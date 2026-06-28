@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Sports Center CMS v2 - 태권도 (게시판형 편집)</title>
+    <title>Sports Center CMS v2 - 태권도 (상세 데이터 반영본)</title>
     <style>
         body { margin: 0; font-family: Arial, sans-serif; background: #eef2f7; display: flex; }
         #side { width: 240px; background: #17324d; color: #fff; height: 100vh; position: fixed; padding: 20px; box-sizing: border-box; }
@@ -71,19 +71,19 @@
     <script>
         const ADMIN_PASSWORD = "2810";
 
-        // 기본 데이터 구조
+        // 요청하신 상세 텍스트를 초기 데이터 구조로 파싱하여 배치
         const defaultPages = [
             {
                 name: '종목 소개',
                 blocks: [
                     {
-                        title: '올림픽 태권도 역사 및 대한민국 성적',
-                        text: '태권도는 1988년 대한민국 서울 올림픽에서 시범 종목으로 처음 도입되었습니다. 당시 개막식에서는 수백 명의 성인과 어린이가 일제히 동작을 수행하는 대규모 태권도 시범이 펼쳐졌습니다. 이후 1992년 스페인 바르셀로나 올림픽에서도 다시 한번 시범 종목으로 채택되었습니다.\n\n태권도는 2000년 호주 시드니 올림픽부터 정식 메달 종목이 되었으며, 이후 올림픽 정식 종목으로 자리를 지켜오고 있습니다.\n\n[올림픽 태권도 통산 순위]\n1위 대한민국 (금 14 / 은 3 / 동 8 / 총 25)',
+                        title: '올림픽 및 아시안게임 태권도 개요',
+                        text: '태권도는 발차기 중심의 박진감 넘치는 격투 스포츠로, 스피드와 기술, 집중력이 승부를 가르는 겨루기가 올림픽과 아시안게임의 공식 종목입니다.\n\n- 아시안게임 태권도: 지난 항저우 대회에서 한국은 종합 1위를 차지하며 아시아 최강의 저력을 보여주었습니다.\n- 올림픽 태권도: 지난 파리 올림픽에서 한국은 금 2, 동 1을 기록하며 세계 무대에서도 경쟁력을 입증했습니다.',
                         img: ''
                     },
                     {
-                        title: '아시안게임 태권도 역사 및 대한민국 성적',
-                        text: '태권도 경기는 1986년 대한민국 서울 대회 이후 모든 아시안게임에서 정식 종목으로 치러져 왔습니다.\n\n[2022 항저우 아시안게임 성적]\n1위 대한민국 (금 5 / 은 2 / 동 2 / 총 9)',
+                        title: '아시안게임의 품새 종목',
+                        text: '아시안게임에서는 겨루기뿐만 아니라 품새 분야도 존재합니다. 남녀 각각 개인전이 실시되며, 대한민국은 이 분야에서 종주국으로서 세계 최강의 위치를 확고히 하고 있습니다.',
                         img: ''
                     }
                 ]
@@ -91,17 +91,36 @@
             {
                 name: '2026 국가대표',
                 blocks: [
-                    { title: '남자 -58kg 안향식', text: '', img: '' },
-                    { title: '남자 -68kg 문진호', text: '', img: '' },
-                    { title: '남자 -80kg 강재권', text: '', img: '' },
-                    { title: '남자 +80kg 강상현', text: '', img: '' },
-                    { title: '여자 -49kg 이유민', text: '', img: '' },
-                    { title: '여자 -57kg 김유진', text: '', img: '' },
-                    { title: '여자 -67kg 곽민주', text: '', img: '' },
-                    { title: '여자 +67kg 송다빈', text: '', img: '' }
+                    {
+                        title: '아시안게임 품새 대표팀 선발 결과',
+                        text: '품새는 자유품새와 공인품새가 있으며 아시안게임은 이 두 분야를 종합하여 점수를 매기게 될 가능성이 높습니다.\n\n[선발전 주요 결과]\n- 종합품새 1차 선발전 우승: 오민혁(남, 경희대) / 정하은(여, 용인시)\n- 아시아선수권 선발전 우승 (자유품새): 윤규성(남, 제2군단사령부) / 김지현(여, 상암고)\n- 아시아선수권 선발전 우승 (공인품새 30세 이하): 이동준(남, 경희대) / 이주영(여, 한체대)\n\n★ 최종 아시안게임 선발자: [남자부] 윤규성 / [여자부] 정하은',
+                        img: ''
+                    },
+                    { title: '남자 -58kg 안향식', text: '최종 선발전 승리 (김종명 패)\n- 아시아선수권 1차대표 통과 자격 보유 (용인대)', img: '' },
+                    { title: '남자 -68kg 문진호', text: '최종 선발전 승리 (권도윤 2위, 장준 3위)\n- 아시아선수권 출전 자격 (서울체고)', img: '' },
+                    { title: '남자 -80kg 강재권', text: '최종 선발전 승리 (서건우 선수의 도핑자격 미달 실격에 따른 선발)\n- 아시아선수권 출전 자격 (삼성에스원태권도단)', img: '' },
+                    { title: '남자 무제한 (+80kg) 강상현', text: '최종 선발전 승리 (박우혁 2위, 박찬희 3위)\n- 아시아선수권 +87kg 출전 자격 (울산시체육회)', img: '' },
+                    { title: '여자 -49kg 이유민', text: '최종 선발전 승리 (김향기 패)\n- 아시안게임 1차대표 통과 자격 (관악고)', img: '' },
+                    { title: '여자 -57kg 김유진', text: '최종 선발전 승리 (서여원 패)\n- 아시아선수권 출전 및 아시안게임 1차대표 통과 (울산시체육회)', img: '' },
+                    { title: '여자 -67kg 곽민주', text: '최종 선발전 승리 (이가은 2위, 홍효림 3위)\n- 아시아선수권 출전 자격 (한국체대)', img: '' },
+                    { title: '여자 무제한 (+67kg) 송다빈', text: '최종 선발전 승리\n- 아시아선수권 +73kg 출전 및 아시안게임 1차대표 통과 (울산시체육회)', img: '' }
                 ]
             },
-            { name: '국제대회 시즌', blocks: [] },
+            {
+                name: '국제대회 시즌',
+                blocks: [
+                    {
+                        title: '3.1. 아시아선수권대회 (5/19 ~ 5/23)',
+                        text: '국가대표 선발 명단 및 아시아 프레지던트컵을 통해 출전권을 획득한 선수들이 출전합니다.\n\n[쿼터 확보 중요성 및 결과]\n- 이 대회 결과는 아시안게임 쿼터 배정에 직결되므로 관련 2개 체급에서 최소 8강(한 명 이상) 이내에 진입하는 것이 필수적이었습니다.\n- 남자부는 순탄하게 진입할 것으로 예상되었으나, 상대적으로 아시아권 약체로 평가받던 여자 67kg급, 여자 49kg급, 무제한급은 선수 풀 제한으로 이변 탈락 우려가 있었습니다.\n- 우려와 달리, 최종적으로 좋은 성적을 거두며 대한민국 대표팀은 전 종목 아시안게임 출전 티켓을 무사히 확보했습니다.',
+                        img: ''
+                    },
+                    {
+                        title: '3.2. 월드태권도 그랑프리',
+                        text: '이전 그랑프리 챌린지 메달리스트들과 해당 시점 당시 세계랭킹 상위권 선수들이 특별 초청되어 치러지는 구조입니다.\n\n※ 본 대회는 랭킹 포인트 획득을 위한 초청제 대회로, 국내 국가대표 선발전 및 아시안게임 출전권 배정과는 직접적인 연관성이 없습니다.',
+                        img: ''
+                    }
+                ]
+            },
             { name: '나고야 아시안게임', blocks: [] },
             { name: 'LA 올림픽', blocks: [] }
         ];
@@ -130,7 +149,6 @@
             render();
         });
 
-        // 편집모드 토글 버튼 (켤 때만 패스워드 검증)
         toggle.onchange = () => {
             if (toggle.checked) {
                 const pw = prompt("편집 권한이 필요합니다. 비밀번호를 입력하세요:");
@@ -158,13 +176,11 @@
                 let d = document.createElement('div');
                 d.className = 'block';
                 
-                // 이미지 태그 처리 (URL만 있으면 인라인으로 깔끔하게 노출)
                 let imgHtml = '';
                 if (b.img && b.img.trim() !== '') {
                     imgHtml = b.img.trim().startsWith('<img') ? b.img : `<img src="${b.img.trim()}">`;
                 }
                 
-                // 기본 보기 화면 레이아웃
                 d.innerHTML = `
                     <div class="tools" style="display: ${isEditMode ? 'block' : 'none'}">
                         <button onclick="toggleInlineEdit(${i})">✏️ 수정</button>
@@ -172,7 +188,7 @@
                     </div>
                     <div id="view-area-${i}">
                         <h2>${b.title || '(제목 없음)'}</h2>
-                        <p>${b.text ? b.text.replace(/\n/g, '<br>') : '<span style="color:#aaa; font-style:italic;">내용이 비어 있습니다. 수정 버튼을 눌러 내용을 채워보세요.</span>'}</p>
+                        <p>${b.text ? b.text.replace(/\n/g, '<br>') : '<span style="color:#aaa; font-style:italic;">내용이 없습니다.</span>'}</p>
                         ${imgHtml}
                     </div>
                     <div id="edit-area-${i}" class="edit-fields">
@@ -192,7 +208,6 @@
             });
         }
 
-        // 인라인 수정창 토글
         function toggleInlineEdit(i) {
             const editArea = document.getElementById(`edit-area-${i}`);
             const viewArea = document.getElementById(`view-area-${i}`);
@@ -205,21 +220,14 @@
             }
         }
 
-        // 인라인 수정 완료 버튼 클릭 시
         function saveInlineEdit(i) {
-            const newTitle = document.getElementById(`edit-t-${i}`).value;
-            const newText = document.getElementById(`edit-c-${i}`).value;
-            const newImg = document.getElementById(`edit-img-${i}`).value;
-            
-            pages[cur].blocks[i].title = newTitle;
-            pages[cur].blocks[i].text = newText;
-            pages[cur].blocks[i].img = newImg;
-            
+            pages[cur].blocks[i].title = document.getElementById(`edit-t-${i}`).value;
+            pages[cur].blocks[i].text = document.getElementById(`edit-c-${i}`).value;
+            pages[cur].blocks[i].img = document.getElementById(`edit-img-${i}`).value;
             saveToStorage();
             render();
         }
 
-        // 새 게시글 추가
         function addBlock() {
             if (!t.value.trim() && !c.value.trim()) {
                 alert("제목이나 내용 중 하나는 입력해야 합니다.");
@@ -231,7 +239,6 @@
             render();
         }
 
-        // 게시글 삭제
         function delBlock(i) {
             if (confirm("정말 이 게시글을 삭제하시겠습니까?")) {
                 pages[cur].blocks.splice(i, 1);
@@ -241,11 +248,10 @@
         }
 
         function downloadPage() {
-            // 원본 파일 형태로 다운로드 시 로컬스토리지 최신 데이터 동기화 포함
             const blob = new Blob([document.documentElement.outerHTML], { type: 'text/html' });
             let a = document.createElement('a');
             a.href = URL.createObjectURL(blob);
-            a.download = 'SportsCenter_Taekwondo_Board.html';
+            a.download = 'SportsCenter_Taekwondo_Final.html';
             a.click();
         }
 
