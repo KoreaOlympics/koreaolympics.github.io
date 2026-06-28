@@ -5,26 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>2026 아이치·나고야 아시안게임 대한민국 선수단</title>
     <style>
-        body { font-family: Arial, sans-serif; background: #eef2f7; margin: 0; padding: 24px; color: #333; }
-        header { text-align: center; margin-bottom: 32px; }
-        header h1 { color: #17324d; margin-bottom: 8px; }
-        header p { color: #666; margin: 0; }
+        body { font-family: Arial, sans-serif; background: #eef2f7; margin: 0; padding: 16px; color: #333; }
+        header { text-align: center; margin-bottom: 16px; }
+        header h2 { color: #17324d; margin-bottom: 4px; font-size: 1.2rem; }
+        header p { color: #666; margin: 0; font-size: 0.8rem; }
         
-        /* 🌟 새로 추가된 메달 후보 섹션 스타일 */
-        .medal-contenders { background: #fff; border-radius: 16px; padding: 20px; margin-bottom: 32px; box-shadow: 0 4px 12px rgba(0,0,0,.05); border-left: 6px solid #d4af37; }
-        .medal-contenders h2 { margin-top: 0; color: #17324d; font-size: 0.8rem; display: flex; align-items: center; gap: 8px; }
-        .badge-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-        .player-badge { background: #f0f4f8; border: 1px solid #cbd5e1; border-radius: 20px; padding: 8px 16px; font-size: 0.95rem; display: flex; align-items: center; gap: 6px; font-weight: bold; color: #1e293b; }
-        .player-badge .sport { font-size: 0.8rem; color: #64748b; font-weight: normal; background: #e2e8f0; padding: 2px 8px; border-radius: 12px; }
+        /* 🌟 콤팩트 메달 후보 섹션 */
+        .medal-contenders { background: #fff; border-radius: 6px; padding: 10px 14px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,.05); border-left: 4px solid #d4af37; }
+        .medal-contenders h2 { margin-top: 0; margin-bottom: 6px; color: #17324d; font-size: 0.85rem; display: flex; align-items: center; gap: 4px; font-weight: bold; }
+        .badge-grid { display: flex; flex-wrap: wrap; gap: 4px; }
         
-        /* 기존 종목 그리드 스타일 */
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; max-width: 1200px; margin: 0 auto; }
-        .card { background: #fff; border-radius: 12px; padding: 16px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,.05); text-decoration: none; color: #333; transition: transform 0.2s, box-shadow 0.2s; display: block; }
-        .card:hover { transform: translateY(-4px); box-shadow: 0 4px 12px rgba(0,0,0,.15); background: #f8fafc; }
-        .emoji { font-size: 2rem; margin-bottom: 8px; }
-        .name { font-weight: bold; font-size: 0.95rem; }
+        /* 🏷️ 상하 4px x 좌우 10px 슬림 배지 */
+        .player-badge { background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 3px; padding: 3px 8px; font-size: 0.78rem; display: inline-flex; align-items: center; gap: 4px; font-weight: bold; color: #1e293b; }
+        .player-badge .sport { font-size: 0.7rem; color: #64748b; font-weight: normal; background: #e2e8f0; padding: 1px 4px; border-radius: 2px; }
         
-        footer { text-align: center; margin-top: 48px; color: #888; font-size: 0.9rem; padding-top: 16px; border-top: 1px solid #e2e8f0; }
+        /* 🎯 무조건 1행에 10개씩 배치하는 초소형 그리드 시스템 */
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(10, 1fr); /* 무조건 1행 10열 고정 */
+            gap: 6px; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+        .card { 
+            background: #fff; 
+            border-radius: 6px; 
+            padding: 8px 4px; /* 최소 규격 여백 조율 */
+            text-align: center; 
+            box-shadow: 0 1px 4px rgba(0,0,0,.04); 
+            text-decoration: none; 
+            color: #333; 
+            transition: transform 0.15s, background-color 0.15s; 
+            display: block; 
+            min-width: 0; /* 텍스트 넘침 방지 */
+        }
+        .card:hover { transform: translateY(-2px); background: #f8fafc; }
+        .emoji { font-size: 1.1rem; margin-bottom: 3px; } /* 이모지 축소 */
+        .name { font-weight: bold; font-size: 0.72rem; letter-spacing: -0.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } /* 글씨 축소 및 생략 처리 */
+        
+        footer { text-align: center; margin-top: 32px; color: #888; font-size: 0.75rem; padding-top: 12px; border-top: 1px solid #e2e8f0; }
+        
+        /* 모바일 화면에서도 10열 구조를 유지하기 위한 터치 스크롤 혹은 비율 축소 대응 */
+        @media (max-width: 768px) {
+            body { padding: 8px; }
+            .grid { gap: 4px; }
+            .name { font-size: 0.65rem; }
+            .emoji { font-size: 0.9rem; }
+        }
     </style>
 </head>
 <body>
@@ -34,49 +61,47 @@
     <p>대한민국 국가대표 종목별 정보</p>
 </header>
 
-<!-- 🎯 그리드 윗단: 주요 메달 후보 20인 영역 -->
 <section class="medal-contenders">
-    <h2>🔥 대한민국 주요 금메달 후보 </h2>
-    <p style="color: #666; font-size: 0.74rem; margin: 0;">이번 대회에서 우승이 기대되는 대한민국 대표팀 핵심 선수 명단입니다.</p>
+    <h2>🔥 대한민국 주요 금메달 후보</h2>
+    <p style="color: #666; font-size: 0.72rem; margin: 0 0 8px 0;">이번 대회에서 우승이 기대되는 대한민국 대표팀 핵심 선수 명단입니다.</p>
     
     <div class="badge-grid">
-        <div class="player-badge"> 대표팀 <span class="sport">남자 축구 U23 </span></div>
-        <div class="player-badge"> 대표팀 <span class="sport">남자 야구</span></div>
-        <div class="player-badge"> 김주형/김성현 <span class="sport">남자 골프</span></div>
-        <div class="player-badge"> 안세영 <span class="sport">여자 배드민턴</span></div>
-        <div class="player-badge"> 서승재-김원호 조 <span class="sport">남자 배드민턴</span></div>
-        <div class="player-badge"> 임종훈-신유빈 조 <span class="sport">혼성 탁구</span></div>
-        <div class="player-badge"> 윤규성 <span class="sport">태권도 품새</span></div>
-        <div class="player-badge"> 정하은 <span class="sport">태권도 품새</span></div>
-        <div class="player-badge"> 문진호 <span class="sport">태권도 68kg</span></div> 
-        <div class="player-badge"> 강상현 <span class="sport">태권도 무제한</span></div>
-        <div class="player-badge"> 김유진 <span class="sport">태권도 57kg</span></div>
-        <div class="player-badge"> 이준환 <span class="sport">유도 81kg</span></div> 
-        <div class="player-badge"> 이현지 <span class="sport">유도 무제한</span></div>
-        <div class="player-badge"> 우상혁 <span class="sport">육상 높이뛰기</span></div>
-        <div class="player-badge"> 김영범 <span class="sport">수영 자유형100</span></div>
-        <div class="player-badge"> 김우민 <span class="sport">수영 자유형중거리</span></div>
-        <div class="player-badge"> 이주호 <span class="sport">수영 배영200</span></div>
-        <div class="player-badge"> 대표팀 <span class="sport">양궁 남자</span></div>
-        <div class="player-badge"> 대표팀 <span class="sport">양궁 여자</span></div>
-        <div class="player-badge"> 대표팀 <span class="sport">양궁 리커브혼성</span></div>
-        <div class="player-badge"> 반효진 <span class="sport">사격 소총여자</span></div>
-        <div class="player-badge"> 오예진,양지인 <span class="sport">사격 권총여자</span></div>
-        <div class="player-badge"> 송종호 등 <span class="sport">사격 권총남자</span></div>
-        <div class="player-badge"> 대표팀 <span class="sport">펜싱사브르 남자</span></div>
-        <div class="player-badge"> 대표팀 <span class="sport">펜싱사브르 여자</span></div>
-        <div class="player-badge"> 오상욱 <span class="sport">펜싱사브르 남자</span></div>
-        <div class="player-badge"> 대표팀 <span class="sport">펜싱에페 여자</span></div>
-        <div class="player-badge"> 성승민 <span class="sport">근대5종 여자</span></div>
-        <div class="player-badge"> 대표팀 <span class="sport">근대5종 여자</span></div>
-        <div class="player-badge"> 대표팀 <span class="sport">근대5종 남자</span></div>
-        <div class="player-badge"> 여서정  <span class="sport">기계체조 도마 여자</span></div>        
-                        <div class="player-badge"> 대표팀 <span class="sport">리그오브레전드</span></div>
-
+        <div class="player-badge">대표팀 <span class="sport">남자 축구 U23</span></div>
+        <div class="player-badge">대표팀 <span class="sport">남자 야구</span></div>
+        <div class="player-badge">김주형/김성현 <span class="sport">남자 골프</span></div>
+        <div class="player-badge">안세영 <span class="sport">여자 배드민턴</span></div>
+        <div class="player-badge">서승재-김원호 조 <span class="sport">남자 배드민턴</span></div>
+        <div class="player-badge">임종훈-신유빈 조 <span class="sport">혼성 탁구</span></div>
+        <div class="player-badge">윤규성 <span class="sport">태권도 품새</span></div>
+        <div class="player-badge">정하은 <span class="sport">태권도 품새</span></div>
+        <div class="player-badge">문진호 <span class="sport">태권도 68kg</span></div> 
+        <div class="player-badge">강상현 <span class="sport">태권도 무제한</span></div>
+        <div class="player-badge">김유진 <span class="sport">태권도 57kg</span></div>
+        <div class="player-badge">이준환 <span class="sport">유도 81kg</span></div> 
+        <div class="player-badge">이현지 <span class="sport">유도 무제한</span></div>
+        <div class="player-badge">우상혁 <span class="sport">육상 높이뛰기</span></div>
+        <div class="player-badge">김영범 <span class="sport">수영 자유형100</span></div>
+        <div class="player-badge">김우민 <span class="sport">수영 자유형중거리</span></div>
+        <div class="player-badge">이주호 <span class="sport">수영 배영200</span></div>
+        <div class="player-badge">대표팀 <span class="sport">양궁 남자</span></div>
+        <div class="player-badge">대표팀 <span class="sport">양궁 여자</span></div>
+        <div class="player-badge">대표팀 <span class="sport">양궁 리커브혼성</span></div>
+        <div class="player-badge">반효진 <span class="sport">사격 소총여자</span></div>
+        <div class="player-badge">오예진,양지인 <span class="sport">사격 권총여자</span></div>
+        <div class="player-badge">송종호 등 <span class="sport">사격 권총남자</span></div>
+        <div class="player-badge">대표팀 <span class="sport">펜싱사브르 남자</span></div>
+        <div class="player-badge">대표팀 <span class="sport">펜싱사브르 여자</span></div>
+        <div class="player-badge">오상욱 <span class="sport">펜싱사브르 남자</span></div>
+        <div class="player-badge">대표팀 <span class="sport">펜싱에페 여자</span></div>
+        <div class="player-badge">성승민 <span class="sport">근대5종 여자</span></div>
+        <div class="player-badge">대표팀 <span class="sport">근대5종 여자</span></div>
+        <div class="player-badge">대표팀 <span class="sport">근대5종 남자</span></div>
+        <div class="player-badge">여서정 <span class="sport">기계체조 도마 여자</span></div>        
+        <div class="player-badge">대표팀 <span class="sport">리그오브레전드</span></div>
     </div>
 </section>
 
-<!-- 기존 종목별 그리드 매트릭스 -->
+<!-- 1행에 10개씩 배치되는 정형화된 종목 마트릭스 -->
 <div class="grid">
     <a class="card" href="mens-football.html"><div class="emoji">⚽</div><div class="name">남자축구</div></a>
     <a class="card" href="womens-football.html"><div class="emoji">⚽</div><div class="name">여자축구</div></a>
