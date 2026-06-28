@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Sports Center CMS v1 - 태권도</title>
+    <title>Sports Center CMS v1 - 태권도 (보안 적용)</title>
     <style>
         body { margin: 0; font-family: Arial, sans-serif; background: #eef2f7; display: flex; }
         #side { width: 240px; background: #17324d; color: #fff; height: 100vh; position: fixed; padding: 20px; box-sizing: border-box; }
@@ -17,9 +17,6 @@
         .tools button { margin-left: 4px; }
         textarea, input { width: 100%; margin: 6px 0; padding: 8px; box-sizing: border-box; }
         button { padding: 8px 12px; cursor: pointer; }
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
-        th { background-color: #f2f2f2; }
     </style>
 </head>
 <body>
@@ -51,7 +48,20 @@
     </div>
 
     <script>
-        // 초기 태권도 데이터 세팅
+        // 변경된 보안 비밀번호
+        const ADMIN_PASSWORD = "2810";
+
+        // 비밀번호 검증 함수
+        function checkPermission() {
+            const pw = prompt("편집 권한이 필요합니다. 비밀번호를 입력하세요:");
+            if (pw === ADMIN_PASSWORD) {
+                return true;
+            } else {
+                alert("비밀번호가 올바르지 않습니다.");
+                return false;
+            }
+        }
+
         const pages = [
             {
                 name: '종목 소개',
@@ -100,7 +110,19 @@
             render();
         });
 
-        toggle.onchange = () => editor.style.display = toggle.checked ? 'block' : 'none';
+        // 편집모드 체크박스를 켤 때 비밀번호 확인
+        toggle.onchange = () => {
+            if (toggle.checked) {
+                if (checkPermission()) {
+                    editor.style.display = 'block';
+                } else {
+                    toggle.checked = false; // 틀리면 체크 해제
+                    editor.style.display = 'none';
+                }
+            } else {
+                editor.style.display = 'none';
+            }
+        };
 
         function render() {
             ptitle.textContent = pages[cur].name;
@@ -124,24 +146,28 @@
         }
 
         function delBlock(i) {
-            pages[cur].blocks.splice(i, 1);
-            render();
+            if (checkPermission()) {
+                pages[cur].blocks.splice(i, 1);
+                render();
+            }
         }
 
         function editBlock(i) {
-            let b = pages[cur].blocks[i];
-            b.title = prompt('제목', b.title) || b.title;
-            b.text = prompt('내용', b.text) || b.text;
-            let ni = prompt('이미지(URL 또는 <img>)', b.img);
-            if (ni != null) b.img = ni;
-            render();
+            if (checkPermission()) {
+                let b = pages[cur].blocks[i];
+                b.title = prompt('제목', b.title) || b.title;
+                b.text = prompt('내용', b.text) || b.text;
+                let ni = prompt('이미지(URL 또는 <img>)', b.img);
+                if (ni != null) b.img = ni;
+                render();
+            }
         }
 
         function downloadPage() {
             const blob = new Blob([document.documentElement.outerHTML], { type: 'text/html' });
             let a = document.createElement('a');
             a.href = URL.createObjectURL(blob);
-            a.download = 'SportsCenter_Taekwondo_v1.html';
+            a.download = 'SportsCenter_Taekwondo_Secure.html';
             a.click();
         }
 
