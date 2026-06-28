@@ -5,20 +5,42 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Sports Center - 하키</title>
     <style>
-        body { margin: 0; font-family: Arial, sans-serif; background: #eef2f7; display: flex; }
+        body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #eef2f7; display: flex; }
         #side { width: 240px; background: #17324d; color: #fff; height: 100vh; position: fixed; padding: 20px; box-sizing: border-box; }
         #content { margin-left: 240px; flex: 1; padding: 24px; }
         .menu { padding: 10px; border-radius: 8px; cursor: pointer; margin: 6px 0; }
         .menu:hover, .active { background: #2b5f8a; }
         .card { background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,.1); }
         
-        /* 깔끔한 정보 열람용 블록 스타일 */
+        /* 정보 열람용 블록 스타일 */
         .block { border: 1px solid #e0e0e0; border-radius: 8px; padding: 16px; margin-bottom: 16px; background: #fdfdfd; }
         .block h2 { margin-top: 0; color: #17324d; font-size: 1.3rem; margin-bottom: 12px; border-bottom: 2px solid #e2e8f0; padding-bottom: 6px; }
-        .block h3 { color: #2b5f8a; font-size: 1.1rem; margin-top: 16px; margin-bottom: 8px; }
         .block p { margin: 0; color: #444; line-height: 1.6; white-space: pre-wrap; }
-        ul { margin: 6px 0; padding-left: 20px; color: #444; line-height: 1.6; }
-        li { margin-bottom: 4px; }
+
+        /* 🌟 2열 카드 레이아웃 */
+        .row-grid { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 10px; }
+        .col-half { flex: 1; min-width: 320px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; box-sizing: border-box; }
+        .col-half h3 { margin-top: 0; margin-bottom: 16px; font-size: 1.15rem; font-weight: bold; padding-bottom: 8px; }
+        .male-title { color: #1e40af; border-bottom: 2px solid #bfdbfe; }
+        .female-title { color: #b91c1c; border-bottom: 2px solid #fecaca; }
+
+        /* 📊 데이터 리스트 및 시각화 그래프 바 */
+        .team-status-item { margin-bottom: 14px; background: #fff; border: 1px solid #edf2f7; border-radius: 6px; padding: 10px 12px; }
+        .team-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+        .team-name { font-weight: bold; font-size: 1.05rem; color: #1e293b; }
+        .rank-text { font-size: 0.85rem; font-weight: bold; color: #64748b; background: #f1f5f9; padding: 2px 8px; border-radius: 4px; }
+        .info-badges { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; }
+        .badge { font-size: 0.75rem; padding: 2px 6px; border-radius: 4px; font-weight: bold; }
+        .badge-cup { background: #e0f2fe; color: #0369a1; }
+        .badge-world { background: #fef3c7; color: #d97706; }
+        .badge-league { background: #f0fdf4; color: #16a34a; }
+        .badge-danger { background: #fee2e2; color: #dc2626; }
+        
+        /* 랭킹 그래프 (낮을수록 강팀이므로 Bar가 꽉 차게 계산: max 30위 기준) */
+        .rank-bar-bg { background: #e2e8f0; height: 6px; border-radius: 3px; overflow: hidden; width: 100%; }
+        .rank-bar-fill { height: 100%; border-radius: 3px; }
+        .male-fill { background: #3b82f6; }
+        .female-fill { background: #ef4444; }
     </style>
 </head>
 <body>
@@ -39,7 +61,6 @@
     </div>
 
     <script>
-        // 제공된 하키 데이터를 기반으로 한 고정 데이터 구조 (입력/수정 기능 제거)
         const pages = [
             {
                 name: '종목 소개',
@@ -65,12 +86,108 @@
             },
             {
                 name: '국제대회 시즌',
-                blocks: [
-                    {
-                        title: '현재 FIH 프로리그 및 네이션스컵 국가별 위치',
-                        text: '현재 국제하키연맹(FIH) 주관 주요 리그에서의 아시아 핵심 국가별 위치 및 25-26 시즌 성적 현황입니다.\n\n[남자부 현황]\n- 인도: 25-26 프로리그 8위\n- 파키스탄: 25-26 프로리그 9위 / 9개 팀 중 최하위 (네이션스컵으로 강등)\n- 일본: 25-26 네이션스컵 4위\n- 말레이시아: 25-26 네이션스컵 5위\n- 대한민국: 25-26 네이션스컵 9위 / 9개 팀 중 최하위\n- 중국: 네이션스컵 2 위치 (25-26 시즌은 취소)\n- 오만: 네이션스컵 2 위치\n\n[여자부 현황]\n- 중국: 25-26 프로리그 4위 / 9개 팀 중 4위\n- 인도: 25-26 네이션스컵 1위 (다음 시즌 프로리그 승격 확정)\n- 대한민국: 25-26 네이션스컵 5위\n- 일본: 25-26 네이션스컵 6위 / 8개 팀 중 6위'
-                    }
-                ]
+                // 🌟 3번 탭 데이터 구조화 및 시각화용 템플릿 코드 바인딩
+                isCustomLayout: true,
+                title: '현재 FIH 프로리그 / 네이션스컵 현황 및 세계랭킹',
+                htmlContent: `
+                    <div class="row-grid">
+                        <!-- 남자부 카드 박스 -->
+                        <div class="col-half">
+                            <h3 class="male-title">🔵 남자부 아시아 주요국</h3>
+                            
+                            <div class="team-status-item">
+                                <div class="team-meta"><span class="team-name">인도</span><span class="rank-text">세계 8위</span></div>
+                                <div class="info-badges">
+                                    <span class="badge badge-cup">25 아시안컵 우승</span><span class="badge badge-world">월드컵 진출</span><span class="badge badge-league">25-26 프로리그 8위</span>
+                                </div>
+                                <div class="rank-bar-bg"><div class="rank-bar-fill male-fill" style="width: 73%;"></div></div>
+                            </div>
+
+                            <div class="team-status-item">
+                                <div class="team-meta"><span class="team-name">파키스탄</span><span class="rank-text">세계 12위</span></div>
+                                <div class="info-badges">
+                                    <span class="badge badge-world">월드컵 진출</span><span class="badge badge-danger">25-26 프로리그 9위 (네이션스컵 강등)</span>
+                                </div>
+                                <div class="rank-bar-bg"><div class="rank-bar-fill male-fill" style="width: 60%;"></div></div>
+                            </div>
+
+                            <div class="team-status-item">
+                                <div class="team-meta"><span class="team-name">말레이시아</span><span class="rank-text">세계 14위</span></div>
+                                <div class="info-badges">
+                                    <span class="badge badge-cup">25 아시안컵 3위</span><span class="badge badge-world">월드컵 진출</span><span class="badge badge-league">25-26 네이션스컵 5위</span>
+                                </div>
+                                <div class="rank-bar-bg"><div class="rank-bar-fill male-fill" style="width: 53%;"></div></div>
+                            </div>
+
+                            <div class="team-status-item">
+                                <div class="team-meta"><span class="team-name">일본</span><span class="rank-text">세계 15위</span></div>
+                                <div class="info-badges">
+                                    <span class="badge badge-cup">25 아시안컵 5위</span><span class="badge badge-world">월드컵 진출</span><span class="badge badge-league">25-26 네이션스컵 4위</span>
+                                </div>
+                                <div class="rank-bar-bg"><div class="rank-bar-fill male-fill" style="width: 50%;"></div></div>
+                            </div>
+
+                            <div class="team-status-item">
+                                <div class="team-meta"><span class="team-name">중국</span><span class="rank-text">세계 20위</span></div>
+                                <div class="info-badges">
+                                    <span class="badge badge-cup">25 아시안컵 4위</span><span class="badge badge-league">네이션스컵2 (25-26 시즌 취소)</span>
+                                </div>
+                                <div class="rank-bar-bg"><div class="rank-bar-fill male-fill" style="width: 33%;"></div></div>
+                            </div>
+
+                            <div class="team-status-item">
+                                <div class="team-meta"><span class="team-name">대한민국</span><span class="rank-text">세계 23위</span></div>
+                                <div class="info-badges">
+                                    <span class="badge badge-cup">25 아시안컵 2위</span><span class="badge badge-danger">25-26 네이션스컵 9위 (최하위)</span>
+                                </div>
+                                <div class="rank-bar-bg"><div class="rank-bar-fill male-fill" style="width: 23%;"></div></div>
+                            </div>
+
+                            <div class="team-status-item">
+                                <div class="team-meta"><span class="team-name">오만</span><span class="rank-text">세계 25위</span></div>
+                                <div class="info-badges"><span class="badge badge-league">네이션스컵2 위치</span></div>
+                                <div class="rank-bar-bg"><div class="rank-bar-fill male-fill" style="width: 16%;"></div></div>
+                            </div>
+                        </div>
+
+                        <!-- 여자부 카드 박스 -->
+                        <div class="col-half">
+                            <h3 class="female-title">🔴 여자부 아시아 주요국</h3>
+
+                            <div class="team-status-item">
+                                <div class="team-meta"><span class="team-name">중국</span><span class="rank-text">세계 4위</span></div>
+                                <div class="info-badges">
+                                    <span class="badge badge-cup">25 아시안컵 우승</span><span class="badge badge-world">월드컵 진출</span><span class="badge badge-league">25-26 프로리그 4위</span>
+                                </div>
+                                <div class="rank-bar-bg"><div class="rank-bar-fill female-fill" style="width: 86%;"></div></div>
+                            </div>
+
+                            <div class="team-status-item">
+                                <div class="team-meta"><span class="team-name">인도</span><span class="rank-text">세계 9위</span></div>
+                                <div class="info-badges">
+                                    <span class="badge badge-cup">25 아시안컵 2위</span><span class="badge badge-world">월드컵 진출</span><span class="badge badge-league">25-26 네이션스컵 1위 (프로리그 승격)</span>
+                                </div>
+                                <div class="rank-bar-bg"><div class="rank-bar-fill female-fill" style="width: 70%;"></div></div>
+                            </div>
+
+                            <div class="team-status-item">
+                                <div class="team-meta"><span class="team-name">일본</span><span class="rank-text">세계 15위</span></div>
+                                <div class="info-badges">
+                                    <span class="badge badge-cup">25 아시안컵 3위</span><span class="badge badge-world">월드컵 진출</span><span class="badge badge-league">25-26 네이션스컵 6위</span>
+                                </div>
+                                <div class="rank-bar-bg"><div class="rank-bar-fill female-fill" style="width: 50%;"></div></div>
+                            </div>
+
+                            <div class="team-status-item">
+                                <div class="team-meta"><span class="team-name">대한민국</span><span class="rank-text">세계 17위</span></div>
+                                <div class="info-badges">
+                                    <span class="badge badge-cup">25 아시안컵 4위</span><span class="badge badge-league">25-26 네이션스컵 5위</span>
+                                </div>
+                                <div class="rank-bar-bg"><div class="rank-bar-fill female-fill" style="width: 43%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                `
             },
             {
                 name: '나고야 아시안게임',
@@ -96,7 +213,6 @@
         const ptitle = document.getElementById('ptitle');
         const blocks = document.getElementById('blocks');
 
-        // 메뉴 전환 인터랙션만 유지
         document.querySelectorAll('.menu').forEach((m, i) => m.onclick = () => {
             document.querySelectorAll('.menu').forEach(x => x.classList.remove('active'));
             m.classList.add('active');
@@ -104,20 +220,26 @@
             render();
         });
 
-        // 깔끔하게 데이터를 화면에 바인딩해주는 함수
         function render() {
             ptitle.textContent = pages[cur].name;
             blocks.innerHTML = '';
             
-            pages[cur].blocks.forEach((b) => {
+            // 🌟 커스텀 대시보드 레이아웃 렌더링 로직 연동
+            if (pages[cur].isCustomLayout) {
                 let d = document.createElement('div');
                 d.className = 'block';
-                d.innerHTML = `<h2>${b.title}</h2><p>${b.text}</p>`;
+                d.innerHTML = `<h2>${pages[cur].title}</h2>${pages[cur].htmlContent}`;
                 blocks.appendChild(d);
-            });
+            } else {
+                pages[cur].blocks.forEach((b) => {
+                    let d = document.createElement('div');
+                    d.className = 'block';
+                    d.innerHTML = `<h2>${b.title}</h2><p>${b.text}</p>`;
+                    blocks.appendChild(d);
+                });
+            }
         }
 
-        // 초기 화면 랜더링
         render();
     </script>
 </body>
