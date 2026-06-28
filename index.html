@@ -1,185 +1,102 @@
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>2026 아이치·나고야 아시안게임 대한민국 국가대표</title>
-
-<style>
-
-body{
-    margin:0;
-    font-family:"Malgun Gothic",sans-serif;
-    background:#f3f5f9;
-}
-
-header{
-    background:#0d6efd;
-    color:white;
-    text-align:center;
-    padding:28px;
-}
-
-header h1{
-    margin:0;
-}
-
-header p{
-    margin-top:8px;
-}
-
-.grid{
-
-    max-width:1400px;
-
-    margin:30px auto;
-
-    display:grid;
-
-    grid-template-columns:repeat(10,1fr);
-
-    gap:10px;
-
-    padding:10px;
-
-}
-
-.card{
-
-    background:white;
-
-    border:1px solid #ddd;
-
-    border-radius:10px;
-
-    text-decoration:none;
-
-    color:#333;
-
-    padding:12px 6px;
-
-    text-align:center;
-
-    transition:.2s;
-
-}
-
-.card:hover{
-
-    background:#0d6efd;
-
-    color:white;
-
-}
-
-.emoji{
-
-    font-size:28px;
-
-}
-
-.name{
-
-    margin-top:8px;
-
-    font-size:14px;
-
-    font-weight:bold;
-
-}
-
-footer{
-
-    margin:30px;
-
-    text-align:center;
-
-    color:#666;
-
-}
-
-@media(max-width:1200px){
-
-.grid{
-grid-template-columns:repeat(5,1fr);
-}
-
-}
-
-@media(max-width:700px){
-
-.grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-</style>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>2026 아이치·나고야 아시안게임 대한민국 선수단</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #eef2f7; margin: 0; padding: 24px; color: #333; }
+        header { text-align: center; margin-bottom: 32px; }
+        header h1 { color: #17324d; margin-bottom: 8px; }
+        header p { color: #666; margin: 0; }
+        
+        /* 🌟 새로 추가된 메달 후보 섹션 스타일 */
+        .medal-contenders { background: #fff; border-radius: 16px; padding: 20px; margin-bottom: 32px; box-shadow: 0 4px 12px rgba(0,0,0,.05); border-left: 6px solid #d4af37; }
+        .medal-contenders h2 { margin-top: 0; color: #17324d; font-size: 1.4rem; display: flex; align-items: center; gap: 8px; }
+        .badge-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+        .player-badge { background: #f0f4f8; border: 1px solid #cbd5e1; border-radius: 20px; padding: 8px 16px; font-size: 0.95rem; display: flex; align-items: center; gap: 6px; font-weight: bold; color: #1e293b; }
+        .player-badge .sport { font-size: 0.8rem; color: #64748b; font-weight: normal; background: #e2e8f0; padding: 2px 8px; border-radius: 12px; }
+        
+        /* 기존 종목 그리드 스타일 */
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; max-width: 1200px; margin: 0 auto; }
+        .card { background: #fff; border-radius: 12px; padding: 16px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,.05); text-decoration: none; color: #333; transition: transform 0.2s, box-shadow 0.2s; display: block; }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 4px 12px rgba(0,0,0,.15); background: #f8fafc; }
+        .emoji { font-size: 2rem; margin-bottom: 8px; }
+        .name { font-weight: bold; font-size: 0.95rem; }
+        
+        footer { text-align: center; margin-top: 48px; color: #888; font-size: 0.9rem; padding-top: 16px; border-top: 1px solid #e2e8f0; }
+    </style>
 </head>
-
 <body>
 
 <header>
-
-<h1>🏅 2026 아이치·나고야 아시안게임</h1>
-
-<p>대한민국 국가대표 종목별 정보</p>
-
+    <h1>🏅 2026 아이치·나고야 아시안게임</h1>
+    <p>대한민국 국가대표 종목별 정보</p>
 </header>
 
+<!-- 🎯 그리드 윗단: 주요 메달 후보 20인 영역 -->
+<section class="medal-contenders">
+    <h2>🔥 대한민국 주요 메달 후보 (TOP 20)</h2>
+    <p style="color: #666; font-size: 0.9rem; margin: 0;">이번 대회에서 찬란한 메달이 기대되는 대한민국 대표팀 핵심 선수 명단입니다.</p>
+    
+    <div class="badge-grid">
+        <!-- 💡 추후 이름을 알려주시면 이 아래 구조로 20명을 채워 넣게 됩니다. 우선 샘플로 3개만 넣어두었습니다. -->
+        <div class="player-badge">🥋 윤규성 <span class="sport">태권도 품새</span></div>
+        <div class="player-badge">🥋 정하은 <span class="sport">태권도 품새</span></div>
+        <div class="player-badge">🥋 김유진 <span class="sport">태권도 겨루기</span></div>
+        <div class="player-badge" style="color: #aaa; font-style: italic; font-weight: normal; border-style: dashed;">(추후 선수 명단 20명 추가 예정...)</div>
+    </div>
+</section>
+
+<!-- 기존 종목별 그리드 매트릭스 -->
 <div class="grid">
+    <a class="card" href="mens-football.html"><div class="emoji">⚽</div><div class="name">남자축구</div></a>
+    <a class="card" href="womens-football.html"><div class="emoji">⚽</div><div class="name">여자축구</div></a>
+    <a class="card" href="basketball.html"><div class="emoji">🏀</div><div class="name">농구</div></a>
+    <a class="card" href="3x3basketball.html"><div class="emoji">🏀</div><div class="name">3X3농구</div></a>
+    <a class="card" href="baseball-softball.html"><div class="emoji">⚾</div><div class="name">야구·소프트볼</div></a>
+    <a class="card" href="volleyball.html"><div class="emoji">🏐</div><div class="name">배구</div></a>
+    <a class="card" href="hockey.html"><div class="emoji">🏑</div><div class="name">하키</div></a>
+    <a class="card" href="handball.html"><div class="emoji">🤾</div><div class="name">핸드볼</div></a>
+    <a class="card" href="rugby.html"><div class="emoji">🏉</div><div class="name">럭비</div></a>
+    <a class="card" href="team-others.html"><div class="emoji">👥</div><div class="name">기타</div></a>
 
-<a class="card" href="mens-football.html"><div class="emoji">⚽</div><div class="name">남자축구</div></a>
-<a class="card" href="womens-football.html"><div class="emoji">⚽</div><div class="name">여자축구</div></a>
-<a class="card" href="basketball.html"><div class="emoji">🏀</div><div class="name">농구</div></a>
-<a class="card" href="3x3basketball.html"><div class="emoji">🏀</div><div class="name">3X3농구</div></a>
-<a class="card" href="baseball-softball.html"><div class="emoji">⚾</div><div class="name">야구·소프트볼</div></a>
-<a class="card" href="volleyball.html"><div class="emoji">🏐</div><div class="name">배구</div></a>
-<a class="card" href="hockey.html"><div class="emoji">🏑</div><div class="name">하키</div></a>
-<a class="card" href="handball.html"><div class="emoji">🤾</div><div class="name">핸드볼</div></a>
-<a class="card" href="rugby.html"><div class="emoji">🏉</div><div class="name">럭비</div></a>
-<a class="card" href="team-others.html"><div class="emoji">👥</div><div class="name">기타</div></a>
+    <a class="card" href="tennis.html"><div class="emoji">🎾</div><div class="name">테니스</div></a>
+    <a class="card" href="golf.html"><div class="emoji">⛳</div><div class="name">골프</div></a>
+    <a class="card" href="badminton.html"><div class="emoji">🏸</div><div class="name">배드민턴</div></a>
+    <a class="card" href="tabletennis.html"><div class="emoji">🏓</div><div class="name">탁구</div></a>
+    <a class="card" href="racket-others.html"><div class="emoji">🎱</div><div class="name">기타 개인구기</div></a>
+    <a class="card" href="taekwondo.html"><div class="emoji">🥋</div><div class="name">태권도</div></a>
+    <a class="card" href="judo.html"><div class="emoji">🥋</div><div class="name">유도</div></a>
+    <a class="card" href="boxing.html"><div class="emoji">🥊</div><div class="name">복싱</div></a>
+    <a class="card" href="wrestling.html"><div class="emoji">🤼</div><div class="name">레슬링</div></a>
+    <a class="card" href="combat-others.html"><div class="emoji">🥋</div><div class="name">기타 격투기</div></a>
 
-<a class="card" href="tennis.html"><div class="emoji">🎾</div><div class="name">테니스</div></a>
-<a class="card" href="golf.html"><div class="emoji">⛳</div><div class="name">골프</div></a>
-<a class="card" href="badminton.html"><div class="emoji">🏸</div><div class="name">배드민턴</div></a>
-<a class="card" href="tabletennis.html"><div class="emoji">🏓</div><div class="name">탁구</div></a>
-<a class="card" href="racket-others.html"><div class="emoji">🎱</div><div class="name">기타 개인구기</div></a>
-<a class="card" href="taekwondo.html"><div class="emoji">🥋</div><div class="name">태권도</div></a>
-<a class="card" href="judo.html"><div class="emoji">🥋</div><div class="name">유도</div></a>
-<a class="card" href="boxing.html"><div class="emoji">🥊</div><div class="name">복싱</div></a>
-<a class="card" href="wrestling.html"><div class="emoji">🤼</div><div class="name">레슬링</div></a>
-<a class="card" href="combat-others.html"><div class="emoji">🥋</div><div class="name">기타 격투기</div></a>
+    <a class="card" href="athletics-track.html"><div class="emoji">🏃</div><div class="name">육상 트랙</div></a>
+    <a class="card" href="athletics-field.html"><div class="emoji">🏃</div><div class="name">육상 기타</div></a>
+    <a class="card" href="swimming-racing.html"><div class="emoji">🏊</div><div class="name">수영 경영</div></a>
+    <a class="card" href="swimming-others.html"><div class="emoji">🤽</div><div class="name">수영 기타</div></a>
+    <a class="card" href="gymnastics.html"><div class="emoji">🤸</div><div class="name">체조</div></a>
+    <a class="card" href="weightlifting.html"><div class="emoji">🏋️</div><div class="name">역도</div></a>
+    <a class="card" href="archery.html"><div class="emoji">🏹</div><div class="name">양궁</div></a>
+    <a class="card" href="shooting.html"><div class="emoji">🎯</div><div class="name">사격</div></a>
+    <a class="card" href="fencing.html"><div class="emoji">🤺</div><div class="name">펜싱</div></a>
+    <a class="card" href="modern-pentathlon.html"><div class="emoji">🏇</div><div class="name">근대5종</div></a>
 
-<a class="card" href="athletics-track.html"><div class="emoji">🏃</div><div class="name">육상 트랙</div></a>
-<a class="card" href="athletics-field.html"><div class="emoji">🏃</div><div class="name">육상 기타</div></a>
-<a class="card" href="swimming-racing.html"><div class="emoji">🏊</div><div class="name">수영 경영</div></a>
-<a class="card" href="swimming-others.html"><div class="emoji">🤽</div><div class="name">수영 기타</div></a>
-<a class="card" href="gymnastics.html"><div class="emoji">🤸</div><div class="name">체조</div></a>
-<a class="card" href="weightlifting.html"><div class="emoji">🏋️</div><div class="name">역도</div></a>
-<a class="card" href="archery.html"><div class="emoji">🏹</div><div class="name">양궁</div></a>
-<a class="card" href="shooting.html"><div class="emoji">🎯</div><div class="name">사격</div></a>
-<a class="card" href="fencing.html"><div class="emoji">🤺</div><div class="name">펜싱</div></a>
-<a class="card" href="modern-pentathlon.html"><div class="emoji">🏇</div><div class="name">근대5종</div></a>
-
-<a class="card" href="sport-climbing.html"><div class="emoji">🧗</div><div class="name">클라이밍</div></a>
-<a class="card" href="skateboarding.html"><div class="emoji">🛹</div><div class="name">스케이트보드</div></a>
-<a class="card" href="esports.html"><div class="emoji">🎮</div><div class="name">E스포츠</div></a>
-<a class="card" href="breaking.html"><div class="emoji">🕺</div><div class="name">브레이킹</div></a>
-<a class="card" href="mma.html"><div class="emoji">🥊</div><div class="name">종합격투기</div></a>
-<a class="card" href="surfing.html"><div class="emoji">🏄</div><div class="name">서핑</div></a>
-<a class="card" href="sailing.html"><div class="emoji">⛵</div><div class="name">요트</div></a>
-<a class="card" href="canoe.html"><div class="emoji">🛶</div><div class="name">카누</div></a>
-<a class="card" href="rowing.html"><div class="emoji">🚣</div><div class="name">조정</div></a>
-<a class="card" href="others.html"><div class="emoji">📦</div><div class="name">기타</div></a>
-
+    <a class="card" href="sport-climbing.html"><div class="emoji">🧗</div><div class="name">클라이밍</div></a>
+    <a class="card" href="skateboarding.html"><div class="emoji">🛹</div><div class="name">스케이트보드</div></a>
+    <a class="card" href="esports.html"><div class="emoji">🎮</div><div class="name">E스포츠</div></a>
+    <a class="card" href="breaking.html"><div class="emoji">🕺</div><div class="name">브레이킹</div></a>
+    <a class="card" href="mma.html"><div class="emoji">🥊</div><div class="name">종합격투기</div></a>
+    <a class="card" href="surfing.html"><div class="emoji">🏄</div><div class="name">서핑</div></a>
+    <a class="card" href="sailing.html"><div class="emoji">⛵</div><div class="name">요트</div></a>
+    <a class="card" href="canoe.html"><div class="emoji">🛶</div><div class="name">카누</div></a>
+    <a class="card" href="rowing.html"><div class="emoji">🚣</div><div class="name">조정</div></a>
+    <a class="card" href="others.html"><div class="emoji">📦</div><div class="name">기타</div></a>
 </div>
 
 <footer>
-
-Made with HTML • GitHub Pages
-
+    Made with HTML • GitHub Pages
 </footer>
 
 </body>
