@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sports Center - 배구</title>
+    <style>
+        body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #eef2f7; display: flex; }
+        #side { width: 240px; background: #17324d; color: #fff; height: 100vh; position: fixed; padding: 20px; box-sizing: border-box; }
+        #content { margin-left: 240px; flex: 1; padding: 24px; }
+        .menu { padding: 10px; border-radius: 8px; cursor: pointer; margin: 6px 0; }
+        .menu:hover, .active { background: #2b5f8a; }
+        .card { background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,.1); }
+        
+        /* 정보 열람용 블록 스타일 */
+        .block { border: 1px solid #e0e0e0; border-radius: 8px; padding: 16px; margin-bottom: 16px; background: #fdfdfd; }
+        .block h2 { margin-top: 0; color: #17324d; font-size: 1.3rem; margin-bottom: 12px; border-bottom: 2px solid #e2e8f0; padding-bottom: 6px; }
+        .block p { margin: 0; color: #444; line-height: 1.6; white-space: pre-wrap; }
+
+        /* 2열 구조 레이아웃 */
+        .row-grid { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 10px; }
+        .col-half { flex: 1; min-width: 320px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; box-sizing: border-box; }
+        .col-half h3 { margin-top: 0; margin-bottom: 16px; font-size: 1.15rem; font-weight: bold; padding-bottom: 8px; }
+        .sub-blue { color: #1e40af; border-bottom: 2px solid #bfdbfe; }
+        .sub-red { color: #b91c1c; border-bottom: 2px solid #fecaca; }
+
+        /* 리스트 항목 스타일 */
+        .status-item { margin-bottom: 14px; background: #fff; border: 1px solid #edf2f7; border-radius: 6px; padding: 12px; }
+        .item-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+        .item-title { font-weight: bold; font-size: 1.05rem; color: #1e293b; }
+        .badge-right { font-size: 0.85rem; font-weight: bold; color: #64748b; background: #f1f5f9; padding: 2px 8px; border-radius: 4px; }
+        .info-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; }
+        .tag { font-size: 0.75rem; padding: 2px 6px; border-radius: 4px; font-weight: bold; }
+        .tag-vnl { background: #e0f2fe; color: #0369a1; }
+        .tag-world { background: #fef3c7; color: #d97706; }
+        .tag-asia { background: #f0fdf4; color: #16a34a; }
+        .tag-fail { background: #fee2e2; color: #dc2626; }
+        
+        /* 랭킹 게이지 바 시각화 */
+        .bar-bg { background: #e2e8f0; height: 6px; border-radius: 3px; overflow: hidden; width: 100%; margin-top: 6px; }
+        .bar-fill { height: 100%; border-radius: 3px; background: #3b82f6; }
+        .female-fill { background: #ef4444; }
+
+        /* 국가대표 명단 테이블 스타일 */
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; margin-bottom: 20px; font-size: 0.95rem; }
+        th, td { border: 1px solid #e2e8f0; padding: 10px; text-align: center; }
+        th { background-color: #f1f5f9; color: #1e293b; font-weight: bold; }
+        tr:nth-child(even) { background-color: #f8fafc; }
+    </style>
+</head>
+<body>
+    <div id="side">
+        <h2>Sports Center</h2>
+        <div class="menu active">1. 종목 소개</div>
+        <div class="menu">2. 국가대표팀</div>
+        <div class="menu">3. 남자 배구</div>
+        <div class="menu">4. 여자 배구</div>
+        <div class="menu">5. 비치 발리볼</div>
+        <div class="menu">6. 아시안게임</div>
+        <div class="menu">7. 올림픽 예선</div>
+    </div>
+    
+    <div id="content">
+        <div class="card">
+            <h1 id="ptitle"></h1>
+            <div id="blocks"></div>
+        </div>
+    </div>
+
+    <script>
+        const pages = [
+            {
+                name: '1. 종목 소개',
+                blocks: [
+                    {
+                        title: '올림픽 배구 역사 및 대한민국 성적',
+                        text: '올림픽 배구는 1964년 도쿄 대회부터 정식 종목으로 시작되었습니다.\n\n■ 남자 배구\n대한민국 남자 대표팀은 2000년 시드니 올림픽까지 총 8회나 본선 진출에 성공하며 아시아의 복병으로 활약했으나, 아쉽게도 이후 현재까지 올림픽 본선 무대를 밟지 못하고 있습니다.\n\n■ 여자 배구\n여자 대표팀은 올림픽 본선에 총 12회 진출한 탄탄한 이력을 가지고 있습니다. 역사적으로 1972년 뮌헨 올림픽 4위, 1976년 몬트리올 올림픽 동메달이라는 찬란한 기록을 남겼으며, 김연경 선수가 활약하던 시대에는 2012년 고전 런던 올림픽과 2020년 도쿄 올림픽에서 각각 레전드 매치를 쓰며 4위를 2회 기록했습니다. 다만, 최근 치러진 2024년 파리 올림픽은 진출에 실패하였으며 향후 올림픽 본선 전망도 다소 불투명한 상태입니다.'
+                    },
+                    {
+                        title: '아시안게임 및 비치발리볼 역사',
+                        text: '■ 아시안게임 배구 역사\n아시안게임에서 배구는 1958년 일본 도쿄 대회부터 정식 종목으로 개최되었으며, 여자부는 1962년 자카르타 대회를 기점으로 도입되었습니다.\n\n- 남자부 동향: 대한민국은 1978년, 2002년, 2006년 총 3회의 우승 기록을 보유하고 있습니다. 최근 국제 무대에서는 이란이 무서운 기세로 아시안게임 3연패를 달성하며 패권을 쥐고 있습니다.\n- 여자부 동향: 대한민국은 1994년 히로시마 대회와 2014년 인천 대회에서 총 2회 금메달을 획득했습니다. 이외에는 1982년 뉴델리 대회 이후 사실상 중국이 아시안게임 배구 왕좌를 독식하고 있습니다.\n\n■ 비치발리볼 정식 도입\n비치발리볼은 1998년 방콕 아시안게임 이후 정식 도입되었습니다. 대한민국은 저변 한계로 인해 아직 세계 무대나 아시아 무대에서 두드러진 성적을 내지 못하고 있으며, 본격적인 32강 제도가 확립된 2010년 광저우 대회 이후 현재까지 아시안게임 16강 이내에 단 한 번도 진입하지 못했습니다.'
+                    }
+                ]
+            },
+            {
+                name: '2. 국가대표팀',
+                isCustomLayout: true,
+                title: '대한민국 배구 국가대표팀 선수 명단',
+                htmlContent: `
+                    <h3 style="color: #1e40af; margin-bottom: 10px;">🔵 남자 배구 국가대표팀 엔트리</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>번호</th><th>성명</th><th>포지션</th><th>생년월일</th><th>신장</th><th>소속팀</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>2</td><td><b>황택의</b></td><td>S</td><td>1996.11.12</td><td>189cm</td><td>KB손해보험</td></tr>
+                            <tr><td>1</td><td><b>차영석</b></td><td>MB</td><td>1994.04.17</td><td>193cm</td><td>KB손해보험</td></tr>
+                            <tr><td>5</td><td><b>박경민</b></td><td>L</td><td>1999.06.05</td><td>170cm</td><td>현대캐피탈</td></tr>
+                            <tr><td>6</td><td><b>김영준</b></td><td>L</td><td>2000.10.18</td><td>174cm</td><td>우리카드</td></tr>
+                            <tr><td>9</td><td><b>임성진</b></td><td>OH</td><td>1999.01.11</td><td>195cm</td><td>국군체육부대</td></tr>
+                            <tr><td>12</td><td><b>박창성</b></td><td>MB</td><td>1998.09.21</td><td>200cm</td><td>OK저축은행</td></tr>
+                            <tr><td>15</td><td><b>김관우</b></td><td>S</td><td>2006.08.20</td><td>196cm</td><td>대한항공</td></tr>
+                            <tr><td>16</td><td><b>정한용</b></td><td>OH</td><td>2001.07.31</td><td>194cm</td><td>대한항공</td></tr>
+                            <tr><td>18</td><td><b>최준혁</b></td><td>MB</td><td>2004.03.25</td><td>205cm</td><td>대한항공</td></tr>
+                            <tr><td>20</td><td><b>이상현</b></td><td>MB</td><td>1999.04.07</td><td>200cm</td><td>국군체육부대</td></tr>
+                            <tr><td>30</td><td><b>신호진</b></td><td>OP</td><td>2001.02.26</td><td>187cm</td><td>현대캐피탈</td></tr>
+                            <tr><td>75</td><td><b>김요한</b></td><td>OP</td><td>2003.02.28</td><td>188cm</td><td>삼성화재</td></tr>
+                            <tr><td>77</td><td><b>윤서진</b></td><td>OH</td><td>2005.04.24</td><td>195cm</td><td>KB손해보험</td></tr>
+                            <tr><td>88</td><td><b>임재영</b></td><td>OH</td><td>1998.03.29</td><td>190cm</td><td>대한항공</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h3 style="color: #b91c1c; margin-top: 30px; margin-bottom: 10px;">🔴 여자 배구 국가대표팀 엔트리 (2026 AVC컵)</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>번호</th><th>성명</th><th>포지션</th><th>생년월일</th><th>신장</th><th>소속팀</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>97</td><td><b>강소휘</b></td><td>OH</td><td>1997.07.18</td><td>180cm</td><td>한국도로공사</td></tr>
+                            <tr><td>1</td><td><b>이예림</b></td><td>OH</td><td>1998.01.10</td><td>175cm</td><td>현대건설</td></tr>
+                            <tr><td>2</td><td><b>이주아</b></td><td>MB</td><td>2000.08.21</td><td>185cm</td><td>IBK기업은행</td></tr>
+                            <tr><td>3</td><td><b>김다인</b></td><td>S</td><td>1998.10.15</td><td>172cm</td><td>현대건설</td></tr>
+                            <tr><td>4</td><td><b>한다혜</b></td><td>L</td><td>1995.02.28</td><td>164cm</td><td>SOOP</td></tr>
+                            <tr><td>5</td><td><b>이영주</b></td><td>L</td><td>1999.03.09</td><td>161cm</td><td>현대건설</td></tr>
+                            <tr><td>6</td><td><b>박은진</b></td><td>MB</td><td>1999.12.15</td><td>187cm</td><td>정관장</td></tr>
+                            <tr><td>9</td><td><b>나현수</b></td><td>OP</td><td>1999.09.15</td><td>183cm</td><td>현대건설</td></tr>
+                            <tr><td>12</td><td><b>이다현</b></td><td>MB</td><td>2001.11.11</td><td>185cm</td><td>흥국생명</td></tr>
+                            <tr><td>14</td><td><b>정윤주</b></td><td>OH</td><td>2003.04.14</td><td>178cm</td><td>흥국생명</td></tr>
+                            <tr><td>15</td><td><b>김세빈</b></td><td>MB</td><td>2005.06.16</td><td>187cm</td><td>한국도로공사</td></tr>
+                            <tr><td>20</td><td><b>박여름</b></td><td>OH</td><td>2007.06.29</td><td>180cm</td><td>정관장</td></tr>
+                            <tr><td>21</td><td><b>이수연</b></td><td>S</td><td>2006.11.05</td><td>177cm</td><td>한국도로공사</td></tr>
+                            <tr><td>22</td><td><b>김효임</b></td><td>OH</td><td>2007.09.22</td><td>164cm</td><td>GS칼텍스</td></tr>
+                        </tbody>
+                    </table>
+                `
+            },
+            {
+                name: '3. 남자 배구',
+                isCustomLayout: true,
+                title: 'FIVB 최신 남자배구 세계랭킹 및 주요 성적 (2026.06.28 업데이트)',
+                htmlContent: `
+                    <div class="row-grid">
+                        <div class="col-half">
+                            <h3 class="sub-blue">🏐 아시아 최상위 그룹 (VNL 핵심국)</h3>
+                            
+                            <div class="status-item">
+                                <div class="item-meta"><span class="item-title">일본</span><span class="badge-right">FIVB 4위 (327.37pt)</span></div>
+                                <div class="info-tags">
+                                    <span class="badge tag-vnl">현재 VNL 1위</span><span class="badge tag-world">세계선수권 23위</span>
+                                </div>
+                                <div class="bar-bg"><div class="bar-fill" style="width: 90%;"></div></div>
+                            </div>
+
+                            <div class="status-item">
+                                <div class="item-meta"><span class="item-title">이란</span><span class="badge-right">FIVB 16위 (212.45pt)</span></div>
+                                <div class="info-tags">
+                                    <span class="badge tag-vnl">VNL 14위</span><span class="badge tag-world">세계선수권 8위(아시아 최고)</span>
+                                </div>
+                                <div class="bar-bg"><div class="bar-fill" style="width: 65%;"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="col-half">
+                            <h3 class="sub-blue">🏐 아시아 중위권 추격 그룹</h3>
+                            
+                            <div class="status-item">
+                                <div class="item-meta"><span class="item-title">카타르</span><span class="badge-right">FIVB 22위 (149.81pt)</span></div>
+                                <div class="info-tags"><span class="badge tag-world">세계선수권 22위</span></div>
+                                <div class="bar-bg"><div class="bar-fill" style="width: 48%;"></div></div>
+                            </div>
+
+                            <div class="status-item">
+                                <div class="item-meta"><span class="item-title">대한민국</span><span class="badge-right">FIVB 25위 (137.22pt)</span></div>
+                                <div class="info-tags">
+                                    <span class="badge tag-asia">세계선수권 27위</span><span class="badge tag-world">랭킹 경쟁 진행 중</span>
+                                </div>
+                                <div class="bar-bg"><div class="bar-fill" style="width: 42%;"></div></div>
+                            </div>
+
+                            <div class="status-item">
+                                <div class="item-meta"><span class="item-title">중국</span><span class="badge-right">FIVB 31위 (127.58pt)</span></div>
+                                <div class="info-tags"><span class="badge tag-vnl">VNL 17위</span></div>
+                                <div class="bar-bg"><div class="bar-fill" style="width: 30%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="font-size:0.85rem; color:#888; margin-top:15px;">※ 기타 참고: 필리핀(세계선수권 19위) / 본 지표는 아시아 상위 32위 이내의 핵심 국가만 발췌해 시각화한 수치입니다.</p>
+                `
+            },
+            {
+                name: '4. 여자 배구',
+                isCustomLayout: true,
+                title: 'FIVB 최신 여자배구 세계랭킹 및 주요 성적 (2026.06.28 업데이트)',
+                htmlContent: `
+                    <div class="row-grid">
+                        <div class="col-half">
+                            <h3 class="sub-red">🏐 아시아 엘리트 리더 보드</h3>
+                            
+                            <div class="status-item">
+                                <div class="item-meta"><span class="item-title">일본</span><span class="badge-right">FIVB 6위 (338.09pt)</span></div>
+                                <div class="info-tags">
+                                    <span class="badge tag-vnl">VNL 5위</span><span class="badge tag-world">세계선수권 9위</span>
+                                </div>
+                                <div class="bar-bg"><div class="bar-fill female-fill" style="width: 88%;"></div></div>
+                            </div>
+
+                            <div class="status-item">
+                                <div class="item-meta"><span class="item-title">중국</span><span class="badge-right">FIVB 7위 (334.29pt)</span></div>
+                                <div class="info-tags">
+                                    <span class="badge tag-vnl">VNL 8위</span><span class="badge tag-world">세계선수권 4위(아시아 최고)</span>
+                                </div>
+                                <div class="bar-bg"><div class="bar-fill female-fill" style="width: 85%;"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="col-half">
+                            <h3 class="sub-red">🏐 동남아시아 및 대한민국 라인</h3>
+                            
+                            <div class="status-item">
+                                <div class="item-meta"><span class="item-title">태국</span><span class="badge-right">FIVB 20위 (171.76pt)</span></div>
+                                <div class="info-tags">
+                                    <span class="badge tag-vnl">VNL 14위</span><span class="badge tag-world">세계선수권 13위</span>
+                                </div>
+                                <div class="bar-bg"><div class="bar-fill female-fill" style="width: 55%;"></div></div>
+                            </div>
+
+                            <div class="status-item">
+                                <div class="item-meta"><span class="item-title">베트남</span><span class="badge-right">FIVB 28위 (142.26pt)</span></div>
+                                <div class="info-tags"><span class="badge tag-world">세계선수권 31위</span></div>
+                                <div class="bar-bg"><div class="bar-fill female-fill" style="width: 38%;"></div></div>
+                            </div>
+
+                            <div class="status-item">
+                                <div class="item-meta"><span class="item-title">대한민국</span><span class="badge-right">FIVB 31위 (138.56pt)</span></div>
+                                <div class="info-tags">
+                                    <span class="badge tag-fail">세계선수권 미출전</span><span class="badge tag-asia">FIVB 32위 이내 수성 타깃</span>
+                                </div>
+                                <div class="bar-bg"><div class="bar-fill female-fill" style="width: 30%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            {
+                name: '5. 비치 발리볼',
+                isCustomLayout: true,
+                title: '대한민국 비치발리볼 대표팀 명단 및 현황',
+                htmlContent: `
+                    <div class="status-item">
+                        <div class="item-meta"><span class="item-title" style="color:#d97706;">🏖️ 대한민국 비치발리볼 국가대표 명단 (총 8인)</span></div>
+                        <p style="margin-top: 10px; font-weight: bold; font-size: 1.05rem; color:#334155; line-height: 2;">
+                            김정아, 김현주, 배상빈, 배인호, 서가은, 신지은, 여민수, 오정택
+                        </p>
+                    </div>
+                    <div class="block" style="margin-top: 20px; border-style: dashed; background-color:#fafafa;">
+                        <p style="color:#666;">※ 비치발리볼 종목 특성상 아시안게임 등 주요 메이저 대회 진출 및 시드 배정은 전적으로 누적 세계랭킹 상위 선수를 우선 선발하는 시스템입니다. 대표팀은 포인트를 보강하기 위한 국제 토너먼트 일정을 수립 중입니다.</p>
+                    </div>
+                `
+            },
+            {
+                name: '6. 아시안게임',
+                blocks: [
+                    {
+                        title: '2026 아이치·나고야 아시안게임 대진 편성 정보',
+                        text: '배구 종목의 남녀부 구체적인 조 편성 결과 및 토너먼트 최종 대진표 일정 정보는 아시아배구연맹(AVC) 및 조직위원회의 공식 오피셜 릴리즈 이후 본 항에 실시간으로 업데이트될 예정입니다.'
+                    }
+                ]
+            },
+            {
+                name: '7. 올림픽 예선',
+                blocks: [
+                    {
+                        title: 'FIVB 올림픽 일반 배구 및 비치발리볼 선발 규정',
+                        text: '■ 일반 실내 배구 본선 선발 구조\n실내 배구의 올림픽 본선 출전권을 획득하기 위한 조건은 매우 까다로우며 사실상 세계 최상위 엘리트 국가들을 위주로 편성됩니다.\n1. 대륙별 예선전 1위 국가 배정\n2. (대륙별 1위 국가들을 제외한) 월드컵 최종 성적 상위 3개 팀 선발\n3. (위 자격 요건을 충족한 국가들을 제외한) FIVB 최종 세계랭킹 상위 3개 팀에게 최종 잔여 티켓 배정\n\n★ 결과적으로 사실상 FIVB 세계랭킹 10위권 이내에 진입한 초강대국 국가들 중심의 바늘구멍 선발 제도입니다.\n\n■ 비치발리볼 선발 구조\n비치발리볼 또한 예외 없이 철저한 국제 포인트 적립 시스템을 기반으로 운영되며, 대부분 세계랭킹 최상위권에 포진한 엘리트 선수조를 위주로 본선 출전권을 최종 부여하게 됩니다.'
+                    }
+                ]
+            }
+        ];
+
+        let cur = 0;
+        const ptitle = document.getElementById('ptitle');
+        const blocks = document.getElementById('blocks');
+
+        document.querySelectorAll('.menu').forEach((m, i) => m.onclick = () => {
+            document.querySelectorAll('.menu').forEach(x => x.classList.remove('active'));
+            m.classList.add('active');
+            cur = i;
+            render();
+        });
+
+        function render() {
+            ptitle.textContent = pages[cur].name;
+            blocks.innerHTML = '';
+            
+            if (pages[cur].isCustomLayout) {
+                let d = document.createElement('div');
+                d.className = 'block';
+                d.innerHTML = `<h2>${pages[cur].title}</h2>${pages[cur].htmlContent}`;
+                blocks.appendChild(d);
+            } else {
+                pages[cur].blocks.forEach((b) => {
+                    let d = document.createElement('div');
+                    d.className = 'block';
+                    d.innerHTML = `<h2>${b.title}</h2><p>${b.text}</p>`;
+                    blocks.appendChild(d);
+                });
+            }
+        }
+
+        render();
+    </script>
+</body>
+</html>
