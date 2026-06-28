@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sports Center - 하키</title>
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; background: #eef2f7; display: flex; }
+        #side { width: 240px; background: #17324d; color: #fff; height: 100vh; position: fixed; padding: 20px; box-sizing: border-box; }
+        #content { margin-left: 240px; flex: 1; padding: 24px; }
+        .menu { padding: 10px; border-radius: 8px; cursor: pointer; margin: 6px 0; }
+        .menu:hover, .active { background: #2b5f8a; }
+        .card { background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,.1); }
+        
+        /* 깔끔한 정보 열람용 블록 스타일 */
+        .block { border: 1px solid #e0e0e0; border-radius: 8px; padding: 16px; margin-bottom: 16px; background: #fdfdfd; }
+        .block h2 { margin-top: 0; color: #17324d; font-size: 1.3rem; margin-bottom: 12px; border-bottom: 2px solid #e2e8f0; padding-bottom: 6px; }
+        .block h3 { color: #2b5f8a; font-size: 1.1rem; margin-top: 16px; margin-bottom: 8px; }
+        .block p { margin: 0; color: #444; line-height: 1.6; white-space: pre-wrap; }
+        ul { margin: 6px 0; padding-left: 20px; color: #444; line-height: 1.6; }
+        li { margin-bottom: 4px; }
+    </style>
+</head>
+<body>
+    <div id="side">
+        <h2>Sports Center</h2>
+        <div class="menu active">1. 종목 소개</div>
+        <div class="menu">2. 2026 국가대표</div>
+        <div class="menu">3. 국제대회 시즌</div>
+        <div class="menu">4. 나고야 아시안게임</div>
+        <div class="menu">5. LA 올림픽</div>
+    </div>
+    
+    <div id="content">
+        <div class="card">
+            <h1 id="ptitle"></h1>
+            <div id="blocks"></div>
+        </div>
+    </div>
+
+    <script>
+        // 제공된 하키 데이터를 기반으로 한 고정 데이터 구조 (입력/수정 기능 제거)
+        const pages = [
+            {
+                name: '종목 소개',
+                blocks: [
+                    {
+                        title: '올림픽 하키 역사 및 아시아 국가 성적',
+                        text: '필드하키는 1908년 런던 올림픽에서 남자 경기로 근대 올림픽에 처음 도입되었습니다. 1924년 파리 하계 올림픽에서는 잠시 종목에서 제외되었다가, 1928년 암스테르담 올림픽에서 다시 채택되었습니다. 여자 필드하키의 경우 1980년 모스크바 올림픽부터 정식 종목으로 채택되어 개최되고 있습니다. 종목 관장 단체인 국제하키연맹(FIH)은 1924년에 설립되었으며, 1988년 하계 올림픽까지 올림픽 하키 대회를 직접 주최했습니다.\n\n[지난 올림픽 아시아 국가 성적]\n- 남자부: 아시안게임 우승국인 인도가 아시아 대표로 출전하여 최종 3위를 기록했습니다.\n- 여자부: 아시안게임 우승국인 중국과 예선을 통과한 일본이 출전했으며, 중국이 준우승을 차지하는 쾌거를 이루었습니다.'
+                    },
+                    {
+                        title: '아시안게임 하키 역사 및 대한민국 성적',
+                        text: '필드하키는 1958년 일본 도쿄 아시안게임부터 남자부 정식 종목으로 채택되었습니다. 여자 필드하키 경기는 1982년 인도 뉴델리 아시안게임부터 도입되었습니다.\n\n[남녀부 최근 동향 및 역대 성적]\n- 남자부: 최근 우승국은 인도이며, 대한민국 대표팀은 2002년 부산 대회와 2006년 도하 대회에서 연속 챔피언 자리에 오른 바 있습니다.\n- 여자부: 최근 우승국은 중국입니다. 대한민국은 당시 대회에서 준우승을 차지했으며, 역사적으로는 2014년 인천 아시안게임에서 우승을 거둔 주역입니다. 한편 중국은 2002년 이후 총 4회 우승을 달성하며 강세를 이어가고 있습니다.'
+                    }
+                ]
+            },
+            {
+                name: '2026 국가대표',
+                blocks: [
+                    {
+                        title: '대한민국 하키 국가대표팀 명단',
+                        text: '현재 최종 선발 명단이 확정되지 않았습니다. 공식 명단 발표 후 업데이트될 예정입니다.'
+                    }
+                ]
+            },
+            {
+                name: '국제대회 시즌',
+                blocks: [
+                    {
+                        title: '현재 FIH 프로리그 및 네이션스컵 국가별 위치',
+                        text: '현재 국제하키연맹(FIH) 주관 주요 리그에서의 아시아 핵심 국가별 위치 및 25-26 시즌 성적 현황입니다.\n\n[남자부 현황]\n- 인도: 25-26 프로리그 8위\n- 파키스탄: 25-26 프로리그 9위 / 9개 팀 중 최하위 (네이션스컵으로 강등)\n- 일본: 25-26 네이션스컵 4위\n- 말레이시아: 25-26 네이션스컵 5위\n- 대한민국: 25-26 네이션스컵 9위 / 9개 팀 중 최하위\n- 중국: 네이션스컵 2 위치 (25-26 시즌은 취소)\n- 오만: 네이션스컵 2 위치\n\n[여자부 현황]\n- 중국: 25-26 프로리그 4위 / 9개 팀 중 4위\n- 인도: 25-26 네이션스컵 1위 (다음 시즌 프로리그 승격 확정)\n- 대한민국: 25-26 네이션스컵 5위\n- 일본: 25-26 네이션스컵 6위 / 8개 팀 중 6위'
+                    }
+                ]
+            },
+            {
+                name: '나고야 아시안게임',
+                blocks: [
+                    {
+                        title: '아시안게임 하키 출전국 및 선발 기준',
+                        text: '[아시안게임 출전 쿼터 배정 기준]\n하키 종목은 직전 아시안게임 상위 6개국과 별도의 대륙별 예선 대회를 거쳐 선발된 나라(남자 6개국, 여자 4개국)들이 최종 출전권을 획득하게 됩니다.\n\n[최종 아시안게임 출전국 명단]\n\n■ 남자부 (총 12개국)\n대한민국, 인도, 파키스탄, 일본, 말레이시아, 중국, 방글라데시, 대만, 인도네시아, 오만, 스리랑카, 우즈베키스탄\n\n■ 여자부 (총 10개국)\n대한민국, 중국, 인도, 일본, 말레이시아, 방글라데시, 대만, 인도네시아, 싱가포르, 태국'
+                    }
+                ]
+            },
+            {
+                name: 'LA 올림픽',
+                blocks: [
+                    {
+                        title: '올림픽 출전 정보',
+                        text: '아시안게임 등 대륙별 종합대회 및 FIH 올림픽 최종 예선의 성적에 따라 올림픽 본선 티켓이 주어집니다. 상세 일정 및 기준은 추후 업데이트 예정입니다.'
+                    }
+                ]
+            }
+        ];
+
+        let cur = 0;
+        const ptitle = document.getElementById('ptitle');
+        const blocks = document.getElementById('blocks');
+
+        // 메뉴 전환 인터랙션만 유지
+        document.querySelectorAll('.menu').forEach((m, i) => m.onclick = () => {
+            document.querySelectorAll('.menu').forEach(x => x.classList.remove('active'));
+            m.classList.add('active');
+            cur = i;
+            render();
+        });
+
+        // 깔끔하게 데이터를 화면에 바인딩해주는 함수
+        function render() {
+            ptitle.textContent = pages[cur].name;
+            blocks.innerHTML = '';
+            
+            pages[cur].blocks.forEach((b) => {
+                let d = document.createElement('div');
+                d.className = 'block';
+                d.innerHTML = `<h2>${b.title}</h2><p>${b.text}</p>`;
+                blocks.appendChild(d);
+            });
+        }
+
+        // 초기 화면 랜더링
+        render();
+    </script>
+</body>
+</html>
