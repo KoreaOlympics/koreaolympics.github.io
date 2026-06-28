@@ -3,33 +3,54 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Sports Center CMS v1 - 태권도 (보안 적용)</title>
+    <title>Sports Center CMS v2 - 태권도 (게시판형 편집)</title>
     <style>
         body { margin: 0; font-family: Arial, sans-serif; background: #eef2f7; display: flex; }
         #side { width: 240px; background: #17324d; color: #fff; height: 100vh; position: fixed; padding: 20px; box-sizing: border-box; }
         #content { margin-left: 240px; flex: 1; padding: 24px; }
         .menu { padding: 10px; border-radius: 8px; cursor: pointer; margin: 6px 0; }
         .menu:hover, .active { background: #2b5f8a; }
-        .card { background: #fff; border-radius: 12px; padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,.1); }
-        #editor { display: none; margin-top: 20px; }
-        .block { border-top: 1px solid #ddd; padding: 12px 0; position: relative; }
-        .tools { position: absolute; right: 0; top: 8px; }
-        .tools button { margin-left: 4px; }
-        textarea, input { width: 100%; margin: 6px 0; padding: 8px; box-sizing: border-box; }
-        button { padding: 8px 12px; cursor: pointer; }
+        .card { background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,.1); }
+        
+        /* 게시판형 블록 스타일 */
+        .block { border: 1px solid #e0e0e0; border-radius: 8px; padding: 16px; margin-bottom: 16px; position: relative; background: #fdfdfd; }
+        .block h2 { margin-top: 0; color: #17324d; font-size: 1.3rem; margin-bottom: 10px; }
+        .block p { margin: 0; color: #444; line-height: 1.6; white-space: pre-wrap; }
+        .block img { max-width: 100%; max-height: 400px; display: block; margin-top: 12px; border-radius: 4px; }
+        
+        /* 인라인 편집 모드 스타일 */
+        .edit-fields { display: none; margin-top: 10px; background: #f0f4f8; padding: 12px; border-radius: 6px; }
+        .edit-fields input, .edit-fields textarea { width: 100%; margin: 4px 0; padding: 8px; box-sizing: border-box; border: 1px solid #cbd5e1; border-radius: 4px; font-family: inherit; }
+        
+        /* 도구 버튼 */
+        .tools { display: none; position: absolute; right: 12px; top: 12px; }
+        .tools button { margin-left: 4px; padding: 4px 8px; font-size: 0.85rem; border: 1px solid #ccc; border-radius: 4px; background: #fff; cursor: pointer; }
+        .tools button.del-btn { background: #fee2e2; color: #dc2626; border-color: #fca5a5; }
+        .tools button.save-btn { background: #dcfce7; color: #15803d; border-color: #86efac; }
+        
+        /* 하단 작성기 */
+        #editor { display: none; margin-top: 24px; padding-top: 20px; border-top: 2px dashed #cbd5e1; }
+        #editor h3 { margin-top: 0; color: #17324d; }
+        textarea, input { width: 100%; margin: 6px 0; padding: 10px; box-sizing: border-box; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit; }
+        textarea { height: 120px; resize: vertical; }
+        button.add-btn { padding: 10px 20px; background: #17324d; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; }
+        button.add-btn:hover { background: #2b5f8a; }
+        
+        button.save-page-btn { padding: 10px; width: 100%; background: #22c55e; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; margin-top: 10px; }
+        button.save-page-btn:hover { background: #16a34a; }
     </style>
 </head>
 <body>
     <div id="side">
         <h2>Sports Center</h2>
-        <div class="menu active" data-idx="0">1. 종목 소개</div>
-        <div class="menu" data-idx="1">2. 2026 국가대표</div>
-        <div class="menu" data-idx="2">3. 국제대회 시즌</div>
-        <div class="menu" data-idx="3">4. 나고야 아시안게임</div>
-        <div class="menu" data-idx="4">5. LA 올림픽</div>
+        <div class="menu active">1. 종목 소개</div>
+        <div class="menu">2. 2026 국가대표</div>
+        <div class="menu">3. 국제대회 시즌</div>
+        <div class="menu">4. 나고야 아시안게임</div>
+        <div class="menu">5. LA 올림픽</div>
         <hr>
-        <label><input type="checkbox" id="toggle"> 편집모드</label><br><br>
-        <button onclick="downloadPage()">💾 HTML 저장</button>
+        <label style="cursor: pointer; font-weight: bold;"><input type="checkbox" id="toggle"> ⚙️ 편집모드 켜기</label><br><br>
+        <button class="save-page-btn" onclick="downloadPage()">💾 HTML 최종 저장</button>
     </div>
     
     <div id="content">
@@ -38,55 +59,46 @@
             <div id="blocks"></div>
             
             <div id="editor">
-                <h3>새 블록 추가</h3>
-                <input id="t" placeholder="제목">
-                <textarea id="c" placeholder="내용"></textarea>
-                <input id="img" placeholder="이미지 URL 또는 <img ...>">
-                <button onclick="addBlock()">추가</button>
+                <h3>✍️ 새 게시글 추가</h3>
+                <input id="t" placeholder="제목을 입력하세요">
+                <textarea id="c" placeholder="내용을 입력하세요"></textarea>
+                <input id="img" placeholder="삽입할 이미지 URL을 입력하세요 (선택사항)">
+                <button class="add-btn" onclick="addBlock()">게시글 등록</button>
             </div>
         </div>
     </div>
 
     <script>
-        // 변경된 보안 비밀번호
         const ADMIN_PASSWORD = "2810";
 
-        // 비밀번호 검증 함수
-        function checkPermission() {
-            const pw = prompt("편집 권한이 필요합니다. 비밀번호를 입력하세요:");
-            if (pw === ADMIN_PASSWORD) {
-                return true;
-            } else {
-                alert("비밀번호가 올바르지 않습니다.");
-                return false;
-            }
-        }
-
-        const pages = [
+        // 기본 데이터 구조
+        const defaultPages = [
             {
                 name: '종목 소개',
                 blocks: [
                     {
                         title: '올림픽 태권도 역사 및 대한민국 성적',
-                        text: '태권도는 1988년 대한민국 서울 올림픽에서 시범 종목으로 처음 도입되었습니다. 당시 개막식에서는 수백 명의 성인과 어린이가 일제히 동작을 수행하는 대규모 태권도 시범이 펼쳐졌습니다. 이후 1992년 스페인 바르셀로나 올림픽에서도 다시 한번 시범 종목으로 채택되었습니다.\n\n태권도는 2000년 호주 시드니 올림픽부터 정식 메달 종목이 되었으며, 이후 올림픽 정식 종목으로 자리를 지켜오고 있습니다.\n\n[올림픽 태권도 통산 순위]\n1위 대한민국 (금 14 / 은 3 / 동 8 / 총 25)'
+                        text: '태권도는 1988년 대한민국 서울 올림픽에서 시범 종목으로 처음 도입되었습니다. 당시 개막식에서는 수백 명의 성인과 어린이가 일제히 동작을 수행하는 대규모 태권도 시범이 펼쳐졌습니다. 이후 1992년 스페인 바르셀로나 올림픽에서도 다시 한번 시범 종목으로 채택되었습니다.\n\n태권도는 2000년 호주 시드니 올림픽부터 정식 메달 종목이 되었으며, 이후 올림픽 정식 종목으로 자리를 지켜오고 있습니다.\n\n[올림픽 태권도 통산 순위]\n1위 대한민국 (금 14 / 은 3 / 동 8 / 총 25)',
+                        img: ''
                     },
                     {
                         title: '아시안게임 태권도 역사 및 대한민국 성적',
-                        text: '태권도 경기는 1986년 대한민국 서울 대회 이후 모든 아시안게임에서 정식 종목으로 치러져 왔습니다.\n\n[2022 항저우 아시안게임 성적]\n1위 대한민국 (금 5 / 은 2 / 동 2 / 총 9)'
+                        text: '태권도 경기는 1986년 대한민국 서울 대회 이후 모든 아시안게임에서 정식 종목으로 치러져 왔습니다.\n\n[2022 항저우 아시안게임 성적]\n1위 대한민국 (금 5 / 은 2 / 동 2 / 총 9)',
+                        img: ''
                     }
                 ]
             },
             {
                 name: '2026 국가대표',
                 blocks: [
-                    { title: '남자 -58kg 안향식', text: '(내용을 입력해 주세요.)' },
-                    { title: '남자 -68kg 문진호', text: '(내용을 입력해 주세요.)' },
-                    { title: '남자 -80kg 강재권', text: '(내용을 입력해 주세요.)' },
-                    { title: '남자 +80kg 강상현', text: '(내용을 입력해 주세요.)' },
-                    { title: '여자 -49kg 이유민', text: '(내용을 입력해 주세요.)' },
-                    { title: '여자 -57kg 김유진', text: '(내용을 입력해 주세요.)' },
-                    { title: '여자 -67kg 곽민주', text: '(내용을 입력해 주세요.)' },
-                    { title: '여자 +67kg 송다빈', text: '(내용을 입력해 주세요.)' }
+                    { title: '남자 -58kg 안향식', text: '', img: '' },
+                    { title: '남자 -68kg 문진호', text: '', img: '' },
+                    { title: '남자 -80kg 강재권', text: '', img: '' },
+                    { title: '남자 +80kg 강상현', text: '', img: '' },
+                    { title: '여자 -49kg 이유민', text: '', img: '' },
+                    { title: '여자 -57kg 김유진', text: '', img: '' },
+                    { title: '여자 -67kg 곽민주', text: '', img: '' },
+                    { title: '여자 +67kg 송다빈', text: '', img: '' }
                 ]
             },
             { name: '국제대회 시즌', blocks: [] },
@@ -94,7 +106,15 @@
             { name: 'LA 올림픽', blocks: [] }
         ];
 
+        let pages = JSON.parse(localStorage.getItem('tkd_sports_center_v2')) || defaultPages;
+
+        function saveToStorage() {
+            localStorage.setItem('tkd_sports_center_v2', JSON.stringify(pages));
+        }
+
         let cur = 0;
+        let isEditMode = false;
+
         const ptitle = document.getElementById('ptitle');
         const blocks = document.getElementById('blocks');
         const toggle = document.getElementById('toggle');
@@ -110,64 +130,122 @@
             render();
         });
 
-        // 편집모드 체크박스를 켤 때 비밀번호 확인
+        // 편집모드 토글 버튼 (켤 때만 패스워드 검증)
         toggle.onchange = () => {
             if (toggle.checked) {
-                if (checkPermission()) {
+                const pw = prompt("편집 권한이 필요합니다. 비밀번호를 입력하세요:");
+                if (pw === ADMIN_PASSWORD) {
+                    isEditMode = true;
                     editor.style.display = 'block';
                 } else {
-                    toggle.checked = false; // 틀리면 체크 해제
+                    alert("비밀번호가 올바르지 않습니다.");
+                    toggle.checked = false;
+                    isEditMode = false;
                     editor.style.display = 'none';
                 }
             } else {
+                isEditMode = false;
                 editor.style.display = 'none';
             }
+            render();
         };
 
         function render() {
             ptitle.textContent = pages[cur].name;
             blocks.innerHTML = '';
+            
             pages[cur].blocks.forEach((b, i) => {
                 let d = document.createElement('div');
                 d.className = 'block';
+                
+                // 이미지 태그 처리 (URL만 있으면 인라인으로 깔끔하게 노출)
                 let imgHtml = '';
-                if (b.img) {
-                    imgHtml = b.img.trim().startsWith('<img') ? b.img : '<img src="' + b.img + '" style="max-width:100%;margin-top:10px">';
+                if (b.img && b.img.trim() !== '') {
+                    imgHtml = b.img.trim().startsWith('<img') ? b.img : `<img src="${b.img.trim()}">`;
                 }
-                d.innerHTML = '<div class="tools"><button onclick="editBlock(' + i + ')">✏</button><button onclick="delBlock(' + i + ')">🗑</button></div><h2>' + b.title + '</h2><p>' + b.text.replace(/\n/g, '<br>') + '</p>' + imgHtml;
+                
+                // 기본 보기 화면 레이아웃
+                d.innerHTML = `
+                    <div class="tools" style="display: ${isEditMode ? 'block' : 'none'}">
+                        <button onclick="toggleInlineEdit(${i})">✏️ 수정</button>
+                        <button class="del-btn" onclick="delBlock(${i})">🗑️ 삭제</button>
+                    </div>
+                    <div id="view-area-${i}">
+                        <h2>${b.title || '(제목 없음)'}</h2>
+                        <p>${b.text ? b.text.replace(/\n/g, '<br>') : '<span style="color:#aaa; font-style:italic;">내용이 비어 있습니다. 수정 버튼을 눌러 내용을 채워보세요.</span>'}</p>
+                        ${imgHtml}
+                    </div>
+                    <div id="edit-area-${i}" class="edit-fields">
+                        <label>제목</label>
+                        <input type="text" id="edit-t-${i}" value="${b.title || ''}">
+                        <label>내용</label>
+                        <textarea id="edit-c-${i}">${b.text || ''}</textarea>
+                        <label>이미지 URL</label>
+                        <input type="text" id="edit-img-${i}" value="${b.img || ''}" placeholder="http://... 이미지 주소">
+                        <div style="margin-top: 10px; text-align: right;">
+                            <button class="save-btn" onclick="saveInlineEdit(${i})">✔️ 수정완료</button>
+                            <button onclick="toggleInlineEdit(${i})">❌ 취소</button>
+                        </div>
+                    </div>
+                `;
                 blocks.appendChild(d);
             });
         }
 
-        function addBlock() {
-            pages[cur].blocks.push({ title: t.value, text: c.value, img: img.value });
-            t.value = c.value = img.value = '';
-            render();
-        }
-
-        function delBlock(i) {
-            if (checkPermission()) {
-                pages[cur].blocks.splice(i, 1);
-                render();
+        // 인라인 수정창 토글
+        function toggleInlineEdit(i) {
+            const editArea = document.getElementById(`edit-area-${i}`);
+            const viewArea = document.getElementById(`view-area-${i}`);
+            if (editArea.style.display === 'block') {
+                editArea.style.display = 'none';
+                viewArea.style.display = 'block';
+            } else {
+                editArea.style.display = 'block';
+                viewArea.style.display = 'none';
             }
         }
 
-        function editBlock(i) {
-            if (checkPermission()) {
-                let b = pages[cur].blocks[i];
-                b.title = prompt('제목', b.title) || b.title;
-                b.text = prompt('내용', b.text) || b.text;
-                let ni = prompt('이미지(URL 또는 <img>)', b.img);
-                if (ni != null) b.img = ni;
+        // 인라인 수정 완료 버튼 클릭 시
+        function saveInlineEdit(i) {
+            const newTitle = document.getElementById(`edit-t-${i}`).value;
+            const newText = document.getElementById(`edit-c-${i}`).value;
+            const newImg = document.getElementById(`edit-img-${i}`).value;
+            
+            pages[cur].blocks[i].title = newTitle;
+            pages[cur].blocks[i].text = newText;
+            pages[cur].blocks[i].img = newImg;
+            
+            saveToStorage();
+            render();
+        }
+
+        // 새 게시글 추가
+        function addBlock() {
+            if (!t.value.trim() && !c.value.trim()) {
+                alert("제목이나 내용 중 하나는 입력해야 합니다.");
+                return;
+            }
+            pages[cur].blocks.push({ title: t.value, text: c.value, img: img.value });
+            t.value = c.value = img.value = '';
+            saveToStorage();
+            render();
+        }
+
+        // 게시글 삭제
+        function delBlock(i) {
+            if (confirm("정말 이 게시글을 삭제하시겠습니까?")) {
+                pages[cur].blocks.splice(i, 1);
+                saveToStorage();
                 render();
             }
         }
 
         function downloadPage() {
+            // 원본 파일 형태로 다운로드 시 로컬스토리지 최신 데이터 동기화 포함
             const blob = new Blob([document.documentElement.outerHTML], { type: 'text/html' });
             let a = document.createElement('a');
             a.href = URL.createObjectURL(blob);
-            a.download = 'SportsCenter_Taekwondo_Secure.html';
+            a.download = 'SportsCenter_Taekwondo_Board.html';
             a.click();
         }
 
