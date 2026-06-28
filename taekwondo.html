@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Sports Center CMS v2 - 태권도 (상세 데이터 반영본)</title>
+    <title>Sports Center CMS v3 - 태권도 (경량 게시판형)</title>
     <style>
         body { margin: 0; font-family: Arial, sans-serif; background: #eef2f7; display: flex; }
         #side { width: 240px; background: #17324d; color: #fff; height: 100vh; position: fixed; padding: 20px; box-sizing: border-box; }
@@ -12,23 +12,17 @@
         .menu:hover, .active { background: #2b5f8a; }
         .card { background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,.1); }
         
-        /* 게시판형 블록 스타일 */
+        /* 깔끔한 게시판형 블록 스타일 */
         .block { border: 1px solid #e0e0e0; border-radius: 8px; padding: 16px; margin-bottom: 16px; position: relative; background: #fdfdfd; }
         .block h2 { margin-top: 0; color: #17324d; font-size: 1.3rem; margin-bottom: 10px; }
         .block p { margin: 0; color: #444; line-height: 1.6; white-space: pre-wrap; }
         .block img { max-width: 100%; max-height: 400px; display: block; margin-top: 12px; border-radius: 4px; }
         
-        /* 인라인 편집 모드 스타일 */
-        .edit-fields { display: none; margin-top: 10px; background: #f0f4f8; padding: 12px; border-radius: 6px; }
-        .edit-fields input, .edit-fields textarea { width: 100%; margin: 4px 0; padding: 8px; box-sizing: border-box; border: 1px solid #cbd5e1; border-radius: 4px; font-family: inherit; }
-        
-        /* 도구 버튼 */
+        /* 삭제 도구 버튼 (편집모드 시에만 우측 상단 노출) */
         .tools { display: none; position: absolute; right: 12px; top: 12px; }
-        .tools button { margin-left: 4px; padding: 4px 8px; font-size: 0.85rem; border: 1px solid #ccc; border-radius: 4px; background: #fff; cursor: pointer; }
-        .tools button.del-btn { background: #fee2e2; color: #dc2626; border-color: #fca5a5; }
-        .tools button.save-btn { background: #dcfce7; color: #15803d; border-color: #86efac; }
+        .tools button.del-btn { padding: 4px 8px; font-size: 0.85rem; border: 1px solid #fca5a5; border-radius: 4px; background: #fee2e2; color: #dc2626; cursor: pointer; }
         
-        /* 하단 작성기 */
+        /* 하단 인라인 작성 창 (게시판 입력란) */
         #editor { display: none; margin-top: 24px; padding-top: 20px; border-top: 2px dashed #cbd5e1; }
         #editor h3 { margin-top: 0; color: #17324d; }
         textarea, input { width: 100%; margin: 6px 0; padding: 10px; box-sizing: border-box; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit; }
@@ -58,6 +52,7 @@
             <h1 id="ptitle"></h1>
             <div id="blocks"></div>
             
+            <!-- 인라인 텍스트 및 이미지 추가 창 -->
             <div id="editor">
                 <h3>✍️ 새 게시글 추가</h3>
                 <input id="t" placeholder="제목을 입력하세요">
@@ -71,7 +66,7 @@
     <script>
         const ADMIN_PASSWORD = "2810";
 
-        // 요청하신 상세 텍스트를 초기 데이터 구조로 파싱하여 배치
+        // 기존 상세 태권도 데이터 세팅 유지
         const defaultPages = [
             {
                 name: '종목 소개',
@@ -116,7 +111,7 @@
                     },
                     {
                         title: '3.2. 월드태권도 그랑프리',
-                        text: '이전 그랑프리 챌린지 메달리스트들과 해당 시점 당시 세계랭킹 상위권 선수들이 특별 초청되어 치러지는 구조입니다.\n\n※ 본 대회는 랭킹 포인트 획득을 위한 초청제 대회로, 국내 국가대표 선발전 및 아시안게임 출전권 배정과는 직접적인 연관성이 없습니다.',
+                        text: '이전 그랑프리 챌린지 메달리스트들도 포함, 해당 시점 당시 세계랭킹 상위권 선수들이 특별 초청되어 치러지는 구조입니다.\n\n※ 본 대회는 랭킹 포인트 획득을 위한 초청제 대회로, 국내 국가대표 선발전 및 아시안게임 출전권 배정과는 직접적인 연관성이 없습니다.',
                         img: ''
                     }
                 ]
@@ -125,10 +120,10 @@
             { name: 'LA 올림픽', blocks: [] }
         ];
 
-        let pages = JSON.parse(localStorage.getItem('tkd_sports_center_v2')) || defaultPages;
+        let pages = JSON.parse(localStorage.getItem('tkd_sports_center_v3')) || defaultPages;
 
         function saveToStorage() {
-            localStorage.setItem('tkd_sports_center_v2', JSON.stringify(pages));
+            localStorage.setItem('tkd_sports_center_v3', JSON.stringify(pages));
         }
 
         let cur = 0;
@@ -149,6 +144,7 @@
             render();
         });
 
+        // 편집모드를 켤 때만 한 번 비밀번호 검증
         toggle.onchange = () => {
             if (toggle.checked) {
                 const pw = prompt("편집 권한이 필요합니다. 비밀번호를 입력하세요:");
@@ -181,53 +177,22 @@
                     imgHtml = b.img.trim().startsWith('<img') ? b.img : `<img src="${b.img.trim()}">`;
                 }
                 
+                // 복잡한 인라인 수정란 제거, 삭제 버튼(🗑️)만 편집모드 시 노출되도록 간소화
                 d.innerHTML = `
                     <div class="tools" style="display: ${isEditMode ? 'block' : 'none'}">
-                        <button onclick="toggleInlineEdit(${i})">✏️ 수정</button>
                         <button class="del-btn" onclick="delBlock(${i})">🗑️ 삭제</button>
                     </div>
-                    <div id="view-area-${i}">
+                    <div>
                         <h2>${b.title || '(제목 없음)'}</h2>
-                        <p>${b.text ? b.text.replace(/\n/g, '<br>') : '<span style="color:#aaa; font-style:italic;">내용이 없습니다.</span>'}</p>
+                        <p>${b.text ? b.text.replace(/\n/g, '<br>') : ''}</p>
                         ${imgHtml}
-                    </div>
-                    <div id="edit-area-${i}" class="edit-fields">
-                        <label>제목</label>
-                        <input type="text" id="edit-t-${i}" value="${b.title || ''}">
-                        <label>내용</label>
-                        <textarea id="edit-c-${i}">${b.text || ''}</textarea>
-                        <label>이미지 URL</label>
-                        <input type="text" id="edit-img-${i}" value="${b.img || ''}" placeholder="http://... 이미지 주소">
-                        <div style="margin-top: 10px; text-align: right;">
-                            <button class="save-btn" onclick="saveInlineEdit(${i})">✔️ 수정완료</button>
-                            <button onclick="toggleInlineEdit(${i})">❌ 취소</button>
-                        </div>
                     </div>
                 `;
                 blocks.appendChild(d);
             });
         }
 
-        function toggleInlineEdit(i) {
-            const editArea = document.getElementById(`edit-area-${i}`);
-            const viewArea = document.getElementById(`view-area-${i}`);
-            if (editArea.style.display === 'block') {
-                editArea.style.display = 'none';
-                viewArea.style.display = 'block';
-            } else {
-                editArea.style.display = 'block';
-                viewArea.style.display = 'none';
-            }
-        }
-
-        function saveInlineEdit(i) {
-            pages[cur].blocks[i].title = document.getElementById(`edit-t-${i}`).value;
-            pages[cur].blocks[i].text = document.getElementById(`edit-c-${i}`).value;
-            pages[cur].blocks[i].img = document.getElementById(`edit-img-${i}`).value;
-            saveToStorage();
-            render();
-        }
-
+        // 인라인 작성창을 통한 신규 게시글 추가
         function addBlock() {
             if (!t.value.trim() && !c.value.trim()) {
                 alert("제목이나 내용 중 하나는 입력해야 합니다.");
@@ -239,6 +204,7 @@
             render();
         }
 
+        // 게시글 삭제
         function delBlock(i) {
             if (confirm("정말 이 게시글을 삭제하시겠습니까?")) {
                 pages[cur].blocks.splice(i, 1);
@@ -247,11 +213,12 @@
             }
         }
 
+        // 최종 완성본 파일 다운로드
         function downloadPage() {
             const blob = new Blob([document.documentElement.outerHTML], { type: 'text/html' });
             let a = document.createElement('a');
             a.href = URL.createObjectURL(blob);
-            a.download = 'SportsCenter_Taekwondo_Final.html';
+            a.download = 'SportsCenter_Taekwondo_SimpleBoard.html';
             a.click();
         }
 
