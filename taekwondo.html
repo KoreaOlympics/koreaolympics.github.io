@@ -1,149 +1,151 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>태권도 | 2026 아시안게임</title>
-
-<style>
-body{
-  margin:0;
-  font-family:Arial;
-  background:#f3f5f8;
-}
-
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:20px;
-}
-
-.header{
-  background:#0d6efd;
-  color:#fff;
-  padding:18px;
-  text-align:center;
-  border-radius:10px;
-  margin-bottom:20px;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:15px;
-}
-
-.card{
-  background:#fff;
-  border:1px solid #ddd;
-  border-radius:10px;
-  padding:15px;
-}
-
-.card h3{
-  margin-top:0;
-  color:#0d6efd;
-}
-
-@media(max-width:768px){
-  .grid{
-    grid-template-columns:1fr;
-  }
-}
-</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sports Center CMS v1 - 태권도</title>
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; background: #eef2f7; display: flex; }
+        #side { width: 240px; background: #17324d; color: #fff; height: 100vh; position: fixed; padding: 20px; box-sizing: border-box; }
+        #content { margin-left: 240px; flex: 1; padding: 24px; }
+        .menu { padding: 10px; border-radius: 8px; cursor: pointer; margin: 6px 0; }
+        .menu:hover, .active { background: #2b5f8a; }
+        .card { background: #fff; border-radius: 12px; padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,.1); }
+        #editor { display: none; margin-top: 20px; }
+        .block { border-top: 1px solid #ddd; padding: 12px 0; position: relative; }
+        .tools { position: absolute; right: 0; top: 8px; }
+        .tools button { margin-left: 4px; }
+        textarea, input { width: 100%; margin: 6px 0; padding: 8px; box-sizing: border-box; }
+        button { padding: 8px 12px; cursor: pointer; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+        th { background-color: #f2f2f2; }
+    </style>
 </head>
-
 <body>
+    <div id="side">
+        <h2>Sports Center</h2>
+        <div class="menu active" data-idx="0">1. 종목 소개</div>
+        <div class="menu" data-idx="1">2. 2026 국가대표</div>
+        <div class="menu" data-idx="2">3. 국제대회 시즌</div>
+        <div class="menu" data-idx="3">4. 나고야 아시안게임</div>
+        <div class="menu" data-idx="4">5. LA 올림픽</div>
+        <hr>
+        <label><input type="checkbox" id="toggle"> 편집모드</label><br><br>
+        <button onclick="downloadPage()">💾 HTML 저장</button>
+    </div>
+    
+    <div id="content">
+        <div class="card">
+            <h1 id="ptitle"></h1>
+            <div id="blocks"></div>
+            
+            <div id="editor">
+                <h3>새 블록 추가</h3>
+                <input id="t" placeholder="제목">
+                <textarea id="c" placeholder="내용"></textarea>
+                <input id="img" placeholder="이미지 URL 또는 <img ...>">
+                <button onclick="addBlock()">추가</button>
+            </div>
+        </div>
+    </div>
 
-<div class="container">
+    <script>
+        // 초기 태권도 데이터 세팅
+        const pages = [
+            {
+                name: '종목 소개',
+                blocks: [
+                    {
+                        title: '올림픽 태권도 역사 및 대한민국 성적',
+                        text: '태권도는 1988년 대한민국 서울 올림픽에서 시범 종목으로 처음 도입되었습니다. 당시 개막식에서는 수백 명의 성인과 어린이가 일제히 동작을 수행하는 대규모 태권도 시범이 펼쳐졌습니다. 이후 1992년 스페인 바르셀로나 올림픽에서도 다시 한번 시범 종목으로 채택되었습니다.\n\n태권도는 2000년 호주 시드니 올림픽부터 정식 메달 종목이 되었으며, 이후 올림픽 정식 종목으로 자리를 지켜오고 있습니다.\n\n[올림픽 태권도 통산 순위]\n1위 대한민국 (금 14 / 은 3 / 동 8 / 총 25)'
+                    },
+                    {
+                        title: '아시안게임 태권도 역사 및 대한민국 성적',
+                        text: '태권도 경기는 1986년 대한민국 서울 대회 이후 모든 아시안게임에서 정식 종목으로 치러져 왔습니다.\n\n[2022 항저우 아시안게임 성적]\n1위 대한민국 (금 5 / 은 2 / 동 2 / 총 9)'
+                    }
+                ]
+            },
+            {
+                name: '2026 국가대표',
+                blocks: [
+                    { title: '남자 -58kg 안향식', text: '(내용을 입력해 주세요.)' },
+                    { title: '남자 -68kg 문진호', text: '(내용을 입력해 주세요.)' },
+                    { title: '남자 -80kg 강재권', text: '(내용을 입력해 주세요.)' },
+                    { title: '남자 +80kg 강상현', text: '(내용을 입력해 주세요.)' },
+                    { title: '여자 -49kg 이유민', text: '(내용을 입력해 주세요.)' },
+                    { title: '여자 -57kg 김유진', text: '(내용을 입력해 주세요.)' },
+                    { title: '여자 -67kg 곽민주', text: '(내용을 입력해 주세요.)' },
+                    { title: '여자 +67kg 송다빈', text: '(내용을 입력해 주세요.)' }
+                ]
+            },
+            { name: '국제대회 시즌', blocks: [] },
+            { name: '나고야 아시안게임', blocks: [] },
+            { name: 'LA 올림픽', blocks: [] }
+        ];
 
-<div class="header">
-  <h2>🥋 태권도</h2>
-  <p>2026 아이치·나고야 아시안게임</p>
-</div>
+        let cur = 0;
+        const ptitle = document.getElementById('ptitle');
+        const blocks = document.getElementById('blocks');
+        const toggle = document.getElementById('toggle');
+        const editor = document.getElementById('editor');
+        const t = document.getElementById('t');
+        const c = document.getElementById('c');
+        const img = document.getElementById('img');
 
-<!-- 1줄 -->
-<div class="grid">
+        document.querySelectorAll('.menu').forEach((m, i) => m.onclick = () => {
+            document.querySelectorAll('.menu').forEach(x => x.classList.remove('active'));
+            m.classList.add('active');
+            cur = i;
+            render();
+        });
 
-  <div class="card">
-    <h3>종목 소개</h3>
-    <p>설명 작성</p>
-  </div>
+        toggle.onchange = () => editor.style.display = toggle.checked ? 'block' : 'none';
 
-  <div class="card">
-    <h3>국가대표</h3>
-    남자 -58 안향식<br>
-    남자 -68 문진호<br>
-    남자 -80 강재권<br>
-    남자 +80 강상현<br><br>
+        function render() {
+            ptitle.textContent = pages[cur].name;
+            blocks.innerHTML = '';
+            pages[cur].blocks.forEach((b, i) => {
+                let d = document.createElement('div');
+                d.className = 'block';
+                let imgHtml = '';
+                if (b.img) {
+                    imgHtml = b.img.trim().startsWith('<img') ? b.img : '<img src="' + b.img + '" style="max-width:100%;margin-top:10px">';
+                }
+                d.innerHTML = '<div class="tools"><button onclick="editBlock(' + i + ')">✏</button><button onclick="delBlock(' + i + ')">🗑</button></div><h2>' + b.title + '</h2><p>' + b.text.replace(/\n/g, '<br>') + '</p>' + imgHtml;
+                blocks.appendChild(d);
+            });
+        }
 
-    여자 -49 이유민<br>
-    여자 -57 김유진<br>
-    여자 -67 곽민주<br>
-    여자 +67 송다빈
-  </div>
+        function addBlock() {
+            pages[cur].blocks.push({ title: t.value, text: c.value, img: img.value });
+            t.value = c.value = img.value = '';
+            render();
+        }
 
-</div>
+        function delBlock(i) {
+            pages[cur].blocks.splice(i, 1);
+            render();
+        }
 
-<!-- 2줄 -->
-<div class="grid">
+        function editBlock(i) {
+            let b = pages[cur].blocks[i];
+            b.title = prompt('제목', b.title) || b.title;
+            b.text = prompt('내용', b.text) || b.text;
+            let ni = prompt('이미지(URL 또는 <img>)', b.img);
+            if (ni != null) b.img = ni;
+            render();
+        }
 
-  <div class="card">
-    <h3>-58kg</h3>
-    한국 국가대표<br>
-    안향식<br><br>
-    설명
-  </div>
+        function downloadPage() {
+            const blob = new Blob([document.documentElement.outerHTML], { type: 'text/html' });
+            let a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'SportsCenter_Taekwondo_v1.html';
+            a.click();
+        }
 
-  <div class="card">
-    <h3>국제현황</h3>
-    우승후보<br>
-    대한민국
-  </div>
-
-  <div class="card">
-    <h3>-68kg</h3>
-    한국 국가대표<br>
-    문진호<br><br>
-    설명
-  </div>
-
-  <div class="card">
-    <h3>국제현황</h3>
-    우승후보<br>
-    대한민국
-  </div>
-
-  <div class="card">
-    <h3>-80kg</h3>
-    한국 국가대표<br>
-    강재권<br><br>
-    설명
-  </div>
-
-  <div class="card">
-    <h3>국제현황</h3>
-    우승후보<br>
-    대한민국
-  </div>
-
-  <div class="card">
-    <h3>+80kg</h3>
-    한국 국가대표<br>
-    강상현<br><br>
-    설명
-  </div>
-
-  <div class="card">
-    <h3>국제현황</h3>
-    우승후보<br>
-    대한민국
-  </div>
-
-</div>
-
-</div>
-
+        render();
+    </script>
 </body>
 </html>
