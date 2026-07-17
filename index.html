@@ -1,156 +1,859 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>2026 아이치·나고야 아시안게임 대한민국 선수단</title>
-    <style>
-        body { font-family: Arial, sans-serif; background: #eef2f7; margin: 0; padding: 16px; color: #333; }
-        header { text-align: center; margin-bottom: 16px; }
-        header h2 { color: #17324d; margin-bottom: 4px; font-size: 1.2rem; }
-        header p { color: #666; margin: 0; font-size: 0.8rem; }
-        
-        /* 🌟 콤팩트 메달 후보 섹션 */
-        .medal-contenders { background: #fff; border-radius: 6px; padding: 10px 14px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,.05); border-left: 4px solid #d4af37; }
-        .medal-contenders h2 { margin-top: 0; margin-bottom: 6px; color: #17324d; font-size: 0.85rem; display: flex; align-items: center; gap: 4px; font-weight: bold; }
-        .badge-grid { display: flex; flex-wrap: wrap; gap: 4px; }
-        
-        /* 🏷️ 상하 4px x 좌우 10px 슬림 배지 */
-        .player-badge { background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 3px; padding: 3px 8px; font-size: 0.78rem; display: inline-flex; align-items: center; gap: 4px; font-weight: bold; color: #1e293b; }
-        .player-badge .sport { font-size: 0.7rem; color: #64748b; font-weight: normal; background: #e2e8f0; padding: 1px 4px; border-radius: 2px; }
-        
-        /* 🎯 무조건 1행에 10개씩 배치하는 초소형 그리드 시스템 */
-        .grid { 
-            display: grid; 
-            grid-template-columns: repeat(10, 1fr); /* 무조건 1행 10열 고정 */
-            gap: 6px; 
-            max-width: 1200px; 
-            margin: 0 auto; 
-        }
-        .card { 
-            background: #fff; 
-            border-radius: 6px; 
-            padding: 8px 4px; /* 최소 규격 여백 조율 */
-            text-align: center; 
-            box-shadow: 0 1px 4px rgba(0,0,0,.04); 
-            text-decoration: none; 
-            color: #333; 
-            transition: transform 0.15s, background-color 0.15s; 
-            display: block; 
-            min-width: 0; /* 텍스트 넘침 방지 */
-        }
-        .card:hover { transform: translateY(-2px); background: #f8fafc; }
-        .emoji { font-size: 1.1rem; margin-bottom: 3px; } /* 이모지 축소 */
-        .name { font-weight: bold; font-size: 0.72rem; letter-spacing: -0.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } /* 글씨 축소 및 생략 처리 */
-        
-        footer { text-align: center; margin-top: 32px; color: #888; font-size: 0.75rem; padding-top: 12px; border-top: 1px solid #e2e8f0; }
-        
-        /* 모바일 화면에서도 10열 구조를 유지하기 위한 터치 스크롤 혹은 비율 축소 대응 */
-        @media (max-width: 768px) {
-            body { padding: 8px; }
-            .grid { gap: 4px; }
-            .name { font-size: 0.65rem; }
-            .emoji { font-size: 0.9rem; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TEAM KOREA · 2026 아시안게임 국가대표 포털</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B1B2B;
+  --paper:#F2EEE3;
+  --paper-2:#E9E3D2;
+  --ink:#151C22;
+  --ink-soft:#4A5560;
+  --red:#C23B32;
+  --red-dark:#8E2A24;
+  --blue:#1F4E86;
+  --blue-dark:#153A63;
+  --gold:#B4862E;
+  --gold-soft:#E7D4A6;
+  --line:#D6CFBB;
+  --line-dark:#2A3D52;
+  --white:#FBFAF6;
+  --radius-card:14px;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;}
+h1,h2,h3,h4{font-family:'Barlow Condensed',sans-serif;margin:0;letter-spacing:.01em;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;}
+
+.site-header{background:var(--navy);color:var(--white);border-bottom:3px solid var(--red);}
+.site-header-inner{max-width:1200px;margin:0 auto;padding:9px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+.brand{display:flex;align-items:center;gap:10px;}
+.brand-mark{width:26px;height:26px;border-radius:4px;background:linear-gradient(135deg, var(--red) 50%, var(--blue) 50%);flex-shrink:0;}
+.brand-text .t1{font-size:17px;font-weight:700;font-family:'Barlow Condensed',sans-serif;letter-spacing:.02em;}
+.site-desc{font-size:12px;color:#AEBCC8;max-width:360px;line-height:1.5;}
+.dday-pill{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--navy);background:var(--gold-soft);padding:6px 12px;border-radius:999px;font-weight:600;white-space:nowrap;}
+.hbtn{font-family:'JetBrains Mono',monospace;font-size:11.5px;background:rgba(255,255,255,.08);color:#D8E1E8;border:1px solid rgba(255,255,255,.18);padding:6px 12px;border-radius:999px;white-space:nowrap;cursor:pointer;}
+.hbtn:hover{background:rgba(255,255,255,.15);}
+.edit-hint{font-size:11px;color:var(--ink-soft);font-family:'JetBrains Mono',monospace;margin-top:8px;}
+.season-freeform-input{width:100%;background:var(--white);border:1px solid var(--line);border-radius:var(--radius-card);padding:16px 18px;font-size:13.5px;line-height:1.8;min-height:80px;font-family:'Inter',sans-serif;color:var(--ink);resize:vertical;}
+.season-freeform-input:focus{outline:2px solid var(--blue);outline-offset:1px;}
+
+.view-nav-wrap{background:var(--paper);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:45;}
+.view-nav{max-width:1200px;margin:0 auto;padding:8px 22px 0;display:flex;gap:6px;align-items:center;}
+.view-btn{border:1px solid var(--line);background:var(--white);color:var(--ink-soft);padding:9px 18px;border-radius:999px 999px 0 0;font-size:13.5px;font-weight:600;border-bottom:none;position:relative;top:1px;}
+.view-btn.active{background:var(--navy);border-color:var(--navy);color:var(--white);}
+
+.breadcrumb-bar{max-width:1200px;margin:0 auto;padding:14px 28px 4px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+.crumb{border:none;background:none;font-size:13.5px;font-weight:600;color:var(--ink-soft);padding:4px 2px;cursor:pointer;}
+.crumb:hover{color:var(--navy);text-decoration:underline;}
+.crumb.active{color:var(--ink);cursor:default;}
+.crumb.active:hover{text-decoration:none;}
+.crumb-sep{color:var(--line);font-size:13px;}
+
+.search-input{border:1px solid var(--line);background:var(--white);border-radius:999px;padding:9px 16px;font-size:13.5px;color:var(--ink);width:260px;max-width:100%;}
+.search-input:focus{outline:none;border-color:var(--navy);}
+
+.view-section{display:none;}
+.view-section.active{display:block;}
+
+.cat-section{max-width:1200px;margin:0 auto;padding:8px 28px 40px;}
+
+.maincat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;padding-top:8px;}
+.maincat-card{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:28px 16px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;transition:transform .15s,border-color .15s;}
+.maincat-card:hover{transform:translateY(-4px);border-color:var(--navy);}
+.mc-icon{font-size:34px;}
+.mc-label{font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:600;color:var(--ink);}
+.mc-count{font-size:11.5px;color:var(--ink-soft);font-family:'JetBrains Mono',monospace;}
+
+.subcat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding-top:8px;}
+.subcat-card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:22px 14px;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;transition:transform .15s,border-color .15s;}
+.subcat-card:hover{transform:translateY(-3px);border-color:var(--navy);}
+.sc-label{font-family:'Barlow Condensed',sans-serif;font-size:16.5px;font-weight:600;color:var(--ink);}
+.sc-count{font-size:11px;color:var(--ink-soft);font-family:'JetBrains Mono',monospace;}
+
+@media (max-width:860px){
+  .maincat-grid{grid-template-columns:repeat(3,1fr);}
+  .subcat-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:560px){
+  .maincat-grid{grid-template-columns:repeat(2,1fr);}
+}
+.cat-header{display:flex;align-items:baseline;gap:12px;padding:18px 0 10px;border-bottom:1px solid var(--line);margin-bottom:12px;}
+.cat-header h2{font-size:23px;font-weight:600;color:var(--ink);}
+.cat-header .count{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-soft);}
+.grid{display:grid;grid-template-columns:repeat(10,1fr);gap:8px;padding-bottom:10px;}
+.tile{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:10px 6px;position:relative;transition:transform .15s,border-color .15s;text-align:center;width:100%;display:flex;flex-direction:column;align-items:center;gap:4px;}
+.tile:hover{transform:translateY(-3px);border-color:var(--navy);}
+.tile-icon{font-size:22px;display:block;}
+.tile-kr{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:600;color:var(--ink);line-height:1.15;}
+.tile-status{font-size:9.5px;color:var(--ink-soft);margin-top:1px;}
+.combo-aware-grid{align-items:stretch;}
+.combo-box{grid-column:span 2;background:var(--paper-2);border:1px dashed var(--line);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:6px;}
+.combo-label{font-size:11px;font-weight:600;color:var(--ink-soft);}
+.combo-pills{display:flex;flex-wrap:wrap;gap:6px;}
+.combo-pill{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:12.5px;font-weight:600;color:var(--ink);white-space:nowrap;}
+.combo-pill:hover{border-color:var(--navy);}
+.combo-pill em{font-style:normal;font-size:9px;color:var(--ink-soft);font-weight:400;}
+@media (max-width:620px){.combo-box{grid-column:span 3;}}
+
+footer{border-top:1px solid var(--line);padding:26px 28px;text-align:center;font-size:12px;color:var(--ink-soft);font-family:'JetBrains Mono',monospace;}
+
+.roster-all-wrap{max-width:1200px;margin:0 auto;padding:24px 28px 60px;}
+.roster-all-grid{columns:2;column-gap:16px;}
+@media (max-width:860px){.roster-all-grid{columns:1;}}
+.roster-block{break-inside:avoid;background:var(--white);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:14px;}
+.roster-block-head{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+.roster-block-head .ic{font-size:18px;}
+.roster-block-head h3{font-size:16.5px;font-weight:600;}
+.roster-block-head .cnt{margin-left:auto;font-size:11px;color:var(--ink-soft);font-family:'JetBrains Mono',monospace;}
+.roster-group-label{font-size:11px;color:var(--ink-soft);font-family:'JetBrains Mono',monospace;margin:8px 0 4px;}
+.member-chips{display:flex;flex-wrap:wrap;gap:5px;}
+.member-chip{font-size:12.5px;background:var(--paper-2);color:var(--ink);padding:3px 9px;border-radius:999px;}
+.roster-empty-note{font-size:12.5px;color:var(--ink-soft);font-style:italic;}
+
+.news-wrap{max-width:900px;margin:0 auto;padding:24px 28px 60px;}
+.news-toggles{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px;}
+.news-toggle{display:flex;align-items:center;gap:8px;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:600;color:var(--ink-soft);cursor:pointer;user-select:none;}
+.news-toggle:has(input:checked){border-color:var(--navy);color:var(--ink);background:var(--paper-2);}
+.news-toggle input{accent-color:var(--navy);width:15px;height:15px;cursor:pointer;}
+.news-box{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:16px;}
+.news-box-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:6px;}
+.news-box-head h3{font-size:18px;font-weight:600;}
+.news-box-sub{font-size:12px;color:var(--ink-soft);font-family:'JetBrains Mono',monospace;margin-bottom:14px;}
+.news-editable{background:var(--paper);border:1px dashed var(--line);border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.7;color:var(--ink);min-height:60px;white-space:pre-wrap;}
+.news-static{font-size:14px;line-height:1.75;color:var(--ink);}
+.news-para{margin:0 0 16px;}
+.news-para:last-child{margin-bottom:0;}
+.news-subhead{display:inline-block;color:var(--navy);background:var(--paper-2);padding:3px 10px;border-radius:6px;font-size:13px;margin-bottom:6px;}
+.news-lastweek{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--ink-soft);margin-bottom:12px;}
+.news-lastweek .lw-label{font-weight:600;color:var(--ink-soft);white-space:nowrap;}
+.news-lastweek .lw-value{flex:1;}
+
+.detail-wrap{display:none;}
+.detail-wrap.active{display:block;}
+.home-wrap.hidden{display:none;}
+.back-bar{border-bottom:1px solid var(--line);background:var(--paper);}
+.back-bar-inner{max-width:1200px;margin:0 auto;padding:12px 28px;}
+.back-btn{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-soft);font-family:'JetBrains Mono',monospace;border:none;background:none;padding:0;}
+.back-btn:hover{color:var(--ink);}
+
+.detail-hero{background:var(--navy);color:var(--white);padding:14px 22px;}
+.detail-hero-inner{max-width:1200px;margin:0 auto;}
+.detail-top-row{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;}
+.detail-titleblock{display:flex;gap:16px;align-items:flex-start;}
+.detail-icon{font-size:26px;line-height:1;}
+.detail-bib{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--gold-soft);letter-spacing:.08em;margin-bottom:4px;}
+.detail-titleblock h1{font-size:19px;font-weight:600;color:var(--white);}
+.detail-en{font-size:12px;color:#9FB0C0;text-transform:uppercase;letter-spacing:.05em;margin-top:1px;}
+.korea-note{display:inline-block;margin-top:6px;font-size:11.5px;font-weight:700;color:#F0B3AD;background:rgba(194,59,50,.22);border:1px solid rgba(194,59,50,.5);padding:3px 10px;border-radius:999px;}
+.extra-info-card{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-top:10px;}
+.extra-info-card .ti{font-size:12.5px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.extra-info-card .ln{font-size:12.5px;color:var(--ink-soft);line-height:1.7;}
+.participant-table{width:100%;border-collapse:collapse;margin-top:4px;}
+.participant-table th{text-align:left;font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--ink-soft);padding:6px 8px;border-bottom:1px solid var(--line);}
+.participant-table td{padding:5px 8px;font-size:12.5px;border-bottom:1px solid var(--line);}
+.season-freeform{display:flex;flex-direction:column;gap:8px;}
+.season-line{background:var(--white);border:1px solid var(--line);border-left:3px solid var(--navy);border-radius:8px;padding:11px 16px;font-size:14px;line-height:1.6;color:var(--ink);}
+.season-line b.mg{color:var(--gold);font-weight:700;}
+.season-line b.ms{color:#7C8896;font-weight:700;}
+.season-line b.mb{color:var(--red-dark);font-weight:700;}
+.mod-date{font-size:11px;color:var(--ink-soft);margin-top:8px;font-family:'JetBrains Mono',monospace;}
+.detail-desc{color:#C4D0DB;font-size:11.5px;margin-top:6px;max-width:560px;line-height:1.5;}
+.tier-badge{padding:7px 14px;border-radius:999px;font-size:12.5px;font-weight:600;white-space:nowrap;font-family:'JetBrains Mono',monospace;}
+.goal-line{margin-top:8px;font-size:12.5px;font-weight:600;color:var(--gold-soft);border-left:2px solid var(--gold-soft);padding-left:8px;}
+.tier-gold{background:rgba(180,134,46,.22);color:var(--gold-soft);border:1px solid rgba(180,134,46,.5);}
+.tier-medal{background:rgba(31,78,134,.28);color:#AFCBEB;border:1px solid rgba(31,78,134,.6);}
+.tier-first{background:rgba(194,59,50,.2);color:#F0B3AD;border:1px solid rgba(194,59,50,.5);}
+
+.tab-panels{max-width:1200px;margin:0 auto;padding:28px 22px 56px;}
+.tab-btn:hover{color:var(--white);}
+.tab-btn.active{color:var(--white);border-bottom-color:var(--red);}
+.tab-btn .idx{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#6B7E90;margin-right:7px;}
+.tab-btn.active .idx{color:var(--gold-soft);}
+
+.tab-panels{max-width:1200px;margin:0 auto;padding:20px 22px 56px;}
+.panel{display:none;}
+.panel.active{display:block;animation:fadein .25s ease;}
+.panel.active + .panel.active{margin-top:36px;padding-top:32px;border-top:1px solid var(--line);}
+@keyframes fadein{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+.panel-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px;}
+.panel-head h3{font-size:18px;font-weight:600;}
+.panel-note{font-size:12px;color:var(--ink-soft);font-family:'JetBrains Mono',monospace;}
+
+.roster-toolbar{display:flex;gap:10px;align-items:center;margin-bottom:14px;flex-wrap:wrap;}
+.rs-pill{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:12.5px;color:var(--ink-soft);}
+.rs-pill b{color:var(--ink);font-weight:600;}
+.roster-note{font-size:13.5px;color:var(--ink-soft);background:var(--white);border:1px dashed var(--line);border-radius:var(--radius-card);padding:18px 20px;}
+.team-cols{display:flex;gap:36px;flex-wrap:wrap;}
+.team-col{flex:1;min-width:220px;}
+.team-col h4{font-size:12px;font-family:'JetBrains Mono',monospace;color:var(--ink-soft);margin-bottom:8px;font-weight:600;}
+.team-col .list{font-size:13.5px;line-height:1.9;color:var(--ink);}
+.plain-list{display:flex;flex-direction:column;}
+.plain-row{padding:9px 0;border-bottom:1px solid var(--line);font-size:14px;line-height:1.6;color:var(--ink);}
+.plain-row:last-child{border-bottom:none;}
+.match-block-title{font-size:13px;font-weight:700;color:var(--navy);margin:20px 0 4px;}
+.match-block-title:first-of-type{margin-top:0;}
+.match-log-note{font-size:12.5px;color:var(--ink-soft);margin-bottom:14px;font-style:italic;}
+.roster-line{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:9px 12px;margin-bottom:6px;font-size:13.5px;line-height:1.6;display:flex;align-items:baseline;gap:6px;}
+.roster-line-label{color:var(--ink-soft);font-size:12px;white-space:nowrap;flex-shrink:0;}
+.roster-line-names{flex:1;}
+
+.disc-grid{display:flex;flex-wrap:wrap;gap:8px;}
+.disc-box{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:8px 12px;display:flex;align-items:center;gap:6px;font-size:13px;}
+.disc-name{font-weight:600;}
+.disc-count{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-soft);background:var(--paper-2);padding:1px 7px;border-radius:999px;}
+
+.history-table{width:100%;border-collapse:collapse;}
+.history-table th{text-align:left;font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--ink-soft);padding:9px 4px;border-bottom:1px solid var(--line);}
+.history-table td{padding:6px 4px;font-size:13px;border-bottom:1px solid var(--line);}
+.hist-medal{font-weight:600;}
+.hm-gold{color:var(--gold);}
+.hm-silver{color:#7C8896;}
+.hm-bronze{color:var(--red-dark);}
+.hm-none{color:var(--ink-soft);}
+.hist-tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;padding:1px 6px;border-radius:4px;margin-right:6px;}
+.hist-tag-AG{background:rgba(31,78,134,.15);color:var(--blue-dark);}
+.hist-tag-OG{background:rgba(180,134,46,.18);color:var(--gold);}
+.roster-matrix th{text-align:center;}
+.roster-matrix td{font-size:13px;line-height:1.6;}
+.roster-matrix .rm-label{font-weight:600;color:var(--ink);text-align:left;background:var(--paper-2);white-space:nowrap;}
+
+.goal-hero{background:var(--navy);color:var(--white);border-radius:var(--radius-card);padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
+.goal-hero .label{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--gold-soft);letter-spacing:.08em;}
+.goal-hero h4{font-size:22px;font-weight:600;margin-top:8px;max-width:560px;line-height:1.35;}
+.goal-medal{width:64px;height:64px;border-radius:50%;border:3px solid var(--gold-soft);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:26px;background:rgba(180,134,46,.15);}
+.goal-focus{margin-top:18px;font-size:14.5px;line-height:1.7;color:var(--ink);max-width:720px;}
+
+@media (max-width:960px){
+  .grid{grid-template-columns:repeat(5,1fr);}
+}
+@media (max-width:620px){.grid{grid-template-columns:repeat(3,1fr);}}
+</style>
 </head>
 <body>
 
-<header>
-    <h2>🏅 2026 아이치·나고야 아시안게임</h2>
-    <p>대한민국 국가대표 종목별 정보</p>
-</header>
-
-<section class="medal-contenders">
-    <h2>🔥 대한민국 주요 금메달 후보</h2>
-    <p style="color: #666; font-size: 0.72rem; margin: 0 0 8px 0;">이번 대회에서 우승이 기대되는 대한민국 대표팀 핵심 선수 명단입니다.</p>
-    
-    <div class="badge-grid">
-        <div class="player-badge">대표팀 <span class="sport">남자 축구 U23</span></div>
-        <div class="player-badge">대표팀 <span class="sport">남자 야구</span></div>
-        <div class="player-badge">김주형/김성현 <span class="sport">남자 골프</span></div>
-        <div class="player-badge">안세영 <span class="sport">여자 배드민턴</span></div>
-        <div class="player-badge">서승재-김원호 조 <span class="sport">남자 배드민턴</span></div>
-        <div class="player-badge">임종훈-신유빈 조 <span class="sport">혼성 탁구</span></div>
-        <div class="player-badge">윤규성 <span class="sport">태권도 품새</span></div>
-        <div class="player-badge">정하은 <span class="sport">태권도 품새</span></div>
-        <div class="player-badge">문진호 <span class="sport">태권도 68kg</span></div> 
-        <div class="player-badge">강상현 <span class="sport">태권도 무제한</span></div>
-        <div class="player-badge">김유진 <span class="sport">태권도 57kg</span></div>
-        <div class="player-badge">이준환 <span class="sport">유도 81kg</span></div> 
-        <div class="player-badge">이현지 <span class="sport">유도 무제한</span></div>
-        <div class="player-badge">우상혁 <span class="sport">육상 높이뛰기</span></div>
-        <div class="player-badge">김영범 <span class="sport">수영 자유형100</span></div>
-        <div class="player-badge">김우민 <span class="sport">수영 자유형중거리</span></div>
-        <div class="player-badge">이주호 <span class="sport">수영 배영200</span></div>
-        <div class="player-badge">대표팀 <span class="sport">양궁 남자</span></div>
-        <div class="player-badge">대표팀 <span class="sport">양궁 여자</span></div>
-        <div class="player-badge">대표팀 <span class="sport">양궁 리커브혼성</span></div>
-        <div class="player-badge">반효진 <span class="sport">사격 소총여자</span></div>
-        <div class="player-badge">오예진,양지인 <span class="sport">사격 권총여자</span></div>
-        <div class="player-badge">송종호 등 <span class="sport">사격 권총남자</span></div>
-        <div class="player-badge">대표팀 <span class="sport">펜싱사브르 남자</span></div>
-        <div class="player-badge">대표팀 <span class="sport">펜싱사브르 여자</span></div>
-        <div class="player-badge">오상욱 <span class="sport">펜싱사브르 남자</span></div>
-        <div class="player-badge">대표팀 <span class="sport">펜싱에페 여자</span></div>
-        <div class="player-badge">성승민 <span class="sport">근대5종 여자</span></div>
-        <div class="player-badge">대표팀 <span class="sport">근대5종 여자</span></div>
-        <div class="player-badge">대표팀 <span class="sport">근대5종 남자</span></div>
-        <div class="player-badge">여서정 <span class="sport">기계체조 도마 여자</span></div>        
-        <div class="player-badge">대표팀 <span class="sport">리그오브레전드</span></div>
+<div class="site-header">
+  <div class="site-header-inner">
+    <div class="brand">
+      <div class="brand-mark"></div>
+      <div class="brand-text"><div class="t1">TEAM KOREA · 2026 아시안게임 국가대표</div></div>
     </div>
-</section>
-
-<!-- 1행에 10개씩 배치되는 정형화된 종목 마트릭스 -->
-<div class="grid">
-    <a class="card" href="mens-football.html"><div class="emoji">⚽</div><div class="name">남자축구</div></a>
-    <a class="card" href="womens-football.html"><div class="emoji">⚽</div><div class="name">여자축구</div></a>
-    <a class="card" href="basketball.html"><div class="emoji">🏀</div><div class="name">농구</div></a>
-    <a class="card" href="3x3basketball.html"><div class="emoji">🏀</div><div class="name">3X3농구</div></a>
-    <a class="card" href="baseball-softball.html"><div class="emoji">⚾</div><div class="name">야구·소프트볼</div></a>
-    <a class="card" href="volleyball.html"><div class="emoji">🏐</div><div class="name">배구</div></a>
-    <a class="card" href="hockey.html"><div class="emoji">🏑</div><div class="name">하키</div></a>
-    <a class="card" href="handball.html"><div class="emoji">🤾</div><div class="name">핸드볼</div></a>
-    <a class="card" href="rugby.html"><div class="emoji">🏉</div><div class="name">럭비</div></a>
-    <a class="card" href="team-others.html"><div class="emoji">👥</div><div class="name">기타</div></a>
-
-    <a class="card" href="tennis.html"><div class="emoji">🎾</div><div class="name">테니스</div></a>
-    <a class="card" href="golf.html"><div class="emoji">⛳</div><div class="name">골프</div></a>
-    <a class="card" href="badminton.html"><div class="emoji">🏸</div><div class="name">배드민턴</div></a>
-    <a class="card" href="tabletennis.html"><div class="emoji">🏓</div><div class="name">탁구</div></a>
-    <a class="card" href="racket-others.html"><div class="emoji">🎱</div><div class="name">기타 개인구기</div></a>
-    <a class="card" href="taekwondo.html"><div class="emoji">🥋</div><div class="name">태권도</div></a>
-    <a class="card" href="judo.html"><div class="emoji">🥋</div><div class="name">유도</div></a>
-    <a class="card" href="boxing.html"><div class="emoji">🥊</div><div class="name">복싱</div></a>
-    <a class="card" href="wrestling.html"><div class="emoji">🤼</div><div class="name">레슬링</div></a>
-    <a class="card" href="combat-others.html"><div class="emoji">🥋</div><div class="name">기타 격투기</div></a>
-
-    <a class="card" href="athletics-track.html"><div class="emoji">🏃</div><div class="name">육상 트랙</div></a>
-    <a class="card" href="athletics-field.html"><div class="emoji">🏃</div><div class="name">육상 기타</div></a>
-    <a class="card" href="swimming-racing.html"><div class="emoji">🏊</div><div class="name">수영 경영</div></a>
-    <a class="card" href="swimming-others.html"><div class="emoji">🤽</div><div class="name">수영 기타</div></a>
-    <a class="card" href="gymnastics.html"><div class="emoji">🤸</div><div class="name">체조</div></a>
-    <a class="card" href="weightlifting.html"><div class="emoji">🏋️</div><div class="name">역도</div></a>
-    <a class="card" href="archery.html"><div class="emoji">🏹</div><div class="name">양궁</div></a>
-    <a class="card" href="shooting.html"><div class="emoji">🎯</div><div class="name">사격</div></a>
-    <a class="card" href="fencing.html"><div class="emoji">🤺</div><div class="name">펜싱</div></a>
-    <a class="card" href="modern-pentathlon.html"><div class="emoji">🏇</div><div class="name">근대5종</div></a>
-
-    <a class="card" href="sport-climbing.html"><div class="emoji">🧗</div><div class="name">클라이밍</div></a>
-    <a class="card" href="skateboarding.html"><div class="emoji">🛹</div><div class="name">스케이트보드</div></a>
-    <a class="card" href="esports.html"><div class="emoji">🎮</div><div class="name">E스포츠</div></a>
-    <a class="card" href="breaking.html"><div class="emoji">🕺</div><div class="name">브레이킹</div></a>
-    <a class="card" href="mma.html"><div class="emoji">🥊</div><div class="name">종합격투기</div></a>
-    <a class="card" href="surfing.html"><div class="emoji">🏄</div><div class="name">서핑</div></a>
-    <a class="card" href="sailing.html"><div class="emoji">⛵</div><div class="name">요트</div></a>
-    <a class="card" href="canoe.html"><div class="emoji">🛶</div><div class="name">카누</div></a>
-    <a class="card" href="rowing.html"><div class="emoji">🚣</div><div class="name">조정</div></a>
-    <a class="card" href="others.html"><div class="emoji">📦</div><div class="name">기타</div></a>
+    <div class="site-desc">종목을 선택하면 국가대표 명단과 성적, 목표를 확인할 수 있습니다.</div>
+    <button class="hbtn" id="exportBtn">JSON 내보내기</button>
+    <span class="dday-pill" id="ddayText">D-　</span>
+  </div>
 </div>
 
-<footer>
-    Made with HTML • GitHub Pages
-</footer>
+<div class="home-wrap" id="homeWrap">
+  <div class="view-nav-wrap">
+    <div class="view-nav" id="viewNav">
+      <button class="view-btn active" data-view="news">우승후보 및 주요 뉴스</button>
+      <button class="view-btn" data-view="grid">종목별</button>
+      <button class="view-btn" data-view="roster">전체 국가대표 명단</button>
+    </div>
+  </div>
 
+  <div class="breadcrumb-bar" id="breadcrumbBar"></div>
+
+  <div class="view-section active" id="viewNews">
+    <div class="news-wrap">
+      <div class="news-toggles">
+        <label class="news-toggle"><input type="checkbox" id="toggleGold" checked><span>주요 금메달 후보</span></label>
+        <label class="news-toggle"><input type="checkbox" id="toggleBall" checked><span>구기종목 국대소식</span></label>
+        <label class="news-toggle"><input type="checkbox" id="toggleOlympic" checked><span>올림픽종목 주요 대회 뉴스</span></label>
+      </div>
+      <div id="newsBoxes"></div>
+    </div>
+  </div>
+
+  <div class="view-section" id="viewGrid">
+    <div class="cat-section" id="catSection"></div>
+  </div>
+
+  <div class="view-section" id="viewRoster">
+    <div class="roster-all-wrap">
+      <input class="search-input" id="rosterSearch" placeholder="선수명 또는 종목명 검색" style="margin-bottom:18px;">
+      <div class="roster-all-grid" id="rosterAllGrid"></div>
+    </div>
+  </div>
+
+  <footer>TEAM KOREA 2026 SPORTS PORTAL</footer>
+</div>
+
+<div class="detail-wrap" id="detailWrap">
+  <div class="back-bar"><div class="back-bar-inner"><button class="back-btn" id="backBtn">← 전체 종목으로</button></div></div>
+  <div class="detail-hero">
+    <div class="detail-hero-inner">
+      <div class="detail-top-row">
+        <div class="detail-titleblock">
+          <div class="detail-icon" id="dIcon"></div>
+          <div>
+            <div class="detail-bib" id="dBib"></div>
+            <h1 id="dKr"></h1>
+            <div class="detail-en" id="dEn"></div>
+            <div id="dKoreaNote"></div>
+            <div class="detail-desc" id="dDesc"></div>
+            <div class="goal-line" id="dGoalLine"></div>
+            <div id="dRef"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-panels" id="tabPanels"></div>
+</div>
+
+<script>
+const CATEGORY_TREE = [
+  {key:"team_ball", label:"단체구기종목", icon:"⚽", items:[
+    {kr:"축구"},
+    {label:"야구·소프트볼", icon:"⚾", combo:["야구","소프트볼"]},
+    {label:"농구·3x3농구", icon:"🏀", combo:["농구","3x3 농구"]},
+    {label:"배구·비치발리볼", icon:"🏐", combo:["배구","비치발리볼"]},
+    {kr:"핸드볼"}, {kr:"하키"}, {kr:"럭비"}, {kr:"크리켓"}, {kr:"세팍타크로"}, {kr:"카바디"},
+  ]},
+  {key:"indiv_ball", label:"개인구기", icon:"🎾", items:[
+    {kr:"테니스"}, {kr:"골프"}, {kr:"배드민턴"}, {kr:"탁구"}, {kr:"소프트테니스"}, {kr:"스쿼시"}, {kr:"크리켓"},
+    {label:"패들·테크볼", icon:"🎾", combo:["패들","테크볼"]},
+  ]},
+  {key:"foundation", label:"기초종목", icon:"🏃", items:[
+    {kr:"육상(트랙)"}, {kr:"육상(필드)"}, {kr:"수영(경영)"}, {kr:"수영(기타)"}, {kr:"사이클"}, {kr:"역도"}, {kr:"체조"}, {kr:"트라이애슬론"},
+  ]},
+  {key:"precision", label:"무기술", icon:"🏹", items:[
+    {kr:"양궁"}, {kr:"펜싱"}, {kr:"사격"}, {kr:"근대5종"}, {kr:"승마"},
+  ]},
+  {key:"combat", label:"격투기/무도", icon:"🥋", items:[
+    {kr:"태권도"}, {kr:"유도"}, {kr:"복싱"}, {kr:"레슬링"}, {kr:"가라테"}, {kr:"우슈"},
+    {label:"컴뱃스포츠", icon:"🥋", combo:["종합격투기","주짓수","쿠라쉬"]},
+  ]},
+  {key:"extreme", label:"익스트림과 기타종목", icon:"🛹", items:[
+    {kr:"스케이트보드"}, {kr:"스포츠클라이밍"}, {kr:"e스포츠"}, {kr:"브레이킹"}, {kr:"조정"}, {kr:"카누"}, {kr:"요트"}, {kr:"서핑"},
+  ]},
+];
+
+function categoryOfSport(kr){
+  for(const cat of CATEGORY_TREE){
+    for(const it of cat.items){
+      if(it.kr===kr) return cat.label;
+      if(it.combo && it.combo.includes(kr)) return cat.label;
+    }
+  }
+  return "기타";
+}
+
+
+const TIERS = {
+  gold:  {label:"금메달 목표", cls:"tier-gold",  medal:"🥇"},
+  medal: {label:"메달권 진입 목표", cls:"tier-medal", medal:"🥈"},
+  first: {label:"첫 메달 도전", cls:"tier-first", medal:"🆕"},
+};
+
+/* ---------- baked national-team data (edited directly by request, no in-app edit mode) ---------- */
+let SPORTS = [{"id": "s0_1783090799291344", "kr": "3x3 농구", "en": "3x3 Basketball", "icon": "🏀", "cat": "team", "tier": "medal", "oly": false, "desc": "농구 코트 절반에서 3대3으로 겨루는 속도감 있는 스트리트 농구 종목입니다. 도쿄 올림픽에서 처음 채택되어 올림픽에서는 2회 치러졌으며, 아시아에서는 중국이 최강자(도쿄 올림픽 여자부 동메달)이고 일본·몽골도 강합니다. 한국은 이 종목에 전문적인 선수층이 두텁지 않아 대학 농구부나 프로 초년생 선수 중심으로 대표팀을 꾸려왔습니다. 아시안게임에는 2018 자카르타 대회에서 데뷔했고, 당시 남자부(안용준·김낙현·양홍석)가 은메달을 땄지만 2022년에는 남자부 4위, 여자부 8강 탈락에 그쳤습니다.", "groups": [{"label": "남자", "members": ["구민교(성균관대)", "김승우(연세대)", "이동근(고려대)", "이주영(연세대)"], "open": false}, {"label": "여자", "members": ["김정은(BNK)", "송윤하(KB)", "최예슬(삼성)", "허유정(신한)"], "open": false}], "disciplines": [{"name": "남자부", "count": 1}, {"name": "여자부", "count": 1}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "은메달(남자부)"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "4위(남자부)·8강 탈락(여자부)"}], "seasonText": "2026 FIBA 3x3 아시아컵 — 남자부, 뉴질랜드에 이어 준우승(역대 최고 성적)\n여자부는 2025 아시아컵 8강 진출 경험을 바탕으로 송윤하를 중심으로 팀 결성 (송윤하는 5인제 대표 발탁도 가능한 신인 최대어)", "goalText": "3x3농구 국가대표팀(남자부)은 2026 아시안게임에서 2018년 은메달급 성적 재현을 목표로 합니다.", "focusText": "종목 저변 확대와 대회 경험 축적에 중점을 두고 있습니다.", "historyText": "아시안게임 2018 자카르타·팔렘방 — 은메달(남자부)\n아시안게임 2022 항저우 — 4위(남자부)·8강 탈락(여자부)", "historyModified": "2026-07-04", "seasonModified": "2026-07-04", "goalsModified": "2026-07-04", "edited": false, "historyTable": {"cols": ["종합"], "rows": [{"label": "2018 자카르타·팔렘방", "tag": "AG", "cells": ["은메달(남자부)"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["4위(남자부)·8강 탈락(여자부)"]}]}, "goalLine": "3x3농구 국가대표팀(남자부)은 2026 아시안게임에서 2018년 은메달급 성적 재현을 목표로 합니다.", "subcat": "court"}, {"id": "s1_1783090799291524", "kr": "e스포츠", "en": "Esports", "icon": "🕹️", "cat": "other", "tier": "first", "oly": false, "desc": "인기 게임 타이틀로 실력을 겨루는 디지털 종목으로, 세부 게임별로 대표팀이 구성됩니다.", "groups": [{"label": "e풋볼", "members": ["김도겸", "송영우"], "open": false}, {"label": "그란투리스모", "members": ["김영찬"], "open": false}, {"label": "대전 격투 게임", "members": ["배재민", "연제길", "이광노"], "open": false}, {"label": "리그 오브 레전드", "members": ["김건부", "김건우", "류민석", "이민형", "이상혁", "최우제"], "open": false}, {"label": "배틀그라운드 모바일", "members": ["김준하", "박상철", "송수안", "전현빈", "정유찬"], "open": false}, {"label": "뿌요뿌요 챔피언스", "members": ["강동신"], "open": false}, {"label": "아너 오브 킹스", "members": ["이섭규", "이훈민", "정윤호", "조성빈", "한성건", "한지훈"], "open": false}, {"label": "제5인격", "members": ["고태현", "김상민", "김재연", "김준서", "박소연", "어홍", "홍현기"], "open": false}, {"label": "포켓몬 유나이트", "members": ["김용식", "박성순", "이지환", "조민하", "조민혁"], "open": false}], "disciplines": [{"name": "e스포츠", "count": 11}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "동메달"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "금메달"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "예선 탈락"}], "seasonText": "2026.02 아시아선수권대회(진천선수촌) — 동메달\n2026.05 월드컵 시리즈(진천선수촌) — 은메달\n2026.06 국제오픈대회(도쿄) — 동메달", "goalText": "e스포츠 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "focusText": "종목 저변 확대와 대회 경험 축적에 중점을 두고 있습니다.", "extraInfo": [{"title": "Identity V — 5.30~6.1, 싱가포르(개최지)", "lines": ["중국, 중화 타이베이, 홍콩, 인도네시아, 말레이시아, 필리핀, 대한민국, 태국, 베트남"]}, {"title": "Naraka: Bladepoint — 6.4~5", "lines": ["중국, 중화 타이베이, 홍콩, 인도네시아, 말레이시아, 필리핀, 태국, 베트남"]}, {"title": "League of Legends — 6.12~14, 말레이시아 쿠알라룸푸르(개최지)", "lines": ["중화 타이베이, 홍콩, 인도, 말레이시아, 사우디아라비아, 대한민국, 아랍에미리트, 베트남"]}, {"title": "Honor of Kings — 6.13~21", "lines": ["중국, 홍콩, 인도네시아, 카자흐스탄, 라오스, 말레이시아, 미얀마, 네팔, 필리핀, 대한민국, 태국, 베트남"]}, {"title": "Mobile Legends: Bang Bang — 6.18~21, 싱가포르(개최지)", "lines": ["캄보디아, 홍콩, 인도네시아, 이란, 요르단, 카자흐스탄, 말레이시아, 몽골, 미얀마, 필리핀, 사우디아라비아, 우즈베키스탄"]}, {"title": "PUBG Mobile — 6.19~21, 베트남 호치민시(개최지)", "lines": ["중국, 중화 타이베이, 인도네시아, 일본, 요르단, 카자흐스탄, 미얀마, 네팔, 파키스탄, 대한민국, 태국, 베트남"]}], "historyText": "아시안게임 2014 인천 — 동메달\n아시안게임 2018 자카르타·팔렘방 — 금메달\n아시안게임 2022 항저우 — 예선 탈락", "edited": false, "historyTable": {"cols": ["종합"], "rows": [{"label": "2018 자카르타·팔렘방", "tag": "AG", "cells": ["금메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["예선 탈락"]}]}, "goalLine": "e스포츠 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "subcat": "digital"}, {"id": "s2_1783090799291642", "kr": "가라테", "en": "Karate", "icon": "🥋", "cat": "combat", "tier": "medal", "oly": true, "desc": "1994년 아시안게임 정식 종목으로 도입되었으며, 정해진 기술 동작(품새)을 겨루는 가타와 실전 대련(겨루기)인 구미테로 나뉩니다. 2026 대회 목표는 메달 2개입니다.", "groups": [{"label": "남자", "members": ["황태연(가타·서울)", "박건호(구미테 -60㎏급·충북)", "안광민(구미테 -75㎏급·부산)"], "open": false}, {"label": "여자", "members": ["최하은(가타·충북)", "양예원(구미테 -60㎏급·제주)", "안정은(구미테 -61㎏급·경남)"], "open": false}], "disciplines": [{"name": "가타 개인전(남)", "count": 1}, {"name": "가타 개인전(여)", "count": 1}, {"name": "가타 단체전(남)", "count": 1}, {"name": "가타 단체전(여)", "count": 1}, {"name": "구미테 남자 -55㎏", "count": 1}, {"name": "구미테 남자 -60㎏", "count": 1}, {"name": "구미테 남자 -67㎏", "count": 1}, {"name": "구미테 남자 -75㎏", "count": 1}, {"name": "구미테 남자 -84㎏", "count": 1}, {"name": "구미테 남자 +84㎏", "count": 1}, {"name": "구미테 여자 -50㎏", "count": 1}, {"name": "구미테 여자 -55㎏", "count": 1}, {"name": "구미테 여자 -61㎏", "count": 1}, {"name": "구미테 여자 -68㎏", "count": 1}, {"name": "구미테 여자 +68㎏", "count": 1}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "동메달 4개"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "동메달 1개"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "동메달 1개"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "노메달"}], "seasonText": "나고야 동아시아선수권 — 금메달 2개, 은메달 2개, 동메달 5개", "goalText": "가라테 국가대표팀은 2026 아시안게임에서 메달 2개 획득을 목표로 합니다.", "focusText": "국제대회 출전 횟수를 늘려 실전 경험치를 쌓는 데 주력하고 있습니다.", "historyText": "아시안게임 2014 인천 — 동메달 4개\n아시안게임 2018 자카르타·팔렘방 — 동메달 1개\n아시안게임 2022 항저우 — 동메달 1개\n올림픽 2020 도쿄 — 노메달", "historyModified": "2026-07-04", "seasonModified": "2026-07-04", "goalsModified": "2026-07-04", "edited": false, "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["노메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["동메달 1개"]}, {"label": "2024 파리", "tag": "OG", "cells": ["미상"]}]}, "goalLine": "가라테 국가대표팀은 2026 아시안게임에서 메달 2개 획득을 목표로 합니다.", "subcat": "strike"}, {"id": "s3_1783090799291979", "kr": "골프", "en": "Golf", "icon": "⛳", "cat": "racket", "tier": "medal", "oly": true, "desc": "티에서 클럽으로 공을 쳐서 최소 스트로크로 홀에 넣는 종목으로, 최초 규칙은 1754년 스코틀랜드 세인트 앤드류스에서 제정되었습니다. 올림픽에서는 2016 리우 대회부터 정식 종목으로 복귀해 남녀 개인전 2종목으로 치러지며(박인비가 2016년 금메달), 아시안게임에서는 단체전도 추가로 열립니다. 2028 올림픽부터는 혼성전도 도입될 예정입니다.", "groups": [{"label": "남자", "members": ["김성현(세계랭킹 143위)", "김주형(세계랭킹 144위)", "문도엽(세계랭킹 203위)"], "open": false}, {"label": "여자", "members": ["박서진(KGA 랭킹 1위·서문여고)", "김규빈(KGA 랭킹 2위·학산여고)", "양윤서(KGA 랭킹 3위·인천여부설방통고)"], "open": false}], "disciplines": [{"name": "개인전(남)", "count": 1}, {"name": "개인전(여)", "count": 1}, {"name": "단체전(남)", "count": 1}, {"name": "단체전(여)", "count": 1}], "emptyNote": null, "history": [{"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "금메달(박인비)"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "미상"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "미상"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "은메달"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "금메달"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "8강"}], "seasonText": "남자부 — 김주형·김성현·문도엽(세계랭킹 143~203위)이 상위 랭커 불참 속 출전\n여자부 — KGA 아마추어랭킹 1~3위 고교생 박서진·김규빈·양윤서로 구성", "goalText": "골프 국가대표팀은 세계 상위 랭커들의 불참 속에 구성된 만큼, 단체전을 중심으로 메달권 진입을 목표로 합니다.", "focusText": "국제대회 출전 횟수를 늘려 실전 경험치를 쌓는 데 주력하고 있습니다.", "historyText": "올림픽 2016 리우데자네이루 — 금메달(박인비)\n올림픽 2020 도쿄 — 미상\n올림픽 2024 파리 — 미상\n올림픽 2016 리우데자네이루 — 은메달\n올림픽 2020 도쿄 — 금메달\n올림픽 2024 파리 — 8강", "historyModified": "2026-07-04", "seasonModified": "2026-07-04", "goalsModified": "2026-07-04", "edited": false, "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["금메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["미상"]}, {"label": "2024 파리", "tag": "OG", "cells": ["8강"]}]}, "goalLine": "골프 국가대표팀은 세계 상위 랭커들의 불참 속에 구성된 만큼, 단체전을 중심으로 메달권 진입을 목표로 합니다.", "subcat": "precision"}, {"id": "s4_1783090799291677", "kr": "근대5종", "en": "Modern Pentathlon", "icon": "🤺", "cat": "combat", "tier": "medal", "oly": true, "desc": "근대 전쟁에서 쓰이던 기술(펜싱·수영·승마·사격 및 육상)을 하루에 모두 겨루는 전통적인 종목입니다. 올림픽에서는 1912년부터 꾸준히 정식 종목이었으나, 아시안게임에는 1994년에야 도입되었습니다.", "groups": [{"label": "남자", "members": ["김영하", "서창완", "이종현", "전웅태"], "open": false}, {"label": "여자", "members": ["김유리", "성승민", "신수민", "장하은"], "open": false}], "disciplines": [{"name": "남자 개인전", "count": 1}, {"name": "여자 개인전", "count": 1}, {"name": "남자 단체전", "count": 1}, {"name": "여자 단체전", "count": 1}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "금1·은2·동2"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "금1·은2·동1"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "금2·은2·동1"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "노메달"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "동메달(전웅태)"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "동메달(성승민)"}], "seasonText": "2차 월드컵 남자부 — 서창완 금메달 (시즌 최고 성적)\n3차(최종) 월드컵 여자부 — 성승민 5위\n월드컵 파이널 여자부 — 성승민 6위", "goalText": "근대5종 국가대표팀은 2026 아시안게임에서 메달 2개 획득을 목표로 합니다.", "focusText": "국제대회 출전 횟수를 늘려 실전 경험치를 쌓는 데 주력하고 있습니다.", "disciplinesNote": "올림픽에서는 개인전만 시행됩니다.", "historyText": "아시안게임 2014 인천 — 금1·은2·동2\n아시안게임 2018 자카르타·팔렘방 — 금1·은2·동1\n아시안게임 2022 항저우 — 금2·은2·동1\n올림픽 2016 리우데자네이루 — 노메달\n올림픽 2020 도쿄 — 동메달(전웅태)\n올림픽 2024 파리 — 동메달(성승민)", "historyModified": "2026-07-04", "seasonModified": "2026-07-04", "goalsModified": "2026-07-04", "edited": false, "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["동메달(전웅태)"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["금2·은2·동1"]}, {"label": "2024 파리", "tag": "OG", "cells": ["동메달(성승민)"]}]}, "goalLine": "근대5종 국가대표팀은 2026 아시안게임에서 메달 2개 획득을 목표로 합니다.", "subcat": "mixed"}, {"id": "s5_178309079929273", "kr": "농구", "en": "Basketball", "icon": "🏀", "cat": "team", "tier": "medal", "oly": true, "desc": "5대5로 골밑 공방을 벌이는 대표적인 구기 종목입니다.", "groups": [], "disciplines": [{"name": "농구", "count": 2}], "emptyNote": "남자 대표팀(감독 마줄스), 여자 대표팀(감독 박수호) — 최종 엔트리 확정 전입니다.", "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "은메달"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "은메달"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "동메달"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "5위"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "동메달"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "5위"}], "seasonText": "2026.02 아시아선수권대회(상하이) — 은메달\n2026.04 월드컵 시리즈(진천선수촌) — 금메달\n2026.06 국제오픈대회(방콕) — 8강 탈락", "goalText": "농구 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "focusText": "국제대회 출전 횟수를 늘려 실전 경험치를 쌓는 데 주력하고 있습니다.", "historyText": "아시안게임 2014 인천 — 은메달\n아시안게임 2018 자카르타·팔렘방 — 은메달\n아시안게임 2022 항저우 — 동메달\n올림픽 2016 리우데자네이루 — 5위\n올림픽 2020 도쿄 — 동메달\n올림픽 2024 파리 — 5위", "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["동메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["동메달"]}, {"label": "2024 파리", "tag": "OG", "cells": ["5위"]}]}, "goalLine": "농구 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "subcat": "court", "edited": false}, {"id": "s6_1783090799292583", "kr": "럭비", "en": "Rugby Sevens", "icon": "🏉", "cat": "team", "tier": "first", "oly": true, "desc": "7명이 한 팀을 이뤄 빠른 공수 전환으로 트라이를 노리는 종목입니다.", "groups": [], "disciplines": [{"name": "럭비 세븐스", "count": 2}], "emptyNote": "최종 엔트리 확정 전입니다.", "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "동메달"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "5위"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "은메달"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "금메달"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "5위"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "예선 탈락"}], "seasonText": "2026.03 아시아선수권대회(상하이) — 4강\n2026.04 월드컵 시리즈(상하이) — 조별예선 통과\n2026.06 국제오픈대회(서울) — 금메달", "goalText": "럭비 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "focusText": "종목 저변 확대와 대회 경험 축적에 중점을 두고 있습니다.", "historyText": "아시안게임 2014 인천 — 동메달\n아시안게임 2018 자카르타·팔렘방 — 5위\n아시안게임 2022 항저우 — 은메달\n올림픽 2016 리우데자네이루 — 금메달\n올림픽 2020 도쿄 — 5위\n올림픽 2024 파리 — 예선 탈락", "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["5위"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["은메달"]}, {"label": "2024 파리", "tag": "OG", "cells": ["예선 탈락"]}]}, "goalLine": "럭비 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "subcat": "field", "edited": false}, {"id": "s7_178309079929293", "kr": "레슬링", "en": "Wrestling", "icon": "🤼", "cat": "combat", "tier": "medal", "oly": true, "desc": "고대 올림픽부터 이어져 온 대표적인 그래플링 종목입니다. 한국은 1990~2000년대 초반 그레코로만형을 중심으로 강세를 보였으나 최근 선수층이 크게 얇아진 상황입니다. 2014·2018 아시안게임에서 각각 금메달 3개, 2개를 따내며 마지막 영광을 이어갔지만, 2024 파리 올림픽에서는 전 체급 결승 진출에 실패했습니다.", "groups": [{"label": "남자 자유형", "members": ["김성권(57kg)", "윤준식(65kg)", "한대길(74kg)", "이경연(86kg)", "서주환(97kg)", "김관욱(125kg)"], "open": false}, {"label": "남자 그레코로만형", "members": ["김다현(60kg)", "정한재(67kg)", "노영훈(77kg)", "이승환(87kg)", "이민호(97kg)", "김민석(130kg)"], "open": false}, {"label": "여자부", "members": ["천미란(-50kg)", "권영진(-53kg)", "조수빈(-57kg)", "박서영(-62kg)", "박현영(-68kg)", "황은주(-76kg)"], "open": false}], "disciplines": [{"name": "남자 자유형 -57kg", "count": 1}, {"name": "남자 자유형 -65kg", "count": 1}, {"name": "남자 자유형 -74kg", "count": 1}, {"name": "남자 자유형 -86kg", "count": 1}, {"name": "남자 자유형 -97kg", "count": 1}, {"name": "남자 자유형 -125kg", "count": 1}, {"name": "남자 그레코로만형 -60kg", "count": 1}, {"name": "남자 그레코로만형 -67kg", "count": 1}, {"name": "남자 그레코로만형 -77kg", "count": 1}, {"name": "남자 그레코로만형 -87kg", "count": 1}, {"name": "남자 그레코로만형 -97kg", "count": 1}, {"name": "남자 그레코로만형 -130kg", "count": 1}, {"name": "여자 자유형 -50kg", "count": 1}, {"name": "여자 자유형 -53kg", "count": 1}, {"name": "여자 자유형 -57kg", "count": 1}, {"name": "여자 자유형 -62kg", "count": 1}, {"name": "여자 자유형 -68kg", "count": 1}, {"name": "여자 자유형 -76kg", "count": 1}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "금3·은3·동6"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "금2·은0·동6"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "금0·은2·동2"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "동메달"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "노메달"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "노메달"}], "seasonText": "2026 아시아선수권 — 정한재(그레코로만 67kg) 5위, 노영훈(그레코로만 77kg) 동메달, 김민석(그레코로만 130kg) 동메달\n김다현(그레코로만 60kg), 서주환(자유형 97kg) 등은 1회전 탈락으로 부진", "goalText": "레슬링 국가대표팀은 2026 아시안게임에서 지난 대회(2022 항저우)의 성적인 동메달 2개 이상을 목표로 합니다.", "focusText": "국제대회 출전 횟수를 늘려 실전 경험치를 쌓는 데 주력하고 있습니다.", "historyText": "아시안게임 2014 인천 — 금3·은3·동6\n아시안게임 2018 자카르타·팔렘방 — 금2·은0·동6\n아시안게임 2022 항저우 — 금0·은2·동2\n올림픽 2016 리우데자네이루 — 동메달\n올림픽 2020 도쿄 — 노메달\n올림픽 2024 파리 — 노메달", "historyModified": "2026-07-04", "seasonModified": "2026-07-04", "goalsModified": "2026-07-04", "edited": false, "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["노메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["금0·은2·동2"]}, {"label": "2024 파리", "tag": "OG", "cells": ["노메달"]}]}, "goalLine": "레슬링 국가대표팀은 2026 아시안게임에서 지난 대회(2022 항저우)의 성적인 동메달 2개 이상을 목표로 합니다.", "subcat": "grapple"}, {"id": "s8_1783090799292753", "kr": "배구", "en": "Volleyball", "icon": "🏐", "cat": "team", "tier": "medal", "oly": true, "desc": "네트를 사이에 두고 공을 넘겨 랠리를 겨루는 구기 종목입니다.", "groups": [], "disciplines": [{"name": "배구", "count": 2}], "emptyNote": "남자 대표팀(감독 라미레스), 여자 대표팀(감독 차상현) — 최종 엔트리 확정 전입니다.", "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "예선 탈락"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "동메달"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "8강"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "8강"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "금메달"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "은메달"}], "seasonText": "2026.02 아시아선수권대회(도쿄) — 8강 탈락\n2026.05 월드컵 시리즈(상하이) — 준우승\n2026.06 국제오픈대회(서울) — 준우승", "goalText": "배구 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "focusText": "국제대회 출전 횟수를 늘려 실전 경험치를 쌓는 데 주력하고 있습니다.", "extraInfo": [{"title": "남자부 예선 통과국 (2026년 5월 말 확정, FIVB 랭킹 기준)", "lines": ["일본(7위·개최국), 이란(16위), 카타르(21위), 대한민국(26위), 중국(28위), 바레인(41위), 파키스탄(45위), 인도네시아(53위),", "중화 타이베이(54위), 인도(59위), 태국(60위), 베트남(61위), 키르기스스탄(69위), 카자흐스탄(71위), 필리핀(82위), 홍콩(92위)"]}, {"title": "여자부 예선 통과국 (2026년 5월 말 확정, FIVB 랭킹 기준)", "lines": ["일본(5위·개최국), 중국(6위), 태국(18위), 베트남(28위), 카자흐스탄(37위), 중화 타이베이(38위), 대한민국(40위), 이란(41위),", "필리핀(48위), 인도(63위), 키르기스스탄(65위), 인도네시아(75위), 홍콩(89위), 몽골(95위), 북한(랭킹 없음), 카타르(랭킹 없음)"]}], "historyText": "아시안게임 2014 인천 — 예선 탈락\n아시안게임 2018 자카르타·팔렘방 — 동메달\n아시안게임 2022 항저우 — 8강\n올림픽 2016 리우데자네이루 — 8강\n올림픽 2020 도쿄 — 금메달\n올림픽 2024 파리 — 은메달", "edited": false, "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["금메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["8강"]}, {"label": "2024 파리", "tag": "OG", "cells": ["은메달"]}]}, "goalLine": "배구 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "subcat": "court"}, {"id": "s9_1783090799292772", "kr": "배드민턴", "en": "Badminton", "icon": "🏸", "cat": "racket", "tier": "gold", "oly": true, "desc": "셔틀콕을 라켓으로 쳐서 상대 코트에 떨어뜨리는 라켓 종목으로, 올림픽에서는 1992년 바르셀로나 대회부터 정식 종목입니다. 한국은 복식 강국으로서 오랜 전통을 이어왔으나 남녀 복식 모두 올림픽·아시안게임 우승은 20년 넘게 없는 상태입니다. 세계 1위 안세영이 이끄는 여자단식이 가장 유력한 금메달 후보이며, 세계랭킹 1위로 새로 결성된 서승재-김원호(남자복식)와 2026 아시아선수권 우승팀 김재현-장하정(혼합복식)도 메달 후보로 꼽힙니다.", "groups": [{"label": "남자 단식", "members": ["유태빈", "최지훈"], "open": false}, {"label": "여자 단식", "members": ["김가은", "안세영"], "open": false}, {"label": "남자 복식", "members": ["강민혁-기동주", "서승재-김원호"], "open": false}, {"label": "여자 복식", "members": ["백하나-이소희", "공희용-김혜정"], "open": false}, {"label": "혼합 복식", "members": ["김재현-장하정", "정나은-조송현"], "open": false}, {"label": "단체전 스쿼드(추가 인원)", "members": ["김가람", "박상용", "심유진", "전혁진"], "open": false}], "disciplines": [{"name": "남자 단식", "count": 1}, {"name": "여자 단식", "count": 1}, {"name": "남자 복식", "count": 1}, {"name": "여자 복식", "count": 1}, {"name": "혼합 복식", "count": 1}, {"name": "남자 단체전", "count": 1}, {"name": "여자 단체전", "count": 1}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "동메달"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "예선 탈락"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "동메달"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "8강"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "5위"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "금메달"}], "seasonText": "안세영(여자단식) — 2025~26시즌 슈퍼1000급 메이저 대회 다수 석권(말레이·전영·인도네시아·프랑스오픈 등)\n김재현-장하정(혼합복식) — 2026 아시아선수권 우승", "goalText": "배드민턴 국가대표팀은 2026 아시안게임에서 안세영을 앞세운 여자단식 금메달과 혼합복식 메달권 진입을 목표로 합니다.", "focusText": "해외 전지훈련과 상대 전력 분석을 통해 실전 감각을 끌어올리는 데 집중하고 있습니다.", "historyText": "아시안게임 2014 인천 — 동메달\n아시안게임 2018 자카르타·팔렘방 — 예선 탈락\n아시안게임 2022 항저우 — 동메달\n올림픽 2016 리우데자네이루 — 8강\n올림픽 2020 도쿄 — 5위\n올림픽 2024 파리 — 금메달", "seasonModified": "2026-07-04", "goalsModified": "2026-07-04", "edited": false, "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["5위"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["동메달"]}, {"label": "2024 파리", "tag": "OG", "cells": ["금메달"]}]}, "goalLine": "배드민턴 국가대표팀은 안세영을 앞세운 여자단식 금메달을 포함해 메달 2개 이상을 목표로 합니다.", "rosterTable": {"cols": ["남자", "여자"], "rows": [{"label": "단식", "cells": ["유태빈, 최지훈", "김가은, 안세영"]}, {"label": "복식", "cells": ["강민혁-기동주, 서승재-김원호", "백하나-이소희, 공희용-김혜정"]}, {"label": "단체전", "cells": ["유태빈, 최지훈, 강민혁, 기동주, 서승재, 김원호, 김재현, 김가람, 박상용, 전혁진", "김가은, 안세영, 백하나, 이소희, 공희용, 김혜정, 장하정, 정나은, 조송현, 심유진"]}], "mergedRows": [{"label": "혼합복식", "value": "김재현-장하정, 정나은-조송현"}]}, "subcat": "court"}, {"id": "s10_1783090799292281", "kr": "복싱", "en": "Boxing", "icon": "🥊", "cat": "combat", "tier": "medal", "oly": true, "desc": "정해진 체급 안에서 주먹으로 승부를 가리는 대표적인 투기 종목입니다.", "groups": [{"label": null, "members": ["김기채", "김민성", "김준수", "박초롱", "선수진", "성수연", "신재용", "오연지", "임애지"], "open": false}], "disciplines": [{"name": "복싱", "count": 11}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "금메달"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "8강"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "동메달"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "은메달"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "은메달"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "예선 탈락"}], "seasonText": "2026.02 아시아선수권대회(진천선수촌) — 은메달\n2026.04 월드컵 시리즈(상하이) — 준우승\n2026.06 국제오픈대회(서울) — 금메달", "goalText": "복싱 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "focusText": "국제대회 출전 횟수를 늘려 실전 경험치를 쌓는 데 주력하고 있습니다.", "historyText": "아시안게임 2014 인천 — 금메달\n아시안게임 2018 자카르타·팔렘방 — 8강\n아시안게임 2022 항저우 — 동메달\n올림픽 2016 리우데자네이루 — 은메달\n올림픽 2020 도쿄 — 은메달\n올림픽 2024 파리 — 예선 탈락", "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["은메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["동메달"]}, {"label": "2024 파리", "tag": "OG", "cells": ["예선 탈락"]}]}, "goalLine": "복싱 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "subcat": "strike", "edited": false}, {"id": "s11_1783090799292572", "kr": "브레이킹", "en": "Breaking", "icon": "🕺", "cat": "racket", "tier": "first", "oly": true, "desc": "힙합 문화에서 출발한 브레이크댄스로 기술과 표현력을 겨루는 신생 종목입니다.", "groups": [{"label": null, "members": ["권성희", "김예리", "김헌우", "김홍열"], "open": false}], "disciplines": [{"name": "브레이킹", "count": 2}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "예선 탈락"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "은메달"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "5위"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "은메달"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "동메달"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "예선 탈락"}], "seasonText": "2026.03 아시아선수권대회(방콕) — 8강 탈락\n2026.04 월드컵 시리즈(서울) — 준우승\n2026.06 국제오픈대회(서울) — 8강 탈락", "goalText": "브레이킹 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "focusText": "종목 저변 확대와 대회 경험 축적에 중점을 두고 있습니다.", "historyText": "아시안게임 2014 인천 — 예선 탈락\n아시안게임 2018 자카르타·팔렘방 — 은메달\n아시안게임 2022 항저우 — 5위\n올림픽 2016 리우데자네이루 — 은메달\n올림픽 2020 도쿄 — 동메달\n올림픽 2024 파리 — 예선 탈락", "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["동메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["5위"]}, {"label": "2024 파리", "tag": "OG", "cells": ["예선 탈락"]}]}, "goalLine": "브레이킹 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "subcat": "urban", "edited": false}, {"id": "s12_1783090799292248", "kr": "비치발리볼", "en": "Beach Volleyball", "icon": "🏐", "cat": "team", "tier": "first", "oly": true, "desc": "모래 코트 위에서 2대2로 겨루는 배구의 변형 종목입니다.", "groups": [{"label": null, "members": ["김정아", "김현주", "배상빈", "배인호", "서가은", "신지은", "여민수", "오정택"], "open": false}], "disciplines": [{"name": "비치발리볼", "count": 2}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "5위"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "동메달"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "금메달"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "5위"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "금메달"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "5위"}], "seasonText": "2026.03 아시아선수권대회(진천선수촌) — 8강 탈락\n2026.05 월드컵 시리즈(도쿄) — 조별예선 통과\n2026.06 국제오픈대회(진천선수촌) — 금메달", "goalText": "비치발리볼 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "focusText": "종목 저변 확대와 대회 경험 축적에 중점을 두고 있습니다.", "historyText": "아시안게임 2014 인천 — 5위\n아시안게임 2018 자카르타·팔렘방 — 동메달\n아시안게임 2022 항저우 — 금메달\n올림픽 2016 리우데자네이루 — 5위\n올림픽 2020 도쿄 — 금메달\n올림픽 2024 파리 — 5위", "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["금메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["금메달"]}, {"label": "2024 파리", "tag": "OG", "cells": ["5위"]}]}, "goalLine": "비치발리볼 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "subcat": "court", "edited": false}, {"id": "s13_1783090799292936", "kr": "사격", "en": "Shooting", "icon": "🎯", "cat": "other", "tier": "gold", "oly": true, "desc": "1954년 제2회 마닐라 대회에서 정식 종목으로 채택된 이후 아시안게임의 핵심 종목으로 자리 잡았습니다. 세부 종목은 권총·소총·클레이(트랩/스키트) 네 갈래로 나뉘며, 결선은 매 발마다 최하위가 탈락하는 서바이벌 방식입니다. 2022 항저우에서 금2·은4·동8을 기록한 한국은 2024 파리 올림픽에서 반효진·오예진·양지인 등 젊은 선수들이 보여준 기량을 바탕으로 나고야에서 아시아 정상 탈환을 노립니다.", "groups": [{"label": "소총 남자", "members": ["박하준", "신민기", "정승우", "박성현", "권협준(더블스타터)"], "open": false}, {"label": "소총 여자", "members": ["권유나", "반효진", "조은별", "오세희", "김보경", "김지은"], "open": false}, {"label": "권총 남자", "members": ["홍수현", "소승섭", "김태영", "이건혁", "윤서영", "송종호"], "open": false}, {"label": "권총 여자", "members": ["김보미", "추가은", "양지인", "봉서린", "오예진(더블스타터)"], "open": false}, {"label": "산탄총 남자", "members": ["김덕훈", "김민수", "이종준", "장자용"], "open": false}, {"label": "산탄총 여자", "members": ["김채은", "안일지", "이보나", "장국희"], "open": false}], "disciplines": [{"name": "남자 10m 공기소총", "count": 1}, {"name": "남자 50m 소총 3자세", "count": 1}, {"name": "여자 10m 공기소총", "count": 1}, {"name": "여자 50m 소총 3자세", "count": 1}, {"name": "남자 10m 공기권총", "count": 1}, {"name": "남자 25m 속사권총", "count": 1}, {"name": "여자 10m 공기권총", "count": 1}, {"name": "여자 25m 권총", "count": 1}, {"name": "클레이 트랩·스키트(남녀)", "count": 4}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "은메달"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "예선 탈락"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "금2·은4·동8"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "동메달"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "은메달"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "복수의 금메달(반효진·오예진·양지인 등)"}], "seasonText": "오예진(권총) — 10m·25m 2종목 석권 노려 금메달 유력\n반효진(여자 10m 공기소총) — 올림픽 금메달리스트 중심 세대교체", "goalText": "사격 국가대표팀은 이번 대회에서 금메달 획득을 목표로 합니다.", "focusText": "권총·소총 전 종목에서 젊은 선수와 베테랑이 조화를 이루며 아시아 정상 탈환을 준비하고 있습니다.", "historyText": "아시안게임 2014 인천 — 은메달\n아시안게임 2018 자카르타·팔렘방 — 예선 탈락\n아시안게임 2022 항저우 — 금2·은4·동8\n올림픽 2016 리우데자네이루 — 동메달\n올림픽 2020 도쿄 — 은메달\n올림픽 2024 파리 — 복수의 금메달(반효진·오예진·양지인 등)", "historyModified": "2026-07-04", "seasonModified": "2026-07-04", "goalsModified": "2026-07-04", "edited": false, "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["은메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["금2·은4·동8"]}, {"label": "2024 파리", "tag": "OG", "cells": ["복수의 금메달(반효진·오예진·양지인 등)"]}]}, "goalLine": "사격 국가대표팀은 이번 대회에서 금메달 획득을 목표로 합니다.", "subcat": "target"}, {"id": "s14_1783090799292979", "kr": "사이클", "en": "Cycling", "icon": "🚴", "cat": "other", "tier": "medal", "oly": true, "desc": "트랙, 산악, BMX 등 다양한 노면에서 스피드를 겨루는 자전거 종목입니다.", "groups": [{"label": "사이클 트랙", "members": ["고하선", "김민정", "김수현", "김유로", "김하은", "김현석", "노윤서", "민경호", "박도영", "박상훈", "송민지", "신지은", "오제석", "윤재빈", "이주은", "이진구", "임종원", "장수지", "정호진", "조선영", "최우림", "최태호", "홍승민", "황현서"], "open": false}, {"label": "산악자전거", "members": ["천성훈", "허승수"], "open": false}, {"label": "BMX 레이싱", "members": ["김예서", "박아연", "윤준수", "홍주호"], "open": false}, {"label": "BMX 프리스타일", "members": ["김율", "오시내"], "open": false}], "disciplines": [{"name": "BMX", "count": 4}, {"name": "산악자전거", "count": 2}, {"name": "도로", "count": 4}, {"name": "트랙", "count": 12}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "동메달"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "금메달"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "예선 탈락"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "금메달"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "8강"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "동메달"}], "seasonText": "2026.02 아시아선수권대회(도쿄) — 금메달\n2026.04 월드컵 시리즈(서울) — 조별예선 통과\n2026.06 국제오픈대회(방콕) — 준우승", "goalText": "사이클 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "focusText": "국제대회 출전 횟수를 늘려 실전 경험치를 쌓는 데 주력하고 있습니다.", "historyText": "아시안게임 2014 인천 — 동메달\n아시안게임 2018 자카르타·팔렘방 — 금메달\n아시안게임 2022 항저우 — 예선 탈락\n올림픽 2016 리우데자네이루 — 금메달\n올림픽 2020 도쿄 — 8강\n올림픽 2024 파리 — 동메달", "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["8강"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["예선 탈락"]}, {"label": "2024 파리", "tag": "OG", "cells": ["동메달"]}]}, "goalLine": "사이클 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "subcat": "wheel", "edited": false}, {"id": "s15_1783090799292970", "kr": "서핑", "en": "Surfing", "icon": "🏄", "cat": "water", "tier": "first", "oly": true, "desc": "파도를 타며 기술과 표현력을 점수로 겨루는 종목입니다.", "groups": [{"label": null, "members": ["이나라", "카노아 희재 팔미아노"], "open": false}], "disciplines": [{"name": "서핑", "count": 2}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "금메달"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "은메달"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "5위"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "예선 탈락"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "8강"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "5위"}], "seasonText": "2026.02 아시아선수권대회(진천선수촌) — 4강\n2026.04 월드컵 시리즈(도쿄) — 우승\n2026.06 국제오픈대회(방콕) — 조별예선 통과", "goalText": "서핑 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "focusText": "종목 저변 확대와 대회 경험 축적에 중점을 두고 있습니다.", "historyText": "아시안게임 2014 인천 — 금메달\n아시안게임 2018 자카르타·팔렘방 — 은메달\n아시안게임 2022 항저우 — 5위\n올림픽 2016 리우데자네이루 — 예선 탈락\n올림픽 2020 도쿄 — 8강\n올림픽 2024 파리 — 5위", "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["8강"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["5위"]}, {"label": "2024 파리", "tag": "OG", "cells": ["5위"]}]}, "goalLine": "서핑 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "subcat": "sail", "edited": false}, {"id": "s16_1783090799292180", "kr": "세팍타크로", "en": "Sepaktakraw", "icon": "🦵", "cat": "team", "tier": "first", "oly": false, "desc": "발과 머리만으로 공을 넘기는 동남아시아 기원의 구기 종목입니다.", "groups": [], "disciplines": [{"name": "세팍타크로", "count": 6}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "8강"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "8강"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "5위"}], "seasonText": "2026.02 아시아선수권대회(상하이) — 금메달\n2026.04 월드컵 시리즈(서울) — 은메달\n2026.06 국제오픈대회(방콕) — 8강 탈락", "goalText": "세팍타크로 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "focusText": "종목 저변 확대와 대회 경험 축적에 중점을 두고 있습니다.", "historyText": "아시안게임 2014 인천 — 8강\n아시안게임 2018 자카르타·팔렘방 — 8강\n아시안게임 2022 항저우 — 5위", "historyTable": {"cols": ["종합"], "rows": [{"label": "2018 자카르타·팔렘방", "tag": "AG", "cells": ["8강"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["5위"]}]}, "goalLine": "세팍타크로 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "subcat": "trad", "edited": true, "participatingTeams": null, "matchLog": [], "matchLogNote": null, "positionLegend": "더블 2인조 · 레구 3인조 · 쿼드 4인조", "rosterPositionTable": [{"pos": "테콩", "name": "박현근", "aff": "고양시청", "gender": "남"}, {"pos": "테콩", "name": "이우진", "aff": "청주시청", "gender": "남"}, {"pos": "테콩", "name": "임태균", "aff": "강원특별자치도체육회", "gender": "남"}, {"pos": "테콩", "name": "천동령", "aff": "경북도청", "gender": "남"}, {"pos": "킬러", "name": "김형종", "aff": "경북도청", "gender": "남"}, {"pos": "킬러", "name": "선우영수", "aff": "강원특별자치도체육회", "gender": "남"}, {"pos": "킬러", "name": "신희섭", "aff": "대구광역시청", "gender": "남"}, {"pos": "킬러", "name": "정하성", "aff": "청주시청", "gender": "남"}, {"pos": "피더", "name": "김정만", "aff": "부산환경공단", "gender": "남"}, {"pos": "피더", "name": "오대양", "aff": "대구광역시청", "gender": "남"}, {"pos": "피더", "name": "이민주", "aff": "대덕구청", "gender": "남"}, {"pos": "피더", "name": "정원덕", "aff": "청주시청", "gender": "남"}, {"pos": "테콩", "name": "김예지", "aff": "충청남도체육회", "gender": "여"}, {"pos": "테콩", "name": "위지선", "aff": "인천광역시체육회", "gender": "여"}, {"pos": "테콩", "name": "장가연", "aff": "부산환경공단", "gender": "여"}, {"pos": "테콩", "name": "최지나", "aff": "경북도청", "gender": "여"}, {"pos": "킬러", "name": "김세영", "aff": "충청남도체육회", "gender": "여"}, {"pos": "킬러", "name": "박선주", "aff": "전북원스포츠단", "gender": "여"}, {"pos": "킬러", "name": "전규미", "aff": "인천광역시체육회", "gender": "여"}, {"pos": "킬러", "name": "한예지", "aff": "부산환경공단", "gender": "여"}, {"pos": "피더", "name": "김지영", "aff": "경북도청", "gender": "여"}, {"pos": "피더", "name": "배채은", "aff": "대전광역시청", "gender": "여"}, {"pos": "피더", "name": "배한울", "aff": "인천광역시체육회", "gender": "여"}, {"pos": "피더", "name": "이민주", "aff": "부산환경공단", "gender": "여"}], "historicalYearTables": [{"year": "2014", "cols": ["남자더블", "남자레구", "남자단체레구", "여자더블", "여자레구", "여자단체레구"], "results": ["2위", "2위", "2위", "예선", "2위", "예선"]}, {"year": "2018", "cols": ["남자더블", "남자쿼드", "남자단체더블", "남자단체레구", "여자쿼드", "여자단체레구"], "results": ["4강", "예선", "예선", "예선", "예선", "2위"]}, {"year": "2022", "cols": ["남자레구", "남자쿼드", "남자단체레구", "여자레구", "여자쿼드", "여자단체레구"], "results": ["예선", "예선", "4강", "4강", "예선", "2위"]}], "recentResults": ["ISTAF 월드컵 — 남자부 레구 3위, 팀레구 3위"]}, {"id": "s17_1783090799292475", "kr": "소프트볼", "en": "Softball", "icon": "🥎", "cat": "team", "tier": "medal", "oly": false, "desc": "야구와 유사한 규칙으로 겨루는 여자 대표 구기 종목입니다.", "groups": [{"label": null, "members": ["김수빈", "김아영", "김여랑", "김지윤", "김하늘", "박민경", "이경민", "이민정", "이아름", "이지영", "장세진", "정송희", "정연우", "주효주", "진주이", "최가현", "최연지"], "open": false}], "disciplines": [{"name": "소프트볼", "count": 1}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "동메달"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "은메달"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "8강"}], "seasonText": "2026.03 아시아선수권대회(방콕) — 은메달\n2026.05 월드컵 시리즈(서울) — 우승\n2026.06 국제오픈대회(도쿄) — 준우승", "goalText": "소프트볼 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "focusText": "국제대회 출전 횟수를 늘려 실전 경험치를 쌓는 데 주력하고 있습니다.", "historyText": "아시안게임 2014 인천 — 동메달\n아시안게임 2018 자카르타·팔렘방 — 은메달\n아시안게임 2022 항저우 — 8강", "historyTable": {"cols": ["종합"], "rows": [{"label": "2018 자카르타·팔렘방", "tag": "AG", "cells": ["은메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["8강"]}]}, "goalLine": "소프트볼 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "subcat": "bat", "edited": false}, {"id": "s18_1783090799292802", "kr": "소프트테니스", "en": "Soft Tennis", "icon": "🎾", "cat": "racket", "tier": "gold", "oly": false, "desc": "고무공을 사용해 겨루는 테니스의 변형 종목으로 한국이 강세를 보입니다.", "groups": [{"label": null, "members": ["김연화", "김진웅", "김한설", "김현수", "박재규", "엄예진", "이수진", "이하늘", "이현권", "황정미"], "open": false}], "disciplines": [{"name": "소프트테니스", "count": 5}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "8강"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "8강"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "8강"}], "seasonText": "2026.02 아시아선수권대회(도쿄) — 8강 탈락\n2026.04 월드컵 시리즈(상하이) — 4강\n2026.06 국제오픈대회(진천선수촌) — 준우승", "goalText": "소프트테니스 국가대표팀은 이번 대회에서 금메달 획득을 목표로 합니다.", "focusText": "해외 전지훈련과 상대 전력 분석을 통해 실전 감각을 끌어올리는 데 집중하고 있습니다.", "historyText": "아시안게임 2014 인천 — 8강\n아시안게임 2018 자카르타·팔렘방 — 8강\n아시안게임 2022 항저우 — 8강", "historyTable": {"cols": ["종합"], "rows": [{"label": "2018 자카르타·팔렘방", "tag": "AG", "cells": ["8강"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["8강"]}]}, "goalLine": "소프트테니스 국가대표팀은 이번 대회에서 금메달 획득을 목표로 합니다.", "subcat": "table", "edited": false}, {"id": "s19_1783090799292859_a", "kr": "수영(경영)", "en": "Swimming", "icon": "🏊", "cat": "water", "tier": "medal", "oly": true, "desc": "자유형·배영·평영·접영·개인혼영 등 정해진 거리를 가장 빨리 완주하는 대표적인 수상 종목입니다. 한국 수영의 간판 종목으로, 2024 파리 올림픽에서 황선우를 비롯한 선수들이 메달권 기량을 보여주었습니다.", "groups": [{"label": "경영", "members": ["김민석", "김민섭", "김승원", "김영범", "김우민", "김윤희", "김준우", "김지훈", "김채윤", "박시은", "박정훈", "안세현", "양재훈", "윤지환", "이송은", "이은지", "이주호", "이호준", "이희은", "조성재", "조현주", "지유찬", "최동열", "한다경", "허연경", "황선우"], "open": false}], "disciplines": [{"name": "경영", "count": 41}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "5위"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "금메달"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "금메달"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "예선 탈락"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "동메달"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "금메달"}], "historyText": "아시안게임 2014 인천 — 5위\n아시안게임 2018 자카르타·팔렘방 — 금메달\n아시안게임 2022 항저우 — 금메달\n올림픽 2016 리우데자네이루 — 예선 탈락\n올림픽 2020 도쿄 — 동메달\n올림픽 2024 파리 — 금메달", "seasonText": "2026.02 아시아선수권대회(서울) — 8강 탈락\n2026.04 월드컵 시리즈(진천선수촌) — 우승\n2026.06 국제오픈대회(도쿄) — 4강", "goalText": "수영(경영) 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "focusText": "국제대회 출전 횟수를 늘려 실전 경험치를 쌓는 데 주력하고 있습니다.", "goalsModified": "2026-07-04", "edited": false, "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["동메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["금메달"]}, {"label": "2024 파리", "tag": "OG", "cells": ["금메달"]}]}, "goalLine": "수영(경영) 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "subcat": "swim"}, {"id": "s19_1783090799292859_b", "kr": "수영(기타)", "en": "Diving · Water Polo · Artistic Swimming", "icon": "🤿", "cat": "water", "tier": "first", "oly": true, "desc": "다이빙, 수구, 아티스틱 스위밍을 아우르는 수상 종목입니다. 경영에 비해 한국의 선수층은 얇지만, 저변 확대를 통해 국제무대 경험을 쌓아가고 있습니다.", "groups": [{"label": "다이빙", "members": ["김나현", "김수지", "김영남", "김영택", "김지욱", "박하름", "신정휘", "이예주"], "open": false}, {"label": "수구", "members": ["강민수", "권대용", "권태우", "김성훈", "김찬수", "박성훈", "손정욱", "용우석", "윤시우", "이시덕", "이진우", "전기재", "한효민", "황정윤"], "open": false}, {"label": "아티스틱 스위밍", "members": ["김지윤", "이규빈", "이채은", "허윤서"], "open": false}], "disciplines": [{"name": "다이빙", "count": 10}, {"name": "수구", "count": 2}, {"name": "아티스틱 스위밍", "count": 2}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "미상"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "미상"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "미상"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "미상"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "미상"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "미상"}], "seasonText": "다이빙·수구·아티스틱 스위밍 모두 국제무대 경험 축적에 주력하고 있습니다.", "goalText": "수영(기타) 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "focusText": "종목 저변 확대와 대회 경험 축적에 중점을 두고 있습니다.", "historyText": "아시안게임 2014 인천 — 미상\n아시안게임 2018 자카르타·팔렘방 — 미상\n아시안게임 2022 항저우 — 미상\n올림픽 2016 리우데자네이루 — 미상\n올림픽 2020 도쿄 — 미상\n올림픽 2024 파리 — 미상", "historyModified": "2026-07-04", "seasonModified": "2026-07-04", "goalsModified": "2026-07-04", "edited": false, "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["미상"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["미상"]}, {"label": "2024 파리", "tag": "OG", "cells": ["미상"]}]}, "goalLine": "수영(기타) 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "subcat": "swim"}, {"id": "s20_178309079929255", "kr": "스케이트보드", "en": "Skateboarding", "icon": "🛹", "cat": "racket", "tier": "first", "oly": true, "desc": "스트리트와 파크 코스에서 기술 난도와 완성도를 겨루는 신생 종목입니다.", "groups": [{"label": "스트리트", "members": ["강준이", "신지율", "이준승"], "open": false}, {"label": "파크", "members": ["곽민지", "문강호", "이로운"], "open": false}], "disciplines": [{"name": "스케이트보드", "count": 4}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "5위"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "예선 탈락"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "8강"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "예선 탈락"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "동메달"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "8강"}], "seasonText": "2026.03 아시아선수권대회(서울) — 금메달\n2026.05 월드컵 시리즈(진천선수촌) — 8강 탈락\n2026.06 국제오픈대회(진천선수촌) — 조별예선 통과", "goalText": "스케이트보드 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "focusText": "종목 저변 확대와 대회 경험 축적에 중점을 두고 있습니다.", "historyText": "아시안게임 2014 인천 — 5위\n아시안게임 2018 자카르타·팔렘방 — 예선 탈락\n아시안게임 2022 항저우 — 8강\n올림픽 2016 리우데자네이루 — 예선 탈락\n올림픽 2020 도쿄 — 동메달\n올림픽 2024 파리 — 8강", "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["동메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["8강"]}, {"label": "2024 파리", "tag": "OG", "cells": ["8강"]}]}, "goalLine": "스케이트보드 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "subcat": "urban", "edited": false}, {"id": "s21_1783090799292736", "kr": "스쿼시", "en": "Squash", "icon": "🎾", "cat": "racket", "tier": "medal", "oly": false, "desc": "밀폐된 코트에서 벽을 이용해 랠리를 이어가는 라켓 종목입니다. 1998 방콕 아시안게임부터 정식 종목으로 채택되어 이후 매 대회 빠짐없이 치러지고 있습니다.", "groups": [{"label": "남자", "members": ["나주영", "류정민", "오서진", "이민우"], "open": false}, {"label": "여자", "members": ["김다미", "류보람", "엄화영", "허민경"], "open": false}, {"label": "예비 엔트리(기존 명단)", "members": ["고영조", "김건", "송채원", "유재진", "전아인"], "open": false}], "disciplines": [{"name": "남자 개인전", "count": 1}, {"name": "여자 개인전", "count": 1}, {"name": "남자 단체전", "count": 1}, {"name": "여자 단체전", "count": 1}, {"name": "혼성 복식", "count": 1}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "동메달 1개"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "노메달"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "동메달 1개"}], "seasonText": "2026 동아시아선수권(5월 29일~31일 개최)", "goalText": "스쿼시 국가대표팀은 2026 아시안게임에서 지난 대회들처럼 메달 1개 이상 획득을 목표로 합니다.", "focusText": "국제대회 출전 횟수를 늘려 실전 경험치를 쌓는 데 주력하고 있습니다.", "historyText": "아시안게임 2014 인천 — 동메달 1개\n아시안게임 2018 자카르타·팔렘방 — 노메달\n아시안게임 2022 항저우 — 동메달 1개", "refUrl": "http://www.koreasquash.or.kr/", "refLabel": "대한스쿼시협회 (koreasquash.or.kr)", "historyModified": "2026-07-04", "seasonModified": "2026-07-04", "goalsModified": "2026-07-04", "edited": false, "historyTable": {"cols": ["종합"], "rows": [{"label": "2018 자카르타·팔렘방", "tag": "AG", "cells": ["노메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["동메달 1개"]}]}, "goalLine": "스쿼시 국가대표팀은 2026 아시안게임에서 지난 대회들처럼 메달 1개 이상 획득을 목표로 합니다.", "subcat": "court"}, {"id": "s22_1783090799292677", "kr": "스포츠클라이밍", "en": "Sport Climbing", "icon": "🧗", "cat": "racket", "tier": "medal", "oly": true, "desc": "인공 암벽을 오르는 속도와 난도로 승부하는 종목입니다.", "groups": [{"label": null, "members": ["김동준", "김채영", "노현승", "노희주", "서채현", "성한아름", "이도현", "정지민", "조진용", "천종원"], "open": false}], "disciplines": [{"name": "스포츠클라이밍", "count": 6}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "은메달"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "8강"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "은메달"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "예선 탈락"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "은메달"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "은메달"}], "seasonText": "2026.02 아시아선수권대회(진천선수촌) — 8강 탈락\n2026.05 월드컵 시리즈(진천선수촌) — 준우승\n2026.06 국제오픈대회(진천선수촌) — 우승", "goalText": "스포츠클라이밍 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "focusText": "국제대회 출전 횟수를 늘려 실전 경험치를 쌓는 데 주력하고 있습니다.", "historyText": "아시안게임 2014 인천 — 은메달\n아시안게임 2018 자카르타·팔렘방 — 8강\n아시안게임 2022 항저우 — 은메달\n올림픽 2016 리우데자네이루 — 예선 탈락\n올림픽 2020 도쿄 — 은메달\n올림픽 2024 파리 — 은메달", "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["은메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["은메달"]}, {"label": "2024 파리", "tag": "OG", "cells": ["은메달"]}]}, "goalLine": "스포츠클라이밍 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "subcat": "urban", "edited": false}, {"id": "s23_1783090799292866", "kr": "승마", "en": "Equestrian", "icon": "🏇", "cat": "other", "tier": "medal", "oly": true, "desc": "말과 호흡을 맞춰 마장마술, 장애물, 종합마술을 겨루는 종목입니다.", "groups": [{"label": "마장마술", "members": ["김시우", "남동헌", "도현우", "이명석"], "open": false}, {"label": "장애물", "members": ["권만준", "이현규", "정철희", "허정훈"], "open": false}, {"label": "종합마술", "members": ["강한수", "김형호", "박흥수", "이동화"], "open": false}], "disciplines": [{"name": "마장마술", "count": 2}, {"name": "종합마술", "count": 2}, {"name": "장애물", "count": 3}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "8강"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "8강"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "8강"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "5위"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "금메달"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "금메달"}], "seasonText": "2026.03 아시아선수권대회(도쿄) — 8강 탈락\n2026.05 월드컵 시리즈(방콕) — 금메달\n2026.06 국제오픈대회(방콕) — 8강 탈락", "goalText": "승마 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "focusText": "국제대회 출전 횟수를 늘려 실전 경험치를 쌓는 데 주력하고 있습니다.", "historyText": "아시안게임 2014 인천 — 8강\n아시안게임 2018 자카르타·팔렘방 — 8강\n아시안게임 2022 항저우 — 8강\n올림픽 2016 리우데자네이루 — 5위\n올림픽 2020 도쿄 — 금메달\n올림픽 2024 파리 — 금메달", "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["금메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["8강"]}, {"label": "2024 파리", "tag": "OG", "cells": ["금메달"]}]}, "goalLine": "승마 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "subcat": "wheel", "edited": false}, {"id": "s24_1783090799292453", "kr": "야구", "en": "Baseball", "icon": "⚾", "cat": "team", "tier": "medal", "oly": false, "desc": "9회 공수 교대로 점수를 겨루는 한국의 인기 구기 종목입니다.", "groups": [{"label": null, "members": ["곽빈", "김건희", "김도영", "김영우", "김주원", "김지찬", "김진욱", "노시환", "문보경", "문현빈", "박영현", "박재현", "박준순", "배찬승", "성영탁", "소형준", "오원석", "윤동희", "이재현", "정준재", "조병현", "조형우", "최민석", "최준용"], "open": false}], "disciplines": [{"name": "야구", "count": 1}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "은메달"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "은메달"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "5위"}], "seasonText": "2026.03 아시아선수권대회(상하이) — 동메달\n2026.05 월드컵 시리즈(방콕) — 조별예선 통과\n2026.06 국제오픈대회(상하이) — 8강 탈락", "goalText": "야구 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "focusText": "국제대회 출전 횟수를 늘려 실전 경험치를 쌓는 데 주력하고 있습니다.", "historyText": "아시안게임 2014 인천 — 은메달\n아시안게임 2018 자카르타·팔렘방 — 은메달\n아시안게임 2022 항저우 — 5위", "historyTable": {"cols": ["종합"], "rows": [{"label": "2018 자카르타·팔렘방", "tag": "AG", "cells": ["은메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["5위"]}]}, "goalLine": "야구 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "subcat": "bat", "edited": false}, {"id": "s25_1783090799292999", "kr": "양궁", "en": "Archery", "icon": "🏹", "cat": "other", "tier": "gold", "oly": true, "desc": "흔들림 없는 집중력과 정교한 기술로 승부를 가르는 기록·토너먼트 종목입니다. 올림픽은 리커브 중심으로 치러지지만, 아시안게임은 리커브와 컴파운드가 함께 열려 종목의 폭이 더 넓습니다. 2024 파리 올림픽에서 한국은 양궁 금메달 5개를 모두 휩쓸었고, 남자 개인전에서 김우진이 금메달, 이우석이 동메달을 획득했습니다.", "groups": [{"label": "리커브 남자", "members": ["김제덕(예천군청)", "김우진(청주시청)", "이우석(코오롱)"], "open": false}, {"label": "리커브 여자", "members": ["오예진(광주은행)", "강채영(현대모비스)", "이윤지(현대모비스)"], "open": false}, {"label": "컴파운드 남자", "members": ["김종호(현대제철)", "최용희(현대제철)", "최은규(울산남구청)"], "open": false}, {"label": "컴파운드 여자", "members": ["박예린(한국체대)", "박정윤(창원시청)", "강연서(부천G-스포츠, 만 14세 최연소 국대)"], "open": false}], "disciplines": [{"name": "리커브 개인(남)", "count": 1}, {"name": "리커브 개인(여)", "count": 1}, {"name": "리커브 단체(남)", "count": 1}, {"name": "리커브 단체(여)", "count": 1}, {"name": "리커브 혼성단체", "count": 1}, {"name": "컴파운드 개인(남)", "count": 1}, {"name": "컴파운드 개인(여)", "count": 1}, {"name": "컴파운드 단체(남)", "count": 1}, {"name": "컴파운드 단체(여)", "count": 1}, {"name": "컴파운드 혼성단체", "count": 1}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "은메달"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "5위"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "리커브 중심 정상권 성적"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "동메달"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "5위"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "금메달 5개(전 종목 석권, 김우진 개인전 금·이우석 동)"}], "seasonText": "월드컵 3차(튀르키예 안탈리아) — 리커브 남자 이우석 은메달·단체 금메달, 여자부는 노메달(안산 4위)로 부진\n2024 파리 올림픽에서 양궁 5개 금메달 전 종목 석권(김우진 개인전 금)", "goalText": "양궁 국가대표팀은 이번 대회에서 금메달 획득을 목표로 합니다.", "focusText": "해외 전지훈련과 상대 전력 분석을 통해 실전 감각을 끌어올리는 데 집중하고 있습니다.", "historyText": "아시안게임 2014 인천 — 은메달\n아시안게임 2018 자카르타·팔렘방 — 5위\n아시안게임 2022 항저우 — 리커브 중심 정상권 성적\n올림픽 2016 리우데자네이루 — 동메달\n올림픽 2020 도쿄 — 5위\n올림픽 2024 파리 — 금메달 5개(전 종목 석권, 김우진 개인전 금·이우석 동)", "historyModified": "2026-07-04", "seasonModified": "2026-07-04", "edited": false, "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["5위"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["리커브 중심 정상권 성적"]}, {"label": "2024 파리", "tag": "OG", "cells": ["금메달 5개(전 종목 석권, 김우진 개인전 금·이우석 동)"]}]}, "goalLine": "양궁 국가대표팀은 이번 대회에서 금메달 획득을 목표로 합니다.", "subcat": "target"}, {"id": "s26_1783090799292645", "kr": "역도", "en": "Weightlifting", "icon": "🏋️", "cat": "other", "tier": "medal", "oly": true, "desc": "인상과 용상 합계 기록으로 순위를 가리는 종목입니다. 아시안게임 역도는 남녀 각 8체급씩 총 16체급이 열리지만, 국가별로는 남녀 각 5체급씩 총 10체급만 출전할 수 있습니다. 은메달 이상이 유력한 선수는 없으나, 동메달 5개 안팎이 기대됩니다.", "groups": [{"label": "남자", "members": ["손현호(-75kg)", "김성민(-85kg)", "원종범(-95kg)", "진윤성(-110kg)", "송영환(+110kg)"], "open": false}, {"label": "여자", "members": ["신재경(-49kg)", "안시성(-61kg)", "김이슬(-77kg)", "전희수(-86kg)", "박혜정(+86kg)"], "open": false}], "disciplines": [{"name": "남자 -60kg", "count": 1}, {"name": "남자 -65kg", "count": 1}, {"name": "남자 -70kg", "count": 1}, {"name": "남자 -75kg", "count": 1}, {"name": "남자 -85kg", "count": 1}, {"name": "남자 -95kg", "count": 1}, {"name": "남자 -110kg", "count": 1}, {"name": "남자 +110kg", "count": 1}, {"name": "여자 -49kg", "count": 1}, {"name": "여자 -53kg", "count": 1}, {"name": "여자 -57kg", "count": 1}, {"name": "여자 -61kg", "count": 1}, {"name": "여자 -69kg", "count": 1}, {"name": "여자 -77kg", "count": 1}, {"name": "여자 -86kg", "count": 1}, {"name": "여자 +86kg", "count": 1}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "금메달"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "5위"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "예선 탈락"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "금메달"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "8강"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "5위"}], "seasonText": "박혜정(여자 무제한) — 아시아선수권 298kg, 카타르 신예 이클리프(299kg)와 경합\n원종범(남자 95kg) — 전국체전 390kg, 이란·북한과 메달권 경쟁", "goalText": "역도 국가대표팀은 2026 아시안게임에서 동메달 5개 안팎 획득을 목표로 합니다.", "focusText": "해외 전지훈련과 상대 전력 분석을 통해 실전 감각을 끌어올리는 데 집중하고 있습니다.", "disciplinesNote": "대한민국은 남녀 각 5체급씩 총 10체급에 출전하며, 나머지 체급은 미출전입니다.", "historyText": "아시안게임 2014 인천 — 금메달\n아시안게임 2018 자카르타·팔렘방 — 5위\n아시안게임 2022 항저우 — 예선 탈락\n올림픽 2016 리우데자네이루 — 금메달\n올림픽 2020 도쿄 — 8강\n올림픽 2024 파리 — 5위", "seasonModified": "2026-07-04", "goalsModified": "2026-07-04", "edited": false, "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["8강"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["예선 탈락"]}, {"label": "2024 파리", "tag": "OG", "cells": ["5위"]}]}, "goalLine": "역도 국가대표팀은 2026 아시안게임에서 동메달 5개 안팎 획득을 목표로 합니다.", "subcat": "strength"}, {"id": "s27_1783090799292548", "kr": "요트", "en": "Sailing", "icon": "⛵", "cat": "water", "tier": "medal", "oly": true, "desc": "바람과 해류를 활용해 가장 빨리 코스를 완주하는 순서를 겨루는 종목입니다.", "groups": [{"label": null, "members": ["김창주", "김태린", "손지원", "신상민", "이경진", "이송하", "이태훈", "이혜인", "정혜원", "채봉진", "최가은", "최군학", "최지운", "하지민"], "open": false}], "disciplines": [{"name": "요트", "count": 14}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "예선 탈락"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "금메달"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "동메달"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "8강"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "금메달"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "은메달"}], "seasonText": "2026.03 아시아선수권대회(진천선수촌) — 준우승\n2026.04 월드컵 시리즈(진천선수촌) — 금메달\n2026.06 국제오픈대회(방콕) — 조별예선 통과", "goalText": "요트 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "focusText": "국제대회 출전 횟수를 늘려 실전 경험치를 쌓는 데 주력하고 있습니다.", "historyText": "아시안게임 2014 인천 — 예선 탈락\n아시안게임 2018 자카르타·팔렘방 — 금메달\n아시안게임 2022 항저우 — 동메달\n올림픽 2016 리우데자네이루 — 8강\n올림픽 2020 도쿄 — 금메달\n올림픽 2024 파리 — 은메달", "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["금메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["동메달"]}, {"label": "2024 파리", "tag": "OG", "cells": ["은메달"]}]}, "goalLine": "요트 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "subcat": "sail", "edited": false}, {"id": "s28_1783090799293310", "kr": "우슈", "en": "Wushu", "icon": "🥋", "cat": "combat", "tier": "medal", "oly": false, "desc": "투로(연기)와 산타(대련)로 나뉘는 중국 전통 무술 종목입니다.", "groups": [{"label": "투로", "members": ["김진수", "김채영", "변시우", "안현기", "이민주", "이하성", "이용현", "장민규"], "open": false}, {"label": "산타", "members": ["김민수", "권문영", "송기철", "신채연", "장세영", "정다재"], "open": false}], "disciplines": [{"name": "우슈", "count": 15}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "5위"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "은메달"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "8강"}], "seasonText": "2026.02 아시아선수권대회(서울) — 우승\n2026.04 월드컵 시리즈(방콕) — 금메달\n2026.06 국제오픈대회(진천선수촌) — 동메달", "goalText": "우슈 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "focusText": "국제대회 출전 횟수를 늘려 실전 경험치를 쌓는 데 주력하고 있습니다.", "historyText": "아시안게임 2014 인천 — 5위\n아시안게임 2018 자카르타·팔렘방 — 은메달\n아시안게임 2022 항저우 — 8강", "historyTable": {"cols": ["종합"], "rows": [{"label": "2018 자카르타·팔렘방", "tag": "AG", "cells": ["은메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["8강"]}]}, "goalLine": "우슈 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "subcat": "mixed", "edited": false}, {"id": "s29_178309079929310", "kr": "유도", "en": "Judo", "icon": "🥋", "cat": "combat", "tier": "gold", "oly": true, "desc": "1882년 일본의 지고로 카노가 창시한 무도로, 메치기와 굳히기 기술로 상대를 제압해 한판·절반·유효 등급으로 점수를 가립니다. 올림픽에서는 1964년 시범 도입 후 1972년부터 매회 정식 종목이며, 여자 유도는 1988년 시범·1992년 정식 채택되었고 2020년부터 혼성 단체전도 열립니다. 아시안게임에서는 1986년 서울대회(남자부)와 1990년(여자부 추가)부터 시작해 이번이 11번째 대회입니다. 역대 금메달은 일본 61개, 한국 42개, 중국 21개 순이며, 2022 항저우에서 한국은 1금 2은 6동을 기록했습니다.", "groups": [{"label": "남자", "members": ["이하림(-60kg)", "김찬녕(-66kg)", "안재홍(-73kg)", "이준환(-81kg)", "김종훈(-90kg)", "한주엽(-100kg)", "김민종(+100kg)"], "open": false}, {"label": "여자", "members": ["정수진(-48kg)", "장세윤(-52kg)", "허미미(-57kg)", "김지수(-63kg)", "김혜미(-70kg)", "김민주(-77kg)", "이현지(+78kg)"], "open": false}], "disciplines": [{"name": "남자 -60kg", "count": 1}, {"name": "남자 -66kg", "count": 1}, {"name": "남자 -73kg", "count": 1}, {"name": "남자 -81kg", "count": 1}, {"name": "남자 -90kg", "count": 1}, {"name": "남자 -100kg", "count": 1}, {"name": "남자 +100kg", "count": 1}, {"name": "여자 -48kg", "count": 1}, {"name": "여자 -52kg", "count": 1}, {"name": "여자 -57kg", "count": 1}, {"name": "여자 -63kg", "count": 1}, {"name": "여자 -70kg", "count": 1}, {"name": "여자 -77kg", "count": 1}, {"name": "여자 +78kg", "count": 1}, {"name": "혼성 단체전", "count": 1}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "미상"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "미상"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "금1·은2·동6"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "미상"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "미상"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "미상"}], "seasonText": "허미미(-57kg) — 세계 9위, 2025년 말 아부다비 그랜드슬램 우승\n이준환(-81kg) — 파리 올림픽 동메달리스트, 몸 상태만 좋다면 금메달도 가능", "goalText": "유도 국가대표팀은 2026 아시안게임에서 여러 체급에서 금메달과 메달권 진입을 동시에 노립니다.", "focusText": "해외 전지훈련과 상대 전력 분석을 통해 실전 감각을 끌어올리는 데 집중하고 있습니다.", "historyText": "아시안게임 2014 인천 — 미상\n아시안게임 2018 자카르타·팔렘방 — 미상\n아시안게임 2022 항저우 — 금1·은2·동6\n올림픽 2016 리우데자네이루 — 미상\n올림픽 2020 도쿄 — 미상\n올림픽 2024 파리 — 미상", "historyModified": "2026-07-04", "seasonModified": "2026-07-04", "goalsModified": "2026-07-04", "edited": false, "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["미상"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["금1·은2·동6"]}, {"label": "2024 파리", "tag": "OG", "cells": ["미상"]}]}, "goalLine": "유도 국가대표팀은 2026 아시안게임에서 여러 체급에서 금메달과 메달권 진입을 동시에 노립니다.", "subcat": "grapple"}, {"id": "s30_1783090799293177_trk", "kr": "육상(트랙)", "en": "Athletics - Track", "icon": "🏃", "cat": "other", "tier": "medal", "oly": true, "desc": "단거리부터 중장거리, 허들, 계주까지 트랙 위에서 순위를 다투는 육상 세부 종목입니다. 아시안게임에서는 역대 34개의 금메달을 따냈지만, 2010년 대회 이후로는 금메달이 크게 줄어 세대교체가 시급한 상황입니다.", "groups": [{"label": "남자 100m", "members": ["나마디 조엘진", "비웨사 다니엘 가사마"], "open": false}, {"label": "남자 200m", "members": ["나마디 조엘진", "이재성"], "open": false}, {"label": "남자 4x100m 계주", "members": ["나마디 조엘진", "비웨사 다니엘 가사마", "이재성", "서민준", "김시온"], "open": false}, {"label": "남자 400m", "members": ["신민규", "배건율"], "open": false}, {"label": "남자 4x400m 계주", "members": ["신민규", "배건율", "장민호"], "open": false}, {"label": "남자 800m", "members": ["이재웅"], "open": false}, {"label": "남자 1500m", "members": ["이재웅", "박종학"], "open": false}, {"label": "남자 5000m", "members": ["박재우"], "open": false}, {"label": "남자 10000m", "members": ["박재우"], "open": false}, {"label": "남자 3000mSC", "members": ["박원빈"], "open": false}, {"label": "여자 100m", "members": ["김주하", "서지현"], "open": false}, {"label": "여자 4x100m 계주", "members": ["김주하", "서지현", "김명지", "안영훈"], "open": false}, {"label": "여자 400m", "members": ["김서윤", "이아영"], "open": false}, {"label": "여자 800m", "members": ["박나연"], "open": false}, {"label": "여자 1500m", "members": ["박나연", "김유진"], "open": false}, {"label": "여자 5000m", "members": ["김유진"], "open": false}, {"label": "여자 10000m", "members": ["조하림"], "open": false}, {"label": "여자 3000mSC", "members": ["조하림"], "open": false}], "disciplines": [{"name": "남자 100m", "count": 1}, {"name": "남자 200m", "count": 1}, {"name": "남자 400m", "count": 1}, {"name": "남자 800m", "count": 1}, {"name": "남자 1500m", "count": 1}, {"name": "남자 5000m", "count": 1}, {"name": "남자 10000m", "count": 1}, {"name": "남자 3000mSC", "count": 1}, {"name": "남자 4x100m 계주", "count": 1}, {"name": "남자 4x400m 계주", "count": 1}, {"name": "여자 100m", "count": 1}, {"name": "여자 200m", "count": 1}, {"name": "여자 400m", "count": 1}, {"name": "여자 800m", "count": 1}, {"name": "여자 1500m", "count": 1}, {"name": "여자 5000m", "count": 1}, {"name": "여자 10000m", "count": 1}, {"name": "여자 3000mSC", "count": 1}, {"name": "여자 4x100m 계주", "count": 1}, {"name": "여자 4x400m 계주", "count": 1}, {"name": "허들(남녀 110mH·100mH·400mH)", "count": 1}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "동메달"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "예선 탈락"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "예선 탈락"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "은메달"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "은메달"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "5위"}], "historyText": "아시안게임 2014 인천 — 동메달\n아시안게임 2018 자카르타·팔렘방 — 예선 탈락\n아시안게임 2022 항저우 — 예선 탈락\n올림픽 2016 리우데자네이루 — 은메달\n올림픽 2020 도쿄 — 은메달\n올림픽 2024 파리 — 5위", "seasonText": "메달 유력 후보 — 나마디 조엘진(남 100·200m, 시즌 최고 20.50), 이재웅(남 1500m, 3:40.57로 1순위 기준기록 통과), 남자 4x100m 계주(38.1~2초대 목표)\n박원빈(남 3000mSC)은 8:40.37로 36년 만의 한국신기록을 세우며 3순위 기준기록을 통과, 현실적으로 기준기록 돌파가 가능한 유일한 선수로 꼽힘", "goalText": "육상(트랙) 국가대표팀은 2026 아시안게임에서 이재웅과 남자 계주진을 중심으로 메달권 진입을 목표로 합니다.", "focusText": "국제대회 출전 횟수를 늘려 실전 경험치를 쌓는 데 주력하고 있습니다.", "seasonModified": "2026-07-04", "goalsModified": "2026-07-04", "edited": false, "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["은메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["예선 탈락"]}, {"label": "2024 파리", "tag": "OG", "cells": ["5위"]}]}, "goalLine": "육상(트랙) 국가대표팀은 2026 아시안게임에서 이재웅과 남자 계주진을 중심으로 메달권 진입을 목표로 합니다.", "subcat": "athletics"}, {"id": "s30_1783090799293177_fld", "kr": "육상(필드)", "en": "Athletics - Field & Road", "icon": "🤸", "cat": "other", "tier": "gold", "oly": true, "desc": "높이뛰기·멀리뛰기·투척 등 필드 종목과 마라톤·경보 등 도로 종목, 혼성 종목(10종·7종)을 포함합니다. 1933년 손기정(당시 일본 국적)의 마라톤 우승은 한국 혈통 선수 최초의 올림픽 메달이었고, 바르셀로나 올림픽 황영조의 마라톤 금메달도 이 분야에서 나왔습니다.", "groups": [{"label": "남자 높이뛰기", "members": ["우상혁"], "open": false}, {"label": "남자 세단뛰기", "members": ["김장우", "김동혁"], "open": false}, {"label": "남자 포환던지기", "members": ["박시훈"], "open": false}, {"label": "남자 해머던지기", "members": ["이윤철"], "open": false}, {"label": "남자 창던지기", "members": ["남태풍"], "open": false}, {"label": "남자 10종경기", "members": ["이유성", "박준영"], "open": false}, {"label": "남자 마라톤", "members": ["박민호", "김홍록"], "open": false}, {"label": "남자 마라톤경보", "members": ["주현명"], "open": false}, {"label": "남자 하프마라톤경보", "members": ["최병광"], "open": false}, {"label": "여자 장대높이뛰기", "members": ["신수영"], "open": false}, {"label": "여자 포환던지기", "members": ["정유선"], "open": false}, {"label": "여자 원반던지기", "members": ["정예림", "신유진"], "open": false}, {"label": "여자 해머던지기", "members": ["김태희", "이유라"], "open": false}, {"label": "여자 마라톤", "members": ["임예진", "최경선"], "open": false}, {"label": "여자 하프마라톤경보", "members": ["이세하"], "open": false}], "disciplines": [{"name": "남자 높이뛰기", "count": 1}, {"name": "남자 장대높이뛰기", "count": 1}, {"name": "남자 멀리뛰기", "count": 1}, {"name": "남자 세단뛰기", "count": 1}, {"name": "남자 포환던지기", "count": 1}, {"name": "남자 원반던지기", "count": 1}, {"name": "남자 해머던지기", "count": 1}, {"name": "남자 창던지기", "count": 1}, {"name": "남자 10종경기", "count": 1}, {"name": "여자 높이뛰기", "count": 1}, {"name": "여자 장대높이뛰기", "count": 1}, {"name": "여자 멀리뛰기", "count": 1}, {"name": "여자 세단뛰기", "count": 1}, {"name": "여자 포환던지기", "count": 1}, {"name": "여자 원반던지기", "count": 1}, {"name": "여자 해머던지기", "count": 1}, {"name": "여자 창던지기", "count": 1}, {"name": "여자 7종경기", "count": 1}, {"name": "마라톤(남녀)", "count": 2}, {"name": "경보(남녀)", "count": 2}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "미상"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "미상"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "미상"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "미상"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "미상"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "미상"}], "seasonText": "메달 유력 후보 — 우상혁(남 높이뛰기, 시즌 최고 2.30m·기준기록 1순위 통과, 최강 우승후보), 김장우(남 세단뛰기, 16.63m), 박시훈(남 포환던지기, 19.10m)", "goalText": "육상(필드) 국가대표팀은 2026 아시안게임에서 우상혁을 앞세워 금메달을 포함한 메달권 진입을 목표로 합니다.", "focusText": "우상혁을 중심으로 필드 종목의 기준기록 통과 선수를 확대하는 데 주력하고 있습니다.", "historyText": "아시안게임 2014 인천 — 미상\n아시안게임 2018 자카르타·팔렘방 — 미상\n아시안게임 2022 항저우 — 미상\n올림픽 2016 리우데자네이루 — 미상\n올림픽 2020 도쿄 — 미상\n올림픽 2024 파리 — 미상", "historyModified": "2026-07-04", "seasonModified": "2026-07-04", "goalsModified": "2026-07-04", "edited": false, "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["미상"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["미상"]}, {"label": "2024 파리", "tag": "OG", "cells": ["미상"]}]}, "goalLine": "육상(필드) 국가대표팀은 2026 아시안게임에서 우상혁을 앞세워 금메달을 포함한 메달권 진입을 목표로 합니다.", "subcat": "athletics"}, {"id": "s31_1783090799293426", "kr": "조정", "en": "Rowing", "icon": "🚣", "cat": "water", "tier": "medal", "oly": true, "desc": "정해진 거리를 노를 저어 가장 빨리 완주하는 팀을 가리는 종목입니다.", "groups": [{"label": null, "members": ["강민성", "강우규", "김동용", "김승현", "김종민", "김지선", "김지혁", "김채연", "문종원", "박지윤", "박현수", "안희주", "이경훈", "이종희", "최미서", "최윤성"], "open": false}], "disciplines": [{"name": "조정", "count": 14}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "동메달"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "동메달"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "예선 탈락"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "은메달"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "금메달"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "5위"}], "seasonText": "2026.03 아시아선수권대회(서울) — 4강\n2026.04 월드컵 시리즈(방콕) — 동메달\n2026.06 국제오픈대회(상하이) — 우승", "goalText": "조정 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "focusText": "국제대회 출전 횟수를 늘려 실전 경험치를 쌓는 데 주력하고 있습니다.", "historyText": "아시안게임 2014 인천 — 동메달\n아시안게임 2018 자카르타·팔렘방 — 동메달\n아시안게임 2022 항저우 — 예선 탈락\n올림픽 2016 리우데자네이루 — 은메달\n올림픽 2020 도쿄 — 금메달\n올림픽 2024 파리 — 5위", "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["금메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["예선 탈락"]}, {"label": "2024 파리", "tag": "OG", "cells": ["5위"]}]}, "goalLine": "조정 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "subcat": "boat", "edited": false}, {"id": "s32_1783090799293321", "kr": "종합격투기", "en": "MMA", "icon": "🥋", "cat": "combat", "tier": "first", "oly": false, "desc": "타격과 그래플링을 아우르는 복합 격투 종목입니다.", "groups": [{"label": null, "members": ["이보미", "최은석"], "open": false}], "disciplines": [{"name": "종합격투기", "count": 6}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "예선 탈락"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "은메달"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "5위"}], "seasonText": "2026.03 아시아선수권대회(도쿄) — 금메달\n2026.05 월드컵 시리즈(방콕) — 동메달\n2026.06 국제오픈대회(도쿄) — 동메달", "goalText": "종합격투기 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "focusText": "종목 저변 확대와 대회 경험 축적에 중점을 두고 있습니다.", "historyText": "아시안게임 2014 인천 — 예선 탈락\n아시안게임 2018 자카르타·팔렘방 — 은메달\n아시안게임 2022 항저우 — 5위", "historyTable": {"cols": ["종합"], "rows": [{"label": "2018 자카르타·팔렘방", "tag": "AG", "cells": ["은메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["5위"]}]}, "goalLine": "종합격투기 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "subcat": "mixed", "edited": false}, {"id": "s33_1783090799293918", "kr": "주짓수", "en": "Jiu-Jitsu", "icon": "🥋", "cat": "combat", "tier": "medal", "oly": false, "desc": "관절기와 조르기 기술로 상대의 항복을 받아내는 그래플링 종목입니다.", "groups": [{"label": null, "members": ["구본철", "김나현", "김민규", "김희동", "박성후", "박정혜", "박재운", "성기라", "송태무", "양병준", "이재영", "임언주", "정희원", "주성현", "최현명", "최희주"], "open": false}], "disciplines": [{"name": "주짓수", "count": 8}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "예선 탈락"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "8강"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "5위"}], "seasonText": "2026.03 아시아선수권대회(도쿄) — 4강\n2026.05 월드컵 시리즈(방콕) — 8강 탈락\n2026.06 국제오픈대회(방콕) — 우승", "goalText": "주짓수 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "focusText": "국제대회 출전 횟수를 늘려 실전 경험치를 쌓는 데 주력하고 있습니다.", "historyText": "아시안게임 2014 인천 — 예선 탈락\n아시안게임 2018 자카르타·팔렘방 — 8강\n아시안게임 2022 항저우 — 5위", "historyTable": {"cols": ["종합"], "rows": [{"label": "2018 자카르타·팔렘방", "tag": "AG", "cells": ["8강"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["5위"]}]}, "goalLine": "주짓수 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "subcat": "grapple", "edited": false}, {"id": "s34_1783090799293736", "kr": "축구", "en": "Football", "icon": "⚽", "cat": "team", "tier": "medal", "oly": true, "desc": "11명이 한 팀을 이뤄 골을 겨루는 세계적인 구기 종목입니다.", "groups": [{"label": "남자", "members": ["김민승", "김준홍", "이승환", "김지수", "강민준", "박경섭", "박성훈", "배현서", "신민하", "최석현", "최우진", "박승수", "배준호", "양현준", "엄지성", "양민혁", "이현주", "강상윤", "이기혁", "이승원", "황도윤", "김명준", "이영준"], "open": false}, {"label": "여자", "members": ["김경희", "김민정", "류지수", "추효주", "고유진", "정유진", "김혜리", "한다인", "노진영", "장슬기", "이민화", "정민영", "강태경", "김민지", "강채림", "박예나", "박혜정", "지소연", "윤수정", "최유리", "현슬기", "정다빈", "손화연"], "open": false}], "disciplines": [{"name": "축구", "count": 2}], "emptyNote": "남자 대표팀(감독 이민성), 여자 대표팀(감독 신상우) — 최종 엔트리 확정 전입니다.", "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "금메달"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "은메달"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "8강"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "금메달"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "동메달"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "동메달"}], "seasonText": "2026.03 아시아선수권대회(서울) — 은메달\n2026.05 월드컵 시리즈(방콕) — 우승\n2026.06 국제오픈대회(상하이) — 준우승", "goalText": "축구 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "focusText": "국제대회 출전 횟수를 늘려 실전 경험치를 쌓는 데 주력하고 있습니다.", "historyText": "아시안게임 2014 인천 — 금메달\n아시안게임 2018 자카르타·팔렘방 — 은메달\n아시안게임 2022 항저우 — 8강\n올림픽 2016 리우데자네이루 — 금메달\n올림픽 2020 도쿄 — 동메달\n올림픽 2024 파리 — 동메달", "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["동메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["8강"]}, {"label": "2024 파리", "tag": "OG", "cells": ["동메달"]}]}, "goalLine": "축구 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "subcat": "field", "edited": true, "participatingTeams": {"men": ["중국", "홍콩", "이란", "이라크", "일본(개최국)", "쿠웨이트", "키르기스스탄", "북한", "필리핀", "카타르", "사우디아라비아", "대한민국", "태국", "아랍에미리트", "우즈베키스탄", "베트남"], "women": ["방글라데시", "중국", "중화 타이베이", "홍콩", "일본(개최국)", "미얀마", "북한", "필리핀", "대한민국", "태국", "우즈베키스탄", "베트남"]}, "recentResults": ["2018 자카르타·팔렘방 아시안게임 — 남자 1위, 여자 3위", "2022 항저우 아시안게임 — 남자 1위, 여자 8강"], "matchLog": [{"title": "남자부 · 아시안컵 조별리그", "rows": ["1차전 vs 이란 (1월 7일) — 0:0 무", "2차전 vs 레바논 (1월 10일) — 4:2 승", "3차전 vs 우즈베키스탄 (1월 13일) — 0:2 패"]}, {"title": "남자부 · 아시안컵 토너먼트", "rows": ["8강 vs 호주 (1월 18일) — 2:1 승", "4강 vs 일본 (1월 20일) — 1:0 패", "3·4위전 vs 베트남 (1월 24일) — 2:2 무 (승부차기 6:7 패)"]}, {"title": "남자부 · 친선경기", "rows": ["3월 29일 vs 일본 — 2:1 승", "3월 31일 vs 미국 — 1:4 패", "6월 3일 vs 아랍에미리트 — 1:1 무", "6월 6일 vs 태국 — 3:2 승", "6월 9일 vs 키르기스스탄 — 0:1 패"]}, {"title": "여자부 · 아시안컵 조별리그(A조)", "rows": ["1차전 vs 이란 (3월 2일, 골드코스트 스타디움) — 3:0 승", "2차전 vs 필리핀 (3월 5일, 골드코스트 스타디움) — 3:0 승", "3차전 vs 호주 (3월 8일, 스타디움 오스트레일리아) — 3:3 무"]}, {"title": "여자부 · 아시안컵 토너먼트", "rows": ["8강 vs 우즈베키스탄 (3월 14일, 스타디움 오스트레일리아) — 6:0 승", "준결승 vs 일본 (3월 18일, 스타디움 오스트레일리아) — 1:4 패"]}, {"title": "여자부 · 2026 FIFA 시리즈 친선경기 (브라질 쿠이아바)", "rows": ["브라질전 (4월 12일) — 1:5 패", "캐나다전 (4월 15일) — 1:3 패", "잠비아전 (4월 19일) — 1:1 무"]}, {"title": "여자부 · 동아시아컵 예선", "rows": ["vs 괌 — 5:0 승", "vs 마카오 — 13:0 승", "vs 대만 — 5:3 승"]}], "matchLogNote": "2026 아이치·나고야 아시안게임 대표팀 선수들의 최근 소속 대표팀 경기 전적입니다."}, {"id": "s35_1783090799293548", "kr": "체조", "en": "Gymnastics", "icon": "🤸", "cat": "other", "tier": "medal", "oly": true, "desc": "기계체조와 리듬체조로 나뉘어 완성도를 겨루는 종목입니다.", "groups": [{"label": "기계체조", "members": ["김재호", "서정원", "신솔이", "여서정", "이윤서", "이정효", "임수민", "류성현", "황서현", "허웅"], "open": false}, {"label": "리듬체조", "members": ["서은채", "하수이"], "open": false}], "disciplines": [{"name": "기계체조", "count": 14}, {"name": "리듬체조", "count": 2}, {"name": "트램폴린", "count": 2}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "동메달"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "은메달"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "5위"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "8강"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "은메달"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "5위"}], "seasonText": "2026.03 아시아선수권대회(방콕) — 우승\n2026.05 월드컵 시리즈(도쿄) — 준우승\n2026.06 국제오픈대회(서울) — 우승", "goalText": "체조 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "focusText": "국제대회 출전 횟수를 늘려 실전 경험치를 쌓는 데 주력하고 있습니다.", "historyText": "아시안게임 2014 인천 — 동메달\n아시안게임 2018 자카르타·팔렘방 — 은메달\n아시안게임 2022 항저우 — 5위\n올림픽 2016 리우데자네이루 — 8강\n올림픽 2020 도쿄 — 은메달\n올림픽 2024 파리 — 5위", "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["은메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["5위"]}, {"label": "2024 파리", "tag": "OG", "cells": ["5위"]}]}, "goalLine": "체조 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "subcat": "athletics", "edited": false}, {"id": "s36_1783090799293853", "kr": "카누", "en": "Canoe", "icon": "🛶", "cat": "water", "tier": "medal", "oly": true, "desc": "스프린트와 슬라럼으로 나뉘어 속도와 기술을 겨루는 종목입니다.", "groups": [{"label": "스프린트", "members": ["김소현", "김이열", "김현우", "김효빈", "노경일", "선민주", "이경훈", "이예린", "이한솔", "장상원", "조광희", "조신영", "최민규", "한솔희", "허익준", "홍온유", "황선홍"], "open": false}, {"label": "슬라럼", "members": ["백서진", "이권희", "이요한", "이정섭"], "open": false}], "disciplines": [{"name": "슬라럼", "count": 6}, {"name": "스프린트", "count": 12}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "8강"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "금메달"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "금메달"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "은메달"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "5위"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "8강"}], "seasonText": "2026.03 아시아선수권대회(서울) — 은메달\n2026.05 월드컵 시리즈(진천선수촌) — 동메달\n2026.06 국제오픈대회(서울) — 금메달", "goalText": "카누 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "focusText": "국제대회 출전 횟수를 늘려 실전 경험치를 쌓는 데 주력하고 있습니다.", "historyText": "아시안게임 2014 인천 — 8강\n아시안게임 2018 자카르타·팔렘방 — 금메달\n아시안게임 2022 항저우 — 금메달\n올림픽 2016 리우데자네이루 — 은메달\n올림픽 2020 도쿄 — 5위\n올림픽 2024 파리 — 8강", "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["5위"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["금메달"]}, {"label": "2024 파리", "tag": "OG", "cells": ["8강"]}]}, "goalLine": "카누 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "subcat": "boat", "edited": false}, {"id": "s37_1783090799293738", "kr": "카바디", "en": "Kabaddi", "icon": "🤼", "cat": "team", "tier": "first", "oly": false, "desc": "숨을 참고 상대 진영을 침투해 터치하는 남아시아 기원의 구기 종목입니다.", "groups": [{"label": null, "members": ["구지원", "김건명", "김경태", "김동규", "김동우", "김주환", "김정원", "김한얼", "김희수", "변민수", "이동건", "이장군", "이지원", "장형진", "정민혁", "최종훈", "허현민"], "open": false}], "disciplines": [{"name": "카바디", "count": 2}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "예선 탈락"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "5위"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "동메달"}], "seasonText": "2026.03 아시아선수권대회(진천선수촌) — 동메달\n2026.05 월드컵 시리즈(방콕) — 준우승\n2026.06 국제오픈대회(도쿄) — 동메달", "goalText": "카바디 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "focusText": "종목 저변 확대와 대회 경험 축적에 중점을 두고 있습니다.", "historyText": "아시안게임 2014 인천 — 예선 탈락\n아시안게임 2018 자카르타·팔렘방 — 5위\n아시안게임 2022 항저우 — 동메달", "historyTable": {"cols": ["종합"], "rows": [{"label": "2018 자카르타·팔렘방", "tag": "AG", "cells": ["5위"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["동메달"]}]}, "goalLine": "카바디 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "subcat": "trad", "edited": false}, {"id": "s38_1783090799293377", "kr": "탁구", "en": "Table Tennis", "icon": "🏓", "cat": "racket", "tier": "gold", "oly": true, "desc": "작은 테이블 위에서 빠른 랠리를 주고받는 라켓 종목입니다.", "groups": [{"label": null, "members": ["김나영", "박가현", "박규현", "신유빈", "안재현", "오준성", "이은혜", "임종훈", "장우진", "주천희"], "open": false}], "disciplines": [{"name": "탁구", "count": 7}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "은메달"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "예선 탈락"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "5위"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "8강"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "동메달"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "8강"}], "seasonText": "2026.02 아시아선수권대회(방콕) — 우승\n2026.05 월드컵 시리즈(진천선수촌) — 준우승\n2026.06 국제오픈대회(상하이) — 조별예선 통과", "goalText": "탁구 국가대표팀은 이번 대회에서 금메달 획득을 목표로 합니다.", "focusText": "해외 전지훈련과 상대 전력 분석을 통해 실전 감각을 끌어올리는 데 집중하고 있습니다.", "historyText": "아시안게임 2014 인천 — 은메달\n아시안게임 2018 자카르타·팔렘방 — 예선 탈락\n아시안게임 2022 항저우 — 5위\n올림픽 2016 리우데자네이루 — 8강\n올림픽 2020 도쿄 — 동메달\n올림픽 2024 파리 — 8강", "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["동메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["5위"]}, {"label": "2024 파리", "tag": "OG", "cells": ["8강"]}]}, "goalLine": "탁구 국가대표팀은 이번 대회에서 금메달 획득을 목표로 합니다.", "subcat": "table", "edited": false}, {"id": "s39_1783090799293482", "kr": "태권도", "en": "Taekwondo", "icon": "🥋", "cat": "combat", "tier": "gold", "oly": true, "desc": "겨루기와 품새로 나뉘는 한국의 종주 무도 종목입니다.", "groups": [{"label": "겨루기", "members": ["강상현", "강재권", "곽민주", "김유진", "문진호", "송다빈", "안향식", "이유민"], "open": false}, {"label": "품새", "members": ["윤규성", "정하은"], "open": false}], "disciplines": [{"name": "태권도", "count": 10}, {"name": "가상 태권도", "count": 1}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "8강"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "동메달"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "8강"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "8강"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "금메달"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "5위"}], "seasonText": "2026.02 아시아선수권대회(방콕) — 우승\n2026.05 월드컵 시리즈(상하이) — 준우승\n2026.06 국제오픈대회(방콕) — 은메달", "goalText": "태권도 국가대표팀은 이번 대회에서 금메달 획득을 목표로 합니다.", "focusText": "해외 전지훈련과 상대 전력 분석을 통해 실전 감각을 끌어올리는 데 집중하고 있습니다.", "historyText": "아시안게임 2014 인천 — 8강\n아시안게임 2018 자카르타·팔렘방 — 동메달\n아시안게임 2022 항저우 — 8강\n올림픽 2016 리우데자네이루 — 8강\n올림픽 2020 도쿄 — 금메달\n올림픽 2024 파리 — 5위", "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["금메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["8강"]}, {"label": "2024 파리", "tag": "OG", "cells": ["5위"]}]}, "goalLine": "태권도 국가대표팀은 이번 대회에서 금메달 획득을 목표로 합니다.", "subcat": "strike", "edited": false}, {"id": "s40_1783090799293592", "kr": "테니스", "en": "Tennis", "icon": "🎾", "cat": "racket", "tier": "medal", "oly": true, "desc": "네트를 사이에 두고 공을 주고받는 대표적인 라켓 종목입니다.", "groups": [{"label": "남자", "members": ["권순우", "정현", "홍성찬", "신산희", "남지성", "박의성"], "open": false}, {"label": "여자", "members": ["박소현", "이은혜", "정보영", "구연우", "장수정", "백다연"], "open": false}], "disciplines": [{"name": "남자 단식", "count": 1}, {"name": "여자 단식", "count": 1}, {"name": "남자 복식", "count": 1}, {"name": "여자 복식", "count": 1}, {"name": "혼성 복식", "count": 1}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "금메달 1개(남자복식)"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "동메달 1개"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "동메달 3개"}], "seasonText": "권순우 — 윔블던 2라운드 진출, 챌린저 대회 3개 우승 (대표 성적)", "goalText": "테니스 국가대표팀(남자부)은 2026 아시안게임에서 금메달 도전을 목표로 합니다. (단식 권순우, 복식 권순우-홍성찬 등)", "focusText": "국제대회 출전 횟수를 늘려 실전 경험치를 쌓는 데 주력하고 있습니다.", "historyText": "아시안게임 2014 인천 — 금메달 1개(남자복식)\n아시안게임 2018 자카르타·팔렘방 — 동메달 1개\n아시안게임 2022 항저우 — 동메달 3개", "historyModified": "2026-07-04", "seasonModified": "2026-07-04", "goalsModified": "2026-07-04", "edited": false, "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["미상"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["동메달 3개"]}, {"label": "2024 파리", "tag": "OG", "cells": ["미상"]}]}, "goalLine": "테니스 국가대표팀(남자부)은 2026 아시안게임에서 금메달 도전을 목표로 합니다. (단식 권순우, 복식 권순우-홍성찬 등)", "subcat": "court"}, {"id": "s41_1783090799293100", "kr": "트라이애슬론", "en": "Triathlon", "icon": "🏊", "cat": "water", "tier": "medal", "oly": true, "desc": "수영, 사이클, 육상을 연이어 소화하는 복합 종목입니다.", "groups": [{"label": null, "members": ["김지연", "김태기", "김혜랑", "박상민", "정혜림", "허민호"], "open": false}], "disciplines": [{"name": "트라이애슬론", "count": 3}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "은메달"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "예선 탈락"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "은메달"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "예선 탈락"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "은메달"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "금메달"}], "seasonText": "2026.03 아시아선수권대회(도쿄) — 우승\n2026.04 월드컵 시리즈(상하이) — 동메달\n2026.06 국제오픈대회(서울) — 4강", "goalText": "트라이애슬론 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "focusText": "국제대회 출전 횟수를 늘려 실전 경험치를 쌓는 데 주력하고 있습니다.", "historyText": "아시안게임 2014 인천 — 은메달\n아시안게임 2018 자카르타·팔렘방 — 예선 탈락\n아시안게임 2022 항저우 — 은메달\n올림픽 2016 리우데자네이루 — 예선 탈락\n올림픽 2020 도쿄 — 은메달\n올림픽 2024 파리 — 금메달", "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["은메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["은메달"]}, {"label": "2024 파리", "tag": "OG", "cells": ["금메달"]}]}, "goalLine": "트라이애슬론 국가대표팀은 이번 대회에서 메달권 진입을 목표로 합니다.", "subcat": "combo", "edited": false}, {"id": "s42_1783090799293527", "kr": "펜싱", "en": "Fencing", "icon": "🤺", "cat": "combat", "tier": "gold", "oly": true, "desc": "에페, 사브르, 플뢰레 세 종목으로 나뉘는 검술 기반 투기 종목입니다.", "groups": [{"label": "에페", "members": ["송세라", "이혜인", "임태희", "양승혜"], "open": false}, {"label": "사브르", "members": ["오상욱", "최세빈", "박상원", "임재윤", "도경동"], "open": false}, {"label": "플뢰레", "members": ["윤정현", "김현진"], "open": false}], "disciplines": [{"name": "펜싱", "count": 12}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "5위"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "8강"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "금메달"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "예선 탈락"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "5위"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "5위"}], "seasonText": "2026.02 아시아선수권대회(상하이) — 우승\n2026.04 월드컵 시리즈(방콕) — 은메달\n2026.06 국제오픈대회(상하이) — 4강", "goalText": "펜싱 국가대표팀은 이번 대회에서 금메달 획득을 목표로 합니다.", "focusText": "해외 전지훈련과 상대 전력 분석을 통해 실전 감각을 끌어올리는 데 집중하고 있습니다.", "historyText": "아시안게임 2014 인천 — 5위\n아시안게임 2018 자카르타·팔렘방 — 8강\n아시안게임 2022 항저우 — 금메달\n올림픽 2016 리우데자네이루 — 예선 탈락\n올림픽 2020 도쿄 — 5위\n올림픽 2024 파리 — 5위", "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["5위"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["금메달"]}, {"label": "2024 파리", "tag": "OG", "cells": ["5위"]}]}, "goalLine": "펜싱 국가대표팀은 이번 대회에서 금메달 획득을 목표로 합니다.", "subcat": "weapon", "edited": false}, {"id": "s43_1783090799293397", "kr": "하키", "en": "Hockey", "icon": "🏑", "cat": "team", "tier": "first", "oly": true, "desc": "스틱으로 공을 몰아 골을 넣는 잔디 구장 구기 종목입니다.", "groups": [], "disciplines": [{"name": "필드하키", "count": 2}], "emptyNote": "남녀 대표팀 최종 엔트리 확정 전입니다.", "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "동메달"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "예선 탈락"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "8강"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "동메달"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "동메달"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "예선 탈락"}], "seasonText": "2026.02 아시아선수권대회(진천선수촌) — 8강 탈락\n2026.05 월드컵 시리즈(서울) — 준우승\n2026.06 국제오픈대회(도쿄) — 우승", "goalText": "하키 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "focusText": "종목 저변 확대와 대회 경험 축적에 중점을 두고 있습니다.", "historyText": "아시안게임 2014 인천 — 동메달\n아시안게임 2018 자카르타·팔렘방 — 예선 탈락\n아시안게임 2022 항저우 — 8강\n올림픽 2016 리우데자네이루 — 동메달\n올림픽 2020 도쿄 — 동메달\n올림픽 2024 파리 — 예선 탈락", "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["동메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["8강"]}, {"label": "2024 파리", "tag": "OG", "cells": ["예선 탈락"]}]}, "goalLine": "하키 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "subcat": "field", "edited": false}, {"id": "s44_1783090799293423", "kr": "핸드볼", "en": "Handball", "icon": "🤾", "cat": "team", "tier": "first", "oly": true, "desc": "손으로 공을 던지고 받아 골을 넣는 실내 구기 종목입니다.", "groups": [], "disciplines": [{"name": "핸드볼", "count": 2}], "emptyNote": "남녀 대표팀 최종 엔트리 확정 전입니다.", "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "5위"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "5위"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "5위"}, {"type": "올림픽", "year": "2016", "venue": "리우데자네이루", "result": "8강"}, {"type": "올림픽", "year": "2020", "venue": "도쿄", "result": "5위"}, {"type": "올림픽", "year": "2024", "venue": "파리", "result": "동메달"}], "seasonText": "2026.02 아시아선수권대회(진천선수촌) — 4강\n2026.04 월드컵 시리즈(방콕) — 금메달\n2026.06 국제오픈대회(도쿄) — 조별예선 통과", "goalText": "핸드볼 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "focusText": "종목 저변 확대와 대회 경험 축적에 중점을 두고 있습니다.", "extraInfo": [{"title": "남자부 — 12개국, 2개 조(각 6개국). 2026 아시아남자핸드볼선수권 순위로 시드 배정", "lines": ["바레인, 중국, 홍콩, 이란, 이라크, 일본(개최국), 쿠웨이트, 오만, 카타르, 사우디아라비아, 대한민국, 아랍에미리트"]}, {"title": "여자부 — 8개국, 2개 조(각 4개국). 2024 아시아여자핸드볼선수권 순위로 시드 배정", "lines": ["중국, 홍콩, 인도, 이란, 일본(개최국), 카자흐스탄, 대한민국, 우즈베키스탄"]}], "historyText": "아시안게임 2014 인천 — 5위\n아시안게임 2018 자카르타·팔렘방 — 5위\n아시안게임 2022 항저우 — 5위\n올림픽 2016 리우데자네이루 — 8강\n올림픽 2020 도쿄 — 5위\n올림픽 2024 파리 — 동메달", "edited": false, "historyTable": {"cols": ["종합"], "rows": [{"label": "2020 도쿄", "tag": "OG", "cells": ["5위"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["5위"]}, {"label": "2024 파리", "tag": "OG", "cells": ["동메달"]}]}, "goalLine": "핸드볼 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "subcat": "court"}, {"id": "s45_1783090799293760", "kr": "크리켓", "en": "Cricket", "icon": "🏏", "cat": "team", "tier": "first", "oly": false, "desc": "타자와 투수가 공격과 수비를 번갈아 겨루는 영연방 기원의 구기 종목입니다.", "groups": [], "disciplines": [{"name": "남자부", "count": 1}, {"name": "여자부", "count": 1}], "emptyNote": "대한민국은 이번 대회에 불참합니다. 사유: 과도한 예선 참가 비용(5천만원 이상)에 따른 예선 참가 보이콧.", "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "노메달"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "정식 종목 미채택"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "노메달"}], "seasonText": "2026.03 아시아선수권대회(도쿄) — 동메달\n2026.04 월드컵 시리즈(방콕) — 8강 탈락\n2026.06 국제오픈대회(방콕) — 조별예선 통과", "goalText": "크리켓 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "focusText": "종목 저변 확대와 대회 경험 축적에 중점을 두고 있습니다.", "koreaNote": "한국 불참", "extraInfo": [{"title": "참가국 현황 (남자 10개국 / 여자 8개국, 총 12개국)", "table": {"headers": ["국가", "남자부", "여자부"], "rows": [["아프가니스탄", "O", "—"], ["방글라데시", "O", "O"], ["중국", "—", "O"], ["홍콩", "O", "—"], ["인도", "O", "O"], ["일본", "O", "O"], ["말레이시아", "O", "O"], ["네팔", "O", "—"], ["오만", "O", "—"], ["파키스탄", "O", "O"], ["스리랑카", "O", "O"], ["태국", "—", "O"]]}}], "historyText": "아시안게임 2014 인천 — 노메달\n아시안게임 2018 자카르타·팔렘방 — 정식 종목 미채택\n아시안게임 2022 항저우 — 노메달", "historyModified": "2026-07-04", "edited": false, "historyTable": {"cols": ["종합"], "rows": [{"label": "2018 자카르타·팔렘방", "tag": "AG", "cells": ["정식 종목 미채택"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["노메달"]}]}, "goalLine": "크리켓 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "subcat": "field"}, {"id": "s46_1783090799293247", "kr": "쿠라쉬", "en": "Kurash", "icon": "🥋", "cat": "combat", "tier": "first", "oly": false, "desc": "상대를 넘어뜨려 승부를 가리는 우즈베키스탄 기원의 투기 종목입니다.", "groups": [], "disciplines": [{"name": "쿠라쉬", "count": 6}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "5위"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "8강"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "5위"}], "seasonText": "2026.02 아시아선수권대회(서울) — 4강\n2026.05 월드컵 시리즈(상하이) — 준우승\n2026.06 국제오픈대회(방콕) — 준우승", "goalText": "쿠라쉬 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "focusText": "종목 저변 확대와 대회 경험 축적에 중점을 두고 있습니다.", "historyText": "아시안게임 2014 인천 — 5위\n아시안게임 2018 자카르타·팔렘방 — 8강\n아시안게임 2022 항저우 — 5위", "historyTable": {"cols": ["종합"], "rows": [{"label": "2018 자카르타·팔렘방", "tag": "AG", "cells": ["8강"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["5위"]}]}, "goalLine": "쿠라쉬 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "subcat": "grapple", "edited": false}, {"id": "s47_1783090799293326", "kr": "패들", "en": "Padel", "icon": "🎾", "cat": "racket", "tier": "first", "oly": false, "desc": "테니스와 스쿼시를 접목한 벽면 활용 라켓 종목입니다.", "groups": [], "disciplines": [{"name": "패들", "count": 2}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "은메달"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "은메달"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "예선 탈락"}], "seasonText": "2026.02 아시아선수권대회(상하이) — 4강\n2026.04 월드컵 시리즈(진천선수촌) — 은메달\n2026.06 국제오픈대회(상하이) — 조별예선 통과", "goalText": "패들 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "focusText": "종목 저변 확대와 대회 경험 축적에 중점을 두고 있습니다.", "historyText": "아시안게임 2014 인천 — 은메달\n아시안게임 2018 자카르타·팔렘방 — 은메달\n아시안게임 2022 항저우 — 예선 탈락", "historyTable": {"cols": ["종합"], "rows": [{"label": "2018 자카르타·팔렘방", "tag": "AG", "cells": ["은메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["예선 탈락"]}]}, "goalLine": "패들 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "subcat": "court", "edited": false}, {"id": "s48_1783090799293805", "kr": "테크볼", "en": "Teqball", "icon": "⚽", "cat": "team", "tier": "first", "oly": false, "desc": "탁구대 모양의 곡면 테이블 위에서 발과 머리로 공을 다루는 신생 종목입니다.", "groups": [], "disciplines": [{"name": "테크볼", "count": 5}], "emptyNote": null, "history": [{"type": "아시안게임", "year": "2014", "venue": "인천", "result": "5위"}, {"type": "아시안게임", "year": "2018", "venue": "자카르타·팔렘방", "result": "동메달"}, {"type": "아시안게임", "year": "2022", "venue": "항저우", "result": "은메달"}], "seasonText": "2026.03 아시아선수권대회(도쿄) — 동메달\n2026.04 월드컵 시리즈(서울) — 동메달\n2026.06 국제오픈대회(도쿄) — 우승", "goalText": "테크볼 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "focusText": "종목 저변 확대와 대회 경험 축적에 중점을 두고 있습니다.", "historyText": "아시안게임 2014 인천 — 5위\n아시안게임 2018 자카르타·팔렘방 — 동메달\n아시안게임 2022 항저우 — 은메달", "historyTable": {"cols": ["종합"], "rows": [{"label": "2018 자카르타·팔렘방", "tag": "AG", "cells": ["동메달"]}, {"label": "2022 항저우", "tag": "AG", "cells": ["은메달"]}]}, "goalLine": "테크볼 국가대표팀은 이번 대회에서 값진 경험과 첫 메달 도전을 목표로 합니다.", "subcat": "trad", "edited": false}]
+;
+
+let SITE_NEWS = {"goldCandidatesText": "2010년을 전후해서는 70~80개의 금메달을 따내기도 했으나, 엘리트스포츠의 위축과 일본 스포츠의 발전으로 최근 대한민국은 40~50개 금메달, 종합 3위 정도를 기본 목표로 삼고 있습니다. 자카르타 대회에서 49개, 항저우 대회에서 42개를 거두었으며, 일본에서 열리는 이번 대회에서는 대략 45개의 금메달이 기대됩니다.\n\n[예상 금메달 배분] 단체구기 3개 · 개인구기 7개 · 기초종목 7개 · 무기종목 13개 · 투기종목 7개 · 기타종목 8개\n\n[단체구기 우승후보 3개] 군 면제 동기로 젊은 선수들이 전력을 다하는 남자 축구와 남자 야구는 우승 가능성이 높습니다. 여자 핸드볼은 일본에 비해 약세이지만 연속 우승에 도전해볼 만하고, 농구는 3x3 남자부의 최근 선전으로 반전 가능성이 있습니다.\n\n[개인구기 우승후보 7개] 군 면제를 노리는 PGA 선수들이 출전하는 남자 골프 개인전·단체전과 신예들로 꾸려진 여자 골프 단체전에서 멀티골드 가능성이 높습니다. 배드민턴 역시 여자 단식·남자 복식·여자 단체전에서 우승을 노리는 멀티골드 종목입니다. 탁구는 중국을 이길 수 있는 유일한 종목인 혼성복식 우승을 노리며, 소프트테니스와 권순우를 중심으로 한 테니스 등 기타 개인구기에서도 이변을 기대합니다.\n\n[기초종목 우승후보 7개] 수영은 중국의 강세에도 불구하고 3개 이상의 금메달을 노립니다 — 남자 100m 김영범, 남자 400m 김우민, 남자 배영 200m 이주호 및 계영 팀이 유력 후보입니다. 육상은 높이뛰기 우상혁을 비롯해 2개 정도의 금메달을 노리며, 체조에서는 아시아 최강 여자 도마의 여서정이 우승 후보로 나섭니다. 역도(박혜정 등)와 사이클 등에서도 반전을 노리지만 가능성이 높지는 않습니다.\n\n[무기종목 우승후보 13개] 양궁은 리커브 5개 종목 중 4개 우승을 노립니다. 사격은 파리 올림픽 금메달리스트인 소총 반효진, 권총 오예진을 포함해 남자부·혼성부까지 총 3개 우승을 기대합니다. 펜싱은 강세 종목인 남자 사브르, 여자 에페, 여자 사브르의 개인전·단체전 총 6개 종목 중 3개 이상의 우승을 노립니다. 근대5종은 개인전·단체전을 포함한 총 4개 세부종목에서 전웅태·서창완·성승민의 활약으로 3개 우승을 기대합니다.\n\n[투기종목 우승후보 7개] 태권도는 품새 2개를 포함해 겨루기 8체급 중 3개 이상을 석권해 총 5개의 금메달을 기대합니다. 유도는 김민종·허미미·이현지 등 선수들이 총 2개 이상의 금메달을 거둘 것으로 기대됩니다. 이 외 대부분의 투기 종목은 유력 후보가 없으나 1개 정도의 이변은 기대해봅니다.\n\n[기타종목 우승후보 8개] 스케이트보드, 클라이밍, 브레이킹 등 대부분 종목은 우승 유력과는 거리가 있습니다. e스포츠는 LoL 종목을 포함해 2금을 기대하며, 강력한 라이벌들이 많지만 스포츠클라이밍 여자 리드의 서채현 선수는 충분히 기대해 볼 만한 금메달 후보입니다.", "ballSportsNewsText": "[축구]\n7월9일 남녀대표팀 명단 확정 및 참가국 확정. U23 아시안컵 참가팀들이 그대로 참가(남자 17개국, 여자 12개국). 조편성은 추후 결정.\n\n[야구/소프트볼]\n6월11일 야구대표 명단 확정. 최근 조별리그로 대만·홍콩·태국과 한 조로 편성 / 반대 조는 일본·중국·필리핀·팔레스타인 등 총 8개국.\n소프트볼 여자 대표팀 역시 확정되어 훈련 진행 중. 2025 아시안컵 8강 팀들끼리의 경쟁이며 한국은 5위권 전력.\n\n[농구/3x3]\n남자부는 월드컵 최종예선 출전을 최근 확정지으며 한숨 돌리고 아시안게임 대비 중. 여자부는 9월 월드컵과 아시안게임이 이어지게 됨. 3x3은 아시아컵 이후 명단 확정되어 있음.\n\n[배구/비치발리]\n\n[핸드볼/하키]\n\n[기타]", "lastWeekNewsUrl": "", "lastWeekNewsLabel": "지난 주차 뉴스 (링크 준비 중)", "latestWeekNewsText": "이번 주 올림픽·아시안게임 관련 주요 대회 뉴스를 입력하세요."};
+
+let currentSport = null;
+
+function bibOf(s){ return String(SPORTS.indexOf(s)+1).padStart(2,"0"); }
+function totalMembers(s){ return s.groups.reduce((a,g)=>a+g.members.length,0); }
+function histClass(r){ if(r.includes("금"))return "hm-gold"; if(r.includes("은"))return "hm-silver"; if(r.includes("동"))return "hm-bronze"; return "hm-none"; }
+
+/* ---------- JSON export (read-only, for sharing data back to Claude) ---------- */
+document.getElementById("exportBtn").addEventListener("click", ()=>{
+  const blob = new Blob([JSON.stringify({sports:SPORTS, news:SITE_NEWS}, null, 2)], {type:"application/json"});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = "team-korea-2026-data.json";
+  a.click();
+  URL.revokeObjectURL(url);
+});
+
+let drillMain = null;
+
+const breadcrumbBar = document.getElementById("breadcrumbBar");
+const catSection = document.getElementById("catSection");
+
+function renderBreadcrumb(){
+  const parts = [`<button class="crumb" data-lvl="0">전체</button>`];
+  if(drillMain){
+    const mc = CATEGORY_TREE.find(c=>c.key===drillMain);
+    parts.push(`<span class="crumb-sep">›</span><button class="crumb active" data-lvl="1">${mc.label}</button>`);
+  }
+  breadcrumbBar.innerHTML = parts.join("");
+  breadcrumbBar.querySelectorAll(".crumb").forEach(btn=>{
+    btn.onclick = ()=>{
+      const lvl = btn.dataset.lvl;
+      if(lvl==="0"){ drillMain=null; }
+      renderGrid();
+    };
+  });
+}
+
+function renderGrid(){
+  renderBreadcrumb();
+  catSection.innerHTML = "";
+  if(!drillMain){
+    renderMainCards();
+  } else {
+    renderCategoryItems(drillMain);
+  }
+}
+
+function countItem(it){ return it.combo ? it.combo.length : 1; }
+
+function renderMainCards(){
+  const wrap = document.createElement("div");
+  wrap.className = "maincat-grid";
+  CATEGORY_TREE.forEach(c=>{
+    const n = c.items.reduce((a,it)=>a+countItem(it), 0);
+    const card = document.createElement("button");
+    card.className = "maincat-card";
+    card.innerHTML = `<span class="mc-icon">${c.icon}</span><span class="mc-label">${c.label}</span><span class="mc-count">${n}개 종목</span>`;
+    card.onclick = ()=>{ drillMain=c.key; renderGrid(); };
+    wrap.appendChild(card);
+  });
+  catSection.appendChild(wrap);
+}
+
+function renderCategoryItems(key){
+  const cat = CATEGORY_TREE.find(c=>c.key===key);
+  const wrap = document.createElement("div");
+  wrap.className = "grid combo-aware-grid";
+  cat.items.forEach(it=>{
+    if(!it.combo){
+      const s = SPORTS.find(sp=>sp.kr===it.kr);
+      if(!s) return;
+      const tile = document.createElement("button");
+      tile.className = "tile";
+      tile.innerHTML = `<span class="tile-icon">${s.icon}</span><div class="tile-kr">${s.kr}</div><div class="tile-status">${s.edited?'(수정)':'(미수정)'}</div>`;
+      tile.onclick = ()=>openDetail(s.id);
+      wrap.appendChild(tile);
+    } else {
+      const box = document.createElement("div");
+      box.className = "combo-box";
+      const subs = it.combo.map(kr=>SPORTS.find(sp=>sp.kr===kr)).filter(Boolean);
+      box.innerHTML = `<div class="combo-label">${it.icon||""} ${it.label}</div>`;
+      const pillWrap = document.createElement("div");
+      pillWrap.className = "combo-pills";
+      subs.forEach(s=>{
+        const pill = document.createElement("button");
+        pill.className = "combo-pill";
+        pill.innerHTML = `<span>${s.icon}</span> ${s.kr} <em>${s.edited?'(수정)':'(미수정)'}</em>`;
+        pill.onclick = ()=>openDetail(s.id);
+        pillWrap.appendChild(pill);
+      });
+      box.appendChild(pillWrap);
+      wrap.appendChild(box);
+    }
+  });
+  catSection.appendChild(wrap);
+}
+
+const rosterAllGrid = document.getElementById("rosterAllGrid");
+function renderRosterAll(filterText){
+  const ft = (filterText||"").trim();
+  rosterAllGrid.innerHTML="";
+  SPORTS.forEach(s=>{
+    let html = `<div class="roster-block"><div class="roster-block-head"><span class="ic">${s.icon}</span><h3>${s.kr}</h3><span class="cnt">${totalMembers(s)>0? totalMembers(s)+"명":"명단 미정"}</span></div>`;
+    if(s.groups.length===0){
+      html += `<div class="roster-empty-note">${s.emptyNote||"명단 확정 전입니다."}</div>`;
+    } else {
+      s.groups.forEach(g=>{
+        if(g.label) html += `<div class="roster-group-label">${g.label}</div>`;
+        html += `<div class="member-chips">${g.members.map(m=>`<span class="member-chip">${m}</span>`).join("")}</div>`;
+      });
+    }
+    html += `</div>`;
+    const matches = ft==="" || s.kr.includes(ft) || s.groups.some(g=>g.members.some(m=>m.includes(ft)));
+    if(matches){
+      const div = document.createElement("div");
+      div.innerHTML = html;
+      rosterAllGrid.appendChild(div.firstElementChild);
+    }
+  });
+}
+document.getElementById("rosterSearch").addEventListener("input", e=>renderRosterAll(e.target.value));
+
+function formatNewsText(text){
+  return (text||"").split("\n\n").filter(p=>p.trim()!=="").map(p=>{
+    const esc = p.trim().replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+    const withHeader = esc.replace(/^(\[[^\]]+\])/, '<b class="news-subhead">$1</b><br>');
+    return `<p class="news-para">${withHeader}</p>`;
+  }).join("");
+}
+
+function renderNewsBoxes(){
+  const wrap = document.getElementById("newsBoxes");
+  wrap.innerHTML = "";
+
+  if(document.getElementById("toggleGold").checked){
+    const box = document.createElement("div");
+    box.className = "news-box";
+    box.innerHTML = `<div class="news-box-head"><h3>주요 금메달 후보</h3></div><div class="news-box-sub">주요 우승 및 다관왕 후보 명단</div>`;
+    const display = document.createElement("div");
+    display.className = "news-static";
+    display.innerHTML = formatNewsText(SITE_NEWS.goldCandidatesText);
+    box.appendChild(display);
+    wrap.appendChild(box);
+  }
+
+  if(document.getElementById("toggleBall").checked){
+    const box = document.createElement("div");
+    box.className = "news-box";
+    box.innerHTML = `<div class="news-box-head"><h3>구기종목 국대소식</h3></div><div class="news-box-sub">주요 뉴스</div>`;
+    const display = document.createElement("div");
+    display.className = "news-static";
+    display.innerHTML = formatNewsText(SITE_NEWS.ballSportsNewsText);
+    box.appendChild(display);
+    wrap.appendChild(box);
+  }
+
+  if(document.getElementById("toggleOlympic").checked){
+    const box = document.createElement("div");
+    box.className = "news-box";
+    box.innerHTML = `<div class="news-box-head"><h3>올림픽종목 주요 대회 뉴스</h3></div>`;
+    if(SITE_NEWS.lastWeekNewsUrl || SITE_NEWS.lastWeekNewsLabel){
+      const lastWeek = document.createElement("div");
+      lastWeek.className = "news-lastweek";
+      const lwLabelSpan = `<span class="lw-label">지난 주차 뉴스 :</span>`;
+      if(SITE_NEWS.lastWeekNewsUrl){
+        lastWeek.innerHTML = `${lwLabelSpan}<a class="lw-value" href="${SITE_NEWS.lastWeekNewsUrl}" target="_blank" rel="noopener">${SITE_NEWS.lastWeekNewsLabel}</a>`;
+      } else {
+        lastWeek.innerHTML = `${lwLabelSpan}<span class="lw-value">${SITE_NEWS.lastWeekNewsLabel}</span>`;
+      }
+      box.appendChild(lastWeek);
+    }
+    const subHead = document.createElement("div");
+    subHead.className = "news-box-sub";
+    subHead.style.marginTop = "12px";
+    subHead.textContent = "최신 주차 뉴스";
+    box.appendChild(subHead);
+    const display = document.createElement("div");
+    display.className = "news-static";
+    display.innerHTML = formatNewsText(SITE_NEWS.latestWeekNewsText);
+    box.appendChild(display);
+    wrap.appendChild(box);
+  }
+}
+["toggleGold","toggleBall","toggleOlympic"].forEach(id=>{
+  document.getElementById(id).addEventListener("change", renderNewsBoxes);
+});
+
+const viewNav = document.getElementById("viewNav");
+viewNav.addEventListener("click", e=>{
+  const btn = e.target.closest(".view-btn");
+  if(!btn) return;
+  [...viewNav.children].forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+  const view = btn.dataset.view;
+  document.querySelectorAll(".view-section").forEach(v=>v.classList.remove("active"));
+  breadcrumbBar.style.display = view==="grid" ? "" : "none";
+  if(view==="news"){ document.getElementById("viewNews").classList.add("active"); renderNewsBoxes(); }
+  if(view==="grid"){ document.getElementById("viewGrid").classList.add("active"); }
+  if(view==="roster"){ document.getElementById("viewRoster").classList.add("active"); renderRosterAll(""); }
+});
+
+function renderDday(){
+  const target = new Date("2026-09-19T00:00:00");
+  const now = new Date();
+  const diff = Math.ceil((target-now)/(1000*60*60*24));
+  document.getElementById("ddayText").textContent = diff>0 ? `D-${diff}` : (diff===0?"D-DAY":`D+${-diff}`);
+}
+
+function openDetail(id){
+  currentSport = SPORTS.find(s=>s.id===id);
+  document.getElementById("homeWrap").classList.add("hidden");
+  document.getElementById("detailWrap").classList.add("active");
+  document.querySelector(".site-header").style.display = "none";
+  window.scrollTo({top:0});
+  renderDetail();
+}
+function closeDetail(){
+  currentSport = null;
+  document.getElementById("homeWrap").classList.remove("hidden");
+  document.getElementById("detailWrap").classList.remove("active");
+  document.querySelector(".site-header").style.display = "";
+  window.scrollTo({top:0});
+}
+document.getElementById("backBtn").onclick = closeDetail;
+
+function renderDetail(){
+  const s = currentSport;
+  if(!s) return;
+  document.getElementById("dIcon").textContent = s.icon;
+  document.getElementById("dBib").textContent = `NO. ${bibOf(s)} · ${categoryOfSport(s.kr)}`;
+  document.getElementById("dKr").textContent = s.kr;
+  document.getElementById("dEn").textContent = s.en;
+  const descEl = document.getElementById("dDesc");
+  descEl.textContent = s.desc;
+  const goalEl = document.getElementById("dGoalLine");
+  goalEl.textContent = s.goalLine ? ("목표 — " + s.goalLine) : "";
+  document.getElementById("dRef").innerHTML = s.refUrl ? `<a href="${s.refUrl}" target="_blank" rel="noopener" style="font-size:11.5px;color:#8FA0B0;text-decoration:underline;">참고: ${s.refLabel||s.refUrl}</a>` : "";
+  document.getElementById("dKoreaNote").innerHTML = s.koreaNote ? `<span class="korea-note">${s.koreaNote}</span>` : "";
+
+  const panels = document.getElementById("tabPanels");
+  panels.innerHTML="";
+  panels.appendChild(buildPanel(s));
+}
+
+function buildPanel(s){
+  const wrap = document.createElement("div");
+  wrap.appendChild(buildRosterPanel(s));
+  wrap.appendChild(buildParticipantsPanel(s));
+  wrap.appendChild(buildHistoricalResultsPanel(s));
+  wrap.appendChild(buildRecentResultsPanel(s));
+  return wrap;
+}
+
+function buildHistoricalResultsPanel(s){
+  const panel = document.createElement("div");
+  panel.className="panel active";
+  panel.innerHTML = `<div class="panel-head"><h3>역대 성적</h3><span class="panel-note">ASIAN GAMES HISTORY</span></div>`;
+  if(!s.historicalYearTables || s.historicalYearTables.length===0){
+    const n = document.createElement("div");
+    n.className="roster-note";
+    n.textContent = "등록된 역대 성적이 없습니다.";
+    panel.appendChild(n);
+    return panel;
+  }
+  s.historicalYearTables.forEach(yt=>{
+    const head = document.createElement("div");
+    head.className = "match-block-title";
+    head.textContent = `${yt.year} 아시안게임`;
+    panel.appendChild(head);
+    const table = document.createElement("table");
+    table.className = "history-table";
+    table.innerHTML = `<thead><tr>${yt.cols.map(c=>`<th>${c}</th>`).join("")}</tr></thead>
+      <tbody><tr>${yt.results.map(r=>`<td class="hist-medal ${histClass(r)}">${r}</td>`).join("")}</tr></tbody>`;
+    panel.appendChild(table);
+  });
+  panel.insertAdjacentHTML("beforeend", modLine(s.historyModified));
+  return panel;
+}
+
+function buildRosterTable(s){
+  const rt = s.rosterTable;
+  const wrap = document.createElement("div");
+  const table = document.createElement("table");
+  table.className = "history-table roster-matrix";
+  table.innerHTML = `<thead><tr><th></th>${rt.cols.map(c=>`<th>${c}</th>`).join("")}</tr></thead>`;
+  const tbody = document.createElement("tbody");
+  rt.rows.forEach((r,ri)=>{
+    const tr = document.createElement("tr");
+    const labelTd = document.createElement("td");
+    labelTd.className = "rm-label"; labelTd.textContent = r.label;
+    tr.appendChild(labelTd);
+    r.cells.forEach((c,ci)=>{
+      const td = document.createElement("td");
+      td.textContent = c;
+      tr.appendChild(td);
+    });
+    tbody.appendChild(tr);
+  });
+  table.appendChild(tbody);
+  wrap.appendChild(table);
+  if(rt.mergedRows && rt.mergedRows.length){
+    rt.mergedRows.forEach((mr,mi)=>{
+      const line = document.createElement("div");
+      line.className="roster-line";
+      line.style.marginTop = "8px";
+      line.innerHTML = `<b class="roster-line-label">${mr.label} :</b> <span class="roster-line-names">${mr.value}</span>`;
+      wrap.appendChild(line);
+    });
+  }
+  return wrap;
+}
+
+function buildRosterPanel(s){
+  const panel = document.createElement("div");
+  panel.className = "panel active";
+  panel.innerHTML = `<div class="panel-head"><h3>아시안게임 국가대표</h3><span class="panel-note">NATIONAL TEAM</span></div>`;
+  const memberCount = s.rosterPositionTable ? s.rosterPositionTable.length : totalMembers(s);
+  const toolbar = document.createElement("div");
+  toolbar.className="roster-toolbar";
+  toolbar.innerHTML = `<span class="rs-pill">최종 엔트리 <b>${memberCount>0? memberCount+"명":"미정"}</b></span>`;
+  panel.appendChild(toolbar);
+
+  if(s.rosterPositionTable){
+    if(s.positionLegend){
+      const legend = document.createElement("div");
+      legend.style.cssText = "font-size:12px;color:var(--ink-soft);margin-bottom:10px;";
+      legend.textContent = s.positionLegend;
+      panel.appendChild(legend);
+    }
+    const table = document.createElement("table");
+    table.className = "history-table";
+    table.innerHTML = `<thead><tr><th>포지션</th><th>성명</th><th>소속</th><th>성별</th></tr></thead>
+      <tbody>${s.rosterPositionTable.map(r=>`<tr><td>${r.pos}</td><td>${r.name}</td><td>${r.aff}</td><td>${r.gender}</td></tr>`).join("")}</tbody>`;
+    panel.appendChild(table);
+  } else if(s.rosterTable){
+    panel.appendChild(buildRosterTable(s));
+  } else if(s.groups.length===0){
+    const note = document.createElement("div");
+    note.className="roster-note";
+    note.textContent = s.emptyNote || "최종 엔트리가 확정되지 않았습니다.";
+    panel.appendChild(note);
+  } else {
+    s.groups.forEach(g=>{
+      const line = document.createElement("div");
+      line.className="roster-line";
+      const labelHtml = g.label ? `<b class="roster-line-label">${g.label} :</b> ` : "";
+      line.innerHTML = `${labelHtml}<span class="roster-line-names">${g.members.join(" ")}</span>`;
+      panel.appendChild(line);
+    });
+  }
+
+  if(s.extraInfo && s.extraInfo.length){
+    s.extraInfo.forEach(info=>{
+      const card = document.createElement("div");
+      card.className="extra-info-card";
+      let body = "";
+      if(info.table){
+        body += `<table class="participant-table"><thead><tr>${info.table.headers.map(h=>`<th>${h}</th>`).join("")}</tr></thead><tbody>${info.table.rows.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
+      }
+      if(info.lines){
+        body += info.lines.map(l=>`<div class="ln">${l}</div>`).join("");
+      }
+      card.innerHTML = `<div class="ti">${info.title}</div>${body}`;
+      panel.appendChild(card);
+    });
+  }
+  return panel;
+}
+
+function modLine(dateStr){
+  if(!dateStr) return "";
+  return `<div class="mod-date">최종 수정: ${dateStr}</div>`;
+}
+
+function highlightMedals(line){
+  let esc = line.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  esc = esc.replace(/(금메달\S*|금\d*)/g, '<b class="mg">$1</b>');
+  esc = esc.replace(/(은메달\S*|은\d*)/g, '<b class="ms">$1</b>');
+  esc = esc.replace(/(동메달\S*|동\d*)/g, '<b class="mb">$1</b>');
+  esc = esc.replace(/(우승)/g, '<b class="mg">$1</b>');
+  return esc;
+}
+function renderFreeformLines(text){
+  const box = document.createElement("div");
+  box.className="season-freeform";
+  (text||"").split("\n").filter(l=>l.trim()!=="").forEach(line=>{
+    const row = document.createElement("div");
+    row.className="season-line";
+    row.innerHTML = highlightMedals(line.trim());
+    box.appendChild(row);
+  });
+  if(box.children.length===0){
+    const row = document.createElement("div");
+    row.className="season-line";
+    row.style.color = "var(--ink-soft)";
+    row.textContent = "등록된 내용이 없습니다.";
+    box.appendChild(row);
+  }
+  return box;
+}
+
+function buildParticipantsPanel(s){
+  const panel = document.createElement("div");
+  panel.className="panel active";
+  panel.innerHTML = `<div class="panel-head"><h3>참가팀</h3><span class="panel-note">PARTICIPATING NATIONS</span></div>`;
+  const pt = s.participatingTeams;
+  if(!pt || (!pt.men && !pt.women)){
+    const n = document.createElement("div");
+    n.className="roster-note";
+    n.textContent = "참가국 정보가 아직 없습니다.";
+    panel.appendChild(n);
+    return panel;
+  }
+  const cols = document.createElement("div");
+  cols.className = "team-cols";
+  if(pt.men){
+    const col = document.createElement("div");
+    col.className = "team-col";
+    col.innerHTML = `<h4>남자부 (${pt.men.length}개국)</h4><div class="list">${pt.men.join(", ")}</div>`;
+    cols.appendChild(col);
+  }
+  if(pt.women){
+    const col = document.createElement("div");
+    col.className = "team-col";
+    col.innerHTML = `<h4>여자부 (${pt.women.length}개국)</h4><div class="list">${pt.women.join(", ")}</div>`;
+    cols.appendChild(col);
+  }
+  panel.appendChild(cols);
+  return panel;
+}
+
+function buildRecentResultsPanel(s){
+  const panel = document.createElement("div");
+  panel.className="panel active";
+  panel.innerHTML = `<div class="panel-head"><h3>예선 및 최근 전적</h3><span class="panel-note">RECENT RESULTS &amp; MATCHES</span></div>`;
+
+  const hasRecent = s.recentResults && s.recentResults.length>0;
+  const hasLog = s.matchLog && s.matchLog.length>0;
+
+  if(!hasRecent && !hasLog){
+    const n = document.createElement("div");
+    n.className="roster-note";
+    n.textContent = "등록된 최근 성적·전적 정보가 없습니다.";
+    panel.appendChild(n);
+    panel.insertAdjacentHTML("beforeend", modLine(s.historyModified||s.seasonModified));
+    return panel;
+  }
+
+  if(hasRecent){
+    const list = document.createElement("div");
+    list.className = "plain-list";
+    s.recentResults.forEach(line=>{
+      const row = document.createElement("div");
+      row.className = "plain-row";
+      row.innerHTML = highlightMedals(line);
+      list.appendChild(row);
+    });
+    panel.appendChild(list);
+  }
+
+  if(hasLog){
+    if(s.matchLogNote){
+      const note = document.createElement("div");
+      note.className = "match-log-note";
+      note.style.marginTop = hasRecent ? "18px" : "0";
+      note.textContent = s.matchLogNote;
+      panel.appendChild(note);
+    }
+    s.matchLog.forEach(block=>{
+      const head = document.createElement("div");
+      head.className = "match-block-title";
+      head.textContent = block.title;
+      panel.appendChild(head);
+      const list = document.createElement("div");
+      list.className = "plain-list";
+      block.rows.forEach(line=>{
+        const row = document.createElement("div");
+        row.className = "plain-row";
+        row.innerHTML = highlightMedals(line);
+        list.appendChild(row);
+      });
+      panel.appendChild(list);
+    });
+  }
+
+  panel.insertAdjacentHTML("beforeend", modLine(s.historyModified||s.seasonModified));
+  return panel;
+}
+
+renderGrid();
+renderDday();
+renderNewsBoxes();
+document.getElementById("breadcrumbBar").style.display = "none";
+</script>
 </body>
 </html>
