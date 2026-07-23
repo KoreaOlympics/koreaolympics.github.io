@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>농구 / 3x3농구 | 2026 아이치·나고야 아시안게임</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E1A2B; --ink-2:#152540; --gold:#C9A24B; --gold-soft:#E4CD8C;
+    --sun:#D8482F; --paper:#F3EFE4; --paper-dim:#B9C2CF; --line:rgba(201,162,75,0.28);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; color:var(--paper); font-family:'Pretendard','Noto Sans KR',sans-serif;
+    background:
+      radial-gradient(1100px 550px at 90% -10%, rgba(216,72,47,0.16), transparent 60%),
+      radial-gradient(900px 500px at -10% 110%, rgba(201,162,75,0.10), transparent 60%),
+      var(--ink);
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:40px 28px 100px;}
+  nav.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;}
+  .back{color:var(--gold-soft);text-decoration:none;font-size:13.5px;font-weight:600;display:inline-flex;align-items:center;gap:6px;}
+  .back:hover{color:var(--gold);}
+  .back svg{width:14px;height:14px;}
+  .crumb{font-size:12px;color:var(--paper-dim);letter-spacing:0.02em;}
+  header.hero{padding-bottom:32px;margin-bottom:32px;border-bottom:1px solid var(--line);}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;letter-spacing:0.16em;color:var(--gold-soft);text-transform:uppercase;font-weight:600;margin-bottom:16px;}
+  .eyebrow::before{content:"";width:22px;height:1px;background:var(--gold);display:inline-block;}
+  h1{font-family:'Noto Serif KR',serif;font-weight:900;font-size:clamp(30px,5vw,46px);line-height:1.2;margin:0 0 6px;color:var(--paper);letter-spacing:-0.01em;}
+  .en-title{font-size:14px;color:var(--paper-dim);letter-spacing:0.04em;margin:0 0 18px;font-style:italic;}
+  .tagline{font-size:16.5px;color:var(--paper-dim);line-height:1.75;max-width:640px;margin:0;}
+  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:28px 0 8px;}
+  .fact{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:14px 16px;}
+  .fact span{display:block;font-size:11px;color:var(--gold-soft);letter-spacing:0.05em;margin-bottom:6px;}
+  .fact b{font-family:'Noto Serif KR',serif;font-size:15px;color:var(--paper);font-weight:700;line-height:1.4;}
+  section.body{margin-top:8px;}
+  section.body p{font-size:15.5px;line-height:1.85;color:var(--paper-dim);margin:0 0 16px;}
+  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:40px 0 18px;font-weight:700;}
+  .cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;}
+  .disc{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:20px;}
+  .disc h3{font-family:'Noto Serif KR',serif;font-size:17px;margin:0 0 4px;color:var(--paper);}
+  .disc .en{font-size:11.5px;color:var(--gold-soft);letter-spacing:0.04em;margin-bottom:10px;display:block;}
+  .disc p{font-size:14px;line-height:1.7;color:var(--paper-dim);margin:0;}
+  footer.pagefoot{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+  footer.pagefoot a{color:var(--gold-soft);text-decoration:none;}
+  @media (max-width:520px){.wrap{padding:28px 18px 70px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="top">
+    <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>전체 종목으로</a>
+    <span class="crumb">단체구기 / 농구 / 3x3농구</span>
+  </nav>
+
+  <header class="hero">
+    <span class="eyebrow">2026 Aichi · Nagoya · 단체구기</span>
+    <h1>농구 / 3x3농구</h1>
+    <p class="en-title">Basketball / 3x3 Basketball</p>
+    <p class="tagline">다섯 명, 혹은 세 명이 코트 위에서 공을 던져 넣어 득점을 겨루는 실내외 구기 종목.</p>
+  </header>
+
+  <div class="facts">
+    <div class="fact"><span>정식 농구</span><b>5 대 5, 10분 4쿼터</b></div>
+    <div class="fact"><span>3x3농구</span><b>3 대 3, 반코트 단판 승부</b></div>
+    <div class="fact"><span>아시안게임</span><b>3x3농구는 2018 자카르타·팔렘방 대회부터 추가</b></div>
+  </div>
+
+  <section class="body">
+    <p>농구는 5명씩 두 팀이 상대 골대(링)에 공을 넣어 득점을 겨루는 종목으로, 빠른 공수 전환과 높이·스피드가 함께 요구된다.</p>
+    <p>3x3농구는 반코트에서 3명씩 겨루는 축약형 종목으로, 짧은 시간 안에 승부가 나는 스트리트 농구 특유의 박진감이 특징이며 도쿄 2020 올림픽부터 정식종목으로 채택되며 급부상했다.</p>
+  </section>
+
+  <h2 class="sub">세부 종목</h2>
+  <div class="cardgrid">
+    <div class="disc">
+      <h3>농구</h3>
+      <span class="en">Basketball</span>
+      <p>5인제 정식 농구. 전후반이 아닌 10분 4쿼터제로 진행되며, 넓은 코트를 활용한 조직적인 공격과 수비가 핵심이다.</p>
+    </div>
+    <div class="disc">
+      <h3>3x3농구</h3>
+      <span class="en">3x3 Basketball</span>
+      <p>3인제 반코트 농구. 12초 공격제한시간과 21점(또는 10분) 선취 규칙으로 빠른 스피드와 순발력이 승부를 가른다.</p>
+    </div>
+  </div>
+
+
+  <footer class="pagefoot">
+    <span>2026 아이치·나고야 아시안게임 종목 안내</span>
+    <a href="index.html">← 전체 종목 목록 보기</a>
+  </footer>
+</div>
+</body>
+</html>
