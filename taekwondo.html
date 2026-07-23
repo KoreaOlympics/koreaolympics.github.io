@@ -1,485 +1,86 @@
-l lang="ko"><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Sports Center CMS v2 - 태권도 (상세 데이터 반영본)</title>
-    <style>
-        body { margin: 0; font-family: Arial, sans-serif; background: #eef2f7; display: flex; }
-        #side { width: 240px; background: #17324d; color: #fff; height: 100vh; position: fixed; padding: 20px; box-sizing: border-box; }
-        #content { margin-left: 240px; flex: 1; padding: 24px; }
-        .menu { padding: 10px; border-radius: 8px; cursor: pointer; margin: 6px 0; }
-        .menu:hover, .active { background: #2b5f8a; }
-        .card { background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,.1); }
-        
-        /* 게시판형 블록 스타일 */
-        .block { border: 1px solid #e0e0e0; border-radius: 8px; padding: 16px; margin-bottom: 16px; position: relative; background: #fdfdfd; }
-        .block h2 { margin-top: 0; color: #17324d; font-size: 1.3rem; margin-bottom: 10px; }
-        .block p { margin: 0; color: #444; line-height: 1.6; white-space: pre-wrap; }
-        .block img { max-width: 100%; max-height: 400px; display: block; margin-top: 12px; border-radius: 4px; }
-        
-        /* 인라인 편집 모드 스타일 */
-        .edit-fields { display: none; margin-top: 10px; background: #f0f4f8; padding: 12px; border-radius: 6px; }
-        .edit-fields input, .edit-fields textarea { width: 100%; margin: 4px 0; padding: 8px; box-sizing: border-box; border: 1px solid #cbd5e1; border-radius: 4px; font-family: inherit; }
-        
-        /* 도구 버튼 */
-        .tools { display: none; position: absolute; right: 12px; top: 12px; }
-        .tools button { margin-left: 4px; padding: 4px 8px; font-size: 0.85rem; border: 1px solid #ccc; border-radius: 4px; background: #fff; cursor: pointer; }
-        .tools button.del-btn { background: #fee2e2; color: #dc2626; border-color: #fca5a5; }
-        .tools button.save-btn { background: #dcfce7; color: #15803d; border-color: #86efac; }
-        
-        /* 하단 작성기 */
-        #editor { display: none; margin-top: 24px; padding-top: 20px; border-top: 2px dashed #cbd5e1; }
-        #editor h3 { margin-top: 0; color: #17324d; }
-        textarea, input { width: 100%; margin: 6px 0; padding: 10px; box-sizing: border-box; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit; }
-        textarea { height: 120px; resize: vertical; }
-        button.add-btn { padding: 10px 20px; background: #17324d; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; }
-        button.add-btn:hover { background: #2b5f8a; }
-        
-        button.save-page-btn { padding: 10px; width: 100%; background: #22c55e; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; margin-top: 10px; }
-        button.save-page-btn:hover { background: #16a34a; }
-    </style>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>태권도 | 2026 아이치·나고야 아시안게임</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E1A2B; --ink-2:#152540; --gold:#C9A24B; --gold-soft:#E4CD8C;
+    --sun:#D8482F; --paper:#F3EFE4; --paper-dim:#B9C2CF; --line:rgba(201,162,75,0.28);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; color:var(--paper); font-family:'Pretendard','Noto Sans KR',sans-serif;
+    background:
+      radial-gradient(1100px 550px at 90% -10%, rgba(216,72,47,0.16), transparent 60%),
+      radial-gradient(900px 500px at -10% 110%, rgba(201,162,75,0.10), transparent 60%),
+      var(--ink);
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:40px 28px 100px;}
+  nav.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;}
+  .back{color:var(--gold-soft);text-decoration:none;font-size:13.5px;font-weight:600;display:inline-flex;align-items:center;gap:6px;}
+  .back:hover{color:var(--gold);}
+  .back svg{width:14px;height:14px;}
+  .crumb{font-size:12px;color:var(--paper-dim);letter-spacing:0.02em;}
+  header.hero{padding-bottom:32px;margin-bottom:32px;border-bottom:1px solid var(--line);}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;letter-spacing:0.16em;color:var(--gold-soft);text-transform:uppercase;font-weight:600;margin-bottom:16px;}
+  .eyebrow::before{content:"";width:22px;height:1px;background:var(--gold);display:inline-block;}
+  h1{font-family:'Noto Serif KR',serif;font-weight:900;font-size:clamp(30px,5vw,46px);line-height:1.2;margin:0 0 6px;color:var(--paper);letter-spacing:-0.01em;}
+  .en-title{font-size:14px;color:var(--paper-dim);letter-spacing:0.04em;margin:0 0 18px;font-style:italic;}
+  .tagline{font-size:16.5px;color:var(--paper-dim);line-height:1.75;max-width:640px;margin:0;}
+  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:28px 0 8px;}
+  .fact{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:14px 16px;}
+  .fact span{display:block;font-size:11px;color:var(--gold-soft);letter-spacing:0.05em;margin-bottom:6px;}
+  .fact b{font-family:'Noto Serif KR',serif;font-size:15px;color:var(--paper);font-weight:700;line-height:1.4;}
+  section.body{margin-top:8px;}
+  section.body p{font-size:15.5px;line-height:1.85;color:var(--paper-dim);margin:0 0 16px;}
+  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:40px 0 18px;font-weight:700;}
+  .cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;}
+  .disc{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:20px;}
+  .disc h3{font-family:'Noto Serif KR',serif;font-size:17px;margin:0 0 4px;color:var(--paper);}
+  .disc .en{font-size:11.5px;color:var(--gold-soft);letter-spacing:0.04em;margin-bottom:10px;display:block;}
+  .disc p{font-size:14px;line-height:1.7;color:var(--paper-dim);margin:0;}
+  footer.pagefoot{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+  footer.pagefoot a{color:var(--gold-soft);text-decoration:none;}
+  @media (max-width:520px){.wrap{padding:28px 18px 70px;}}
+</style>
 </head>
 <body>
-    <div id="side">
-        <h2>Sports Center</h2>
-        <div class="menu">1. 종목 소개</div>
-        <div class="menu active">2. 2026 국가대표</div>
-        <div class="menu">3. 국제대회 시즌</div>
-        <div class="menu">4. 나고야 아시안게임</div>
-        <div class="menu">5. LA 올림픽</div>
-        <hr>
-        <label style="cursor: pointer; font-weight: bold;"><input type="checkbox" id="toggle"> ⚙️ 편집모드 켜기</label><br><br>
-        <button class="save-page-btn" onclick="downloadPage()">💾 HTML 최종 저장</button>
-    </div>
-    
-    <div id="content">
-        <div class="card">
-            <h1 id="ptitle">2026 국가대표</h1>
-            <div id="blocks"><div class="block">
-                    <div class="tools" style="display: block">
-                        <button onclick="toggleInlineEdit(0)">✏️ 수정</button>
-                        <button class="del-btn" onclick="delBlock(0)">🗑️ 삭제</button>
-                    </div>
-                    <div id="view-area-0">
-                        <h2>품새 : [남자부] 윤규성 / [여자부] 정하은</h2>
-                        <p>품새는 자유품새와 공인품새가 있으며 아시안게임은 이 두 분야를 종합하여 점수를 매기게 된다.<br><br>[선발전 주요 결과]<br>- 종합품새 1차 선발전 우승: 오민혁(남, 경희대) / 정하은(여, 용인시)<br>- 아시아선수권 선발전 우승 (자유품새): 윤규성(남, 제2군단사령부) / 김지현(여, 상암고)<br>- 아시아선수권 선발전 우승 (공인품새 30세 이하): 이동준(남, 경희대) / 이주영(여, 한체대)<br><br></p>
-                        <img src="https://img0.yna.co.kr/etc/inner/KR/2024/12/03/AKR20241203024300007_01_i_P4.jpg">
-                    </div>
-                    <div id="edit-area-0" class="edit-fields">
-                        <label>제목</label>
-                        <input type="text" id="edit-t-0" value="품새 : [남자부] 윤규성 / [여자부] 정하은">
-                        <label>내용</label>
-                        <textarea id="edit-c-0">품새는 자유품새와 공인품새가 있으며 아시안게임은 이 두 분야를 종합하여 점수를 매기게 된다.
+<div class="wrap">
+  <nav class="top">
+    <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>전체 종목으로</a>
+    <span class="crumb">무도와 격투기 / 태권도</span>
+  </nav>
 
-[선발전 주요 결과]
-- 종합품새 1차 선발전 우승: 오민혁(남, 경희대) / 정하은(여, 용인시)
-- 아시아선수권 선발전 우승 (자유품새): 윤규성(남, 제2군단사령부) / 김지현(여, 상암고)
-- 아시아선수권 선발전 우승 (공인품새 30세 이하): 이동준(남, 경희대) / 이주영(여, 한체대)
+  <header class="hero">
+    <span class="eyebrow">2026 Aichi · Nagoya · 무도와 격투기</span>
+    <h1>태권도</h1>
+    <p class="en-title">Taekwondo</p>
+    <p class="tagline">발차기를 중심으로 한 타격기 겨루기(품새) 종목으로, 한국이 종주국인 올림픽 정식 무도.</p>
+  </header>
 
-</textarea>
-                        <label>이미지 URL</label>
-                        <input type="text" id="edit-img-0" value="https://img0.yna.co.kr/etc/inner/KR/2024/12/03/AKR20241203024300007_01_i_P4.jpg" placeholder="http://... 이미지 주소">
-                        <div style="margin-top: 10px; text-align: right;">
-                            <button class="save-btn" onclick="saveInlineEdit(0)">✔️ 수정완료</button>
-                            <button onclick="toggleInlineEdit(0)">❌ 취소</button>
-                        </div>
-                    </div>
-                </div><div class="block">
-                    <div class="tools" style="display: block">
-                        <button onclick="toggleInlineEdit(1)">✏️ 수정</button>
-                        <button class="del-btn" onclick="delBlock(1)">🗑️ 삭제</button>
-                    </div>
-                    <div id="view-area-1">
-                        <h2>남자 -58kg 안향식</h2>
-                        <p>대한민국에서 가장 치열한 체급이라고 봐도 무방하며, 박태준이 올림픽 타이틀을 가지고 있는 체급이기도 하다. <br>작년 세계선수권은 54kg 서은수 (성문고, 세계랭킹 8위) 58kg 배준서 (강화군청, 세계랭킹 5위) 가 출전해 서은수가 금메달을 획득하기도 했다.<br>올해 예비선발전이었던 아시아선수권에 이동건(관악고), 김종명(서천군청) 이 출전했고, 별도 국가대표 예비 선발전에서 안향식 (용인대) 가 선발되었다. <br>여기에서 김종명과 안향식이 최종 플레이오프를 진행했으며 선발전에서 승리한 안향식 선수가 아시안게임 국가대표로 선발되었다. <br><br>안향식 선수는 세계랭킹 275위로 아직 국제 대회에서의 특징적인 전적은 없다. <br>2024 그랜드 슬램 챌린지 16강, 2025 샬럿 그랑프리 챌린지 32강, 무주 그랑프리 챌린지 16강 을 기록했다. </p>
-                        
-                    </div>
-                    <div id="edit-area-1" class="edit-fields">
-                        <label>제목</label>
-                        <input type="text" id="edit-t-1" value="남자 -58kg 안향식">
-                        <label>내용</label>
-                        <textarea id="edit-c-1">대한민국에서 가장 치열한 체급이라고 봐도 무방하며, 박태준이 올림픽 타이틀을 가지고 있는 체급이기도 하다. 
-작년 세계선수권은 54kg 서은수 (성문고, 세계랭킹 8위) 58kg 배준서 (강화군청, 세계랭킹 5위) 가 출전해 서은수가 금메달을 획득하기도 했다.
-올해 예비선발전이었던 아시아선수권에 이동건(관악고), 김종명(서천군청) 이 출전했고, 별도 국가대표 예비 선발전에서 안향식 (용인대) 가 선발되었다. 
-여기에서 김종명과 안향식이 최종 플레이오프를 진행했으며 선발전에서 승리한 안향식 선수가 아시안게임 국가대표로 선발되었다. 
+  <div class="facts">
+    <div class="fact"><span>겨루기</span><b>전자호구 판정, 3라운드</b></div>
+    <div class="fact"><span>품새</span><b>정해진 동작 연기, 예술성 평가</b></div>
+    <div class="fact"><span>종주국</span><b>대한민국</b></div>
+  </div>
 
-안향식 선수는 세계랭킹 275위로 아직 국제 대회에서의 특징적인 전적은 없다. 
-2024 그랜드 슬램 챌린지 16강, 2025 샬럿 그랑프리 챌린지 32강, 무주 그랑프리 챌린지 16강 을 기록했다. </textarea>
-                        <label>이미지 URL</label>
-                        <input type="text" id="edit-img-1" value="" placeholder="http://... 이미지 주소">
-                        <div style="margin-top: 10px; text-align: right;">
-                            <button class="save-btn" onclick="saveInlineEdit(1)">✔️ 수정완료</button>
-                            <button onclick="toggleInlineEdit(1)">❌ 취소</button>
-                        </div>
-                    </div>
-                </div><div class="block">
-                    <div class="tools" style="display: block">
-                        <button onclick="toggleInlineEdit(2)">✏️ 수정</button>
-                        <button class="del-btn" onclick="delBlock(2)">🗑️ 삭제</button>
-                    </div>
-                    <div id="view-area-2">
-                        <h2><b>남자 -68kg 문진호</b></h2>
-                        <p>이대훈 선수의 은퇴 이후 진호준, 장준 등 선수들이 활약해 왔던 체급이다. 2024 올림픽에는 체급 수 제한으로 출전하지 못했으며 (당시 진호준 세계랭킹 6위) <br>2025 세계선수권에서는 63kg 장준 선수가 동메달, 68kg 성유현 선수가 은메달을 획득했었다.<br><br>올해 예비선발전이던 아시아선수권에 문진호와 장준(한국가스공사) 선수가 출전해 문진호 우승, 장준 준우승을 기록했고, 권도윤(울산체육회) 선수가 별도 선발전을 통과했다.<br>문진호 선수는 서울체고 재학 중이던 지난해 우시 그랜드슬램 챌린지와 방콕 그랑프리 챌린지에서 우승하였는데, 특히 방콕에서 대선배 장준을 꺾고 68kg 정상에 오르며 국제 무대에서 주목받고 있다.<br>올해도 아시아선수권 우승에 이어 선발전에서 다시 장준 선수 등을 꺾고 아시안게임 국가대표로 선발되었다. <br><br>그랜드슬램 챌린지, 그랑프리 챌린지, U-21 세계선수권, 아시아선수권에서 3금1은을 기록한 문진호 선수는 현재 세계랭킹 12위이며 아시안게임 주요 메달 후보이다. </p>
-                        
-                    </div>
-                    <div id="edit-area-2" class="edit-fields">
-                        <label>제목</label>
-                        <input type="text" id="edit-t-2" value="&lt;b&gt;남자 -68kg 문진호&lt;/b&gt;">
-                        <label>내용</label>
-                        <textarea id="edit-c-2">이대훈 선수의 은퇴 이후 진호준, 장준 등 선수들이 활약해 왔던 체급이다. 2024 올림픽에는 체급 수 제한으로 출전하지 못했으며 (당시 진호준 세계랭킹 6위) 
-2025 세계선수권에서는 63kg 장준 선수가 동메달, 68kg 성유현 선수가 은메달을 획득했었다.
-
-올해 예비선발전이던 아시아선수권에 문진호와 장준(한국가스공사) 선수가 출전해 문진호 우승, 장준 준우승을 기록했고, 권도윤(울산체육회) 선수가 별도 선발전을 통과했다.
-문진호 선수는 서울체고 재학 중이던 지난해 우시 그랜드슬램 챌린지와 방콕 그랑프리 챌린지에서 우승하였는데, 특히 방콕에서 대선배 장준을 꺾고 68kg 정상에 오르며 국제 무대에서 주목받고 있다.
-올해도 아시아선수권 우승에 이어 선발전에서 다시 장준 선수 등을 꺾고 아시안게임 국가대표로 선발되었다. 
-
-그랜드슬램 챌린지, 그랑프리 챌린지, U-21 세계선수권, 아시아선수권에서 3금1은을 기록한 문진호 선수는 현재 세계랭킹 12위이며 아시안게임 주요 메달 후보이다. </textarea>
-                        <label>이미지 URL</label>
-                        <input type="text" id="edit-img-2" value="" placeholder="http://... 이미지 주소">
-                        <div style="margin-top: 10px; text-align: right;">
-                            <button class="save-btn" onclick="saveInlineEdit(2)">✔️ 수정완료</button>
-                            <button onclick="toggleInlineEdit(2)">❌ 취소</button>
-                        </div>
-                    </div>
-                </div><div class="block">
-                    <div class="tools" style="display: block">
-                        <button onclick="toggleInlineEdit(3)">✏️ 수정</button>
-                        <button class="del-btn" onclick="delBlock(3)">🗑️ 삭제</button>
-                    </div>
-                    <div id="view-area-3">
-                        <h2>남자 -80kg 강재권</h2>
-                        <p>최종 선발전 승리 (서건우 선수의 도핑자격 미달 실격에 따른 선발)<br>- 아시아선수권 출전 자격 (삼성에스원태권도단)</p>
-                        
-                    </div>
-                    <div id="edit-area-3" class="edit-fields">
-                        <label>제목</label>
-                        <input type="text" id="edit-t-3" value="남자 -80kg 강재권">
-                        <label>내용</label>
-                        <textarea id="edit-c-3">최종 선발전 승리 (서건우 선수의 도핑자격 미달 실격에 따른 선발)
-- 아시아선수권 출전 자격 (삼성에스원태권도단)</textarea>
-                        <label>이미지 URL</label>
-                        <input type="text" id="edit-img-3" value="" placeholder="http://... 이미지 주소">
-                        <div style="margin-top: 10px; text-align: right;">
-                            <button class="save-btn" onclick="saveInlineEdit(3)">✔️ 수정완료</button>
-                            <button onclick="toggleInlineEdit(3)">❌ 취소</button>
-                        </div>
-                    </div>
-                </div><div class="block">
-                    <div class="tools" style="display: block">
-                        <button onclick="toggleInlineEdit(4)">✏️ 수정</button>
-                        <button class="del-btn" onclick="delBlock(4)">🗑️ 삭제</button>
-                    </div>
-                    <div id="view-area-4">
-                        <h2>남자 무제한 (+80kg) 강상현</h2>
-                        <p>최종 선발전 승리 (박우혁 2위, 박찬희 3위)<br>- 아시아선수권 +87kg 출전 자격 (울산시체육회)</p>
-                        
-                    </div>
-                    <div id="edit-area-4" class="edit-fields">
-                        <label>제목</label>
-                        <input type="text" id="edit-t-4" value="남자 무제한 (+80kg) 강상현">
-                        <label>내용</label>
-                        <textarea id="edit-c-4">최종 선발전 승리 (박우혁 2위, 박찬희 3위)
-- 아시아선수권 +87kg 출전 자격 (울산시체육회)</textarea>
-                        <label>이미지 URL</label>
-                        <input type="text" id="edit-img-4" value="" placeholder="http://... 이미지 주소">
-                        <div style="margin-top: 10px; text-align: right;">
-                            <button class="save-btn" onclick="saveInlineEdit(4)">✔️ 수정완료</button>
-                            <button onclick="toggleInlineEdit(4)">❌ 취소</button>
-                        </div>
-                    </div>
-                </div><div class="block">
-                    <div class="tools" style="display: block">
-                        <button onclick="toggleInlineEdit(5)">✏️ 수정</button>
-                        <button class="del-btn" onclick="delBlock(5)">🗑️ 삭제</button>
-                    </div>
-                    <div id="view-area-5">
-                        <h2>여자 -49kg 이유민</h2>
-                        <p>최종 선발전 승리 (김향기 패)<br>- 아시안게임 1차대표 통과 자격 (관악고)</p>
-                        
-                    </div>
-                    <div id="edit-area-5" class="edit-fields">
-                        <label>제목</label>
-                        <input type="text" id="edit-t-5" value="여자 -49kg 이유민">
-                        <label>내용</label>
-                        <textarea id="edit-c-5">최종 선발전 승리 (김향기 패)
-- 아시안게임 1차대표 통과 자격 (관악고)</textarea>
-                        <label>이미지 URL</label>
-                        <input type="text" id="edit-img-5" value="" placeholder="http://... 이미지 주소">
-                        <div style="margin-top: 10px; text-align: right;">
-                            <button class="save-btn" onclick="saveInlineEdit(5)">✔️ 수정완료</button>
-                            <button onclick="toggleInlineEdit(5)">❌ 취소</button>
-                        </div>
-                    </div>
-                </div><div class="block">
-                    <div class="tools" style="display: block">
-                        <button onclick="toggleInlineEdit(6)">✏️ 수정</button>
-                        <button class="del-btn" onclick="delBlock(6)">🗑️ 삭제</button>
-                    </div>
-                    <div id="view-area-6">
-                        <h2>여자 -57kg 김유진</h2>
-                        <p>최종 선발전 승리 (서여원 패)<br>- 아시아선수권 출전 및 아시안게임 1차대표 통과 (울산시체육회)</p>
-                        
-                    </div>
-                    <div id="edit-area-6" class="edit-fields">
-                        <label>제목</label>
-                        <input type="text" id="edit-t-6" value="여자 -57kg 김유진">
-                        <label>내용</label>
-                        <textarea id="edit-c-6">최종 선발전 승리 (서여원 패)
-- 아시아선수권 출전 및 아시안게임 1차대표 통과 (울산시체육회)</textarea>
-                        <label>이미지 URL</label>
-                        <input type="text" id="edit-img-6" value="" placeholder="http://... 이미지 주소">
-                        <div style="margin-top: 10px; text-align: right;">
-                            <button class="save-btn" onclick="saveInlineEdit(6)">✔️ 수정완료</button>
-                            <button onclick="toggleInlineEdit(6)">❌ 취소</button>
-                        </div>
-                    </div>
-                </div><div class="block">
-                    <div class="tools" style="display: block">
-                        <button onclick="toggleInlineEdit(7)">✏️ 수정</button>
-                        <button class="del-btn" onclick="delBlock(7)">🗑️ 삭제</button>
-                    </div>
-                    <div id="view-area-7">
-                        <h2>여자 -67kg 곽민주</h2>
-                        <p>최종 선발전 승리 (이가은 2위, 홍효림 3위)<br>- 아시아선수권 출전 자격 (한국체대)</p>
-                        
-                    </div>
-                    <div id="edit-area-7" class="edit-fields">
-                        <label>제목</label>
-                        <input type="text" id="edit-t-7" value="여자 -67kg 곽민주">
-                        <label>내용</label>
-                        <textarea id="edit-c-7">최종 선발전 승리 (이가은 2위, 홍효림 3위)
-- 아시아선수권 출전 자격 (한국체대)</textarea>
-                        <label>이미지 URL</label>
-                        <input type="text" id="edit-img-7" value="" placeholder="http://... 이미지 주소">
-                        <div style="margin-top: 10px; text-align: right;">
-                            <button class="save-btn" onclick="saveInlineEdit(7)">✔️ 수정완료</button>
-                            <button onclick="toggleInlineEdit(7)">❌ 취소</button>
-                        </div>
-                    </div>
-                </div><div class="block">
-                    <div class="tools" style="display: block">
-                        <button onclick="toggleInlineEdit(8)">✏️ 수정</button>
-                        <button class="del-btn" onclick="delBlock(8)">🗑️ 삭제</button>
-                    </div>
-                    <div id="view-area-8">
-                        <h2>여자 무제한 (+67kg) 송다빈</h2>
-                        <p>최종 선발전 승리<br>- 아시아선수권 +73kg 출전 및 아시안게임 1차대표 통과 (울산시체육회)</p>
-                        
-                    </div>
-                    <div id="edit-area-8" class="edit-fields">
-                        <label>제목</label>
-                        <input type="text" id="edit-t-8" value="여자 무제한 (+67kg) 송다빈">
-                        <label>내용</label>
-                        <textarea id="edit-c-8">최종 선발전 승리
-- 아시아선수권 +73kg 출전 및 아시안게임 1차대표 통과 (울산시체육회)</textarea>
-                        <label>이미지 URL</label>
-                        <input type="text" id="edit-img-8" value="" placeholder="http://... 이미지 주소">
-                        <div style="margin-top: 10px; text-align: right;">
-                            <button class="save-btn" onclick="saveInlineEdit(8)">✔️ 수정완료</button>
-                            <button onclick="toggleInlineEdit(8)">❌ 취소</button>
-                        </div>
-                    </div>
-                </div></div>
-            
-            <div id="editor" style="display: block;">
-                <h3>✍️ 새 게시글 추가</h3>
-                <input id="t" placeholder="제목을 입력하세요">
-                <textarea id="c" placeholder="내용을 입력하세요"></textarea>
-                <input id="img" placeholder="삽입할 이미지 URL을 입력하세요 (선택사항)">
-                <button class="add-btn" onclick="addBlock()">게시글 등록</button>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        const ADMIN_PASSWORD = "2810";
-
-        // 요청하신 상세 텍스트를 초기 데이터 구조로 파싱하여 배치
-        const defaultPages = [
-            {
-                name: '종목 소개',
-                blocks: [
-                    {
-                        title: '올림픽 및 아시안게임 태권도 개요',
-                        text: '태권도는 발차기 중심의 박진감 넘치는 격투 스포츠로, 스피드와 기술, 집중력이 승부를 가르는 겨루기가 올림픽과 아시안게임의 공식 종목입니다.\n\n- 아시안게임 태권도: 지난 항저우 대회에서 한국은 종합 1위를 차지하며 아시아 최강의 저력을 보여주었습니다.\n- 올림픽 태권도: 지난 파리 올림픽에서 한국은 금 2, 동 1을 기록하며 세계 무대에서도 경쟁력을 입증했습니다.',
-                        img: ''
-                    },
-                    {
-                        title: '아시안게임의 품새 종목',
-                        text: '아시안게임에서는 겨루기뿐만 아니라 품새 분야도 존재합니다. 남녀 각각 개인전이 실시되며, 대한민국은 이 분야에서 종주국으로서 세계 최강의 위치를 확고히 하고 있습니다.',
-                        img: ''
-                    }
-                ]
-            },
-            {
-                name: '2026 국가대표',
-                blocks: [
-                    {
-                        title: '아시안게임 품새 대표팀 선발 결과',
-                        text: '품새는 자유품새와 공인품새가 있으며 아시안게임은 이 두 분야를 종합하여 점수를 매기게 될 가능성이 높습니다.\n\n[선발전 주요 결과]\n- 종합품새 1차 선발전 우승: 오민혁(남, 경희대) / 정하은(여, 용인시)\n- 아시아선수권 선발전 우승 (자유품새): 윤규성(남, 제2군단사령부) / 김지현(여, 상암고)\n- 아시아선수권 선발전 우승 (공인품새 30세 이하): 이동준(남, 경희대) / 이주영(여, 한체대)\n\n★ 최종 아시안게임 선발자: [남자부] 윤규성 / [여자부] 정하은',
-                        img: ''
-                    },
-                    { title: '남자 -58kg 안향식', text: '최종 선발전 승리 (김종명 패)\n- 아시아선수권 1차대표 통과 자격 보유 (용인대)', img: '' },
-                    { title: '남자 -68kg 문진호', text: '최종 선발전 승리 (권도윤 2위, 장준 3위)\n- 아시아선수권 출전 자격 (서울체고)', img: '' },
-                    { title: '남자 -80kg 강재권', text: '최종 선발전 승리 (서건우 선수의 도핑자격 미달 실격에 따른 선발)\n- 아시아선수권 출전 자격 (삼성에스원태권도단)', img: '' },
-                    { title: '남자 무제한 (+80kg) 강상현', text: '최종 선발전 승리 (박우혁 2위, 박찬희 3위)\n- 아시아선수권 +87kg 출전 자격 (울산시체육회)', img: '' },
-                    { title: '여자 -49kg 이유민', text: '최종 선발전 승리 (김향기 패)\n- 아시안게임 1차대표 통과 자격 (관악고)', img: '' },
-                    { title: '여자 -57kg 김유진', text: '최종 선발전 승리 (서여원 패)\n- 아시아선수권 출전 및 아시안게임 1차대표 통과 (울산시체육회)', img: '' },
-                    { title: '여자 -67kg 곽민주', text: '최종 선발전 승리 (이가은 2위, 홍효림 3위)\n- 아시아선수권 출전 자격 (한국체대)', img: '' },
-                    { title: '여자 무제한 (+67kg) 송다빈', text: '최종 선발전 승리\n- 아시아선수권 +73kg 출전 및 아시안게임 1차대표 통과 (울산시체육회)', img: '' }
-                ]
-            },
-            {
-                name: '국제대회 시즌',
-                blocks: [
-                    {
-                        title: '3.1. 아시아선수권대회 (5/19 ~ 5/23)',
-                        text: '국가대표 선발 명단 및 아시아 프레지던트컵을 통해 출전권을 획득한 선수들이 출전합니다.\n\n[쿼터 확보 중요성 및 결과]\n- 이 대회 결과는 아시안게임 쿼터 배정에 직결되므로 관련 2개 체급에서 최소 8강(한 명 이상) 이내에 진입하는 것이 필수적이었습니다.\n- 남자부는 순탄하게 진입할 것으로 예상되었으나, 상대적으로 아시아권 약체로 평가받던 여자 67kg급, 여자 49kg급, 무제한급은 선수 풀 제한으로 이변 탈락 우려가 있었습니다.\n- 우려와 달리, 최종적으로 좋은 성적을 거두며 대한민국 대표팀은 전 종목 아시안게임 출전 티켓을 무사히 확보했습니다.',
-                        img: ''
-                    },
-                    {
-                        title: '3.2. 월드태권도 그랑프리',
-                        text: '이전 그랑프리 챌린지 메달리스트들과 해당 시점 당시 세계랭킹 상위권 선수들이 특별 초청되어 치러지는 구조입니다.\n\n※ 본 대회는 랭킹 포인트 획득을 위한 초청제 대회로, 국내 국가대표 선발전 및 아시안게임 출전권 배정과는 직접적인 연관성이 없습니다.',
-                        img: ''
-                    }
-                ]
-            },
-            { name: '나고야 아시안게임', blocks: [] },
-            { name: 'LA 올림픽', blocks: [] }
-        ];
-
-        let pages = JSON.parse(localStorage.getItem('tkd_sports_center_v2')) || defaultPages;
-
-        function saveToStorage() {
-            localStorage.setItem('tkd_sports_center_v2', JSON.stringify(pages));
-        }
-
-        let cur = 0;
-        let isEditMode = false;
-
-        const ptitle = document.getElementById('ptitle');
-        const blocks = document.getElementById('blocks');
-        const toggle = document.getElementById('toggle');
-        const editor = document.getElementById('editor');
-        const t = document.getElementById('t');
-        const c = document.getElementById('c');
-        const img = document.getElementById('img');
-
-        document.querySelectorAll('.menu').forEach((m, i) => m.onclick = () => {
-            document.querySelectorAll('.menu').forEach(x => x.classList.remove('active'));
-            m.classList.add('active');
-            cur = i;
-            render();
-        });
-
-        toggle.onchange = () => {
-            if (toggle.checked) {
-                const pw = prompt("편집 권한이 필요합니다. 비밀번호를 입력하세요:");
-                if (pw === ADMIN_PASSWORD) {
-                    isEditMode = true;
-                    editor.style.display = 'block';
-                } else {
-                    alert("비밀번호가 올바르지 않습니다.");
-                    toggle.checked = false;
-                    isEditMode = false;
-                    editor.style.display = 'none';
-                }
-            } else {
-                isEditMode = false;
-                editor.style.display = 'none';
-            }
-            render();
-        };
-
-        function render() {
-            ptitle.textContent = pages[cur].name;
-            blocks.innerHTML = '';
-            
-            pages[cur].blocks.forEach((b, i) => {
-                let d = document.createElement('div');
-                d.className = 'block';
-                
-                let imgHtml = '';
-                if (b.img && b.img.trim() !== '') {
-                    imgHtml = b.img.trim().startsWith('<img') ? b.img : `<img src="${b.img.trim()}">`;
-                }
-                
-                d.innerHTML = `
-                    <div class="tools" style="display: ${isEditMode ? 'block' : 'none'}">
-                        <button onclick="toggleInlineEdit(${i})">✏️ 수정</button>
-                        <button class="del-btn" onclick="delBlock(${i})">🗑️ 삭제</button>
-                    </div>
-                    <div id="view-area-${i}">
-                        <h2>${b.title || '(제목 없음)'}</h2>
-                        <p>${b.text ? b.text.replace(/\n/g, '<br>') : '<span style="color:#aaa; font-style:italic;">내용이 없습니다.</span>'}</p>
-                        ${imgHtml}
-                    </div>
-                    <div id="edit-area-${i}" class="edit-fields">
-                        <label>제목</label>
-                        <input type="text" id="edit-t-${i}" value="${b.title || ''}">
-                        <label>내용</label>
-                        <textarea id="edit-c-${i}">${b.text || ''}</textarea>
-                        <label>이미지 URL</label>
-                        <input type="text" id="edit-img-${i}" value="${b.img || ''}" placeholder="http://... 이미지 주소">
-                        <div style="margin-top: 10px; text-align: right;">
-                            <button class="save-btn" onclick="saveInlineEdit(${i})">✔️ 수정완료</button>
-                            <button onclick="toggleInlineEdit(${i})">❌ 취소</button>
-                        </div>
-                    </div>
-                `;
-                blocks.appendChild(d);
-            });
-        }
-
-        function toggleInlineEdit(i) {
-            const editArea = document.getElementById(`edit-area-${i}`);
-            const viewArea = document.getElementById(`view-area-${i}`);
-            if (editArea.style.display === 'block') {
-                editArea.style.display = 'none';
-                viewArea.style.display = 'block';
-            } else {
-                editArea.style.display = 'block';
-                viewArea.style.display = 'none';
-            }
-        }
-
-        function saveInlineEdit(i) {
-            pages[cur].blocks[i].title = document.getElementById(`edit-t-${i}`).value;
-            pages[cur].blocks[i].text = document.getElementById(`edit-c-${i}`).value;
-            pages[cur].blocks[i].img = document.getElementById(`edit-img-${i}`).value;
-            saveToStorage();
-            render();
-        }
-
-        function addBlock() {
-            if (!t.value.trim() && !c.value.trim()) {
-                alert("제목이나 내용 중 하나는 입력해야 합니다.");
-                return;
-            }
-            pages[cur].blocks.push({ title: t.value, text: c.value, img: img.value });
-            t.value = c.value = img.value = '';
-            saveToStorage();
-            render();
-        }
-
-        function delBlock(i) {
-            if (confirm("정말 이 게시글을 삭제하시겠습니까?")) {
-                pages[cur].blocks.splice(i, 1);
-                saveToStorage();
-                render();
-            }
-        }
-
-        function downloadPage() {
-            const blob = new Blob([document.documentElement.outerHTML], { type: 'text/html' });
-            let a = document.createElement('a');
-            a.href = URL.createObjectURL(blob);
-            a.download = 'SportsCenter_Taekwondo_Final.html';
-            a.click();
-        }
-
-        render();
-    </script>
+  <section class="body">
+    <p>태권도는 발차기를 중심으로 한 타격 기술로 상대를 제압하는 겨루기 경기와, 정해진 품새 동작의 정확성·표현력을 겨루는 품새 경기로 나뉜다.</p>
+    <p>한국에서 창시되어 올림픽 정식종목까지 오른 대표적인 무도로, 아시안게임에서도 한국이 오랜 기간 강세를 보여온 종목이다.</p>
+  </section>
 
 
-</body></html>
+
+  <footer class="pagefoot">
+    <span>2026 아이치·나고야 아시안게임 종목 안내</span>
+    <a href="index.html">← 전체 종목 목록 보기</a>
+  </footer>
+</div>
+</body>
 </html>

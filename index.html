@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 아이치·나고야 아시안게임 종목 안내</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E1A2B; --ink-2:#152540; --gold:#C9A24B; --gold-soft:#E4CD8C;
+    --sun:#D8482F; --paper:#F3EFE4; --paper-dim:#B9C2CF; --line:rgba(201,162,75,0.28);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 85% -10%, rgba(216,72,47,0.18), transparent 60%),
+      radial-gradient(900px 500px at -10% 110%, rgba(201,162,75,0.12), transparent 60%),
+      var(--ink);
+    color:var(--paper); font-family:'Pretendard','Noto Sans KR',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1180px;margin:0 auto;padding:64px 28px 100px;}
+  header.hero{display:flex;flex-direction:column;gap:18px;padding-bottom:40px;margin-bottom:36px;border-bottom:1px solid var(--line);}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;letter-spacing:0.18em;color:var(--gold-soft);text-transform:uppercase;font-weight:600;}
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--gold);display:inline-block;}
+  h1{font-family:'Noto Serif KR',serif;font-weight:900;font-size:clamp(32px,5vw,54px);line-height:1.18;margin:0;color:var(--paper);letter-spacing:-0.01em;}
+  h1 em{font-style:normal;color:var(--sun);}
+  .lede{max-width:640px;color:var(--paper-dim);font-size:16px;line-height:1.7;margin:0;}
+  .stat-row{display:flex;gap:28px;margin-top:8px;flex-wrap:wrap;}
+  .stat{display:flex;flex-direction:column;gap:2px;}
+  .stat b{font-family:'Noto Serif KR',serif;font-size:26px;color:var(--gold);}
+  .stat span{font-size:12px;color:var(--paper-dim);letter-spacing:0.04em;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;}
+  .card{background:linear-gradient(180deg, var(--ink-2), rgba(21,37,64,0.6));border:1px solid var(--line);border-radius:4px;overflow:hidden;transition:border-color .25s ease;}
+  .card.open{border-color:rgba(201,162,75,0.6);}
+  .card-head{width:100%;text-align:left;background:none;border:none;color:var(--paper);padding:22px 22px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;font-family:inherit;}
+  .card-head:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
+  .card-num{font-family:'Noto Serif KR',serif;font-size:12px;color:var(--gold);letter-spacing:0.08em;display:block;margin-bottom:10px;}
+  .card-title{font-family:'Noto Serif KR',serif;font-weight:700;font-size:22px;color:var(--paper);margin:0;line-height:1.3;}
+  .card-count{font-size:12px;color:var(--paper-dim);margin-top:8px;display:block;}
+  .chevron{flex:none;width:22px;height:22px;color:var(--gold);transition:transform .3s ease;margin-top:4px;}
+  .card.open .chevron{transform:rotate(135deg);}
+  .subwrap{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+  .card.open .subwrap{max-height:900px;}
+  .sublist{display:flex;flex-direction:column;gap:8px;padding:0 22px 22px;margin:0;border-top:1px solid var(--line);padding-top:16px;}
+  .sublist a{text-decoration:none;color:var(--paper);background:rgba(243,239,228,0.05);border:1px solid rgba(243,239,228,0.14);padding:12px 16px;border-radius:8px;display:flex;justify-content:space-between;align-items:center;gap:10px;transition:background .2s ease, border-color .2s ease;}
+  .sublist a:hover, .sublist a:focus-visible{background:var(--sun);border-color:var(--sun);}
+  .lbl{font-size:14.5px;font-weight:600;color:var(--paper);}
+  .arrow{flex:none;width:14px;height:14px;color:var(--gold-soft);opacity:.8;}
+  .sublist a:hover .arrow{color:#fff;}
+  footer{margin-top:60px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px;color:var(--paper-dim);}
+  @media (max-width:520px){.wrap{padding:40px 18px 70px;}.stat-row{gap:20px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <span class="eyebrow">2026 Aichi · Nagoya</span>
+    <h1>제20회 아이치·나고야<br><em>아시안게임 종목</em> 안내</h1>
+    <p class="lede">대분류를 눌러 펼치고, 원하는 항목을 클릭하면 해당 종목 페이지로 이동합니다.</p>
+    <div class="stat-row">
+      <div class="stat"><b>7</b><span>대분류</span></div>
+      <div class="stat"><b id="linkCount">-</b><span>연결 페이지</span></div>
+      <div class="stat"><b>2026</b><span>대회 연도</span></div>
+    </div>
+  </header>
+
+  <main class="grid" id="grid"></main>
+
+  <footer>
+    <span>구조: 대분류 → 항목(2단계) · 항목 클릭 시 개별 페이지로 이동</span>
+    <span>예시: 축구 → soccer.html</span>
+  </footer>
+</div>
+
+<script>
+const DATA = [
+  { title:"단체구기", note:"여러 명이 한 팀을 이뤄 겨루는 구기 종목", items:[
+    { label:"축구", slug:"soccer" },
+    { label:"농구 / 3x3농구", slug:"basketball" },
+    { label:"야구 / 소프트볼", slug:"baseball" },
+    { label:"배구 / 비치발리볼", slug:"volleyball" },
+    { label:"핸드볼 / 하키", slug:"handball" },
+    { label:"럭비 / 크리켓 / 수구", slug:"rugby" },
+  ]},
+  { title:"개인구기", note:"라켓·채로 개인 또는 소수가 겨루는 종목", items:[
+    { label:"배드민턴", slug:"badminton" },
+    { label:"탁구", slug:"tabletennis" },
+    { label:"골프", slug:"golf" },
+    { label:"테니스", slug:"tennis" },
+  ]},
+  { title:"무도와 격투기", note:"올림픽 정식 무도·격투 종목", items:[
+    { label:"태권도", slug:"taekwondo" },
+    { label:"유도", slug:"judo" },
+    { label:"레슬링", slug:"wrestling" },
+    { label:"복싱", slug:"boxing" },
+  ]},
+  { title:"올림픽 · 무기·기술종목", note:"도구·정밀 기술을 겨루는 올림픽 종목", items:[
+    { label:"양궁", slug:"archery" },
+    { label:"펜싱", slug:"fencing" },
+    { label:"사격", slug:"shooting" },
+    { label:"근대5종", slug:"modernpentathlon" },
+  ]},
+  { title:"올림픽 · 기초종목", note:"전통적 기초 올림픽 종목", items:[
+    { label:"육상", slug:"athletics" },
+    { label:"수영류(경영 / 다이빙 / 아티스틱스위밍)", slug:"swimming" },
+    { label:"역도", slug:"weightlifting" },
+    { label:"기계체조", slug:"gymnastics" },
+    { label:"트라이애슬론", slug:"triathlon" },
+  ]},
+  { title:"올림픽 · 기타종목", note:"최근 올림픽에 편입된 신생·확장 종목", items:[
+    { label:"클라이밍", slug:"climbing" },
+    { label:"스케이트보드", slug:"skateboard" },
+    { label:"사이클", slug:"cycling" },
+    { label:"수상", slug:"watersports" },
+    { label:"리듬체조 / 트램펄린 / 승마", slug:"rhythmicgymnastics" },
+  ]},
+  { title:"비올림픽 종목", note:"아시안게임 고유·지역 인기 종목", items:[
+    { label:"소프트테니스 / 스쿼시", slug:"softtennis" },
+    { label:"지역종목(카바디 / 세팍타크로)", slug:"kabaddi" },
+    { label:"투기(가라테 / MMA / 쿠라쉬 / 우슈 / 주짓수)", slug:"karate" },
+    { label:"e스포츠(LOL / 배그 / 풋볼 / 기타)", slug:"esports" },
+    { label:"브레이킹", slug:"breaking" },
+  ]},
+];
+
+const grid = document.getElementById('grid');
+let totalLinks = 0;
+
+DATA.forEach((cat, idx) => {
+  totalLinks += cat.items.length;
+  const card = document.createElement('div');
+  card.className = 'card';
+  const head = document.createElement('button');
+  head.className = 'card-head';
+  head.setAttribute('aria-expanded', 'false');
+  head.innerHTML = `
+    <div>
+      <span class="card-num">${String(idx+1).padStart(2,'0')}</span>
+      <p class="card-title">${cat.title}</p>
+      <span class="card-count">${cat.note} · ${cat.items.length}개 항목</span>
+    </div>
+    <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+  `;
+  const subwrap = document.createElement('div');
+  subwrap.className = 'subwrap';
+  const sublist = document.createElement('div');
+  sublist.className = 'sublist';
+  cat.items.forEach(item => {
+    const a = document.createElement('a');
+    a.href = `${item.slug}.html`;
+    a.innerHTML = `<span class="lbl">${item.label}</span>
+      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>`;
+    sublist.appendChild(a);
+  });
+  subwrap.appendChild(sublist);
+  head.addEventListener('click', () => {
+    const isOpen = card.classList.toggle('open');
+    head.setAttribute('aria-expanded', String(isOpen));
+  });
+  card.appendChild(head);
+  card.appendChild(subwrap);
+  grid.appendChild(card);
+});
+document.getElementById('linkCount').textContent = totalLinks;
+</script>
+</body>
+</html>
