@@ -9,45 +9,69 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#0E1A2B; --ink-2:#152540; --gold:#C9A24B; --gold-soft:#E4CD8C;
+    --ink:#0E1A2B; --ink-2:#152540; --ink-3:#1B2E4D; --gold:#C9A24B; --gold-soft:#E4CD8C;
     --sun:#D8482F; --paper:#F3EFE4; --paper-dim:#B9C2CF; --line:rgba(201,162,75,0.28);
+    --win:#4C8C6B; --lose:#C05B4A; --draw:#9AA3AE;
   }
   *{box-sizing:border-box;}
   body{
     margin:0; color:var(--paper); font-family:'Pretendard','Noto Sans KR',sans-serif;
     background:
-      radial-gradient(1100px 550px at 90% -10%, rgba(216,72,47,0.16), transparent 60%),
-      radial-gradient(900px 500px at -10% 110%, rgba(201,162,75,0.10), transparent 60%),
+      radial-gradient(1100px 550px at 90% -10%, rgba(216,72,47,0.14), transparent 60%),
+      radial-gradient(900px 500px at -10% 110%, rgba(201,162,75,0.09), transparent 60%),
       var(--ink);
     -webkit-font-smoothing:antialiased;
   }
-  .wrap{max-width:880px;margin:0 auto;padding:40px 28px 100px;}
-  nav.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;}
-  .back{color:var(--gold-soft);text-decoration:none;font-size:13.5px;font-weight:600;display:inline-flex;align-items:center;gap:6px;}
+  .wrap{max-width:1080px;margin:0 auto;padding:36px 24px 90px;}
+  nav.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:32px;}
+  .back{color:var(--gold-soft);text-decoration:none;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:6px;}
   .back:hover{color:var(--gold);}
-  .back svg{width:14px;height:14px;}
-  .crumb{font-size:12px;color:var(--paper-dim);letter-spacing:0.02em;}
-  header.hero{padding-bottom:32px;margin-bottom:32px;border-bottom:1px solid var(--line);}
-  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;letter-spacing:0.16em;color:var(--gold-soft);text-transform:uppercase;font-weight:600;margin-bottom:16px;}
-  .eyebrow::before{content:"";width:22px;height:1px;background:var(--gold);display:inline-block;}
-  h1{font-family:'Noto Serif KR',serif;font-weight:900;font-size:clamp(30px,5vw,46px);line-height:1.2;margin:0 0 6px;color:var(--paper);letter-spacing:-0.01em;}
-  .en-title{font-size:14px;color:var(--paper-dim);letter-spacing:0.04em;margin:0 0 18px;font-style:italic;}
-  .tagline{font-size:16.5px;color:var(--paper-dim);line-height:1.75;max-width:640px;margin:0;}
-  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:28px 0 8px;}
-  .fact{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:14px 16px;}
-  .fact span{display:block;font-size:11px;color:var(--gold-soft);letter-spacing:0.05em;margin-bottom:6px;}
-  .fact b{font-family:'Noto Serif KR',serif;font-size:15px;color:var(--paper);font-weight:700;line-height:1.4;}
-  section.body{margin-top:8px;}
-  section.body p{font-size:15.5px;line-height:1.85;color:var(--paper-dim);margin:0 0 16px;}
-  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:40px 0 18px;font-weight:700;}
-  .cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;}
-  .disc{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:20px;}
-  .disc h3{font-family:'Noto Serif KR',serif;font-size:17px;margin:0 0 4px;color:var(--paper);}
-  .disc .en{font-size:11.5px;color:var(--gold-soft);letter-spacing:0.04em;margin-bottom:10px;display:block;}
-  .disc p{font-size:14px;line-height:1.7;color:var(--paper-dim);margin:0;}
-  footer.pagefoot{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+  .back svg{width:13px;height:13px;}
+  .crumb{font-size:11.5px;color:var(--paper-dim);}
+
+  header.pagehead{display:flex;align-items:baseline;gap:14px;padding-bottom:20px;margin-bottom:28px;border-bottom:1px solid var(--line);flex-wrap:wrap;}
+  .eyebrow{font-size:12px;letter-spacing:0.14em;color:var(--gold-soft);text-transform:uppercase;font-weight:600;}
+  h1.title{font-family:'Noto Serif KR',serif;font-weight:900;font-size:30px;margin:0;color:var(--paper);}
+
+  section.division{margin-bottom:44px;}
+  .div-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px;}
+  .div-head h2{font-family:'Noto Serif KR',serif;font-size:19px;color:var(--paper);margin:0;font-weight:700;}
+  .badge{font-size:11.5px;color:var(--gold-soft);border:1px solid var(--line);border-radius:100px;padding:4px 12px;background:rgba(201,162,75,0.08);white-space:nowrap;}
+
+  .cardgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  @media (max-width:720px){.cardgrid{grid-template-columns:1fr;}}
+  .info-card{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:18px 20px;}
+  .info-card h3{font-family:'Noto Serif KR',serif;font-size:13px;color:var(--gold-soft);letter-spacing:0.04em;margin:0 0 12px;text-transform:uppercase;}
+
+  .poslist{font-size:13.5px;line-height:1.85;color:var(--paper);margin-bottom:6px;}
+  .poslist .pos{display:inline-block;min-width:30px;font-weight:700;color:var(--gold);font-size:12px;margin-right:6px;}
+  .note{font-size:12.5px;color:var(--paper-dim);margin-top:10px;line-height:1.7;border-top:1px dashed var(--line);padding-top:10px;}
+
+  .grouptable{display:flex;flex-direction:column;gap:6px;margin-bottom:12px;}
+  .grow{display:flex;gap:8px;font-size:13px;line-height:1.6;}
+  .grow .gname{flex:none;width:38px;font-weight:700;color:var(--gold);}
+  .grow.mine{background:rgba(201,162,75,0.10);border-radius:5px;padding:3px 6px;margin:-3px -6px;}
+  .grow.mine .gname{color:var(--sun);}
+  .sched{display:flex;flex-direction:column;gap:5px;margin-top:10px;}
+  .sched span{font-size:12.5px;color:var(--paper-dim);}
+  .sched b{color:var(--paper);font-weight:600;}
+
+  p.txt{font-size:13.5px;line-height:1.85;color:var(--paper-dim);margin:0 0 10px;}
+  p.txt:last-child{margin-bottom:0;}
+
+  .results{display:flex;flex-direction:column;gap:8px;}
+  .rgroup{font-size:12px;color:var(--gold-soft);font-weight:600;margin-top:6px;}
+  .rline{font-size:13px;line-height:1.7;color:var(--paper-dim);}
+  .rline .w{color:var(--win);font-weight:700;}
+  .rline .l{color:var(--lose);font-weight:700;}
+  .rline .d{color:var(--draw);font-weight:700;}
+
+  .pitch{margin-top:14px;background:rgba(76,140,107,0.10);border:1px solid rgba(76,140,107,0.35);border-radius:8px;padding:14px 10px;display:flex;flex-direction:column-reverse;gap:10px;}
+  .prow{display:flex;justify-content:space-around;flex-wrap:wrap;gap:6px;}
+  .pplayer{background:var(--ink);border:1px solid var(--line);border-radius:6px;padding:5px 9px;font-size:11.5px;color:var(--paper);text-align:center;white-space:nowrap;}
+
+  footer.pagefoot{margin-top:50px;padding-top:20px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
   footer.pagefoot a{color:var(--gold-soft);text-decoration:none;}
-  @media (max-width:520px){.wrap{padding:28px 18px 70px;}}
 </style>
 </head>
 <body>
@@ -57,28 +81,118 @@
     <span class="crumb">단체구기 / 축구</span>
   </nav>
 
-  <header class="hero">
-    <span class="eyebrow">2026 Aichi · Nagoya · 단체구기</span>
-    <h1>축구</h1>
-    <p class="en-title">Football / Soccer</p>
-    <p class="tagline">11명이 한 팀을 이뤄 공을 발과 몸으로만 다뤄 상대 골대에 넣는, 세계에서 가장 널리 즐기는 구기 종목.</p>
+  <header class="pagehead">
+    <span class="eyebrow">단체구기</span>
+    <h1 class="title">축구</h1>
   </header>
 
-  <div class="facts">
-    <div class="fact"><span>경기 인원</span><b>11 대 11</b></div>
-    <div class="fact"><span>경기 시간</span><b>전후반 45분씩</b></div>
-    <div class="fact"><span>아시안게임</span><b>1951년 뉴델리 대회부터 정식종목</b></div>
-  </div>
+  <!-- ===== 남자 U23 축구 ===== -->
+  <section class="division">
+    <div class="div-head">
+      <h2>남자 U23 축구</h2>
+      <span class="badge">참가 15개국 · D조 (대한민국·사우디·카타르)</span>
+    </div>
+    <div class="cardgrid">
 
-  <section class="body">
-    <p>축구는 손을 쓰지 않고 발, 머리, 몸통으로 공을 다뤄 상대 골문에 더 많이 넣는 팀이 승리하는 종목이다. 아시안게임에서는 남녀부 모두 정식종목으로 치러지며, 특히 남자부는 23세 이하(와일드카드 3명 포함) 규정을 적용해 젊은 선수들의 경연장이 되어왔다.</p>
-    <p>그라운드 위 11명씩, 벤치의 교체 선수까지 팀 전체의 조직력과 개인 기량이 함께 요구되는 종목으로, 아시아 축구연맹(AFC) 소속 각국의 자존심이 걸린 인기 종목이다.</p>
+      <div class="info-card">
+        <h3>국가대표 명단</h3>
+        <div class="poslist"><span class="pos">GK</span>김민승, 김준홍, 이승환</div>
+        <div class="poslist"><span class="pos">DF</span>강민준, 김지수, 박경섭, 박성훈, 배현서, 신민하, 최석현, 최우진</div>
+        <div class="poslist"><span class="pos">MF</span>강상윤, 박승수, 배준호, 양민혁, 양현준(WC), 엄지성(WC), 이기혁(WC), 이승원, 이현주, 황도윤</div>
+        <div class="poslist"><span class="pos">FW</span>김명준, 이영준</div>
+        <div class="note">유럽파 9명 포함 — 김지수(브렌트포드), 박승수(뉴캐슬), 배준호(스토크시티), 양현준(셀틱), 엄지성(스완지), 양민혁(토트넘), 이현주(아로카), 김명준(헹크), 이영준(그라스호퍼)</div>
+
+        <div class="pitch">
+          <div class="prow"><span class="pplayer">김준홍(GK)</span></div>
+          <div class="prow"><span class="pplayer">배현서</span><span class="pplayer">김지수</span><span class="pplayer">이기혁</span><span class="pplayer">최우진</span></div>
+          <div class="prow"><span class="pplayer">강상윤</span><span class="pplayer">이승원</span></div>
+          <div class="prow"><span class="pplayer">양현준/양민혁</span><span class="pplayer">배준호</span><span class="pplayer">엄지성/박승수</span></div>
+          <div class="prow"><span class="pplayer">이영준</span></div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h3>조 편성 · 일정</h3>
+        <div class="grouptable">
+          <div class="grow"><span class="gname">A조</span>일본, 태국, 키르기즈스탄, 홍콩</div>
+          <div class="grow"><span class="gname">B조</span>중국, UAE, 이란, 북한</div>
+          <div class="grow"><span class="gname">C조</span>베트남, 우즈베키스탄, 필리핀, 쿠웨이트</div>
+          <div class="grow mine"><span class="gname">D조</span>대한민국, 사우디, 카타르</div>
+        </div>
+        <div class="sched">
+          <span><b>9/16</b> 예선 카타르전</span>
+          <span><b>9/23</b> 예선 사우디전</span>
+        </div>
+        <div class="note">조 2위 이내 시 8강 진출. 8강 이후 대진은 추후 결정.</div>
+      </div>
+
+      <div class="info-card">
+        <h3>전력 분석</h3>
+        <p class="txt">올해 초 U23 아시안컵에서 카타르는 3패, 사우디는 1승 2패로 예선 탈락했다. 비교적 평이한 조 배정이며 4강 이후 대진이 변수가 될 전망이다.</p>
+        <p class="txt">일본과 우즈벡이 가장 강력한 경쟁자로 보이며, 중국·베트남·북한 등도 변수를 만들 수 있다. 이라크·요르단 등은 불참한다.</p>
+      </div>
+
+      <div class="info-card">
+        <h3>최근 전적</h3>
+        <div class="results">
+          <div class="rgroup">U23 아시안컵</div>
+          <div class="rline">vs 이란 <span class="d">0-0 무</span> · vs 레바논 <span class="w">4-2 승</span> · vs 우즈벡 <span class="l">0-2 패</span> · vs 호주 <span class="w">2-1 승</span> · vs 일본 <span class="l">0-1 패</span> · vs 베트남 <span class="d">2-2 무(승부차기 패, 4위)</span></div>
+          <div class="rgroup">친선</div>
+          <div class="rline">vs 일본 <span class="w">2-1 승</span> · vs 미국 <span class="l">1-4 패</span> · vs UAE <span class="d">1-1 무</span> · vs 태국 <span class="w">3-2 승</span> · vs 키르기즈스탄 <span class="l">0-1 패</span></div>
+        </div>
+      </div>
+
+    </div>
   </section>
 
+  <!-- ===== 여자 축구 ===== -->
+  <section class="division">
+    <div class="div-head">
+      <h2>여자 축구</h2>
+      <span class="badge">참가 12개국 · B조 (남북한 동반 편성)</span>
+    </div>
+    <div class="cardgrid">
 
+      <div class="info-card">
+        <h3>국가대표 명단</h3>
+        <div class="poslist"><span class="pos">GK</span>김경희, 김민정, 류지수</div>
+        <div class="poslist"><span class="pos">DF</span>추효주(오타와), 고유진, 정유진, 김혜리, 한다인, 노진영, 장슬기, 이민화</div>
+        <div class="poslist"><span class="pos">MF</span>정민영(오타와), 강태경, 김민지, 강채림, 박예나, 박혜정, 지소연, 윤수정, 최유리, 현슬기</div>
+        <div class="poslist"><span class="pos">FW</span>정다빈(스타베크·노르웨이), 손화연</div>
+      </div>
+
+      <div class="info-card">
+        <h3>조 편성 · 일정</h3>
+        <div class="grouptable">
+          <div class="grow"><span class="gname">A조</span>일본, 대만, 베트남, 태국</div>
+          <div class="grow mine"><span class="gname">B조</span>대한민국, 북한, 방글라데시, 미얀마</div>
+          <div class="grow"><span class="gname">C조</span>중국, 필리핀, 우즈벡, 홍콩</div>
+        </div>
+        <div class="note">조 3위 이내 9개국 중 최하위 1개 팀을 제외하고 8강 토너먼트 진출.</div>
+      </div>
+
+      <div class="info-card">
+        <h3>전력 분석</h3>
+        <p class="txt">남북한이 동시에 같은 조에 편성되며 '죽음의 조'가 됐다. 일본과 중국은 조 1위로 4강까지 비교적 쉽게 오를 것으로 보이며, B조의 결과가 나머지 국가들의 행방을 좌우할 전망이다.</p>
+      </div>
+
+      <div class="info-card">
+        <h3>최근 전적</h3>
+        <div class="results">
+          <div class="rgroup">아시안컵</div>
+          <div class="rline">vs 이란 <span class="w">3-0 승</span> · vs 필리핀 <span class="w">3-0 승</span> · vs 호주 <span class="d">3-3 무</span> · vs 우즈벡 <span class="w">6-0 승</span> · vs 일본 <span class="l">1-4 패</span>(4강 탈락)</div>
+          <div class="rgroup">FIFA 시리즈 친선</div>
+          <div class="rline">vs 브라질 <span class="l">1-5 패</span> · vs 캐나다 <span class="l">1-3 패</span> · vs 잠비아 <span class="d">1-1 무</span></div>
+          <div class="rgroup">EAFF E-1 선수권</div>
+          <div class="rline">vs 괌 <span class="w">5-0 승</span> · vs 마카오 <span class="w">13-0 승</span> · vs 대만 <span class="w">5-3 승</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <footer class="pagefoot">
-    <span>2026 아이치·나고야 아시안게임 종목 안내</span>
+    <span>2026 아이치·나고야 아시안게임 · 축구</span>
     <a href="index.html">← 전체 종목 목록 보기</a>
   </footer>
 </div>
