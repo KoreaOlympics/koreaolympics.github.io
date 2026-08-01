@@ -11,6 +11,7 @@
   :root{
     --ink:#0E1A2B; --ink-2:#152540; --gold:#C9A24B; --gold-soft:#E4CD8C;
     --sun:#D8482F; --paper:#F3EFE4; --paper-dim:#B9C2CF; --line:rgba(201,162,75,0.28);
+    --medal-gold:#D8B44A; --medal-silver:#C8CDD6; --medal-bronze:#C97B4A;
   }
   *{box-sizing:border-box;}
   body{
@@ -39,12 +40,49 @@
   .fact b{font-family:'Noto Serif KR',serif;font-size:15px;color:var(--paper);font-weight:700;line-height:1.4;}
   section.body{margin-top:8px;}
   section.body p{font-size:15.5px;line-height:1.85;color:var(--paper-dim);margin:0 0 16px;}
-  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:40px 0 18px;font-weight:700;}
+  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:48px 0 6px;font-weight:700;}
+  p.sub-note{font-size:13px;color:var(--paper-dim);margin:0 0 20px;line-height:1.6;}
   .cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;}
   .disc{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:20px;}
   .disc h3{font-family:'Noto Serif KR',serif;font-size:17px;margin:0 0 4px;color:var(--paper);}
   .disc .en{font-size:11.5px;color:var(--gold-soft);letter-spacing:0.04em;margin-bottom:10px;display:block;}
   .disc p{font-size:14px;line-height:1.7;color:var(--paper-dim);margin:0;}
+
+  /* Schedule */
+  .schedule-hero{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-bottom:6px;}
+  .schedule-hero b{font-family:'Noto Serif KR',serif;font-size:22px;color:var(--gold);}
+  .schedule-hero span{font-size:13px;color:var(--paper-dim);}
+  .format-steps{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0;}
+  .format-steps span{font-size:12px;color:var(--paper-dim);background:var(--ink-2);border:1px solid var(--line);border-radius:999px;padding:7px 14px;}
+  .format-steps span b{color:var(--gold-soft);font-weight:700;}
+
+  /* Roster */
+  .roster-team{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:18px 20px;}
+  .roster-team h4{font-family:'Noto Serif KR',serif;font-size:13px;color:var(--gold-soft);margin:0 0 12px;letter-spacing:.06em;text-transform:uppercase;}
+  .roster-chips{display:flex;flex-wrap:wrap;gap:8px;}
+  .roster-chips span{font-size:13px;font-weight:600;color:var(--paper);background:rgba(243,239,228,0.05);border:1px solid rgba(243,239,228,0.14);padding:7px 13px;border-radius:999px;}
+
+  /* Tabs (medal history) */
+  .tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;}
+  .tab-btn{background:var(--ink-2);border:1px solid var(--line);color:var(--paper-dim);font-size:13.5px;font-weight:600;padding:9px 18px;border-radius:999px;cursor:pointer;font-family:inherit;transition:background .2s ease, color .2s ease, border-color .2s ease;}
+  .tab-btn:hover{border-color:var(--gold);}
+  .tab-btn.active{background:var(--gold);border-color:var(--gold);color:var(--ink);}
+  .tab-panel{display:none;}
+  .tab-panel.active{display:block;}
+  .medal-group-label{font-family:'Noto Serif KR',serif;font-size:14px;font-weight:700;color:var(--paper);margin:20px 0 8px;}
+  .medal-group-label:first-child{margin-top:0;}
+
+  .medal-compact{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:4px 20px;}
+  .mc-row{padding:13px 0;border-top:1px solid rgba(243,239,228,0.08);display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;}
+  .mc-row:first-child{border-top:none;}
+  .mc-event{flex:none;width:104px;font-family:'Noto Serif KR',serif;font-size:12.5px;font-weight:700;color:var(--gold-soft);}
+  .mc-meds{flex:1;display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--paper-dim);min-width:200px;}
+  .mc-item{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;}
+  .mc-dot{width:8px;height:8px;border-radius:50%;flex:none;display:inline-block;}
+  .mc-dot.gold{background:var(--medal-gold);}
+  .mc-dot.silver{background:var(--medal-silver);}
+  .mc-dot.bronze{background:var(--medal-bronze);}
+
   footer.pagefoot{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
   footer.pagefoot a{color:var(--gold-soft);text-decoration:none;}
   @media (max-width:520px){.wrap{padding:28px 18px 70px;}}
@@ -68,6 +106,7 @@
     <div class="fact"><span>남자 종목</span><b>마루·안마·링·도마·평행봉·철봉</b></div>
     <div class="fact"><span>여자 종목</span><b>도마·이단평행봉·평균대·마루</b></div>
     <div class="fact"><span>강세 국가</span><b>중국, 일본</b></div>
+    <div class="fact"><span>2026 종목 일정</span><b>9월 20일 ~ 9월 24일</b></div>
   </div>
 
   <section class="body">
@@ -75,12 +114,424 @@
     <p>중국과 일본이 오랜 기간 세계 최상위권을 형성해온 종목으로, 아시안게임에서도 두 나라의 각축전이 매 대회 이어진다.</p>
   </section>
 
+  <!-- 2026 대회 일정 -->
+  <h2 class="sub">2026 아이치·나고야 대회 일정</h2>
+  <div class="schedule-hero">
+    <div><b>2026.9.20 – 9.24</b><br><span>기계체조 14개 금메달 종목 진행</span></div>
+    <span>일본 아이치·나고야 · 카스가이시 체육관</span>
+  </div>
+  <div class="format-steps">
+    <span><b>9.20~9.22</b> 예선 · 단체전 · 개인종합 결선</span>
+    <span><b>9.23~9.24</b> 종목별(기구별) 결선</span>
+  </div>
+  <p class="sub-note" style="margin-top:12px;">참고로 리듬체조는 10.2~10.3, 트램펄린은 9.28에 별도로 진행된다.</p>
 
+  <!-- 주목할 선수 -->
+  <h2 class="sub">주목할 선수</h2>
+  <p class="sub-note">2026 대회에서 메달 경쟁을 이끌 것으로 예상되는 주요 선수들.</p>
+  <div class="cardgrid">
+    <div class="disc">
+      <h3>카를로스 율로</h3>
+      <span class="en">Philippines · Men's Floor / Vault</span>
+      <p>올림픽 2관왕(마루·도마)이자 세계선수권 우승 경력을 지닌 필리핀의 간판 선수. 종목별 결선(9.23~24)에서 가장 주목받는 이름.</p>
+    </div>
+    <div class="disc">
+      <h3>하시모토 다이키</h3>
+      <span class="en">Japan · Men's All-Around</span>
+      <p>도쿄 2020 개인종합 금메달리스트로, 단체전·개인종합이 열리는 대회 초반(9.20~22) 일본의 중심 축.</p>
+    </div>
+    <div class="disc">
+      <h3>장보헝</h3>
+      <span class="en">China · Men's All-Around</span>
+      <p>2021 세계선수권 개인종합 챔피언이자 파리 2024 은메달리스트. 중국 단체전·개인종합의 핵심 전력.</p>
+    </div>
+    <div class="disc">
+      <h3>장칭잉</h3>
+      <span class="en">China · Women's Balance Beam / All-Around</span>
+      <p>2025 세계선수권 평균대 금메달·개인종합 동메달리스트. 2026 아시아선수권에서도 개인종합·평균대 모두 결선에 올라 여자 체조 최강 전력의 중심.</p>
+    </div>
+    <div class="disc">
+      <h3>커친친</h3>
+      <span class="en">China · Women's All-Around / Floor</span>
+      <p>2026년 시니어 데뷔와 동시에 아시아선수권 개인종합 금메달을 차지한 신예. 도마·마루에서도 고난도 기술을 구사해 다관왕을 노린다.</p>
+    </div>
+    <div class="disc">
+      <h3>여서정</h3>
+      <span class="en">South Korea · Women's Vault</span>
+      <p>도쿄 2020 도마 동메달리스트로, 2026 아시아선수권 도마에서 금메달을 차지하며 한국 여자 체조의 확실한 금메달 후보로 떠올랐다.</p>
+    </div>
+  </div>
+
+  <!-- 2026 아시아선수권 -->
+  <h2 class="sub">2026 아시아선수권 결과</h2>
+  <p class="sub-note">아시안게임 직전 열린 최신 대회 결과로, 현재 경쟁력을 보여주는 가장 확실한 지표.</p>
+
+  <div class="tabs" id="acTabs">
+    <button class="tab-btn active" data-actab="acMen">남자</button>
+    <button class="tab-btn" data-actab="acWomen">여자</button>
+  </div>
+
+  <div class="tab-panel active" id="acMen">
+    <div class="medal-compact">
+      <div class="mc-row"><div class="mc-event">단체전</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>일본</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>한국 (허웅·김재호·이정효·류성현·서정원)</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">개인종합</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 장보헝</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>중국 양하오난</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>일본 미와 텟페이</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">마루</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>필리핀 카를로스 율로</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>일본 쓰키야마 쇼마</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>필리핀 엘드류 율로</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">안마</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>우즈베키스탄 우트키르벡 주라예프</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>중국 장보헝</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>차이니스 타이베이 리즈카이</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">링</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 양하오난</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>중국 장보헝</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>이란 메흐디 아마드 코하니</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">도마</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>일본 다니가와 와타루</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>한국 김재호</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>이란 마흐디 올파티</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">평행봉</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 장보헝</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>한국 류성현</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>차이니스 타이베이 훙위안시</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">철봉</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>차이니스 타이베이 탕자훙</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>중국 장보헝</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>일본 마에다 후스케</span>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="tab-panel" id="acWomen">
+    <div class="medal-compact">
+      <div class="mc-row"><div class="mc-event">단체전</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>일본</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>한국 (황서현·이윤서·임수민·박나영·여서정)</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">개인종합</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 커친친</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>중국 장칭잉</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>일본 니시야마 미사</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">도마</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>한국 여서정</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>북한 안창옥</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>일본 미야타 쇼코</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">이단평행봉</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 추치위안</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>중국 두쓰위</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>일본 니시야마 미사</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">평균대</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 장칭잉</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>중국 커친친</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>한국 황서현</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">마루</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 장이한</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>일본 스기하라 아이코</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>중국 장칭잉</span>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- 한국 국가대표 명단 -->
+  <h2 class="sub">2026 한국 국가대표 명단</h2>
+  <p class="sub-note">2026 아이치·나고야 아시안게임 기계체조 대표팀, 총 10명.</p>
+  <div class="roster-team">
+    <h4>기계체조 대표팀</h4>
+    <div class="roster-chips">
+      <span>김재호</span><span>서정원</span><span>신솔이</span><span>여서정</span><span>이윤서</span>
+      <span>이정효</span><span>임수민</span><span>류성현</span><span>황서현</span><span>허웅</span>
+    </div>
+  </div>
+  <p class="sub-note" style="margin-top:14px;">
+    여서정은 도쿄 2020 도마 동메달에 이어 2026 아시아선수권 도마 금메달까지 따내며 이번 대회 도마 최유력 금메달 후보로 꼽힌다.
+    남자부에서는 류성현이 같은 대회 평행봉 은메달, 김재호가 도마 은메달을 각각 획득했고, 여자부에서는 황서현이 평균대 동메달을 보태며 세 선수 모두 아시안게임 메달 사정권에 들어 있다.
+  </p>
+
+  <!-- 역대 시상대 -->
+  <h2 class="sub">역대 시상대</h2>
+  <p class="sub-note">최근 아시안게임과 올림픽에서의 기계체조 종목 메달 결과.</p>
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="t2022">2022 항저우 아시안게임</button>
+    <button class="tab-btn" data-tab="t2024">2024 파리 올림픽</button>
+    <button class="tab-btn" data-tab="t2025w">2025 세계선수권</button>
+  </div>
+
+  <div class="tab-panel active" id="t2022">
+    <div class="medal-group-label">남자</div>
+    <div class="medal-compact">
+      <div class="mc-row"><div class="mc-event">단체전</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>일본</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>차이니스 타이베이</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">개인종합</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 장보헝</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>일본 기타조노 다케루</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>중국 란싱위</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">마루</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>한국 김한솔</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>중국 장보헝</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>중국 린차오판</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">안마</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>차이니스 타이베이 리즈카이</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>일본 쓰무라 료타</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>카자흐스탄 나리만 쿠르바노프</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">링</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 란싱위</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>베트남 응우옌반칸퐁</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>일본 다니가와 와타루</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">도마</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>일본 다니가와 와타루</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>이란 메흐디 올파티</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>말레이시아 샤룰 아이미</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">평행봉</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 저우징위안</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>일본 기타조노 다케루</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>일본 다니가와 가케루</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">철봉</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 장보헝</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>중국 린차오판</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>일본 다니가와 가케루</span>
+      </div></div>
+    </div>
+
+    <div class="medal-group-label">여자</div>
+    <div class="medal-compact">
+      <div class="mc-row"><div class="mc-event">단체전</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>일본</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>북한</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">개인종합</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 줘퉁</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>일본 오카무라 마나</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>북한 김수정</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">도마</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>북한 안창옥</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>북한 김선향</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>중국 위린민</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">이단평행봉</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>북한 안창옥</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>일본 세리타 미카코</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>중국 줘퉁</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">평균대</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>일본 오카무라 마나</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>중국 탕시징</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>차이니스 타이베이 딩화톈</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">마루</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 장진</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>북한 김선향</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>한국 임수민</span>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="tab-panel" id="t2024">
+    <div class="medal-group-label">남자</div>
+    <div class="medal-compact">
+      <div class="mc-row"><div class="mc-event">단체전</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>일본</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>중국</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>미국</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">개인종합</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>일본 오카 신노스케</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>중국 장보헝</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>중국 샤오루오텅</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">마루</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>필리핀 카를로스 율로</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>이스라엘 아르템 돌고파트</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>영국 제이크 자만</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">안마</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>아일랜드 리스 맥클레너건</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>카자흐스탄 나리만 쿠르바노프</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>미국 스티븐 네도로시크</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">링</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 류양</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>중국 저우징위안</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>그리스 엘레프테리오스 페트루니아스</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">도마</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>필리핀 카를로스 율로</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>아르메니아 아르투르 다브티안</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>영국 해리 헵워스</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">평행봉</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 저우징위안</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>우크라이나 일리아 코브툰</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>일본 오카 신노스케</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">철봉</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>일본 오카 신노스케</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>콜롬비아 앙헬 바라하스</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>중국 장보헝 · 차이니스 타이베이 탕자훙</span>
+      </div></div>
+    </div>
+
+    <div class="medal-group-label">여자</div>
+    <div class="medal-compact">
+      <div class="mc-row"><div class="mc-event">단체전</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>미국</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>이탈리아</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>브라질</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">개인종합</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>미국 시몬 바일스</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>브라질 헤베카 안드라지</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>미국 수니사 리</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">도마</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>미국 시몬 바일스</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>브라질 헤베카 안드라지</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>미국 제이드 캐리</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">이단평행봉</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>알제리 카일리아 느무르</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>중국 추치위안</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>미국 수니사 리</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">평균대</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>이탈리아 알리체 다마토</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>중국 저우야친</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>이탈리아 마닐라 에스포지토</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">마루</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>브라질 헤베카 안드라지</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>미국 시몬 바일스</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>루마니아 아나 버르보수</span>
+      </div></div>
+    </div>
+    <p class="sub-note" style="margin-top:8px;">참고: 올림픽은 리듬체조·트램펄린도 별도 종목으로 시상하며, 아시안게임과 달리 남녀 기계체조에 단체전·개인종합·기구별 결선만 있고 국가별 참가 인원 제한이 있다.</p>
+  </div>
+
+  <div class="tab-panel" id="t2025w">
+    <div class="medal-group-label">남자</div>
+    <div class="medal-compact">
+      <div class="mc-row"><div class="mc-event">개인종합</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>일본 하시모토 다이키</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>중국 장보헝</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>스위스 노에 자이페르트</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">마루</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>영국 제이크 자만</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>영국 루크 화이트하우스</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>필리핀 카를로스 율로</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">안마</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 훙옌밍</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>아르메니아 마미콘 하차트리안</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>미국 패트릭 훕스</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">링</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>미국 도넬 휘튼버그</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>튀르키예 아뎀 아실</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>중국 란싱위</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">도마</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>필리핀 카를로스 율로</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>아르메니아 아르투르 다브티안</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>우크라이나 나자르 체푸르니</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">평행봉</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 저우징위안</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>일본 쓰노가이 도모하루</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>중립선수 다니엘 마리노프</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">철봉</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>미국 브로디 말론</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>일본 하시모토 다이키</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>영국 조 프레이저</span>
+      </div></div>
+    </div>
+
+    <div class="medal-group-label">여자</div>
+    <div class="medal-compact">
+      <div class="mc-row"><div class="mc-event">개인종합</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중립선수 안젤리나 멜니코바</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>미국 리앤 웡</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>중국 장칭잉</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">도마</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중립선수 안젤리나 멜니코바</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>캐나다 리아 모니카 폰테인</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>미국 조슬린 로버슨</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">이단평행봉</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>알제리 카일리아 느무르</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>중립선수 안젤리나 멜니코바</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>중국 양판위웨이</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">평균대</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 장칭잉</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>알제리 카일리아 느무르</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>일본 스기하라 아이코</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">마루</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>일본 스기하라 아이코</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>영국 루비 에반스</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>영국 애비게일 마틴</span>
+      </div></div>
+    </div>
+    <p class="sub-note" style="margin-top:8px;">2025 세계선수권(자카르타)에는 단체전이 없으며 개인종합·기구별 결선만 진행됐다.</p>
+  </div>
 
   <footer class="pagefoot">
     <span>2026 아이치·나고야 아시안게임 종목 안내</span>
     <a href="index.html">← 전체 종목 목록 보기</a>
   </footer>
 </div>
+
+<script>
+document.querySelectorAll('.tab-btn[data-tab]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn[data-tab]').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('#t2022, #t2024, #t2025w').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.tab).classList.add('active');
+  });
+});
+
+document.querySelectorAll('.tab-btn[data-actab]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn[data-actab]').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('#acMen, #acWomen').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.actab).classList.add('active');
+  });
+});
+</script>
 </body>
 </html>
