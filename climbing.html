@@ -52,13 +52,6 @@
   .schedule-hero{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-bottom:6px;}
   .schedule-hero b{font-family:'Noto Serif KR',serif;font-size:22px;color:var(--gold);}
   .schedule-hero span{font-size:13px;color:var(--paper-dim);}
-  .hero-photo{width:100%;border-radius:8px;border:1px solid var(--line);display:block;margin:18px 0 6px;}
-  .hero-photo-cap{font-size:11px;color:var(--paper-dim);margin:0 0 8px;}
-
-  /* Roster */
-  .roster-photo-box{border-radius:8px;overflow:hidden;border:1px solid var(--line);margin-bottom:10px;}
-  .roster-photo-box img{width:100%;display:block;}
-  .roster-caption{font-size:11.5px;color:var(--paper-dim);margin:0 0 20px;line-height:1.5;}
   .roster-wrap2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
   @media (max-width:640px){.roster-wrap2{grid-template-columns:1fr;}}
   .roster-team{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:18px 20px;}
@@ -66,6 +59,13 @@
   .roster-chips{display:flex;flex-wrap:wrap;gap:8px;}
   .roster-chips span{font-size:13px;font-weight:600;color:var(--paper);background:rgba(243,239,228,0.05);border:1px solid rgba(243,239,228,0.14);padding:7px 13px;border-radius:999px;}
   .roster-chips span small{display:block;font-size:10px;font-weight:500;color:var(--paper-dim);margin-top:2px;}
+
+  .spotlight-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;}
+  @media (max-width:640px){.spotlight-grid{grid-template-columns:1fr;}}
+  .athlete-spotlight{background:linear-gradient(155deg, rgba(21,37,64,0.9), rgba(14,26,43,0.6));border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:6px;padding:22px 24px;}
+  .athlete-spotlight .as-tag{font-size:12px;color:var(--gold-soft);letter-spacing:.06em;text-transform:uppercase;font-weight:700;margin:0 0 6px;display:block;}
+  .athlete-spotlight h3{font-family:'Noto Serif KR',serif;font-size:26px;font-weight:900;color:var(--gold);margin:0 0 12px;}
+  .athlete-spotlight p{font-size:15px;line-height:1.85;color:var(--paper);margin:0;}
 
   /* Tabs (medal history) */
   .tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;}
@@ -143,12 +143,12 @@
     <div class="disc">
       <h3>추서우훙 (중국)</h3>
       <span class="en">Men's Speed</span>
-      <p>2026 아시아선수권 남자 스피드 금메달리스트. 시즌 내내 4초 초중반대 기록을 안정적으로 유지하며 스피드 종목 최대 위협.</p>
+      <p>2026 아시아선수권 남자 스피드 금메달리스트. 시즌 월드컵에서는 자오이청(중국)·베드리크 레오나르도(인도네시아)와 우승이 갈렸지만, 아시아 선수들끼리 직접 겨룬 아시아선수권에서 정상에 오른 만큼 아시안게임 최유력 후보로 꼽힌다.</p>
     </div>
     <div class="disc">
-      <h3>이도현 (한국)</h3>
+      <h3>안라쿠 소라토 (일본)</h3>
       <span class="en">Men's Bouldering</span>
-      <p>2026 아시아선수권 남자 볼더링 금메달리스트로, 시즌 내내 세계 최강 소라토 안라쿠(일본)와 접전을 벌여온 끝에 아시아 무대에서 앞선 성적을 냈다.</p>
+      <p>커차오·베른·마드리드·프라하·인스브루크까지 시즌 월드컵 볼더링을 사실상 독식한 압도적 1인자. 2026 아시아선수권에서는 이도현(한국)에게 금메달을 내줬지만, 시즌 전체 기량에서는 여전히 최대 우승 후보다.</p>
     </div>
     <div class="disc">
       <h3>스즈키 네오 (일본)</h3>
@@ -166,18 +166,14 @@
       <p>2026 아시아선수권 여자 볼더링 금메달리스트. 일본이 볼더링 시상대를 싹쓸이한 대회에서 단연 1위를 차지했다.</p>
     </div>
     <div class="disc">
-      <h3>모리 아이 (일본)</h3>
+      <h3>서채현 (한국)</h3>
       <span class="en">Women's Lead</span>
-      <p>2026 아시아선수권에서 볼더링에 이어 리드까지 2관왕에 올랐다. 서채현(한국)이 같은 대회 은메달로 바짝 뒤쫓는 형국.</p>
+      <p>2025 세계선수권 동메달, 2026 아시아선수권 은메달(모리 아이에 이어 2위)에 시즌 내내 월드컵 시상대를 지킨 꾸준함까지 갖춘 여자 리드 최상위권 후보.</p>
     </div>
   </div>
 
   <!-- 한국 국가대표 명단 -->
   <h2 class="sub">2026 한국 국가대표 명단</h2>
-  <div class="roster-photo-box">
-    <img src="climbing-roster.png" alt="2026 아시안게임 스포츠클라이밍 한국 국가대표 라인업" loading="lazy">
-  </div>
-  <p class="roster-caption">출처: 대한산악연맹 — 2026 아이치·나고야 아시안게임 스포츠클라이밍 국가대표 라인업</p>
   <div class="roster-wrap2">
     <div class="roster-team">
       <h4>남자대표팀</h4>
@@ -200,10 +196,18 @@
       </div>
     </div>
   </div>
-  <p class="sub-note" style="margin-top:14px;">
-    이도현은 2026 아시아선수권 볼더링 금메달에 2025 세계선수권 리드 금메달·볼더링 동메달까지 겸비해 남자부 최대 기대주다.
-    서채현은 리드에서 2025 세계선수권 동메달, 2026 아시아선수권 은메달로 꾸준히 상위권을 지키고 있어 여자 리드 메달권.
-  </p>
+  <div class="spotlight-grid">
+    <div class="athlete-spotlight">
+      <span class="as-tag">Men's Boulder · Lead</span>
+      <h3>이도현</h3>
+      <p>2025 세계선수권 리드 금메달과 볼더링 동메달을 동시에 따내며 시즌 최고의 한 해를 보냈고, 2026 아시아선수권에서는 볼더링 정상에 올라 세계 최강 소라토 안라쿠(일본)를 직접 꺾었다. 시즌 월드컵에서도 프라하·인스브루크 볼더링에서 잇달아 시상대에 오르며 컨디션을 유지 중이다. 두 종목 모두 메달, 특히 볼더링에서는 금메달을 노릴 수 있는 한국 클라이밍의 최대 기대주다.</p>
+    </div>
+    <div class="athlete-spotlight">
+      <span class="as-tag">Women's Lead</span>
+      <h3>서채현</h3>
+      <p>2022 항저우 아시안게임 콤바인 은메달에 이어 2025 세계선수권 리드 동메달을 추가했고, 2026 아시아선수권에서는 모리 아이(일본)에 이어 리드 은메달을 차지했다. 시즌 월드컵 리드에서도 프라하·인스브루크·샤모니까지 꾸준히 시상대에 이름을 올려, 안정감 면에서는 한국 대표팀 내 최고 수준. 리드 종목 메달권 진입이 유력하다.</p>
+    </div>
+  </div>
 
   <!-- 역대 시상대 -->
   <h2 class="sub">역대 시상대</h2>
@@ -367,28 +371,72 @@
 
   <!-- 2026시즌 월드컵 시리즈 -->
   <h2 class="sub">2026시즌 월드컵 시리즈 금메달리스트</h2>
-  <p class="sub-note">2026 IFSC 월드컵(월드컵 시리즈) 라운드별 종목 우승자. B=볼더링, L=리드, S=스피드.</p>
-  <div class="table-scroll">
-    <table class="wc-table">
-      <thead><tr><th>대회</th><th>일정</th><th>종목</th><th>남자 금</th><th>여자 금</th></tr></thead>
-      <tbody>
-        <tr><td class="stop">중국 커차오</td><td>5.1–3</td><td>B</td><td class="gold-cell">안라쿠 소라토(일본)</td><td class="gold-cell">젤리아 아브주(프랑스)</td></tr>
-        <tr class="kr"><td class="stop">중국 우장</td><td>5.8–10</td><td>L</td><td class="gold-cell">스즈키 네오(일본)</td><td class="gold-cell">애니 샌더스(미국)</td></tr>
-        <tr><td class="stop">중국 우장</td><td>5.8–10</td><td>S</td><td class="gold-cell">자오이청(중국)</td><td class="gold-cell">알렉산드라 카웃카(폴란드)</td></tr>
-        <tr><td class="stop">스위스 베른</td><td>5.22–24</td><td>B</td><td class="gold-cell">안라쿠 소라토(일본)</td><td class="gold-cell">오세아나 매켄지(호주)</td></tr>
-        <tr><td class="stop">스페인 마드리드</td><td>5.28–31</td><td>B</td><td class="gold-cell">안라쿠 소라토(일본)</td><td class="gold-cell">에린 맥니스(영국)</td></tr>
-        <tr><td class="stop">스페인 마드리드</td><td>5.28–31</td><td>S</td><td class="gold-cell">추서우훙(중국)</td><td class="gold-cell">에마 헌트(미국)</td></tr>
-        <tr class="kr"><td class="stop">체코 프라하</td><td>6.3–7</td><td>B</td><td class="gold-cell">안라쿠 소라토(일본) · 2위 이도현(한국)</td><td class="gold-cell">애니 샌더스(미국)</td></tr>
-        <tr class="kr"><td class="stop">체코 프라하</td><td>6.3–7</td><td>L</td><td class="gold-cell">푸트라 트리 라마다니(인도네시아)</td><td class="gold-cell">애니 샌더스(미국) · 2위 서채현(한국)</td></tr>
-        <tr class="kr"><td class="stop">오스트리아 인스브루크</td><td>6.17–21</td><td>B</td><td class="gold-cell">안라쿠 소라토(일본) · 3위 이도현(한국)</td><td class="gold-cell">애니 샌더스(미국)</td></tr>
-        <tr class="kr"><td class="stop">오스트리아 인스브루크</td><td>6.17–21</td><td>L</td><td class="gold-cell">스즈키 네오(일본)</td><td class="gold-cell">얀야 가른브레트(슬로베니아) · 3위 서채현(한국)</td></tr>
-        <tr><td class="stop">폴란드 크라쿠프</td><td>7.3–5</td><td>S</td><td class="gold-cell">새뮤얼 왓슨(미국)</td><td class="gold-cell">데삭 마데 리타 쿠수마 데위(인도네시아)</td></tr>
-        <tr><td class="stop">프랑스 샤모니</td><td>7.10–12</td><td>S</td><td class="gold-cell">베드리크 레오나르도(인도네시아)</td><td class="gold-cell">데삭 마데 리타 쿠수마 데위(인도네시아)</td></tr>
-        <tr class="kr"><td class="stop">프랑스 샤모니</td><td>7.10–12</td><td>L</td><td class="gold-cell">알베르토 히네스 로페스(스페인)</td><td class="gold-cell">애니 샌더스(미국) · 3위 서채현(한국)</td></tr>
-      </tbody>
-    </table>
+  <p class="sub-note">종목별로 묶어 정리했다. 라운드 진행 순서대로 나열.</p>
+
+  <div class="medal-group-label">볼더링 (B)</div>
+  <div class="medal-compact">
+    <div class="mc-row"><div class="mc-event">1라운드</div><div class="mc-meds">
+      <span class="mc-item"><i class="mc-dot gold"></i>남 안라쿠 소라토(일본)</span>
+      <span class="mc-item"><i class="mc-dot gold"></i>여 젤리아 아브주(프랑스)</span>
+    </div></div>
+    <div class="mc-row"><div class="mc-event">2라운드</div><div class="mc-meds">
+      <span class="mc-item"><i class="mc-dot gold"></i>남 안라쿠 소라토(일본)</span>
+      <span class="mc-item"><i class="mc-dot gold"></i>여 오세아나 매켄지(호주)</span>
+    </div></div>
+    <div class="mc-row"><div class="mc-event">3라운드</div><div class="mc-meds">
+      <span class="mc-item"><i class="mc-dot gold"></i>남 안라쿠 소라토(일본)</span>
+      <span class="mc-item"><i class="mc-dot gold"></i>여 에린 맥니스(영국)</span>
+    </div></div>
+    <div class="mc-row"><div class="mc-event">4라운드</div><div class="mc-meds">
+      <span class="mc-item"><i class="mc-dot gold"></i>남 안라쿠 소라토(일본) · 2위 이도현(한국)</span>
+      <span class="mc-item"><i class="mc-dot gold"></i>여 애니 샌더스(미국)</span>
+    </div></div>
+    <div class="mc-row"><div class="mc-event">5라운드</div><div class="mc-meds">
+      <span class="mc-item"><i class="mc-dot gold"></i>남 안라쿠 소라토(일본) · 3위 이도현(한국)</span>
+      <span class="mc-item"><i class="mc-dot gold"></i>여 애니 샌더스(미국)</span>
+    </div></div>
   </div>
-  <p class="sub-note" style="margin-top:10px;">한국 선수가 시상대에 오른 라운드는 배경으로 표시했다. 이도현(볼더링)·서채현(리드)이 시즌 내내 세계 상위권을 유지했다.</p>
+
+  <div class="medal-group-label">리드 (L)</div>
+  <div class="medal-compact">
+    <div class="mc-row"><div class="mc-event">1라운드</div><div class="mc-meds">
+      <span class="mc-item"><i class="mc-dot gold"></i>남 스즈키 네오(일본)</span>
+      <span class="mc-item"><i class="mc-dot gold"></i>여 애니 샌더스(미국)</span>
+    </div></div>
+    <div class="mc-row"><div class="mc-event">2라운드</div><div class="mc-meds">
+      <span class="mc-item"><i class="mc-dot gold"></i>남 푸트라 트리 라마다니(인도네시아)</span>
+      <span class="mc-item"><i class="mc-dot gold"></i>여 애니 샌더스(미국) · 2위 서채현(한국)</span>
+    </div></div>
+    <div class="mc-row"><div class="mc-event">3라운드</div><div class="mc-meds">
+      <span class="mc-item"><i class="mc-dot gold"></i>남 스즈키 네오(일본)</span>
+      <span class="mc-item"><i class="mc-dot gold"></i>여 얀야 가른브레트(슬로베니아) · 3위 서채현(한국)</span>
+    </div></div>
+    <div class="mc-row"><div class="mc-event">4라운드</div><div class="mc-meds">
+      <span class="mc-item"><i class="mc-dot gold"></i>남 알베르토 히네스 로페스(스페인)</span>
+      <span class="mc-item"><i class="mc-dot gold"></i>여 애니 샌더스(미국) · 3위 서채현(한국)</span>
+    </div></div>
+  </div>
+
+  <div class="medal-group-label">스피드 (S)</div>
+  <div class="medal-compact">
+    <div class="mc-row"><div class="mc-event">1라운드</div><div class="mc-meds">
+      <span class="mc-item"><i class="mc-dot gold"></i>남 자오이청(중국)</span>
+      <span class="mc-item"><i class="mc-dot gold"></i>여 알렉산드라 카웃카(폴란드)</span>
+    </div></div>
+    <div class="mc-row"><div class="mc-event">2라운드</div><div class="mc-meds">
+      <span class="mc-item"><i class="mc-dot gold"></i>남 추서우훙(중국)</span>
+      <span class="mc-item"><i class="mc-dot gold"></i>여 에마 헌트(미국)</span>
+    </div></div>
+    <div class="mc-row"><div class="mc-event">3라운드</div><div class="mc-meds">
+      <span class="mc-item"><i class="mc-dot gold"></i>남 새뮤얼 왓슨(미국)</span>
+      <span class="mc-item"><i class="mc-dot gold"></i>여 데삭 마데 리타 쿠수마 데위(인도네시아)</span>
+    </div></div>
+    <div class="mc-row"><div class="mc-event">4라운드</div><div class="mc-meds">
+      <span class="mc-item"><i class="mc-dot gold"></i>남 베드리크 레오나르도(인도네시아)</span>
+      <span class="mc-item"><i class="mc-dot gold"></i>여 데삭 마데 리타 쿠수마 데위(인도네시아)</span>
+    </div></div>
+  </div>
+  <p class="sub-note" style="margin-top:10px;">남자 스피드는 4라운드에서 우승자가 세 번(자오이청·추서우훙·베드리크 레오나르도) 갈렸을 만큼 혼전 양상이다. 다만 아시아만 겨루는 2026 아시아선수권에서는 추서우훙이 직접 우승해, 아시안게임 금메달 후보로는 여전히 그가 가장 앞선다. 여자 스피드는 데삭 마데 리타 쿠수마 데위가 아시아선수권과 월드컵을 모두 지배해 이견의 여지가 적다.</p>
 
   <footer class="pagefoot">
     <span>2026 아이치·나고야 아시안게임 종목 안내</span>
