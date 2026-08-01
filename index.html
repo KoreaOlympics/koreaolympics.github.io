@@ -11,6 +11,7 @@
   :root{
     --ink:#0E1A2B; --ink-2:#152540; --gold:#C9A24B; --gold-soft:#E4CD8C;
     --sun:#D8482F; --paper:#F3EFE4; --paper-dim:#B9C2CF; --line:rgba(201,162,75,0.28);
+    --jade:#4C9F86; --plum:#8B6FB3;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -34,6 +35,35 @@
   .stat{display:flex;flex-direction:column;gap:2px;}
   .stat b{font-family:'Noto Serif KR',serif;font-size:26px;color:var(--gold);}
   .stat span{font-size:12px;color:var(--paper-dim);letter-spacing:0.04em;}
+
+  /* Featured 2x2 section */
+  .featured-section{margin-bottom:56px;}
+  .featured-heading{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:18px;flex-wrap:wrap;}
+  .featured-heading h2{font-family:'Noto Serif KR',serif;font-weight:700;font-size:19px;margin:0;color:var(--paper);}
+  .featured-heading span{font-size:12.5px;color:var(--paper-dim);}
+  .featured-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .fcard{
+    position:relative;border-radius:4px;padding:24px 24px 20px;
+    background:linear-gradient(155deg, rgba(21,37,64,0.85), rgba(14,26,43,0.6));
+    border:1px solid var(--line); border-left:3px solid var(--accent, var(--gold));
+    overflow:hidden;
+  }
+  .fcard::before{
+    content:attr(data-mark); position:absolute; right:16px; top:14px;
+    font-family:'Noto Serif KR',serif; font-size:44px; font-weight:900;
+    color:var(--accent, var(--gold)); opacity:0.10; line-height:1; pointer-events:none;
+  }
+  .fcard-eyebrow{font-size:11.5px; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent, var(--gold)); font-weight:700; margin:0 0 6px;}
+  .fcard-title{font-family:'Noto Serif KR',serif; font-weight:700; font-size:20px; margin:0 0 4px; color:var(--paper);}
+  .fcard-note{font-size:12.5px; color:var(--paper-dim); margin:0 0 16px; line-height:1.5;}
+  .fpills{display:flex; flex-wrap:wrap; gap:8px; position:relative; z-index:1;}
+  .fpills a{
+    text-decoration:none; color:var(--paper); font-size:13.5px; font-weight:600;
+    padding:8px 14px; border-radius:999px; border:1px solid rgba(243,239,228,0.18);
+    background:rgba(243,239,228,0.04); transition:background .2s ease, border-color .2s ease, color .2s ease;
+  }
+  .fpills a:hover, .fpills a:focus-visible{background:var(--accent, var(--gold)); border-color:var(--accent, var(--gold)); color:var(--ink);}
+
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;}
   .card{background:linear-gradient(180deg, var(--ink-2), rgba(21,37,64,0.6));border:1px solid var(--line);border-radius:4px;overflow:hidden;transition:border-color .25s ease;}
   .card.open{border-color:rgba(201,162,75,0.6);}
@@ -53,7 +83,12 @@
   .arrow{flex:none;width:14px;height:14px;color:var(--gold-soft);opacity:.8;}
   .sublist a:hover .arrow{color:#fff;}
   footer{margin-top:60px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px;color:var(--paper-dim);}
+  @media (max-width:720px){.featured-grid{grid-template-columns:1fr;}}
   @media (max-width:520px){.wrap{padding:40px 18px 70px;}.stat-row{gap:20px;}}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .chevron, .subwrap, .card, .fpills a{transition:none;}
+  }
 </style>
 </head>
 <body>
@@ -69,6 +104,14 @@
     </div>
   </header>
 
+  <section class="featured-section">
+    <div class="featured-heading">
+      <h2>주목할 만한 종목</h2>
+      <span>관심사별로 바로 이동</span>
+    </div>
+    <div class="featured-grid" id="featuredGrid"></div>
+  </section>
+
   <main class="grid" id="grid"></main>
 
   <footer>
@@ -78,6 +121,35 @@
 </div>
 
 <script>
+const FEATURED = [
+  { mark:"世", accent:"var(--gold)", eyebrow:"World Class", title:"세계 최고 레벨 종목", note:"한국이 세계 정상급 경쟁력을 갖춘 종목", items:[
+    { label:"양궁", slug:"archery" },
+    { label:"사격", slug:"shooting" },
+    { label:"펜싱", slug:"fencing" },
+    { label:"태권도", slug:"taekwondo" },
+    { label:"배드민턴", slug:"badminton" },
+  ]},
+  { mark:"挑", accent:"var(--sun)", eyebrow:"Rising Contender", title:"올림픽 입상을 노리는 도전자", note:"올림픽 메달권 진입을 노리는 종목", items:[
+    { label:"유도", slug:"judo" },
+    { label:"역도", slug:"weightlifting" },
+    { label:"탁구", slug:"tabletennis" },
+    { label:"근대5종", slug:"modernpentathlon" },
+    { label:"수영", slug:"swimming" },
+  ]},
+  { mark:"亞", accent:"var(--jade)", eyebrow:"Asia's Best", title:"아시아 최강을 노리는 팀", note:"아시아권 정상을 목표로 하는 단체 종목", items:[
+    { label:"축구", slug:"soccer" },
+    { label:"야구", slug:"baseball" },
+    { label:"골프", slug:"golf" },
+    { label:"e스포츠", slug:"esports" },
+  ]},
+  { mark:"未", accent:"var(--plum)", eyebrow:"Next Wave", title:"미래를 기대하는 종목", note:"성장 가능성이 큰 신흥·유망 종목", items:[
+    { label:"클라이밍", slug:"climbing" },
+    { label:"스케이트보드", slug:"skateboard" },
+    { label:"체조", slug:"gymnastics" },
+    { label:"복싱", slug:"boxing" },
+  ]},
+];
+
 const DATA = [
   { title:"단체구기", note:"여러 명이 한 팀을 이뤄 겨루는 구기 종목", items:[
     { label:"축구", slug:"soccer" },
@@ -128,6 +200,26 @@ const DATA = [
   ]},
 ];
 
+// Featured 2x2 render
+const featuredGrid = document.getElementById('featuredGrid');
+FEATURED.forEach(f => {
+  const card = document.createElement('div');
+  card.className = 'fcard';
+  card.style.setProperty('--accent', f.accent);
+  card.setAttribute('data-mark', f.mark);
+  const pills = f.items.map(item =>
+    `<a href="${item.slug}.html">${item.label}</a>`
+  ).join('');
+  card.innerHTML = `
+    <p class="fcard-eyebrow">${f.eyebrow}</p>
+    <p class="fcard-title">${f.title}</p>
+    <p class="fcard-note">${f.note}</p>
+    <div class="fpills">${pills}</div>
+  `;
+  featuredGrid.appendChild(card);
+});
+
+// Main accordion render
 const grid = document.getElementById('grid');
 let totalLinks = 0;
 
