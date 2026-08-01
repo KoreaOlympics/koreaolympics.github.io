@@ -11,6 +11,7 @@
   :root{
     --ink:#0E1A2B; --ink-2:#152540; --gold:#C9A24B; --gold-soft:#E4CD8C;
     --sun:#D8482F; --paper:#F3EFE4; --paper-dim:#B9C2CF; --line:rgba(201,162,75,0.28);
+    --medal-gold:#D8B44A; --medal-silver:#C8CDD6; --medal-bronze:#C97B4A;
   }
   *{box-sizing:border-box;}
   body{
@@ -39,12 +40,85 @@
   .fact b{font-family:'Noto Serif KR',serif;font-size:15px;color:var(--paper);font-weight:700;line-height:1.4;}
   section.body{margin-top:8px;}
   section.body p{font-size:15.5px;line-height:1.85;color:var(--paper-dim);margin:0 0 16px;}
-  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:40px 0 18px;font-weight:700;}
+  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:48px 0 6px;font-weight:700;}
+  p.sub-note{font-size:13px;color:var(--paper-dim);margin:0 0 20px;line-height:1.6;}
   .cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;}
   .disc{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:20px;}
   .disc h3{font-family:'Noto Serif KR',serif;font-size:17px;margin:0 0 4px;color:var(--paper);}
   .disc .en{font-size:11.5px;color:var(--gold-soft);letter-spacing:0.04em;margin-bottom:10px;display:block;}
   .disc p{font-size:14px;line-height:1.7;color:var(--paper-dim);margin:0;}
+
+  /* Schedule */
+  .schedule-hero{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-bottom:6px;}
+  .schedule-hero b{font-family:'Noto Serif KR',serif;font-size:22px;color:var(--gold);}
+  .schedule-hero span{font-size:13px;color:var(--paper-dim);}
+
+  /* Roster */
+  .roster-team{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:18px 20px;}
+  .roster-team h4{font-family:'Noto Serif KR',serif;font-size:13px;color:var(--gold-soft);margin:0 0 12px;letter-spacing:.06em;text-transform:uppercase;}
+  .roster-chips{display:flex;flex-wrap:wrap;gap:8px;}
+  .roster-chips span{font-size:13px;font-weight:600;color:var(--paper);background:rgba(243,239,228,0.05);border:1px solid rgba(243,239,228,0.14);padding:7px 13px;border-radius:999px;}
+  .roster-wrap2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:24px;}
+  @media (max-width:640px){.roster-wrap2{grid-template-columns:1fr;}}
+
+  .rival-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;}
+  .rival-card{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:18px 20px;}
+  .rival-card h4{font-family:'Noto Serif KR',serif;font-size:15px;color:var(--paper);margin:0 0 10px;}
+  .rival-card dl{margin:0;font-size:12.5px;color:var(--paper-dim);line-height:1.9;}
+  .rival-card dt{color:var(--gold-soft);display:inline;font-weight:600;}
+  .rival-card dd{display:inline;margin:0;}
+  .rival-card .rline{display:block;margin-bottom:4px;}
+  .rival-note{font-size:11px;color:var(--paper-dim);margin-top:12px;line-height:1.6;}
+
+  /* Tabs (medal history) */
+  .tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;}
+  .tab-btn{background:var(--ink-2);border:1px solid var(--line);color:var(--paper-dim);font-size:13.5px;font-weight:600;padding:9px 18px;border-radius:999px;cursor:pointer;font-family:inherit;transition:background .2s ease, color .2s ease, border-color .2s ease;}
+  .tab-btn:hover{border-color:var(--gold);}
+  .tab-btn.active{background:var(--gold);border-color:var(--gold);color:var(--ink);}
+  .tab-panel{display:none;}
+  .tab-panel.active{display:block;}
+
+  .medal-compact{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:4px 20px;}
+  .mc-row{padding:13px 0;border-top:1px solid rgba(243,239,228,0.08);display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;}
+  .mc-row:first-child{border-top:none;}
+  .mc-event{flex:none;width:84px;font-family:'Noto Serif KR',serif;font-size:12.5px;font-weight:700;color:var(--gold-soft);}
+  .mc-meds{flex:1;display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--paper-dim);min-width:200px;}
+  .mc-item{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;}
+  .mc-dot{width:8px;height:8px;border-radius:50%;flex:none;display:inline-block;}
+  .mc-dot.gold{background:var(--medal-gold);}
+  .mc-dot.silver{background:var(--medal-silver);}
+  .mc-dot.bronze{background:var(--medal-bronze);}
+  .mc-note{font-size:12px;color:var(--paper-dim);margin:14px 2px 0;line-height:1.6;}
+
+  /* Tour winners */
+  .tier-group{margin-bottom:18px;}
+  .tier-label{font-family:'Noto Serif KR',serif;font-weight:700;font-size:14.5px;color:var(--gold);margin-bottom:8px;}
+  .tourney{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:14px 18px;margin-bottom:10px;}
+  .tourney h5{font-family:'Noto Serif KR',serif;font-size:14px;margin:0 0 8px;color:var(--paper);}
+  .twin-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:6px 14px;font-size:12px;color:var(--paper-dim);}
+  .twin-grid b{display:block;color:var(--gold-soft);font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:2px;font-weight:600;}
+  .twin-grid span.tbd{color:var(--paper-dim);opacity:.5;}
+
+  /* Ranking */
+  .rank-card-accordion{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-bottom:10px;}
+  .rank-head{width:100%;text-align:left;background:none;border:none;color:var(--paper);padding:16px 18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:inherit;}
+  .rank-head .rh-name{font-size:14.5px;font-weight:700;}
+  .rank-head .rh-pos{font-size:12px;color:var(--gold-soft);margin-left:8px;}
+  .rank-chevron{flex:none;width:18px;height:18px;color:var(--gold);transition:transform .3s ease;}
+  .rank-card-accordion.open .rank-chevron{transform:rotate(135deg);}
+  .rank-subwrap{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+  .rank-card-accordion.open .rank-subwrap{max-height:900px;}
+  .table-scroll{overflow-x:auto;border-top:1px solid var(--line);}
+  table.rank-table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:460px;}
+  .rank-table th{text-align:left;color:var(--gold-soft);font-weight:600;font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;padding:10px 16px;white-space:nowrap;}
+  .rank-table td{padding:7px 16px;color:var(--paper-dim);border-top:1px solid rgba(243,239,228,0.06);white-space:nowrap;}
+  .rank-table td.pos{color:var(--paper);font-weight:600;}
+  .rank-table td.plr{white-space:normal;color:var(--paper);font-weight:500;}
+  .rank-table tr.kr td{background:rgba(201,162,75,0.08);}
+  .rank-table tr.kr td.plr{color:var(--gold-soft);font-weight:700;}
+  .team-mini{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:16px 20px;margin-bottom:20px;font-size:13px;color:var(--paper-dim);line-height:1.8;}
+  .team-mini b{color:var(--gold);}
+
   footer.pagefoot{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
   footer.pagefoot a{color:var(--gold-soft);text-decoration:none;}
   @media (max-width:520px){.wrap{padding:28px 18px 70px;}}
@@ -68,19 +142,393 @@
     <div class="fact"><span>경기 방식</span><b>단식·복식·혼합복식</b></div>
     <div class="fact"><span>득점 방식</span><b>랠리 포인트제, 3게임 2선승</b></div>
     <div class="fact"><span>강세 국가</span><b>중국, 인도네시아, 한국, 일본, 말레이시아</b></div>
+    <div class="fact"><span>2026 대회 기간</span><b>9월 19일 ~ 10월 4일</b></div>
   </div>
 
   <section class="body">
-    <p>배드민턴은 라켓으로 셔틀콕을 쳐서 네트 너머 상대 코트 바닥에 떨어뜨리면 득점하는 종목으로, 셔틀콕이 공기저항을 크게 받는 만큼 정교한 각도와 스피드 조절이 중요하다.</p>
-    <p>아시아 국가들이 세계 최상위권을 형성하고 있어 아시안게임에서 유독 치열한 각축전이 벌어지는 종목이다.</p>
+    <p>배드민턴은 순간적인 스매시 스피드와 정교한 네트 플레이가 공존하는 종목으로, 랠리 하나에서도 파워와 세밀함이 동시에 요구된다.</p>
+    <p>아시아 국가들이 세계 랭킹 최상위권을 사실상 독점하고 있어, 아시안게임 결승 무대가 사실상 세계 최고 수준의 대결이 되는 경우가 많다.</p>
   </section>
 
+  <!-- 2026 대회 일정 -->
+  <h2 class="sub">2026 아이치·나고야 대회 일정</h2>
+  <div class="schedule-hero">
+    <div><b>2026.9.19 – 10.4</b><br><span>제20회 아시안게임 전체 대회 기간</span></div>
+    <span>일본 아이치·나고야</span>
+  </div>
+  <p class="sub-note">배드민턴 세부 종목 일정은 추후 공개됩니다.</p>
 
+  <!-- 한국 국가대표 명단 -->
+  <h2 class="sub">2026 한국 국가대표 명단</h2>
+  <p class="sub-note">2026 아이치·나고야 아시안게임에 나설 대한민국 배드민턴 대표팀. 남녀 각 10명, 총 20명.</p>
+  <div class="roster-wrap2">
+    <div class="roster-team">
+      <h4>남자대표팀</h4>
+      <div class="roster-chips">
+        <span>서승재</span><span>김원호</span><span>최지훈</span><span>강민혁</span><span>박상용</span>
+        <span>김재현</span><span>전혁진</span><span>유태빈</span><span>기동주</span><span>조송현</span>
+      </div>
+    </div>
+    <div class="roster-team">
+      <h4>여자대표팀</h4>
+      <div class="roster-chips">
+        <span>안세영</span><span>김가은</span><span>김혜정</span><span>심유진</span><span>이소희</span>
+        <span>백하나</span><span>장하정</span><span>정나은</span><span>김가람</span><span>공희용</span>
+      </div>
+    </div>
+  </div>
+  <p class="sub-note" style="margin-top:-8px;">출처: 머니투데이(2026.7.2), 네이트스포츠(2026.7.2)</p>
+
+  <h2 class="sub" style="margin-top:32px;">주요 경쟁국 대표팀</h2>
+  <p class="sub-note">2026 아시안게임 배드민턴에 나서는 중국·일본·인도·말레이시아 대표팀 요약 (각국 20명 규모 편성).</p>
+  <div class="rival-grid">
+    <div class="rival-card">
+      <h4>중국</h4>
+      <dl>
+        <span class="rline"><dt>남자 단식</dt> <dd>스위치, 천룽, 왕톈위</dd></span>
+        <span class="rline"><dt>여자 단식</dt> <dd>천위페이, 허빙자오, 왕즈이</dd></span>
+        <span class="rline"><dt>남자 복식</dt> <dd>리준후이/류위천, 탄창/탄위쉬안</dd></span>
+        <span class="rline"><dt>여자 복식</dt> <dd>천칭천/자이판, 두위에/리인후이</dd></span>
+        <span class="rline"><dt>혼합 복식</dt> <dd>왕이루/황둥핑</dd></span>
+      </dl>
+    </div>
+    <div class="rival-card">
+      <h4>일본</h4>
+      <dl>
+        <span class="rline"><dt>남자 단식</dt> <dd>나라오카 고다이, 니시모토 겐타, 타나카 유시, 와타나베 고키</dd></span>
+        <span class="rline"><dt>남자 복식</dt> <dd>호키 다쿠로/고바야시 유고, 구마가이 쇼/니시 다이키</dd></span>
+        <span class="rline"><dt>여자 단식</dt> <dd>야마구치 아카네, 미야자키 도모카, 오쿠하라 노조미, 군지 리코</dd></span>
+        <span class="rline"><dt>여자 복식</dt> <dd>후쿠시마 유키/마츠모토 마유, 나카니시 다카에/이와나가 스즈</dd></span>
+        <span class="rline"><dt>혼합 복식</dt> <dd>시모가미 유이치/야스하라 아야카, 와타나베 유타/타구치 마아사</dd></span>
+      </dl>
+    </div>
+    <div class="rival-card">
+      <h4>인도</h4>
+      <dl>
+        <span class="rline"><dt>남자 단식</dt> <dd>락샤 센, 아유슈 셰티, H.S. 프라노이, 키담비 스리칸트, 타룬 만네팔리</dd></span>
+        <span class="rline"><dt>남자 복식</dt> <dd>랑키레디/셰티, 암사카루난/아르준</dd></span>
+        <span class="rline"><dt>여자 단식</dt> <dd>P.V. 신두, 운나티 후다, 데비카 시하그, 탄비 샤르마, 이샤라니 바루아</dd></span>
+        <span class="rline"><dt>여자 복식</dt> <dd>졸리/풀렐라, 셀밤/싱히</dd></span>
+        <span class="rline"><dt>혼합 복식</dt> <dd>카필라/크라스토</dd></span>
+      </dl>
+    </div>
+    <div class="rival-card">
+      <h4>말레이시아</h4>
+      <dl>
+        <span class="rline"><dt>남자 (10)</dt> <dd>리옹준하오, 저스틴 호, 오진 유, 콩웨이샹, 아론 치아, 티 카이 운, 고희순, 누르 이즈딘 룸사니, 천탕지, 고훈화트</dd></span>
+        <span class="rline"><dt>여자 (10)</dt> <dd>K 레트샤나, 웡링칭, 우샨지, 엥러치, 펄리 탄, M 티나, 로지유, 노라킬라 마이사라 람단, 청수인, 셰본 라이</dd></span>
+      </dl>
+    </div>
+  </div>
+  <p class="rival-note">중국·일본·인도 명단 출처: archysport(2026.6), badspi.jp(2026.5.19)</p>
+
+  <!-- 역대 시상대 -->
+  <h2 class="sub">역대 시상대</h2>
+  <p class="sub-note">최근 아시안게임과 올림픽에서의 배드민턴 종목 메달 결과.</p>
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="t2022">2022 항저우 아시안게임</button>
+    <button class="tab-btn" data-tab="t2024">2024 파리 올림픽</button>
+  </div>
+
+  <div class="tab-panel active" id="t2022">
+    <div class="medal-compact">
+      <div class="mc-row"><div class="mc-event">남자 단식</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 리스펑</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>중국 스위치</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>인도 프란노이 · 일본 나라오카 고다이</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">여자 단식</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>한국 안세영</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>중국 천위페이</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>중국 허빙자오 · 일본 오리 아야</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">남자 복식</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>인도 사트윅사이라지·치라그 셰티</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>한국 최솔규·김원호</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>차이니스 타이베이 · 말레이시아</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">여자 복식</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 천칭천·자이판</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>한국 백하나·이소희</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>일본 · 한국 (김소영·공희용)</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">혼합 복식</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 정쓰웨이·황야충</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>일본 와타나베 유타·히가시노 아리사</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>중국 · 한국 (서승재·채유정)</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">남자 단체전</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>인도</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>일본 · 한국</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">여자 단체전</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>한국</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>중국</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>일본 · 태국</span>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="tab-panel" id="t2024">
+    <div class="medal-compact">
+      <div class="mc-row"><div class="mc-event">남자 단식</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>덴마크 빅토르 악셀센</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>태국 쿤라부트 위티차이차른</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>말레이시아 리치아</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">여자 단식</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>한국 안세영</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>중국 허빙자오</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>인도네시아 그레고리아 마리스카 툰중</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">남자 복식</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>차이니스 타이베이 리양·왕치린</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>중국 량웨이컹·왕창</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>말레이시아 아론 치아·소 우이 익</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">여자 복식</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 천칭천·자이판</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>중국 류성수·탄닝</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>일본 마츠모토 나미·시다 치하루</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">혼합 복식</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 정쓰웨이·황야충</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>한국 김원호·정나은</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>일본 와타나베 유타·히가시노 아리사</span>
+      </div></div>
+    </div>
+    <p class="mc-note">참고: 올림픽 배드민턴은 단식·복식·혼합복식만 채택되어 있어 단체전은 없다.</p>
+  </div>
+
+  <!-- 2026시즌 BWF 월드투어 우승자 -->
+  <h2 class="sub">2026시즌 BWF 월드투어 우승자</h2>
+  <p class="sub-note">시즌 진행 중 확정된 대회별 우승자 (일부 대회는 진행 중이거나 결과 미공개).</p>
+
+  <div class="tier-group">
+    <div class="tier-label">World Tour Finals</div>
+    <div class="tourney">
+      <h5>BWF 월드투어 파이널스</h5>
+      <div class="twin-grid">
+        <div><b>남자 단식</b>크리스토 포포프(프랑스)</div>
+        <div><b>여자 단식</b>안세영(한국)</div>
+        <div><b>남자 복식</b>김원호·서승재(한국)</div>
+        <div><b>여자 복식</b>백하나·이소희(한국)</div>
+        <div><b>혼합 복식</b>펑옌저·황야충(중국)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tier-group">
+    <div class="tier-label">Super 1000</div>
+    <div class="tourney">
+      <h5>말레이시아 오픈</h5>
+      <div class="twin-grid">
+        <div><b>남자 단식</b>쿤라부트 위티차이차른(태국)</div>
+        <div><b>여자 단식</b>안세영(한국)</div>
+        <div><b>남자 복식</b>김원호·서승재(한국)</div>
+        <div><b>여자 복식</b>류성수·탄닝(중국)</div>
+        <div><b>혼합 복식</b>펑옌저·황둥핑(중국)</div>
+      </div>
+    </div>
+    <div class="tourney">
+      <h5>올잉글랜드 오픈</h5>
+      <div class="twin-grid">
+        <div><b>남자 단식</b>린춘이(차이니스 타이베이)</div>
+        <div><b>여자 단식</b>왕즈이(중국)</div>
+        <div><b>남자 복식</b>고체이·누르 이즈딘(말레이시아)</div>
+        <div><b>여자 복식</b>후쿠시마 유키·마츠모토 마유(일본)</div>
+        <div><b>혼합 복식</b>마티아스 크리스티안센·알렉산드라 뵈에(덴마크)</div>
+      </div>
+    </div>
+    <div class="tourney">
+      <h5>인도네시아 오픈</h5>
+      <div class="twin-grid">
+        <div><b>남자 단식</b>빅터 라이(캐나다)</div>
+        <div><b>여자 단식</b>안세영(한국)</div>
+        <div><b>남자 복식</b>파자르 알피안·무함마드 쇼히불 피크리(인도네시아)</div>
+        <div><b>여자 복식</b>자이판·장수셴(중국)</div>
+        <div><b>혼합 복식</b>톰 지크벨·델핀 델뤼(프랑스)</div>
+      </div>
+    </div>
+    <div class="tourney">
+      <h5>차이나 오픈</h5>
+      <div class="twin-grid">
+        <div><b>남자 단식</b>초우 티엔첸(차이니스 타이베이)</div>
+        <div><b>여자 단식</b>야마구치 아카네(일본)</div>
+        <div><b>남자 복식</b>파자르 알피안·무함마드 쇼히불 피크리(인도네시아)</div>
+        <div><b>여자 복식</b>류성수·탄닝(중국)</div>
+        <div><b>혼합 복식</b>궈신와·천팡후이(중국)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tier-group">
+    <div class="tier-label">Super 750</div>
+    <div class="tourney">
+      <h5>인도 오픈</h5>
+      <div class="twin-grid">
+        <div><b>남자 단식</b>린춘이(차이니스 타이베이)</div>
+        <div><b>여자 단식</b>안세영(한국)</div>
+        <div><b>남자 복식</b>량웨이컹·왕창(중국)</div>
+        <div><b>여자 복식</b>류성수·탄닝(중국)</div>
+        <div><b>혼합 복식</b>데차폴 푸아바라눅로·수피사라 페사쁘란(태국)</div>
+      </div>
+    </div>
+    <div class="tourney">
+      <h5>싱가포르 오픈</h5>
+      <div class="twin-grid">
+        <div><b>남자 단식</b>알렉스 라니에(프랑스)</div>
+        <div><b>여자 단식</b><span class="tbd">미공개</span></div>
+        <div><b>남자 복식</b>사트윅사이라지·치라그 셰티(인도)</div>
+        <div><b>여자 복식</b>자이판·장수셴(중국)</div>
+        <div><b>혼합 복식</b>마티아스 크리스티안센·알렉산드라 뵈에(덴마크)</div>
+      </div>
+    </div>
+    <div class="tourney">
+      <h5>재팬 오픈</h5>
+      <div class="twin-grid">
+        <div><b>남자 단식</b>크리스토 포포프(프랑스)</div>
+        <div><b>여자 단식</b>P.V. 신두(인도)</div>
+        <div><b>남자 복식</b>파자르 알피안·무함마드 쇼히불 피크리(인도네시아)</div>
+        <div><b>여자 복식</b>김혜정·공희용(한국)</div>
+        <div><b>혼합 복식</b>펑옌저·황둥핑(중국)</div>
+      </div>
+    </div>
+    <div class="tourney">
+      <h5>차이나 마스터스 · 덴마크 오픈 · 프랑스 오픈</h5>
+      <div class="twin-grid">
+        <div><span class="tbd">결과 미공개 — 대회 진행 예정</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 세계 랭킹 -->
+  <h2 class="sub">BWF 세계 랭킹</h2>
+  <p class="sub-note"><strong style="color:var(--gold-soft);">2026년 7월 28일 기준</strong> BWF 공식 세계 랭킹 상위권. 한국 선수는 강조 표시.</p>
+
+  <div class="team-mini"><b>세계 팀 랭킹 3위</b> — 대한민국 (2026.1.6 기준, China 1위 · Indonesia 2위 다음). 여자 단식(안세영 1위)과 남자 복식(김원호·서승재 1위)이 팀 포인트를 견인.</div>
+
+  <div class="tabs" id="rankTabs">
+    <button class="tab-btn active" data-rtab="ms">남자 단식</button>
+    <button class="tab-btn" data-rtab="ws">여자 단식</button>
+    <button class="tab-btn" data-rtab="md">남자 복식</button>
+    <button class="tab-btn" data-rtab="wd">여자 복식</button>
+    <button class="tab-btn" data-rtab="xd">혼합 복식</button>
+  </div>
+
+  <div id="rankPanels"></div>
 
   <footer class="pagefoot">
     <span>2026 아이치·나고야 아시안게임 종목 안내</span>
     <a href="index.html">← 전체 종목 목록 보기</a>
   </footer>
 </div>
+
+<script>
+// Medal history tabs
+document.querySelectorAll('.tabs .tab-btn[data-tab]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tabs .tab-btn[data-tab]').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.tab).classList.add('active');
+  });
+});
+
+// Ranking data (BWF World Rankings, as of 28 July 2026) — top entries, Korean players flagged
+const RANKS = {
+  ms: { label:"남자 단식", rows:[
+    ["1","China Shi Yuqi","94,255"],
+    ["2","Thailand Kunlavut Vitidsarn","91,215"],
+    ["3","Indonesia Jonatan Christie","89,231"],
+    ["4","Denmark Anders Antonsen","87,705"],
+    ["5","France Christo Popov","87,002"],
+    ["6","Chinese Taipei Chou Tien-chen","84,280"],
+    ["7","Canada Victor Lai","77,045"],
+    ["8","China Li Shifeng","70,483"],
+    ["9","France Alex Lanier","70,215"],
+    ["10","Japan Kodai Naraoka","70,030"],
+  ]},
+  ws: { label:"여자 단식", rows:[
+    ["1","South Korea An Se-young","117,787","kr"],
+    ["2","Japan Akane Yamaguchi","104,576"],
+    ["3","China Wang Zhiyi","102,689"],
+    ["4","China Chen Yufei","91,451"],
+    ["5","China Han Yue","77,038"],
+    ["6","Indonesia Putri Kusuma Wardani","76,473"],
+    ["7","Thailand Ratchanok Intanon","74,606"],
+    ["8","Japan Tomoka Miyazaki","68,106"],
+    ["9","India P. V. Sindhu","67,601"],
+    ["10","Thailand Pornpawee Chochuwong","66,727"],
+    ["12","South Korea Kim Ga-eun","59,731","kr"],
+    ["14","South Korea Sim Yu-jin","55,084","kr"],
+  ]},
+  md: { label:"남자 복식", rows:[
+    ["1","South Korea Kim Won-ho / Seo Seung-jae","119,899","kr"],
+    ["2","Indonesia Fajar Alfian / Muhammad Shohibul Fikri","94,053"],
+    ["3","China Liang Weikeng / Wang Chang","86,009"],
+    ["4","Malaysia Aaron Chia / Soh Wooi Yik","84,584"],
+    ["5","India Satwiksairaj Rankireddy / Chirag Shetty","84,131"],
+    ["6","Malaysia Goh Sze Fei / Nur Izzuddin","74,917"],
+    ["7","China Chen Boyang / Liu Yi","73,345"],
+    ["8","Japan Takuro Hoki / Yugo Kobayashi","72,090"],
+    ["9","Indonesia Sabar Karyaman Gutama / M. Reza Pahlevi Isfahani","70,786"],
+    ["10","England Ben Lane / Sean Vendy","70,651"],
+    ["15","South Korea Kang Min-hyuk / Ki Dong-ju","58,723","kr"],
+  ]},
+  wd: { label:"여자 복식", rows:[
+    ["1","China Liu Shengshu / Tan Ning","115,317"],
+    ["2","Japan Yuki Fukushima / Mayu Matsumoto","97,006"],
+    ["3","South Korea Baek Ha-na / Lee So-hee","94,254","kr"],
+    ["4","China Jia Yifan / Zhang Shuxian","90,460"],
+    ["5","Malaysia Pearly Tan / Thinaah Muralitharan","86,800"],
+    ["6","South Korea Kim Hye-jeong / Kong Hee-yong","82,617","kr"],
+    ["7","Japan Rin Iwanaga / Kie Nakanishi","79,564"],
+    ["8","China Li Yijing / Luo Xumin","64,817"],
+    ["9","Bulgaria Gabriela Stoeva / Stefani Stoeva","61,676"],
+    ["10","Chinese Taipei Hsieh Pei-shan / Hung En-tzu","61,315"],
+  ]},
+  xd: { label:"혼합 복식", rows:[
+    ["1","China Feng Yanzhe / Huang Dongping","106,500"],
+    ["2","China Jiang Zhenbang / Wei Yaxin","90,850"],
+    ["3","Denmark Mathias Christiansen / Alexandra Bøje","89,270"],
+    ["4","Thailand Dechapol Puavaranukroh / Supissara Paewsampran","87,670"],
+    ["5","France Thom Gicquel / Delphine Delrue","82,200"],
+    ["6","China Guo Xinwa / Chen Fanghui","82,070"],
+    ["7","Malaysia Chen Tang Jie / Toh Ee Wei","81,090"],
+    ["8","Hong Kong Tang Chun Man / Tse Ying Suet","66,110"],
+    ["9","China Cheng Xing / Zhang Chi","63,180"],
+    ["10","Chinese Taipei Ye Hong-wei / Nicole Gonzales Chan","62,680"],
+  ]},
+};
+
+const rankPanels = document.getElementById('rankPanels');
+Object.keys(RANKS).forEach((key, idx) => {
+  const cat = RANKS[key];
+  const panel = document.createElement('div');
+  panel.className = 'tab-panel' + (idx === 0 ? ' active' : '');
+  panel.id = 'rp-' + key;
+  const rowsHtml = cat.rows.map(r => {
+    const cls = r[3] === 'kr' ? ' class="kr"' : '';
+    return `<tr${cls}><td class="pos">${r[0]}</td><td class="plr">${r[1]}</td><td>${r[2]}</td></tr>`;
+  }).join('');
+  panel.innerHTML = `<div class="table-scroll"><table class="rank-table">
+    <thead><tr><th>순위</th><th>선수</th><th>포인트</th></tr></thead>
+    <tbody>${rowsHtml}</tbody>
+  </table></div>`;
+  rankPanels.appendChild(panel);
+});
+
+document.querySelectorAll('#rankTabs .tab-btn[data-rtab]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#rankTabs .tab-btn[data-rtab]').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('#rankPanels .tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('rp-' + btn.dataset.rtab).classList.add('active');
+  });
+});
+</script>
 </body>
 </html>
