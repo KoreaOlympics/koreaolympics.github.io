@@ -11,6 +11,7 @@
   :root{
     --ink:#0E1A2B; --ink-2:#152540; --gold:#C9A24B; --gold-soft:#E4CD8C;
     --sun:#D8482F; --paper:#F3EFE4; --paper-dim:#B9C2CF; --line:rgba(201,162,75,0.28);
+    --medal-gold:#D8B44A; --medal-silver:#C8CDD6; --medal-bronze:#C97B4A;
   }
   *{box-sizing:border-box;}
   body{
@@ -39,12 +40,85 @@
   .fact b{font-family:'Noto Serif KR',serif;font-size:15px;color:var(--paper);font-weight:700;line-height:1.4;}
   section.body{margin-top:8px;}
   section.body p{font-size:15.5px;line-height:1.85;color:var(--paper-dim);margin:0 0 16px;}
-  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:40px 0 18px;font-weight:700;}
+  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:48px 0 6px;font-weight:700;}
+  p.sub-note{font-size:13px;color:var(--paper-dim);margin:0 0 20px;line-height:1.6;}
   .cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;}
   .disc{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:20px;}
   .disc h3{font-family:'Noto Serif KR',serif;font-size:17px;margin:0 0 4px;color:var(--paper);}
   .disc .en{font-size:11.5px;color:var(--gold-soft);letter-spacing:0.04em;margin-bottom:10px;display:block;}
   .disc p{font-size:14px;line-height:1.7;color:var(--paper-dim);margin:0;}
+
+  /* Tabs (medal history) */
+  .tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;}
+  .tab-btn{background:var(--ink-2);border:1px solid var(--line);color:var(--paper-dim);font-size:13.5px;font-weight:600;padding:9px 18px;border-radius:999px;cursor:pointer;font-family:inherit;transition:background .2s ease, color .2s ease, border-color .2s ease;}
+  .tab-btn:hover{border-color:var(--gold);}
+  .tab-btn.active{background:var(--gold);border-color:var(--gold);color:var(--ink);}
+  .tab-panel{display:none;}
+  .tab-panel.active{display:block;}
+
+  .medal-compact{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:4px 20px;}
+  .mc-row{padding:13px 0;border-top:1px solid rgba(243,239,228,0.08);display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;}
+  .mc-row:first-child{border-top:none;}
+  .mc-event{flex:none;width:84px;font-family:'Noto Serif KR',serif;font-size:12.5px;font-weight:700;color:var(--gold-soft);}
+  .mc-meds{flex:1;display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--paper-dim);min-width:200px;}
+  .mc-item{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;}
+  .mc-dot{width:8px;height:8px;border-radius:50%;flex:none;display:inline-block;}
+  .mc-dot.gold{background:var(--medal-gold);}
+  .mc-dot.silver{background:var(--medal-silver);}
+  .mc-dot.bronze{background:var(--medal-bronze);}
+  .mc-note{font-size:12px;color:var(--paper-dim);margin:14px 2px 0;line-height:1.6;}
+
+  /* Roster analysis */
+  .roster-analysis{background:linear-gradient(155deg, rgba(21,37,64,0.85), rgba(14,26,43,0.55));border:1px solid var(--line);border-left:3px solid var(--sun);border-radius:4px;padding:18px 20px;margin-top:16px;}
+  .roster-analysis p{font-size:14px;line-height:1.85;color:var(--paper-dim);margin:0;}
+  .roster-analysis .ra-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--sun);font-weight:700;margin:0 0 8px;}
+
+  /* Schedule block */
+  .schedule-hero{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-bottom:14px;}
+  .schedule-hero b{font-family:'Noto Serif KR',serif;font-size:22px;color:var(--gold);}
+  .schedule-hero span{font-size:13px;color:var(--paper-dim);}
+  .month-group{margin-bottom:16px;}
+  .month-label{font-family:'Noto Serif KR',serif;font-weight:700;font-size:14.5px;color:var(--gold);margin-bottom:8px;}
+  .event-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;}
+  .event-list li{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:11px 14px;font-size:13.5px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 14px;}
+  .event-list li b{color:var(--paper);font-weight:600;}
+  .event-list li .loc{color:var(--paper-dim);font-size:12.5px;}
+
+  /* Roster */
+  .roster-wrap{display:grid;grid-template-columns:260px 1fr;gap:24px;align-items:start;}
+  .roster-photo-box{border-radius:8px;overflow:hidden;border:1px solid var(--line);}
+  .roster-photo-box img{width:100%;display:block;}
+  .roster-caption{font-size:11.5px;color:var(--paper-dim);margin-top:8px;line-height:1.5;}
+  .roster-teams{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .roster-team h4{font-family:'Noto Serif KR',serif;font-size:13px;color:var(--gold-soft);margin:0 0 10px;letter-spacing:.06em;text-transform:uppercase;}
+  .roster-team ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;}
+  .roster-team li{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:10px 12px;font-size:13.5px;}
+  .roster-team li b{color:var(--paper);display:block;}
+  .roster-team li small{color:var(--paper-dim);font-size:11.5px;}
+  @media (max-width:640px){.roster-wrap{grid-template-columns:1fr;}}
+
+  /* Ranking */
+  .rank-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:24px;}
+  .rank-card{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:18px;}
+  .rank-num{font-family:'Noto Serif KR',serif;font-size:28px;color:var(--gold);font-weight:900;line-height:1;}
+  .rank-name{font-size:14px;font-weight:700;color:var(--paper);margin-top:6px;}
+  .rank-note{font-size:11.5px;color:var(--paper-dim);margin-top:6px;line-height:1.6;}
+
+  .rank-card-accordion{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-bottom:10px;}
+  .rank-head{width:100%;text-align:left;background:none;border:none;color:var(--paper);padding:16px 18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:inherit;}
+  .rank-head .rh-name{font-size:14.5px;font-weight:700;}
+  .rank-head .rh-pos{font-size:12px;color:var(--gold-soft);margin-left:8px;}
+  .rank-chevron{flex:none;width:18px;height:18px;color:var(--gold);transition:transform .3s ease;}
+  .rank-card-accordion.open .rank-chevron{transform:rotate(135deg);}
+  .rank-subwrap{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+  .rank-card-accordion.open .rank-subwrap{max-height:900px;}
+  .table-scroll{overflow-x:auto;border-top:1px solid var(--line);}
+  table.rank-table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:520px;}
+  .rank-table th{text-align:left;color:var(--gold-soft);font-weight:600;font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;padding:10px 18px;white-space:nowrap;}
+  .rank-table td{padding:8px 18px;color:var(--paper-dim);border-top:1px solid rgba(243,239,228,0.06);white-space:nowrap;}
+  .rank-table td.pos{color:var(--paper);font-weight:600;}
+  .rank-table td.evt{white-space:normal;color:var(--paper);font-weight:500;}
+
   footer.pagefoot{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
   footer.pagefoot a{color:var(--gold-soft);text-decoration:none;}
   @media (max-width:520px){.wrap{padding:28px 18px 70px;}}
@@ -68,6 +142,7 @@
     <div class="fact"><span>경기 방식</span><b>단식·복식·단체전</b></div>
     <div class="fact"><span>득점 방식</span><b>11점 랠리 포인트, 다득점제</b></div>
     <div class="fact"><span>강세 국가</span><b>중국이 압도적 세계 최강</b></div>
+    <div class="fact"><span>2026 대회 기간</span><b>9월 20일 ~ 9월 28일</b></div>
   </div>
 
   <section class="body">
@@ -75,12 +150,347 @@
     <p>중국이 남녀 전 종목에서 오랜 기간 세계 최강 자리를 지켜온 종목으로, 아시안게임에서도 최상위권 경쟁이 대부분 아시아 국가들 사이에서 이뤄진다.</p>
   </section>
 
+  <!-- 2026 대회 일정 -->
+  <h2 class="sub">2026 아이치·나고야 대회 일정</h2>
+  <div class="schedule-hero">
+    <div><b>2026.9.20 – 9.28</b><br><span>탁구 종목 진행 기간 (예정)</span></div>
+    <span>제20회 아시안게임 · 일본 아이치·나고야</span>
+  </div>
 
+  <!-- 한국 대표팀 -->
+  <h2 class="sub">2026 한국 국가대표 명단</h2>
+  <p class="sub-note">2026 아이치·나고야 아시안게임에 나설 대한탁구협회 선발 대표팀.</p>
+  <div class="roster-wrap">
+    <div>
+      <div class="roster-photo-box">
+        <img src="https://www.news1.kr/_next/image?url=https%3A%2F%2Fi3n.news1.kr%2Fsystem%2Fphotos%2F2026%2F7%2F30%2F8034272%2Fhigh.jpg&w=750&q=75" alt="2026 아시안게임 탁구 국가대표 선발 선수단" loading="lazy">
+      </div>
+      <p class="roster-caption">사진: 뉴스1 — 2026 아이치·나고야 아시안게임 탁구 국가대표 선발 선수단</p>
+    </div>
+    <div class="roster-teams">
+      <div class="roster-team">
+        <h4>남자대표팀</h4>
+        <ul>
+          <li><b>장우진</b><small>세아</small></li>
+          <li><b>임종훈</b><small>한국거래소</small></li>
+          <li><b>안재현</b><small>한국거래소</small></li>
+          <li><b>오준성</b><small>한국거래소</small></li>
+          <li><b>박규현</b><small>미래에셋증권</small></li>
+        </ul>
+      </div>
+      <div class="roster-team">
+        <h4>여자대표팀</h4>
+        <ul>
+          <li><b>신유빈</b><small>대한항공</small></li>
+          <li><b>이은혜</b><small>대한항공</small></li>
+          <li><b>박가현</b><small>대한항공</small></li>
+          <li><b>주천희</b><small>삼성생명</small></li>
+          <li><b>김나영</b><small>포스코인터내셔널</small></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="roster-analysis">
+    <p class="ra-label">전망</p>
+    <p>한국의 혼합복식 랭킹 세계 1위 임종훈·신유빈 조는 유력한 우승 후보 중 하나다. 남자와 여자 단식 모두 중국·일본의 견제 속에 메달 도전을 노리는 4~5위권 후보이며, 변수가 많은 복식에서도 메달을 노린다. 단체전의 경우 남자부는 중국의 하락세 속에 난전 양상이 될 것으로 보이며, 남녀 단체전 모두 메달, 특히 이변의 결승 진출까지도 기대할 만하다. 팀 전체로는 1개 이상의 금메달을 목표로 한다.</p>
+  </div>
+
+  <!-- 역대 시상대 -->
+  <h2 class="sub">역대 시상대</h2>
+  <p class="sub-note">최근 아시안게임과 올림픽에서의 탁구 종목 메달 결과.</p>
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="t2022">2022 항저우 아시안게임</button>
+    <button class="tab-btn" data-tab="t2024">2024 파리 올림픽</button>
+  </div>
+
+  <div class="tab-panel active" id="t2022">
+    <div class="medal-compact">
+      <div class="mc-row"><div class="mc-event">남자 단식</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 왕추친</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>중국 판전둥</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>한국 장우진 · 홍콩 웡춘팅</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">남자 복식</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 판전둥·왕추친</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>한국 장우진·임종훈</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>차이니스 타이베이 · 이란</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">남자 단체전</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>한국 (안재현·장우진·임종훈·오준성·박강현)</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>차이니스 타이베이 · 이란</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">여자 단식</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 쑨잉사</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>일본 하야타 히나</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>한국 신유빈 · 중국 왕이디</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">여자 복식</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>한국 전지희·신유빈</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>북한 차수용·박수경</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>일본 · 인도</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">여자 단체전</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>일본</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>태국 · 한국 (전지희·이은혜·신유빈·서효원·양하은)</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">혼합 복식</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 왕추친·쑨잉사</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>중국 린가오위안·왕이디</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>한국 임종훈·신유빈 · 한국 장우진·전지희</span>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="tab-panel" id="t2024">
+    <div class="medal-compact">
+      <div class="mc-row"><div class="mc-event">남자 단식</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 판전둥</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>스웨덴 뫼레고르드</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>프랑스 펠릭스 르브룅</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">남자 단체전</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>스웨덴</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>프랑스</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">여자 단식</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 천멍</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>중국 쑨잉사</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>일본 하야타 히나</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">여자 단체전</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>일본</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>한국 (신유빈·전지희·이은혜)</span>
+      </div></div>
+      <div class="mc-row"><div class="mc-event">혼합 복식</div><div class="mc-meds">
+        <span class="mc-item"><i class="mc-dot gold"></i>중국 왕추친·쑨잉사</span>
+        <span class="mc-item"><i class="mc-dot silver"></i>북한 리정식·김금영</span>
+        <span class="mc-item"><i class="mc-dot bronze"></i>한국 임종훈·신유빈</span>
+      </div></div>
+    </div>
+    <p class="mc-note">참고: 올림픽 탁구는 단식·단체전·혼합복식만 채택되어 남녀 복식 종목은 없다.</p>
+  </div>
+
+  <!-- 2026시즌 국제대회 일정 -->
+  <h2 class="sub">2026시즌 국제 탁구대회 일정</h2>
+  <p class="sub-note">WTT·ITTF 주관 주요 국제대회 캘린더 (월별).</p>
+
+  <div class="month-group">
+    <div class="month-label">2월</div>
+    <ul class="event-list">
+      <li><b>WTT 싱가포르 스매시</b><span class="loc">2.19 – 3.1 · 싱가포르</span></li>
+    </ul>
+  </div>
+  <div class="month-group">
+    <div class="month-label">3월</div>
+    <ul class="event-list">
+      <li><b>WTT 챔피언스 충칭</b><span class="loc">3.10 – 15 · 중국 충칭</span></li>
+      <li><b>ITTF 남자&amp;여자 월드컵 마카오</b><span class="loc">3.30 – 4.5 · 마카오</span></li>
+    </ul>
+  </div>
+  <div class="month-group">
+    <div class="month-label">4월</div>
+    <ul class="event-list">
+      <li><b>ITTF 세계단체전탁구선수권대회 파이널</b><span class="loc">4.28 – 5.10 · 영국 런던</span></li>
+    </ul>
+  </div>
+  <div class="month-group">
+    <div class="month-label">6월</div>
+    <ul class="event-list">
+      <li><b>WTT 스타 컨텐더 류블랴나</b><span class="loc">6.16 – 21 · 슬로베니아 류블랴나</span></li>
+      <li><b>WTT 미국 스매시</b><span class="loc">6.25 – 7.5 · 미국 (개최지 추후 발표)</span></li>
+    </ul>
+  </div>
+  <div class="month-group">
+    <div class="month-label">7월</div>
+    <ul class="event-list">
+      <li><b>WTT 스타 컨텐더 브라질</b><span class="loc">7.21 – 26 · 브라질 (개최지 추후 발표)</span></li>
+    </ul>
+  </div>
+  <div class="month-group">
+    <div class="month-label">8월</div>
+    <ul class="event-list">
+      <li><b>WTT 챔피언스 요코하마</b><span class="loc">8.4 – 9 · 일본 요코하마</span></li>
+      <li><b>WTT 유럽 스매시</b><span class="loc">8.8 – 16 · 스웨덴 말뫼</span></li>
+    </ul>
+  </div>
+  <div class="month-group">
+    <div class="month-label">9월</div>
+    <ul class="event-list">
+      <li><b>WTT 챔피언스 마카오</b><span class="loc">9.8 – 13 · 마카오</span></li>
+      <li><b>WTT 스타 컨텐더 런던</b><span class="loc">9.15 – 20 · 영국 런던</span></li>
+    </ul>
+  </div>
+
+  <!-- 선수 랭킹 -->
+  <h2 class="sub">국가대표 국제 랭킹</h2>
+  <p class="sub-note"><strong style="color:var(--gold-soft);">2026년 8월 1일 기준</strong> WTT 세계 랭킹. 대표팀 선수 순위 및 최근 주요 성적이며, 랭킹은 대회 결과에 따라 매주 변동된다.</p>
+
+  <div class="rank-grid">
+    <div class="rank-card"><div class="rank-num">9위</div><div class="rank-name">장우진</div><div class="rank-note">WTT 챔피언스 도하 결승 진출</div></div>
+    <div class="rank-card"><div class="rank-num">25위</div><div class="rank-name">안재현</div><div class="rank-note">유럽 스매시(스웨덴) 8강</div></div>
+    <div class="rank-card"><div class="rank-num">29위</div><div class="rank-name">오준성</div><div class="rank-note">WTT 컨텐더 라고스 결승 진출</div></div>
+    <div class="rank-card"><div class="rank-num">10위</div><div class="rank-name">신유빈</div><div class="rank-note">차이나 스매시 4강</div></div>
+    <div class="rank-card"><div class="rank-num">15위</div><div class="rank-name">주천희</div><div class="rank-note">스타 컨텐더 무스카트 결승 진출</div></div>
+    <div class="rank-card"><div class="rank-num">1위</div><div class="rank-name">임종훈 · 신유빈 (혼합복식)</div><div class="rank-note">US 스매시 우승</div></div>
+  </div>
+
+  <div id="rankAccordions"></div>
 
   <footer class="pagefoot">
     <span>2026 아이치·나고야 아시안게임 종목 안내</span>
     <a href="index.html">← 전체 종목 목록 보기</a>
   </footer>
 </div>
+
+<script>
+// Tabs
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.tab).classList.add('active');
+  });
+});
+
+// Ranking accordions (detailed event-by-event results)
+const RANKINGS = [
+  { name:"장우진", pos:"세계랭킹 9위", rows:[
+    ["WTT 챔피언스 도하 2026","결승","700","2027-01-18"],
+    ["싱가포르 스매시 2026","8강","580","2027-03-08"],
+    ["US 스매시 2026","8강","580","2027-07-12"],
+    ["WTT 챔피언스 마카오 2025","4강","350","2026-09-14"],
+    ["WTT 챔피언스 몽펠리에 2025","4강","350","2026-11-02"],
+    ["ITTF 남자·여자 월드컵 마카오 2026","16강","300","2027-04-12"],
+    ["ITTF 혼성단체 월드컵 청두 2025","4강(-22%)","196","2026-12-07"],
+    ["WTT 스타 컨텐더 도하 2026","8강","175","2027-01-25"],
+    ["ITTF 세계단체선수권 파이널 런던 2026","8강(-25%)","145","2027-05-17"],
+    ["유럽 스매시(스웨덴) 2025","32강","90","2026-08-24"],
+    ["WTT 스타 컨텐더 무스카트 2025","16강","55","2026-11-23"],
+    ["차이나 스매시 2025","64강","20","2026-10-05"],
+    ["WTT 챔피언스 요코하마 2025","32강","15","2026-08-17"],
+    ["WTT 챔피언스 프랑크푸르트 2025","32강","15","2026-11-09"],
+    ["ITTF-ATTU 아시안컵 하이커우 2026","조별리그","0","2027-02-15"],
+  ]},
+  { name:"안재현", pos:"세계랭킹 25위", rows:[
+    ["유럽 스매시(스웨덴) 2025","8강","350","2026-08-24"],
+    ["WTT 컨텐더 자그레브 2026","결승","280","2027-06-21"],
+    ["WTT 스타 컨텐더 상조제 두스캄푸스 2026","4강","270","2027-08-02"],
+    ["ITTF 세계단체선수권 파이널 런던 2026","8강(-33%)","193","2027-05-17"],
+    ["WTT 챔피언스 요코하마 2025","8강","175","2026-08-17"],
+    ["차이나 스매시 2025","16강","175","2026-10-05"],
+    ["WTT 챔피언스 충칭 2026","16강","140","2027-03-22"],
+    ["WTT 파이널스 홍콩 2025","16강","100","2026-12-14"],
+    ["ITTF 남자·여자 월드컵 마카오 2026","그룹2단계","40","2027-04-12"],
+    ["싱가포르 스매시 2026","64강","20","2027-03-08"],
+    ["US 스매시 2026","64강","20","2027-07-12"],
+    ["WTT 챔피언스 마카오 2025","32강","15","2026-09-14"],
+    ["WTT 챔피언스 몽펠리에 2025","32강","15","2026-11-02"],
+    ["WTT 챔피언스 프랑크푸르트 2025","32강","15","2026-11-09"],
+    ["WTT 챔피언스 도하 2026","32강","15","2027-01-18"],
+    ["ITTF-ATTU 아시안팀선수권 부바네스와르 2025","8강(-14%)","6","2026-10-19"],
+    ["WTT 스타 컨텐더 도하 2026","64강","5","2027-01-25"],
+    ["WTT 스타 컨텐더 류블랴나 2026","64강","5","2027-06-28"],
+  ]},
+  { name:"오준성", pos:"세계랭킹 29위", rows:[
+    ["WTT 컨텐더 라고스 2026","결승","280","2027-05-31"],
+    ["ITTF 세계단체선수권 파이널 런던 2026","8강(-42%)","242","2027-05-17"],
+    ["WTT 스타 컨텐더 포즈두이과수 2025","4강","210","2026-08-03"],
+    ["유럽 스매시(스웨덴) 2025","16강","175","2026-08-24"],
+    ["WTT 스타 컨텐더 첸나이 2026","8강","175","2027-02-22"],
+    ["WTT 스타 컨텐더 상조제 두스캄푸스 2026","8강","175","2027-08-02"],
+    ["WTT 스타 컨텐더 무스카트 2025","8강","105","2026-11-23"],
+    ["WTT 챔피언스 요코하마 2025","16강","90","2026-08-17"],
+    ["WTT 챔피언스 마카오 2025","16강","90","2026-09-14"],
+    ["차이나 스매시 2025","32강","90","2026-10-05"],
+    ["WTT 챔피언스 몽펠리에 2025","16강","90","2026-11-02"],
+    ["WTT 컨텐더 자그레브 2026","16강","30","2027-06-21"],
+    ["ITTF-ATTU 아시안팀선수권 부바네스와르 2025","8강(-57%)","26","2026-10-19"],
+    ["US 스매시 2026","64강","20","2027-07-12"],
+    ["WTT 챔피언스 프랑크푸르트 2025","32강","15","2026-11-09"],
+    ["WTT 챔피언스 도하 2026","32강","15","2027-01-18"],
+    ["WTT 스타 컨텐더 도하 2026","64강","5","2027-01-25"],
+    ["WTT 스타 컨텐더 류블랴나 2026","64강","5","2027-06-28"],
+    ["WTT 컨텐더 스코페 2026","32강","4","2027-06-14"],
+  ]},
+  { name:"신유빈", pos:"세계랭킹 10위", rows:[
+    ["차이나 스매시 2025","4강","700","2026-10-05"],
+    ["ITTF 남자·여자 월드컵 마카오 2026","4강","680","2027-04-12"],
+    ["싱가포르 스매시 2026","16강","380","2027-03-08"],
+    ["US 스매시 2026","16강","380","2027-07-12"],
+    ["WTT 챔피언스 몽펠리에 2025","4강","350","2026-11-02"],
+    ["WTT 챔피언스 프랑크푸르트 2025","4강","350","2026-11-09"],
+    ["WTT 챔피언스 충칭 2026","8강","300","2027-03-22"],
+    ["WTT 스타 컨텐더 류블랴나 2026","4강","270","2027-06-28"],
+    ["ITTF 세계단체선수권 파이널 런던 2026","8강(-33%)","193","2027-05-17"],
+    ["WTT 스타 컨텐더 도하 2026","8강","175","2027-01-25"],
+    ["WTT 파이널스 홍콩 2025","16강","100","2026-12-14"],
+    ["유럽 스매시(스웨덴) 2025","32강","90","2026-08-24"],
+    ["ITTF-ATTU 아시안컵 하이커우 2026","8강","90","2027-02-15"],
+    ["ITTF-ATTU 아시안팀선수권 부바네스와르 2025","4강(-67%)","60","2026-10-19"],
+    ["WTT 스타 컨텐더 런던 2025","16강","55","2026-10-26"],
+    ["WTT 챔피언스 요코하마 2025","32강","15","2026-08-17"],
+    ["WTT 챔피언스 마카오 2025","32강","15","2026-09-14"],
+    ["WTT 챔피언스 도하 2026","32강","15","2027-01-18"],
+  ]},
+  { name:"주천희", pos:"세계랭킹 15위", rows:[
+    ["US 스매시 2026","8강","580","2027-07-12"],
+    ["WTT 스타 컨텐더 무스카트 2025","결승","420","2026-11-23"],
+    ["차이나 스매시 2025","8강","350","2026-10-05"],
+    ["WTT 챔피언스 몽펠리에 2025","4강","350","2026-11-02"],
+    ["WTT 컨텐더 튀니스 2026","결승","280","2027-04-05"],
+    ["WTT 파이널스 홍콩 2025","8강","265","2026-12-14"],
+    ["WTT 컨텐더 라고스 2026","4강","180","2027-05-31"],
+    ["WTT 챔피언스 도하 2026","16강","140","2027-01-18"],
+    ["WTT 컨텐더 스코페 2026","8강","120","2027-06-14"],
+    ["WTT 스타 컨텐더 첸나이 2026","16강","115","2027-02-22"],
+    ["WTT 스타 컨텐더 류블랴나 2026","16강","115","2027-06-28"],
+    ["WTT 스타 컨텐더 포즈두이과수 2025","8강","105","2026-08-03"],
+    ["유럽 스매시(스웨덴) 2025","32강","90","2026-08-24"],
+    ["싱가포르 스매시 2026","64강","20","2027-03-08"],
+    ["WTT 챔피언스 요코하마 2025","32강","15","2026-08-17"],
+    ["WTT 챔피언스 마카오 2025","32강","15","2026-09-14"],
+    ["WTT 챔피언스 프랑크푸르트 2025","32강","15","2026-11-09"],
+    ["WTT 챔피언스 충칭 2026","32강","15","2027-03-22"],
+    ["WTT 스타 컨텐더 도하 2026","64강","5","2027-01-25"],
+  ]},
+  { name:"임종훈 · 신유빈 (혼합복식)", pos:"세계랭킹 1위", rows:[
+    ["US 스매시 2026","우승","2000","2027-07-12"],
+    ["WTT 파이널스 홍콩 2025","우승","1500","2026-12-14"],
+    ["유럽 스매시(스웨덴) 2025","결승","1400","2026-08-24"],
+    ["싱가포르 스매시 2026","결승","1400","2027-03-08"],
+    ["WTT 스타 컨텐더 류블랴나 2026","우승","600","2027-06-28"],
+    ["WTT 스타 컨텐더 도하 2026","8강","70","2027-01-25"],
+    ["차이나 스매시 2025","32강","10","2026-10-05"],
+  ]},
+];
+
+const rankWrap = document.getElementById('rankAccordions');
+RANKINGS.forEach(p => {
+  const card = document.createElement('div');
+  card.className = 'rank-card-accordion';
+  const head = document.createElement('button');
+  head.className = 'rank-head';
+  head.innerHTML = `<span><span class="rh-name">${p.name}</span><span class="rh-pos">${p.pos}</span></span>
+    <svg class="rank-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>`;
+  const subwrap = document.createElement('div');
+  subwrap.className = 'rank-subwrap';
+  const rowsHtml = p.rows.map(r => `<tr><td class="evt">${r[0]}</td><td class="pos">${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join('');
+  subwrap.innerHTML = `<div class="table-scroll"><table class="rank-table">
+    <thead><tr><th>대회명</th><th>성적</th><th>포인트</th><th>포인트 만료일</th></tr></thead>
+    <tbody>${rowsHtml}</tbody>
+  </table></div>`;
+  head.addEventListener('click', () => card.classList.toggle('open'));
+  card.appendChild(head);
+  card.appendChild(subwrap);
+  rankWrap.appendChild(card);
+});
+</script>
 </body>
 </html>
