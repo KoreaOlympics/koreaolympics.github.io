@@ -40,14 +40,53 @@
   section.body{margin-top:8px;}
   section.body p{font-size:15.5px;line-height:1.85;color:var(--paper-dim);margin:0 0 16px;}
   h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:40px 0 18px;font-weight:700;}
+  h2.sub small{display:block;font-family:'Pretendard',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.12em;color:var(--gold-soft);text-transform:uppercase;margin-bottom:7px;}
   .cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;}
   .disc{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:20px;}
   .disc h3{font-family:'Noto Serif KR',serif;font-size:17px;margin:0 0 4px;color:var(--paper);}
   .disc .en{font-size:11.5px;color:var(--gold-soft);letter-spacing:0.04em;margin-bottom:10px;display:block;}
   .disc p{font-size:14px;line-height:1.7;color:var(--paper-dim);margin:0;}
+  .disc dl{margin:14px 0 0;padding-top:12px;border-top:1px dashed var(--line);display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:13px;}
+  .disc dt{color:var(--gold-soft);}
+  .disc dd{margin:0;color:var(--paper-dim);}
+
+  /* 대표팀 명단 */
+  .roster{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;}
+  .squad{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:18px 20px;}
+  .squad h3{font-family:'Noto Serif KR',serif;font-size:15.5px;margin:0 0 12px;color:var(--paper);display:flex;align-items:center;gap:8px;}
+  .squad h3 em{font-style:normal;font-size:10.5px;letter-spacing:0.08em;color:var(--ink);background:var(--gold-soft);border-radius:3px;padding:2px 6px;font-weight:700;}
+  .squad ul{list-style:none;margin:0;padding:0;}
+  .squad li{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:8px 0;border-bottom:1px dashed var(--line);}
+  .squad li:last-child{border-bottom:0;padding-bottom:0;}
+  .squad li b{font-size:14.5px;color:var(--paper);font-weight:600;}
+  .squad li span{font-size:11.5px;color:var(--paper-dim);}
+
+  /* 최근 성적 */
+  .rec{display:grid;grid-template-columns:104px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line);}
+  .rec:first-of-type{border-top:1px solid var(--line);}
+  .rec .yr{font-family:'Noto Serif KR',serif;font-size:19px;font-weight:900;color:var(--gold);line-height:1.25;}
+  .rec .yr i{display:block;font-style:normal;font-family:'Pretendard',sans-serif;font-size:11px;font-weight:500;color:var(--paper-dim);letter-spacing:0.03em;margin-top:4px;}
+  .rec h3{font-family:'Noto Serif KR',serif;font-size:16px;margin:0 0 8px;color:var(--paper);font-weight:700;}
+  .rec p{font-size:14px;line-height:1.75;color:var(--paper-dim);margin:0;}
+  .chips{margin:0 0 10px;}
+  .chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;border:1px solid;margin:0 6px 6px 0;}
+  .chip::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;}
+  .chip.g{color:#EBD08F;border-color:rgba(201,162,75,0.45);background:rgba(201,162,75,0.10);}
+  .chip.s{color:#D3DAE4;border-color:rgba(211,218,228,0.26);background:rgba(211,218,228,0.06);}
+  .chip.b{color:#D9A87C;border-color:rgba(217,168,124,0.32);background:rgba(217,168,124,0.08);}
+
+  /* 관전 포인트 */
+  .note{margin-top:26px;border-left:3px solid var(--sun);background:rgba(216,72,47,0.08);border-radius:0 8px 8px 0;padding:18px 22px;}
+  .note h3{font-family:'Noto Serif KR',serif;font-size:16px;margin:0 0 8px;color:var(--paper);}
+  .note p{font-size:14.5px;line-height:1.8;color:var(--paper-dim);margin:0 0 10px;}
+  .note p:last-child{margin-bottom:0;}
+
   footer.pagefoot{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
   footer.pagefoot a{color:var(--gold-soft);text-decoration:none;}
-  @media (max-width:520px){.wrap{padding:28px 18px 70px;}}
+  @media (max-width:520px){
+    .wrap{padding:28px 18px 70px;}
+    .rec{grid-template-columns:1fr;gap:10px;}
+  }
 </style>
 </head>
 <body>
@@ -65,17 +104,148 @@
   </header>
 
   <div class="facts">
-    <div class="fact"><span>경기 방식</span><b>리커브·컴파운드, 개인·단체</b></div>
-    <div class="fact"><span>경기 거리</span><b>최대 70m</b></div>
-    <div class="fact"><span>강세 국가</span><b>대한민국이 세계 최상위권</b></div>
+    <div class="fact"><span>경기 기간</span><b>9월 26일 ~ 10월 3일</b></div>
+    <div class="fact"><span>경기장</span><b>오카자키 중앙공원 다목적광장</b></div>
+    <div class="fact"><span>세부 종목</span><b>10개 (리커브 5 · 컴파운드 5)</b></div>
+    <div class="fact"><span>사거리</span><b>리커브 70m · 컴파운드 50m</b></div>
   </div>
 
   <section class="body">
-    <p>양궁은 정해진 거리에서 활을 쏘아 과녁 중심에 가깝게 맞힐수록 높은 점수를 얻는 종목으로, 극도의 집중력과 심리적 안정감이 요구된다.</p>
-    <p>한국은 올림픽과 아시안게임 모두에서 세계 최강으로 평가받아 왔으며, 아시안게임에서도 대부분의 금메달을 가져가는 종목 중 하나다.</p>
+    <p>양궁은 정해진 거리에서 활을 쏘아 과녁 중심에 가깝게 맞힐수록 높은 점수를 얻는 종목으로, 극도의 집중력과 심리적 안정감이 요구된다. 아시안게임에서는 1978년 방콕 대회부터 정식 종목으로 치러져 왔다.</p>
+    <p>이번 대회는 아이치현 오카자키 중앙공원 다목적광장에서 열리며, 리커브와 컴파운드 두 부문에서 각각 개인·단체·혼성단체 금메달이 걸려 총 10개의 금메달이 배출된다.</p>
+    <p>한국은 리커브에서 오랫동안 세계 최강으로 평가받아 왔고, 아시안게임에서도 대부분의 금메달을 가져가는 종목 중 하나다. 다만 컴파운드에서는 인도가 압도적인 강세를 보이고 있어 부문별 온도차가 뚜렷하다.</p>
   </section>
 
+  <h2 class="sub"><small>Disciplines</small>두 개의 활, 두 개의 무대</h2>
+  <div class="cardgrid">
+    <div class="disc">
+      <h3>리커브</h3>
+      <span class="en">Recurve</span>
+      <p>올림픽에서 쓰이는 전통적인 형태의 활. 조준경과 안정기 외에 확대 렌즈나 기계식 조준 보조 장치를 쓸 수 없어, 선수의 감각과 심리 통제력이 성적을 좌우한다.</p>
+      <dl>
+        <dt>거리</dt><dd>70m</dd>
+        <dt>과녁</dt><dd>지름 122cm</dd>
+        <dt>세부 종목</dt><dd>남녀 개인·단체, 혼성단체</dd>
+      </dl>
+    </div>
+    <div class="disc">
+      <h3>컴파운드</h3>
+      <span class="en">Compound</span>
+      <p>도르래로 힘을 덜어주는 활. 확대 조준경과 릴리스를 사용해 정확도가 매우 높고, 그만큼 10점 안쪽 X10 싸움으로 승부가 갈린다. 올림픽에는 없고 아시안게임에서만 볼 수 있는 부문이다.</p>
+      <dl>
+        <dt>거리</dt><dd>50m</dd>
+        <dt>과녁</dt><dd>지름 80cm</dd>
+        <dt>세부 종목</dt><dd>남녀 개인·단체, 혼성단체</dd>
+      </dl>
+    </div>
+  </div>
 
+  <h2 class="sub"><small>Team Korea</small>한국 대표팀 최종 명단</h2>
+  <div class="roster">
+    <div class="squad">
+      <h3>리커브 <em>남자</em></h3>
+      <ul>
+        <li><b>김제덕</b><span>예천군청</span></li>
+        <li><b>김우진</b><span>청주시청</span></li>
+        <li><b>이우석</b><span>코오롱</span></li>
+      </ul>
+    </div>
+    <div class="squad">
+      <h3>리커브 <em>여자</em></h3>
+      <ul>
+        <li><b>강채영</b><span>현대모비스</span></li>
+        <li><b>오예진</b><span>광주은행</span></li>
+        <li><b>이윤지</b><span>LH</span></li>
+      </ul>
+    </div>
+    <div class="squad">
+      <h3>컴파운드 <em>남자</em></h3>
+      <ul>
+        <li><b>김종호</b><span>현대제철</span></li>
+        <li><b>최용희</b><span>현대제철</span></li>
+        <li><b>최은규</b><span>울산남구청</span></li>
+      </ul>
+    </div>
+    <div class="squad">
+      <h3>컴파운드 <em>여자</em></h3>
+      <ul>
+        <li><b>박예린</b><span>현대모비스</span></li>
+        <li><b>박정윤</b><span>현대모비스</span></li>
+        <li><b>강연서</b><span>울산남구청</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="sub"><small>Form Guide</small>최근 성적으로 보는 현재 위치</h2>
+
+  <div class="rec">
+    <div class="yr">2022<i>항저우 AG</i></div>
+    <div>
+      <h3>리커브 4관왕, 그러나 컴파운드는 무관</h3>
+      <p class="chips">
+        <span class="chip g">금 4</span><span class="chip s">은 4</span><span class="chip b">동 3</span>
+      </p>
+      <p>리커브에서 남자단체·여자단체·여자개인(임시현)·혼성단체를 쓸어 담았지만, 남자개인 금메달은 몽골의 오트곤볼드에게 내주며 전 종목 석권에 실패했다. 컴파운드는 인도가 5개 금메달을 모두 가져갔고, 한국은 은 3·동 2에 머물렀다.</p>
+    </div>
+  </div>
+
+  <div class="rec">
+    <div class="yr">2024<i>파리 올림픽</i></div>
+    <div>
+      <h3>리커브 5개 전 종목 석권</h3>
+      <p class="chips"><span class="chip g">금 5</span><span class="chip s">은 1</span><span class="chip b">동 1</span></p>
+      <p>김우진이 남자개인, 임시현이 여자개인 정상에 올랐고 남자단체·여자단체·혼성단체까지 모두 금메달을 가져갔다. 이우석이 남자개인 동메달, 남수현이 여자개인 은메달을 더하며 사실상 시상대를 점령했다.</p>
+    </div>
+  </div>
+
+  <div class="rec">
+    <div class="yr">2025<i>세계선수권</i></div>
+    <div>
+      <h3>남자단체는 여전히 최강, 개인전은 혼전</h3>
+      <p class="chips"><span class="chip g">금 2</span><span class="chip s">은 1</span><span class="chip b">동 4</span></p>
+      <p>강채영이 여자개인 정상에 오르고 남자단체가 금메달을 지켰다. 반면 남자개인 금메달은 스페인의 안드레스 테미뇨에게, 여자단체 금메달은 대만에 내주며 한국의 독주가 예전 같지 않다는 신호도 함께 나왔다. 컴파운드에서는 최용희가 남자개인 동메달을 따냈다.</p>
+    </div>
+  </div>
+
+  <div class="rec">
+    <div class="yr">2026<i>월드컵 1~4차</i></div>
+    <div>
+      <h3>남자단체 3연속 우승, 여자부는 상승세</h3>
+      <p class="chips"><span class="chip g">단체전 4승</span><span class="chip s">혼성 준우승 2회</span></p>
+      <p>김제덕·김우진·이우석이 나선 리커브 남자단체는 상하이·안탈리아·마드리드 3개 대회 연속 우승했다. 여자단체는 강채영·이윤지·오예진 조합으로 마드리드에서 금메달을 따내며 시즌 후반 상승 곡선을 그렸고, 강채영은 상하이 개인전 금메달을 추가했다. 컴파운드는 여자단체 마드리드 동메달이 유일한 시상대였다. 시즌 최종전은 9월 12~13일 멕시코 살티요에서 열린 뒤 곧바로 아시안게임으로 이어진다.</p>
+    </div>
+  </div>
+
+  <h2 class="sub"><small>Rivals</small>경계할 상대</h2>
+  <div class="cardgrid">
+    <div class="disc">
+      <h3>중국</h3>
+      <span class="en">China</span>
+      <p>리커브 여자부의 최대 경쟁자. 주징이가 월드컵 개인전에서 두 차례 우승했고 여자단체도 2개 대회를 가져갔다. 남자부에서도 리멍치가 상하이에서 개인전 금메달을 따내며 전력을 끌어올렸다.</p>
+    </div>
+    <div class="disc">
+      <h3>인도</h3>
+      <span class="en">India</span>
+      <p>컴파운드 최강국. 항저우에서 컴파운드 금메달 5개를 독식했고, 조티 수레카를 비롯한 주축이 이번에도 대표팀에 이름을 올렸다. 리커브에서도 디라지 보마데바라가 안탈리아 월드컵 개인전을 제패했다.</p>
+    </div>
+    <div class="disc">
+      <h3>대만</h3>
+      <span class="en">Chinese Taipei</span>
+      <p>2025 세계선수권 리커브 여자단체 금메달. 컴파운드 혼성에서도 월드컵 우승 경험이 있어, 한국이 놓치기 쉬운 지점을 정확히 파고드는 팀이다.</p>
+    </div>
+    <div class="disc">
+      <h3>일본</h3>
+      <span class="en">Japan</span>
+      <p>홈 이점을 등에 업은 개최국. 2025 세계선수권 여자단체 은메달·남자단체 동메달에 이어 마드리드 월드컵에서도 여자단체 동메달을 따내며 단체전 경쟁력을 키웠다.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <h3>관전 포인트</h3>
+    <p><b>리커브 남자단체 3연패에 도전한다.</b> 김제덕·김우진·이우석은 파리 올림픽 금메달 조합 그대로 나선다. 올 시즌 월드컵 3연속 우승으로 조직력도 정점에 있다.</p>
+    <p><b>항저우에서 놓친 남자개인 금메달을 되찾을 수 있을까.</b> 아시안게임 남자개인 금메달은 2022년 대회에서 몽골에 내준 뒤 4년 만의 재도전이다.</p>
+    <p><b>컴파운드에서 인도의 벽을 넘느냐가 관건이다.</b> 한국은 항저우에서 컴파운드 금메달이 없었다. 최용희가 세계선수권 개인 동메달로 가능성을 보여준 만큼, 이번 대회 성적표의 차이는 이 부문에서 갈릴 가능성이 크다.</p>
+  </div>
 
   <footer class="pagefoot">
     <span>2026 아이치·나고야 아시안게임 종목 안내</span>

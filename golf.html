@@ -40,14 +40,68 @@
   section.body{margin-top:8px;}
   section.body p{font-size:15.5px;line-height:1.85;color:var(--paper-dim);margin:0 0 16px;}
   h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:40px 0 18px;font-weight:700;}
+  h2.sub small{display:block;font-family:'Pretendard',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.12em;color:var(--gold-soft);text-transform:uppercase;margin-bottom:7px;}
+  .lede{font-size:15px;line-height:1.8;color:var(--paper-dim);margin:0 0 18px;}
   .cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;}
   .disc{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:20px;}
   .disc h3{font-family:'Noto Serif KR',serif;font-size:17px;margin:0 0 4px;color:var(--paper);}
   .disc .en{font-size:11.5px;color:var(--gold-soft);letter-spacing:0.04em;margin-bottom:10px;display:block;}
   .disc p{font-size:14px;line-height:1.7;color:var(--paper-dim);margin:0;}
+
+  /* 대표팀 */
+  .roster{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;}
+  .squad{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:18px 20px;}
+  .squad h3{font-family:'Noto Serif KR',serif;font-size:15.5px;margin:0 0 4px;color:var(--paper);display:flex;align-items:center;gap:8px;}
+  .squad h3 em{font-style:normal;font-size:10.5px;letter-spacing:0.08em;color:var(--ink);background:var(--gold-soft);border-radius:3px;padding:2px 6px;font-weight:700;}
+  .squad .cap{font-size:12px;color:var(--gold-soft);margin:0 0 12px;letter-spacing:0.02em;}
+  .squad ul{list-style:none;margin:0;padding:0;}
+  .squad li{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:8px 0;border-bottom:1px dashed var(--line);}
+  .squad li:last-child{border-bottom:0;padding-bottom:0;}
+  .squad li b{font-size:14.5px;color:var(--paper);font-weight:600;}
+  .squad li span{font-size:11.5px;color:var(--paper-dim);text-align:right;}
+
+  /* 랭킹 */
+  .ranks{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;}
+  .rank-card{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:18px 20px 16px;}
+  .rank-card h3{font-family:'Noto Serif KR',serif;font-size:15.5px;margin:0 0 2px;color:var(--paper);}
+  .rank-card .asof{font-size:11px;color:var(--gold-soft);margin:0 0 12px;letter-spacing:0.03em;}
+  table.rk{width:100%;border-collapse:collapse;}
+  table.rk td{padding:6px 0;font-size:13.5px;color:var(--paper-dim);border-bottom:1px dashed rgba(201,162,75,0.16);}
+  table.rk tr:last-child td{border-bottom:0;}
+  table.rk td.n{width:30px;font-family:'Noto Serif KR',serif;font-weight:700;color:var(--gold);text-align:right;padding-right:12px;}
+  table.rk td.p{color:var(--paper);}
+  table.rk td.a{width:44px;text-align:right;font-size:12px;color:var(--paper-dim);}
+  table.rk tr.kor td.p{color:var(--gold-soft);font-weight:600;}
+  table.rk tr.kor td{background:rgba(201,162,75,0.07);}
+  .rank-foot{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;line-height:1.7;color:var(--paper-dim);}
+  .rank-foot b{color:var(--gold-soft);font-weight:600;}
+  .agenote{font-size:11.5px;color:var(--paper-dim);margin:12px 0 0;opacity:0.75;}
+
+  /* 역대 성적 */
+  .rec{display:grid;grid-template-columns:112px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line);}
+  .rec:first-of-type{border-top:1px solid var(--line);}
+  .rec .yr{font-family:'Noto Serif KR',serif;font-size:19px;font-weight:900;color:var(--gold);line-height:1.25;}
+  .rec .yr i{display:block;font-style:normal;font-family:'Pretendard',sans-serif;font-size:11px;font-weight:500;color:var(--paper-dim);letter-spacing:0.03em;margin-top:4px;}
+  .rec h3{font-family:'Noto Serif KR',serif;font-size:16px;margin:0 0 8px;color:var(--paper);font-weight:700;}
+  .rec p{font-size:14px;line-height:1.75;color:var(--paper-dim);margin:0;}
+  .chips{margin:0 0 10px;}
+  .chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;border:1px solid;margin:0 6px 6px 0;}
+  .chip::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;}
+  .chip.g{color:#EBD08F;border-color:rgba(201,162,75,0.45);background:rgba(201,162,75,0.10);}
+  .chip.s{color:#D3DAE4;border-color:rgba(211,218,228,0.26);background:rgba(211,218,228,0.06);}
+  .chip.b{color:#D9A87C;border-color:rgba(217,168,124,0.32);background:rgba(217,168,124,0.08);}
+
+  .note{margin-top:26px;border-left:3px solid var(--sun);background:rgba(216,72,47,0.08);border-radius:0 8px 8px 0;padding:18px 22px;}
+  .note h3{font-family:'Noto Serif KR',serif;font-size:16px;margin:0 0 8px;color:var(--paper);}
+  .note p{font-size:14.5px;line-height:1.8;color:var(--paper-dim);margin:0 0 10px;}
+  .note p:last-child{margin-bottom:0;}
+
   footer.pagefoot{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
   footer.pagefoot a{color:var(--gold-soft);text-decoration:none;}
-  @media (max-width:520px){.wrap{padding:28px 18px 70px;}}
+  @media (max-width:520px){
+    .wrap{padding:28px 18px 70px;}
+    .rec{grid-template-columns:1fr;gap:10px;}
+  }
 </style>
 </head>
 <body>
@@ -61,21 +115,122 @@
     <span class="eyebrow">2026 Aichi · Nagoya · 개인구기</span>
     <h1>골프</h1>
     <p class="en-title">Golf</p>
-    <p class="tagline">넓은 코스를 돌며 최소 타수로 공을 홀에 넣는 것을 겨루는 야외 개인 종목.</p>
+    <p class="tagline">72홀을 돌며 최소 타수를 겨루는 종목. 오랫동안 아마추어의 무대였지만, 이번 대회는 남자부만 프로들의 전쟁터가 됐다.</p>
   </header>
 
   <div class="facts">
-    <div class="fact"><span>경기 방식</span><b>72홀 스트로크 플레이 등</b></div>
-    <div class="fact"><span>경기 장소</span><b>18홀 정규 코스</b></div>
-    <div class="fact"><span>아시안게임</span><b>2010년 광저우 대회부터 정식종목</b></div>
+    <div class="fact"><span>경기 기간</span><b>9월 30일 ~ 10월 3일</b></div>
+    <div class="fact"><span>경기장</span><b>가스가이CC 히가시 코스</b></div>
+    <div class="fact"><span>경기 방식</span><b>72홀 스트로크 플레이</b></div>
+    <div class="fact"><span>금메달</span><b>4개 (남녀 개인·단체)</b></div>
   </div>
 
   <section class="body">
-    <p>골프는 정해진 순서로 각 홀을 돌며 최소 타수로 공을 홀에 넣는 선수가 승리하는 종목으로, 정신력과 코스 공략 전략이 매우 중요하다.</p>
-    <p>아시안게임에서는 개인전과 단체전으로 나뉘어 진행되며, 최근 한국·일본·중국 선수들의 경쟁력이 크게 높아진 종목이다.</p>
+    <p>골프는 1982년 뉴델리 대회에서 아시안게임에 처음 등장했고, 여자부는 1990년 베이징 대회부터 추가됐다. 개인전과 단체전 모두 4라운드 72홀 스트로크 플레이로 치러지며, 단체전은 매 라운드 팀 내 상위 두 명의 스코어를 합산해 순위를 가린다. 이번 대회부터 단체전 참가 인원이 국가당 4명에서 3명으로 줄어, 한 선수의 부진을 감춰줄 여유가 사라졌다.</p>
+    <p>출전 자격에 프로·아마추어 구분은 없지만, 실제로는 오랫동안 각국 아마추어 국가대표들이 채워온 무대였다. 세계 최상위 프로들에게는 시즌 한복판에 끼어드는 비공인 대회이기 때문이다. 그 관성을 깨는 것이 병역이다. 한국 남자 선수에게 아시안게임 금메달은 병역 특례로 직결되고, 그래서 남자부에만 정상급 프로가 모인다.</p>
+    <p>한국은 역대 아시안게임 골프에서 금메달 14개(남자 6개, 여자 8개)를 따냈다. 가장 최근 금메달은 2022 항저우 대회 남자 단체전이었다.</p>
   </section>
 
+  <h2 class="sub"><small>Team Korea</small>같은 종목, 전혀 다른 두 대표팀</h2>
+  <p class="lede">대한골프협회의 선발 원칙은 1순위가 세계랭킹(남자 OWGR·여자 롤렉스 랭킹) 한국 선수 상위 15명, 여기서 채워지지 않으면 2순위로 KGA 랭킹 상위 선수다. 이 규정이 남녀에게 정반대의 결과를 만들었다.</p>
+  <div class="roster">
+    <div class="squad">
+      <h3>남자 <em>전원 프로</em></h3>
+      <p class="cap">세계랭킹 기준 선발 · 병역 미필 2명</p>
+      <ul>
+        <li><b>김주형</b><span>24세 · PGA 투어</span></li>
+        <li><b>김성현</b><span>28세 · PGA 투어</span></li>
+        <li><b>문도엽</b><span>35세 · KPGA & LIV 투어</span></li>
+      </ul>
+    </div>
+    <div class="squad">
+      <h3>여자 <em>전원 아마추어</em></h3>
+      <p class="cap">상위 프로 전원 고사 → KGA 랭킹 1~3위</p>
+      <ul>
+        <li><b>박서진</b><span>18세 · 서문여고 3</span></li>
+        <li><b>양윤서</b><span>18세 · 인천여상부설방통고 3 (KLPGA LPGA 출전경험 유) </span></li>
+        <li><b>김규빈</b><span>17세 · 학산여고 2</span></li>
+      </ul>
+    </div>
+  </div>
 
+  <section class="body" style="margin-top:20px;">
+    <p>남자부는 세계랭킹으로 김성현·김주형·문도엽이 선발됐다. 문도엽은 이미 군 복무를 마쳤지만 김성현과 김주형은 미필이고, 개인전이든 단체전이든 금메달을 따면 병역 혜택을 받는다. PGA 투어 시즌을 뒤로하고 아이치까지 오는 이유가 여기에 있다.</p>
+    <p>여자부는 정반대다. 롤렉스 랭킹 한국 선수 상위 15명이 모두 출전을 고사하면서, KGA 랭킹 1~3위인 고교생 국가대표 세 명이 태극마크를 달았다. 양윤서는 올해 아시아·태평양 여자 아마추어선수권 우승자에 KLPGA 준우승 경력, LPGA 출전경험이 있는 슈퍼루키이다. 여자 선수에게는 병역이라는 유인이 없고, LPGA·KLPGA 시즌 종반과 일정이 겹친다는 점이 그대로 드러난 결과다.</p>
+  </section>
+
+  <h2 class="sub"><small>World Rankings</small>세계랭킹 상위 15명</h2>
+  <div class="ranks">
+    <div class="rank-card">
+      <h3>남자 · OWGR</h3>
+      <p class="asof">2026년 6월 21일 기준</p>
+      <table class="rk">
+        <tr><td class="n">1</td><td class="p">스코티 셰플러</td><td class="a">30세</td></tr>
+        <tr><td class="n">2</td><td class="p">로리 매킬로이</td><td class="a">37세</td></tr>
+        <tr><td class="n">3</td><td class="p">캐머런 영</td><td class="a">29세</td></tr>
+        <tr><td class="n">4</td><td class="p">맷 피츠패트릭</td><td class="a">31세</td></tr>
+        <tr><td class="n">5</td><td class="p">러셀 헨리</td><td class="a">36세</td></tr>
+      </table>
+      <p class="rank-foot">한국 선수는 톱15에 없다. <b>김시우 21위</b>, <b>김주형 64위</b>, <b>임성재 79위</b>, <b>김성현 151위</b>, <b>안병훈 183위</b> 순이며, 이 중 김주형과 김성현이 대표팀에 포함됐다.</p>
+    </div>
+
+    <div class="rank-card">
+      <h3>여자 · 롤렉스 랭킹</h3>
+      <p class="asof">2026년 7월 27일 기준</p>
+      <table class="rk">
+        <tr><td class="n">1</td><td class="p">넬리 코르다</td><td class="a">28세</td></tr>
+        <tr><td class="n">2</td><td class="p">지노 티티쿤</td><td class="a">23세</td></tr>
+        <tr class="kor"><td class="n">3</td><td class="p">유해란</td><td class="a">25세</td></tr>
+        <tr class="kor"><td class="n">4</td><td class="p">김효주</td><td class="a">31세</td></tr>
+        <tr><td class="n">5</td><td class="p">로티 우드</td><td class="a">22세</td></tr>
+      </table>
+      <p class="rank-foot">세계 10위 안에 한국 선수가 10위 김세영까지 <b>세 명</b>이지만, 이번 대회에는 아무도 나서지 않는다. 2022년 항저우 은메달 멤버였던 <b>김민솔(16위)</b>과 <b>유현조(45위)</b> 역시 마찬가지다.</p>
+    </div>
+  </div>
+  <p class="agenote">나이는 2026년 8월 1일 기준. 한국 선수는 강조 표시.</p>
+
+  <h2 class="sub"><small>Korea vs Japan</small>개최국 일본도 처음으로 프로를 내보낸다</h2>
+  <div class="cardgrid">
+    <div class="disc">
+      <h3>일본 남자</h3>
+      <span class="en">Japan · Men</span>
+      <p>사상 처음으로 프로 선수를 대표팀에 넣었다. 세계랭킹 136위 나카지마 게이타와 172위 히가 가즈키, 그리고 미국 애리조나대에서 뛰는 아마추어 모토 다이시로 구성됐다. 홈 코스에서 열리는 만큼 남자 단체전은 사실상 한일 양강 구도다.</p>
+    </div>
+    <div class="disc">
+      <h3>일본 여자</h3>
+      <span class="en">Japan · Women</span>
+      <p>한국과 마찬가지로 아마추어 국가대표로 팀을 꾸렸다. 다만 일본 여자 골프는 야마시타 미유(6위), 사이고 마오(15위)를 비롯해 세계 상위권 선수층이 두껍고, 아마추어 저변도 최근 몇 년 사이 크게 두꺼워졌다.</p>
+    </div>
+  </div>
+
+  <h2 class="sub"><small>Form Guide</small>지난 두 무대</h2>
+
+  <div class="rec">
+    <div class="yr">2022<i>항저우 AG</i></div>
+    <div>
+      <div class="chips">
+        <span class="chip g">금 1</span><span class="chip s">은 2</span><span class="chip b">동 1</span>
+      </div>
+      <h3>남자 단체 금, 그러나 개인전 금메달은 없었다</h3>
+      <p>남자 단체전에서 김시우·임성재·장유빈·조우영이 금메달을 합작했고 임성재가 개인전 은메달을 더했다. 개인전 금메달은 홍콩의 고타이치가 가져갔다. 여자부는 유현조·임지유·김민솔이 단체전 은메달, 유현조가 개인전 동메달을 따냈지만 금메달 두 개는 모두 태국 몫이었다.</p>
+    </div>
+  </div>
+
+  <div class="rec">
+    <div class="yr">2024<i>파리 올림픽</i></div>
+    <div>
+      <div class="chips"><span class="chip s">한국 노메달</span></div>
+      <h3>남자 셰플러, 여자 리디아 고</h3>
+      <p>남자부는 스코티 셰플러가 금메달, 토미 플리트우드가 은메달, 마쓰야마 히데키가 동메달을 가져갔다. 여자부는 리디아 고가 금메달로 커리어 골든 슬램을 완성했고 에스더 헨젤라이트가 은메달, 린시위가 동메달을 차지했다. 한국은 남녀 모두 시상대에 오르지 못했고 양희영 선수가 아쉽게 4위로 대회를 마감했다.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <h3>관전 포인트</h3>
+    <p><b>김주형과 김성현에게는 병역이 걸려 있다.</b> 개인전이든 단체전이든 금메달 하나면 된다. 세계랭킹으로만 보면 김주형(64위)이 이번 대회 출전자 중 최상위권이다.</p>
+    <p><b>남자 단체전은 3인 체제 첫 시험대다.</b> 매 라운드 상위 두 명 스코어만 반영되므로, 세 명 중 한 명이 무너지면 곧바로 순위에 반영된다. 4인제였던 항저우 때보다 변수가 크다.</p>
+    <p><b>여자부는 성적보다 세대의 이야기다.</b> 17~18세 국가대표 세 명이 프로 진출 전 마지막 아마추어 무대에서 국제 경험을 쌓는다. 한국 여자 골프가 아시안게임에서 따낸 금메달 8개의 계보를 이 팀이 이어갈 수 있을지가 관심사다.</p>
+  </div>
 
   <footer class="pagefoot">
     <span>2026 아이치·나고야 아시안게임 종목 안내</span>
