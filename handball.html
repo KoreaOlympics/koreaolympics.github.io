@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>핸드볼 / 하키 | 2026 아이치·나고야 아시안게임</title>
+<title>핸드볼 | 2026 아이치·나고야 아시안게임</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -39,56 +39,504 @@
   .fact b{font-family:'Noto Serif KR',serif;font-size:15px;color:var(--paper);font-weight:700;line-height:1.4;}
   section.body{margin-top:8px;}
   section.body p{font-size:15.5px;line-height:1.85;color:var(--paper-dim);margin:0 0 16px;}
-  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:40px 0 18px;font-weight:700;}
-  .cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;}
-  .disc{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:20px;}
-  .disc h3{font-family:'Noto Serif KR',serif;font-size:17px;margin:0 0 4px;color:var(--paper);}
-  .disc .en{font-size:11.5px;color:var(--gold-soft);letter-spacing:0.04em;margin-bottom:10px;display:block;}
-  .disc p{font-size:14px;line-height:1.7;color:var(--paper-dim);margin:0;}
+  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:42px 0 18px;font-weight:700;}
+  h2.sub small{display:block;font-family:'Pretendard',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.12em;color:var(--gold-soft);text-transform:uppercase;margin-bottom:7px;}
+  .lede{font-size:15px;line-height:1.8;color:var(--paper-dim);margin:0 0 18px;}
+  .tblcap{font-family:'Noto Serif KR',serif;font-size:14px;color:var(--paper);font-weight:700;margin:28px 0 10px;display:flex;align-items:center;gap:9px;}
+  .tblcap::before{content:"";width:16px;height:1px;background:var(--gold);display:inline-block;}
+  .tblnote{font-size:11.5px;color:var(--paper-dim);opacity:0.75;margin:12px 0 0;line-height:1.65;}
+
+  /* 탭 */
+  .tabs input{position:absolute;opacity:0;pointer-events:none;}
+  .tabbar{display:flex;gap:8px;margin-bottom:30px;border-bottom:1px solid var(--line);}
+  .tabbar label{cursor:pointer;padding:12px 20px 13px;border-radius:6px 6px 0 0;border:1px solid transparent;border-bottom:none;position:relative;top:1px;transition:background .15s,color .15s;}
+  .tabbar label b{display:block;font-family:'Noto Serif KR',serif;font-size:16px;font-weight:700;color:var(--paper-dim);}
+  .tabbar label i{display:block;font-style:normal;font-size:10px;letter-spacing:0.1em;color:var(--paper-dim);opacity:0.6;margin-top:3px;text-transform:uppercase;}
+  .tabbar label:hover b{color:var(--paper);}
+  #tab-hb:checked ~ .tabbar label[for="tab-hb"],
+  #tab-fh:checked ~ .tabbar label[for="tab-fh"]{background:var(--ink-2);border-color:var(--line);}
+  #tab-hb:checked ~ .tabbar label[for="tab-hb"] b,
+  #tab-fh:checked ~ .tabbar label[for="tab-fh"] b{color:var(--gold-soft);}
+  #tab-hb:checked ~ .tabbar label[for="tab-hb"] i,
+  #tab-fh:checked ~ .tabbar label[for="tab-fh"] i{color:var(--gold);opacity:1;}
+  .panel{display:none;}
+  #tab-hb:checked ~ .panel-hb{display:block;}
+  #tab-fh:checked ~ .panel-fh{display:block;}
+  .panel .facts{margin-top:0;}
+
+  /* 표 (조 편성 · 일정) */
+  .rankwrap{overflow-x:auto;}
+  table.rk{width:100%;border-collapse:collapse;min-width:460px;}
+  table.rk th{font-size:11.5px;font-weight:600;color:var(--gold-soft);text-align:left;padding:0 0 9px;border-bottom:1px solid var(--line);letter-spacing:0.04em;}
+  table.rk td{padding:10px 0;font-size:13.5px;color:var(--paper-dim);border-bottom:1px dashed rgba(201,162,75,0.16);}
+  table.rk th+th,table.rk td+td{padding-left:16px;}
+  table.rk tr:last-child td{border-bottom:0;}
+  table.rk td.n{width:42px;font-family:'Noto Serif KR',serif;font-weight:700;color:var(--gold);text-align:right;}
+  table.rk td.c{color:var(--paper);font-weight:600;}
+  table.rk td.p{width:64px;font-size:12.5px;}
+  table.rk td.memo{font-size:11.5px;opacity:0.8;}
+  table.rk tr.kor td{background:rgba(201,162,75,0.09);}
+  table.rk tr.kor td.c{color:var(--gold-soft);}
+  table.rk tr.big td{background:rgba(216,72,47,0.09);}
+  table.rk tr.big td.c{color:#F2A08C;}
+  table.rk tr.big td.memo{color:#E7A08C;opacity:1;}
+  table.rk.lg{min-width:560px;}
+  table.rk td.yes{width:62px;font-size:12px;font-weight:700;color:#EBD08F;}
+  table.rk td.no{width:62px;font-size:12px;font-weight:700;color:var(--sun);}
+  table.rk td.memo.alarm{color:#E7856F;opacity:1;}
+  table.rk td.memo.up{color:#EBD08F;opacity:1;}
+  table.rk td.c em{font-style:normal;font-weight:400;font-size:10.5px;color:var(--gold-soft);opacity:0.85;margin-left:4px;}
+
+  /* 코트 도해 */
+  .courtbox{background:var(--ink-2);border:1px solid var(--line);border-radius:10px;padding:22px;display:grid;grid-template-columns:minmax(260px,1fr) minmax(220px,300px);gap:24px;align-items:center;}
+  .court{width:100%;height:auto;}
+  .court .cline{fill:none;stroke:rgba(201,162,75,0.45);stroke-width:1.6;}
+  .court .dash{fill:none;stroke:rgba(201,162,75,0.35);stroke-width:1.4;stroke-dasharray:5 5;}
+  .court .goal{fill:none;stroke:var(--sun);stroke-width:3;}
+  .court .area{fill:rgba(201,162,75,0.06);}
+  .court circle.pt{fill:var(--ink);stroke:var(--gold);stroke-width:2.2;}
+  .court circle.gk{fill:rgba(216,72,47,0.2);stroke:var(--sun);}
+  .court text.abbr{fill:var(--gold-soft);font-family:'Noto Serif KR',serif;font-weight:900;font-size:11px;text-anchor:middle;}
+  .court circle.gk + text.abbr{fill:#F2A08C;}
+  .court text.kr{fill:var(--paper-dim);font-size:9.5px;text-anchor:middle;}
+  .poskey{font-size:13px;line-height:1.55;}
+  .poskey div{padding:7px 0;border-bottom:1px dashed rgba(201,162,75,0.2);display:grid;grid-template-columns:34px 1fr;gap:10px;}
+  .poskey div:last-child{border-bottom:0;}
+  .poskey b{font-family:'Noto Serif KR',serif;color:var(--gold);font-size:12px;}
+  .poskey span{color:var(--paper-dim);}
+  .poskey span i{font-style:normal;color:var(--paper);font-weight:600;}
+
+  /* 조 편성 */
+  .pools{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;}
+  .pool{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:15px 17px;}
+  .pool.ours{border-color:rgba(216,72,47,0.5);background:rgba(216,72,47,0.07);}
+  .pool h4{font-family:'Noto Serif KR',serif;font-size:13.5px;margin:0 0 10px;color:var(--gold-soft);letter-spacing:0.05em;}
+  .pool.ours h4{color:var(--sun);}
+  .pool ul{list-style:none;margin:0;padding:0;}
+  .pool li{font-size:13.5px;color:var(--paper-dim);padding:5px 0;display:flex;justify-content:space-between;gap:8px;}
+  .pool li.me{color:var(--paper);font-weight:700;}
+  .pool li em{font-style:normal;font-size:10.5px;color:var(--gold-soft);opacity:0.85;}
+
+  /* 일정 */
+  .sched{border-top:1px solid var(--line);margin-top:6px;}
+  .day{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:11px 0;border-bottom:1px solid rgba(201,162,75,0.16);align-items:baseline;}
+  .day .d{font-family:'Noto Serif KR',serif;font-size:14px;font-weight:700;color:var(--gold);}
+  .day .e{font-size:13.5px;line-height:1.6;color:var(--paper-dim);}
+  .day .e b{color:var(--paper);font-weight:600;}
+  .day.goal .d{color:var(--sun);}
+
+  /* 명단 */
+  .roster{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;}
+  .squad{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:18px 20px;}
+  .squad h3{font-family:'Noto Serif KR',serif;font-size:15.5px;margin:0 0 4px;color:var(--paper);display:flex;align-items:center;gap:8px;}
+  .squad h3 em{font-style:normal;font-size:10.5px;letter-spacing:0.08em;color:var(--ink);background:var(--gold-soft);border-radius:3px;padding:2px 6px;font-weight:700;}
+  .squad .cap{font-size:11.5px;color:var(--gold-soft);margin:0 0 12px;}
+  .squad ul{list-style:none;margin:0;padding:0;}
+  .squad li{padding:9px 0;border-bottom:1px dashed var(--line);}
+  .squad li:last-child{border-bottom:0;padding-bottom:0;}
+  .squad li i{display:block;font-style:normal;font-size:10.5px;color:var(--gold-soft);letter-spacing:0.04em;margin-bottom:4px;}
+  .squad li b{font-size:13.5px;color:var(--paper);font-weight:600;line-height:1.75;}
+  .squad li b span{font-weight:400;font-size:11px;color:var(--paper-dim);}
+
+  /* 성적 */
+  .rec{display:grid;grid-template-columns:112px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line);}
+  .rec:first-of-type{border-top:1px solid var(--line);}
+  .rec .yr{font-family:'Noto Serif KR',serif;font-size:18px;font-weight:900;color:var(--gold);line-height:1.25;}
+  .rec .yr i{display:block;font-style:normal;font-family:'Pretendard',sans-serif;font-size:11px;font-weight:500;color:var(--paper-dim);margin-top:4px;}
+  .rec h3{font-family:'Noto Serif KR',serif;font-size:16px;margin:0 0 8px;color:var(--paper);font-weight:700;}
+  .rec p{font-size:14px;line-height:1.75;color:var(--paper-dim);margin:0;}
+  .chips{margin:0 0 10px;}
+  .chip{display:inline-flex;align-items:center;font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;border:1px solid;margin:0 6px 6px 0;}
+  .chip.g{color:#EBD08F;border-color:rgba(201,162,75,0.45);background:rgba(201,162,75,0.10);}
+  .chip.s{color:#D3DAE4;border-color:rgba(211,218,228,0.26);background:rgba(211,218,228,0.06);}
+  .chip.down{color:#E7856F;border-color:rgba(216,72,47,0.35);background:rgba(216,72,47,0.10);}
+
+  .note{margin-top:26px;border-left:3px solid var(--sun);background:rgba(216,72,47,0.08);border-radius:0 8px 8px 0;padding:18px 22px;}
+  .note h3{font-family:'Noto Serif KR',serif;font-size:16px;margin:0 0 8px;color:var(--paper);}
+  .note p{font-size:14.5px;line-height:1.8;color:var(--paper-dim);margin:0 0 10px;}
+  .note p:last-child{margin-bottom:0;}
+
   footer.pagefoot{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
   footer.pagefoot a{color:var(--gold-soft);text-decoration:none;}
-  @media (max-width:520px){.wrap{padding:28px 18px 70px;}}
+  @media (max-width:640px){
+    .courtbox{grid-template-columns:1fr;}
+  }
+  @media (max-width:520px){
+    .wrap{padding:28px 18px 70px;}
+    .rec{grid-template-columns:1fr;gap:10px;}
+    .day{grid-template-columns:1fr;gap:4px;}
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
   <nav class="top">
     <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>전체 종목으로</a>
-    <span class="crumb">단체구기 / 핸드볼 / 하키</span>
+    <span class="crumb">단체구기 / 핸드볼</span>
   </nav>
 
   <header class="hero">
     <span class="eyebrow">2026 Aichi · Nagoya · 단체구기</span>
-    <h1>핸드볼 / 하키</h1>
-    <p class="en-title">Handball / Hockey</p>
-    <p class="tagline">손으로 공을 다뤄 골을 노리는 핸드볼과, 스틱으로 공을 몰아 골을 넣는 필드하키를 함께 소개한다.</p>
+    <h1>핸드볼 · 필드하키</h1>
+    <p class="en-title">Handball &amp; Field Hockey</p>
+    <p class="tagline">손으로 던지고 스틱으로 밀어 넣는 두 단체 구기. 한국은 네 종목 모두 시상대를 노리지만, 길목마다 일본과 인도가 서 있다.</p>
   </header>
 
+  <div class="tabs">
+    <input type="radio" name="sport" id="tab-hb" checked>
+    <input type="radio" name="sport" id="tab-fh">
+    <div class="tabbar">
+      <label for="tab-hb"><b>핸드볼</b><i>Handball</i></label>
+      <label for="tab-fh"><b>필드하키</b><i>Field Hockey</i></label>
+    </div>
+
+    <section class="panel panel-hb">
   <div class="facts">
-    <div class="fact"><span>핸드볼</span><b>7 대 7, 실내 코트</b></div>
-    <div class="fact"><span>하키</span><b>11 대 11, 인조잔디 필드</b></div>
-    <div class="fact"><span>공통점</span><b>빠른 패스와 조직적 공격 전개가 핵심</b></div>
+    <div class="fact"><span>남자 경기</span><b>9월 20일 ~ 29일</b></div>
+    <div class="fact"><span>여자 경기</span><b>9월 21일 ~ 27일</b></div>
+    <div class="fact"><span>출전국</span><b>남자 9 · 여자 7</b></div>
+    <div class="fact"><span>2022 항저우</span><b>여자 은메달 · 남자 무관</b></div>
   </div>
 
   <section class="body">
-    <p>핸드볼은 7명씩 겨루며 손으로 공을 패스·드리블해 상대 골대에 던져 넣는 실내 종목으로, 농구와 축구를 절반씩 섞어놓은 듯한 빠른 전개가 특징이다.</p>
-    <p>필드하키는 11명씩 스틱으로 공을 몰아 상대 골대에 넣는 종목으로, 인조잔디 위에서 정교한 스틱 컨트롤과 스피드가 요구된다.</p>
+    <p>핸드볼은 골키퍼 1명과 필드 플레이어 6명이 40×20m 코트에서 전·후반 30분씩 겨루는 종목이다. 골대 앞 6m 안쪽은 골키퍼만 들어갈 수 있는 골에어리어여서, 공격수는 그 선 밖에서 뛰어올라 공중에서 던지고 착지한다. 슛과 몸싸움이 끊이지 않아 90분 내내 점수가 오르내리는 경기가 된다.</p>
+    <p>이번 대회 남자부는 9개국이 두 조로, 여자부는 7개국이 하나의 조로 나뉜다. 남자 조 편성은 2026 아시아선수권 최종 순위를, 여자는 2024 아시아선수권 최종 순위를 기준으로 시드를 배정했다.</p>
+    <p>한국은 여자부에서 오래 아시아를 지배했지만 지금은 일본이 앞서 있다. 남자부는 사정이 더 어렵다. 2022 항저우에서 시상대에 오르지 못했고, 올해 아시아선수권에서도 5위에 그쳐 2027 세계선수권 출전권을 놓쳤다.</p>
   </section>
 
-  <h2 class="sub">세부 종목</h2>
-  <div class="cardgrid">
-    <div class="disc">
-      <h3>핸드볼</h3>
-      <span class="en">Handball</span>
-      <p>골키퍼를 포함해 7명이 실내 코트에서 겨루는 종목. 한 경기 60분(전후반 30분) 동안 빠른 득점 공방이 이어진다.</p>
+  <h2 class="sub"><small>Positions</small>코트 위 일곱 자리</h2>
+  <div class="courtbox">
+    <svg class="court" viewBox="0 0 360 280" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8" y="8" width="344" height="264" rx="4" class="cline"/>
+      <path d="M110 20 A 70 70 0 0 1 250 20 L 250 20 L 110 20 Z" class="area"/>
+      <path d="M110 20 A 70 70 0 0 0 250 20" class="cline"/>
+      <path d="M78 20 A 102 102 0 0 0 282 20" class="dash"/>
+      <line x1="150" y1="20" x2="210" y2="20" class="goal"/>
+      <line x1="8" y1="20" x2="352" y2="20" class="cline"/>
+
+      <circle class="pt gk" cx="180" cy="34" r="13"/>
+      <text class="abbr" x="180" y="38">GK</text>
+      <text class="kr" x="180" y="60">골키퍼</text>
+
+      <circle class="pt" cx="180" cy="102" r="13"/>
+      <text class="abbr" x="180" y="106">PV</text>
+      <text class="kr" x="180" y="128">피봇</text>
+
+      <circle class="pt" cx="60" cy="118" r="13"/>
+      <text class="abbr" x="60" y="122">LW</text>
+      <text class="kr" x="60" y="144">레프트윙</text>
+
+      <circle class="pt" cx="300" cy="118" r="13"/>
+      <text class="abbr" x="300" y="122">RW</text>
+      <text class="kr" x="300" y="144">라이트윙</text>
+
+      <circle class="pt" cx="106" cy="192" r="13"/>
+      <text class="abbr" x="106" y="196">LB</text>
+      <text class="kr" x="106" y="218">레프트백</text>
+
+      <circle class="pt" cx="180" cy="216" r="13"/>
+      <text class="abbr" x="180" y="220">CB</text>
+      <text class="kr" x="180" y="242">센터백</text>
+
+      <circle class="pt" cx="254" cy="192" r="13"/>
+      <text class="abbr" x="254" y="196">RB</text>
+      <text class="kr" x="254" y="218">라이트백</text>
+    </svg>
+    <div class="poskey">
+      <div><b>GK</b><span><i>골키퍼</i> 6m 골에어리어 안에서 막는 유일한 자리</span></div>
+      <div><b>PV</b><span><i>피봇</i> 상대 수비벽 사이를 파고들어 공간을 만든다</span></div>
+      <div><b>LW · RW</b><span><i>양 윙</i> 코트 가장자리에서 좁은 각도로 던진다</span></div>
+      <div><b>LB · RB</b><span><i>양 백</i> 9m 밖에서 장거리 슛을 쏘는 주 득점원</span></div>
+      <div><b>CB</b><span><i>센터백</i> 공격을 설계하는 야전 사령관</span></div>
     </div>
-    <div class="disc">
-      <h3>하키</h3>
-      <span class="en">Field Hockey</span>
-      <p>11명이 스틱으로 공을 다루는 필드 종목. 인도·파키스탄 등 남아시아 국가들이 전통 강호로 꼽힌다.</p>
+  </div>
+  <p class="tblnote">진한 선이 골대, 안쪽 실선이 6m 골에어리어, 점선이 9m 프리스로 라인이다. 한국 대표팀 선발도 이 포지션 구분을 그대로 따른다.</p>
+
+  <h2 class="sub"><small>Groups</small>조 편성</h2>
+
+  <p class="tblcap">남자 9개국 · 2개 조</p>
+  <div class="pools">
+    <div class="pool"><h4>A조</h4><ul>
+      <li>카타르 <em>아시아 2위</em></li>
+      <li>일본 <em>아시아 4위 · 개최국</em></li>
+      <li>중국 <em>아시아 9위</em></li>
+      <li>홍콩 <em>아시아 10위</em></li>
+    </ul></div>
+    <div class="pool ours"><h4>B조</h4><ul>
+      <li>바레인 <em>아시아 1위</em></li>
+      <li>쿠웨이트 <em>아시아 3위</em></li>
+      <li class="me">한국 <em>아시아 5위</em></li>
+      <li>이란 <em>아시아 12위</em></li>
+      <li>카자흐스탄 <em>—</em></li>
+    </ul></div>
+  </div>
+  <p class="tblnote">아시아선수권 1·3·5위가 모두 B조에 몰렸다. A조가 2·4·9·10위로 짜인 것과 대비된다. 한국은 조별리그부터 바레인과 쿠웨이트를 연달아 만난다.</p>
+
+  <p class="tblcap">여자 7개국 · 단일 조</p>
+  <div class="pools">
+    <div class="pool ours" style="grid-column:1/-1;"><h4>단일 조</h4><ul>
+      <li>일본 <em>2024 아시아선수권 1위 · 개최국</em></li>
+      <li class="me">한국 <em>2024 아시아선수권 2위</em></li>
+      <li>카자흐스탄 <em>3위</em></li>
+      <li>중국 <em>5위</em></li>
+      <li>홍콩 <em>7위</em></li>
+      <li>우즈베키스탄 <em>2024 대회 기권</em></li>
+      <li>베트남 <em>2024 대회 미출전</em></li>
+    </ul></div>
+  </div>
+
+  <h2 class="sub"><small>Schedule</small>경기 일정</h2>
+  <div class="sched">
+    <div class="day"><span class="d">9월 20 ~ 23일</span><span class="e"><b>남자 조별리그</b></span></div>
+    <div class="day"><span class="d">9월 21 ~ 23일</span><span class="e"><b>여자 조별리그</b></span></div>
+    <div class="day"><span class="d">9월 25 ~ 26일</span><span class="e">남자 2차 라운드</span></div>
+    <div class="day goal"><span class="d">9월 25일</span><span class="e"><b>여자 준결승</b></span></div>
+    <div class="day"><span class="d">9월 27일</span><span class="e">남자 준결승</span></div>
+    <div class="day goal"><span class="d">9월 27일</span><span class="e"><b>여자 결승</b></span></div>
+    <div class="day goal"><span class="d">9월 29일</span><span class="e"><b>남자 결승</b></span></div>
+  </div>
+  <p class="tblnote">여자부는 9월 27일에 모든 일정이 끝나고, 남자부는 같은 날 준결승을 치른 뒤 하루를 쉬고 29일 결승에 나선다.</p>
+
+  <h2 class="sub"><small>Team Korea</small>국가대표 선발 명단</h2>
+  <p class="lede">2026년 4월 30일 기준 선발 결과다. 남자 23명, 여자 22명이 뽑혔고 아시안게임 최종 엔트리는 이보다 훨씬 좁혀진다.</p>
+
+  <div class="roster">
+    <div class="squad">
+      <h3>여자 <em>22명</em></h3>
+      <p class="cap">항저우 은메달 주축이 상당수 남아 있다</p>
+      <ul>
+        <li><i>골키퍼</i><b>박새영 <span>삼척시청</span> · 박조은 <span>SK슈가글라이더즈</span> · 정진희 <span>서울시청</span></b></li>
+        <li><i>센터백 · 레프트백</i><b>이연경 <span>삼척시청</span> · 우빛나 <span>서울시청</span> · 권한나 <span>부산시설공단</span> · 조은빈 <span>서울시청</span> · 김민서 <span>삼척시청</span> · 김연우 <span>경남개발공사</span></b></li>
+        <li><i>라이트백</i><b>류은희 <span>부산시설공단</span> · 정지인 <span>대구광역시청</span> · 이혜원 <span>부산시설공단</span></b></li>
+        <li><i>레프트윙</i><b>윤예진 <span>SK슈가글라이더즈</span> · 이원정 <span>대구광역시청</span> · 유혜정 <span>경남개발공사</span></b></li>
+        <li><i>라이트윙</i><b>김하경 <span>SK슈가글라이더즈</span> · 전지연 <span>삼척시청</span> · 차서연 <span>인천광역시청</span></b></li>
+        <li><i>피봇</i><b>강은혜 <span>SK슈가글라이더즈</span> · 김보은 <span>삼척시청</span> · 김소라 <span>경남개발공사</span></b></li>
+        <li><i>수비 전문</i><b>한미슬 <span>SK슈가글라이더즈</span></b></li>
+      </ul>
+    </div>
+
+    <div class="squad">
+      <h3>남자 <em>23명</em></h3>
+      <p class="cap">골키퍼 4명, 라이트백 4명으로 두껍게 뽑았다</p>
+      <ul>
+        <li><i>골키퍼</i><b>박재용 <span>하남시청</span> · 이창우 <span>SK호크스</span> · 김동욱 <span>두산</span> · 이창우 <span>인천도시공사</span></b></li>
+        <li><i>센터백</i><b>이요셉 <span>인천도시공사</span> · 김진호 <span>SK호크스</span> · 육태경 <span>충남도청</span></b></li>
+        <li><i>레프트백</i><b>박광순 <span>SK호크스</span> · 김락찬 <span>인천도시공사</span> · 이성민 <span>두산</span></b></li>
+        <li><i>라이트백</i><b>김연빈 <span>두산</span> · 김진영 <span>인천도시공사</span> · 김태관 <span>충남도청</span> · 유명한 <span>충남도청</span></b></li>
+        <li><i>레프트윙</i><b>김기민 <span>SK호크스</span> · 전진수 <span>인천도시공사</span></b></li>
+        <li><i>라이트윙</i><b>하민호 <span>SK호크스</span> · 원민준 <span>충남도청</span> · 박시우 <span>SK호크스</span></b></li>
+        <li><i>피봇</i><b>박세웅 <span>SK호크스</span> · 김태웅 <span>두산</span> · 진유성 <span>상무피닉스</span> · 연민모 <span>하남시청</span></b></li>
+      </ul>
+    </div>
+  </div>
+  <p class="tblnote">남자 골키퍼에는 동명이인 이창우(SK호크스·인천도시공사) 두 명이 나란히 이름을 올렸다. 여자 대표팀에는 류은희·강은혜·김보은·김민서·박조은 등 2022 항저우 은메달 멤버가 여럿 남아 있다.</p>
+
+  <h2 class="sub"><small>Form Guide</small>최근 성적</h2>
+
+  <div class="rec">
+    <div class="yr">2022<i>항저우 AG</i></div>
+    <div>
+      <div class="chips"><span class="chip s">여자 은메달</span><span class="chip down">남자 무관</span></div>
+      <h3>여자는 결승에서 일본에, 남자는 시상대 밖으로</h3>
+      <p>여자부 결승 상대는 일본이었고 한국이 은메달, 중국이 동메달을 가져갔다. 남자부 시상대는 카타르·바레인·쿠웨이트 세 나라가 채웠고 한국은 메달 없이 대회를 마쳤다.</p>
     </div>
   </div>
 
+  <div class="rec">
+    <div class="yr">2024<i>여자 아시아선수권</i></div>
+    <div>
+      <div class="chips"><span class="chip s">2위</span></div>
+      <h3>다시 일본 다음</h3>
+      <p>일본이 우승하고 한국이 준우승, 카자흐스탄이 3위에 올랐다. 이란 4위, 중국 5위, 인도 6위, 홍콩 7위 순이었다. 이 순위가 그대로 이번 아시안게임 여자부 시드가 됐다.</p>
+    </div>
+  </div>
+
+  <div class="rec">
+    <div class="yr">2025<i>여자 세계선수권</i></div>
+    <div>
+      <div class="chips"><span class="chip down">한국 23위 · 5전 전패</span><span class="chip">일본 13위</span></div>
+      <h3>일본과의 격차가 세계 무대에서 드러났다</h3>
+      <p>한국은 다섯 경기를 모두 지고 122득점 164실점으로 23위에 머물렀다. 같은 대회에서 일본은 2승 1무 2패로 13위에 올랐다. 아시아에서 한 골 차로 갈리던 두 팀의 차이가 세계 무대에서는 열 계단으로 벌어졌다. 우승은 노르웨이, 준우승은 독일이었다.</p>
+    </div>
+  </div>
+
+  <div class="rec">
+    <div class="yr">2026<i>남자 아시아선수권</i></div>
+    <div>
+      <div class="chips"><span class="chip down">5위 · 세계선수권 진출 무산</span></div>
+      <h3>4승 1무 1패를 하고도 5위</h3>
+      <p>한국은 6경기에서 4승 1무 1패, 178득점 170실점으로 승점 9를 쌓았지만 최종 5위에 그쳤다. 2027 세계선수권 출전권은 상위 네 팀인 바레인·카타르·쿠웨이트·일본에 돌아갔다. 성적 자체는 나쁘지 않았으나 상위권과의 승부처에서 한 걸음이 모자랐다.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <h3>관전 포인트</h3>
+    <p><b>여자부는 사실상 한일전 하나다.</b> 7개국 단일 조여서 한국과 일본은 조별리그에서 반드시 만나고, 순조롭게 간다면 27일 결승에서 다시 만난다. 항저우 결승, 2024 아시아선수권 결승에 이어 세 번째 결승 대결이 성사될 수 있다.</p>
+    <p><b>남자부는 조별리그가 최대 고비다.</b> B조에 아시아 1위 바레인과 3위 쿠웨이트가 함께 있다. A조가 2·4·9·10위로 구성된 것과 비교하면 대진운이 나쁘다. 조 2위 안에 들어야 메달 경쟁이 시작된다.</p>
+    <p><b>일본이 두 종목 모두 변수다.</b> 여자는 세계선수권 13위로 아시아를 넘어선 전력을 증명했고, 남자는 아시아 4위로 2027 세계선수권 티켓을 따내며 한국을 제쳤다. 개최국 이점까지 더해지는 만큼, 이번 대회 성적표는 한일 비교로 읽힐 가능성이 크다.</p>
+  </div>
+
+    </section>
+
+    <section class="panel panel-fh">
+  <div class="facts">
+    <div class="fact"><span>남자 경기</span><b>9월 18일 ~ 10월 3일</b></div>
+    <div class="fact"><span>여자 경기</span><b>9월 18일 ~ 10월 2일</b></div>
+    <div class="fact"><span>FIH 세계랭킹</span><b>남자 23위 · 여자 17위</b></div>
+    <div class="fact"><span>2022 항저우</span><b>남자 동메달 · 여자 은메달</b></div>
+  </div>
+
+  <section class="body">
+    <p>필드하키는 골키퍼를 포함한 11명이 인조잔디 위에서 스틱으로 공을 다뤄 골문을 여는 종목이다. 15분씩 4쿼터, 총 60분을 뛴다. 골은 골대 앞 반원형 슈팅 서클 안에서 때린 슛만 인정되기 때문에, 서클 안으로 공을 밀어 넣는 과정 자체가 경기의 핵심이 된다. 수비가 서클 안에서 반칙하면 주어지는 페널티 코너가 가장 확실한 득점 기회다.</p>
+    <p>올림픽에서는 1908년 런던 대회에 남자부가 처음 도입됐고, 1924년 파리 대회에서 잠시 빠졌다가 1928년 암스테르담부터 다시 자리를 잡았다. 여자부는 1980년 모스크바 대회부터다. 아시안게임에서는 1958년 도쿄 대회에 남자부가, 1982년 뉴델리 대회에 여자부가 도입됐다. 종목을 관장하는 국제하키연맹(FIH)은 1924년에 설립됐고 1988년 서울 올림픽까지는 올림픽 하키 대회를 직접 주최했다.</p>
+  </section>
+
+  <h2 class="sub"><small>Korea's Arc</small>한국 하키가 지나온 길</h2>
+  <p class="lede">한국 하키는 올림픽 은메달만 세 개를 가진 종목이다. 그 성과가 모두 1980~2000년대에 몰려 있다는 것이 지금의 문제다.</p>
+  <div class="cardgrid">
+    <div class="disc">
+      <h3>남자</h3>
+      <span class="en">Men</span>
+      <p>전성기는 2000년대 초반이었다. 2000 시드니 올림픽 은메달, 2002·2006 월드컵 연속 4위. 아시안게임에서는 1986·1994·2002·2006년 네 번 우승했다. 그러나 2010년대 들어 국가 주도형 비인기 구기 종목의 한계가 드러나며 급격히 쇠퇴했고, 올림픽 출전권마저 잃었다. 이후 아시안게임 성적은 동메달 두 개가 전부다.</p>
+    </div>
+    <div class="disc">
+      <h3>여자</h3>
+      <span class="en">Women</span>
+      <p>1988 서울과 1996 애틀랜타 올림픽에서 은메달을 따냈고 1990년 월드컵에서는 동메달을 기록했다. 아시안게임에서는 1986년부터 1998년까지 4연패를 이뤘고 2014 인천 대회에서도 우승했다. 다만 2016 리우 올림픽을 끝으로 올림픽 무대에 서지 못하고 있으며, 지금은 세계 10위권 초반대의 팀으로 분류된다.</p>
+    </div>
+  </div>
+
+  <h2 class="sub"><small>World Ranking</small>세계랭킹과 시즌 현황</h2>
+  <p class="lede">FIH는 프로리그(1부)와 네이션스컵(2부) 구조로 국가대항 리그를 운영한다. 아시아 주요국의 현재 위치는 아래와 같다.</p>
+
+  <p class="tblcap">남자</p>
+  <div class="rankwrap">
+    <table class="rk lg">
+      <tr><th>세계랭킹</th><th>국가</th><th>2025 아시안컵</th><th>월드컵</th><th>25–26 시즌</th></tr>
+      <tr><td class="n">8</td><td class="c">인도</td><td class="memo">우승</td><td class="yes">진출</td><td class="memo">프로리그 8위</td></tr>
+      <tr><td class="n">12</td><td class="c">파키스탄</td><td class="memo">—</td><td class="yes">진출</td><td class="memo alarm">프로리그 9위 · 네이션스컵 강등</td></tr>
+      <tr><td class="n">14</td><td class="c">말레이시아</td><td class="memo">3위</td><td class="yes">진출</td><td class="memo">네이션스컵 5위</td></tr>
+      <tr><td class="n">15</td><td class="c">일본</td><td class="memo">5위</td><td class="yes">진출</td><td class="memo">네이션스컵 4위</td></tr>
+      <tr><td class="n">20</td><td class="c">중국</td><td class="memo">4위</td><td class="no">미진출</td><td class="memo">네이션스컵2 · 시즌 취소</td></tr>
+      <tr class="kor"><td class="n">23</td><td class="c">한국</td><td class="memo">2위</td><td class="no">미진출</td><td class="memo alarm">네이션스컵 9위 · 최하위</td></tr>
+      <tr><td class="n">25</td><td class="c">오만</td><td class="memo">—</td><td class="no">미진출</td><td class="memo">네이션스컵2</td></tr>
+    </table>
+  </div>
+  <p class="tblnote">한국은 2025 아시안컵 준우승국이면서 세계랭킹은 아시아 주요국 중 가장 낮다. 아시안컵 3위 말레이시아(14위), 5위 일본(15위)보다도 여덟 계단 이상 아래다. 대륙 대회 한 번의 성적과 축적된 랭킹이 어긋나 있다는 뜻이다.</p>
+
+  <p class="tblcap">여자</p>
+  <div class="rankwrap">
+    <table class="rk lg">
+      <tr><th>세계랭킹</th><th>국가</th><th>2025 아시안컵</th><th>월드컵</th><th>25–26 시즌</th></tr>
+      <tr><td class="n">4</td><td class="c">중국</td><td class="memo">우승</td><td class="yes">진출</td><td class="memo">프로리그 4위</td></tr>
+      <tr><td class="n">9</td><td class="c">인도</td><td class="memo">2위</td><td class="yes">진출</td><td class="memo up">네이션스컵 1위 · 프로리그 승격</td></tr>
+      <tr><td class="n">15</td><td class="c">일본</td><td class="memo">3위</td><td class="yes">진출</td><td class="memo">네이션스컵 6위</td></tr>
+      <tr class="kor"><td class="n">17</td><td class="c">한국</td><td class="memo">4위</td><td class="no">미진출</td><td class="memo">네이션스컵 5위</td></tr>
+    </table>
+  </div>
+  <p class="tblnote">여자부는 중국이 세계 4위로 아시아를 이끌고, 인도가 네이션스컵 우승으로 프로리그 승격을 확정했다. 한국은 아시아 4강 중 유일하게 월드컵에 나가지 못한다.<br><b>남녀 모두 한국만 월드컵 무대가 없다.</b> 아시안게임이 국제 무대 공백을 메울 사실상 유일한 대회인 셈이다.</p>
+
+  <h2 class="sub"><small>Entry</small>출전 쿼터</h2>
+  <p class="lede">아시안게임 하키는 직전 대회 상위 6개국이 자동 출전하고, 나머지는 대륙 예선을 거쳐 채워진다. 남자는 예선으로 6개국, 여자는 4개국이 추가로 합류하는 구조다.</p>
+
+  <h2 class="sub"><small>Groups</small>조 편성</h2>
+  <p class="lede">각 조 상위 2팀만 준결승에 오른다. 표의 순서는 시드 배정 순이다.</p>
+
+  <p class="tblcap">남자</p>
+  <div class="rankwrap">
+    <table class="rk grp">
+      <tr><th>시드</th><th>A조</th><th>B조</th><th>조별리그 이후</th></tr>
+      <tr><td class="n">1</td><td class="c">인도 <em>세계 8위</em></td><td class="c">파키스탄 <em>12위</em></td><td class="memo">1·2위 → 준결승</td></tr>
+      <tr><td class="n">2</td><td class="c">일본 <em>15위</em></td><td class="c">말레이시아 <em>14위</em></td><td class="memo">1·2위 → 준결승</td></tr>
+      <tr class="kor"><td class="n">3</td><td class="c">한국 <em>23위</em></td><td class="c">중국 <em>20위</em></td><td class="memo">3·4위 → 5위 결정전</td></tr>
+      <tr><td class="n">4</td><td class="c">방글라데시</td><td class="c">오만 <em>25위</em></td><td class="memo">3·4위 → 5위 결정전</td></tr>
+      <tr><td class="n">5</td><td class="c">스리랑카</td><td class="c">우즈베키스탄</td><td class="memo">5위 → 9위 결정전</td></tr>
+      <tr><td class="n">6</td><td class="c">인도네시아</td><td class="c">태국</td><td class="memo">6위 → 11위 결정전</td></tr>
+    </table>
+  </div>
+  <p class="tblnote">A조에 항저우 금메달 인도, 은메달 일본, 동메달 한국이 모두 들어갔다. 세 나라 중 한 팀은 조별리그에서 탈락한다. 세계랭킹으로 보면 인도 8위, 일본 15위, 한국 23위 순이다.</p>
+
+  <p class="tblcap">여자</p>
+  <div class="rankwrap">
+    <table class="rk grp">
+      <tr><th>시드</th><th>A조</th><th>B조</th><th>조별리그 이후</th></tr>
+      <tr><td class="n">1</td><td class="c">중국 <em>세계 4위</em></td><td class="c">인도 <em>9위</em></td><td class="memo">1·2위 → 준결승</td></tr>
+      <tr class="kor"><td class="n">2</td><td class="c">한국 <em>17위</em></td><td class="c">일본 <em>15위</em></td><td class="memo">1·2위 → 준결승</td></tr>
+      <tr><td class="n">3</td><td class="c">말레이시아</td><td class="c">태국</td><td class="memo">3·4위 → 5위 결정전</td></tr>
+      <tr><td class="n">4</td><td class="c">카자흐스탄</td><td class="c">싱가포르</td><td class="memo">3·4위 → 5위 결정전</td></tr>
+      <tr><td class="n">5</td><td class="c">대만</td><td class="c">인도네시아</td><td class="memo">5위 → 9위 결정전</td></tr>
+      <tr><td class="n">6</td><td class="c">방글라데시</td><td class="c">우즈베키스탄</td><td class="memo">6위 → 11위 결정전</td></tr>
+    </table>
+  </div>
+  <p class="tblnote">여자부는 항저우 금메달 중국과 은메달 한국이 A조에, 동메달 인도와 일본이 B조에 묶였다. 아시아 4강이 두 조에 정확히 갈렸다.</p>
+
+  <h2 class="sub"><small>Korea Fixtures</small>한국 조별리그 일정</h2>
+
+  <p class="tblcap">남자 · A조</p>
+  <div class="rankwrap">
+    <table class="rk fix">
+      <tr><th>날짜</th><th>시간</th><th>상대</th><th>비고</th></tr>
+      <tr><td class="c">9월 18일</td><td class="p">11:00</td><td class="c">방글라데시</td><td class="memo">대회 개막전</td></tr>
+      <tr><td class="c">9월 22일</td><td class="p">11:00</td><td class="c">인도네시아</td><td class="memo"></td></tr>
+      <tr class="big"><td class="c">9월 24일</td><td class="p">15:00</td><td class="c">인도</td><td class="memo">세계 8위 · 항저우 금메달</td></tr>
+      <tr><td class="c">9월 26일</td><td class="p">15:00</td><td class="c">스리랑카</td><td class="memo"></td></tr>
+      <tr class="big"><td class="c">9월 28일</td><td class="p">17:00</td><td class="c">일본</td><td class="memo">세계 15위 · 조별리그 최종전</td></tr>
+    </table>
+  </div>
+  <p class="tblnote">인도전과 일본전이 나흘 간격으로 배치됐고 일본전이 조별리그 마지막 경기다. 랭킹상 두 경기 모두 열세여서, 준결승 진출 여부가 사실상 이 이틀에 달렸다.</p>
+
+  <p class="tblcap">여자 · A조</p>
+  <div class="rankwrap">
+    <table class="rk fix">
+      <tr><th>날짜</th><th>시간</th><th>상대</th><th>비고</th></tr>
+      <tr><td class="c">9월 18일</td><td class="p">13:00</td><td class="c">대만</td><td class="memo"></td></tr>
+      <tr><td class="c">9월 21일</td><td class="p">09:00</td><td class="c">카자흐스탄</td><td class="memo"></td></tr>
+      <tr><td class="c">9월 23일</td><td class="p">09:00</td><td class="c">방글라데시</td><td class="memo"></td></tr>
+      <tr class="big"><td class="c">9월 25일</td><td class="p">13:00</td><td class="c">중국</td><td class="memo">세계 4위 · 항저우 결승 상대</td></tr>
+      <tr><td class="c">9월 27일</td><td class="p">15:00</td><td class="c">말레이시아</td><td class="memo">조별리그 최종전</td></tr>
+    </table>
+  </div>
+  <p class="tblnote">9월 25일 중국전이 조 1위를 가르는 경기다. 다만 세계랭킹은 중국 4위, 한국 17위로 격차가 크다. 현실적인 목표는 조 2위 확보로 준결승에 오르는 것이다.</p>
+
+  <h2 class="sub"><small>Schedule</small>대회 전체 일정</h2>
+  <div class="sched">
+    <div class="day"><span class="d">9월 18 ~ 28일</span><span class="e"><b>남자 조별리그</b> <span style="opacity:.7">18 · 20 · 22 · 24 · 26 · 28일</span></span></div>
+    <div class="day"><span class="d">9월 18 ~ 27일</span><span class="e"><b>여자 조별리그</b> <span style="opacity:.7">18 · 20 · 21 · 23 · 25 · 27일</span></span></div>
+    <div class="day"><span class="d">9월 29일</span><span class="e">여자 준결승</span></div>
+    <div class="day"><span class="d">9월 30일</span><span class="e">남자 준결승</span></div>
+    <div class="day goal"><span class="d">10월 2일</span><span class="e"><b>여자 3·4위전 및 결승</b></span></div>
+    <div class="day goal"><span class="d">10월 3일</span><span class="e"><b>남자 3·4위전 및 결승</b></span></div>
+  </div>
+
+  <h2 class="sub"><small>Form Guide</small>지난 대회</h2>
+
+  <div class="rec">
+    <div class="yr">2022<i>항저우 AG</i></div>
+    <div>
+      <div class="chips"><span class="chip b">남자 동메달</span><span class="chip s">여자 은메달</span></div>
+      <h3>남자 인도, 여자 중국</h3>
+      <p>남자부는 인도가 우승하고 일본이 준우승, 한국이 3위에 올랐다. 여자부는 중국이 금메달, 한국이 은메달, 인도가 동메달을 가져갔다. 이번 대회에서 남자 시상대 세 나라는 A조에 함께 묶였고, 여자는 중국과 한국이 A조, 인도와 일본이 B조로 갈렸다.</p>
+    </div>
+  </div>
+
+  <div class="rec">
+    <div class="yr">2024<i>파리 올림픽</i></div>
+    <div>
+      <div class="chips"><span class="chip down">한국 남녀 모두 미출전</span></div>
+      <h3>아시아를 대표한 것은 인도와 중국이었다</h3>
+      <p>남자부에서는 아시안게임 우승국 인도가 아시아 몫으로 출전해 3위에 올랐다. 여자부에서는 아시안게임 우승국 중국과 예선을 통과한 일본이 나섰고, 중국이 준우승을 차지했다. 한국은 남녀 모두 출전권을 얻지 못했다. 남자는 2012 런던 이후, 여자는 2016 리우 이후 올림픽에 나가지 못하고 있다.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <h3>관전 포인트</h3>
+    <p><b>남자 A조는 준결승이 조별리그에서 먼저 열린다.</b> 항저우 시상대에 오른 인도·일본·한국이 한 조인데 티켓은 두 장이다. 세계랭킹으로는 인도 8위, 일본 15위, 한국 23위 순이라 한국이 가장 불리하다. 9월 24일 인도전과 28일 일본전이 대회 성적표 그 자체가 된다.</p>
+    <p><b>랭킹과 아시안컵 성적이 어긋나 있다.</b> 남자 대표팀은 2025 아시안컵 준우승을 하고도 세계 23위이고, 같은 시즌 FIH 네이션스컵에서는 아홉 팀 중 꼴찌였다. 아시안컵에서 보여준 모습이 진짜인지, 네이션스컵 최하위가 실체인지를 가리는 대회이기도 하다.</p>
+    <p><b>여자는 조 2위가 현실적인 목표다.</b> 9월 25일 중국전에서 이기면 조 1위지만 세계 4위와 17위의 격차는 크다. 조 2위로 준결승에 올라 B조 1위(인도 또는 일본)를 만나는 그림이 유력하다.</p>
+    <p><b>이 대회가 사실상 유일한 국제 무대다.</b> 아시아 주요국 가운데 남녀 모두 월드컵에 나가지 못하는 나라는 한국뿐이다. 올림픽 출전도 남자는 2012년, 여자는 2016년이 마지막이었다. 아시안게임 성적이 곧 한국 하키의 국제 좌표가 된다.</p>
+  </div>
+    </section>
+  </div>
 
   <footer class="pagefoot">
     <span>2026 아이치·나고야 아시안게임 종목 안내</span>
