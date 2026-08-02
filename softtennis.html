@@ -11,6 +11,7 @@
   :root{
     --ink:#0E1A2B; --ink-2:#152540; --gold:#C9A24B; --gold-soft:#E4CD8C;
     --sun:#D8482F; --paper:#F3EFE4; --paper-dim:#B9C2CF; --line:rgba(201,162,75,0.28);
+    --medal-gold:#D8B44A; --medal-silver:#C8CDD6; --medal-bronze:#C97B4A;
   }
   *{box-sizing:border-box;}
   body{
@@ -39,12 +40,44 @@
   .fact b{font-family:'Noto Serif KR',serif;font-size:15px;color:var(--paper);font-weight:700;line-height:1.4;}
   section.body{margin-top:8px;}
   section.body p{font-size:15.5px;line-height:1.85;color:var(--paper-dim);margin:0 0 16px;}
-  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:40px 0 18px;font-weight:700;}
+  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:48px 0 6px;font-weight:700;}
+  p.sub-note{font-size:13px;color:var(--paper-dim);margin:0 0 20px;line-height:1.6;}
   .cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;}
   .disc{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:20px;}
   .disc h3{font-family:'Noto Serif KR',serif;font-size:17px;margin:0 0 4px;color:var(--paper);}
   .disc .en{font-size:11.5px;color:var(--gold-soft);letter-spacing:0.04em;margin-bottom:10px;display:block;}
   .disc p{font-size:14px;line-height:1.7;color:var(--paper-dim);margin:0;}
+
+  /* Roster */
+  .roster-team{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:18px 20px;}
+  .roster-team h4{font-family:'Noto Serif KR',serif;font-size:13px;color:var(--gold-soft);margin:0 0 12px;letter-spacing:.06em;text-transform:uppercase;}
+  .roster-chips{display:flex;flex-wrap:wrap;gap:8px;}
+  .roster-chips span{font-size:13px;font-weight:600;color:var(--paper);background:rgba(243,239,228,0.05);border:1px solid rgba(243,239,228,0.14);padding:7px 13px;border-radius:999px;}
+
+  /* Athlete spotlight (large) */
+  .spotlight-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;}
+  @media (max-width:640px){.spotlight-grid{grid-template-columns:1fr;}}
+  .athlete-spotlight{background:linear-gradient(155deg, rgba(21,37,64,0.9), rgba(14,26,43,0.6));border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:6px;padding:22px 24px;}
+  .athlete-spotlight .as-tag{font-size:12px;color:var(--gold-soft);letter-spacing:.06em;text-transform:uppercase;font-weight:700;margin:0 0 6px;display:block;}
+  .athlete-spotlight h3{font-family:'Noto Serif KR',serif;font-size:26px;font-weight:900;color:var(--gold);margin:0 0 12px;}
+  .athlete-spotlight p{font-size:14.5px;line-height:1.85;color:var(--paper);margin:0 0 10px;}
+  .athlete-spotlight p:last-child{margin-bottom:0;}
+
+  /* Medal history */
+  .medal-group-label{font-family:'Noto Serif KR',serif;font-size:14px;font-weight:700;color:var(--paper);margin:20px 0 8px;}
+  .medal-group-label:first-child{margin-top:0;}
+  .medal-compact{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:4px 20px;}
+  .mc-row{padding:13px 0;border-top:1px solid rgba(243,239,228,0.08);display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;}
+  .mc-row:first-child{border-top:none;}
+  .mc-event{flex:none;width:96px;font-family:'Noto Serif KR',serif;font-size:12.5px;font-weight:700;color:var(--gold-soft);}
+  .mc-meds{flex:1;display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--paper-dim);min-width:200px;}
+  .mc-item{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;}
+  .mc-dot{width:8px;height:8px;border-radius:50%;flex:none;display:inline-block;}
+  .mc-dot.gold{background:var(--medal-gold);}
+  .mc-dot.silver{background:var(--medal-silver);}
+  .mc-dot.bronze{background:var(--medal-bronze);}
+  .mc-item.kr{color:var(--gold-soft);font-weight:700;}
+
   footer.pagefoot{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
   footer.pagefoot a{color:var(--gold-soft);text-decoration:none;}
   @media (max-width:520px){.wrap{padding:28px 18px 70px;}}
@@ -89,6 +122,64 @@
     </div>
   </div>
 
+  <!-- 한국 국가대표 명단 -->
+  <h2 class="sub">2026 한국 소프트테니스 국가대표 명단</h2>
+  <p class="sub-note">2026 아이치·나고야 아시안게임 소프트테니스(정구) 대표팀, 총 10명.</p>
+  <div class="roster-team">
+    <h4>소프트테니스 대표팀</h4>
+    <div class="roster-chips">
+      <span>김연화</span><span>김진웅</span><span>김한설</span><span>김현수</span><span>박재규</span>
+      <span>엄예진</span><span>이수진</span><span>이하늘</span><span>이현권</span><span>황정미</span>
+    </div>
+  </div>
+
+  <!-- 주목할 선수 -->
+  <div class="spotlight-grid">
+    <div class="athlete-spotlight">
+      <span class="as-tag">Men's Singles · 전설의 귀환</span>
+      <h3>김진웅</h3>
+      <p>소프트테니스 최초로 세계선수권 단식 2연패(2015 뉴델리, 2019 타이저우)를 달성한 한국 정구의 살아있는 전설. 2018 자카르타-팔렘방 아시안게임에서는 병역 문제가 걸린 절박한 상황에서 극적으로 단식 금메달을 따내며 화제를 모았고, 이어 남자단체전까지 2관왕에 올랐다.</p>
+      <p>2024 안성 세계선수권을 끝으로 대표팀을 떠났다가 2년 만에 복귀. 2026년 국가대표 선발전 남자 단식 결승에서 김우식(서울시청)을 4-2, 4-0으로 꺾고 태극마크를 다시 달며 아이치·나고야에서 명예 회복을 노린다.</p>
+    </div>
+    <div class="athlete-spotlight">
+      <span class="as-tag">Women's Singles · 19세 신예</span>
+      <h3>황정미</h3>
+      <p>2026 국가대표 선발전 여자 단식 1위에 오른 19세 왼손 파워히터. 까다로운 커팅서브와 쇼트 활용까지 겸비한 다재다능한 스타일로 평가받는다.</p>
+      <p>2년 전 세계주니어대회 18세 이하 결승에서 일본의 세계 최강 템마 레나에게 1-4로 패한 아픔이 있다. "템마 레나를 잡고 아시안게임 금메달을 따겠다"는 각오로 이번 대회를 준비하고 있다.</p>
+    </div>
+  </div>
+
+  <!-- 역대 시상대 -->
+  <h2 class="sub">역대 시상대</h2>
+  <p class="sub-note">2022 항저우 아시안게임 소프트테니스 메달 결과.</p>
+  <div class="medal-compact">
+    <div class="mc-row"><div class="mc-event">남자 단식</div><div class="mc-meds">
+      <span class="mc-item"><i class="mc-dot gold"></i>일본 우에마쓰 도시키</span>
+      <span class="mc-item"><i class="mc-dot silver"></i>차이니스 타이베이 장위성</span>
+      <span class="mc-item kr"><i class="mc-dot bronze"></i>한국 윤형욱 · 차이니스 타이베이 천위쉰</span>
+    </div></div>
+    <div class="mc-row"><div class="mc-event">남자 단체전</div><div class="mc-meds">
+      <span class="mc-item"><i class="mc-dot gold"></i>일본</span>
+      <span class="mc-item"><i class="mc-dot silver"></i>차이니스 타이베이</span>
+      <span class="mc-item kr"><i class="mc-dot bronze"></i>인도네시아 · 한국 (김병국·김현수·김태민·이현수·윤형욱)</span>
+    </div></div>
+    <div class="mc-row"><div class="mc-event">여자 단식</div><div class="mc-meds">
+      <span class="mc-item kr"><i class="mc-dot gold"></i>한국 문혜경</span>
+      <span class="mc-item"><i class="mc-dot silver"></i>일본 다카하시 노아</span>
+      <span class="mc-item"><i class="mc-dot bronze"></i>중국 리덩린 · 마웨</span>
+    </div></div>
+    <div class="mc-row"><div class="mc-event">여자 단체전</div><div class="mc-meds">
+      <span class="mc-item"><i class="mc-dot gold"></i>일본</span>
+      <span class="mc-item"><i class="mc-dot silver"></i>차이니스 타이베이</span>
+      <span class="mc-item kr"><i class="mc-dot bronze"></i>한국 (지다영·고은지·이민선·임진아·문혜경) · 중국</span>
+    </div></div>
+    <div class="mc-row"><div class="mc-event">혼합 복식</div><div class="mc-meds">
+      <span class="mc-item"><i class="mc-dot gold"></i>일본 우에마쓰 도시키·다카하시 노아</span>
+      <span class="mc-item"><i class="mc-dot silver"></i>일본 우치다 리쿠·시무타 도모미</span>
+      <span class="mc-item kr"><i class="mc-dot bronze"></i>차이니스 타이베이 · 한국 (김현수·문혜경)</span>
+    </div></div>
+  </div>
+  <p class="sub-note" style="margin-top:8px;">문혜경은 2022 대회 여자 단식 금메달리스트로, 여자 단체전·혼합복식에서도 동메달을 보태며 대회 최다 메달을 획득했다.</p>
 
   <footer class="pagefoot">
     <span>2026 아이치·나고야 아시안게임 종목 안내</span>

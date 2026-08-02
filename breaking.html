@@ -11,6 +11,7 @@
   :root{
     --ink:#0E1A2B; --ink-2:#152540; --gold:#C9A24B; --gold-soft:#E4CD8C;
     --sun:#D8482F; --paper:#F3EFE4; --paper-dim:#B9C2CF; --line:rgba(201,162,75,0.28);
+    --medal-gold:#D8B44A; --medal-silver:#C8CDD6; --medal-bronze:#C97B4A;
   }
   *{box-sizing:border-box;}
   body{
@@ -39,12 +40,44 @@
   .fact b{font-family:'Noto Serif KR',serif;font-size:15px;color:var(--paper);font-weight:700;line-height:1.4;}
   section.body{margin-top:8px;}
   section.body p{font-size:15.5px;line-height:1.85;color:var(--paper-dim);margin:0 0 16px;}
-  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:40px 0 18px;font-weight:700;}
+  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:48px 0 6px;font-weight:700;}
+  p.sub-note{font-size:13px;color:var(--paper-dim);margin:0 0 20px;line-height:1.6;}
   .cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;}
   .disc{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:20px;}
   .disc h3{font-family:'Noto Serif KR',serif;font-size:17px;margin:0 0 4px;color:var(--paper);}
   .disc .en{font-size:11.5px;color:var(--gold-soft);letter-spacing:0.04em;margin-bottom:10px;display:block;}
   .disc p{font-size:14px;line-height:1.7;color:var(--paper-dim);margin:0;}
+
+  .medal-group-label{font-family:'Noto Serif KR',serif;font-size:14px;font-weight:700;color:var(--paper);margin:20px 0 8px;}
+  .medal-group-label:first-child{margin-top:0;}
+  .medal-compact{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:4px 20px;}
+  .mc-row{padding:13px 0;border-top:1px solid rgba(243,239,228,0.08);display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;}
+  .mc-row:first-child{border-top:none;}
+  .mc-event{flex:none;width:70px;font-family:'Noto Serif KR',serif;font-size:12.5px;font-weight:700;color:var(--gold-soft);}
+  .mc-meds{flex:1;display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--paper-dim);min-width:200px;}
+  .mc-item{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;}
+  .mc-dot{width:8px;height:8px;border-radius:50%;flex:none;display:inline-block;}
+  .mc-dot.gold{background:var(--medal-gold);}
+  .mc-dot.silver{background:var(--medal-silver);}
+  .mc-dot.bronze{background:var(--medal-bronze);}
+  .mc-item.kr{color:var(--gold-soft);font-weight:700;}
+
+  /* BC One current-form cards */
+  .latest-banner{display:flex;align-items:center;gap:10px;background:linear-gradient(90deg, rgba(216,72,47,0.18), transparent);border:1px solid var(--sun);border-radius:6px;padding:12px 18px;margin-bottom:16px;}
+  .latest-banner b{color:var(--sun);font-size:12px;letter-spacing:.08em;text-transform:uppercase;}
+  .latest-banner span{font-size:13px;color:var(--paper-dim);}
+  .bc-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  @media (max-width:640px){.bc-grid{grid-template-columns:1fr;}}
+  .bc-card{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:20px;}
+  .bc-card h4{font-family:'Noto Serif KR',serif;font-size:15px;margin:0 0 12px;color:var(--paper);}
+  .bc-row{display:flex;justify-content:space-between;align-items:baseline;padding:8px 0;border-top:1px solid rgba(243,239,228,0.08);font-size:13px;}
+  .bc-row:first-of-type{border-top:none;}
+  .bc-row .bc-rank{color:var(--gold-soft);font-weight:700;font-size:11.5px;letter-spacing:.03em;}
+  .bc-row .bc-name{color:var(--paper);font-weight:600;}
+  .bc-row .bc-crew{color:var(--paper-dim);font-size:11.5px;display:block;}
+  .bc-kr-note{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);line-height:1.7;}
+  .bc-kr-note b{color:var(--gold-soft);}
+
   footer.pagefoot{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
   footer.pagefoot a{color:var(--gold-soft);text-decoration:none;}
   @media (max-width:520px){.wrap{padding:28px 18px 70px;}}
@@ -75,7 +108,40 @@
     <p>기술적 완성도뿐 아니라 음악 해석력과 독창성까지 종합적으로 평가받으며, 파리 2024 올림픽 정식종목으로 채택되며 국제적 위상이 크게 높아졌다.</p>
   </section>
 
+  <!-- 역대 시상대 -->
+  <h2 class="sub">역대 시상대</h2>
+  <p class="sub-note">2022 항저우 아시안게임 브레이킹 메달 결과. 브레이킹이 종합대회에 처음 포함된 대회다.</p>
+  <div class="medal-compact">
+    <div class="mc-row"><div class="mc-event">B-Boys</div><div class="mc-meds">
+      <span class="mc-item"><i class="mc-dot gold"></i>일본 시게유키 나카라이</span>
+      <span class="mc-item kr"><i class="mc-dot silver"></i>한국 김홍열</span>
+      <span class="mc-item"><i class="mc-dot bronze"></i>중국 치샹위</span>
+    </div></div>
+    <div class="mc-row"><div class="mc-event">B-Girls</div><div class="mc-meds">
+      <span class="mc-item"><i class="mc-dot gold"></i>중국 류칭이</span>
+      <span class="mc-item"><i class="mc-dot silver"></i>일본 유아사 아미</span>
+      <span class="mc-item"><i class="mc-dot bronze"></i>일본 후쿠시마 아유미</span>
+    </div></div>
+  </div>
 
+  <!-- 2025 레드불 BC One -->
+  <h2 class="sub">2025 레드불 BC One 월드파이널</h2>
+  <div class="latest-banner"><b>Latest</b><span>브레이킹 최고 권위의 개인전으로 꼽히는 대회로, 현재 세계 최정상급 기량을 가늠할 수 있는 지표다.</span></div>
+  <p class="sub-note">아시안게임 국가 대항전과는 별개로 열리는 개인 초청전이지만, 한국 선수들의 세계 무대 성적을 함께 확인할 수 있다.</p>
+  <div class="bc-grid">
+    <div class="bc-card">
+      <h4>B-Boy</h4>
+      <div class="bc-row"><div><span class="bc-rank">우승</span><br><span class="bc-name">Issin</span><span class="bc-crew">Body Carnival · Red Bull BC One All Stars</span></div></div>
+      <div class="bc-row"><div><span class="bc-rank">준우승</span><br><span class="bc-name">Haruto</span><span class="bc-crew">Body Carnival</span></div></div>
+      <div class="bc-kr-note"><b>한국:</b> FE 선수 8강 진출</div>
+    </div>
+    <div class="bc-card">
+      <h4>B-Girl</h4>
+      <div class="bc-row"><div><span class="bc-rank">우승</span><br><span class="bc-name">Riko</span><span class="bc-crew">One Piece Crew</span></div></div>
+      <div class="bc-row"><div><span class="bc-rank">준우승</span><br><span class="bc-name">Nicka</span><span class="bc-crew">Red Bull BC One All Stars</span></div></div>
+      <div class="bc-kr-note"><b>한국:</b> Starry 선수 8강, Fresh Bella 선수 16강 진출</div>
+    </div>
+  </div>
 
   <footer class="pagefoot">
     <span>2026 아이치·나고야 아시안게임 종목 안내</span>
