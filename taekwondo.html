@@ -39,15 +39,76 @@
   .fact b{font-family:'Noto Serif KR',serif;font-size:15px;color:var(--paper);font-weight:700;line-height:1.4;}
   section.body{margin-top:8px;}
   section.body p{font-size:15.5px;line-height:1.85;color:var(--paper-dim);margin:0 0 16px;}
-  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:40px 0 18px;font-weight:700;}
-  .cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;}
+  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:42px 0 18px;font-weight:700;}
+  h2.sub small{display:block;font-family:'Pretendard',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.12em;color:var(--gold-soft);text-transform:uppercase;margin-bottom:7px;}
+  .lede{font-size:15px;line-height:1.8;color:var(--paper-dim);margin:0 0 18px;}
+  .tblcap{font-family:'Noto Serif KR',serif;font-size:14px;color:var(--paper);font-weight:700;margin:28px 0 10px;display:flex;align-items:center;gap:9px;}
+  .tblcap::before{content:"";width:16px;height:1px;background:var(--gold);display:inline-block;}
+  .tblnote{font-size:11.5px;color:var(--paper-dim);opacity:0.78;margin:12px 0 0;line-height:1.7;}
+
+  .cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;}
   .disc{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:20px;}
   .disc h3{font-family:'Noto Serif KR',serif;font-size:17px;margin:0 0 4px;color:var(--paper);}
   .disc .en{font-size:11.5px;color:var(--gold-soft);letter-spacing:0.04em;margin-bottom:10px;display:block;}
-  .disc p{font-size:14px;line-height:1.7;color:var(--paper-dim);margin:0;}
+  .disc p{font-size:13.5px;line-height:1.7;color:var(--paper-dim);margin:0;}
+  .disc.newone{border-color:rgba(216,72,47,0.45);background:rgba(216,72,47,0.07);}
+  .tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:0.05em;color:var(--ink);background:var(--sun);border-radius:3px;padding:2px 6px;margin-top:10px;}
+  .tag.gold{background:var(--gold-soft);}
+
+  /* 표 */
+  .rankwrap{overflow-x:auto;}
+  table.rk{width:100%;border-collapse:collapse;min-width:520px;}
+  table.rk th{font-size:11.5px;font-weight:600;color:var(--gold-soft);text-align:left;padding:0 0 9px;border-bottom:1px solid var(--line);letter-spacing:0.04em;vertical-align:bottom;}
+  table.rk td{padding:11px 0;font-size:13px;line-height:1.65;color:var(--paper-dim);border-bottom:1px dashed rgba(201,162,75,0.16);vertical-align:top;}
+  table.rk th+th,table.rk td+td{padding-left:16px;}
+  table.rk tr:last-child td{border-bottom:0;}
+  table.rk td.wt{width:76px;font-family:'Noto Serif KR',serif;font-weight:700;color:var(--gold);white-space:nowrap;}
+  table.rk td.who{width:104px;color:var(--paper);font-weight:600;}
+  table.rk td.who i{display:block;font-style:normal;font-size:10.5px;font-weight:400;color:var(--gold-soft);margin-top:3px;}
+  table.rk td.out{width:118px;font-size:11.5px;color:#E7856F;}
+  table.rk em{font-style:normal;color:var(--gold-soft);font-weight:600;}
+  table.rk b.kr{color:var(--paper);font-weight:700;}
+  table.rk tr.wide td{}
+  table.rk.big{min-width:700px;}
+
+  /* 명단 */
+  .roster{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;}
+  .squad{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:18px 20px;}
+  .squad h3{font-family:'Noto Serif KR',serif;font-size:15.5px;margin:0 0 4px;color:var(--paper);display:flex;align-items:center;gap:8px;}
+  .squad h3 em{font-style:normal;font-size:10.5px;letter-spacing:0.08em;color:var(--ink);background:var(--gold-soft);border-radius:3px;padding:2px 6px;font-weight:700;}
+  .squad .cap{font-size:11.5px;color:var(--gold-soft);margin:0 0 12px;}
+  .squad ul{list-style:none;margin:0;padding:0;}
+  .squad li{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px dashed var(--line);font-size:13.5px;}
+  .squad li:last-child{border-bottom:0;padding-bottom:0;}
+  .squad li span{color:var(--gold-soft);font-size:11.5px;white-space:nowrap;}
+  .squad li b{color:var(--paper);font-weight:600;}
+  .squad.tbd{border-style:dashed;opacity:0.85;}
+
+  /* 성적 */
+  .rec{display:grid;grid-template-columns:112px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line);}
+  .rec:first-of-type{border-top:1px solid var(--line);}
+  .rec .yr{font-family:'Noto Serif KR',serif;font-size:18px;font-weight:900;color:var(--gold);line-height:1.25;}
+  .rec .yr i{display:block;font-style:normal;font-family:'Pretendard',sans-serif;font-size:11px;font-weight:500;color:var(--paper-dim);margin-top:4px;}
+  .rec h3{font-family:'Noto Serif KR',serif;font-size:16px;margin:0 0 8px;color:var(--paper);font-weight:700;}
+  .rec p{font-size:14px;line-height:1.75;color:var(--paper-dim);margin:0;}
+  .chips{margin:0 0 10px;}
+  .chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;border:1px solid;margin:0 6px 6px 0;}
+  .chip::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;}
+  .chip.g{color:#EBD08F;border-color:rgba(201,162,75,0.45);background:rgba(201,162,75,0.10);}
+  .chip.s{color:#D3DAE4;border-color:rgba(211,218,228,0.26);background:rgba(211,218,228,0.06);}
+  .chip.b{color:#D9A87C;border-color:rgba(217,168,124,0.32);background:rgba(217,168,124,0.08);}
+
+  .note{margin-top:26px;border-left:3px solid var(--sun);background:rgba(216,72,47,0.08);border-radius:0 8px 8px 0;padding:18px 22px;}
+  .note h3{font-family:'Noto Serif KR',serif;font-size:16px;margin:0 0 8px;color:var(--paper);}
+  .note p{font-size:14.5px;line-height:1.8;color:var(--paper-dim);margin:0 0 10px;}
+  .note p:last-child{margin-bottom:0;}
+
   footer.pagefoot{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
   footer.pagefoot a{color:var(--gold-soft);text-decoration:none;}
-  @media (max-width:520px){.wrap{padding:28px 18px 70px;}}
+  @media (max-width:520px){
+    .wrap{padding:28px 18px 70px;}
+    .rec{grid-template-columns:1fr;gap:10px;}
+  }
 </style>
 </head>
 <body>
@@ -61,21 +122,184 @@
     <span class="eyebrow">2026 Aichi · Nagoya · 무도와 격투기</span>
     <h1>태권도</h1>
     <p class="en-title">Taekwondo</p>
-    <p class="tagline">발차기를 중심으로 한 타격기 겨루기(품새) 종목으로, 한국이 종주국인 올림픽 정식 무도.</p>
+    <p class="tagline">종주국이 항저우 종합 1위를 지킨 종목. 다만 이번 대회는 겨루기 체급이 줄고 품새와 버추얼 태권도가 새로 들어와, 판 자체가 다시 짜였다.</p>
   </header>
 
   <div class="facts">
-    <div class="fact"><span>겨루기</span><b>전자호구 판정, 3라운드</b></div>
-    <div class="fact"><span>품새</span><b>정해진 동작 연기, 예술성 평가</b></div>
-    <div class="fact"><span>종주국</span><b>대한민국</b></div>
+    <div class="fact"><span>겨루기</span><b>남녀 각 4체급 (올림픽과 동일)</b></div>
+    <div class="fact"><span>신설</span><b>품새 · 버추얼 태권도</b></div>
+    <div class="fact"><span>폐지</span><b>혼성단체전</b></div>
+    <div class="fact"><span>2022 항저우</span><b>금 5 · 은 2 · 동 2 (종합 1위)</b></div>
   </div>
 
   <section class="body">
-    <p>태권도는 발차기를 중심으로 한 타격 기술로 상대를 제압하는 겨루기 경기와, 정해진 품새 동작의 정확성·표현력을 겨루는 품새 경기로 나뉜다.</p>
-    <p>한국에서 창시되어 올림픽 정식종목까지 오른 대표적인 무도로, 아시안게임에서도 한국이 오랜 기간 강세를 보여온 종목이다.</p>
+    <p>태권도는 발차기를 중심으로 상대를 제압하는 겨루기와, 정해진 동작의 정확성·표현력을 겨루는 품새로 나뉜다. 겨루기는 전자호구가 타격을 자동으로 감지해 점수를 매기고, 머리 공격과 회전 기술에 높은 배점이 붙어 마지막 라운드에 순위가 뒤집히는 일이 잦다.</p>
+    <p>이번 대회는 구성이 크게 바뀌었다. 겨루기가 항저우의 남녀 5체급에서 4체급으로 줄어 올림픽과 같아졌고, 혼성단체전은 폐지됐다. 대신 품새가 남녀 개인전으로 들어왔고 버추얼 태권도가 새로 채택됐다. 한국은 겨루기 8명, 품새 2명, 버추얼 2명으로 대표팀을 꾸린다.</p>
+    <p>체급 축소는 종주국에 불리한 변화다. 국가당 체급별 한 명만 출전할 수 있는데, 항저우에서 금메달을 딴 체급 일부가 사라지면서 세계 상위권 선수들이 선발전에서 서로를 떨어뜨리는 구조가 됐다.</p>
   </section>
 
+  <h2 class="sub"><small>Events</small>세 갈래로 나뉜 종목</h2>
+  <div class="cardgrid">
+    <div class="disc">
+      <h3>겨루기</h3>
+      <span class="en">Kyorugi · Sparring</span>
+      <p>전자호구를 착용하고 3라운드를 겨룬다. 몸통보다 머리, 정면보다 회전 기술에 배점이 높다. 남녀 각 4체급으로 총 8개의 금메달이 걸린다.</p>
+      <span class="tag">체급 1개씩 감소</span>
+    </div>
+    <div class="disc newone">
+      <h3>품새</h3>
+      <span class="en">Poomsae</span>
+      <p>정해진 동작을 연기해 정확성과 표현력으로 점수를 받는다. 공인품새와 자유품새가 있으며, 아시안게임에서는 두 분야를 종합해 채점할 가능성이 높다. 남녀 개인전으로 치러진다.</p>
+      <span class="tag gold">한국이 종주국 프리미엄을 가진 분야</span>
+    </div>
+    <div class="disc newone">
+      <h3>버추얼 태권도</h3>
+      <span class="en">Virtual Taekwondo</span>
+      <p>센서와 가상 환경을 활용해 겨루는 신설 종목. 한국 대표는 아직 확정되지 않았다.</p>
+      <span class="tag">신설 · 대표 미정</span>
+    </div>
+  </div>
 
+  <h2 class="sub"><small>Team Korea</small>대표 선발 결과</h2>
+  <p class="lede">겨루기 8명, 품새 2명이 확정됐고 버추얼 태권도 2명은 미정이다. 겨루기는 아시아선수권 성적으로 쿼터를 확보한 뒤, 1차 대표와 최종 선발전을 치러 체급당 한 명을 가렸다.</p>
+
+  <div class="rankwrap">
+    <table class="rk">
+      <tr><th>체급</th><th>대표</th><th>최종 선발전에서 밀린 선수</th></tr>
+      <tr><td class="wt">남 58kg</td><td class="who">안향식 <i>용인대</i></td><td class="out">김종명</td></tr>
+      <tr><td class="wt">남 68kg</td><td class="who">문진호 <i>서울체고</i></td><td class="out">권도윤 2위 · 장준 3위</td></tr>
+      <tr><td class="wt">남 80kg</td><td class="who">강재권 <i>삼성에스원</i></td><td class="out">서건우 실격</td></tr>
+      <tr><td class="wt">남 +80kg</td><td class="who">강상현 <i>울산시체육회</i></td><td class="out">박우혁 2위 · 박찬희 3위</td></tr>
+      <tr><td class="wt">여 49kg</td><td class="who">이유민 <i>관악고</i></td><td class="out">김향기</td></tr>
+      <tr><td class="wt">여 57kg</td><td class="who">김유진 <i>울산시체육회</i></td><td class="out">서여원</td></tr>
+      <tr><td class="wt">여 67kg</td><td class="who">곽민주 <i>한국체대</i></td><td class="out">이가은 2위 · 홍효림 3위</td></tr>
+      <tr><td class="wt">여 +67kg</td><td class="who">송다빈 <i>울산시체육회</i></td><td class="out">—</td></tr>
+    </table>
+  </div>
+  <p class="tblnote">남자 80kg의 서건우는 도핑 관련 자격 미달로 선발전에서 실격됐고, 그 자리를 강재권이 이어받았다. 아시아선수권 쿼터는 관련 두 체급에서 7위 이내 성적을 낸 선수의 국가에 주어지며 국가당 한 장이 상한이다. 한국은 여자 49kg·67kg·무제한급에서 이변 탈락 가능성이 거론됐지만 전 체급 출전권을 확보했다.</p>
+
+  <div class="roster" style="margin-top:20px;">
+    <div class="squad">
+      <h3>품새 <em>2명</em></h3>
+      <p class="cap">최종 선발전을 거쳐 남녀 1명씩</p>
+      <ul>
+        <li><b>윤규성</b><span>제2군단사령부 · 남자</span></li>
+        <li><b>정하은</b><span>용인시 · 여자</span></li>
+      </ul>
+    </div>
+    <div class="squad">
+      <h3>품새 <em>선발 과정</em></h3>
+      <p class="cap">분야별 선발전 우승자</p>
+      <ul>
+        <li><b>종합품새 1차</b><span>오민혁 · 정하은</span></li>
+        <li><b>자유품새</b><span>윤규성 · 김지현</span></li>
+        <li><b>공인품새 30세 이하</b><span>이동준 · 이주영</span></li>
+      </ul>
+    </div>
+    <div class="squad tbd">
+      <h3>버추얼 <em>2명</em></h3>
+      <p class="cap">신설 종목 · 대표 미확정</p>
+      <ul>
+        <li><b>미정</b><span>추후 발표</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="sub"><small>Weight Classes</small>체급별 판세</h2>
+  <p class="lede">6월 세계랭킹 상위 5명과 2026년 1차 그랑프리(로마) 결과를 함께 정리했다. 한국 선수는 강조 표시.</p>
+
+  <p class="tblcap">남자</p>
+  <div class="rankwrap">
+    <table class="rk big">
+      <tr><th>체급</th><th>대표</th><th>세계랭킹 톱5</th><th>2026 1차 그랑프리</th></tr>
+      <tr>
+        <td class="wt">58kg</td><td class="who">안향식</td>
+        <td>1 잔디<em>(이란)</em> · 2 젠두비<em>(튀니지)</em> · 3 사로스<em>(그리스)</em> · 4 <b class="kr">서은수</b> · 5 트리고스<em>(스페인)</em></td>
+        <td>우승 델라킬라<em>(이탈리아)</em><br>준우승 <b class="kr">서은수</b></td>
+      </tr>
+      <tr>
+        <td class="wt">68kg</td><td class="who">문진호</td>
+        <td>1 툽팀당<em>(태국)</em> · 2 코심코지에프<em>(우즈베키스탄)</em> · 3 폰테스<em>(브라질)</em> · 4 <b class="kr">장준</b> · 5 보르겐<em>(노르웨이)</em></td>
+        <td>우승 베르카이<em>(튀르키예)</em><br>장준·정우혁·성유현 16강 이하 탈락</td>
+      </tr>
+      <tr>
+        <td class="wt">80kg</td><td class="who">강재권</td>
+        <td>1 마르케즈<em>(브라질)</em> · 2 <b class="kr">서건우</b> · 3 니콜라스<em>(미국)</em> · 4 카투시<em>(튀니지)</em> · 5 에수노프<em>(우즈베키스탄)</em></td>
+        <td>우승 밀란<em>(스페인)</em><br>강재권 8강, 타코프에 패</td>
+      </tr>
+      <tr>
+        <td class="wt">+80kg</td><td class="who">강상현 <i>세계 3위</i></td>
+        <td>1 알레시오<em>(이탈리아)</em> · 2 에이자<em>(이집트)</em> · 3 <b class="kr">강상현</b> · 4 커닝햄<em>(영국)</em> · 5 피아콥스키<em>(폴란드)</em></td>
+        <td>우승 아유카에프<em>(러시아)</em><br><b class="kr">강상현 공동 3위</b> · 8강에서 커닝햄 격파</td>
+      </tr>
+    </table>
+  </div>
+  <p class="tblnote">58kg은 20세 서은수가 세계 4위, 박태준이 7위로 한국 선수 두 명이 상위권에 있지만 둘 다 이번 아시안게임 대표가 아니다. 68kg은 최강자 라시토프가 도핑 징계로 빠진 뒤 태국의 툽팀당과 우즈베키스탄의 코심코지에프가 올라선 혼전 구도다. +80kg은 강상현이 지난해 세계선수권 우승으로 상위권에 진입한 체급으로, 파리 올림픽 은메달리스트 커닝햄을 그랑프리에서 꺾었다.</p>
+
+  <p class="tblcap">여자</p>
+  <div class="rankwrap">
+    <table class="rk big">
+      <tr><th>체급</th><th>대표</th><th>세계랭킹 톱5</th><th>2026 1차 그랑프리</th></tr>
+      <tr>
+        <td class="wt">49kg</td><td class="who">이유민</td>
+        <td>1 카부라트<em>(튀르키예)</em> · 2 리위윈<em>(대만)</em> · 3 고게바칸<em>(튀르키예)</em> · 4 베쿨로바<em>(러시아)</em> · 5 바세트<em>(코스타리카)</em></td>
+        <td>우승 안젤로바<em>(러시아)</em><br><b class="kr">김향기 공동 3위</b></td>
+      </tr>
+      <tr>
+        <td class="wt">57kg</td><td class="who">김유진 <i>세계 2위</i></td>
+        <td>1 파세코<em>(브라질)</em> · 2 <b class="kr">김유진</b> · 3 둔야<em>(사우디)</em> · 4 데하위<em>(모로코)</em> · 5 브루스터<em>(캐나다)</em></td>
+        <td>우승 파세코<br><b class="kr">준우승 김유진</b></td>
+      </tr>
+      <tr>
+        <td class="wt">67kg</td><td class="who">곽민주 <i>세계 6위</i></td>
+        <td>1 마르톤<em>(헝가리)</em> · 2 와파<em>(튀니지)</em> · 3 티토네리<em>(브라질)</em> · 4 소비로노바<em>(우즈베키스탄)</em> · 5 레에스<em>(스페인)</em></td>
+        <td>우승 마르톤 · 준우승 페리시치<em>(세르비아)</em><br><b class="kr">홍효림 공동 3위</b> · 곽민주 1회전 탈락</td>
+      </tr>
+      <tr>
+        <td class="wt">+67kg</td><td class="who">송다빈</td>
+        <td>1 카리<em>(벨기에)</em> · 2 오시포바<em>(우즈베키스탄)</em> · 3 마르톤<em>(헝가리)</em> · 4 아이딘<em>(튀르키예)</em> · 5 오신<em>(코트디부아르)</em></td>
+        <td>우승 오신<em>(코트디부아르)</em> · 준우승 무원즈<em>(중국)</em><br>송다빈 8강 탈락, 무원즈에 패</td>
+      </tr>
+    </table>
+  </div>
+  <p class="tblnote">57kg은 2025년 이후 상위권이 고정적이다. 김유진은 파세코에게 상성이 좋지 않지만 파리 올림픽 챔피언의 자리를 지키고 있다. 49kg은 웡파타나낏 은퇴 이후 혼전이며, 세계 7위 김향기는 그랑프리 공동 3위를 하고도 선발전에서 이유민에게 밀렸다. 67kg에서는 곽민주가 세계 6위지만 그랑프리에서 1회전 탈락했고, 대신 대표에서 빠진 홍효림이 상위 선수들을 연달아 꺾고 4강에 올랐다.</p>
+
+  <h2 class="sub"><small>Form Guide</small>최근 성적</h2>
+
+  <div class="rec">
+    <div class="yr">2022<i>항저우 AG</i></div>
+    <div>
+      <div class="chips"><span class="chip g">금 5</span><span class="chip s">은 2</span><span class="chip b">동 2</span></div>
+      <h3>종합 1위, 그러나 이번엔 그 체급들이 없다</h3>
+      <p>품새에서 강완진과 차예은이 금메달을 따냈고 겨루기에서는 장준(-58kg), 박우혁(-80kg), 박혜진(-53kg)이 우승했다. 이다빈이 여자 +67kg 은메달, 혼성단체가 은메달, 진호준(-68kg)과 김유진(-57kg)이 동메달을 보탰다. 중국도 금메달 5개를 땄지만 은메달에서 한국이 앞서 종합 1위를 지켰다. 다만 금메달이 나온 여자 53kg과 혼성단체는 이번 대회에 없다.</p>
+    </div>
+  </div>
+
+  <div class="rec">
+    <div class="yr">2024<i>파리 올림픽</i></div>
+    <div>
+      <div class="chips"><span class="chip g">금 2</span><span class="chip b">동 1</span></div>
+      <h3>박태준과 김유진의 금메달</h3>
+      <p>박태준이 남자 58kg, 김유진이 여자 57kg에서 우승했고 이다빈이 여자 +67kg 동메달을 따냈다. 같은 대회에서 우즈베키스탄의 라시토프가 남자 68kg 2연패를 이뤘고, 이란의 살리미가 +80kg 정상에 올랐다. 이번 아시안게임 대표 중 파리 금메달리스트는 김유진 한 명이다.</p>
+    </div>
+  </div>
+
+  <div class="rec">
+    <div class="yr">2026<i>아시아선수권</i></div>
+    <div>
+      <div class="chips"><span class="chip g">금 4</span><span class="chip s">은 4</span><span class="chip b">동 6</span></div>
+      <h3>전 체급 쿼터 확보</h3>
+      <p>5월 19~23일 열린 대회에서 문진호(-68kg), 서건우(-80kg), 박우혁(-87kg), 김향기(여 -49kg)가 금메달을 따냈다. 아시아선수권은 8체급 체제여서 아시안게임의 한 체급이 두 개 체급에 걸쳐 있고, 그중 한 명이라도 7위 안에 들어야 쿼터가 나온다. 선수층이 얇아 우려가 나왔던 여자 49kg·67kg·무제한급에서도 모두 성적을 내며 전 체급 출전권을 확보했다. 이란과 우즈베키스탄이 시상대를 함께 나눠 가졌다.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <h3>관전 포인트</h3>
+    <p><b>세계 상위권 한국 선수 상당수가 나고야에 오지 못한다.</b> 남자 58kg의 서은수(4위)와 박태준(7위), 68kg의 장준(4위), 80kg의 서건우(2위), 여자 49kg의 김향기(7위)가 모두 대표가 아니다. 체급이 줄고 국가당 한 장씩만 주어지는 구조가 만든 결과다. 대표로 뽑힌 선수들에게는 그만큼 증명해야 할 것이 많다.</p>
+    <p><b>확실한 카드는 김유진과 강상현이다.</b> 김유진은 세계 2위이자 파리 올림픽 챔피언으로 올해 그랑프리에서도 준우승했고, 강상현은 지난해 세계선수권 우승자이자 세계 3위로 그랑프리에서 파리 은메달리스트 커닝햄을 꺾었다. 겨루기 금메달은 이 두 체급에서 가장 유력하다.</p>
+    <p><b>품새 두 자리가 조용한 금맥이다.</b> 항저우에서 강완진과 차예은이 남녀 품새 금메달을 모두 가져왔고, 이 분야에서는 종주국의 우위가 여전히 뚜렷하다. 윤규성과 정하은이 그 자리를 이어받는다.</p>
+    <p><b>버추얼 태권도는 미지수다.</b> 신설 종목이라 국제 경쟁력을 가늠할 자료가 거의 없고 한국 대표도 아직 정해지지 않았다. 금메달 두 개가 걸린 새 종목이 종합 순위를 흔들 수 있다.</p>
+  </div>
 
   <footer class="pagefoot">
     <span>2026 아이치·나고야 아시안게임 종목 안내</span>
