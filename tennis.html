@@ -39,15 +39,61 @@
   .fact b{font-family:'Noto Serif KR',serif;font-size:15px;color:var(--paper);font-weight:700;line-height:1.4;}
   section.body{margin-top:8px;}
   section.body p{font-size:15.5px;line-height:1.85;color:var(--paper-dim);margin:0 0 16px;}
-  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:40px 0 18px;font-weight:700;}
-  .cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;}
+  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:42px 0 18px;font-weight:700;}
+  h2.sub small{display:block;font-family:'Pretendard',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.12em;color:var(--gold-soft);text-transform:uppercase;margin-bottom:7px;}
+  .lede{font-size:15px;line-height:1.8;color:var(--paper-dim);margin:0 0 18px;}
+  .tblcap{font-family:'Noto Serif KR',serif;font-size:14px;color:var(--paper);font-weight:700;margin:28px 0 10px;display:flex;align-items:center;gap:9px;}
+  .tblcap::before{content:"";width:16px;height:1px;background:var(--gold);display:inline-block;}
+  .tblnote{font-size:11.5px;color:var(--paper-dim);opacity:0.78;margin:12px 0 0;line-height:1.7;}
+
+  .cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;}
   .disc{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:20px;}
   .disc h3{font-family:'Noto Serif KR',serif;font-size:17px;margin:0 0 4px;color:var(--paper);}
   .disc .en{font-size:11.5px;color:var(--gold-soft);letter-spacing:0.04em;margin-bottom:10px;display:block;}
-  .disc p{font-size:14px;line-height:1.7;color:var(--paper-dim);margin:0;}
+  .disc p{font-size:13.5px;line-height:1.7;color:var(--paper-dim);margin:0;}
+  .disc.hi{border-color:rgba(216,72,47,0.45);background:rgba(216,72,47,0.07);}
+
+  /* 랭킹 */
+  .rankwrap{overflow-x:auto;}
+  table.rk{width:100%;border-collapse:collapse;min-width:440px;}
+  table.rk th{font-size:11.5px;font-weight:600;color:var(--gold-soft);text-align:left;padding:0 0 9px;border-bottom:1px solid var(--line);letter-spacing:0.04em;}
+  table.rk td{padding:8px 0;font-size:13.5px;color:var(--paper-dim);border-bottom:1px dashed rgba(201,162,75,0.14);}
+  table.rk th+th,table.rk td+td{padding-left:16px;}
+  table.rk tr:last-child td{border-bottom:0;}
+  table.rk td.n{width:48px;font-family:'Noto Serif KR',serif;font-weight:700;color:var(--gold);text-align:right;}
+  table.rk td.c{color:var(--paper);font-weight:600;}
+  table.rk td.nat{width:104px;font-size:12.5px;}
+  table.rk td.pt{width:62px;text-align:right;font-size:12.5px;}
+  table.rk td.age{width:48px;text-align:right;font-size:12px;opacity:0.8;}
+  table.rk tr.kor td{background:rgba(201,162,75,0.09);}
+  table.rk tr.kor td.c,table.rk tr.kor td.nat{color:var(--gold-soft);}
+  table.rk tr.sep td{border-bottom:1px solid var(--line);}
+  table.rk td.memo{font-size:11.5px;opacity:0.85;}
+
+  /* 성적 */
+  .rec{display:grid;grid-template-columns:112px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line);}
+  .rec:first-of-type{border-top:1px solid var(--line);}
+  .rec .yr{font-family:'Noto Serif KR',serif;font-size:18px;font-weight:900;color:var(--gold);line-height:1.25;}
+  .rec .yr i{display:block;font-style:normal;font-family:'Pretendard',sans-serif;font-size:11px;font-weight:500;color:var(--paper-dim);margin-top:4px;}
+  .rec h3{font-family:'Noto Serif KR',serif;font-size:16px;margin:0 0 8px;color:var(--paper);font-weight:700;}
+  .rec p{font-size:14px;line-height:1.75;color:var(--paper-dim);margin:0;}
+  .chips{margin:0 0 10px;}
+  .chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;border:1px solid;margin:0 6px 6px 0;}
+  .chip::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;}
+  .chip.b{color:#D9A87C;border-color:rgba(217,168,124,0.32);background:rgba(217,168,124,0.08);}
+  .chip.none{color:#E7856F;border-color:rgba(216,72,47,0.32);background:rgba(216,72,47,0.08);}
+
+  .note{margin-top:26px;border-left:3px solid var(--sun);background:rgba(216,72,47,0.08);border-radius:0 8px 8px 0;padding:18px 22px;}
+  .note h3{font-family:'Noto Serif KR',serif;font-size:16px;margin:0 0 8px;color:var(--paper);}
+  .note p{font-size:14.5px;line-height:1.8;color:var(--paper-dim);margin:0 0 10px;}
+  .note p:last-child{margin-bottom:0;}
+
   footer.pagefoot{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
   footer.pagefoot a{color:var(--gold-soft);text-decoration:none;}
-  @media (max-width:520px){.wrap{padding:28px 18px 70px;}}
+  @media (max-width:520px){
+    .wrap{padding:28px 18px 70px;}
+    .rec{grid-template-columns:1fr;gap:10px;}
+  }
 </style>
 </head>
 <body>
@@ -61,21 +107,165 @@
     <span class="eyebrow">2026 Aichi · Nagoya · 개인구기</span>
     <h1>테니스</h1>
     <p class="en-title">Tennis</p>
-    <p class="tagline">라켓으로 공을 쳐 네트 너머 상대 코트에 떨어뜨리는, 전 세계적으로 인기 높은 라켓 스포츠.</p>
+    <p class="tagline">단식 우승자에게 2028 LA 올림픽 직행 티켓이 걸린 대회. 그런데 항저우 남녀 단식 챔피언이 모두 오지 않는다.</p>
   </header>
 
   <div class="facts">
-    <div class="fact"><span>경기 방식</span><b>단식·복식·혼합복식·단체전</b></div>
-    <div class="fact"><span>득점 방식</span><b>6게임 선취 세트제</b></div>
-    <div class="fact"><span>코트 종류</span><b>하드·클레이·잔디</b></div>
+    <div class="fact"><span>경기 기간</span><b>9월 27일 ~ 10월 3일</b></div>
+    <div class="fact"><span>경기장</span><b>나고야시 히가시야마공원 테니스센터</b></div>
+    <div class="fact"><span>금메달</span><b>5개 (단식 2 · 복식 2 · 혼복 1)</b></div>
+    <div class="fact"><span>2022 항저우</span><b>한국 동메달 3개</b></div>
   </div>
 
   <section class="body">
-    <p>테니스는 라켓으로 공을 쳐 네트 너머 상대 코트 안에 떨어뜨려 득점하는 종목으로, 강력한 서브와 스트로크, 코트 커버 능력이 함께 요구된다.</p>
-    <p>아시안게임에서는 단식·복식 외에도 단체전이 편성되어 있어, 개인 기량뿐 아니라 팀 전략까지 함께 평가받는 것이 특징이다.</p>
+    <p>테니스는 대회 둘째 주에 배치돼 9월 27일부터 10월 3일까지 나고야시 히가시야마공원 테니스센터에서 열린다. 남녀 단식과 복식, 그리고 혼합복식까지 다섯 개의 금메달이 걸린다.</p>
+    <p>이번 대회의 무게는 <b>단식 금메달에 붙은 2028 LA 올림픽 직행 쿼터</b>에서 나온다. 아시안게임 단식 우승자는 별도의 랭킹 경쟁 없이 올림픽 본선에 오른다. 상위 랭커가 시즌 중 대회를 비우고 아시안게임에 나올 이유가 여기에 있고, 반대로 랭킹만으로는 올림픽에 못 가는 선수에게는 가장 현실적인 지름길이 된다.</p>
+    <p>한국은 항저우에서 금메달 없이 동메달 세 개에 그쳤다. 남자 단식과 남자 복식, 여자 복식에서 하나씩이었다. 지금 세계랭킹으로도 남자 권순우가 153위, 여자 구연우가 174위로 아시아 상위권과는 거리가 있다.</p>
   </section>
 
+  <h2 class="sub"><small>Events</small>다섯 개의 금메달</h2>
+  <div class="cardgrid">
+    <div class="disc hi">
+      <h3>단식</h3>
+      <span class="en">Singles</span>
+      <p>남녀 각 1개. 우승자는 2028 LA 올림픽 출전권을 함께 얻는다. 아시안게임 테니스에서 가장 값이 비싼 두 장이다.</p>
+    </div>
+    <div class="disc">
+      <h3>복식</h3>
+      <span class="en">Doubles</span>
+      <p>남녀 각 1개. 단식 랭킹이 낮아도 호흡이 맞는 조합이면 승부를 볼 수 있어, 항저우에서는 대만이 남녀 복식을 모두 가져갔다.</p>
+    </div>
+    <div class="disc">
+      <h3>혼합복식</h3>
+      <span class="en">Mixed Doubles</span>
+      <p>남녀 한 명씩 짝을 이룬다. 항저우에서는 인도의 로한 보판나·루투자 보살레 조가 우승했다. 각국이 에이스를 어디에 배치하느냐에 따라 대진이 크게 흔들린다.</p>
+    </div>
+  </div>
 
+  <h2 class="sub"><small>Team Korea</small>한국 대표 12명</h2>
+  <p class="lede">남녀 합쳐 12명이 출전한다. 항저우에서 동메달 세 개를 합작한 네 명이 모두 명단에 남았고, 2018년 호주오픈 4강에 올랐던 정현이 이름을 올린 것이 눈에 띈다.</p>
+  <div class="rankwrap">
+    <table class="rk">
+      <tr><th>선수</th><th>세계랭킹</th><th>비고</th></tr>
+      <tr class="kor"><td class="c">권순우</td><td class="pt">ATP 153</td><td class="memo">항저우 남자 복식 동메달</td></tr>
+      <tr class="kor"><td class="c">홍성찬</td><td class="pt">—</td><td class="memo">항저우 남자 단식·복식 동메달</td></tr>
+      <tr class="kor"><td class="c">구연우</td><td class="pt">WTA 174</td><td class="memo">여자 최상위</td></tr>
+      <tr class="kor"><td class="c">백다연</td><td class="pt">WTA 248</td><td class="memo">항저우 여자 복식 동메달</td></tr>
+      <tr class="kor"><td class="c">정보영</td><td class="pt">—</td><td class="memo">항저우 여자 복식 동메달</td></tr>
+      <tr class="kor"><td class="c">박소현</td><td class="pt">WTA 305</td><td class="memo"></td></tr>
+      <tr class="kor"><td class="c">정현</td><td class="pt">—</td><td class="memo">2018 호주오픈 4강</td></tr>
+      <tr class="kor"><td class="c">장수정</td><td class="pt">—</td><td class="memo"></td></tr>
+      <tr class="kor"><td class="c">남지성</td><td class="pt">—</td><td class="memo"></td></tr>
+      <tr class="kor"><td class="c">박의성</td><td class="pt">—</td><td class="memo"></td></tr>
+      <tr class="kor"><td class="c">신산희</td><td class="pt">—</td><td class="memo"></td></tr>
+      <tr class="kor"><td class="c">이은혜</td><td class="pt">—</td><td class="memo"></td></tr>
+    </table>
+  </div>
+  <p class="tblnote">랭킹은 ATP·WTA 300위 이내 선수만 표기했다. 항저우 동메달 3개의 주역인 홍성찬·권순우·백다연·정보영이 전원 재승선해, 복식 조합이 그대로 유지될 여지가 있다.</p>
+
+  <h2 class="sub"><small>Asian Rankings</small>아시아 선수 세계랭킹</h2>
+  <p class="lede">ATP·WTA 랭킹에서 아시아 국가 선수만 추려 정리했다. 한국 선수는 강조 표시.</p>
+
+  <p class="tblcap">여자 · WTA</p>
+  <div class="rankwrap">
+    <table class="rk">
+      <tr><th>순위</th><th>선수</th><th>국가</th><th>포인트</th><th>나이</th></tr>
+      <tr><td class="n">2</td><td class="c">엘레나 리바키나</td><td class="nat">카자흐스탄</td><td class="pt">8,056</td><td class="age">27</td></tr>
+      <tr><td class="n">13</td><td class="c">오사카 나오미</td><td class="nat">일본</td><td class="pt">3,281</td><td class="age">28</td></tr>
+      <tr><td class="n">24</td><td class="c">알렉산드라 이알라</td><td class="nat">필리핀</td><td class="pt">1,931</td><td class="age">21</td></tr>
+      <tr><td class="n">36</td><td class="c">자니스 첸</td><td class="nat">인도네시아</td><td class="pt">1,312</td><td class="age">24</td></tr>
+      <tr><td class="n">41</td><td class="c">왕신위</td><td class="nat">중국</td><td class="pt">1,238</td><td class="age">24</td></tr>
+      <tr><td class="n">62</td><td class="c">장솨이</td><td class="nat">중국</td><td class="pt">1,020</td><td class="age">37</td></tr>
+      <tr><td class="n">79</td><td class="c">란라나 타라루디</td><td class="nat">태국</td><td class="pt">916</td><td class="age">22</td></tr>
+      <tr><td class="n">82</td><td class="c">율리아 푸틴체바</td><td class="nat">카자흐스탄</td><td class="pt">904</td><td class="age">31</td></tr>
+      <tr><td class="n">83</td><td class="c">카밀라 라히모바</td><td class="nat">우즈베키스탄</td><td class="pt">894</td><td class="age">24</td></tr>
+      <tr><td class="n">96</td><td class="c">왕시위</td><td class="nat">중국</td><td class="pt">809</td><td class="age">25</td></tr>
+      <tr><td class="n">103</td><td class="c">폴리나 쿠데르메토바</td><td class="nat">우즈베키스탄</td><td class="pt">778</td><td class="age">23</td></tr>
+      <tr><td class="n">111</td><td class="c">우치지마 모유카</td><td class="nat">일본</td><td class="pt">738</td><td class="age">24</td></tr>
+      <tr class="sep"><td class="n">124</td><td class="c">정친원</td><td class="nat">중국</td><td class="pt">611</td><td class="age">23</td></tr>
+      <tr class="kor"><td class="n">174</td><td class="c">구연우</td><td class="nat">한국</td><td class="pt">452</td><td class="age">23</td></tr>
+      <tr class="kor"><td class="n">248</td><td class="c">백다연</td><td class="nat">한국</td><td class="pt">299</td><td class="age">24</td></tr>
+      <tr class="kor"><td class="n">305</td><td class="c">박소현</td><td class="nat">한국</td><td class="pt">236</td><td class="age">24</td></tr>
+    </table>
+  </div>
+  <p class="tblnote">항저우 여자 단식 금메달리스트 정친원(124위)은 중국 대표 명단에서 빠졌다. 반대로 당시 동메달이던 알렉산드라 이알라는 24위까지 올라 출전을 확정하고 금메달을 목표로 내걸었다. 중국은 왕시위(96위)·장솨이(62위)·궈한위(170위) 등을 파견하며 41위 왕신위도 제외했고, 일본은 우치지마 모유카(111위)를 넣었다. <b>현재까지 공개된 출전자 가운데 이알라보다 랭킹이 높은 선수는 없다.</b></p>
+
+  <p class="tblcap">남자 · ATP</p>
+  <div class="rankwrap">
+    <table class="rk">
+      <tr><th>순위</th><th>선수</th><th>국가</th><th>포인트</th><th>나이</th></tr>
+      <tr><td class="n">11</td><td class="c">알렉산더 부블리크</td><td class="nat">카자흐스탄</td><td class="pt">2,525</td><td class="age">29</td></tr>
+      <tr><td class="n">88</td><td class="c">알렉산드르 셰브첸코</td><td class="nat">카자흐스탄</td><td class="pt">699</td><td class="age">25</td></tr>
+      <tr><td class="n">91</td><td class="c">콜먼 웡</td><td class="nat">홍콩</td><td class="pt">680</td><td class="age">22</td></tr>
+      <tr><td class="n">93</td><td class="c">시마부쿠로 쇼</td><td class="nat">일본</td><td class="pt">677</td><td class="age">29</td></tr>
+      <tr><td class="n">116</td><td class="c">우이빙</td><td class="nat">중국</td><td class="pt">553</td><td class="age">26</td></tr>
+      <tr><td class="n">117</td><td class="c">모치즈키 신타로</td><td class="nat">일본</td><td class="pt">547</td><td class="age">23</td></tr>
+      <tr><td class="n">118</td><td class="c">부윈차오커터</td><td class="nat">중국</td><td class="pt">546</td><td class="age">24</td></tr>
+      <tr class="sep"><td class="n">147</td><td class="c">티모페이 스카토프</td><td class="nat">카자흐스탄</td><td class="pt">391</td><td class="age">25</td></tr>
+      <tr class="kor"><td class="n">153</td><td class="c">권순우</td><td class="nat">한국</td><td class="pt">371</td><td class="age">28</td></tr>
+      <tr><td class="n">156</td><td class="c">장즈전</td><td class="nat">중국</td><td class="pt">365</td><td class="age">29</td></tr>
+      <tr><td class="n">165</td><td class="c">사카모토 레이</td><td class="nat">일본</td><td class="pt">344</td><td class="age">20</td></tr>
+      <tr><td class="n">183</td><td class="c">다니엘 타로</td><td class="nat">일본</td><td class="pt">311</td><td class="age">33</td></tr>
+      <tr><td class="n">196</td><td class="c">니시오카 요시히토</td><td class="nat">일본</td><td class="pt">286</td><td class="age">30</td></tr>
+      <tr><td class="n">235</td><td class="c">수밋 나갈</td><td class="nat">인도</td><td class="pt">239</td><td class="age">28</td></tr>
+      <tr><td class="n">241</td><td class="c">쉬위샤오</td><td class="nat">대만</td><td class="pt">232</td><td class="age">27</td></tr>
+      <tr><td class="n">281</td><td class="c">상쥔청</td><td class="nat">중국</td><td class="pt">195</td><td class="age">21</td></tr>
+    </table>
+  </div>
+  <p class="tblnote">항저우 남자 단식 금메달리스트 장즈전(156위)도 중국 대표에서 제외됐다. 중국이 파견하는 남자 최상위는 우이빙(116위)이고, 일본은 항저우 은메달리스트 와타누키 요스케와 마쓰오카를 내정했으며 인도는 수밋 나갈(235위)을 앞세운다. <b>공개된 엔트리만 놓고 보면 권순우(153위)가 우이빙 다음가는 랭킹이다.</b> 남자부는 여자부와 달리 압도적인 우승 후보가 없다.</p>
+
+  <h2 class="sub"><small>Entries</small>주요국 엔트리</h2>
+  <div class="cardgrid">
+    <div class="disc hi">
+      <h3>중국</h3>
+      <span class="en">China</span>
+      <p>여자 왕시위·장솨이·양자오쉬안·궈한위·장신위, 남자 쿵웨이이·장톈후이·천예·우이빙·멍판밍. <b>항저우 단식 금메달리스트 정친원과 장즈전이 모두 빠졌다.</b> 4년 전 단식 두 종목을 석권한 나라가 두 챔피언 없이 나선다.</p>
+    </div>
+    <div class="disc">
+      <h3>일본</h3>
+      <span class="en">Japan</span>
+      <p>남자 단식에 항저우 은메달리스트 와타누키 요스케와 마쓰오카, 여자 단식에 우치지마 모유카와 사카즈메 히메노 등을 내정했다. 개최국이자 항저우 남자 단식 준우승국이다.</p>
+    </div>
+    <div class="disc">
+      <h3>인도</h3>
+      <span class="en">India</span>
+      <p>12명 규모. 남자는 수밋 나갈과 유키 밤브리, 여자는 사하자 야말라팔리·바이슈나비 아드카르·바이데히 차우다리로 구성했다. 항저우 혼합복식 금메달을 지켜야 한다.</p>
+    </div>
+    <div class="disc hi">
+      <h3>필리핀</h3>
+      <span class="en">Philippines</span>
+      <p>세계 24위 알렉스 이알라가 출전을 확정했다. 기자회견에서 금메달을 목표로 한다고 직접 밝혔다. 항저우에서는 단식 동메달과 혼합복식 동메달을 따냈다.</p>
+    </div>
+  </div>
+
+  <h2 class="sub"><small>Form Guide</small>2022 항저우 결과</h2>
+
+  <div class="rec">
+    <div class="yr">남자<i>단식 · 복식</i></div>
+    <div>
+      <div class="chips"><span class="chip b">동메달 2</span></div>
+      <h3>홍성찬이 두 개의 동메달</h3>
+      <p>단식 금메달은 중국의 장즈전, 은메달은 일본의 와타누키 요스케가 가져갔다. 홍성찬이 우즈베키스탄의 술타노프와 함께 공동 3위에 올랐고, 복식에서도 권순우와 짝을 이뤄 동메달을 따냈다. 복식 우승은 대만의 쉬위샤오·제이슨 정 조였다.</p>
+    </div>
+  </div>
+
+  <div class="rec">
+    <div class="yr">여자<i>단식 · 복식</i></div>
+    <div>
+      <div class="chips"><span class="chip b">동메달 1</span></div>
+      <h3>중국이 단식 결승을 독점</h3>
+      <p>단식 결승은 정친원과 주린의 중국 내전이었고, 이알라와 카지 하루카가 공동 3위였다. 복식은 대만이 금·은을 모두 차지했으며 백다연·정보영 조가 동메달을 따냈다. 혼합복식에서는 인도의 보판나·보살레 조가 우승했다.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <h3>관전 포인트</h3>
+    <p><b>단식 금메달 두 장이 곧 올림픽 티켓이다.</b> 아시안게임 단식 우승자는 2028 LA 올림픽 직행 쿼터를 받는다. 랭킹만으로는 올림픽 진출이 어려운 중위권 선수들에게 이 대회가 가장 현실적인 지름길인 이유다.</p>
+    <p><b>디펜딩 챔피언 두 명이 모두 오지 않는다.</b> 항저우 남녀 단식을 석권했던 중국의 장즈전과 정친원이 나란히 대표 명단에서 빠졌다. 두 종목 모두 타이틀 방어자 없이 새 챔피언이 나온다.</p>
+    <p><b>여자 단식은 이알라 쪽으로 크게 기울었다.</b> 세계 24위로 출전을 확정했고 금메달을 공언했다. 현재까지 공개된 엔트리 중 그보다 높은 랭킹은 없다. 필리핀 테니스의 첫 아시안게임 금메달이 걸린 셈이다.</p>
+    <p><b>남자 단식은 오히려 열려 있다.</b> 확정 엔트리 최상위가 중국 우이빙(116위)이고 권순우(153위)가 그다음이다. 일본은 항저우 은메달리스트 와타누키를, 인도는 나갈(235위)을 앞세운다. 한국이 4년 만에 단식 시상대 위쪽을 노려볼 만한 구도다.</p>
+    <p><b>복식은 항저우 조합이 그대로 살아 있다.</b> 홍성찬·권순우와 백다연·정보영 네 명이 모두 대표팀에 남았다. 항저우에서 동메달을 따낸 조합을 유지할 수 있다면, 금메달에 가장 가까운 종목은 단식이 아니라 복식 쪽이다.</p>
+  </div>
 
   <footer class="pagefoot">
     <span>2026 아이치·나고야 아시안게임 종목 안내</span>
