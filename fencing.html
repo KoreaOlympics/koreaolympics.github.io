@@ -40,14 +40,74 @@
   section.body{margin-top:8px;}
   section.body p{font-size:15.5px;line-height:1.85;color:var(--paper-dim);margin:0 0 16px;}
   h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:40px 0 18px;font-weight:700;}
+  h2.sub small{display:block;font-family:'Pretendard',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.12em;color:var(--gold-soft);text-transform:uppercase;margin-bottom:7px;}
+  .lede{font-size:15px;line-height:1.8;color:var(--paper-dim);margin:0 0 18px;}
   .cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;}
   .disc{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:20px;}
   .disc h3{font-family:'Noto Serif KR',serif;font-size:17px;margin:0 0 4px;color:var(--paper);}
   .disc .en{font-size:11.5px;color:var(--gold-soft);letter-spacing:0.04em;margin-bottom:10px;display:block;}
   .disc p{font-size:14px;line-height:1.7;color:var(--paper-dim);margin:0;}
+  .disc dl{margin:14px 0 0;padding-top:12px;border-top:1px dashed var(--line);display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:13px;}
+  .disc dt{color:var(--gold-soft);white-space:nowrap;}
+  .disc dd{margin:0;color:var(--paper-dim);}
+
+  /* 종목별 라이벌 표 */
+  .rivalwrap{margin-top:18px;overflow-x:auto;}
+  table.rivals{width:100%;border-collapse:collapse;min-width:560px;}
+  table.rivals.wide{min-width:760px;}
+  table.rivals th{font-family:'Noto Serif KR',serif;font-size:12px;font-weight:700;color:var(--gold-soft);text-align:left;padding:0 0 10px;border-bottom:1px solid var(--line);letter-spacing:0.04em;}
+  table.rivals td{padding:11px 0;font-size:13.5px;line-height:1.6;color:var(--paper-dim);border-bottom:1px dashed rgba(201,162,75,0.18);vertical-align:top;}
+  table.rivals td+td,table.rivals th+th{padding-left:18px;}
+  table.rivals tr:last-child td{border-bottom:0;}
+  table.rivals td.ev{font-family:'Noto Serif KR',serif;color:var(--paper);font-weight:700;white-space:nowrap;}
+  table.rivals td.kr{color:var(--gold-soft);font-weight:600;}
+  table.rivals td.kr.none{color:var(--sun);font-weight:600;}
+  table.rivals em{font-style:normal;color:var(--paper);}
+  .tblnote{font-size:11.5px;color:var(--paper-dim);opacity:0.75;margin:12px 0 0;line-height:1.6;}
+  .tblcap{font-family:'Noto Serif KR',serif;font-size:14px;color:var(--paper);font-weight:700;margin:30px 0 10px;display:flex;align-items:center;gap:9px;}
+  .tblcap::before{content:"";width:16px;height:1px;background:var(--gold);display:inline-block;}
+  .mg{color:#EBD08F;font-weight:700;}
+  .ms{color:#D3DAE4;font-weight:700;}
+  .mb{color:#D9A87C;font-weight:700;}
+  .mx{color:var(--paper-dim);opacity:0.6;}
+
+  /* 명단 */
+  .roster{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;}
+  .squad{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:18px 20px;}
+  .squad h3{font-family:'Noto Serif KR',serif;font-size:15.5px;margin:0 0 12px;color:var(--paper);display:flex;align-items:center;gap:8px;}
+  .squad h3 em{font-style:normal;font-size:10.5px;letter-spacing:0.08em;color:var(--ink);background:var(--gold-soft);border-radius:3px;padding:2px 6px;font-weight:700;}
+  .squad ul{list-style:none;margin:0;padding:0;}
+  .squad li{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:8px 0;border-bottom:1px dashed var(--line);}
+  .squad li:last-child{border-bottom:0;padding-bottom:0;}
+  .squad li b{font-size:14px;color:var(--paper);font-weight:600;}
+  .squad li span{font-size:11px;color:var(--paper-dim);text-align:right;}
+  .squad li.star b{color:var(--gold-soft);}
+
+  /* 성적 */
+  .rec{display:grid;grid-template-columns:112px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line);}
+  .rec:first-of-type{border-top:1px solid var(--line);}
+  .rec .yr{font-family:'Noto Serif KR',serif;font-size:19px;font-weight:900;color:var(--gold);line-height:1.25;}
+  .rec .yr i{display:block;font-style:normal;font-family:'Pretendard',sans-serif;font-size:11px;font-weight:500;color:var(--paper-dim);letter-spacing:0.03em;margin-top:4px;}
+  .rec h3{font-family:'Noto Serif KR',serif;font-size:16px;margin:0 0 8px;color:var(--paper);font-weight:700;}
+  .rec p{font-size:14px;line-height:1.75;color:var(--paper-dim);margin:0;}
+  .chips{margin:0 0 10px;}
+  .chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;border:1px solid;margin:0 6px 6px 0;}
+  .chip::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;}
+  .chip.g{color:#EBD08F;border-color:rgba(201,162,75,0.45);background:rgba(201,162,75,0.10);}
+  .chip.s{color:#D3DAE4;border-color:rgba(211,218,228,0.26);background:rgba(211,218,228,0.06);}
+  .chip.b{color:#D9A87C;border-color:rgba(217,168,124,0.32);background:rgba(217,168,124,0.08);}
+
+  .note{margin-top:26px;border-left:3px solid var(--sun);background:rgba(216,72,47,0.08);border-radius:0 8px 8px 0;padding:18px 22px;}
+  .note h3{font-family:'Noto Serif KR',serif;font-size:16px;margin:0 0 8px;color:var(--paper);}
+  .note p{font-size:14.5px;line-height:1.8;color:var(--paper-dim);margin:0 0 10px;}
+  .note p:last-child{margin-bottom:0;}
+
   footer.pagefoot{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
   footer.pagefoot a{color:var(--gold-soft);text-decoration:none;}
-  @media (max-width:520px){.wrap{padding:28px 18px 70px;}}
+  @media (max-width:520px){
+    .wrap{padding:28px 18px 70px;}
+    .rec{grid-template-columns:1fr;gap:10px;}
+  }
 </style>
 </head>
 <body>
@@ -61,21 +121,250 @@
     <span class="eyebrow">2026 Aichi · Nagoya · 올림픽 · 무기·기술종목</span>
     <h1>펜싱</h1>
     <p class="en-title">Fencing</p>
-    <p class="tagline">칼로 상대의 몸 특정 부위를 찔러 득점을 겨루는 유럽 기원의 무기 스포츠.</p>
+    <p class="tagline">항저우에서 12개 종목 중 10개에서 메달을 쓸어담은 종목. 그러나 그 사이 아시아의 판도가 바뀌었고, 한국은 아시아선수권 정상을 일본에 내줬다.</p>
   </header>
 
   <div class="facts">
-    <div class="fact"><span>세부 종목</span><b>플뢰레·에페·사브르</b></div>
-    <div class="fact"><span>경기 시간</span><b>3피리어드 3분씩</b></div>
-    <div class="fact"><span>득점 방식</span><b>전자 판정기 사용</b></div>
+    <div class="fact"><span>세부 종목</span><b>12개 (개인 6 · 단체 6)</b></div>
+    <div class="fact"><span>승부 방식</span><b>개인 15점 · 단체 45점</b></div>
+    <div class="fact"><span>2022 항저우</span><b>금 6 · 은 3 · 동 3</b></div>
+    <div class="fact"><span>2026 아시아선수권</span><b>종합 2위 (일본 1위)</b></div>
   </div>
 
   <section class="body">
-    <p>펜싱은 플뢰레·에페·사브르 세 가지 검을 사용해 상대의 유효 부위를 먼저 찌르거나 베어 득점하는 종목으로, 순간적인 반응 속도와 거리 감각이 핵심이다.</p>
-    <p>한국, 중국 등 아시아 국가들의 기량이 최근 크게 향상되며 아시안게임에서도 유럽 못지않은 경쟁력을 보여주고 있다.</p>
+    <p>펜싱은 플뢰레·에페·사브르 세 가지 검으로 상대의 유효 부위를 먼저 찌르거나 베어 득점하는 종목이다. 세 검은 겨루는 방식 자체가 다르다. 어느 부위를 노릴 수 있는지, 동시에 찔렀을 때 누구의 득점으로 인정하는지가 검마다 달라, 사실상 세 개의 다른 경기가 하나의 이름으로 묶여 있다고 봐도 된다.</p>
+    <p>개인전은 3분 3피리어드로 15점 선취, 단체전은 3명이 번갈아 아홉 판을 치러 45점에 먼저 도달하는 쪽이 이긴다. 아시안게임에서는 남녀 각 3종목의 개인전과 단체전, 총 12개의 금메달이 걸린다.</p>
+    <p>한국은 2022 항저우에서 12개 종목 중 10개에서 메달을 따내며 아시아 최강임을 확인했다. 하지만 2025년과 2026년 아시아선수권을 연달아 일본에 내주며 흐름이 달라졌다. 나고야는 그 판도를 다시 시험하는 무대다.</p>
   </section>
 
+  <h2 class="sub"><small>Three Weapons</small>세 자루의 검</h2>
+  <div class="cardgrid">
+    <div class="disc">
+      <h3>플뢰레</h3>
+      <span class="en">Foil</span>
+      <p>가장 가벼운 검. 몸통만 유효 부위이고 찌르기만 인정된다. 먼저 공격을 시작한 쪽에 우선권이 주어져, 상대의 공격을 쳐내고 되받아치는 수 싸움이 길게 이어진다.</p>
+      <dl><dt>유효 부위</dt><dd>몸통</dd><dt>득점</dt><dd>찌르기</dd><dt>우선권</dt><dd>있음</dd></dl>
+    </div>
+    <div class="disc">
+      <h3>에페</h3>
+      <span class="en">Épée</span>
+      <p>가장 무거운 검. 머리끝부터 발끝까지 전신이 유효 부위이고 우선권이 없다. 동시에 찌르면 양쪽 모두 득점이라, 한 번의 판단 실수가 곧바로 실점으로 이어진다. 가장 신중한 종목.</p>
+      <dl><dt>유효 부위</dt><dd>전신</dd><dt>득점</dt><dd>찌르기</dd><dt>우선권</dt><dd>없음</dd></dl>
+    </div>
+    <div class="disc">
+      <h3>사브르</h3>
+      <span class="en">Sabre</span>
+      <p>유일하게 베기가 인정되는 검. 허리 위 상체와 팔, 머리가 모두 유효 부위여서 공격 범위가 넓고 속도가 가장 빠르다. 한 판이 몇 초 만에 끝나기도 한다. 한국의 주력 종목.</p>
+      <dl><dt>유효 부위</dt><dd>허리 위</dd><dt>득점</dt><dd>찌르기·베기</dd><dt>우선권</dt><dd>있음</dd></dl>
+    </div>
+  </div>
 
+  <p class="tblcap">개인전 · FIE 세계랭킹</p>
+  <div class="rivalwrap">
+    <table class="rivals">
+      <tr>
+        <th>세부 종목</th>
+        <th>한국</th>
+        <th>주요 아시아 경쟁자</th>
+      </tr>
+      <tr>
+        <td class="ev">남자 사브르</td>
+        <td class="kr">오상욱 8위<br>도경동 11위</td>
+        <td><em>고쿠보 마오</em>(일본) 14위 · <em>뤄사오퉁</em>(중국) · <em>호 팍람</em>(홍콩)</td>
+      </tr>
+      <tr>
+        <td class="ev">여자 사브르</td>
+        <td class="kr">전하영 11위<br>최세빈 14위</td>
+        <td><em>에무라 미사키</em>(일본) 12위 · <em>사오야치</em>(중국) · <em>다이베코바</em>(우즈베키스탄)</td>
+      </tr>
+      <tr>
+        <td class="ev">여자 에페</td>
+        <td class="kr">송세라 4위<br>임태희 12위</td>
+        <td><em>셰카이린</em>(홍콩) 13위 · <em>탕쥔야오</em>(중국) 27위 · <em>바칼디나</em>(카자흐스탄) 28위</td>
+      </tr>
+      <tr>
+        <td class="ev">남자 에페</td>
+        <td class="kr none">톱16 없음</td>
+        <td><em>가노 고키</em>(일본) 2위 · <em>야마다 마사루</em>(일본) 6위 · <em>쿠르바노프</em>(카자흐스탄) 8위</td>
+      </tr>
+      <tr>
+        <td class="ev">남자 플뢰레</td>
+        <td class="kr none">톱16 없음</td>
+        <td><em>이이무라 가즈키</em>(일본) 5위 · <em>라이언 초이</em>(홍콩) 7위 · <em>청카롱</em>(홍콩) 12위</td>
+      </tr>
+      <tr>
+        <td class="ev">여자 플뢰레</td>
+        <td class="kr none">톱16 없음</td>
+        <td><em>우에노 유카</em>(일본) 3위 · <em>기쿠치 고마키</em>(일본) 6위 · <em>아즈마 세라</em>(일본) 8위</td>
+      </tr>
+    </table>
+  </div>
+  <p class="tblnote">2025–26 시즌 FIE 개인 랭킹 기준. 7월 홍콩 세계선수권 결과는 아직 반영되지 않았다. 순위가 붙지 않은 선수는 톱30 밖이지만 올해 아시아선수권 시상대에 오른 경쟁자다.<br>플뢰레 4개 종목에는 세계 톱16에 한국 선수가 한 명도 없는 반면, 일본과 홍콩 선수가 여섯 명 올라 있다.</p>
+
+  <p class="tblcap">단체전 · FIE 팀 랭킹과 최근 성적</p>
+  <div class="rivalwrap">
+    <table class="rivals wide">
+      <tr>
+        <th>세부 종목</th>
+        <th>FIE 팀 랭킹</th>
+        <th>2022 항저우 AG</th>
+        <th>2026 아시아선수권</th>
+        <th>2026 세계선수권</th>
+      </tr>
+      <tr>
+        <td class="ev">여자 에페</td>
+        <td class="kr">한국 <b>1위</b><br><span class="mx">아시아 경쟁국 없음</span></td>
+        <td><span class="mg">금</span> 한국 <span class="mx">· 은 홍콩</span></td>
+        <td><span class="mg">금</span> 한국 <span class="mx">· 은 중국</span></td>
+        <td><span class="mb">동</span> 한국 <span class="mx">· 아시아 최고</span></td>
+      </tr>
+      <tr>
+        <td class="ev">남자 사브르</td>
+        <td class="kr">한국 <b>2위</b><br><span class="mx">1위 프랑스</span></td>
+        <td><span class="mg">금</span> 한국 <span class="mx">· 은 중국</span></td>
+        <td><span class="mg">금</span> 한국 <span class="mx">· 은 일본</span></td>
+        <td><span class="ms">은</span> 한국 <span class="mx">· 아시아 최고</span></td>
+      </tr>
+      <tr>
+        <td class="ev">여자 사브르</td>
+        <td class="kr">한국 <b>3위</b><br><span class="mx">1위 프랑스 · 2위 헝가리</span></td>
+        <td><span class="mb">동</span> 한국 <span class="mx">· 금 우즈베키스탄</span></td>
+        <td><span class="mg">금</span> 한국 <span class="mx">· 은 일본</span></td>
+        <td><span class="ms">은</span> 중국 <span class="mx">· 한국 무관</span></td>
+      </tr>
+      <tr>
+        <td class="ev">남자 에페</td>
+        <td class="kr none">한국 <b>7위</b><br><span class="mx">카자흐스탄 3위</span></td>
+        <td><span class="mb">동</span> 한국 <span class="mx">· 금 일본</span></td>
+        <td><span class="mb">동</span> 한국 <span class="mx">· 금 카자흐스탄</span></td>
+        <td><span class="mg">금</span> 카자흐스탄 <span class="mx">· 한국 무관</span></td>
+      </tr>
+      <tr>
+        <td class="ev">여자 플뢰레</td>
+        <td class="kr none">한국 <b>8위</b><br><span class="mx">일본 3위</span></td>
+        <td><span class="ms">은</span> 한국 <span class="mx">· 금 중국</span></td>
+        <td><span class="mb">동</span> 한국 <span class="mx">· 금 일본, 은 중국</span></td>
+        <td><span class="mb">동</span> 일본 <span class="mx">· 한국 무관</span></td>
+      </tr>
+      <tr>
+        <td class="ev">남자 플뢰레</td>
+        <td class="kr none">한국 <b>9위</b><br><span class="mx">홍콩 2위 · 일본 4위</span></td>
+        <td><span class="mg">금</span> 한국 <span class="mx">· 은 중국</span></td>
+        <td><span class="mb">동</span> 한국 <span class="mx">· 금 일본, 은 홍콩</span></td>
+        <td><span class="ms">은</span> 홍콩 <span class="mx">· 한국 무관</span></td>
+      </tr>
+    </table>
+  </div>
+  <p class="tblnote">아시아선수권 단체전은 4강에 오른 두 팀에 모두 동메달을 준다.<br>여자 에페는 한국이 세계 1위이고 아시아 경쟁국이 팀 랭킹 상위권에 없다. 반대로 한국이 7~9위로 처진 세 종목에서는 홍콩(남자 플뢰레 2위), 카자흐스탄(남자 에페 3위), 일본(여자 플뢰레 3위)이 모두 세계 4위 안에 들어 있다. 나고야에서 이 세 종목의 상대는 아시아 강호가 아니라 세계 강호다.</p>
+
+  <h2 class="sub"><small>Team Korea</small>2025–26 시즌 국가대표</h2>
+  <p class="lede">종목별 4명씩 24명. 매년 열리는 국내 4개 대회 성적과 국제펜싱연맹(FIE) 개인 랭킹 점수를 합산해 선발한다. 올해 아시아선수권과 세계선수권에 나선 명단이 그대로 나고야를 향한다.</p>
+
+  <div class="roster">
+    <div class="squad">
+      <h3>사브르 <em>남자</em></h3>
+      <ul>
+        <li class="star"><b>오상욱</b><span>대전광역시청</span></li>
+        <li class="star"><b>도경동</b><span>대구광역시청</span></li>
+        <li><b>박상원</b><span>대전광역시청</span></li>
+        <li><b>황희근</b><span>국군체육부대</span></li>
+      </ul>
+    </div>
+    <div class="squad">
+      <h3>사브르 <em>여자</em></h3>
+      <ul>
+        <li><b>최세빈</b><span>대전광역시청</span></li>
+        <li><b>전하영</b><span>서울시청</span></li>
+        <li><b>김정미</b><span>안산시청</span></li>
+        <li><b>서지연</b><span>안산시청</span></li>
+      </ul>
+    </div>
+    <div class="squad">
+      <h3>에페 <em>여자</em></h3>
+      <ul>
+        <li class="star"><b>송세라</b><span>부산광역시청</span></li>
+        <li><b>이혜인</b><span>울산광역시청</span></li>
+        <li><b>임태희</b><span>계룡시청</span></li>
+        <li><b>양승혜</b><span>한국체육대학교</span></li>
+      </ul>
+    </div>
+    <div class="squad">
+      <h3>에페 <em>남자</em></h3>
+      <ul>
+        <li><b>박상영</b><span>울산광역시청</span></li>
+        <li><b>권오민</b><span>국군체육부대</span></li>
+        <li><b>손민성</b><span>화성특례시청</span></li>
+        <li><b>남연호</b><span>한국체육대학교</span></li>
+      </ul>
+    </div>
+    <div class="squad">
+      <h3>플뢰레 <em>남자</em></h3>
+      <ul>
+        <li><b>임철우</b><span>화성특례시청</span></li>
+        <li><b>윤정현</b><span>화성특례시청</span></li>
+        <li><b>이광현</b><span>화성특례시청</span></li>
+        <li><b>김태환</b><span>충청남도체육회</span></li>
+      </ul>
+    </div>
+    <div class="squad">
+      <h3>플뢰레 <em>여자</em></h3>
+      <ul>
+        <li><b>심소은</b><span>서울특별시청</span></li>
+        <li><b>박지희</b><span>서울특별시청</span></li>
+        <li><b>모별이</b><span>인천광역시중구청</span></li>
+        <li><b>이세주</b><span>충청북도청</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="body" style="margin-top:20px;">
+    <p>항저우에서 개인전 금메달을 딴 최인정(여자 에페)과 윤지수(여자 사브르)는 이번 시즌 대표팀 명단에 없다. 아시안게임 하계 최다 금메달 기록 보유자인 구본길 역시 이번 국제대회 엔트리에서는 빠졌다. 두 종목 모두 사실상 다음 세대로 넘어간 상태다. 반면 남자 에페에는 2016 리우 올림픽 개인전 금메달리스트 박상영이 이름을 올렸다.</p>
+  </section>
+
+  <h2 class="sub"><small>Form Guide</small>최근 성적</h2>
+
+  <div class="rec">
+    <div class="yr">2022<i>항저우 AG</i></div>
+    <div>
+      <div class="chips"><span class="chip g">금 6</span><span class="chip s">은 3</span><span class="chip b">동 3</span></div>
+      <h3>12개 종목 중 10개에서 메달</h3>
+      <p>남자 플뢰레 단체, 남자 사브르 개인(오상욱)과 단체, 여자 에페 개인(최인정)과 단체, 여자 사브르 개인(윤지수)에서 금메달이 나왔다. 구본길이 남자 사브르 개인 은메달, 송세라가 여자 에페 개인 은메달을 보탰고 여자 플뢰레 단체도 은메달을 따냈다. 메달이 없었던 종목은 남자 에페 개인과 남자 플뢰레 개인 둘뿐이었다.</p>
+    </div>
+  </div>
+
+  <div class="rec">
+    <div class="yr">2024<i>파리 올림픽</i></div>
+    <div>
+      <div class="chips"><span class="chip g">금 2</span><span class="chip s">은 1</span></div>
+      <h3>모든 메달이 사브르에서 나왔다</h3>
+      <p>오상욱이 남자 사브르 개인전에서 우승하고 구본길·박상원·도경동과 함께 단체전까지 제패해 2관왕에 올랐다. 여자 사브르 단체는 결승에서 우크라이나에 42-45로 패해 은메달. 에페와 플뢰레에서는 메달이 나오지 않았고, 대신 홍콩의 청카롱이 남자 플뢰레 개인 2연패, 비비안 콩이 여자 에페 개인 금메달, 일본의 가노 고키가 남자 에페 개인 금메달을 가져갔다.</p>
+    </div>
+  </div>
+
+  <div class="rec">
+    <div class="yr">2026<i>아시아선수권 · 뉴델리</i></div>
+    <div>
+      <div class="chips"><span class="chip g">금 4</span><span class="chip s">은 1</span><span class="chip b">동 5</span></div>
+      <h3>종합 2위, 일본이 2년 연속 1위</h3>
+      <p>6월 19~24일 인도 뉴델리. 오상욱이 남자 사브르 개인·단체 2관왕에 올랐고 여자 에페 단체와 여자 사브르 단체도 정상을 지켰다. 그러나 송세라가 준결승에서 카자흐스탄의 이리나 바칼디나에게 7-15로 무너지며 개인전 2연패가 무산됐고, 플뢰레에서는 남녀 모두 금메달이 없었다. 일본이 메달 15개(금6·은5·동4)로 종합 우승을 차지했다.</p>
+    </div>
+  </div>
+
+  <div class="rec">
+    <div class="yr">2026<i>세계선수권 · 홍콩</i></div>
+    <div>
+      <div class="chips"><span class="chip g">금 1</span><span class="chip s">은 2</span><span class="chip b">동 1</span></div>
+      <h3>송세라의 금메달, 그리고 도경동의 부상</h3>
+      <p>7월 22~30일 홍콩. 송세라가 여자 에페 개인전에서 우승하며 한국 펜싱에 4년 만의 세계선수권 금메달을 안겼다. 도경동은 남자 사브르 개인 결승에서 러시아의 파벨 그라우딘에게 7-15로 패했지만, 오상욱 이후 7년 만의 개인전 입상이었다. 남자 사브르 단체는 프랑스에 밀려 은메달, 여자 에페 단체는 동메달. 다만 오상욱은 개인전 32강에서 탈락해 20위에 머물렀다.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <h3>관전 포인트</h3>
+    <p><b>남자 사브르에 두 명의 세계 정상급이 있다.</b> 파리 2관왕 오상욱과 올해 세계선수권 준우승자 도경동. 다만 오상욱은 세계선수권 개인전에서 32강 탈락했고 도경동은 결승에 올랐다. 개인전 금메달을 누가 가져갈지가 팀 내부에서부터 관심사다.</p>
+    <p><b>송세라는 세계 챔피언 자격으로 나선다.</b> 세계랭킹 3위, 올 시즌 월드컵 개인전 금메달 2개, 그리고 7월 세계선수권 우승. 다만 6월 아시아선수권 준결승에서 바칼디나에게 졌다는 점이 변수다. 아시아 무대에서 다시 만날 가능성이 높다.</p>
+    <p><b>플뢰레를 되찾을 수 있느냐가 종합 성적을 가른다.</b> 항저우에서 남자 플뢰레 단체 금메달, 여자 플뢰레 단체 은메달을 따냈지만 올해 아시아선수권에서는 남녀 모두 동메달에 그쳤다. 일본이 이 종목을 완전히 장악한 상태여서, 4개 금메달이 걸린 플뢰레의 향방이 한일 종합 순위를 결정할 가능성이 크다.</p>
+  </div>
 
   <footer class="pagefoot">
     <span>2026 아이치·나고야 아시안게임 종목 안내</span>
