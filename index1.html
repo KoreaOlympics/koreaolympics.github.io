@@ -53,11 +53,14 @@
   .cat{display:flex;align-items:baseline;gap:9px;margin:20px 0 9px;font-family:var(--serif);font-weight:600;font-size:18px;color:#2a2d31;}
   .cat:first-child{margin-top:6px;}
   .cat .cnt{font-family:var(--sans);font-size:12px;color:var(--muted);font-weight:500;}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(186px,1fr));gap:9px;}
-  .card{display:flex;align-items:center;gap:11px;border:1px solid var(--border);border-radius:9px;padding:11px 13px;background:#fff;transition:box-shadow .14s,border-color .14s,transform .14s;}
+  .grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;}
+  @media (max-width:900px){.grid{grid-template-columns:repeat(4,1fr);}}
+  @media (max-width:560px){.grid{grid-template-columns:repeat(3,1fr);}}
+  @media (max-width:380px){.grid{grid-template-columns:repeat(2,1fr);}}
+  .card{display:flex;align-items:center;gap:8px;border:1px solid var(--border);border-radius:9px;padding:9px 10px;background:#fff;min-width:0;transition:box-shadow .14s,border-color .14s,transform .14s;}
   .card:hover{box-shadow:0 3px 12px rgba(0,0,0,.08);border-color:#9db4e0;transform:translateY(-1px);}
-  .card .ic{font-size:24px;width:30px;text-align:center;flex:0 0 auto;}
-  .card .nm{font-size:15.5px;font-weight:600;line-height:1.25;}
+  .card .ic{font-size:21px;width:26px;text-align:center;flex:0 0 auto;}
+  .card .nm{font-size:14px;font-weight:600;line-height:1.2;min-width:0;word-break:keep-all;}
   .card .nm a{color:var(--ink);}
   .card.pending{background:var(--panel);border-style:dashed;}
   .card.pending .nm a{color:var(--link-red);}
@@ -65,6 +68,7 @@
   .tag.ag{background:#fff2e0;color:#a05a00;border:1px solid #f2d2a0;}
   .tag.new{background:#eaf1ff;color:#2456c6;border:1px solid #c3d6f7;}
   .tag.soon{background:#fde8e8;color:#b02a2a;border:1px solid #f3c0c0;}
+  .tag.merge{background:#eef0f2;color:#5b6168;border:1px solid #d5d9de;}
   .legend{font-size:12px;color:var(--muted);margin:14px 0 0;}
 
   /* ── 2026 전광판 ── */
@@ -96,9 +100,32 @@
   .sub-btn.active{background:#0d1117;color:#fff;border-color:#0d1117;}
   .sub-panel{display:none;}
   .sub-panel.active{display:block;}
-  .st{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 6px;border-radius:3px;margin-right:6px;vertical-align:middle;}
-  .st.done{background:rgba(139,148,158,.18);color:#c9d1d9;border:1px solid rgba(139,148,158,.4);}
-  .st.live{background:rgba(229,83,75,.16);color:#ff7b72;border:1px solid rgba(229,83,75,.5);}
+  .st{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:3px;margin-right:7px;vertical-align:middle;}
+  .st.done{background:rgba(63,185,80,.16);color:#3fb950;border:1px solid rgba(63,185,80,.45);}
+  .st.live{background:rgba(229,83,75,.18);color:#ff7b72;border:1px solid rgba(229,83,75,.55);}
+  .st.live .pd{display:inline-block;width:6px;height:6px;border-radius:50%;background:#ff5c52;margin-right:4px;vertical-align:middle;animation:blink 1s infinite;}
+  .board tr.rdone > td:first-child{border-left:3px solid #3fb950;}
+  .board tr.rlive > td:first-child{border-left:3px solid #e5534b;}
+  .board tr.rdone .sp{color:#8b949e;}
+  .qteam{color:#7ee2a8;font-weight:600;}
+  /* 펼침 행 */
+  .board tr.erow{cursor:pointer;}
+  .board tr.erow:hover td{background:rgba(88,166,255,.06);}
+  .board tr.erow .chev{color:#8b949e;font-size:10px;margin-left:7px;display:inline-block;transition:transform .15s;}
+  .board tr.erow.open .chev{transform:rotate(180deg);}
+  .board tr.drow{display:none;}
+  .board tr.drow.open{display:table-row;}
+  .board tr.drow > td{background:#0b0f14;padding:11px 16px 12px;}
+  .krnote{color:#c9d1d9;font-size:12px;line-height:1.65;}
+  .krnote b{color:#f0f6fc;}
+  .krnote .flag{color:#ff7b72;font-weight:700;}
+  .kexp{color:#58a6ff;font-weight:600;}
+  .board .kr .kexp{color:#58a6ff;font-weight:600;font-style:normal;}
+  .board-hint{font-size:11px;color:#8b949e;margin:4px 2px 10px;}
+  /* 준비중 카드 */
+  .card.prep{background:var(--panel);border-style:dashed;}
+  .card.prep .nm{color:#6b7075;}
+  .tag.prep{background:#eef0f2;color:#6b7075;border:1px solid #d5d9de;}
   .board .kr td{padding:8px 6px;}
   .board .krname{color:#6e7681;font-style:italic;}
   .board .krsum{font-size:12px;color:#8b949e;padding:4px 2px 0;}
@@ -125,36 +152,52 @@
   <!-- ════════ 탭 1 : 종목별 예선 ════════ -->
   <div class="tab-panel active" id="t-sports">
 
-    <div class="cat">단체 구기 종목 <span class="cnt">팀 종목 · 6</span></div>
+    <div class="cat">전체 종목 <span class="cnt">가나다순 · 40 (41개 세부종목)</span></div>
     <div class="grid">
-      <div class="card"><span class="ic">🏀</span><div class="nm"><a href="olbasketball.html">농구</a></div></div>
-      <div class="card"><span class="ic">🤾</span><div class="nm"><a href="olhandball.html">핸드볼</a></div></div>
-      <div class="card"><span class="ic">🏑</span><div class="nm"><a href="olhockey.html">하키</a><span class="tag ag">AG</span></div></div>
-      <div class="card"><span class="ic">⚾</span><div class="nm"><a href="olbaseball.html">야구·소프트볼</a></div></div>
-      <div class="card"><span class="ic">🏈</span><div class="nm"><a href="olflagfootball.html">플래그풋볼</a><span class="tag new">신규</span></div></div>
-      <div class="card pending"><span class="ic">⚽</span><div class="nm"><a class="new" href="#" onclick="return false;">축구</a><span class="tag soon">미발표</span></div></div>
-    </div>
-
-    <div class="cat">라켓·개인 구기 <span class="cnt">라켓·타깃 · 4</span></div>
-    <div class="grid">
-      <div class="card"><span class="ic">🎾</span><div class="nm"><a href="oltennis.html">테니스</a><span class="tag ag">AG</span></div></div>
-      <div class="card"><span class="ic">🏸</span><div class="nm"><a href="olbadminton.html">배드민턴</a></div></div>
-      <div class="card"><span class="ic">🏓</span><div class="nm"><a href="oltabletennis.html">탁구</a></div></div>
       <div class="card"><span class="ic">⛳</span><div class="nm"><a href="olgolf.html">골프</a></div></div>
-    </div>
-
-    <div class="cat">기타 개인 종목 <span class="cnt">채점·기록·격투·타깃 · 7</span></div>
-    <div class="grid">
-      <div class="card"><span class="ic">🤸</span><div class="nm"><a href="olgymnastics.html">체조</a></div></div>
-      <div class="card"><span class="ic">🧗</span><div class="nm"><a href="olclimbing.html">스포츠클라이밍</a></div></div>
-      <div class="card"><span class="ic">🛹</span><div class="nm"><a href="olskateboard.html">스케이트보딩</a></div></div>
+      <div class="card prep"><span class="ic">🎽</span><div class="nm">근대5종</div></div>
+      <div class="card"><span class="ic">🏀</span><div class="nm"><a href="olbasketball.html">농구</a></div></div>
+      <div class="card prep"><span class="ic">🤿</span><div class="nm">다이빙</div></div>
+      <div class="card prep"><span class="ic">🥍</span><div class="nm">라크로스<span class="tag new">신규</span></div></div>
+      <div class="card prep"><span class="ic">🏉</span><div class="nm">럭비</div></div>
+      <div class="card prep"><span class="ic">🤼</span><div class="nm">레슬링</div></div>
+      <div class="card prep"><span class="ic">🌊</span><div class="nm">마라톤 수영</div></div>
+      <div class="card"><span class="ic">🏐</span><div class="nm"><a href="olvolleyball.html">배구</a><span class="tag merge">2종목</span></div></div>
+      <div class="card"><span class="ic">🏸</span><div class="nm"><a href="olbadminton.html">배드민턴</a></div></div>
       <div class="card"><span class="ic">🥊</span><div class="nm"><a href="olboxing.html">복싱</a></div></div>
+      <div class="card prep"><span class="ic">🎯</span><div class="nm">사격</div></div>
+      <div class="card"><span class="ic">🚴</span><div class="nm"><a href="olcycling.html">사이클</a><span class="tag merge">5종목</span></div></div>
+      <div class="card prep"><span class="ic">🏄</span><div class="nm">서핑</div></div>
+      <div class="card prep"><span class="ic">🤽</span><div class="nm">수구</div></div>
+      <div class="card prep"><span class="ic">🏊</span><div class="nm">수영</div></div>
+      <div class="card"><span class="ic">🛹</span><div class="nm"><a href="olskateboard.html">스케이트보딩</a></div></div>
+      <div class="card prep"><span class="ic">⚫</span><div class="nm">스쿼시<span class="tag new">신규</span></div></div>
+      <div class="card"><span class="ic">🧗</span><div class="nm"><a href="olclimbing.html">스포츠클라이밍</a><span class="tag merge">3종목</span></div></div>
+      <div class="card prep"><span class="ic">🏇</span><div class="nm">승마<span class="tag merge">3종목</span></div></div>
+      <div class="card prep"><span class="ic">🩰</span><div class="nm">아티스틱 스위밍</div></div>
+      <div class="card"><span class="ic">⚾</span><div class="nm"><a href="olbaseball.html">야구·소프트볼</a><span class="tag merge">2종목</span></div></div>
       <div class="card"><span class="ic">🏹</span><div class="nm"><a href="olarchery.html">양궁</a><span class="tag ag">AG</span></div></div>
-      <div class="card"><span class="ic">🥋</span><div class="nm"><a href="oltaekwondo.html">태권도</a></div></div>
+      <div class="card"><span class="ic">🏋️</span><div class="nm"><a href="olweightlifting.html">역도</a></div></div>
+      <div class="card prep"><span class="ic">⛵</span><div class="nm">요트</div></div>
+      <div class="card prep"><span class="ic">👘</span><div class="nm">유도</div></div>
       <div class="card pending"><span class="ic">🏃</span><div class="nm"><a class="new" href="#" onclick="return false;">육상</a><span class="tag soon">미발표</span></div></div>
+      <div class="card prep"><span class="ic">🚣</span><div class="nm">조정<span class="tag merge">2종목</span></div></div>
+      <div class="card"><span class="ic">🤸</span><div class="nm"><a href="olgymnastics.html">체조</a><span class="tag merge">3종목</span></div></div>
+      <div class="card pending"><span class="ic">⚽</span><div class="nm"><a class="new" href="#" onclick="return false;">축구</a><span class="tag soon">미발표</span></div></div>
+      <div class="card prep"><span class="ic">🛶</span><div class="nm">카누<span class="tag merge">2종목</span></div></div>
+      <div class="card prep"><span class="ic">🏏</span><div class="nm">크리켓<span class="tag new">신규</span></div></div>
+      <div class="card"><span class="ic">🏓</span><div class="nm"><a href="oltabletennis.html">탁구</a></div></div>
+      <div class="card"><span class="ic">🥋</span><div class="nm"><a href="oltaekwondo.html">태권도</a></div></div>
+      <div class="card"><span class="ic">🎾</span><div class="nm"><a href="oltennis.html">테니스</a><span class="tag ag">AG</span></div></div>
+      <div class="card prep"><span class="ic">🏅</span><div class="nm">트라이애슬론</div></div>
+      <div class="card prep"><span class="ic">🤺</span><div class="nm">펜싱</div></div>
+      <div class="card"><span class="ic">🏈</span><div class="nm"><a href="olflagfootball.html">플래그풋볼</a><span class="tag new">신규</span></div></div>
+      <div class="card"><span class="ic">🏑</span><div class="nm"><a href="olhockey.html">필드하키</a><span class="tag ag">AG</span></div></div>
+      <div class="card"><span class="ic">🤾</span><div class="nm"><a href="olhandball.html">핸드볼</a></div></div>
     </div>
 
-    <p class="legend"><span class="tag ag">AG</span> 2026 아시안게임이 예선 경로 &nbsp;·&nbsp; <span class="tag new">신규</span> LA28 신규 종목 &nbsp;·&nbsp; <span class="tag soon">미발표</span> 예선 시스템 미공개 (추가 예정)</p>
+    <p class="legend"><span class="tag ag">AG</span> 2026 아시안게임이 예선 경로 &nbsp;·&nbsp; <span class="tag new">신규</span> LA28 신규 종목 &nbsp;·&nbsp; <span class="tag merge">N종목</span> 여러 세부종목이 단일 예선 문서로 통합 &nbsp;·&nbsp; <span class="tag soon">미발표</span> 규정 미공개</p>
+    <p class="legend" style="margin-top:6px;">파란 링크 카드(18종)는 <b>상세 페이지 작성 완료</b>, 회색 점선 카드는 <b>예선 규정은 있으나 상세 페이지 준비중</b>, 빨강 점선(<span class="tag soon">미발표</span>)은 <b>규정 문서 자체가 아직 없는</b> 축구·육상입니다. 위키백과 41개 세부 종목을 가나다순으로 모두 표시했으며, 야구·소프트볼처럼 단일 문서로 통합된 종목은 한 링크로 묶었습니다.</p>
   </div>
 
   <!-- ════════ 탭 2 : 2026 전광판 ════════ -->
@@ -170,19 +213,34 @@
       <div class="board">
         <div class="board-head">
           <div class="board-title"><span class="dot"></span>이미 진행된 예선 · 2026 (~8월 기준)</div>
-          <div class="board-sub">완료 또는 진행 중인 예선</div>
+          <div class="board-sub">완료 1 · 진행중 6</div>
         </div>
+        <p class="board-hint">🔽 <b>진행중</b> 종목의 행을 누르면 한국 관련 설명이 펼쳐집니다.</p>
         <table>
-          <tr><td class="d">2026.03</td><td class="ic2">⚾</td><td class="sp">야구</td><td class="ev"><span class="st done">완료</span>월드베이스볼클래식 — 미주 상위 2팀</td><td class="tg"><span class="led direct">직행</span></td></tr>
-          <tr><td class="d">2026.06~</td><td class="ic2">⛳</td><td class="sp">골프</td><td class="ev"><span class="st live">진행중</span>올림픽 골프 랭킹(OGR) 적립</td><td class="tg"><span class="led rank">랭킹</span></td></tr>
-          <tr><td class="d">2026.06~</td><td class="ic2">🛹</td><td class="sp">스케이트보딩</td><td class="ev"><span class="st live">진행중</span>WSR Phase 1 랭킹 구간</td><td class="tg"><span class="led rank">랭킹</span></td></tr>
-          <tr><td class="d">2026.07~</td><td class="ic2">🥋</td><td class="sp">태권도</td><td class="ev"><span class="st live">진행중</span>WT 올림픽 랭킹 적립</td><td class="tg"><span class="led rank">랭킹</span></td></tr>
-          <tr><td class="d">2026.08.12</td><td class="ic2">🤸</td><td class="sp">리듬체조</td><td class="ev"><span class="st live">진행중</span>세계선수권 (프랑크푸르트, ~8.16)</td><td class="tg"><span class="led cont">세계선수권</span></td></tr>
-          <tr><td class="d">2026.08.13</td><td class="ic2">🏈</td><td class="sp">플래그풋볼</td><td class="ev"><span class="st live">진행중</span>IFAF 세계선수권 (뒤셀도르프, ~8.16)</td><td class="tg"><span class="led direct">직행</span></td></tr>
+          <tr class="rdone erow" onclick="toggleRow(this)"><td class="d">2026.03</td><td class="ic2">⚾</td><td class="sp">야구</td><td class="ev"><span class="st done">✓ 완료</span>월드베이스볼클래식 — <span class="qteam">🇩🇴 도미니카 · 🇻🇪 베네수엘라</span> 확정</td><td class="tg"><span class="led direct">직행</span><span class="chev">▼</span></td></tr>
+          <tr class="drow"><td colspan="5"><div class="krnote"><b>LA28 야구 출전국 현황 — 6팀 중 3팀 확정</b><br>· 개최국: <span class="qteam">🇺🇸 미국</span> ✓<br>· 2026 WBC (미주, 3월): <span class="qteam">🇩🇴 도미니카공화국 · 🇻🇪 베네수엘라</span> ✓<br>· 2027 프리미어12: 아시아 1 + 유럽/오세아니아 1 <span class="flag">미정</span><br>· 최종예선 (~2028.3): 1 <span class="flag">미정</span> &nbsp;<span class="kexp">상세 표 → 야구·소프트볼 페이지</span></div></td></tr>
+
+          <tr class="rlive erow" onclick="toggleRow(this)"><td class="d">2026.06~</td><td class="ic2">⛳</td><td class="sp">골프</td><td class="ev"><span class="st live"><span class="pd"></span>진행중</span>올림픽 골프 랭킹(OGR) 적립</td><td class="tg"><span class="led rank">랭킹</span><span class="chev">▼</span></td></tr>
+          <tr class="drow"><td colspan="5"><div class="krnote"><b>🇰🇷 한국</b> — OGR 랭킹(2026.6~2028.6)으로 남녀 각 최대 4명까지 출전 가능. 현재 라이브랭킹 기준 <span class="kexp">여자 WWGR 3위 류해란·4위 김효주·10위 김세영, 남자 OWGR 18위 김시우·30위 김주형</span> 등이 상위권으로, 시작 시점 기준으로는 복수 출전권 확보 가능성이 있다(확정 아님). <span class="flag">아직 확정 0명 · 랭킹 적립 중</span></div></td></tr>
+
+          <tr class="rlive erow" onclick="toggleRow(this)"><td class="d">2026.06~</td><td class="ic2">🛹</td><td class="sp">스케이트보딩</td><td class="ev"><span class="st live"><span class="pd"></span>진행중</span>WSR Phase 1 랭킹 구간</td><td class="tg"><span class="led rank">랭킹</span><span class="chev">▼</span></td></tr>
+          <tr class="drow"><td colspan="5"><div class="krnote"><b>🇰🇷 한국</b> — WSR 단일 랭킹(2026.6~2028.6) 상위 20명이 직행. <b>WST(World Skate Tour) 예선</b> 8월 라이브랭킹 기준 <span class="kexp">남자 스트리트 7위 강준, 여자 스트리트 9위 신지율</span>이 올림픽 직행권(종목·성별당 상위 20위) 안팎에 있다(확정 아님). <span class="flag">아직 확정 0명 · WST 예선 도전 중</span></div></td></tr>
+
+          <tr class="rlive erow" onclick="toggleRow(this)"><td class="d">2026.07~</td><td class="ic2">🥋</td><td class="sp">태권도</td><td class="ev"><span class="st live"><span class="pd"></span>진행중</span>WT 올림픽 랭킹 적립</td><td class="tg"><span class="led rank">랭킹</span><span class="chev">▼</span></td></tr>
+          <tr class="drow"><td colspan="5"><div class="krnote"><b>🇰🇷 한국</b> — 전통적 강국. WT 올림픽 랭킹(2026.7~2028.6)·그랜드슬램·아시아 대륙예선의 다경로로 도전한다. 시작 시점 라이브랭킹 기준 <span class="kexp">남 -58kg 5위 서은수, 남 -80kg 5위 강재권, 여 -57kg 6위 김유진, 여 -67kg 3위 홍효림</span> 등이 체급별 톱5급으로, 이 흐름이면 쿼터 진입 가능성이 있다(확정 아님). 다만 체급별 NOC 1명 제한이 관건이다. <span class="flag">아직 확정 0명 · 랭킹 적립 중</span></div></td></tr>
+
+          <tr class="rlive erow" onclick="toggleRow(this)"><td class="d">2026.07~</td><td class="ic2">🏋️</td><td class="sp">역도</td><td class="ev"><span class="st live"><span class="pd"></span>진행중</span>IWF 올림픽예선랭킹(OQR) 적립</td><td class="tg"><span class="led rank">랭킹</span><span class="chev">▼</span></td></tr>
+          <tr class="drow"><td colspan="5"><div class="krnote"><b>🇰🇷 한국</b> — OQR 랭킹(2026.7.27~2028.5.7) 체급별 상위 8명이 직행. 한국은 일부 체급에서 경쟁력이 있으나 체급별 상위권 진입 유지가 관건이다. <span class="flag">아직 확정 0명 · 랭킹 적립 중</span></div></td></tr>
+
+          <tr class="rlive erow" onclick="toggleRow(this)"><td class="d">2026.08.12</td><td class="ic2">🤸</td><td class="sp">리듬체조</td><td class="ev"><span class="st live"><span class="pd"></span>진행중</span>세계선수권 (프랑크푸르트, ~8.16)</td><td class="tg"><span class="led cont">세계선수권</span><span class="chev">▼</span></td></tr>
+          <tr class="drow"><td colspan="5"><div class="krnote"><b>🇰🇷 한국</b> — 2026 세계선수권이 개인·단체 1차 예선이다. 개인 티켓은 세계 정상권과 격차가 있어 2028 대륙선수권·월드컵 시리즈 경로가 더 현실적이다. <span class="flag">아직 확정 0명</span></div></td></tr>
+
+          <tr class="rlive erow" onclick="toggleRow(this)"><td class="d">2026.08.13</td><td class="ic2">🏈</td><td class="sp">플래그풋볼</td><td class="ev"><span class="st live"><span class="pd"></span>진행중</span>IFAF 세계선수권 (뒤셀도르프, ~8.16)</td><td class="tg"><span class="led direct">직행</span><span class="chev">▼</span></td></tr>
+          <tr class="drow"><td colspan="5"><div class="krnote"><b>🇰🇷 한국</b> — 세계선수권 성별 상위 2팀 직행은 미주·유럽이 강세다. 한국은 2027 아시아·오세아니아 선수권 → 올림픽 Q-시리즈 경로를 노리는 단계다. <span class="flag">아직 확정 0명</span></div></td></tr>
         </table>
         <div class="board-foot">
-          <span><span class="st done">완료</span> 종료된 예선</span>
-          <span><span class="st live">진행중</span> 열리는 중·랭킹 적립 중</span>
+          <span><span class="st done">✓ 완료</span> 종료 — 출전권 확정</span>
+          <span><span class="st live"><span class="pd"></span>진행중</span> 열리는 중·랭킹 적립 중</span>
         </div>
       </div>
     </div>
@@ -196,11 +254,15 @@
         </div>
         <table>
           <tr><td class="d">2026.08.17</td><td class="ic2">🏀</td><td class="sp">농구 (여)</td><td class="ev">FIBA 여자 올림픽 프리퀄리파잉</td><td class="tg"><span class="led cont">대륙예선</span></td></tr>
+          <tr><td class="d">2026.08~</td><td class="ic2">🏖️</td><td class="sp">비치발리볼</td><td class="ev">대륙선수권·투어파이널 (~11월) — 성별 5팀</td><td class="tg"><span class="led direct">직행</span></td></tr>
+          <tr><td class="d">2026.08.21</td><td class="ic2">🏐</td><td class="sp">배구</td><td class="ev">대륙선수권 (아시아 여 CHN·남 JPN 등) — 성별 5팀</td><td class="tg"><span class="led direct">직행</span></td></tr>
           <tr><td class="d">2026.09.04</td><td class="ic2">🏀</td><td class="sp">농구 (여)</td><td class="ev">FIBA 여자농구월드컵 (독일) — 우승 직행</td><td class="tg"><span class="led direct">직행</span></td></tr>
           <tr><td class="d">2026.09.19</td><td class="ic2">🏑</td><td class="sp">하키</td><td class="ev">아시안게임 (나고야) — 남·여 우승국</td><td class="tg"><span class="led ag">아시안게임</span></td></tr>
           <tr><td class="d">2026.09.25</td><td class="ic2">🏹</td><td class="sp">양궁</td><td class="ev">아시안게임 (나고야) — 리커브 개인 상위 2명</td><td class="tg"><span class="led ag">아시안게임</span></td></tr>
           <tr><td class="d">2026.09~10</td><td class="ic2">🎾</td><td class="sp">테니스</td><td class="ev">아시안게임 (나고야) — 단식 우승자</td><td class="tg"><span class="led ag">아시안게임</span></td></tr>
           <tr><td class="d">2026.10.17</td><td class="ic2">🤸</td><td class="sp">기계체조</td><td class="ev">세계선수권 — 1차 단체·개인 예선</td><td class="tg"><span class="led cont">세계선수권</span></td></tr>
+          <tr><td class="d">2026.10~</td><td class="ic2">🚴</td><td class="sp">사이클(트랙)</td><td class="ev">UCI 트랙 세계선수권 — 랭킹 반영</td><td class="tg"><span class="led cont">세계선수권</span></td></tr>
+          <tr><td class="d">2026.11.03</td><td class="ic2">🚵</td><td class="sp">사이클(BMX)</td><td class="ev">UCI 어반 세계선수권 (리야드) — BMX 프리스타일 쿼터</td><td class="tg"><span class="led direct">직행</span></td></tr>
           <tr><td class="d">2026.12.03</td><td class="ic2">🤾</td><td class="sp">핸드볼 (여)</td><td class="ev">유럽선수권 — 대륙예선</td><td class="tg"><span class="led cont">대륙예선</span></td></tr>
         </table>
         <div class="board-foot">
@@ -223,11 +285,13 @@
           <tr><td class="d">2026.09</td><td class="ic2">🏹</td><td class="sp">양궁</td><td class="ev">아시안게임 리커브 <span class="krname">— 선수 미정</span></td><td class="tg"><span class="led ag">예정</span></td></tr>
           <tr><td class="d">2026.09</td><td class="ic2">🏑</td><td class="sp">하키</td><td class="ev">아시안게임 남·여 <span class="krname">— 선수 미정</span></td><td class="tg"><span class="led ag">예정</span></td></tr>
           <tr><td class="d">2026.09</td><td class="ic2">🎾</td><td class="sp">테니스</td><td class="ev">아시안게임 단식 <span class="krname">— 선수 미정</span></td><td class="tg"><span class="led ag">예정</span></td></tr>
-          <tr><td class="d">진행중</td><td class="ic2">🥋</td><td class="sp">태권도</td><td class="ev">WT 올림픽 랭킹 <span class="krname">— 선수 미정</span></td><td class="tg"><span class="led rank">랭킹</span></td></tr>
+          <tr><td class="d">진행중</td><td class="ic2">🥋</td><td class="sp">태권도</td><td class="ev">WT 올림픽 랭킹 <span class="kexp">서은수·강재권·김유진·홍효림 톱5급</span></td><td class="tg"><span class="led rank">랭킹</span></td></tr>
+          <tr><td class="d">진행중</td><td class="ic2">⛳</td><td class="sp">골프</td><td class="ev">OGR <span class="kexp">류해란·김효주·김세영 / 김시우·김주형 상위권</span></td><td class="tg"><span class="led rank">랭킹</span></td></tr>
+          <tr><td class="d">진행중</td><td class="ic2">🛹</td><td class="sp">스케이트보딩</td><td class="ev">WST 예선 <span class="kexp">강준(남 스트리트 7위)·신지율(여 스트리트 9위)</span></td><td class="tg"><span class="led rank">랭킹</span></td></tr>
           <tr><td class="d">2027~</td><td class="ic2">🏸</td><td class="sp">배드민턴</td><td class="ev">LA28 올림픽 랭킹 <span class="krname">— 선수 미정</span></td><td class="tg"><span class="led rank">랭킹</span></td></tr>
           <tr><td class="d">2027~</td><td class="ic2">🏓</td><td class="sp">탁구</td><td class="ev">대륙·세계예선 <span class="krname">— 선수 미정</span></td><td class="tg"><span class="led cont">예선</span></td></tr>
         </table>
-        <div class="krsum">※ 위는 한국이 노려볼 수 있는 주요 예선 관문입니다. 확정된 대표 선수·출전권은 예선 결과가 나오는 대로 채워집니다. <b style="color:#c9d1d9">(현재 명단: 빈칸)</b></div>
+        <div class="krsum">※ <span class="kexp">파란 글씨</span>는 현재 라이브랭킹상 올림픽 쿼터 진입 가능성이 있는 선수로, <b>아직 확정이 아닙니다.</b> 확정 대표·출전권은 예선 결과가 나오는 대로 채워집니다. <b style="color:#c9d1d9">(현재 확정 명단: 빈칸)</b></div>
       </div>
     </div>
   </div>
@@ -235,17 +299,17 @@
   <!-- ════════ 탭 3 : 개요·관계 ════════ -->
   <div class="tab-panel" id="t-info">
     <h2 id="intro">개요</h2>
-    <p><b>올림픽 예선 시스템(Qualification System)</b>은 각 국제경기연맹(IF)이 IOC의 승인을 받아 정하는 문서로, 종목별 출전권(<i>Quota Places</i>)을 어떤 경로로 배분할지 규정합니다. 대체로 세계랭킹 기반 <i>직행(Direct Acceptance)</i>, 대륙별 예선, 개최국 쿼터, 유니버설리티(Universality) 배정 등으로 구성됩니다. 현재 정리된 예선 문서는 <b>15종</b>입니다.</p>
+    <p><b>올림픽 예선 시스템(Qualification System)</b>은 각 국제경기연맹(IF)이 IOC의 승인을 받아 정하는 문서로, 종목별 출전권(<i>Quota Places</i>)을 어떤 경로로 배분할지 규정합니다. 대체로 세계랭킹 기반 <i>직행(Direct Acceptance)</i>, 대륙별 예선, 개최국 쿼터, 유니버설리티(Universality) 배정 등으로 구성됩니다. LA28 전체 <b>41개 세부 종목</b>을 메뉴에 모두 표시했으며, 이 중 <b>상세 페이지 18종</b>이 작성되었고 나머지는 준비 중입니다.</p>
 
     <h2 id="asiad">아시안게임과의 관계</h2>
-    <p>정리된 15개 종목 중 <b>양궁·테니스·하키</b>가 2026 아이치·나고야 아시안게임을 예선 경로표에 <b>직접 포함</b>합니다. 태권도는 아시안게임 성적이 세계랭킹 포인트로 <b>간접 반영</b>됩니다.</p>
+    <p>정리된 18개 종목 중 <b>양궁·테니스·하키</b>가 2026 아이치·나고야 아시안게임을 예선 경로표에 <b>직접 포함</b>합니다. 태권도는 아시안게임 성적이 세계랭킹 포인트로 <b>간접 반영</b>됩니다.</p>
     <table class="wt">
       <tr><th>종목</th><th>연계</th><th>비고</th></tr>
       <tr><td>양궁</td><td><span class="badge asiad">직접</span></td><td>리커브 개인 상위 2명(성별) 직행</td></tr>
       <tr><td>테니스</td><td><span class="badge asiad">직접</span></td><td>단식 우승자 → ITF 최종예선 출전권</td></tr>
       <tr><td>하키</td><td><span class="badge asiad">직접</span></td><td>남·여 아시안게임 우승국 대륙대표 직행</td></tr>
       <tr><td>태권도</td><td><span class="badge">간접</span></td><td>WT 올림픽 랭킹 포인트로만 반영</td></tr>
-      <tr><td>그 외 11종</td><td>비연계</td><td>연맹 자체 세계·대륙선수권, 랭킹 등</td></tr>
+      <tr><td>그 외 14종</td><td>비연계</td><td>연맹 자체 세계·대륙선수권, 랭킹 등</td></tr>
     </table>
 
     <h2 id="terms">공통 용어</h2>
@@ -263,7 +327,7 @@
   </div>
 
   <div class="footer">
-    출처: FIG / World Climbing / World Skate / World Boxing / World Archery / ITF / FIBA / IFAF / WBSC / BWF / IGF / IHF / FIH / World Taekwondo / ITTF — LA28 Qualification System (각 연맹 2026년 5~8월 버전). 본 페이지는 요약 예시이며, 정확한 규정은 각 연맹 원문을 따릅니다.
+    출처: FIG / World Climbing / World Skate / World Boxing / World Archery / ITF / FIBA / IFAF / WBSC / BWF / IGF / IHF / FIH / World Taekwondo / ITTF / IWF / FIVB / UCI — LA28 Qualification System (각 연맹 2026년 5~8월 버전). 본 페이지는 요약 예시이며, 정확한 규정은 각 연맹 원문을 따릅니다.
   </div>
 </div>
 
@@ -273,6 +337,11 @@
     document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active');});
     document.getElementById(id).classList.add('active');
     btn.classList.add('active');
+  }
+  function toggleRow(row){
+    var d = row.nextElementSibling;
+    row.classList.toggle('open');
+    if(d && d.classList.contains('drow')){ d.classList.toggle('open'); }
   }
   function showSub(id, btn){
     document.querySelectorAll('.sub-panel').forEach(function(p){p.classList.remove('active');});
