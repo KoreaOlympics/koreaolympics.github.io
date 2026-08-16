@@ -3,74 +3,1306 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>농구 - 올림픽예선 (LA28 종목별 예선 시스템)</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-  :root{
-    --bg:#ffffff; --panel:#f8f9fa; --border:#c8ccd1; --border-soft:#eaecf0;
-    --ink:#202122; --muted:#54595d; --link:#3366cc; --link-visited:#795cb2; --link-red:#ba0000;
-    --serif:'Noto Serif KR',Georgia,'Times New Roman',serif;
-    --sans:'Pretendard','Helvetica Neue',Arial,sans-serif;
+:root{
+  --bg:#ffffff;
+  --panel:#f8f9fa;
+  --border:#c8ccd1;
+  --border-soft:#eaecf0;
+  --ink:#202122;
+  --muted:#54595d;
+  --link:#3366cc;
+  --link-visited:#795cb2;
+  --link-red:#ba0000;
+  --serif:'Noto Serif KR',Georgia,'Times New Roman',serif;
+  --sans:'Pretendard','Helvetica Neue',Arial,sans-serif;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:15px;
+  line-height:1.65;
+}
+
+a{
+  color:var(--link);
+  text-decoration:none;
+}
+
+a:hover{
+  text-decoration:underline;
+}
+
+a:visited{
+  color:var(--link-visited);
+}
+
+.topbar{
+  border-bottom:1px solid var(--border);
+  background:var(--panel);
+  font-size:12.5px;
+  color:var(--muted);
+}
+
+.topbar .inner{
+  max-width:1100px;
+  margin:0 auto;
+  padding:8px 20px;
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.topbar a{
+  color:var(--link);
+}
+
+.layout{
+  max-width:1100px;
+  margin:0 auto;
+  padding:22px 20px 80px;
+}
+
+h1.title{
+  font-family:var(--serif);
+  font-weight:400;
+  font-size:30px;
+  line-height:1.3;
+  margin:0 0 2px;
+  padding-bottom:6px;
+  border-bottom:1px solid var(--border);
+}
+
+h1.title .ic{
+  font-family:var(--sans);
+}
+
+.subtitle{
+  color:var(--muted);
+  font-size:13px;
+  margin:0 0 18px;
+}
+
+.hatnote{
+  font-style:italic;
+  color:var(--muted);
+  background:var(--panel);
+  border:1px solid var(--border-soft);
+  padding:8px 14px;
+  border-radius:2px;
+  margin:0 0 20px;
+  font-size:13.5px;
+}
+
+.content{
+  display:flex;
+  gap:28px;
+  align-items:flex-start;
+  flex-wrap:wrap;
+}
+
+.main{
+  flex:1 1 560px;
+  min-width:0;
+}
+
+h2{
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:22px;
+  margin:28px 0 10px;
+  padding-bottom:5px;
+  border-bottom:1px solid var(--border-soft);
+}
+
+h3{
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:17px;
+  margin:22px 0 8px;
+}
+
+h4{
+  font-family:var(--sans);
+  font-weight:700;
+  font-size:14.5px;
+  margin:16px 0 6px;
+  color:#3a3f44;
+}
+
+p{
+  margin:0 0 12px;
+}
+
+.toc{
+  display:inline-block;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:2px;
+  padding:12px 20px 12px 14px;
+  margin:0 0 20px;
+  font-size:14px;
+}
+
+.toc-title{
+  font-weight:700;
+  text-align:center;
+  font-size:13px;
+  margin-bottom:6px;
+}
+
+.toc ol{
+  margin:0;
+  padding-left:22px;
+}
+
+.toc li{
+  margin:3px 0;
+}
+
+
+/* =========================
+   Infobox
+========================= */
+
+.infobox{
+  flex:0 0 300px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:2px;
+  font-size:13px;
+  align-self:flex-start;
+}
+
+.infobox .ib-title{
+  background:#eaecf0;
+  font-family:var(--serif);
+  font-weight:700;
+  text-align:center;
+  padding:10px 12px;
+  font-size:15px;
+  border-bottom:1px solid var(--border);
+}
+
+.infobox .ib-ic{
+  font-size:30px;
+  text-align:center;
+  padding:10px 0 4px;
+}
+
+.infobox table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.infobox th,
+.infobox td{
+  text-align:left;
+  padding:7px 12px;
+  vertical-align:top;
+  border-bottom:1px solid var(--border-soft);
+}
+
+.infobox th{
+  width:38%;
+  color:var(--muted);
+  font-weight:600;
+}
+
+
+/* =========================
+   Badges
+========================= */
+
+.badge{
+  display:inline-block;
+  font-size:11px;
+  padding:1px 7px;
+  border-radius:2px;
+  background:#e6f0ff;
+  color:#2456c6;
+  border:1px solid #b9d0f5;
+  margin-left:4px;
+}
+
+.badge.asiad{
+  background:#fff2e0;
+  color:#a05a00;
+  border-color:#f2d2a0;
+}
+
+.badge.green{
+  background:#e7f6ec;
+  color:#1f7a44;
+  border-color:#b6e2c6;
+}
+
+.badge.red{
+  background:#fde8e8;
+  color:#b02a2a;
+  border-color:#f3c0c0;
+}
+
+.badge.gray{
+  background:#f1f2f3;
+  color:#54595d;
+  border-color:#d6d9dc;
+}
+
+
+/* =========================
+   General tables
+========================= */
+
+table.wt{
+  border-collapse:collapse;
+  width:100%;
+  font-size:13.5px;
+  margin:6px 0 16px;
+}
+
+table.wt th,
+table.wt td{
+  border:1px solid var(--border);
+  padding:7px 10px;
+  text-align:left;
+  vertical-align:middle;
+}
+
+table.wt th{
+  background:var(--panel);
+  font-weight:700;
+}
+
+table.wt td.num,
+table.wt th.num{
+  text-align:center;
+}
+
+.note{
+  font-size:12.5px;
+  color:var(--muted);
+  margin:-8px 0 16px;
+}
+
+
+/* =========================
+   Qualification route boxes
+========================= */
+
+.route-box{
+  border:1px solid var(--border);
+  margin:10px 0 18px;
+  background:#fff;
+}
+
+.route-box-title{
+  background:var(--panel);
+  border-bottom:1px solid var(--border);
+  padding:9px 12px;
+  font-family:var(--serif);
+  font-weight:700;
+  font-size:16px;
+}
+
+.route-row{
+  display:grid;
+  grid-template-columns:150px 1fr 80px;
+  border-bottom:1px solid var(--border-soft);
+}
+
+.route-row:last-child{
+  border-bottom:none;
+}
+
+.route-row > div{
+  padding:8px 10px;
+}
+
+.route-row .route-name{
+  font-weight:600;
+}
+
+.route-row .route-quota{
+  text-align:center;
+  font-weight:700;
+}
+
+
+/* =========================
+   Qualified team list
+========================= */
+
+.qual-section{
+  margin:18px 0 26px;
+}
+
+.qual-title{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:8px;
+}
+
+.qual-title h3{
+  margin:0;
+}
+
+.qual-count{
+  font-size:12px;
+  color:var(--muted);
+  white-space:nowrap;
+}
+
+.qual-table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:13.5px;
+  border:1px solid var(--border);
+}
+
+.qual-table th,
+.qual-table td{
+  border:1px solid var(--border);
+  padding:7px 9px;
+  vertical-align:middle;
+}
+
+.qual-table th{
+  background:var(--panel);
+  font-weight:700;
+}
+
+.qual-table .slot{
+  width:42px;
+  text-align:center;
+  color:var(--muted);
+}
+
+.qual-table .method{
+  width:190px;
+}
+
+.qual-table .team{
+  font-weight:600;
+}
+
+.qual-table .status{
+  width:90px;
+  text-align:center;
+}
+
+
+/* =========================
+   Qualified / TBD status
+========================= */
+
+.team-qualified{
+  color:#202122;
+}
+
+.team-tbd{
+  color:#777;
+  font-style:italic;
+}
+
+.status-confirmed{
+  display:inline-block;
+  font-size:11px;
+  padding:2px 7px;
+  border-radius:2px;
+  background:#e7f6ec;
+  color:#1f7a44;
+  border:1px solid #b6e2c6;
+}
+
+.status-tbd{
+  display:inline-block;
+  font-size:11px;
+  padding:2px 7px;
+  border-radius:2px;
+  background:#f1f2f3;
+  color:#666;
+  border:1px solid #d6d9dc;
+}
+
+
+/* =========================
+   Medal / host emphasis
+========================= */
+
+.host-row td{
+  background:#f5f8ff;
+}
+
+.direct-row td{
+  background:#fbfbfb;
+}
+
+
+/* =========================
+   Relation box
+========================= */
+
+.asiad-box{
+  background:#fff8ee;
+  border:1px solid #f2d2a0;
+  border-radius:3px;
+  padding:14px 16px;
+  margin:10px 0 18px;
+}
+
+.asiad-box h4{
+  margin-top:0;
+  color:#a05a00;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+.footer{
+  margin-top:36px;
+  padding-top:14px;
+  border-top:1px solid var(--border);
+  color:var(--muted);
+  font-size:12px;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width:820px){
+
+  .layout{
+    padding:18px 14px 60px;
   }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.65;}
-  a{color:var(--link);text-decoration:none;}
-  a:hover{text-decoration:underline;}
-  a:visited{color:var(--link-visited);}
-  a.new{color:var(--link-red);}
-  .topbar{border-bottom:1px solid var(--border);background:var(--panel);font-size:12.5px;color:var(--muted);}
-  .topbar .inner{max-width:1100px;margin:0 auto;padding:8px 20px;display:flex;gap:16px;flex-wrap:wrap;}
-  .topbar a{color:var(--link);}
-  .layout{max-width:1100px;margin:0 auto;padding:22px 20px 80px;}
-  h1.title{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.3;margin:0 0 2px;padding-bottom:6px;border-bottom:1px solid var(--border);}
-  h1.title .ic{font-family:var(--sans);}
-  .subtitle{color:var(--muted);font-size:13px;margin:0 0 18px;}
-  .hatnote{font-style:italic;color:var(--muted);background:var(--panel);border:1px solid var(--border-soft);padding:8px 14px;border-radius:2px;margin:0 0 20px;font-size:13.5px;}
-  .content{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;}
-  .main{flex:1 1 560px;min-width:0;}
-  h2{font-family:var(--serif);font-weight:600;font-size:22px;margin:26px 0 10px;padding-bottom:5px;border-bottom:1px solid var(--border-soft);}
-  h3{font-family:var(--serif);font-weight:600;font-size:17px;margin:20px 0 8px;}
-  h4{font-family:var(--sans);font-weight:700;font-size:14.5px;margin:16px 0 6px;color:#3a3f44;}
-  p{margin:0 0 12px;}
-  .toc{display:inline-block;background:var(--panel);border:1px solid var(--border);border-radius:2px;padding:12px 20px 12px 14px;margin:0 0 20px;font-size:14px;}
-  .toc-title{font-weight:700;text-align:center;font-size:13px;margin-bottom:6px;}
-  .toc ol{margin:0;padding-left:22px;}
-  .toc li{margin:3px 0;}
-  .infobox{flex:0 0 300px;background:var(--panel);border:1px solid var(--border);border-radius:2px;font-size:13px;align-self:flex-start;}
-  .infobox .ib-title{background:#eaecf0;font-family:var(--serif);font-weight:700;text-align:center;padding:10px 12px;font-size:15px;border-bottom:1px solid var(--border);}
-  .infobox .ib-ic{font-size:30px;text-align:center;padding:10px 0 4px;}
-  .infobox table{width:100%;border-collapse:collapse;}
-  .infobox th,.infobox td{text-align:left;padding:7px 12px;vertical-align:top;border-bottom:1px solid var(--border-soft);}
-  .infobox th{width:38%;color:var(--muted);font-weight:600;}
-  .badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:2px;background:#e6f0ff;color:#2456c6;border:1px solid #b9d0f5;margin-left:6px;}
-  .badge.asiad{background:#fff2e0;color:#a05a00;border-color:#f2d2a0;}
-  .badge.green{background:#e7f6ec;color:#1f7a44;border-color:#b6e2c6;}
-  .badge.red{background:#fde8e8;color:#b02a2a;border-color:#f3c0c0;}
-  table.wt{border-collapse:collapse;width:100%;font-size:13.5px;margin:6px 0 16px;}
-  table.wt th,table.wt td{border:1px solid var(--border);padding:6px 10px;text-align:left;}
-  table.wt th{background:var(--panel);}
-  table.wt td.num, table.wt th.num{text-align:center;}
-  .note{font-size:12.5px;color:var(--muted);margin:-8px 0 16px;}
-  .asiad-box{background:#fff8ee;border:1px solid #f2d2a0;border-radius:3px;padding:14px 16px;margin:10px 0 18px;}
-  .asiad-box.link{background:#eef8f1;border-color:#b6e2c6;}
-  .asiad-box h4{margin-top:0;color:#a05a00;}
-  .asiad-box.link h4{color:#1f7a44;}
-  .footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;}
-  @media (max-width:820px){.infobox{flex:1 1 100%;order:-1;}}
+
+  .content{
+    display:block;
+  }
+
+  .infobox{
+    width:100%;
+    margin-bottom:20px;
+  }
+
+  h1.title{
+    font-size:26px;
+  }
+
+  h2{
+    font-size:20px;
+  }
+
+  .toc{
+    width:100%;
+  }
+
+  /*
+     예선 경로 표는 모바일에서
+     3열 구조를 카드형으로 전환
+  */
+
+  .route-row{
+    display:block;
+    padding:9px 12px;
+  }
+
+  .route-row > div{
+    padding:2px 0;
+  }
+
+  .route-row .route-name{
+    font-size:14px;
+  }
+
+  .route-row .route-quota{
+    text-align:left;
+    font-size:12px;
+    color:var(--muted);
+  }
+
+  .route-row .route-quota::before{
+    content:"출전권 ";
+  }
+
+
+  /*
+     출전자 목록 표
+  */
+
+  .qual-table{
+    border:1px solid var(--border);
+  }
+
+  .qual-table thead{
+    display:none;
+  }
+
+  .qual-table,
+  .qual-table tbody,
+  .qual-table tr,
+  .qual-table td{
+    display:block;
+    width:100%;
+  }
+
+  .qual-table tr{
+    border-bottom:1px solid var(--border);
+    padding:8px 10px;
+  }
+
+  .qual-table tr:last-child{
+    border-bottom:none;
+  }
+
+  .qual-table td{
+    border:none;
+    padding:1px 0;
+  }
+
+  .qual-table .slot{
+    width:auto;
+    display:inline;
+    font-size:11px;
+  }
+
+  .qual-table .slot::after{
+    content:"번 ";
+  }
+
+  .qual-table .method{
+    width:auto;
+    display:inline;
+    color:var(--muted);
+    font-size:11px;
+  }
+
+  .qual-table .method::before{
+    content:"· ";
+  }
+
+  .qual-table .team{
+    width:auto;
+    margin-top:2px;
+    font-size:14px;
+  }
+
+  .qual-table .status{
+    width:auto;
+    text-align:left;
+    margin-top:3px;
+  }
+
+  .qual-title{
+    align-items:flex-end;
+  }
+
+  .qual-count{
+    font-size:11px;
+  }
+
+  .badge{
+    font-size:10px;
+  }
+}
+
+
+/* =========================
+   Very small mobile
+========================= */
+
+@media (max-width:480px){
+
+  body{
+    font-size:14px;
+  }
+
+  .layout{
+    padding-left:10px;
+    padding-right:10px;
+  }
+
+  .topbar .inner{
+    padding-left:10px;
+    padding-right:10px;
+    gap:10px;
+  }
+
+  .hatnote{
+    font-size:12.5px;
+  }
+
+  .qual-table tr{
+    padding:8px;
+  }
+}
 </style>
 </head>
+
+
 <body>
-<div class="topbar"><div class="inner">
-  <a href="index1.html">← 올림픽예선 목차</a>
-  <span>문서 · 농구</span>
-  <a href="olflagfootball.html">플래그풋볼 →</a>
-</div></div>
-<div class="layout">
-<h1 class="title"><span class="ic">🏀</span> 농구 (Basketball)</h1>
-<p class="subtitle">국제농구연맹(FIBA) · 남자 12개팀 · 여자 12개팀 · LA28 예선 시스템</p>
-<p class="hatnote">농구(5x5)는 남녀 각 12개팀(팀당 12명), 총 <b>288명</b>이 출전한다. 남자는 2027 FIBA 농구월드컵과 2028 올림픽예선토너먼트로, 여자는 <b>2026 FIBA 여자농구월드컵</b>부터 예선이 시작된다. (3x3 농구는 별도 예선 시스템)</p>
-<div class="content"><div class="main"><div class="toc"><div class="toc-title">목차</div><ol><li><a href="#overview">출전권</a></li><li><a href="#men">남자 예선 경로</a></li><li><a href="#women">여자 예선 경로</a></li><li><a href="#relation">아시안게임·2026년도 예선과의 연관성</a></li></ol></div><h2 id="overview">출전권</h2><table class="wt"><tr><th>구분</th><th class="num">정량</th><th class="num">개최국</th><th class="num">합계</th></tr><tr><td>남자</td><td class="num">132 (11팀)</td><td class="num">12 (1팀)</td><td class="num">144 (12팀)</td></tr><tr><td>여자</td><td class="num">132 (11팀)</td><td class="num">12 (1팀)</td><td class="num">144 (12팀)</td></tr></table><p class="note">총 288명(24팀). NOC당 성별 1팀(12명). 출전권은 NOC에 배정.</p><h2 id="men">남자 예선 경로</h2><table class="wt"><tr><th>경로</th><th class="num">팀</th><th>배정</th></tr><tr><td>개최국(미국)</td><td class="num">1</td><td>2027년 FIBA 중앙이사회 결정</td></tr><tr><td>2027 FIBA 농구월드컵(카타르)</td><td class="num">7</td><td>아프리카1·아메리카2·아시아1·유럽2·오세아니아1</td></tr><tr><td>올림픽예선토너먼트(FOQT) 2028</td><td class="num">4</td><td>4개 대회 각 우승</td></tr></table><p class="note">FOQT는 프리퀄리파잉(FOPQT, 2027)→본선(FOQT, 2028.6~7)의 2라운드 구조로 24개팀이 참가한다.</p><h2 id="women">여자 예선 경로</h2><table class="wt"><tr><th>경로</th><th class="num">팀</th><th>배정</th></tr><tr><td>개최국(미국)</td><td class="num">1</td><td>2027년 FIBA 중앙이사회 결정</td></tr><tr><td>2026 FIBA 여자농구월드컵(독일)</td><td class="num">1</td><td>우승국 직행</td></tr><tr><td>여자 올림픽예선토너먼트(FWOQT) 2028</td><td class="num">10</td><td>4개 대회(4개조), 대륙컵·프리퀄 기반 16개팀</td></tr></table><div class="asiad-box" id="relation"><h4>아시안게임·2026년도 예선과의 연관성</h4><p>농구는 아시안게임을 <b>직접적인 예선 경로로 인정하지 않는다.</b> 아시아 대표는 2027 FIBA 농구월드컵(남자)과 FIBA 여자 아시아컵(여자) 성적으로 결정된다.</p><p>다만 <b>여자부는 2026년에 예선이 시작</b>된다. FIBA 여자 올림픽 프리퀄리파잉 토너먼트(2026.8.17~23)와 <b>2026 FIBA 여자농구월드컵(2026.9.4~13, 독일)</b>이 열리며, 여자농구월드컵 우승국은 곧바로 LA28 출전권을 얻는다. 남자부 예선은 2027년부터 시작된다.</p><p><span class="badge asiad">아시안게임 비연계</span> · <span class="badge green">2026.9 여자 월드컵(예선 시작)</span></p></div><div class="footer">출처: FIBA — LA28 Qualification System, Basketball (2026.5.12 버전).<br>본 페이지는 원문서를 요약한 것이며, 정확한 규정은 FIBA 원문을 따른다.</div></div><aside class="infobox"><div class="ib-ic">🏀</div><div class="ib-title">농구 LA28 예선</div><table><tr><th>주관</th><td>FIBA</td></tr><tr><th>세부종목</th><td>남자·여자 5x5</td></tr><tr><th>총 출전권</th><td>288명 (24팀)</td></tr><tr><th>아시안게임 연계</th><td><span class='badge asiad'>없음</span></td></tr><tr><th>2026 예선</th><td>여자 월드컵(독일, 9월)</td></tr><tr><th>관련 문서</th><td><a href='index1.html'>올림픽예선 목차</a></td></tr></table></aside></div>
+
+<div class="topbar">
+  <div class="inner">
+    <a href="index1.html">← 올림픽예선 목차</a>
+    <span>문서 · 농구</span>
+    <a href="olflagfootball.html">플래그풋볼 →</a>
+  </div>
 </div>
+
+
+<div class="layout">
+
+<h1 class="title">
+  <span class="ic">🏀</span> 농구 (Basketball)
+</h1>
+
+<p class="subtitle">
+  국제농구연맹(FIBA) · 남자 12개팀 · 여자 12개팀 · LA28 예선 시스템
+</p>
+
+<p class="hatnote">
+  농구(5x5)는 남녀 각 12개팀, 총 <b>24개팀</b>이 출전한다.
+  남자부는 개최국·2027 FIBA 농구월드컵·올림픽예선토너먼트를 통해,
+  여자부는 개최국·2026 FIBA 여자농구월드컵·올림픽예선토너먼트를 통해 출전팀이 결정된다.
+</p>
+
+
+<div class="content">
+
+<div class="main">
+
+
+<!-- =======================
+     목차
+======================== -->
+
+<div class="toc">
+  <div class="toc-title">목차</div>
+  <ol>
+    <li><a href="#overview">출전권</a></li>
+    <li><a href="#men">남자 예선 경로</a></li>
+    <li><a href="#men-qualified">남자부 출전권 확보 현황</a></li>
+    <li><a href="#women">여자 예선 경로</a></li>
+    <li><a href="#women-qualified">여자부 출전권 확보 현황</a></li>
+    <li><a href="#relation">아시안게임·2026년도 예선과의 연관성</a></li>
+  </ol>
+</div>
+
+
+<!-- =======================
+     출전권
+======================== -->
+
+<h2 id="overview">출전권</h2>
+
+<table class="wt">
+  <tr>
+    <th>구분</th>
+    <th class="num">팀</th>
+    <th class="num">선수</th>
+  </tr>
+
+  <tr>
+    <td>남자</td>
+    <td class="num">12</td>
+    <td class="num">144명</td>
+  </tr>
+
+  <tr>
+    <td>여자</td>
+    <td class="num">12</td>
+    <td class="num">144명</td>
+  </tr>
+
+  <tr>
+    <th>합계</th>
+    <th class="num">24</th>
+    <th class="num">288명</th>
+  </tr>
+</table>
+
+<p class="note">
+  각 팀은 12명으로 구성된다. 출전권은 선수 개인이 아닌 NOC의 국가대표팀에 배정된다.
+</p>
+
+
+<!-- =======================
+     남자 예선
+======================== -->
+
+<h2 id="men">남자 예선 경로</h2>
+
+<div class="route-box">
+
+  <div class="route-box-title">
+    남자부 출전권 배분
+  </div>
+
+  <div class="route-row">
+    <div class="route-name">개최국</div>
+    <div>미국 자동 출전</div>
+    <div class="route-quota">1팀</div>
+  </div>
+
+  <div class="route-row">
+    <div class="route-name">2027 월드컵</div>
+    <div>
+      아프리카 1 · 아메리카 2 · 아시아 1 · 유럽 2 · 오세아니아 1
+    </div>
+    <div class="route-quota">7팀</div>
+  </div>
+
+  <div class="route-row">
+    <div class="route-name">올림픽 예선</div>
+    <div>
+      2028 FIBA 남자 올림픽 예선토너먼트 우승팀
+    </div>
+    <div class="route-quota">4팀</div>
+  </div>
+
+</div>
+
+<p class="note">
+  올림픽 예선토너먼트에는 총 24개팀이 참가하며 4개 대회에서 각각 1팀씩 올림픽 출전권을 획득한다.
+</p>
+
+
+<h3>올림픽 예선토너먼트 참가 구조</h3>
+
+<table class="wt">
+  <tr>
+    <th>구분</th>
+    <th>선발 기준</th>
+    <th class="num">팀</th>
+  </tr>
+
+  <tr>
+    <td>월드컵 상위권</td>
+    <td>2027 FIBA 농구월드컵 성적을 기준으로 선발</td>
+    <td class="num">16</td>
+  </tr>
+
+  <tr>
+    <td>아프리카</td>
+    <td>FPOQT 및 월드컵 결과에 따른 추가 진출</td>
+    <td class="num">2</td>
+  </tr>
+
+  <tr>
+    <td>아메리카</td>
+    <td>FPOQT 및 월드컵 결과에 따른 추가 진출</td>
+    <td class="num">2</td>
+  </tr>
+
+  <tr>
+    <td>아시아·오세아니아</td>
+    <td>FPOQT 및 월드컵 결과에 따른 추가 진출</td>
+    <td class="num">2</td>
+  </tr>
+
+  <tr>
+    <td>유럽</td>
+    <td>FPOQT에서 추가 진출</td>
+    <td class="num">2</td>
+  </tr>
+
+  <tr>
+    <th>합계</th>
+    <th></th>
+    <th class="num">24</th>
+  </tr>
+</table>
+
+
+<!-- =======================
+     남자 출전권 확보
+======================== -->
+
+<h2 id="men-qualified">남자부 출전권 확보 현황</h2>
+
+<div class="qual-section">
+
+<div class="qual-title">
+  <h3>LA28 남자 농구</h3>
+  <span class="qual-count">12개 출전권</span>
+</div>
+
+<table class="qual-table">
+
+<thead>
+<tr>
+  <th class="slot">순번</th>
+  <th class="method">출전 경로</th>
+  <th>출전팀</th>
+  <th class="status">상태</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr class="host-row">
+  <td class="slot">1</td>
+  <td class="method">개최국</td>
+  <td class="team team-qualified">🇺🇸 미국</td>
+  <td class="status">
+    <span class="status-confirmed">확정</span>
+  </td>
+</tr>
+
+<tr class="direct-row">
+  <td class="slot">2</td>
+  <td class="method">월드컵 · 아프리카</td>
+  <td class="team team-tbd">TBD</td>
+  <td class="status">
+    <span class="status-tbd">미정</span>
+  </td>
+</tr>
+
+<tr class="direct-row">
+  <td class="slot">3</td>
+  <td class="method">월드컵 · 아메리카</td>
+  <td class="team team-tbd">TBD</td>
+  <td class="status">
+    <span class="status-tbd">미정</span>
+  </td>
+</tr>
+
+<tr class="direct-row">
+  <td class="slot">4</td>
+  <td class="method">월드컵 · 아메리카</td>
+  <td class="team team-tbd">TBD</td>
+  <td class="status">
+    <span class="status-tbd">미정</span>
+  </td>
+</tr>
+
+<tr class="direct-row">
+  <td class="slot">5</td>
+  <td class="method">월드컵 · 아시아</td>
+  <td class="team team-tbd">TBD</td>
+  <td class="status">
+    <span class="status-tbd">미정</span>
+  </td>
+</tr>
+
+<tr class="direct-row">
+  <td class="slot">6</td>
+  <td class="method">월드컵 · 유럽</td>
+  <td class="team team-tbd">TBD</td>
+  <td class="status">
+    <span class="status-tbd">미정</span>
+  </td>
+</tr>
+
+<tr class="direct-row">
+  <td class="slot">7</td>
+  <td class="method">월드컵 · 유럽</td>
+  <td class="team team-tbd">TBD</td>
+  <td class="status">
+    <span class="status-tbd">미정</span>
+  </td>
+</tr>
+
+<tr class="direct-row">
+  <td class="slot">8</td>
+  <td class="method">월드컵 · 오세아니아</td>
+  <td class="team team-tbd">TBD</td>
+  <td class="status">
+    <span class="status-tbd">미정</span>
+  </td>
+</tr>
+
+<tr>
+  <td class="slot">9</td>
+  <td class="method">올림픽 예선</td>
+  <td class="team team-tbd">TBD</td>
+  <td class="status">
+    <span class="status-tbd">미정</span>
+  </td>
+</tr>
+
+<tr>
+  <td class="slot">10</td>
+  <td class="method">올림픽 예선</td>
+  <td class="team team-tbd">TBD</td>
+  <td class="status">
+    <span class="status-tbd">미정</span>
+  </td>
+</tr>
+
+<tr>
+  <td class="slot">11</td>
+  <td class="method">올림픽 예선</td>
+  <td class="team team-tbd">TBD</td>
+  <td class="status">
+    <span class="status-tbd">미정</span>
+  </td>
+</tr>
+
+<tr>
+  <td class="slot">12</td>
+  <td class="method">올림픽 예선</td>
+  <td class="team team-tbd">TBD</td>
+  <td class="status">
+    <span class="status-tbd">미정</span>
+  </td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+
+
+<!-- =======================
+     여자 예선
+======================== -->
+
+<h2 id="women">여자 예선 경로</h2>
+
+<div class="route-box">
+
+  <div class="route-box-title">
+    여자부 출전권 배분
+  </div>
+
+  <div class="route-row">
+    <div class="route-name">개최국</div>
+    <div>미국 자동 출전</div>
+    <div class="route-quota">1팀</div>
+  </div>
+
+  <div class="route-row">
+    <div class="route-name">여자 월드컵</div>
+    <div>2026 FIBA 여자농구월드컵 우승국</div>
+    <div class="route-quota">1팀</div>
+  </div>
+
+  <div class="route-row">
+    <div class="route-name">올림픽 예선</div>
+    <div>4개 올림픽 예선토너먼트에서 상위 3팀씩 선발</div>
+    <div class="route-quota">10팀</div>
+  </div>
+
+</div>
+
+<p class="note">
+  여자 올림픽 예선토너먼트는 4개 대회에서 각 3팀씩 총 12개 출전팀을 결정하지만,
+  개최국과 여자 월드컵 우승국이 이미 출전권을 확보하므로 실제 올림픽 잔여 출전권은 10장이다.
+</p>
+
+
+<h3>여자 올림픽 예선토너먼트 참가팀</h3>
+
+<table class="wt">
+  <tr>
+    <th>대륙</th>
+    <th>선발 경로</th>
+    <th class="num">팀</th>
+  </tr>
+
+  <tr>
+    <td>아프리카</td>
+    <td>2027 Women's AfroBasket</td>
+    <td class="num">2</td>
+  </tr>
+
+  <tr>
+    <td>아메리카</td>
+    <td>2027 FIBA Women's AmeriCup</td>
+    <td class="num">4</td>
+  </tr>
+
+  <tr>
+    <td>아시아·오세아니아</td>
+    <td>2027 FIBA Women's Asia Cup</td>
+    <td class="num">4</td>
+  </tr>
+
+  <tr>
+    <td>유럽</td>
+    <td>EuroBasket Women 2027</td>
+    <td class="num">6</td>
+  </tr>
+
+  <tr>
+    <th>합계</th>
+    <th></th>
+    <th class="num">16</th>
+  </tr>
+</table>
+
+
+<!-- =======================
+     여자 출전권 확보
+======================== -->
+
+<h2 id="women-qualified">여자부 출전권 확보 현황</h2>
+
+<div class="qual-section">
+
+<div class="qual-title">
+  <h3>LA28 여자 농구</h3>
+  <span class="qual-count">12개 출전권</span>
+</div>
+
+<table class="qual-table">
+
+<thead>
+<tr>
+  <th class="slot">순번</th>
+  <th class="method">출전 경로</th>
+  <th>출전팀</th>
+  <th class="status">상태</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr class="host-row">
+  <td class="slot">1</td>
+  <td class="method">개최국</td>
+  <td class="team team-qualified">🇺🇸 미국</td>
+  <td class="status">
+    <span class="status-confirmed">확정</span>
+  </td>
+</tr>
+
+<tr class="direct-row">
+  <td class="slot">2</td>
+  <td class="method">여자 월드컵</td>
+  <td class="team team-tbd">TBD</td>
+  <td class="status">
+    <span class="status-tbd">미정</span>
+  </td>
+</tr>
+
+<tr>
+  <td class="slot">3</td>
+  <td class="method">올림픽 예선 ①</td>
+  <td class="team team-tbd">TBD</td>
+  <td class="status">
+    <span class="status-tbd">미정</span>
+  </td>
+</tr>
+
+<tr>
+  <td class="slot">4</td>
+  <td class="method">올림픽 예선 ①</td>
+  <td class="team team-tbd">TBD</td>
+  <td class="status">
+    <span class="status-tbd">미정</span>
+  </td>
+</tr>
+
+<tr>
+  <td class="slot">5</td>
+  <td class="method">올림픽 예선 ①</td>
+  <td class="team team-tbd">TBD</td>
+  <td class="status">
+    <span class="status-tbd">미정</span>
+  </td>
+</tr>
+
+<tr>
+  <td class="slot">6</td>
+  <td class="method">올림픽 예선 ②</td>
+  <td class="team team-tbd">TBD</td>
+  <td class="status">
+    <span class="status-tbd">미정</span>
+  </td>
+</tr>
+
+<tr>
+  <td class="slot">7</td>
+  <td class="method">올림픽 예선 ②</td>
+  <td class="team team-tbd">TBD</td>
+  <td class="status">
+    <span class="status-tbd">미정</span>
+  </td>
+</tr>
+
+<tr>
+  <td class="slot">8</td>
+  <td class="method">올림픽 예선 ②</td>
+  <td class="team team-tbd">TBD</td>
+  <td class="status">
+    <span class="status-tbd">미정</span>
+  </td>
+</tr>
+
+<tr>
+  <td class="slot">9</td>
+  <td class="method">올림픽 예선 ③</td>
+  <td class="team team-tbd">TBD</td>
+  <td class="status">
+    <span class="status-tbd">미정</span>
+  </td>
+</tr>
+
+<tr>
+  <td class="slot">10</td>
+  <td class="method">올림픽 예선 ③</td>
+  <td class="team team-tbd">TBD</td>
+  <td class="status">
+    <span class="status-tbd">미정</span>
+  </td>
+</tr>
+
+<tr>
+  <td class="slot">11</td>
+  <td class="method">올림픽 예선 ④</td>
+  <td class="team team-tbd">TBD</td>
+  <td class="status">
+    <span class="status-tbd">미정</span>
+  </td>
+</tr>
+
+<tr>
+  <td class="slot">12</td>
+  <td class="method">올림픽 예선 ④</td>
+  <td class="team team-tbd">TBD</td>
+  <td class="status">
+    <span class="status-tbd">미정</span>
+  </td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+
+
+<!-- =======================
+     아시안게임 / 2026
+======================== -->
+
+<div class="asiad-box" id="relation">
+
+<h4>아시안게임·2026년도 예선과의 연관성</h4>
+
+<p>
+농구는 아시안게임을 <b>LA28의 직접적인 예선 경로로 인정하지 않는다.</b>
+아시아 대표팀은 FIBA가 정한 월드컵 및 대륙선수권, 올림픽 예선 시스템을 통해 출전권을 획득한다.
+</p>
+
+<p>
+여자부는 <b>2026년부터 실질적인 올림픽 예선 과정이 시작</b>된다.
+2026 FIBA 여자농구월드컵 우승국은 LA28 출전권을 직접 확보하며,
+월드컵에 출전하지 못한 일부 국가대표팀은 프리퀄리파잉 과정을 거쳐 올림픽 예선토너먼트 진출을 노린다.
+</p>
+
+<p>
+남자부는 2027 FIBA 농구월드컵이 핵심적인 첫 단계이며,
+월드컵 성적과 FIBA 올림픽 프리퀄리파잉 토너먼트를 통해 2028 올림픽 예선토너먼트 참가팀이 결정된다.
+</p>
+
+<p>
+<span class="badge asiad">아시안게임 비연계</span>
+<span class="badge green">여자부 2026 예선 시작</span>
+<span class="badge red">남자부 2027 월드컵부터 본격화</span>
+</p>
+
+</div>
+
+
+<!-- =======================
+     Footer
+======================== -->
+
+<div class="footer">
+출처: FIBA — LA28 Qualification System, Basketball.<br>
+본 페이지는 원문서를 바탕으로 정리한 요약이며, 정확한 출전 자격 및 배정 규정은 FIBA 공식 규정을 따른다.
+</div>
+
+</div>
+
+
+<!-- =======================
+     Infobox
+======================== -->
+
+<aside class="infobox">
+
+  <div class="ib-ic">🏀</div>
+
+  <div class="ib-title">
+    농구 LA28 예선
+  </div>
+
+  <table>
+
+    <tr>
+      <th>주관</th>
+      <td>FIBA</td>
+    </tr>
+
+    <tr>
+      <th>세부종목</th>
+      <td>남자·여자 5x5</td>
+    </tr>
+
+    <tr>
+      <th>총 출전팀</th>
+      <td>24팀</td>
+    </tr>
+
+    <tr>
+      <th>총 출전선수</th>
+      <td>288명</td>
+    </tr>
+
+    <tr>
+      <th>아시안게임</th>
+      <td>
+        <span class="badge asiad">직접 연계 없음</span>
+      </td>
+    </tr>
+
+    <tr>
+      <th>2026 예선</th>
+      <td>여자 월드컵</td>
+    </tr>
+
+    <tr>
+      <th>관련 문서</th>
+      <td>
+        <a href="index1.html">올림픽예선 목차</a>
+      </td>
+    </tr>
+
+  </table>
+
+</aside>
+
+</div>
+
+</div>
+
 </body>
 </html>
