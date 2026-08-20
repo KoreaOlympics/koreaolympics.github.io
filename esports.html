@@ -39,12 +39,55 @@
   .fact b{font-family:'Noto Serif KR',serif;font-size:15px;color:var(--paper);font-weight:700;line-height:1.4;}
   section.body{margin-top:8px;}
   section.body p{font-size:15.5px;line-height:1.85;color:var(--paper-dim);margin:0 0 16px;}
-  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:40px 0 18px;font-weight:700;}
-  .cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;}
-  .disc{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:20px;}
-  .disc h3{font-family:'Noto Serif KR',serif;font-size:17px;margin:0 0 4px;color:var(--paper);}
-  .disc .en{font-size:11.5px;color:var(--gold-soft);letter-spacing:0.04em;margin-bottom:10px;display:block;}
-  .disc p{font-size:14px;line-height:1.7;color:var(--paper-dim);margin:0;}
+  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:42px 0 18px;font-weight:700;}
+  h2.sub small{display:block;font-family:'Pretendard',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.12em;color:var(--gold-soft);text-transform:uppercase;margin-bottom:7px;}
+  .lede{font-size:15px;line-height:1.8;color:var(--paper-dim);margin:0 0 18px;}
+  .tblcap{font-family:'Noto Serif KR',serif;font-size:14px;color:var(--paper);font-weight:700;margin:28px 0 10px;display:flex;align-items:center;gap:9px;}
+  .tblcap::before{content:"";width:16px;height:1px;background:var(--gold);display:inline-block;}
+  .tblnote{font-size:11.5px;color:var(--paper-dim);opacity:0.82;margin:12px 0 0;line-height:1.7;}
+
+  /* 표 */
+  .rankwrap{overflow-x:auto;}
+  table.rk{width:100%;border-collapse:collapse;min-width:520px;}
+  table.rk th{font-size:11.5px;font-weight:600;color:var(--gold-soft);text-align:left;padding:0 0 9px;border-bottom:1px solid var(--line);letter-spacing:0.04em;vertical-align:bottom;}
+  table.rk td{padding:11px 0;font-size:13px;line-height:1.65;color:var(--paper-dim);border-bottom:1px dashed rgba(201,162,75,0.16);vertical-align:top;}
+  table.rk th+th,table.rk td+td{padding-left:16px;}
+  table.rk tr:last-child td{border-bottom:0;}
+  table.rk td.gm{color:var(--paper);font-weight:600;font-family:'Noto Serif KR',serif;}
+  table.rk td.pf{width:120px;color:var(--gold-soft);white-space:nowrap;}
+  table.rk td.fm{width:150px;}
+
+  /* 일정 그리드 */
+  .legend{display:flex;flex-wrap:wrap;gap:8px 14px;margin:0 0 14px;font-size:11.5px;color:var(--paper-dim);}
+  .legend span{display:inline-flex;align-items:center;gap:6px;}
+  .legend i{width:16px;height:16px;border-radius:3px;display:inline-block;font-style:normal;font-size:9px;font-weight:800;color:#0E1A2B;text-align:center;line-height:16px;}
+  .st-P{background:#63C08A;} .st-E{background:#B58CD8;} .st-H{background:#7FB2E8;} .st-F{background:var(--gold-soft);}
+  table.sched{border-collapse:collapse;min-width:660px;width:100%;}
+  table.sched th,table.sched td{border:1px solid var(--line);text-align:center;}
+  table.sched thead th{padding:7px 4px;color:var(--gold-soft);font-weight:600;font-size:11px;line-height:1.3;}
+  table.sched thead th b{display:block;font-size:12.5px;color:var(--paper);}
+  table.sched thead th.corner{text-align:left;padding-left:10px;color:var(--paper);font-family:'Noto Serif KR',serif;}
+  table.sched td.game{text-align:left;padding:8px 10px;color:var(--paper);font-weight:600;white-space:nowrap;font-size:12px;font-style:italic;}
+  table.sched td.st{font-size:10px;font-weight:800;color:#0E1A2B;padding:8px 2px;}
+
+  /* 명단 */
+  .roster{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:14px;}
+  .squad{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:18px 20px;}
+  .squad h3{font-family:'Noto Serif KR',serif;font-size:15.5px;margin:0 0 4px;color:var(--paper);display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .squad h3 em{font-style:normal;font-size:10.5px;letter-spacing:0.06em;color:var(--ink);background:var(--gold-soft);border-radius:3px;padding:2px 6px;font-weight:700;}
+  .squad .cap{font-size:11.5px;color:var(--gold-soft);margin:0 0 12px;}
+  .squad ul{list-style:none;margin:0;padding:0;}
+  .squad li{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px dashed var(--line);font-size:13px;}
+  .squad li:last-child{border-bottom:0;padding-bottom:0;}
+  .squad li span{color:var(--gold-soft);font-size:11.5px;white-space:nowrap;font-family:'Pretendard',sans-serif;}
+  .squad li b{color:var(--paper);font-weight:600;}
+  .squad li b i{font-style:normal;color:var(--paper-dim);font-weight:500;font-size:11px;margin-right:5px;}
+
+  .note{margin-top:26px;border-left:3px solid var(--sun);background:rgba(216,72,47,0.08);border-radius:0 8px 8px 0;padding:18px 22px;}
+  .note h3{font-family:'Noto Serif KR',serif;font-size:16px;margin:0 0 8px;color:var(--paper);}
+  .note p{font-size:14.5px;line-height:1.8;color:var(--paper-dim);margin:0 0 10px;}
+  .note p:last-child{margin-bottom:0;}
+
   footer.pagefoot{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
   footer.pagefoot a{color:var(--gold-soft);text-decoration:none;}
   @media (max-width:520px){.wrap{padding:28px 18px 70px;}}
@@ -54,28 +97,196 @@
 <div class="wrap">
   <nav class="top">
     <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>전체 종목으로</a>
-    <span class="crumb">비올림픽 종목 / e스포츠(LOL / 배그 / 풋볼 / 기타)</span>
+    <span class="crumb">비올림픽 종목 / e스포츠</span>
   </nav>
 
   <header class="hero">
     <span class="eyebrow">2026 Aichi · Nagoya · 비올림픽 종목</span>
-    <h1>e스포츠(LOL / 배그 / 풋볼 / 기타)</h1>
-    <p class="en-title">Esports: LoL / PUBG / eFootball / Others</p>
-    <p class="tagline">인기 비디오 게임 종목으로 국가대표들이 겨루는, 아시안게임에 새롭게 편입된 디지털 스포츠.</p>
+    <h1>e스포츠</h1>
+    <p class="en-title">Esports</p>
+    <p class="tagline">인기 비디오 게임 종목으로 국가대표들이 겨루는, 2022 항저우에 이어 두 번째로 열리는 아시안게임 정식 종목.</p>
   </header>
 
   <div class="facts">
-    <div class="fact"><span>정식 편입</span><b>2022 항저우 대회부터 정식종목</b></div>
-    <div class="fact"><span>주요 종목</span><b>LoL, 배틀그라운드 모바일, e풋볼 등</b></div>
-    <div class="fact"><span>특징</span><b>대회마다 채택 게임 종목이 변경</b></div>
+    <div class="fact"><span>정식 편입</span><b>2022 항저우부터 정식종목</b></div>
+    <div class="fact"><span>메달 종목</span><b>11개 (단체·개인)</b></div>
+    <div class="fact"><span>플랫폼</span><b>PC · 모바일 · 콘솔</b></div>
+    <div class="fact"><span>특징</span><b>대회마다 채택 게임이 변경</b></div>
   </div>
 
   <section class="body">
     <p>e스포츠는 인기 비디오 게임을 종목화해 국가대표 선수들이 실시간으로 겨루는 디지털 스포츠로, 2022 항저우 아시안게임부터 정식종목으로 채택되며 전통 스포츠와 어깨를 나란히 하게 됐다.</p>
-    <p>대회마다 리그 오브 레전드(LoL), 배틀그라운드 모바일, e풋볼(피파류) 등 채택되는 게임 종목이 달라지는 것이 특징이며, 앞으로도 인기 게임 트렌드에 맞춰 변화할 가능성이 크다.</p>
+    <p>이번 나고야 대회는 리그 오브 레전드, PUBG 모바일, 아너 오브 킹즈 등 11개 종목에 금메달이 걸린다. 대회마다 채택 게임이 달라지는 것이 특징으로, 항저우에서 열렸던 종목 상당수가 교체됐다.</p>
   </section>
 
+  <h2 class="sub"><small>Events</small>종목 구성 11개</h2>
+  <p class="lede">플랫폼과 경기 형식(단체·개인)을 정리했다. 단체전은 팀 단위, 개인전은 개인 또는 종목·플랫폼별 1인이 출전한다.</p>
+  <div class="rankwrap">
+    <table class="rk">
+      <tr><th>종목</th><th>플랫폼</th><th>형식</th></tr>
+      <tr><td class="gm">eFootball</td><td class="pf">PC · 모바일</td><td class="fm">개인 (플랫폼별 1명)</td></tr>
+      <tr><td class="gm">그란 투리스모 7</td><td class="pf">PS5</td><td class="fm">개인 1명</td></tr>
+      <tr><td class="gm">아너 오브 킹즈</td><td class="pf">모바일</td><td class="fm">단체 5인</td></tr>
+      <tr><td class="gm">Naraka: Bladepoint</td><td class="pf">PC</td><td class="fm">단체</td></tr>
+      <tr><td class="gm">뿌요뿌요 챔피언스</td><td class="pf">PC</td><td class="fm">개인 1명</td></tr>
+      <tr><td class="gm">제5인격 (Identity V)</td><td class="pf">모바일</td><td class="fm">단체 7인</td></tr>
+      <tr><td class="gm">리그 오브 레전드</td><td class="pf">PC</td><td class="fm">단체 5인</td></tr>
+      <tr><td class="gm">Mobile Legends: Bang Bang</td><td class="pf">모바일</td><td class="fm">단체 5인</td></tr>
+      <tr><td class="gm">포켓몬 유나이트</td><td class="pf">닌텐도 스위치</td><td class="fm">단체 6인</td></tr>
+      <tr><td class="gm">PUBG 모바일</td><td class="pf">모바일</td><td class="fm">단체 5인</td></tr>
+      <tr><td class="gm">대전 격투 게임</td><td class="pf">PC</td><td class="fm">개인 3종목 (SF6·철권8·KOF XV)</td></tr>
+    </table>
+  </div>
 
+  <h2 class="sub"><small>Schedule</small>경기 일정</h2>
+  <p class="lede">종목별 진행 단계를 날짜에 맞춰 정리했다. 종목마다 예선부터 결승까지의 일정이 다르다.</p>
+  <div class="legend">
+    <span><i class="st-P">P</i> 예선 (Preliminary)</span>
+    <span><i class="st-E">E</i> 토너먼트 (Elimination)</span>
+    <span><i class="st-H">½</i> 준결승 (Semifinals)</span>
+    <span><i class="st-F">F</i> 결승 (Finals)</span>
+  </div>
+  <div class="rankwrap">
+    <table class="sched">
+      <thead>
+        <tr>
+          <th class="corner">종목 / 日付</th>
+          <th>23<b>수</b></th><th>24<b>목</b></th><th>25<b>금</b></th><th>26<b>토</b></th><th>27<b>일</b></th><th>28<b>월</b></th><th>29<b>화</b></th><th>30<b>수</b></th><th>1<b>목</b></th><th>2<b>금</b></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="game">eFootball</td><td class="st st-H">½</td><td class="st st-F">F</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="game">Gran Turismo 7</td><td class="st st-P">P</td><td class="st st-F">F</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="game">Honor of Kings</td><td></td><td></td><td></td><td></td><td></td><td class="st st-E">E</td><td class="st st-F">F</td><td></td><td></td><td></td></tr>
+        <tr><td class="game">Naraka: Bladepoint</td><td></td><td class="st st-H">½</td><td class="st st-F">F</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="game">Puyo Puyo Champions</td><td></td><td></td><td></td><td class="st st-E">E</td><td class="st st-F">F</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="game">Identity V</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="st st-E">E</td><td class="st st-F">F</td><td></td><td></td></tr>
+        <tr><td class="game">League of Legends</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="st st-F">F</td></tr>
+        <tr><td class="game">Mobile Legends: Bang Bang</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="st st-F">F</td><td></td><td></td></tr>
+        <tr><td class="game">Pokémon Unite</td><td></td><td></td><td></td><td></td><td class="st st-E">E</td><td class="st st-F">F</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="game">PUBG Mobile</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="st st-F">F</td><td></td><td></td><td></td></tr>
+        <tr><td class="game">Competitive Martial Arts</td><td></td><td></td><td class="st st-E">E</td><td class="st st-H">½</td><td class="st st-F">F</td><td></td><td></td><td></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="tblnote">날짜는 경기 진행 단계 기준이며, 종목별 세부 시간은 대회 조직위 발표에 따라 달라질 수 있다. 대전 격투 게임에는 스트리트 파이터 6, 철권 8, 더 킹 오브 파이터즈 XV 세 타이틀이 포함된다.</p>
+
+  <h2 class="sub"><small>Team Korea</small>대한민국 대표팀</h2>
+  <p class="lede">2026년 2월 감독진이 먼저 발표됐고, 리그 오브 레전드와 배틀그라운드 모바일은 프로 선수 차출, 나머지 종목은 선발전으로 대표를 가렸다. 괄호 안은 선수의 인게임 아이디(IGN)다.</p>
+  <div class="roster">
+    <div class="squad">
+      <h3>리그 오브 레전드 <em>5인</em></h3>
+      <p class="cap">감독 강동훈 (Hirai) · 강동훈호</p>
+      <ul>
+        <li><b><i>TOP</i>최우제</b><span>Zeus</span></li>
+        <li><b><i>JGL</i>김건부</b><span>Canyon</span></li>
+        <li><b><i>MID</i>김건우</b><span>Zeka</span></li>
+        <li><b><i>MID</i>이상혁</b><span>Faker</span></li>
+        <li><b><i>BOT</i>이민형</b><span>Gumayusi</span></li>
+        <li><b><i>SPT</i>류민석</b><span>Keria</span></li>
+      </ul>
+    </div>
+    <div class="squad">
+      <h3>배틀그라운드 모바일 <em>5인</em></h3>
+      <p class="cap">감독 윤상훈 (JANCHI)</p>
+      <ul>
+        <li><b>김준하</b><span>XZY</span></li>
+        <li><b>박상철</b><span>FAVIAN</span></li>
+        <li><b>송수안</b><span>NolBu</span></li>
+        <li><b>전현빈</b><span>HYUNBIN</span></li>
+        <li><b>정유찬</b><span>chpz</span></li>
+      </ul>
+    </div>
+    <div class="squad">
+      <h3>아너 오브 킹즈 <em>5인</em></h3>
+      <p class="cap">감독 장형준 (YK)</p>
+      <ul>
+        <li><b>정윤호</b><span>Ratel</span></li>
+        <li><b>한지훈</b><span>HAKU</span></li>
+        <li><b>이섭규</b><span>DOK</span></li>
+        <li><b>조성빈</b><span>illusion</span></li>
+        <li><b>이훈민</b><span>SIRI</span></li>
+        <li><b>한성건</b><span>Namu3</span></li>
+      </ul>
+    </div>
+    <div class="squad">
+      <h3>제5인격 <em>7인</em></h3>
+      <p class="cap">Identity V · 선발전 차출</p>
+      <ul>
+        <li><b>고태현</b><span>Gar2b</span></li>
+        <li><b>김상민</b><span>ApHO</span></li>
+        <li><b>김재연</b><span>OvO</span></li>
+        <li><b>김준서</b><span>nary</span></li>
+        <li><b>박소연</b><span>PHR</span></li>
+        <li><b>어홍</b><span>Sol</span></li>
+        <li><b>홍현기</b><span>Toulang</span></li>
+      </ul>
+    </div>
+    <div class="squad">
+      <h3>포켓몬 유나이트 <em>5인</em></h3>
+      <p class="cap">선발전 차출</p>
+      <ul>
+        <li><b>김재영</b><span>Seram</span></li>
+        <li><b>박성순</b><span>Pisterio</span></li>
+        <li><b>이지환</b><span>ePe</span></li>
+        <li><b>조민혁</b><span>Comi</span></li>
+        <li><b>조민하</b><span>Garam</span></li>
+      </ul>
+    </div>
+    <div class="squad">
+      <h3>대전 격투 게임 <em>3인</em></h3>
+      <p class="cap">감독 강성훈 (MurderK)</p>
+      <ul>
+        <li><b><i>KOF XV</i>이광노</b><span>Madkof</span></li>
+        <li><b><i>SF6</i>연제길</b><span>DakCorgi</span></li>
+        <li><b><i>철권 8</i>배재민</b><span>Knee</span></li>
+      </ul>
+    </div>
+    <div class="squad">
+      <h3>eFootball <em>2인</em></h3>
+      <p class="cap">감독 정명훈 (FanTaSy)</p>
+      <ul>
+        <li><b>송영우</b><span>KOR_Ssong</span></li>
+        <li><b>김도겸</b><span>DK__DK</span></li>
+      </ul>
+    </div>
+    <div class="squad">
+      <h3>그란 투리스모 7 <em>1인</em></h3>
+      <p class="cap">감독 정명훈 (FanTaSy)</p>
+      <ul>
+        <li><b>김영찬</b><span>—</span></li>
+      </ul>
+    </div>
+    <div class="squad">
+      <h3>뿌요뿌요 챔피언스 <em>1인</em></h3>
+      <p class="cap">감독 정명훈 (FanTaSy)</p>
+      <ul>
+        <li><b>강동신</b><span>RED231</span></li>
+      </ul>
+    </div>
+  </div>
+  <p class="tblnote">한국은 Naraka: Bladepoint와 Mobile Legends: Bang Bang 두 종목에는 본선에 오르지 못해 출전하지 않는다. 제5인격·포켓몬 유나이트의 감독은 명단 발표 시점 기준 미정이었다.</p>
+
+  <h2 class="sub"><small>Qualified Teams</small>본선 진출국</h2>
+  <p class="lede">종목별 예선을 통과해 본선에 오른 국가·지역이다. 한국은 아래 4개 단체전과 개인전 종목에 출전한다.</p>
+  <div class="rankwrap">
+    <table class="rk">
+      <tr><th>종목 · 예선</th><th>본선 진출</th></tr>
+      <tr><td class="gm" style="width:150px">리그 오브 레전드<br><small style="font-size:11px;color:var(--gold-soft);font-family:'Pretendard',sans-serif;font-weight:500">6/12~14 · 쿠알라룸푸르</small></td><td>대만 · 홍콩 · 인도 · 말레이시아 · 사우디아라비아 · <b style="color:var(--paper)">대한민국</b> · UAE · 베트남</td></tr>
+      <tr><td class="gm">아너 오브 킹즈<br><small style="font-size:11px;color:var(--gold-soft);font-family:'Pretendard',sans-serif;font-weight:500">6/13~21</small></td><td>중국 · 홍콩 · 인도네시아 · 카자흐스탄 · 라오스 · 말레이시아 · 미얀마 · 네팔 · 필리핀 · <b style="color:var(--paper)">대한민국</b> · 태국 · 베트남</td></tr>
+      <tr><td class="gm">제5인격<br><small style="font-size:11px;color:var(--gold-soft);font-family:'Pretendard',sans-serif;font-weight:500">5/30~6/1 · 싱가포르</small></td><td>중국 · 대만 · 홍콩 · 인도네시아 · 일본 · 말레이시아 · 필리핀 · <b style="color:var(--paper)">대한민국</b> · 태국 · 베트남</td></tr>
+      <tr><td class="gm">PUBG 모바일<br><small style="font-size:11px;color:var(--gold-soft);font-family:'Pretendard',sans-serif;font-weight:500">6/19~21 · 호치민</small></td><td>중국 · 대만 · 인도네시아 · 일본 · 요르단 · 카자흐스탄 · 미얀마 · 네팔 · 파키스탄 · <b style="color:var(--paper)">대한민국</b> · 태국 · 베트남</td></tr>
+      <tr><td class="gm">Naraka: Bladepoint<br><small style="font-size:11px;color:var(--gold-soft);font-family:'Pretendard',sans-serif;font-weight:500">6/4~5</small></td><td>중국 · 대만 · 홍콩 · 인도네시아 · 말레이시아 · 필리핀 · 태국 · 베트남 <em style="font-style:normal;color:#E7856F">(한국 미진출)</em></td></tr>
+      <tr><td class="gm">Mobile Legends<br><small style="font-size:11px;color:var(--gold-soft);font-family:'Pretendard',sans-serif;font-weight:500">6/18~21 · 싱가포르</small></td><td>캄보디아 · 홍콩 · 인도네시아 · 이란 · 요르단 · 카자흐스탄 · 말레이시아 · 몽골 · 미얀마 · 필리핀 · 사우디 · 우즈베키스탄 <em style="font-style:normal;color:#E7856F">(한국 미진출)</em></td></tr>
+    </table>
+  </div>
+
+  <div class="note">
+    <h3>관전 포인트</h3>
+    <p><b>리그 오브 레전드가 최대어다.</b> 항저우 금메달 멤버였던 이상혁(Faker)이 다시 대표팀에 이름을 올렸고, 최우제(Zeus)·김건부(Canyon)·류민석(Keria) 등 세계 정상급 프로들이 합류한 강동훈호가 2연패를 노린다. 결승은 대회 마지막 날(2일)에 열린다.</p>
+    <p><b>대전 격투 게임의 배재민(Knee)도 주목할 카드다.</b> 철권 8에서 세계적으로 손꼽히는 선수로, 개인전 종목에서 금메달을 기대할 수 있다. 스트리트 파이터 6·KOF XV까지 세 타이틀에 각각 한 명씩 출전한다.</p>
+    <p><b>한국은 11개 종목 중 9개에 출전한다.</b> Naraka: Bladepoint와 Mobile Legends: Bang Bang은 본선에 오르지 못했다. 반대로 아너 오브 킹즈·제5인격·포켓몬 유나이트처럼 국내 저변이 상대적으로 얇은 종목에서 얼마나 성적을 내느냐가 종합 메달 수를 좌우한다.</p>
+  </div>
 
   <footer class="pagefoot">
     <span>2026 아이치·나고야 아시안게임 종목 안내</span>
