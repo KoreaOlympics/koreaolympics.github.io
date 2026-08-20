@@ -45,6 +45,40 @@
   .disc h3{font-family:'Noto Serif KR',serif;font-size:17px;margin:0 0 4px;color:var(--paper);}
   .disc .en{font-size:11.5px;color:var(--gold-soft);letter-spacing:0.04em;margin-bottom:10px;display:block;}
   .disc p{font-size:14px;line-height:1.7;color:var(--paper-dim);margin:0;}
+
+  /* ── 국가대표 명단 ── */
+  .section-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px;margin:52px 0 6px;padding-top:34px;border-top:1px solid var(--line);}
+  .section-head h2{font-family:'Noto Serif KR',serif;font-size:23px;color:var(--paper);margin:0;font-weight:900;}
+  .section-head .count{font-size:12.5px;color:var(--gold-soft);letter-spacing:0.06em;font-weight:600;}
+  .section-note{font-size:13px;color:var(--paper-dim);line-height:1.7;margin:10px 0 22px;}
+  .roster{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;}
+  .rcard{background:var(--ink-2);border:1px solid var(--line);border-radius:9px;padding:18px 20px;}
+  .rcard > h3{font-family:'Noto Serif KR',serif;font-size:16.5px;margin:0 0 2px;color:var(--gold-soft);display:flex;align-items:center;justify-content:space-between;}
+  .rcard > h3 .n{font-size:12px;color:var(--paper-dim);font-weight:500;font-family:'Pretendard',sans-serif;}
+  .rcard .ev{margin-top:14px;}
+  .rcard .ev:first-of-type{margin-top:10px;}
+  .rcard .ev .evt{font-size:12px;font-weight:700;color:var(--paper);letter-spacing:0.01em;display:flex;align-items:center;gap:7px;margin-bottom:5px;}
+  .rcard .ev .evt::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold);flex:0 0 auto;}
+  .rcard .ev ul{list-style:none;margin:0;padding:0 0 0 12px;}
+  .rcard .ev li{font-size:13.5px;line-height:1.65;color:var(--paper-dim);}
+  .rcard .ev li b{color:var(--paper);font-weight:600;}
+  .rcard .ev li .club{color:var(--paper-dim);font-size:11.5px;opacity:0.8;}
+  .dbl{display:inline-block;font-size:10px;font-weight:700;color:var(--ink);background:var(--gold-soft);border-radius:3px;padding:1px 5px;margin-left:4px;letter-spacing:0.02em;vertical-align:middle;}
+  .legend{font-size:12px;color:var(--paper-dim);margin-top:16px;display:flex;align-items:center;gap:8px;}
+  .legend .dbl{margin-left:0;}
+
+  /* ── 월드컵 요약 ── */
+  .wc-lead{font-size:15.5px;line-height:1.85;color:var(--paper-dim);margin:0 0 22px;}
+  .wc-block{background:var(--ink-2);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:8px;padding:18px 22px;margin-bottom:14px;}
+  .wc-block h3{font-family:'Noto Serif KR',serif;font-size:16px;margin:0 0 8px;color:var(--paper);}
+  .wc-block h3 .flag{font-size:12px;color:var(--gold-soft);font-weight:600;margin-left:6px;letter-spacing:0.03em;}
+  .wc-block p{font-size:14px;line-height:1.8;color:var(--paper-dim);margin:0;}
+  .wc-block.kor{border-left-color:var(--sun);}
+  .wc-block p .kr-name{color:var(--paper);font-weight:700;}
+  .wc-block p .medal{font-weight:700;}
+  .wc-block p .g{color:#E9C765;} .wc-block p .s{color:#C9CDD4;} .wc-block p .b{color:#CE8E5B;}
+  .venue{font-size:12px;color:var(--paper-dim);opacity:0.75;}
+
   footer.pagefoot{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
   footer.pagefoot a{color:var(--gold-soft);text-decoration:none;}
   @media (max-width:520px){.wrap{padding:28px 18px 70px;}}
@@ -56,26 +90,163 @@
     <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>전체 종목으로</a>
     <span class="crumb">올림픽 · 무기·기술종목 / 사격</span>
   </nav>
-
   <header class="hero">
     <span class="eyebrow">2026 Aichi · Nagoya · 올림픽 · 무기·기술종목</span>
     <h1>사격</h1>
     <p class="en-title">Shooting</p>
     <p class="tagline">총으로 표적을 맞혀 정확도를 겨루는 종목으로, 권총·소총·클레이 등 다양한 세부 종목으로 구성된다.</p>
   </header>
-
   <div class="facts">
     <div class="fact"><span>세부 종목</span><b>권총·소총·클레이 사격</b></div>
     <div class="fact"><span>평가 방식</span><b>표적 명중 점수 합산</b></div>
     <div class="fact"><span>강세 국가</span><b>중국, 인도, 한국</b></div>
   </div>
-
   <section class="body">
     <p>사격은 정지된 표적이나 날아가는 클레이를 총으로 맞혀 점수를 겨루는 종목으로, 극도의 집중력과 호흡 조절 능력이 승부를 가른다.</p>
     <p>권총, 소총, 클레이 사격 등 세부 종목이 다양하게 나뉘어 있으며, 중국과 인도, 한국이 아시안게임 강세 국가로 꼽힌다.</p>
   </section>
 
+  <!-- ══════════ 국가대표 명단 ══════════ -->
+  <div class="section-head">
+    <h2>대한민국 국가대표 명단</h2>
+    <span class="count">총 30명 · 소총 11 · 권총 11 · 산탄총 8</span>
+  </div>
+  <p class="section-note">2026 아이치·나고야 아시안게임 사격 국가대표 선발자다. 권협준·오예진은 두 종목에 출전하는 <b>더블스타터</b>로, 인원(30명) 집계 시 각각 1명으로 계산된다.</p>
 
+  <div class="roster">
+    <!-- 소총 -->
+    <div class="rcard">
+      <h3>소총 <span class="n">Rifle · 11명</span></h3>
+      <div class="ev">
+        <div class="evt">10m 공기소총 (남)</div>
+        <ul>
+          <li><b>박하준</b> <span class="club">KT</span></li>
+          <li><b>신민기</b> <span class="club">창원특례시청</span></li>
+        </ul>
+      </div>
+      <div class="ev">
+        <div class="evt">50m 소총 3자세 (남)</div>
+        <ul>
+          <li><b>정승우</b> <span class="club">KT</span></li>
+          <li><b>박성현</b> <span class="club">창원특례시청</span></li>
+          <li><b>권협준</b><span class="dbl">더블</span> <span class="club">서산시청</span></li>
+        </ul>
+      </div>
+      <div class="ev">
+        <div class="evt">10m 공기소총 (여)</div>
+        <ul>
+          <li><b>반효진</b> <span class="club">대구공공시설관리공단</span></li>
+          <li><b>권유나</b> <span class="club">우리은행</span></li>
+          <li><b>조은별</b> <span class="club">한국체대</span></li>
+        </ul>
+      </div>
+      <div class="ev">
+        <div class="evt">50m 소총 3자세 (여)</div>
+        <ul>
+          <li><b>오세희</b> <span class="club">충북보과대</span></li>
+          <li><b>김보경</b> <span class="club">창원특례시청</span></li>
+          <li><b>김지은</b> <span class="club">IBK기업은행</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 권총 -->
+    <div class="rcard">
+      <h3>권총 <span class="n">Pistol · 11명</span></h3>
+      <div class="ev">
+        <div class="evt">10m 공기권총 (남)</div>
+        <ul>
+          <li><b>홍수현</b> <span class="club">강원도청</span></li>
+          <li><b>소승섭</b> <span class="club">서산시청</span></li>
+          <li><b>김태영</b> <span class="club">대구공공시설관리공단</span></li>
+        </ul>
+      </div>
+      <div class="ev">
+        <div class="evt">25m 속사권총 (남)</div>
+        <ul>
+          <li><b>이건혁</b> <span class="club">대구공공시설관리공단</span></li>
+          <li><b>윤서영</b> <span class="club">국군체육부대</span></li>
+          <li><b>송종호</b> <span class="club">IBK기업은행</span></li>
+        </ul>
+      </div>
+      <div class="ev">
+        <div class="evt">10m 공기권총 (여)</div>
+        <ul>
+          <li><b>김보미</b> <span class="club">부산시청</span></li>
+          <li><b>추가은</b> <span class="club">임실군청</span></li>
+        </ul>
+      </div>
+      <div class="ev">
+        <div class="evt">25m 권총 (여)</div>
+        <ul>
+          <li><b>양지인</b> <span class="club">우리은행</span></li>
+          <li><b>오예진</b><span class="dbl">더블</span> <span class="club">IBK기업은행</span></li>
+          <li><b>봉서린</b> <span class="club">광주시체육회</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 산탄총 -->
+    <div class="rcard">
+      <h3>산탄총 <span class="n">Shotgun · 8명</span></h3>
+      <div class="ev">
+        <div class="evt">트랩 (남)</div>
+        <ul>
+          <li><b>김덕훈</b> <span class="club">울산북구청</span></li>
+        </ul>
+      </div>
+      <div class="ev">
+        <div class="evt">스키트 (남)</div>
+        <ul>
+          <li><b>김민수</b> <span class="club">국군체육부대</span></li>
+          <li><b>이종준</b> <span class="club">충남체육회</span></li>
+          <li><b>장자용</b> <span class="club">창원특례시청</span></li>
+        </ul>
+      </div>
+      <div class="ev">
+        <div class="evt">트랩 (여)</div>
+        <ul>
+          <li><b>이보나</b> <span class="club">대한항공</span></li>
+        </ul>
+      </div>
+      <div class="ev">
+        <div class="evt">스키트 (여)</div>
+        <ul>
+          <li><b>장국희</b> <span class="club">KT</span></li>
+          <li><b>안일지</b> <span class="club">울산북구청</span></li>
+          <li><b>김채은</b> <span class="club">전북일반</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="legend"><span class="dbl">더블</span> 두 종목에 함께 출전하는 더블스타터 (권협준·오예진)</div>
+
+  <!-- ══════════ 월드컵 아시아 주요 선수 ══════════ -->
+  <div class="section-head">
+    <h2>2026 ISSF 월드컵 속 아시아 주요 선수</h2>
+    <span class="count">아시안게임 전초전</span>
+  </div>
+  <p class="wc-lead">아시안게임과 같은 해에 치러진 2026 ISSF 월드컵(3월~12월, 8개국 순회)은 아이치·나고야 대회의 전력을 가늠할 무대였다. 소총·권총에서는 중국이 압도적 강세를 보인 가운데, 한국 국가대표 선발 선수들이 국제 무대에서 성과를 내며 존재감을 드러냈고 인도가 권총에서 급부상했다.</p>
+
+  <div class="wc-block">
+    <h3>중국 — 소총·권총 싹쓸이 <span class="flag">CHN</span></h3>
+    <p><span class="kr-name">성리하오(Sheng Lihao)</span>가 남자 10m 공기소총에서 그라나다·항저우 <span class="medal g">금</span>을 가져갔고, <span class="kr-name">장창훙(Zhang Changhong)</span>은 남자 50m 3자세와 뮌헨 10m 공기소총을 석권했다. 여자부는 <span class="kr-name">왕쯔페이(Wang Zifei)</span>·두위천(Du Yuchen)이 10m 공기소총 금메달을 나눠 가졌고, 권총에서는 부솨이항(Bu Shuaihang)과 야오첸쉰(Yao Qianxun)이 정상에 섰다. 혼성 단체전 금메달도 대부분 중국 몫이었다.</p>
+  </div>
+
+  <div class="wc-block kor">
+    <h3>대한민국 — 명단 선수들의 국제 성과 <span class="flag">KOR</span></h3>
+    <p>이번 아시안게임 대표 중 <span class="kr-name">신민기</span>가 뮌헨 남자 10m 공기소총에서 장창훙에 이어 <span class="medal s">은</span>을 따내며 세계 정상권과 격차를 좁혔다. 권총 간판 <span class="kr-name">홍수현</span>은 뮌헨 남자 10m 공기권총 <span class="medal g">금</span>·항저우 <span class="medal s">은</span>으로 두 대회 연속 시상대에 올랐고, 여자부 <span class="kr-name">추가은</span>(Choo Ga-eun)은 뮌헨 10m 공기권총에서 인도 선수들에 이어 <span class="medal b">동</span>을 획득했다. 항저우에서는 <span class="kr-name">김보미·홍수현</span>이 10m 공기권총 혼성 단체에서 <span class="medal b">동</span>메달을 합작하며 대표팀의 조직력을 확인했다.</p>
+  </div>
+
+  <div class="wc-block">
+    <h3>인도 — 권총에서 급부상 <span class="flag">IND</span></h3>
+    <p>여자 권총이 눈에 띈다. <span class="kr-name">에샤 싱(Esha Singh)</span>이 25m 권총에서 뮌헨·항저우 <span class="medal g">금</span>을 연달아 따냈고, <span class="kr-name">수루치 싱(Suruchi Singh)</span>은 뮌헨 10m 공기권총 <span class="medal g">금</span>, 마누 바커(Manu Bhaker)도 항저우 25m 권총 <span class="medal b">동</span>으로 힘을 보탰다. 혼성 단체에서도 그라나다 10m 공기권총 금을 가져가며 아시안게임 최대 라이벌로 떠올랐다.</p>
+  </div>
+
+  <div class="wc-block">
+    <h3>일본 · 산탄총 — 그 외 아시아 표정 <span class="flag">JPN · 外</span></h3>
+    <p>일본은 <span class="kr-name">노바타 미사키(Misaki Nobata)</span>가 여자 10m 공기소총에서 뮌헨·항저우 연속 <span class="medal s">은</span>으로 저력을 보였다. 상대적으로 판도가 분산된 산탄총에서는 중국 치잉(Qi Ying)이 남자 트랩에서 꾸준히 시상대에 올랐고, 카자흐스탄 아셈 오린바이(여자 스키트, 알마티 <span class="medal g">금</span>), 카타르 알아트바(남자 스키트, 항저우 <span class="medal g">금</span>), 인도 니루 단다(여자 트랩, 로나토 <span class="medal g">금</span>) 등 아시아권 선수들이 종목별로 금맥을 이었다.</p>
+  </div>
 
   <footer class="pagefoot">
     <span>2026 아이치·나고야 아시안게임 종목 안내</span>
