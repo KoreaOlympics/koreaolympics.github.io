@@ -4,13 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>다이빙 - 올림픽예선 (LA28 종목별 예선 시스템)</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#ffffff; --panel:#f8f9fa; --border:#c8ccd1; --border-soft:#eaecf0;
     --ink:#202122; --muted:#54595d; --link:#3366cc; --link-visited:#795cb2; --link-red:#ba0000;
     --serif:'Noto Serif KR',Georgia,'Times New Roman',serif;
     --sans:'Pretendard','Helvetica Neue',Arial,sans-serif;
+    --accent:#2456c6; --ok:#1a7f37; --warn:#b45309; --live:#c2410c;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -18,18 +21,16 @@
   a{color:var(--link);text-decoration:none;}
   a:hover{text-decoration:underline;}
   a:visited{color:var(--link-visited);}
-  a.new{color:var(--link-red);}
   .topbar{border-bottom:1px solid var(--border);background:var(--panel);font-size:12.5px;color:var(--muted);}
   .topbar .inner{max-width:1100px;margin:0 auto;padding:8px 20px;display:flex;gap:16px;flex-wrap:wrap;}
   .topbar a{color:var(--link);}
   .layout{max-width:1100px;margin:0 auto;padding:22px 20px 80px;}
   h1.title{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.3;margin:0 0 2px;padding-bottom:6px;border-bottom:1px solid var(--border);}
-  h1.title .ic{font-family:var(--sans);}
   .subtitle{color:var(--muted);font-size:13px;margin:0 0 18px;}
   .hatnote{font-style:italic;color:var(--muted);background:var(--panel);border:1px solid var(--border-soft);padding:8px 14px;border-radius:2px;margin:0 0 20px;font-size:13.5px;}
   .content{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;}
   .main{flex:1 1 560px;min-width:0;}
-  h2{font-family:var(--serif);font-weight:600;font-size:22px;margin:26px 0 10px;padding-bottom:5px;border-bottom:1px solid var(--border-soft);}
+  h2{font-family:var(--serif);font-weight:600;font-size:22px;margin:26px 0 10px;padding-bottom:5px;border-bottom:1px solid var(--border-soft);scroll-margin-top:12px;}
   h3{font-family:var(--serif);font-weight:600;font-size:17px;margin:20px 0 8px;}
   h4{font-family:var(--sans);font-weight:700;font-size:14.5px;margin:16px 0 6px;color:#3a3f44;}
   p{margin:0 0 12px;}
@@ -39,38 +40,250 @@
   .toc li{margin:3px 0;}
   .infobox{flex:0 0 300px;background:var(--panel);border:1px solid var(--border);border-radius:2px;font-size:13px;align-self:flex-start;}
   .infobox .ib-title{background:#eaecf0;font-family:var(--serif);font-weight:700;text-align:center;padding:10px 12px;font-size:15px;border-bottom:1px solid var(--border);}
-  .infobox .ib-ic{font-size:30px;text-align:center;padding:10px 0 4px;}
   .infobox table{width:100%;border-collapse:collapse;}
   .infobox th,.infobox td{text-align:left;padding:7px 12px;vertical-align:top;border-bottom:1px solid var(--border-soft);}
-  .infobox th{width:38%;color:var(--muted);font-weight:600;}
+  .infobox th{width:40%;color:var(--muted);font-weight:600;}
   .badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:2px;background:#e6f0ff;color:#2456c6;border:1px solid #b9d0f5;margin-left:6px;}
   .badge.asiad{background:#fff2e0;color:#a05a00;border-color:#f2d2a0;}
-  .badge.green{background:#e7f6ec;color:#1f7a44;border-color:#b6e2c6;}
-  .badge.red{background:#fde8e8;color:#b02a2a;border-color:#f3c0c0;}
+  .badge.new{background:#eaf1ff;color:#2456c6;border-color:#c3d6f7;}
+  .badge.ok{background:#e6f4ea;color:#1a7f37;border-color:#b7e0c2;}
   table.wt{border-collapse:collapse;width:100%;font-size:13.5px;margin:6px 0 16px;}
-  table.wt th,table.wt td{border:1px solid var(--border);padding:6px 10px;text-align:left;}
+  table.wt th,table.wt td{border:1px solid var(--border);padding:6px 10px;text-align:left;vertical-align:top;}
   table.wt th{background:var(--panel);}
   table.wt td.num, table.wt th.num{text-align:center;}
+  table.wt caption{font-size:12.5px;color:var(--muted);text-align:left;padding:2px 0 6px;}
   .note{font-size:12.5px;color:var(--muted);margin:-8px 0 16px;}
-  .asiad-box{background:#fff8ee;border:1px solid #f2d2a0;border-radius:3px;padding:14px 16px;margin:10px 0 18px;}
-  .asiad-box.link{background:#eef8f1;border-color:#b6e2c6;}
+  .kr-box{background:#eef4ff;border:1px solid #c3d6f7;border-radius:3px;padding:14px 16px;margin:10px 0 18px;}
+  .kr-box h4{margin-top:0;color:#1e3a8a;}
+  .asiad-box{background:#fff8ee;border:1px solid #f2d2a0;border-radius:3px;padding:12px 16px;margin:10px 0 18px;}
   .asiad-box h4{margin-top:0;color:#a05a00;}
-  .asiad-box.link h4{color:#1f7a44;}
+  .y2026{background:#f0fbf3;border:1px solid #b7e0c2;border-radius:3px;padding:12px 16px;margin:10px 0 18px;}
+  .y2026 h4{margin-top:0;color:#1a7f37;}
   .footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;}
-  @media (max-width:820px){.infobox{flex:1 1 100%;order:-1;}}
+  .fb{border:1px solid var(--border);border-radius:8px;margin:14px 0 6px;overflow:hidden;}
+  .fb-head{background:#0d1117;color:#e6edf3;padding:11px 15px;font-weight:700;font-size:14.5px;display:flex;align-items:center;gap:9px;flex-wrap:wrap;}
+  .fb-head .live{width:8px;height:8px;border-radius:50%;background:#3fb950;box-shadow:0 0 7px #3fb950;}
+  .fb-head .sub{font-weight:500;font-size:11.5px;color:#8b949e;margin-left:auto;}
+  .fb-body{padding:14px 15px;background:var(--panel);}
+  .fb-form{display:grid;grid-template-columns:1.1fr 1.2fr 1fr .8fr;gap:8px;margin-bottom:10px;}
+  .fb-form input,.fb-form select,.fb-form textarea{font-family:var(--sans);font-size:13px;padding:7px 9px;border:1px solid var(--border);border-radius:5px;background:#fff;width:100%;}
+  .fb-form textarea{grid-column:1/-1;resize:vertical;min-height:38px;}
+  .fb-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px;}
+  .fb-btn{appearance:none;border:1px solid var(--border);background:#fff;font-family:var(--sans);font-size:13px;font-weight:600;color:var(--ink);padding:7px 14px;border-radius:6px;cursor:pointer;}
+  .fb-btn:hover{border-color:#9db4e0;}
+  .fb-btn.primary{background:var(--accent);color:#fff;border-color:var(--accent);}
+  .fb-btn.ghost{color:var(--muted);}
+  .fb-btn.danger{color:#b02a2a;}
+  .fb-table{width:100%;border-collapse:collapse;font-size:13px;background:#fff;}
+  .fb-table th,.fb-table td{border:1px solid var(--border-soft);padding:6px 8px;text-align:left;vertical-align:top;}
+  .fb-table th{background:#eef0f2;font-size:12px;color:#3a3f44;}
+  .fb-empty{color:var(--muted);font-size:12.5px;padding:14px 4px;text-align:center;}
+  .st{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:10px;}
+  .st.confirmed{background:#e6f4ea;color:#1a7f37;border:1px solid #b7e0c2;}
+  .st.live{background:#fde8e8;color:#c2410c;border:1px solid #f3c0c0;}
+  .st.pending{background:#eef0f2;color:#5b6168;border:1px solid #d5d9de;}
+  .st.failed{background:#f3e8ff;color:#6b21a8;border:1px solid #e2c9f5;}
+  .fb-note{font-size:11.5px;color:var(--muted);margin:9px 2px 0;}
+  .rowdel{cursor:pointer;color:#b02a2a;font-weight:700;border:none;background:none;font-size:14px;}
+  @media (max-width:820px){.infobox{flex:1 1 100%;order:-1;}.fb-form{grid-template-columns:1fr 1fr;}}
+  @media (max-width:520px){.fb-form{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
 <div class="topbar"><div class="inner">
   <a href="index1.html">← 올림픽예선 목차</a>
   <span>문서 · 다이빙</span>
-  <a href="index1.html">목차 →</a>
+  <a href="ollacrosse.html">라크로스 →</a>
 </div></div>
 <div class="layout">
-<h1 class="title"><span class="ic">🤿</span> 다이빙 (Diving)</h1>
-<p class="subtitle">세계수영연맹(World Aquatics) · 3m·10m 개인/싱크로 · LA28 예선 시스템</p>
-<p class="hatnote">다이빙은 남녀 각 4개(3m 스프링보드·10m 플랫폼의 개인·싱크로), 총 <b>8개 세부종목·136명</b>이 겨룬다. 2027 세계선수권과 대륙대회로 선발된다.</p>
-<div class="content"><div class="main"><div class="toc"><div class="toc-title">목차</div><ol><li><a href="#overview">출전권</a></li><li><a href="#pathway">예선 경로</a></li><li><a href="#relation">아시안게임·2026년도 예선과의 연관성</a></li></ol></div><h2 id="overview">출전권</h2><table class="wt"><tr><th>구분</th><th class="num">정량</th><th class="num">개최국</th><th class="num">합계</th></tr><tr><td>남자</td><td class="num">64</td><td class="num">4</td><td class="num">68</td></tr><tr><td>여자</td><td class="num">64</td><td class="num">4</td><td class="num">68</td></tr></table><p class="note">총 136명(성별 균형은 NOC 수락에 따라 소폭 변동). 세부종목: 3m·10m 개인 및 싱크로(남녀 각 4).</p><h2 id="pathway">예선 경로</h2><table class="wt"><tr><th>단계</th><th>대회</th><th>배정</th></tr><tr><td>Phase 1</td><td>2027 세계선수권</td><td>개인 종목 상위, 싱크로 상위국</td></tr><tr><td>Phase 2</td><td>2027 대륙대회</td><td>대륙별 최대 5명</td></tr><tr><td>개최국</td><td>미국 성별 4석</td><td>보장</td></tr></table><p class="note">주관은 세계수영연맹(World Aquatics). 아시안게임은 예선 경로가 아니며, 아시아 선수는 세계선수권·세계랭킹으로 예선을 치른다.</p><div class="asiad-box" id="relation"><h4>아시안게임·2026년도 예선과의 연관성</h4><p>다이빙은 아시안게임을 예선 경로로 두지 않으며, 아시아 선수는 2027 세계선수권과 아시아 대륙대회로 예선을 치른다.</p><p>예선 대회가 2027년부터 시작되므로 <b>2026년도 예선 이벤트는 없다.</b></p><p><span class="badge asiad">아시안게임 비연계</span> · <span class="badge red">2026년 예선 없음</span></p></div><div class="footer">출처: World Aquatics — LA28 Qualification System, Diving (2026.6.15 버전).<br>본 페이지는 원문서를 요약한 것이며, 정확한 규정은 World Aquatics 원문을 따른다.</div></div><aside class="infobox"><div class="ib-ic">🤿</div><div class="ib-title">다이빙 LA28 예선</div><table><tr><th>주관</th><td>World Aquatics</td></tr><tr><th>세부종목</th><td>3m·10m 개인/싱크로 (8)</td></tr><tr><th>총 출전권</th><td>136명</td></tr><tr><th>아시안게임 연계</th><td><span class='badge asiad'>없음</span></td></tr><tr><th>2026 예선</th><td><span class='badge red'>없음</span></td></tr><tr><th>관련 문서</th><td><a href='index1.html'>올림픽예선 목차</a></td></tr></table></aside></div>
+  <h1 class="title">다이빙 (Diving)</h1>
+  <p class="subtitle">월드아쿠아틱스(World Aquatics, AQUA) · 개인 4종목 · 싱크로 4종목 · LA28 예선 시스템</p>
+  <p class="hatnote">다이빙은 남녀 각 개인 2종목(3m 스프링보드·10m 플랫폼)과 싱크로 2종목으로 <b>총 8세부종목</b>이 열리며, 개최국 쿼터를 포함해 <b>최대 136명</b>이 출전한다. 개인 종목은 세계수영선수권(Phase 1)·대륙별 경기(Phase 2)·다이빙 월드컵(Phase 3)의 3단계로, 싱크로 종목은 다이빙 월드컵과 개최국 보장으로 선발한다. 예선은 <b>2027년 6월부터</b> 시작된다.</p>
+  <div class="content">
+    <div class="main">
+      <div class="toc">
+        <div class="toc-title">목차</div>
+        <ol>
+          <li><a href="#overview">세부종목 및 출전권</a></li>
+          <li><a href="#pathway">예선 경로</a></li>
+          <li><a href="#other">개최국·유니버설리티</a></li>
+          <li><a href="#eligibility">참가 자격</a></li>
+          <li><a href="#timeline">예선 일정 · 2026년</a></li>
+          <li><a href="#feedback">예선 결과 입력</a></li>
+        </ol>
+      </div>
+
+      <h2 id="overview">세부종목 및 출전권</h2>
+      <p>다이빙은 남녀 각 개인 2종목과 싱크로 2종목, 총 8세부종목이 실시된다. 개인·싱크로 출전권은 특정 선수가 아니라 NOC에 배정된다.</p>
+      <table class="wt">
+        <tr><th>구분</th><th>세부종목(각 4개)</th><th class="num">정량</th><th class="num">개최국</th><th class="num">유니버설리티</th><th class="num">합계</th></tr>
+        <tr><td>남자</td><td>개인 3m·10m / 싱크로 3m·10m</td><td class="num">64</td><td class="num">4</td><td class="num">–</td><td class="num">68</td></tr>
+        <tr><td>여자</td><td>개인 3m·10m / 싱크로 3m·10m</td><td class="num">64</td><td class="num">4</td><td class="num">–</td><td class="num">68</td></tr>
+        <tr><td><b>총계</b></td><td>8세부종목</td><td class="num">128</td><td class="num">8</td><td class="num">–</td><td class="num"><b>136</b></td></tr>
+      </table>
+      <p class="note">개최국 수용 여부에 따라 최종 인원은 다소 변동될 수 있으나 총원 136명을 넘지 않는다. 다이빙에는 별도 유니버설리티 쿼터가 없다. NOC당 상한은 남 8·여 8명(총 16명)이며, 개인 종목은 종목당 최대 2명, 싱크로는 종목당 최대 1팀으로 제한된다.</p>
+      <h4>싱크로 종목 팀 수</h4>
+      <table class="wt">
+        <tr><th>싱크로 종목(성별·종목당)</th><th class="num">월드컵 선발</th><th class="num">개최국</th><th class="num">합계</th></tr>
+        <tr><td>3m 싱크로 / 10m 싱크로</td><td class="num">7팀</td><td class="num">1팀</td><td class="num">8팀</td></tr>
+      </table>
+      <p class="note">각 싱크로 종목은 2명 1팀으로 구성되며, 개최국 팀을 포함해 종목당 8팀이 겨룬다.</p>
+
+      <h2 id="pathway">예선 경로</h2>
+      <p>개인 종목은 3단계(Phase)로 진행되며, 한 선수는 개인 종목당 소속 NOC를 위해 최대 1장, NOC 기준 개인 종목당 최대 2장까지 획득할 수 있다. 싱크로 종목은 Phase 2에서는 선발하지 않고 Phase 3(다이빙 월드컵)과 개최국 보장으로 채운다.</p>
+
+      <h3>개인 종목 (3m 스프링보드 · 10m 플랫폼)</h3>
+      <table class="wt">
+        <tr><th>단계</th><th>경로</th><th class="num">종목당 배정</th><th>선발 방식</th></tr>
+        <tr><td>Phase 1</td><td>세계수영선수권 부다페스트 2027</td><td class="num">8명</td><td>각 개인 종목 상위 8명에게 NOC별 출전권 1장(NOC당 최대 2명)</td></tr>
+        <tr><td>Phase 2</td><td>대륙별 경기 2027</td><td class="num">최대 5명</td><td>각 종목 1위(최소 성적기준 충족 시). 대륙·종목당 최대 1명, 종목당 최대 5명. Phase 1 확보 선수는 획득 불가</td></tr>
+        <tr><td>Phase 3</td><td>다이빙 월드컵 Stop 1·2 (2028년 2~5월)</td><td class="num">잔여분</td><td>Stop 1·2 중 최고 개인 점수 순으로 총원 136명 한도 내 배정(NOC당 최대 2명). 대륙별 대표성 심사 적용</td></tr>
+      </table>
+      <p class="note">Phase 2 미사용 쿼터는 Phase 3에서 총원 136명 한도 내로 재배정된다. 대륙별 대표성 심사: 5개 대륙(아프리카·아시아·유럽·오세아니아·아메리카) 각각 최소 남 1·여 1명이 최소 성적기준 충족 시 대표되어야 한다.</p>
+
+      <h3>싱크로 종목 (3m 스프링보드 · 10m 플랫폼)</h3>
+      <table class="wt">
+        <tr><th>단계</th><th>경로</th><th class="num">종목당 배정</th><th>선발 방식</th></tr>
+        <tr><td>Phase 2</td><td>대륙별 경기 2027</td><td class="num">0팀</td><td>싱크로는 Phase 2 예선 대상이 아님</td></tr>
+        <tr><td>Phase 3</td><td>다이빙 월드컵 Stop 1·2 (2028년 2~5월)</td><td class="num">7팀</td><td>Stop 1 상위 3팀 + Stop 2 상위 3팀(Stop 1 통과팀 제외) + 총점 최고 1팀. 전 종목 예선 없이 결선으로 진행</td></tr>
+        <tr><td>개최국</td><td>미국 보장</td><td class="num">1팀</td><td>각 싱크로 종목 1팀 보장 → 종목당 총 8팀</td></tr>
+      </table>
+
+      <h2 id="other">개최국·유니버설리티</h2>
+      <p>개최국(미국)은 개인 종목에서는 다른 NOC와 동일한 조건으로 예선을 통해 출전권을 획득한다. 싱크로 종목에서는 각 싱크로 종목 1팀씩(여 4명·남 4명, 최대 8명)을 보장받는다. 개최국이 보장 싱크로 팀 쿼터를 사용하지 않으면 해당 종목의 Phase 3 다음 순위 NOC로 재배정된다. 다이빙에는 별도의 유니버설리티(3자위원회) 쿼터가 배정되지 않는다.</p>
+
+      <h2 id="eligibility">참가 자격</h2>
+      <p>모든 출전 선수는 <b>2014년 12월 31일 이전 출생</b>(2028년 12월 31일 기준 만 14세 이상)이어야 하며, 여권상 생년월일이 ACR 등록에 사용된 것으로 검증되어야 한다. 올림픽 헌장(제41조 국적, 제43조 반도핑), 세계반도핑규약, 여성 카테고리 보호 정책 등 IOC 및 World Aquatics의 참가 조건을 모두 준수해야 한다. Phase 2·3의 일부 경로는 종목별 최소 성적기준(예: 남 3m 330점, 남 10m 310점, 여 3m 230점, 여 10m 210점)을 충족해야 한다.</p>
+      <p class="note">아시안게임 비연계 — 다이빙 LA28 예선 경로에 아시안게임·대륙종합대회는 포함되지 않는다.</p>
+
+      <h2 id="timeline">예선 일정 · 2026년</h2>
+      <div class="y2026">
+        <h4>2026년 진행 사항</h4>
+        <p><b>2026년 예선 활동 없음, 2027년부터 시작.</b> 다이빙의 예선은 2027년 6월 세계수영선수권 부다페스트 대회(Phase 1)로 개시된다. 2026년 중에는 출전권 배정이나 예선 대회가 예정되어 있지 않다.</p>
+      </div>
+      <table class="wt">
+        <tr><th>시기</th><th>일정</th></tr>
+        <tr><td>2027.06.26~07.04</td><td>세계수영선수권 부다페스트 2027 (Phase 1)</td></tr>
+        <tr><td>2027</td><td>대륙별 경기 2027 (Phase 2)</td></tr>
+        <tr><td>2028.02~05</td><td>다이빙 월드컵 Stop 1·2 (Phase 3)</td></tr>
+        <tr><td>2028.05.29</td><td>NOC 선수 명단(정확한 이름) 확정 마감</td></tr>
+        <tr><td>2028.06.26</td><td>LA28 스포츠 엔트리 마감</td></tr>
+        <tr><td>2028.07.15</td><td>팀 리더 회의</td></tr>
+        <tr><td>2028.07.16~28</td><td>LA28 올림픽 다이빙 경기</td></tr>
+      </table>
+
+      <h2 id="feedback">예선 결과 입력 · 피드백</h2>
+      <p class="note">아래에 다이빙 예선 결과(세부종목·대회·확정 선수/국가 등)를 직접 입력하면 브라우저에 저장됩니다. 현재 <b>대한민국 확정 출전권: 0장</b> — 결과가 나오는 대로 기록하세요.</p>
+
+<!-- ==== 결과 입력·피드백 위젯 ==== -->
+<div class="fb" id="fb">
+  <div class="fb-head"><span class="live"></span> 예선 결과 입력 · 피드백 <span class="sub" id="fb-count">0건 저장됨</span></div>
+  <div class="fb-body">
+    <p class="fb-note" style="margin-top:0">세부종목·대회·결과를 입력하고 <b>추가</b>를 누르면 아래 표에 기록됩니다. 입력값은 이 브라우저(localStorage)에 자동 저장되며, <b>JSON 내보내기/불러오기</b>로 백업·복원할 수 있습니다.</p>
+    <div class="fb-form">
+      <input id="f-ev" placeholder="세부종목/체급 (예: 남 -58kg)">
+      <input id="f-comp" placeholder="예선 대회 (예: 아시아 대륙예선)">
+      <input id="f-res" placeholder="결과 (예: 대한민국 확정 / 서은수)">
+      <select id="f-st">
+        <option value="confirmed">확정</option>
+        <option value="live">진행중</option>
+        <option value="pending" selected>예정</option>
+        <option value="failed">탈락/불발</option>
+      </select>
+      <textarea id="f-note" placeholder="메모 (선택) — 날짜·랭킹·비고 등"></textarea>
+    </div>
+    <div class="fb-actions">
+      <button class="fb-btn primary" onclick="fbAdd()">＋ 추가</button>
+      <button class="fb-btn ghost" onclick="fbExport()">⬇ JSON 내보내기</button>
+      <label class="fb-btn ghost" style="margin:0">⬆ JSON 불러오기<input type="file" id="f-imp" accept="application/json,.json" style="display:none" onchange="fbImport(event)"></label>
+      <button class="fb-btn danger" onclick="fbClear()">전체 삭제</button>
+      <button class="fb-btn ghost" onclick="fbSeed()">예시 채우기</button>
+    </div>
+    <table class="fb-table">
+      <thead><tr><th style="width:16%">세부종목</th><th style="width:22%">예선 대회</th><th style="width:26%">결과</th><th style="width:10%">상태</th><th>메모</th><th style="width:34px"></th></tr></thead>
+      <tbody id="fb-rows"></tbody>
+    </table>
+    <p class="fb-note">※ 저장은 이 컴퓨터·브라우저에만 남습니다. 다른 기기로 옮기거나 백업하려면 <b>JSON 내보내기</b>를 사용하세요. (파일로 직접 열었을 때 정상 동작하며, 대화창 미리보기에서는 저장이 유지되지 않을 수 있습니다.)</p>
+  </div>
 </div>
+
+      <div class="footer">
+        출처: World Aquatics (AQUA) — LA28 Qualification System, Diving (Version as of 15 June 2026).<br>
+        본 페이지는 원문서를 요약한 것이며, 정확한 규정은 World Aquatics 원문을 따른다.
+      </div>
+    </div>
+    <aside class="infobox">
+      <div class="ib-title">다이빙 LA28 예선</div>
+      <table>
+        <tr><th>주관</th><td>World Aquatics (AQUA)</td></tr>
+        <tr><th>세부종목</th><td>개인 4 · 싱크로 4 (남 4·여 4)</td></tr>
+        <tr><th>총 출전권</th><td>136명 (기본 128 + 개최국 8)</td></tr>
+        <tr><th>NOC 상한</th><td>남 8 · 여 8 (총 16명)</td></tr>
+        <tr><th>예선 개시</th><td>2027년 6월 (세계수영선수권)</td></tr>
+        <tr><th>아시안게임 연계</th><td><span class="badge">비연계</span></td></tr>
+        <tr><th>관련 문서</th><td><a href="index1.html">올림픽예선 목차</a></td></tr>
+      </table>
+    </aside>
+  </div>
+</div>
+<script>
+var SPORT_KEY = "diving";
+var SPORT_NAME = "다이빙";
+var SEED = [
+  {ev:"남 3m 스프링보드(개인)", comp:"세계수영선수권 부다페스트 2027", res:"(미정)", st:"pending", note:"Phase 1 각 종목 상위 8명, NOC당 최대 2명"},
+  {ev:"여 10m 플랫폼(개인)", comp:"다이빙 월드컵 Stop 1·2(2028)", res:"(미정)", st:"pending", note:"Phase 3 최고 개인 점수 순 배정"},
+  {ev:"여 3m 싱크로", comp:"다이빙 월드컵 Stop 1·2(2028)", res:"(미정)", st:"pending", note:"종목당 7팀 + 개최국 1팀"}
+];
+var STORE = "la28_fb_" + SPORT_KEY;
+var ST_LABEL = {confirmed:"확정", live:"진행중", pending:"예정", failed:"탈락/불발"};
+function fbLoad(){ try{ var r=localStorage.getItem(STORE); return r?JSON.parse(r):null; }catch(e){ return null; } }
+function fbSave(d){ try{ localStorage.setItem(STORE, JSON.stringify(d)); }catch(e){} }
+var DATA = fbLoad();
+if(DATA===null){ DATA = []; fbSave(DATA); }
+function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
+function fbRender(){
+  var tb=document.getElementById("fb-rows");
+  document.getElementById("fb-count").textContent = DATA.length + "건 저장됨";
+  if(!DATA.length){ tb.innerHTML='<tr><td colspan="6" class="fb-empty">아직 입력된 결과가 없습니다. 위 칸에 입력 후 <b>추가</b>를 누르세요. (또는 <b>예시 채우기</b>)</td></tr>'; return; }
+  tb.innerHTML = DATA.map(function(r,i){
+    return '<tr><td>'+esc(r.ev)+'</td><td>'+esc(r.comp)+'</td><td>'+esc(r.res)+
+      '</td><td><span class="st '+(r.st||"pending")+'">'+(ST_LABEL[r.st]||r.st)+'</span></td><td>'+esc(r.note)+
+      '</td><td><button class="rowdel" title="삭제" onclick="fbDel('+i+')">✕</button></td></tr>';
+  }).join("");
+}
+function fbAdd(){
+  var ev=document.getElementById("f-ev").value.trim();
+  var comp=document.getElementById("f-comp").value.trim();
+  var res=document.getElementById("f-res").value.trim();
+  var st=document.getElementById("f-st").value;
+  var note=document.getElementById("f-note").value.trim();
+  if(!ev && !comp && !res){ return; }
+  DATA.push({ev:ev,comp:comp,res:res,st:st,note:note});
+  fbSave(DATA); fbRender();
+  document.getElementById("f-ev").value="";document.getElementById("f-comp").value="";
+  document.getElementById("f-res").value="";document.getElementById("f-note").value="";
+  document.getElementById("f-ev").focus();
+}
+function fbDel(i){ DATA.splice(i,1); fbSave(DATA); fbRender(); }
+function fbClear(){ if(confirm(SPORT_NAME+" 결과 기록을 모두 삭제할까요?")){ DATA=[]; fbSave(DATA); fbRender(); } }
+function fbSeed(){ DATA = DATA.concat(SEED); fbSave(DATA); fbRender(); }
+function fbExport(){
+  var blob=new Blob([JSON.stringify({sport:SPORT_KEY,name:SPORT_NAME,data:DATA},null,2)],{type:"application/json"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob);
+  a.download="la28_"+SPORT_KEY+"_결과.json"; document.body.appendChild(a); a.click();
+  setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); },100);
+}
+function fbImport(e){
+  var f=e.target.files[0]; if(!f) return;
+  var rd=new FileReader();
+  rd.onload=function(){ try{ var o=JSON.parse(rd.result); var arr=Array.isArray(o)?o:(o.data||[]);
+    if(!Array.isArray(arr)) throw 0;
+    DATA=arr.map(function(r){return {ev:r.ev||"",comp:r.comp||"",res:r.res||"",st:r.st||"pending",note:r.note||""};});
+    fbSave(DATA); fbRender(); alert(DATA.length+"건을 불러왔습니다.");
+  }catch(err){ alert("불러오기 실패: 올바른 JSON 파일이 아닙니다."); } e.target.value=""; };
+  rd.readAsText(f);
+}
+fbRender();
+</script>
 </body>
 </html>

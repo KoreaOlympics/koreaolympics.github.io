@@ -4,13 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>레슬링 - 올림픽예선 (LA28 종목별 예선 시스템)</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#ffffff; --panel:#f8f9fa; --border:#c8ccd1; --border-soft:#eaecf0;
     --ink:#202122; --muted:#54595d; --link:#3366cc; --link-visited:#795cb2; --link-red:#ba0000;
     --serif:'Noto Serif KR',Georgia,'Times New Roman',serif;
     --sans:'Pretendard','Helvetica Neue',Arial,sans-serif;
+    --accent:#2456c6; --ok:#1a7f37; --warn:#b45309; --live:#c2410c;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -18,18 +21,16 @@
   a{color:var(--link);text-decoration:none;}
   a:hover{text-decoration:underline;}
   a:visited{color:var(--link-visited);}
-  a.new{color:var(--link-red);}
   .topbar{border-bottom:1px solid var(--border);background:var(--panel);font-size:12.5px;color:var(--muted);}
   .topbar .inner{max-width:1100px;margin:0 auto;padding:8px 20px;display:flex;gap:16px;flex-wrap:wrap;}
   .topbar a{color:var(--link);}
   .layout{max-width:1100px;margin:0 auto;padding:22px 20px 80px;}
   h1.title{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.3;margin:0 0 2px;padding-bottom:6px;border-bottom:1px solid var(--border);}
-  h1.title .ic{font-family:var(--sans);}
   .subtitle{color:var(--muted);font-size:13px;margin:0 0 18px;}
   .hatnote{font-style:italic;color:var(--muted);background:var(--panel);border:1px solid var(--border-soft);padding:8px 14px;border-radius:2px;margin:0 0 20px;font-size:13.5px;}
   .content{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;}
   .main{flex:1 1 560px;min-width:0;}
-  h2{font-family:var(--serif);font-weight:600;font-size:22px;margin:26px 0 10px;padding-bottom:5px;border-bottom:1px solid var(--border-soft);}
+  h2{font-family:var(--serif);font-weight:600;font-size:22px;margin:26px 0 10px;padding-bottom:5px;border-bottom:1px solid var(--border-soft);scroll-margin-top:12px;}
   h3{font-family:var(--serif);font-weight:600;font-size:17px;margin:20px 0 8px;}
   h4{font-family:var(--sans);font-weight:700;font-size:14.5px;margin:16px 0 6px;color:#3a3f44;}
   p{margin:0 0 12px;}
@@ -39,38 +40,279 @@
   .toc li{margin:3px 0;}
   .infobox{flex:0 0 300px;background:var(--panel);border:1px solid var(--border);border-radius:2px;font-size:13px;align-self:flex-start;}
   .infobox .ib-title{background:#eaecf0;font-family:var(--serif);font-weight:700;text-align:center;padding:10px 12px;font-size:15px;border-bottom:1px solid var(--border);}
-  .infobox .ib-ic{font-size:30px;text-align:center;padding:10px 0 4px;}
   .infobox table{width:100%;border-collapse:collapse;}
   .infobox th,.infobox td{text-align:left;padding:7px 12px;vertical-align:top;border-bottom:1px solid var(--border-soft);}
-  .infobox th{width:38%;color:var(--muted);font-weight:600;}
+  .infobox th{width:40%;color:var(--muted);font-weight:600;}
   .badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:2px;background:#e6f0ff;color:#2456c6;border:1px solid #b9d0f5;margin-left:6px;}
   .badge.asiad{background:#fff2e0;color:#a05a00;border-color:#f2d2a0;}
-  .badge.green{background:#e7f6ec;color:#1f7a44;border-color:#b6e2c6;}
-  .badge.red{background:#fde8e8;color:#b02a2a;border-color:#f3c0c0;}
+  .badge.new{background:#eaf1ff;color:#2456c6;border-color:#c3d6f7;}
+  .badge.ok{background:#e6f4ea;color:#1a7f37;border-color:#b7e0c2;}
   table.wt{border-collapse:collapse;width:100%;font-size:13.5px;margin:6px 0 16px;}
-  table.wt th,table.wt td{border:1px solid var(--border);padding:6px 10px;text-align:left;}
+  table.wt th,table.wt td{border:1px solid var(--border);padding:6px 10px;text-align:left;vertical-align:top;}
   table.wt th{background:var(--panel);}
   table.wt td.num, table.wt th.num{text-align:center;}
+  table.wt caption{font-size:12.5px;color:var(--muted);text-align:left;padding:2px 0 6px;}
   .note{font-size:12.5px;color:var(--muted);margin:-8px 0 16px;}
-  .asiad-box{background:#fff8ee;border:1px solid #f2d2a0;border-radius:3px;padding:14px 16px;margin:10px 0 18px;}
-  .asiad-box.link{background:#eef8f1;border-color:#b6e2c6;}
+  .kr-box{background:#eef4ff;border:1px solid #c3d6f7;border-radius:3px;padding:14px 16px;margin:10px 0 18px;}
+  .kr-box h4{margin-top:0;color:#1e3a8a;}
+  .asiad-box{background:#fff8ee;border:1px solid #f2d2a0;border-radius:3px;padding:12px 16px;margin:10px 0 18px;}
   .asiad-box h4{margin-top:0;color:#a05a00;}
-  .asiad-box.link h4{color:#1f7a44;}
+  .y2026{background:#f0fbf3;border:1px solid #b7e0c2;border-radius:3px;padding:12px 16px;margin:10px 0 18px;}
+  .y2026 h4{margin-top:0;color:#1a7f37;}
   .footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;}
-  @media (max-width:820px){.infobox{flex:1 1 100%;order:-1;}}
+  .fb{border:1px solid var(--border);border-radius:8px;margin:14px 0 6px;overflow:hidden;}
+  .fb-head{background:#0d1117;color:#e6edf3;padding:11px 15px;font-weight:700;font-size:14.5px;display:flex;align-items:center;gap:9px;flex-wrap:wrap;}
+  .fb-head .live{width:8px;height:8px;border-radius:50%;background:#3fb950;box-shadow:0 0 7px #3fb950;}
+  .fb-head .sub{font-weight:500;font-size:11.5px;color:#8b949e;margin-left:auto;}
+  .fb-body{padding:14px 15px;background:var(--panel);}
+  .fb-form{display:grid;grid-template-columns:1.1fr 1.2fr 1fr .8fr;gap:8px;margin-bottom:10px;}
+  .fb-form input,.fb-form select,.fb-form textarea{font-family:var(--sans);font-size:13px;padding:7px 9px;border:1px solid var(--border);border-radius:5px;background:#fff;width:100%;}
+  .fb-form textarea{grid-column:1/-1;resize:vertical;min-height:38px;}
+  .fb-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px;}
+  .fb-btn{appearance:none;border:1px solid var(--border);background:#fff;font-family:var(--sans);font-size:13px;font-weight:600;color:var(--ink);padding:7px 14px;border-radius:6px;cursor:pointer;}
+  .fb-btn:hover{border-color:#9db4e0;}
+  .fb-btn.primary{background:var(--accent);color:#fff;border-color:var(--accent);}
+  .fb-btn.ghost{color:var(--muted);}
+  .fb-btn.danger{color:#b02a2a;}
+  .fb-table{width:100%;border-collapse:collapse;font-size:13px;background:#fff;}
+  .fb-table th,.fb-table td{border:1px solid var(--border-soft);padding:6px 8px;text-align:left;vertical-align:top;}
+  .fb-table th{background:#eef0f2;font-size:12px;color:#3a3f44;}
+  .fb-empty{color:var(--muted);font-size:12.5px;padding:14px 4px;text-align:center;}
+  .st{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:10px;}
+  .st.confirmed{background:#e6f4ea;color:#1a7f37;border:1px solid #b7e0c2;}
+  .st.live{background:#fde8e8;color:#c2410c;border:1px solid #f3c0c0;}
+  .st.pending{background:#eef0f2;color:#5b6168;border:1px solid #d5d9de;}
+  .st.failed{background:#f3e8ff;color:#6b21a8;border:1px solid #e2c9f5;}
+  .fb-note{font-size:11.5px;color:var(--muted);margin:9px 2px 0;}
+  .rowdel{cursor:pointer;color:#b02a2a;font-weight:700;border:none;background:none;font-size:14px;}
+  @media (max-width:820px){.infobox{flex:1 1 100%;order:-1;}.fb-form{grid-template-columns:1fr 1fr;}}
+  @media (max-width:520px){.fb-form{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
 <div class="topbar"><div class="inner">
   <a href="index1.html">← 올림픽예선 목차</a>
   <span>문서 · 레슬링</span>
-  <a href="index1.html">목차 →</a>
+  <a href="olmarathonswim.html">마라톤 수영 →</a>
 </div></div>
 <div class="layout">
-<h1 class="title"><span class="ic">🤼</span> 레슬링 (Wrestling)</h1>
-<p class="subtitle">세계레슬링연맹(UWW) · 자유형 · 그레코로만 · LA28 예선 시스템</p>
-<p class="hatnote">레슬링은 남자 12체급(자유형 6·그레코로만 6), 여자 자유형 6체급으로 총 <b>288명</b>이 겨룬다. 2027 세계선수권·UWW 랭킹과 2028 대륙·세계 올림픽예선으로 선발된다.</p>
-<div class="content"><div class="main"><div class="toc"><div class="toc-title">목차</div><ol><li><a href="#overview">체급 및 출전권</a></li><li><a href="#pathway">예선 경로</a></li><li><a href="#relation">아시안게임·2026년도 예선과의 연관성</a></li></ol></div><h2 id="overview">체급 및 출전권</h2><table class="wt"><tr><th>종목</th><th>체급</th><th class="num">출전권</th></tr><tr><td>남자 자유형</td><td>57·65·74·86·97·125kg</td><td class="num">96</td></tr><tr><td>남자 그레코로만</td><td>60·67·77·87·97·130kg</td><td class="num">96</td></tr><tr><td>여자 자유형</td><td>50·53·57·62·68·76kg</td><td class="num">96</td></tr></table><p class="note">총 288명(체급당 16명). NOC당 체급별 1명(남 12·여 6). 개최국·유니버설리티 쿼터 없음. 출전권은 NOC에 배정.</p><h2 id="pathway">예선 경로</h2><table class="wt"><tr><th>단계</th><th>대회</th><th class="num">배정</th></tr><tr><td>1단계</td><td>2027 세계선수권 — 체급별 상위</td><td class="num">체급별 상위</td></tr><tr><td>2단계</td><td>UWW 랭킹 (2027 대륙선수권·랭킹시리즈 등 7개 대회)</td><td class="num">랭킹 상위 3명</td></tr><tr><td>3단계</td><td>2028 대륙 올림픽예선</td><td class="num">대륙별</td></tr><tr><td>4단계</td><td>2028 세계 올림픽예선</td><td class="num">잔여</td></tr></table><div class="asiad-box" id="relation"><h4>아시안게임·2026년도 예선과의 연관성</h4><p>레슬링은 아시안게임을 직접 예선 경로로 두지 않는다. 아시아 선수는 2027 아시아선수권(UWW 랭킹 반영)과 2028 아시아 대륙 올림픽예선으로 예선을 치른다.</p><p>1단계 2027 세계선수권부터 예선이 시작되므로 <b>2026년도 예선 이벤트는 없다.</b></p><p><span class="badge asiad">아시안게임 비연계</span> · <span class="badge red">2026년 예선 없음</span></p></div><div class="footer">출처: United World Wrestling(UWW) — LA28 Qualification System, Wrestling (2026.7.31 버전).<br>본 페이지는 원문서를 요약한 것이며, 정확한 규정은 UWW 원문을 따른다.</div></div><aside class="infobox"><div class="ib-ic">🤼</div><div class="ib-title">레슬링 LA28 예선</div><table><tr><th>주관</th><td>UWW</td></tr><tr><th>세부종목</th><td>자유형·그레코로만 (18체급)</td></tr><tr><th>총 출전권</th><td>288명</td></tr><tr><th>아시안게임 연계</th><td><span class='badge asiad'>없음</span></td></tr><tr><th>2026 예선</th><td><span class='badge red'>없음</span></td></tr><tr><th>관련 문서</th><td><a href='index1.html'>올림픽예선 목차</a></td></tr></table></aside></div>
+  <h1 class="title">레슬링 (Wrestling)</h1>
+  <p class="subtitle">세계레슬링연맹(United World Wrestling, UWW) · 자유형 · 그레코로만 · 남자 12체급 · 여자 6체급 · LA28 예선 시스템</p>
+  <p class="hatnote">레슬링은 자유형과 그레코로만 두 종목(스타일)에서 남자 12체급, 여자 6체급(총 18세부종목)에 <b>총 288개 출전권</b>이 배정된다. 개최국·유니버설리티 직접 배정은 없으며, 2027 세계선수권 → UWW 랭킹 → 2028 대륙별 예선 → 2028 세계 예선의 4단계 경로로 선발한다. 예선 기간은 <b>2027년 1월부터</b> 시작된다.</p>
+  <div class="content">
+    <div class="main">
+      <div class="toc">
+        <div class="toc-title">목차</div>
+        <ol>
+          <li><a href="#overview">체급 및 출전권</a></li>
+          <li><a href="#pathway">예선 경로</a></li>
+          <li><a href="#other">개최국·유니버설리티</a></li>
+          <li><a href="#eligibility">참가 자격</a></li>
+          <li><a href="#timeline">예선 일정 · 2026년</a></li>
+          <li><a href="#feedback">예선 결과 입력</a></li>
+        </ol>
+      </div>
+
+      <h2 id="overview">체급 및 출전권</h2>
+      <p>레슬링은 <b>자유형(Freestyle)</b>과 <b>그레코로만(Greco-Roman)</b> 두 스타일로 나뉜다. 남자는 두 스타일 각 6체급, 여자는 자유형 6체급으로 총 18세부종목이 열린다. 출전권은 선수 개인이 아니라 소속 NOC에 배정된다.</p>
+      <table class="wt">
+        <tr><th>구분</th><th>스타일 · 체급</th><th class="num">정량</th><th class="num">개최국</th><th class="num">유니버설리티</th><th class="num">합계</th></tr>
+        <tr><td>남자 (12체급)</td><td>자유형 57·65·74·86·97·125kg / 그레코로만 60·67·77·87·97·130kg</td><td class="num">192</td><td class="num">0</td><td class="num">0*</td><td class="num">192</td></tr>
+        <tr><td>여자 (6체급)</td><td>자유형 50·53·57·62·68·76kg</td><td class="num">96</td><td class="num">0</td><td class="num">0*</td><td class="num">96</td></tr>
+        <tr><td><b>총계</b></td><td>18세부종목</td><td class="num">288</td><td class="num">0</td><td class="num">0*</td><td class="num"><b>288</b></td></tr>
+      </table>
+      <p class="note">체급별 출전 인원은 16명. NOC당 상한은 남자 12명·여자 6명(각 체급 1명, 총 18명). *유니버설리티는 별도 직접 배정되지 않고, 미사용 출전권 재배정 절차에서만 제공될 수 있다(D.3).</p>
+
+      <h3>자유형 (Freestyle)</h3>
+      <table class="wt">
+        <tr><th>구분</th><th>체급(6개)</th><th class="num">체급 수</th><th class="num">체급당 인원</th></tr>
+        <tr><td>남자</td><td>57 · 65 · 74 · 86 · 97 · 125kg</td><td class="num">6</td><td class="num">16</td></tr>
+        <tr><td>여자</td><td>50 · 53 · 57 · 62 · 68 · 76kg</td><td class="num">6</td><td class="num">16</td></tr>
+      </table>
+
+      <h3>그레코로만 (Greco-Roman)</h3>
+      <table class="wt">
+        <tr><th>구분</th><th>체급(6개)</th><th class="num">체급 수</th><th class="num">체급당 인원</th></tr>
+        <tr><td>남자</td><td>60 · 67 · 77 · 87 · 97 · 130kg</td><td class="num">6</td><td class="num">16</td></tr>
+        <tr><td>여자</td><td colspan="3">해당 없음 (여자부는 자유형만 시행)</td></tr>
+      </table>
+
+      <h2 id="pathway">예선 경로</h2>
+      <p>예선 경로는 4단계로 우선순위에 따라 순차 적용된다. 각 NOC는 스타일·성별별로 체급당 최대 1명까지만 등록할 수 있으며, 앞 단계에서 이미 출전권을 확보한 체급으로는 뒤 단계에 참가할 수 없다.</p>
+      <table class="wt">
+        <tr><th>단계</th><th>경로</th><th class="num">배정(남+여)</th><th>선발 방식</th></tr>
+        <tr><td>D.1.1</td><td>1단계 — 2027 세계선수권</td><td class="num">72 (48+24)</td><td>18개 올림픽 체급의 메달리스트(금·은·동·동 4명)가 각 1장 획득. 2027 대륙선수권 참가 NOC 소속 선수만 출전 가능</td></tr>
+        <tr><td>D.1.2</td><td>2단계 — UWW 랭킹</td><td class="num">54 (36+18)</td><td>1단계 미확보 선수 중 체급별 UWW 랭킹 상위 3명이 각 1장 획득</td></tr>
+        <tr><td>D.1.3</td><td>3단계 — 2028 대륙별 예선</td><td class="num">144 (96+48)</td><td>4개 대륙 예선전에서 체급별 상위 2명이 각 1장 획득(아프리카·오세아니아는 공동 개최)</td></tr>
+        <tr><td>D.1.4</td><td>4단계 — 2028 세계 예선</td><td class="num">18 (12+6)</td><td>앞 단계 미확보 NOC만 참가(전 스타일 통틀어 최대 2명 등록), 체급별 1위가 1장 획득</td></tr>
+      </table>
+
+      <h4>2단계 — UWW 랭킹 산정 대회</h4>
+      <p class="note">UWW 랭킹은 아래 7개 대회 성적으로 산정하되, 각 선수의 <b>최고 성적 5개</b>(최다 포인트)만 반영한다.</p>
+      <table class="wt">
+        <tr><th>연도</th><th>포함 대회</th></tr>
+        <tr><td>2027</td><td>대륙선수권 · 랭킹 시리즈 3개 대회 · 세계선수권</td></tr>
+        <tr><td>2028</td><td>랭킹 시리즈 1개 대회 · 대륙선수권</td></tr>
+      </table>
+      <p class="note">대륙 종합대회(Continental Games)가 랭킹 대회에 추가될 수 있으나, 형평성을 위해 연도별로 대륙 대회는 1개만 반영된다. 같은 해의 대륙선수권과 대륙 종합대회 성적은 합산되지 않고, 포인트가 높은 쪽만 채택된다.</p>
+
+      <h4>3단계 — 대륙별 예선 배정</h4>
+      <table class="wt">
+        <tr><th>대륙 예선전</th><th class="num">남자</th><th class="num">여자</th><th class="num">합계</th></tr>
+        <tr><td>아프리카 & 오세아니아(공동)</td><td class="num">24</td><td class="num">12</td><td class="num">36</td></tr>
+        <tr><td>아메리카</td><td class="num">24</td><td class="num">12</td><td class="num">36</td></tr>
+        <tr><td>아시아</td><td class="num">24</td><td class="num">12</td><td class="num">36</td></tr>
+        <tr><td>유럽</td><td class="num">24</td><td class="num">12</td><td class="num">36</td></tr>
+        <tr><td><b>합계</b></td><td class="num">96</td><td class="num">48</td><td class="num"><b>144</b></td></tr>
+      </table>
+      <p class="note">앞 두 단계에서 출전권을 확보한 선수는 다른 스타일로 출전하는 경우를 제외하고 대륙 예선에 참가할 수 없으며, 이미 출전권을 확보한 체급으로는 다른 선수를 보낼 수 없다.</p>
+
+      <h2 id="other">개최국·유니버설리티</h2>
+      <p>레슬링에는 <b>개최국(미국) 자동 출전권이 없다.</b> 미국도 다른 NOC와 동일하게 4단계 경로를 통해 출전권을 획득해야 한다. 유니버설리티 쿼터 역시 선수 출전권의 일부로 <b>직접 배정되지 않는다.</b> 다만 개인 종목의 미사용 출전권 재배정 절차(F)가 완료된 뒤, 그 범위 안에서 NOC에 유니버설리티 자리가 제공될 수 있다. IOC는 2027년 10월 1일 자격 있는 NOC에 유니버설리티 신청을 안내하며, 신청 마감은 2028년 1월 15일, 배정은 종목 예선 종료 후 3자위원회가 서면으로 확정한다.</p>
+
+      <h2 id="eligibility">참가 자격</h2>
+      <p><b>2010년 12월 31일 이전 출생</b>(대회 시점 만 18세 이상 또는 2028년에 만 18세가 되는 선수)이어야 하며, 등록에 사용하는 여권으로 검증된다. 또한 소속 <b>국가레슬링연맹이 발급한 유효 라이선스</b>를 보유하고 UWW 공식 데이터베이스에 등록되어 있어야 한다. 올림픽 헌장(국적·반도핑 등), 세계반도핑규약, 경기조작방지규약, 여성 부문 보호 정책 등 IOC 참가 조건을 모두 충족해야 한다.</p>
+
+      <div class="asiad-box">
+        <h4>아시안게임 연관성</h4>
+        <p>아시안게임(대륙 종합대회) 성적은 레슬링 LA28 출전권과 <b>직접 연결되지 않는다.</b> 다만 UWW 규정상 대륙 종합대회가 랭킹 산정 대회로 추가될 수 있어, 2단계 UWW 랭킹에 <b>간접 반영</b>될 여지가 있다. 이 경우에도 같은 해 대륙선수권 성적과는 합산되지 않고 포인트가 높은 쪽만 채택된다. <span class="badge asiad">간접</span></p>
+      </div>
+
+      <h2 id="timeline">예선 일정 · 2026년</h2>
+      <div class="y2026">
+        <h4>2026년 진행 사항</h4>
+        <p><b>2026년 예선 활동 없음.</b> 올림픽 예선 기간은 <b>2027년 1월 1일~2028년 5월 28일</b>로, 실질적인 예선은 2027년부터 시작된다. 2026년 7월 31일자 규정 문서가 확정되었을 뿐, 2026년 중 열리는 예선 대회나 확정되는 출전권은 없다.</p>
+      </div>
+      <table class="wt">
+        <tr><th>시기</th><th>일정</th></tr>
+        <tr><td>2027.01.01~2028.05.28</td><td>레슬링 올림픽 예선 기간</td></tr>
+        <tr><td>2027.02.15~21</td><td>제1차 랭킹 시리즈</td></tr>
+        <tr><td>2027.03.30~04.04</td><td>아시아선수권 (랭킹 반영)</td></tr>
+        <tr><td>2027.04.05~05.02</td><td>유럽·아프리카·오세아니아·팬아메리카 선수권 (랭킹 반영)</td></tr>
+        <tr><td>2027.05.31~06.06</td><td>제2차 랭킹 시리즈</td></tr>
+        <tr><td>2027.07.19~25</td><td>제3차 랭킹 시리즈</td></tr>
+        <tr><td>2027.09.11~19</td><td>2027 세계선수권 (라스베이거스, 미국) — 1단계</td></tr>
+        <tr><td>2028.01.17~23</td><td>제4차 랭킹 시리즈</td></tr>
+        <tr><td>2028.02~03</td><td>2028 대륙선수권 (랭킹 반영)</td></tr>
+        <tr><td>2028.03.24~04.16</td><td>대륙별 올림픽 예선전 — 3단계</td></tr>
+        <tr><td>2028.05.18~21</td><td>세계 올림픽 예선전 — 4단계</td></tr>
+        <tr><td>2028.07.14~30</td><td>LA28 올림픽</td></tr>
+      </table>
+      <p class="note">랭킹 시리즈·대륙선수권 등은 직접 예선 대회가 아니라 UWW 랭킹 포인트 산정용이다. 직행 출전권은 2027 세계선수권(1단계)부터 나온다.</p>
+
+      <h2 id="feedback">예선 결과 입력 · 피드백</h2>
+      <p class="note">아래에 레슬링 예선 결과(스타일·체급·대회·확정 선수/국가 등)를 직접 입력하면 브라우저에 저장됩니다. 현재 <b>대한민국 확정 출전권: 0장</b> — 결과가 나오는 대로 기록하세요.</p>
+
+<!-- ==== 결과 입력·피드백 위젯 ==== -->
+<div class="fb" id="fb">
+  <div class="fb-head"><span class="live"></span> 예선 결과 입력 · 피드백 <span class="sub" id="fb-count">0건 저장됨</span></div>
+  <div class="fb-body">
+    <p class="fb-note" style="margin-top:0">세부종목·대회·결과를 입력하고 <b>추가</b>를 누르면 아래 표에 기록됩니다. 입력값은 이 브라우저(localStorage)에 자동 저장되며, <b>JSON 내보내기/불러오기</b>로 백업·복원할 수 있습니다.</p>
+    <div class="fb-form">
+      <input id="f-ev" placeholder="세부종목/체급 (예: 남 -58kg)">
+      <input id="f-comp" placeholder="예선 대회 (예: 아시아 대륙예선)">
+      <input id="f-res" placeholder="결과 (예: 대한민국 확정 / 서은수)">
+      <select id="f-st">
+        <option value="confirmed">확정</option>
+        <option value="live">진행중</option>
+        <option value="pending" selected>예정</option>
+        <option value="failed">탈락/불발</option>
+      </select>
+      <textarea id="f-note" placeholder="메모 (선택) — 날짜·랭킹·비고 등"></textarea>
+    </div>
+    <div class="fb-actions">
+      <button class="fb-btn primary" onclick="fbAdd()">＋ 추가</button>
+      <button class="fb-btn ghost" onclick="fbExport()">⬇ JSON 내보내기</button>
+      <label class="fb-btn ghost" style="margin:0">⬆ JSON 불러오기<input type="file" id="f-imp" accept="application/json,.json" style="display:none" onchange="fbImport(event)"></label>
+      <button class="fb-btn danger" onclick="fbClear()">전체 삭제</button>
+      <button class="fb-btn ghost" onclick="fbSeed()">예시 채우기</button>
+    </div>
+    <table class="fb-table">
+      <thead><tr><th style="width:16%">세부종목</th><th style="width:22%">예선 대회</th><th style="width:26%">결과</th><th style="width:10%">상태</th><th>메모</th><th style="width:34px"></th></tr></thead>
+      <tbody id="fb-rows"></tbody>
+    </table>
+    <p class="fb-note">※ 저장은 이 컴퓨터·브라우저에만 남습니다. 다른 기기로 옮기거나 백업하려면 <b>JSON 내보내기</b>를 사용하세요. (파일로 직접 열었을 때 정상 동작하며, 대화창 미리보기에서는 저장이 유지되지 않을 수 있습니다.)</p>
+  </div>
 </div>
+
+      <div class="footer">
+        출처: United World Wrestling (UWW) — LA28 Qualification System, Wrestling (2026.7.31 버전).<br>
+        본 페이지는 원문서를 요약한 것이며, 정확한 규정은 United World Wrestling 원문을 따른다.
+      </div>
+    </div>
+    <aside class="infobox">
+      <div class="ib-title">레슬링 LA28 예선</div>
+      <table>
+        <tr><th>주관</th><td>United World Wrestling (UWW)</td></tr>
+        <tr><th>세부종목</th><td>남자 12 · 여자 6 (자유형·그레코로만)</td></tr>
+        <tr><th>총 출전권</th><td>288명</td></tr>
+        <tr><th>NOC 상한</th><td>남 12 · 여 6 (체급별 1명)</td></tr>
+        <tr><th>개최국 쿼터</th><td>없음 (0)</td></tr>
+        <tr><th>예선 개시</th><td>2027년 1월</td></tr>
+        <tr><th>아시안게임 연계</th><td><span class="badge asiad">간접(랭킹 가능)</span></td></tr>
+        <tr><th>관련 문서</th><td><a href="index1.html">올림픽예선 목차</a></td></tr>
+      </table>
+    </aside>
+  </div>
+</div>
+<script>
+var SPORT_KEY = "wrestling";
+var SPORT_NAME = "레슬링";
+var SEED = [
+  {ev:"남 자유형 74kg", comp:"2027 세계선수권", res:"(미정)", st:"pending", note:"1단계, 메달리스트 4명 직행"},
+  {ev:"남 그레코로만 77kg", comp:"UWW 랭킹", res:"(미정)", st:"pending", note:"2단계, 체급별 랭킹 상위 3명"},
+  {ev:"여 자유형 53kg", comp:"2028 아시아 대륙예선", res:"(미정)", st:"pending", note:"3단계, 체급별 상위 2명"}
+];
+var STORE = "la28_fb_" + SPORT_KEY;
+var ST_LABEL = {confirmed:"확정", live:"진행중", pending:"예정", failed:"탈락/불발"};
+function fbLoad(){ try{ var r=localStorage.getItem(STORE); return r?JSON.parse(r):null; }catch(e){ return null; } }
+function fbSave(d){ try{ localStorage.setItem(STORE, JSON.stringify(d)); }catch(e){} }
+var DATA = fbLoad();
+if(DATA===null){ DATA = []; fbSave(DATA); }
+function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
+function fbRender(){
+  var tb=document.getElementById("fb-rows");
+  document.getElementById("fb-count").textContent = DATA.length + "건 저장됨";
+  if(!DATA.length){ tb.innerHTML='<tr><td colspan="6" class="fb-empty">아직 입력된 결과가 없습니다. 위 칸에 입력 후 <b>추가</b>를 누르세요. (또는 <b>예시 채우기</b>)</td></tr>'; return; }
+  tb.innerHTML = DATA.map(function(r,i){
+    return '<tr><td>'+esc(r.ev)+'</td><td>'+esc(r.comp)+'</td><td>'+esc(r.res)+
+      '</td><td><span class="st '+(r.st||"pending")+'">'+(ST_LABEL[r.st]||r.st)+'</span></td><td>'+esc(r.note)+
+      '</td><td><button class="rowdel" title="삭제" onclick="fbDel('+i+')">✕</button></td></tr>';
+  }).join("");
+}
+function fbAdd(){
+  var ev=document.getElementById("f-ev").value.trim();
+  var comp=document.getElementById("f-comp").value.trim();
+  var res=document.getElementById("f-res").value.trim();
+  var st=document.getElementById("f-st").value;
+  var note=document.getElementById("f-note").value.trim();
+  if(!ev && !comp && !res){ return; }
+  DATA.push({ev:ev,comp:comp,res:res,st:st,note:note});
+  fbSave(DATA); fbRender();
+  document.getElementById("f-ev").value="";document.getElementById("f-comp").value="";
+  document.getElementById("f-res").value="";document.getElementById("f-note").value="";
+  document.getElementById("f-ev").focus();
+}
+function fbDel(i){ DATA.splice(i,1); fbSave(DATA); fbRender(); }
+function fbClear(){ if(confirm(SPORT_NAME+" 결과 기록을 모두 삭제할까요?")){ DATA=[]; fbSave(DATA); fbRender(); } }
+function fbSeed(){ DATA = DATA.concat(SEED); fbSave(DATA); fbRender(); }
+function fbExport(){
+  var blob=new Blob([JSON.stringify({sport:SPORT_KEY,name:SPORT_NAME,data:DATA},null,2)],{type:"application/json"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob);
+  a.download="la28_"+SPORT_KEY+"_결과.json"; document.body.appendChild(a); a.click();
+  setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); },100);
+}
+function fbImport(e){
+  var f=e.target.files[0]; if(!f) return;
+  var rd=new FileReader();
+  rd.onload=function(){ try{ var o=JSON.parse(rd.result); var arr=Array.isArray(o)?o:(o.data||[]);
+    if(!Array.isArray(arr)) throw 0;
+    DATA=arr.map(function(r){return {ev:r.ev||"",comp:r.comp||"",res:r.res||"",st:r.st||"pending",note:r.note||""};});
+    fbSave(DATA); fbRender(); alert(DATA.length+"건을 불러왔습니다.");
+  }catch(err){ alert("불러오기 실패: 올바른 JSON 파일이 아닙니다."); } e.target.value=""; };
+  rd.readAsText(f);
+}
+fbRender();
+</script>
 </body>
 </html>

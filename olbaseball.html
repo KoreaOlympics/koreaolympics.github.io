@@ -4,13 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>야구·소프트볼 - 올림픽예선 (LA28 종목별 예선 시스템)</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#ffffff; --panel:#f8f9fa; --border:#c8ccd1; --border-soft:#eaecf0;
     --ink:#202122; --muted:#54595d; --link:#3366cc; --link-visited:#795cb2; --link-red:#ba0000;
     --serif:'Noto Serif KR',Georgia,'Times New Roman',serif;
     --sans:'Pretendard','Helvetica Neue',Arial,sans-serif;
+    --accent:#2456c6; --ok:#1a7f37; --warn:#b45309; --live:#c2410c;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -18,18 +21,16 @@
   a{color:var(--link);text-decoration:none;}
   a:hover{text-decoration:underline;}
   a:visited{color:var(--link-visited);}
-  a.new{color:var(--link-red);}
   .topbar{border-bottom:1px solid var(--border);background:var(--panel);font-size:12.5px;color:var(--muted);}
   .topbar .inner{max-width:1100px;margin:0 auto;padding:8px 20px;display:flex;gap:16px;flex-wrap:wrap;}
   .topbar a{color:var(--link);}
   .layout{max-width:1100px;margin:0 auto;padding:22px 20px 80px;}
   h1.title{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.3;margin:0 0 2px;padding-bottom:6px;border-bottom:1px solid var(--border);}
-  h1.title .ic{font-family:var(--sans);}
   .subtitle{color:var(--muted);font-size:13px;margin:0 0 18px;}
   .hatnote{font-style:italic;color:var(--muted);background:var(--panel);border:1px solid var(--border-soft);padding:8px 14px;border-radius:2px;margin:0 0 20px;font-size:13.5px;}
   .content{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;}
   .main{flex:1 1 560px;min-width:0;}
-  h2{font-family:var(--serif);font-weight:600;font-size:22px;margin:26px 0 10px;padding-bottom:5px;border-bottom:1px solid var(--border-soft);}
+  h2{font-family:var(--serif);font-weight:600;font-size:22px;margin:26px 0 10px;padding-bottom:5px;border-bottom:1px solid var(--border-soft);scroll-margin-top:12px;}
   h3{font-family:var(--serif);font-weight:600;font-size:17px;margin:20px 0 8px;}
   h4{font-family:var(--sans);font-weight:700;font-size:14.5px;margin:16px 0 6px;color:#3a3f44;}
   p{margin:0 0 12px;}
@@ -39,60 +40,268 @@
   .toc li{margin:3px 0;}
   .infobox{flex:0 0 300px;background:var(--panel);border:1px solid var(--border);border-radius:2px;font-size:13px;align-self:flex-start;}
   .infobox .ib-title{background:#eaecf0;font-family:var(--serif);font-weight:700;text-align:center;padding:10px 12px;font-size:15px;border-bottom:1px solid var(--border);}
-  .infobox .ib-ic{font-size:30px;text-align:center;padding:10px 0 4px;}
   .infobox table{width:100%;border-collapse:collapse;}
   .infobox th,.infobox td{text-align:left;padding:7px 12px;vertical-align:top;border-bottom:1px solid var(--border-soft);}
-  .infobox th{width:38%;color:var(--muted);font-weight:600;}
+  .infobox th{width:40%;color:var(--muted);font-weight:600;}
   .badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:2px;background:#e6f0ff;color:#2456c6;border:1px solid #b9d0f5;margin-left:6px;}
   .badge.asiad{background:#fff2e0;color:#a05a00;border-color:#f2d2a0;}
-  .badge.green{background:#e7f6ec;color:#1f7a44;border-color:#b6e2c6;}
-  .badge.red{background:#fde8e8;color:#b02a2a;border-color:#f3c0c0;}
+  .badge.new{background:#eaf1ff;color:#2456c6;border-color:#c3d6f7;}
+  .badge.ok{background:#e6f4ea;color:#1a7f37;border-color:#b7e0c2;}
   table.wt{border-collapse:collapse;width:100%;font-size:13.5px;margin:6px 0 16px;}
-  table.wt th,table.wt td{border:1px solid var(--border);padding:6px 10px;text-align:left;}
+  table.wt th,table.wt td{border:1px solid var(--border);padding:6px 10px;text-align:left;vertical-align:top;}
   table.wt th{background:var(--panel);}
   table.wt td.num, table.wt th.num{text-align:center;}
+  table.wt caption{font-size:12.5px;color:var(--muted);text-align:left;padding:2px 0 6px;}
   .note{font-size:12.5px;color:var(--muted);margin:-8px 0 16px;}
-  .asiad-box{background:#fff8ee;border:1px solid #f2d2a0;border-radius:3px;padding:14px 16px;margin:10px 0 18px;}
-  .asiad-box.link{background:#eef8f1;border-color:#b6e2c6;}
+  .kr-box{background:#eef4ff;border:1px solid #c3d6f7;border-radius:3px;padding:14px 16px;margin:10px 0 18px;}
+  .kr-box h4{margin-top:0;color:#1e3a8a;}
+  .asiad-box{background:#fff8ee;border:1px solid #f2d2a0;border-radius:3px;padding:12px 16px;margin:10px 0 18px;}
   .asiad-box h4{margin-top:0;color:#a05a00;}
-  .asiad-box.link h4{color:#1f7a44;}
+  .y2026{background:#f0fbf3;border:1px solid #b7e0c2;border-radius:3px;padding:12px 16px;margin:10px 0 18px;}
+  .y2026 h4{margin-top:0;color:#1a7f37;}
   .footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;}
-  @media (max-width:820px){.infobox{flex:1 1 100%;order:-1;}}
+  .fb{border:1px solid var(--border);border-radius:8px;margin:14px 0 6px;overflow:hidden;}
+  .fb-head{background:#0d1117;color:#e6edf3;padding:11px 15px;font-weight:700;font-size:14.5px;display:flex;align-items:center;gap:9px;flex-wrap:wrap;}
+  .fb-head .live{width:8px;height:8px;border-radius:50%;background:#3fb950;box-shadow:0 0 7px #3fb950;}
+  .fb-head .sub{font-weight:500;font-size:11.5px;color:#8b949e;margin-left:auto;}
+  .fb-body{padding:14px 15px;background:var(--panel);}
+  .fb-form{display:grid;grid-template-columns:1.1fr 1.2fr 1fr .8fr;gap:8px;margin-bottom:10px;}
+  .fb-form input,.fb-form select,.fb-form textarea{font-family:var(--sans);font-size:13px;padding:7px 9px;border:1px solid var(--border);border-radius:5px;background:#fff;width:100%;}
+  .fb-form textarea{grid-column:1/-1;resize:vertical;min-height:38px;}
+  .fb-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px;}
+  .fb-btn{appearance:none;border:1px solid var(--border);background:#fff;font-family:var(--sans);font-size:13px;font-weight:600;color:var(--ink);padding:7px 14px;border-radius:6px;cursor:pointer;}
+  .fb-btn:hover{border-color:#9db4e0;}
+  .fb-btn.primary{background:var(--accent);color:#fff;border-color:var(--accent);}
+  .fb-btn.ghost{color:var(--muted);}
+  .fb-btn.danger{color:#b02a2a;}
+  .fb-table{width:100%;border-collapse:collapse;font-size:13px;background:#fff;}
+  .fb-table th,.fb-table td{border:1px solid var(--border-soft);padding:6px 8px;text-align:left;vertical-align:top;}
+  .fb-table th{background:#eef0f2;font-size:12px;color:#3a3f44;}
+  .fb-empty{color:var(--muted);font-size:12.5px;padding:14px 4px;text-align:center;}
+  .st{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:10px;}
+  .st.confirmed{background:#e6f4ea;color:#1a7f37;border:1px solid #b7e0c2;}
+  .st.live{background:#fde8e8;color:#c2410c;border:1px solid #f3c0c0;}
+  .st.pending{background:#eef0f2;color:#5b6168;border:1px solid #d5d9de;}
+  .st.failed{background:#f3e8ff;color:#6b21a8;border:1px solid #e2c9f5;}
+  .fb-note{font-size:11.5px;color:var(--muted);margin:9px 2px 0;}
+  .rowdel{cursor:pointer;color:#b02a2a;font-weight:700;border:none;background:none;font-size:14px;}
+  @media (max-width:820px){.infobox{flex:1 1 100%;order:-1;}.fb-form{grid-template-columns:1fr 1fr;}}
+  @media (max-width:520px){.fb-form{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
 <div class="topbar"><div class="inner">
   <a href="index1.html">← 올림픽예선 목차</a>
   <span>문서 · 야구·소프트볼</span>
-  <a href="olbadminton.html">배드민턴 →</a>
+  <a href="olarchery.html">양궁 →</a>
 </div></div>
 <div class="layout">
-<h1 class="title"><span class="ic">⚾</span> 야구·소프트볼 (Baseball/Softball)</h1>
-<p class="subtitle">세계야구소프트볼연맹(WBSC) · 남자 야구 · 여자 소프트볼 · LA28 예선 시스템</p>
-<p class="hatnote">LA28에서 부활한 종목으로, 남자는 <b>야구</b> 6개팀(144명), 여자는 <b>소프트볼</b> 6개팀(90명), 총 234명이 겨룬다. 야구 예선은 <b>2026년 3월 월드베이스볼클래식(WBC)</b>에서 시작되었고, <b>🇩🇴 도미니카공화국·🇻🇪 베네수엘라</b>가 첫 출전권을 확정했다.</p>
-<div class="content"><div class="main"><div class="toc"><div class="toc-title">목차</div><ol><li><a href="#overview">출전권</a></li><li><a href="#baseball">야구(남자) 예선 경로</a></li><li><a href="#softball">소프트볼(여자) 예선 경로</a></li><li><a href="#status">출전국 현황 (쿼터·확정국)</a></li><li><a href="#relation">아시안게임·2026년도 예선과의 연관성</a></li></ol></div><h2 id="overview">출전권</h2><table class="wt"><tr><th>구분</th><th class="num">정량</th><th class="num">개최국</th><th class="num">합계</th></tr><tr><td>야구(남)</td><td class="num">5팀 (120)</td><td class="num">1팀 (24)</td><td class="num">6팀 (144)</td></tr><tr><td>소프트볼(여)</td><td class="num">5팀 (75)</td><td class="num">1팀 (15)</td><td class="num">6팀 (90)</td></tr></table><p class="note">총 234명(12팀). 야구 24명·소프트볼 15명. NOC당 종목별 1팀. 출전권은 NOC에 배정.</p><h2 id="baseball">야구(남자) 예선 경로</h2><table class="wt"><tr><th>단계</th><th>대회</th><th class="num">팀</th></tr><tr><td>개최국</td><td>미국 1팀 보장</td><td class="num">1</td></tr><tr style="background:#eef8f1;"><td>월드베이스볼클래식 <span class="badge green">완료</span></td><td><b>2026 WBC (2026.3)</b> — 미주 미자격 상위 2팀 → <b>🇩🇴 도미니카공화국 · 🇻🇪 베네수엘라</b> 확정</td><td class="num">2</td></tr><tr><td>프리미어12</td><td>2027 WBSC 프리미어12(11월) — 아시아 최고 1 + 유럽/오세아니아 최고 1</td><td class="num">2</td></tr><tr><td>최종예선</td><td>2028.3 이전 — 아시아·유럽·아프리카·오세아니아 챔피언십 기반 상위 1팀</td><td class="num">1</td></tr></table><h2 id="softball">소프트볼(여자) 예선 경로</h2><table class="wt"><tr><th>단계</th><th>대회</th><th class="num">팀</th></tr><tr><td>개최국</td><td>미국 1팀 보장</td><td class="num">1</td></tr><tr><td>세계선수권</td><td>2027 여자 소프트볼 월드컵 파이널 — 우승 1팀</td><td class="num">1</td></tr><tr><td>대륙예선</td><td>2027 — 유럽/아프리카·아시아/오세아니아·아메리카 각 1팀</td><td class="num">3</td></tr><tr><td>최종예선</td><td>2028.3 이전 — 대륙예선 2·3위 팀 참가</td><td class="num">1</td></tr></table><h2 id="status">출전국 현황 (쿼터·확정국)</h2>
-<p class="note">각 예선이 진행되는 대로 확정국을 채워 나간다. 아래는 현재(2026년 8월)까지 확정된 출전국이다.</p>
-<h4>야구 (남자 · 6팀)</h4>
-<table class="wt">
-<tr><th>경로 (Event)</th><th>일정</th><th>장소</th><th class="num">티켓</th><th>확정국 (Qualified)</th></tr>
-<tr style="background:#eef8f1;"><td>개최국</td><td class="num">—</td><td>—</td><td class="num">1</td><td>🇺🇸 미국 <span class="badge green">확정</span></td></tr>
-<tr style="background:#eef8f1;"><td>2026 월드베이스볼클래식 (미주)</td><td class="num">2026.3.5~17</td><td>미국 마이애미</td><td class="num">2</td><td>🇩🇴 도미니카공화국 · 🇻🇪 베네수엘라 <span class="badge green">확정</span></td></tr>
-<tr><td>2027 WBSC 프리미어12 (아시아)</td><td class="num">2027.11</td><td>미정</td><td class="num">1</td><td>아시아 최고팀 <span class="badge">미정</span></td></tr>
-<tr><td>2027 WBSC 프리미어12 (유럽/오세아니아)</td><td class="num">2027.11</td><td>미정</td><td class="num">1</td><td>유럽/오세아니아 최고팀 <span class="badge">미정</span></td></tr>
-<tr><td>최종예선</td><td class="num">~2028.3</td><td>미정</td><td class="num">1</td><td><span class="badge">미정</span></td></tr>
-<tr><th colspan="3" style="text-align:right;">합계</th><th class="num">6</th><th>3개국 확정 · 3장 미정</th></tr>
-</table>
-<h4>소프트볼 (여자 · 6팀)</h4>
-<table class="wt">
-<tr><th>경로 (Event)</th><th>일정</th><th class="num">티켓</th><th>확정국 (Qualified)</th></tr>
-<tr style="background:#eef8f1;"><td>개최국</td><td class="num">—</td><td class="num">1</td><td>🇺🇸 미국 <span class="badge green">확정</span></td></tr>
-<tr><td>2027 여자 소프트볼 월드컵 파이널</td><td class="num">2027</td><td class="num">1</td><td>우승팀 <span class="badge">미정</span></td></tr>
-<tr><td>대륙예선 (유럽·아프리카 / 아시아·오세아니아 / 아메리카)</td><td class="num">2027</td><td class="num">3</td><td>각 1팀 <span class="badge">미정</span></td></tr>
-<tr><td>최종예선</td><td class="num">~2028.3</td><td class="num">1</td><td><span class="badge">미정</span></td></tr>
-<tr><th colspan="2" style="text-align:right;">합계</th><th class="num">6</th><th>1개국 확정 · 5장 미정</th></tr>
-</table>
-<p class="note">✅ 현재 확정: 🇺🇸 미국(개최국, 야구·소프트볼) · 🇩🇴 도미니카공화국 · 🇻🇪 베네수엘라(2026 WBC 미주). 소프트볼은 2026년 예선 이벤트가 없어 개최국 외 전원 미정이다.</p>
-<div class="asiad-box" id="relation"><h4>아시안게임·2026년도 예선과의 연관성</h4><p>야구·소프트볼은 아시안게임을 <b>직접 예선 경로로 인정하지 않는다.</b> 아시아 경로는 야구의 경우 2027 프리미어12, 소프트볼의 경우 아시아/오세아니아 대륙예선(2027)으로 진행된다.</p><p>다만 <b>야구는 2026년 3월 월드베이스볼클래식(WBC)</b>에서 미주 지역 미자격 상위 2팀이 곧바로 출전권을 얻는 구조로, 2026년에 첫 예선이 열려 <b>도미니카공화국·베네수엘라</b>가 이미 확정됐다. 한국 야구는 이 경로(미주 한정)에 해당하지 않으며, 아시아 몫은 2027 프리미어12에서 가려진다.</p><p><span class="badge asiad">아시안게임 비연계</span> · <span class="badge green">2026.3 WBC 완료 — 도미니카·베네수엘라</span></p></div><div class="footer">출처: WBSC — LA28 Qualification System, Baseball/Softball (2026.5.12 버전).<br>본 페이지는 원문서를 요약한 것이며, 정확한 규정은 WBSC 원문을 따른다.</div></div><aside class="infobox"><div class="ib-ic">⚾</div><div class="ib-title">야구·소프트볼 LA28 예선</div><table><tr><th>주관</th><td>WBSC</td></tr><tr><th>세부종목</th><td>야구(남)·소프트볼(여)</td></tr><tr><th>총 출전권</th><td>234명 (12팀)</td></tr><tr><th>아시안게임 연계</th><td><span class='badge asiad'>없음</span></td></tr><tr><th>2026 예선</th><td>WBC 완료 — 도미니카·베네수엘라 확정</td></tr><tr><th>관련 문서</th><td><a href='index1.html'>올림픽예선 목차</a></td></tr></table></aside></div>
+  <h1 class="title">야구·소프트볼 (Baseball/Softball) ⚾</h1>
+  <p class="subtitle">세계야구소프트볼연맹(WBSC) · 야구(남자, 6팀) · 소프트볼(여자, 6팀) · LA28 예선 시스템</p>
+  <p class="hatnote">야구·소프트볼은 LA28에서 남자 야구 6팀·여자 소프트볼 6팀, <b>총 12팀(234명)</b>에 출전권이 배정된다. 야구는 2026년 3월 <b>월드 베이스볼 클래식(WBC)</b>과 2027년 11월 <b>WBSC 프리미어12</b>가 핵심 예선 경로이며, 소프트볼은 2027년 세계선수권·대륙예선을 거친다. 각 종목은 개최국(미국) 1팀을 자동 확보한다.</p>
+  <div class="content">
+    <div class="main">
+      <div class="toc">
+        <div class="toc-title">목차</div>
+        <ol>
+          <li><a href="#overview">세부종목 및 출전권</a></li>
+          <li><a href="#pathway">예선 경로</a></li>
+          <li><a href="#other">개최국·재배정</a></li>
+          <li><a href="#eligibility">참가 자격</a></li>
+          <li><a href="#timeline">예선 일정 · 2026년</a></li>
+          <li><a href="#feedback">예선 결과 입력</a></li>
+        </ol>
+      </div>
+
+      <h2 id="overview">세부종목 및 출전권</h2>
+      <p>야구(남자)와 소프트볼(여자)은 각각 별도의 팀 종목으로 운영되며, 각 종목당 6팀씩 총 12팀이 출전한다. 출전권은 선수 개인이 아니라 <b>NOC(국가올림픽위원회)</b>에 배정된다.</p>
+
+      <h3>야구 (남자, 6팀)</h3>
+      <table class="wt">
+        <tr><th>구분</th><th>이벤트</th><th class="num">정량</th><th class="num">개최국</th><th class="num">합계</th></tr>
+        <tr><td>남자</td><td>야구</td><td class="num">5팀 (120명)</td><td class="num">1팀 (24명)</td><td class="num"><b>6팀 (144명)</b></td></tr>
+      </table>
+      <p class="note">팀당 24명. NOC당 남자 야구 1팀만 출전 가능.</p>
+
+      <h3>소프트볼 (여자, 6팀)</h3>
+      <table class="wt">
+        <tr><th>구분</th><th>이벤트</th><th class="num">정량</th><th class="num">개최국</th><th class="num">합계</th></tr>
+        <tr><td>여자</td><td>소프트볼</td><td class="num">5팀 (75명)</td><td class="num">1팀 (15명)</td><td class="num"><b>6팀 (90명)</b></td></tr>
+      </table>
+      <p class="note">팀당 15명. NOC당 여자 소프트볼 1팀만 출전 가능.</p>
+
+      <table class="wt">
+        <caption>전체 합계</caption>
+        <tr><th>구분</th><th class="num">정량</th><th class="num">개최국</th><th class="num">합계</th></tr>
+        <tr><td>야구(남) + 소프트볼(여)</td><td class="num">10팀 (195명)</td><td class="num">2팀 (39명)</td><td class="num"><b>12팀 (234명)</b></td></tr>
+      </table>
+      <p class="note">NOC당 최대 2팀(야구 1 + 소프트볼 1, 39명). 이 종목에는 유니버설리티 쿼터가 없다.</p>
+
+      <h2 id="pathway">예선 경로</h2>
+      <p>예선 경로는 우선순위 순서(hierarchical order)대로 적용된다. 야구와 소프트볼은 서로 다른 경로 구조를 가진다.</p>
+
+      <h3>야구 (남자) 경로</h3>
+      <table class="wt">
+        <tr><th>단계</th><th>경로</th><th class="num">배정</th><th>선발 방식</th></tr>
+        <tr><td>D.1</td><td>개최국</td><td class="num">1팀 (24)</td><td>개최국(미국)은 종목별 1팀 자동 보장</td></tr>
+        <tr><td>D.2</td><td>월드 베이스볼 클래식(WBC), 2026.3</td><td class="num">2팀 (48)</td><td>WBC 2026 최종 순위에서 아메리카 소속 미확정 상위 2개 팀</td></tr>
+        <tr><td>D.3</td><td>WBSC 프리미어12, 2027.11</td><td class="num">2팀 (48)</td><td>프리미어12 최종 순위에서 아시아 1위 팀 및 유럽·오세아니아 중 1위 팀</td></tr>
+        <tr><td>D.4</td><td>최종예선전(FQE), 2028.3 이전</td><td class="num">1팀 (24)</td><td>최종예선전 우승 팀 1개</td></tr>
+      </table>
+      <p class="note">최종예선전에는 아시아선수권 미확정 상위 2팀, 유럽선수권 미확정 상위 2팀, 아프리카선수권 미확정 1팀, 오세아니아 예선 미확정 1팀(총 6팀)이 참가한다.</p>
+
+      <h3>소프트볼 (여자) 경로</h3>
+      <table class="wt">
+        <tr><th>단계</th><th>경로</th><th class="num">배정</th><th>선발 방식</th></tr>
+        <tr><td>D.5</td><td>개최국</td><td class="num">1팀 (15)</td><td>개최국(미국)은 종목별 1팀 자동 보장</td></tr>
+        <tr><td>D.6</td><td>여자 소프트볼 월드컵 파이널 2027</td><td class="num">1팀 (15)</td><td>월드컵 파이널 최종 순위 1위 팀</td></tr>
+        <tr><td>D.7</td><td>대륙별 예선전 3개, 2027</td><td class="num">3팀 (45)</td><td>아시아·오세아니아 통합, 유럽·아프리카 통합, 아메리카 각 대회 1위 팀</td></tr>
+        <tr><td>D.8</td><td>최종예선전(FQE), 2028.3 이전</td><td class="num">1팀 (15)</td><td>대륙예선 준우승·3위 팀들이 참가하여 1팀 확보</td></tr>
+      </table>
+      <p class="note">대륙예선은 아시아/오세아니아, 유럽/아프리카, 아메리카 3개 대회로 구성된다. 최종예선전에는 세 대륙예선의 준우승·3위(각 2팀, 총 6팀)가 참가한다.</p>
+
+      <h2 id="other">개최국·재배정</h2>
+      <p>개최국(미국)은 야구·소프트볼 각 종목에서 1팀씩 자동 확보한다. 미사용 출전권은 해당 예선 대회의 차순위 팀에게 재배정된다. 미사용 개최국 출전권의 경우, 야구는 <b>2027 WBSC 프리미어12</b>의 다음 순위 자격 팀에게, 소프트볼은 <b>2027 여자 소프트볼 월드컵 파이널</b>의 다음 순위 자격 팀에게 재배정된다. NOC는 출전권 통보 후 <b>2주 이내</b>에 사용 여부를 확정해야 한다.</p>
+
+      <h2 id="eligibility">참가 자격</h2>
+      <p>모든 선수는 올림픽 헌장(국적 규정 제41조·반도핑 규정 제43조 포함), 세계반도핑규약, IOC 참가 조건 및 WBSC 규정을 준수해야 한다. 연령 기준은 종목별로 다르다.</p>
+      <table class="wt">
+        <tr><th>종목</th><th>연령 기준</th></tr>
+        <tr><td>야구</td><td>대회가 열리는 연도에 만 18세가 되는 선수(ACR 등록 여권 기준)</td></tr>
+        <tr><td>소프트볼</td><td>대회가 열리는 연도에 만 16세가 되는 선수(ACR 등록 여권 기준)</td></tr>
+      </table>
+      <p class="note">아시안게임 비연계 — 야구·소프트볼 LA28 출전권은 아시안게임 성적과 연결되지 않는다.</p>
+
+      <h2 id="timeline">예선 일정 · 2026년</h2>
+      <div class="y2026">
+        <h4>2026년 진행 사항</h4>
+        <p>이 종목에서 2026년에 열리는 예선 이벤트는 <b>월드 베이스볼 클래식(WBC) 2026(3월)</b> 뿐이다. WBC 2026은 야구 종목의 첫 출전권 배정 경로로, 최종 순위에서 <b>아메리카 소속 미확정 상위 2개 팀</b>이 각각 출전권을 확보한다. 아시아 팀(대한민국 포함)은 WBC 경로가 아니라 <b>2027년 프리미어12</b>에서 아시아 1위로 출전권을 노린다. 소프트볼은 2026년 예선 활동이 없으며 2027년부터 시작된다.</p>
+      </div>
+      <table class="wt">
+        <tr><th>시기</th><th>일정</th></tr>
+        <tr><td>2026.03</td><td>월드 베이스볼 클래식(WBC) 2026 — 야구 2팀 배정</td></tr>
+        <tr><td>2027</td><td>소프트볼 대륙예선 아메리카(캐나다 서리)</td></tr>
+        <tr><td>2027</td><td>소프트볼 대륙예선 아시아/오세아니아</td></tr>
+        <tr><td>2027</td><td>소프트볼 대륙예선 유럽/아프리카</td></tr>
+        <tr><td>2027.11</td><td>WBSC 프리미어12 — 야구 2팀 배정</td></tr>
+        <tr><td>2028.03 이전</td><td>야구 최종예선전 · 소프트볼 최종예선전</td></tr>
+        <tr><td>2028.05.26</td><td>미사용 출전권 재배정</td></tr>
+        <tr><td>2028.07.14~30</td><td>LA28 올림픽</td></tr>
+      </table>
+
+      <h2 id="feedback">예선 결과 입력 · 피드백</h2>
+      <p class="note">아래에 야구·소프트볼 예선 결과(종목·대회·확정 팀/국가 등)를 직접 입력하면 브라우저에 저장됩니다. 현재 <b>대한민국 확정 출전권: 0장</b> — 결과가 나오는 대로 기록하세요.</p>
+
+<!-- ==== 결과 입력·피드백 위젯 ==== -->
+<div class="fb" id="fb">
+  <div class="fb-head"><span class="live"></span> 예선 결과 입력 · 피드백 <span class="sub" id="fb-count">0건 저장됨</span></div>
+  <div class="fb-body">
+    <p class="fb-note" style="margin-top:0">세부종목·대회·결과를 입력하고 <b>추가</b>를 누르면 아래 표에 기록됩니다. 입력값은 이 브라우저(localStorage)에 자동 저장되며, <b>JSON 내보내기/불러오기</b>로 백업·복원할 수 있습니다.</p>
+    <div class="fb-form">
+      <input id="f-ev" placeholder="세부종목/체급 (예: 남 -58kg)">
+      <input id="f-comp" placeholder="예선 대회 (예: 아시아 대륙예선)">
+      <input id="f-res" placeholder="결과 (예: 대한민국 확정 / 서은수)">
+      <select id="f-st">
+        <option value="confirmed">확정</option>
+        <option value="live">진행중</option>
+        <option value="pending" selected>예정</option>
+        <option value="failed">탈락/불발</option>
+      </select>
+      <textarea id="f-note" placeholder="메모 (선택) — 날짜·랭킹·비고 등"></textarea>
+    </div>
+    <div class="fb-actions">
+      <button class="fb-btn primary" onclick="fbAdd()">＋ 추가</button>
+      <button class="fb-btn ghost" onclick="fbExport()">⬇ JSON 내보내기</button>
+      <label class="fb-btn ghost" style="margin:0">⬆ JSON 불러오기<input type="file" id="f-imp" accept="application/json,.json" style="display:none" onchange="fbImport(event)"></label>
+      <button class="fb-btn danger" onclick="fbClear()">전체 삭제</button>
+      <button class="fb-btn ghost" onclick="fbSeed()">예시 채우기</button>
+    </div>
+    <table class="fb-table">
+      <thead><tr><th style="width:16%">세부종목</th><th style="width:22%">예선 대회</th><th style="width:26%">결과</th><th style="width:10%">상태</th><th>메모</th><th style="width:34px"></th></tr></thead>
+      <tbody id="fb-rows"></tbody>
+    </table>
+    <p class="fb-note">※ 저장은 이 컴퓨터·브라우저에만 남습니다. 다른 기기로 옮기거나 백업하려면 <b>JSON 내보내기</b>를 사용하세요. (파일로 직접 열었을 때 정상 동작하며, 대화창 미리보기에서는 저장이 유지되지 않을 수 있습니다.)</p>
+  </div>
 </div>
+
+      <div class="footer">
+        출처: World Baseball Softball Confederation (WBSC) — LA28 Qualification System, Baseball/Softball (2026.5.12 버전).<br>
+        본 페이지는 원문서를 요약한 것이며, 정확한 규정은 WBSC 원문을 따른다.
+      </div>
+    </div>
+    <aside class="infobox">
+      <div class="ib-title">야구·소프트볼 LA28 예선</div>
+      <table>
+        <tr><th>주관</th><td>World Baseball Softball Confederation (WBSC)</td></tr>
+        <tr><th>세부종목</th><td>야구(남) · 소프트볼(여)</td></tr>
+        <tr><th>총 출전권</th><td>12팀 (234명)</td></tr>
+        <tr><th>NOC 상한</th><td>2팀 (야구 1 + 소프트볼 1, 39명)</td></tr>
+        <tr><th>핵심 경로</th><td>WBC 2026 · 프리미어12 2027 (야구)</td></tr>
+        <tr><th>예선 개시</th><td>2026년 3월 (WBC)</td></tr>
+        <tr><th>아시안게임 연계</th><td>비연계</td></tr>
+        <tr><th>관련 문서</th><td><a href="index1.html">올림픽예선 목차</a></td></tr>
+      </table>
+    </aside>
+  </div>
+</div>
+<script>
+var SPORT_KEY = "baseballsoftball";
+var SPORT_NAME = "야구·소프트볼";
+var SEED = [
+  {ev:"야구(남)", comp:"WBSC 프리미어12 2027", res:"(미정)", st:"pending", note:"2027.11, 아시아 1위 팀 출전권 확보 목표"},
+  {ev:"야구(남)", comp:"WBC 2026", res:"(미정)", st:"live", note:"2026.3, 아메리카 상위 2팀 배정 — 아시아팀 비대상"},
+  {ev:"소프트볼(여)", comp:"대륙예선 아시아/오세아니아 2027", res:"(미정)", st:"pending", note:"1위 팀 출전권"}
+];
+var STORE = "la28_fb_" + SPORT_KEY;
+var ST_LABEL = {confirmed:"확정", live:"진행중", pending:"예정", failed:"탈락/불발"};
+function fbLoad(){ try{ var r=localStorage.getItem(STORE); return r?JSON.parse(r):null; }catch(e){ return null; } }
+function fbSave(d){ try{ localStorage.setItem(STORE, JSON.stringify(d)); }catch(e){} }
+var DATA = fbLoad();
+if(DATA===null){ DATA = []; fbSave(DATA); }
+function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
+function fbRender(){
+  var tb=document.getElementById("fb-rows");
+  document.getElementById("fb-count").textContent = DATA.length + "건 저장됨";
+  if(!DATA.length){ tb.innerHTML='<tr><td colspan="6" class="fb-empty">아직 입력된 결과가 없습니다. 위 칸에 입력 후 <b>추가</b>를 누르세요. (또는 <b>예시 채우기</b>)</td></tr>'; return; }
+  tb.innerHTML = DATA.map(function(r,i){
+    return '<tr><td>'+esc(r.ev)+'</td><td>'+esc(r.comp)+'</td><td>'+esc(r.res)+
+      '</td><td><span class="st '+(r.st||"pending")+'">'+(ST_LABEL[r.st]||r.st)+'</span></td><td>'+esc(r.note)+
+      '</td><td><button class="rowdel" title="삭제" onclick="fbDel('+i+')">✕</button></td></tr>';
+  }).join("");
+}
+function fbAdd(){
+  var ev=document.getElementById("f-ev").value.trim();
+  var comp=document.getElementById("f-comp").value.trim();
+  var res=document.getElementById("f-res").value.trim();
+  var st=document.getElementById("f-st").value;
+  var note=document.getElementById("f-note").value.trim();
+  if(!ev && !comp && !res){ return; }
+  DATA.push({ev:ev,comp:comp,res:res,st:st,note:note});
+  fbSave(DATA); fbRender();
+  document.getElementById("f-ev").value="";document.getElementById("f-comp").value="";
+  document.getElementById("f-res").value="";document.getElementById("f-note").value="";
+  document.getElementById("f-ev").focus();
+}
+function fbDel(i){ DATA.splice(i,1); fbSave(DATA); fbRender(); }
+function fbClear(){ if(confirm(SPORT_NAME+" 결과 기록을 모두 삭제할까요?")){ DATA=[]; fbSave(DATA); fbRender(); } }
+function fbSeed(){ DATA = DATA.concat(SEED); fbSave(DATA); fbRender(); }
+function fbExport(){
+  var blob=new Blob([JSON.stringify({sport:SPORT_KEY,name:SPORT_NAME,data:DATA},null,2)],{type:"application/json"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob);
+  a.download="la28_"+SPORT_KEY+"_결과.json"; document.body.appendChild(a); a.click();
+  setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); },100);
+}
+function fbImport(e){
+  var f=e.target.files[0]; if(!f) return;
+  var rd=new FileReader();
+  rd.onload=function(){ try{ var o=JSON.parse(rd.result); var arr=Array.isArray(o)?o:(o.data||[]);
+    if(!Array.isArray(arr)) throw 0;
+    DATA=arr.map(function(r){return {ev:r.ev||"",comp:r.comp||"",res:r.res||"",st:r.st||"pending",note:r.note||""};});
+    fbSave(DATA); fbRender(); alert(DATA.length+"건을 불러왔습니다.");
+  }catch(err){ alert("불러오기 실패: 올바른 JSON 파일이 아닙니다."); } e.target.value=""; };
+  rd.readAsText(f);
+}
+fbRender();
+</script>
 </body>
 </html>
