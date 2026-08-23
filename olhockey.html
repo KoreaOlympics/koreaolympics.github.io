@@ -3,14 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>하키 - 올림픽예선 (LA28 종목별 예선 시스템)</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>필드하키 - 올림픽예선 (LA28 종목별 예선 시스템)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#ffffff; --panel:#f8f9fa; --border:#c8ccd1; --border-soft:#eaecf0;
     --ink:#202122; --muted:#54595d; --link:#3366cc; --link-visited:#795cb2; --link-red:#ba0000;
     --serif:'Noto Serif KR',Georgia,'Times New Roman',serif;
     --sans:'Pretendard','Helvetica Neue',Arial,sans-serif;
+    --accent:#2456c6; --ok:#1a7f37; --warn:#b45309; --live:#c2410c;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -18,18 +21,16 @@
   a{color:var(--link);text-decoration:none;}
   a:hover{text-decoration:underline;}
   a:visited{color:var(--link-visited);}
-  a.new{color:var(--link-red);}
   .topbar{border-bottom:1px solid var(--border);background:var(--panel);font-size:12.5px;color:var(--muted);}
   .topbar .inner{max-width:1100px;margin:0 auto;padding:8px 20px;display:flex;gap:16px;flex-wrap:wrap;}
   .topbar a{color:var(--link);}
   .layout{max-width:1100px;margin:0 auto;padding:22px 20px 80px;}
   h1.title{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.3;margin:0 0 2px;padding-bottom:6px;border-bottom:1px solid var(--border);}
-  h1.title .ic{font-family:var(--sans);}
   .subtitle{color:var(--muted);font-size:13px;margin:0 0 18px;}
   .hatnote{font-style:italic;color:var(--muted);background:var(--panel);border:1px solid var(--border-soft);padding:8px 14px;border-radius:2px;margin:0 0 20px;font-size:13.5px;}
   .content{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;}
   .main{flex:1 1 560px;min-width:0;}
-  h2{font-family:var(--serif);font-weight:600;font-size:22px;margin:26px 0 10px;padding-bottom:5px;border-bottom:1px solid var(--border-soft);}
+  h2{font-family:var(--serif);font-weight:600;font-size:22px;margin:26px 0 10px;padding-bottom:5px;border-bottom:1px solid var(--border-soft);scroll-margin-top:12px;}
   h3{font-family:var(--serif);font-weight:600;font-size:17px;margin:20px 0 8px;}
   h4{font-family:var(--sans);font-weight:700;font-size:14.5px;margin:16px 0 6px;color:#3a3f44;}
   p{margin:0 0 12px;}
@@ -39,38 +40,278 @@
   .toc li{margin:3px 0;}
   .infobox{flex:0 0 300px;background:var(--panel);border:1px solid var(--border);border-radius:2px;font-size:13px;align-self:flex-start;}
   .infobox .ib-title{background:#eaecf0;font-family:var(--serif);font-weight:700;text-align:center;padding:10px 12px;font-size:15px;border-bottom:1px solid var(--border);}
-  .infobox .ib-ic{font-size:30px;text-align:center;padding:10px 0 4px;}
   .infobox table{width:100%;border-collapse:collapse;}
   .infobox th,.infobox td{text-align:left;padding:7px 12px;vertical-align:top;border-bottom:1px solid var(--border-soft);}
-  .infobox th{width:38%;color:var(--muted);font-weight:600;}
+  .infobox th{width:40%;color:var(--muted);font-weight:600;}
   .badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:2px;background:#e6f0ff;color:#2456c6;border:1px solid #b9d0f5;margin-left:6px;}
   .badge.asiad{background:#fff2e0;color:#a05a00;border-color:#f2d2a0;}
-  .badge.green{background:#e7f6ec;color:#1f7a44;border-color:#b6e2c6;}
-  .badge.red{background:#fde8e8;color:#b02a2a;border-color:#f3c0c0;}
+  .badge.new{background:#eaf1ff;color:#2456c6;border-color:#c3d6f7;}
+  .badge.ok{background:#e6f4ea;color:#1a7f37;border-color:#b7e0c2;}
   table.wt{border-collapse:collapse;width:100%;font-size:13.5px;margin:6px 0 16px;}
-  table.wt th,table.wt td{border:1px solid var(--border);padding:6px 10px;text-align:left;}
+  table.wt th,table.wt td{border:1px solid var(--border);padding:6px 10px;text-align:left;vertical-align:top;}
   table.wt th{background:var(--panel);}
   table.wt td.num, table.wt th.num{text-align:center;}
+  table.wt caption{font-size:12.5px;color:var(--muted);text-align:left;padding:2px 0 6px;}
   .note{font-size:12.5px;color:var(--muted);margin:-8px 0 16px;}
-  .asiad-box{background:#fff8ee;border:1px solid #f2d2a0;border-radius:3px;padding:14px 16px;margin:10px 0 18px;}
-  .asiad-box.link{background:#eef8f1;border-color:#b6e2c6;}
+  .kr-box{background:#eef4ff;border:1px solid #c3d6f7;border-radius:3px;padding:14px 16px;margin:10px 0 18px;}
+  .kr-box h4{margin-top:0;color:#1e3a8a;}
+  .asiad-box{background:#fff8ee;border:1px solid #f2d2a0;border-radius:3px;padding:12px 16px;margin:10px 0 18px;}
   .asiad-box h4{margin-top:0;color:#a05a00;}
-  .asiad-box.link h4{color:#1f7a44;}
+  .y2026{background:#f0fbf3;border:1px solid #b7e0c2;border-radius:3px;padding:12px 16px;margin:10px 0 18px;}
+  .y2026 h4{margin-top:0;color:#1a7f37;}
   .footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;}
-  @media (max-width:820px){.infobox{flex:1 1 100%;order:-1;}}
+  .fb{border:1px solid var(--border);border-radius:8px;margin:14px 0 6px;overflow:hidden;}
+  .fb-head{background:#0d1117;color:#e6edf3;padding:11px 15px;font-weight:700;font-size:14.5px;display:flex;align-items:center;gap:9px;flex-wrap:wrap;}
+  .fb-head .live{width:8px;height:8px;border-radius:50%;background:#3fb950;box-shadow:0 0 7px #3fb950;}
+  .fb-head .sub{font-weight:500;font-size:11.5px;color:#8b949e;margin-left:auto;}
+  .fb-body{padding:14px 15px;background:var(--panel);}
+  .fb-form{display:grid;grid-template-columns:1.1fr 1.2fr 1fr .8fr;gap:8px;margin-bottom:10px;}
+  .fb-form input,.fb-form select,.fb-form textarea{font-family:var(--sans);font-size:13px;padding:7px 9px;border:1px solid var(--border);border-radius:5px;background:#fff;width:100%;}
+  .fb-form textarea{grid-column:1/-1;resize:vertical;min-height:38px;}
+  .fb-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px;}
+  .fb-btn{appearance:none;border:1px solid var(--border);background:#fff;font-family:var(--sans);font-size:13px;font-weight:600;color:var(--ink);padding:7px 14px;border-radius:6px;cursor:pointer;}
+  .fb-btn:hover{border-color:#9db4e0;}
+  .fb-btn.primary{background:var(--accent);color:#fff;border-color:var(--accent);}
+  .fb-btn.ghost{color:var(--muted);}
+  .fb-btn.danger{color:#b02a2a;}
+  .fb-table{width:100%;border-collapse:collapse;font-size:13px;background:#fff;}
+  .fb-table th,.fb-table td{border:1px solid var(--border-soft);padding:6px 8px;text-align:left;vertical-align:top;}
+  .fb-table th{background:#eef0f2;font-size:12px;color:#3a3f44;}
+  .fb-empty{color:var(--muted);font-size:12.5px;padding:14px 4px;text-align:center;}
+  .st{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:10px;}
+  .st.confirmed{background:#e6f4ea;color:#1a7f37;border:1px solid #b7e0c2;}
+  .st.live{background:#fde8e8;color:#c2410c;border:1px solid #f3c0c0;}
+  .st.pending{background:#eef0f2;color:#5b6168;border:1px solid #d5d9de;}
+  .st.failed{background:#f3e8ff;color:#6b21a8;border:1px solid #e2c9f5;}
+  .fb-note{font-size:11.5px;color:var(--muted);margin:9px 2px 0;}
+  .rowdel{cursor:pointer;color:#b02a2a;font-weight:700;border:none;background:none;font-size:14px;}
+  @media (max-width:820px){.infobox{flex:1 1 100%;order:-1;}.fb-form{grid-template-columns:1fr 1fr;}}
+  @media (max-width:520px){.fb-form{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
 <div class="topbar"><div class="inner">
-  <a href="index1.html">← 올림픽예선 목차</a>
-  <span>문서 · 하키</span>
-  <a href="oltaekwondo.html">태권도 →</a>
+  <a href="olflagfootball.html">← 플래그풋볼</a>
+  <span>문서 · 필드하키</span>
+  <a href="olhandball.html">핸드볼 →</a>
 </div></div>
 <div class="layout">
-<h1 class="title"><span class="ic">🏑</span> 하키 (Hockey)</h1>
-<p class="subtitle">국제하키연맹(FIH) · 남자 12개팀 · 여자 12개팀 · LA28 예선 시스템</p>
-<p class="hatnote">하키는 <b>2026 아이치·나고야 아시안게임 우승국이 곧바로 올림픽 출전권을 얻는</b> 대표적 단체종목이다. 남녀 각 12개팀(팀당 16명), 총 <b>384명</b>이 출전한다.</p>
-<div class="content"><div class="main"><div class="toc"><div class="toc-title">목차</div><ol><li><a href="#overview">출전권</a></li><li><a href="#pathway">예선 경로(남·여 공통)</a></li><li><a href="#relation">아시안게임·2026년도 예선과의 연관성</a></li></ol></div><h2 id="overview">출전권</h2><table class="wt"><tr><th>구분</th><th class="num">정량</th><th class="num">개최국</th><th class="num">합계</th></tr><tr><td>남자</td><td class="num">176 (11팀)</td><td class="num">16 (1팀)</td><td class="num">192 (12팀)</td></tr><tr><td>여자</td><td class="num">176 (11팀)</td><td class="num">16 (1팀)</td><td class="num">192 (12팀)</td></tr></table><p class="note">총 384명(24팀). 팀당 16명. NOC당 성별 1팀. 출전권은 NOC에 배정.</p><h2 id="pathway">예선 경로 (남·여 공통)</h2><table class="wt"><tr><th>경로</th><th class="num">팀</th><th>배정</th></tr><tr><td>개최국(미국)</td><td class="num">1</td><td>세계랭킹 25위 이내 조건</td></tr><tr><td>FIH 프로리그</td><td class="num">2</td><td>시즌7·시즌8 각 최고 NOC</td></tr><tr><td>대륙선수권</td><td class="num">5</td><td>아시아=<b>2026 아시안게임</b>·아메리카=팬암 2027·유럽=유로하키 2027·아프리카 2027·오세아니아컵 2027</td></tr><tr><td>올림픽예선토너먼트</td><td class="num">4</td><td>2028 초 2개 대회(각 8개팀) 상위 2팀</td></tr></table><p class="note">성별 합계 12개팀. 대륙선수권 5팀 중 아시아 몫이 2026 아시안게임(나고야) 하키 우승국에게 배정된다.</p><div class="asiad-box link" id="relation"><h4>아시안게임·2026년도 예선과의 연관성</h4><p>하키는 <b>2026 아이치·나고야 아시안게임(2026.9.19~10.4) 하키 종목이 아시아 대륙예선으로 명시</b>된 종목이다. 남녀 각 아시안게임 우승국(개최국·프로리그로 이미 자격을 얻지 않은 최고 순위 NOC)이 곧바로 LA28 출전권을 획득한다.</p><p>또한 FIH 프로리그 시즌7(2025.12~2026.6)도 2026년에 진행되므로, 하키는 <b>2026년에 예선이 활발히 진행되는 종목</b>이다. 아시안게임 성적이 올림픽으로 직결되는 몇 안 되는 단체구기 종목이라는 점에서 양궁·테니스와 함께 아시안게임 연계 종목으로 분류된다.</p><p><span class="badge asiad">아시안게임 직접 예선 경로</span> · <span class="badge green">2026.9 아시안게임(예선)</span></p></div><div class="footer">출처: FIH — LA28 Qualification System, Hockey (2026.6.4 버전).<br>본 페이지는 원문서를 요약한 것이며, 정확한 규정은 FIH 원문을 따른다. 관련 문서: <a href="index2.html">2026 아이치·나고야 아시안게임</a>.</div></div><aside class="infobox"><div class="ib-ic">🏑</div><div class="ib-title">하키 LA28 예선</div><table><tr><th>주관</th><td>FIH</td></tr><tr><th>세부종목</th><td>남자·여자</td></tr><tr><th>총 출전권</th><td>384명 (24팀)</td></tr><tr><th>아시안게임 연계</th><td><span class='badge asiad'>직접 예선 경로</span></td></tr><tr><th>2026 예선</th><td>아시안게임 하키(나고야, 9~10월)</td></tr><tr><th>관련 문서</th><td><a href='index1.html'>올림픽예선 목차</a><br><a href='index2.html'>2026 아시안게임</a></td></tr></table></aside></div>
+  <h1 class="title">필드하키 (Field Hockey)</h1>
+  <p class="subtitle">국제하키연맹(International Hockey Federation, FIH) · 남자 12팀 · 여자 12팀 · LA28 예선 시스템</p>
+  <p class="hatnote">필드하키는 남녀 각 12개 팀 토너먼트로 치러지며 <b>총 384명(24개 팀) 출전권</b>이 배정된다. 개최국(미국)·FIH 프로리그·5개 대륙별 예선·FIH 올림픽예선 토너먼트의 4단계 경로로 팀을 선발한다. 아시아 대륙 예선은 <b>2026년 아이치·나고야 아시안게임</b>으로 치러진다.</p>
+  <div class="content">
+    <div class="main">
+<div class="toc">
+        <div class="toc-title">목차</div>
+        <ol>
+          <li><a href="#overview">이벤트 및 출전권</a></li>
+          <li><a href="#pathway">예선 경로</a></li>
+          <li><a href="#other">개최국·유니버설리티</a></li>
+          <li><a href="#eligibility">참가 자격</a></li>
+          <li><a href="#timeline">예선 일정 · 2026년</a></li>
+        </ol>
+      </div>
+
+      <h2 id="calc">🧮 쿼터 계산기</h2>
+      <p class="note">아래 계산기는 위 표의 <b>배정 인원(합계)</b>을 자동으로 읽어와 세부종목별로 채워집니다. "확보" 칸에 확보(예상) 인원을 입력하면 잔여 쿼터가 자동 계산되며, 입력값은 이 브라우저에 저장됩니다.</p>
+      <div class="qcalc" id="qcalc">
+        <div class="qcalc-head"><span class="em">🧮</span> 쿼터 계산기 <span class="sub" id="qc-updated"></span></div>
+        <div class="qcalc-body" id="qc-body">
+          <div class="qcalc-empty">표를 불러오는 중…</div>
+        </div>
+      </div>
+
+      <h2 id="overview">이벤트 및 출전권</h2>
+      <table class="wt">
+        <tr><th>구분</th><th>대회 방식</th><th class="num">정규 쿼터</th><th class="num">개최국 쿼터</th><th class="num">합계</th></tr>
+        <tr><td>남자</td><td>12개 팀 토너먼트</td><td class="num">176 (11팀)</td><td class="num">16 (1팀)*</td><td class="num">192 (12팀)</td></tr>
+        <tr><td>여자</td><td>12개 팀 토너먼트</td><td class="num">176 (11팀)</td><td class="num">16 (1팀)*</td><td class="num">192 (12팀)</td></tr>
+        <tr><td><b>총계</b></td><td>남녀 각 12팀</td><td class="num">352 (22팀)</td><td class="num">32 (2팀)</td><td class="num">384 (24팀)</td></tr>
+      </table>
+      <p class="note">*개최국 쿼터는 미국 NOC가 팀을 실제로 구성·선발하는 것을 조건으로 한다. NOC당 최대 인원(쿼터)은 성별 1팀·16명이며, 쿼터 배정 방식은 팀 단위로 해당 NOC에 부여된다.</p>
+
+      <h2 id="pathway">예선 경로</h2>
+      <p>예선 경로는 우선순위 순서대로 적용되며, 남자·여자 각각 개최국 → FIH 프로리그 → 대륙별 예선 → FIH 올림픽예선 토너먼트 순으로 4단계에 걸쳐 12개 팀이 확정된다.</p>
+      <table class="wt">
+        <tr><th>단계</th><th>경로</th><th class="num">배정(남 또는 여)</th><th>선발 방식</th></tr>
+        <tr><td>D.1 / D.5</td><td>개최국(미국)</td><td class="num">16 (1팀)</td><td>파리 2024 이후 FIH 세계랭킹 25위 이내 기준 충족 시 자동 배정</td></tr>
+        <tr><td>D.2 / D.6</td><td>FIH 하키 프로리그</td><td class="num">32 (2팀)</td><td>시즌7·시즌8 각 최상위 NOC 1팀(동일 팀 연속 우승 시 시즌8 준우승팀)</td></tr>
+        <tr><td>D.3 / D.7</td><td>대륙별 예선 5개 대회</td><td class="num">80 (5팀)</td><td>대륙별 대회당 미확정 최상위 팀 1팀 (아프리카·아메리카·아시아·유럽·오세아니아 각 1)</td></tr>
+        <tr><td>D.4 / D.8</td><td>FIH 올림픽예선 토너먼트(2개)</td><td class="num">64 (4팀)</td><td>2028년 초 8개 팀씩 2개 대회, 각 대회 상위 2팀(개최국 조건 충족 시 5번째 배정석 추가)</td></tr>
+      </table>
+      <h4>대륙별 예선 대회(남·여 공통 구조)</h4>
+      <table class="wt">
+        <tr><th>대륙</th><th>대회명(남자 / 여자)</th><th>시기</th></tr>
+        <tr><td>아프리카</td><td>Africa Hockey Road to Los Angeles 2028</td><td>2027</td></tr>
+        <tr><td>아메리카</td><td>제20회 팬아메리칸게임 하키</td><td>2027.07.16~08.01 (페루 리마)</td></tr>
+        <tr><td>아시아</td><td>제20회 아시안게임 하키</td><td>2026.09.19~10.04 (일본 아이치·나고야)</td></tr>
+        <tr><td>유럽</td><td>유로하키 네이션스 챔피언십</td><td>2027.07.28~08.08</td></tr>
+        <tr><td>오세아니아</td><td>오세아니아컵</td><td>2027 (TBC)</td></tr>
+      </table>
+      <p class="note">FIH 올림픽예선 토너먼트에 초청되는 16개 팀은 세계랭킹 상위 24개 올림픽 자격 NOC 중 이미 확정되지 않은 8개 대륙 쿼터를 스네이크 방식(1,4,5,8,9,12,13,16 / 2,3,6,7,10,11,14,15)으로 두 토너먼트에 배정한다.</p>
+
+      <h2 id="other">개최국·유니버설리티</h2>
+      <p>개최국(미국)은 남녀 각각 파리 2024 이후 FIH 세계랭킹 25위 이내 기준을 충족하면 자동으로 1개 팀(16명) 쿼터를 배정받는다. 필드하키는 팀 단위 단체종목 특성상 별도의 유니버설리티(보편성) 쿼터는 배정되지 않는다.</p>
+
+      <h2 id="eligibility">참가 자격</h2>
+      <p>모든 선수는 현행 올림픽 헌장, 특히 규정 41(선수의 국적)과 규정 43(세계반도핑규약 및 경기조작방지 올림픽 운동 규정)을 준수해야 하며, IOC의 여성 카테고리 보호 정책 및 지침을 충족해야 한다. 이와 함께 IOC가 정한 참가 조건과 국제하키연맹(FIH)의 규정·정책을 준수하는 선수만이 LA28 올림픽에 참가할 수 있다. 각 확정 팀은 경쟁 선수 외 3명의 Ap(비경쟁) 선수를 둘 수 있으며, 이 중 1명은 예비 골키퍼로 지정해야 3명 모두를 활용할 수 있다.</p>
+
+      <h2 id="timeline">예선 일정 · 2026년</h2>
+      <div class="y2026">
+        <h4>2026년 진행 사항</h4>
+        <p>이 종목의 2026년 핵심 일정은 <b>제20회 아시안게임(2026.09.19~10.04, 일본 아이치·나고야) 하키 남·여 종목</b>이다. 이 대회는 아시아 대륙 예선을 겸하며, 남·여 각 최상위 NOC(호스트국·프로리그로 이미 확정되지 않은 팀 중)에 LA28 출전권 1장씩이 직접 부여된다. 이와 별도로 FIH 프로리그 시즌7(2025.12.09~2026.06.28)이 진행 중이며, 시즌8은 2026.12.08 개막한다. 2026년 7월에는 모든 대륙선수권 일정이 확정된다.</p>
+      </div>
+      <table class="wt">
+        <tr><th>시기</th><th>일정</th></tr>
+        <tr><td>2025.12.09~2026.06.28</td><td>FIH 하키 프로리그 시즌7</td></tr>
+        <tr><td>2026.07</td><td>모든 대륙선수권 대회 일정 확정</td></tr>
+        <tr><td>2026.09.19~10.04</td><td>제20회 아시안게임 하키(남·여), 아이치·나고야(일본) — 아시아 대륙 예선 겸용</td></tr>
+        <tr><td>2026.12.08~2027.06.20</td><td>FIH 하키 프로리그 시즌8</td></tr>
+        <tr><td>2027.07~08</td><td>팬아메리칸게임·유로하키·아프리카·오세아니아 대륙 예선</td></tr>
+        <tr><td>2028.03~(TBC)</td><td>FIH 올림픽예선 토너먼트(2개)</td></tr>
+        <tr><td>2028.07.12~30</td><td>LA28 올림픽 하키(대회 기간 중 진행)</td></tr>
+      </table>
+
+      <div class="asiad-box">
+        <h4>아시안게임 연관성</h4>
+        <p>2026 아이치·나고야 아시안게임 하키 종목은 필드하키 LA28 예선 경로의 <b>아시아 대륙 예선을 공식적으로 대체</b>한다. 남·여 각각 이 대회에서 최상위 NOC(호스트국·FIH 프로리그로 이미 확정되지 않은 팀 중)가 LA28 출전권 1장(팀)을 <b>직접 획득</b>한다. <span class="badge asiad">직행</span></p>
+      </div>
+
+      <div class="footer">
+        출처: International Hockey Federation (FIH) — LA28 Qualification System, Hockey (2026.6.4 버전).<br>
+        본 페이지는 원문서를 요약한 것이며, 정확한 규정은 International Hockey Federation 원문을 따른다.
+      </div>
+    </div>
+    <aside class="infobox">
+      <div class="ib-title">필드하키 LA28 예선</div>
+      <table>
+        <tr><th>주관</th><td>International Hockey Federation (FIH)</td></tr>
+        <tr><th>세부종목</th><td>남자 12팀 · 여자 12팀 토너먼트</td></tr>
+        <tr><th>총 출전권</th><td>384명 (24개 팀)</td></tr>
+        <tr><th>NOC 상한</th><td>성별당 1팀 · 16명</td></tr>
+        <tr><th>예선 개시</th><td>2025.12 (FIH 프로리그 시즌7)</td></tr>
+        <tr><th>아시안게임 연계</th><td><span class="badge asiad">직행(아시아 대륙 예선 겸용)</span></td></tr>
+        <tr><th>관련 문서</th><td><a href="index1.html">올림픽예선 목차</a></td></tr>
+      </table>
+    </aside>
+  </div>
 </div>
+
+<!-- 쿼터 계산기 엔진: 편집 도구와 별개로 항상 포함(게시용 페이지에도 유지) -->
+<script id="qcalc-engine">
+(function(){
+"use strict";
+const SLUG=(location.pathname.split('/').pop()||'page').replace('.html','');
+/* ══ 쿼터 계산기 (문서 내 모든 table.wt 중 마지막 헤더가 "합계"인 표를 자동 인식) ══ */
+const QC_KEY="la28_qc_"+SLUG+"_v1";
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function qcParseCap(text){
+  const m=String(text).match(/\d+/);
+  return m? parseInt(m[0],10) : 0;
+}
+function qcGroupLabel(table){
+  let el=table.previousElementSibling, hops=0;
+  while(el && hops<6){
+    if(/^H[234]$/.test(el.tagName)) return el.textContent.replace(/^\s*[🧮📌]\s*/,'').trim();
+    el=el.previousElementSibling; hops++;
+  }
+  return "종목";
+}
+function qcCollect(){
+  const tables=Array.from(document.querySelectorAll("#wiki-main table.wt, .main table.wt"));
+  const groups=[];
+  tables.forEach((t,ti)=>{
+    const headRow=t.querySelector("tr"); if(!headRow) return;
+    const ths=Array.from(headRow.querySelectorAll("th"));
+    if(!ths.length) return;
+    const lastTh=ths[ths.length-1].textContent.trim();
+    if(lastTh!=="합계") return;
+    const label=qcGroupLabel(t);
+    const rows=Array.from(t.querySelectorAll("tr")).slice(1);
+    const items=[];
+    rows.forEach(r=>{
+      const tds=Array.from(r.querySelectorAll("td")); if(!tds.length) return;
+      const firstText=tds[0].textContent.trim();
+      if(/^(총계|합계|총 ?계|총 ?인원|TOTAL)$/i.test(firstText.replace(/\s+/g,''))) return;
+      if(tds[0].querySelector("b") && tds.length<=2) return;
+      const cap=qcParseCap(tds[tds.length-1].textContent);
+      if(!firstText) return;
+      items.push({label:firstText, cap:cap});
+    });
+    if(items.length) groups.push({id:"g"+ti, label:label, items:items});
+  });
+  return groups;
+}
+function qcLoadState(){
+  try{ return JSON.parse(localStorage.getItem(QC_KEY)||"{}"); }catch(e){ return {}; }
+}
+function qcSaveState(st){ try{ localStorage.setItem(QC_KEY, JSON.stringify(st)); }catch(e){} }
+function qcRender(){
+  const body=document.getElementById("qc-body");
+  if(!body) return;
+  const groups=qcCollect();
+  if(!groups.length){ body.innerHTML='<div class="qcalc-empty">이 페이지에서 인식 가능한 쿼터 표가 없습니다.</div>'; return; }
+  const state=qcLoadState();
+  let html="";
+  groups.forEach(g=>{
+    html+='<div class="qc-group"><h5>'+esc(g.label)+'</h5><table class="qc-table"><thead><tr><th style="width:34%">세부종목/구분</th><th class="num" style="width:15%">배정 인원</th><th class="num" style="width:15%">확보(입력)</th><th class="num" style="width:15%">잔여</th><th>비고</th></tr></thead><tbody>';
+    g.items.forEach((it,i)=>{
+      const key=g.id+"_"+i;
+      const got=state[key]&&state[key].got!=null?state[key].got:"";
+      const note=state[key]&&state[key].note?state[key].note:"";
+      html+='<tr data-key="'+key+'" data-cap="'+it.cap+'"><td>'+esc(it.label)+'</td><td class="num">'+it.cap+'</td>'+
+        '<td class="num"><input type="number" min="0" max="'+it.cap+'" class="qc-got" value="'+got+'" placeholder="0"></td>'+
+        '<td class="num qc-left-cell">–</td>'+
+        '<td><input type="text" class="qc-note" value="'+esc(note)+'" placeholder="메모"></td></tr>';
+    });
+    html+='</tbody></table></div>';
+  });
+  html+='<div class="qc-summary" id="qc-summary"></div>'+
+    '<div class="qcalc-actions"><button class="fb-btn ghost" onclick="qcReset()">전체 초기화</button></div>';
+  body.innerHTML=html;
+  body.querySelectorAll(".qc-got,.qc-note").forEach(inp=>{
+    inp.addEventListener("input", qcOnInput);
+  });
+  qcRecalc();
+  const upd=document.getElementById("qc-updated");
+  if(upd) upd.textContent="표 "+groups.length+"개 인식됨";
+}
+function qcOnInput(){
+  const tr=this.closest("tr"); if(!tr) return;
+  const key=tr.dataset.key;
+  const state=qcLoadState();
+  const gotInput=tr.querySelector(".qc-got"), noteInput=tr.querySelector(".qc-note");
+  state[key]={ got: gotInput.value===""?null:parseInt(gotInput.value,10)||0, note: noteInput.value };
+  qcSaveState(state);
+  qcRecalc();
+}
+function qcRecalc(){
+  const body=document.getElementById("qc-body"); if(!body) return;
+  let totalCap=0, totalGot=0;
+  body.querySelectorAll("table.qc-table tr[data-key]").forEach(tr=>{
+    const cap=parseInt(tr.dataset.cap,10)||0;
+    const gotInput=tr.querySelector(".qc-got");
+    const got=gotInput.value===""?0:(parseInt(gotInput.value,10)||0);
+    const left=cap-got;
+    const cell=tr.querySelector(".qc-left-cell");
+    cell.textContent=left;
+    cell.className="num qc-left-cell "+(left<0?"qc-left over":left===0?"qc-left ok":"qc-left");
+    totalCap+=cap; totalGot+=got;
+  });
+  const sum=document.getElementById("qc-summary");
+  if(sum){
+    const left=totalCap-totalGot;
+    sum.innerHTML="전체 배정: <b>"+totalCap+"</b> · 확보 입력 합계: <b>"+totalGot+"</b> · 잔여: <b class=\""+(left<0?'qc-left over':'qc-left ok')+"\">"+left+"</b>";
+  }
+}
+window.qcReset=function(){
+  if(!confirm("쿼터 계산기 입력값을 모두 지울까요?"))return;
+  try{ localStorage.removeItem(QC_KEY); }catch(e){}
+  qcRender();
+}
+window.qcInit=function(){ qcRender(); }
+qcInit();
+})();
+</script>
 </body>
 </html>
