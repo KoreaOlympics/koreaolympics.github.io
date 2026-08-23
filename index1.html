@@ -67,7 +67,6 @@
   .tag.prep{background:#eef0f2;color:#6b7075;border:1px solid #d5d9de;}
   .tag.add{background:#e6f4ea;color:#1a7f37;border:1px solid #b7e0c2;}
   .legend{font-size:12px;color:var(--muted);margin:14px 0 0;}
-  /* 2026 목록 */
   .y-toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:2px 0 12px;}
   .y-btn{appearance:none;border:1px solid var(--border);background:#fff;font-family:var(--sans);font-size:13px;font-weight:600;color:var(--muted);padding:6px 13px;border-radius:20px;cursor:pointer;}
   .y-btn:hover{color:var(--ink);border-color:#9db4e0;}
@@ -96,7 +95,7 @@
 <div class="layout">
   <h1 class="title">올림픽예선 (LA28 종목별 예선 시스템)</h1>
   <p class="subtitle">제34회 하계올림픽 로스앤젤레스 2028 · 종목별 출전권(Quota) 배분 방식 — 각 국제경기연맹 공식 예선 시스템(2026년 5~8월 버전) 기준</p>
-  <p class="hatnote">종목 카드를 누르면 상세 페이지로 이동합니다. 각 상세 페이지 하단에는 <b>예선 결과를 직접 입력·저장</b>할 수 있는 도구가 있습니다. 아래 탭으로 <b>종목별 예선</b>, <b>2026 예선 목록</b>, <b>개요·용어</b>를 오갈 수 있습니다.</p>
+  <p class="hatnote">종목 카드를 누르면 상세 페이지로 이동합니다. 각 상세 페이지에는 <b>위키 편집기</b>(직접 내용을 고쳐 저장)와 <b>쿼터 계산기</b>(세부종목별 확보 인원을 입력하면 잔여 쿼터 자동 계산)가 있습니다. 아래 탭으로 <b>종목별 예선</b>, <b>2026 예선 목록</b>, <b>개요·용어</b>를 오갈 수 있습니다.</p>
   <div class="tabs">
     <button class="tab-btn active" id="b-sports" onclick="showTab('t-sports',this)">📋 종목별 예선</button>
     <button class="tab-btn" id="b-2026" onclick="showTab('t-2026',this)"><span class="dot"></span>2026 예선 목록</button>
@@ -105,7 +104,7 @@
 
   <!-- ════ 탭 1 : 종목별 예선 ════ -->
   <div class="tab-panel active" id="t-sports">
-    <div class="cat">전체 종목 <span class="cnt">가나다순 · 상세 페이지 29종 작성 완료</span></div>
+    <div class="cat">전체 종목 <span class="cnt">가나다순 · 상세 페이지 37종 전부 완료</span></div>
     <div class="grid">
       <div class="card"><span class="ic">⛳</span><div class="nm"><a href="olgolf.html">골프</a></div></div>
       <div class="card"><span class="ic">🎽</span><div class="nm"><a href="olmodernpentathlon.html">근대5종</a></div></div>
@@ -138,24 +137,24 @@
       <div class="card"><span class="ic">🤸</span><div class="nm"><a href="olgymnastics.html">체조</a><span class="tag merge">3종목</span></div></div>
       <div class="card pending"><span class="ic">⚽</span><div class="nm"><a class="new" href="#" onclick="return false;">축구</a><span class="tag soon">미발표</span></div></div>
       <div class="card"><span class="ic">🛶</span><div class="nm"><a href="olcanoe.html">카누</a><span class="tag merge">2종목</span></div></div>
-      <div class="card prep"><span class="ic">🏏</span><div class="nm">크리켓<span class="tag new">신규</span><span class="tag prep">작성중</span></div></div>
-      <div class="card prep"><span class="ic">🏓</span><div class="nm">탁구<span class="tag prep">작성중</span></div></div>
+      <div class="card"><span class="ic">🏏</span><div class="nm"><a href="olcricket.html">크리켓</a><span class="tag new">신규</span><span class="tag add">추가</span></div></div>
+      <div class="card"><span class="ic">🏓</span><div class="nm"><a href="oltabletennis.html">탁구</a></div></div>
       <div class="card"><span class="ic">🥋</span><div class="nm"><a href="oltaekwondo.html">태권도</a></div></div>
-      <div class="card prep"><span class="ic">🎾</span><div class="nm">테니스<span class="tag prep">작성중</span></div></div>
-      <div class="card prep"><span class="ic">🏅</span><div class="nm">트라이애슬론<span class="tag prep">작성중</span></div></div>
-      <div class="card prep"><span class="ic">🤺</span><div class="nm">펜싱<span class="tag add">추가</span><span class="tag prep">작성중</span></div></div>
-      <div class="card prep"><span class="ic">🏈</span><div class="nm">플래그풋볼<span class="tag new">신규</span><span class="tag prep">작성중</span></div></div>
-      <div class="card prep"><span class="ic">🏑</span><div class="nm">필드하키<span class="tag prep">작성중</span></div></div>
-      <div class="card prep"><span class="ic">🤾</span><div class="nm">핸드볼<span class="tag prep">작성중</span></div></div>
+      <div class="card"><span class="ic">🎾</span><div class="nm"><a href="oltennis.html">테니스</a></div></div>
+      <div class="card"><span class="ic">🏅</span><div class="nm"><a href="oltriathlon.html">트라이애슬론</a></div></div>
+      <div class="card"><span class="ic">🤺</span><div class="nm"><a href="olfencing.html">펜싱</a><span class="tag add">추가</span></div></div>
+      <div class="card"><span class="ic">🏈</span><div class="nm"><a href="olflagfootball.html">플래그풋볼</a><span class="tag new">신규</span><span class="tag add">추가</span></div></div>
+      <div class="card"><span class="ic">🏑</span><div class="nm"><a href="olhockey.html">필드하키</a></div></div>
+      <div class="card"><span class="ic">🤾</span><div class="nm"><a href="olhandball.html">핸드볼</a></div></div>
     </div>
-    <p class="legend"><span class="tag add">추가</span> 이번에 새로 수록된 종목(사격·요트·유도·조정·승마 등) &nbsp;·&nbsp; <span class="tag new">신규</span> LA28 신규 채택 종목 &nbsp;·&nbsp; <span class="tag merge">N종목</span> 여러 세부종목을 한 페이지로 통합 &nbsp;·&nbsp; <span class="tag prep">작성중</span> 다음 차수 작성 예정 &nbsp;·&nbsp; <span class="tag soon">미발표</span> 연맹 예선 규정 미공개</p>
-    <p class="legend" style="margin-top:8px;">파란 링크 카드 29종은 <b>상세 페이지 완료</b>(태권도 포함). 회색 점선 <span class="tag prep">작성중</span> 8종(태권도 제외한 크리켓·탁구·테니스·트라이애슬론·펜싱·플래그풋볼·필드하키·핸드볼)은 다음 차수에서 PDF 기준으로 추가됩니다. 태권도는 완료되어 링크 카드에 곧 반영됩니다.</p>
+    <p class="legend"><span class="tag add">추가</span> 이번에 새로 수록된 종목 &nbsp;·&nbsp; <span class="tag new">신규</span> LA28 신규 채택 종목 &nbsp;·&nbsp; <span class="tag merge">N종목</span> 여러 세부종목을 한 페이지로 통합 &nbsp;·&nbsp; <span class="tag soon">미발표</span> 연맹 예선 규정 미공개</p>
+    <p class="legend" style="margin-top:8px;">파란 링크 카드 <b>37종 전부 상세 페이지 완료</b>. 서핑은 이번 PDF 묶음에 예선 문서가 없어 미수록, 육상·축구는 연맹이 아직 예선 시스템을 공개하지 않아 규정 문서 자체가 없습니다.</p>
   </div>
 
   <!-- ════ 탭 2 : 2026 예선 목록 ════ -->
   <div class="tab-panel" id="t-2026">
-    <div class="cat">2026년 예선 일정 <span class="cnt">시간순 · 완료 종목 기준</span></div>
-    <p class="infoline">LA28 예선은 대부분 2026년 하반기에 <b>랭킹 적립</b> 또는 <b>세계·대륙선수권</b>으로 시작됩니다. 아래는 상세 페이지가 완료된 종목의 2026년 예선 이벤트를 시간순으로 모은 것입니다. (작성중 8종목의 2026 일정은 다음 차수에 추가)</p>
+    <div class="cat">2026년 예선 일정 <span class="cnt">시간순 · 37종 전체 반영</span></div>
+    <p class="infoline">LA28 예선은 대부분 2026년 하반기에 <b>랭킹 적립</b> 또는 <b>세계·대륙선수권</b>으로 시작됩니다. 아래는 상세 페이지 37종 전체의 2026년 예선 이벤트를 시간순으로 모은 것입니다.</p>
     <div class="y-toolbar">
       <button class="y-btn active" onclick="filterY('all',this)">전체</button>
       <button class="y-btn" onclick="filterY('direct',this)">직행</button>
@@ -169,18 +168,28 @@
         <tr data-k="worlds"><td class="d">2026.03</td><td class="sp">⚾ 야구</td><td>월드 베이스볼 클래식(WBC) 2026 — 상위 성적 국가 예선</td><td><span class="led worlds">세계대회</span></td></tr>
         <tr data-k="rank"><td class="d">2026.03~</td><td class="sp">🤸 리듬체조</td><td>리듬체조 월드컵 시리즈 개시(2026.3~2027.6) — 랭킹 반영</td><td><span class="led rank">랭킹</span></td></tr>
         <tr data-k="rank"><td class="d">2026.04~</td><td class="sp">🚴 사이클(MTB)</td><td>산악 올림픽 랭킹 적립 개시</td><td><span class="led rank">랭킹</span></td></tr>
+        <tr data-k="rank"><td class="d">2026.05.18</td><td class="sp">🏅 트라이애슬론</td><td>WT 올림픽예선 랭킹(IOQR·MROQR) 적립 개시</td><td><span class="led rank">랭킹</span></td></tr>
         <tr data-k="rank"><td class="d">2026.06~</td><td class="sp">⛳ 골프</td><td>올림픽 골프 랭킹(OGR) 적립 개시(남·여)</td><td><span class="led rank">랭킹</span></td></tr>
         <tr data-k="rank"><td class="d">2026.06~</td><td class="sp">👘 유도</td><td>IJF 세계랭킹 적립 개시(2026.6.15~2028.6.12)</td><td><span class="led rank">랭킹</span></td></tr>
+        <tr data-k="etc"><td class="d">2026.06.12~07.06</td><td class="sp">🏏 크리켓</td><td>ICC 여자 T20 월드컵 2026 — 여자부 출전권 4장 확정</td><td><span class="led worlds">세계선수권</span></td></tr>
+        <tr data-k="worlds"><td class="d">2026.07.12</td><td class="sp">🏅 트라이애슬론</td><td>WT 혼성계주 세계선수권(독일 함부르크)</td><td><span class="led worlds">세계선수권</span></td></tr>
         <tr data-k="rank"><td class="d">2026.07~</td><td class="sp">🏋️ 역도</td><td>IWF 올림픽예선랭킹(OQR) 기간 1 개시 · 2026 세계선수권</td><td><span class="led rank">랭킹</span></td></tr>
         <tr data-k="rank"><td class="d">2026.07~</td><td class="sp">🥋 태권도</td><td>WT 올림픽 랭킹 적립 개시(2026.7~2028.6)</td><td><span class="led rank">랭킹</span></td></tr>
+        <tr data-k="etc"><td class="d">2026.07</td><td class="sp">🤾 핸드볼</td><td>개최국(미국) 쿼터 사용 확정 마감</td><td><span class="led etc">준비</span></td></tr>
         <tr data-k="cont"><td class="d">2026.08</td><td class="sp">🏐 배구</td><td>실내 배구 대륙선수권(남·여) — 대륙별 1팀 직행</td><td><span class="led cont">대륙예선</span></td></tr>
         <tr data-k="cont"><td class="d">2026.08~</td><td class="sp">🏖️ 비치발리볼</td><td>대륙선수권·대륙투어 파이널 — 대륙별 우승팀</td><td><span class="led cont">대륙예선</span></td></tr>
         <tr data-k="worlds"><td class="d">2026.08</td><td class="sp">🤸 리듬체조</td><td>2026 세계선수권(프랑크푸르트) — 개인·단체 배정</td><td><span class="led worlds">세계선수권</span></td></tr>
         <tr data-k="cont"><td class="d">2026.08</td><td class="sp">🏀 농구(여)</td><td>FIBA 여자 올림픽 사전예선 토너먼트(5x5)</td><td><span class="led cont">대륙예선</span></td></tr>
         <tr data-k="direct"><td class="d">2026.08</td><td class="sp">🏇 승마</td><td>아헨 FEI 세계선수권(장애물·종합·마장마술) — 팀 직행</td><td><span class="led direct">직행</span></td></tr>
+        <tr data-k="worlds"><td class="d">2026.08.13~16</td><td class="sp">🏈 플래그풋볼</td><td>IFAF 세계선수권(남·여), 독일 뒤셀도르프</td><td><span class="led worlds">세계선수권</span></td></tr>
+        <tr data-k="direct"><td class="d">2026.08.17</td><td class="sp">🏈 플래그풋볼</td><td>개최국 NOC 남녀 개최국 쿼터 사용 확정</td><td><span class="led direct">직행</span></td></tr>
+        <tr data-k="worlds"><td class="d">2026.08.14</td><td class="sp">🏓 탁구</td><td>ITTF LA28 예선 시스템 문서 버전 공개(실제 예선 이벤트는 2027년부터)</td><td><span class="led etc">준비</span></td></tr>
         <tr data-k="cont"><td class="d">2026.09</td><td class="sp">🥍 라크로스</td><td>팬아메리카 대륙 예선(세계선수권 예선)</td><td><span class="led cont">대륙예선</span></td></tr>
         <tr data-k="worlds"><td class="d">2026.09</td><td class="sp">🏀 농구(여)</td><td>FIBA 여자농구월드컵 2026(독일) — 우승국 직행</td><td><span class="led worlds">세계대회</span></td></tr>
         <tr data-k="asiad"><td class="d">2026.09</td><td class="sp">🏹 양궁</td><td>2026 아이치·나고야 아시안게임(9.25~10.3) — 리커브 개인·혼성단체 등 직접 예선</td><td><span class="led asiad">아시안게임</span></td></tr>
+        <tr data-k="asiad"><td class="d">2026.09.19~10.04</td><td class="sp">🏑 필드하키</td><td>제20회 아시안게임 하키(남·여), 아이치·나고야 — 아시아 대륙예선 겸용</td><td><span class="led asiad">아시안게임</span></td></tr>
+        <tr data-k="asiad"><td class="d">2026.09.20~21</td><td class="sp">🏅 트라이애슬론</td><td>아이치·나고야 아시안게임(대륙종합대회 경로)</td><td><span class="led asiad">아시안게임</span></td></tr>
+        <tr data-k="asiad"><td class="d">2026(아이치·나고야)</td><td class="sp">🎾 테니스</td><td>아시안게임 단식 — 남녀 우승자 ITF 파이널퀄리피케이션 출전권 확보</td><td><span class="led asiad">아시안게임</span></td></tr>
         <tr data-k="worlds"><td class="d">2026.10</td><td class="sp">🤸 기계체조</td><td>제54회 FIG 세계선수권 — 남·여 각 3팀 배정</td><td><span class="led worlds">세계선수권</span></td></tr>
         <tr data-k="worlds"><td class="d">2026.10</td><td class="sp">🚴 사이클(트랙)</td><td>UCI 트랙 세계선수권 — 랭킹 반영</td><td><span class="led worlds">세계선수권</span></td></tr>
         <tr data-k="cont"><td class="d">2026.10</td><td class="sp">🥍 라크로스</td><td>아시아·태평양 대륙 예선</td><td><span class="led cont">대륙예선</span></td></tr>
@@ -188,9 +197,11 @@
         <tr data-k="cont"><td class="d">2026.11</td><td class="sp">🥍 라크로스</td><td>유럽 대륙 예선</td><td><span class="led cont">대륙예선</span></td></tr>
         <tr data-k="cont"><td class="d">2026.12</td><td class="sp">🥍 라크로스</td><td>아프리카 대륙 예선</td><td><span class="led cont">대륙예선</span></td></tr>
         <tr data-k="etc"><td class="d">2026.12</td><td class="sp">🚣 조정</td><td>대륙별 예선 레가타 개최지 확정(조정·코스탈)</td><td><span class="led etc">준비</span></td></tr>
+        <tr data-k="cont"><td class="d">2026.12</td><td class="sp">🤾 핸드볼</td><td>여자 유럽선수권(대륙예선 겸용)</td><td><span class="led cont">대륙예선</span></td></tr>
+        <tr data-k="rank"><td class="d">2026.12.31</td><td class="sp">🏏 크리켓</td><td>남자부 올림픽 예선 랭킹 마감 · FOGQT 참가팀 확정</td><td><span class="led rank">랭킹</span></td></tr>
       </tbody>
     </table>
-    <p class="legend">2026년 예선 활동이 없는 종목(2027년 이후 시작): 근대5종·다이빙·마라톤수영·배드민턴·복싱·수구·수영·아티스틱스위밍. &nbsp; 작성중 8종목(테니스·필드하키 등)의 2026 일정은 다음 차수에 추가됩니다.</p>
+    <p class="legend">2026년 예선 활동이 없는 종목(2027년 이후 시작): 근대5종·다이빙·마라톤수영·배드민턴·복싱·수구·수영·아티스틱스위밍·펜싱·탁구(본 예선). 필드하키·테니스는 아시안게임이 곧 대륙예선을 겸하는 방식이라 위 표에도 함께 표시했습니다.</p>
   </div>
 
   <!-- ════ 탭 3 : 개요·용어 ════ -->
@@ -208,11 +219,11 @@
       <tr><td>OQR / OGR / 랭킹</td><td>연맹별 올림픽 예선 랭킹(역도 OQR, 골프 OGR, 태권도·유도 세계랭킹 등)</td></tr>
     </table>
     <h2>아시안게임과의 관계</h2>
-    <p>이번 개정에서는 아시안게임 강조를 줄이고, 각 종목 페이지에서 <b>실제로 아시안게임이 예선 경로에 포함되는 경우</b>에만 이를 표기했습니다. 대표적으로 <b>양궁</b>은 2026 아이치·나고야 아시안게임 성적이 리커브 부문 예선에 직접 연결됩니다. 태권도·역도 등은 대륙종합대회 성적이 세계랭킹 포인트로 간접 반영될 수 있는 정도이며, 복싱의 '아시아 예선전'은 아시안게임이 아니라 연맹이 여는 별도 대륙 자격전입니다.</p>
-    <h2>결과 입력 도구</h2>
-    <p>각 종목 상세 페이지 하단에는 <b>예선 결과 입력·피드백</b> 도구가 있습니다. 세부종목·대회·결과·상태를 입력하면 브라우저(localStorage)에 저장되며, <b>JSON 내보내기/불러오기</b>로 백업·복원할 수 있습니다. 실제 예선 결과가 확정되는 대로 직접 기록해 나갈 수 있는 구조입니다.</p>
+    <p>이번 개정에서는 아시안게임 강조를 줄이고, 각 종목 페이지에서 <b>실제로 아시안게임이 예선 경로에 포함되는 경우</b>에만 이를 표기했습니다. 양궁·필드하키·트라이애슬론·테니스는 2026 아이치·나고야 아시안게임 성적이 예선 경로에 <b>직접</b> 연결됩니다. 태권도·역도 등은 대륙종합대회 성적이 세계랭킹 포인트로 간접 반영될 수 있는 정도이며, 복싱의 '아시아 예선전'은 아시안게임이 아니라 연맹이 여는 별도 대륙 자격전입니다.</p>
+    <h2>위키 편집기 · 쿼터 계산기</h2>
+    <p>각 종목 상세 페이지에는 두 가지 도구가 있습니다. <b>위키 편집기</b>는 상단 툴바의 [편집]을 누르면 본문·표를 위키백과처럼 직접 고쳐 쓰고 [저장]할 수 있으며(브라우저에 자동 저장, JSON 내보내기/불러오기 지원), 하단 <b>게시판</b>에 별도 글도 남길 수 있습니다. <b>쿼터 계산기</b>는 "체급/세부종목 및 출전권" 표의 배정 인원을 자동으로 읽어와, 확보(예상) 인원을 입력하면 잔여 쿼터를 즉시 계산해 줍니다. 이 사이트는 두 가지 형태로 배포됩니다: <b>편집판</b>(위키 편집기 포함, 개인 사용/초안 작성용)과 <b>게시판</b>(편집 도구 없이 계산기만 남긴 정적 버전, GitHub Pages 등 공개 배포용) — 두 폴더는 파일명이 완전히 동일해 그대로 바꿔 쓸 수 있습니다.</p>
     <h2>아직 발표되지 않은 종목</h2>
-    <p>전체 프로그램에서 <b>육상(World Athletics)</b>과 <b>축구(FIFA)</b> 두 종목의 예선 시스템은 아직 본 PDF에 포함되지 않았습니다. 발표되는 대로 추가할 예정입니다. 서핑은 이번 자료 묶음에 예선 문서가 포함되지 않아 미수록입니다.</p>
+    <p>전체 프로그램에서 <b>육상(World Athletics)</b>과 <b>축구(FIFA)</b> 두 종목의 예선 시스템은 아직 공개되지 않았습니다. 발표되는 대로 추가할 예정입니다. 서핑은 이번 자료 묶음에 예선 문서가 포함되지 않아 미수록입니다.</p>
   </div>
 
   <div class="footer">
@@ -235,6 +246,8 @@
       tr.style.display=(!keys||keys.indexOf(tr.getAttribute('data-k'))>=0)?'':'none';
     });
   }
+  if(location.hash==='#2026'){showTab('t-2026',document.getElementById('b-2026'));}
+  else if(location.hash==='#info'){showTab('t-info',document.getElementById('b-info'));}
 </script>
 </body>
 </html>

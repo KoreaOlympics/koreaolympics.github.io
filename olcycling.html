@@ -91,7 +91,7 @@
 </head>
 <body>
 <div class="topbar"><div class="inner">
-  <a href="index1.html">← 올림픽예선 목차</a>
+  <a href="olshooting.html">← 사격</a>
   <span>문서 · 사이클</span>
   <a href="olwaterpolo.html">수구 →</a>
 </div></div>
@@ -101,7 +101,7 @@
   <p class="hatnote">사이클은 트랙·도로·BMX 레이싱·BMX 프리스타일·산악(MTB)의 <b>5개 독립 디시플린</b>으로 구성되며, 디시플린별 예선 시스템이 각각 운영된다. 5개 디시플린 합산 <b>총 514장</b>의 출전권이 배정되며(트랙 190·도로 180·BMX 레이싱 48·BMX 프리스타일 24·산악 72), 대부분 <b>UCI 올림픽 예선 랭킹</b>과 세계선수권·대륙선수권·올림픽 Q-시리즈로 선발한다. 예선 랭킹 적립은 종목에 따라 <b>2026년 4월(산악)부터</b> 순차 개시된다.</p>
   <div class="content">
     <div class="main">
-      <div class="toc">
+<div class="toc">
         <div class="toc-title">목차</div>
         <ol>
           <li><a href="#overview">디시플린 및 출전권</a></li>
@@ -119,6 +119,15 @@
           <li><a href="#timeline">예선 일정 · 2026년</a></li>
           <li><a href="#feedback">예선 결과 입력</a></li>
         </ol>
+      </div>
+
+      <h2 id="calc">🧮 쿼터 계산기</h2>
+      <p class="note">아래 계산기는 위 표의 <b>배정 인원(합계)</b>을 자동으로 읽어와 세부종목별로 채워집니다. "확보" 칸에 확보(예상) 인원을 입력하면 잔여 쿼터가 자동 계산되며, 입력값은 이 브라우저에 저장됩니다.</p>
+      <div class="qcalc" id="qcalc">
+        <div class="qcalc-head"><span class="em">🧮</span> 쿼터 계산기 <span class="sub" id="qc-updated"></span></div>
+        <div class="qcalc-body" id="qc-body">
+          <div class="qcalc-empty">표를 불러오는 중…</div>
+        </div>
       </div>
 
       <h2 id="overview">디시플린 및 출전권</h2>
@@ -258,37 +267,7 @@
       <h2 id="feedback">예선 결과 입력 · 피드백</h2>
       <p class="note">아래에 사이클 예선 결과(디시플린·세부종목·대회·확정 선수/국가 등)를 직접 입력하면 브라우저에 저장됩니다. 현재 <b>대한민국 확정 출전권: 0장</b> — 결과가 나오는 대로 기록하세요.</p>
 
-<!-- ==== 결과 입력·피드백 위젯 ==== -->
-<div class="fb" id="fb">
-  <div class="fb-head"><span class="live"></span> 예선 결과 입력 · 피드백 <span class="sub" id="fb-count">0건 저장됨</span></div>
-  <div class="fb-body">
-    <p class="fb-note" style="margin-top:0">세부종목·대회·결과를 입력하고 <b>추가</b>를 누르면 아래 표에 기록됩니다. 입력값은 이 브라우저(localStorage)에 자동 저장되며, <b>JSON 내보내기/불러오기</b>로 백업·복원할 수 있습니다.</p>
-    <div class="fb-form">
-      <input id="f-ev" placeholder="세부종목/체급 (예: 남 -58kg)">
-      <input id="f-comp" placeholder="예선 대회 (예: 아시아 대륙예선)">
-      <input id="f-res" placeholder="결과 (예: 대한민국 확정 / 서은수)">
-      <select id="f-st">
-        <option value="confirmed">확정</option>
-        <option value="live">진행중</option>
-        <option value="pending" selected>예정</option>
-        <option value="failed">탈락/불발</option>
-      </select>
-      <textarea id="f-note" placeholder="메모 (선택) — 날짜·랭킹·비고 등"></textarea>
-    </div>
-    <div class="fb-actions">
-      <button class="fb-btn primary" onclick="fbAdd()">＋ 추가</button>
-      <button class="fb-btn ghost" onclick="fbExport()">⬇ JSON 내보내기</button>
-      <label class="fb-btn ghost" style="margin:0">⬆ JSON 불러오기<input type="file" id="f-imp" accept="application/json,.json" style="display:none" onchange="fbImport(event)"></label>
-      <button class="fb-btn danger" onclick="fbClear()">전체 삭제</button>
-      <button class="fb-btn ghost" onclick="fbSeed()">예시 채우기</button>
-    </div>
-    <table class="fb-table">
-      <thead><tr><th style="width:16%">세부종목</th><th style="width:22%">예선 대회</th><th style="width:26%">결과</th><th style="width:10%">상태</th><th>메모</th><th style="width:34px"></th></tr></thead>
-      <tbody id="fb-rows"></tbody>
-    </table>
-    <p class="fb-note">※ 저장은 이 컴퓨터·브라우저에만 남습니다. 다른 기기로 옮기거나 백업하려면 <b>JSON 내보내기</b>를 사용하세요. (파일로 직접 열었을 때 정상 동작하며, 대화창 미리보기에서는 저장이 유지되지 않을 수 있습니다.)</p>
-  </div>
-</div>
+
 
       <div class="footer">
         출처: Union Cycliste Internationale (UCI) — LA28 Qualification System, Cycling (트랙·도로·BMX 레이싱·산악 2026.5.12 버전, BMX 프리스타일 2026.7.22 버전).<br>
@@ -310,64 +289,122 @@
     </aside>
   </div>
 </div>
-<script>
-var SPORT_KEY = "cycling";
-var SPORT_NAME = "사이클";
-var SEED = [
-  {ev:"트랙 여 매디슨", comp:"UCI 트랙 올림픽 예선 랭킹", res:"(미정)", st:"live", note:"2026.10 예선 기간 개시, 상위 6개국 직행"},
-  {ev:"BMX 프리스타일 남 파크", comp:"2026 어반 세계선수권(리야드)", res:"(미정)", st:"pending", note:"2026.11.3~7, 미확보국 상위 2개국"},
-  {ev:"산악 남 크로스컨트리", comp:"UCI 산악 올림픽 예선 랭킹", res:"(미정)", st:"live", note:"2026.4.27 랭킹 적립 개시, 상위 19개국"}
-];
-var STORE = "la28_fb_" + SPORT_KEY;
-var ST_LABEL = {confirmed:"확정", live:"진행중", pending:"예정", failed:"탈락/불발"};
-function fbLoad(){ try{ var r=localStorage.getItem(STORE); return r?JSON.parse(r):null; }catch(e){ return null; } }
-function fbSave(d){ try{ localStorage.setItem(STORE, JSON.stringify(d)); }catch(e){} }
-var DATA = fbLoad();
-if(DATA===null){ DATA = []; fbSave(DATA); }
-function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
-function fbRender(){
-  var tb=document.getElementById("fb-rows");
-  document.getElementById("fb-count").textContent = DATA.length + "건 저장됨";
-  if(!DATA.length){ tb.innerHTML='<tr><td colspan="6" class="fb-empty">아직 입력된 결과가 없습니다. 위 칸에 입력 후 <b>추가</b>를 누르세요. (또는 <b>예시 채우기</b>)</td></tr>'; return; }
-  tb.innerHTML = DATA.map(function(r,i){
-    return '<tr><td>'+esc(r.ev)+'</td><td>'+esc(r.comp)+'</td><td>'+esc(r.res)+
-      '</td><td><span class="st '+(r.st||"pending")+'">'+(ST_LABEL[r.st]||r.st)+'</span></td><td>'+esc(r.note)+
-      '</td><td><button class="rowdel" title="삭제" onclick="fbDel('+i+')">✕</button></td></tr>';
-  }).join("");
+
+<!-- 쿼터 계산기 엔진: 편집 도구와 별개로 항상 포함(게시용 페이지에도 유지) -->
+<script id="qcalc-engine">
+(function(){
+"use strict";
+const SLUG=(location.pathname.split('/').pop()||'page').replace('.html','');
+/* ══ 쿼터 계산기 (문서 내 모든 table.wt 중 마지막 헤더가 "합계"인 표를 자동 인식) ══ */
+const QC_KEY="la28_qc_"+SLUG+"_v1";
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function qcParseCap(text){
+  const m=String(text).match(/\d+/);
+  return m? parseInt(m[0],10) : 0;
 }
-function fbAdd(){
-  var ev=document.getElementById("f-ev").value.trim();
-  var comp=document.getElementById("f-comp").value.trim();
-  var res=document.getElementById("f-res").value.trim();
-  var st=document.getElementById("f-st").value;
-  var note=document.getElementById("f-note").value.trim();
-  if(!ev && !comp && !res){ return; }
-  DATA.push({ev:ev,comp:comp,res:res,st:st,note:note});
-  fbSave(DATA); fbRender();
-  document.getElementById("f-ev").value="";document.getElementById("f-comp").value="";
-  document.getElementById("f-res").value="";document.getElementById("f-note").value="";
-  document.getElementById("f-ev").focus();
+function qcGroupLabel(table){
+  let el=table.previousElementSibling, hops=0;
+  while(el && hops<6){
+    if(/^H[234]$/.test(el.tagName)) return el.textContent.replace(/^\s*[🧮📌]\s*/,'').trim();
+    el=el.previousElementSibling; hops++;
+  }
+  return "종목";
 }
-function fbDel(i){ DATA.splice(i,1); fbSave(DATA); fbRender(); }
-function fbClear(){ if(confirm(SPORT_NAME+" 결과 기록을 모두 삭제할까요?")){ DATA=[]; fbSave(DATA); fbRender(); } }
-function fbSeed(){ DATA = DATA.concat(SEED); fbSave(DATA); fbRender(); }
-function fbExport(){
-  var blob=new Blob([JSON.stringify({sport:SPORT_KEY,name:SPORT_NAME,data:DATA},null,2)],{type:"application/json"});
-  var a=document.createElement("a"); a.href=URL.createObjectURL(blob);
-  a.download="la28_"+SPORT_KEY+"_결과.json"; document.body.appendChild(a); a.click();
-  setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); },100);
+function qcCollect(){
+  const tables=Array.from(document.querySelectorAll("#wiki-main table.wt, .main table.wt"));
+  const groups=[];
+  tables.forEach((t,ti)=>{
+    const headRow=t.querySelector("tr"); if(!headRow) return;
+    const ths=Array.from(headRow.querySelectorAll("th"));
+    if(!ths.length) return;
+    const lastTh=ths[ths.length-1].textContent.trim();
+    if(lastTh!=="합계") return;
+    const label=qcGroupLabel(t);
+    const rows=Array.from(t.querySelectorAll("tr")).slice(1);
+    const items=[];
+    rows.forEach(r=>{
+      const tds=Array.from(r.querySelectorAll("td")); if(!tds.length) return;
+      const firstText=tds[0].textContent.trim();
+      if(/^(총계|합계|총 ?계|총 ?인원|TOTAL)$/i.test(firstText.replace(/\s+/g,''))) return;
+      if(tds[0].querySelector("b") && tds.length<=2) return;
+      const cap=qcParseCap(tds[tds.length-1].textContent);
+      if(!firstText) return;
+      items.push({label:firstText, cap:cap});
+    });
+    if(items.length) groups.push({id:"g"+ti, label:label, items:items});
+  });
+  return groups;
 }
-function fbImport(e){
-  var f=e.target.files[0]; if(!f) return;
-  var rd=new FileReader();
-  rd.onload=function(){ try{ var o=JSON.parse(rd.result); var arr=Array.isArray(o)?o:(o.data||[]);
-    if(!Array.isArray(arr)) throw 0;
-    DATA=arr.map(function(r){return {ev:r.ev||"",comp:r.comp||"",res:r.res||"",st:r.st||"pending",note:r.note||""};});
-    fbSave(DATA); fbRender(); alert(DATA.length+"건을 불러왔습니다.");
-  }catch(err){ alert("불러오기 실패: 올바른 JSON 파일이 아닙니다."); } e.target.value=""; };
-  rd.readAsText(f);
+function qcLoadState(){
+  try{ return JSON.parse(localStorage.getItem(QC_KEY)||"{}"); }catch(e){ return {}; }
 }
-fbRender();
+function qcSaveState(st){ try{ localStorage.setItem(QC_KEY, JSON.stringify(st)); }catch(e){} }
+function qcRender(){
+  const body=document.getElementById("qc-body");
+  if(!body) return;
+  const groups=qcCollect();
+  if(!groups.length){ body.innerHTML='<div class="qcalc-empty">이 페이지에서 인식 가능한 쿼터 표가 없습니다.</div>'; return; }
+  const state=qcLoadState();
+  let html="";
+  groups.forEach(g=>{
+    html+='<div class="qc-group"><h5>'+esc(g.label)+'</h5><table class="qc-table"><thead><tr><th style="width:34%">세부종목/구분</th><th class="num" style="width:15%">배정 인원</th><th class="num" style="width:15%">확보(입력)</th><th class="num" style="width:15%">잔여</th><th>비고</th></tr></thead><tbody>';
+    g.items.forEach((it,i)=>{
+      const key=g.id+"_"+i;
+      const got=state[key]&&state[key].got!=null?state[key].got:"";
+      const note=state[key]&&state[key].note?state[key].note:"";
+      html+='<tr data-key="'+key+'" data-cap="'+it.cap+'"><td>'+esc(it.label)+'</td><td class="num">'+it.cap+'</td>'+
+        '<td class="num"><input type="number" min="0" max="'+it.cap+'" class="qc-got" value="'+got+'" placeholder="0"></td>'+
+        '<td class="num qc-left-cell">–</td>'+
+        '<td><input type="text" class="qc-note" value="'+esc(note)+'" placeholder="메모"></td></tr>';
+    });
+    html+='</tbody></table></div>';
+  });
+  html+='<div class="qc-summary" id="qc-summary"></div>'+
+    '<div class="qcalc-actions"><button class="fb-btn ghost" onclick="qcReset()">전체 초기화</button></div>';
+  body.innerHTML=html;
+  body.querySelectorAll(".qc-got,.qc-note").forEach(inp=>{
+    inp.addEventListener("input", qcOnInput);
+  });
+  qcRecalc();
+  const upd=document.getElementById("qc-updated");
+  if(upd) upd.textContent="표 "+groups.length+"개 인식됨";
+}
+function qcOnInput(){
+  const tr=this.closest("tr"); if(!tr) return;
+  const key=tr.dataset.key;
+  const state=qcLoadState();
+  const gotInput=tr.querySelector(".qc-got"), noteInput=tr.querySelector(".qc-note");
+  state[key]={ got: gotInput.value===""?null:parseInt(gotInput.value,10)||0, note: noteInput.value };
+  qcSaveState(state);
+  qcRecalc();
+}
+function qcRecalc(){
+  const body=document.getElementById("qc-body"); if(!body) return;
+  let totalCap=0, totalGot=0;
+  body.querySelectorAll("table.qc-table tr[data-key]").forEach(tr=>{
+    const cap=parseInt(tr.dataset.cap,10)||0;
+    const gotInput=tr.querySelector(".qc-got");
+    const got=gotInput.value===""?0:(parseInt(gotInput.value,10)||0);
+    const left=cap-got;
+    const cell=tr.querySelector(".qc-left-cell");
+    cell.textContent=left;
+    cell.className="num qc-left-cell "+(left<0?"qc-left over":left===0?"qc-left ok":"qc-left");
+    totalCap+=cap; totalGot+=got;
+  });
+  const sum=document.getElementById("qc-summary");
+  if(sum){
+    const left=totalCap-totalGot;
+    sum.innerHTML="전체 배정: <b>"+totalCap+"</b> · 확보 입력 합계: <b>"+totalGot+"</b> · 잔여: <b class=\""+(left<0?'qc-left over':'qc-left ok')+"\">"+left+"</b>";
+  }
+}
+window.qcReset=function(){
+  if(!confirm("쿼터 계산기 입력값을 모두 지울까요?"))return;
+  try{ localStorage.removeItem(QC_KEY); }catch(e){}
+  qcRender();
+}
+window.qcInit=function(){ qcRender(); }
+qcInit();
+})();
 </script>
 </body>
 </html>

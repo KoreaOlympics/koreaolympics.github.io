@@ -7,731 +7,311 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 <style>
   :root{
     --bg:#ffffff; --panel:#f8f9fa; --border:#c8ccd1; --border-soft:#eaecf0;
     --ink:#202122; --muted:#54595d; --link:#3366cc; --link-visited:#795cb2; --link-red:#ba0000;
     --serif:'Noto Serif KR',Georgia,'Times New Roman',serif;
     --sans:'Pretendard','Helvetica Neue',Arial,sans-serif;
+    --accent:#2456c6; --ok:#1a7f37; --warn:#b45309; --live:#c2410c;
   }
-
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--ink);
-    font-family:var(--sans);
-    font-size:15px;
-    line-height:1.65;
-  }
-
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.65;}
   a{color:var(--link);text-decoration:none;}
   a:hover{text-decoration:underline;}
   a:visited{color:var(--link-visited);}
-  a.new{color:var(--link-red);}
-
-  .topbar{
-    border-bottom:1px solid var(--border);
-    background:var(--panel);
-    font-size:12.5px;
-    color:var(--muted);
-  }
-
-  .topbar .inner{
-    max-width:1100px;
-    margin:0 auto;
-    padding:8px 20px;
-    display:flex;
-    gap:16px;
-    flex-wrap:wrap;
-  }
-
+  .topbar{border-bottom:1px solid var(--border);background:var(--panel);font-size:12.5px;color:var(--muted);}
+  .topbar .inner{max-width:1100px;margin:0 auto;padding:8px 20px;display:flex;gap:16px;flex-wrap:wrap;}
   .topbar a{color:var(--link);}
-
-  .layout{
-    max-width:1100px;
-    margin:0 auto;
-    padding:22px 20px 80px;
-  }
-
-  h1.title{
-    font-family:var(--serif);
-    font-weight:400;
-    font-size:30px;
-    line-height:1.3;
-    margin:0 0 2px;
-    padding-bottom:6px;
-    border-bottom:1px solid var(--border);
-  }
-
-  h1.title .ic{font-family:var(--sans);}
-
-  .subtitle{
-    color:var(--muted);
-    font-size:13px;
-    margin:0 0 18px;
-  }
-
-  .hatnote{
-    font-style:italic;
-    color:var(--muted);
-    background:var(--panel);
-    border:1px solid var(--border-soft);
-    padding:8px 14px;
-    border-radius:2px;
-    margin:0 0 20px;
-    font-size:13.5px;
-  }
-
-  .content{
-    display:flex;
-    gap:28px;
-    align-items:flex-start;
-    flex-wrap:wrap;
-  }
-
-  .main{
-    flex:1 1 560px;
-    min-width:0;
-  }
-
-  h2{
-    font-family:var(--serif);
-    font-weight:600;
-    font-size:22px;
-    margin:26px 0 10px;
-    padding-bottom:5px;
-    border-bottom:1px solid var(--border-soft);
-  }
-
-  h3{
-    font-family:var(--serif);
-    font-weight:600;
-    font-size:17px;
-    margin:20px 0 8px;
-  }
-
-  h4{
-    font-family:var(--sans);
-    font-weight:700;
-    font-size:14.5px;
-    margin:16px 0 6px;
-    color:#3a3f44;
-  }
-
+  .layout{max-width:1100px;margin:0 auto;padding:22px 20px 80px;}
+  h1.title{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.3;margin:0 0 2px;padding-bottom:6px;border-bottom:1px solid var(--border);}
+  .subtitle{color:var(--muted);font-size:13px;margin:0 0 18px;}
+  .hatnote{font-style:italic;color:var(--muted);background:var(--panel);border:1px solid var(--border-soft);padding:8px 14px;border-radius:2px;margin:0 0 20px;font-size:13.5px;}
+  .content{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;}
+  .main{flex:1 1 560px;min-width:0;}
+  h2{font-family:var(--serif);font-weight:600;font-size:22px;margin:26px 0 10px;padding-bottom:5px;border-bottom:1px solid var(--border-soft);scroll-margin-top:12px;}
+  h3{font-family:var(--serif);font-weight:600;font-size:17px;margin:20px 0 8px;}
+  h4{font-family:var(--sans);font-weight:700;font-size:14.5px;margin:16px 0 6px;color:#3a3f44;}
   p{margin:0 0 12px;}
-
-  .toc{
-    display:inline-block;
-    background:var(--panel);
-    border:1px solid var(--border);
-    border-radius:2px;
-    padding:12px 20px 12px 14px;
-    margin:0 0 20px;
-    font-size:14px;
-  }
-
-  .toc-title{
-    font-weight:700;
-    text-align:center;
-    font-size:13px;
-    margin-bottom:6px;
-  }
-
-  .toc ol{
-    margin:0;
-    padding-left:22px;
-  }
-
+  .toc{display:inline-block;background:var(--panel);border:1px solid var(--border);border-radius:2px;padding:12px 20px 12px 14px;margin:0 0 20px;font-size:14px;}
+  .toc-title{font-weight:700;text-align:center;font-size:13px;margin-bottom:6px;}
+  .toc ol{margin:0;padding-left:22px;}
   .toc li{margin:3px 0;}
-
-  .infobox{
-    flex:0 0 300px;
-    background:var(--panel);
-    border:1px solid var(--border);
-    border-radius:2px;
-    font-size:13px;
-    align-self:flex-start;
-  }
-
-  .infobox .ib-title{
-    background:#eaecf0;
-    font-family:var(--serif);
-    font-weight:700;
-    text-align:center;
-    padding:10px 12px;
-    font-size:15px;
-    border-bottom:1px solid var(--border);
-  }
-
-  .infobox .ib-ic{
-    font-size:30px;
-    text-align:center;
-    padding:10px 0 4px;
-  }
-
-  .infobox table{
-    width:100%;
-    border-collapse:collapse;
-  }
-
-  .infobox th,
-  .infobox td{
-    text-align:left;
-    padding:7px 12px;
-    vertical-align:top;
-    border-bottom:1px solid var(--border-soft);
-  }
-
-  .infobox th{
-    width:38%;
-    color:var(--muted);
-    font-weight:600;
-  }
-
-  .badge{
-    display:inline-block;
-    font-size:11px;
-    padding:1px 7px;
-    border-radius:2px;
-    background:#e6f0ff;
-    color:#2456c6;
-    border:1px solid #b9d0f5;
-    margin-left:6px;
-  }
-
-  .badge.asiad{
-    background:#fff2e0;
-    color:#a05a00;
-    border-color:#f2d2a0;
-  }
-
-  .badge.green{
-    background:#e7f6ec;
-    color:#1f7a44;
-    border-color:#b6e2c6;
-  }
-
-  .badge.red{
-    background:#fde8e8;
-    color:#b02a2a;
-    border-color:#f3c0c0;
-  }
-
-  table.wt{
-    border-collapse:collapse;
-    width:100%;
-    font-size:13.5px;
-    margin:6px 0 16px;
-  }
-
-  table.wt th,
-  table.wt td{
-    border:1px solid var(--border);
-    padding:6px 10px;
-    text-align:left;
-  }
-
+  .infobox{flex:0 0 300px;background:var(--panel);border:1px solid var(--border);border-radius:2px;font-size:13px;align-self:flex-start;}
+  .infobox .ib-title{background:#eaecf0;font-family:var(--serif);font-weight:700;text-align:center;padding:10px 12px;font-size:15px;border-bottom:1px solid var(--border);}
+  .infobox table{width:100%;border-collapse:collapse;}
+  .infobox th,.infobox td{text-align:left;padding:7px 12px;vertical-align:top;border-bottom:1px solid var(--border-soft);}
+  .infobox th{width:40%;color:var(--muted);font-weight:600;}
+  .badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:2px;background:#e6f0ff;color:#2456c6;border:1px solid #b9d0f5;margin-left:6px;}
+  .badge.asiad{background:#fff2e0;color:#a05a00;border-color:#f2d2a0;}
+  .badge.new{background:#eaf1ff;color:#2456c6;border-color:#c3d6f7;}
+  .badge.ok{background:#e6f4ea;color:#1a7f37;border-color:#b7e0c2;}
+  table.wt{border-collapse:collapse;width:100%;font-size:13.5px;margin:6px 0 16px;}
+  table.wt th,table.wt td{border:1px solid var(--border);padding:6px 10px;text-align:left;vertical-align:top;}
   table.wt th{background:var(--panel);}
-  table.wt td.num,
-  table.wt th.num{text-align:center;}
-
-  .note{
-    font-size:12.5px;
-    color:var(--muted);
-    margin:-8px 0 16px;
-  }
-
-  .asiad-box{
-    background:#fff8ee;
-    border:1px solid #f2d2a0;
-    border-radius:3px;
-    padding:14px 16px;
-    margin:10px 0 18px;
-  }
-
-  .asiad-box.link{
-    background:#eef8f1;
-    border-color:#b6e2c6;
-  }
-
-  .asiad-box h4{
-    margin-top:0;
-    color:#a05a00;
-  }
-
-  .asiad-box.link h4{color:#1f7a44;}
-
-  .format-box{
-    background:#f8f9fa;
-    border:1px solid var(--border);
-    border-radius:3px;
-    padding:14px 16px;
-    margin:10px 0 18px;
-  }
-
-  .format-box h4{
-    margin-top:0;
-  }
-
-  .footer{
-    margin-top:36px;
-    padding-top:14px;
-    border-top:1px solid var(--border);
-    color:var(--muted);
-    font-size:12px;
-  }
-
-  @media (max-width:820px){
-    .infobox{
-      flex:1 1 100%;
-      order:-1;
-    }
-  }
+  table.wt td.num, table.wt th.num{text-align:center;}
+  table.wt caption{font-size:12.5px;color:var(--muted);text-align:left;padding:2px 0 6px;}
+  .note{font-size:12.5px;color:var(--muted);margin:-8px 0 16px;}
+  .kr-box{background:#eef4ff;border:1px solid #c3d6f7;border-radius:3px;padding:14px 16px;margin:10px 0 18px;}
+  .kr-box h4{margin-top:0;color:#1e3a8a;}
+  .asiad-box{background:#fff8ee;border:1px solid #f2d2a0;border-radius:3px;padding:12px 16px;margin:10px 0 18px;}
+  .asiad-box h4{margin-top:0;color:#a05a00;}
+  .y2026{background:#f0fbf3;border:1px solid #b7e0c2;border-radius:3px;padding:12px 16px;margin:10px 0 18px;}
+  .y2026 h4{margin-top:0;color:#1a7f37;}
+  .footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;}
+  .fb{border:1px solid var(--border);border-radius:8px;margin:14px 0 6px;overflow:hidden;}
+  .fb-head{background:#0d1117;color:#e6edf3;padding:11px 15px;font-weight:700;font-size:14.5px;display:flex;align-items:center;gap:9px;flex-wrap:wrap;}
+  .fb-head .live{width:8px;height:8px;border-radius:50%;background:#3fb950;box-shadow:0 0 7px #3fb950;}
+  .fb-head .sub{font-weight:500;font-size:11.5px;color:#8b949e;margin-left:auto;}
+  .fb-body{padding:14px 15px;background:var(--panel);}
+  .fb-form{display:grid;grid-template-columns:1.1fr 1.2fr 1fr .8fr;gap:8px;margin-bottom:10px;}
+  .fb-form input,.fb-form select,.fb-form textarea{font-family:var(--sans);font-size:13px;padding:7px 9px;border:1px solid var(--border);border-radius:5px;background:#fff;width:100%;}
+  .fb-form textarea{grid-column:1/-1;resize:vertical;min-height:38px;}
+  .fb-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px;}
+  .fb-btn{appearance:none;border:1px solid var(--border);background:#fff;font-family:var(--sans);font-size:13px;font-weight:600;color:var(--ink);padding:7px 14px;border-radius:6px;cursor:pointer;}
+  .fb-btn:hover{border-color:#9db4e0;}
+  .fb-btn.primary{background:var(--accent);color:#fff;border-color:var(--accent);}
+  .fb-btn.ghost{color:var(--muted);}
+  .fb-btn.danger{color:#b02a2a;}
+  .fb-table{width:100%;border-collapse:collapse;font-size:13px;background:#fff;}
+  .fb-table th,.fb-table td{border:1px solid var(--border-soft);padding:6px 8px;text-align:left;vertical-align:top;}
+  .fb-table th{background:#eef0f2;font-size:12px;color:#3a3f44;}
+  .fb-empty{color:var(--muted);font-size:12.5px;padding:14px 4px;text-align:center;}
+  .st{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:10px;}
+  .st.confirmed{background:#e6f4ea;color:#1a7f37;border:1px solid #b7e0c2;}
+  .st.live{background:#fde8e8;color:#c2410c;border:1px solid #f3c0c0;}
+  .st.pending{background:#eef0f2;color:#5b6168;border:1px solid #d5d9de;}
+  .st.failed{background:#f3e8ff;color:#6b21a8;border:1px solid #e2c9f5;}
+  .fb-note{font-size:11.5px;color:var(--muted);margin:9px 2px 0;}
+  .rowdel{cursor:pointer;color:#b02a2a;font-weight:700;border:none;background:none;font-size:14px;}
+  @media (max-width:820px){.infobox{flex:1 1 100%;order:-1;}.fb-form{grid-template-columns:1fr 1fr;}}
+  @media (max-width:520px){.fb-form{grid-template-columns:1fr;}}
 </style>
 </head>
-
 <body>
+<div class="topbar"><div class="inner">
+  <a href="olfencing.html">← 펜싱</a>
+  <span>문서 · 플래그풋볼</span>
+  <a href="olhockey.html">필드하키 →</a>
+</div></div>
+<div class="layout">
+  <h1 class="title">플래그풋볼 (Flag Football) <span class="badge new">LA28 신설 종목</span></h1>
+  <p class="subtitle">국제아메리칸풋볼연맹(International Federation of American Football, IFAF) · 남자부·여자부 각 6팀 토너먼트 · LA28 예선 시스템</p>
+  <p class="hatnote">플래그풋볼은 LA28에서 처음 채택된 <b>신설 종목</b>으로, 남자부·여자부 각 6개 팀(팀당 10명, <b>총 120명·12개 팀</b>)이 출전한다. 2026년 IFAF 세계선수권대회 성적과 2028년 올림픽 Q-시리즈, 개최국(미국) 쿼터의 3가지 경로로 출전권이 배정되며, 아시안게임과는 연계되지 않는다.</p>
+  <div class="content">
+    <div class="main">
+<div class="toc">
+        <div class="toc-title">목차</div>
+        <ol>
+          <li><a href="#overview">체급/이벤트 및 출전권</a></li>
+          <li><a href="#pathway">예선 경로</a></li>
+          <li><a href="#other">개최국·유니버설리티</a></li>
+          <li><a href="#eligibility">참가 자격</a></li>
+          <li><a href="#timeline">예선 일정 · 2026년</a></li>
+        </ol>
+      </div>
 
-<div class="topbar">
-  <div class="inner">
-    <a href="index1.html">← 올림픽예선 목차</a>
-    <span>문서 · 플래그풋볼</span>
-    <a href="olbaseball.html">야구·소프트볼 →</a>
+      <h2 id="calc">🧮 쿼터 계산기</h2>
+      <p class="note">아래 계산기는 위 표의 <b>배정 인원(합계)</b>을 자동으로 읽어와 세부종목별로 채워집니다. "확보" 칸에 확보(예상) 인원을 입력하면 잔여 쿼터가 자동 계산되며, 입력값은 이 브라우저에 저장됩니다.</p>
+      <div class="qcalc" id="qcalc">
+        <div class="qcalc-head"><span class="em">🧮</span> 쿼터 계산기 <span class="sub" id="qc-updated"></span></div>
+        <div class="qcalc-body" id="qc-body">
+          <div class="qcalc-empty">표를 불러오는 중…</div>
+        </div>
+      </div>
+
+      <h2 id="overview">체급/이벤트 및 출전권</h2>
+      <p>남자부·여자부 각각 6개 팀이 참가하는 토너먼트로 진행되며, 팀당 10명(엔트리 기준) 규모다.</p>
+      <table class="wt">
+        <tr><th>구분</th><th>이벤트 방식</th><th class="num">정량 쿼터</th><th class="num">개최국 쿼터</th><th class="num">합계</th></tr>
+        <tr><td>남자</td><td>6팀 토너먼트</td><td class="num">50 (5팀)</td><td class="num">10 (1팀)</td><td class="num">60 (6팀)</td></tr>
+        <tr><td>여자</td><td>6팀 토너먼트</td><td class="num">50 (5팀)</td><td class="num">10 (1팀)</td><td class="num">60 (6팀)</td></tr>
+        <tr><td><b>총계</b></td><td>12팀 토너먼트</td><td class="num">100 (10팀)</td><td class="num">20 (2팀)</td><td class="num"><b>120 (12팀)</b></td></tr>
+      </table>
+      <p class="note">쿼터는 선수 개인이 아닌 <b>NOC(팀) 단위</b>로 배정된다. NOC당 최대 남자 1팀(10명)·여자 1팀(10명), 합계 2팀(20명)까지 획득할 수 있다.</p>
+
+      <h2 id="pathway">예선 경로</h2>
+      <p>예선 경로는 우선순위 순서대로 적용되며, 이미 출전권을 확보한 NOC는 이후 경로(올림픽 Q-시리즈)에 다시 참가할 수 없다.</p>
+      <table class="wt">
+        <tr><th>단계</th><th>경로</th><th class="num">배정(남+여)</th><th>선발 방식</th></tr>
+        <tr><td>D.1</td><td>개최국(미국) 쿼터</td><td class="num">20 (2팀)</td><td>남녀 각 1팀 보장. 2026 IFAF 세계선수권 및 2027 대륙선수권 지속 참가와 IFAF 규정 준수를 조건으로 함</td></tr>
+        <tr><td>D.2</td><td>2026 IFAF 세계선수권대회 (독일 뒤셀도르프, 2026.8.13~16)</td><td class="num">40 (4팀)</td><td>남녀 각 16팀 출전, 성별별 최상위 2개 팀이 자국 NOC 출전권 획득</td></tr>
+        <tr><td>D.3</td><td>올림픽 Q-시리즈 (캐나다 몬트리올·미국 올랜도, 2028.6)</td><td class="num">60 (6팀)</td><td>성별별 최상위 3개 팀이 출전권 획득(최소 2개 대륙 대표 포함)</td></tr>
+      </table>
+      <h4>올림픽 Q-시리즈 대륙별 배정 (10팀, 남녀 통합 대회)</h4>
+      <table class="wt">
+        <tr><th>대륙(2027 IFAF 대륙선수권)</th><th class="num">배정 팀 수</th></tr>
+        <tr><td>아메리카</td><td class="num">2</td></tr>
+        <tr><td>아프리카</td><td class="num">2</td></tr>
+        <tr><td>아시아</td><td class="num">2</td></tr>
+        <tr><td>오세아니아</td><td class="num">2</td></tr>
+        <tr><td>유럽</td><td class="num">2</td></tr>
+      </table>
+      <p class="note">이미 LA28 출전권을 확보한 NOC의 팀은 올림픽 Q-시리즈에 참가할 수 없다. 특정 국가대표팀이 참가를 포기하면 해당 대륙선수권의 차순위 팀이 초청된다.</p>
+
+      <h2 id="other">개최국·유니버설리티</h2>
+      <p>개최국(미국)은 남자·여자 각 1개 팀(각 10명, 합계 20명)의 출전권을 보장받는다. 다만 이 보장은 <b>2026 IFAF 세계선수권대회 및 2027 대륙선수권대회에 지속적으로 참가</b>하고 IFAF 규정·규칙을 계속 준수하는 것을 조건으로 한다. 개최국이 쿼터 사용을 원하지 않을 경우, 해당 쿼터는 2026 IFAF 세계선수권대회의 차순위 팀에게 재배정된다. 플래그풋볼에는 별도의 유니버설리티 쿼터가 없다.</p>
+
+      <h2 id="eligibility">참가 자격</h2>
+      <p>모든 선수는 현행 올림픽 헌장, 특히 <b>규칙 41(국적)</b>, <b>규칙 43(세계반도핑규약 및 대회조작방지 올림픽운동강령)</b>과 IOC의 여성 카테고리 보호 정책을 준수해야 한다. 나이 요건으로는 <b>2028년 12월 31일 기준 만 18세 이상</b>이어야 하며, 등록(공인) 시 사용된 여권으로 연령을 검증받는다. 예선 과정에 참가하려면 IFAF의 핵심 참가자격 요건(연령 범위, 트랜스젠더 정책, 국적 요건 등)도 함께 충족해야 한다.</p>
+
+      <h2 id="timeline">예선 일정 · 2026년</h2>
+      <div class="y2026">
+        <h4>2026년 진행 사항</h4>
+        <p>이 종목의 2026년 활동은 <b>2026 IFAF 세계선수권대회(독일 뒤셀도르프, 8월 13~16일)</b>가 핵심이다. 이 대회에서 남녀 각 성별 상위 2개 팀이 LA28 출전권을 확보하며, 개최국(미국)은 대회 종료 직후인 8월 17일까지 개최국 쿼터 사용 여부를 IFAF에 서면으로 확정해야 한다. 이후 IFAF는 8월 19일까지 확보된 출전권을 NOC에 서면 통보하고, NOC는 9월 2일까지 사용 여부를 IFAF에 회신해야 한다.</p>
+      </div>
+      <table class="wt">
+        <tr><th>시기</th><th>일정</th></tr>
+        <tr><td>2026.08.13~16</td><td>2026 IFAF 세계선수권대회(남자·여자), 독일 뒤셀도르프</td></tr>
+        <tr><td>2026.08.17</td><td>개최국 NOC, 남녀 개최국 쿼터 사용 확정 통보</td></tr>
+        <tr><td>2026.08.19까지</td><td>IFAF, 확보된 출전권을 NOC에 서면 통보</td></tr>
+        <tr><td>2026.09.02까지</td><td>NOC, 배정 출전권 사용 여부를 IFAF에 서면 확인</td></tr>
+        <tr><td>2027년 봄~여름(예정)</td><td>2027 IFAF 대륙선수권(아메리카·유럽·아프리카·아시아&amp;오세아니아, 남녀)</td></tr>
+        <tr><td>2028.06.01~04</td><td>올림픽 Q-시리즈, 캐나다 몬트리올</td></tr>
+        <tr><td>2028.06.08~11</td><td>올림픽 Q-시리즈, 미국 올랜도</td></tr>
+        <tr><td>2028.06.26</td><td>LA28 올림픽 종목별 출전 신청 마감</td></tr>
+        <tr><td>2028.07.14~30</td><td>LA28 올림픽</td></tr>
+      </table>
+
+      <p class="note">2026 아시안게임(아이치·나고야)과 플래그풋볼 LA28 출전권은 <b>연계되지 않는다.</b> 예선 경로에 등장하는 대륙선수권은 IFAF가 자체 주관하는 대회이며 아시안게임과는 무관하다.</p>
+
+      <div class="footer">
+        출처: International Federation of American Football (IFAF) — LA28 Qualification System, Flag Football (2026.7.10 버전).<br>
+        본 페이지는 원문서를 요약한 것이며, 정확한 규정은 IFAF 원문을 따른다.
+      </div>
+    </div>
+    <aside class="infobox">
+      <div class="ib-title">플래그풋볼 LA28 예선</div>
+      <table>
+        <tr><th>주관</th><td>International Federation of American Football (IFAF)</td></tr>
+        <tr><th>세부종목</th><td>남자 6팀 · 여자 6팀 토너먼트</td></tr>
+        <tr><th>총 출전권</th><td>120명 (12팀)</td></tr>
+        <tr><th>NOC 상한</th><td>남 1팀(10명) · 여 1팀(10명)</td></tr>
+        <tr><th>예선 개시</th><td>2026년 8월 (IFAF 세계선수권)</td></tr>
+        <tr><th>신설 종목</th><td><span class="badge new">LA28 신설</span></td></tr>
+        <tr><th>아시안게임 연계</th><td>없음</td></tr>
+        <tr><th>관련 문서</th><td><a href="index1.html">올림픽예선 목차</a></td></tr>
+      </table>
+    </aside>
   </div>
 </div>
 
-<div class="layout">
-
-<h1 class="title"><span class="ic">🏈</span> 플래그풋볼 (Flag Football)</h1>
-
-<p class="subtitle">
-국제미식축구연맹(IFAF) · 남자·여자 5대5 · LA28 올림픽 신규 종목
-</p>
-
-<p class="hatnote">
-플래그풋볼은 LA28에서 처음 정식 올림픽 종목으로 채택된다.
-남자와 여자 각각 1개 세부종목으로 구성되며, 총 <b>12개 팀</b>(남자 6팀·여자 6팀)이 참가한다.
-예선은 개최국 미국의 자동 출전과 3개의 예선 대회를 통해 결정된다.
-</p>
-
-<div class="content">
-
-<div class="main">
-
-<div class="toc">
-  <div class="toc-title">목차</div>
-  <ol>
-    <li><a href="#overview">올림픽 채택과 경기 방식</a></li>
-    <li><a href="#qualification">출전권</a></li>
-    <li><a href="#pathway">예선 경로</a></li>
-    <li><a href="#schedule">LA28 경기 일정·장소</a></li>
-    <li><a href="#relation">아시안게임·2026년도 예선과의 연관성</a></li>
-  </ol>
-</div>
-
-
-<h2 id="overview">올림픽 채택과 경기 방식</h2>
-
-<p>
-플래그풋볼은 2023년 10월 LA28 개최국 제안 종목으로 선정된 뒤
-국제올림픽위원회(IOC)의 승인을 거쳐 2028년 하계올림픽 정식 종목으로 데뷔한다.
-크리켓, 스쿼시, 야구·소프트볼, 라크로스와 함께 LA28 프로그램에 추가된 5개 종목 가운데 하나다.
-</p>
-
-<p>
-IOC 총회에서는 압도적인 찬성으로 채택이 결정되었으며,
-승인된 올림픽 플래그풋볼은 <b>남자부 1개, 여자부 1개</b>의 총 2개 세부종목으로 구성된다.
-</p>
-
-<div class="format-box">
-
-<h4>LA28 플래그풋볼 경기 방식</h4>
-
-<table class="wt">
-  <tr>
-    <th>항목</th>
-    <th>내용</th>
-  </tr>
-  <tr>
-    <td>세부종목</td>
-    <td>남자 1개 · 여자 1개</td>
-  </tr>
-  <tr>
-    <td>경기 인원</td>
-    <td><b>5대5</b></td>
-  </tr>
-  <tr>
-    <td>경기장</td>
-    <td>50야드 필드</td>
-  </tr>
-  <tr>
-    <td>특징</td>
-    <td>라인맨 없이 진행되는 플래그풋볼 방식</td>
-  </tr>
-</table>
-
-</div>
-
-
-<h2 id="qualification">출전권</h2>
-
-<table class="wt">
-  <tr>
-    <th>구분</th>
-    <th class="num">개최국</th>
-    <th class="num">예선</th>
-    <th class="num">총 팀</th>
-  </tr>
-  <tr>
-    <td>남자</td>
-    <td class="num">1</td>
-    <td class="num">5</td>
-    <td class="num"><b>6</b></td>
-  </tr>
-  <tr>
-    <td>여자</td>
-    <td class="num">1</td>
-    <td class="num">5</td>
-    <td class="num"><b>6</b></td>
-  </tr>
-</table>
-
-<p class="note">
-총 12개 팀(남자 6팀·여자 6팀)이 참가한다.
-개최국 미국은 남녀 모두 자동 출전권을 확보하며, 나머지 10개 팀은 3개의 예선 대회를 통해 결정된다.
-</p>
-
-
-<h2 id="pathway">예선 경로</h2>
-
-<h3>남자 예선</h3>
-
-<table class="wt">
-  <tr>
-    <th>자격 수단</th>
-    <th>날짜</th>
-    <th>장소</th>
-    <th class="num">선석(팀)</th>
-    <th>자격 있는</th>
-  </tr>
-
-  <tr>
-    <td>개최국</td>
-    <td class="num">—</td>
-    <td class="num">—</td>
-    <td class="num">1</td>
-    <td>🇺🇸 미국</td>
-  </tr>
-
-  <tr>
-    <td>
-      <a href="https://en.wikipedia.org/wiki/2026_IFAF_Flag_Football_World_Championship">
-        2026 IFAF 남자 플래그 풋볼 세계 선수권 대회
-      </a>
-    </td>
-    <td>2026년 8월 13일~16일</td>
-    <td>🇩🇪 뒤셀도르프</td>
-    <td class="num">2</td>
-    <td>—</td>
-  </tr>
-
-  <tr>
-    <td><a href="#qseries">2028년 올림픽 예선 시리즈 – 몬트리올</a></td>
-    <td>2028년 6월 1일~4일</td>
-    <td>🇨🇦 몬트리올</td>
-    <td class="num">2</td>
-    <td>—</td>
-  </tr>
-
-  <tr>
-    <td><a href="#qseries">2028년 올림픽 예선 시리즈 – 올랜도</a></td>
-    <td>2028년 6월 8일~11일</td>
-    <td>🇺🇸 올랜도</td>
-    <td class="num">1</td>
-    <td>—</td>
-  </tr>
-
-  <tr>
-    <th>총</th>
-    <th></th>
-    <th></th>
-    <th class="num">6</th>
-    <th></th>
-  </tr>
-</table>
-
-
-<h3>여자 예선</h3>
-
-<table class="wt">
-  <tr>
-    <th>자격 수단</th>
-    <th>날짜</th>
-    <th>장소</th>
-    <th class="num">선석(팀)</th>
-    <th>자격 있는</th>
-  </tr>
-
-  <tr>
-    <td>개최국</td>
-    <td class="num">—</td>
-    <td class="num">—</td>
-    <td class="num">1</td>
-    <td>🇺🇸 미국</td>
-  </tr>
-
-  <tr>
-    <td>2026 IFAF 여자 플래그 풋볼 세계 선수권 대회</td>
-    <td>2026년 8월 13일~16일</td>
-    <td>🇩🇪 뒤셀도르프</td>
-    <td class="num">2</td>
-    <td>—</td>
-  </tr>
-
-  <tr>
-    <td><a href="#qseries">2028년 올림픽 예선 시리즈 – 몬트리올</a></td>
-    <td>2028년 6월 1일~4일</td>
-    <td>🇨🇦 몬트리올</td>
-    <td class="num">2</td>
-    <td>—</td>
-  </tr>
-
-  <tr>
-    <td><a href="#qseries">2028년 올림픽 예선 시리즈 – 올랜도</a></td>
-    <td>2028년 6월 8일~11일</td>
-    <td>🇺🇸 올랜도</td>
-    <td class="num">1</td>
-    <td>—</td>
-  </tr>
-
-  <tr>
-    <th>총</th>
-    <th></th>
-    <th></th>
-    <th class="num">6</th>
-    <th></th>
-  </tr>
-</table>
-
-<p class="note">
-남녀 모두 개최국 1팀, 2026 세계선수권 2팀, 2028 올림픽 예선 시리즈에서 3팀이 결정되어 각각 6팀이 구성된다.
-</p>
-
-
-<h3 id="qseries">올림픽 예선 시리즈</h3>
-
-<p>
-개최국 미국과 2026 세계선수권을 통해 출전권을 확보한 팀을 제외한 팀들은
-2028년 올림픽 예선 시리즈를 통해 마지막 출전권을 놓고 경쟁한다.
-예선 시리즈는 <b>몬트리올과 올랜도</b>에서 두 차례 개최되며,
-각 대회에서 남녀별 출전권이 배분된다.
-</p>
-
-<table class="wt">
-  <tr>
-    <th>대회</th>
-    <th>일정</th>
-    <th>남자</th>
-    <th>여자</th>
-  </tr>
-  <tr>
-    <td>올림픽 예선 시리즈 – 몬트리올</td>
-    <td>2028.6.1~4</td>
-    <td class="num">2팀</td>
-    <td class="num">2팀</td>
-  </tr>
-  <tr>
-    <td>올림픽 예선 시리즈 – 올랜도</td>
-    <td>2028.6.8~11</td>
-    <td class="num">1팀</td>
-    <td class="num">1팀</td>
-  </tr>
-</table>
-
-<p>
-이에 따라 세계선수권과 두 차례 올림픽 예선 시리즈를 합쳐
-남녀 각각 5개의 비개최국 출전권이 결정된다.
-이미 출전권을 확보한 팀은 중복 출전을 방지하기 위해 후속 예선에서 제외된다.
-</p>
-
-
-<h2 id="schedule">LA28 경기 일정·장소</h2>
-
-<p>
-LA28 플래그풋볼 경기는 <b>2028년 7월 15일부터 22일까지</b>
-미국 로스앤젤레스에서 개최될 예정이다.
-경기장은 <b>엑스포지션 파크 스타디움(BMO Stadium)</b>이다.
-</p>
-
-<table class="wt">
-  <tr>
-    <th>항목</th>
-    <th>내용</th>
-  </tr>
-  <tr>
-    <td>대회</td>
-    <td>2028 로스앤젤레스 하계올림픽</td>
-  </tr>
-  <tr>
-    <td>기간</td>
-    <td><b>2028년 7월 15일~22일</b></td>
-  </tr>
-  <tr>
-    <td>개최지</td>
-    <td>미국 로스앤젤레스</td>
-  </tr>
-  <tr>
-    <td>경기장</td>
-    <td>BMO Stadium (엑스포지션 파크)</td>
-  </tr>
-  <tr>
-    <td>세부종목</td>
-    <td>남자 플래그풋볼 · 여자 플래그풋볼</td>
-  </tr>
-</table>
-
-
-<h2 id="relation">아시안게임·2026년도 예선과의 연관성</h2>
-
-<div class="asiad-box">
-
-<h4>아시안게임과 올림픽 예선은 별개</h4>
-
-<p>
-플래그풋볼의 LA28 출전권은 아시안게임 성적을 통해 직접 배분되지 않는다.
-따라서 아시안게임은 올림픽 예선 대회가 아니다.
-</p>
-
-<p>
-아시아 지역 선수와 국가대표팀에게는 별도의 대륙권 경쟁과 국제대회 성적이 중요하며,
-올림픽 예선 시스템은 세계선수권과 올림픽 예선 시리즈를 중심으로 구성된다.
-</p>
-
-</div>
-
-<div class="asiad-box link">
-
-<h4>2026년 세계선수권이 첫 번째 핵심 관문</h4>
-
-<p>
-플래그풋볼은 LA28 신규 종목이지만 올림픽 예선은 2026년부터 본격적으로 시작된다.
-<b>2026 IFAF 세계선수권</b>이 첫 번째 핵심 예선 대회이며,
-남녀 각각 상위 2개 팀이 LA28 출전권을 확보한다.
-</p>
-
-<p>
-세계선수권 이후 남은 출전권은 2028년 6월 몬트리올과 올랜도에서 열리는
-올림픽 예선 시리즈를 통해 결정된다.
-</p>
-
-<p>
-따라서 플래그풋볼은 2026년 세계선수권부터 2028년 올림픽 직전까지
-국제대회 성적이 직접적인 올림픽 출전권 경쟁으로 연결되는 구조다.
-</p>
-
-<p>
-<span class="badge asiad">아시안게임 비연계</span>
-<span class="badge green">2026.8 세계선수권</span>
-<span class="badge red">LA28 올림픽 데뷔</span>
-</p>
-
-</div>
-
-
-<div class="footer">
-출처: IFAF — LA28 Qualification System, Flag Football.<br>
-본 페이지는 LA28 플래그풋볼 종목의 올림픽 채택 배경, 경기 방식 및 예선 시스템을 요약한 것이다.
-정확한 출전 자격 및 최종 규정은 IFAF·IOC의 공식 원문을 따른다.
-</div>
-
-</div>
-
-
-<aside class="infobox">
-
-<div class="ib-ic">🏈</div>
-<div class="ib-title">플래그풋볼 LA28 예선</div>
-
-<table>
-  <tr>
-    <th>주관</th>
-    <td>IFAF</td>
-  </tr>
-
-  <tr>
-    <th>올림픽 데뷔</th>
-    <td>LA28</td>
-  </tr>
-
-  <tr>
-    <th>세부종목</th>
-    <td>남자·여자 각 1개</td>
-  </tr>
-
-  <tr>
-    <th>경기 방식</th>
-    <td>5대5</td>
-  </tr>
-
-  <tr>
-    <th>총 출전팀</th>
-    <td>12팀</td>
-  </tr>
-
-  <tr>
-    <th>남자</th>
-    <td>6팀</td>
-  </tr>
-
-  <tr>
-    <th>여자</th>
-    <td>6팀</td>
-  </tr>
-
-  <tr>
-    <th>개최국</th>
-    <td>미국 남녀 각 1팀</td>
-  </tr>
-
-  <tr>
-    <th>2026 예선</th>
-    <td>세계선수권<br>뒤셀도르프</td>
-  </tr>
-
-  <tr>
-    <th>2028 예선</th>
-    <td>몬트리올·올랜도</td>
-  </tr>
-
-  <tr>
-    <th>LA28 경기</th>
-    <td>2028.7.15~22</td>
-  </tr>
-
-  <tr>
-    <th>경기장</th>
-    <td>BMO Stadium</td>
-  </tr>
-
-  <tr>
-    <th>아시안게임 연계</th>
-    <td><span class="badge asiad">없음</span></td>
-  </tr>
-
-  <tr>
-    <th>관련 문서</th>
-    <td><a href="index1.html">올림픽예선 목차</a></td>
-  </tr>
-</table>
-
-</aside>
-
-</div>
-</div>
-
+<!-- 쿼터 계산기 엔진: 편집 도구와 별개로 항상 포함(게시용 페이지에도 유지) -->
+<script id="qcalc-engine">
+(function(){
+"use strict";
+const SLUG=(location.pathname.split('/').pop()||'page').replace('.html','');
+/* ══ 쿼터 계산기 (문서 내 모든 table.wt 중 마지막 헤더가 "합계"인 표를 자동 인식) ══ */
+const QC_KEY="la28_qc_"+SLUG+"_v1";
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function qcParseCap(text){
+  const m=String(text).match(/\d+/);
+  return m? parseInt(m[0],10) : 0;
+}
+function qcGroupLabel(table){
+  let el=table.previousElementSibling, hops=0;
+  while(el && hops<6){
+    if(/^H[234]$/.test(el.tagName)) return el.textContent.replace(/^\s*[🧮📌]\s*/,'').trim();
+    el=el.previousElementSibling; hops++;
+  }
+  return "종목";
+}
+function qcCollect(){
+  const tables=Array.from(document.querySelectorAll("#wiki-main table.wt, .main table.wt"));
+  const groups=[];
+  tables.forEach((t,ti)=>{
+    const headRow=t.querySelector("tr"); if(!headRow) return;
+    const ths=Array.from(headRow.querySelectorAll("th"));
+    if(!ths.length) return;
+    const lastTh=ths[ths.length-1].textContent.trim();
+    if(lastTh!=="합계") return;
+    const label=qcGroupLabel(t);
+    const rows=Array.from(t.querySelectorAll("tr")).slice(1);
+    const items=[];
+    rows.forEach(r=>{
+      const tds=Array.from(r.querySelectorAll("td")); if(!tds.length) return;
+      const firstText=tds[0].textContent.trim();
+      if(/^(총계|합계|총 ?계|총 ?인원|TOTAL)$/i.test(firstText.replace(/\s+/g,''))) return;
+      if(tds[0].querySelector("b") && tds.length<=2) return;
+      const cap=qcParseCap(tds[tds.length-1].textContent);
+      if(!firstText) return;
+      items.push({label:firstText, cap:cap});
+    });
+    if(items.length) groups.push({id:"g"+ti, label:label, items:items});
+  });
+  return groups;
+}
+function qcLoadState(){
+  try{ return JSON.parse(localStorage.getItem(QC_KEY)||"{}"); }catch(e){ return {}; }
+}
+function qcSaveState(st){ try{ localStorage.setItem(QC_KEY, JSON.stringify(st)); }catch(e){} }
+function qcRender(){
+  const body=document.getElementById("qc-body");
+  if(!body) return;
+  const groups=qcCollect();
+  if(!groups.length){ body.innerHTML='<div class="qcalc-empty">이 페이지에서 인식 가능한 쿼터 표가 없습니다.</div>'; return; }
+  const state=qcLoadState();
+  let html="";
+  groups.forEach(g=>{
+    html+='<div class="qc-group"><h5>'+esc(g.label)+'</h5><table class="qc-table"><thead><tr><th style="width:34%">세부종목/구분</th><th class="num" style="width:15%">배정 인원</th><th class="num" style="width:15%">확보(입력)</th><th class="num" style="width:15%">잔여</th><th>비고</th></tr></thead><tbody>';
+    g.items.forEach((it,i)=>{
+      const key=g.id+"_"+i;
+      const got=state[key]&&state[key].got!=null?state[key].got:"";
+      const note=state[key]&&state[key].note?state[key].note:"";
+      html+='<tr data-key="'+key+'" data-cap="'+it.cap+'"><td>'+esc(it.label)+'</td><td class="num">'+it.cap+'</td>'+
+        '<td class="num"><input type="number" min="0" max="'+it.cap+'" class="qc-got" value="'+got+'" placeholder="0"></td>'+
+        '<td class="num qc-left-cell">–</td>'+
+        '<td><input type="text" class="qc-note" value="'+esc(note)+'" placeholder="메모"></td></tr>';
+    });
+    html+='</tbody></table></div>';
+  });
+  html+='<div class="qc-summary" id="qc-summary"></div>'+
+    '<div class="qcalc-actions"><button class="fb-btn ghost" onclick="qcReset()">전체 초기화</button></div>';
+  body.innerHTML=html;
+  body.querySelectorAll(".qc-got,.qc-note").forEach(inp=>{
+    inp.addEventListener("input", qcOnInput);
+  });
+  qcRecalc();
+  const upd=document.getElementById("qc-updated");
+  if(upd) upd.textContent="표 "+groups.length+"개 인식됨";
+}
+function qcOnInput(){
+  const tr=this.closest("tr"); if(!tr) return;
+  const key=tr.dataset.key;
+  const state=qcLoadState();
+  const gotInput=tr.querySelector(".qc-got"), noteInput=tr.querySelector(".qc-note");
+  state[key]={ got: gotInput.value===""?null:parseInt(gotInput.value,10)||0, note: noteInput.value };
+  qcSaveState(state);
+  qcRecalc();
+}
+function qcRecalc(){
+  const body=document.getElementById("qc-body"); if(!body) return;
+  let totalCap=0, totalGot=0;
+  body.querySelectorAll("table.qc-table tr[data-key]").forEach(tr=>{
+    const cap=parseInt(tr.dataset.cap,10)||0;
+    const gotInput=tr.querySelector(".qc-got");
+    const got=gotInput.value===""?0:(parseInt(gotInput.value,10)||0);
+    const left=cap-got;
+    const cell=tr.querySelector(".qc-left-cell");
+    cell.textContent=left;
+    cell.className="num qc-left-cell "+(left<0?"qc-left over":left===0?"qc-left ok":"qc-left");
+    totalCap+=cap; totalGot+=got;
+  });
+  const sum=document.getElementById("qc-summary");
+  if(sum){
+    const left=totalCap-totalGot;
+    sum.innerHTML="전체 배정: <b>"+totalCap+"</b> · 확보 입력 합계: <b>"+totalGot+"</b> · 잔여: <b class=\""+(left<0?'qc-left over':'qc-left ok')+"\">"+left+"</b>";
+  }
+}
+window.qcReset=function(){
+  if(!confirm("쿼터 계산기 입력값을 모두 지울까요?"))return;
+  try{ localStorage.removeItem(QC_KEY); }catch(e){}
+  qcRender();
+}
+window.qcInit=function(){ qcRender(); }
+qcInit();
+})();
+</script>
 </body>
 </html>
