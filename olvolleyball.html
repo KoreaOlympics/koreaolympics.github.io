@@ -104,28 +104,17 @@
 <div class="toc">
         <div class="toc-title">목차</div>
         <ol>
-          <li><a href="#overview">세부종목 및 출전권</a></li>
-          <li><a href="#pathway">예선 경로</a></li>
-          <li><a href="#other">개최국·유니버설리티</a></li>
-          <li><a href="#eligibility">참가 자격</a></li>
-          <li><a href="#timeline">예선 일정 · 2026년</a></li>
-          <li><a href="#feedback">예선 결과 입력</a></li>
+          <li><a href="#system">예선 시스템</a></li>
+          <li><a href="#timeline">일정</a></li>
+          <li><a href="#summary">예선 결과 요약</a></li>
         </ol>
-      </div>
+      </div>                  <h2 id="system">예선 시스템</h2>
+      <p>배구는 <b>실내 배구</b>와 <b>비치발리볼</b> 두 종목으로 나뉘며 모두 FIVB가 주관한다. 실내 배구는 남녀 각 12팀(총 24팀·288명), 비치발리볼은 남녀 각 24팀(총 48팀·96명)이 출전한다. 두 종목 모두 <b>2026년 대륙 예선</b>에서 첫 출전권이 배정되기 시작하며, 이후 세계선수권·월드컵·랭킹·Q-시리즈 등으로 이어진다.</p>
 
-      <h2 id="calc">🧮 쿼터 계산기</h2>
-      <p class="note">아래 계산기는 위 표의 <b>배정 인원(합계)</b>을 자동으로 읽어와 세부종목별로 채워집니다. "확보" 칸에 확보(예상) 인원을 입력하면 잔여 쿼터가 자동 계산되며, 입력값은 이 브라우저에 저장됩니다.</p>
-      <div class="qcalc" id="qcalc">
-        <div class="qcalc-head"><span class="em">🧮</span> 쿼터 계산기 <span class="sub" id="qc-updated"></span></div>
-        <div class="qcalc-body" id="qc-body">
-          <div class="qcalc-empty">표를 불러오는 중…</div>
-        </div>
-      </div>
-
-      <h2 id="overview">세부종목 및 출전권</h2>
+      <h3 id="overview">세부종목 및 출전권</h3>
       <p>배구는 실내 배구와 비치발리볼 두 개의 디시플린으로 구성되며, 각각 남·여 토너먼트를 치른다. 출전권은 모두 NOC(국가올림픽위원회)에 배정된다.</p>
 
-      <h3>실내 배구 (Volleyball)</h3>
+      <h4>실내 배구 (Volleyball)</h4>
       <table class="wt">
         <caption>남·여 각 12팀 토너먼트 — 총 24팀(288명)</caption>
         <tr><th>구분</th><th>이벤트</th><th class="num">정량</th><th class="num">개최국</th><th class="num">합계</th></tr>
@@ -135,7 +124,7 @@
       </table>
       <p class="note">NOC당 최대 성별당 1팀(12명), 즉 남 1팀 + 여 1팀. 팀당 선수 12명. 유니버설리티 배정은 없다.</p>
 
-      <h3>비치발리볼 (Beach Volleyball)</h3>
+      <h4>비치발리볼 (Beach Volleyball)</h4>
       <table class="wt">
         <caption>남·여 각 24팀 토너먼트 — 총 48팀(96명)</caption>
         <tr><th>구분</th><th>이벤트</th><th class="num">정량</th><th class="num">개최국</th><th class="num">합계</th></tr>
@@ -145,10 +134,10 @@
       </table>
       <p class="note">NOC당 최대 성별당 2팀(4명), 즉 남 2팀 + 여 2팀(총 4팀·8명). 한 팀은 선수 2명. 유니버설리티 배정은 없다.</p>
 
-      <h2 id="pathway">예선 경로</h2>
+      <h3 id="pathway">예선 경로</h3>
       <p>각 선수는 소속 NOC를 위해 최대 1장의 출전권만 획득할 수 있다. 예선 이벤트는 시간 순서대로 진행된다.</p>
 
-      <h3>실내 배구 예선 경로</h3>
+      <h4>실내 배구 예선 경로</h4>
       <table class="wt">
         <caption>총 24장(남 12 + 여 12)</caption>
         <tr><th>단계</th><th>경로</th><th class="num">배정(남+여)</th><th>선발 방식</th></tr>
@@ -159,7 +148,7 @@
       </table>
       <p class="note">대륙선수권: 남·여 각 5개 대륙(아시아·아프리카·유럽·남미·NORCECA)에서 성별당 1팀. 미국은 NORCECA 대회에 참가하지만 이미 개최국 자격을 보유하므로, 미국 제외 상위 4팀이 준결승·결승을 치러 우승 팀이 LA28에 진출한다.</p>
 
-      <h3>비치발리볼 예선 경로</h3>
+      <h4>비치발리볼 예선 경로</h4>
       <table class="wt">
         <caption>총 48장(남 24 + 여 24)</caption>
         <tr><th>단계</th><th>경로</th><th class="num">배정(남+여)</th><th>선발 방식</th></tr>
@@ -171,47 +160,64 @@
       </table>
       <p class="note">대륙선수권 성별당 1팀이 배정되려면 AVC·CAVB·CEV·NORCECA는 성별당 16개국 이상, CSV는 7개국 이상이 참가해야 한다. Q-시리즈: 상하이(중국)·몬트리올(캐나다)·올랜도(미국) 3개 대회, 각 16팀 참가.</p>
 
-      <h2 id="other">개최국·유니버설리티</h2>
+      <h3 id="other">개최국·유니버설리티</h3>
       <p>개최국 미국은 실내 배구에서 남·여 각 1팀(총 2팀·24명), 비치발리볼에서 남·여 각 1팀(총 2팀·4명)을 자동 배정받는다. 비치발리볼의 경우 개최국은 모든 예선 이벤트에도 참가해 성별당 2번째 출전권을 추가로 획득할 권리가 있다. 두 종목 모두 <b>유니버설리티(3자위원회) 배정은 없다.</b> 개최국은 실내 배구 사용 여부를 2026년 9월 1일까지, 비치발리볼은 2026년 12월 31일까지 FIVB에 서면 확정해야 한다.</p>
 
-      <h2 id="eligibility">참가 자격</h2>
+      <h3 id="eligibility">참가 자격</h3>
       <p>모든 선수는 올림픽 헌장(국적 규정 제41조, 반도핑 규약 제43조 등), 여성 카테고리 보호 정책, 세계반도핑규약과 IOC 참가 조건, FIVB 규정을 준수해야 한다. 별도의 출생 연령 하한은 규정되어 있지 않다.</p>
       <p><b>실내 배구:</b> 반도핑 검사 기간은 <b>2026년 6월 26일~2028년 6월 26일</b>이며, FIVB 스포츠규정 제1~5조를 충족해야 한다.</p>
       <p><b>비치발리볼:</b> 반도핑 검사·자격 기간은 <b>2026년 8월 1일~2028년 6월 11일</b>이다. 경로별 최소 대회 참가 요건이 있어, 세계선수권·랭킹·Q-시리즈 경로는 8개 이상, 2026 대륙선수권·대륙투어 파이널·개최국 경로는 6개 이상의 지정 대회에 참가해야 한다. NOC는 2028년 6월 12일 기준 올림픽 랭킹 상위 12명 이내에서 선수를 선발한다.</p>
-      <p class="note"><b>아시안게임 비연계:</b> 실내·비치 모두 아시안게임 성적은 LA28 출전권과 직접 연결되지 않는다(비치발리볼의 종합·지역 대회 참가는 최소 대회 참가 요건 충족용으로만 인정될 수 있음).</p>
+      <p class="note"><b>아시안게임 비연계:</b> 실내·비치 모두 아시안게임 성적은 LA28 출전권과 직접 연결되지 않는다(비치발리볼의 종합·지역 대회 참가는 최소 대회 참가 요건 충족용으로만 인정될 수 있음). 2026 아이치·나고야 아시안게임 배구(실내·비치)의 실제 경기 일정·참가국·대한민국 대표 명단은 <a href="volleyball.html">배구 (2026 아시안게임)</a> 문서에 별도로 정리했다.</p>
 
-      <h2 id="timeline">예선 일정 · 2026년</h2>
+      <h2 id="timeline">일정</h2>
       <div class="y2026">
         <h4>2026년 진행 사항</h4>
-        <p>2026년에는 두 종목 모두 <b>대륙 예선에서 첫 출전권이 배정</b>된다. <b>실내 배구</b>는 2026년 8월 21일~9월 27일 5개 대륙선수권에서 성별당 대륙별 1팀이 직행하고, 개최국·해당 NOC의 사용 확정은 2026년 8월 1일 마감이다. <b>비치발리볼</b>은 2026년 8월 1일~11월 15일 대륙선수권·대륙투어 파이널에서 성별당 대륙별 우승 팀이 출전권을 얻으며, FIVB가 11월 23일까지 배정을 확정한다. 2026년은 예선 활동이 실제로 시작되는 해다.</p>
+        <p>2026년에는 두 종목 모두 <b>대륙 예선에서 첫 출전권이 배정</b>된다. <b>실내 배구</b>는 2026년 8월 21일~9월 27일 5개 대륙선수권에서 성별당 대륙별 1팀이 직행하고, 개최국·해당 NOC의 사용 확정은 2026년 8월 1일 마감이다. <b>비치발리볼</b>은 2026년 8월 1일~11월 15일 대륙선수권·대륙투어 파이널에서 성별당 대륙별 우승 팀이 출전권을 얻으며, FIVB가 11월 23일까지 배정을 확정한다. 2026년 9월 아이치·나고야 아시안게임은 이 예선 시스템과 직접 연결되지 않는다(자세한 내용은 <a href="volleyball.html">배구 (2026 아시안게임)</a> 참고). 2026년은 예선 활동이 실제로 시작되는 해다.</p>
       </div>
-      <h4>실내 배구</h4>
+      <h3>실내 배구</h3>
       <table class="wt">
-        <tr><th>시기</th><th>일정</th></tr>
-        <tr><td>2026.08.01</td><td>개최국·대륙선수권 잠재 통과 NOC의 출전권 사용 서면 확정 마감</td></tr>
-        <tr><td>2026.08.21~09.27</td><td>2026 대륙선수권(남·여 5개 대륙) — 첫 출전권 배정</td></tr>
-        <tr><td>2027.08.20~09.26</td><td>배구 월드컵 2027 (여자 USA·CAN / 남자 POL)</td></tr>
-        <tr><td>2028.06.11 / 06.18</td><td>세계랭킹 경로(여자/남자)</td></tr>
-        <tr><td>2028.06.26</td><td>미사용 출전권 재배정 · 종목 엔트리 마감</td></tr>
-        <tr><td>2028.07.14~30</td><td>LA28 올림픽</td></tr>
+        <tr><th>시기</th><th>이벤트</th><th>장소</th></tr>
+        <tr><td>2026.08.01</td><td>개최국·대륙선수권 잠재 통과 NOC의 출전권 사용 서면 확정 마감</td><td>—</td></tr>
+        <tr><td>2026.08.21~09.27</td><td>2026 대륙선수권(남·여 5개 대륙) — 첫 출전권 배정</td><td>대륙별</td></tr>
+        <tr><td>2027.08.20~09.26</td><td>배구 월드컵 2027 (여자 USA·CAN / 남자 POL)</td><td>미국·캐나다 / 폴란드</td></tr>
+        <tr><td>2028.06.11 / 06.18</td><td>세계랭킹 경로(여자/남자)</td><td>—</td></tr>
+        <tr><td>2028.06.26</td><td>미사용 출전권 재배정 · 종목 엔트리 마감</td><td>—</td></tr>
+        <tr><td>2028.07.14~30</td><td>LA28 올림픽</td><td>로스앤젤레스, 미국</td></tr>
       </table>
-      <h4>비치발리볼</h4>
+      <h3>비치발리볼</h3>
       <table class="wt">
-        <tr><th>시기</th><th>일정</th></tr>
-        <tr><td>2026.08.01~11.15</td><td>2026 대륙선수권·대륙투어 파이널 — 첫 출전권 배정</td></tr>
-        <tr><td>2026.11.23</td><td>FIVB가 대륙 예선 출전권 서면 확정</td></tr>
-        <tr><td>2026.12.31</td><td>개최국 출전권 사용 확정 마감</td></tr>
-        <tr><td>2027.08</td><td>2027 세계선수권(네덜란드)</td></tr>
-        <tr><td>2028.02~03(예정)</td><td>올림픽 랭킹 마감(29 Feb~31 Mar)</td></tr>
-        <tr><td>2028.05~06</td><td>올림픽 Q-시리즈(상하이·몬트리올·올랜도)</td></tr>
-        <tr><td>2028.06.24 / 06.26</td><td>미사용 출전권 재배정 · 종목 엔트리 마감</td></tr>
-        <tr><td>2028.07.14~30</td><td>LA28 올림픽</td></tr>
+        <tr><th>시기</th><th>이벤트</th><th>장소</th></tr>
+        <tr><td>2026.08.01~11.15</td><td>2026 대륙선수권·대륙투어 파이널 — 첫 출전권 배정</td><td>대륙별</td></tr>
+        <tr><td>2026.11.23</td><td>FIVB가 대륙 예선 출전권 서면 확정</td><td>—</td></tr>
+        <tr><td>2026.12.31</td><td>개최국 출전권 사용 확정 마감</td><td>—</td></tr>
+        <tr><td>2027.08</td><td>2027 세계선수권</td><td>네덜란드</td></tr>
+        <tr><td>2028.02~03(예정)</td><td>올림픽 랭킹 마감(29 Feb~31 Mar)</td><td>—</td></tr>
+        <tr><td>2028.05~06</td><td>올림픽 Q-시리즈</td><td>상하이·몬트리올·올랜도</td></tr>
+        <tr><td>2028.06.24 / 06.26</td><td>미사용 출전권 재배정 · 종목 엔트리 마감</td><td>—</td></tr>
+        <tr><td>2028.07.14~30</td><td>LA28 올림픽</td><td>로스앤젤레스, 미국</td></tr>
       </table>
 
-      <h2 id="feedback">예선 결과 입력 · 피드백</h2>
-      <p class="note">아래에 배구(실내·비치) 예선 결과(세부종목·대회·확정 팀/국가 등)를 직접 입력하면 브라우저에 저장됩니다. 현재 <b>대한민국 확정 출전권: 0장</b> — 결과가 나오는 대로 기록하세요.</p>
+      <h2 id="summary">예선 결과 요약</h2>
+      <p class="note">배구 LA28 예선은 실내·비치 모두 <b>2026년 대륙 예선부터</b> 실제 출전권이 배정되기 시작한다. 아래 표는 위키백과 올림픽 예선 문서의 "Qualification summary" 구성을 참고해 경로별로 확보 NOC를 기록하는 틀이며, 실제 결과가 나오는 대로 채워질 예정이다.</p>
 
+      <h3>실내 배구 — 확정 NOC</h3>
+      <table class="wt">
+        <tr><th>경로</th><th class="num">남자</th><th class="num">여자</th></tr>
+        <tr><td>2026 대륙선수권(5개 대륙)</td><td>미정</td><td>미정</td></tr>
+        <tr><td>배구 월드컵 2027</td><td>미정</td><td>미정</td></tr>
+        <tr><td>세계랭킹 경로</td><td>미정</td><td>미정</td></tr>
+        <tr><td>개최국</td><td>미국</td><td>미국</td></tr>
+      </table>
 
+      <h3>비치발리볼 — 확정 NOC</h3>
+      <table class="wt">
+        <tr><th>경로</th><th class="num">남자</th><th class="num">여자</th></tr>
+        <tr><td>2026 대륙선수권·대륙투어 파이널</td><td>미정</td><td>미정</td></tr>
+        <tr><td>2027 세계선수권</td><td>미정</td><td>미정</td></tr>
+        <tr><td>올림픽 랭킹 리스트</td><td>미정</td><td>미정</td></tr>
+        <tr><td>올림픽 Q-시리즈</td><td>미정</td><td>미정</td></tr>
+        <tr><td>개최국</td><td>미국</td><td>미국</td></tr>
+      </table>
 
       <div class="footer">
         출처: International Volleyball Federation (FIVB) — LA28 Qualification System, Volleyball (2026.5.12 버전) · Beach Volleyball (2026.7.10 버전).<br>
@@ -228,127 +234,10 @@
         <tr><th>NOC 상한</th><td>실내 성별당 1팀 · 비치 성별당 2팀</td></tr>
         <tr><th>예선 개시</th><td>2026년 (대륙 예선)</td></tr>
         <tr><th>아시안게임 연계</th><td><span class="badge">비연계</span></td></tr>
-        <tr><th>관련 문서</th><td><a href="index1.html">올림픽예선 목차</a></td></tr>
+        <tr><th>관련 문서</th><td><a href="index1.html">올림픽예선 목차</a> · <a href="volleyball.html">2026 아시안게임</a></td></tr>
       </table>
     </aside>
   </div>
 </div>
-
-<!-- 쿼터 계산기 엔진: 편집 도구와 별개로 항상 포함(게시용 페이지에도 유지) -->
-<script id="qcalc-engine">
-(function(){
-"use strict";
-const SLUG=(location.pathname.split('/').pop()||'page').replace('.html','');
-/* ══ 쿼터 계산기 (문서 내 모든 table.wt 중 마지막 헤더가 "합계"인 표를 자동 인식) ══ */
-const QC_KEY="la28_qc_"+SLUG+"_v1";
-function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
-function qcParseCap(text){
-  const m=String(text).match(/\d+/);
-  return m? parseInt(m[0],10) : 0;
-}
-function qcGroupLabel(table){
-  let el=table.previousElementSibling, hops=0;
-  while(el && hops<6){
-    if(/^H[234]$/.test(el.tagName)) return el.textContent.replace(/^\s*[🧮📌]\s*/,'').trim();
-    el=el.previousElementSibling; hops++;
-  }
-  return "종목";
-}
-function qcCollect(){
-  const tables=Array.from(document.querySelectorAll("#wiki-main table.wt, .main table.wt"));
-  const groups=[];
-  tables.forEach((t,ti)=>{
-    const headRow=t.querySelector("tr"); if(!headRow) return;
-    const ths=Array.from(headRow.querySelectorAll("th"));
-    if(!ths.length) return;
-    const lastTh=ths[ths.length-1].textContent.trim();
-    if(lastTh!=="합계") return;
-    const label=qcGroupLabel(t);
-    const rows=Array.from(t.querySelectorAll("tr")).slice(1);
-    const items=[];
-    rows.forEach(r=>{
-      const tds=Array.from(r.querySelectorAll("td")); if(!tds.length) return;
-      const firstText=tds[0].textContent.trim();
-      if(/^(총계|합계|총 ?계|총 ?인원|TOTAL)$/i.test(firstText.replace(/\s+/g,''))) return;
-      if(tds[0].querySelector("b") && tds.length<=2) return;
-      const cap=qcParseCap(tds[tds.length-1].textContent);
-      if(!firstText) return;
-      items.push({label:firstText, cap:cap});
-    });
-    if(items.length) groups.push({id:"g"+ti, label:label, items:items});
-  });
-  return groups;
-}
-function qcLoadState(){
-  try{ return JSON.parse(localStorage.getItem(QC_KEY)||"{}"); }catch(e){ return {}; }
-}
-function qcSaveState(st){ try{ localStorage.setItem(QC_KEY, JSON.stringify(st)); }catch(e){} }
-function qcRender(){
-  const body=document.getElementById("qc-body");
-  if(!body) return;
-  const groups=qcCollect();
-  if(!groups.length){ body.innerHTML='<div class="qcalc-empty">이 페이지에서 인식 가능한 쿼터 표가 없습니다.</div>'; return; }
-  const state=qcLoadState();
-  let html="";
-  groups.forEach(g=>{
-    html+='<div class="qc-group"><h5>'+esc(g.label)+'</h5><table class="qc-table"><thead><tr><th style="width:34%">세부종목/구분</th><th class="num" style="width:15%">배정 인원</th><th class="num" style="width:15%">확보(입력)</th><th class="num" style="width:15%">잔여</th><th>비고</th></tr></thead><tbody>';
-    g.items.forEach((it,i)=>{
-      const key=g.id+"_"+i;
-      const got=state[key]&&state[key].got!=null?state[key].got:"";
-      const note=state[key]&&state[key].note?state[key].note:"";
-      html+='<tr data-key="'+key+'" data-cap="'+it.cap+'"><td>'+esc(it.label)+'</td><td class="num">'+it.cap+'</td>'+
-        '<td class="num"><input type="number" min="0" max="'+it.cap+'" class="qc-got" value="'+got+'" placeholder="0"></td>'+
-        '<td class="num qc-left-cell">–</td>'+
-        '<td><input type="text" class="qc-note" value="'+esc(note)+'" placeholder="메모"></td></tr>';
-    });
-    html+='</tbody></table></div>';
-  });
-  html+='<div class="qc-summary" id="qc-summary"></div>'+
-    '<div class="qcalc-actions"><button class="fb-btn ghost" onclick="qcReset()">전체 초기화</button></div>';
-  body.innerHTML=html;
-  body.querySelectorAll(".qc-got,.qc-note").forEach(inp=>{
-    inp.addEventListener("input", qcOnInput);
-  });
-  qcRecalc();
-  const upd=document.getElementById("qc-updated");
-  if(upd) upd.textContent="표 "+groups.length+"개 인식됨";
-}
-function qcOnInput(){
-  const tr=this.closest("tr"); if(!tr) return;
-  const key=tr.dataset.key;
-  const state=qcLoadState();
-  const gotInput=tr.querySelector(".qc-got"), noteInput=tr.querySelector(".qc-note");
-  state[key]={ got: gotInput.value===""?null:parseInt(gotInput.value,10)||0, note: noteInput.value };
-  qcSaveState(state);
-  qcRecalc();
-}
-function qcRecalc(){
-  const body=document.getElementById("qc-body"); if(!body) return;
-  let totalCap=0, totalGot=0;
-  body.querySelectorAll("table.qc-table tr[data-key]").forEach(tr=>{
-    const cap=parseInt(tr.dataset.cap,10)||0;
-    const gotInput=tr.querySelector(".qc-got");
-    const got=gotInput.value===""?0:(parseInt(gotInput.value,10)||0);
-    const left=cap-got;
-    const cell=tr.querySelector(".qc-left-cell");
-    cell.textContent=left;
-    cell.className="num qc-left-cell "+(left<0?"qc-left over":left===0?"qc-left ok":"qc-left");
-    totalCap+=cap; totalGot+=got;
-  });
-  const sum=document.getElementById("qc-summary");
-  if(sum){
-    const left=totalCap-totalGot;
-    sum.innerHTML="전체 배정: <b>"+totalCap+"</b> · 확보 입력 합계: <b>"+totalGot+"</b> · 잔여: <b class=\""+(left<0?'qc-left over':'qc-left ok')+"\">"+left+"</b>";
-  }
-}
-window.qcReset=function(){
-  if(!confirm("쿼터 계산기 입력값을 모두 지울까요?"))return;
-  try{ localStorage.removeItem(QC_KEY); }catch(e){}
-  qcRender();
-}
-window.qcInit=function(){ qcRender(); }
-qcInit();
-})();
-</script>
 </body>
 </html>

@@ -104,26 +104,15 @@
 <div class="toc">
         <div class="toc-title">목차</div>
         <ol>
-          <li><a href="#overview">체급 및 출전권</a></li>
-          <li><a href="#pathway">예선 경로</a></li>
-          <li><a href="#other">개최국·유니버설리티</a></li>
-          <li><a href="#eligibility">참가 자격</a></li>
-          <li><a href="#timeline">예선 일정 · 2026년</a></li>
-          <li><a href="#feedback">예선 결과 입력</a></li>
+          <li><a href="#system">예선 시스템</a></li>
+          <li><a href="#timeline">일정</a></li>
+          <li><a href="#summary">예선 결과 요약</a></li>
         </ol>
       </div>
+                  <h2 id="system">예선 시스템</h2>
+      <p>레슬링은 <b>자유형(Freestyle)</b>과 <b>그레코로만(Greco-Roman)</b> 두 스타일로 나뉜다. 남자는 두 스타일 각 6체급, 여자는 자유형 6체급으로 총 18세부종목이 열리며, <b>총 288개 출전권</b>이 걸려 있다. 개최국·유니버설리티 직접 배정은 없으며, 2027 세계선수권 → UWW 랭킹 → 2028 대륙별 예선 → 2028 세계 예선의 4단계 경로로 선발한다. 출전권은 선수 개인이 아니라 소속 NOC에 배정된다.</p>
 
-      <h2 id="calc">🧮 쿼터 계산기</h2>
-      <p class="note">아래 계산기는 위 표의 <b>배정 인원(합계)</b>을 자동으로 읽어와 세부종목별로 채워집니다. "확보" 칸에 확보(예상) 인원을 입력하면 잔여 쿼터가 자동 계산되며, 입력값은 이 브라우저에 저장됩니다.</p>
-      <div class="qcalc" id="qcalc">
-        <div class="qcalc-head"><span class="em">🧮</span> 쿼터 계산기 <span class="sub" id="qc-updated"></span></div>
-        <div class="qcalc-body" id="qc-body">
-          <div class="qcalc-empty">표를 불러오는 중…</div>
-        </div>
-      </div>
-
-      <h2 id="overview">체급 및 출전권</h2>
-      <p>레슬링은 <b>자유형(Freestyle)</b>과 <b>그레코로만(Greco-Roman)</b> 두 스타일로 나뉜다. 남자는 두 스타일 각 6체급, 여자는 자유형 6체급으로 총 18세부종목이 열린다. 출전권은 선수 개인이 아니라 소속 NOC에 배정된다.</p>
+      <h3 id="overview">체급 및 출전권</h3>
       <table class="wt">
         <tr><th>구분</th><th>스타일 · 체급</th><th class="num">정량</th><th class="num">개최국</th><th class="num">유니버설리티</th><th class="num">합계</th></tr>
         <tr><td>남자 (12체급)</td><td>자유형 57·65·74·86·97·125kg / 그레코로만 60·67·77·87·97·130kg</td><td class="num">192</td><td class="num">0</td><td class="num">0*</td><td class="num">192</td></tr>
@@ -132,21 +121,21 @@
       </table>
       <p class="note">체급별 출전 인원은 16명. NOC당 상한은 남자 12명·여자 6명(각 체급 1명, 총 18명). *유니버설리티는 별도 직접 배정되지 않고, 미사용 출전권 재배정 절차에서만 제공될 수 있다(D.3).</p>
 
-      <h3>자유형 (Freestyle)</h3>
+      <h4>자유형 (Freestyle)</h4>
       <table class="wt">
         <tr><th>구분</th><th>체급(6개)</th><th class="num">체급 수</th><th class="num">체급당 인원</th></tr>
         <tr><td>남자</td><td>57 · 65 · 74 · 86 · 97 · 125kg</td><td class="num">6</td><td class="num">16</td></tr>
         <tr><td>여자</td><td>50 · 53 · 57 · 62 · 68 · 76kg</td><td class="num">6</td><td class="num">16</td></tr>
       </table>
 
-      <h3>그레코로만 (Greco-Roman)</h3>
+      <h4>그레코로만 (Greco-Roman)</h4>
       <table class="wt">
         <tr><th>구분</th><th>체급(6개)</th><th class="num">체급 수</th><th class="num">체급당 인원</th></tr>
         <tr><td>남자</td><td>60 · 67 · 77 · 87 · 97 · 130kg</td><td class="num">6</td><td class="num">16</td></tr>
         <tr><td>여자</td><td colspan="3">해당 없음 (여자부는 자유형만 시행)</td></tr>
       </table>
 
-      <h2 id="pathway">예선 경로</h2>
+      <h3 id="pathway">예선 경로 (4단계)</h3>
       <p>예선 경로는 4단계로 우선순위에 따라 순차 적용된다. 각 NOC는 스타일·성별별로 체급당 최대 1명까지만 등록할 수 있으며, 앞 단계에서 이미 출전권을 확보한 체급으로는 뒤 단계에 참가할 수 없다.</p>
       <table class="wt">
         <tr><th>단계</th><th>경로</th><th class="num">배정(남+여)</th><th>선발 방식</th></tr>
@@ -176,43 +165,74 @@
       </table>
       <p class="note">앞 두 단계에서 출전권을 확보한 선수는 다른 스타일로 출전하는 경우를 제외하고 대륙 예선에 참가할 수 없으며, 이미 출전권을 확보한 체급으로는 다른 선수를 보낼 수 없다.</p>
 
-      <h2 id="other">개최국·유니버설리티</h2>
+      <h3 id="other">개최국·유니버설리티</h3>
       <p>레슬링에는 <b>개최국(미국) 자동 출전권이 없다.</b> 미국도 다른 NOC와 동일하게 4단계 경로를 통해 출전권을 획득해야 한다. 유니버설리티 쿼터 역시 선수 출전권의 일부로 <b>직접 배정되지 않는다.</b> 다만 개인 종목의 미사용 출전권 재배정 절차(F)가 완료된 뒤, 그 범위 안에서 NOC에 유니버설리티 자리가 제공될 수 있다. IOC는 2027년 10월 1일 자격 있는 NOC에 유니버설리티 신청을 안내하며, 신청 마감은 2028년 1월 15일, 배정은 종목 예선 종료 후 3자위원회가 서면으로 확정한다.</p>
 
-      <h2 id="eligibility">참가 자격</h2>
+      <h3 id="eligibility">참가 자격</h3>
       <p><b>2010년 12월 31일 이전 출생</b>(대회 시점 만 18세 이상 또는 2028년에 만 18세가 되는 선수)이어야 하며, 등록에 사용하는 여권으로 검증된다. 또한 소속 <b>국가레슬링연맹이 발급한 유효 라이선스</b>를 보유하고 UWW 공식 데이터베이스에 등록되어 있어야 한다. 올림픽 헌장(국적·반도핑 등), 세계반도핑규약, 경기조작방지규약, 여성 부문 보호 정책 등 IOC 참가 조건을 모두 충족해야 한다.</p>
 
       <div class="asiad-box">
         <h4>아시안게임 연관성</h4>
-        <p>아시안게임(대륙 종합대회) 성적은 레슬링 LA28 출전권과 <b>직접 연결되지 않는다.</b> 다만 UWW 규정상 대륙 종합대회가 랭킹 산정 대회로 추가될 수 있어, 2단계 UWW 랭킹에 <b>간접 반영</b>될 여지가 있다. 이 경우에도 같은 해 대륙선수권 성적과는 합산되지 않고 포인트가 높은 쪽만 채택된다. <span class="badge asiad">간접</span></p>
+        <p>아시안게임(대륙 종합대회) 성적은 레슬링 LA28 출전권과 <b>직접 연결되지 않는다.</b> 다만 UWW 규정상 대륙 종합대회가 랭킹 산정 대회로 추가될 수 있어, 2단계 UWW 랭킹에 <b>간접 반영</b>될 여지가 있다. 이 경우에도 같은 해 대륙선수권 성적과는 합산되지 않고 포인트가 높은 쪽만 채택된다. <span class="badge asiad">간접</span> 2026 아이치·나고야 아시안게임의 실제 경기 일정·참가국·대한민국 대표 명단은 <a href="wrestling.html">레슬링 (2026 아시안게임)</a> 문서에 별도로 정리했다.</p>
       </div>
 
-      <h2 id="timeline">예선 일정 · 2026년</h2>
+      <h2 id="timeline">일정</h2>
       <div class="y2026">
         <h4>2026년 진행 사항</h4>
-        <p><b>2026년 예선 활동 없음.</b> 올림픽 예선 기간은 <b>2027년 1월 1일~2028년 5월 28일</b>로, 실질적인 예선은 2027년부터 시작된다. 2026년 7월 31일자 규정 문서가 확정되었을 뿐, 2026년 중 열리는 예선 대회나 확정되는 출전권은 없다.</p>
+        <p><b>2026년 LA28 예선 활동 없음.</b> 올림픽 예선 기간은 <b>2027년 1월 1일~2028년 5월 28일</b>로, 실질적인 예선은 2027년부터 시작된다. 2026년 7월 31일자 규정 문서가 확정되었을 뿐, 2026년 중 열리는 LA28 예선 대회나 확정되는 출전권은 없다. (2026년 9~10월 아이치·나고야 아시안게임은 LA28 예선 대회 자체는 아니며, 성적이 UWW 랭킹에 간접 반영될 수 있는 대회다 — 자세한 내용은 <a href="wrestling.html">레슬링 (2026 아시안게임)</a> 참고.)</p>
       </div>
       <table class="wt">
-        <tr><th>시기</th><th>일정</th></tr>
-        <tr><td>2027.01.01~2028.05.28</td><td>레슬링 올림픽 예선 기간</td></tr>
-        <tr><td>2027.02.15~21</td><td>제1차 랭킹 시리즈</td></tr>
-        <tr><td>2027.03.30~04.04</td><td>아시아선수권 (랭킹 반영)</td></tr>
-        <tr><td>2027.04.05~05.02</td><td>유럽·아프리카·오세아니아·팬아메리카 선수권 (랭킹 반영)</td></tr>
-        <tr><td>2027.05.31~06.06</td><td>제2차 랭킹 시리즈</td></tr>
-        <tr><td>2027.07.19~25</td><td>제3차 랭킹 시리즈</td></tr>
-        <tr><td>2027.09.11~19</td><td>2027 세계선수권 (라스베이거스, 미국) — 1단계</td></tr>
-        <tr><td>2028.01.17~23</td><td>제4차 랭킹 시리즈</td></tr>
-        <tr><td>2028.02~03</td><td>2028 대륙선수권 (랭킹 반영)</td></tr>
-        <tr><td>2028.03.24~04.16</td><td>대륙별 올림픽 예선전 — 3단계</td></tr>
-        <tr><td>2028.05.18~21</td><td>세계 올림픽 예선전 — 4단계</td></tr>
-        <tr><td>2028.07.14~30</td><td>LA28 올림픽</td></tr>
+        <tr><th>시기</th><th>이벤트</th><th>장소</th></tr>
+        <tr><td>2027.01.01~2028.05.28</td><td>레슬링 올림픽 예선 기간</td><td>—</td></tr>
+        <tr><td>2027.02.15~21</td><td>제1차 랭킹 시리즈</td><td>미정</td></tr>
+        <tr><td>2027.03.30~04.04</td><td>아시아선수권 (랭킹 반영)</td><td>미정</td></tr>
+        <tr><td>2027.04.05~05.02</td><td>유럽·아프리카·오세아니아·팬아메리카 선수권 (랭킹 반영)</td><td>미정</td></tr>
+        <tr><td>2027.05.31~06.06</td><td>제2차 랭킹 시리즈</td><td>미정</td></tr>
+        <tr><td>2027.07.19~25</td><td>제3차 랭킹 시리즈</td><td>미정</td></tr>
+        <tr><td>2027.09.11~19</td><td>2027 세계선수권 — 1단계</td><td>라스베이거스, 미국</td></tr>
+        <tr><td>2028.01.17~23</td><td>제4차 랭킹 시리즈</td><td>미정</td></tr>
+        <tr><td>2028.02~03</td><td>2028 대륙선수권 (랭킹 반영)</td><td>미정</td></tr>
+        <tr><td>2028.03.24~04.16</td><td>대륙별 올림픽 예선전 — 3단계</td><td>대륙별 4개 지역</td></tr>
+        <tr><td>2028.05.18~21</td><td>세계 올림픽 예선전 — 4단계</td><td>미정</td></tr>
+        <tr><td>2028.07.14~30</td><td>LA28 올림픽</td><td>로스앤젤레스, 미국</td></tr>
       </table>
       <p class="note">랭킹 시리즈·대륙선수권 등은 직접 예선 대회가 아니라 UWW 랭킹 포인트 산정용이다. 직행 출전권은 2027 세계선수권(1단계)부터 나온다.</p>
 
-      <h2 id="feedback">예선 결과 입력 · 피드백</h2>
-      <p class="note">아래에 레슬링 예선 결과(스타일·체급·대회·확정 선수/국가 등)를 직접 입력하면 브라우저에 저장됩니다. 현재 <b>대한민국 확정 출전권: 0장</b> — 결과가 나오는 대로 기록하세요.</p>
+      <h2 id="summary">예선 결과 요약</h2>
+      <p class="note">레슬링 LA28 예선은 <b>2027년 1월부터</b> 시작되어 아직 확정된 출전권이 없다. 아래 표는 위키백과 올림픽 예선 문서의 "Qualification summary" 구성을 참고해 체급별로 확보 NOC를 기록하는 틀이며, 2027 세계선수권부터 실제 결과가 나오는 대로 채워질 예정이다.</p>
 
+      <h3>남자 자유형 (Men's Freestyle)</h3>
+      <table class="wt">
+        <tr><th>체급</th><th>1단계(세계선수권)</th><th>2단계(랭킹)</th><th>3단계(대륙예선)</th><th>4단계(세계예선)</th></tr>
+        <tr><td>57kg</td><td>미정</td><td>미정</td><td>미정</td><td>미정</td></tr>
+        <tr><td>65kg</td><td>미정</td><td>미정</td><td>미정</td><td>미정</td></tr>
+        <tr><td>74kg</td><td>미정</td><td>미정</td><td>미정</td><td>미정</td></tr>
+        <tr><td>86kg</td><td>미정</td><td>미정</td><td>미정</td><td>미정</td></tr>
+        <tr><td>97kg</td><td>미정</td><td>미정</td><td>미정</td><td>미정</td></tr>
+        <tr><td>125kg</td><td>미정</td><td>미정</td><td>미정</td><td>미정</td></tr>
+      </table>
 
+      <h3>남자 그레코로만 (Men's Greco-Roman)</h3>
+      <table class="wt">
+        <tr><th>체급</th><th>1단계(세계선수권)</th><th>2단계(랭킹)</th><th>3단계(대륙예선)</th><th>4단계(세계예선)</th></tr>
+        <tr><td>60kg</td><td>미정</td><td>미정</td><td>미정</td><td>미정</td></tr>
+        <tr><td>67kg</td><td>미정</td><td>미정</td><td>미정</td><td>미정</td></tr>
+        <tr><td>77kg</td><td>미정</td><td>미정</td><td>미정</td><td>미정</td></tr>
+        <tr><td>87kg</td><td>미정</td><td>미정</td><td>미정</td><td>미정</td></tr>
+        <tr><td>97kg</td><td>미정</td><td>미정</td><td>미정</td><td>미정</td></tr>
+        <tr><td>130kg</td><td>미정</td><td>미정</td><td>미정</td><td>미정</td></tr>
+      </table>
+
+      <h3>여자 자유형 (Women's Freestyle)</h3>
+      <table class="wt">
+        <tr><th>체급</th><th>1단계(세계선수권)</th><th>2단계(랭킹)</th><th>3단계(대륙예선)</th><th>4단계(세계예선)</th></tr>
+        <tr><td>50kg</td><td>미정</td><td>미정</td><td>미정</td><td>미정</td></tr>
+        <tr><td>53kg</td><td>미정</td><td>미정</td><td>미정</td><td>미정</td></tr>
+        <tr><td>57kg</td><td>미정</td><td>미정</td><td>미정</td><td>미정</td></tr>
+        <tr><td>62kg</td><td>미정</td><td>미정</td><td>미정</td><td>미정</td></tr>
+        <tr><td>68kg</td><td>미정</td><td>미정</td><td>미정</td><td>미정</td></tr>
+        <tr><td>76kg</td><td>미정</td><td>미정</td><td>미정</td><td>미정</td></tr>
+      </table>
 
       <div class="footer">
         출처: United World Wrestling (UWW) — LA28 Qualification System, Wrestling (2026.7.31 버전).<br>
@@ -229,127 +249,10 @@
         <tr><th>개최국 쿼터</th><td>없음 (0)</td></tr>
         <tr><th>예선 개시</th><td>2027년 1월</td></tr>
         <tr><th>아시안게임 연계</th><td><span class="badge asiad">간접(랭킹 가능)</span></td></tr>
-        <tr><th>관련 문서</th><td><a href="index1.html">올림픽예선 목차</a></td></tr>
+        <tr><th>관련 문서</th><td><a href="index1.html">올림픽예선 목차</a> · <a href="wrestling.html">2026 아시안게임</a></td></tr>
       </table>
     </aside>
   </div>
 </div>
-
-<!-- 쿼터 계산기 엔진: 편집 도구와 별개로 항상 포함(게시용 페이지에도 유지) -->
-<script id="qcalc-engine">
-(function(){
-"use strict";
-const SLUG=(location.pathname.split('/').pop()||'page').replace('.html','');
-/* ══ 쿼터 계산기 (문서 내 모든 table.wt 중 마지막 헤더가 "합계"인 표를 자동 인식) ══ */
-const QC_KEY="la28_qc_"+SLUG+"_v1";
-function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
-function qcParseCap(text){
-  const m=String(text).match(/\d+/);
-  return m? parseInt(m[0],10) : 0;
-}
-function qcGroupLabel(table){
-  let el=table.previousElementSibling, hops=0;
-  while(el && hops<6){
-    if(/^H[234]$/.test(el.tagName)) return el.textContent.replace(/^\s*[🧮📌]\s*/,'').trim();
-    el=el.previousElementSibling; hops++;
-  }
-  return "종목";
-}
-function qcCollect(){
-  const tables=Array.from(document.querySelectorAll("#wiki-main table.wt, .main table.wt"));
-  const groups=[];
-  tables.forEach((t,ti)=>{
-    const headRow=t.querySelector("tr"); if(!headRow) return;
-    const ths=Array.from(headRow.querySelectorAll("th"));
-    if(!ths.length) return;
-    const lastTh=ths[ths.length-1].textContent.trim();
-    if(lastTh!=="합계") return;
-    const label=qcGroupLabel(t);
-    const rows=Array.from(t.querySelectorAll("tr")).slice(1);
-    const items=[];
-    rows.forEach(r=>{
-      const tds=Array.from(r.querySelectorAll("td")); if(!tds.length) return;
-      const firstText=tds[0].textContent.trim();
-      if(/^(총계|합계|총 ?계|총 ?인원|TOTAL)$/i.test(firstText.replace(/\s+/g,''))) return;
-      if(tds[0].querySelector("b") && tds.length<=2) return;
-      const cap=qcParseCap(tds[tds.length-1].textContent);
-      if(!firstText) return;
-      items.push({label:firstText, cap:cap});
-    });
-    if(items.length) groups.push({id:"g"+ti, label:label, items:items});
-  });
-  return groups;
-}
-function qcLoadState(){
-  try{ return JSON.parse(localStorage.getItem(QC_KEY)||"{}"); }catch(e){ return {}; }
-}
-function qcSaveState(st){ try{ localStorage.setItem(QC_KEY, JSON.stringify(st)); }catch(e){} }
-function qcRender(){
-  const body=document.getElementById("qc-body");
-  if(!body) return;
-  const groups=qcCollect();
-  if(!groups.length){ body.innerHTML='<div class="qcalc-empty">이 페이지에서 인식 가능한 쿼터 표가 없습니다.</div>'; return; }
-  const state=qcLoadState();
-  let html="";
-  groups.forEach(g=>{
-    html+='<div class="qc-group"><h5>'+esc(g.label)+'</h5><table class="qc-table"><thead><tr><th style="width:34%">세부종목/구분</th><th class="num" style="width:15%">배정 인원</th><th class="num" style="width:15%">확보(입력)</th><th class="num" style="width:15%">잔여</th><th>비고</th></tr></thead><tbody>';
-    g.items.forEach((it,i)=>{
-      const key=g.id+"_"+i;
-      const got=state[key]&&state[key].got!=null?state[key].got:"";
-      const note=state[key]&&state[key].note?state[key].note:"";
-      html+='<tr data-key="'+key+'" data-cap="'+it.cap+'"><td>'+esc(it.label)+'</td><td class="num">'+it.cap+'</td>'+
-        '<td class="num"><input type="number" min="0" max="'+it.cap+'" class="qc-got" value="'+got+'" placeholder="0"></td>'+
-        '<td class="num qc-left-cell">–</td>'+
-        '<td><input type="text" class="qc-note" value="'+esc(note)+'" placeholder="메모"></td></tr>';
-    });
-    html+='</tbody></table></div>';
-  });
-  html+='<div class="qc-summary" id="qc-summary"></div>'+
-    '<div class="qcalc-actions"><button class="fb-btn ghost" onclick="qcReset()">전체 초기화</button></div>';
-  body.innerHTML=html;
-  body.querySelectorAll(".qc-got,.qc-note").forEach(inp=>{
-    inp.addEventListener("input", qcOnInput);
-  });
-  qcRecalc();
-  const upd=document.getElementById("qc-updated");
-  if(upd) upd.textContent="표 "+groups.length+"개 인식됨";
-}
-function qcOnInput(){
-  const tr=this.closest("tr"); if(!tr) return;
-  const key=tr.dataset.key;
-  const state=qcLoadState();
-  const gotInput=tr.querySelector(".qc-got"), noteInput=tr.querySelector(".qc-note");
-  state[key]={ got: gotInput.value===""?null:parseInt(gotInput.value,10)||0, note: noteInput.value };
-  qcSaveState(state);
-  qcRecalc();
-}
-function qcRecalc(){
-  const body=document.getElementById("qc-body"); if(!body) return;
-  let totalCap=0, totalGot=0;
-  body.querySelectorAll("table.qc-table tr[data-key]").forEach(tr=>{
-    const cap=parseInt(tr.dataset.cap,10)||0;
-    const gotInput=tr.querySelector(".qc-got");
-    const got=gotInput.value===""?0:(parseInt(gotInput.value,10)||0);
-    const left=cap-got;
-    const cell=tr.querySelector(".qc-left-cell");
-    cell.textContent=left;
-    cell.className="num qc-left-cell "+(left<0?"qc-left over":left===0?"qc-left ok":"qc-left");
-    totalCap+=cap; totalGot+=got;
-  });
-  const sum=document.getElementById("qc-summary");
-  if(sum){
-    const left=totalCap-totalGot;
-    sum.innerHTML="전체 배정: <b>"+totalCap+"</b> · 확보 입력 합계: <b>"+totalGot+"</b> · 잔여: <b class=\""+(left<0?'qc-left over':'qc-left ok')+"\">"+left+"</b>";
-  }
-}
-window.qcReset=function(){
-  if(!confirm("쿼터 계산기 입력값을 모두 지울까요?"))return;
-  try{ localStorage.removeItem(QC_KEY); }catch(e){}
-  qcRender();
-}
-window.qcInit=function(){ qcRender(); }
-qcInit();
-})();
-</script>
 </body>
 </html>
