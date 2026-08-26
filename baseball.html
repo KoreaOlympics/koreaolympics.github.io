@@ -3,167 +3,179 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>야구 / 소프트볼 | 2026 아이치·나고야 아시안게임</title>
+<title>야구 · 소프트볼 - 2026 아이치·나고야 아시안게임</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#0E1A2B; --ink-2:#152540; --gold:#C9A24B; --gold-soft:#E4CD8C;
-    --sun:#D8482F; --paper:#F3EFE4; --paper-dim:#B9C2CF; --line:rgba(201,162,75,0.28);
-    --win:#4C8C6B; --lose:#C05B4A; --draw:#9AA3AE;
+    --bg:#ffffff; --panel:#f8f9fa; --border:#c8ccd1; --border-soft:#eaecf0;
+    --ink:#202122; --muted:#54595d; --link:#3366cc; --link-visited:#795cb2; --link-red:#ba0000;
+    --serif:'Noto Serif KR',Georgia,'Times New Roman',serif;
+    --sans:'Pretendard','Helvetica Neue',Arial,sans-serif;
+    --accent:#2456c6; --ok:#1a7f37; --warn:#b45309; --gold:#a05a00;
   }
   *{box-sizing:border-box;}
-  body{
-    margin:0; color:var(--paper); font-family:'Pretendard','Noto Sans KR',sans-serif;
-    background:
-      radial-gradient(1100px 550px at 90% -10%, rgba(216,72,47,0.14), transparent 60%),
-      radial-gradient(900px 500px at -10% 110%, rgba(201,162,75,0.09), transparent 60%),
-      var(--ink);
-    -webkit-font-smoothing:antialiased;
-  }
-  .wrap{max-width:1080px;margin:0 auto;padding:36px 24px 90px;}
-  nav.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:32px;}
-  .back{color:var(--gold-soft);text-decoration:none;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:6px;}
-  .back:hover{color:var(--gold);}
-  .back svg{width:13px;height:13px;}
-  .crumb{font-size:11.5px;color:var(--paper-dim);}
-
-  header.pagehead{display:flex;align-items:baseline;gap:14px;padding-bottom:20px;margin-bottom:28px;border-bottom:1px solid var(--line);flex-wrap:wrap;}
-  .eyebrow{font-size:12px;letter-spacing:0.14em;color:var(--gold-soft);text-transform:uppercase;font-weight:600;}
-  h1.title{font-family:'Noto Serif KR',serif;font-weight:900;font-size:30px;margin:0;color:var(--paper);}
-
-  section.division{margin-bottom:44px;}
-  .div-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px;}
-  .div-head h2{font-family:'Noto Serif KR',serif;font-size:19px;color:var(--paper);margin:0;font-weight:700;}
-  .badge{font-size:11.5px;color:var(--gold-soft);border:1px solid var(--line);border-radius:100px;padding:4px 12px;background:rgba(201,162,75,0.08);white-space:nowrap;}
-
-  .cardgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-  @media (max-width:720px){.cardgrid{grid-template-columns:1fr;}}
-  .info-card{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:18px 20px;}
-  .info-card h3{font-family:'Noto Serif KR',serif;font-size:13px;color:var(--gold-soft);letter-spacing:0.04em;margin:0 0 12px;text-transform:uppercase;}
-
-  .poslist{font-size:13.5px;line-height:1.85;color:var(--paper);margin-bottom:6px;}
-  .poslist .pos{display:inline-block;min-width:44px;font-weight:700;color:var(--gold);font-size:12px;margin-right:6px;}
-  .note{font-size:12.5px;color:var(--paper-dim);margin-top:10px;line-height:1.7;border-top:1px dashed var(--line);padding-top:10px;}
-
-  .grouptable{display:flex;flex-direction:column;gap:6px;margin-bottom:12px;}
-  .grow{display:flex;gap:8px;font-size:13px;line-height:1.6;}
-  .grow .gname{flex:none;width:38px;font-weight:700;color:var(--gold);}
-  .grow.mine{background:rgba(201,162,75,0.10);border-radius:5px;padding:3px 6px;margin:-3px -6px;}
-  .grow.mine .gname{color:var(--sun);}
-  .sched{display:flex;flex-direction:column;gap:5px;margin-top:10px;}
-  .sched span{font-size:12.5px;color:var(--paper-dim);}
-  .sched b{color:var(--paper);font-weight:600;}
-
-  p.txt{font-size:13.5px;line-height:1.85;color:var(--paper-dim);margin:0 0 10px;}
-  p.txt:last-child{margin-bottom:0;}
-
-  .results{display:flex;flex-direction:column;gap:8px;}
-  .rgroup{font-size:12px;color:var(--gold-soft);font-weight:600;margin-top:6px;}
-  .rline{font-size:13px;line-height:1.7;color:var(--paper-dim);}
-  .rline .w{color:var(--win);font-weight:700;}
-  .rline .l{color:var(--lose);font-weight:700;}
-  .rline .d{color:var(--draw);font-weight:700;}
-
-  footer.pagefoot{margin-top:50px;padding-top:20px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
-  footer.pagefoot a{color:var(--gold-soft);text-decoration:none;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.65;}
+  a{color:var(--link);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  a:visited{color:var(--link-visited);}
+  .topbar{border-bottom:1px solid var(--border);background:var(--panel);font-size:12.5px;color:var(--muted);}
+  .topbar .inner{max-width:1100px;margin:0 auto;padding:8px 20px;display:flex;gap:16px;flex-wrap:wrap;}
+  .topbar a{color:var(--link);}
+  .layout{max-width:1100px;margin:0 auto;padding:22px 20px 80px;}
+  h1.title{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.3;margin:0 0 2px;padding-bottom:6px;border-bottom:1px solid var(--border);}
+  .subtitle{color:var(--muted);font-size:13px;margin:0 0 18px;}
+  .hatnote{font-style:italic;color:var(--muted);background:var(--panel);border:1px solid var(--border-soft);padding:8px 14px;border-radius:2px;margin:0 0 20px;font-size:13.5px;}
+  .content{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;}
+  .main{flex:1 1 560px;min-width:0;}
+  h2{font-family:var(--serif);font-weight:600;font-size:22px;margin:26px 0 10px;padding-bottom:5px;border-bottom:1px solid var(--border-soft);scroll-margin-top:12px;}
+  h3{font-family:var(--serif);font-weight:600;font-size:17px;margin:20px 0 8px;}
+  h4{font-family:var(--sans);font-weight:700;font-size:14.5px;margin:16px 0 6px;color:#3a3f44;}
+  p{margin:0 0 12px;}
+  .toc{display:inline-block;background:var(--panel);border:1px solid var(--border);border-radius:2px;padding:12px 20px 12px 14px;margin:0 0 20px;font-size:14px;}
+  .toc-title{font-weight:700;text-align:center;font-size:13px;margin-bottom:6px;}
+  .toc ol{margin:0;padding-left:22px;}
+  .toc li{margin:3px 0;}
+  .infobox{flex:0 0 300px;background:var(--panel);border:1px solid var(--border);border-radius:2px;font-size:13px;align-self:flex-start;}
+  .infobox .ib-title{background:#eaecf0;font-family:var(--serif);font-weight:700;text-align:center;padding:10px 12px;font-size:15px;border-bottom:1px solid var(--border);}
+  .infobox table{width:100%;border-collapse:collapse;}
+  .infobox th,.infobox td{text-align:left;padding:7px 12px;vertical-align:top;border-bottom:1px solid var(--border-soft);}
+  .infobox th{width:38%;color:var(--muted);font-weight:600;}
+  .badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:2px;background:#e6f0ff;color:#2456c6;border:1px solid #b9d0f5;margin-left:6px;}
+  .badge.gold{background:#fff2e0;color:#a05a00;border-color:#f2d2a0;}
+  table.wt{border-collapse:collapse;width:100%;font-size:13.5px;margin:6px 0 16px;}
+  table.wt th,table.wt td{border:1px solid var(--border);padding:6px 10px;text-align:left;vertical-align:top;}
+  table.wt th{background:var(--panel);}
+  table.wt td.num, table.wt th.num{text-align:center;}
+  table.wt caption{font-size:12.5px;color:var(--muted);text-align:left;padding:2px 0 6px;}
+  .note{font-size:12.5px;color:var(--muted);margin:-8px 0 16px;}
+  .kr-box{background:#eef4ff;border:1px solid #c3d6f7;border-radius:3px;padding:14px 16px;margin:10px 0 18px;}
+  .kr-box h4{margin-top:0;color:#1e3a8a;}
+  .medals{display:inline-flex;gap:6px;margin:0 0 8px;flex-wrap:wrap;}
+  .medal{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;border:1px solid;}
+  .medal.g{color:#8a6d1a;border-color:#e4cd8c;background:#fdf6e3;}
+  .medal.s{color:#5b6168;border-color:#d5d9de;background:#f4f5f6;}
+  .medal.b{color:#8a5a30;border-color:#e0c3a3;background:#fbf1e6;}
+  .medal.w{color:#1a7f37;border-color:#bfe3c9;background:#eefaf1;}
+  .medal.l{color:#ba0000;border-color:#f2c2c2;background:#fdeeee;}
+  .footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;}
+  @media (max-width:820px){.infobox{flex:1 1 100%;order:-1;}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <nav class="top">
-    <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>전체 종목으로</a>
-    <span class="crumb">단체구기 / 야구 · 소프트볼</span>
-  </nav>
+<div class="topbar"><div class="inner">
+  <a href="index2.html">← 아시안게임 종목 목록</a>
+  <span>문서 · 야구·소프트볼</span>
+  <a href="index.html">전체 목차</a>
+</div></div>
+<div class="layout">
+  <h1 class="title">야구 · 소프트볼</h1>
+  <p class="subtitle">Baseball · Softball · 2026 아이치·나고야 아시안게임 (제20회) · 남자 야구·여자 소프트볼</p>
+  <p class="hatnote">야구는 9명의 선수로 구성된 두 팀이 공격과 수비를 번갈아 하며 득점을 겨루는 구기 종목이며, 소프트볼은 유사한 규칙을 여자부 경기 방식에 맞게 조정한 자매 종목이다. 아시안게임에서는 각각 남자 야구, 여자 소프트볼로 나뉘어 치러진다.</p>
+  <div class="content">
+    <div class="main">
+      <div class="toc">
+        <div class="toc-title">목차</div>
+        <ol>
+          <li><a href="#overview">개요</a></li>
+          <li><a href="#baseball">남자 야구</a></li>
+          <li><a href="#softball">여자 소프트볼</a></li>
+          <li><a href="#watch">관전 포인트</a></li>
+        </ol>
+      </div>
 
-  <header class="pagehead">
-    <span class="eyebrow">단체구기</span>
-    <h1 class="title">야구 / 소프트볼</h1>
-  </header>
+      <h2 id="overview">개요</h2>
+      <p>야구는 9명의 선수로 구성된 두 팀이 공격과 수비를 번갈아 하며 득점을 겨루는 구기 종목이며, 소프트볼은 유사한 규칙을 여자부 경기 방식에 맞게 조정한 자매 종목이다. 아시안게임에서는 남자 야구와 여자 소프트볼로 나뉘어 치러진다.</p>
+      <p>남자 야구는 8개국이 참가하며 한국은 대만·홍콩·태국과 함께 B조에 편성됐다. 여자 소프트볼도 8개국이 참가하며 하루 2경기 진행이 가능한 종목 특성상 풀리그 방식이 유력하다.</p>
 
-  <!-- ===== 남자 야구 ===== -->
-  <section class="division">
-    <div class="div-head">
-      <h2>남자 야구</h2>
-      <span class="badge">참가 8개국 · B조 (대만·대한민국·홍콩·태국)</span>
+      <h2 id="baseball">남자 야구</h2>
+      <p class="note">참가 8개국 · B조 (대만·대한민국·홍콩·태국)</p>
+
+      <h3>대표팀 (24명)</h3>
+      <table class="wt">
+        <tr><th>포지션</th><th>선수</th></tr>
+        <tr><td>우투수</td><td>김영우, 조병현, 박영현, 소형준, 최준용, 성영탁, 곽빈, 최민석</td></tr>
+        <tr><td>좌투수</td><td>배찬승, 오원석, 김진욱</td></tr>
+        <tr><td>포수</td><td>김건희, 조형우</td></tr>
+        <tr><td>내야수</td><td>김도영, 김주원, 노시환, 문보경, 박준순, 이재현, 정준재</td></tr>
+        <tr><td>외야수</td><td>김지찬, 문현빈, 박재현, 윤동희</td></tr>
+      </table>
+      <p class="note">3명을 제외한 전원이 23세 이하이며, 전원 프로 선수로 구성됐다.</p>
+
+      <h3>조 편성 · 일정</h3>
+      <table class="wt">
+        <tr><th>조</th><th>국가</th></tr>
+        <tr><td>A조</td><td>일본, 중국, 필리핀, 팔레스타인</td></tr>
+        <tr><td>B조 (한국)</td><td>대만, 대한민국, 홍콩, 태국</td></tr>
+      </table>
+      <table class="wt">
+        <tr><th>일시</th><th>경기</th></tr>
+        <tr><td>9/21 18:30</td><td>대만전</td></tr>
+        <tr><td>9/22 18:30</td><td>홍콩전</td></tr>
+        <tr><td>9/23 12:00</td><td>태국전</td></tr>
+      </table>
+      <p class="note">슈퍼라운드 진출 후 4강 토너먼트 방식이므로 조 1위가 중요하다. 대만은 해외파·국내 프로 등 절반가량이 포함돼 있고, 일본은 실업야구(사회인 리그) 대표로 구성된다.</p>
+
+      <h3>전력 분석</h3>
+      <p>예선부터 대만과 맞붙는다. 조 1위 시 결승행이 사실상 확정되며, 조 2위일 경우 일본(사회인) 팀과 4강에서 만날 가능성이 유력하다.</p>
+
+      <h3>최근 전적 (WBC)</h3>
+      <p class="medals">
+        <span class="medal w">체코전 승</span>
+        <span class="medal l">일본전 패</span>
+        <span class="medal l">대만전 패</span>
+        <span class="medal w">호주전 승</span>
+        <span class="medal l">(8강) 도미니카전 패</span>
+      </p>
+      <p>vs 체코 11-4 승 · vs 일본 6-8 패 · vs 대만 4-5 패 · vs 호주 7-2 승 · (8강) vs 도미니카 0-10 패.</p>
+
+      <h2 id="softball">여자 소프트볼</h2>
+      <p class="note">참가 8개국 · 풀리그 유력</p>
+
+      <h3>대표팀 (17명)</h3>
+      <table class="wt">
+        <tr><th>포지션</th><th>선수</th></tr>
+        <tr><td>투수</td><td>김하늘, 박민경, 최연지, 홍시연</td></tr>
+        <tr><td>포수</td><td>정송희, 주효주</td></tr>
+        <tr><td>내야수</td><td>김아영, 배유가, 이경민, 장세진, 정연우, 최가현, 허아영</td></tr>
+        <tr><td>외야수</td><td>김수빈, 김지윤, 이민정, 진주이</td></tr>
+      </table>
+
+      <h3>대회 방식</h3>
+      <p>하루에 2경기 진행이 가능한 종목 특성상 8개국 풀리그 방식이 유력하다.</p>
+
+      <h3>전력 분석</h3>
+      <p>2025 아시아컵 8위 이내 국가들이 출전하며, 국가 간 수준차가 대체로 뚜렷하다. 한국은 5위로 진출했고 일본·중국·대만·필리핀은 비교적 한 수 위로 평가되며, 이 국가들은 월드컵 진출권도 획득했다.</p>
+      <p>현재 일본인 감독을 선임해 역대 최고 성적(3위)을 목표로 전지훈련을 시작한 상태다.</p>
+
+      <h2 id="watch">관전 포인트</h2>
+      <div class="kr-box">
+        <p><b>남자 야구는 대만전이 사실상 최대 고비다.</b> 예선부터 대만과 맞붙는 만큼, 조 1위로 결승행을 확정 짓느냐가 대회 초반 판가름 난다. 조 2위에 그치면 일본(사회인 대표)과 4강에서 만날 가능성이 유력하다.</p>
+        <p><b>24명 중 3명을 제외하고 전원이 23세 이하라는 점도 눈여겨볼 대목이다.</b> 세대교체가 진행 중인 대표팀이 국제무대에서 어떤 경쟁력을 보여줄지가 관심사다.</p>
+        <p><b>여자 소프트볼은 역대 최고 성적(3위) 달성 여부가 관전 포인트다.</b> 일본인 감독을 새로 선임하고 전지훈련에 돌입한 대표팀이 한 수 위로 평가받는 일본·중국·대만·필리핀을 상대로 이변을 만들 수 있을지 지켜볼 만하다.</p>
+      </div>
+
+      <div class="footer">
+        출처: 대한야구소프트볼협회, WBC 결과, 2025 아시아컵 순위, 그 외 편집부 취재 및 자체 정리.<br>
+        일정과 세부 사항, 최종 명단은 대회 진행에 따라 변경될 수 있다.
+      </div>
     </div>
-    <div class="cardgrid">
-
-      <div class="info-card">
-        <h3>대표팀 24명</h3>
-        <div class="poslist"><span class="pos">우투수</span>김영우, 조병현, 박영현, 소형준, 최준용, 성영탁, 곽빈, 최민석</div>
-        <div class="poslist"><span class="pos">좌투수</span>배찬승, 오원석, 김진욱</div>
-        <div class="poslist"><span class="pos">포수</span>김건희, 조형우</div>
-        <div class="poslist"><span class="pos">내야수</span>김도영, 김주원, 노시환, 문보경, 박준순, 이재현, 정준재</div>
-        <div class="poslist"><span class="pos">외야수</span>김지찬, 문현빈, 박재현, 윤동희</div>
-        <div class="note">3명 제외 전원 23세 이하 · 전원 프로 선수</div>
-      </div>
-
-      <div class="info-card">
-        <h3>조 편성 · 일정</h3>
-        <div class="grouptable">
-          <div class="grow"><span class="gname">A조</span>일본, 중국, 필리핀, 팔레스타인</div>
-          <div class="grow mine"><span class="gname">B조</span>대만, 대한민국, 홍콩, 태국</div>
-        </div>
-        <div class="sched">
-          <span><b>9/21 18:30</b> 대만전</span>
-          <span><b>9/22 18:30</b> 홍콩전</span>
-          <span><b>9/23 12:00</b> 태국전</span>
-        </div>
-        <div class="note">슈퍼라운드 진출 후 4강 토너먼트 방식이므로 조 1위가 중요. 대만은 해외파·국내 프로 등 절반가량 포함, 일본은 실업야구(사회인 리그) 대표.</div>
-      </div>
-
-      <div class="info-card">
-        <h3>전력 분석</h3>
-        <p class="txt">예선부터 대만과 맞붙는다. 조 1위 시 결승행이 사실상 확정되며, 조 2위일 경우 일본(사회인) 팀과 4강에서 만날 가능성이 유력하다.</p>
-      </div>
-
-      <div class="info-card">
-        <h3>최근 전적</h3>
-        <div class="results">
-          <div class="rgroup">WBC</div>
-          <div class="rline">vs 체코 <span class="w">11-4 승</span> · vs 일본 <span class="l">6-8 패</span> · vs 대만 <span class="l">4-5 패</span> · vs 호주 <span class="w">7-2 승</span> · (8강) vs 도미니카 <span class="l">0-10 패</span></div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ===== 여자 소프트볼 ===== -->
-  <section class="division">
-    <div class="div-head">
-      <h2>여자 소프트볼</h2>
-      <span class="badge">참가 8개국 · 풀리그 유력</span>
-    </div>
-    <div class="cardgrid">
-
-      <div class="info-card">
-        <h3>대표팀 17명</h3>
-        <div class="poslist"><span class="pos">투수</span>김하늘, 박민경, 최연지, 홍시연</div>
-        <div class="poslist"><span class="pos">포수</span>정송희, 주효주</div>
-        <div class="poslist"><span class="pos">내야수</span>김아영, 배유가, 이경민, 장세진, 정연우, 최가현, 허아영</div>
-        <div class="poslist"><span class="pos">외야수</span>김수빈, 김지윤, 이민정, 진주이</div>
-      </div>
-
-      <div class="info-card">
-        <h3>대회 방식</h3>
-        <p class="txt">하루에 2경기 진행이 가능한 종목 특성상 8개국 풀리그 방식이 유력하다.</p>
-      </div>
-
-      <div class="info-card">
-        <h3>전력 분석</h3>
-        <p class="txt">2025 아시아컵 8위 이내 국가들이 출전하며, 국가 간 수준차가 대체로 뚜렷하다. 한국은 5위로 진출했고 일본·중국·대만·필리핀은 비교적 한 수 위(이 국가들은 월드컵 진출권도 획득).</p>
-        <p class="txt">현재 일본인 감독을 선임해 역대 최고 성적(3위)을 목표로 전지훈련을 시작한 상태다.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <footer class="pagefoot">
-    <span>2026 아이치·나고야 아시안게임 · 야구 / 소프트볼</span>
-    <a href="index.html">← 전체 종목 목록 보기</a>
-  </footer>
+    <aside class="infobox">
+      <div class="ib-title">야구 · 소프트볼 종목 정보</div>
+      <table>
+        <tr><th>영문명</th><td>Baseball / Softball</td></tr>
+        <tr><th>참가국</th><td>남자 야구 8개국 · 여자 소프트볼 8개국</td></tr>
+        <tr><th>한국 조 편성</th><td>야구 B조 (대만·대한민국·홍콩·태국)</td></tr>
+        <tr><th>야구 대회 방식</th><td>조별리그 → 슈퍼라운드 → 4강 토너먼트</td></tr>
+        <tr><th>소프트볼 대회 방식</th><td>8개국 풀리그 유력</td></tr>
+        <tr><th>야구 최근 전적</th><td>WBC 2승 3패<span class="badge">2025시즌</span></td></tr>
+        <tr><th>소프트볼 목표</th><td>역대 최고 성적(3위)</td></tr>
+        <tr><th>관련 문서</th><td><a href="index2.html">아시안게임 종목 안내</a></td></tr>
+      </table>
+    </aside>
+  </div>
 </div>
 </body>
 </html>

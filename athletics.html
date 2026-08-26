@@ -3,409 +3,236 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>육상 | 2026 아이치·나고야 아시안게임</title>
+<title>육상 - 2026 아이치·나고야 아시안게임</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#0E1A2B; --ink-2:#152540; --gold:#C9A24B; --gold-soft:#E4CD8C;
-    --sun:#D8482F; --paper:#F3EFE4; --paper-dim:#B9C2CF; --line:rgba(201,162,75,0.28);
-    --medal-gold:#D8B44A; --medal-silver:#C8CDD6; --medal-bronze:#C97B4A;
+    --bg:#ffffff; --panel:#f8f9fa; --border:#c8ccd1; --border-soft:#eaecf0;
+    --ink:#202122; --muted:#54595d; --link:#3366cc; --link-visited:#795cb2; --link-red:#ba0000;
+    --serif:'Noto Serif KR',Georgia,'Times New Roman',serif;
+    --sans:'Pretendard','Helvetica Neue',Arial,sans-serif;
+    --accent:#2456c6; --ok:#1a7f37; --warn:#b45309; --gold:#a05a00;
   }
   *{box-sizing:border-box;}
-  body{
-    margin:0; color:var(--paper); font-family:'Pretendard','Noto Sans KR',sans-serif;
-    background:
-      radial-gradient(1100px 550px at 90% -10%, rgba(216,72,47,0.16), transparent 60%),
-      radial-gradient(900px 500px at -10% 110%, rgba(201,162,75,0.10), transparent 60%),
-      var(--ink);
-    -webkit-font-smoothing:antialiased;
-  }
-  .wrap{max-width:880px;margin:0 auto;padding:40px 28px 100px;}
-  nav.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;}
-  .back{color:var(--gold-soft);text-decoration:none;font-size:13.5px;font-weight:600;display:inline-flex;align-items:center;gap:6px;}
-  .back:hover{color:var(--gold);}
-  .back svg{width:14px;height:14px;}
-  .crumb{font-size:12px;color:var(--paper-dim);letter-spacing:0.02em;}
-  header.hero{padding-bottom:32px;margin-bottom:32px;border-bottom:1px solid var(--line);}
-  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;letter-spacing:0.16em;color:var(--gold-soft);text-transform:uppercase;font-weight:600;margin-bottom:16px;}
-  .eyebrow::before{content:"";width:22px;height:1px;background:var(--gold);display:inline-block;}
-  h1{font-family:'Noto Serif KR',serif;font-weight:900;font-size:clamp(30px,5vw,46px);line-height:1.2;margin:0 0 6px;color:var(--paper);letter-spacing:-0.01em;}
-  .en-title{font-size:14px;color:var(--paper-dim);letter-spacing:0.04em;margin:0 0 18px;font-style:italic;}
-  .tagline{font-size:16.5px;color:var(--paper-dim);line-height:1.75;max-width:640px;margin:0;}
-  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:28px 0 8px;}
-  .fact{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:14px 16px;}
-  .fact span{display:block;font-size:11px;color:var(--gold-soft);letter-spacing:0.05em;margin-bottom:6px;}
-  .fact b{font-family:'Noto Serif KR',serif;font-size:15px;color:var(--paper);font-weight:700;line-height:1.4;}
-  section.body{margin-top:8px;}
-  section.body p{font-size:15.5px;line-height:1.85;color:var(--paper-dim);margin:0 0 16px;}
-  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:48px 0 6px;font-weight:700;}
-  p.sub-note{font-size:13px;color:var(--paper-dim);margin:0 0 20px;line-height:1.6;}
-  .cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;}
-  .disc{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:20px;}
-  .disc h3{font-family:'Noto Serif KR',serif;font-size:17px;margin:0 0 4px;color:var(--paper);}
-  .disc .en{font-size:11.5px;color:var(--gold-soft);letter-spacing:0.04em;margin-bottom:10px;display:block;}
-  .disc p{font-size:14px;line-height:1.7;color:var(--paper-dim);margin:0;}
-
-  /* Schedule + history box */
-  .schedule-hero{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-bottom:6px;}
-  .schedule-hero b{font-family:'Noto Serif KR',serif;font-size:22px;color:var(--gold);}
-  .schedule-hero span{font-size:13px;color:var(--paper-dim);}
-  .history-box{background:var(--ink-2);border:1px solid var(--line);border-left:3px solid var(--sun);border-radius:6px;padding:20px 22px;}
-  .history-box p{font-size:14px;line-height:1.85;color:var(--paper-dim);margin:0 0 10px;}
-  .history-box p:last-child{margin-bottom:0;}
-  .history-box b{color:var(--gold-soft);}
-
-  /* Roster */
-  .roster-wrap2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-  @media (max-width:640px){.roster-wrap2{grid-template-columns:1fr;}}
-  .roster-team{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:18px 20px;}
-  .roster-team h4{font-family:'Noto Serif KR',serif;font-size:13px;color:var(--gold-soft);margin:0 0 10px;letter-spacing:.06em;text-transform:uppercase;}
-  .roster-cat{margin-bottom:12px;}
-  .roster-cat:last-child{margin-bottom:0;}
-  .roster-cat-label{font-size:11px;color:var(--paper-dim);margin-bottom:6px;}
-  .roster-chips{display:flex;flex-wrap:wrap;gap:6px;}
-  .roster-chips span{font-size:12.5px;font-weight:600;color:var(--paper);background:rgba(243,239,228,0.05);border:1px solid rgba(243,239,228,0.14);padding:5px 11px;border-radius:999px;}
-
-  /* Medal history */
-  .medal-group-label{font-family:'Noto Serif KR',serif;font-size:14px;font-weight:700;color:var(--paper);margin:20px 0 8px;}
-  .medal-group-label:first-child{margin-top:0;}
-  .medal-compact{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:4px 20px;}
-  .mc-row{padding:13px 0;border-top:1px solid rgba(243,239,228,0.08);display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;}
-  .mc-row:first-child{border-top:none;}
-  .mc-event{flex:none;width:104px;font-family:'Noto Serif KR',serif;font-size:12.5px;font-weight:700;color:var(--gold-soft);}
-  .mc-meds{flex:1;display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--paper-dim);min-width:200px;}
-  .mc-item{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;}
-  .mc-dot{width:8px;height:8px;border-radius:50%;flex:none;display:inline-block;}
-  .mc-dot.gold{background:var(--medal-gold);}
-  .mc-dot.silver{background:var(--medal-silver);}
-  .mc-dot.bronze{background:var(--medal-bronze);}
-  .mc-item.kr{color:var(--gold-soft);font-weight:700;}
-
-  /* Record watch */
-  .record-list{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:4px 20px;}
-  .record-row{padding:12px 0;border-top:1px solid rgba(243,239,228,0.08);display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;}
-  .record-row:first-child{border-top:none;}
-  .record-row .rname{color:var(--paper);font-weight:600;font-size:13.5px;}
-  .record-row .revent{color:var(--paper-dim);font-size:12px;}
-  .record-row .rmark{color:var(--gold-soft);font-weight:700;font-size:13px;}
-
-  /* Tabs + standards table */
-  .tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;}
-  .tab-btn{background:var(--ink-2);border:1px solid var(--line);color:var(--paper-dim);font-size:13.5px;font-weight:600;padding:9px 18px;border-radius:999px;cursor:pointer;font-family:inherit;transition:background .2s ease, color .2s ease, border-color .2s ease;}
-  .tab-btn:hover{border-color:var(--gold);}
-  .tab-btn.active{background:var(--gold);border-color:var(--gold);color:var(--ink);}
-  .tab-panel{display:none;}
-  .tab-panel.active{display:block;}
-  .table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--ink-2);}
-  table.std-table{width:100%;border-collapse:collapse;font-size:12px;min-width:620px;}
-  .std-table th{text-align:left;color:var(--gold-soft);font-weight:600;font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;padding:10px 14px;white-space:nowrap;}
-  .std-table td{padding:9px 14px;color:var(--paper-dim);border-top:1px solid rgba(243,239,228,0.07);vertical-align:top;}
-  .std-table td.ev{color:var(--paper);font-weight:700;white-space:nowrap;}
-  .std-table td.win, .std-table td.sb{color:var(--paper);}
-  .std-table tr.hl td.sb{color:var(--gold-soft);font-weight:700;}
-
-  footer.pagefoot{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
-  footer.pagefoot a{color:var(--gold-soft);text-decoration:none;}
-  @media (max-width:520px){.wrap{padding:28px 18px 70px;}}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.65;}
+  a{color:var(--link);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  a:visited{color:var(--link-visited);}
+  .topbar{border-bottom:1px solid var(--border);background:var(--panel);font-size:12.5px;color:var(--muted);}
+  .topbar .inner{max-width:1100px;margin:0 auto;padding:8px 20px;display:flex;gap:16px;flex-wrap:wrap;}
+  .topbar a{color:var(--link);}
+  .layout{max-width:1100px;margin:0 auto;padding:22px 20px 80px;}
+  h1.title{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.3;margin:0 0 2px;padding-bottom:6px;border-bottom:1px solid var(--border);}
+  .subtitle{color:var(--muted);font-size:13px;margin:0 0 18px;}
+  .hatnote{font-style:italic;color:var(--muted);background:var(--panel);border:1px solid var(--border-soft);padding:8px 14px;border-radius:2px;margin:0 0 20px;font-size:13.5px;}
+  .content{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;}
+  .main{flex:1 1 560px;min-width:0;}
+  h2{font-family:var(--serif);font-weight:600;font-size:22px;margin:26px 0 10px;padding-bottom:5px;border-bottom:1px solid var(--border-soft);scroll-margin-top:12px;}
+  h3{font-family:var(--serif);font-weight:600;font-size:17px;margin:20px 0 8px;}
+  h4{font-family:var(--sans);font-weight:700;font-size:14.5px;margin:16px 0 6px;color:#3a3f44;}
+  p{margin:0 0 12px;}
+  .toc{display:inline-block;background:var(--panel);border:1px solid var(--border);border-radius:2px;padding:12px 20px 12px 14px;margin:0 0 20px;font-size:14px;}
+  .toc-title{font-weight:700;text-align:center;font-size:13px;margin-bottom:6px;}
+  .toc ol{margin:0;padding-left:22px;}
+  .toc li{margin:3px 0;}
+  .infobox{flex:0 0 300px;background:var(--panel);border:1px solid var(--border);border-radius:2px;font-size:13px;align-self:flex-start;}
+  .infobox .ib-title{background:#eaecf0;font-family:var(--serif);font-weight:700;text-align:center;padding:10px 12px;font-size:15px;border-bottom:1px solid var(--border);}
+  .infobox table{width:100%;border-collapse:collapse;}
+  .infobox th,.infobox td{text-align:left;padding:7px 12px;vertical-align:top;border-bottom:1px solid var(--border-soft);}
+  .infobox th{width:38%;color:var(--muted);font-weight:600;}
+  .badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:2px;background:#e6f0ff;color:#2456c6;border:1px solid #b9d0f5;margin-left:6px;}
+  .badge.gold{background:#fff2e0;color:#a05a00;border-color:#f2d2a0;}
+  table.wt{border-collapse:collapse;width:100%;font-size:13.5px;margin:6px 0 16px;}
+  table.wt th,table.wt td{border:1px solid var(--border);padding:6px 10px;text-align:left;vertical-align:top;}
+  table.wt th{background:var(--panel);}
+  table.wt td.num, table.wt th.num{text-align:center;}
+  table.wt caption{font-size:12.5px;color:var(--muted);text-align:left;padding:2px 0 6px;}
+  .note{font-size:12.5px;color:var(--muted);margin:-8px 0 16px;}
+  .kr-box{background:#eef4ff;border:1px solid #c3d6f7;border-radius:3px;padding:14px 16px;margin:10px 0 18px;}
+  .kr-box h4{margin-top:0;color:#1e3a8a;}
+  .medals{display:inline-flex;gap:6px;margin:0 0 8px;flex-wrap:wrap;}
+  .medal{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;border:1px solid;}
+  .medal.g{color:#8a6d1a;border-color:#e4cd8c;background:#fdf6e3;}
+  .medal.s{color:#5b6168;border-color:#d5d9de;background:#f4f5f6;}
+  .medal.b{color:#8a5a30;border-color:#e0c3a3;background:#fbf1e6;}
+  .footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;}
+  @media (max-width:820px){.infobox{flex:1 1 100%;order:-1;}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <nav class="top">
-    <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>전체 종목으로</a>
-    <span class="crumb">올림픽 · 기초종목 / 육상</span>
-  </nav>
-
-  <header class="hero">
-    <span class="eyebrow">2026 Aichi · Nagoya · 올림픽 · 기초종목</span>
-    <h1>육상</h1>
-    <p class="en-title">Athletics</p>
-    <p class="tagline">트랙에서의 달리기·허들·계주와 필드에서의 던지기·뛰기 종목을 모두 아우르는 스포츠의 기초.</p>
-  </header>
-
-  <div class="facts">
-    <div class="fact"><span>트랙 종목</span><b>단거리·중장거리·허들·계주</b></div>
-    <div class="fact"><span>필드 종목</span><b>높이뛰기·멀리뛰기·투척</b></div>
-    <div class="fact"><span>경기장</span><b>나고야 파로마 미즈호 스타디움</b></div>
-    <div class="fact"><span>2026 대회 기간</span><b>9월 23일 ~ 29일</b></div>
-  </div>
-
-  <section class="body">
-    <p>육상은 트랙에서 스피드를 겨루는 달리기·허들·계주 종목과, 필드에서 높이·거리·투척력을 겨루는 도약·투척 종목을 모두 포함하는 스포츠의 기본 종목군이다.</p>
-    <p>가장 많은 세부 종목과 메달 수가 걸려 있어 아시안게임 전체 메달 순위에 큰 영향을 미치며, 중국·일본·인도·카타르 등이 강세를 보인다.</p>
-  </section>
-
-  <!-- 2026 대회 일정 -->
-  <h2 class="sub">2026 아이치·나고야 대회 일정</h2>
-  <div class="schedule-hero">
-    <div><b>2026.9.23 – 9.29</b><br><span>육상 경기 기간(트랙·필드)</span></div>
-    <span>나고야 파로마 미즈호 스타디움</span>
-  </div>
-  <p class="sub-note">경보는 아이치현청·나고야시청 청사 인근에 마련되는 별도 순환 코스에서 치러지며, 세부 종목별 시간표는 추후 공개됩니다.</p>
-
-  <!-- 한국 육상과 아시안게임 -->
-  <h2 class="sub">한국 육상과 아시안게임</h2>
-  <div class="history-box">
-    <p>한국 육상은 손기정(1936년, 당시 일본 국적으로 올림픽 우승)과 바르셀로나 올림픽 금메달리스트 황영조로 대표되지만, 마라톤을 제외한 종목에서는 세계 무대에서 두각을 드러낸 경우가 드물었다.</p>
-    <p>아시안게임 역대 누적 <b>34개 금메달</b>을 따냈고 백옥자(포환던지기)·임춘애(중장거리)·이진택(높이뛰기)·이진일(800m)·이영선(창던지기)·정혜림(100m 허들) 등이 대표적인 다관왕 선수로 꼽힌다. 다만 2010 광저우 대회(이연경·지용준·김덕현·정순옥 4금) 이후로는 금메달이 단 하나에 그쳐, 이번 대회에서의 반등이 절실한 상황이다.</p>
-  </div>
-
-  <!-- 한국 국가대표 명단 -->
-  <h2 class="sub">2026 한국 국가대표 명단</h2>
-  <p class="sub-note">2026년 전국선수권 우승자·기준기록 통과자를 중심으로 선발된 명단.</p>
-  <div class="roster-wrap2">
-    <div class="roster-team">
-      <h4>남자</h4>
-      <div class="roster-cat">
-        <div class="roster-cat-label">단거리(100·200·계주)</div>
-        <div class="roster-chips"><span>나마디 조엘진</span><span>비웨사 다니엘 가사마</span><span>이재성</span><span>서민준</span><span>김시온</span></div>
+<div class="topbar"><div class="inner">
+  <a href="index2.html">← 아시안게임 종목 목록</a>
+  <span>문서 · 육상</span>
+  <a href="index.html">전체 목차</a>
+</div></div>
+<div class="layout">
+  <h1 class="title">육상</h1>
+  <p class="subtitle">Athletics · 2026 아이치·나고야 아시안게임 (제20회) · 트랙·필드</p>
+  <p class="hatnote">육상은 트랙에서 스피드를 겨루는 달리기·허들·계주 종목과, 필드에서 높이·거리·투척력을 겨루는 도약·투척 종목을 모두 포함하는 스포츠의 기본 종목군이다. 가장 많은 세부 종목과 메달 수가 걸려 있어 아시안게임 전체 메달 순위에 큰 영향을 미친다.</p>
+  <div class="content">
+    <div class="main">
+      <div class="toc">
+        <div class="toc-title">목차</div>
+        <ol>
+          <li><a href="#overview">개요</a></li>
+          <li><a href="#disciplines">세부종목 · 선발 기준기록</a></li>
+          <li><a href="#roster">한국 대표팀</a></li>
+          <li><a href="#form">최근 성적</a></li>
+          <li><a href="#rivals">경계할 상대</a></li>
+          <li><a href="#watch">관전 포인트</a></li>
+        </ol>
       </div>
-      <div class="roster-cat">
-        <div class="roster-cat-label">단거리(400·계주)</div>
-        <div class="roster-chips"><span>신민규</span><span>배건율</span><span>장민호</span></div>
-      </div>
-      <div class="roster-cat">
-        <div class="roster-cat-label">중장거리</div>
-        <div class="roster-chips"><span>이재웅</span><span>박종학</span><span>박재우</span><span>박원빈</span></div>
-      </div>
-      <div class="roster-cat">
-        <div class="roster-cat-label">필드</div>
-        <div class="roster-chips"><span>우상혁</span><span>김장우</span><span>김동혁</span><span>박시훈</span><span>이윤철</span><span>남태풍</span></div>
-      </div>
-      <div class="roster-cat">
-        <div class="roster-cat-label">혼성·도로</div>
-        <div class="roster-chips"><span>이유성</span><span>박준영</span><span>최병광</span><span>주현명</span><span>박민호</span><span>김홍록</span></div>
-      </div>
-    </div>
-    <div class="roster-team">
-      <h4>여자</h4>
-      <div class="roster-cat">
-        <div class="roster-cat-label">단거리</div>
-        <div class="roster-chips"><span>김주하</span><span>서지현</span><span>김명지</span><span>안영훈</span><span>김서윤</span><span>이아영</span></div>
-      </div>
-      <div class="roster-cat">
-        <div class="roster-cat-label">중장거리</div>
-        <div class="roster-chips"><span>박나연</span><span>김유진</span><span>조하림</span></div>
-      </div>
-      <div class="roster-cat">
-        <div class="roster-cat-label">필드</div>
-        <div class="roster-chips"><span>신수영</span><span>정유선</span><span>정예림</span><span>신유진</span><span>김태희</span><span>이유라</span></div>
-      </div>
-      <div class="roster-cat">
-        <div class="roster-cat-label">도로</div>
-        <div class="roster-chips"><span>이세하</span><span>임예진</span><span>최경선</span></div>
-      </div>
-    </div>
-  </div>
 
-  <!-- 메달 유력 후보 -->
-  <h2 class="sub">메달 유력 후보</h2>
-  <p class="sub-note">2018·2023 아시안게임 메달권 기록과 2026시즌 국내외 기록을 비교해 추린 후보들.</p>
-  <div class="cardgrid">
-    <div class="disc">
-      <h3>나마디 조엘진</h3>
-      <span class="en">Men's 100m / 200m</span>
-      <p>전국선수권 200m 20.50 기록. 2018·2023 아시안게임 200m 메달권 기록(20.5~20.6초대)과 맞먹는 수준으로, 이재성과 함께 남자 단거리 메달을 노린다.</p>
-    </div>
-    <div class="disc">
-      <h3>이재웅</h3>
-      <span class="en">Men's 1500m</span>
-      <p>2025 아시아선수권 은메달리스트. 2025년 3분36초01 한국신기록을 세웠고, 2026년에도 3분39초대로 아시아권 메달권에 근접한 기록을 유지하고 있다.</p>
-    </div>
-    <div class="disc">
-      <h3>남자 4×100m 계주</h3>
-      <span class="en">나마디 조엘진·비웨사·이재성·서민준</span>
-      <p>기존 한국기록 38.49를 0.2~0.3초만 단축해도 중국·일본과 견줄 만한 38.1~2초대에 도달해 우승 경쟁이 가능하다는 평가.</p>
-    </div>
-    <div class="disc">
-      <h3>우상혁</h3>
-      <span class="en">Men's High Jump</span>
-      <p>2026시즌 최고기록 2.30m. 2022 대회 은메달(2.33m)의 주인공으로, 세계적 강자 무타즈 바르심의 불참 시 가장 유력한 우승 후보로 꼽힌다.</p>
-    </div>
-    <div class="disc">
-      <h3>김장우</h3>
-      <span class="en">Men's Triple Jump</span>
-      <p>현재 기록 16.63m로도 메달권 경쟁이 가능하며, 본인의 한국신기록 17m대가 나온다면 우승 경쟁까지 가능하다는 전망.</p>
-    </div>
-    <div class="disc">
-      <h3>박시훈</h3>
-      <span class="en">Men's Shot Put</span>
-      <p>20세의 나이에 1년 만에 기록을 1m 가까이 끌어올려(18.05m→19.10m) 한국신기록(19.49m)에 근접. 하반기 20m대 진입 시 메달권 싸움이 가능하다.</p>
-    </div>
-     </div>
+      <h2 id="overview">개요</h2>
+      <p>육상은 트랙에서 스피드를 겨루는 달리기·허들·계주 종목과, 필드에서 높이·거리·투척력을 겨루는 도약·투척 종목을 모두 포함하는 스포츠의 기본 종목군이다. 가장 많은 세부 종목과 메달 수가 걸려 있어 아시안게임 전체 메달 순위에 큰 영향을 미치며, 중국·일본·인도·카타르 등이 강세를 보인다.</p>
+      <p>2026 대회는 나고야 파로마 미즈호 스타디움에서 9월 23일부터 29일까지 열린다. 경보는 아이치현청·나고야시청 청사 인근에 마련되는 별도 순환 코스에서 치러지며, 세부 종목별 시간표는 추후 공개된다.</p>
 
- 
-  <!-- 종목별 선발 기준기록 -->
-  <h2 class="sub">종목별 선발 기준기록 상세</h2>
-  <p class="sub-note">전국선수권 우승 기록과 2026시즌 최고기록을 한국기록(한국신)과 함께 종목별로 정리했다.</p>
-
-  <div class="tabs" id="stdTabs">
-    <button class="tab-btn active" data-stdtab="mt">남자 트랙</button>
-    <button class="tab-btn" data-stdtab="mf">남자 필드</button>
-    <button class="tab-btn" data-stdtab="wt">여자 트랙</button>
-    <button class="tab-btn" data-stdtab="wf">여자 필드</button>
-    <button class="tab-btn" data-stdtab="rd">도로</button>
-  </div>
-
-  <div class="tab-panel active" id="mt">
-    <div class="table-scroll">
-      <table class="std-table">
-        <thead><tr><th>종목</th><th>한국신</th><th>전국선수권 우승자</th><th>2026시즌 최고기록</th></tr></thead>
-        <tbody>
-          <tr><td class="ev">100m</td><td>10.07</td><td class="win">나마디 조엘진 10.09(풍속초과)</td><td class="sb">비웨사 다니엘 가사마·나마디 조엘진 공동 10.11</td></tr>
-          <tr><td class="ev">200m</td><td>20.40</td><td class="win">이재성 20.64</td><td class="sb">나마디 조엘진 20.50</td></tr>
-          <tr><td class="ev">400m</td><td>45.37</td><td class="win">신민규 46.59</td><td class="sb">장민호 46.47</td></tr>
-          <tr><td class="ev">800m</td><td>1:44.14</td><td class="win">이재웅 1:49.49</td><td class="sb">한태건 1:49.40</td></tr>
-          <tr><td class="ev">1500m</td><td>3:36.01</td><td class="win">이재웅 3:44.70</td><td class="sb">이재웅 3:39.48</td></tr>
-          <tr><td class="ev">5000m</td><td>13:42.98</td><td class="win">박재우 14:22.91</td><td class="sb">박재우 13:57.75</td></tr>
-          <tr><td class="ev">10000m</td><td>28:23.62</td><td class="win">박재우 29:39.80</td><td class="sb">김태훈 29:37.20</td></tr>
-          <tr><td class="ev">110mH</td><td>13.39</td><td class="win">김주호 13.97</td><td class="sb">김경태 13.89</td></tr>
-          <tr><td class="ev">400mH</td><td>49.80</td><td class="win">김주호 50.56</td><td class="sb">김주호 50.11</td></tr>
-          <tr><td class="ev">3000mSC</td><td>8:40.37</td><td class="win">박원빈 9:00</td><td class="sb">박원빈 8:40.37 — 36년 만의 한국신기록</td></tr>
-          <tr><td class="ev">계주(4×100/4×400)</td><td colspan="3">전국선수권 결승 1·2위 및 시즌 최고기록을 바탕으로 경기력분석위원회가 별도 추천</td></tr>
-        </tbody>
+      <h2 id="disciplines">세부종목 · 선발 기준기록</h2>
+      <table class="wt">
+        <tr><th>구분</th><th>세부종목</th></tr>
+        <tr><td>트랙</td><td>단거리·중장거리·허들·계주</td></tr>
+        <tr><td>필드</td><td>높이뛰기·멀리뛰기·투척</td></tr>
       </table>
-    </div>
-  </div>
+      <p>2026년 전국선수권 우승 기록과 2026시즌 최고기록을 한국기록(한국신)과 함께 종목별로 정리했다. 계주는 전국선수권 결승 1·2위 및 시즌 최고기록을 바탕으로 경기력분석위원회가 별도 추천한다.</p>
 
-  <div class="tab-panel" id="mf">
-    <div class="table-scroll">
-      <table class="std-table">
-        <thead><tr><th>종목</th><th>한국신</th><th>전국선수권 우승자</th><th>2026시즌 최고기록</th></tr></thead>
-        <tbody>
-          <tr><td class="ev">높이뛰기</td><td>2.36</td><td class="win">우상혁 2.27</td><td class="sb">우상혁 2.30</td></tr>
-          <tr><td class="ev">장대높이뛰기</td><td>5.80</td><td class="win">진민섭 5.20</td><td class="sb">진민섭·한두현 5.20</td></tr>
-          <tr><td class="ev">멀리뛰기</td><td>8.22</td><td class="win">이현우 7.78(참고, 풍속초과)</td><td class="sb">김민수 7.63</td></tr>
-          <tr><td class="ev">세단뛰기</td><td>17.13</td><td class="win">김장우 16.63</td><td class="sb">김장우 16.63</td></tr>
-          <tr><td class="ev">포환던지기</td><td>19.49</td><td class="win">박시훈 19.10</td><td class="sb">심준 19.49 — 한국신 타이</td></tr>
-          <tr><td class="ev">원반던지기</td><td>59.68</td><td class="win">김동혁 56.87</td><td class="sb">김동혁 56.87(동일)</td></tr>
-          <tr><td class="ev">해머던지기</td><td>73.77</td><td class="win">이윤철 68.66</td><td class="sb">이윤철 68.66</td></tr>
-          <tr><td class="ev">창던지기</td><td>83.99</td><td class="win">남태풍 78.51</td><td class="sb">남태풍 80.35</td></tr>
-          <tr><td class="ev">10종경기</td><td>—</td><td class="win">이유성 7237</td><td class="sb">이유성 7237</td></tr>
-        </tbody>
+      <h3>남자 트랙</h3>
+      <table class="wt">
+        <tr><th>종목</th><th>한국신</th><th>전국선수권 우승자</th><th>2026시즌 최고기록</th></tr>
+        <tr><td>100m</td><td class="num">10.07</td><td>나마디 조엘진 10.09(풍속초과)</td><td>비웨사 다니엘 가사마·나마디 조엘진 공동 10.11</td></tr>
+        <tr><td>200m</td><td class="num">20.40</td><td>이재성 20.64</td><td>나마디 조엘진 20.50</td></tr>
+        <tr><td>400m</td><td class="num">45.37</td><td>신민규 46.59</td><td>장민호 46.47</td></tr>
+        <tr><td>800m</td><td class="num">1:44.14</td><td>이재웅 1:49.49</td><td>한태건 1:49.40</td></tr>
+        <tr><td>1500m</td><td class="num">3:36.01</td><td>이재웅 3:44.70</td><td>이재웅 3:39.48</td></tr>
+        <tr><td>5000m</td><td class="num">13:42.98</td><td>박재우 14:22.91</td><td>박재우 13:57.75</td></tr>
+        <tr><td>10000m</td><td class="num">28:23.62</td><td>박재우 29:39.80</td><td>김태훈 29:37.20</td></tr>
+        <tr><td>110mH</td><td class="num">13.39</td><td>김주호 13.97</td><td>김경태 13.89</td></tr>
+        <tr><td>400mH</td><td class="num">49.80</td><td>김주호 50.56</td><td>김주호 50.11</td></tr>
+        <tr><td>3000mSC</td><td class="num">8:40.37</td><td>박원빈 9:00</td><td>박원빈 8:40.37 — 36년 만의 한국신기록</td></tr>
+        <tr><td>계주(4×100/4×400)</td><td colspan="3">전국선수권 결승 1·2위 및 시즌 최고기록을 바탕으로 경기력분석위원회가 별도 추천</td></tr>
       </table>
-    </div>
-  </div>
 
-  <div class="tab-panel" id="wt">
-    <div class="table-scroll">
-      <table class="std-table">
-        <thead><tr><th>종목</th><th>한국신</th><th>전국선수권 우승자</th><th>2026시즌 최고기록</th></tr></thead>
-        <tbody>
-          <tr><td class="ev">100m</td><td>11.49</td><td class="win">김주하 11.66(풍속초과)</td><td class="sb">김주하 11.76</td></tr>
-          <tr><td class="ev">200m</td><td>23.69</td><td class="win">김주하 23.85</td><td class="sb">김주하 동일</td></tr>
-          <tr><td class="ev">400m</td><td>53.67</td><td class="win">김서윤 54.31</td><td class="sb">김서윤 동일</td></tr>
-          <tr><td class="ev">800m</td><td>2:04.12</td><td class="win">박해진 2:10.15</td><td class="sb">박해진 동일</td></tr>
-          <tr><td class="ev">1500m</td><td>4:14.18</td><td class="win">박나연 4:21.23</td><td class="sb">박나연 4:13.87 — 한국신기록 경신</td></tr>
-          <tr><td class="ev">5000m</td><td>—</td><td class="win">김유진 16:37</td><td class="sb">김유진 15:46.78</td></tr>
-          <tr><td class="ev">10000m</td><td>—</td><td class="win">조하림 34:28.57</td><td class="sb">조하림 동일</td></tr>
-          <tr><td class="ev">3000mSC</td><td>—</td><td class="win">남보하나 10:44</td><td class="sb">조하림 10:17.30 — 한국기록 보유(9분대)</td></tr>
-          <tr><td class="ev">100mH</td><td>—</td><td class="win">류나희 13.56</td><td class="sb">—</td></tr>
-          <tr><td class="ev">400mH</td><td>—</td><td class="win">손경미 1:01.25</td><td class="sb">노지현 1:00.28</td></tr>
-        </tbody>
+      <h3>남자 필드</h3>
+      <table class="wt">
+        <tr><th>종목</th><th>한국신</th><th>전국선수권 우승자</th><th>2026시즌 최고기록</th></tr>
+        <tr><td>높이뛰기</td><td class="num">2.36</td><td>우상혁 2.27</td><td>우상혁 2.30</td></tr>
+        <tr><td>장대높이뛰기</td><td class="num">5.80</td><td>진민섭 5.20</td><td>진민섭·한두현 5.20</td></tr>
+        <tr><td>멀리뛰기</td><td class="num">8.22</td><td>이현우 7.78(참고, 풍속초과)</td><td>김민수 7.63</td></tr>
+        <tr><td>세단뛰기</td><td class="num">17.13</td><td>김장우 16.63</td><td>김장우 16.63</td></tr>
+        <tr><td>포환던지기</td><td class="num">19.49</td><td>박시훈 19.10</td><td>심준 19.49 — 한국신 타이</td></tr>
+        <tr><td>원반던지기</td><td class="num">59.68</td><td>김동혁 56.87</td><td>김동혁 56.87(동일)</td></tr>
+        <tr><td>해머던지기</td><td class="num">73.77</td><td>이윤철 68.66</td><td>이윤철 68.66</td></tr>
+        <tr><td>창던지기</td><td class="num">83.99</td><td>남태풍 78.51</td><td>남태풍 80.35</td></tr>
+        <tr><td>10종경기</td><td class="num">—</td><td>이유성 7237</td><td>이유성 7237</td></tr>
       </table>
-    </div>
-    <p class="sub-note" style="margin-top:8px;">계주는 남자와 동일하게 전국선수권 결승 1·2위 및 시즌 최고기록 기준으로 추천 선발.</p>
-  </div>
 
-  <div class="tab-panel" id="wf">
-    <div class="table-scroll">
-      <table class="std-table">
-        <thead><tr><th>종목</th><th>한국신</th><th>전국선수권 우승자</th><th>2026시즌 최고기록</th></tr></thead>
-        <tbody>
-          <tr><td class="ev">높이뛰기</td><td>1.93</td><td class="win">장선영 1.79m</td><td class="sb">장선영 1.79m(동일)</td></tr>
-          <tr><td class="ev">장대높이뛰기</td><td>4.41</td><td class="win">신수영 4.00</td><td class="sb">신수영 4.00</td></tr>
-          <tr><td class="ev">멀리뛰기</td><td>6.76</td><td class="win">김한나 5.90(참고)</td><td class="sb">김수지 5.94</td></tr>
-          <tr><td class="ev">세단뛰기</td><td>13.92</td><td class="win">임채영 12.50</td><td class="sb">임채영 동일</td></tr>
-          <tr><td class="ev">포환던지기</td><td>19.36</td><td class="win">정유선 16.51</td><td class="sb">정유선 동일</td></tr>
-          <tr><td class="ev">원반던지기</td><td>57.70</td><td class="win">정예림 57.34</td><td class="sb">정예림 57.34 — 한국 역대 2위기록</td></tr>
-          <tr><td class="ev">해머던지기</td><td>64.70</td><td class="win">이유라 60.63</td><td class="sb">김태희 64.10 · 이유라 62.19</td></tr>
-          <tr><td class="ev">창던지기</td><td>60.92</td><td class="win">양석주 52.18</td><td class="sb">양석주 53.15</td></tr>
-          <tr><td class="ev">7종경기</td><td>—</td><td class="win">김주현 4779</td><td class="sb">김주현 동일</td></tr>
-        </tbody>
+      <h3>여자 트랙</h3>
+      <table class="wt">
+        <tr><th>종목</th><th>한국신</th><th>전국선수권 우승자</th><th>2026시즌 최고기록</th></tr>
+        <tr><td>100m</td><td class="num">11.49</td><td>김주하 11.66(풍속초과)</td><td>김주하 11.76</td></tr>
+        <tr><td>200m</td><td class="num">23.69</td><td>김주하 23.85</td><td>김주하 동일</td></tr>
+        <tr><td>400m</td><td class="num">53.67</td><td>김서윤 54.31</td><td>김서윤 동일</td></tr>
+        <tr><td>800m</td><td class="num">2:04.12</td><td>박해진 2:10.15</td><td>박해진 동일</td></tr>
+        <tr><td>1500m</td><td class="num">4:14.18</td><td>박나연 4:21.23</td><td>박나연 4:13.87 — 한국신기록 경신</td></tr>
+        <tr><td>5000m</td><td class="num">—</td><td>김유진 16:37</td><td>김유진 15:46.78</td></tr>
+        <tr><td>10000m</td><td class="num">—</td><td>조하림 34:28.57</td><td>조하림 동일</td></tr>
+        <tr><td>3000mSC</td><td class="num">—</td><td>남보하나 10:44</td><td>조하림 10:17.30 — 한국기록 보유(9분대)</td></tr>
+        <tr><td>100mH</td><td class="num">—</td><td>류나희 13.56</td><td>—</td></tr>
+        <tr><td>400mH</td><td class="num">—</td><td>손경미 1:01.25</td><td>노지현 1:00.28</td></tr>
       </table>
-    </div>
-  </div>
+      <p class="note">계주는 남자와 동일하게 전국선수권 결승 1·2위 및 시즌 최고기록 기준으로 추천 선발한다.</p>
 
-  <div class="tab-panel" id="rd">
-    <p class="sub-note">경보는 실제 대회에서 하프마라톤·마라톤 거리로 진행되지만, 2026년 전국선수권은 20km·30km 경보로 최종 선발전을 실시했다. 마라톤은 여자부 최경선이 우선 선발됐다.</p>
-    <div class="table-scroll">
-      <table class="std-table">
-        <thead><tr><th>종목</th><th>결과</th></tr></thead>
-        <tbody>
-          <tr><td class="ev">하프마라톤경보(남)</td><td class="win">최병광 우승 — 1시간 25분대</td></tr>
-          <tr><td class="ev">하프마라톤경보(여)</td><td class="win">이세하 우승 — 1시간 38분대</td></tr>
-          <tr><td class="ev">마라톤(여)</td><td class="win">최경선 우선 선발</td></tr>
-        </tbody>
+      <h3>여자 필드</h3>
+      <table class="wt">
+        <tr><th>종목</th><th>한국신</th><th>전국선수권 우승자</th><th>2026시즌 최고기록</th></tr>
+        <tr><td>높이뛰기</td><td class="num">1.93</td><td>장선영 1.79m</td><td>장선영 1.79m(동일)</td></tr>
+        <tr><td>장대높이뛰기</td><td class="num">4.41</td><td>신수영 4.00</td><td>신수영 4.00</td></tr>
+        <tr><td>멀리뛰기</td><td class="num">6.76</td><td>김한나 5.90(참고)</td><td>김수지 5.94</td></tr>
+        <tr><td>세단뛰기</td><td class="num">13.92</td><td>임채영 12.50</td><td>임채영 동일</td></tr>
+        <tr><td>포환던지기</td><td class="num">19.36</td><td>정유선 16.51</td><td>정유선 동일</td></tr>
+        <tr><td>원반던지기</td><td class="num">57.70</td><td>정예림 57.34</td><td>정예림 57.34 — 한국 역대 2위기록</td></tr>
+        <tr><td>해머던지기</td><td class="num">64.70</td><td>이유라 60.63</td><td>김태희 64.10 · 이유라 62.19</td></tr>
+        <tr><td>창던지기</td><td class="num">60.92</td><td>양석주 52.18</td><td>양석주 53.15</td></tr>
+        <tr><td>7종경기</td><td class="num">—</td><td>김주현 4779</td><td>김주현 동일</td></tr>
       </table>
+
+      <h3>도로 (경보·마라톤)</h3>
+      <p>경보는 실제 대회에서 하프마라톤·마라톤 거리로 진행되지만, 2026년 전국선수권은 20km·30km 경보로 최종 선발전을 실시했다. 마라톤은 여자부 최경선이 우선 선발됐다.</p>
+      <table class="wt">
+        <tr><th>종목</th><th>결과</th></tr>
+        <tr><td>하프마라톤경보(남)</td><td>최병광 우승 — 1시간 25분대</td></tr>
+        <tr><td>하프마라톤경보(여)</td><td>이세하 우승 — 1시간 38분대</td></tr>
+        <tr><td>마라톤(여)</td><td>최경선 우선 선발</td></tr>
+      </table>
+
+      <h2 id="roster">한국 대표팀</h2>
+      <p>2026년 전국선수권 우승자·기준기록 통과자를 중심으로 선발된 명단.</p>
+      <h3>남자</h3>
+      <table class="wt">
+        <tr><th>부문</th><th>선수</th></tr>
+        <tr><td>단거리(100·200·계주)</td><td>나마디 조엘진, 비웨사 다니엘 가사마, 이재성, 서민준, 김시온</td></tr>
+        <tr><td>단거리(400·계주)</td><td>신민규, 배건율, 장민호</td></tr>
+        <tr><td>중장거리</td><td>이재웅, 박종학, 박재우, 박원빈</td></tr>
+        <tr><td>필드</td><td>우상혁, 김장우, 김동혁, 박시훈, 이윤철, 남태풍</td></tr>
+        <tr><td>혼성·도로</td><td>이유성, 박준영, 최병광, 주현명, 박민호, 김홍록</td></tr>
+      </table>
+      <h3>여자</h3>
+      <table class="wt">
+        <tr><th>부문</th><th>선수</th></tr>
+        <tr><td>단거리</td><td>김주하, 서지현, 김명지, 안영훈, 김서윤, 이아영</td></tr>
+        <tr><td>중장거리</td><td>박나연, 김유진, 조하림</td></tr>
+        <tr><td>필드</td><td>신수영, 정유선, 정예림, 신유진, 김태희, 이유라</td></tr>
+        <tr><td>도로</td><td>이세하, 임예진, 최경선</td></tr>
+      </table>
+
+      <h2 id="form">최근 성적</h2>
+      <h3>2022 항저우 아시안게임 — 금메달 없이 은1·동2에 그쳐</h3>
+      <p class="medals"><span class="medal s">은 1</span><span class="medal b">동 2</span></p>
+      <p>남자 높이뛰기에서 우상혁이 2.33m로 은메달을 따냈고(금메달은 카타르 무타즈 바르심 2.35m), 남자 4×100m 계주(이정태·김국영·이재성·고승환·박원진, 38.74)와 여자 해머던지기 김태희(64.14)가 동메달을 보탰다. 그 외 주요 종목 금메달은 중국·카타르·바레인 등이 나눠 가졌고, 한국은 금메달을 하나도 배출하지 못했다.</p>
+
+      <h3>2026시즌 — 메달 유력 후보들의 기록 향상</h3>
+      <p class="medals"><span class="medal g">기록 경신 다수</span></p>
+      <p>나마디 조엘진은 전국선수권 200m 20.50을 기록해 2018·2023 대회 메달권 기록(20.5~20.6초대)에 근접했다. 이재웅은 2025 아시아선수권 1500m 은메달에 이어 2025년 3분36초01 한국신기록을 세웠고 2026년에도 3분39초대를 유지 중이다. 우상혁은 2026시즌 최고기록 2.30m로 2022 대회 은메달(2.33m) 이후 다시 메달권에 근접했으며, 김장우(세단뛰기 16.63m)와 박시훈(포환던지기, 1년 만에 18.05m→19.10m로 향상)도 메달권 경쟁이 가능한 기록을 냈다. 남자 4×100m 계주(나마디 조엘진·비웨사·이재성·서민준)는 한국기록 38.49를 0.2~0.3초만 단축해도 중국·일본과 견줄 만한 38.1~2초대에 도달한다는 평가다.</p>
+
+      <h2 id="rivals">경계할 상대</h2>
+      <h4>중국 <span style="font-weight:400;color:var(--muted);">China</span></h4>
+      <p>2022 대회에서 남자 100m(셰전예 9.97)·남자 4×100m 계주·남자 마라톤(허제)·여자 100m(거만치 11.23)·여자 해머던지기(왕정·자오제 1·2위)까지 휩쓸며 육상 최강국임을 재확인했다. 트랙과 필드 모두에서 고르게 강한 만큼 이번 대회에서도 가장 많은 금메달을 가져갈 것으로 예상된다.</p>
+      <h4>카타르 <span style="font-weight:400;color:var(--muted);">Qatar</span></h4>
+      <p>남자 높이뛰기의 무타즈 바르심이 2022 대회 2.35m로 금메달을 따내며 우상혁을 눌렀다. 세계적 강자인 만큼 그의 출전 여부가 이번 대회 남자 높이뛰기 판도를 좌우할 전망이다.</p>
+      <h4>일본 <span style="font-weight:400;color:var(--muted);">Japan</span></h4>
+      <p>2022 대회 남자 4×100m 계주 은메달, 남자 높이뛰기 신노 도모히로 동메달(2.29m)로 트랙·필드 모두 메달권 전력을 보여줬다. 계주 종목에서는 한국의 직접적인 경쟁 상대다.</p>
+      <h4>바레인·싱가포르 등 서아시아·동남아 강국 <span style="font-weight:400;color:var(--muted);">Bahrain, Singapore</span></h4>
+      <p>바레인은 2022 대회 여자 마라톤(유니스 춤바)과 여자 100m 동메달(하자르 알칼디)을 가져갔고, 싱가포르는 산티 페레이라가 여자 100m 은메달을 따냈다. 아프리카 출신 귀화 선수를 앞세운 국가들이 단거리·마라톤에서 꾸준히 이변을 만들어내는 만큼 방심할 수 없다.</p>
+
+      <h2 id="watch">관전 포인트</h2>
+      <div class="kr-box">
+        <p><b>2010년 광저우 대회(4관왕) 이후 최근 몇 대회에서 이어진 부진을 끊을 수 있을까.</b> 한국 육상은 아시안게임 역대 누적 34개 금메달을 따냈고 백옥자·임춘애·이진택·이진일·이영선·정혜림 등 다관왕 선수를 배출했지만, 2010년 이후로는 금메달이 단 하나에 그쳤다.</p>
+        <p><b>우상혁이 바르심의 벽을 넘을 수 있을지가 최대 관심사다.</b> 2022 대회 은메달(2.33m)에 이어 2026시즌 최고기록 2.30m를 보유한 우상혁은, 세계적 강자 무타즈 바르심이 불참할 경우 가장 유력한 우승 후보로 꼽힌다.</p>
+        <p><b>박원빈의 3000mSC 한국신기록이 아시안게임에서도 통할지 주목된다.</b> 36년 만에 한국기록(8:40.37)을 새로 쓴 만큼, 실제 메달권 진입으로 이어질지가 관전 포인트다.</p>
+        <p><b>남자 4×100m 계주가 중국·일본과 겨룰 수 있는 기록을 낼 수 있을지도 지켜볼 대목이다.</b> 한국기록 38.49를 0.2~0.3초만 단축해도 38.1~2초대에 도달해 우승 경쟁이 가능하다는 평가가 나온다.</p>
+      </div>
+
+      <div class="footer">
+        출처: World Athletics·아시아육상연맹 공식 기록, 대한육상연맹 전국선수권 결과, 2026시즌 국내 기록 및 편집부 취재·자체 정리.<br>
+        일정과 세부 사항, 최종 선발 명단은 대회 진행에 따라 변경될 수 있다.
+      </div>
     </div>
+    <aside class="infobox">
+      <div class="ib-title">육상 종목 정보</div>
+      <table>
+        <tr><th>영문명</th><td>Athletics</td></tr>
+        <tr><th>경기 기간</th><td>9월 23일 ~ 29일</td></tr>
+        <tr><th>경기장</th><td>나고야 파로마 미즈호 스타디움</td></tr>
+        <tr><th>트랙 종목</th><td>단거리·중장거리·허들·계주</td></tr>
+        <tr><th>필드 종목</th><td>높이뛰기·멀리뛰기·투척</td></tr>
+        <tr><th>한국 역대 성적</th><td>누적 금 34개<span class="badge">2010년 이후 금0</span></td></tr>
+        <tr><th>2022 대회 성적</th><td>은1·동2<span class="badge gold">우상혁 은메달</span></td></tr>
+        <tr><th>관련 문서</th><td><a href="index2.html">아시안게임 종목 안내</a></td></tr>
+      </table>
+    </aside>
   </div>
-
-  <!-- 역대 시상대 -->
-  <h2 class="sub">역대 시상대</h2>
-  <p class="sub-note">2022 항저우 아시안게임 육상 메달 결과. 세부 종목이 매우 많아 대표 종목과 한국 관련 메달 위주로 정리했다.</p>
-
-  <div class="medal-group-label">남자</div>
-  <div class="medal-compact">
-    <div class="mc-row"><div class="mc-event">100m</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>중국 셰전예 9.97</span>
-      <span class="mc-item"><i class="mc-dot silver"></i>태국 푸리폴 분손 10.02</span>
-      <span class="mc-item"><i class="mc-dot bronze"></i>말레이시아 무흐드 아짐 파미 10.11</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">4×100m 계주</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>중국</span>
-      <span class="mc-item"><i class="mc-dot silver"></i>일본</span>
-      <span class="mc-item kr"><i class="mc-dot bronze"></i>한국 (이정태·김국영·이재성·고승환·박원진) 38.74</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">높이뛰기</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>카타르 무타즈 바르심 2.35</span>
-      <span class="mc-item kr"><i class="mc-dot silver"></i>한국 우상혁 2.33</span>
-      <span class="mc-item"><i class="mc-dot bronze"></i>일본 신노 도모히로 2.29</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">마라톤</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>중국 허제</span>
-      <span class="mc-item"><i class="mc-dot silver"></i>북한 한일룡</span>
-      <span class="mc-item"><i class="mc-dot bronze"></i>중국 양샤오후이</span>
-    </div></div>
-  </div>
-
-  <div class="medal-group-label">여자</div>
-  <div class="medal-compact">
-    <div class="mc-row"><div class="mc-event">100m</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>중국 거만치 11.23</span>
-      <span class="mc-item"><i class="mc-dot silver"></i>싱가포르 산티 페레이라 11.27</span>
-      <span class="mc-item"><i class="mc-dot bronze"></i>바레인 하자르 알칼디 11.35</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">해머던지기</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>중국 왕정</span>
-      <span class="mc-item"><i class="mc-dot silver"></i>중국 자오제</span>
-      <span class="mc-item kr"><i class="mc-dot bronze"></i>한국 김태희 64.14</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">마라톤</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>바레인 유니스 춤바</span>
-      <span class="mc-item"><i class="mc-dot silver"></i>중국 장더순</span>
-      <span class="mc-item"><i class="mc-dot bronze"></i>키르기스스탄 사르다나 트로피모바</span>
-    </div></div>
-  </div>
-  <p class="sub-note" style="margin-top:8px;">한국은 2022 대회에서 우상혁(높이뛰기 은)·남자 4×100m 계주(동)·김태희(해머던지기 동) 3개 메달에 그쳤고 금메달은 없었다 — 앞선 "한국 육상과 아시안게임" 항목에서 언급한 최근의 부진을 잘 보여준다.</p>
-
-  <footer class="pagefoot">
-    <span>2026 아이치·나고야 아시안게임 종목 안내</span>
-    <a href="index.html">← 전체 종목 목록 보기</a>
-  </footer>
 </div>
-
-<script>
-document.querySelectorAll('.tab-btn[data-stdtab]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.tab-btn[data-stdtab]').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('#mt, #mf, #wt, #wf, #rd').forEach(p => p.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById(btn.dataset.stdtab).classList.add('active');
-  });
-});
-</script>
 </body>
 </html>

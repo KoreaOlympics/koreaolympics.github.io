@@ -3,456 +3,225 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>클라이밍 | 2026 아이치·나고야 아시안게임</title>
+<title>클라이밍 - 2026 아이치·나고야 아시안게임</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#0E1A2B; --ink-2:#152540; --gold:#C9A24B; --gold-soft:#E4CD8C;
-    --sun:#D8482F; --paper:#F3EFE4; --paper-dim:#B9C2CF; --line:rgba(201,162,75,0.28);
-    --medal-gold:#D8B44A; --medal-silver:#C8CDD6; --medal-bronze:#C97B4A;
+    --bg:#ffffff; --panel:#f8f9fa; --border:#c8ccd1; --border-soft:#eaecf0;
+    --ink:#202122; --muted:#54595d; --link:#3366cc; --link-visited:#795cb2; --link-red:#ba0000;
+    --serif:'Noto Serif KR',Georgia,'Times New Roman',serif;
+    --sans:'Pretendard','Helvetica Neue',Arial,sans-serif;
+    --accent:#2456c6; --ok:#1a7f37; --warn:#b45309; --gold:#a05a00;
   }
   *{box-sizing:border-box;}
-  body{
-    margin:0; color:var(--paper); font-family:'Pretendard','Noto Sans KR',sans-serif;
-    background:
-      radial-gradient(1100px 550px at 90% -10%, rgba(216,72,47,0.16), transparent 60%),
-      radial-gradient(900px 500px at -10% 110%, rgba(201,162,75,0.10), transparent 60%),
-      var(--ink);
-    -webkit-font-smoothing:antialiased;
-  }
-  .wrap{max-width:880px;margin:0 auto;padding:40px 28px 100px;}
-  nav.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;}
-  .back{color:var(--gold-soft);text-decoration:none;font-size:13.5px;font-weight:600;display:inline-flex;align-items:center;gap:6px;}
-  .back:hover{color:var(--gold);}
-  .back svg{width:14px;height:14px;}
-  .crumb{font-size:12px;color:var(--paper-dim);letter-spacing:0.02em;}
-  header.hero{padding-bottom:32px;margin-bottom:32px;border-bottom:1px solid var(--line);}
-  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;letter-spacing:0.16em;color:var(--gold-soft);text-transform:uppercase;font-weight:600;margin-bottom:16px;}
-  .eyebrow::before{content:"";width:22px;height:1px;background:var(--gold);display:inline-block;}
-  h1{font-family:'Noto Serif KR',serif;font-weight:900;font-size:clamp(30px,5vw,46px);line-height:1.2;margin:0 0 6px;color:var(--paper);letter-spacing:-0.01em;}
-  .en-title{font-size:14px;color:var(--paper-dim);letter-spacing:0.04em;margin:0 0 18px;font-style:italic;}
-  .tagline{font-size:16.5px;color:var(--paper-dim);line-height:1.75;max-width:640px;margin:0;}
-  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:28px 0 8px;}
-  .fact{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:14px 16px;}
-  .fact span{display:block;font-size:11px;color:var(--gold-soft);letter-spacing:0.05em;margin-bottom:6px;}
-  .fact b{font-family:'Noto Serif KR',serif;font-size:15px;color:var(--paper);font-weight:700;line-height:1.4;}
-  section.body{margin-top:8px;}
-  section.body p{font-size:15.5px;line-height:1.85;color:var(--paper-dim);margin:0 0 16px;}
-  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:48px 0 6px;font-weight:700;}
-  p.sub-note{font-size:13px;color:var(--paper-dim);margin:0 0 20px;line-height:1.6;}
-  .cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;}
-  .disc{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:20px;}
-  .disc h3{font-family:'Noto Serif KR',serif;font-size:17px;margin:0 0 4px;color:var(--paper);}
-  .disc .en{font-size:11.5px;color:var(--gold-soft);letter-spacing:0.04em;margin-bottom:10px;display:block;}
-  .disc p{font-size:14px;line-height:1.7;color:var(--paper-dim);margin:0;}
-
-  /* Schedule */
-  .schedule-hero{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-bottom:6px;}
-  .schedule-hero b{font-family:'Noto Serif KR',serif;font-size:22px;color:var(--gold);}
-  .schedule-hero span{font-size:13px;color:var(--paper-dim);}
-  .roster-wrap2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-  @media (max-width:640px){.roster-wrap2{grid-template-columns:1fr;}}
-  .roster-team{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:18px 20px;}
-  .roster-team h4{font-family:'Noto Serif KR',serif;font-size:13px;color:var(--gold-soft);margin:0 0 12px;letter-spacing:.06em;text-transform:uppercase;}
-  .roster-chips{display:flex;flex-wrap:wrap;gap:8px;}
-  .roster-chips span{font-size:13px;font-weight:600;color:var(--paper);background:rgba(243,239,228,0.05);border:1px solid rgba(243,239,228,0.14);padding:7px 13px;border-radius:999px;}
-  .roster-chips span small{display:block;font-size:10px;font-weight:500;color:var(--paper-dim);margin-top:2px;}
-
-  .spotlight-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;}
-  @media (max-width:640px){.spotlight-grid{grid-template-columns:1fr;}}
-  .athlete-spotlight{background:linear-gradient(155deg, rgba(21,37,64,0.9), rgba(14,26,43,0.6));border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:6px;padding:22px 24px;}
-  .athlete-spotlight .as-tag{font-size:12px;color:var(--gold-soft);letter-spacing:.06em;text-transform:uppercase;font-weight:700;margin:0 0 6px;display:block;}
-  .athlete-spotlight h3{font-family:'Noto Serif KR',serif;font-size:26px;font-weight:900;color:var(--gold);margin:0 0 12px;}
-  .athlete-spotlight p{font-size:15px;line-height:1.85;color:var(--paper);margin:0;}
-
-  /* Tabs (medal history) */
-  .tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;}
-  .tab-btn{background:var(--ink-2);border:1px solid var(--line);color:var(--paper-dim);font-size:13.5px;font-weight:600;padding:9px 18px;border-radius:999px;cursor:pointer;font-family:inherit;transition:background .2s ease, color .2s ease, border-color .2s ease;}
-  .tab-btn:hover{border-color:var(--gold);}
-  .tab-btn.active{background:var(--gold);border-color:var(--gold);color:var(--ink);}
-  .tab-panel{display:none;}
-  .tab-panel.active{display:block;}
-  .medal-group-label{font-family:'Noto Serif KR',serif;font-size:14px;font-weight:700;color:var(--paper);margin:20px 0 8px;}
-  .medal-group-label:first-child{margin-top:0;}
-
-  .medal-compact{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:4px 20px;}
-  .mc-row{padding:13px 0;border-top:1px solid rgba(243,239,228,0.08);display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;}
-  .mc-row:first-child{border-top:none;}
-  .mc-event{flex:none;width:104px;font-family:'Noto Serif KR',serif;font-size:12.5px;font-weight:700;color:var(--gold-soft);}
-  .mc-meds{flex:1;display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--paper-dim);min-width:200px;}
-  .mc-item{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;}
-  .mc-dot{width:8px;height:8px;border-radius:50%;flex:none;display:inline-block;}
-  .mc-dot.gold{background:var(--medal-gold);}
-  .mc-dot.silver{background:var(--medal-silver);}
-  .mc-dot.bronze{background:var(--medal-bronze);}
-
-  /* World cup series table */
-  .table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--ink-2);}
-  table.wc-table{width:100%;border-collapse:collapse;font-size:12px;min-width:560px;}
-  .wc-table th{text-align:left;color:var(--gold-soft);font-weight:600;font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;padding:10px 14px;white-space:nowrap;}
-  .wc-table td{padding:8px 14px;color:var(--paper-dim);border-top:1px solid rgba(243,239,228,0.06);white-space:nowrap;}
-  .wc-table td.stop{color:var(--paper);font-weight:600;white-space:normal;}
-  .wc-table td.gold-cell{color:var(--gold-soft);font-weight:600;white-space:normal;}
-  .wc-table tr.kr td.gold-cell{color:var(--gold);}
-
-  footer.pagefoot{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
-  footer.pagefoot a{color:var(--gold-soft);text-decoration:none;}
-  @media (max-width:520px){.wrap{padding:28px 18px 70px;}}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.65;}
+  a{color:var(--link);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  a:visited{color:var(--link-visited);}
+  .topbar{border-bottom:1px solid var(--border);background:var(--panel);font-size:12.5px;color:var(--muted);}
+  .topbar .inner{max-width:1100px;margin:0 auto;padding:8px 20px;display:flex;gap:16px;flex-wrap:wrap;}
+  .topbar a{color:var(--link);}
+  .layout{max-width:1100px;margin:0 auto;padding:22px 20px 80px;}
+  h1.title{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.3;margin:0 0 2px;padding-bottom:6px;border-bottom:1px solid var(--border);}
+  .subtitle{color:var(--muted);font-size:13px;margin:0 0 18px;}
+  .hatnote{font-style:italic;color:var(--muted);background:var(--panel);border:1px solid var(--border-soft);padding:8px 14px;border-radius:2px;margin:0 0 20px;font-size:13.5px;}
+  .content{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;}
+  .main{flex:1 1 560px;min-width:0;}
+  h2{font-family:var(--serif);font-weight:600;font-size:22px;margin:26px 0 10px;padding-bottom:5px;border-bottom:1px solid var(--border-soft);scroll-margin-top:12px;}
+  h3{font-family:var(--serif);font-weight:600;font-size:17px;margin:20px 0 8px;}
+  h4{font-family:var(--sans);font-weight:700;font-size:14.5px;margin:16px 0 6px;color:#3a3f44;}
+  p{margin:0 0 12px;}
+  .toc{display:inline-block;background:var(--panel);border:1px solid var(--border);border-radius:2px;padding:12px 20px 12px 14px;margin:0 0 20px;font-size:14px;}
+  .toc-title{font-weight:700;text-align:center;font-size:13px;margin-bottom:6px;}
+  .toc ol{margin:0;padding-left:22px;}
+  .toc li{margin:3px 0;}
+  .infobox{flex:0 0 300px;background:var(--panel);border:1px solid var(--border);border-radius:2px;font-size:13px;align-self:flex-start;}
+  .infobox .ib-title{background:#eaecf0;font-family:var(--serif);font-weight:700;text-align:center;padding:10px 12px;font-size:15px;border-bottom:1px solid var(--border);}
+  .infobox table{width:100%;border-collapse:collapse;}
+  .infobox th,.infobox td{text-align:left;padding:7px 12px;vertical-align:top;border-bottom:1px solid var(--border-soft);}
+  .infobox th{width:38%;color:var(--muted);font-weight:600;}
+  .badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:2px;background:#e6f0ff;color:#2456c6;border:1px solid #b9d0f5;margin-left:6px;}
+  .badge.gold{background:#fff2e0;color:#a05a00;border-color:#f2d2a0;}
+  table.wt{border-collapse:collapse;width:100%;font-size:13.5px;margin:6px 0 16px;}
+  table.wt th,table.wt td{border:1px solid var(--border);padding:6px 10px;text-align:left;vertical-align:top;}
+  table.wt th{background:var(--panel);}
+  table.wt td.num, table.wt th.num{text-align:center;}
+  table.wt caption{font-size:12.5px;color:var(--muted);text-align:left;padding:2px 0 6px;}
+  .note{font-size:12.5px;color:var(--muted);margin:-8px 0 16px;}
+  .kr-box{background:#eef4ff;border:1px solid #c3d6f7;border-radius:3px;padding:14px 16px;margin:10px 0 18px;}
+  .kr-box h4{margin-top:0;color:#1e3a8a;}
+  .medals{display:inline-flex;gap:6px;margin:0 0 8px;flex-wrap:wrap;}
+  .medal{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;border:1px solid;}
+  .medal.g{color:#8a6d1a;border-color:#e4cd8c;background:#fdf6e3;}
+  .medal.s{color:#5b6168;border-color:#d5d9de;background:#f4f5f6;}
+  .medal.b{color:#8a5a30;border-color:#e0c3a3;background:#fbf1e6;}
+  .footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;}
+  @media (max-width:820px){.infobox{flex:1 1 100%;order:-1;}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <nav class="top">
-    <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>전체 종목으로</a>
-    <span class="crumb">올림픽 · 기타종목 / 클라이밍</span>
-  </nav>
-
-  <header class="hero">
-    <span class="eyebrow">2026 Aichi · Nagoya · 올림픽 · 기타종목</span>
-    <h1>클라이밍</h1>
-    <p class="en-title">Sport Climbing</p>
-    <p class="tagline">인공 암벽을 맨몸으로 오르며 속도와 난이도를 겨루는, 최근 올림픽에 새로 편입된 종목.</p>
-  </header>
-
-  <div class="facts">
-    <div class="fact"><span>세부 종목</span><b>스피드·볼더링·리드</b></div>
-    <div class="fact"><span>올림픽 편입</span><b>도쿄 2020부터 정식종목</b></div>
-    <div class="fact"><span>특징</span><b>순발력과 지구력을 함께 요구</b></div>
-    <div class="fact"><span>2026 대회 기간</span><b>9월 19일 ~ 10월 3일</b></div>
-  </div>
-
-  <section class="body">
-    <p>스포츠클라이밍은 인공 암벽을 맨몸으로 올라 속도, 정해진 시간 내 완등 개수, 도달 높이 등을 겨루는 종목으로 속도·볼더링·리드 세 세부 종목으로 나뉜다.</p>
-    <p>도쿄 2020 올림픽부터 정식종목으로 채택되며 인지도가 크게 높아졌고, 아시안게임에서도 젊은 관중층에게 인기가 높은 종목으로 자리잡고 있다.</p>
-  </section>
-
-  <!-- 2026 대회 일정 -->
-  <h2 class="sub">2026 아이치·나고야 대회 일정</h2>
-  <div class="schedule-hero">
-    <div><b>2026.9.19 – 10.3</b><br><span>대회 기간 내 진행 (세부 일정 추후 공개)</span></div>
-    <span>일본 아이치·나고야</span>
-  </div>
-  <p class="sub-note">남녀 각 스피드·볼더링·리드 3개 종목씩, 총 6개 금메달이 걸려 있다.</p>
-
-  <!-- 종목별 유력 우승 후보 -->
-  <h2 class="sub">종목별 유력 우승 후보</h2>
-  <p class="sub-note">2026 아시아선수권과 올 시즌 월드컵 시리즈 결과를 바탕으로 한 종목별(6개) 금메달 후보.</p>
-  <div class="cardgrid">
-    <div class="disc">
-      <h3>추서우훙 (중국)</h3>
-      <span class="en">Men's Speed</span>
-      <p>2026 아시아선수권 남자 스피드 금메달리스트. 시즌 월드컵에서는 자오이청(중국)·베드리크 레오나르도(인도네시아)와 우승이 갈렸지만, 아시아 선수들끼리 직접 겨룬 아시아선수권에서 정상에 오른 만큼 아시안게임 최유력 후보로 꼽힌다.</p>
-    </div>
-    <div class="disc">
-      <h3>안라쿠 소라토 (일본)</h3>
-      <span class="en">Men's Bouldering</span>
-      <p>커차오·베른·마드리드·프라하·인스브루크까지 시즌 월드컵 볼더링을 사실상 독식한 압도적 1인자. 2026 아시아선수권에서는 이도현(한국)에게 금메달을 내줬지만, 시즌 전체 기량에서는 여전히 최대 우승 후보다.</p>
-    </div>
-    <div class="disc">
-      <h3>스즈키 네오 (일본)</h3>
-      <span class="en">Men's Lead</span>
-      <p>2026 아시아선수권 남자 리드 금메달리스트. 우지앙·인스브루크 월드컵 리드에서도 모두 우승하며 시즌 내내 가장 꾸준한 리드 스페셜리스트.</p>
-    </div>
-    <div class="disc">
-      <h3>데삭 마데 리타 쿠수마 데위 (인도네시아)</h3>
-      <span class="en">Women's Speed</span>
-      <p>2026 아시아선수권 여자 스피드 금메달리스트이자 크라쿠프·샤모니 월드컵 연속 우승. 여자 스피드 최고 기량 보유자.</p>
-    </div>
-    <div class="disc">
-      <h3>모리 아이 (일본)</h3>
-      <span class="en">Women's Bouldering</span>
-      <p>2026 아시아선수권 여자 볼더링 금메달리스트. 일본이 볼더링 시상대를 싹쓸이한 대회에서 단연 1위를 차지했다.</p>
-    </div>
-    <div class="disc">
-      <h3>서채현 (한국)</h3>
-      <span class="en">Women's Lead</span>
-      <p>2025 세계선수권 동메달, 2026 아시아선수권 은메달(모리 아이에 이어 2위)에 시즌 내내 월드컵 시상대를 지킨 꾸준함까지 갖춘 여자 리드 최상위권 후보.</p>
-    </div>
-  </div>
-
-  <!-- 한국 국가대표 명단 -->
-  <h2 class="sub">2026 한국 국가대표 명단</h2>
-  <div class="roster-wrap2">
-    <div class="roster-team">
-      <h4>남자대표팀</h4>
-      <div class="roster-chips">
-        <span>이도현<small>볼더·리드</small></span>
-        <span>천종원<small>볼더</small></span>
-        <span>노현승<small>리드</small></span>
-        <span>김동준<small>스피드</small></span>
-        <span>조진용<small>스피드</small></span>
+<div class="topbar"><div class="inner">
+  <a href="index2.html">← 아시안게임 종목 목록</a>
+  <span>문서 · 클라이밍</span>
+  <a href="index.html">전체 목차</a>
+</div></div>
+<div class="layout">
+  <h1 class="title">클라이밍</h1>
+  <p class="subtitle">Sport Climbing · 2026 아이치·나고야 아시안게임 (제20회) · 올림픽·기타종목</p>
+  <p class="hatnote">인공 암벽을 맨몸으로 오르며 속도와 난이도를 겨루는, 최근 올림픽에 새로 편입된 종목.</p>
+  <div class="content">
+    <div class="main">
+      <div class="toc">
+        <div class="toc-title">목차</div>
+        <ol>
+          <li><a href="#overview">개요</a></li>
+          <li><a href="#disciplines">세부종목</a></li>
+          <li><a href="#roster">한국 대표팀</a></li>
+          <li><a href="#form">최근 성적</a></li>
+          <li><a href="#worldcup">2026시즌 월드컵 시리즈</a></li>
+        </ol>
       </div>
-    </div>
-    <div class="roster-team">
-      <h4>여자대표팀</h4>
-      <div class="roster-chips">
-        <span>서채현<small>볼더·리드</small></span>
-        <span>노희주<small>볼더</small></span>
-        <span>김채영<small>리드</small></span>
-        <span>정지민<small>스피드</small></span>
-        <span>성한아름<small>스피드</small></span>
-      </div>
-    </div>
-  </div>
-  <div class="spotlight-grid">
-    <div class="athlete-spotlight">
-      <span class="as-tag">Men's Boulder · Lead</span>
-      <h3>이도현</h3>
+
+      <h2 id="overview">개요</h2>
+      <p>스포츠클라이밍은 인공 암벽을 맨몸으로 올라 속도, 정해진 시간 내 완등 개수, 도달 높이 등을 겨루는 종목으로 속도·볼더링·리드 세 세부 종목으로 나뉜다.</p>
+      <p>도쿄 2020 올림픽부터 정식종목으로 채택되며 인지도가 크게 높아졌고, 아시안게임에서도 젊은 관중층에게 인기가 높은 종목으로 자리잡고 있다.</p>
+      <p>2026 아이치·나고야 대회는 9월 19일부터 10월 3일까지 대회 기간 내 진행되며(세부 일정 추후 공개), 남녀 각 스피드·볼더링·리드 3개 종목씩 총 6개의 금메달이 걸려 있다.</p>
+
+      <h2 id="disciplines">세부종목</h2>
+      <table class="wt">
+        <tr><th>부문</th><th>방식</th></tr>
+        <tr><td>스피드 <span style="color:var(--muted);font-size:12px;">Speed</span></td><td>정해진 벽을 최대한 빠르게 완등하는 경기</td></tr>
+        <tr><td>볼더링 <span style="color:var(--muted);font-size:12px;">Bouldering</span></td><td>정해진 시간 내 완등한 문제 개수를 겨루는 경기</td></tr>
+        <tr><td>리드 <span style="color:var(--muted);font-size:12px;">Lead</span></td><td>제한 시간 내 도달한 높이를 겨루는 경기</td></tr>
+      </table>
+      <p>2026 아시아선수권과 올 시즌 월드컵 시리즈 결과를 바탕으로 한 종목별(6개) 유력 금메달 후보는 다음과 같다.</p>
+      <table class="wt">
+        <tr><th>세부종목</th><th>선수</th><th>설명</th></tr>
+        <tr><td>남자 스피드</td><td>추서우훙 (중국)</td><td>2026 아시아선수권 남자 스피드 금메달리스트. 시즌 월드컵에서는 자오이청(중국)·베드리크 레오나르도(인도네시아)와 우승이 갈렸지만, 아시아 선수들끼리 직접 겨룬 아시아선수권에서 정상에 오른 만큼 아시안게임 최유력 후보로 꼽힌다.</td></tr>
+        <tr><td>남자 볼더링</td><td>안라쿠 소라토 (일본)</td><td>커차오·베른·마드리드·프라하·인스브루크까지 시즌 월드컵 볼더링을 사실상 독식한 압도적 1인자. 2026 아시아선수권에서는 이도현(한국)에게 금메달을 내줬지만, 시즌 전체 기량에서는 여전히 최대 우승 후보다.</td></tr>
+        <tr><td>남자 리드</td><td>스즈키 네오 (일본)</td><td>2026 아시아선수권 남자 리드 금메달리스트. 우지앙·인스브루크 월드컵 리드에서도 모두 우승하며 시즌 내내 가장 꾸준한 리드 스페셜리스트.</td></tr>
+        <tr><td>여자 스피드</td><td>데삭 마데 리타 쿠수마 데위 (인도네시아)</td><td>2026 아시아선수권 여자 스피드 금메달리스트이자 크라쿠프·샤모니 월드컵 연속 우승. 여자 스피드 최고 기량 보유자.</td></tr>
+        <tr><td>여자 볼더링</td><td>모리 아이 (일본)</td><td>2026 아시아선수권 여자 볼더링 금메달리스트. 일본이 볼더링 시상대를 싹쓸이한 대회에서 단연 1위를 차지했다.</td></tr>
+        <tr><td>여자 리드</td><td>서채현 (한국)</td><td>2025 세계선수권 동메달, 2026 아시아선수권 은메달(모리 아이에 이어 2위)에 시즌 내내 월드컵 시상대를 지킨 꾸준함까지 갖춘 여자 리드 최상위권 후보.</td></tr>
+      </table>
+
+      <h2 id="roster">한국 대표팀</h2>
+      <table class="wt">
+        <tr><th>성별</th><th>선수</th><th>세부종목</th></tr>
+        <tr><td rowspan="5">남자</td><td>이도현</td><td>볼더·리드</td></tr>
+        <tr><td>천종원</td><td>볼더</td></tr>
+        <tr><td>노현승</td><td>리드</td></tr>
+        <tr><td>김동준</td><td>스피드</td></tr>
+        <tr><td>조진용</td><td>스피드</td></tr>
+        <tr><td rowspan="5">여자</td><td>서채현</td><td>볼더·리드</td></tr>
+        <tr><td>노희주</td><td>볼더</td></tr>
+        <tr><td>김채영</td><td>리드</td></tr>
+        <tr><td>정지민</td><td>스피드</td></tr>
+        <tr><td>성한아름</td><td>스피드</td></tr>
+      </table>
+      <h3>이도현 <span style="font-weight:400;color:var(--muted);">남자 볼더·리드</span></h3>
       <p>2025 세계선수권 리드 금메달과 볼더링 동메달을 동시에 따내며 시즌 최고의 한 해를 보냈고, 2026 아시아선수권에서는 볼더링 정상에 올라 세계 최강 소라토 안라쿠(일본)를 직접 꺾었다. 시즌 월드컵에서도 프라하·인스브루크 볼더링에서 잇달아 시상대에 오르며 컨디션을 유지 중이다. 두 종목 모두 메달, 특히 볼더링에서는 금메달을 노릴 수 있는 한국 클라이밍의 최대 기대주다.</p>
-    </div>
-    <div class="athlete-spotlight">
-      <span class="as-tag">Women's Lead</span>
-      <h3>서채현</h3>
+      <h3>서채현 <span style="font-weight:400;color:var(--muted);">여자 리드</span></h3>
       <p>2022 항저우 아시안게임 콤바인 은메달에 이어 2025 세계선수권 리드 동메달을 추가했고, 2026 아시아선수권에서는 모리 아이(일본)에 이어 리드 은메달을 차지했다. 시즌 월드컵 리드에서도 프라하·인스브루크·샤모니까지 꾸준히 시상대에 이름을 올려, 안정감 면에서는 한국 대표팀 내 최고 수준. 리드 종목 메달권 진입이 유력하다.</p>
+
+      <h2 id="form">최근 성적</h2>
+      <p>최근 아시안게임·올림픽·세계선수권·아시아선수권에서의 클라이밍 메달 결과.</p>
+
+      <h3>2022 항저우 아시안게임</h3>
+      <p class="note">참고: 2022 항저우 대회까지는 볼더링+리드를 합산하는 '콤바인' 방식이었으며, 스피드는 개인전과 계주로 나뉘어 있었다.</p>
+      <table class="wt">
+        <tr><th>성별</th><th>세부종목</th><th>금</th><th>은</th><th>동</th></tr>
+        <tr><td rowspan="3">남자</td><td>스피드</td><td>이란 레자 알리푸르</td><td>중국 룽진바오</td><td>인도네시아 베드리크 레오나르도</td></tr>
+        <tr><td>스피드 계주</td><td>중국</td><td>인도네시아</td><td>한국 (정용준·이승범·이용수)</td></tr>
+        <tr><td>복합(콤바인)</td><td>일본 소라토 안라쿠</td><td>한국 이도현</td><td>중국 판위페이</td></tr>
+        <tr><td rowspan="3">여자</td><td>스피드</td><td>인도네시아 데삭 마데 리타 쿠수마 데위</td><td>중국 덩리쥐안</td><td>인도네시아 라지아 살사빌라</td></tr>
+        <tr><td>스피드 계주</td><td>중국</td><td>인도네시아</td><td>한국 (최나우·정지민·노희주)</td></tr>
+        <tr><td>복합(콤바인)</td><td>일본 모리 아이</td><td>한국 서채현</td><td>중국 장웨퉁</td></tr>
+      </table>
+
+      <h3>2024 파리 올림픽</h3>
+      <p class="note">참고: 올림픽은 볼더링+리드 콤바인과 스피드, 2종목만 시상한다.</p>
+      <table class="wt">
+        <tr><th>성별</th><th>세부종목</th><th>금</th><th>은</th><th>동</th></tr>
+        <tr><td rowspan="2">남자</td><td>복합(콤바인)</td><td>영국 토비 로버츠</td><td>일본 소라토 안라쿠</td><td>오스트리아 야콥 슈베르트</td></tr>
+        <tr><td>스피드</td><td>인도네시아 베드리크 레오나르도</td><td>중국 우펑</td><td>미국 샘 왓슨</td></tr>
+        <tr><td rowspan="2">여자</td><td>복합(콤바인)</td><td>슬로베니아 얀야 가른브레트</td><td>미국 브룩 라부토</td><td>오스트리아 예시카 필츠</td></tr>
+        <tr><td>스피드</td><td>폴란드 알렉산드라 미로스와프</td><td>중국 덩리쥐안</td><td>폴란드 알렉산드라 카웃카</td></tr>
+      </table>
+
+      <h3>2025 세계선수권</h3>
+      <table class="wt">
+        <tr><th>성별</th><th>세부종목</th><th>금</th><th>은</th><th>동</th></tr>
+        <tr><td rowspan="3">남자</td><td>리드</td><td>한국 이도현</td><td>일본 요시다 사토네</td><td>일본 혼마 다이세이</td></tr>
+        <tr><td>볼더링</td><td>일본 소라토 안라쿠</td><td>프랑스 메지디 샬크</td><td>한국 이도현</td></tr>
+        <tr><td>스피드</td><td>중국 룽젠궈</td><td>독일 레안더 카르만스</td><td>미국 잭 해머</td></tr>
+        <tr><td rowspan="3">여자</td><td>리드</td><td>슬로베니아 얀야 가른브레트</td><td>슬로베니아 로자 레카르</td><td>한국 서채현</td></tr>
+        <tr><td>볼더링</td><td>슬로베니아 얀야 가른브레트</td><td>프랑스 오리안 베르톤</td><td>미국 멜리나 코스탄자</td></tr>
+        <tr><td>스피드</td><td>폴란드 알렉산드라 미로스와프</td><td>중국 덩리쥐안</td><td>중국 저우야페이</td></tr>
+      </table>
+
+      <h3>2026 아시아선수권</h3>
+      <p class="note">아시안게임 직전 열린 대회로, 현재 아시아 최강 서열을 가장 잘 보여주는 지표다.</p>
+      <table class="wt">
+        <tr><th>성별</th><th>세부종목</th><th>금</th><th>은</th><th>동</th></tr>
+        <tr><td rowspan="3">남자</td><td>리드</td><td>일본 스즈키 네오</td><td>일본 소라토 안라쿠</td><td>일본 오마타 시온</td></tr>
+        <tr><td>볼더링</td><td>한국 이도현</td><td>일본 나라사키 도모아</td><td>일본 도이 게이타</td></tr>
+        <tr><td>스피드</td><td>중국 추서우훙</td><td>중국 저우쯔위</td><td>인도네시아 베드리크 레오나르도</td></tr>
+        <tr><td rowspan="3">여자</td><td>리드</td><td>일본 모리 아이</td><td>한국 서채현</td><td>일본 오다 나쓰미</td></tr>
+        <tr><td>볼더링</td><td>일본 모리 아이</td><td>일본 세키카와 멜로디</td><td>일본 이토 후타바</td></tr>
+        <tr><td>스피드</td><td>인도네시아 데삭 마데 리타 쿠수마 데위</td><td>중국 저우야페이</td><td>중국 친위메이</td></tr>
+      </table>
+
+      <h2 id="worldcup">2026시즌 월드컵 시리즈 금메달리스트</h2>
+      <p>종목별로 묶어 라운드 진행 순서대로 정리했다.</p>
+      <h3>볼더링 (B)</h3>
+      <table class="wt">
+        <tr><th>라운드</th><th>남자</th><th>여자</th></tr>
+        <tr><td>1</td><td>안라쿠 소라토(일본)</td><td>젤리아 아브주(프랑스)</td></tr>
+        <tr><td>2</td><td>안라쿠 소라토(일본)</td><td>오세아나 매켄지(호주)</td></tr>
+        <tr><td>3</td><td>안라쿠 소라토(일본)</td><td>에린 맥니스(영국)</td></tr>
+        <tr><td>4</td><td>안라쿠 소라토(일본) · 2위 이도현(한국)</td><td>애니 샌더스(미국)</td></tr>
+        <tr><td>5</td><td>안라쿠 소라토(일본) · 3위 이도현(한국)</td><td>애니 샌더스(미국)</td></tr>
+      </table>
+      <h3>리드 (L)</h3>
+      <table class="wt">
+        <tr><th>라운드</th><th>남자</th><th>여자</th></tr>
+        <tr><td>1</td><td>스즈키 네오(일본)</td><td>애니 샌더스(미국)</td></tr>
+        <tr><td>2</td><td>푸트라 트리 라마다니(인도네시아)</td><td>애니 샌더스(미국) · 2위 서채현(한국)</td></tr>
+        <tr><td>3</td><td>스즈키 네오(일본)</td><td>얀야 가른브레트(슬로베니아) · 3위 서채현(한국)</td></tr>
+        <tr><td>4</td><td>알베르토 히네스 로페스(스페인)</td><td>애니 샌더스(미국) · 3위 서채현(한국)</td></tr>
+      </table>
+      <h3>스피드 (S)</h3>
+      <table class="wt">
+        <tr><th>라운드</th><th>남자</th><th>여자</th></tr>
+        <tr><td>1</td><td>자오이청(중국)</td><td>알렉산드라 카웃카(폴란드)</td></tr>
+        <tr><td>2</td><td>추서우훙(중국)</td><td>에마 헌트(미국)</td></tr>
+        <tr><td>3</td><td>새뮤얼 왓슨(미국)</td><td>데삭 마데 리타 쿠수마 데위(인도네시아)</td></tr>
+        <tr><td>4</td><td>베드리크 레오나르도(인도네시아)</td><td>데삭 마데 리타 쿠수마 데위(인도네시아)</td></tr>
+      </table>
+      <p class="note">남자 스피드는 4라운드에서 우승자가 세 번(자오이청·추서우훙·베드리크 레오나르도) 갈렸을 만큼 혼전 양상이다. 다만 아시아만 겨루는 2026 아시아선수권에서는 추서우훙이 직접 우승해, 아시안게임 금메달 후보로는 여전히 그가 가장 앞선다. 여자 스피드는 데삭 마데 리타 쿠수마 데위가 아시아선수권과 월드컵을 모두 지배해 이견의 여지가 적다.</p>
+
+      <div class="footer">
+        출처: 편집부 취재 및 자체 정리.<br>
+        일정과 세부 사항은 대회 진행에 따라 변경될 수 있다.
+      </div>
     </div>
+    <aside class="infobox">
+      <div class="ib-title">클라이밍 종목 정보</div>
+      <table>
+        <tr><th>영문명</th><td>Sport Climbing</td></tr>
+        <tr><th>세부 종목</th><td>스피드·볼더링·리드</td></tr>
+        <tr><th>올림픽 편입</th><td>도쿄 2020부터 정식종목</td></tr>
+        <tr><th>특징</th><td>순발력과 지구력을 함께 요구</td></tr>
+        <tr><th>2026 대회 기간</th><td>9월 19일 ~ 10월 3일</td></tr>
+        <tr><th>금메달 수</th><td>6개 (남녀 각 3종목)</td></tr>
+        <tr><th>관련 문서</th><td><a href="index2.html">아시안게임 종목 안내</a></td></tr>
+      </table>
+    </aside>
   </div>
-
-  <!-- 역대 시상대 -->
-  <h2 class="sub">역대 시상대</h2>
-  <p class="sub-note">최근 아시안게임·올림픽·세계선수권·아시아선수권에서의 클라이밍 메달 결과.</p>
-
-  <div class="tabs">
-    <button class="tab-btn active" data-tab="t2022">2022 항저우 아시안게임</button>
-    <button class="tab-btn" data-tab="t2024">2024 파리 올림픽</button>
-    <button class="tab-btn" data-tab="t2025w">2025 세계선수권</button>
-    <button class="tab-btn" data-tab="t2026a">2026 아시아선수권</button>
-  </div>
-
-  <div class="tab-panel active" id="t2022">
-    <div class="medal-group-label">남자</div>
-    <div class="medal-compact">
-      <div class="mc-row"><div class="mc-event">스피드</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>이란 레자 알리푸르</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>중국 룽진바오</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>인도네시아 베드리크 레오나르도</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">스피드 계주</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>중국</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>인도네시아</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>한국 (정용준·이승범·이용수)</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">복합(콤바인)</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>일본 소라토 안라쿠</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>한국 이도현</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>중국 판위페이</span>
-      </div></div>
-    </div>
-    <div class="medal-group-label">여자</div>
-    <div class="medal-compact">
-      <div class="mc-row"><div class="mc-event">스피드</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>인도네시아 데삭 마데 리타 쿠수마 데위</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>중국 덩리쥐안</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>인도네시아 라지아 살사빌라</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">스피드 계주</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>중국</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>인도네시아</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>한국 (최나우·정지민·노희주)</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">복합(콤바인)</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>일본 모리 아이</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>한국 서채현</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>중국 장웨퉁</span>
-      </div></div>
-    </div>
-    <p class="sub-note" style="margin-top:8px;">참고: 2022 항저우 대회까지는 볼더링+리드를 합산하는 '콤바인' 방식이었으며, 스피드는 개인전과 계주로 나뉘어 있었다.</p>
-  </div>
-
-  <div class="tab-panel" id="t2024">
-    <div class="medal-group-label">남자</div>
-    <div class="medal-compact">
-      <div class="mc-row"><div class="mc-event">복합(콤바인)</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>영국 토비 로버츠</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>일본 소라토 안라쿠</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>오스트리아 야콥 슈베르트</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">스피드</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>인도네시아 베드리크 레오나르도</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>중국 우펑</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>미국 샘 왓슨</span>
-      </div></div>
-    </div>
-    <div class="medal-group-label">여자</div>
-    <div class="medal-compact">
-      <div class="mc-row"><div class="mc-event">복합(콤바인)</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>슬로베니아 얀야 가른브레트</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>미국 브룩 라부토</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>오스트리아 예시카 필츠</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">스피드</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>폴란드 알렉산드라 미로스와프</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>중국 덩리쥐안</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>폴란드 알렉산드라 카웃카</span>
-      </div></div>
-    </div>
-    <p class="sub-note" style="margin-top:8px;">참고: 올림픽은 볼더링+리드 콤바인과 스피드, 2종목만 시상한다.</p>
-  </div>
-
-  <div class="tab-panel" id="t2025w">
-    <div class="medal-group-label">남자</div>
-    <div class="medal-compact">
-      <div class="mc-row"><div class="mc-event">리드</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>한국 이도현</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>일본 요시다 사토네</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>일본 혼마 다이세이</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">볼더링</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>일본 소라토 안라쿠</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>프랑스 메지디 샬크</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>한국 이도현</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">스피드</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>중국 룽젠궈</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>독일 레안더 카르만스</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>미국 잭 해머</span>
-      </div></div>
-    </div>
-    <div class="medal-group-label">여자</div>
-    <div class="medal-compact">
-      <div class="mc-row"><div class="mc-event">리드</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>슬로베니아 얀야 가른브레트</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>슬로베니아 로자 레카르</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>한국 서채현</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">볼더링</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>슬로베니아 얀야 가른브레트</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>프랑스 오리안 베르톤</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>미국 멜리나 코스탄자</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">스피드</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>폴란드 알렉산드라 미로스와프</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>중국 덩리쥐안</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>중국 저우야페이</span>
-      </div></div>
-    </div>
-  </div>
-
-  <div class="tab-panel" id="t2026a">
-    <div class="medal-group-label">남자</div>
-    <div class="medal-compact">
-      <div class="mc-row"><div class="mc-event">리드</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>일본 스즈키 네오</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>일본 소라토 안라쿠</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>일본 오마타 시온</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">볼더링</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>한국 이도현</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>일본 나라사키 도모아</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>일본 도이 게이타</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">스피드</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>중국 추서우훙</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>중국 저우쯔위</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>인도네시아 베드리크 레오나르도</span>
-      </div></div>
-    </div>
-    <div class="medal-group-label">여자</div>
-    <div class="medal-compact">
-      <div class="mc-row"><div class="mc-event">리드</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>일본 모리 아이</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>한국 서채현</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>일본 오다 나쓰미</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">볼더링</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>일본 모리 아이</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>일본 세키카와 멜로디</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>일본 이토 후타바</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">스피드</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>인도네시아 데삭 마데 리타 쿠수마 데위</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>중국 저우야페이</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>중국 친위메이</span>
-      </div></div>
-    </div>
-    <p class="sub-note" style="margin-top:8px;">아시안게임 직전 열린 대회로, 현재 아시아 최강 서열을 가장 잘 보여주는 지표다.</p>
-  </div>
-
-  <!-- 2026시즌 월드컵 시리즈 -->
-  <h2 class="sub">2026시즌 월드컵 시리즈 금메달리스트</h2>
-  <p class="sub-note">종목별로 묶어 정리했다. 라운드 진행 순서대로 나열.</p>
-
-  <div class="medal-group-label">볼더링 (B)</div>
-  <div class="medal-compact">
-    <div class="mc-row"><div class="mc-event">1라운드</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>남 안라쿠 소라토(일본)</span>
-      <span class="mc-item"><i class="mc-dot gold"></i>여 젤리아 아브주(프랑스)</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">2라운드</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>남 안라쿠 소라토(일본)</span>
-      <span class="mc-item"><i class="mc-dot gold"></i>여 오세아나 매켄지(호주)</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">3라운드</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>남 안라쿠 소라토(일본)</span>
-      <span class="mc-item"><i class="mc-dot gold"></i>여 에린 맥니스(영국)</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">4라운드</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>남 안라쿠 소라토(일본) · 2위 이도현(한국)</span>
-      <span class="mc-item"><i class="mc-dot gold"></i>여 애니 샌더스(미국)</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">5라운드</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>남 안라쿠 소라토(일본) · 3위 이도현(한국)</span>
-      <span class="mc-item"><i class="mc-dot gold"></i>여 애니 샌더스(미국)</span>
-    </div></div>
-  </div>
-
-  <div class="medal-group-label">리드 (L)</div>
-  <div class="medal-compact">
-    <div class="mc-row"><div class="mc-event">1라운드</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>남 스즈키 네오(일본)</span>
-      <span class="mc-item"><i class="mc-dot gold"></i>여 애니 샌더스(미국)</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">2라운드</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>남 푸트라 트리 라마다니(인도네시아)</span>
-      <span class="mc-item"><i class="mc-dot gold"></i>여 애니 샌더스(미국) · 2위 서채현(한국)</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">3라운드</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>남 스즈키 네오(일본)</span>
-      <span class="mc-item"><i class="mc-dot gold"></i>여 얀야 가른브레트(슬로베니아) · 3위 서채현(한국)</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">4라운드</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>남 알베르토 히네스 로페스(스페인)</span>
-      <span class="mc-item"><i class="mc-dot gold"></i>여 애니 샌더스(미국) · 3위 서채현(한국)</span>
-    </div></div>
-  </div>
-
-  <div class="medal-group-label">스피드 (S)</div>
-  <div class="medal-compact">
-    <div class="mc-row"><div class="mc-event">1라운드</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>남 자오이청(중국)</span>
-      <span class="mc-item"><i class="mc-dot gold"></i>여 알렉산드라 카웃카(폴란드)</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">2라운드</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>남 추서우훙(중국)</span>
-      <span class="mc-item"><i class="mc-dot gold"></i>여 에마 헌트(미국)</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">3라운드</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>남 새뮤얼 왓슨(미국)</span>
-      <span class="mc-item"><i class="mc-dot gold"></i>여 데삭 마데 리타 쿠수마 데위(인도네시아)</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">4라운드</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>남 베드리크 레오나르도(인도네시아)</span>
-      <span class="mc-item"><i class="mc-dot gold"></i>여 데삭 마데 리타 쿠수마 데위(인도네시아)</span>
-    </div></div>
-  </div>
-  <p class="sub-note" style="margin-top:10px;">남자 스피드는 4라운드에서 우승자가 세 번(자오이청·추서우훙·베드리크 레오나르도) 갈렸을 만큼 혼전 양상이다. 다만 아시아만 겨루는 2026 아시아선수권에서는 추서우훙이 직접 우승해, 아시안게임 금메달 후보로는 여전히 그가 가장 앞선다. 여자 스피드는 데삭 마데 리타 쿠수마 데위가 아시아선수권과 월드컵을 모두 지배해 이견의 여지가 적다.</p>
-
-  <footer class="pagefoot">
-    <span>2026 아이치·나고야 아시안게임 종목 안내</span>
-    <a href="index.html">← 전체 종목 목록 보기</a>
-  </footer>
 </div>
-
-<script>
-document.querySelectorAll('.tab-btn[data-tab]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.tab-btn[data-tab]').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById(btn.dataset.tab).classList.add('active');
-  });
-});
-</script>
 </body>
 </html>

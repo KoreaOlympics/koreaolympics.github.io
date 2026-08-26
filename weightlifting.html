@@ -3,385 +3,211 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>역도 | 2026 아이치·나고야 아시안게임</title>
+<title>역도 - 2026 아이치·나고야 아시안게임</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#0E1A2B; --ink-2:#152540; --gold:#C9A24B; --gold-soft:#E4CD8C;
-    --sun:#D8482F; --paper:#F3EFE4; --paper-dim:#B9C2CF; --line:rgba(201,162,75,0.28);
-    --medal-gold:#D8B44A; --medal-silver:#C8CDD6; --medal-bronze:#C97B4A;
+    --bg:#ffffff; --panel:#f8f9fa; --border:#c8ccd1; --border-soft:#eaecf0;
+    --ink:#202122; --muted:#54595d; --link:#3366cc; --link-visited:#795cb2; --link-red:#ba0000;
+    --serif:'Noto Serif KR',Georgia,'Times New Roman',serif;
+    --sans:'Pretendard','Helvetica Neue',Arial,sans-serif;
+    --accent:#2456c6; --ok:#1a7f37; --warn:#b45309; --gold:#a05a00;
   }
   *{box-sizing:border-box;}
-  body{
-    margin:0; color:var(--paper); font-family:'Pretendard','Noto Sans KR',sans-serif;
-    background:
-      radial-gradient(1100px 550px at 90% -10%, rgba(216,72,47,0.16), transparent 60%),
-      radial-gradient(900px 500px at -10% 110%, rgba(201,162,75,0.10), transparent 60%),
-      var(--ink);
-    -webkit-font-smoothing:antialiased;
-  }
-  .wrap{max-width:880px;margin:0 auto;padding:40px 28px 100px;}
-  nav.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;}
-  .back{color:var(--gold-soft);text-decoration:none;font-size:13.5px;font-weight:600;display:inline-flex;align-items:center;gap:6px;}
-  .back:hover{color:var(--gold);}
-  .back svg{width:14px;height:14px;}
-  .crumb{font-size:12px;color:var(--paper-dim);letter-spacing:0.02em;}
-  header.hero{padding-bottom:32px;margin-bottom:32px;border-bottom:1px solid var(--line);}
-  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;letter-spacing:0.16em;color:var(--gold-soft);text-transform:uppercase;font-weight:600;margin-bottom:16px;}
-  .eyebrow::before{content:"";width:22px;height:1px;background:var(--gold);display:inline-block;}
-  h1{font-family:'Noto Serif KR',serif;font-weight:900;font-size:clamp(30px,5vw,46px);line-height:1.2;margin:0 0 6px;color:var(--paper);letter-spacing:-0.01em;}
-  .en-title{font-size:14px;color:var(--paper-dim);letter-spacing:0.04em;margin:0 0 18px;font-style:italic;}
-  .tagline{font-size:16.5px;color:var(--paper-dim);line-height:1.75;max-width:640px;margin:0;}
-  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:28px 0 8px;}
-  .fact{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:14px 16px;}
-  .fact span{display:block;font-size:11px;color:var(--gold-soft);letter-spacing:0.05em;margin-bottom:6px;}
-  .fact b{font-family:'Noto Serif KR',serif;font-size:15px;color:var(--paper);font-weight:700;line-height:1.4;}
-  section.body{margin-top:8px;}
-  section.body p{font-size:15.5px;line-height:1.85;color:var(--paper-dim);margin:0 0 16px;}
-  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:48px 0 6px;font-weight:700;}
-  p.sub-note{font-size:13px;color:var(--paper-dim);margin:0 0 20px;line-height:1.6;}
-  .cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;}
-  .disc{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:20px;}
-  .disc h3{font-family:'Noto Serif KR',serif;font-size:17px;margin:0 0 4px;color:var(--paper);}
-  .disc .en{font-size:11.5px;color:var(--gold-soft);letter-spacing:0.04em;margin-bottom:10px;display:block;}
-  .disc p{font-size:14px;line-height:1.7;color:var(--paper-dim);margin:0;}
-
-  /* Schedule */
-  .schedule-hero{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-bottom:6px;}
-  .schedule-hero b{font-family:'Noto Serif KR',serif;font-size:22px;color:var(--gold);}
-  .schedule-hero span{font-size:13px;color:var(--paper-dim);}
-
-  /* Featured latest-form banner */
-  .latest-banner{display:flex;align-items:center;gap:10px;background:linear-gradient(90deg, rgba(216,72,47,0.18), transparent);border:1px solid var(--sun);border-radius:6px;padding:12px 18px;margin-bottom:16px;}
-  .latest-banner b{color:var(--sun);font-size:12px;letter-spacing:.08em;text-transform:uppercase;}
-  .latest-banner span{font-size:13px;color:var(--paper-dim);}
-
-  /* Tabs */
-  .tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;}
-  .tab-btn{background:var(--ink-2);border:1px solid var(--line);color:var(--paper-dim);font-size:13.5px;font-weight:600;padding:9px 18px;border-radius:999px;cursor:pointer;font-family:inherit;transition:background .2s ease, color .2s ease, border-color .2s ease;}
-  .tab-btn:hover{border-color:var(--gold);}
-  .tab-btn.active{background:var(--gold);border-color:var(--gold);color:var(--ink);}
-  .tab-panel{display:none;}
-  .tab-panel.active{display:block;}
-  .medal-group-label{font-family:'Noto Serif KR',serif;font-size:14px;font-weight:700;color:var(--paper);margin:20px 0 8px;}
-  .medal-group-label:first-child{margin-top:0;}
-
-  .medal-compact{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:4px 20px;}
-  .mc-row{padding:13px 0;border-top:1px solid rgba(243,239,228,0.08);display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;}
-  .mc-row:first-child{border-top:none;}
-  .mc-event{flex:none;width:70px;font-family:'Noto Serif KR',serif;font-size:12.5px;font-weight:700;color:var(--gold-soft);}
-  .mc-meds{flex:1;display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--paper-dim);min-width:200px;}
-  .mc-item{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;}
-  .mc-dot{width:8px;height:8px;border-radius:50%;flex:none;display:inline-block;}
-  .mc-dot.gold{background:var(--medal-gold);}
-  .mc-dot.silver{background:var(--medal-silver);}
-  .mc-dot.bronze{background:var(--medal-bronze);}
-  .mc-item.kr{color:var(--gold-soft);font-weight:700;}
-
-  footer.pagefoot{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
-  footer.pagefoot a{color:var(--gold-soft);text-decoration:none;}
-  @media (max-width:520px){.wrap{padding:28px 18px 70px;}}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.65;}
+  a{color:var(--link);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  a:visited{color:var(--link-visited);}
+  .topbar{border-bottom:1px solid var(--border);background:var(--panel);font-size:12.5px;color:var(--muted);}
+  .topbar .inner{max-width:1100px;margin:0 auto;padding:8px 20px;display:flex;gap:16px;flex-wrap:wrap;}
+  .topbar a{color:var(--link);}
+  .layout{max-width:1100px;margin:0 auto;padding:22px 20px 80px;}
+  h1.title{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.3;margin:0 0 2px;padding-bottom:6px;border-bottom:1px solid var(--border);}
+  .subtitle{color:var(--muted);font-size:13px;margin:0 0 18px;}
+  .hatnote{font-style:italic;color:var(--muted);background:var(--panel);border:1px solid var(--border-soft);padding:8px 14px;border-radius:2px;margin:0 0 20px;font-size:13.5px;}
+  .content{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;}
+  .main{flex:1 1 560px;min-width:0;}
+  h2{font-family:var(--serif);font-weight:600;font-size:22px;margin:26px 0 10px;padding-bottom:5px;border-bottom:1px solid var(--border-soft);scroll-margin-top:12px;}
+  h3{font-family:var(--serif);font-weight:600;font-size:17px;margin:20px 0 8px;}
+  h4{font-family:var(--sans);font-weight:700;font-size:14.5px;margin:16px 0 6px;color:#3a3f44;}
+  p{margin:0 0 12px;}
+  .toc{display:inline-block;background:var(--panel);border:1px solid var(--border);border-radius:2px;padding:12px 20px 12px 14px;margin:0 0 20px;font-size:14px;}
+  .toc-title{font-weight:700;text-align:center;font-size:13px;margin-bottom:6px;}
+  .toc ol{margin:0;padding-left:22px;}
+  .toc li{margin:3px 0;}
+  .infobox{flex:0 0 300px;background:var(--panel);border:1px solid var(--border);border-radius:2px;font-size:13px;align-self:flex-start;}
+  .infobox .ib-title{background:#eaecf0;font-family:var(--serif);font-weight:700;text-align:center;padding:10px 12px;font-size:15px;border-bottom:1px solid var(--border);}
+  .infobox table{width:100%;border-collapse:collapse;}
+  .infobox th,.infobox td{text-align:left;padding:7px 12px;vertical-align:top;border-bottom:1px solid var(--border-soft);}
+  .infobox th{width:38%;color:var(--muted);font-weight:600;}
+  .badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:2px;background:#e6f0ff;color:#2456c6;border:1px solid #b9d0f5;margin-left:6px;}
+  .badge.gold{background:#fff2e0;color:#a05a00;border-color:#f2d2a0;}
+  table.wt{border-collapse:collapse;width:100%;font-size:13.5px;margin:6px 0 16px;}
+  table.wt th,table.wt td{border:1px solid var(--border);padding:6px 10px;text-align:left;vertical-align:top;}
+  table.wt th{background:var(--panel);}
+  table.wt td.num, table.wt th.num{text-align:center;}
+  table.wt caption{font-size:12.5px;color:var(--muted);text-align:left;padding:2px 0 6px;}
+  .note{font-size:12.5px;color:var(--muted);margin:-8px 0 16px;}
+  .kr-box{background:#eef4ff;border:1px solid #c3d6f7;border-radius:3px;padding:14px 16px;margin:10px 0 18px;}
+  .kr-box h4{margin-top:0;color:#1e3a8a;}
+  .medals{display:inline-flex;gap:6px;margin:0 0 8px;flex-wrap:wrap;}
+  .medal{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;border:1px solid;}
+  .medal.g{color:#8a6d1a;border-color:#e4cd8c;background:#fdf6e3;}
+  .medal.s{color:#5b6168;border-color:#d5d9de;background:#f4f5f6;}
+  .medal.b{color:#8a5a30;border-color:#e0c3a3;background:#fbf1e6;}
+  .footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;}
+  @media (max-width:820px){.infobox{flex:1 1 100%;order:-1;}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <nav class="top">
-    <a class="back" href="index1.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>전체 종목으로</a>
-    <span class="crumb">올림픽 · 기초종목 / 역도</span>
-  </nav>
+<div class="topbar"><div class="inner">
+  <a href="index2.html">← 아시안게임 종목 목록</a>
+  <span>문서 · 역도</span>
+  <a href="index.html">전체 목차</a>
+</div></div>
+<div class="layout">
+  <h1 class="title">역도</h1>
+  <p class="subtitle">Weightlifting · 2026 아이치·나고야 아시안게임 (제20회) · 올림픽·기초종목</p>
+  <p class="hatnote">역도는 정해진 체급 안에서 바벨을 한 번에 머리 위로 들어 올리는 인상과, 어깨에 걸쳤다가 머리 위로 밀어 올리는 용상 두 종목의 합산 기록으로 순위를 가리는 종목이다. 중국이 남녀 대부분 체급에서 세계 최강 자리를 지키고 있으며, 북한과 카자흐스탄 등도 아시안게임 강세 국가로 꼽힌다.</p>
+  <div class="content">
+    <div class="main">
+      <div class="toc">
+        <div class="toc-title">목차</div>
+        <ol>
+          <li><a href="#overview">개요</a></li>
+          <li><a href="#disciplines">세부종목</a></li>
+          <li><a href="#form">최근 성적</a></li>
+          <li><a href="#la28">LA28 예선과의 관계</a></li>
+        </ol>
+      </div>
 
-  <header class="hero">
-    <span class="eyebrow">2026 Aichi · Nagoya · 올림픽 · 기초종목</span>
-    <h1>역도</h1>
-    <p class="en-title">Weightlifting</p>
-    <p class="tagline">바벨을 머리 위로 들어 올려 최대 중량을 겨루는 체급별 힘의 종목.</p>
-  </header>
+      <h2 id="overview">개요</h2>
+      <p>역도는 정해진 체급 안에서 바벨을 한 번에 머리 위로 들어 올리는 인상과, 어깨에 걸쳤다가 머리 위로 밀어 올리는 용상 두 종목의 합산 기록으로 순위를 가린다. 2026 대회는 남자 8체급(60·65·70·75·85·95·110·+110kg), 여자 8체급(49·53·57·61·69·77·86·+86kg) 총 16개 세부종목으로 치러지며, 경기는 9월 23일부터 29일까지 나고야시 산업무역관에서 열린다.</p>
+      <p>중국이 남녀 대부분 체급에서 세계 최강 자리를 지키고 있으며, 북한과 카자흐스탄 등도 아시안게임 강세 국가로 꼽힌다.</p>
 
-  <div class="facts">
-    <div class="fact"><span>경기 기간</span><b>9월 23일 ~ 29일</b></div>
-    <div class="fact"><span>경기장</span><b>나고야시 산업무역관</b></div>
-    <div class="fact"><span>세부 종목</span><b>16개 (남녀 각 8체급)</b></div>
-    <div class="fact"><span>판정</span><b>인상·용상 합계, 3회 시기 중 최고 기록</b></div>
-  </div>
+      <h2 id="disciplines">세부종목</h2>
+      <table class="wt">
+        <tr><th>구분</th><th class="num">체급 수</th><th>체급</th></tr>
+        <tr><td>남자</td><td class="num">8</td><td>60 · 65 · 70 · 75 · 85 · 95 · 110 · +110kg</td></tr>
+        <tr><td>여자</td><td class="num">8</td><td>49 · 53 · 57 · 61 · 69 · 77 · 86 · +86kg</td></tr>
+        <tr><td><b>합계</b></td><td class="num"><b>16</b></td><td>—</td></tr>
+      </table>
+      <p class="note">판정: 인상·용상 각 3회 시기 중 최고 기록의 합계(Total)로 순위를 가린다. 세부 일정은 대회 진행에 따라 갱신될 수 있다.</p>
 
-  <section class="body">
-    <p>역도는 정해진 체급 안에서 바벨을 한 번에 머리 위로 들어 올리는 인상과, 어깨에 걸쳤다가 머리 위로 밀어 올리는 용상 두 종목의 합산 기록으로 순위를 가린다. 2026 대회는 남자 8체급(60·65·70·75·85·95·110·+110kg), 여자 8체급(49·53·57·61·69·77·86·+86kg) 총 16개 세부종목으로 치러지며, 경기는 9월 23일부터 29일까지 나고야시 산업무역관에서 열린다.</p>
-    <p>중국이 남녀 대부분 체급에서 세계 최강 자리를 지키고 있으며, 북한과 카자흐스탄 등도 아시안게임 강세 국가로 꼽힌다.</p>
-  </section>
+      <h2 id="form">최근 성적</h2>
 
-  <!-- 2026 대회 일정 -->
-  <h2 class="sub">2026 아이치·나고야 대회 일정</h2>
-  <div class="schedule-hero">
-    <div><b>2026.9.23 – 9.29</b><br><span>역도 경기 기간</span></div>
-    <span>나고야시 산업무역관 · 일본 아이치·나고야</span>
-  </div>
-  <p class="sub-note">제20회 아시안게임 전체 대회 기간은 9월 19일~10월 4일이며, 역도는 그중 9월 23일부터 29일까지 열린다. 체급별 세부 일정은 추후 공개됩니다.</p>
+      <h3>2026 아시아선수권 — 아시안게임 직전 최신 서열</h3>
+      <p class="medals"><span class="medal b">동 4</span></p>
+      <p>아시안게임 직전 열린 최신 대회로, 현재 아시아 체급별 서열을 가장 잘 보여준다. 북한이 남녀 다수 체급에서 강세를 보였고, 한국은 이성원(88kg)·송영환(+110kg)·장현주(86kg)·박혜정(+86kg) 4명이 동메달을 획득해 저력을 보여줬다. 아래는 체급별 합계(Total) 기준 메달이다.</p>
 
-  <!-- 2026 아시아선수권 -->
-  <h2 class="sub">2026 아시아선수권 결과</h2>
-  <div class="latest-banner"><b>Latest</b><span>아시안게임 직전 열린 최신 대회로, 현재 아시아 체급별 서열을 가장 잘 보여준다.</span></div>
-  <p class="sub-note">체급별 합계(Total) 기준 메달만 정리. 북한이 남녀 다수 체급에서 강세를 보였다.</p>
+      <p><b>남자</b></p>
+      <table class="wt">
+        <tr><th>체급</th><th>금</th><th>은</th><th>동</th></tr>
+        <tr><td class="num">60kg</td><td>북한 방운철 304kg</td><td>말레이시아 아니크 카스단 277kg</td><td>베트남 라이자탄 267kg</td></tr>
+        <tr><td class="num">65kg</td><td>중국 허웨지 329kg(WR)</td><td>북한 박명진 321kg</td><td>중국 딩훙제 319kg</td></tr>
+        <tr><td class="num">71kg</td><td>북한 리원주 351kg</td><td>중국 천젠 335kg</td><td>인도 아지트 나라야나 314kg</td></tr>
+        <tr><td class="num">79kg</td><td>북한 리룡현 364kg</td><td>북한 리종성 358kg</td><td>중국 루나이강 345kg</td></tr>
+        <tr><td class="num">88kg</td><td>북한 로광열 387kg</td><td>중국 판윈화 369kg</td><td><b>한국 이성원 368kg</b></td></tr>
+        <tr><td class="num">94kg</td><td>중국 투이 386kg</td><td>우즈베키스탄 토슈테미로프 373kg</td><td>투르크메니스탄 안나베르디예프 354kg</td></tr>
+        <tr><td class="num">110kg</td><td>중국 류환화 420kg</td><td>투르크메니스탄 하사노프 392kg</td><td>차이니스 타이베이 둥빙청 381kg</td></tr>
+        <tr><td class="num">+110kg</td><td>바레인 고르 미나샨 457kg</td><td>이란 알리레자 유세피 445kg</td><td><b>한국 송영환 416kg</b></td></tr>
+      </table>
 
-  <div class="medal-group-label">남자</div>
-  <div class="medal-compact">
-    <div class="mc-row"><div class="mc-event">60kg</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>북한 방운철 304kg</span>
-      <span class="mc-item"><i class="mc-dot silver"></i>말레이시아 아니크 카스단 277kg</span>
-      <span class="mc-item"><i class="mc-dot bronze"></i>베트남 라이자탄 267kg</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">65kg</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>중국 허웨지 329kg(WR)</span>
-      <span class="mc-item"><i class="mc-dot silver"></i>북한 박명진 321kg</span>
-      <span class="mc-item"><i class="mc-dot bronze"></i>중국 딩훙제 319kg</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">71kg</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>북한 리원주 351kg</span>
-      <span class="mc-item"><i class="mc-dot silver"></i>중국 천젠 335kg</span>
-      <span class="mc-item"><i class="mc-dot bronze"></i>인도 아지트 나라야나 314kg</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">79kg</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>북한 리룡현 364kg</span>
-      <span class="mc-item"><i class="mc-dot silver"></i>북한 리종성 358kg</span>
-      <span class="mc-item"><i class="mc-dot bronze"></i>중국 루나이강 345kg</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">88kg</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>북한 로광열 387kg</span>
-      <span class="mc-item"><i class="mc-dot silver"></i>중국 판윈화 369kg</span>
-      <span class="mc-item kr"><i class="mc-dot bronze"></i>한국 이성원 368kg</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">94kg</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>중국 투이 386kg</span>
-      <span class="mc-item"><i class="mc-dot silver"></i>우즈베키스탄 토슈테미로프 373kg</span>
-      <span class="mc-item"><i class="mc-dot bronze"></i>투르크메니스탄 안나베르디예프 354kg</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">110kg</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>중국 류환화 420kg</span>
-      <span class="mc-item"><i class="mc-dot silver"></i>투르크메니스탄 하사노프 392kg</span>
-      <span class="mc-item"><i class="mc-dot bronze"></i>차이니스 타이베이 둥빙청 381kg</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">+110kg</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>바레인 고르 미나샨 457kg</span>
-      <span class="mc-item"><i class="mc-dot silver"></i>이란 알리레자 유세피 445kg</span>
-      <span class="mc-item kr"><i class="mc-dot bronze"></i>한국 송영환 416kg</span>
-    </div></div>
-  </div>
+      <p><b>여자</b></p>
+      <table class="wt">
+        <tr><th>체급</th><th>금</th><th>은</th><th>동</th></tr>
+        <tr><td class="num">48kg</td><td>차이니스 타이베이 황이천 193kg</td><td>차이니스 타이베이 팡완링 192kg</td><td>인도 코말 코하르 177kg</td></tr>
+        <tr><td class="num">53kg</td><td>중국 자오진란 216kg</td><td>베트남 응우옌호아이흐엉 195kg</td><td>인도 갸네시와리 야다브 194kg</td></tr>
+        <tr><td class="num">58kg</td><td>북한 김일경 230kg</td><td>중국 웨이팅나 225kg</td><td>베트남 꾸앙티땀 221kg</td></tr>
+        <tr><td class="num">63kg</td><td>북한 리숙 254kg(WR)</td><td>중국 양류웨 251kg</td><td>중국 팡린 235kg</td></tr>
+        <tr><td class="num">69kg</td><td>북한 송국향 263kg</td><td>차이니스 타이베이 천원후이 239kg</td><td>일본 미야고에 유이 219kg</td></tr>
+        <tr><td class="num">77kg</td><td>중국 랴오구이팡 265kg</td><td>북한 김경룡 260kg</td><td>인도 산자나 220kg</td></tr>
+        <tr><td class="num">86kg</td><td>중국 펑추이팅 270kg</td><td>바레인 알리나 마루샤크 265kg</td><td><b>한국 장현주 245kg</b></td></tr>
+        <tr><td class="num">+86kg</td><td>중국 리옌 323kg</td><td>카타르 위살 이클레프 299kg</td><td><b>한국 박혜정 298kg</b></td></tr>
+      </table>
+      <p class="note">WR = 세계기록. 2026년 대회 직전 시점 기준.</p>
 
-  <div class="medal-group-label">여자</div>
-  <div class="medal-compact">
-    <div class="mc-row"><div class="mc-event">48kg</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>차이니스 타이베이 황이천 193kg</span>
-      <span class="mc-item"><i class="mc-dot silver"></i>차이니스 타이베이 팡완링 192kg</span>
-      <span class="mc-item"><i class="mc-dot bronze"></i>인도 코말 코하르 177kg</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">53kg</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>중국 자오진란 216kg</span>
-      <span class="mc-item"><i class="mc-dot silver"></i>베트남 응우옌호아이흐엉 195kg</span>
-      <span class="mc-item"><i class="mc-dot bronze"></i>인도 갸네시와리 야다브 194kg</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">58kg</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>북한 김일경 230kg</span>
-      <span class="mc-item"><i class="mc-dot silver"></i>중국 웨이팅나 225kg</span>
-      <span class="mc-item"><i class="mc-dot bronze"></i>베트남 꾸앙티땀 221kg</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">63kg</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>북한 리숙 254kg(WR)</span>
-      <span class="mc-item"><i class="mc-dot silver"></i>중국 양류웨 251kg</span>
-      <span class="mc-item"><i class="mc-dot bronze"></i>중국 팡린 235kg</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">69kg</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>북한 송국향 263kg</span>
-      <span class="mc-item"><i class="mc-dot silver"></i>차이니스 타이베이 천원후이 239kg</span>
-      <span class="mc-item"><i class="mc-dot bronze"></i>일본 미야고에 유이 219kg</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">77kg</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>중국 랴오구이팡 265kg</span>
-      <span class="mc-item"><i class="mc-dot silver"></i>북한 김경룡 260kg</span>
-      <span class="mc-item"><i class="mc-dot bronze"></i>인도 산자나 220kg</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">86kg</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>중국 펑추이팅 270kg</span>
-      <span class="mc-item"><i class="mc-dot silver"></i>바레인 알리나 마루샤크 265kg</span>
-      <span class="mc-item kr"><i class="mc-dot bronze"></i>한국 장현주 245kg</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">+86kg</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>중국 리옌 323kg</span>
-      <span class="mc-item"><i class="mc-dot silver"></i>카타르 위살 이클레프 299kg</span>
-      <span class="mc-item kr"><i class="mc-dot bronze"></i>한국 박혜정 298kg</span>
-    </div></div>
-  </div>
-  <p class="sub-note" style="margin-top:8px;">WR = 세계기록. 이성원(88kg)·송영환(+110kg)·장현주(86kg)·박혜정(+86kg) 4명이 동메달을 획득해 한국 역도의 저력을 보여줬다.</p>
+      <h3>2022 항저우 아시안게임</h3>
+      <p class="medals"><span class="medal g">금 1</span><span class="medal s">은 2</span><span class="medal b">동 3</span></p>
+      <p>여자 최중량급(+87kg)에서 박혜정·손영희가 나란히 금·은을 차지하며 한국이 시상대를 휩쓴 유일한 체급이었다.</p>
 
-  <!-- 역대 시상대 -->
-  <h2 class="sub">역대 시상대</h2>
-  <p class="sub-note">최근 아시안게임과 올림픽에서의 역도 메달 결과 (체급 합계 기준).</p>
+      <p><b>남자</b></p>
+      <table class="wt">
+        <tr><th>체급</th><th>금</th><th>은</th><th>동</th></tr>
+        <tr><td class="num">61kg</td><td>중국 리파빈</td><td>북한 박명진</td><td>북한 김청국</td></tr>
+        <tr><td class="num">67kg</td><td>중국 천리쥔</td><td>북한 리원주</td><td><b>한국 이상연</b></td></tr>
+        <tr><td class="num">73kg</td><td>인도네시아 라흐맛 에르윈 압둘라</td><td>태국 위라폰 위추마</td><td>북한 오금택</td></tr>
+        <tr><td class="num">81kg</td><td>북한 리종성</td><td>우즈베키스탄 토슈테미로프</td><td>카자흐스탄 우바로프</td></tr>
+        <tr><td class="num">96kg</td><td>중국 톈타오</td><td>북한 로광열</td><td>태국 사랏 숨프라딧</td></tr>
+        <tr><td class="num">109kg</td><td>중국 류환화</td><td>우즈베키스탄 아크바르 주라예프</td><td>우즈베키스탄 루슬란 누루디노프</td></tr>
+        <tr><td class="num">+109kg</td><td>바레인 고르 미나샨</td><td>이란 알리 다부디</td><td>우즈베키스탄 루스탐 장가바예프</td></tr>
+      </table>
 
-  <div class="tabs">
-    <button class="tab-btn active" data-tab="t2022">2022 항저우 아시안게임</button>
-    <button class="tab-btn" data-tab="t2024">2024 파리 올림픽</button>
-  </div>
+      <p><b>여자</b></p>
+      <table class="wt">
+        <tr><th>체급</th><th>금</th><th>은</th><th>동</th></tr>
+        <tr><td class="num">49kg</td><td>북한 리송금</td><td>중국 장후이화</td><td>태국 탄야톤 숙차론</td></tr>
+        <tr><td class="num">55kg</td><td>북한 강현경</td><td>북한 리수연</td><td>중국 허우즈후이</td></tr>
+        <tr><td class="num">59kg</td><td>북한 김일경</td><td>중국 뤄스팡</td><td>차이니스 타이베이 궈싱춘</td></tr>
+        <tr><td class="num">64kg</td><td>북한 림은심</td><td>중국 페이신이</td><td>필리핀 엘린 안도</td></tr>
+        <tr><td class="num">76kg</td><td>북한 송국향</td><td>북한 정춘희</td><td><b>한국 김수현</b></td></tr>
+        <tr><td class="num">87kg</td><td>중국 량샤오메이</td><td><b>한국 윤하제</b></td><td><b>한국 정아람</b></td></tr>
+        <tr><td class="num">+87kg</td><td><b>한국 박혜정</b></td><td><b>한국 손영희</b></td><td>태국 두앙악손 차이디</td></tr>
+      </table>
 
-  <div class="tab-panel active" id="t2022">
-    <div class="medal-group-label">남자</div>
-    <div class="medal-compact">
-      <div class="mc-row"><div class="mc-event">61kg</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>중국 리파빈</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>북한 박명진</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>북한 김청국</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">67kg</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>중국 천리쥔</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>북한 리원주</span>
-        <span class="mc-item kr"><i class="mc-dot bronze"></i>한국 이상연</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">73kg</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>인도네시아 라흐맛 에르윈 압둘라</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>태국 위라폰 위추마</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>북한 오금택</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">81kg</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>북한 리종성</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>우즈베키스탄 토슈테미로프</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>카자흐스탄 우바로프</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">96kg</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>중국 톈타오</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>북한 로광열</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>태국 사랏 숨프라딧</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">109kg</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>중국 류환화</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>우즈베키스탄 아크바르 주라예프</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>우즈베키스탄 루슬란 누루디노프</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">+109kg</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>바레인 고르 미나샨</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>이란 알리 다부디</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>우즈베키스탄 루스탐 장가바예프</span>
-      </div></div>
+      <h3>2024 파리 올림픽</h3>
+      <p class="medals"><span class="medal s">은 1</span></p>
+      <p>올림픽은 체급 수가 남녀 각 5개로 축소 운영되어, 아시안게임(7~8체급)보다 체급 구간이 넓다. 박혜정은 2022 아시안게임 금메달에 이어 2024 올림픽에서 은메달을 추가했다.</p>
+
+      <p><b>남자</b></p>
+      <table class="wt">
+        <tr><th>체급</th><th>금</th><th>은</th><th>동</th></tr>
+        <tr><td class="num">61kg</td><td>중국 리파빈 310kg</td><td>태국 티라퐁 실라차이 303kg</td><td>미국 햄튼 모리스 298kg</td></tr>
+        <tr><td class="num">73kg</td><td>인도네시아 리즈키 주니안샤 354kg</td><td>태국 위라폰 위추마 346kg</td><td>불가리아 보지다르 안드레예프 344kg</td></tr>
+        <tr><td class="num">89kg</td><td>불가리아 카를로스 나사르 404kg(WR)</td><td>콜롬비아 예이손 로페스 390kg</td><td>이탈리아 안토니노 피촐라토 384kg</td></tr>
+        <tr><td class="num">102kg</td><td>중국 류환화 406kg</td><td>우즈베키스탄 아크바르 주라예프 404kg</td><td>중립선수 예우헤니 치한초우 402kg</td></tr>
+        <tr><td class="num">+102kg</td><td>조지아 라샤 탈라하제 470kg</td><td>아르메니아 바라즈다트 랄라얀 467kg</td><td>바레인 고르 미나샨 461kg</td></tr>
+      </table>
+
+      <p><b>여자</b></p>
+      <table class="wt">
+        <tr><th>체급</th><th>금</th><th>은</th><th>동</th></tr>
+        <tr><td class="num">49kg</td><td>중국 허우즈후이 206kg</td><td>루마니아 미하엘라 캄베이 205kg</td><td>태국 수롯차나 캄바오 200kg</td></tr>
+        <tr><td class="num">59kg</td><td>중국 뤄스팡 241kg(OR)</td><td>캐나다 모드 샤롱 236kg</td><td>차이니스 타이베이 궈싱춘 235kg</td></tr>
+        <tr><td class="num">71kg</td><td>미국 올리비아 리브스 262kg</td><td>콜롬비아 마리 산체스 257kg</td><td>에콰도르 앤지 팔라시오스 256kg</td></tr>
+        <tr><td class="num">81kg</td><td>노르웨이 솔프리드 코안다 275kg(OR)</td><td>이집트 사라 아메드 268kg</td><td>에콰도르 네이시 다호메스 267kg</td></tr>
+        <tr><td class="num">+81kg</td><td>중국 리원원 309kg</td><td><b>한국 박혜정 299kg</b></td><td>영국 에밀리 캠벨 288kg</td></tr>
+      </table>
+      <p class="note">WR = 세계기록, OR = 올림픽기록.</p>
+
+      <h2 id="la28">LA28 예선과의 관계</h2>
+      <div class="kr-box">
+        <h4>IWF 올림픽예선랭킹(OQR) 간접 반영</h4>
+        <p>역도의 LA28(로스앤젤레스 2028) 출전권은 IWF 올림픽예선 랭킹(OQR)으로 결정되며, 아시안게임 성적 자체가 출전권으로 직접 연결되지는 않는다. 다만 IWF가 예선 대회로 승인한 대륙 종합대회 성적은 OQR 랭킹 포인트로 간접 반영될 수 있다. LA28 역도 예선 시스템의 전체 규정(세부종목·정량·경로·일정)은 <a href="olweightlifting.html">역도 (올림픽예선)</a> 문서에 정리되어 있다.</p>
+      </div>
+
+      <div class="footer">
+        출처: 2026 아시아선수권 및 2022 항저우 아시안게임·2024 파리 올림픽 결과, 아이치·나고야 2026 조직위원회 정보를 종합해 편집부가 정리함. 일정과 세부 사항은 대회 진행에 따라 변경될 수 있다.
+      </div>
     </div>
-    <div class="medal-group-label">여자</div>
-    <div class="medal-compact">
-      <div class="mc-row"><div class="mc-event">49kg</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>북한 리송금</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>중국 장후이화</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>태국 탄야톤 숙차론</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">55kg</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>북한 강현경</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>북한 리수연</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>중국 허우즈후이</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">59kg</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>북한 김일경</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>중국 뤄스팡</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>차이니스 타이베이 궈싱춘</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">64kg</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>북한 림은심</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>중국 페이신이</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>필리핀 엘린 안도</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">76kg</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>북한 송국향</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>북한 정춘희</span>
-        <span class="mc-item kr"><i class="mc-dot bronze"></i>한국 김수현</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">87kg</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>중국 량샤오메이</span>
-        <span class="mc-item kr"><i class="mc-dot silver"></i>한국 윤하제</span>
-        <span class="mc-item kr"><i class="mc-dot bronze"></i>한국 정아람</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">+87kg</div><div class="mc-meds">
-        <span class="mc-item kr"><i class="mc-dot gold"></i>한국 박혜정</span>
-        <span class="mc-item kr"><i class="mc-dot silver"></i>한국 손영희</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>태국 두앙악손 차이디</span>
-      </div></div>
-    </div>
-    <p class="sub-note" style="margin-top:8px;">참고: 여자 최중량급(+87kg)에서 박혜정·손영희가 나란히 금·은을 차지하며 한국이 시상대를 휩쓴 유일한 체급이었다.</p>
+    <aside class="infobox">
+      <div class="ib-title">역도 종목 정보</div>
+      <table>
+        <tr><th>영문명</th><td>Weightlifting</td></tr>
+        <tr><th>경기 기간</th><td>9월 23일 ~ 29일</td></tr>
+        <tr><th>경기장</th><td>나고야시 산업무역관</td></tr>
+        <tr><th>세부 종목</th><td>16개 (남녀 각 8체급)</td></tr>
+        <tr><th>판정</th><td>인상·용상 합계, 3회 시기 중 최고 기록</td></tr>
+        <tr><th>2026 아시아선수권</th><td>한국 동4 <span class="badge">4명 입상</span></td></tr>
+        <tr><th>2022 항저우</th><td>한국 금1·은2·동3</td></tr>
+        <tr><th>LA28 예선 연계</th><td><span class="badge gold">간접(OQR 랭킹)</span></td></tr>
+        <tr><th>관련 문서</th><td><a href="olweightlifting.html">역도 (올림픽예선)</a> · <a href="index2.html">아시안게임 종목 안내</a></td></tr>
+      </table>
+    </aside>
   </div>
-
-  <div class="tab-panel" id="t2024">
-    <div class="medal-group-label">남자</div>
-    <div class="medal-compact">
-      <div class="mc-row"><div class="mc-event">61kg</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>중국 리파빈 310kg</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>태국 티라퐁 실라차이 303kg</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>미국 햄튼 모리스 298kg</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">73kg</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>인도네시아 리즈키 주니안샤 354kg</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>태국 위라폰 위추마 346kg</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>불가리아 보지다르 안드레예프 344kg</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">89kg</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>불가리아 카를로스 나사르 404kg(WR)</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>콜롬비아 예이손 로페스 390kg</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>이탈리아 안토니노 피촐라토 384kg</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">102kg</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>중국 류환화 406kg</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>우즈베키스탄 아크바르 주라예프 404kg</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>중립선수 예우헤니 치한초우 402kg</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">+102kg</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>조지아 라샤 탈라하제 470kg</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>아르메니아 바라즈다트 랄라얀 467kg</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>바레인 고르 미나샨 461kg</span>
-      </div></div>
-    </div>
-    <div class="medal-group-label">여자</div>
-    <div class="medal-compact">
-      <div class="mc-row"><div class="mc-event">49kg</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>중국 허우즈후이 206kg</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>루마니아 미하엘라 캄베이 205kg</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>태국 수롯차나 캄바오 200kg</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">59kg</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>중국 뤄스팡 241kg(OR)</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>캐나다 모드 샤롱 236kg</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>차이니스 타이베이 궈싱춘 235kg</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">71kg</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>미국 올리비아 리브스 262kg</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>콜롬비아 마리 산체스 257kg</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>에콰도르 앤지 팔라시오스 256kg</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">81kg</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>노르웨이 솔프리드 코안다 275kg(OR)</span>
-        <span class="mc-item"><i class="mc-dot silver"></i>이집트 사라 아메드 268kg</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>에콰도르 네이시 다호메스 267kg</span>
-      </div></div>
-      <div class="mc-row"><div class="mc-event">+81kg</div><div class="mc-meds">
-        <span class="mc-item"><i class="mc-dot gold"></i>중국 리원원 309kg</span>
-        <span class="mc-item kr"><i class="mc-dot silver"></i>한국 박혜정 299kg</span>
-        <span class="mc-item"><i class="mc-dot bronze"></i>영국 에밀리 캠벨 288kg</span>
-      </div></div>
-    </div>
-    <p class="sub-note" style="margin-top:8px;">참고: 올림픽은 체급 수가 남녀 각 5개로 축소 운영되어, 아시안게임(7~8체급)보다 체급 구간이 넓다. 박혜정은 2022 아시안게임 금메달에 이어 2024 올림픽에서 은메달을 추가했다.</p>
-  </div>
-
-<div class="wiki-related">
-    <h4>LA28 예선과의 관계</h4>
-    <p>역도의 LA28(로스앤젤레스 2028) 출전권은 IWF 올림픽 예선 랭킹(OQR)으로 결정되며, 아시안게임 성적 자체가 출전권으로 직접 연결되지는 않는다. 다만 IWF가 예선 대회로 승인한 대륙 종합대회 성적은 OQR 랭킹 포인트로 간접 반영될 수 있다. LA28 역도 예선 시스템의 전체 규정(세부종목·정량·경로·일정)은 <a href="olweightlifting.html">역도 (올림픽예선)</a> 문서에 정리되어 있다.</p>
-  </div>
-
-  <footer class="pagefoot">
-    <span>2026 아이치·나고야 아시안게임 종목 안내</span>
-    <a href="index1.html">← 전체 종목 목록 보기</a>
-  </footer>
 </div>
-
-<script>
-document.querySelectorAll('.tab-btn[data-tab]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.tab-btn[data-tab]').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById(btn.dataset.tab).classList.add('active');
-  });
-});
-</script>
 </body>
 </html>

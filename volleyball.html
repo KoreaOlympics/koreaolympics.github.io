@@ -3,418 +3,250 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>배구 | 2026 아이치·나고야 아시안게임</title>
+<title>배구 - 2026 아이치·나고야 아시안게임</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#0E1A2B; --ink-2:#152540; --gold:#C9A24B; --gold-soft:#E4CD8C;
-    --sun:#D8482F; --paper:#F3EFE4; --paper-dim:#B9C2CF; --line:rgba(201,162,75,0.28);
+    --bg:#ffffff; --panel:#f8f9fa; --border:#c8ccd1; --border-soft:#eaecf0;
+    --ink:#202122; --muted:#54595d; --link:#3366cc; --link-visited:#795cb2; --link-red:#ba0000;
+    --serif:'Noto Serif KR',Georgia,'Times New Roman',serif;
+    --sans:'Pretendard','Helvetica Neue',Arial,sans-serif;
+    --accent:#2456c6; --ok:#1a7f37; --warn:#b45309; --gold:#a05a00;
   }
   *{box-sizing:border-box;}
-  body{
-    margin:0; color:var(--paper); font-family:'Pretendard','Noto Sans KR',sans-serif;
-    background:
-      radial-gradient(1100px 550px at 90% -10%, rgba(216,72,47,0.16), transparent 60%),
-      radial-gradient(900px 500px at -10% 110%, rgba(201,162,75,0.10), transparent 60%),
-      var(--ink);
-    -webkit-font-smoothing:antialiased;
-  }
-  .wrap{max-width:880px;margin:0 auto;padding:40px 28px 100px;}
-  nav.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;}
-  .back{color:var(--gold-soft);text-decoration:none;font-size:13.5px;font-weight:600;display:inline-flex;align-items:center;gap:6px;}
-  .back:hover{color:var(--gold);}
-  .back svg{width:14px;height:14px;}
-  .crumb{font-size:12px;color:var(--paper-dim);letter-spacing:0.02em;}
-  header.hero{padding-bottom:32px;margin-bottom:32px;border-bottom:1px solid var(--line);}
-  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;letter-spacing:0.16em;color:var(--gold-soft);text-transform:uppercase;font-weight:600;margin-bottom:16px;}
-  .eyebrow::before{content:"";width:22px;height:1px;background:var(--gold);display:inline-block;}
-  h1{font-family:'Noto Serif KR',serif;font-weight:900;font-size:clamp(30px,5vw,46px);line-height:1.2;margin:0 0 6px;color:var(--paper);letter-spacing:-0.01em;}
-  .en-title{font-size:14px;color:var(--paper-dim);letter-spacing:0.04em;margin:0 0 18px;font-style:italic;}
-  .tagline{font-size:16.5px;color:var(--paper-dim);line-height:1.75;max-width:640px;margin:0;}
-  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:28px 0 8px;}
-  .fact{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:14px 16px;}
-  .fact span{display:block;font-size:11px;color:var(--gold-soft);letter-spacing:0.05em;margin-bottom:6px;}
-  .fact b{font-family:'Noto Serif KR',serif;font-size:15px;color:var(--paper);font-weight:700;line-height:1.4;}
-  section.body{margin-top:8px;}
-  section.body p{font-size:15.5px;line-height:1.85;color:var(--paper-dim);margin:0 0 16px;}
-  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:42px 0 18px;font-weight:700;}
-  h2.sub small{display:block;font-family:'Pretendard',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.12em;color:var(--gold-soft);text-transform:uppercase;margin-bottom:7px;}
-  .lede{font-size:15px;line-height:1.8;color:var(--paper-dim);margin:0 0 18px;}
-  .tblcap{font-family:'Noto Serif KR',serif;font-size:14px;color:var(--paper);font-weight:700;margin:28px 0 10px;display:flex;align-items:center;gap:9px;}
-  .tblcap::before{content:"";width:16px;height:1px;background:var(--gold);display:inline-block;}
-  .tblnote{font-size:11.5px;color:var(--paper-dim);opacity:0.75;margin:12px 0 0;line-height:1.65;}
-
-  /* 로드맵 */
-  .road{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;}
-  .lane{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:18px 20px;}
-  .lane h3{font-family:'Noto Serif KR',serif;font-size:15.5px;margin:0 0 14px;color:var(--paper);display:flex;align-items:center;gap:8px;}
-  .lane h3 em{font-style:normal;font-size:10.5px;letter-spacing:0.08em;color:var(--ink);background:var(--gold-soft);border-radius:3px;padding:2px 6px;font-weight:700;}
-  .stop{display:grid;grid-template-columns:16px 1fr;gap:12px;padding-bottom:16px;position:relative;}
-  .stop:last-child{padding-bottom:0;}
-  .stop::before{content:"";position:absolute;left:7px;top:14px;bottom:0;width:1px;background:var(--line);}
-  .stop:last-child::before{display:none;}
-  .dot{width:11px;height:11px;border-radius:50%;border:2px solid var(--gold);background:var(--ink-2);margin-top:3px;z-index:1;}
-  .stop.goal .dot{background:var(--sun);border-color:var(--sun);}
-  .stop .d{font-size:11.5px;color:var(--gold-soft);letter-spacing:0.03em;margin-bottom:3px;}
-  .stop.goal .d{color:var(--sun);}
-  .stop .t{font-size:14px;color:var(--paper);font-weight:600;}
-  .stop .v{font-size:11.5px;color:var(--paper-dim);margin-top:2px;}
-
-  /* 랭킹 */
-  .rankwrap{overflow-x:auto;}
-  table.rk{width:100%;border-collapse:collapse;min-width:420px;}
-  table.rk th{font-size:11.5px;font-weight:600;color:var(--gold-soft);text-align:left;padding:0 0 9px;border-bottom:1px solid var(--line);letter-spacing:0.04em;}
-  table.rk td{padding:9px 0;font-size:13.5px;color:var(--paper-dim);border-bottom:1px dashed rgba(201,162,75,0.16);}
-  table.rk th+th,table.rk td+td{padding-left:16px;}
-  table.rk tr:last-child td{border-bottom:0;}
-  table.rk td.n{width:44px;font-family:'Noto Serif KR',serif;font-weight:700;color:var(--gold);text-align:right;}
-  table.rk td.c{color:var(--paper);font-weight:600;}
-  table.rk td.p{width:78px;text-align:right;font-size:12.5px;}
-  table.rk td.memo{font-size:12px;opacity:0.85;}
-  table.rk tr.kor td{background:rgba(201,162,75,0.09);}
-  table.rk tr.kor td.c{color:var(--gold-soft);}
-
-  /* 조 편성 */
-  .pools{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;}
-  .pool{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:15px 17px;}
-  .pool.ours{border-color:rgba(216,72,47,0.5);background:rgba(216,72,47,0.07);}
-  .pool h4{font-family:'Noto Serif KR',serif;font-size:13.5px;margin:0 0 10px;color:var(--gold-soft);letter-spacing:0.05em;}
-  .pool.ours h4{color:var(--sun);}
-  .pool ul{list-style:none;margin:0;padding:0;}
-  .pool li{font-size:13.5px;color:var(--paper-dim);padding:4px 0;}
-  .pool li.me{color:var(--paper);font-weight:700;}
-
-  /* 유니폼 로스터 */
-  .kit{background:var(--ink-2);border:1px solid var(--line);border-radius:10px;padding:20px 22px 8px;margin-bottom:16px;}
-  .kithead{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:6px;}
-  .kithead h3{font-family:'Noto Serif KR',serif;font-size:16px;margin:0;color:var(--paper);display:flex;align-items:center;gap:8px;}
-  .kithead h3 em{font-style:normal;font-size:10.5px;letter-spacing:0.08em;color:var(--ink);background:var(--gold-soft);border-radius:3px;padding:2px 6px;font-weight:700;}
-  .kithead .meta{font-size:11.5px;color:var(--paper-dim);}
-  .posrow{display:grid;grid-template-columns:52px 1fr;gap:14px;align-items:start;padding:14px 0;border-bottom:1px dashed rgba(201,162,75,0.2);}
-  .posrow:last-child{border-bottom:0;}
-  .posrow .pos{padding-top:10px;}
-  .posrow .pos b{display:block;font-family:'Noto Serif KR',serif;font-size:13px;color:var(--gold);font-weight:900;letter-spacing:0.04em;}
-  .posrow .pos i{display:block;font-style:normal;font-size:9.5px;color:var(--paper-dim);margin-top:3px;line-height:1.3;}
-  .pls{display:flex;flex-wrap:wrap;gap:11px;}
-  .pl{width:72px;text-align:center;}
-  .jsy{width:52px;height:52px;display:block;margin:0 auto;}
-  .jsy path{fill:rgba(201,162,75,0.10);stroke:var(--gold);stroke-width:3;stroke-linejoin:round;}
-  .jsy text{fill:var(--gold-soft);font-family:'Noto Serif KR',serif;font-weight:900;font-size:34px;text-anchor:middle;}
-  .pl.capt .jsy path{fill:rgba(216,72,47,0.18);stroke:var(--sun);}
-  .pl.capt .jsy text{fill:#F2A08C;}
-  .pl b{display:block;font-size:12.5px;color:var(--paper);margin-top:5px;font-weight:600;white-space:nowrap;}
-  .pl s{display:inline-block;text-decoration:none;font-size:8.5px;color:var(--ink);background:var(--sun);border-radius:2px;padding:0 3px;vertical-align:2px;margin-left:2px;font-weight:700;}
-  .pl span{display:block;font-size:9.5px;color:var(--paper-dim);line-height:1.35;margin-top:2px;}
-  .pl.abroad span{color:var(--gold-soft);}
-
-  /* 최근 흐름 */
-  .rec{display:grid;grid-template-columns:112px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line);}
-  .rec:first-of-type{border-top:1px solid var(--line);}
-  .rec .yr{font-family:'Noto Serif KR',serif;font-size:18px;font-weight:900;color:var(--gold);line-height:1.25;}
-  .rec .yr i{display:block;font-style:normal;font-family:'Pretendard',sans-serif;font-size:11px;font-weight:500;color:var(--paper-dim);margin-top:4px;}
-  .rec h3{font-family:'Noto Serif KR',serif;font-size:16px;margin:0 0 8px;color:var(--paper);font-weight:700;}
-  .rec p{font-size:14px;line-height:1.75;color:var(--paper-dim);margin:0;}
-  .chips{margin:0 0 10px;}
-  .chip{display:inline-flex;align-items:center;font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;border:1px solid;margin:0 6px 6px 0;}
-  .chip.up{color:#EBD08F;border-color:rgba(201,162,75,0.45);background:rgba(201,162,75,0.10);}
-  .chip.flat{color:#D3DAE4;border-color:rgba(211,218,228,0.26);background:rgba(211,218,228,0.06);}
-  .chip.down{color:#E7856F;border-color:rgba(216,72,47,0.35);background:rgba(216,72,47,0.10);}
-  .scores{margin-top:10px;font-size:12.5px;line-height:1.95;color:var(--paper-dim);}
-  .scores b{color:var(--paper);font-weight:600;}
-  .scores .w{color:var(--gold-soft);font-weight:700;}
-  .scores .l{color:var(--sun);font-weight:700;}
-
-  .note{margin-top:26px;border-left:3px solid var(--sun);background:rgba(216,72,47,0.08);border-radius:0 8px 8px 0;padding:18px 22px;}
-  .note h3{font-family:'Noto Serif KR',serif;font-size:16px;margin:0 0 8px;color:var(--paper);}
-  .note p{font-size:14.5px;line-height:1.8;color:var(--paper-dim);margin:0 0 10px;}
-  .note p:last-child{margin-bottom:0;}
-
-  footer.pagefoot{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
-  footer.pagefoot a{color:var(--gold-soft);text-decoration:none;}
-  @media (max-width:520px){
-    .wrap{padding:28px 18px 70px;}
-    .rec{grid-template-columns:1fr;gap:10px;}
-    .posrow{grid-template-columns:1fr;gap:8px;}
-    .posrow .pos{padding-top:0;display:flex;align-items:baseline;gap:8px;}
-    .posrow .pos i{margin-top:0;}
-  }
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.65;}
+  a{color:var(--link);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  a:visited{color:var(--link-visited);}
+  .topbar{border-bottom:1px solid var(--border);background:var(--panel);font-size:12.5px;color:var(--muted);}
+  .topbar .inner{max-width:1100px;margin:0 auto;padding:8px 20px;display:flex;gap:16px;flex-wrap:wrap;}
+  .topbar a{color:var(--link);}
+  .layout{max-width:1100px;margin:0 auto;padding:22px 20px 80px;}
+  h1.title{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.3;margin:0 0 2px;padding-bottom:6px;border-bottom:1px solid var(--border);}
+  .subtitle{color:var(--muted);font-size:13px;margin:0 0 18px;}
+  .hatnote{font-style:italic;color:var(--muted);background:var(--panel);border:1px solid var(--border-soft);padding:8px 14px;border-radius:2px;margin:0 0 20px;font-size:13.5px;}
+  .content{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;}
+  .main{flex:1 1 560px;min-width:0;}
+  h2{font-family:var(--serif);font-weight:600;font-size:22px;margin:26px 0 10px;padding-bottom:5px;border-bottom:1px solid var(--border-soft);scroll-margin-top:12px;}
+  h3{font-family:var(--serif);font-weight:600;font-size:17px;margin:20px 0 8px;}
+  h4{font-family:var(--sans);font-weight:700;font-size:14.5px;margin:16px 0 6px;color:#3a3f44;}
+  p{margin:0 0 12px;}
+  .toc{display:inline-block;background:var(--panel);border:1px solid var(--border);border-radius:2px;padding:12px 20px 12px 14px;margin:0 0 20px;font-size:14px;}
+  .toc-title{font-weight:700;text-align:center;font-size:13px;margin-bottom:6px;}
+  .toc ol{margin:0;padding-left:22px;}
+  .toc li{margin:3px 0;}
+  .infobox{flex:0 0 300px;background:var(--panel);border:1px solid var(--border);border-radius:2px;font-size:13px;align-self:flex-start;}
+  .infobox .ib-title{background:#eaecf0;font-family:var(--serif);font-weight:700;text-align:center;padding:10px 12px;font-size:15px;border-bottom:1px solid var(--border);}
+  .infobox table{width:100%;border-collapse:collapse;}
+  .infobox th,.infobox td{text-align:left;padding:7px 12px;vertical-align:top;border-bottom:1px solid var(--border-soft);}
+  .infobox th{width:38%;color:var(--muted);font-weight:600;}
+  .badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:2px;background:#e6f0ff;color:#2456c6;border:1px solid #b9d0f5;margin-left:6px;}
+  .badge.gold{background:#fff2e0;color:#a05a00;border-color:#f2d2a0;}
+  table.wt{border-collapse:collapse;width:100%;font-size:13.5px;margin:6px 0 16px;}
+  table.wt th,table.wt td{border:1px solid var(--border);padding:6px 10px;text-align:left;vertical-align:top;}
+  table.wt th{background:var(--panel);}
+  table.wt td.num, table.wt th.num{text-align:center;}
+  table.wt caption{font-size:12.5px;color:var(--muted);text-align:left;padding:2px 0 6px;}
+  .note{font-size:12.5px;color:var(--muted);margin:-8px 0 16px;}
+  .kr-box{background:#eef4ff;border:1px solid #c3d6f7;border-radius:3px;padding:14px 16px;margin:10px 0 18px;}
+  .kr-box h4{margin-top:0;color:#1e3a8a;}
+  .medals{display:inline-flex;gap:6px;margin:0 0 8px;flex-wrap:wrap;}
+  .medal{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;border:1px solid;}
+  .medal.g{color:#8a6d1a;border-color:#e4cd8c;background:#fdf6e3;}
+  .medal.s{color:#5b6168;border-color:#d5d9de;background:#f4f5f6;}
+  .medal.b{color:#8a5a30;border-color:#e0c3a3;background:#fbf1e6;}
+  .footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;}
+  @media (max-width:820px){.infobox{flex:1 1 100%;order:-1;}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <nav class="top">
-    <a class="back" href="index1.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>전체 종목으로</a>
-    <span class="crumb">단체구기 / 배구</span>
-  </nav>
-
-  <header class="hero">
-    <span class="eyebrow">2026 Aichi · Nagoya · 단체구기</span>
-    <h1>배구</h1>
-    <p class="en-title">Volleyball</p>
-    <p class="tagline">네트를 사이에 두고 세 번 안에 공을 넘겨 득점을 겨루는 단체 구기. 한국은 남녀 모두 FIVB 랭킹으로 출전권을 받았고, 목표는 남녀 동반 입상이다.</p>
-  </header>
-
-  <div class="facts">
-    <div class="fact"><span>여자 경기</span><b>9월 16일 ~ 22일</b></div>
-    <div class="fact"><span>남자 경기</span><b>9월 27일 ~ 10월 3일</b></div>
-    <div class="fact"><span>경기장</span><b>오카자키 종합체육관 · 고마키 파크 아레나</b></div>
-    <div class="fact"><span>출전국</span><b>남자 16 · 여자 14 (총 18개국)</b></div>
-    <div class="fact"><span>한국 랭킹</span><b>남자 26위 · 여자 30위</b></div>
-  </div>
-
-  <section class="body">
-    <p>아시아배구연맹(AVC)은 2026년 5월 말 FIVB 세계랭킹을 기준으로 출전국을 확정했다. 남자는 16개국, 여자는 14개국이 각각 네 개 조로 나뉘어 조별리그를 치르며, 한국은 남녀 모두 D조에 배정됐다. 경기는 아이치현 오카자키 종합체육관과 고마키 파크 아레나 두 곳에서 열리고, 여자 경기가 9월 16일부터 22일까지 먼저 끝나고, 남자 경기는 9월 27일에 시작한다.</p>
-    <p>지금 한국 배구는 남녀의 방향이 정반대다. 여자 대표팀은 6월 AVC컵에서 일곱 경기를 모두 이기며 세계랭킹을 40위권에서 30위까지 끌어올렸고, 남자 대표팀은 같은 달 인도네시아와 태국에 발목을 잡히며 제자리에 머물렀다. 랭킹 숫자만 보면 남자가 앞서지만, 최근 흐름은 여자 쪽이 훨씬 좋다.</p>
-  </section>
-
-  <h2 class="sub"><small>Roadmap</small>아시안게임까지 남은 일정</h2>
-  <p class="lede">남녀 일정이 완전히 다르게 짜여 있다. 여자는 8월에 두 대회를 연달아 치른 뒤 2주 반을 쉬고 아시안게임에 들어가고, 남자는 아시아선수권이 9월 중순까지 이어져 아시안게임 개막까지 2주밖에 없다.</p>
-  <div class="road">
-    <div class="lane">
-      <h3>여자 <em>Women</em></h3>
-      <div class="stop">
-        <div class="dot"></div>
-        <div><div class="d">8월 11 ~ 16일</div><div class="t">동아시아선수권</div><div class="v">홍콩</div></div>
+<div class="topbar"><div class="inner">
+  <a href="index2.html">← 아시안게임 종목 목록</a>
+  <span>문서 · 배구</span>
+  <a href="index.html">전체 목차</a>
+</div></div>
+<div class="layout">
+  <h1 class="title">배구</h1>
+  <p class="subtitle">Volleyball / Beach Volleyball · 2026 아이치·나고야 아시안게임 (제20회) · 단체구기</p>
+  <p class="hatnote">네트를 사이에 두고 세 번 안에 공을 넘겨 득점을 겨루는 단체 구기. 한국은 남녀 모두 FIVB 랭킹으로 출전권을 받았고, 목표는 남녀 동반 입상이다.</p>
+  <div class="content">
+    <div class="main">
+      <div class="toc">
+        <div class="toc-title">목차</div>
+        <ol>
+          <li><a href="#overview">개요</a></li>
+          <li><a href="#roadmap">아시안게임까지 남은 일정</a></li>
+          <li><a href="#roster">한국 대표팀</a></li>
+          <li><a href="#rankings">출전국 FIVB 세계랭킹</a></li>
+          <li><a href="#groups">조 편성</a></li>
+          <li><a href="#form">최근 흐름</a></li>
+          <li><a href="#beach">비치발리볼</a></li>
+          <li><a href="#watch">관전 포인트</a></li>
+          <li><a href="#la28">LA28 예선과의 관계</a></li>
+        </ol>
       </div>
-      <div class="stop">
-        <div class="dot"></div>
-        <div><div class="d">8월 21 ~ 30일</div><div class="t">아시아선수권</div><div class="v">중국 톈진 · 2028 LA 올림픽 &amp; 2027 월드컵 출전권</div></div>
-      </div>
-      <div class="stop goal">
-        <div class="dot"></div>
-        <div><div class="d">9월 16 ~ 22일</div><div class="t">아시안게임</div><div class="v">일본 아이치현</div></div>
-      </div>
-    </div>
-    <div class="lane">
-      <h3>남자 <em>Men</em></h3>
-      <div class="stop">
-        <div class="dot"></div>
-        <div><div class="d">8월 5 ~ 9일</div><div class="t">동아시아선수권</div><div class="v">몽골 울란바토르</div></div>
-      </div>
-      <div class="stop">
-        <div class="dot"></div>
-        <div><div class="d">9월 4 ~ 13일</div><div class="t">아시아선수권</div><div class="v">일본 후쿠오카현 기타큐슈 · 2028 LA 올림픽 &amp; 2027 월드컵 출전권</div></div>
-      </div>
-      <div class="stop goal">
-        <div class="dot"></div>
-        <div><div class="d">9월 27일 ~ 10월 3일</div><div class="t">아시안게임</div><div class="v">일본 아이치현</div></div>
-      </div>
-    </div>
-  </div>
-  <p class="tblnote">남자 대표팀은 아시아선수권도 일본에서 치른다. 9월에만 일본을 두 번 찾는 셈이라 현지 적응 면에서는 유리하지만, 아시아선수권 종료 후 아시안게임 개막까지 회복 기간이 2주에 불과하다.</p>
 
-  <h2 class="sub"><small>Team Korea</small>국가대표 로스터</h2>
-  <p class="lede">각 14명. 아시안게임은 12명 로스터로 치러지므로 남녀 모두 두 명이 빠지며, 그 밖에도 선수 변동이 있을 수 있다.</p>
+      <h2 id="overview">개요</h2>
+      <p>아시아배구연맹(AVC)은 2026년 5월 말 FIVB 세계랭킹을 기준으로 출전국을 확정했다. 남자는 16개국, 여자는 14개국이 각각 네 개 조로 나뉘어 조별리그를 치르며, 한국은 남녀 모두 D조에 배정됐다. 경기는 아이치현 오카자키 종합체육관과 고마키 파크 아레나 두 곳에서 열리고, 여자 경기가 9월 16일부터 22일까지 먼저 끝나고, 남자 경기는 9월 27일에 시작한다.</p>
+      <p>지금 한국 배구는 남녀의 방향이 정반대다. 여자 대표팀은 6월 AVC컵에서 일곱 경기를 모두 이기며 세계랭킹을 40위권에서 30위까지 끌어올렸고, 남자 대표팀은 같은 달 인도네시아와 태국에 발목을 잡히며 제자리에 머물렀다. 랭킹 숫자만 보면 남자가 앞서지만, 최근 흐름은 여자 쪽이 훨씬 좋다.</p>
 
-  <div class="kit">
-    <div class="kithead">
-      <h3>여자 <em>14명</em></h3>
-      <span class="meta">S 2 · OH 4 · MB 3 · OP 2 · L 3</span>
-    </div>
+      <h2 id="roadmap">아시안게임까지 남은 일정</h2>
+      <p>남녀 일정이 완전히 다르게 짜여 있다. 여자는 8월에 두 대회를 연달아 치른 뒤 2주 반을 쉬고 아시안게임에 들어가고, 남자는 아시아선수권이 9월 중순까지 이어져 아시안게임 개막까지 2주밖에 없다.</p>
+      <p><b>여자</b></p>
+      <table class="wt">
+        <tr><th>날짜</th><th>일정</th><th>장소</th></tr>
+        <tr><td class="num">8월 11 ~ 16일</td><td>동아시아선수권</td><td>홍콩</td></tr>
+        <tr><td class="num">8월 21 ~ 30일</td><td>아시아선수권</td><td>중국 톈진 · 2028 LA 올림픽 &amp; 2027 월드컵 출전권</td></tr>
+        <tr><td class="num"><b>9월 16 ~ 22일</b></td><td><b>아시안게임</b></td><td>일본 아이치현</td></tr>
+      </table>
+      <p><b>남자</b></p>
+      <table class="wt">
+        <tr><th>날짜</th><th>일정</th><th>장소</th></tr>
+        <tr><td class="num">8월 5 ~ 9일</td><td>동아시아선수권</td><td>몽골 울란바토르</td></tr>
+        <tr><td class="num">9월 4 ~ 13일</td><td>아시아선수권</td><td>일본 후쿠오카현 기타큐슈 · 2028 LA 올림픽 &amp; 2027 월드컵 출전권</td></tr>
+        <tr><td class="num"><b>9월 27일 ~ 10월 3일</b></td><td><b>아시안게임</b></td><td>일본 아이치현</td></tr>
+      </table>
+      <p class="note">남자 대표팀은 아시아선수권도 일본에서 치른다. 9월에만 일본을 두 번 찾는 셈이라 현지 적응 면에서는 유리하지만, 아시아선수권 종료 후 아시안게임 개막까지 회복 기간이 2주에 불과하다.</p>
 
-    <div class="posrow">
-      <div class="pos"><b>S</b><i>세터</i></div>
-      <div class="pls">
-        <div class="pl"><svg class="jsy" viewBox="0 0 100 100"><path d="M31 9 L20 15 L7 31 L20 42 L27 35 L27 93 L73 93 L73 35 L80 42 L93 31 L80 15 L69 9 C65 19 57 23 50 23 C43 23 35 19 31 9 Z"/><text x="50" y="66">3</text></svg><b>김다인</b><span>현대건설</span></div>
-        <div class="pl"><svg class="jsy" viewBox="0 0 100 100"><path d="M31 9 L20 15 L7 31 L20 42 L27 35 L27 93 L73 93 L73 35 L80 42 L93 31 L80 15 L69 9 C65 19 57 23 50 23 C43 23 35 19 31 9 Z"/><text x="50" y="66">21</text></svg><b>이수연</b><span>한국도로공사</span></div>
-      </div>
-    </div>
+      <h2 id="roster">한국 대표팀</h2>
+      <p>각 14명. 아시안게임은 12명 로스터로 치러지므로 남녀 모두 두 명이 빠지며, 그 밖에도 선수 변동이 있을 수 있다.</p>
 
-    <div class="posrow">
-      <div class="pos"><b>OH</b><i>아웃사이드<br>히터</i></div>
-      <div class="pls">
-        <div class="pl capt"><svg class="jsy" viewBox="0 0 100 100"><path d="M31 9 L20 15 L7 31 L20 42 L27 35 L27 93 L73 93 L73 35 L80 42 L93 31 L80 15 L69 9 C65 19 57 23 50 23 C43 23 35 19 31 9 Z"/><text x="50" y="66">97</text></svg><b>강소휘<s>C</s></b><span>한국도로공사</span></div>
-        <div class="pl"><svg class="jsy" viewBox="0 0 100 100"><path d="M31 9 L20 15 L7 31 L20 42 L27 35 L27 93 L73 93 L73 35 L80 42 L93 31 L80 15 L69 9 C65 19 57 23 50 23 C43 23 35 19 31 9 Z"/><text x="50" y="66">1</text></svg><b>이예림</b><span>현대건설</span></div>
-        <div class="pl"><svg class="jsy" viewBox="0 0 100 100"><path d="M31 9 L20 15 L7 31 L20 42 L27 35 L27 93 L73 93 L73 35 L80 42 L93 31 L80 15 L69 9 C65 19 57 23 50 23 C43 23 35 19 31 9 Z"/><text x="50" y="66">11</text></svg><b>육서영</b><span>IBK기업은행</span></div>
-        <div class="pl"><svg class="jsy" viewBox="0 0 100 100"><path d="M31 9 L20 15 L7 31 L20 42 L27 35 L27 93 L73 93 L73 35 L80 42 L93 31 L80 15 L69 9 C65 19 57 23 50 23 C43 23 35 19 31 9 Z"/><text x="50" y="66">14</text></svg><b>정윤주</b><span>흥국생명</span></div>
-      </div>
-    </div>
+      <p><b>여자 14명</b> <span style="color:var(--muted);font-size:12px;">S 2 · OH 4 · MB 3 · OP 2 · L 3</span></p>
+      <table class="wt">
+        <tr><th>포지션</th><th>등번호</th><th>선수</th><th>소속</th></tr>
+        <tr><td rowspan="2">S <span style="color:var(--muted);font-size:11.5px;">세터</span></td><td class="num">3</td><td>김다인</td><td>현대건설</td></tr>
+        <tr><td class="num">21</td><td>이수연</td><td>한국도로공사</td></tr>
+        <tr><td rowspan="4">OH <span style="color:var(--muted);font-size:11.5px;">아웃사이드 히터</span></td><td class="num">97</td><td>강소휘 <span class="badge gold">주장</span></td><td>한국도로공사</td></tr>
+        <tr><td class="num">1</td><td>이예림</td><td>현대건설</td></tr>
+        <tr><td class="num">11</td><td>육서영</td><td>IBK기업은행</td></tr>
+        <tr><td class="num">14</td><td>정윤주</td><td>흥국생명</td></tr>
+        <tr><td rowspan="3">MB <span style="color:var(--muted);font-size:11.5px;">미들 블로커</span></td><td class="num">2</td><td>이주아</td><td>IBK기업은행</td></tr>
+        <tr><td class="num">6</td><td>박은진</td><td>정관장</td></tr>
+        <tr><td class="num">12</td><td>이다현</td><td>NEC 레드로켓츠 가와사키 (일본) <span class="badge">해외파</span></td></tr>
+        <tr><td rowspan="2">OP <span style="color:var(--muted);font-size:11.5px;">아포짓 스파이커</span></td><td class="num">9</td><td>나현수</td><td>현대건설</td></tr>
+        <tr><td class="num">13</td><td>박은서</td><td>SOOP</td></tr>
+        <tr><td rowspan="3">L <span style="color:var(--muted);font-size:11.5px;">리베로</span></td><td class="num">4</td><td>한다혜</td><td>SOOP</td></tr>
+        <tr><td class="num">22</td><td>김효임</td><td>GS칼텍스</td></tr>
+        <tr><td class="num">23</td><td>유가람</td><td>GS칼텍스</td></tr>
+      </table>
 
-    <div class="posrow">
-      <div class="pos"><b>MB</b><i>미들<br>블로커</i></div>
-      <div class="pls">
-        <div class="pl"><svg class="jsy" viewBox="0 0 100 100"><path d="M31 9 L20 15 L7 31 L20 42 L27 35 L27 93 L73 93 L73 35 L80 42 L93 31 L80 15 L69 9 C65 19 57 23 50 23 C43 23 35 19 31 9 Z"/><text x="50" y="66">2</text></svg><b>이주아</b><span>IBK기업은행</span></div>
-        <div class="pl"><svg class="jsy" viewBox="0 0 100 100"><path d="M31 9 L20 15 L7 31 L20 42 L27 35 L27 93 L73 93 L73 35 L80 42 L93 31 L80 15 L69 9 C65 19 57 23 50 23 C43 23 35 19 31 9 Z"/><text x="50" y="66">6</text></svg><b>박은진</b><span>정관장</span></div>
-        <div class="pl abroad"><svg class="jsy" viewBox="0 0 100 100"><path d="M31 9 L20 15 L7 31 L20 42 L27 35 L27 93 L73 93 L73 35 L80 42 L93 31 L80 15 L69 9 C65 19 57 23 50 23 C43 23 35 19 31 9 Z"/><text x="50" y="66">12</text></svg><b>이다현</b><span>NEC 레드로켓츠<br>가와사키 (일본)</span></div>
-      </div>
-    </div>
+      <p><b>남자 14명</b> <span style="color:var(--muted);font-size:12px;">S 2 · OH 4 · MB 4 · OP 2 · L 2</span></p>
+      <table class="wt">
+        <tr><th>포지션</th><th>등번호</th><th>선수</th><th>소속</th></tr>
+        <tr><td rowspan="2">S <span style="color:var(--muted);font-size:11.5px;">세터</span></td><td class="num">3</td><td>황승빈</td><td>현대캐피탈</td></tr>
+        <tr><td class="num">8</td><td>한태준</td><td>우리카드</td></tr>
+        <tr><td rowspan="4">OH <span style="color:var(--muted);font-size:11.5px;">아웃사이드 히터</span></td><td class="num">9</td><td>임성진</td><td>KB손해보험</td></tr>
+        <tr><td class="num">16</td><td>정한용</td><td>대한항공</td></tr>
+        <tr><td class="num">77</td><td>윤서진</td><td>KB손해보험</td></tr>
+        <tr><td class="num">88</td><td>임재영</td><td>대한항공</td></tr>
+        <tr><td rowspan="4">MB <span style="color:var(--muted);font-size:11.5px;">미들 블로커</span></td><td class="num">1</td><td>차영석</td><td>KB손해보험</td></tr>
+        <tr><td class="num">12</td><td>박창성</td><td>OK저축은행</td></tr>
+        <tr><td class="num">18</td><td>최준혁</td><td>대한항공</td></tr>
+        <tr><td class="num">20</td><td>이상현</td><td>국군체육부대</td></tr>
+        <tr><td rowspan="2">OP <span style="color:var(--muted);font-size:11.5px;">아포짓 스파이커</span></td><td class="num">30</td><td>신호진</td><td>현대캐피탈</td></tr>
+        <tr><td class="num">75</td><td>김요한</td><td>삼성화재</td></tr>
+        <tr><td rowspan="2">L <span style="color:var(--muted);font-size:11.5px;">리베로</span></td><td class="num">5</td><td>박경민</td><td>현대캐피탈</td></tr>
+        <tr><td class="num">6</td><td>김영준</td><td>우리카드</td></tr>
+      </table>
+      <p class="note">여자 대표팀 주장은 강소휘(97번). 미들블로커 이다현은 유일하게 해외 소속으로, 일본 NEC 레드로켓츠 가와사키에서 뛴다. 개최국 리그를 경험한 선수가 팀에 한 명 있는 셈이다. 여자는 리베로를 3명, 남자는 미들블로커를 4명 뽑았다. 12명으로 줄일 때 어느 자리를 덜어낼지가 최종 엔트리의 관전 포인트다.</p>
 
-    <div class="posrow">
-      <div class="pos"><b>OP</b><i>아포짓<br>스파이커</i></div>
-      <div class="pls">
-        <div class="pl"><svg class="jsy" viewBox="0 0 100 100"><path d="M31 9 L20 15 L7 31 L20 42 L27 35 L27 93 L73 93 L73 35 L80 42 L93 31 L80 15 L69 9 C65 19 57 23 50 23 C43 23 35 19 31 9 Z"/><text x="50" y="66">9</text></svg><b>나현수</b><span>현대건설</span></div>
-        <div class="pl"><svg class="jsy" viewBox="0 0 100 100"><path d="M31 9 L20 15 L7 31 L20 42 L27 35 L27 93 L73 93 L73 35 L80 42 L93 31 L80 15 L69 9 C65 19 57 23 50 23 C43 23 35 19 31 9 Z"/><text x="50" y="66">13</text></svg><b>박은서</b><span>SOOP</span></div>
-      </div>
-    </div>
+      <h2 id="rankings">출전국 FIVB 세계랭킹</h2>
+      <p><b>여자</b></p>
+      <table class="wt">
+        <tr><th>순위</th><th>국가</th><th>승점</th><th>비고</th></tr>
+        <tr><td class="num">6</td><td>일본</td><td class="num">331.36</td><td>개최국 · A조</td></tr>
+        <tr><td class="num">7</td><td>중국</td><td class="num">315.51</td><td>B조</td></tr>
+        <tr><td class="num">17</td><td>태국</td><td class="num">189.26</td><td>C조</td></tr>
+        <tr><td class="num">27</td><td>베트남</td><td class="num">143.83</td><td>D조 · 한국과 같은 조</td></tr>
+        <tr><td class="num">30</td><td><b>한국</b></td><td class="num">138.56</td><td>D조 · 6월 이후 10계단 상승</td></tr>
+        <tr><td class="num">38</td><td>대만</td><td class="num">114.76</td><td>C조</td></tr>
+        <tr><td class="num">39</td><td>카자흐스탄</td><td class="num">110.91</td><td>B조</td></tr>
+      </table>
+      <p><b>남자</b></p>
+      <table class="wt">
+        <tr><th>순위</th><th>국가</th><th>승점</th><th>비고</th></tr>
+        <tr><td class="num">4</td><td>일본</td><td class="num">346.37</td><td>개최국 · A조</td></tr>
+        <tr><td class="num">19</td><td>이란</td><td class="num">205.60</td><td>B조</td></tr>
+        <tr><td class="num">24</td><td>카타르</td><td class="num">147.82</td><td>C조 · 6월 한국에 1-3 패</td></tr>
+        <tr><td class="num">26</td><td><b>한국</b></td><td class="num">137.22</td><td>D조</td></tr>
+        <tr><td class="num">35</td><td>중국</td><td class="num">121.16</td><td>D조 · 한국과 같은 조</td></tr>
+        <tr><td class="num">38</td><td>파키스탄</td><td class="num">116.69</td><td>A조</td></tr>
+        <tr><td class="num">44</td><td>인도네시아</td><td class="num">102.51</td><td>B조 · 6월 한국에 3-0 승</td></tr>
+        <tr><td class="num">45</td><td>인도</td><td class="num">101.86</td><td>C조</td></tr>
+      </table>
+      <p class="note">2026년 8월 1일 FIVB 세계랭킹 기준. 출전국 확정은 5월 말 랭킹으로 이뤄졌고, 당시 40위였던 한국 여자 대표팀은 6월 AVC컵 이후 30위로 올라섰다. 표에 없는 출전국(키르기스스탄·몽골·네팔·필리핀·홍콩 등)은 대부분 60위 밖이다.</p>
 
-    <div class="posrow">
-      <div class="pos"><b>L</b><i>리베로</i></div>
-      <div class="pls">
-        <div class="pl"><svg class="jsy" viewBox="0 0 100 100"><path d="M31 9 L20 15 L7 31 L20 42 L27 35 L27 93 L73 93 L73 35 L80 42 L93 31 L80 15 L69 9 C65 19 57 23 50 23 C43 23 35 19 31 9 Z"/><text x="50" y="66">4</text></svg><b>한다혜</b><span>SOOP</span></div>
-        <div class="pl"><svg class="jsy" viewBox="0 0 100 100"><path d="M31 9 L20 15 L7 31 L20 42 L27 35 L27 93 L73 93 L73 35 L80 42 L93 31 L80 15 L69 9 C65 19 57 23 50 23 C43 23 35 19 31 9 Z"/><text x="50" y="66">22</text></svg><b>김효임</b><span>GS칼텍스</span></div>
-        <div class="pl"><svg class="jsy" viewBox="0 0 100 100"><path d="M31 9 L20 15 L7 31 L20 42 L27 35 L27 93 L73 93 L73 35 L80 42 L93 31 L80 15 L69 9 C65 19 57 23 50 23 C43 23 35 19 31 9 Z"/><text x="50" y="66">23</text></svg><b>유가람</b><span>GS칼텍스</span></div>
-      </div>
-    </div>
-  </div>
+      <h2 id="groups">조 편성</h2>
+      <p><b>여자 14개국</b></p>
+      <table class="wt">
+        <tr><th>조</th><th>소속국</th></tr>
+        <tr><td>A조</td><td>일본 · 인도네시아 · 네팔</td></tr>
+        <tr><td>B조</td><td>중국 · 카자흐스탄 · 필리핀</td></tr>
+        <tr><td>C조</td><td>태국 · 대만 · 키르기스스탄 · 몽골</td></tr>
+        <tr><td>D조</td><td>베트남 · <b>한국</b> · 홍콩 · 카타르</td></tr>
+      </table>
+      <p><b>남자 16개국</b></p>
+      <table class="wt">
+        <tr><th>조</th><th>소속국</th></tr>
+        <tr><td>A조</td><td>일본 · 파키스탄 · 카자흐스탄 · 우즈베키스탄</td></tr>
+        <tr><td>B조</td><td>이란 · 인도네시아 · 태국 · 키르기스스탄</td></tr>
+        <tr><td>C조</td><td>카타르 · 인도 · 베트남 · 홍콩</td></tr>
+        <tr><td>D조</td><td><b>한국</b> · 중국 · 대만 · 필리핀</td></tr>
+      </table>
+      <p class="note">여자 D조에서는 베트남이, 남자 D조에서는 중국이 조 1위를 두고 한국과 직접 부딪히는 상대다. 조 편성상 한국은 두 종목 모두 일본과 조별리그에서 만나지 않는다.</p>
 
-  <div class="kit">
-    <div class="kithead">
-      <h3>남자 <em>14명</em></h3>
-      <span class="meta">S 2 · OH 4 · MB 4 · OP 2 · L 2</span>
-    </div>
+      <h2 id="form">최근 흐름</h2>
+      <h3>6월 AVC 여자컵 — 7전 전승, 랭킹 10계단 상승</h3>
+      <p class="medals"><span class="medal g">7전 전승</span></p>
+      <p>일곱 경기를 모두 잡았고 그중 여섯 경기는 세트 스코어 3-0이었다. 대만을 두 번, 아시안게임 같은 조 상대인 베트남을 3-0으로 꺾은 것이 가장 큰 수확이다. 이 대회 하나로 세계랭킹이 40위권에서 30위까지 올라왔다 (승점 99.53 → 138.56).</p>
+      <p style="font-size:13px;color:var(--muted);">승 키르기스스탄 3-0 · 승 우즈베키스탄 3-0 · 승 필리핀 3-0 · 승 호주 3-0 · 승 대만 3-2 · 승 <b>베트남 3-0</b> · 승 대만 3-0</p>
 
-    <div class="posrow">
-      <div class="pos"><b>S</b><i>세터</i></div>
-      <div class="pls">
-        <div class="pl"><svg class="jsy" viewBox="0 0 100 100"><path d="M31 9 L20 15 L7 31 L20 42 L27 35 L27 93 L73 93 L73 35 L80 42 L93 31 L80 15 L69 9 C65 19 57 23 50 23 C43 23 35 19 31 9 Z"/><text x="50" y="66">3</text></svg><b>황승빈</b><span>현대캐피탈</span></div>
-        <div class="pl"><svg class="jsy" viewBox="0 0 100 100"><path d="M31 9 L20 15 L7 31 L20 42 L27 35 L27 93 L73 93 L73 35 L80 42 L93 31 L80 15 L69 9 C65 19 57 23 50 23 C43 23 35 19 31 9 Z"/><text x="50" y="66">8</text></svg><b>한태준</b><span>우리카드</span></div>
-      </div>
-    </div>
+      <h3>6월 AVC 남자컵 — 카타르는 잡고, 인도네시아에 무너지고</h3>
+      <p class="medals"><span class="medal s">4승 2패</span></p>
+      <p>랭킹이 위인 카타르를 3-1로 꺾은 반면 44위 인도네시아에 0-3으로 완패했고 태국에도 2-3으로 졌다. 여섯 경기를 치르고 승점이 오히려 0.06 줄었다(137.28 → 137.22). 상위권 상대에게는 통하는데 하위권 상대에게 무너지는 기복이 그대로 드러난 대회였다.</p>
+      <p style="font-size:13px;color:var(--muted);">패 태국 2-3 · 승 인도네시아 3-0 · 승 오만 3-2 · 승 <b>카타르 3-1</b> · 승 바레인 3-1 · 패 <b>인도네시아 0-3</b></p>
 
-    <div class="posrow">
-      <div class="pos"><b>OH</b><i>아웃사이드<br>히터</i></div>
-      <div class="pls">
-        <div class="pl"><svg class="jsy" viewBox="0 0 100 100"><path d="M31 9 L20 15 L7 31 L20 42 L27 35 L27 93 L73 93 L73 35 L80 42 L93 31 L80 15 L69 9 C65 19 57 23 50 23 C43 23 35 19 31 9 Z"/><text x="50" y="66">9</text></svg><b>임성진</b><span>KB손해보험</span></div>
-        <div class="pl"><svg class="jsy" viewBox="0 0 100 100"><path d="M31 9 L20 15 L7 31 L20 42 L27 35 L27 93 L73 93 L73 35 L80 42 L93 31 L80 15 L69 9 C65 19 57 23 50 23 C43 23 35 19 31 9 Z"/><text x="50" y="66">16</text></svg><b>정한용</b><span>대한항공</span></div>
-        <div class="pl"><svg class="jsy" viewBox="0 0 100 100"><path d="M31 9 L20 15 L7 31 L20 42 L27 35 L27 93 L73 93 L73 35 L80 42 L93 31 L80 15 L69 9 C65 19 57 23 50 23 C43 23 35 19 31 9 Z"/><text x="50" y="66">77</text></svg><b>윤서진</b><span>KB손해보험</span></div>
-        <div class="pl"><svg class="jsy" viewBox="0 0 100 100"><path d="M31 9 L20 15 L7 31 L20 42 L27 35 L27 93 L73 93 L73 35 L80 42 L93 31 L80 15 L69 9 C65 19 57 23 50 23 C43 23 35 19 31 9 Z"/><text x="50" y="66">88</text></svg><b>임재영</b><span>대한항공</span></div>
-      </div>
-    </div>
-
-    <div class="posrow">
-      <div class="pos"><b>MB</b><i>미들<br>블로커</i></div>
-      <div class="pls">
-        <div class="pl"><svg class="jsy" viewBox="0 0 100 100"><path d="M31 9 L20 15 L7 31 L20 42 L27 35 L27 93 L73 93 L73 35 L80 42 L93 31 L80 15 L69 9 C65 19 57 23 50 23 C43 23 35 19 31 9 Z"/><text x="50" y="66">1</text></svg><b>차영석</b><span>KB손해보험</span></div>
-        <div class="pl"><svg class="jsy" viewBox="0 0 100 100"><path d="M31 9 L20 15 L7 31 L20 42 L27 35 L27 93 L73 93 L73 35 L80 42 L93 31 L80 15 L69 9 C65 19 57 23 50 23 C43 23 35 19 31 9 Z"/><text x="50" y="66">12</text></svg><b>박창성</b><span>OK저축은행</span></div>
-        <div class="pl"><svg class="jsy" viewBox="0 0 100 100"><path d="M31 9 L20 15 L7 31 L20 42 L27 35 L27 93 L73 93 L73 35 L80 42 L93 31 L80 15 L69 9 C65 19 57 23 50 23 C43 23 35 19 31 9 Z"/><text x="50" y="66">18</text></svg><b>최준혁</b><span>대한항공</span></div>
-        <div class="pl"><svg class="jsy" viewBox="0 0 100 100"><path d="M31 9 L20 15 L7 31 L20 42 L27 35 L27 93 L73 93 L73 35 L80 42 L93 31 L80 15 L69 9 C65 19 57 23 50 23 C43 23 35 19 31 9 Z"/><text x="50" y="66">20</text></svg><b>이상현</b><span>국군체육부대</span></div>
-      </div>
-    </div>
-
-    <div class="posrow">
-      <div class="pos"><b>OP</b><i>아포짓<br>스파이커</i></div>
-      <div class="pls">
-        <div class="pl"><svg class="jsy" viewBox="0 0 100 100"><path d="M31 9 L20 15 L7 31 L20 42 L27 35 L27 93 L73 93 L73 35 L80 42 L93 31 L80 15 L69 9 C65 19 57 23 50 23 C43 23 35 19 31 9 Z"/><text x="50" y="66">30</text></svg><b>신호진</b><span>현대캐피탈</span></div>
-        <div class="pl"><svg class="jsy" viewBox="0 0 100 100"><path d="M31 9 L20 15 L7 31 L20 42 L27 35 L27 93 L73 93 L73 35 L80 42 L93 31 L80 15 L69 9 C65 19 57 23 50 23 C43 23 35 19 31 9 Z"/><text x="50" y="66">75</text></svg><b>김요한</b><span>삼성화재</span></div>
-      </div>
-    </div>
-
-    <div class="posrow">
-      <div class="pos"><b>L</b><i>리베로</i></div>
-      <div class="pls">
-        <div class="pl"><svg class="jsy" viewBox="0 0 100 100"><path d="M31 9 L20 15 L7 31 L20 42 L27 35 L27 93 L73 93 L73 35 L80 42 L93 31 L80 15 L69 9 C65 19 57 23 50 23 C43 23 35 19 31 9 Z"/><text x="50" y="66">5</text></svg><b>박경민</b><span>현대캐피탈</span></div>
-        <div class="pl"><svg class="jsy" viewBox="0 0 100 100"><path d="M31 9 L20 15 L7 31 L20 42 L27 35 L27 93 L73 93 L73 35 L80 42 L93 31 L80 15 L69 9 C65 19 57 23 50 23 C43 23 35 19 31 9 Z"/><text x="50" y="66">6</text></svg><b>김영준</b><span>우리카드</span></div>
-      </div>
-    </div>
-  </div>
-  <p class="tblnote">여자 대표팀 주장은 강소휘(97번). 미들블로커 이다현은 유일하게 해외 소속으로, 일본 NEC 레드로켓츠 가와사키에서 뛴다. 개최국 리그를 경험한 선수가 팀에 한 명 있는 셈이다.<br>여자는 리베로를 3명, 남자는 미들블로커를 4명 뽑았다. 12명으로 줄일 때 어느 자리를 덜어낼지가 최종 엔트리의 관전 포인트다.</p>
-
-  <h2 class="sub"><small>World Ranking</small>출전국 FIVB 세계랭킹</h2>
-
-  <p class="tblcap">여자</p>
-  <div class="rankwrap">
-    <table class="rk">
-      <tr><th>순위</th><th>국가</th><th>승점</th><th>비고</th></tr>
-      <tr><td class="n">6</td><td class="c">일본</td><td class="p">331.36</td><td class="memo">개최국 · A조</td></tr>
-      <tr><td class="n">7</td><td class="c">중국</td><td class="p">315.51</td><td class="memo">B조</td></tr>
-      <tr><td class="n">17</td><td class="c">태국</td><td class="p">189.26</td><td class="memo">C조</td></tr>
-      <tr><td class="n">27</td><td class="c">베트남</td><td class="p">143.83</td><td class="memo">D조 · 한국과 같은 조</td></tr>
-      <tr class="kor"><td class="n">30</td><td class="c">한국</td><td class="p">138.56</td><td class="memo">D조 · 6월 이후 10계단 상승</td></tr>
-      <tr><td class="n">38</td><td class="c">대만</td><td class="p">114.76</td><td class="memo">C조</td></tr>
-      <tr><td class="n">39</td><td class="c">카자흐스탄</td><td class="p">110.91</td><td class="memo">B조</td></tr>
-    </table>
-  </div>
-
-  <p class="tblcap">남자</p>
-  <div class="rankwrap">
-    <table class="rk">
-      <tr><th>순위</th><th>국가</th><th>승점</th><th>비고</th></tr>
-      <tr><td class="n">4</td><td class="c">일본</td><td class="p">346.37</td><td class="memo">개최국 · A조</td></tr>
-      <tr><td class="n">19</td><td class="c">이란</td><td class="p">205.60</td><td class="memo">B조</td></tr>
-      <tr><td class="n">24</td><td class="c">카타르</td><td class="p">147.82</td><td class="memo">C조 · 6월 한국에 1-3 패</td></tr>
-      <tr class="kor"><td class="n">26</td><td class="c">한국</td><td class="p">137.22</td><td class="memo">D조</td></tr>
-      <tr><td class="n">35</td><td class="c">중국</td><td class="p">121.16</td><td class="memo">D조 · 한국과 같은 조</td></tr>
-      <tr><td class="n">38</td><td class="c">파키스탄</td><td class="p">116.69</td><td class="memo">A조</td></tr>
-      <tr><td class="n">44</td><td class="c">인도네시아</td><td class="p">102.51</td><td class="memo">B조 · 6월 한국에 3-0 승</td></tr>
-      <tr><td class="n">45</td><td class="c">인도</td><td class="p">101.86</td><td class="memo">C조</td></tr>
-    </table>
-  </div>
-  <p class="tblnote">2026년 8월 1일 FIVB 세계랭킹 기준. 출전국 확정은 5월 말 랭킹으로 이뤄졌고, 당시 40위였던 한국 여자 대표팀은 6월 AVC컵 이후 30위로 올라섰다. 표에 없는 출전국(키르기스스탄·몽골·네팔·필리핀·홍콩 등)은 대부분 60위 밖이다.</p>
-
-  <h2 class="sub"><small>Groups</small>조 편성</h2>
-
-  <p class="tblcap">여자 14개국</p>
-  <div class="pools">
-    <div class="pool"><h4>A조</h4><ul><li>일본</li><li>인도네시아</li><li>네팔</li></ul></div>
-    <div class="pool"><h4>B조</h4><ul><li>중국</li><li>카자흐스탄</li><li>필리핀</li></ul></div>
-    <div class="pool"><h4>C조</h4><ul><li>태국</li><li>대만</li><li>키르기스스탄</li><li>몽골</li></ul></div>
-    <div class="pool ours"><h4>D조</h4><ul><li>베트남</li><li class="me">한국</li><li>홍콩</li><li>카타르</li></ul></div>
-  </div>
-
-  <p class="tblcap">남자 16개국</p>
-  <div class="pools">
-    <div class="pool"><h4>A조</h4><ul><li>일본</li><li>파키스탄</li><li>카자흐스탄</li><li>우즈베키스탄</li></ul></div>
-    <div class="pool"><h4>B조</h4><ul><li>이란</li><li>인도네시아</li><li>태국</li><li>키르기스스탄</li></ul></div>
-    <div class="pool"><h4>C조</h4><ul><li>카타르</li><li>인도</li><li>베트남</li><li>홍콩</li></ul></div>
-    <div class="pool ours"><h4>D조</h4><ul><li class="me">한국</li><li>중국</li><li>대만</li><li>필리핀</li></ul></div>
-  </div>
-  <p class="tblnote">여자 D조에서는 베트남이, 남자 D조에서는 중국이 조 1위를 두고 한국과 직접 부딪히는 상대다. 조 편성상 한국은 두 종목 모두 일본과 조별리그에서 만나지 않는다.</p>
-
-  <h2 class="sub"><small>Form Guide</small>최근 흐름</h2>
-
-  <div class="rec">
-    <div class="yr">6월<i>AVC 여자컵</i></div>
-    <div>
-      <div class="chips"><span class="chip up">7전 전승</span><span class="chip up">랭킹 10계단 상승</span></div>
-      <h3>승점 99.53에서 138.56으로</h3>
-      <p>일곱 경기를 모두 잡았고 그중 여섯 경기는 세트 스코어 3-0이었다. 대만을 두 번, 아시안게임 같은 조 상대인 베트남을 3-0으로 꺾은 것이 가장 큰 수확이다. 이 대회 하나로 세계랭킹이 40위권에서 30위까지 올라왔다.</p>
-      <p class="scores">
-        <span class="w">승</span> 키르기스스탄 3-0 · <span class="w">승</span> 우즈베키스탄 3-0 · <span class="w">승</span> 필리핀 3-0 · <span class="w">승</span> 호주 3-0<br>
-        <span class="w">승</span> 대만 3-2 · <span class="w">승</span> <b>베트남 3-0</b> · <span class="w">승</span> 대만 3-0
-      </p>
-    </div>
-  </div>
-
-  <div class="rec">
-    <div class="yr">6월<i>AVC 남자컵</i></div>
-    <div>
-      <div class="chips"><span class="chip flat">4승 2패</span><span class="chip down">승점 137.28 → 137.22</span></div>
-      <h3>카타르는 잡고, 인도네시아에 무너지고</h3>
-      <p>랭킹이 위인 카타르를 3-1로 꺾은 반면 44위 인도네시아에 0-3으로 완패했고 태국에도 2-3으로 졌다. 여섯 경기를 치르고 승점이 오히려 0.06 줄었다. 상위권 상대에게는 통하는데 하위권 상대에게 무너지는 기복이 그대로 드러난 대회였다.</p>
-      <p class="scores">
-        <span class="l">패</span> 태국 2-3 · <span class="w">승</span> 인도네시아 3-0 · <span class="w">승</span> 오만 3-2<br>
-        <span class="w">승</span> <b>카타르 3-1</b> · <span class="w">승</span> 바레인 3-1 · <span class="l">패</span> <b>인도네시아 0-3</b>
-      </p>
-    </div>
-  </div>
-
-  <div class="rec">
-    <div class="yr">2025<i>남자 세계선수권</i></div>
-    <div>
-      <div class="chips"><span class="chip down">3전 3패</span></div>
-      <h3>조별리그 탈락</h3>
+      <h3>2025 남자 세계선수권 — 조별리그 탈락</h3>
+      <p class="medals"><span class="medal b">3전 3패</span></p>
       <p>프랑스에 0-3, 아르헨티나에 1-3, 핀란드에 1-3으로 졌다. 세계 최상위권과의 격차는 아직 뚜렷하다. 다만 아시안게임은 그 강팀들이 없는 무대다.</p>
+
+      <h2 id="beach">비치발리볼</h2>
+      <p>비치발리볼은 실내 배구와 별도 종목으로 함께 치러지지만, 이 문서 작성 시점 기준 세부 일정·출전 로스터 등 구체적인 정보는 아직 공개되지 않았다. 확정되는 대로 갱신할 예정이다.</p>
+
+      <h2 id="watch">관전 포인트</h2>
+      <div class="kr-box">
+        <p><b>여자는 D조 베트남전이 관건이다.</b> 랭킹으로는 베트남이 27위로 한국(30위)보다 위다. 다만 6월 AVC컵에서 한국이 3-0으로 이겼고, 그 승리가 랭킹 상승의 가장 큰 몫이었다. 두 팀의 순서가 뒤집힐지가 조별리그 최대 변수다.</p>
+        <p><b>남자는 D조 중국전이 사실상 조 1위 결정전이다.</b> 랭킹은 한국 26위, 중국 35위로 한국이 위지만 2023 아시아선수권에서는 중국에 1-3으로 졌다. 당시 양 팀 승점은 139.42 대 139.17로 거의 붙어 있었다.</p>
+        <p><b>진짜 변수는 랭킹 아래 팀들이다.</b> 남자 대표팀은 6월에 44위 인도네시아에 0-3, 태국에 2-3으로 졌다. VNL급 강팀이 오지 않는 아시안게임에서는 오히려 이 기복이 성적을 결정한다. 남녀 동반 입상이라는 목표도 여기서 갈린다.</p>
+      </div>
+
+      <h2 id="la28">LA28 예선과의 관계</h2>
+      <div class="kr-box">
+        <h4>직접 연결되지 않는 종목</h4>
+        <p>실내 배구·비치발리볼 모두 아시안게임 성적은 LA28 출전권과 직접 연결되지 않는다(비치발리볼의 대륙 대회 참가는 최소 대회 참가 요건 충족용으로만 인정될 수 있음). LA28 배구 예선 시스템의 전체 규정(세부종목·정량·경로·일정)은 <a href="olvolleyball.html">배구 (올림픽예선)</a> 문서에 정리되어 있다.</p>
+      </div>
+
+      <div class="footer">
+        출처: 아시아배구연맹(AVC)·FIVB 공식 랭킹 및 대회 결과, 아이치·나고야 2026 조직위원회 정보를 종합해 편집부가 정리함. 일정과 세부 사항은 대회 진행에 따라 변경될 수 있다.
+      </div>
     </div>
+    <aside class="infobox">
+      <div class="ib-title">배구 종목 정보</div>
+      <table>
+        <tr><th>영문명</th><td>Volleyball / Beach Volleyball</td></tr>
+        <tr><th>여자 경기</th><td>9월 16일 ~ 22일</td></tr>
+        <tr><th>남자 경기</th><td>9월 27일 ~ 10월 3일</td></tr>
+        <tr><th>경기장</th><td>오카자키 종합체육관 · 고마키 파크 아레나</td></tr>
+        <tr><th>출전국</th><td>남자 16 · 여자 14 (총 18개국)</td></tr>
+        <tr><th>한국 랭킹</th><td>남자 26위 · 여자 30위</td></tr>
+        <tr><th>LA28 연계</th><td><span class="badge">직접 연결 없음</span></td></tr>
+        <tr><th>관련 문서</th><td><a href="olvolleyball.html">배구 (올림픽예선)</a> · <a href="index2.html">아시안게임 종목 안내</a></td></tr>
+      </table>
+    </aside>
   </div>
-
-  <div class="note">
-    <h3>관전 포인트</h3>
-    <p><b>여자는 D조 베트남전이 관건이다.</b> 랭킹으로는 베트남이 27위로 한국(30위)보다 위다. 다만 6월 AVC컵에서 한국이 3-0으로 이겼고, 그 승리가 랭킹 상승의 가장 큰 몫이었다. 두 팀의 순서가 뒤집힐지가 조별리그 최대 변수다.</p>
-    <p><b>남자는 D조 중국전이 사실상 조 1위 결정전이다.</b> 랭킹은 한국 26위, 중국 35위로 한국이 위지만 2023 아시아선수권에서는 중국에 1-3으로 졌다. 당시 양 팀 승점은 139.42 대 139.17로 거의 붙어 있었다.</p>
-    <p><b>진짜 변수는 랭킹 아래 팀들이다.</b> 남자 대표팀은 6월에 44위 인도네시아에 0-3, 태국에 2-3으로 졌다. VNL급 강팀이 오지 않는 아시안게임에서는 오히려 이 기복이 성적을 결정한다. 남녀 동반 입상이라는 목표도 여기서 갈린다.</p>
-  </div>
-
-<div class="wiki-related">
-    <h4>LA28 예선과의 관계</h4>
-    <p>실내 배구·비치발리볼 모두 아시안게임 성적은 LA28 출전권과 직접 연결되지 않는다(비치발리볼의 대륙 대회 참가는 최소 대회 참가 요건 충족용으로만 인정될 수 있음). LA28 배구 예선 시스템의 전체 규정(세부종목·정량·경로·일정)은 <a href="olvolleyball.html">배구 (올림픽예선)</a> 문서에 정리되어 있다.</p>
-  </div>
-
-  <footer class="pagefoot">
-    <span>2026 아이치·나고야 아시안게임 종목 안내</span>
-    <a href="index1.html">← 전체 종목 목록 보기</a>
-  </footer>
 </div>
 </body>
 </html>
