@@ -3,247 +3,185 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>유도 | 2026 아이치·나고야 아시안게임</title>
+<title>유도 - 2026 아이치·나고야 아시안게임</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#0E1A2B; --ink-2:#152540; --gold:#C9A24B; --gold-soft:#E4CD8C;
-    --sun:#D8482F; --paper:#F3EFE4; --paper-dim:#B9C2CF; --line:rgba(201,162,75,0.28);
+    --bg:#ffffff; --panel:#f8f9fa; --border:#c8ccd1; --border-soft:#eaecf0;
+    --ink:#202122; --muted:#54595d; --link:#3366cc; --link-visited:#795cb2; --link-red:#ba0000;
+    --serif:'Noto Serif KR',Georgia,'Times New Roman',serif;
+    --sans:'Pretendard','Helvetica Neue',Arial,sans-serif;
+    --accent:#2456c6; --ok:#1a7f37; --warn:#b45309; --gold:#a05a00;
   }
   *{box-sizing:border-box;}
-  body{
-    margin:0; color:var(--paper); font-family:'Pretendard','Noto Sans KR',sans-serif;
-    background:
-      radial-gradient(1100px 550px at 90% -10%, rgba(216,72,47,0.16), transparent 60%),
-      radial-gradient(900px 500px at -10% 110%, rgba(201,162,75,0.10), transparent 60%),
-      var(--ink);
-    -webkit-font-smoothing:antialiased;
-  }
-  .wrap{max-width:880px;margin:0 auto;padding:40px 28px 100px;}
-  nav.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;}
-  .back{color:var(--gold-soft);text-decoration:none;font-size:13.5px;font-weight:600;display:inline-flex;align-items:center;gap:6px;}
-  .back:hover{color:var(--gold);}
-  .back svg{width:14px;height:14px;}
-  .crumb{font-size:12px;color:var(--paper-dim);letter-spacing:0.02em;}
-  header.hero{padding-bottom:32px;margin-bottom:32px;border-bottom:1px solid var(--line);}
-  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;letter-spacing:0.16em;color:var(--gold-soft);text-transform:uppercase;font-weight:600;margin-bottom:16px;}
-  .eyebrow::before{content:"";width:22px;height:1px;background:var(--gold);display:inline-block;}
-  h1{font-family:'Noto Serif KR',serif;font-weight:900;font-size:clamp(30px,5vw,46px);line-height:1.2;margin:0 0 6px;color:var(--paper);letter-spacing:-0.01em;}
-  .en-title{font-size:14px;color:var(--paper-dim);letter-spacing:0.04em;margin:0 0 18px;font-style:italic;}
-  .tagline{font-size:16.5px;color:var(--paper-dim);line-height:1.75;max-width:640px;margin:0;}
-  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:28px 0 8px;}
-  .fact{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:14px 16px;}
-  .fact span{display:block;font-size:11px;color:var(--gold-soft);letter-spacing:0.05em;margin-bottom:6px;}
-  .fact b{font-family:'Noto Serif KR',serif;font-size:15px;color:var(--paper);font-weight:700;line-height:1.4;}
-  section.body{margin-top:8px;}
-  section.body p{font-size:15.5px;line-height:1.85;color:var(--paper-dim);margin:0 0 16px;}
-  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:42px 0 18px;font-weight:700;}
-  h2.sub small{display:block;font-family:'Pretendard',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.12em;color:var(--gold-soft);text-transform:uppercase;margin-bottom:7px;}
-  .lede{font-size:15px;line-height:1.8;color:var(--paper-dim);margin:0 0 18px;}
-  .tblcap{font-family:'Noto Serif KR',serif;font-size:14px;color:var(--paper);font-weight:700;margin:28px 0 10px;display:flex;align-items:center;gap:9px;}
-  .tblcap::before{content:"";width:16px;height:1px;background:var(--gold);display:inline-block;}
-  .tblnote{font-size:11.5px;color:var(--paper-dim);opacity:0.78;margin:12px 0 0;line-height:1.7;}
-
-  .cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;}
-  .disc{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:20px;}
-  .disc h3{font-family:'Noto Serif KR',serif;font-size:17px;margin:0 0 4px;color:var(--paper);}
-  .disc .en{font-size:11.5px;color:var(--gold-soft);letter-spacing:0.04em;margin-bottom:10px;display:block;}
-  .disc p{font-size:14px;line-height:1.7;color:var(--paper-dim);margin:0;}
-
-  /* 표 */
-  .rankwrap{overflow-x:auto;}
-  table.rk{width:100%;border-collapse:collapse;min-width:520px;}
-  table.rk.slim{min-width:0;}
-  table.rk th{font-size:11.5px;font-weight:600;color:var(--gold-soft);text-align:left;padding:0 0 9px;border-bottom:1px solid var(--line);letter-spacing:0.04em;vertical-align:bottom;}
-  table.rk td{padding:11px 0;font-size:13px;line-height:1.65;color:var(--paper-dim);border-bottom:1px dashed rgba(201,162,75,0.16);vertical-align:top;}
-  table.rk th+th,table.rk td+td{padding-left:16px;}
-  table.rk tr:last-child td{border-bottom:0;}
-  table.rk td.wt{width:88px;font-family:'Noto Serif KR',serif;font-weight:700;color:var(--gold);white-space:nowrap;}
-  table.rk td.who{color:var(--paper);font-weight:600;}
-  table.rk td.who i{display:block;font-style:normal;font-size:10.5px;font-weight:400;color:var(--gold-soft);margin-top:3px;}
-  table.rk td.res{width:130px;font-size:12px;}
-  table.rk td.who a,.squad li a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(201,162,75,0.55);transition:color .15s,border-color .15s;}
-  table.rk td.who a:hover,.squad li a:hover{color:var(--gold-soft);border-bottom-color:var(--gold);}
-  .medal{font-weight:700;}
-  .medal.g{color:#EBD08F;} .medal.s{color:#D3DAE4;} .medal.b{color:#D9A87C;}
-
-  /* 명단 */
-  .roster{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;}
-  .squad{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:18px 20px;}
-  .squad h3{font-family:'Noto Serif KR',serif;font-size:15.5px;margin:0 0 4px;color:var(--paper);display:flex;align-items:center;gap:8px;}
-  .squad h3 em{font-style:normal;font-size:10.5px;letter-spacing:0.08em;color:var(--ink);background:var(--gold-soft);border-radius:3px;padding:2px 6px;font-weight:700;}
-  .squad .cap{font-size:11.5px;color:var(--gold-soft);margin:0 0 12px;}
-  .squad ul{list-style:none;margin:0;padding:0;}
-  .squad li{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px dashed var(--line);font-size:13.5px;}
-  .squad li:last-child{border-bottom:0;padding-bottom:0;}
-  .squad li span{color:var(--gold-soft);font-size:11.5px;white-space:nowrap;}
-  .squad li b{color:var(--paper);font-weight:600;}
-
-  /* 성적 */
-  .rec{display:grid;grid-template-columns:112px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line);}
-  .rec:first-of-type{border-top:1px solid var(--line);}
-  .rec .yr{font-family:'Noto Serif KR',serif;font-size:18px;font-weight:900;color:var(--gold);line-height:1.25;}
-  .rec .yr i{display:block;font-style:normal;font-family:'Pretendard',sans-serif;font-size:11px;font-weight:500;color:var(--paper-dim);margin-top:4px;}
-  .rec h3{font-family:'Noto Serif KR',serif;font-size:16px;margin:0 0 8px;color:var(--paper);font-weight:700;}
-  .rec p{font-size:14px;line-height:1.75;color:var(--paper-dim);margin:0;}
-  .chips{margin:0 0 10px;}
-  .chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;border:1px solid;margin:0 6px 6px 0;}
-  .chip::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;}
-  .chip.g{color:#EBD08F;border-color:rgba(201,162,75,0.45);background:rgba(201,162,75,0.10);}
-  .chip.s{color:#D3DAE4;border-color:rgba(211,218,228,0.26);background:rgba(211,218,228,0.06);}
-  .chip.b{color:#D9A87C;border-color:rgba(217,168,124,0.32);background:rgba(217,168,124,0.08);}
-
-  .note{margin-top:26px;border-left:3px solid var(--sun);background:rgba(216,72,47,0.08);border-radius:0 8px 8px 0;padding:18px 22px;}
-  .note h3{font-family:'Noto Serif KR',serif;font-size:16px;margin:0 0 8px;color:var(--paper);}
-  .note p{font-size:14.5px;line-height:1.8;color:var(--paper-dim);margin:0 0 10px;}
-  .note p:last-child{margin-bottom:0;}
-
-  footer.pagefoot{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
-  footer.pagefoot a{color:var(--gold-soft);text-decoration:none;}
-  @media (max-width:520px){
-    .wrap{padding:28px 18px 70px;}
-    .rec{grid-template-columns:1fr;gap:10px;}
-  }
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.65;}
+  a{color:var(--link);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  a:visited{color:var(--link-visited);}
+  .topbar{border-bottom:1px solid var(--border);background:var(--panel);font-size:12.5px;color:var(--muted);}
+  .topbar .inner{max-width:1100px;margin:0 auto;padding:8px 20px;display:flex;gap:16px;flex-wrap:wrap;}
+  .topbar a{color:var(--link);}
+  .layout{max-width:1100px;margin:0 auto;padding:22px 20px 80px;}
+  h1.title{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.3;margin:0 0 2px;padding-bottom:6px;border-bottom:1px solid var(--border);}
+  .subtitle{color:var(--muted);font-size:13px;margin:0 0 18px;}
+  .hatnote{font-style:italic;color:var(--muted);background:var(--panel);border:1px solid var(--border-soft);padding:8px 14px;border-radius:2px;margin:0 0 20px;font-size:13.5px;}
+  .content{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;}
+  .main{flex:1 1 560px;min-width:0;}
+  h2{font-family:var(--serif);font-weight:600;font-size:22px;margin:26px 0 10px;padding-bottom:5px;border-bottom:1px solid var(--border-soft);scroll-margin-top:12px;}
+  h3{font-family:var(--serif);font-weight:600;font-size:17px;margin:20px 0 8px;}
+  h4{font-family:var(--sans);font-weight:700;font-size:14.5px;margin:16px 0 6px;color:#3a3f44;}
+  p{margin:0 0 12px;}
+  .toc{display:inline-block;background:var(--panel);border:1px solid var(--border);border-radius:2px;padding:12px 20px 12px 14px;margin:0 0 20px;font-size:14px;}
+  .toc-title{font-weight:700;text-align:center;font-size:13px;margin-bottom:6px;}
+  .toc ol{margin:0;padding-left:22px;}
+  .toc li{margin:3px 0;}
+  .infobox{flex:0 0 300px;background:var(--panel);border:1px solid var(--border);border-radius:2px;font-size:13px;align-self:flex-start;}
+  .infobox .ib-title{background:#eaecf0;font-family:var(--serif);font-weight:700;text-align:center;padding:10px 12px;font-size:15px;border-bottom:1px solid var(--border);}
+  .infobox table{width:100%;border-collapse:collapse;}
+  .infobox th,.infobox td{text-align:left;padding:7px 12px;vertical-align:top;border-bottom:1px solid var(--border-soft);}
+  .infobox th{width:38%;color:var(--muted);font-weight:600;}
+  .badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:2px;background:#e6f0ff;color:#2456c6;border:1px solid #b9d0f5;margin-left:6px;}
+  .badge.gold{background:#fff2e0;color:#a05a00;border-color:#f2d2a0;}
+  table.wt{border-collapse:collapse;width:100%;font-size:13.5px;margin:6px 0 16px;}
+  table.wt th,table.wt td{border:1px solid var(--border);padding:6px 10px;text-align:left;vertical-align:top;}
+  table.wt th{background:var(--panel);}
+  table.wt td.num, table.wt th.num{text-align:center;}
+  table.wt caption{font-size:12.5px;color:var(--muted);text-align:left;padding:2px 0 6px;}
+  .note{font-size:12.5px;color:var(--muted);margin:-8px 0 16px;}
+  .kr-box{background:#eef4ff;border:1px solid #c3d6f7;border-radius:3px;padding:14px 16px;margin:10px 0 18px;}
+  .kr-box h4{margin-top:0;color:#1e3a8a;}
+  .medals{display:inline-flex;gap:6px;margin:0 0 8px;flex-wrap:wrap;}
+  .medal{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;border:1px solid;}
+  .medal.g{color:#8a6d1a;border-color:#e4cd8c;background:#fdf6e3;}
+  .medal.s{color:#5b6168;border-color:#d5d9de;background:#f4f5f6;}
+  .medal.b{color:#8a5a30;border-color:#e0c3a3;background:#fbf1e6;}
+  .footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;}
+  @media (max-width:820px){.infobox{flex:1 1 100%;order:-1;}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <nav class="top">
-    <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>전체 종목으로</a>
-    <span class="crumb">무도와 격투기 / 유도</span>
-  </nav>
+<div class="topbar"><div class="inner">
+  <a href="index2.html">← 아시안게임 종목 목록</a>
+  <span>문서 · 유도</span>
+  <a href="index.html">전체 목차</a>
+</div></div>
+<div class="layout">
+  <h1 class="title">유도</h1>
+  <p class="subtitle">Judo · 2026 아이치·나고야 아시안게임 (제20회) · 남녀 7체급·혼성단체전</p>
+  <p class="hatnote">유도는 상대의 힘을 이용해 메치거나 바닥에서 굳히기·조르기로 제압하는 일본 기원의 무도로, 체급별로 나뉘어 경기가 진행된다. 일본, 한국, 몽골, 카자흐스탄 등이 아시아권 강호로 꼽힌다.</p>
+  <div class="content">
+    <div class="main">
+      <div class="toc">
+        <div class="toc-title">목차</div>
+        <ol>
+          <li><a href="#overview">개요</a></li>
+          <li><a href="#disciplines">세부종목</a></li>
+          <li><a href="#roster">한국 대표팀</a></li>
+          <li><a href="#form">최근 성적</a></li>
+          <li><a href="#rivals">경계할 상대</a></li>
+          <li><a href="#watch">관전 포인트</a></li>
+        </ol>
+      </div>
 
-  <header class="hero">
-    <span class="eyebrow">2026 Aichi · Nagoya · 무도와 격투기</span>
-    <h1>유도</h1>
-    <p class="en-title">Judo</p>
-    <p class="tagline">상대를 메치거나 굳히기로 제압하는 일본 기원의 그래플링 무도 종목.</p>
-  </header>
+      <h2 id="overview">개요</h2>
+      <p>유도는 상대의 힘을 이용해 메치거나 바닥에서 굳히기·조르기로 제압하는 일본 기원의 무도로, 체급별로 나뉘어 경기가 진행된다.</p>
+      <p>일본, 한국, 몽골, 카자흐스탄 등이 아시아권 강호로 꼽히며, 올림픽과 아시안게임 모두에서 꾸준히 인기 있는 격투 종목이다. 한국은 개인전 남녀 각 7체급과 혼성단체전에 대표를 내보낸다.</p>
 
-  <div class="facts">
-    <div class="fact"><span>주요 기술</span><b>메치기·굳히기·조르기</b></div>
-    <div class="fact"><span>경기 시간</span><b>체급별 4분 내외</b></div>
-    <div class="fact"><span>종주국</span><b>일본</b></div>
-    <div class="fact"><span>2026 아시아선수권</span><b>금 1 · 은 2 · 동 4</b></div>
-  </div>
+      <h2 id="disciplines">세부종목</h2>
+      <table class="wt">
+        <tr><th>부문</th><th>체급 구성</th></tr>
+        <tr><td>남자 개인전</td><td>-60kg · -66kg · -73kg · -81kg · -90kg · -100kg · +100kg (7체급)</td></tr>
+        <tr><td>여자 개인전</td><td>-48kg · -52kg · -57kg · -63kg · -70kg · -78kg · +78kg (7체급)</td></tr>
+        <tr><td>혼성단체전</td><td>남녀 각 2명씩 총 4명</td></tr>
+      </table>
+      <p>주요 기술은 메치기·굳히기·조르기이며, 체급별 경기 시간은 4분 내외다. 종주국은 일본이다.</p>
 
-  <section class="body">
-    <p>유도는 상대의 힘을 이용해 메치거나 바닥에서 굳히기·조르기로 제압하는 일본 기원의 무도로, 체급별로 나뉘어 경기가 진행된다.</p>
-    <p>일본, 한국, 몽골, 카자흐스탄 등이 아시아권 강호로 꼽히며, 올림픽과 아시안게임 모두에서 꾸준히 인기 있는 격투 종목이다. 한국은 개인전 남녀 각 7체급과 혼성단체전에 대표를 내보낸다.</p>
-  </section>
+      <h2 id="roster">한국 대표팀</h2>
+      <p>남자 개인전 7체급, 여자 개인전 7체급, 혼성단체전 4명으로 대표팀을 꾸린다. 출전 선수는 총 18명이다.</p>
+      <p><b>남자 개인전</b></p>
+      <table class="wt">
+        <tr><th>체급</th><th>대표</th></tr>
+        <tr><td>-60kg</td><td><a href="https://namu.wiki/w/%EC%9D%B4%ED%95%98%EB%A6%BC(%EC%9C%A0%EB%8F%84)" target="_blank" rel="noopener">이하림</a></td></tr>
+        <tr><td>-66kg</td><td><a href="https://namu.wiki/w/%EA%B9%80%EC%B0%AC%EB%85%95" target="_blank" rel="noopener">김찬녕</a></td></tr>
+        <tr><td>-73kg</td><td>안재홍</td></tr>
+        <tr><td>-81kg</td><td><a href="https://namu.wiki/w/%EC%9D%B4%EC%A4%80%ED%99%98" target="_blank" rel="noopener">이준환</a></td></tr>
+        <tr><td>-90kg</td><td>김종훈</td></tr>
+        <tr><td>-100kg</td><td><a href="https://namu.wiki/w/%ED%95%9C%EC%A3%BC%EC%97%BD" target="_blank" rel="noopener">한주엽</a></td></tr>
+        <tr><td>+100kg</td><td><a href="https://namu.wiki/w/%EA%B9%80%EB%AF%BC%EC%A2%85(%EC%9C%A0%EB%8F%84)" target="_blank" rel="noopener">김민종</a></td></tr>
+      </table>
+      <p><b>여자 개인전</b></p>
+      <table class="wt">
+        <tr><th>체급</th><th>대표</th></tr>
+        <tr><td>-48kg</td><td>정수진</td></tr>
+        <tr><td>-52kg</td><td>장세윤</td></tr>
+        <tr><td>-57kg</td><td><a href="https://namu.wiki/w/%ED%97%88%EB%AF%B8%EB%AF%B8" target="_blank" rel="noopener">허미미</a></td></tr>
+        <tr><td>-63kg</td><td><a href="https://namu.wiki/w/%EA%B9%80%EC%A7%80%EC%88%98(%EC%9C%A0%EB%8F%84)" target="_blank" rel="noopener">김지수</a></td></tr>
+        <tr><td>-70kg</td><td>김혜미</td></tr>
+        <tr><td>-78kg</td><td>김민주</td></tr>
+        <tr><td>+78kg</td><td><a href="https://namu.wiki/w/%EC%9D%B4%ED%98%84%EC%A7%80(%EC%9C%A0%EB%8F%84)" target="_blank" rel="noopener">이현지</a></td></tr>
+      </table>
+      <p><b>혼성단체전 (4명)</b> — 개인전과 별도로 선발된 단체전 엔트리</p>
+      <table class="wt">
+        <tr><th>선수</th><th>체급</th></tr>
+        <tr><td><a href="https://namu.wiki/w/%EC%9D%B4%EC%9D%80%EA%B2%B0(%EC%9C%A0%EB%8F%84)" target="_blank" rel="noopener">이은결</a></td><td>남자 -73kg</td></tr>
+        <tr><td>김재민</td><td>남자 -90kg</td></tr>
+        <tr><td>신유나</td><td>여자 -57kg</td></tr>
+        <tr><td><a href="https://namu.wiki/w/%EA%B9%80%ED%95%98%EC%9C%A4(%EC%9C%A0%EB%8F%84)" target="_blank" rel="noopener">김하윤</a></td><td>여자 +78kg</td></tr>
+      </table>
+      <p class="note">혼성단체전에는 개인전과 다른 선수가 일부 배치됐다. 남자 -73kg은 이은결(개인전은 안재홍), 여자 +78kg은 2025 세계선수권 우승자 김하윤(개인전은 이현지)이 맡는다. 이름을 누르면 선수 프로필로 이동한다.</p>
 
-  <h2 class="sub"><small>Team Korea</small>출전 선수 18명</h2>
-  <p class="lede">남자 개인전 7체급, 여자 개인전 7체급, 혼성단체전 4명으로 대표팀을 꾸린다. 이름을 누르면 선수 프로필로 이동한다.</p>
-
-  <p class="tblcap">남자 개인전</p>
-  <div class="rankwrap">
-    <table class="rk slim">
-      <tr><th>체급</th><th>대표</th></tr>
-      <tr><td class="wt">-60kg</td><td class="who"><a href="https://namu.wiki/w/%EC%9D%B4%ED%95%98%EB%A6%BC(%EC%9C%A0%EB%8F%84)" target="_blank" rel="noopener">이하림</a></td></tr>
-      <tr><td class="wt">-66kg</td><td class="who"><a href="https://namu.wiki/w/%EA%B9%80%EC%B0%AC%EB%85%95" target="_blank" rel="noopener">김찬녕</a></td></tr>
-      <tr><td class="wt">-73kg</td><td class="who">안재홍</td></tr>
-      <tr><td class="wt">-81kg</td><td class="who"><a href="https://namu.wiki/w/%EC%9D%B4%EC%A4%80%ED%99%98" target="_blank" rel="noopener">이준환</a></td></tr>
-      <tr><td class="wt">-90kg</td><td class="who">김종훈</td></tr>
-      <tr><td class="wt">-100kg</td><td class="who"><a href="https://namu.wiki/w/%ED%95%9C%EC%A3%BC%EC%97%BD" target="_blank" rel="noopener">한주엽</a></td></tr>
-      <tr><td class="wt">+100kg</td><td class="who"><a href="https://namu.wiki/w/%EA%B9%80%EB%AF%BC%EC%A2%85(%EC%9C%A0%EB%8F%84)" target="_blank" rel="noopener">김민종</a></td></tr>
-    </table>
-  </div>
-
-  <p class="tblcap">여자 개인전</p>
-  <div class="rankwrap">
-    <table class="rk slim">
-      <tr><th>체급</th><th>대표</th></tr>
-      <tr><td class="wt">-48kg</td><td class="who">정수진</td></tr>
-      <tr><td class="wt">-52kg</td><td class="who">장세윤</td></tr>
-      <tr><td class="wt">-57kg</td><td class="who"><a href="https://namu.wiki/w/%ED%97%88%EB%AF%B8%EB%AF%B8" target="_blank" rel="noopener">허미미</a></td></tr>
-      <tr><td class="wt">-63kg</td><td class="who"><a href="https://namu.wiki/w/%EA%B9%80%EC%A7%80%EC%88%98(%EC%9C%A0%EB%8F%84)" target="_blank" rel="noopener">김지수</a></td></tr>
-      <tr><td class="wt">-70kg</td><td class="who">김혜미</td></tr>
-      <tr><td class="wt">-78kg</td><td class="who">김민주</td></tr>
-      <tr><td class="wt">+78kg</td><td class="who"><a href="https://namu.wiki/w/%EC%9D%B4%ED%98%84%EC%A7%80(%EC%9C%A0%EB%8F%84)" target="_blank" rel="noopener">이현지</a></td></tr>
-    </table>
-  </div>
-
-  <p class="tblcap">혼성단체전</p>
-  <div class="roster">
-    <div class="squad">
-      <h3>혼성단체전 <em>4명</em></h3>
-      <p class="cap">개인전과 별도로 선발된 단체전 엔트리</p>
-      <ul>
-        <li><b><a href="https://namu.wiki/w/%EC%9D%B4%EC%9D%80%EA%B2%B0(%EC%9C%A0%EB%8F%84)" target="_blank" rel="noopener">이은결</a></b><span>남자 -73kg</span></li>
-        <li><b>김재민</b><span>남자 -90kg</span></li>
-        <li><b>신유나</b><span>여자 -57kg</span></li>
-        <li><b><a href="https://namu.wiki/w/%EA%B9%80%ED%95%98%EC%9C%A4(%EC%9C%A0%EB%8F%84)" target="_blank" rel="noopener">김하윤</a></b><span>여자 +78kg</span></li>
-      </ul>
-    </div>
-  </div>
-  <p class="tblnote">혼성단체전에는 개인전과 다른 선수가 일부 배치됐다. 남자 -73kg은 이은결(개인전은 안재홍), 여자 +78kg은 2025 세계선수권 우승자 김하윤(개인전은 이현지)이 맡는다.</p>
-
-  <h2 class="sub"><small>Rivals</small>주요 경쟁 상대</h2>
-  <p class="lede">종주국 일본이 전 체급에 대표를 채운 가장 강력한 상대다. 이번 나고야 대회 일본 대표는 아래와 같고, 몽골·중국·카자흐스탄이 뒤를 잇는다.</p>
-
-  <p class="tblcap">일본 남자</p>
-  <div class="rankwrap">
-    <table class="rk slim">
-      <tr><th>체급</th><th>일본 대표</th></tr>
-      <tr><td class="wt">-60kg</td><td class="who">곤도 하야토 <i>Kondo Hayato</i></td></tr>
-      <tr><td class="wt">-66kg</td><td class="who">핫토리 신세이 <i>Hattori Shinsei</i></td></tr>
-      <tr><td class="wt">-73kg</td><td class="who">이시하라 타츠키 <i>Ishihara Tatsuki</i></td></tr>
-      <tr><td class="wt">-81kg</td><td class="who">후지와라 소타로 <i>Fujiwara Sotaro</i></td></tr>
-      <tr><td class="wt">-90kg</td><td class="who">오카다 리쿠 <i>Okada Riku</i></td></tr>
-      <tr><td class="wt">-100kg</td><td class="who">마스치 료타로 <i>Masuchi Ryotaro</i></td></tr>
-      <tr><td class="wt">+100kg</td><td class="who">오타 효가 <i>Ota Hyoga</i></td></tr>
-    </table>
-  </div>
-
-  <p class="tblcap">일본 여자</p>
-  <div class="rankwrap">
-    <table class="rk slim">
-      <tr><th>체급</th><th>일본 대표</th></tr>
-      <tr><td class="wt">-48kg</td><td class="who">곤도 미츠키 <i>Kondo Mitsuki</i></td></tr>
-      <tr><td class="wt">-52kg</td><td class="who">후지시로 코코로 <i>Fujishiro Kokoro</i></td></tr>
-      <tr><td class="wt">-57kg</td><td class="who">시라카네 미오 <i>Shirakane Mio</i></td></tr>
-      <tr><td class="wt">-63kg</td><td class="who">타니오카 나루미 <i>Tanioka Narumi</i></td></tr>
-      <tr><td class="wt">-70kg</td><td class="who">마에다 린 <i>Maeda Rin</i></td></tr>
-      <tr><td class="wt">-78kg</td><td class="who">스기무라 미즈키 <i>Sugimura Mizuki</i></td></tr>
-      <tr><td class="wt">+78kg</td><td class="who">무쿠노키 미키 <i>Mukunoki Miki</i></td></tr>
-    </table>
-  </div>
-  <p class="tblnote">일본 외 주목할 선수로는 몽골의 라그바토고 엔흐릴렌(Lkhagvatogoo Enkhriilen)과 바트후야그 곤칙수렌(Batkhuyag Gonchigsuren), 중국의 뉴신란(Niu Xinran, 여 +78kg 아시아선수권 금메달) 등이 있다. 시드 배정에서도 일본·몽골·중국 선수가 상위권을 차지하고 있다.</p>
-
-  <h2 class="sub"><small>Form Guide</small>최근 성적</h2>
-  <p class="lede">직전 두 국제대회에서 한국 선수가 딴 메달을 정리했다. 대표팀의 현재 경쟁력을 가늠할 수 있는 지표다.</p>
-
-  <div class="rec">
-    <div class="yr">2026<i>아시아선수권</i></div>
-    <div>
-      <div class="chips"><span class="chip g">금 1</span><span class="chip s">은 2</span><span class="chip b">동 4</span></div>
-      <h3>김종훈의 금메달, 시상대 곳곳에 태극기</h3>
-      <p>김종훈이 남자 -90kg에서 금메달을 따냈다. 이승엽(+100kg)과 이현지(여 +78kg)가 은메달, 김찬녕(-66kg)·이은결(-73kg)·김지수(여 -63kg)가 동메달을 보탰고 혼성단체전에서도 동메달을 추가했다. 혼성단체전 우승은 몽골, 준우승은 카자흐스탄이었다. 다만 +100kg 은메달의 이승엽은 이번 아시안게임 대표(김민종)와 다른 선수다.</p>
-    </div>
-  </div>
-
-  <div class="rec">
-    <div class="yr">2025<i>세계선수권</i></div>
-    <div>
-      <div class="chips"><span class="chip g">금 1</span><span class="chip b">동 3</span></div>
-      <h3>김하윤의 세계 정상, +78kg 두 카드</h3>
+      <h2 id="form">최근 성적</h2>
+      <h3>2025 세계선수권 — 김하윤의 세계 정상, +78kg 두 카드</h3>
+      <p class="medals"><span class="medal g">금 1</span><span class="medal b">동 3</span></p>
       <p>김하윤이 여자 +78kg에서 세계선수권 금메달을 차지했다. 이준환(-81kg)과 김민종(+100kg)이 동메달을 따냈고, 여자 +78kg에서는 이현지도 동메달을 보태 이 체급에서만 한국 선수 두 명이 시상대에 올랐다. 이번 대회에서 개인 +78kg은 이현지가, 혼성단체전 +78kg은 김하윤이 나눠 맡는다.</p>
+
+      <h3>2026 아시아선수권 — 김종훈의 금메달, 시상대 곳곳에 태극기</h3>
+      <p class="medals"><span class="medal g">금 1</span><span class="medal s">은 2</span><span class="medal b">동 4</span></p>
+      <p>김종훈이 남자 -90kg에서 금메달을 따냈다. 이승엽(+100kg)과 이현지(여 +78kg)가 은메달, 김찬녕(-66kg)·이은결(-73kg)·김지수(여 -63kg)가 동메달을 보탰고 혼성단체전에서도 동메달을 추가했다. 혼성단체전 우승은 몽골, 준우승은 카자흐스탄이었다. 다만 +100kg 은메달의 이승엽은 이번 아시안게임 대표(김민종)와 다른 선수다.</p>
+
+      <h2 id="rivals">경계할 상대</h2>
+      <h4>일본 <span style="font-weight:400;color:var(--muted);">Japan</span></h4>
+      <p>종주국 일본이 전 체급에 대표를 채운 가장 강력한 상대다.</p>
+      <table class="wt">
+        <tr><th>체급</th><th>일본 남자 대표</th><th>일본 여자 대표</th></tr>
+        <tr><td>-60kg / -48kg</td><td>곤도 하야토 <i>Kondo Hayato</i></td><td>곤도 미츠키 <i>Kondo Mitsuki</i></td></tr>
+        <tr><td>-66kg / -52kg</td><td>핫토리 신세이 <i>Hattori Shinsei</i></td><td>후지시로 코코로 <i>Fujishiro Kokoro</i></td></tr>
+        <tr><td>-73kg / -57kg</td><td>이시하라 타츠키 <i>Ishihara Tatsuki</i></td><td>시라카네 미오 <i>Shirakane Mio</i></td></tr>
+        <tr><td>-81kg / -63kg</td><td>후지와라 소타로 <i>Fujiwara Sotaro</i></td><td>타니오카 나루미 <i>Tanioka Narumi</i></td></tr>
+        <tr><td>-90kg / -70kg</td><td>오카다 리쿠 <i>Okada Riku</i></td><td>마에다 린 <i>Maeda Rin</i></td></tr>
+        <tr><td>-100kg / -78kg</td><td>마스치 료타로 <i>Masuchi Ryotaro</i></td><td>스기무라 미즈키 <i>Sugimura Mizuki</i></td></tr>
+        <tr><td>+100kg / +78kg</td><td>오타 효가 <i>Ota Hyoga</i></td><td>무쿠노키 미키 <i>Mukunoki Miki</i></td></tr>
+      </table>
+      <p class="note">일본 외 주목할 선수로는 몽골의 라그바토고 엔흐릴렌(Lkhagvatogoo Enkhriilen)과 바트후야그 곤칙수렌(Batkhuyag Gonchigsuren), 중국의 뉴신란(Niu Xinran, 여 +78kg 아시아선수권 금메달) 등이 있다. 시드 배정에서도 일본·몽골·중국 선수가 상위권을 차지하고 있다.</p>
+
+      <h2 id="watch">관전 포인트</h2>
+      <div class="kr-box">
+        <p><b>가장 확실한 카드는 +78kg의 두 선수다.</b> 김하윤은 2025 세계선수권 우승자, 이현지는 같은 대회 동메달이자 2026 아시아선수권 은메달리스트다. 개인전(이현지)과 혼성단체전(김하윤)에 나눠 배치해 두 무대 모두를 노린다.</p>
+        <p><b>남자 중량급이 두껍다.</b> 이준환(-81kg)과 김민종(+100kg)이 세계선수권 동메달리스트이고, 김종훈(-90kg)은 아시아선수권 금메달로 상승세다. -90kg부터 +100kg까지 이어지는 라인이 메달권 경쟁의 핵심이다.</p>
+        <p><b>혼성단체전은 메달을 넘볼 종목이다.</b> 아시아선수권에서 동메달을 따냈고, 개인전 유망주들이 그대로 팀을 이룬다. 몽골·일본·카자흐스탄과의 격차를 얼마나 좁히느냐가 관건이다.</p>
+      </div>
+
+      <div class="footer">
+        출처: 2026 아시아선수권·2025 세계선수권 결과, 대한유도회 선발 발표, 그 외 편집부 취재 및 자체 정리.<br>
+        일정과 세부 사항은 대회 진행에 따라 변경될 수 있다.
+      </div>
     </div>
+    <aside class="infobox">
+      <div class="ib-title">유도 종목 정보</div>
+      <table>
+        <tr><th>영문명</th><td>Judo</td></tr>
+        <tr><th>주요 기술</th><td>메치기·굳히기·조르기</td></tr>
+        <tr><th>경기 시간</th><td>체급별 4분 내외</td></tr>
+        <tr><th>종주국</th><td>일본</td></tr>
+        <tr><th>출전 인원</th><td>18명 (개인전 14 · 혼성단체전 4)</td></tr>
+        <tr><th>한국 최근 성적</th><td>2026 아시아선수권 금1·은2·동4<span class="badge gold">김종훈 금메달</span></td></tr>
+        <tr><th>관련 문서</th><td><a href="index2.html">아시안게임 종목 안내</a></td></tr>
+      </table>
+    </aside>
   </div>
-
-  <div class="note">
-    <h3>관전 포인트</h3>
-    <p><b>가장 확실한 카드는 +78kg의 두 선수다.</b> 김하윤은 2025 세계선수권 우승자, 이현지는 같은 대회 동메달이자 2026 아시아선수권 은메달리스트다. 개인전(이현지)과 혼성단체전(김하윤)에 나눠 배치해 두 무대 모두를 노린다.</p>
-    <p><b>남자 중량급이 두껍다.</b> 이준환(-81kg)과 김민종(+100kg)이 세계선수권 동메달리스트이고, 김종훈(-90kg)은 아시아선수권 금메달로 상승세다. -90kg부터 +100kg까지 이어지는 라인이 메달권 경쟁의 핵심이다.</p>
-    <p><b>혼성단체전은 메달을 넘볼 종목이다.</b> 아시아선수권에서 동메달을 따냈고, 개인전 유망주들이 그대로 팀을 이룬다. 몽골·일본·카자흐스탄과의 격차를 얼마나 좁히느냐가 관건이다.</p>
-  </div>
-
-  <footer class="pagefoot">
-    <span>2026 아이치·나고야 아시안게임 종목 안내</span>
-    <a href="index.html">← 전체 종목 목록 보기</a>
-  </footer>
 </div>
 </body>
 </html>

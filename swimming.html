@@ -3,103 +3,125 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>수영류(경영 / 다이빙 / 아티스틱스위밍) | 2026 아이치·나고야 아시안게임</title>
+<title>수영류(경영 / 다이빙 / 아티스틱스위밍) - 2026 아이치·나고야 아시안게임</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#0E1A2B; --ink-2:#152540; --gold:#C9A24B; --gold-soft:#E4CD8C;
-    --sun:#D8482F; --paper:#F3EFE4; --paper-dim:#B9C2CF; --line:rgba(201,162,75,0.28);
+    --bg:#ffffff; --panel:#f8f9fa; --border:#c8ccd1; --border-soft:#eaecf0;
+    --ink:#202122; --muted:#54595d; --link:#3366cc; --link-visited:#795cb2; --link-red:#ba0000;
+    --serif:'Noto Serif KR',Georgia,'Times New Roman',serif;
+    --sans:'Pretendard','Helvetica Neue',Arial,sans-serif;
+    --accent:#2456c6; --ok:#1a7f37; --warn:#b45309; --gold:#a05a00;
   }
   *{box-sizing:border-box;}
-  body{
-    margin:0; color:var(--paper); font-family:'Pretendard','Noto Sans KR',sans-serif;
-    background:
-      radial-gradient(1100px 550px at 90% -10%, rgba(216,72,47,0.16), transparent 60%),
-      radial-gradient(900px 500px at -10% 110%, rgba(201,162,75,0.10), transparent 60%),
-      var(--ink);
-    -webkit-font-smoothing:antialiased;
-  }
-  .wrap{max-width:880px;margin:0 auto;padding:40px 28px 100px;}
-  nav.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;}
-  .back{color:var(--gold-soft);text-decoration:none;font-size:13.5px;font-weight:600;display:inline-flex;align-items:center;gap:6px;}
-  .back:hover{color:var(--gold);}
-  .back svg{width:14px;height:14px;}
-  .crumb{font-size:12px;color:var(--paper-dim);letter-spacing:0.02em;}
-  header.hero{padding-bottom:32px;margin-bottom:32px;border-bottom:1px solid var(--line);}
-  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;letter-spacing:0.16em;color:var(--gold-soft);text-transform:uppercase;font-weight:600;margin-bottom:16px;}
-  .eyebrow::before{content:"";width:22px;height:1px;background:var(--gold);display:inline-block;}
-  h1{font-family:'Noto Serif KR',serif;font-weight:900;font-size:clamp(30px,5vw,46px);line-height:1.2;margin:0 0 6px;color:var(--paper);letter-spacing:-0.01em;}
-  .en-title{font-size:14px;color:var(--paper-dim);letter-spacing:0.04em;margin:0 0 18px;font-style:italic;}
-  .tagline{font-size:16.5px;color:var(--paper-dim);line-height:1.75;max-width:640px;margin:0;}
-  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:28px 0 8px;}
-  .fact{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:14px 16px;}
-  .fact span{display:block;font-size:11px;color:var(--gold-soft);letter-spacing:0.05em;margin-bottom:6px;}
-  .fact b{font-family:'Noto Serif KR',serif;font-size:15px;color:var(--paper);font-weight:700;line-height:1.4;}
-  section.body{margin-top:8px;}
-  section.body p{font-size:15.5px;line-height:1.85;color:var(--paper-dim);margin:0 0 16px;}
-  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:40px 0 18px;font-weight:700;}
-  .cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;}
-  .disc{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:20px;}
-  .disc h3{font-family:'Noto Serif KR',serif;font-size:17px;margin:0 0 4px;color:var(--paper);}
-  .disc .en{font-size:11.5px;color:var(--gold-soft);letter-spacing:0.04em;margin-bottom:10px;display:block;}
-  .disc p{font-size:14px;line-height:1.7;color:var(--paper-dim);margin:0;}
-  footer.pagefoot{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
-  footer.pagefoot a{color:var(--gold-soft);text-decoration:none;}
-  @media (max-width:520px){.wrap{padding:28px 18px 70px;}}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.65;}
+  a{color:var(--link);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  a:visited{color:var(--link-visited);}
+  .topbar{border-bottom:1px solid var(--border);background:var(--panel);font-size:12.5px;color:var(--muted);}
+  .topbar .inner{max-width:1100px;margin:0 auto;padding:8px 20px;display:flex;gap:16px;flex-wrap:wrap;}
+  .topbar a{color:var(--link);}
+  .layout{max-width:1100px;margin:0 auto;padding:22px 20px 80px;}
+  h1.title{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.3;margin:0 0 2px;padding-bottom:6px;border-bottom:1px solid var(--border);}
+  .subtitle{color:var(--muted);font-size:13px;margin:0 0 18px;}
+  .hatnote{font-style:italic;color:var(--muted);background:var(--panel);border:1px solid var(--border-soft);padding:8px 14px;border-radius:2px;margin:0 0 20px;font-size:13.5px;}
+  .content{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;}
+  .main{flex:1 1 560px;min-width:0;}
+  h2{font-family:var(--serif);font-weight:600;font-size:22px;margin:26px 0 10px;padding-bottom:5px;border-bottom:1px solid var(--border-soft);scroll-margin-top:12px;}
+  h3{font-family:var(--serif);font-weight:600;font-size:17px;margin:20px 0 8px;}
+  h4{font-family:var(--sans);font-weight:700;font-size:14.5px;margin:16px 0 6px;color:#3a3f44;}
+  p{margin:0 0 12px;}
+  .toc{display:inline-block;background:var(--panel);border:1px solid var(--border);border-radius:2px;padding:12px 20px 12px 14px;margin:0 0 20px;font-size:14px;}
+  .toc-title{font-weight:700;text-align:center;font-size:13px;margin-bottom:6px;}
+  .toc ol{margin:0;padding-left:22px;}
+  .toc li{margin:3px 0;}
+  .infobox{flex:0 0 300px;background:var(--panel);border:1px solid var(--border);border-radius:2px;font-size:13px;align-self:flex-start;}
+  .infobox .ib-title{background:#eaecf0;font-family:var(--serif);font-weight:700;text-align:center;padding:10px 12px;font-size:15px;border-bottom:1px solid var(--border);}
+  .infobox table{width:100%;border-collapse:collapse;}
+  .infobox th,.infobox td{text-align:left;padding:7px 12px;vertical-align:top;border-bottom:1px solid var(--border-soft);}
+  .infobox th{width:38%;color:var(--muted);font-weight:600;}
+  .badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:2px;background:#e6f0ff;color:#2456c6;border:1px solid #b9d0f5;margin-left:6px;}
+  .badge.gold{background:#fff2e0;color:#a05a00;border-color:#f2d2a0;}
+  table.wt{border-collapse:collapse;width:100%;font-size:13.5px;margin:6px 0 16px;}
+  table.wt th,table.wt td{border:1px solid var(--border);padding:6px 10px;text-align:left;vertical-align:top;}
+  table.wt th{background:var(--panel);}
+  table.wt td.num, table.wt th.num{text-align:center;}
+  table.wt caption{font-size:12.5px;color:var(--muted);text-align:left;padding:2px 0 6px;}
+  .note{font-size:12.5px;color:var(--muted);margin:-8px 0 16px;}
+  .kr-box{background:#eef4ff;border:1px solid #c3d6f7;border-radius:3px;padding:14px 16px;margin:10px 0 18px;}
+  .kr-box h4{margin-top:0;color:#1e3a8a;}
+  .medals{display:inline-flex;gap:6px;margin:0 0 8px;flex-wrap:wrap;}
+  .medal{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;border:1px solid;}
+  .medal.g{color:#8a6d1a;border-color:#e4cd8c;background:#fdf6e3;}
+  .medal.s{color:#5b6168;border-color:#d5d9de;background:#f4f5f6;}
+  .medal.b{color:#8a5a30;border-color:#e0c3a3;background:#fbf1e6;}
+  .footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;}
+  @media (max-width:820px){.infobox{flex:1 1 100%;order:-1;}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <nav class="top">
-    <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>전체 종목으로</a>
-    <span class="crumb">올림픽 · 기초종목 / 수영류(경영 / 다이빙 / 아티스틱스위밍)</span>
-  </nav>
+<div class="topbar"><div class="inner">
+  <a href="index2.html">← 아시안게임 종목 목록</a>
+  <span>문서 · 수영류(경영 / 다이빙 / 아티스틱스위밍)</span>
+  <a href="index.html">전체 목차</a>
+</div></div>
+<div class="layout">
+  <h1 class="title">수영류(경영 / 다이빙 / 아티스틱스위밍)</h1>
+  <p class="subtitle">Aquatics: Swimming / Diving / Artistic Swimming · 2026 아이치·나고야 아시안게임 (제20회)</p>
+  <p class="hatnote">물 위와 물속에서 스피드, 기술, 예술성을 각각 겨루는 세 가지 수중 종목을 함께 소개한다.</p>
+  <div class="content">
+    <div class="main">
+      <div class="toc">
+        <div class="toc-title">목차</div>
+        <ol>
+          <li><a href="#overview">개요</a></li>
+          <li><a href="#disciplines">세부종목 한눈에 보기</a></li>
+          <li><a href="#swimming">경영</a></li>
+          <li><a href="#diving">다이빙</a></li>
+          <li><a href="#artistic">아티스틱스위밍</a></li>
+        </ol>
+      </div>
 
-  <header class="hero">
-    <span class="eyebrow">2026 Aichi · Nagoya · 올림픽 · 기초종목</span>
-    <h1>수영류(경영 / 다이빙 / 아티스틱스위밍)</h1>
-    <p class="en-title">Aquatics: Swimming / Diving / Artistic Swimming</p>
-    <p class="tagline">물 위와 물속에서 스피드, 기술, 예술성을 각각 겨루는 세 가지 수중 종목을 함께 소개한다.</p>
-  </header>
+      <h2 id="overview">개요</h2>
+      <p>경영, 다이빙, 아티스틱스위밍은 모두 물을 무대로 하지만 겨루는 방식은 전혀 다르다. 경영은 순수하게 속도를 겨루고, 다이빙과 아티스틱스위밍은 기술적 완성도와 예술성을 심판이 채점한다.</p>
+      <p>세 종목 모두 아시안게임에서 중국이 세계 최강 수준의 경쟁력을 보이고 있으며, 일본과 한국도 경영에서 상위권 성적을 꾸준히 내고 있다.</p>
+      <p>2026 대회에서 경영은 9월 20일부터 25일까지, 다이빙은 9월 26일부터 30일까지 나란히 도쿄 아쿠아틱스센터에서 열린다. 아티스틱스위밍은 9월 26일부터 28일까지 하마마쓰 스위밍센터에서 별도로 치러진다.</p>
 
-  <div class="facts">
-    <div class="fact"><span>경영</span><b>9.20–9.25 · 도쿄 아쿠아틱스센터 · 금메달 49개</b></div>
-    <div class="fact"><span>다이빙</span><b>9.26–9.30 · 도쿄 아쿠아틱스센터 · 금메달 10개</b></div>
-    <div class="fact"><span>아티스틱스위밍</span><b>9.26–9.28 · 하마마쓰 스위밍센터 · 금메달 2개</b></div>
-  </div>
+      <h2 id="disciplines">세부종목 한눈에 보기</h2>
+      <table class="wt">
+        <tr><th>종목</th><th>기간</th><th>경기장</th><th class="num">금메달</th></tr>
+        <tr><td>경영 <span style="color:var(--muted);font-size:12px;">Swimming</span></td><td>9.20 – 9.25</td><td>도쿄 아쿠아틱스센터</td><td class="num">49개</td></tr>
+        <tr><td>다이빙 <span style="color:var(--muted);font-size:12px;">Diving</span></td><td>9.26 – 9.30</td><td>도쿄 아쿠아틱스센터</td><td class="num">10개</td></tr>
+        <tr><td>아티스틱스위밍 <span style="color:var(--muted);font-size:12px;">Artistic Swimming</span></td><td>9.26 – 9.28</td><td>하마마쓰 스위밍센터</td><td class="num">2개</td></tr>
+      </table>
 
-  <section class="body">
-    <p>경영, 다이빙, 아티스틱스위밍은 모두 물을 무대로 하지만 겨루는 방식은 전혀 다르다. 경영은 순수하게 속도를 겨루고, 다이빙과 아티스틱스위밍은 기술적 완성도와 예술성을 심판이 채점한다.</p>
-    <p>세 종목 모두 아시안게임에서 중국이 세계 최강 수준의 경쟁력을 보이고 있으며, 일본과 한국도 경영에서 상위권 성적을 꾸준히 내고 있다.</p>
-    <p>2026 대회에서 경영은 9월 20일부터 25일까지, 다이빙은 9월 26일부터 30일까지 나란히 도쿄 아쿠아틱스센터에서 열린다. 아티스틱스위밍은 9월 26일부터 28일까지 하마마쓰 스위밍센터에서 별도로 치러진다.</p>
-  </section>
-
-  <h2 class="sub">세부 종목</h2>
-  <div class="cardgrid">
-    <div class="disc">
-      <h3>경영</h3>
-      <span class="en">Swimming</span>
+      <h2 id="swimming">경영</h2>
       <p>자유형 6종목, 배영·평영·접영 각 3종목, 개인혼영 2종목에 계영 3종목을 더해 남녀 각 19개, 여기에 혼성 계영을 합쳐 총 49개의 금메달이 걸린 순수 기록 경기다.</p>
-    </div>
-    <div class="disc">
-      <h3>다이빙</h3>
-      <span class="en">Diving</span>
+
+      <h2 id="diving">다이빙</h2>
       <p>1m·3m 스프링보드와 10m 플랫폼 개인전에 싱크로나이즈드 종목까지 더해 남녀 각 5개씩, 총 10개의 금메달을 놓고 회전·비틀기 동작의 난이도와 완성도를 심판이 채점한다.</p>
-    </div>
-    <div class="disc">
-      <h3>아티스틱스위밍</h3>
-      <span class="en">Artistic Swimming</span>
+
+      <h2 id="artistic">아티스틱스위밍</h2>
       <p>여자 듀엣과, 남자 선수 참가가 허용된 단체전 두 종목으로만 치러져 금메달은 2개뿐이다. 음악에 맞춘 군무형 연기를 펼치며, 과거 싱크로나이즈드 스위밍으로 불렸다.</p>
+
+      <div class="footer">
+        출처: 편집부 자체 정리. 한국 대표팀 명단·최근 성적 등 세부 정보는 확정되는 대로 업데이트될 예정이다.
+      </div>
     </div>
+    <aside class="infobox">
+      <div class="ib-title">수영류 종목 정보</div>
+      <table>
+        <tr><th>영문명</th><td>Aquatics</td></tr>
+        <tr><th>경영</th><td>9.20–9.25 · 도쿄 아쿠아틱스센터 · 금메달 49개</td></tr>
+        <tr><th>다이빙</th><td>9.26–9.30 · 도쿄 아쿠아틱스센터 · 금메달 10개</td></tr>
+        <tr><th>아티스틱스위밍</th><td>9.26–9.28 · 하마마쓰 스위밍센터 · 금메달 2개</td></tr>
+        <tr><th>관련 문서</th><td><a href="index2.html">아시안게임 종목 안내</a></td></tr>
+      </table>
+    </aside>
   </div>
-
-
-  <footer class="pagefoot">
-    <span>2026 아이치·나고야 아시안게임 종목 안내</span>
-    <a href="index.html">← 전체 종목 목록 보기</a>
-  </footer>
 </div>
 </body>
 </html>

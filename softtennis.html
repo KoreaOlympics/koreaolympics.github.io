@@ -3,188 +3,155 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>소프트테니스 / 스쿼시 | 2026 아이치·나고야 아시안게임</title>
+<title>소프트테니스 / 스쿼시 - 2026 아이치·나고야 아시안게임</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#0E1A2B; --ink-2:#152540; --gold:#C9A24B; --gold-soft:#E4CD8C;
-    --sun:#D8482F; --paper:#F3EFE4; --paper-dim:#B9C2CF; --line:rgba(201,162,75,0.28);
-    --medal-gold:#D8B44A; --medal-silver:#C8CDD6; --medal-bronze:#C97B4A;
+    --bg:#ffffff; --panel:#f8f9fa; --border:#c8ccd1; --border-soft:#eaecf0;
+    --ink:#202122; --muted:#54595d; --link:#3366cc; --link-visited:#795cb2; --link-red:#ba0000;
+    --serif:'Noto Serif KR',Georgia,'Times New Roman',serif;
+    --sans:'Pretendard','Helvetica Neue',Arial,sans-serif;
+    --accent:#2456c6; --ok:#1a7f37; --warn:#b45309; --gold:#a05a00;
   }
   *{box-sizing:border-box;}
-  body{
-    margin:0; color:var(--paper); font-family:'Pretendard','Noto Sans KR',sans-serif;
-    background:
-      radial-gradient(1100px 550px at 90% -10%, rgba(216,72,47,0.16), transparent 60%),
-      radial-gradient(900px 500px at -10% 110%, rgba(201,162,75,0.10), transparent 60%),
-      var(--ink);
-    -webkit-font-smoothing:antialiased;
-  }
-  .wrap{max-width:880px;margin:0 auto;padding:40px 28px 100px;}
-  nav.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;}
-  .back{color:var(--gold-soft);text-decoration:none;font-size:13.5px;font-weight:600;display:inline-flex;align-items:center;gap:6px;}
-  .back:hover{color:var(--gold);}
-  .back svg{width:14px;height:14px;}
-  .crumb{font-size:12px;color:var(--paper-dim);letter-spacing:0.02em;}
-  header.hero{padding-bottom:32px;margin-bottom:32px;border-bottom:1px solid var(--line);}
-  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;letter-spacing:0.16em;color:var(--gold-soft);text-transform:uppercase;font-weight:600;margin-bottom:16px;}
-  .eyebrow::before{content:"";width:22px;height:1px;background:var(--gold);display:inline-block;}
-  h1{font-family:'Noto Serif KR',serif;font-weight:900;font-size:clamp(30px,5vw,46px);line-height:1.2;margin:0 0 6px;color:var(--paper);letter-spacing:-0.01em;}
-  .en-title{font-size:14px;color:var(--paper-dim);letter-spacing:0.04em;margin:0 0 18px;font-style:italic;}
-  .tagline{font-size:16.5px;color:var(--paper-dim);line-height:1.75;max-width:640px;margin:0;}
-  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:28px 0 8px;}
-  .fact{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:14px 16px;}
-  .fact span{display:block;font-size:11px;color:var(--gold-soft);letter-spacing:0.05em;margin-bottom:6px;}
-  .fact b{font-family:'Noto Serif KR',serif;font-size:15px;color:var(--paper);font-weight:700;line-height:1.4;}
-  section.body{margin-top:8px;}
-  section.body p{font-size:15.5px;line-height:1.85;color:var(--paper-dim);margin:0 0 16px;}
-  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:48px 0 6px;font-weight:700;}
-  p.sub-note{font-size:13px;color:var(--paper-dim);margin:0 0 20px;line-height:1.6;}
-  .cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;}
-  .disc{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:20px;}
-  .disc h3{font-family:'Noto Serif KR',serif;font-size:17px;margin:0 0 4px;color:var(--paper);}
-  .disc .en{font-size:11.5px;color:var(--gold-soft);letter-spacing:0.04em;margin-bottom:10px;display:block;}
-  .disc p{font-size:14px;line-height:1.7;color:var(--paper-dim);margin:0;}
-
-  /* Roster */
-  .roster-team{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:18px 20px;}
-  .roster-team h4{font-family:'Noto Serif KR',serif;font-size:13px;color:var(--gold-soft);margin:0 0 12px;letter-spacing:.06em;text-transform:uppercase;}
-  .roster-chips{display:flex;flex-wrap:wrap;gap:8px;}
-  .roster-chips span{font-size:13px;font-weight:600;color:var(--paper);background:rgba(243,239,228,0.05);border:1px solid rgba(243,239,228,0.14);padding:7px 13px;border-radius:999px;}
-
-  /* Athlete spotlight (large) */
-  .spotlight-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;}
-  @media (max-width:640px){.spotlight-grid{grid-template-columns:1fr;}}
-  .athlete-spotlight{background:linear-gradient(155deg, rgba(21,37,64,0.9), rgba(14,26,43,0.6));border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:6px;padding:22px 24px;}
-  .athlete-spotlight .as-tag{font-size:12px;color:var(--gold-soft);letter-spacing:.06em;text-transform:uppercase;font-weight:700;margin:0 0 6px;display:block;}
-  .athlete-spotlight h3{font-family:'Noto Serif KR',serif;font-size:26px;font-weight:900;color:var(--gold);margin:0 0 12px;}
-  .athlete-spotlight p{font-size:14.5px;line-height:1.85;color:var(--paper);margin:0 0 10px;}
-  .athlete-spotlight p:last-child{margin-bottom:0;}
-
-  /* Medal history */
-  .medal-group-label{font-family:'Noto Serif KR',serif;font-size:14px;font-weight:700;color:var(--paper);margin:20px 0 8px;}
-  .medal-group-label:first-child{margin-top:0;}
-  .medal-compact{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:4px 20px;}
-  .mc-row{padding:13px 0;border-top:1px solid rgba(243,239,228,0.08);display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;}
-  .mc-row:first-child{border-top:none;}
-  .mc-event{flex:none;width:96px;font-family:'Noto Serif KR',serif;font-size:12.5px;font-weight:700;color:var(--gold-soft);}
-  .mc-meds{flex:1;display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--paper-dim);min-width:200px;}
-  .mc-item{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;}
-  .mc-dot{width:8px;height:8px;border-radius:50%;flex:none;display:inline-block;}
-  .mc-dot.gold{background:var(--medal-gold);}
-  .mc-dot.silver{background:var(--medal-silver);}
-  .mc-dot.bronze{background:var(--medal-bronze);}
-  .mc-item.kr{color:var(--gold-soft);font-weight:700;}
-
-  footer.pagefoot{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
-  footer.pagefoot a{color:var(--gold-soft);text-decoration:none;}
-  @media (max-width:520px){.wrap{padding:28px 18px 70px;}}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.65;}
+  a{color:var(--link);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  a:visited{color:var(--link-visited);}
+  .topbar{border-bottom:1px solid var(--border);background:var(--panel);font-size:12.5px;color:var(--muted);}
+  .topbar .inner{max-width:1100px;margin:0 auto;padding:8px 20px;display:flex;gap:16px;flex-wrap:wrap;}
+  .topbar a{color:var(--link);}
+  .layout{max-width:1100px;margin:0 auto;padding:22px 20px 80px;}
+  h1.title{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.3;margin:0 0 2px;padding-bottom:6px;border-bottom:1px solid var(--border);}
+  .subtitle{color:var(--muted);font-size:13px;margin:0 0 18px;}
+  .hatnote{font-style:italic;color:var(--muted);background:var(--panel);border:1px solid var(--border-soft);padding:8px 14px;border-radius:2px;margin:0 0 20px;font-size:13.5px;}
+  .content{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;}
+  .main{flex:1 1 560px;min-width:0;}
+  h2{font-family:var(--serif);font-weight:600;font-size:22px;margin:26px 0 10px;padding-bottom:5px;border-bottom:1px solid var(--border-soft);scroll-margin-top:12px;}
+  h3{font-family:var(--serif);font-weight:600;font-size:17px;margin:20px 0 8px;}
+  h4{font-family:var(--sans);font-weight:700;font-size:14.5px;margin:16px 0 6px;color:#3a3f44;}
+  p{margin:0 0 12px;}
+  .toc{display:inline-block;background:var(--panel);border:1px solid var(--border);border-radius:2px;padding:12px 20px 12px 14px;margin:0 0 20px;font-size:14px;}
+  .toc-title{font-weight:700;text-align:center;font-size:13px;margin-bottom:6px;}
+  .toc ol{margin:0;padding-left:22px;}
+  .toc li{margin:3px 0;}
+  .infobox{flex:0 0 300px;background:var(--panel);border:1px solid var(--border);border-radius:2px;font-size:13px;align-self:flex-start;}
+  .infobox .ib-title{background:#eaecf0;font-family:var(--serif);font-weight:700;text-align:center;padding:10px 12px;font-size:15px;border-bottom:1px solid var(--border);}
+  .infobox table{width:100%;border-collapse:collapse;}
+  .infobox th,.infobox td{text-align:left;padding:7px 12px;vertical-align:top;border-bottom:1px solid var(--border-soft);}
+  .infobox th{width:38%;color:var(--muted);font-weight:600;}
+  .badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:2px;background:#e6f0ff;color:#2456c6;border:1px solid #b9d0f5;margin-left:6px;}
+  .badge.gold{background:#fff2e0;color:#a05a00;border-color:#f2d2a0;}
+  table.wt{border-collapse:collapse;width:100%;font-size:13.5px;margin:6px 0 16px;}
+  table.wt th,table.wt td{border:1px solid var(--border);padding:6px 10px;text-align:left;vertical-align:top;}
+  table.wt th{background:var(--panel);}
+  table.wt td.num, table.wt th.num{text-align:center;}
+  table.wt caption{font-size:12.5px;color:var(--muted);text-align:left;padding:2px 0 6px;}
+  .note{font-size:12.5px;color:var(--muted);margin:-8px 0 16px;}
+  .kr-box{background:#eef4ff;border:1px solid #c3d6f7;border-radius:3px;padding:14px 16px;margin:10px 0 18px;}
+  .kr-box h4{margin-top:0;color:#1e3a8a;}
+  .medals{display:inline-flex;gap:6px;margin:0 0 8px;flex-wrap:wrap;}
+  .medal{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;border:1px solid;}
+  .medal.g{color:#8a6d1a;border-color:#e4cd8c;background:#fdf6e3;}
+  .medal.s{color:#5b6168;border-color:#d5d9de;background:#f4f5f6;}
+  .medal.b{color:#8a5a30;border-color:#e0c3a3;background:#fbf1e6;}
+  .footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;}
+  @media (max-width:820px){.infobox{flex:1 1 100%;order:-1;}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <nav class="top">
-    <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>전체 종목으로</a>
-    <span class="crumb">비올림픽 종목 / 소프트테니스 / 스쿼시</span>
-  </nav>
+<div class="topbar"><div class="inner">
+  <a href="index2.html">← 아시안게임 종목 목록</a>
+  <span>문서 · 소프트테니스 / 스쿼시</span>
+  <a href="index.html">전체 목차</a>
+</div></div>
+<div class="layout">
+  <h1 class="title">소프트테니스 / 스쿼시</h1>
+  <p class="subtitle">Soft Tennis / Squash · 2026 아이치·나고야 아시안게임 (제20회) · 비올림픽 종목</p>
+  <p class="hatnote">일반 테니스보다 부드러운 공을 쓰는 소프트테니스와, 벽을 이용해 랠리를 주고받는 스쿼시를 함께 소개한다. 둘 다 라켓을 활용한 개인·복식 종목이라는 공통점이 있다.</p>
+  <div class="content">
+    <div class="main">
+      <div class="toc">
+        <div class="toc-title">목차</div>
+        <ol>
+          <li><a href="#overview">개요</a></li>
+          <li><a href="#disciplines">세부종목</a></li>
+          <li><a href="#softtennis">소프트테니스</a></li>
+          <li><a href="#squash">스쿼시</a></li>
+        </ol>
+      </div>
 
-  <header class="hero">
-    <span class="eyebrow">2026 Aichi · Nagoya · 비올림픽 종목</span>
-    <h1>소프트테니스 / 스쿼시</h1>
-    <p class="en-title">Soft Tennis / Squash</p>
-    <p class="tagline">일반 테니스보다 부드러운 공을 쓰는 소프트테니스와, 벽을 이용해 랠리를 주고받는 스쿼시를 함께 소개한다.</p>
-  </header>
+      <h2 id="overview">개요</h2>
+      <p>소프트테니스는 일반 테니스보다 부드러운 고무공(연식구)을 사용하는 종목으로 한국, 일본, 대만 등 동아시아에서 특히 발달했다. 이번 대회에서는 남자 단식·단체, 여자 단식·단체, 혼합복식 등 5개 종목의 금메달을 놓고 9월 18일부터 23일까지 나고야 히가시야마공원 테니스센터에서 경기가 열린다.</p>
+      <p>스쿼시는 사방이 벽으로 막힌 좁은 코트 안에서 공을 벽에 맞혀 랠리를 이어가는 종목으로, 순간적인 방향 전환과 체력 소모가 매우 큰 것이 특징이다.</p>
 
-  <div class="facts">
-    <div class="fact"><span>소프트테니스</span><b>9/18~9/23, 나고야 히가시야마공원</b></div>
-    <div class="fact"><span>스쿼시</span><b>사방이 막힌 코트에서 진행</b></div>
-    <div class="fact"><span>공통점</span><b>라켓을 활용한 개인·복식 종목</b></div>
-  </div>
+      <h2 id="disciplines">세부종목</h2>
+      <table class="wt">
+        <tr><th>종목</th><th>설명</th></tr>
+        <tr><td>소프트테니스 <span style="color:var(--muted);font-size:12px;">Soft Tennis</span></td><td>연식구와 전용 라켓을 사용하는 동아시아 발상 종목. 한국이 전통적인 강세를 보인다. 남자 단식·단체, 여자 단식·단체, 혼합복식 5개 종목이 나고야 히가시야마공원 테니스센터에서 9/18~23 열린다.</td></tr>
+        <tr><td>스쿼시 <span style="color:var(--muted);font-size:12px;">Squash</span></td><td>네 개의 벽을 활용해 랠리를 이어가는 실내 라켓 종목. 짧은 코트 안에서의 스피드와 지구력이 핵심이다.</td></tr>
+      </table>
 
-  <section class="body">
-    <p>소프트테니스는 일반 테니스보다 부드러운 고무공(연식구)을 사용하는 종목으로 한국, 일본, 대만 등 동아시아에서 특히 발달했다. 이번 대회에서는 남자 단식·단체, 여자 단식·단체, 혼합복식 등 5개 종목의 금메달을 놓고 9월 18일부터 23일까지 나고야 히가시야마공원 테니스센터에서 경기가 열린다.</p>
-    <p>스쿼시는 사방이 벽으로 막힌 좁은 코트 안에서 공을 벽에 맞혀 랠리를 이어가는 종목으로, 순간적인 방향 전환과 체력 소모가 매우 큰 것이 특징이다.</p>
-  </section>
+      <h2 id="softtennis">소프트테니스</h2>
 
-  <h2 class="sub">세부 종목</h2>
-  <div class="cardgrid">
-    <div class="disc">
-      <h3>소프트테니스</h3>
-      <span class="en">Soft Tennis</span>
-      <p>연식구와 전용 라켓을 사용하는 동아시아 발상 종목. 한국이 전통적인 강세를 보인다. 남자 단식·단체, 여자 단식·단체, 혼합복식 5개 종목이 나고야 히가시야마공원 테니스센터에서 9/18~23 열린다.</p>
-    </div>
-    <div class="disc">
-      <h3>스쿼시</h3>
-      <span class="en">Squash</span>
-      <p>네 개의 벽을 활용해 랠리를 이어가는 실내 라켓 종목. 짧은 코트 안에서의 스피드와 지구력이 핵심이다.</p>
-    </div>
-  </div>
+      <h3>한국 대표팀</h3>
+      <p class="note">2026 아이치·나고야 아시안게임 소프트테니스(정구) 대표팀, 총 10명.</p>
+      <table class="wt">
+        <tr><th>선수</th></tr>
+        <tr><td>김연화</td></tr>
+        <tr><td>김진웅</td></tr>
+        <tr><td>김한설</td></tr>
+        <tr><td>김현수</td></tr>
+        <tr><td>박재규</td></tr>
+        <tr><td>엄예진</td></tr>
+        <tr><td>이수진</td></tr>
+        <tr><td>이하늘</td></tr>
+        <tr><td>이현권</td></tr>
+        <tr><td>황정미</td></tr>
+      </table>
 
-  <!-- 한국 국가대표 명단 -->
-  <h2 class="sub">2026 한국 소프트테니스 국가대표 명단</h2>
-  <p class="sub-note">2026 아이치·나고야 아시안게임 소프트테니스(정구) 대표팀, 총 10명.</p>
-  <div class="roster-team">
-    <h4>소프트테니스 대표팀</h4>
-    <div class="roster-chips">
-      <span>김연화</span><span>김진웅</span><span>김한설</span><span>김현수</span><span>박재규</span>
-      <span>엄예진</span><span>이수진</span><span>이하늘</span><span>이현권</span><span>황정미</span>
-    </div>
-  </div>
-
-  <!-- 주목할 선수 -->
-  <div class="spotlight-grid">
-    <div class="athlete-spotlight">
-      <span class="as-tag">Men's Singles · 전설의 귀환</span>
-      <h3>김진웅</h3>
+      <h4>김진웅 — 남자 단식, 전설의 귀환</h4>
       <p>소프트테니스 최초로 세계선수권 단식 2연패(2015 뉴델리, 2019 타이저우)를 달성한 한국 정구의 살아있는 전설. 2018 자카르타-팔렘방 아시안게임에서는 병역 문제가 걸린 절박한 상황에서 극적으로 단식 금메달을 따내며 화제를 모았고, 이어 남자단체전까지 2관왕에 올랐다.</p>
       <p>2024 안성 세계선수권을 끝으로 대표팀을 떠났다가 2년 만에 복귀. 2026년 국가대표 선발전 남자 단식 결승에서 김우식(서울시청)을 4-2, 4-0으로 꺾고 태극마크를 다시 달며 아이치·나고야에서 명예 회복을 노린다.</p>
-    </div>
-    <div class="athlete-spotlight">
-      <span class="as-tag">Women's Singles · 19세 신예</span>
-      <h3>황정미</h3>
+
+      <h4>황정미 — 여자 단식, 19세 신예</h4>
       <p>2026 국가대표 선발전 여자 단식 1위에 오른 19세 왼손 파워히터. 까다로운 커팅서브와 쇼트 활용까지 겸비한 다재다능한 스타일로 평가받는다.</p>
       <p>2년 전 세계주니어대회 18세 이하 결승에서 일본의 세계 최강 템마 레나에게 1-4로 패한 아픔이 있다. "템마 레나를 잡고 아시안게임 금메달을 따겠다"는 각오로 이번 대회를 준비하고 있다.</p>
+
+      <h3>역대 시상대</h3>
+      <p class="note">2022 항저우 아시안게임 소프트테니스 메달 결과.</p>
+      <table class="wt">
+        <tr><th>종목</th><th>금</th><th>은</th><th>동</th></tr>
+        <tr><td>남자 단식</td><td>일본 우에마쓰 도시키</td><td>차이니스 타이베이 장위성</td><td>한국 윤형욱 · 차이니스 타이베이 천위쉰</td></tr>
+        <tr><td>남자 단체전</td><td>일본</td><td>차이니스 타이베이</td><td>인도네시아 · 한국 (김병국·김현수·김태민·이현수·윤형욱)</td></tr>
+        <tr><td>여자 단식</td><td>한국 문혜경</td><td>일본 다카하시 노아</td><td>중국 리덩린 · 마웨</td></tr>
+        <tr><td>여자 단체전</td><td>일본</td><td>차이니스 타이베이</td><td>한국 (지다영·고은지·이민선·임진아·문혜경) · 중국</td></tr>
+        <tr><td>혼합 복식</td><td>일본 우에마쓰 도시키·다카하시 노아</td><td>일본 우치다 리쿠·시무타 도모미</td><td>차이니스 타이베이 · 한국 (김현수·문혜경)</td></tr>
+      </table>
+      <p class="note">문혜경은 2022 대회 여자 단식 금메달리스트로, 여자 단체전·혼합복식에서도 동메달을 보태며 대회 최다 메달을 획득했다.</p>
+
+      <h2 id="squash">스쿼시</h2>
+      <p>스쿼시는 네 개의 벽을 활용해 랠리를 이어가는 실내 라켓 종목으로, 짧은 코트 안에서의 스피드와 지구력이 핵심이다. 아직 한국 대표팀 명단 등 세부 정보는 확정되지 않았다.</p>
+
+      <div class="footer">
+        출처: 편집부 취재 및 자체 정리 — 소프트테니스 대표팀 명단·주목할 선수·역대 성적은 대한정구협회 발표 및 대회 기록 기준. 스쿼시는 세부 정보가 확정되는 대로 업데이트될 예정이다.
+      </div>
     </div>
+    <aside class="infobox">
+      <div class="ib-title">소프트테니스 / 스쿼시 종목 정보</div>
+      <table>
+        <tr><th>영문명</th><td>Soft Tennis / Squash</td></tr>
+        <tr><th>소프트테니스 기간</th><td>9월 18일 ~ 9월 23일</td></tr>
+        <tr><th>소프트테니스 경기장</th><td>나고야 히가시야마공원 테니스센터</td></tr>
+        <tr><th>소프트테니스 세부종목</th><td>5개 (남자·여자 단식·단체, 혼합복식)</td></tr>
+        <tr><th>스쿼시 특징</th><td>사방이 막힌 코트에서 진행</td></tr>
+        <tr><th>관련 문서</th><td><a href="index2.html">아시안게임 종목 안내</a></td></tr>
+      </table>
+    </aside>
   </div>
-
-  <!-- 역대 시상대 -->
-  <h2 class="sub">역대 시상대</h2>
-  <p class="sub-note">2022 항저우 아시안게임 소프트테니스 메달 결과.</p>
-  <div class="medal-compact">
-    <div class="mc-row"><div class="mc-event">남자 단식</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>일본 우에마쓰 도시키</span>
-      <span class="mc-item"><i class="mc-dot silver"></i>차이니스 타이베이 장위성</span>
-      <span class="mc-item kr"><i class="mc-dot bronze"></i>한국 윤형욱 · 차이니스 타이베이 천위쉰</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">남자 단체전</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>일본</span>
-      <span class="mc-item"><i class="mc-dot silver"></i>차이니스 타이베이</span>
-      <span class="mc-item kr"><i class="mc-dot bronze"></i>인도네시아 · 한국 (김병국·김현수·김태민·이현수·윤형욱)</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">여자 단식</div><div class="mc-meds">
-      <span class="mc-item kr"><i class="mc-dot gold"></i>한국 문혜경</span>
-      <span class="mc-item"><i class="mc-dot silver"></i>일본 다카하시 노아</span>
-      <span class="mc-item"><i class="mc-dot bronze"></i>중국 리덩린 · 마웨</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">여자 단체전</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>일본</span>
-      <span class="mc-item"><i class="mc-dot silver"></i>차이니스 타이베이</span>
-      <span class="mc-item kr"><i class="mc-dot bronze"></i>한국 (지다영·고은지·이민선·임진아·문혜경) · 중국</span>
-    </div></div>
-    <div class="mc-row"><div class="mc-event">혼합 복식</div><div class="mc-meds">
-      <span class="mc-item"><i class="mc-dot gold"></i>일본 우에마쓰 도시키·다카하시 노아</span>
-      <span class="mc-item"><i class="mc-dot silver"></i>일본 우치다 리쿠·시무타 도모미</span>
-      <span class="mc-item kr"><i class="mc-dot bronze"></i>차이니스 타이베이 · 한국 (김현수·문혜경)</span>
-    </div></div>
-  </div>
-  <p class="sub-note" style="margin-top:8px;">문혜경은 2022 대회 여자 단식 금메달리스트로, 여자 단체전·혼합복식에서도 동메달을 보태며 대회 최다 메달을 획득했다.</p>
-
-  <footer class="pagefoot">
-    <span>2026 아이치·나고야 아시안게임 종목 안내</span>
-    <a href="index.html">← 전체 종목 목록 보기</a>
-  </footer>
 </div>
 </body>
 </html>

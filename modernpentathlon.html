@@ -3,250 +3,187 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>근대5종 | 2026 아이치·나고야 아시안게임</title>
+<title>근대5종 - 2026 아이치·나고야 아시안게임</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#0E1A2B; --ink-2:#152540; --gold:#C9A24B; --gold-soft:#E4CD8C;
-    --sun:#D8482F; --paper:#F3EFE4; --paper-dim:#B9C2CF; --line:rgba(201,162,75,0.28);
+    --bg:#ffffff; --panel:#f8f9fa; --border:#c8ccd1; --border-soft:#eaecf0;
+    --ink:#202122; --muted:#54595d; --link:#3366cc; --link-visited:#795cb2; --link-red:#ba0000;
+    --serif:'Noto Serif KR',Georgia,'Times New Roman',serif;
+    --sans:'Pretendard','Helvetica Neue',Arial,sans-serif;
+    --accent:#2456c6; --ok:#1a7f37; --warn:#b45309; --gold:#a05a00;
   }
   *{box-sizing:border-box;}
-  body{
-    margin:0; color:var(--paper); font-family:'Pretendard','Noto Sans KR',sans-serif;
-    background:
-      radial-gradient(1100px 550px at 90% -10%, rgba(216,72,47,0.16), transparent 60%),
-      radial-gradient(900px 500px at -10% 110%, rgba(201,162,75,0.10), transparent 60%),
-      var(--ink);
-    -webkit-font-smoothing:antialiased;
-  }
-  .wrap{max-width:880px;margin:0 auto;padding:40px 28px 100px;}
-  nav.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;}
-  .back{color:var(--gold-soft);text-decoration:none;font-size:13.5px;font-weight:600;display:inline-flex;align-items:center;gap:6px;}
-  .back:hover{color:var(--gold);}
-  .back svg{width:14px;height:14px;}
-  .crumb{font-size:12px;color:var(--paper-dim);letter-spacing:0.02em;}
-  header.hero{padding-bottom:32px;margin-bottom:32px;border-bottom:1px solid var(--line);}
-  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;letter-spacing:0.16em;color:var(--gold-soft);text-transform:uppercase;font-weight:600;margin-bottom:16px;}
-  .eyebrow::before{content:"";width:22px;height:1px;background:var(--gold);display:inline-block;}
-  h1{font-family:'Noto Serif KR',serif;font-weight:900;font-size:clamp(30px,5vw,46px);line-height:1.2;margin:0 0 6px;color:var(--paper);letter-spacing:-0.01em;}
-  .en-title{font-size:14px;color:var(--paper-dim);letter-spacing:0.04em;margin:0 0 18px;font-style:italic;}
-  .tagline{font-size:16.5px;color:var(--paper-dim);line-height:1.75;max-width:640px;margin:0;}
-  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:28px 0 8px;}
-  .fact{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:14px 16px;}
-  .fact span{display:block;font-size:11px;color:var(--gold-soft);letter-spacing:0.05em;margin-bottom:6px;}
-  .fact b{font-family:'Noto Serif KR',serif;font-size:15px;color:var(--paper);font-weight:700;line-height:1.4;}
-  section.body{margin-top:8px;}
-  section.body p{font-size:15.5px;line-height:1.85;color:var(--paper-dim);margin:0 0 16px;}
-  h2.sub{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:42px 0 18px;font-weight:700;}
-  h2.sub small{display:block;font-family:'Pretendard',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.12em;color:var(--gold-soft);text-transform:uppercase;margin-bottom:7px;}
-  .lede{font-size:15px;line-height:1.8;color:var(--paper-dim);margin:0 0 18px;}
-  .tblcap{font-family:'Noto Serif KR',serif;font-size:14px;color:var(--paper);font-weight:700;margin:28px 0 10px;display:flex;align-items:center;gap:9px;}
-  .tblcap::before{content:"";width:16px;height:1px;background:var(--gold);display:inline-block;}
-  .tblnote{font-size:11.5px;color:var(--paper-dim);opacity:0.75;margin:12px 0 0;line-height:1.65;}
-
-  .cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;}
-  .disc{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:20px;position:relative;}
-  .disc .ord{position:absolute;top:16px;right:18px;font-family:'Noto Serif KR',serif;font-size:26px;font-weight:900;color:rgba(201,162,75,0.22);line-height:1;}
-  .disc h3{font-family:'Noto Serif KR',serif;font-size:17px;margin:0 0 4px;color:var(--paper);}
-  .disc .en{font-size:11.5px;color:var(--gold-soft);letter-spacing:0.04em;margin-bottom:10px;display:block;}
-  .disc p{font-size:13.5px;line-height:1.7;color:var(--paper-dim);margin:0;}
-  .disc.newrule{border-color:rgba(216,72,47,0.45);background:rgba(216,72,47,0.07);}
-  .disc.newrule .ord{color:rgba(216,72,47,0.28);}
-  .tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:0.05em;color:var(--ink);background:var(--sun);border-radius:3px;padding:2px 6px;margin-top:10px;}
-
-  /* 랭킹 */
-  .rankwrap{overflow-x:auto;}
-  table.rk{width:100%;border-collapse:collapse;min-width:480px;}
-  table.rk th{font-size:11.5px;font-weight:600;color:var(--gold-soft);text-align:left;padding:0 0 9px;border-bottom:1px solid var(--line);letter-spacing:0.04em;}
-  table.rk td{padding:10px 0;font-size:13.5px;color:var(--paper-dim);border-bottom:1px dashed rgba(201,162,75,0.16);}
-  table.rk th+th,table.rk td+td{padding-left:16px;}
-  table.rk tr:last-child td{border-bottom:0;}
-  table.rk td.n{width:42px;font-family:'Noto Serif KR',serif;font-weight:700;color:var(--gold);text-align:right;}
-  table.rk td.c{color:var(--paper);font-weight:600;}
-  table.rk td.nat{width:96px;font-size:12.5px;}
-  table.rk td.pt{width:60px;text-align:right;font-size:12.5px;}
-  table.rk td.age{width:52px;text-align:right;font-size:12px;opacity:0.8;}
-  table.rk tr.kor td{background:rgba(201,162,75,0.09);}
-  table.rk tr.kor td.c,table.rk tr.kor td.nat{color:var(--gold-soft);}
-  table.rk tr.asia td.nat{color:var(--gold-soft);opacity:0.9;}
-  table.rk tr.gap td{border-bottom:1px solid var(--line);}
-
-  /* 일정 */
-  .sched{border-top:1px solid var(--line);}
-  .day{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:12px 0;border-bottom:1px solid rgba(201,162,75,0.16);align-items:baseline;}
-  .day .d{font-family:'Noto Serif KR',serif;font-size:14px;font-weight:700;color:var(--gold);}
-  .day .e{font-size:13.5px;line-height:1.65;color:var(--paper-dim);}
-  .day .e b{color:var(--paper);font-weight:600;}
-  .day.goal .d{color:var(--sun);}
-
-  /* 성적 */
-  .rec{display:grid;grid-template-columns:112px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line);}
-  .rec:first-of-type{border-top:1px solid var(--line);}
-  .rec .yr{font-family:'Noto Serif KR',serif;font-size:18px;font-weight:900;color:var(--gold);line-height:1.25;}
-  .rec .yr i{display:block;font-style:normal;font-family:'Pretendard',sans-serif;font-size:11px;font-weight:500;color:var(--paper-dim);margin-top:4px;}
-  .rec h3{font-family:'Noto Serif KR',serif;font-size:16px;margin:0 0 8px;color:var(--paper);font-weight:700;}
-  .rec p{font-size:14px;line-height:1.75;color:var(--paper-dim);margin:0;}
-  .chips{margin:0 0 10px;}
-  .chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;border:1px solid;margin:0 6px 6px 0;}
-  .chip::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;}
-  .chip.g{color:#EBD08F;border-color:rgba(201,162,75,0.45);background:rgba(201,162,75,0.10);}
-  .chip.s{color:#D3DAE4;border-color:rgba(211,218,228,0.26);background:rgba(211,218,228,0.06);}
-  .chip.b{color:#D9A87C;border-color:rgba(217,168,124,0.32);background:rgba(217,168,124,0.08);}
-
-  .note{margin-top:26px;border-left:3px solid var(--sun);background:rgba(216,72,47,0.08);border-radius:0 8px 8px 0;padding:18px 22px;}
-  .note h3{font-family:'Noto Serif KR',serif;font-size:16px;margin:0 0 8px;color:var(--paper);}
-  .note p{font-size:14.5px;line-height:1.8;color:var(--paper-dim);margin:0 0 10px;}
-  .note p:last-child{margin-bottom:0;}
-
-  footer.pagefoot{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
-  footer.pagefoot a{color:var(--gold-soft);text-decoration:none;}
-  @media (max-width:520px){
-    .wrap{padding:28px 18px 70px;}
-    .rec{grid-template-columns:1fr;gap:10px;}
-    .day{grid-template-columns:1fr;gap:4px;}
-  }
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.65;}
+  a{color:var(--link);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  a:visited{color:var(--link-visited);}
+  .topbar{border-bottom:1px solid var(--border);background:var(--panel);font-size:12.5px;color:var(--muted);}
+  .topbar .inner{max-width:1100px;margin:0 auto;padding:8px 20px;display:flex;gap:16px;flex-wrap:wrap;}
+  .topbar a{color:var(--link);}
+  .layout{max-width:1100px;margin:0 auto;padding:22px 20px 80px;}
+  h1.title{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.3;margin:0 0 2px;padding-bottom:6px;border-bottom:1px solid var(--border);}
+  .subtitle{color:var(--muted);font-size:13px;margin:0 0 18px;}
+  .hatnote{font-style:italic;color:var(--muted);background:var(--panel);border:1px solid var(--border-soft);padding:8px 14px;border-radius:2px;margin:0 0 20px;font-size:13.5px;}
+  .content{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;}
+  .main{flex:1 1 560px;min-width:0;}
+  h2{font-family:var(--serif);font-weight:600;font-size:22px;margin:26px 0 10px;padding-bottom:5px;border-bottom:1px solid var(--border-soft);scroll-margin-top:12px;}
+  h3{font-family:var(--serif);font-weight:600;font-size:17px;margin:20px 0 8px;}
+  h4{font-family:var(--sans);font-weight:700;font-size:14.5px;margin:16px 0 6px;color:#3a3f44;}
+  p{margin:0 0 12px;}
+  .toc{display:inline-block;background:var(--panel);border:1px solid var(--border);border-radius:2px;padding:12px 20px 12px 14px;margin:0 0 20px;font-size:14px;}
+  .toc-title{font-weight:700;text-align:center;font-size:13px;margin-bottom:6px;}
+  .toc ol{margin:0;padding-left:22px;}
+  .toc li{margin:3px 0;}
+  .infobox{flex:0 0 300px;background:var(--panel);border:1px solid var(--border);border-radius:2px;font-size:13px;align-self:flex-start;}
+  .infobox .ib-title{background:#eaecf0;font-family:var(--serif);font-weight:700;text-align:center;padding:10px 12px;font-size:15px;border-bottom:1px solid var(--border);}
+  .infobox table{width:100%;border-collapse:collapse;}
+  .infobox th,.infobox td{text-align:left;padding:7px 12px;vertical-align:top;border-bottom:1px solid var(--border-soft);}
+  .infobox th{width:38%;color:var(--muted);font-weight:600;}
+  .badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:2px;background:#e6f0ff;color:#2456c6;border:1px solid #b9d0f5;margin-left:6px;}
+  .badge.gold{background:#fff2e0;color:#a05a00;border-color:#f2d2a0;}
+  table.wt{border-collapse:collapse;width:100%;font-size:13.5px;margin:6px 0 16px;}
+  table.wt th,table.wt td{border:1px solid var(--border);padding:6px 10px;text-align:left;vertical-align:top;}
+  table.wt th{background:var(--panel);}
+  table.wt td.num, table.wt th.num{text-align:center;}
+  table.wt caption{font-size:12.5px;color:var(--muted);text-align:left;padding:2px 0 6px;}
+  .note{font-size:12.5px;color:var(--muted);margin:-8px 0 16px;}
+  .kr-box{background:#eef4ff;border:1px solid #c3d6f7;border-radius:3px;padding:14px 16px;margin:10px 0 18px;}
+  .kr-box h4{margin-top:0;color:#1e3a8a;}
+  .medals{display:inline-flex;gap:6px;margin:0 0 8px;flex-wrap:wrap;}
+  .medal{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;border:1px solid;}
+  .medal.g{color:#8a6d1a;border-color:#e4cd8c;background:#fdf6e3;}
+  .medal.s{color:#5b6168;border-color:#d5d9de;background:#f4f5f6;}
+  .medal.b{color:#8a5a30;border-color:#e0c3a3;background:#fbf1e6;}
+  .footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;}
+  @media (max-width:820px){.infobox{flex:1 1 100%;order:-1;}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <nav class="top">
-    <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>전체 종목으로</a>
-    <span class="crumb">올림픽 · 무기·기술종목 / 근대5종</span>
-  </nav>
+<div class="topbar"><div class="inner">
+  <a href="index2.html">← 아시안게임 종목 목록</a>
+  <span>문서 · 근대5종</span>
+  <a href="index.html">전체 목차</a>
+</div></div>
+<div class="layout">
+  <h1 class="title">근대5종</h1>
+  <p class="subtitle">Modern Pentathlon · 2026 아이치·나고야 아시안게임 (제20회) · 올림픽 · 무기·기술종목</p>
+  <p class="hatnote">한 선수가 하루에 다섯 종목을 모두 소화하는 종합 경기. 100년 넘게 자리를 지키던 승마가 빠지고 장애물 경기가 들어선, 지금 가장 크게 바뀌고 있는 올림픽 종목이다.</p>
+  <div class="content">
+    <div class="main">
+      <div class="toc">
+        <div class="toc-title">목차</div>
+        <ol>
+          <li><a href="#overview">개요</a></li>
+          <li><a href="#disciplines">세부종목</a></li>
+          <li><a href="#ranking">세계랭킹</a></li>
+          <li><a href="#form">최근 성적</a></li>
+          <li><a href="#rivals">경계할 상대</a></li>
+          <li><a href="#watch">관전 포인트</a></li>
+        </ol>
+      </div>
 
-  <header class="hero">
-    <span class="eyebrow">2026 Aichi · Nagoya · 올림픽 · 무기·기술종목</span>
-    <h1>근대5종</h1>
-    <p class="en-title">Modern Pentathlon</p>
-    <p class="tagline">한 선수가 하루에 다섯 종목을 모두 소화하는 종합 경기. 100년 넘게 자리를 지키던 승마가 빠지고 장애물 경기가 들어선, 지금 가장 크게 바뀌고 있는 올림픽 종목이다.</p>
-  </header>
+      <h2 id="overview">개요</h2>
+      <p>근대5종은 근대 올림픽을 창시한 쿠베르탱이 고안한 종목이다. 전령 장교가 임무를 수행하며 마주칠 상황을 상정해 펜싱·수영·승마·사격·달리기를 하나로 묶었다. 한 선수가 성격이 전혀 다른 다섯 가지를 모두 해내야 하므로, 어느 하나를 특출나게 잘하는 것보다 어디에서도 무너지지 않는 균형이 성적을 만든다.</p>
+      <p>그 구성이 지금 바뀌는 중이다. 종목의 상징이던 승마가 빠지고 장애물 경기가 그 자리를 대신하게 됐다. 2026년부터는 수영 거리가 절반으로 줄고 레이저런의 사격 횟수가 늘어나는 등 세부 규정도 함께 손질됐다. 이번 아시안게임은 그 새 포맷으로 치러지는 첫 대륙 종합대회로, 9월 16일부터 20일까지 아이치현 안조시 안조스포츠파크에서 남자 개인전과 여자 개인전, 두 개 종목만으로 치러진다.</p>
+      <p>한국에게는 놓칠 수 없는 종목이다. 항저우에서 남자 개인·단체 금메달을 포함해 다섯 개의 메달을 가져왔고, 파리 올림픽에서는 성승민이 여자 개인 동메달을 따냈다. 현재 세계랭킹에서도 여자 2위와 남자 6위를 한국 선수가 차지하고 있다.</p>
 
-  <div class="facts">
-    <div class="fact"><span>구성</span><b>펜싱 · 수영 · 장애물 · 레이저런</b></div>
-    <div class="fact"><span>2026 변경</span><b>수영 100m · 사격 5회</b></div>
-    <div class="fact"><span>메달 종목</span><b>남자 개인 · 여자 개인 (2개, 단체전 없음)</b></div>
-    <div class="fact"><span>경기 일정</span><b>9월 16일 ~ 20일 · 안조스포츠파크</b></div>
-    <div class="fact"><span>2022 항저우</span><b>금 2 · 은 2 · 동 1</b></div>
-    <div class="fact"><span>세계랭킹</span><b>성승민 여자 2위 · 서창완 남자 6위</b></div>
-  </div>
+      <h2 id="disciplines">세부종목</h2>
+      <table class="wt">
+        <tr><th>순서</th><th>종목</th><th>영문명</th><th>설명</th><th>2026 변경</th></tr>
+        <tr><td class="num">01</td><td>펜싱</td><td>Fencing · Épée</td><td>에페로 출전 선수 전원과 한 번씩 맞붙는 라운드로빈. 한 판은 1분, 먼저 한 번 찌르면 이긴다. 승률이 그대로 점수가 된다.</td><td class="num">—</td></tr>
+        <tr><td class="num">02</td><td>수영</td><td>Swimming · Freestyle</td><td>자유형. 지구력보다 순간 스피드의 비중이 커졌고, 종목 간 실력 차가 벌어질 여지도 좁아졌다.</td><td class="num">200m → 100m</td></tr>
+        <tr><td class="num">03</td><td>장애물</td><td>Obstacle</td><td>승마를 대체해 들어온 종목. 벽·로프·행잉 구조물이 이어지는 코스를 최단 시간에 통과한다. 말을 추첨으로 배정받던 운의 요소가 사라지고 순수한 신체 능력 싸움이 됐다.</td><td class="num">승마 대체</td></tr>
+        <tr><td class="num">04</td><td>레이저런</td><td>Laser Run</td><td>레이저 사격과 달리기를 번갈아 반복하는 마지막 종목. 출발도 달리기가 아니라 사격으로 시작한다. 앞선 종목 점수차만큼 시차를 두고 출발해, 결승선 통과 순서가 곧 최종 순위다.</td><td class="num">사격 4회 → 5회</td></tr>
+      </table>
+      <p class="note">사격과 달리기가 레이저런 하나로 합쳐져 있어 경기는 네 파트로 진행되지만, 채점상으로는 다섯 종목이다.</p>
 
-  <section class="body">
-    <p>근대5종은 근대 올림픽을 창시한 쿠베르탱이 고안한 종목이다. 전령 장교가 임무를 수행하며 마주칠 상황을 상정해 펜싱·수영·승마·사격·달리기를 하나로 묶었다. 한 선수가 성격이 전혀 다른 다섯 가지를 모두 해내야 하므로, 어느 하나를 특출나게 잘하는 것보다 어디에서도 무너지지 않는 균형이 성적을 만든다.</p>
-    <p>그 구성이 지금 바뀌는 중이다. 종목의 상징이던 승마가 빠지고 장애물 경기가 그 자리를 대신하게 됐다. 2026년부터는 수영 거리가 절반으로 줄고 레이저런의 사격 횟수가 늘어나는 등 세부 규정도 함께 손질됐다. 이번 아시안게임은 그 새 포맷으로 치러지는 첫 대륙 종합대회로, 9월 16일부터 20일까지 아이치현 안조시 안조스포츠파크에서 남자 개인전과 여자 개인전, 두 개 종목만으로 치러진다.</p>
-    <p>한국에게는 놓칠 수 없는 종목이다. 항저우에서 남자 개인·단체 금메달을 포함해 다섯 개의 메달을 가져왔고, 파리 올림픽에서는 성승민이 여자 개인 동메달을 따냈다. 현재 세계랭킹에서도 여자 2위와 남자 6위를 한국 선수가 차지하고 있다.</p>
-  </section>
+      <h2 id="ranking">세계랭킹</h2>
+      <p>세계 1~3위와, 그 아래 순위에 든 아시아 선수를 함께 정리했다. 나이는 2026년 8월 1일 기준.</p>
+      <h3>여자</h3>
+      <table class="wt">
+        <tr><th>순위</th><th>선수</th><th>국가</th><th>점수</th><th>나이</th></tr>
+        <tr><td class="num">1</td><td>블랑카 구지</td><td>헝가리</td><td class="num">201</td><td class="num">27세</td></tr>
+        <tr><td class="num">2</td><td><b>성승민</b></td><td><b>한국</b></td><td class="num">183</td><td class="num">23세</td></tr>
+        <tr><td class="num">3</td><td>라우라 에레디아</td><td>스페인</td><td class="num">177</td><td class="num">26세</td></tr>
+        <tr><td class="num">13</td><td>우시야오</td><td>중국</td><td class="num">116</td><td class="num">19세</td></tr>
+      </table>
+      <p class="note">세계 톱15에 든 아시아 선수는 성승민과 우시야오 둘뿐이다. 2위와 13위 사이에 아시아 선수가 없다는 것은, 아시안게임 여자부에서 성승민의 위치가 그만큼 확고하다는 뜻이기도 하다.</p>
 
-  <h2 class="sub"><small>Disciplines</small>하루에 치르는 다섯 종목</h2>
-  <div class="cardgrid">
-    <div class="disc">
-      <span class="ord">01</span>
-      <h3>펜싱</h3>
-      <span class="en">Fencing · Épée</span>
-      <p>에페로 출전 선수 전원과 한 번씩 맞붙는 라운드로빈. 한 판은 1분, 먼저 한 번 찌르면 이긴다. 승률이 그대로 점수가 된다.</p>
-    </div>
-    <div class="disc newrule">
-      <span class="ord">02</span>
-      <h3>수영</h3>
-      <span class="en">Swimming · Freestyle</span>
-      <p>자유형. 2026년부터 거리가 200m에서 100m로 절반 줄었다. 지구력보다 순간 스피드의 비중이 커졌고, 종목 간 실력 차가 벌어질 여지도 좁아졌다.</p>
-      <span class="tag">200m → 100m</span>
-    </div>
-    <div class="disc newrule">
-      <span class="ord">03</span>
-      <h3>장애물</h3>
-      <span class="en">Obstacle</span>
-      <p>승마를 대체해 들어온 종목. 벽·로프·행잉 구조물이 이어지는 코스를 최단 시간에 통과한다. 말을 추첨으로 배정받던 운의 요소가 사라지고 순수한 신체 능력 싸움이 됐다.</p>
-      <span class="tag">승마 대체</span>
-    </div>
-    <div class="disc newrule">
-      <span class="ord">04</span>
-      <h3>레이저런</h3>
-      <span class="en">Laser Run</span>
-      <p>레이저 사격과 달리기를 번갈아 반복하는 마지막 종목. 2026년부터 사격대 방문이 4회에서 5회로 늘었고, 출발도 달리기가 아니라 사격으로 시작한다. 앞선 종목 점수차만큼 시차를 두고 출발해, 결승선 통과 순서가 곧 최종 순위다.</p>
-      <span class="tag">사격 4회 → 5회</span>
-    </div>
-  </div>
-  <p class="tblnote">사격과 달리기가 레이저런 하나로 합쳐져 있어 경기는 네 파트로 진행되지만, 채점상으로는 다섯 종목이다.</p>
+      <h3>남자</h3>
+      <table class="wt">
+        <tr><th>순위</th><th>선수</th><th>국가</th><th>점수</th><th>나이</th></tr>
+        <tr><td class="num">1</td><td>마테이 루케시</td><td>체코</td><td class="num">200</td><td class="num">24세</td></tr>
+        <tr><td class="num">2</td><td>마티스 로샤</td><td>프랑스</td><td class="num">181</td><td class="num">24세</td></tr>
+        <tr><td class="num">3</td><td>무타즈 모하메드</td><td>이집트</td><td class="num">179</td><td class="num">21세</td></tr>
+        <tr><td class="num">6</td><td><b>서창완</b></td><td><b>한국</b></td><td class="num">152</td><td class="num">29세</td></tr>
+        <tr><td class="num">11</td><td>리류창</td><td>중국</td><td class="num">139</td><td class="num">—</td></tr>
+      </table>
+      <p class="note">남자부 상위권은 체코·프랑스·이집트가 주도하고 있으며, 톱15의 아시아 선수는 서창완과 리류창뿐이다. 항저우 2관왕 전웅태는 현재 톱15 밖이지만 올 시즌 월드컵에서 시상대에 올랐다.</p>
 
-  <h2 class="sub"><small>World Ranking</small>UIPM 세계랭킹</h2>
-  <p class="lede">세계 1~3위와, 그 아래 순위에 든 아시아 선수를 함께 정리했다.</p>
+      <h2 id="form">최근 성적</h2>
+      <p>2026시즌 주요 일정은 다음과 같다.</p>
+      <table class="wt">
+        <tr><th>일정</th><th>대회</th><th>내용</th></tr>
+        <tr><td>4월 8~12일</td><td>월드컵 카이로</td><td>새 포맷이 처음 적용된 개막전</td></tr>
+        <tr><td>6월 8~13일</td><td>월드컵 부다페스트</td><td>오마르 아메르 우승, 전웅태와 서창완이 나란히 시상대</td></tr>
+        <tr><td>7월 22~29일</td><td>세계주니어선수권</td><td>리투아니아 카우나스</td></tr>
+        <tr><td>8월 24일 ~</td><td>세계선수권</td><td>중국 구이양</td></tr>
+      </table>
+      <p class="note">세계선수권이 8월 하순 중국 구이양에서 열린다. 아시안게임 개막 직전이라, 이 대회 결과가 나고야 판세를 가늠할 마지막 지표가 된다.</p>
 
-  <p class="tblcap">여자</p>
-  <div class="rankwrap">
-    <table class="rk">
-      <tr><th>순위</th><th>선수</th><th>국가</th><th>점수</th><th>나이</th></tr>
-      <tr><td class="n">1</td><td class="c">블랑카 구지</td><td class="nat">헝가리</td><td class="pt">201</td><td class="age">27세</td></tr>
-      <tr class="kor"><td class="n">2</td><td class="c">성승민</td><td class="nat">한국</td><td class="pt">183</td><td class="age">23세</td></tr>
-      <tr class="gap"><td class="n">3</td><td class="c">라우라 에레디아</td><td class="nat">스페인</td><td class="pt">177</td><td class="age">26세</td></tr>
-      <tr class="asia"><td class="n">13</td><td class="c">우시야오</td><td class="nat">중국</td><td class="pt">116</td><td class="age">19세</td></tr>
-    </table>
-  </div>
-  <p class="tblnote">세계 톱15에 든 아시아 선수는 성승민과 우시야오 둘뿐이다. 2위와 13위 사이에 아시아 선수가 없다는 것은, 아시안게임 여자부에서 성승민의 위치가 그만큼 확고하다는 뜻이기도 하다.</p>
-
-  <p class="tblcap">남자</p>
-  <div class="rankwrap">
-    <table class="rk">
-      <tr><th>순위</th><th>선수</th><th>국가</th><th>점수</th><th>나이</th></tr>
-      <tr><td class="n">1</td><td class="c">마테이 루케시</td><td class="nat">체코</td><td class="pt">200</td><td class="age">24세</td></tr>
-      <tr><td class="n">2</td><td class="c">마티스 로샤</td><td class="nat">프랑스</td><td class="pt">181</td><td class="age">24세</td></tr>
-      <tr class="gap"><td class="n">3</td><td class="c">무타즈 모하메드</td><td class="nat">이집트</td><td class="pt">179</td><td class="age">21세</td></tr>
-      <tr class="kor"><td class="n">6</td><td class="c">서창완</td><td class="nat">한국</td><td class="pt">152</td><td class="age">29세</td></tr>
-      <tr class="asia"><td class="n">11</td><td class="c">리류창</td><td class="nat">중국</td><td class="pt">139</td><td class="age">—</td></tr>
-    </table>
-  </div>
-  <p class="tblnote">나이는 2026년 8월 1일 기준. 남자부 상위권은 체코·프랑스·이집트가 주도하고 있으며, 톱15의 아시아 선수는 서창완과 리류창뿐이다. 항저우 2관왕 전웅태는 현재 톱15 밖이지만 올 시즌 월드컵에서 시상대에 올랐다.</p>
-
-  <h2 class="sub"><small>2026 Season</small>올 시즌 주요 일정</h2>
-  <div class="sched">
-    <div class="day"><span class="d">4월 8 ~ 12일</span><span class="e"><b>월드컵 카이로</b> · 새 포맷이 처음 적용된 개막전</span></div>
-    <div class="day"><span class="d">6월 8 ~ 13일</span><span class="e"><b>월드컵 부다페스트</b> · 오마르 아메르 우승, <b>전웅태와 서창완이 나란히 시상대</b></span></div>
-    <div class="day"><span class="d">7월 22 ~ 29일</span><span class="e">세계주니어선수권 · 리투아니아 카우나스</span></div>
-    <div class="day goal"><span class="d">8월 24일 ~</span><span class="e"><b>세계선수권 · 중국 구이양</b></span></div>
-  </div>
-  <p class="tblnote">세계선수권이 8월 하순 중국 구이양에서 열린다. 아시안게임 개막 직전이라, 이 대회 결과가 나고야 판세를 가늠할 마지막 지표가 된다.</p>
-
-  <h2 class="sub"><small>Form Guide</small>최근 성적</h2>
-
-  <div class="rec">
-    <div class="yr">2022<i>항저우 AG</i></div>
-    <div>
-      <div class="chips"><span class="chip g">금 2</span><span class="chip s">은 2</span><span class="chip b">동 1</span></div>
-      <h3>남자는 시상대를 점령하고, 여자는 한 걸음 뒤에</h3>
+      <h3>2022 항저우 아시안게임 — 남자는 시상대를 점령하고, 여자는 한 걸음 뒤에</h3>
+      <p class="medals"><span class="medal g">금 2</span><span class="medal s">은 2</span><span class="medal b">동 1</span></p>
       <p>남자 개인전에서 전웅태가 금메달, 이지훈이 은메달을 따내며 1·2위를 독식했고 전웅태·정진화·이지훈이 나선 단체전도 우승했다. 여자부는 개인전 금메달을 중국의 장밍위가 가져갔고 김선우가 은메달, 단체전은 중국·일본에 이어 한국이 동메달이었다. 당시 여자 단체 동메달 멤버 중 한 명이 성승민이다.</p>
-    </div>
-  </div>
 
-  <div class="rec">
-    <div class="yr">2024<i>파리 올림픽</i></div>
-    <div>
-      <div class="chips"><span class="chip b">성승민 동메달</span></div>
-      <h3>승마가 마지막으로 치러진 올림픽</h3>
+      <h3>2024 파리 올림픽 — 승마가 마지막으로 치러진 올림픽</h3>
+      <p class="medals"><span class="medal b">성승민 동메달</span></p>
       <p>여자부에서 성승민이 동메달을 따냈다. 금메달은 헝가리의 미셸 굴리아시, 은메달은 프랑스의 엘로디 클루벨이었다. 남자부는 이집트의 아메드 엘겐디가 우승했고 일본의 사토 다이슈가 은메달, 이탈리아의 조르조 말란이 동메달을 가져갔다. 아시아 선수가 남녀 모두 시상대에 오른 대회였다.</p>
-    </div>
-  </div>
 
-  <div class="rec">
-    <div class="yr">2026<i>월드컵 부다페스트</i></div>
-    <div>
-      <div class="chips"><span class="chip">한국 선수 2명 입상</span></div>
-      <h3>새 포맷에서도 통했다</h3>
+      <h3>2026 월드컵 부다페스트 — 새 포맷에서도 통했다</h3>
+      <p class="medals"><span class="medal">한국 선수 2명 입상</span></p>
       <p>6월 부다페스트 대회에서 우승은 이집트의 오마르 아메르가 차지했고, 전웅태와 서창완이 시상대에 함께 올랐다. 수영이 100m로 줄고 사격 횟수가 늘어난 새 규정이 한국 선수들에게 불리하지 않다는 신호로 읽힌다.</p>
+
+      <h2 id="rivals">경계할 상대</h2>
+      <h4>헝가리 <span style="font-weight:400;color:var(--muted);">Hungary</span></h4>
+      <p>여자 세계랭킹 1위 블랑카 구지(201점, 27세)가 버티고 있어 여자부 개인전 최대 경쟁자다.</p>
+      <h4>체코 · 프랑스 <span style="font-weight:400;color:var(--muted);">Czech Republic · France</span></h4>
+      <p>남자 세계랭킹 1위 마테이 루케시(체코, 200점)와 2위 마티스 로샤(프랑스, 181점)가 나란히 상위권을 지키고 있어 남자부 정상 경쟁의 중심에 있다.</p>
+      <h4>이집트 <span style="font-weight:400;color:var(--muted);">Egypt</span></h4>
+      <p>남자 세계랭킹 3위 무타즈 모하메드(179점)에 더해, 6월 부다페스트 월드컵에서는 오마르 아메르가 우승하며 저력을 보였다.</p>
+      <h4>중국 <span style="font-weight:400;color:var(--muted);">China</span></h4>
+      <p>세계 톱15에 이름을 올린 유일한 아시아권 경쟁자. 여자부 우시야오(13위)와 남자부 리류창(11위)이 각각 성승민·서창완을 추격하는 위치에 있다.</p>
+
+      <h2 id="watch">관전 포인트</h2>
+      <div class="kr-box">
+        <p><b>성승민이 세계 2위 자격으로 아시안게임에 나선다.</b> 항저우에서는 여자 단체 동메달 멤버였고, 파리에서 개인 동메달을 따낸 뒤 세계랭킹 2위까지 올라왔다. 세계 톱15에 든 다른 아시아 선수는 중국의 19세 우시야오(13위) 한 명뿐이라, 개인전 금메달에 가장 가까이 있는 선수다.</p>
+        <p><b>남자부는 서창완과 전웅태의 조합이 관건이다.</b> 서창완이 세계 6위로 팀 내 최상위이고, 항저우 2관왕 전웅태는 랭킹은 내려갔지만 6월 부다페스트 월드컵에서 시상대에 올랐다. 이번 대회에는 항저우 때와 달리 단체전이 없어 개인전 성적으로만 승부가 갈리는 만큼, 둘 중 누가 먼저 치고 나가느냐가 한국 남자부의 최대 관심사다.</p>
+        <p><b>새 포맷이 판을 어떻게 흔들지가 최대 변수다.</b> 승마가 사라지면서 말 배정 운이라는 요소가 없어졌고, 수영은 100m로 짧아져 격차가 줄었다. 대신 장애물이라는 완전히 새로운 종목이 들어왔다. 기존 강자에게 불리할 수도, 유리할 수도 있는 변화라 8월 구이양 세계선수권 결과를 지켜볼 필요가 있다.</p>
+      </div>
+
+      <div class="footer">
+        출처: UIPM(국제근대5종연맹) 세계랭킹·대회 결과, 그 외 한국 선수 성적·전망은 편집부 취재 및 자체 정리.<br>
+        일정과 세부 사항은 대회 진행에 따라 변경될 수 있다.
+      </div>
     </div>
+    <aside class="infobox">
+      <div class="ib-title">근대5종 종목 정보</div>
+      <table>
+        <tr><th>영문명</th><td>Modern Pentathlon</td></tr>
+        <tr><th>구성</th><td>펜싱 · 수영 · 장애물 · 레이저런</td></tr>
+        <tr><th>2026 변경</th><td>수영 100m · 사격 5회</td></tr>
+        <tr><th>메달 종목</th><td>남자 개인 · 여자 개인 (2개, 단체전 없음)</td></tr>
+        <tr><th>경기 기간</th><td>9월 16일 ~ 20일</td></tr>
+        <tr><th>경기장</th><td>안조스포츠파크</td></tr>
+        <tr><th>2022 항저우 성적</th><td>금2·은2·동1<span class="badge gold">2위권</span></td></tr>
+        <tr><th>세계랭킹</th><td>성승민 여자 2위 · 서창완 남자 6위</td></tr>
+        <tr><th>관련 문서</th><td><a href="index2.html">아시안게임 종목 안내</a></td></tr>
+      </table>
+    </aside>
   </div>
-
-  <div class="note">
-    <h3>관전 포인트</h3>
-    <p><b>성승민이 세계 2위 자격으로 아시안게임에 나선다.</b> 항저우에서는 여자 단체 동메달 멤버였고, 파리에서 개인 동메달을 따낸 뒤 세계랭킹 2위까지 올라왔다. 세계 톱15에 든 다른 아시아 선수는 중국의 19세 우시야오(13위) 한 명뿐이라, 개인전 금메달에 가장 가까이 있는 선수다.</p>
-    <p><b>남자부는 서창완과 전웅태의 조합이 관건이다.</b> 서창완이 세계 6위로 팀 내 최상위이고, 항저우 2관왕 전웅태는 랭킹은 내려갔지만 6월 부다페스트 월드컵에서 시상대에 올랐다. 이번 대회에는 항저우 때와 달리 단체전이 없어 개인전 성적으로만 승부가 갈리는 만큼, 둘 중 누가 먼저 치고 나가느냐가 한국 남자부의 최대 관심사다.</p>
-    <p><b>새 포맷이 판을 어떻게 흔들지가 최대 변수다.</b> 승마가 사라지면서 말 배정 운이라는 요소가 없어졌고, 수영은 100m로 짧아져 격차가 줄었다. 대신 장애물이라는 완전히 새로운 종목이 들어왔다. 기존 강자에게 불리할 수도, 유리할 수도 있는 변화라 8월 구이양 세계선수권 결과를 지켜볼 필요가 있다.</p>
-  </div>
-
-  <footer class="pagefoot">
-    <span>2026 아이치·나고야 아시안게임 종목 안내</span>
-    <a href="index.html">← 전체 종목 목록 보기</a>
-  </footer>
 </div>
 </body>
 </html>

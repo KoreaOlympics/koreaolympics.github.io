@@ -3,480 +3,233 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>농구 / 3x3농구 | 2026 아이치·나고야 아시안게임</title>
+<title>농구 · 3x3농구 - 2026 아이치·나고야 아시안게임</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#0A1220; --ink-2:#111D33; --ink-3:#0D1826;
-    --gold:#E7B65B; --gold-soft:#F3DDA0; --gold-dim:rgba(231,182,91,0.30);
-    --sun:#FF7A52; --kr:#FFD166;
-    --paper:#F8F5EC; --paper-dim:#CBD4E1; --line:rgba(231,182,91,0.30);
-    --win:#5FCB93; --lose:#FF8A76; --draw:#AAB4C2;
+    --bg:#ffffff; --panel:#f8f9fa; --border:#c8ccd1; --border-soft:#eaecf0;
+    --ink:#202122; --muted:#54595d; --link:#3366cc; --link-visited:#795cb2; --link-red:#ba0000;
+    --serif:'Noto Serif KR',Georgia,'Times New Roman',serif;
+    --sans:'Pretendard','Helvetica Neue',Arial,sans-serif;
+    --accent:#2456c6; --ok:#1a7f37; --warn:#b45309; --gold:#a05a00;
   }
   *{box-sizing:border-box;}
-  body{
-    margin:0; color:var(--paper); font-family:'Pretendard','Noto Sans KR',sans-serif;
-    background:
-      radial-gradient(1100px 550px at 90% -10%, rgba(255,122,82,0.16), transparent 60%),
-      radial-gradient(900px 500px at -10% 110%, rgba(231,182,91,0.11), transparent 60%),
-      var(--ink);
-    -webkit-font-smoothing:antialiased;
-  }
-  .wrap{max-width:1080px;margin:0 auto;padding:36px 24px 90px;}
-  nav.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:32px;flex-wrap:wrap;gap:10px;}
-  .back{color:var(--gold-soft);text-decoration:none;font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:6px;}
-  .back:hover{color:var(--gold);}
-  .back svg{width:13px;height:13px;}
-  .crumb{font-size:12px;color:var(--paper-dim);}
-
-  header.pagehead{display:flex;align-items:baseline;gap:14px;padding-bottom:20px;margin-bottom:8px;border-bottom:1px solid var(--line);flex-wrap:wrap;}
-  .eyebrow{font-size:12px;letter-spacing:0.14em;color:var(--gold-soft);text-transform:uppercase;font-weight:700;}
-  h1.title{font-family:'Noto Serif KR',serif;font-weight:900;font-size:30px;margin:0;color:var(--paper);}
-
-  /* ===== Tabs ===== */
-  .tabbar{display:flex;gap:6px;margin:22px 0 30px;background:var(--ink-2);border:1px solid var(--line);border-radius:12px;padding:6px;}
-  .tabbtn{
-    flex:1; appearance:none; border:none; cursor:pointer; text-align:center;
-    padding:13px 14px; border-radius:8px; font-family:'Pretendard',sans-serif;
-    font-size:15px; font-weight:800; letter-spacing:0.01em;
-    color:var(--paper-dim); background:transparent; transition:all .15s ease;
-  }
-  .tabbtn .sub{display:block;font-size:11px;font-weight:600;letter-spacing:0.06em;margin-top:2px;opacity:0.8;text-transform:uppercase;}
-  .tabbtn.active{
-    color:var(--ink); background:linear-gradient(135deg,var(--gold-soft),var(--gold));
-    box-shadow:0 4px 14px rgba(231,182,91,0.28);
-  }
-  .tabbtn:not(.active):hover{color:var(--gold-soft); background:rgba(231,182,91,0.08);}
-  .tabpanel{display:none;}
-  .tabpanel.active{display:block;}
-
-  section.division{margin-bottom:44px;}
-  .div-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px;}
-  .div-head h2{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--paper);margin:0;font-weight:700;display:flex;align-items:center;gap:8px;}
-  .div-head h2 .dot{width:9px;height:9px;border-radius:50%;background:var(--sun);display:inline-block;}
-  .badge{font-size:11.5px;color:var(--ink);border:1px solid var(--gold);border-radius:100px;padding:4px 12px;background:var(--gold-soft);white-space:nowrap;font-weight:700;}
-
-  .cardgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-  @media (max-width:720px){.cardgrid{grid-template-columns:1fr;}}
-  .info-card{background:var(--ink-2);border:1px solid var(--line);border-radius:10px;padding:18px 20px;}
-  .info-card.full{grid-column:1/-1;}
-  .info-card h3{font-family:'Noto Serif KR',serif;font-size:13px;color:var(--gold-soft);letter-spacing:0.05em;margin:0 0 12px;text-transform:uppercase;font-weight:700;}
-
-  .poslist{font-size:13.5px;line-height:1.9;color:var(--paper);margin-bottom:6px;}
-  .note{font-size:12.5px;color:var(--paper-dim);margin-top:10px;line-height:1.75;border-top:1px dashed var(--line);padding-top:10px;}
-
-  p.txt{font-size:13.5px;line-height:1.9;color:var(--paper);margin:0 0 10px;}
-  p.txt:last-child{margin-bottom:0;}
-  p.txt.dim{color:var(--paper-dim);}
-
-  .kr{color:var(--kr);font-weight:800;}
-
-  /* Groups */
-  .grouprow{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
-  @media (max-width:640px){.grouprow{grid-template-columns:1fr;}}
-  .groupcol{background:var(--ink-3);border:1px solid var(--line);border-radius:8px;padding:12px 14px;}
-  .groupcol h4{margin:0 0 8px;font-size:12px;color:var(--gold-soft);letter-spacing:0.05em;font-weight:800;}
-  .groupcol ol{margin:0;padding-left:18px;}
-  .groupcol li{font-size:13px;line-height:2;color:var(--paper);}
-  .groupcol li.me{color:var(--kr);font-weight:800;}
-
-  /* Schedule list */
-  .sched{display:flex;flex-direction:column;gap:10px;}
-  .sched-item{display:flex;gap:14px;align-items:flex-start;background:var(--ink-3);border:1px solid var(--line);border-radius:8px;padding:12px 14px;}
-  .sched-date{min-width:92px;font-size:12px;color:var(--gold-soft);font-weight:800;line-height:1.5;}
-  .sched-date .t{display:block;font-size:11.5px;color:var(--paper-dim);font-weight:600;margin-top:2px;}
-  .sched-match{font-size:14px;color:var(--paper);font-weight:700;}
-  .sched-tag{display:inline-block;font-size:10.5px;color:var(--ink);background:var(--sun);border-radius:5px;padding:1px 7px;margin-left:8px;font-weight:800;vertical-align:middle;}
-
-  .results{display:flex;flex-direction:column;gap:8px;}
-  .rgroup{font-size:12px;color:var(--gold-soft);font-weight:800;margin-top:10px;}
-  .rgroup:first-child{margin-top:0;}
-  .rline{font-size:13px;line-height:1.8;color:var(--paper);}
-  .rline .w{color:var(--win);font-weight:800;}
-  .rline .l{color:var(--lose);font-weight:800;}
-  .rline .d{color:var(--draw);font-weight:800;}
-
-  /* Medal table */
-  .medaltable{width:100%;border-collapse:collapse;font-size:13px;margin-top:4px;}
-  .medaltable th{text-align:left;font-size:11px;color:var(--gold-soft);letter-spacing:0.04em;text-transform:uppercase;padding:6px 8px;border-bottom:1px solid var(--line);font-weight:700;}
-  .medaltable td{padding:8px 8px;border-bottom:1px solid rgba(255,255,255,0.06);color:var(--paper);vertical-align:top;}
-  .medaltable td.yr{color:var(--gold-soft);font-weight:800;white-space:nowrap;}
-  .medal{display:inline-block;width:16px;height:16px;border-radius:50%;font-size:9px;line-height:16px;text-align:center;font-weight:900;color:var(--ink);margin-right:6px;}
-  .medal.g{background:#E7B65B;}
-  .medal.s{background:#C7CDD6;}
-  .medal.b{background:#C98A55;}
-  .medaltable .kr-row{color:var(--kr);font-weight:800;}
-
-  .srclist{font-size:11px;color:var(--paper-dim);margin-top:6px;}
-  .srclist a{color:var(--gold-soft);text-decoration:none;}
-  .srclist a:hover{text-decoration:underline;}
-
-  footer.pagefoot{margin-top:50px;padding-top:20px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
-  footer.pagefoot a{color:var(--gold-soft);text-decoration:none;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.65;}
+  a{color:var(--link);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  a:visited{color:var(--link-visited);}
+  .topbar{border-bottom:1px solid var(--border);background:var(--panel);font-size:12.5px;color:var(--muted);}
+  .topbar .inner{max-width:1100px;margin:0 auto;padding:8px 20px;display:flex;gap:16px;flex-wrap:wrap;}
+  .topbar a{color:var(--link);}
+  .layout{max-width:1100px;margin:0 auto;padding:22px 20px 80px;}
+  h1.title{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.3;margin:0 0 2px;padding-bottom:6px;border-bottom:1px solid var(--border);}
+  .subtitle{color:var(--muted);font-size:13px;margin:0 0 18px;}
+  .hatnote{font-style:italic;color:var(--muted);background:var(--panel);border:1px solid var(--border-soft);padding:8px 14px;border-radius:2px;margin:0 0 20px;font-size:13.5px;}
+  .content{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;}
+  .main{flex:1 1 560px;min-width:0;}
+  h2{font-family:var(--serif);font-weight:600;font-size:22px;margin:26px 0 10px;padding-bottom:5px;border-bottom:1px solid var(--border-soft);scroll-margin-top:12px;}
+  h3{font-family:var(--serif);font-weight:600;font-size:17px;margin:20px 0 8px;}
+  h4{font-family:var(--sans);font-weight:700;font-size:14.5px;margin:16px 0 6px;color:#3a3f44;}
+  p{margin:0 0 12px;}
+  .toc{display:inline-block;background:var(--panel);border:1px solid var(--border);border-radius:2px;padding:12px 20px 12px 14px;margin:0 0 20px;font-size:14px;}
+  .toc-title{font-weight:700;text-align:center;font-size:13px;margin-bottom:6px;}
+  .toc ol{margin:0;padding-left:22px;}
+  .toc li{margin:3px 0;}
+  .infobox{flex:0 0 300px;background:var(--panel);border:1px solid var(--border);border-radius:2px;font-size:13px;align-self:flex-start;}
+  .infobox .ib-title{background:#eaecf0;font-family:var(--serif);font-weight:700;text-align:center;padding:10px 12px;font-size:15px;border-bottom:1px solid var(--border);}
+  .infobox table{width:100%;border-collapse:collapse;}
+  .infobox th,.infobox td{text-align:left;padding:7px 12px;vertical-align:top;border-bottom:1px solid var(--border-soft);}
+  .infobox th{width:38%;color:var(--muted);font-weight:600;}
+  .badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:2px;background:#e6f0ff;color:#2456c6;border:1px solid #b9d0f5;margin-left:6px;}
+  .badge.gold{background:#fff2e0;color:#a05a00;border-color:#f2d2a0;}
+  table.wt{border-collapse:collapse;width:100%;font-size:13.5px;margin:6px 0 16px;}
+  table.wt th,table.wt td{border:1px solid var(--border);padding:6px 10px;text-align:left;vertical-align:top;}
+  table.wt th{background:var(--panel);}
+  table.wt td.num, table.wt th.num{text-align:center;}
+  table.wt caption{font-size:12.5px;color:var(--muted);text-align:left;padding:2px 0 6px;}
+  table.wt tr.kr td{background:#eef4ff;font-weight:600;}
+  .note{font-size:12.5px;color:var(--muted);margin:-8px 0 16px;}
+  .kr-box{background:#eef4ff;border:1px solid #c3d6f7;border-radius:3px;padding:14px 16px;margin:10px 0 18px;}
+  .kr-box h4{margin-top:0;color:#1e3a8a;}
+  .medals{display:inline-flex;gap:6px;margin:0 0 8px;flex-wrap:wrap;}
+  .medal{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;border:1px solid;}
+  .medal.g{color:#8a6d1a;border-color:#e4cd8c;background:#fdf6e3;}
+  .medal.s{color:#5b6168;border-color:#d5d9de;background:#f4f5f6;}
+  .medal.b{color:#8a5a30;border-color:#e0c3a3;background:#fbf1e6;}
+  .medal.w{color:#1a7f37;border-color:#bfe3c9;background:#eefaf1;}
+  .medal.l{color:#ba0000;border-color:#f2c2c2;background:#fdeeee;}
+  .footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;}
+  @media (max-width:820px){.infobox{flex:1 1 100%;order:-1;}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <nav class="top">
-    <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>전체 종목으로</a>
-    <span class="crumb">단체구기 / 농구 · 3x3농구</span>
-  </nav>
+<div class="topbar"><div class="inner">
+  <a href="index2.html">← 아시안게임 종목 목록</a>
+  <span>문서 · 농구·3x3농구</span>
+  <a href="index.html">전체 목차</a>
+</div></div>
+<div class="layout">
+  <h1 class="title">농구 · 3x3농구</h1>
+  <p class="subtitle">Basketball · 3x3 Basketball · 2026 아이치·나고야 아시안게임 (제20회) · 5인농구·3x3농구</p>
+  <p class="hatnote">2026 아이치·나고야 아시안게임 농구 종목은 5인농구와 3x3농구로 나뉘어 치러진다. 5인농구는 9월 10일(남자)·9월 17일(여자)부터, 3x3농구는 9월 21일부터 진행된다.</p>
+  <div class="content">
+    <div class="main">
+      <div class="toc">
+        <div class="toc-title">목차</div>
+        <ol>
+          <li><a href="#overview">개요</a></li>
+          <li><a href="#m5x5">남자 5인농구</a></li>
+          <li><a href="#w5x5">여자 5인농구</a></li>
+          <li><a href="#history">역대 성적</a></li>
+          <li><a href="#3x3">3x3농구</a></li>
+          <li><a href="#watch">관전 포인트</a></li>
+        </ol>
+      </div>
 
-  <header class="pagehead">
-    <span class="eyebrow">단체구기</span>
-    <h1 class="title">농구 / 3x3농구</h1>
-  </header>
-  <p class="txt dim" style="margin-top:14px;">2026 아이치·나고야 아시안게임 농구 종목 정보. 5인농구는 9월 10일(남자) · 9월 17일(여자)부터, 3x3농구는 9월 21일부터 진행된다.</p>
+      <h2 id="overview">개요</h2>
+      <p>2026 아이치·나고야 아시안게임 농구 종목은 5인농구와 3x3농구로 나뉘어 치러진다. 5인농구는 9월 10일(남자)·9월 17일(여자)부터, 3x3농구는 9월 21일부터 진행되며, 5인농구는 나고야 아이치 국제아레나, 3x3농구는 긴조후토역 광장(나고야) 특설 코트에서 열린다.</p>
 
-  <!-- ===== Tabs ===== -->
-  <div class="tabbar" role="tablist">
-    <button class="tabbtn active" id="tabbtn-5x5" role="tab" aria-selected="true" onclick="switchTab('5x5')">5인농구<span class="sub">5x5 Basketball</span></button>
-    <button class="tabbtn" id="tabbtn-3x3" role="tab" aria-selected="false" onclick="switchTab('3x3')">3x3농구<span class="sub">3x3 Basketball</span></button>
+      <h2 id="m5x5">남자 5인농구</h2>
+      <p class="note">9.10(목) ~ 9.20(일) · 나고야 아이치 국제아레나</p>
+
+      <h3>대표팀 (훈련 대상자)</h3>
+      <p>이정현, 문유현, 변준형, 강성욱, 이두원, 유기상, 이우석, 이현중, 안영준, 에디 다니엘, 여준석, 송교창, 최준용, 장재석, 이승현</p>
+      <p class="note">월드컵 예선 훈련대상자 기준. 해외파 이현중(NBA 섬머리그·샌안토니오 스퍼스), 여준석(시애틀대), 송교창(오사카) 포함.</p>
+
+      <h3>대회 방식</h3>
+      <p>4개 팀씩 3개 조로 나뉘어 조별리그를 치른다. 각 조 2위까지는 8강 토너먼트에 직행하며, 3위 팀들 중 상위 2개 팀 역시 8강에 진출할 수 있다.</p>
+      <p>이란·중국 등 강호를 피해 상대적으로 해볼 만한 조에 편성됐다는 평가다.</p>
+
+      <h3>조 편성 (2026.8.7 발표)</h3>
+      <table class="wt">
+        <tr><th>A조</th><th>B조</th><th>C조</th></tr>
+        <tr><td>일본<br>대한민국<br>사우디아라비아<br>인도네시아</td><td>이란<br>요르단<br>중화 타이베이<br>카타르</td><td>중국<br>필리핀<br>바레인<br>카자흐스탄</td></tr>
+      </table>
+
+      <h3>대한민국 조별리그 일정</h3>
+      <table class="wt">
+        <tr><th>일시</th><th>경기</th></tr>
+        <tr><td>9.10(목) 16:00</td><td>대한민국 vs 사우디아라비아</td></tr>
+        <tr><td>9.11(금) 16:00</td><td>대한민국 vs 인도네시아</td></tr>
+        <tr><td>9.13(일) 19:00</td><td>대한민국 vs 일본 (한일전)</td></tr>
+      </table>
+      <p class="note">경기 장소: 아이치 국제아레나(나고야). 8강 이후 일정은 조별리그 순위 확정 후 발표.</p>
+
+      <h3>최근 국제대회 전적 (월드컵 예선)</h3>
+      <p>vs 중국 80-76 승 · vs 중국 90-76 승 · vs 대만 65-77 패 · vs 일본 72-78 패 · vs 대만 80-82 패 · vs 일본 81-79 승</p>
+
+      <h3>전력 분석</h3>
+      <p>최근까지 진행된 월드컵 아시아 예선에서 필리핀, 일본, 중국, 한국, 이란, 요르단, 시리아, 레바논, 카타르, 사우디가 본선에 진출했다.</p>
+      <p>동아시아 3국과 필리핀, 이란, 요르단, 레바논 등이 전체적으로 8강권 전력으로 평가되며, 최근 부진했던 마줄스호가 이번 조 편성을 발판 삼아 반전을 노릴 수 있을지 관심이 모인다.</p>
+
+      <h2 id="w5x5">여자 5인농구</h2>
+      <p class="note">9.17(목) ~ 9.26(토) · 나고야 아이치 국제아레나</p>
+
+      <h3>대표팀 (강화훈련 대상자)</h3>
+      <p>허예은, 안혜지, 박소희, 이소희, 강유림, 강이슬, 박지현, 최이샘, 정현, 이해란, 진안, 홍유순, 박지수</p>
+      <p class="note">박지수는 부상 여부, 박지현은 WNBA 일정 등에 따라 최종 명단은 추후 조율될 예정.</p>
+
+      <h3>대회 방식</h3>
+      <p>3개조 4팀으로 나뉘어 조별리그를 치른 뒤 순위에 따라 8강 토너먼트로 진행될 예정이다.</p>
+
+      <h3>조 편성 (2026.8.7 발표)</h3>
+      <table class="wt">
+        <tr><th>A조</th><th>B조</th><th>C조</th></tr>
+        <tr><td>중국<br>인도네시아<br>태국</td><td>일본<br>필리핀<br>카자흐스탄<br>홍콩</td><td>대한민국<br>중화 타이베이<br>몽골<br>말레이시아</td></tr>
+      </table>
+
+      <h3>대한민국 조별리그 일정</h3>
+      <table class="wt">
+        <tr><th>일시</th><th>경기</th></tr>
+        <tr><td>9.18(금) 10:00</td><td>대한민국 vs 말레이시아</td></tr>
+        <tr><td>9.21(월) 13:00</td><td>대한민국 vs 몽골</td></tr>
+        <tr><td>9.22(화) 16:00</td><td>대한민국 vs 중화 타이베이</td></tr>
+      </table>
+
+      <h3>전력 분석</h3>
+      <p>현실적으로 중국과 일본이 한 수 위이며 그 다음이 대한민국, 나머지 국가들과는 전력 격차가 있는 것으로 평가된다.</p>
+
+      <h2 id="history">역대 성적</h2>
+      <h3>남자</h3>
+      <table class="wt">
+        <tr><th>대회</th><th>금메달</th><th>은메달</th><th>동메달</th></tr>
+        <tr class="kr"><td>2014 인천</td><td><b>대한민국</b> 79–77 vs 이란</td><td>이란</td><td>일본 76–72 vs 카자흐스탄</td></tr>
+        <tr><td>2018 자카르타·팔렘방</td><td>중국 84–72 vs 이란</td><td>이란</td><td class="kr"><b>대한민국</b> 89–81 vs 중화 타이베이</td></tr>
+        <tr><td>2022 항저우</td><td>필리핀 70–60 vs 요르단</td><td>요르단</td><td>중국 101–73 vs 중화 타이베이</td></tr>
+      </table>
+
+      <h3>여자</h3>
+      <table class="wt">
+        <tr><th>대회</th><th>금메달</th><th>은메달</th><th>동메달</th></tr>
+        <tr class="kr"><td>2014 인천</td><td><b>대한민국</b> 70–64 vs 중국</td><td>중국</td><td>일본 61–59 vs 중화 타이베이</td></tr>
+        <tr class="kr"><td>2018 자카르타·팔렘방</td><td>중국 71–65 vs 대한민국</td><td><b>대한민국</b></td><td>일본 76–63 vs 중화 타이베이</td></tr>
+        <tr class="kr"><td>2022 항저우</td><td>중국 74–72 vs 일본</td><td>일본</td><td><b>대한민국</b> 93–63 vs 북한</td></tr>
+      </table>
+
+      <h2 id="3x3">3x3농구</h2>
+      <p class="note">9.21(월) ~ 9.25(금) · 긴조후토역 광장(나고야)</p>
+      <p>3x3(3인) 농구는 9월 21일부터 25일까지 나고야 긴조후토역 광장 특설 코트에서 진행되며, 남녀 대표팀 모두 메달을 목표로 준비하고 있다.</p>
+
+      <h3>대표팀</h3>
+      <table class="wt">
+        <tr><th>부문</th><th>선수</th></tr>
+        <tr><td>남자</td><td>구민교(성균관대), 김승우(연세대), 이주영(연세대), 이동근(고려대)</td></tr>
+        <tr><td>여자</td><td>송윤하(청주 KB스타즈), 허유정(인천 신한은행), 김정은(부산 BNK), 최예슬(용인 삼성생명)</td></tr>
+      </table>
+
+      <h3>조 편성</h3>
+      <table class="wt">
+        <tr><th>남자 D조</th><th>여자 D조</th></tr>
+        <tr><td>대한민국<br>일본<br>싱가포르<br>태국</td><td>대한민국<br>싱가포르<br>인도네시아<br>태국</td></tr>
+      </table>
+
+      <h3>남자 대표팀 일정</h3>
+      <table class="wt">
+        <tr><th>일시</th><th>경기</th></tr>
+        <tr><td>9.22(화) 18:55</td><td>대한민국 vs 태국</td></tr>
+        <tr><td>9.22(화) 20:35</td><td>대한민국 vs 일본 (한일전)</td></tr>
+        <tr><td>9.23(수) 20:10</td><td>대한민국 vs 싱가포르 (예선 최종전)</td></tr>
+      </table>
+
+      <h3>여자 대표팀 일정</h3>
+      <table class="wt">
+        <tr><th>일시</th><th>경기</th></tr>
+        <tr><td>9.21(월) 12:25</td><td>대한민국 vs 태국</td></tr>
+        <tr><td>9.21(월) 14:05</td><td>대한민국 vs 인도네시아</td></tr>
+        <tr><td>9.23(수) 12:00</td><td>대한민국 vs 싱가포르 (예선 최종전)</td></tr>
+      </table>
+      <p class="note">연합뉴스·SBS뉴스·뉴스1(2026.8.8 보도) 기준 일정 및 명단이며, 세부 시간·장소는 대회 조직위 발표에 따라 변동될 수 있다.</p>
+
+      <h2 id="watch">관전 포인트</h2>
+      <div class="kr-box">
+        <p><b>남자 대표팀에게는 9월 13일 일본전(한일전)이 조별리그 최대 승부처다.</b> 이란·중국 등 강호를 피한 조 편성인 만큼, 일본전 결과가 8강 진출 순위를 가를 가능성이 크다.</p>
+        <p><b>여자 대표팀은 2018년 은메달·2022년 동메달에 이어 다시 시상대에 오를 수 있을지가 관건이다.</b> 다만 중국·일본이 한 수 위로 평가받는 만큼, 3위 자리를 지키는 것이 현실적인 목표로 꼽힌다.</p>
+        <p><b>박지수·박지현의 최종 합류 여부도 지켜볼 대목이다.</b> 부상과 WNBA 일정 문제로 최종 명단이 유동적인 상황이라, 두 선수의 합류 여부가 여자 대표팀 전력에 큰 변수가 될 수 있다.</p>
+        <p><b>3x3농구는 남녀 모두 첫 경기부터 승부처다.</b> 남자는 9월 22일 태국·일본과 하루에 두 경기를 치르고, 여자는 9월 21일 태국·인도네시아를 연달아 상대하며 조별 순위를 조기에 결정짓는다.</p>
+      </div>
+
+      <div class="footer">
+        출처: 대한농구협회 조 편성·명단 발표(2026.8.7), 연합뉴스·SBS뉴스·뉴스1(2026.8.8), 역대 아시안게임 결과, 그 외 편집부 취재 및 자체 정리.<br>
+        일정과 세부 사항, 최종 명단은 대회 진행에 따라 변경될 수 있다.
+      </div>
+    </div>
+    <aside class="infobox">
+      <div class="ib-title">농구 · 3x3농구 종목 정보</div>
+      <table>
+        <tr><th>영문명</th><td>Basketball / 3x3 Basketball</td></tr>
+        <tr><th>남자 5인농구</th><td>9.10 ~ 9.20 · 아이치 국제아레나</td></tr>
+        <tr><th>여자 5인농구</th><td>9.17 ~ 9.26 · 아이치 국제아레나</td></tr>
+        <tr><th>3x3농구</th><td>9.21 ~ 9.25 · 긴조후토역 광장(나고야)</td></tr>
+        <tr><th>남자 조 편성</th><td>A조 (일본·한국·사우디·인도네시아)</td></tr>
+        <tr><th>여자 조 편성</th><td>C조 (한국·중화타이베이·몽골·말레이시아)</td></tr>
+        <tr><th>한국 역대 성적</th><td>남자 금1·동1 / 여자 금1·은1·동1<span class="badge gold">메달권</span></td></tr>
+        <tr><th>관련 문서</th><td><a href="index2.html">아시안게임 종목 안내</a></td></tr>
+      </table>
+    </aside>
   </div>
-
-  <!-- ===================================================== -->
-  <!-- ===== PANEL: 5인농구 ===== -->
-  <!-- ===================================================== -->
-  <div class="tabpanel active" id="panel-5x5">
-
-    <!-- ===== 남자 5인농구 ===== -->
-    <section class="division">
-      <div class="div-head">
-        <h2><span class="dot"></span>남자 5인농구</h2>
-        <span class="badge">9.10(목) ~ 9.20(일) · 나고야 아이치 국제아레나</span>
-      </div>
-      <div class="cardgrid">
-
-        <div class="info-card">
-          <h3>대표팀 (훈련 대상자)</h3>
-          <p class="poslist">이정현, 문유현, 변준형, 강성욱, 이두원, 유기상, 이우석, 이현중, 안영준, 에디 다니엘, 여준석, 송교창, 최준용, 장재석, 이승현</p>
-          <div class="note">월드컵 예선 훈련대상자 기준. 해외파 이현중(NBA 섬머리그·샌안토니오 스퍼스), 여준석(시애틀대), 송교창(오사카) 포함.</div>
-        </div>
-
-        <div class="info-card">
-          <h3>대회 방식</h3>
-          <p class="txt">4개 팀씩 3개 조로 나뉘어 조별리그를 치른다. 각 조 2위까지는 8강 토너먼트에 직행하며, 3위 팀들 중 상위 2개 팀 역시 8강에 진출할 수 있다.</p>
-          <p class="txt dim">이란·중국 등 강호를 피해 상대적으로 해볼 만한 조에 편성됐다는 평가다.</p>
-        </div>
-
-        <div class="info-card full">
-          <h3>조 편성 (2026.8.7 발표)</h3>
-          <div class="grouprow">
-            <div class="groupcol">
-              <h4>A조</h4>
-              <ol>
-                <li>일본</li>
-                <li class="me">대한민국</li>
-                <li>사우디아라비아</li>
-                <li>인도네시아</li>
-              </ol>
-            </div>
-            <div class="groupcol">
-              <h4>B조</h4>
-              <ol>
-                <li>이란</li>
-                <li>요르단</li>
-                <li>중화 타이베이</li>
-                <li>카타르</li>
-              </ol>
-            </div>
-            <div class="groupcol">
-              <h4>C조</h4>
-              <ol>
-                <li>중국</li>
-                <li>필리핀</li>
-                <li>바레인</li>
-                <li>카자흐스탄</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-
-        <div class="info-card full">
-          <h3>대한민국 조별리그 일정</h3>
-          <div class="sched">
-            <div class="sched-item">
-              <div class="sched-date">9.10(목)<span class="t">16:00</span></div>
-              <div class="sched-match">대한민국 vs 사우디아라비아</div>
-            </div>
-            <div class="sched-item">
-              <div class="sched-date">9.11(금)<span class="t">16:00</span></div>
-              <div class="sched-match">대한민국 vs 인도네시아</div>
-            </div>
-            <div class="sched-item">
-              <div class="sched-date">9.13(일)<span class="t">19:00</span></div>
-              <div class="sched-match">대한민국 vs 일본<span class="sched-tag">한일전</span></div>
-            </div>
-          </div>
-          <div class="note">경기 장소: 아이치 국제아레나(나고야). 8강 이후 일정은 조별리그 순위 확정 후 발표.</div>
-        </div>
-
-        <div class="info-card full">
-          <h3>역대 성적 (남자)</h3>
-          <table class="medaltable">
-            <thead>
-              <tr><th>대회</th><th>금메달</th><th>은메달</th><th>동메달</th></tr>
-            </thead>
-            <tbody>
-              <tr class="kr-row">
-                <td class="yr">2014 인천</td>
-                <td><span class="medal g">1</span>대한민국 <span style="color:var(--paper-dim);font-weight:600;">79–77 vs 이란</span></td>
-                <td>이란</td>
-                <td>일본 <span style="color:var(--paper-dim);font-weight:600;">76–72 vs 카자흐스탄</span></td>
-              </tr>
-              <tr>
-                <td class="yr">2018 자카르타·팔렘방</td>
-                <td>중국 <span style="color:var(--paper-dim);font-weight:600;">84–72 vs 이란</span></td>
-                <td>이란</td>
-                <td class="kr-row">대한민국 <span style="color:var(--paper-dim);font-weight:600;">89–81 vs 중화 타이베이</span></td>
-              </tr>
-              <tr>
-                <td class="yr">2022 항저우</td>
-                <td>필리핀 <span style="color:var(--paper-dim);font-weight:600;">70–60 vs 요르단</span></td>
-                <td>요르단</td>
-                <td>중국 <span style="color:var(--paper-dim);font-weight:600;">101–73 vs 중화 타이베이</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="info-card full">
-          <h3>최근 국제대회 전적 (월드컵 예선)</h3>
-          <div class="results">
-            <div class="rline">vs 중국 <span class="w">80-76 승</span> · vs 중국 <span class="w">90-76 승</span> · vs 대만 <span class="l">65-77 패</span> · vs 일본 <span class="l">72-78 패</span> · vs 대만 <span class="l">80-82 패</span> · vs 일본 <span class="w">81-79 승</span></div>
-          </div>
-        </div>
-
-        <div class="info-card full">
-          <h3>전력 분석</h3>
-          <p class="txt">최근까지 진행된 월드컵 아시아 예선에서 필리핀, 일본, 중국, 한국, 이란, 요르단, 시리아, 레바논, 카타르, 사우디가 본선에 진출했다.</p>
-          <p class="txt dim">동아시아 3국과 필리핀, 이란, 요르단, 레바논 등이 전체적으로 8강권 전력으로 평가되며, 최근 부진했던 마줄스호가 이번 조 편성을 발판 삼아 반전을 노릴 수 있을지 관심이 모인다.</p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ===== 여자 5인농구 ===== -->
-    <section class="division">
-      <div class="div-head">
-        <h2><span class="dot"></span>여자 5인농구</h2>
-        <span class="badge">9.17(목) ~ 9.26(토) · 나고야 아이치 국제아레나</span>
-      </div>
-      <div class="cardgrid">
-
-        <div class="info-card">
-          <h3>대표팀 (강화훈련 대상자)</h3>
-          <p class="poslist">허예은, 안혜지, 박소희, 이소희, 강유림, 강이슬, 박지현, 최이샘, 정현, 이해란, 진안, 홍유순, 박지수</p>
-          <div class="note">박지수는 부상 여부, 박지현은 WNBA 일정 등에 따라 최종 명단은 추후 조율될 예정.</div>
-        </div>
-
-        <div class="info-card">
-          <h3>대회 방식</h3>
-          <p class="txt">3개조 4팀으로 나뉘어 조별리그를 치른 뒤 순위에 따라 8강 토너먼트로 진행될 예정이다.</p>
-        </div>
-
-        <div class="info-card full">
-          <h3>조 편성 (2026.8.7 발표)</h3>
-          <div class="grouprow">
-            <div class="groupcol">
-              <h4>A조</h4>
-              <ol>
-                <li>중국</li>
-                <li>인도네시아</li>
-                <li>태국</li>
-              </ol>
-            </div>
-            <div class="groupcol">
-              <h4>B조</h4>
-              <ol>
-                <li>일본</li>
-                <li>필리핀</li>
-                <li>카자흐스탄</li>
-                <li>홍콩</li>
-              </ol>
-            </div>
-            <div class="groupcol">
-              <h4>C조</h4>
-              <ol>
-                <li class="me">대한민국</li>
-                <li>중화 타이베이</li>
-                <li>몽골</li>
-                <li>말레이시아</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-
-        <div class="info-card full">
-          <h3>대한민국 조별리그 일정</h3>
-          <div class="sched">
-            <div class="sched-item">
-              <div class="sched-date">9.18(금)<span class="t">10:00</span></div>
-              <div class="sched-match">대한민국 vs 말레이시아</div>
-            </div>
-            <div class="sched-item">
-              <div class="sched-date">9.21(월)<span class="t">13:00</span></div>
-              <div class="sched-match">대한민국 vs 몽골</div>
-            </div>
-            <div class="sched-item">
-              <div class="sched-date">9.22(화)<span class="t">16:00</span></div>
-              <div class="sched-match">대한민국 vs 중화 타이베이</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="info-card full">
-          <h3>역대 성적 (여자)</h3>
-          <table class="medaltable">
-            <thead>
-              <tr><th>대회</th><th>금메달</th><th>은메달</th><th>동메달</th></tr>
-            </thead>
-            <tbody>
-              <tr class="kr-row">
-                <td class="yr">2014 인천</td>
-                <td><span class="medal g">1</span>대한민국 <span style="color:var(--paper-dim);font-weight:600;">70–64 vs 중국</span></td>
-                <td>중국</td>
-                <td>일본 <span style="color:var(--paper-dim);font-weight:600;">61–59 vs 중화 타이베이</span></td>
-              </tr>
-              <tr class="kr-row">
-                <td class="yr">2018 자카르타·팔렘방</td>
-                <td>중국 <span style="color:var(--paper-dim);font-weight:600;">71–65 vs 대한민국</span></td>
-                <td><span class="medal s">2</span>대한민국</td>
-                <td>일본 <span style="color:var(--paper-dim);font-weight:600;">76–63 vs 중화 타이베이</span></td>
-              </tr>
-              <tr class="kr-row">
-                <td class="yr">2022 항저우</td>
-                <td>중국 <span style="color:var(--paper-dim);font-weight:600;">74–72 vs 일본</span></td>
-                <td>일본</td>
-                <td><span class="medal b">3</span>대한민국 <span style="color:var(--paper-dim);font-weight:600;">93–63 vs 북한</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="info-card full">
-          <h3>전력 분석</h3>
-          <p class="txt">현실적으로 중국과 일본이 한 수 위이며 그 다음이 대한민국, 나머지 국가들과는 전력 격차가 있는 것으로 평가된다.</p>
-        </div>
-
-      </div>
-    </section>
-
-  </div>
-
-  <!-- ===================================================== -->
-  <!-- ===== PANEL: 3x3농구 ===== -->
-  <!-- ===================================================== -->
-  <div class="tabpanel" id="panel-3x3">
-
-    <section class="division">
-      <div class="div-head">
-        <h2><span class="dot"></span>3x3 농구</h2>
-        <span class="badge">9.21(월) ~ 9.25(금) · 긴조후토역 광장(나고야)</span>
-      </div>
-      <p class="txt dim" style="margin-bottom:16px;">3x3(3인) 농구는 9월 21일부터 25일까지 나고야 긴조후토역 광장 특설 코트에서 진행되며, 남녀 대표팀 모두 메달을 목표로 준비하고 있다.</p>
-
-      <div class="cardgrid">
-
-        <div class="info-card">
-          <h3>남자 대표팀</h3>
-          <p class="poslist">구민교(성균관대), 김승우(연세대), 이주영(연세대), 이동근(고려대)</p>
-        </div>
-
-        <div class="info-card">
-          <h3>여자 대표팀</h3>
-          <p class="poslist">송윤하(청주 KB스타즈), 허유정(인천 신한은행), 김정은(부산 BNK), 최예슬(용인 삼성생명)</p>
-        </div>
-
-        <div class="info-card full">
-          <h3>조 편성</h3>
-          <div class="grouprow" style="grid-template-columns:1fr 1fr;">
-            <div class="groupcol">
-              <h4>남자 D조</h4>
-              <ol>
-                <li class="me">대한민국</li>
-                <li>일본</li>
-                <li>싱가포르</li>
-                <li>태국</li>
-              </ol>
-            </div>
-            <div class="groupcol">
-              <h4>여자 D조</h4>
-              <ol>
-                <li class="me">대한민국</li>
-                <li>싱가포르</li>
-                <li>인도네시아</li>
-                <li>태국</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-
-        <div class="info-card full">
-          <h3>남자 대표팀 일정</h3>
-          <div class="sched">
-            <div class="sched-item">
-              <div class="sched-date">9.22(화)<span class="t">18:55</span></div>
-              <div class="sched-match">대한민국 vs 태국</div>
-            </div>
-            <div class="sched-item">
-              <div class="sched-date">9.22(화)<span class="t">20:35</span></div>
-              <div class="sched-match">대한민국 vs 일본<span class="sched-tag">한일전</span></div>
-            </div>
-            <div class="sched-item">
-              <div class="sched-date">9.23(수)<span class="t">20:10</span></div>
-              <div class="sched-match">대한민국 vs 싱가포르<span class="sched-tag">예선 최종전</span></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="info-card full">
-          <h3>여자 대표팀 일정</h3>
-          <div class="sched">
-            <div class="sched-item">
-              <div class="sched-date">9.21(월)<span class="t">12:25</span></div>
-              <div class="sched-match">대한민국 vs 태국</div>
-            </div>
-            <div class="sched-item">
-              <div class="sched-date">9.21(월)<span class="t">14:05</span></div>
-              <div class="sched-match">대한민국 vs 인도네시아</div>
-            </div>
-            <div class="sched-item">
-              <div class="sched-date">9.23(수)<span class="t">12:00</span></div>
-              <div class="sched-match">대한민국 vs 싱가포르<span class="sched-tag">예선 최종전</span></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="info-card full">
-          <h3>참고</h3>
-          <div class="srclist">
-            연합뉴스 · SBS뉴스 · 뉴스1 (2026.8.8 보도) 기준 일정 및 명단이며, 세부 시간·장소는 대회 조직위 발표에 따라 변동될 수 있다.
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-  </div>
-
-  <footer class="pagefoot">
-    <span>2026 아이치·나고야 아시안게임 · 농구 / 3x3농구</span>
-    <a href="index.html">← 전체 종목 목록 보기</a>
-  </footer>
 </div>
-
-<script>
-function switchTab(tab){
-  document.getElementById('panel-5x5').classList.toggle('active', tab==='5x5');
-  document.getElementById('panel-3x3').classList.toggle('active', tab==='3x3');
-  document.getElementById('tabbtn-5x5').classList.toggle('active', tab==='5x5');
-  document.getElementById('tabbtn-3x3').classList.toggle('active', tab==='3x3');
-  document.getElementById('tabbtn-5x5').setAttribute('aria-selected', tab==='5x5');
-  document.getElementById('tabbtn-3x3').setAttribute('aria-selected', tab==='3x3');
-}
-</script>
 </body>
 </html>

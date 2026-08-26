@@ -3,198 +3,256 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>축구 | 2026 아이치·나고야 아시안게임</title>
+<title>축구 - 2026 아이치·나고야 아시안게임</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#0E1A2B; --ink-2:#152540; --ink-3:#1B2E4D; --gold:#C9A24B; --gold-soft:#E4CD8C;
-    --sun:#D8482F; --paper:#F3EFE4; --paper-dim:#B9C2CF; --line:rgba(201,162,75,0.28);
-    --win:#4C8C6B; --lose:#C05B4A; --draw:#9AA3AE;
+    --bg:#ffffff; --panel:#f8f9fa; --border:#c8ccd1; --border-soft:#eaecf0;
+    --ink:#202122; --muted:#54595d; --link:#3366cc; --link-visited:#795cb2; --link-red:#ba0000;
+    --serif:'Noto Serif KR',Georgia,'Times New Roman',serif;
+    --sans:'Pretendard','Helvetica Neue',Arial,sans-serif;
+    --accent:#2456c6; --ok:#1a7f37; --warn:#b45309; --gold:#a05a00;
   }
   *{box-sizing:border-box;}
-  body{
-    margin:0; color:var(--paper); font-family:'Pretendard','Noto Sans KR',sans-serif;
-    background:
-      radial-gradient(1100px 550px at 90% -10%, rgba(216,72,47,0.14), transparent 60%),
-      radial-gradient(900px 500px at -10% 110%, rgba(201,162,75,0.09), transparent 60%),
-      var(--ink);
-    -webkit-font-smoothing:antialiased;
-  }
-  .wrap{max-width:1080px;margin:0 auto;padding:36px 24px 90px;}
-  nav.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:32px;}
-  .back{color:var(--gold-soft);text-decoration:none;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:6px;}
-  .back:hover{color:var(--gold);}
-  .back svg{width:13px;height:13px;}
-  .crumb{font-size:11.5px;color:var(--paper-dim);}
-
-  header.pagehead{display:flex;align-items:baseline;gap:14px;padding-bottom:20px;margin-bottom:28px;border-bottom:1px solid var(--line);flex-wrap:wrap;}
-  .eyebrow{font-size:12px;letter-spacing:0.14em;color:var(--gold-soft);text-transform:uppercase;font-weight:600;}
-  h1.title{font-family:'Noto Serif KR',serif;font-weight:900;font-size:30px;margin:0;color:var(--paper);}
-
-  section.division{margin-bottom:44px;}
-  .div-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px;}
-  .div-head h2{font-family:'Noto Serif KR',serif;font-size:19px;color:var(--paper);margin:0;font-weight:700;}
-  .badge{font-size:11.5px;color:var(--gold-soft);border:1px solid var(--line);border-radius:100px;padding:4px 12px;background:rgba(201,162,75,0.08);white-space:nowrap;}
-
-  .cardgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-  @media (max-width:720px){.cardgrid{grid-template-columns:1fr;}}
-  .info-card{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:18px 20px;}
-  .info-card h3{font-family:'Noto Serif KR',serif;font-size:13px;color:var(--gold-soft);letter-spacing:0.04em;margin:0 0 12px;text-transform:uppercase;}
-
-  .poslist{font-size:13.5px;line-height:1.85;color:var(--paper);margin-bottom:6px;}
-  .poslist .pos{display:inline-block;min-width:30px;font-weight:700;color:var(--gold);font-size:12px;margin-right:6px;}
-  .note{font-size:12.5px;color:var(--paper-dim);margin-top:10px;line-height:1.7;border-top:1px dashed var(--line);padding-top:10px;}
-
-  .grouptable{display:flex;flex-direction:column;gap:6px;margin-bottom:12px;}
-  .grow{display:flex;gap:8px;font-size:13px;line-height:1.6;}
-  .grow .gname{flex:none;width:38px;font-weight:700;color:var(--gold);}
-  .grow.mine{background:rgba(201,162,75,0.10);border-radius:5px;padding:3px 6px;margin:-3px -6px;}
-  .grow.mine .gname{color:var(--sun);}
-  .sched{display:flex;flex-direction:column;gap:5px;margin-top:10px;}
-  .sched span{font-size:12.5px;color:var(--paper-dim);}
-  .sched b{color:var(--paper);font-weight:600;}
-
-  p.txt{font-size:13.5px;line-height:1.85;color:var(--paper-dim);margin:0 0 10px;}
-  p.txt:last-child{margin-bottom:0;}
-
-  .results{display:flex;flex-direction:column;gap:8px;}
-  .rgroup{font-size:12px;color:var(--gold-soft);font-weight:600;margin-top:6px;}
-  .rline{font-size:13px;line-height:1.7;color:var(--paper-dim);}
-  .rline .w{color:var(--win);font-weight:700;}
-  .rline .l{color:var(--lose);font-weight:700;}
-  .rline .d{color:var(--draw);font-weight:700;}
-
-  .pitch{margin-top:14px;background:rgba(76,140,107,0.10);border:1px solid rgba(76,140,107,0.35);border-radius:8px;padding:14px 10px;display:flex;flex-direction:column-reverse;gap:10px;}
-  .prow{display:flex;justify-content:space-around;flex-wrap:wrap;gap:6px;}
-  .pplayer{background:var(--ink);border:1px solid var(--line);border-radius:6px;padding:5px 9px;font-size:11.5px;color:var(--paper);text-align:center;white-space:nowrap;}
-
-  footer.pagefoot{margin-top:50px;padding-top:20px;border-top:1px solid var(--line);font-size:12px;color:var(--paper-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
-  footer.pagefoot a{color:var(--gold-soft);text-decoration:none;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.65;}
+  a{color:var(--link);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  a:visited{color:var(--link-visited);}
+  .topbar{border-bottom:1px solid var(--border);background:var(--panel);font-size:12.5px;color:var(--muted);}
+  .topbar .inner{max-width:1100px;margin:0 auto;padding:8px 20px;display:flex;gap:16px;flex-wrap:wrap;}
+  .topbar a{color:var(--link);}
+  .layout{max-width:1100px;margin:0 auto;padding:22px 20px 80px;}
+  h1.title{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.3;margin:0 0 2px;padding-bottom:6px;border-bottom:1px solid var(--border);}
+  .subtitle{color:var(--muted);font-size:13px;margin:0 0 18px;}
+  .hatnote{font-style:italic;color:var(--muted);background:var(--panel);border:1px solid var(--border-soft);padding:8px 14px;border-radius:2px;margin:0 0 20px;font-size:13.5px;}
+  .content{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;}
+  .main{flex:1 1 560px;min-width:0;}
+  h2{font-family:var(--serif);font-weight:600;font-size:22px;margin:26px 0 10px;padding-bottom:5px;border-bottom:1px solid var(--border-soft);scroll-margin-top:12px;}
+  h3{font-family:var(--serif);font-weight:600;font-size:17px;margin:20px 0 8px;}
+  h4{font-family:var(--sans);font-weight:700;font-size:14.5px;margin:16px 0 6px;color:#3a3f44;}
+  p{margin:0 0 12px;}
+  .toc{display:inline-block;background:var(--panel);border:1px solid var(--border);border-radius:2px;padding:12px 20px 12px 14px;margin:0 0 20px;font-size:14px;}
+  .toc-title{font-weight:700;text-align:center;font-size:13px;margin-bottom:6px;}
+  .toc ol{margin:0;padding-left:22px;}
+  .toc li{margin:3px 0;}
+  .infobox{flex:0 0 300px;background:var(--panel);border:1px solid var(--border);border-radius:2px;font-size:13px;align-self:flex-start;}
+  .infobox .ib-title{background:#eaecf0;font-family:var(--serif);font-weight:700;text-align:center;padding:10px 12px;font-size:15px;border-bottom:1px solid var(--border);}
+  .infobox table{width:100%;border-collapse:collapse;}
+  .infobox th,.infobox td{text-align:left;padding:7px 12px;vertical-align:top;border-bottom:1px solid var(--border-soft);}
+  .infobox th{width:38%;color:var(--muted);font-weight:600;}
+  .badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:2px;background:#e6f0ff;color:#2456c6;border:1px solid #b9d0f5;margin-left:6px;}
+  .badge.gold{background:#fff2e0;color:#a05a00;border-color:#f2d2a0;}
+  table.wt{border-collapse:collapse;width:100%;font-size:13.5px;margin:6px 0 16px;}
+  table.wt th,table.wt td{border:1px solid var(--border);padding:6px 10px;text-align:left;vertical-align:top;}
+  table.wt th{background:var(--panel);}
+  table.wt td.num, table.wt th.num{text-align:center;}
+  table.wt caption{font-size:12.5px;color:var(--muted);text-align:left;padding:2px 0 6px;}
+  .note{font-size:12.5px;color:var(--muted);margin:-8px 0 16px;}
+  .kr-box{background:#eef4ff;border:1px solid #c3d6f7;border-radius:3px;padding:14px 16px;margin:10px 0 18px;}
+  .kr-box h4{margin-top:0;color:#1e3a8a;}
+  .medals{display:inline-flex;gap:6px;margin:0 0 8px;flex-wrap:wrap;}
+  .medal{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;border:1px solid;}
+  .medal.g{color:#8a6d1a;border-color:#e4cd8c;background:#fdf6e3;}
+  .medal.s{color:#5b6168;border-color:#d5d9de;background:#f4f5f6;}
+  .medal.b{color:#8a5a30;border-color:#e0c3a3;background:#fbf1e6;}
+  .win{color:var(--ok);font-weight:700;}
+  .lose{color:var(--link-red);font-weight:700;}
+  .draw{color:var(--muted);font-weight:700;}
+  .footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;}
+  @media (max-width:820px){.infobox{flex:1 1 100%;order:-1;}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <nav class="top">
-    <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>전체 종목으로</a>
-    <span class="crumb">단체구기 / 축구</span>
-  </nav>
+<div class="topbar"><div class="inner">
+  <a href="index2.html">← 아시안게임 종목 목록</a>
+  <span>문서 · 축구</span>
+  <a href="index.html">전체 목차</a>
+</div></div>
+<div class="layout">
+  <h1 class="title">축구</h1>
+  <p class="subtitle">Football · 2026 아이치·나고야 아시안게임 (제20회) · 남자 U23 · 여자</p>
+  <p class="hatnote">축구는 아시안게임에서 남자부(23세 이하, 와일드카드 3명 허용)와 여자부(성인대표팀)로 나뉘어 열리는 단체구기 종목이다. 남자부는 15개국, 여자부는 12개국이 참가하며, 대한민국은 남자부 D조(사우디아라비아·카타르), 여자부 B조(북한·방글라데시·미얀마)에 편성됐다.</p>
+  <div class="content">
+    <div class="main">
+      <div class="toc">
+        <div class="toc-title">목차</div>
+        <ol>
+          <li><a href="#overview">개요</a></li>
+          <li><a href="#disciplines">세부종목</a></li>
+          <li><a href="#groups">조 편성</a></li>
+          <li><a href="#roster">한국 대표팀</a></li>
+          <li><a href="#form">최근 전적</a></li>
+          <li><a href="#watch">전망과 관전 포인트</a></li>
+        </ol>
+      </div>
 
-  <header class="pagehead">
-    <span class="eyebrow">단체구기</span>
-    <h1 class="title">축구</h1>
-  </header>
+      <h2 id="overview">개요</h2>
+      <p>축구는 2026 아이치·나고야 아시안게임에서 남자 U23축구와 여자축구 두 세부종목으로 나뉘어 열린다. 남자부는 만 23세 이하 선수로 구성되며 와일드카드(연령 제한 없는 선수) 3명까지 기용할 수 있고, 여자부는 성인 국가대표팀이 그대로 출전한다.</p>
+      <p>대한민국 남자 U23대표팀은 참가 15개국 중 D조에 편성돼 사우디아라비아·카타르와 조별리그를 치르고, 여자대표팀은 참가 12개국 중 B조에서 북한과 함께 나란히 조별리그를 치르는 '동반 편성'을 받았다.</p>
 
-  <!-- ===== 남자 U23 축구 ===== -->
-  <section class="division">
-    <div class="div-head">
-      <h2>남자 U23 축구</h2>
-      <span class="badge">참가 15개국 · D조 (대한민국·사우디·카타르)</span>
+      <h2 id="disciplines">세부종목</h2>
+      <table class="wt">
+        <tr><th>세부종목</th><th class="num">참가국</th><th>진출 방식</th></tr>
+        <tr><td>남자 U23축구 <span style="color:var(--muted);font-size:12px;">Men's U23 Football</span></td><td class="num">15개국</td><td>4개 조 조별리그 후 각 조 2위 이내 팀이 8강 토너먼트 진출</td></tr>
+        <tr><td>여자축구 <span style="color:var(--muted);font-size:12px;">Women's Football</span></td><td class="num">12개국</td><td>3개 조 조별리그 후 조 3위 이내 9개국 중 최하위 1개 팀을 제외하고 8강 토너먼트 진출</td></tr>
+      </table>
+
+      <h2 id="groups">조 편성</h2>
+      <h3>남자 U23축구</h3>
+      <table class="wt">
+        <tr><th>조</th><th>참가국</th></tr>
+        <tr><td>A조</td><td>일본, 태국, 키르기즈스탄, 홍콩</td></tr>
+        <tr><td>B조</td><td>중국, UAE, 이란, 북한</td></tr>
+        <tr><td>C조</td><td>베트남, 우즈베키스탄, 필리핀, 쿠웨이트</td></tr>
+        <tr><td><b>D조</b> <span class="badge gold">대한민국 조</span></td><td><b>대한민국</b>, 사우디아라비아, 카타르</td></tr>
+      </table>
+      <p><b>예선 일정</b> — 9월 16일 카타르전, 9월 23일 사우디아라비아전.</p>
+      <p class="note">조 2위 이내 팀이 8강 진출. 8강 이후 대진은 추후 결정된다.</p>
+
+      <h3>여자축구</h3>
+      <table class="wt">
+        <tr><th>조</th><th>참가국</th></tr>
+        <tr><td>A조</td><td>일본, 대만, 베트남, 태국</td></tr>
+        <tr><td><b>B조</b> <span class="badge gold">대한민국 조</span></td><td><b>대한민국</b>, 북한, 방글라데시, 미얀마</td></tr>
+        <tr><td>C조</td><td>중국, 필리핀, 우즈베키스탄, 홍콩</td></tr>
+      </table>
+      <p class="note">조 3위 이내 9개국 중 최하위 1개 팀을 제외하고 8강 토너먼트 진출.</p>
+
+      <h2 id="roster">한국 대표팀</h2>
+      <h3>남자 U23대표팀</h3>
+      <table class="wt">
+        <tr><th>포지션</th><th>선수</th></tr>
+        <tr><td rowspan="3">GK</td><td>김민승</td></tr>
+        <tr><td>김준홍</td></tr>
+        <tr><td>이승환</td></tr>
+        <tr><td rowspan="8">DF</td><td>강민준</td></tr>
+        <tr><td>김지수</td></tr>
+        <tr><td>박경섭</td></tr>
+        <tr><td>박성훈</td></tr>
+        <tr><td>배현서</td></tr>
+        <tr><td>신민하</td></tr>
+        <tr><td>최석현</td></tr>
+        <tr><td>최우진</td></tr>
+        <tr><td rowspan="10">MF</td><td>강상윤</td></tr>
+        <tr><td>박승수</td></tr>
+        <tr><td>배준호</td></tr>
+        <tr><td>양민혁</td></tr>
+        <tr><td>양현준 (WC)</td></tr>
+        <tr><td>엄지성 (WC)</td></tr>
+        <tr><td>이기혁 (WC)</td></tr>
+        <tr><td>이승원</td></tr>
+        <tr><td>이현주</td></tr>
+        <tr><td>황도윤</td></tr>
+        <tr><td rowspan="2">FW</td><td>김명준</td></tr>
+        <tr><td>이영준</td></tr>
+      </table>
+      <p class="note">WC = 와일드카드(23세 초과 선수). 유럽파 9명 포함 — 김지수(브렌트포드), 박승수(뉴캐슬), 배준호(스토크시티), 양현준(셀틱), 엄지성(스완지), 양민혁(토트넘), 이현주(아로카), 김명준(헹크), 이영준(그라스호퍼).</p>
+      <p><b>예상 선발 라인업(4-2-3-1)</b> — GK 김준홍 / DF 배현서·김지수·이기혁·최우진 / MF 강상윤·이승원 / 공격형 미드필더 양현준(또는 양민혁)·배준호·엄지성(또는 박승수) / FW 이영준.</p>
+
+      <h3>여자대표팀</h3>
+      <table class="wt">
+        <tr><th>포지션</th><th>선수</th></tr>
+        <tr><td rowspan="3">GK</td><td>김경희</td></tr>
+        <tr><td>김민정</td></tr>
+        <tr><td>류지수</td></tr>
+        <tr><td rowspan="8">DF</td><td>추효주 (오타와)</td></tr>
+        <tr><td>고유진</td></tr>
+        <tr><td>정유진</td></tr>
+        <tr><td>김혜리</td></tr>
+        <tr><td>한다인</td></tr>
+        <tr><td>노진영</td></tr>
+        <tr><td>장슬기</td></tr>
+        <tr><td>이민화</td></tr>
+        <tr><td rowspan="10">MF</td><td>정민영 (오타와)</td></tr>
+        <tr><td>강태경</td></tr>
+        <tr><td>김민지</td></tr>
+        <tr><td>강채림</td></tr>
+        <tr><td>박예나</td></tr>
+        <tr><td>박혜정</td></tr>
+        <tr><td>지소연</td></tr>
+        <tr><td>윤수정</td></tr>
+        <tr><td>최유리</td></tr>
+        <tr><td>현슬기</td></tr>
+        <tr><td rowspan="2">FW</td><td>정다빈 (스타베크·노르웨이)</td></tr>
+        <tr><td>손화연</td></tr>
+      </table>
+
+      <h2 id="form">최근 전적</h2>
+      <h3>남자 U23축구</h3>
+      <h4>U23 아시안컵</h4>
+      <table class="wt">
+        <tr><th>상대</th><th>결과</th></tr>
+        <tr><td>이란</td><td><span class="draw">0-0 무</span></td></tr>
+        <tr><td>레바논</td><td><span class="win">4-2 승</span></td></tr>
+        <tr><td>우즈베키스탄</td><td><span class="lose">0-2 패</span></td></tr>
+        <tr><td>호주</td><td><span class="win">2-1 승</span></td></tr>
+        <tr><td>일본</td><td><span class="lose">0-1 패</span></td></tr>
+        <tr><td>베트남</td><td><span class="draw">2-2 무</span> (승부차기 패, 4위)</td></tr>
+      </table>
+      <h4>친선경기</h4>
+      <table class="wt">
+        <tr><th>상대</th><th>결과</th></tr>
+        <tr><td>일본</td><td><span class="win">2-1 승</span></td></tr>
+        <tr><td>미국</td><td><span class="lose">1-4 패</span></td></tr>
+        <tr><td>UAE</td><td><span class="draw">1-1 무</span></td></tr>
+        <tr><td>태국</td><td><span class="win">3-2 승</span></td></tr>
+        <tr><td>키르기즈스탄</td><td><span class="lose">0-1 패</span></td></tr>
+      </table>
+
+      <h3>여자축구</h3>
+      <h4>아시안컵</h4>
+      <table class="wt">
+        <tr><th>상대</th><th>결과</th></tr>
+        <tr><td>이란</td><td><span class="win">3-0 승</span></td></tr>
+        <tr><td>필리핀</td><td><span class="win">3-0 승</span></td></tr>
+        <tr><td>호주</td><td><span class="draw">3-3 무</span></td></tr>
+        <tr><td>우즈베키스탄</td><td><span class="win">6-0 승</span></td></tr>
+        <tr><td>일본</td><td><span class="lose">1-4 패</span> (4강 탈락)</td></tr>
+      </table>
+      <h4>FIFA 시리즈 친선경기</h4>
+      <table class="wt">
+        <tr><th>상대</th><th>결과</th></tr>
+        <tr><td>브라질</td><td><span class="lose">1-5 패</span></td></tr>
+        <tr><td>캐나다</td><td><span class="lose">1-3 패</span></td></tr>
+        <tr><td>잠비아</td><td><span class="draw">1-1 무</span></td></tr>
+      </table>
+      <h4>EAFF E-1 선수권</h4>
+      <table class="wt">
+        <tr><th>상대</th><th>결과</th></tr>
+        <tr><td>괌</td><td><span class="win">5-0 승</span></td></tr>
+        <tr><td>마카오</td><td><span class="win">13-0 승</span></td></tr>
+        <tr><td>대만</td><td><span class="win">5-3 승</span></td></tr>
+      </table>
+
+      <h2 id="watch">전망과 관전 포인트</h2>
+      <div class="kr-box">
+        <h4>남자 U23축구</h4>
+        <p><b>비교적 평이한 조 배정, 관건은 4강 이후다.</b> 올해 초 U23 아시안컵에서 카타르는 3패, 사우디아라비아는 1승 2패로 예선 탈락한 만큼 D조 통과 자체는 어렵지 않을 전망이며, 8강 이후 대진이 변수가 될 것으로 보인다.</p>
+        <p><b>일본과 우즈베키스탄이 가장 강력한 경쟁자다.</b> 중국·베트남·북한 등도 변수를 만들 수 있는 반면, 이라크·요르단 등 전통 강호는 이번 대회에 불참한다.</p>
+        <h4>여자축구</h4>
+        <p><b>남북한이 한 조에 편성된 '죽음의 조'.</b> B조에서 대한민국과 북한이 동시에 조별리그를 치르게 되면서, 이 조의 결과가 나머지 국가들의 8강 진출 향방까지 좌우할 전망이다.</p>
+        <p><b>일본과 중국이 조 1위 후보.</b> 두 나라는 각각의 조에서 1위로 비교적 수월하게 4강까지 오를 것으로 보인다.</p>
+      </div>
+
+      <div class="footer">
+        출처: 편집부 취재 및 자체 정리 — 국가대표 명단·조 편성·최근 전적은 대한축구협회 발표 및 대회 기록 기준. 일정과 세부 사항은 대회 진행에 따라 변경될 수 있다.
+      </div>
     </div>
-    <div class="cardgrid">
-
-      <div class="info-card">
-        <h3>국가대표 명단</h3>
-        <div class="poslist"><span class="pos">GK</span>김민승, 김준홍, 이승환</div>
-        <div class="poslist"><span class="pos">DF</span>강민준, 김지수, 박경섭, 박성훈, 배현서, 신민하, 최석현, 최우진</div>
-        <div class="poslist"><span class="pos">MF</span>강상윤, 박승수, 배준호, 양민혁, 양현준(WC), 엄지성(WC), 이기혁(WC), 이승원, 이현주, 황도윤</div>
-        <div class="poslist"><span class="pos">FW</span>김명준, 이영준</div>
-        <div class="note">유럽파 9명 포함 — 김지수(브렌트포드), 박승수(뉴캐슬), 배준호(스토크시티), 양현준(셀틱), 엄지성(스완지), 양민혁(토트넘), 이현주(아로카), 김명준(헹크), 이영준(그라스호퍼)</div>
-
-        <div class="pitch">
-          <div class="prow"><span class="pplayer">김준홍(GK)</span></div>
-          <div class="prow"><span class="pplayer">배현서</span><span class="pplayer">김지수</span><span class="pplayer">이기혁</span><span class="pplayer">최우진</span></div>
-          <div class="prow"><span class="pplayer">강상윤</span><span class="pplayer">이승원</span></div>
-          <div class="prow"><span class="pplayer">양현준/양민혁</span><span class="pplayer">배준호</span><span class="pplayer">엄지성/박승수</span></div>
-          <div class="prow"><span class="pplayer">이영준</span></div>
-        </div>
-      </div>
-
-      <div class="info-card">
-        <h3>조 편성 · 일정</h3>
-        <div class="grouptable">
-          <div class="grow"><span class="gname">A조</span>일본, 태국, 키르기즈스탄, 홍콩</div>
-          <div class="grow"><span class="gname">B조</span>중국, UAE, 이란, 북한</div>
-          <div class="grow"><span class="gname">C조</span>베트남, 우즈베키스탄, 필리핀, 쿠웨이트</div>
-          <div class="grow mine"><span class="gname">D조</span>대한민국, 사우디, 카타르</div>
-        </div>
-        <div class="sched">
-          <span><b>9/16</b> 예선 카타르전</span>
-          <span><b>9/23</b> 예선 사우디전</span>
-        </div>
-        <div class="note">조 2위 이내 시 8강 진출. 8강 이후 대진은 추후 결정.</div>
-      </div>
-
-      <div class="info-card">
-        <h3>전력 분석</h3>
-        <p class="txt">올해 초 U23 아시안컵에서 카타르는 3패, 사우디는 1승 2패로 예선 탈락했다. 비교적 평이한 조 배정이며 4강 이후 대진이 변수가 될 전망이다.</p>
-        <p class="txt">일본과 우즈벡이 가장 강력한 경쟁자로 보이며, 중국·베트남·북한 등도 변수를 만들 수 있다. 이라크·요르단 등은 불참한다.</p>
-      </div>
-
-      <div class="info-card">
-        <h3>최근 전적</h3>
-        <div class="results">
-          <div class="rgroup">U23 아시안컵</div>
-          <div class="rline">vs 이란 <span class="d">0-0 무</span> · vs 레바논 <span class="w">4-2 승</span> · vs 우즈벡 <span class="l">0-2 패</span> · vs 호주 <span class="w">2-1 승</span> · vs 일본 <span class="l">0-1 패</span> · vs 베트남 <span class="d">2-2 무(승부차기 패, 4위)</span></div>
-          <div class="rgroup">친선</div>
-          <div class="rline">vs 일본 <span class="w">2-1 승</span> · vs 미국 <span class="l">1-4 패</span> · vs UAE <span class="d">1-1 무</span> · vs 태국 <span class="w">3-2 승</span> · vs 키르기즈스탄 <span class="l">0-1 패</span></div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ===== 여자 축구 ===== -->
-  <section class="division">
-    <div class="div-head">
-      <h2>여자 축구</h2>
-      <span class="badge">참가 12개국 · B조 (남북한 동반 편성)</span>
-    </div>
-    <div class="cardgrid">
-
-      <div class="info-card">
-        <h3>국가대표 명단</h3>
-        <div class="poslist"><span class="pos">GK</span>김경희, 김민정, 류지수</div>
-        <div class="poslist"><span class="pos">DF</span>추효주(오타와), 고유진, 정유진, 김혜리, 한다인, 노진영, 장슬기, 이민화</div>
-        <div class="poslist"><span class="pos">MF</span>정민영(오타와), 강태경, 김민지, 강채림, 박예나, 박혜정, 지소연, 윤수정, 최유리, 현슬기</div>
-        <div class="poslist"><span class="pos">FW</span>정다빈(스타베크·노르웨이), 손화연</div>
-      </div>
-
-      <div class="info-card">
-        <h3>조 편성 · 일정</h3>
-        <div class="grouptable">
-          <div class="grow"><span class="gname">A조</span>일본, 대만, 베트남, 태국</div>
-          <div class="grow mine"><span class="gname">B조</span>대한민국, 북한, 방글라데시, 미얀마</div>
-          <div class="grow"><span class="gname">C조</span>중국, 필리핀, 우즈벡, 홍콩</div>
-        </div>
-        <div class="note">조 3위 이내 9개국 중 최하위 1개 팀을 제외하고 8강 토너먼트 진출.</div>
-      </div>
-
-      <div class="info-card">
-        <h3>전력 분석</h3>
-        <p class="txt">남북한이 동시에 같은 조에 편성되며 '죽음의 조'가 됐다. 일본과 중국은 조 1위로 4강까지 비교적 쉽게 오를 것으로 보이며, B조의 결과가 나머지 국가들의 행방을 좌우할 전망이다.</p>
-      </div>
-
-      <div class="info-card">
-        <h3>최근 전적</h3>
-        <div class="results">
-          <div class="rgroup">아시안컵</div>
-          <div class="rline">vs 이란 <span class="w">3-0 승</span> · vs 필리핀 <span class="w">3-0 승</span> · vs 호주 <span class="d">3-3 무</span> · vs 우즈벡 <span class="w">6-0 승</span> · vs 일본 <span class="l">1-4 패</span>(4강 탈락)</div>
-          <div class="rgroup">FIFA 시리즈 친선</div>
-          <div class="rline">vs 브라질 <span class="l">1-5 패</span> · vs 캐나다 <span class="l">1-3 패</span> · vs 잠비아 <span class="d">1-1 무</span></div>
-          <div class="rgroup">EAFF E-1 선수권</div>
-          <div class="rline">vs 괌 <span class="w">5-0 승</span> · vs 마카오 <span class="w">13-0 승</span> · vs 대만 <span class="w">5-3 승</span></div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <footer class="pagefoot">
-    <span>2026 아이치·나고야 아시안게임 · 축구</span>
-    <a href="index.html">← 전체 종목 목록 보기</a>
-  </footer>
+    <aside class="infobox">
+      <div class="ib-title">축구 종목 정보</div>
+      <table>
+        <tr><th>영문명</th><td>Football</td></tr>
+        <tr><th>남자 U23 참가국</th><td>15개국</td></tr>
+        <tr><th>남자 U23 조</th><td>D조 (대한민국·사우디아라비아·카타르)</td></tr>
+        <tr><th>여자 참가국</th><td>12개국</td></tr>
+        <tr><th>여자 조</th><td>B조 (대한민국·북한·방글라데시·미얀마)</td></tr>
+        <tr><th>관련 문서</th><td><a href="index2.html">아시안게임 종목 안내</a></td></tr>
+      </table>
+    </aside>
+  </div>
 </div>
 </body>
 </html>
