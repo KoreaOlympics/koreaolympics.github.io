@@ -85,10 +85,18 @@
     html{scroll-behavior:auto;}
     .chevron, .subwrap, .card, .fpills a{transition:none;}
   }
+  .corner-nav{display:flex;justify-content:space-between;align-items:center;font-size:13px;margin-bottom:24px;}
+  .corner-nav a{color:var(--muted);font-weight:600;padding:6px 12px;border:1px solid var(--border);border-radius:20px;background:var(--panel);}
+  .corner-nav a:hover{color:var(--gold);border-color:var(--gold);text-decoration:none;}
+  @media (max-width:560px){.corner-nav{font-size:12px;}.corner-nav a{padding:5px 9px;}}
 </style>
 </head>
 <body>
 <div class="wrap">
+  <nav class="corner-nav">
+    <a href="korea-favorites.html">🏅 한국의 우승후보</a>
+    <a href="asia-stars.html">⭐ 주요 아시아 스타 선수</a>
+  </nav>
   <header class="hero">
     <span class="eyebrow">2026 Aichi · Nagoya</span>
     <h1>제20회 아이치·나고야<br><em>아시안게임 종목</em> 안내</h1>
