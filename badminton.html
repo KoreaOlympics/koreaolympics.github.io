@@ -60,6 +60,14 @@
   .medal.s{color:#5b6168;border-color:#d5d9de;background:#f4f5f6;}
   .medal.b{color:#8a5a30;border-color:#e0c3a3;background:#fbf1e6;}
   .footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;}
+  details.riv{border:1px solid var(--border);border-radius:3px;margin:0 0 10px;background:var(--panel);}
+  details.riv summary{cursor:pointer;font-family:var(--serif);font-weight:600;font-size:15.5px;padding:9px 14px;list-style:none;}
+  details.riv summary::-webkit-details-marker{display:none;}
+  details.riv summary::before{content:"▶";display:inline-block;font-size:11px;color:var(--gold);margin-right:8px;transition:transform .15s ease;}
+  details.riv[open] summary::before{transform:rotate(90deg);}
+  details.riv summary .en{font-weight:400;color:var(--muted);font-size:13px;margin-left:6px;}
+  details.riv .riv-body{padding:0 14px 12px;}
+  details.riv table.wt{margin:4px 0 0;}
   @media (max-width:820px){.infobox{flex:1 1 100%;order:-1;}}
 </style>
 </head>
@@ -215,40 +223,58 @@
       </table>
 
       <h2 id="rivals">경계할 상대</h2>
-      <p class="note">2026 아시안게임 배드민턴에 나서는 중국·일본·인도·말레이시아 대표팀 요약 (각국 20명 규모 편성). 출처: archysport(2026.6), badspi.jp(2026.5.19)</p>
+      <p class="note">위 세계 랭킹(2026.7.28 기준)에서 종목별 3위 이내에 든 선수(한국 제외)만 국가별로 추린 금메달 후보 요약. 각 항목을 눌러 펼쳐보세요.</p>
 
-      <h4>중국 <span style="font-weight:400;color:var(--muted);">China</span></h4>
-      <table class="wt">
-        <tr><td>남자 단식</td><td>스위치, 천룽, 왕톈위</td></tr>
-        <tr><td>여자 단식</td><td>천위페이, 허빙자오, 왕즈이</td></tr>
-        <tr><td>남자 복식</td><td>리준후이/류위천, 탄창/탄위쉬안</td></tr>
-        <tr><td>여자 복식</td><td>천칭천/자이판, 두위에/리인후이</td></tr>
-        <tr><td>혼합 복식</td><td>왕이루/황둥핑</td></tr>
-      </table>
+      <details class="riv">
+        <summary>중국 <span class="en">China</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><td>남자단식</td><td>세계 1위 스이치</td></tr>
+            <tr><td>여자단식</td><td>세계 3위 왕즈이</td></tr>
+            <tr><td>남자복식</td><td>세계 3위 량웨이컹 / 왕창</td></tr>
+            <tr><td>여자복식</td><td>세계 1위 류성수 / 탄닝</td></tr>
+            <tr><td>혼합복식</td><td>세계 1위 펑옌저 / 황둥핑 · 세계 2위 장전방 / 웨이야신</td></tr>
+          </table>
+        </div>
+      </details>
 
-      <h4>일본 <span style="font-weight:400;color:var(--muted);">Japan</span></h4>
-      <table class="wt">
-        <tr><td>남자 단식</td><td>나라오카 고다이, 니시모토 겐타, 타나카 유시, 와타나베 고키</td></tr>
-        <tr><td>남자 복식</td><td>호키 다쿠로/고바야시 유고, 구마가이 쇼/니시 다이키</td></tr>
-        <tr><td>여자 단식</td><td>야마구치 아카네, 미야자키 도모카, 오쿠하라 노조미, 군지 리코</td></tr>
-        <tr><td>여자 복식</td><td>후쿠시마 유키/마츠모토 마유, 나카니시 다카에/이와나가 스즈</td></tr>
-        <tr><td>혼합 복식</td><td>시모가미 유이치/야스하라 아야카, 와타나베 유타/타구치 마아사</td></tr>
-      </table>
+      <details class="riv">
+        <summary>태국 <span class="en">Thailand</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><td>남자단식</td><td>세계 2위 쿤라부트 위티차이차른</td></tr>
+          </table>
+        </div>
+      </details>
 
-      <h4>인도 <span style="font-weight:400;color:var(--muted);">India</span></h4>
-      <table class="wt">
-        <tr><td>남자 단식</td><td>락샤 센, 아유슈 셰티, H.S. 프라노이, 키담비 스리칸트, 타룬 만네팔리</td></tr>
-        <tr><td>남자 복식</td><td>랑키레디/셰티, 암사카루난/아르준</td></tr>
-        <tr><td>여자 단식</td><td>P.V. 신두, 운나티 후다, 데비카 시하그, 탄비 샤르마, 이샤라니 바루아</td></tr>
-        <tr><td>여자 복식</td><td>졸리/풀렐라, 셀밤/싱히</td></tr>
-        <tr><td>혼합 복식</td><td>카필라/크라스토</td></tr>
-      </table>
+      <details class="riv">
+        <summary>인도네시아 <span class="en">Indonesia</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><td>남자단식</td><td>세계 3위 요나탄 크리스티</td></tr>
+            <tr><td>남자복식</td><td>세계 2위 파자르 알피안 / 무함마드 쇼히불 피크리</td></tr>
+          </table>
+        </div>
+      </details>
 
-      <h4>말레이시아 <span style="font-weight:400;color:var(--muted);">Malaysia</span></h4>
-      <table class="wt">
-        <tr><td>남자 (10명)</td><td>리옹준하오, 저스틴 호, 오진 유, 콩웨이샹, 아론 치아, 티 카이 운, 고희순, 누르 이즈딘 룸사니, 천탕지, 고훈화트</td></tr>
-        <tr><td>여자 (10명)</td><td>K 레트샤나, 웡링칭, 우샨지, 엥러치, 펄리 탄, M 티나, 로지유, 노라킬라 마이사라 람단, 청수인, 셰본 라이</td></tr>
-      </table>
+      <details class="riv">
+        <summary>일본 <span class="en">Japan</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><td>여자단식</td><td>세계 2위 야마구치 아카네</td></tr>
+            <tr><td>여자복식</td><td>세계 2위 후쿠시마 유키 / 마츠모토 마유</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="riv">
+        <summary>덴마크 <span class="en">Denmark</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><td>혼합복식</td><td>세계 3위 마티아스 크리스티안센 / 알렉산드라 뵈에</td></tr>
+          </table>
+        </div>
+      </details>
 
       <h2 id="watch">관전 포인트</h2>
       <div class="kr-box">
