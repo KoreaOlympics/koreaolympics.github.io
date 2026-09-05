@@ -50,6 +50,7 @@
   table.wt th{background:var(--panel);}
   table.wt td.num, table.wt th.num{text-align:center;}
   table.wt caption{font-size:12.5px;color:var(--muted);text-align:left;padding:2px 0 6px;}
+  table.wt tr.kr td{background:#eef4ff;font-weight:600;}
   .note{font-size:12.5px;color:var(--muted);margin:-8px 0 16px;}
   .kr-box{background:#eef4ff;border:1px solid #c3d6f7;border-radius:3px;padding:14px 16px;margin:10px 0 18px;}
   .kr-box h4{margin-top:0;color:#1e3a8a;}
@@ -59,6 +60,14 @@
   .medal.s{color:#5b6168;border-color:#d5d9de;background:#f4f5f6;}
   .medal.b{color:#8a5a30;border-color:#e0c3a3;background:#fbf1e6;}
   .footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;}
+  details.riv{border:1px solid var(--border);border-radius:3px;margin:0 0 10px;background:var(--panel);}
+  details.riv summary{cursor:pointer;font-family:var(--serif);font-weight:600;font-size:15.5px;padding:9px 14px;list-style:none;}
+  details.riv summary::-webkit-details-marker{display:none;}
+  details.riv summary::before{content:"▶";display:inline-block;font-size:11px;color:var(--gold);margin-right:8px;transition:transform .15s ease;}
+  details.riv[open] summary::before{transform:rotate(90deg);}
+  details.riv summary .en{font-weight:400;color:var(--muted);font-size:13px;margin-left:6px;}
+  details.riv .riv-body{padding:0 14px 12px;}
+  details.riv table.wt{margin:4px 0 0;}
   @media (max-width:820px){.infobox{flex:1 1 100%;order:-1;}}
 </style>
 </head>
@@ -79,7 +88,11 @@
         <ol>
           <li><a href="#overview">개요</a></li>
           <li><a href="#disciplines">세부종목</a></li>
-          <li><a href="#roster">한국 대표팀</a></li>
+          <li><a href="#roster">한국 대표팀</a>
+            <ol>
+              <li><a href="#mma-entries">종합격투기 전체 출전자 명단</a></li>
+            </ol>
+          </li>
         </ol>
       </div>
 
@@ -116,6 +129,120 @@
         <tr><td>이보미</td></tr>
         <tr><td>최은석</td></tr>
       </table>
+
+      <h3 id="mma-entries">전체 출전자 명단</h3>
+      <p>2026 아이치·나고야 아시안게임 종합격투기(MMA) 6개 체급의 공식 확정 출전자 명단 전체(총 57명). 체급을 눌러 펼쳐보세요. 한국 선수 3명(최은석·윤태영·이보미)은 강조 표시했으며, 프로 전적·소속 단체 등 주목할 만한 이력이 있는 선수는 이름 아래 별도로 표기했다.</p>
+
+      <details class="riv">
+        <summary>남자 모던 -60kg <span class="en">출전 10명</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><th class="num">No</th><th>국가코드</th><th>국적</th><th>성명</th><th>생년월일</th></tr>
+            <tr><td class="num">1</td><td>CAM</td><td>캄보디아</td><td>PHENG Sopanha</td><td>2007-08-15</td></tr>
+            <tr><td class="num">2</td><td>IRI</td><td>이란</td><td>GHAEDIFAR Amin</td><td>1995-04-30</td></tr>
+            <tr><td class="num">3</td><td>JOR</td><td>요르단</td><td>ABABNEH Mahmoud</td><td>2001-01-23</td></tr>
+            <tr><td class="num">4</td><td>JPN</td><td>일본</td><td>NAKASHIMA Kojiro</td><td>2004-07-23</td></tr>
+            <tr><td class="num">5</td><td>KGZ</td><td>키르기스스탄</td><td>KANYBEK UULU Dastan</td><td>2003-10-20</td></tr>
+            <tr><td class="num">6</td><td>KSA</td><td>사우디아라비아</td><td>BASAHEL Malik</td><td>2001-11-15</td></tr>
+            <tr><td class="num">7</td><td>PAK</td><td>파키스탄</td><td>KHAN Asim</td><td>2000-10-09</td></tr>
+            <tr><td class="num">8</td><td>TJK</td><td>타지키스탄</td><td>UMAROV Mirzobek</td><td>1996-10-04</td></tr>
+            <tr><td class="num">9</td><td>TPE</td><td>중화타이베이</td><td>CHANG Li</td><td>1994-12-19</td></tr>
+            <tr><td class="num">10</td><td>UZB</td><td>우즈베키스탄</td><td>ATAMURATOV Firdavs</td><td>2008-07-27</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="riv">
+        <summary>남자 모던 -71kg <span class="en">출전 9명</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><th class="num">No</th><th>국가코드</th><th>국적</th><th>성명</th><th>생년월일</th></tr>
+            <tr><td class="num">1</td><td>AFG</td><td>아프가니스탄</td><td>ZAHERI Sameallah</td><td>2001-11-25</td></tr>
+            <tr><td class="num">2</td><td>BRN</td><td>바레인</td><td>IDRISOV Kurban<br><span style="font-size:12px;color:var(--muted);">(BRAVE CF 소속 무패 프로 파이터, KHK Team Bahrain)</span></td><td>1997-04-16</td></tr>
+            <tr><td class="num">3</td><td>JOR</td><td>요르단</td><td>NASSAR Marwan "The Wolf"<br><span style="font-size:12px;color:var(--muted);">(현지 프로 MMA 파이터 겸 코치)</span></td><td>1997-09-13</td></tr>
+            <tr><td class="num">4</td><td>KAZ</td><td>카자흐스탄</td><td>SHINBAYEV Kadyrbek</td><td>2004-02-08</td></tr>
+            <tr><td class="num">5</td><td>KGZ</td><td>키르기스스탄</td><td>DUISHEEV Yryskeldi</td><td>2001-09-21</td></tr>
+            <tr class="kr"><td class="num">6</td><td>KOR</td><td>대한민국</td><td>CHOI Eunsok (최은석)<br><span style="font-size:12px;color:var(--muted);">('코리안 좀비' 정찬성 문하생, 고교 재학 중 프로 데뷔)</span></td><td>2006-12-14</td></tr>
+            <tr><td class="num">7</td><td>THA</td><td>태국</td><td>JANHOM Saksit</td><td>1997-02-07</td></tr>
+            <tr><td class="num">8</td><td>TJK</td><td>타지키스탄</td><td>KHURSHEDZODA Behruz</td><td>2001-09-07</td></tr>
+            <tr><td class="num">9</td><td>UZB</td><td>우즈베키스탄</td><td>SHAVKATOV Nodirbek</td><td>2003-06-07</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="riv">
+        <summary>남자 전통 -65kg <span class="en">출전 10명</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><th class="num">No</th><th>국가코드</th><th>국적</th><th>성명</th><th>생년월일</th></tr>
+            <tr><td class="num">1</td><td>AFG</td><td>아프가니스탄</td><td>ARSALANI Khalil</td><td>2007-04-26</td></tr>
+            <tr><td class="num">2</td><td>BRN</td><td>바레인</td><td>ALSAMEEA Mohamed<br><span style="font-size:12px;color:var(--muted);">(BRAVE CF 정규 로스터 활동 중인 프로 파이터)</span></td><td>2003-10-10</td></tr>
+            <tr><td class="num">3</td><td>INA</td><td>인도네시아</td><td>ALFARIZI Gibran</td><td>2008-11-13</td></tr>
+            <tr><td class="num">4</td><td>IRI</td><td>이란</td><td>SALIMI TOUPGHARA Afshin</td><td>1995-10-28</td></tr>
+            <tr><td class="num">5</td><td>JPN</td><td>일본</td><td>MURAYAMA Daisuke</td><td>1994-03-29</td></tr>
+            <tr><td class="num">6</td><td>KAZ</td><td>카자흐스탄</td><td>ADILOV Sanzhar<br><span style="font-size:12px;color:var(--muted);">(UAE Warriors 등 출전 경력 프로 파이터)</span></td><td>1996-05-20</td></tr>
+            <tr><td class="num">7</td><td>KSA</td><td>사우디아라비아</td><td>ALMOLHEM Saud<br><span style="font-size:12px;color:var(--muted);">(PFL MENA 계약 신인 파이터)</span></td><td>2005-02-09</td></tr>
+            <tr><td class="num">8</td><td>PHI</td><td>필리핀</td><td>SACLAG Jean Claude</td><td>1994-09-25</td></tr>
+            <tr><td class="num">9</td><td>TJK</td><td>타지키스탄</td><td>RAJABOV Otabek</td><td>2002-12-18</td></tr>
+            <tr><td class="num">10</td><td>UZB</td><td>우즈베키스탄</td><td>NASRIDDINOV Husniddin</td><td>~2003-04-01</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="riv">
+        <summary>남자 전통 -77kg <span class="en">출전 10명</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><th class="num">No</th><th>국가코드</th><th>국적</th><th>성명</th><th>생년월일</th></tr>
+            <tr><td class="num">1</td><td>BRN</td><td>바레인</td><td>NABIEV Mukhammad</td><td>1995-08-20</td></tr>
+            <tr><td class="num">2</td><td>INA</td><td>인도네시아</td><td>PRABOWO Ananda Wahyu Setyo<br><span style="font-size:12px;color:var(--muted);">("The Black Bear", One Pride MMA 등 전적 5승1패 프로 파이터)</span></td><td>1999-12-04</td></tr>
+            <tr><td class="num">3</td><td>IND</td><td>인도</td><td>TOMAR Prathvi<br><span style="font-size:12px;color:var(--muted);">(인도 MMA씬에서 소개된 현역 파이터)</span></td><td>2002-02-13</td></tr>
+            <tr><td class="num">4</td><td>JOR</td><td>요르단</td><td>ALNAJJAR Ra'ad</td><td>1999-10-18</td></tr>
+            <tr><td class="num">5</td><td>KAZ</td><td>카자흐스탄</td><td>BURKUTALIN Yerkingali</td><td>1998-05-11</td></tr>
+            <tr><td class="num">6</td><td>KGZ</td><td>키르기스스탄</td><td>ZHANYBEK UULU Syimyk</td><td>1999-10-13</td></tr>
+            <tr class="kr"><td class="num">7</td><td>KOR</td><td>대한민국</td><td>YOON Taeyoung (윤태영)<br><span style="font-size:12px;color:var(--muted);">(現 Road FC 웰터급 챔피언)</span></td><td>1996-07-21</td></tr>
+            <tr><td class="num">8</td><td>PHI</td><td>필리핀</td><td>ALVAREZ Carlos</td><td>1999-04-05</td></tr>
+            <tr><td class="num">9</td><td>TPE</td><td>중화타이베이</td><td>LIN Ming-dian</td><td>1998-04-21</td></tr>
+            <tr><td class="num">10</td><td>VIE</td><td>베트남</td><td>QUANG Van Minh</td><td>1997-05-10</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="riv">
+        <summary>여자 모던 -54kg <span class="en">출전 9명</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><th class="num">No</th><th>국가코드</th><th>국적</th><th>성명</th><th>생년월일</th></tr>
+            <tr><td class="num">1</td><td>INA</td><td>인도네시아</td><td>HOTMAULI Vallensia Fahira</td><td>1999-06-22</td></tr>
+            <tr><td class="num">2</td><td>JPN</td><td>일본</td><td>KATAYAMA Tomoe</td><td>2000-08-13</td></tr>
+            <tr><td class="num">3</td><td>KAZ</td><td>카자흐스탄</td><td>TOREKHANOVA Aigerim<br><span style="font-size:12px;color:var(--muted);">(Naiza FC·IMMAF 아시아선수권 등 다수 출전 현역 파이터)</span></td><td>2000-02-24</td></tr>
+            <tr><td class="num">4</td><td>KGZ</td><td>키르기스스탄</td><td>MURZAGALIEVA Adelina</td><td>2006-03-06</td></tr>
+            <tr class="kr"><td class="num">5</td><td>KOR</td><td>대한민국</td><td>LEE Bomi (이보미)<br><span style="font-size:12px;color:var(--muted);">(베테랑 파이터, 자국 첫 아시안게임 MMA 출전)</span></td><td>1999-01-02</td></tr>
+            <tr><td class="num">6</td><td>KSA</td><td>사우디아라비아</td><td>ALSAIF Hattan</td><td>2001-11-24</td></tr>
+            <tr><td class="num">7</td><td>PHI</td><td>필리핀</td><td>ARAOS Gina<br><span style="font-size:12px;color:var(--muted);">(필리핀 킥복싱 국가대표 출신, 아시안게임 킥복싱 금메달리스트)</span></td><td>1989-06-05</td></tr>
+            <tr><td class="num">8</td><td>THA</td><td>태국</td><td>PHATTARABOONSORN Kanjutha</td><td>1996-06-14</td></tr>
+            <tr><td class="num">9</td><td>VIE</td><td>베트남</td><td>LO Thi Phung</td><td>~1990s</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="riv">
+        <summary>여자 전통 -60kg <span class="en">출전 9명</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><th class="num">No</th><th>국가코드</th><th>국적</th><th>성명</th><th>생년월일</th></tr>
+            <tr><td class="num">1</td><td>CAM</td><td>캄보디아</td><td>CHENG Dalin</td><td>2002-12-30</td></tr>
+            <tr><td class="num">2</td><td>IND</td><td>인도</td><td>TARIYAL Suchika</td><td>1990-08-16</td></tr>
+            <tr><td class="num">3</td><td>IRI</td><td>이란</td><td>SALIMIGHALEHTAKI Arezou</td><td>1995-08-06</td></tr>
+            <tr><td class="num">4</td><td>MAS</td><td>말레이시아</td><td>HOONG Gloria Isabelle</td><td>1993-04-14</td></tr>
+            <tr><td class="num">5</td><td>MGL</td><td>몽골</td><td>BAIGALMAA Altanchimeg</td><td>2005-05-24</td></tr>
+            <tr><td class="num">6</td><td>SGP</td><td>싱가포르</td><td>TEO Tiffany (테오 티파니)<br><span style="font-size:12px;color:var(--muted);">(ONE 챔피언십 소속, 세계 정상급 여자 종합격투기 선수)</span></td><td>1989-11-11</td></tr>
+            <tr><td class="num">7</td><td>SYR</td><td>시리아</td><td>DRGHAM Aline</td><td>2000-01-14</td></tr>
+            <tr><td class="num">8</td><td>TPE</td><td>중화타이베이</td><td>LIN Yu-fen</td><td>1992-05-31</td></tr>
+            <tr><td class="num">9</td><td>UZB</td><td>우즈베키스탄</td><td>OMONKELDIEVA Mushtariybonu</td><td>1999-07-27</td></tr>
+          </table>
+        </div>
+      </details>
 
       <h3>주짓수 (16명)</h3>
       <table class="wt">
@@ -159,6 +286,7 @@
 
       <div class="footer">
         출처: 편집부 자체 정리.<br>
+        종합격투기 전체 출전자 명단 출처: results.asiangames2026.org (Entries).<br>
         일정과 세부 사항은 대회 진행에 따라 변경될 수 있다.
       </div>
     </div>
