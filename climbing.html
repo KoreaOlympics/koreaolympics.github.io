@@ -50,6 +50,7 @@
   table.wt th{background:var(--panel);}
   table.wt td.num, table.wt th.num{text-align:center;}
   table.wt caption{font-size:12.5px;color:var(--muted);text-align:left;padding:2px 0 6px;}
+  table.wt tr.kr td{background:#eef4ff;font-weight:600;}
   .note{font-size:12.5px;color:var(--muted);margin:-8px 0 16px;}
   .kr-box{background:#eef4ff;border:1px solid #c3d6f7;border-radius:3px;padding:14px 16px;margin:10px 0 18px;}
   .kr-box h4{margin-top:0;color:#1e3a8a;}
@@ -59,6 +60,14 @@
   .medal.s{color:#5b6168;border-color:#d5d9de;background:#f4f5f6;}
   .medal.b{color:#8a5a30;border-color:#e0c3a3;background:#fbf1e6;}
   .footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;}
+  details.riv{border:1px solid var(--border);border-radius:3px;margin:0 0 10px;background:var(--panel);}
+  details.riv summary{cursor:pointer;font-family:var(--serif);font-weight:600;font-size:15.5px;padding:9px 14px;list-style:none;}
+  details.riv summary::-webkit-details-marker{display:none;}
+  details.riv summary::before{content:"▶";display:inline-block;font-size:11px;color:var(--gold);margin-right:8px;transition:transform .15s ease;}
+  details.riv[open] summary::before{transform:rotate(90deg);}
+  details.riv summary .en{font-weight:400;color:var(--muted);font-size:13px;margin-left:6px;}
+  details.riv .riv-body{padding:0 14px 12px;}
+  details.riv table.wt{margin:4px 0 0;}
   @media (max-width:820px){.infobox{flex:1 1 100%;order:-1;}}
 </style>
 </head>
@@ -80,6 +89,7 @@
           <li><a href="#overview">개요</a></li>
           <li><a href="#disciplines">세부종목</a></li>
           <li><a href="#roster">한국 대표팀</a></li>
+          <li><a href="#entries">전체 출전자 명단</a></li>
           <li><a href="#form">최근 성적</a></li>
           <li><a href="#worldcup">2026시즌 월드컵 시리즈</a></li>
         </ol>
@@ -126,6 +136,158 @@
       <p>2025 세계선수권 리드 금메달과 볼더링 동메달을 동시에 따내며 시즌 최고의 한 해를 보냈고, 2026 아시아선수권에서는 볼더링 정상에 올라 세계 최강 소라토 안라쿠(일본)를 직접 꺾었다. 시즌 월드컵에서도 프라하·인스브루크 볼더링에서 잇달아 시상대에 오르며 컨디션을 유지 중이다. 두 종목 모두 메달, 특히 볼더링에서는 금메달을 노릴 수 있는 한국 클라이밍의 최대 기대주다.</p>
       <h3>서채현 <span style="font-weight:400;color:var(--muted);">여자 리드</span></h3>
       <p>2022 항저우 아시안게임 콤바인 은메달에 이어 2025 세계선수권 리드 동메달을 추가했고, 2026 아시아선수권에서는 모리 아이(일본)에 이어 리드 은메달을 차지했다. 시즌 월드컵 리드에서도 프라하·인스브루크·샤모니까지 꾸준히 시상대에 이름을 올려, 안정감 면에서는 한국 대표팀 내 최고 수준. 리드 종목 메달권 진입이 유력하다.</p>
+
+      <h2 id="entries">전체 출전자 명단</h2>
+      <p>2026 아이치·나고야 아시안게임 스포츠클라이밍 6개 세부종목(남녀 각 스피드·볼더링·리드)의 공식 확정 출전자 명단 전체. 종목을 눌러 펼쳐보세요. 한국 선수는 강조 표시했다.</p>
+
+      <details class="riv">
+        <summary>여자 스피드 <span class="en">Total entries: 17</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><th>국가</th><th>선수</th><th>생년월일</th></tr>
+            <tr><td>CHN</td><td>Lijuan Deng</td><td>2000.05.12</td></tr>
+            <tr><td>CHN</td><td>Yafei Zhou</td><td>2004.05.15</td></tr>
+            <tr><td>HKG</td><td>LAM Cho Wing Jasmiki</td><td>2004.02.13</td></tr>
+            <tr><td>INA</td><td>DEWI Desak Made Rita Kusuma</td><td>2001.01.24</td></tr>
+            <tr><td>INA</td><td>KUSUMA Berthdigna Devi Surya</td><td>1999.09.21</td></tr>
+            <tr><td>IND</td><td>PURTY Joga</td><td>2007.01.26</td></tr>
+            <tr><td>JOR</td><td>FARKOUH Jood</td><td>2002.08.07</td></tr>
+            <tr><td>JPN</td><td>HAYASHI Karin</td><td>2005.03.20</td></tr>
+            <tr><td>JPN</td><td>KOYAMATSU Ren</td><td>2008.01.28</td></tr>
+            <tr><td>KAZ</td><td>ULZHABAYEVA Tamara</td><td>1987.08.04</td></tr>
+            <tr><td>KAZ</td><td>UTESHEVA Adeliya</td><td>2003.02.28</td></tr>
+            <tr class="kr"><td>KOR</td><td>JEONG Jimin</td><td>2004.08.01</td></tr>
+            <tr class="kr"><td>KOR</td><td>SUNG Hanareum</td><td>2005.05.17</td></tr>
+            <tr><td>SGP</td><td>KOH Jeanette Frances</td><td>2004.11.02</td></tr>
+            <tr><td>SGP</td><td>TAN Eilin</td><td>2003.01.02</td></tr>
+            <tr><td>THA</td><td>DISYABUT Napat</td><td>2004.02.23</td></tr>
+            <tr><td>THA</td><td>DISYABUT Narada</td><td>2000.08.24</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="riv">
+        <summary>남자 스피드 <span class="en">Total entries: 20</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><th>국가</th><th>선수</th><th>생년월일</th></tr>
+            <tr><td>CHN</td><td>Jianguo Long</td><td>2003.03.22</td></tr>
+            <tr><td>CHN</td><td>Shouhong Chu</td><td>2007.04.14</td></tr>
+            <tr><td>HKG</td><td>AU Chi Fung</td><td>1995.07.05</td></tr>
+            <tr><td>HKG</td><td>WONG Cheuk Nam</td><td>2001.08.02</td></tr>
+            <tr><td>INA</td><td>LEONARDO Veddriq</td><td>1997.03.11</td></tr>
+            <tr><td>INA</td><td>SYAHRIA Aditya Tri</td><td>2003.08.27</td></tr>
+            <tr><td>IND</td><td>MALLESH Deepu</td><td>1998.01.10</td></tr>
+            <tr><td>IRI</td><td>ALI POUR SHENAZANDI FARD Reza</td><td>1994.04.29</td></tr>
+            <tr><td>JOR</td><td>ABU HAMATTO Omar</td><td>2006.06.18</td></tr>
+            <tr><td>JPN</td><td>FUJINO Shuto</td><td>2004.11.28</td></tr>
+            <tr><td>JPN</td><td>OMASA Ryo</td><td>2002.06.26</td></tr>
+            <tr><td>KAZ</td><td>MAIMURATOV Amir</td><td>1995.07.19</td></tr>
+            <tr><td>KAZ</td><td>TOKTAROV Damir</td><td>2007.09.20</td></tr>
+            <tr class="kr"><td>KOR</td><td>JO Jinyong</td><td>2008.01.14</td></tr>
+            <tr class="kr"><td>KOR</td><td>KIM Dongjun</td><td>2006.11.03</td></tr>
+            <tr><td>KUW</td><td>NASSER Abu Ergeeb</td><td>1998.02.04</td></tr>
+            <tr><td>SGP</td><td>ADRE Bin Alfiyan</td><td>2005.03.23</td></tr>
+            <tr><td>SGP</td><td>LOW Ezell Qing Wei</td><td>2006.04.29</td></tr>
+            <tr><td>THA</td><td>BUNPRAKOP Phanuphong</td><td>1997.03.06</td></tr>
+            <tr><td>THA</td><td>LIMPANICHPAKDEE Aphiwit</td><td>2003.04.17</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="riv">
+        <summary>여자 볼더링 <span class="en">Total entries: 14</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><th>국가</th><th>선수</th><th>생년월일</th></tr>
+            <tr><td>CHN</td><td>Yuetong Zhang</td><td>2003.02.22</td></tr>
+            <tr><td>CHN</td><td>Zhilu Luo</td><td>2006.01.11</td></tr>
+            <tr><td>HKG</td><td>WONG Cheuk Kei</td><td>2007.06.02</td></tr>
+            <tr><td>HKG</td><td>WONG Hei Kiu Heidi</td><td>2008.08.04</td></tr>
+            <tr><td>IRI</td><td>GHAFFARI Sarina</td><td>2006.08.07</td></tr>
+            <tr><td>JPN</td><td>MORI Ai</td><td>2003.09.17</td></tr>
+            <tr><td>JPN</td><td>NONAKA Miho</td><td>1997.05.21</td></tr>
+            <tr class="kr"><td>KOR</td><td>NOH Heeju</td><td>2004.11.20</td></tr>
+            <tr class="kr"><td>KOR</td><td>SEO Chaehyun</td><td>2003.11.01</td></tr>
+            <tr><td>MAS</td><td>MOHD NASRAN Shareen</td><td>2006.06.02</td></tr>
+            <tr><td>SGP</td><td>GOH Natalie</td><td>2007.08.09</td></tr>
+            <tr><td>SGP</td><td>TENG Vanessa</td><td>1996.11.29</td></tr>
+            <tr><td>THA</td><td>MCGINNIS Annabel Joy</td><td>2008.09.15</td></tr>
+            <tr><td>THA</td><td>SUPAVORASED Natcha</td><td>2007.09.20</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="riv">
+        <summary>남자 볼더링 <span class="en">Total entries: 15</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><th>국가</th><th>선수</th><th>생년월일</th></tr>
+            <tr><td>CHN</td><td>Junzhe Hu</td><td>2007.07.04</td></tr>
+            <tr><td>CHN</td><td>Yufei Pan</td><td>2000.06.23</td></tr>
+            <tr><td>HKG</td><td>CHAN Cheung Chi Shoji</td><td>1995.07.27</td></tr>
+            <tr><td>HKG</td><td>CHAN Hugo Zhi Tao</td><td>2009.09.16</td></tr>
+            <tr><td>INA</td><td>RAMADHAN Raviandi</td><td>2002.11.26</td></tr>
+            <tr><td>INA</td><td>RAMADHAN Ravianto</td><td>2002.11.26</td></tr>
+            <tr><td>JPN</td><td>ANRAKU Sorato</td><td>2006.11.14</td></tr>
+            <tr><td>JPN</td><td>NARASAKI Tomoa</td><td>1996.06.22</td></tr>
+            <tr class="kr"><td>KOR</td><td>CHON Jongwon</td><td>1996.02.07</td></tr>
+            <tr class="kr"><td>KOR</td><td>LEE Dohyun</td><td>2002.10.08</td></tr>
+            <tr><td>MAS</td><td>KE Qun Tao</td><td>2005.09.05</td></tr>
+            <tr><td>SGP</td><td>GOH Wen Bin Luke</td><td>2002.12.22</td></tr>
+            <tr><td>SGP</td><td>VEROSIL Gerald</td><td>2001.02.08</td></tr>
+            <tr><td>THA</td><td>AUEAREECHIT Auswin</td><td>2007.10.28</td></tr>
+            <tr><td>THA</td><td>BOONDECH Teeraphon</td><td>2001.04.30</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="riv">
+        <summary>여자 리드 <span class="en">Total entries: 14</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><th>국가</th><th>선수</th><th>생년월일</th></tr>
+            <tr><td>CHN</td><td>Yuetong Zhang</td><td>2003.02.22</td></tr>
+            <tr><td>CHN</td><td>Zhilu Luo</td><td>2006.01.11</td></tr>
+            <tr><td>HKG</td><td>LEUNG Sze Lai</td><td>2006.02.26</td></tr>
+            <tr><td>HKG</td><td>WONG Cheuk Kei</td><td>2007.06.02</td></tr>
+            <tr><td>INA</td><td>CAHYANI Sukma Lintang</td><td>2004.09.19</td></tr>
+            <tr><td>INA</td><td>TSANY Alma Ariella</td><td>2009.07.25</td></tr>
+            <tr><td>JPN</td><td>KOTAKE Mei</td><td>1997.05.18</td></tr>
+            <tr><td>JPN</td><td>MORI Ai</td><td>2003.09.17</td></tr>
+            <tr class="kr"><td>KOR</td><td>KIM Chaeyeong</td><td>2007.11.06</td></tr>
+            <tr class="kr"><td>KOR</td><td>SEO Chaehyun</td><td>2003.11.01</td></tr>
+            <tr><td>MAS</td><td>MOHD NASRAN Shareen</td><td>2006.06.02</td></tr>
+            <tr><td>SGP</td><td>KOH Lynnette</td><td>1994.01.23</td></tr>
+            <tr><td>SGP</td><td>TENG Vanessa</td><td>1996.11.29</td></tr>
+            <tr><td>THA</td><td>SUPAVORASED Natcha</td><td>2007.09.20</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="riv">
+        <summary>남자 리드 <span class="en">Total entries: 15</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><th>국가</th><th>선수</th><th>생년월일</th></tr>
+            <tr><td>CHN</td><td>Junzhe Hu</td><td>2007.07.04</td></tr>
+            <tr><td>CHN</td><td>Yufei Pan</td><td>2000.06.23</td></tr>
+            <tr><td>HKG</td><td>CHAN Cheung Chi Shoji</td><td>1995.07.27</td></tr>
+            <tr><td>HKG</td><td>CHAN Hugo Zhi Tao</td><td>2009.09.16</td></tr>
+            <tr><td>INA</td><td>RAMADANI Putra Tri</td><td>2005.10.26</td></tr>
+            <tr><td>INA</td><td>RAMADHAN Raviandi</td><td>2002.11.26</td></tr>
+            <tr><td>JPN</td><td>SUZUKI Neo</td><td>2004.07.21</td></tr>
+            <tr><td>JPN</td><td>YOSHIDA Satone</td><td>2004.05.22</td></tr>
+            <tr class="kr"><td>KOR</td><td>LEE Dohyun</td><td>2002.10.08</td></tr>
+            <tr class="kr"><td>KOR</td><td>NOH Hyunseung</td><td>2008.01.26</td></tr>
+            <tr><td>MAS</td><td>KE Qun Tao</td><td>2005.09.05</td></tr>
+            <tr><td>SGP</td><td>GOH Wen Bin Luke</td><td>2002.12.22</td></tr>
+            <tr><td>SGP</td><td>VEROSIL Gerald</td><td>2001.02.08</td></tr>
+            <tr><td>THA</td><td>AUEAREECHIT Auswin</td><td>2007.10.28</td></tr>
+            <tr><td>THA</td><td>BOONDECH Teeraphon</td><td>2001.04.30</td></tr>
+          </table>
+        </div>
+      </details>
 
       <h2 id="form">최근 성적</h2>
       <p>최근 아시안게임·올림픽·세계선수권·아시아선수권에서의 클라이밍 메달 결과.</p>
@@ -205,7 +367,7 @@
       <p class="note">남자 스피드는 4라운드에서 우승자가 세 번(자오이청·추서우훙·베드리크 레오나르도) 갈렸을 만큼 혼전 양상이다. 다만 아시아만 겨루는 2026 아시아선수권에서는 추서우훙이 직접 우승해, 아시안게임 금메달 후보로는 여전히 그가 가장 앞선다. 여자 스피드는 데삭 마데 리타 쿠수마 데위가 아시아선수권과 월드컵을 모두 지배해 이견의 여지가 적다.</p>
 
       <div class="footer">
-        출처: 편집부 취재 및 자체 정리.<br>
+        출처: 편집부 취재 및 자체 정리. 전체 출전자 명단 출처: results.asiangames2026.org (공식 엔트리).<br>
         일정과 세부 사항은 대회 진행에 따라 변경될 수 있다.
       </div>
     </div>
