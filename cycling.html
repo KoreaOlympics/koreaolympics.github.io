@@ -50,7 +50,16 @@
   table.wt th{background:var(--panel);}
   table.wt td.num, table.wt th.num{text-align:center;}
   table.wt caption{font-size:12.5px;color:var(--muted);text-align:left;padding:2px 0 6px;}
+  table.wt tr.kr td{background:#eef4ff;font-weight:600;}
   .note{font-size:12.5px;color:var(--muted);margin:-8px 0 16px;}
+  details.riv{border:1px solid var(--border);border-radius:3px;margin:0 0 10px;background:var(--panel);}
+  details.riv summary{cursor:pointer;font-family:var(--serif);font-weight:600;font-size:15.5px;padding:9px 14px;list-style:none;}
+  details.riv summary::-webkit-details-marker{display:none;}
+  details.riv summary::before{content:"▶";display:inline-block;font-size:11px;color:var(--gold);margin-right:8px;transition:transform .15s ease;}
+  details.riv[open] summary::before{transform:rotate(90deg);}
+  details.riv summary .en{font-weight:400;color:var(--muted);font-size:13px;margin-left:6px;}
+  details.riv .riv-body{padding:0 14px 12px;}
+  details.riv table.wt{margin:4px 0 0;}
   .kr-box{background:#eef4ff;border:1px solid #c3d6f7;border-radius:3px;padding:14px 16px;margin:10px 0 18px;}
   .kr-box h4{margin-top:0;color:#1e3a8a;}
   .medals{display:inline-flex;gap:6px;margin:0 0 8px;flex-wrap:wrap;}
@@ -80,6 +89,15 @@
           <li><a href="#overview">개요</a></li>
           <li><a href="#disciplines">세부종목</a></li>
           <li><a href="#roster">한국 대표팀</a></li>
+          <li><a href="#entries">전체 출전자 명단</a>
+            <ol>
+              <li><a href="#entries-track">사이클 트랙</a></li>
+              <li><a href="#entries-road">사이클 도로</a></li>
+              <li><a href="#entries-mtb">산악자전거</a></li>
+              <li><a href="#entries-bmxr">BMX 레이싱</a></li>
+              <li><a href="#entries-bmxf">BMX 프리스타일</a></li>
+            </ol>
+          </li>
         </ol>
       </div>
 

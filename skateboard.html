@@ -51,6 +51,15 @@
   table.wt td.num, table.wt th.num{text-align:center;}
   table.wt caption{font-size:12.5px;color:var(--muted);text-align:left;padding:2px 0 6px;}
   .note{font-size:12.5px;color:var(--muted);margin:-8px 0 16px;}
+  table.wt tr.kr td{background:#eef4ff;font-weight:600;}
+  details.riv{border:1px solid var(--border);border-radius:3px;margin:0 0 10px;background:var(--panel);}
+  details.riv summary{cursor:pointer;font-family:var(--serif);font-weight:600;font-size:15.5px;padding:9px 14px;list-style:none;}
+  details.riv summary::-webkit-details-marker{display:none;}
+  details.riv summary::before{content:"▶";display:inline-block;font-size:11px;color:var(--gold);margin-right:8px;transition:transform .15s ease;}
+  details.riv[open] summary::before{transform:rotate(90deg);}
+  details.riv summary .en{font-weight:400;color:var(--muted);font-size:13px;margin-left:6px;}
+  details.riv .riv-body{padding:0 14px 12px;}
+  details.riv table.wt{margin:4px 0 0;}
   .kr-box{background:#eef4ff;border:1px solid #c3d6f7;border-radius:3px;padding:14px 16px;margin:10px 0 18px;}
   .kr-box h4{margin-top:0;color:#1e3a8a;}
   .medals{display:inline-flex;gap:6px;margin:0 0 8px;flex-wrap:wrap;}
@@ -80,6 +89,7 @@
           <li><a href="#overview">개요</a></li>
           <li><a href="#disciplines">세부종목</a></li>
           <li><a href="#roster">한국 대표팀</a></li>
+          <li><a href="#entries">전체 출전자 명단</a></li>
         </ol>
       </div>
 
@@ -107,8 +117,104 @@
         <tr><td>이로운</td></tr>
       </table>
 
+      <h2 id="entries">전체 출전자 명단</h2>
+      <p>2026 아이치·나고야 아시안게임 스케이트보드 4개 세부종목의 공식 확정 출전자 명단 전체. 세부종목을 눌러 펼쳐보세요. 한국 선수는 강조 표시했다.</p>
+
+      <details class="riv">
+        <summary>여자 스트리트 <span class="en">Total entries: 12</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><th>국가</th><th>선수</th><th>생년월일</th></tr>
+            <tr><td>CHN</td><td>CUI Chenxi</td><td>2009.12.19</td></tr>
+            <tr><td>CHN</td><td>ZHU Yuanling</td><td>2011.02.13</td></tr>
+            <tr><td>HKG</td><td>WAN Hiu Yin Yuna</td><td>2013.06.07</td></tr>
+            <tr><td>INA</td><td>DARMAWAN Zeefara Mahika</td><td>2011.08.13</td></tr>
+            <tr><td>INA</td><td>FAIRBROTHER Ni Wayan Malana</td><td>2012.03.17</td></tr>
+            <tr><td>JPN</td><td>MATSUMOTO Ibuki</td><td>2012.02.03</td></tr>
+            <tr><td>JPN</td><td>ODA Yumeka</td><td>2006.10.30</td></tr>
+            <tr><td>KAZ</td><td>LYU-SI-GUN Anna</td><td>2006.08.23</td></tr>
+            <tr class="kr"><td>KOR</td><td>PARK Jibeen</td><td>2009.10.24</td></tr>
+            <tr class="kr"><td>KOR</td><td>SHIN Jiyul</td><td>2011.07.22</td></tr>
+            <tr><td>THA</td><td>NAWAKITWONG Nathtiyabhorn</td><td>2011.03.22</td></tr>
+            <tr><td>THA</td><td>SUKASEM Vareeraya</td><td>2011.10.23</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="riv">
+        <summary>남자 스트리트 <span class="en">Total entries: 17</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><th>국가</th><th>선수</th><th>생년월일</th></tr>
+            <tr><td>CHN</td><td>CHEN Yuxuan</td><td>2007.12.15</td></tr>
+            <tr><td>CHN</td><td>LIN Honghao</td><td>2012.11.07</td></tr>
+            <tr><td>INA</td><td>HUTOMO Basral Graito</td><td>2007.01.22</td></tr>
+            <tr><td>INA</td><td>TANJUNG Sanggoe Darma</td><td>2001.12.28</td></tr>
+            <tr><td>IRI</td><td>ESTEHMAMI Arian</td><td>1997.08.06</td></tr>
+            <tr><td>JPN</td><td>ONODERA Ginwoo</td><td>2010.02.15</td></tr>
+            <tr><td>JPN</td><td>SASAKI Toa</td><td>2007.02.28</td></tr>
+            <tr><td>KAZ</td><td>ANUARBEK Nurayat</td><td>2010.06.21</td></tr>
+            <tr><td>KAZ</td><td>ESHMATOV Alfiruz</td><td>2005.03.04</td></tr>
+            <tr class="kr"><td>KOR</td><td>KANG Juni</td><td>2008.09.29</td></tr>
+            <tr class="kr"><td>KOR</td><td>LEE Junseung</td><td>2010.07.09</td></tr>
+            <tr><td>NEP</td><td>BARDEWA Gajendra</td><td>2000.03.10</td></tr>
+            <tr><td>NEP</td><td>RAI Saradh Kumar</td><td>2004.10.06</td></tr>
+            <tr><td>PHI</td><td>FELICIANO Renzo Mark</td><td>1997.07.22</td></tr>
+            <tr><td>PHI</td><td>GELIG Renz</td><td>2006.03.18</td></tr>
+            <tr><td>THA</td><td>PETKIREE Kirin</td><td>2014.09.12</td></tr>
+            <tr><td>THA</td><td>SIANGOUENG Thawatchai</td><td>1999.08.03</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="riv">
+        <summary>여자 파크 <span class="en">Total entries: 14</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><th>국가</th><th>선수</th><th>생년월일</th></tr>
+            <tr><td>CHN</td><td>CAO Shiqi</td><td>2014.08.01</td></tr>
+            <tr><td>CHN</td><td>MENG Lingyan</td><td>2013.09.25</td></tr>
+            <tr><td>HKG</td><td>WONG Yeuk Ching</td><td>2014.07.25</td></tr>
+            <tr><td>HKG</td><td>WONG Yi Huen</td><td>2014.09.19</td></tr>
+            <tr><td>INA</td><td>CAYA Mikhayla Shanum</td><td>2014.09.30</td></tr>
+            <tr><td>INA</td><td>CINTA Nyimas Bunga</td><td>2006.04.13</td></tr>
+            <tr><td>JPN</td><td>HASEGAWA Mizuho</td><td>2010.10.15</td></tr>
+            <tr><td>JPN</td><td>OKAMOTO Misugu</td><td>2006.06.22</td></tr>
+            <tr class="kr"><td>KOR</td><td>CHO Hyunju</td><td>2007.05.16</td></tr>
+            <tr class="kr"><td>KOR</td><td>GWAK Minji</td><td>2007.05.27</td></tr>
+            <tr><td>PHI</td><td>ALEGADO Mazel</td><td>2014.03.04</td></tr>
+            <tr><td>PHI</td><td>AMADOR Elizabeth Grace</td><td>2014.07.23</td></tr>
+            <tr><td>THA</td><td>BROWN Freya</td><td>2013.11.09</td></tr>
+            <tr><td>TPE</td><td>LIN Yi-fan</td><td>2012.08.21</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="riv">
+        <summary>남자 파크 <span class="en">Total entries: 14</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><th>국가</th><th>선수</th><th>생년월일</th></tr>
+            <tr><td>CHN</td><td>CHEN Ye</td><td>2008.01.31</td></tr>
+            <tr><td>CHN</td><td>WU Bowen</td><td>2006.11.07</td></tr>
+            <tr><td>HKG</td><td>GU Jiahuan</td><td>2009.07.14</td></tr>
+            <tr><td>HKG</td><td>LI Pak Lam</td><td>2012.12.01</td></tr>
+            <tr><td>INA</td><td>HARTANTO Firdausy Nuzula Putra</td><td>2008.05.12</td></tr>
+            <tr><td>INA</td><td>LIJNZAAT Jason Dennis</td><td>2003.10.22</td></tr>
+            <tr><td>JPN</td><td>NAGAHARA Izuru</td><td>2011.07.19</td></tr>
+            <tr><td>JPN</td><td>SHIJI Gunjo</td><td>2011.08.11</td></tr>
+            <tr class="kr"><td>KOR</td><td>LEE Roun</td><td>2012.04.09</td></tr>
+            <tr class="kr"><td>KOR</td><td>MOON Gangho</td><td>2011.04.15</td></tr>
+            <tr><td>PHI</td><td>FRANCISCO Jericho Jojit Jr</td><td>2001.12.07</td></tr>
+            <tr><td>THA</td><td>KETKAEO Konwit</td><td>2005.08.15</td></tr>
+            <tr><td>THA</td><td>UPAPONG Brian Van</td><td>1994.10.13</td></tr>
+            <tr><td>TPE</td><td>KU Yong-yan</td><td>2013.12.22</td></tr>
+          </table>
+        </div>
+      </details>
+
       <div class="footer">
-        출처: 편집부 자체 정리. 세부 종목·경기 일정·경기장 등 세부 사항은 대회 진행에 따라 추후 확정·변경될 수 있다.
+        출처: 편집부 자체 정리. 세부 종목·경기 일정·경기장 등 세부 사항은 대회 진행에 따라 추후 확정·변경될 수 있다. 전체 출전자 명단 출처: results.asiangames2026.org (공식 엔트리).
       </div>
     </div>
     <aside class="infobox">
