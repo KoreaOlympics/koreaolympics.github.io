@@ -71,6 +71,15 @@
   details.riv .riv-body{padding:0 14px 12px;}
   details.riv table.wt{margin:4px 0 0;}
   @media (max-width:820px){.infobox{flex:1 1 100%;order:-1;}}
+  .active-board{border:1px solid var(--border);border-radius:4px;margin:0 0 20px;overflow:hidden;}
+  .ab-head{display:flex;align-items:center;gap:8px;padding:8px 14px;font-size:12px;font-weight:700;letter-spacing:.03em;color:#fff;background:#c2410c;}
+  .ab-dot{width:7px;height:7px;border-radius:50%;background:#fff;animation:ab-blink 1.2s infinite;}
+  @keyframes ab-blink{50%{opacity:.3;}}
+  .ab-body{padding:12px 14px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;}
+  .ab-sport{font-weight:700;font-size:15px;}
+  .ab-status{font-weight:700;color:var(--gold);font-size:14px;}
+  .ab-foot{padding:6px 14px;font-size:11px;color:var(--muted);background:var(--panel);border-top:1px solid var(--border-soft);}
+  .ab-foot a{color:var(--link);}
 </style>
 </head>
 <body>
@@ -83,6 +92,16 @@
   <h1 class="title">농구 · 3x3농구</h1>
   <p class="subtitle">Basketball · 3x3 Basketball · 2026 아이치·나고야 아시안게임 (제20회) · 5인농구·3x3농구</p>
   <p class="hatnote">2026 아이치·나고야 아시안게임 농구 종목은 5인농구와 3x3농구로 나뉘어 치러진다. 5인농구는 9월 10일(남자)·9월 17일(여자)부터, 3x3농구는 9월 21일부터 진행된다.</p>
+
+  <div class="active-board">
+    <div class="ab-head"><span class="ab-dot"></span>액티브 보드 · 실시간 진행상황</div>
+    <div class="ab-body">
+      <span class="ab-sport">🏀 남자 5인농구</span>
+      <span class="ab-status">예선 1승 0패</span>
+    </div>
+    <div class="ab-foot">수동 업데이트 · <a href="index2.html">전체 종목 현황 보기</a></div>
+  </div>
+
   <div class="content">
     <div class="main">
       <div class="toc">
@@ -572,10 +591,10 @@
             <tr><td>KAZ</td><td>MAMMATRAIMOV Begzod</td><td>2004.05.07</td></tr>
             <tr><td>KAZ</td><td>TANGIYEV Timur</td><td>2003.04.03</td></tr>
             <tr><td>KAZ</td><td>YDYRYSZHAN Alizhan</td><td>2003.10.30</td></tr>
-            <tr class="kr"><td>KOR</td><td>KIM Seungwoo</td><td>2005.03.28</td></tr>
-            <tr class="kr"><td>KOR</td><td>KU Mingyo</td><td>2005.07.07</td></tr>
-            <tr class="kr"><td>KOR</td><td>LEE Donggeun</td><td>2003.06.26</td></tr>
-            <tr class="kr"><td>KOR</td><td>LEE Juyeong</td><td>2004.03.13</td></tr>
+            <tr class="kr"><td>KOR</td><td>김승우 (KIM Seungwoo)</td><td>2005.03.28</td></tr>
+            <tr class="kr"><td>KOR</td><td>구민교 (KU Mingyo)</td><td>2005.07.07</td></tr>
+            <tr class="kr"><td>KOR</td><td>이동근 (LEE Donggeun)</td><td>2003.06.26</td></tr>
+            <tr class="kr"><td>KOR</td><td>이주영 (LEE Juyeong)</td><td>2004.03.13</td></tr>
             <tr><td>MAS</td><td>CHONG Zhen Yang</td><td>2003.02.23</td></tr>
             <tr><td>MAS</td><td>LIM Ting Xuan</td><td>2004.09.13</td></tr>
             <tr><td>MAS</td><td>PAN Zheng Hao</td><td>2004.10.27</td></tr>
@@ -637,10 +656,10 @@
             <tr><td>KAZ</td><td>KYDYRALI Symbat</td><td>2004.05.07</td></tr>
             <tr><td>KAZ</td><td>TURSYNOVA Lyazzat</td><td>2003.03.15</td></tr>
             <tr><td>KAZ</td><td>YERKEBAY Dilnaz</td><td>2003.02.10</td></tr>
-            <tr class="kr"><td>KOR</td><td>CHOI Yeseul</td><td>2006.06.06</td></tr>
-            <tr class="kr"><td>KOR</td><td>HEO Yoojung</td><td>2005.10.06</td></tr>
-            <tr class="kr"><td>KOR</td><td>KIM Jeongeun</td><td>2005.09.27</td></tr>
-            <tr class="kr"><td>KOR</td><td>SONG Yunha</td><td>2006.11.02</td></tr>
+            <tr class="kr"><td>KOR</td><td>최예슬 (CHOI Yeseul)</td><td>2006.06.06</td></tr>
+            <tr class="kr"><td>KOR</td><td>허유정 (HEO Yoojung)</td><td>2005.10.06</td></tr>
+            <tr class="kr"><td>KOR</td><td>김정은 (KIM Jeongeun)</td><td>2005.09.27</td></tr>
+            <tr class="kr"><td>KOR</td><td>송윤하 (SONG Yunha)</td><td>2006.11.02</td></tr>
             <tr><td>MAC</td><td>CHANG Cho Wan</td><td>2007.10.22</td></tr>
             <tr><td>MAC</td><td>CHENG U Man</td><td>2003.06.13</td></tr>
             <tr><td>MAC</td><td>LIN Weng Ha</td><td>2005.07.16</td></tr>
