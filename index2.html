@@ -128,8 +128,12 @@
   /* Header logo */
   .brand-row{display:flex;align-items:center;gap:16px;margin-bottom:14px;flex-wrap:wrap;}
   .brand-row .emblem{height:56px;width:auto;}
-  .brand-row .banner{height:64px;width:auto;border-radius:4px;object-fit:cover;}
-  @media (max-width:520px){.brand-row .banner{height:48px;}.brand-row .emblem{height:44px;}}
+  .hero-inner{display:flex;gap:32px;align-items:flex-start;justify-content:space-between;}
+  .hero-main{flex:1;min-width:0;display:flex;flex-direction:column;gap:14px;}
+  .hero-banner{flex:none;width:260px;}
+  .hero-banner img{width:100%;height:auto;border-radius:10px;object-fit:cover;display:block;box-shadow:0 4px 16px rgba(0,0,0,.12);}
+  @media (max-width:820px){.hero-inner{flex-wrap:wrap;}.hero-banner{width:200px;order:-1;margin:0 auto;}}
+  @media (max-width:520px){.hero-banner{width:100%;}}
 </style>
 </head>
 <body>
@@ -139,17 +143,23 @@
     <a href="asia-stars.html">⭐ 주요 아시아 스타 선수</a>
   </nav>
   <header class="hero">
-    <div class="brand-row">
-      <img class="emblem" src="assets/emblem.svg" alt="2026 아이치·나고야 아시안게임 엠블럼">
-      <img class="banner" src="assets/banner.jpg" alt="대한민국 아시안게임 국가대표">
-      <span class="eyebrow">2026 Aichi · Nagoya</span>
-    </div>
-    <h1>제20회 아이치·나고야<br><em>아시안게임 종목</em> 안내</h1>
-    <p class="lede">대분류를 눌러 펼치고, 원하는 항목을 클릭하면 해당 종목 페이지로 이동합니다.</p>
-    <div class="stat-row">
-      <div class="stat"><b>7</b><span>대분류</span></div>
-      <div class="stat"><b id="linkCount">-</b><span>연결 페이지</span></div>
-      <div class="stat"><b>2026</b><span>대회 연도</span></div>
+    <div class="hero-inner">
+      <div class="hero-main">
+        <div class="brand-row">
+          <img class="emblem" src="assets/emblem.svg" alt="2026 아이치·나고야 아시안게임 엠블럼">
+          <span class="eyebrow">2026 Aichi · Nagoya</span>
+        </div>
+        <h1>제20회 아이치·나고야<br><em>아시안게임 종목</em> 안내</h1>
+        <p class="lede">대분류를 눌러 펼치고, 원하는 항목을 클릭하면 해당 종목 페이지로 이동합니다.</p>
+        <div class="stat-row">
+          <div class="stat"><b>7</b><span>대분류</span></div>
+          <div class="stat"><b id="linkCount">-</b><span>연결 페이지</span></div>
+          <div class="stat"><b>2026</b><span>대회 연도</span></div>
+        </div>
+      </div>
+      <div class="hero-banner">
+        <img src="assets/banner.jpg" alt="대한민국 아시안게임 국가대표">
+      </div>
     </div>
   </header>
 
@@ -165,6 +175,14 @@
   </div>
   <span class="sched-toggle" id="schedToggle">▸ 전체 일정 펼쳐보기</span>
   <div id="schedAll"></div>
+
+  <div class="live-box status-box">
+    <div class="live-head"><span class="live-dot"></span><span>실시간 현황 (종목별 진행상황 · 메달 현황)</span></div>
+    <div class="live-body" id="statusBody">
+      <p class="live-empty">대회 시작 전입니다. 대회 기간 중 이 자리에 종목별 진행상황(예: 농구 1승1패, 야구 8강, 축구 4강 진행중)과 메달 현황(예: 금10·은4·동4)을 갱신할 예정입니다.</p>
+    </div>
+    <div class="live-foot"><span>수동 업데이트</span><span>대회 기간(9.19~10.4) 중 갱신 예정</span></div>
+  </div>
 
   <section class="featured-section">
     <div class="featured-heading">
