@@ -89,6 +89,45 @@
   .corner-nav a{color:var(--muted);font-weight:600;padding:6px 12px;border:1px solid var(--border);border-radius:20px;background:var(--panel);}
   .corner-nav a:hover{color:var(--gold);border-color:var(--gold);text-decoration:none;}
   @media (max-width:560px){.corner-nav{font-size:12px;}.corner-nav a{padding:5px 9px;}}
+
+  /* Search */
+  .search-box{position:relative;margin:0 0 30px;}
+  .search-input{width:100%;font-size:15px;padding:12px 16px;border:1px solid var(--border);border-radius:4px;font-family:inherit;background:#fff;color:var(--ink);}
+  .search-input:focus{outline:2px solid var(--gold);outline-offset:1px;}
+  .search-results{position:absolute;left:0;right:0;top:calc(100% + 4px);background:#fff;border:1px solid var(--border);border-radius:4px;box-shadow:0 8px 24px rgba(0,0,0,.1);max-height:340px;overflow-y:auto;z-index:20;}
+  .search-results a{display:flex;justify-content:space-between;gap:10px;padding:10px 16px;color:var(--ink);text-decoration:none;font-size:14px;border-bottom:1px solid var(--border-soft);}
+  .search-results a:last-child{border-bottom:none;}
+  .search-results a:hover,.search-results a.active{background:var(--panel);}
+  .search-results .cat{color:var(--muted);font-size:12px;}
+  .search-empty{padding:12px 16px;color:var(--muted);font-size:13px;}
+  [hidden]{display:none!important;}
+
+  /* Live/Next schedule widget */
+  .live-box{border:1px solid var(--border);border-radius:6px;margin:0 0 30px;overflow:hidden;}
+  .live-head{display:flex;align-items:center;gap:8px;padding:9px 16px;font-size:12.5px;font-weight:700;letter-spacing:.03em;color:#fff;background:var(--muted);}
+  .live-head.on{background:#c2410c;}
+  .live-dot{width:8px;height:8px;border-radius:50%;background:#fff;opacity:.5;}
+  .live-head.on .live-dot{animation:blink 1.2s infinite;opacity:1;}
+  @keyframes blink{50%{opacity:.25;}}
+  .live-body{padding:14px 18px;}
+  .live-empty{color:var(--muted);font-size:13.5px;}
+  .live-item{display:flex;align-items:baseline;gap:12px;padding:8px 0;border-bottom:1px solid var(--border-soft);}
+  .live-item:last-child{border-bottom:none;}
+  .live-time{font-family:var(--serif);font-size:14px;color:var(--gold);white-space:nowrap;min-width:44px;}
+  .live-sport{font-weight:700;font-size:13.5px;}
+  .live-x{color:var(--muted);font-size:13px;}
+  .live-foot{padding:8px 16px;font-size:11px;color:var(--muted);border-top:1px solid var(--border-soft);background:var(--panel);display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;}
+  .sched-toggle{display:inline-block;margin:0 0 20px;font-size:13px;cursor:pointer;color:var(--link);}
+  .sched-day{margin:0 0 14px;}
+  .sched-day h3{font-family:var(--serif);font-size:14.5px;margin:0 0 4px;padding-bottom:3px;border-bottom:1px solid var(--border-soft);}
+  .sched-row{display:flex;gap:10px;font-size:13px;padding:2px 0;}
+  .sched-row a{color:inherit;display:flex;gap:10px;}
+  .sched-row .tm{color:var(--muted);min-width:42px;font-family:var(--serif);}
+  #schedAll{display:none;margin-bottom:20px;}
+
+  /* Header logo */
+  .brand-row{display:flex;align-items:center;gap:16px;margin-bottom:6px;}
+  .brand-row img{height:56px;width:auto;}
 </style>
 </head>
 <body>
@@ -98,7 +137,10 @@
     <a href="asia-stars.html">⭐ 주요 아시아 스타 선수</a>
   </nav>
   <header class="hero">
-    <span class="eyebrow">2026 Aichi · Nagoya</span>
+    <div class="brand-row">
+      <img src="assets/emblem.svg" alt="2026 아이치·나고야 아시안게임 엠블럼">
+      <span class="eyebrow">2026 Aichi · Nagoya</span>
+    </div>
     <h1>제20회 아이치·나고야<br><em>아시안게임 종목</em> 안내</h1>
     <p class="lede">대분류를 눌러 펼치고, 원하는 항목을 클릭하면 해당 종목 페이지로 이동합니다.</p>
     <div class="stat-row">
@@ -107,6 +149,19 @@
       <div class="stat"><b>2026</b><span>대회 연도</span></div>
     </div>
   </header>
+
+  <div class="search-box">
+    <input type="text" class="search-input" id="searchInput" placeholder="🔍 관심 종목 검색 (예: 양궁, 축구, 유도...)" autocomplete="off">
+    <div class="search-results" id="searchResults" hidden></div>
+  </div>
+
+  <div class="live-box">
+    <div class="live-head" id="liveHead"><span class="live-dot"></span><span id="liveHeadText">불러오는 중...</span></div>
+    <div class="live-body" id="liveBody"><p class="live-empty">일정을 확인하는 중입니다...</p></div>
+    <div class="live-foot"><span id="liveFootDate"></span><span>대한민국 경기 및 주요 경기 중심 · 시간은 현지(일본)=한국(KST) 기준</span></div>
+  </div>
+  <span class="sched-toggle" id="schedToggle">▸ 전체 일정 펼쳐보기</span>
+  <div id="schedAll"></div>
 
   <section class="featured-section">
     <div class="featured-heading">
@@ -264,6 +319,356 @@ DATA.forEach((cat, idx) => {
   grid.appendChild(card);
 });
 document.getElementById('linkCount').textContent = totalLinks;
+
+// ===== 관심종목 검색 =====
+const SEARCH_INDEX = [
+  { label:'축구', cat:'단체구기', url:'soccer.html' },
+  { label:'농구', cat:'단체구기', url:'basketball.html' },
+  { label:'3x3농구', cat:'단체구기', url:'basketball.html#3x3' },
+  { label:'야구', cat:'단체구기', url:'baseball.html' },
+  { label:'소프트볼', cat:'단체구기', url:'baseball.html' },
+  { label:'배구', cat:'단체구기', url:'volleyball.html' },
+  { label:'비치발리볼', cat:'단체구기', url:'volleyball.html' },
+  { label:'핸드볼', cat:'단체구기', url:'handball.html' },
+  { label:'하키', cat:'단체구기', url:'handball.html' },
+  { label:'필드하키', cat:'단체구기', url:'handball.html' },
+  { label:'럭비', cat:'단체구기', url:'rugby.html#rugby' },
+  { label:'크리켓', cat:'단체구기', url:'rugby.html#cricket' },
+  { label:'수구', cat:'단체구기', url:'rugby.html#waterpolo' },
+  { label:'배드민턴', cat:'개인구기', url:'badminton.html' },
+  { label:'탁구', cat:'개인구기', url:'tabletennis.html' },
+  { label:'골프', cat:'개인구기', url:'golf.html' },
+  { label:'테니스', cat:'개인구기', url:'tennis.html' },
+  { label:'소프트테니스', cat:'비올림픽', url:'softtennis.html' },
+  { label:'스쿼시', cat:'비올림픽', url:'softtennis.html' },
+  { label:'태권도', cat:'무도·격투', url:'taekwondo.html' },
+  { label:'유도', cat:'무도·격투', url:'judo.html' },
+  { label:'레슬링', cat:'무도·격투', url:'wrestling.html' },
+  { label:'복싱', cat:'무도·격투', url:'boxing.html' },
+  { label:'가라테', cat:'비올림픽', url:'karate.html' },
+  { label:'종합격투기', cat:'비올림픽', url:'karate.html#mma-entries' },
+  { label:'MMA', cat:'비올림픽', url:'karate.html#mma-entries' },
+  { label:'쿠라쉬', cat:'비올림픽', url:'karate.html' },
+  { label:'우슈', cat:'비올림픽', url:'karate.html' },
+  { label:'주짓수', cat:'비올림픽', url:'karate.html' },
+  { label:'카바디', cat:'비올림픽', url:'kabaddi.html' },
+  { label:'세팍타크로', cat:'비올림픽', url:'kabaddi.html' },
+  { label:'양궁', cat:'무기·기술', url:'archery.html' },
+  { label:'펜싱', cat:'무기·기술', url:'fencing.html' },
+  { label:'사격', cat:'무기·기술', url:'shooting.html' },
+  { label:'근대5종', cat:'무기·기술', url:'modernpentathlon.html' },
+  { label:'육상', cat:'기초종목', url:'athletics.html' },
+  { label:'경영', cat:'기초종목', url:'swimming.html' },
+  { label:'수영', cat:'기초종목', url:'swimming.html' },
+  { label:'다이빙', cat:'기초종목', url:'swimming.html' },
+  { label:'아티스틱스위밍', cat:'기초종목', url:'swimming.html' },
+  { label:'역도', cat:'기초종목', url:'weightlifting.html' },
+  { label:'기계체조', cat:'기초종목', url:'gymnastics.html' },
+  { label:'체조', cat:'기초종목', url:'gymnastics.html' },
+  { label:'트라이애슬론', cat:'기초종목', url:'triathlon.html' },
+  { label:'클라이밍', cat:'기타종목', url:'climbing.html' },
+  { label:'스포츠클라이밍', cat:'기타종목', url:'climbing.html' },
+  { label:'스케이트보드', cat:'기타종목', url:'skateboard.html' },
+  { label:'사이클', cat:'기타종목', url:'cycling.html' },
+  { label:'수상', cat:'기타종목', url:'watersports.html' },
+  { label:'요트', cat:'기타종목', url:'watersports.html' },
+  { label:'조정', cat:'기타종목', url:'watersports.html' },
+  { label:'서핑', cat:'기타종목', url:'watersports.html' },
+  { label:'카누', cat:'기타종목', url:'watersports.html' },
+  { label:'리듬체조', cat:'기타종목', url:'rhythmicgymnastics.html' },
+  { label:'트램폴린', cat:'기타종목', url:'rhythmicgymnastics.html' },
+  { label:'승마', cat:'기타종목', url:'rhythmicgymnastics.html' },
+  { label:'e스포츠', cat:'비올림픽', url:'esports.html' },
+  { label:'에스포츠', cat:'비올림픽', url:'esports.html' },
+  { label:'브레이킹', cat:'비올림픽', url:'breaking.html' },
+  { label:'테크볼', cat:'비올림픽', url:'teqball.html' },
+];
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
+function renderSearch(q){
+  const query = q.trim().toLowerCase();
+  if (!query){ searchResults.hidden = true; searchResults.innerHTML=''; return; }
+  const hits = SEARCH_INDEX.filter(s => s.label.toLowerCase().includes(query));
+  if (!hits.length){
+    searchResults.innerHTML = '<div class="search-empty">일치하는 종목이 없습니다.</div>';
+  } else {
+    searchResults.innerHTML = hits.slice(0,12).map(h =>
+      `<a href="${h.url}"><span>${h.label}</span><span class="cat">${h.cat} →</span></a>`
+    ).join('');
+  }
+  searchResults.hidden = false;
+}
+searchInput.addEventListener('input', e => renderSearch(e.target.value));
+searchInput.addEventListener('focus', e => { if (e.target.value) renderSearch(e.target.value); });
+document.addEventListener('click', e => { if (!e.target.closest('.search-box')) searchResults.hidden = true; });
+
+// ===== 실시간/다음 경기 위젯 =====
+const SPORTS_SCHED = {
+  bball:      { e:'🏀', n:'농구',        u:'basketball.html' },
+  bball3x3:   { e:'🏀', n:'3x3농구',     u:'basketball.html#3x3' },
+  soccer:     { e:'⚽', n:'축구',        u:'soccer.html' },
+  hockey:     { e:'🏑', n:'필드하키',    u:'handball.html' },
+  volleyball: { e:'🏐', n:'배구',        u:'volleyball.html' },
+  tabletennis:{ e:'🏓', n:'탁구',        u:'tabletennis.html' },
+  badminton:  { e:'🏸', n:'배드민턴',    u:'badminton.html' },
+  swimming:   { e:'🏊', n:'경영(수영)',  u:'swimming.html' },
+  gymnastics: { e:'🤸', n:'기계체조',    u:'gymnastics.html' },
+  fencing:    { e:'🤺', n:'펜싱',        u:'fencing.html' },
+  athletics:  { e:'🏃', n:'육상',        u:'athletics.html' },
+  boxing:     { e:'🥊', n:'복싱',        u:'boxing.html' },
+  judo:       { e:'🥋', n:'유도',        u:'judo.html' },
+  climbing:   { e:'🧗', n:'스포츠클라이밍', u:'climbing.html' },
+  shooting:   { e:'🔫', n:'사격',        u:'shooting.html' },
+  tennis:     { e:'🎾', n:'테니스',      u:'tennis.html' },
+  archery:    { e:'🏹', n:'양궁',        u:'archery.html' },
+  surfing:    { e:'🏄', n:'서핑',        u:'watersports.html' },
+  skateboard: { e:'🛹', n:'스케이트보드', u:'skateboard.html' },
+  pentathlon: { e:'🎽', n:'근대5종',     u:'modernpentathlon.html' },
+  squash:     { e:'🎯', n:'스쿼시',      u:'softtennis.html' },
+  handball:   { e:'🤾', n:'핸드볼',      u:'handball.html' },
+  taekwondo:  { e:'🥋', n:'태권도',      u:'taekwondo.html' },
+  baseball:   { e:'⚾', n:'야구',        u:'baseball.html' },
+  triathlon:  { e:'🏊‍♂️', n:'트라이애슬론', u:'triathlon.html' },
+  ceremony:   { e:'🎆', n:'식',          u:null },
+};
+const SCHEDULE2 = [
+['09-10','16:00','bball','','대한민국 vs 사우디아라비아'],
+['09-11','16:00','bball','','인도네시아 vs 대한민국'],
+['09-13','19:00','bball','','일본 vs 대한민국'],
+['09-14','19:30','soccer','w','대한민국 vs 미얀마'],
+['09-15','19:30','soccer','','카타르 vs 대한민국'],
+['09-16','10:00','bball','','8강전'],
+['09-16','13:00','bball','','8강전'],
+['09-16','16:00','bball','','8강전'],
+['09-16','19:20','bball','','8강전'],
+['09-16','10:00','pentathlon','w','준결승'],
+['09-16','15:00','pentathlon','','준결승'],
+['09-16','16:00','volleyball','w','홍콩 vs 대한민국'],
+['09-17','10:00','pentathlon','w','결승'],
+['09-17','14:30','pentathlon','','결승'],
+['09-17','16:00','soccer','w','방글라데시 vs 대한민국'],
+['09-17','13:00','volleyball','w','카타르 vs 대한민국'],
+['09-18','11:00','hockey','','대한민국 vs 방글라데시'],
+['09-18','13:00','hockey','w','대한민국 vs 대만'],
+['09-18','16:00','volleyball','w','대한민국 vs 베트남'],
+['09-18','10:00','bball','w','대한민국 vs 말레이시아'],
+['09-18','16:00','bball','','준결승'],
+['09-18','19:20','bball','','준결승'],
+['09-19','18:00','ceremony','','개회식'],
+['09-20','08:30','triathlon','','남녀 개인전'],
+['09-20','09:00','shooting','w','10m 공기소총'],
+['09-20','09:30','badminton','','단체전 1라운드'],
+['09-20','10:00','tabletennis','','단체전'],
+['09-20','10:00','swimming','','경영 예선'],
+['09-20','16:40','bball','','동메달전'],
+['09-20','17:00','swimming','','경영 결승'],
+['09-20','19:40','bball','','결승'],
+['09-20',null,'volleyball','w','8강'],
+['09-21','09:00','hockey','w','대한민국 vs 카자흐스탄'],
+['09-21','09:30','badminton','','단체전 2라운드'],
+['09-21','10:00','tabletennis','','단체전'],
+['09-21','10:00','swimming','','경영 예선'],
+['09-21','10:00','gymnastics','','개인 종합'],
+['09-21','16:00','soccer','w','대한민국 vs 북한'],
+['09-21','17:00','swimming','','경영 결승'],
+['09-21','12:25','bball3x3','w','태국 vs 대한민국'],
+['09-21','13:00','bball','w','몽골 vs 대한민국'],
+['09-21','14:05','bball3x3','w','인도네시아 vs 대한민국'],
+['09-21','18:30','baseball','','대한민국 vs 대만'],
+['09-21','18:30','tabletennis','','개인전'],
+['09-21',null,'volleyball','w','준결승'],
+['09-22','10:00','swimming','','경영 예선'],
+['09-22','11:00','hockey','','인도네시아 vs 대한민국'],
+['09-22','12:00','gymnastics','w','개인 종합'],
+['09-22','19:00','soccer','','대한민국 vs 사우디아라비아'],
+['09-22','16:00','bball','w','대한민국 vs 대만'],
+['09-22','17:00','swimming','','경영 결승'],
+['09-22','17:40','fencing','','개인전'],
+['09-22','18:30','baseball','','홍콩 vs 대한민국'],
+['09-22','18:55','bball3x3','','대한민국 vs 태국'],
+['09-22','19:20','tabletennis','','단체전 8강'],
+['09-22','20:35','bball3x3','','일본 vs 대한민국'],
+['09-22',null,'volleyball','w','3-4위전'],
+['09-22',null,'volleyball','w','결승'],
+['09-23','09:00','hockey','w','방글라데시 vs 대한민국'],
+['09-23','09:30','badminton','',''],
+['09-23','10:00','tabletennis','','개인전'],
+['09-23','10:00','swimming','','경영 예선'],
+['09-23','12:00','baseball','','대한민국 vs 태국'],
+['09-23','12:00','bball3x3','w','싱가포르 vs 대한민국'],
+['09-23','13:00','gymnastics','','단체종합'],
+['09-23','16:50','fencing','','개인전'],
+['09-23','17:00','tabletennis','','단체전 준결승'],
+['09-23','17:00','swimming','','경영 결승'],
+['09-23','19:00','gymnastics','w','단체종합'],
+['09-23','20:10','bball3x3','','싱가포르 vs 대한민국'],
+['09-24','10:00','bball','w','8강'],
+['09-24','13:00','bball','w','8강'],
+['09-24','16:00','bball','w','8강'],
+['09-24','19:20','bball','w','8강'],
+['09-24','10:00','tabletennis','','개인전'],
+['09-24','10:00','swimming','','경영 예선'],
+['09-24','15:00','hockey','','대한민국 vs 인도'],
+['09-24','17:00','swimming','','경영 결승'],
+['09-24','17:00','tabletennis','','단체전 결승'],
+['09-24','17:00','gymnastics','w','도마'],
+['09-24','17:40','fencing','','개인전'],
+['09-24','19:30','athletics','','100m 예선'],
+['09-24','20:06','athletics','','세단뛰기 결승'],
+['09-24','20:11','athletics','','높이뛰기 예선'],
+['09-25','10:00','tabletennis','','개인전'],
+['09-25','10:00','swimming','','경영 예선'],
+['09-25','13:00','hockey','w','대한민국 vs 중국'],
+['09-25','14:00','soccer','','8강'],
+['09-25','19:30','soccer','','8강'],
+['09-25','15:00','soccer','w','8강'],
+['09-25','19:30','soccer','w','8강'],
+['09-25','15:00','fencing','','단체전'],
+['09-25','16:00','bball','w','준결승'],
+['09-25','19:20','bball','w','준결승'],
+['09-25','17:00','swimming','','경영 결승'],
+['09-25','17:00','gymnastics','','종목별 결승'],
+['09-25','18:30','baseball','','B조 1위 vs A조 1위'],
+['09-25','18:30','baseball','','B조 2위 vs A조 2위'],
+['09-25','22:23','athletics','','100m 결승'],
+['09-26','09:30','badminton','',''],
+['09-26','10:00','tabletennis','','개인전'],
+['09-26','10:00','skateboard','','스트리트 결승'],
+['09-26','15:00','hockey','','스리랑카 vs 대한민국'],
+['09-26','15:10','fencing','','개인전'],
+['09-26','15:30','tabletennis','','개인전'],
+['09-26','15:30','tabletennis','','혼합복식 결승'],
+['09-26','16:00','bball','w','동메달 결정전'],
+['09-26','19:20','bball','w','결승'],
+['09-26','18:30','baseball','','B조 1위 vs A조 2위'],
+['09-26','18:30','baseball','','B조 2위 vs A조 1위'],
+['09-26','20:43','athletics','','높이뛰기 결승'],
+['09-27','09:30','badminton','','8강'],
+['09-27','12:00','tabletennis','','준결승'],
+['09-27','12:00','squash','','결승'],
+['09-27','12:00','handball','w','메달 결정전'],
+['09-27','12:00','baseball','','동메달전'],
+['09-27','18:30','baseball','','결승'],
+['09-27','15:50','fencing','',''],
+['09-27','19:00','tabletennis','','결승'],
+['09-27','19:20','volleyball','','대한민국 vs 필리핀'],
+['09-27','21:43','athletics','','400m 계주 예선'],
+['09-28','07:00','surfing','','동메달 결정전·결승'],
+['09-28','09:30','badminton','','준결승'],
+['09-28','12:00','tabletennis','','준결승'],
+['09-28','17:00','hockey','','일본 vs 대한민국'],
+['09-28','19:00','tabletennis','','결승'],
+['09-28','19:20','volleyball','','대만 vs 대한민국'],
+['09-28','22:23','athletics','','400m 계주 결승'],
+['09-29','11:00','badminton','','결승'],
+['09-29','17:00','hockey','w','말레이시아 vs 대한민국'],
+['09-29','15:00','soccer','w','준결승'],
+['09-29','19:30','soccer','w','준결승'],
+['09-29','17:00','handball','','메달 결정전'],
+['09-29','19:20','volleyball','','중국 vs 대한민국'],
+['09-30','09:00','archery','','컴파운드 결승'],
+['09-30',null,'hockey','w','준결승'],
+['09-30','15:00','soccer','','준결승'],
+['09-30','19:30','soccer','','준결승'],
+['09-30','17:00','judo','',''],
+['09-30','18:00','climbing','','결승'],
+['10-01','17:00','judo','',''],
+['10-01','18:00','climbing','','결승'],
+['10-01',null,'hockey','','준결승'],
+['10-01',null,'volleyball','','8강'],
+['10-02','09:00','archery','','리커브 단체전'],
+['10-02','09:00','taekwondo','',''],
+['10-02','10:00','tennis','','결승'],
+['10-02','13:00','boxing','','결승'],
+['10-02','16:00','volleyball','','준결승'],
+['10-02','19:20','volleyball','','준결승'],
+['10-02','17:00','judo','',''],
+['10-02','17:30','boxing','','결승'],
+['10-02',null,'hockey','w','3-4위전'],
+['10-02',null,'hockey','w','결승'],
+['10-02',null,'soccer','w','3-4위전'],
+['10-02',null,'soccer','w','결승'],
+['10-03','09:00','taekwondo','',''],
+['10-03','09:00','archery','','리커브 개인전'],
+['10-03','10:00','tennis','','결승'],
+['10-03',null,'hockey','','3-4위전'],
+['10-03',null,'hockey','','결승'],
+['10-03',null,'soccer','','3-4위전'],
+['10-03',null,'soccer','','결승'],
+['10-03','16:00','volleyball','','3-4위전'],
+['10-03','19:20','volleyball','','결승'],
+['10-03','17:00','judo','','유도 혼성 단체전'],
+['10-03','18:00','climbing','','결승'],
+['10-04','18:00','ceremony','','폐회식'],
+];
+function schedLabel(row){
+  const sp = SPORTS_SCHED[row[2]];
+  const gender = row[3] === 'w' ? '여자 ' : '';
+  return { emoji: sp.e, name: gender + sp.n, url: sp.u, x: row[4] || '' };
+}
+function toDate2(dstr, tstr){
+  const [mo, da] = dstr.split('-').map(Number);
+  const [h, mi] = tstr.split(':').map(Number);
+  return new Date(2026, mo - 1, da, h, mi);
+}
+const DEFAULT_DURATION_MIN = 150;
+
+function renderSchedule(){
+  const now = new Date();
+  const timed = SCHEDULE2.filter(r => r[1] !== null).map(r => ({ row:r, start: toDate2(r[0], r[1]) }));
+  const live = timed.filter(o => now >= o.start && now < new Date(o.start.getTime() + DEFAULT_DURATION_MIN*60000));
+  const head = document.getElementById('liveHead');
+  const headText = document.getElementById('liveHeadText');
+  const body = document.getElementById('liveBody');
+  const footDate = document.getElementById('liveFootDate');
+  footDate.textContent = now.toLocaleString('ko-KR', { month:'long', day:'numeric', weekday:'short', hour:'2-digit', minute:'2-digit' });
+
+  if (live.length){
+    head.classList.add('on');
+    headText.textContent = `LIVE · 진행 중일 가능성이 있는 경기 ${live.length}건 (실제 진행 여부는 방송/현지 일정에 따라 다를 수 있음)`;
+    body.innerHTML = live.map(o => {
+      const L = schedLabel(o.row);
+      const inner = `<span class="live-time">${o.row[1]}</span><span class="live-sport">${L.emoji} ${L.name}</span><span class="live-x">${L.x}</span>`;
+      return `<div class="live-item">${L.url ? `<a href="${L.url}" style="display:flex;gap:12px;align-items:baseline;flex:1;">${inner}</a>` : inner}</div>`;
+    }).join('');
+  } else {
+    const upcoming = timed.filter(o => o.start > now).sort((a,b)=>a.start-b.start).slice(0,5);
+    head.classList.remove('on');
+    headText.textContent = '지금 진행 중인 경기 없음 · 다음 일정';
+    if (!upcoming.length){
+      body.innerHTML = '<p class="live-empty">등록된 다음 일정이 없습니다.</p>';
+    } else {
+      body.innerHTML = upcoming.map(o => {
+        const L = schedLabel(o.row);
+        const dd = `${o.row[0].slice(0,2)}.${o.row[0].slice(3)}`;
+        const inner = `<span class="live-time">${dd} ${o.row[1]}</span><span class="live-sport">${L.emoji} ${L.name}</span><span class="live-x">${L.x}</span>`;
+        return `<div class="live-item">${L.url ? `<a href="${L.url}" style="display:flex;gap:12px;align-items:baseline;flex:1;">${inner}</a>` : inner}</div>`;
+      }).join('');
+    }
+  }
+
+  const byDay = {};
+  SCHEDULE2.forEach(r => { (byDay[r[0]] = byDay[r[0]] || []).push(r); });
+  const days = Object.keys(byDay).sort();
+  const schedAll = document.getElementById('schedAll');
+  schedAll.innerHTML = days.map(d => {
+    const rows = byDay[d].map(r => {
+      const L = schedLabel(r);
+      const t = r[1] || '시간 미정';
+      const inner = `<span class="tm">${t}</span><span>${L.emoji} ${L.name}${L.x ? ' — ' + L.x : ''}</span>`;
+      return `<div class="sched-row">${L.url ? `<a href="${L.url}">${inner}</a>` : inner}</div>`;
+    }).join('');
+    return `<div class="sched-day"><h3>${d.slice(0,2)}.${d.slice(3)}</h3>${rows}</div>`;
+  }).join('');
+}
+renderSchedule();
+setInterval(renderSchedule, 60000);
+document.getElementById('schedToggle').addEventListener('click', function(){
+  const el = document.getElementById('schedAll');
+  const open = el.style.display === 'block';
+  el.style.display = open ? 'none' : 'block';
+  this.textContent = (open ? '▸' : '▾') + ' 전체 일정 ' + (open ? '펼쳐보기' : '접기');
+});
 </script>
 </body>
 </html>
