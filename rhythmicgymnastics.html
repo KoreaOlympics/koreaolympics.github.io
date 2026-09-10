@@ -50,7 +50,16 @@
   table.wt th{background:var(--panel);}
   table.wt td.num, table.wt th.num{text-align:center;}
   table.wt caption{font-size:12.5px;color:var(--muted);text-align:left;padding:2px 0 6px;}
+  table.wt tr.kr td{background:#eef4ff;font-weight:600;}
   .note{font-size:12.5px;color:var(--muted);margin:-8px 0 16px;}
+  details.riv{border:1px solid var(--border);border-radius:3px;margin:0 0 10px;background:var(--panel);}
+  details.riv summary{cursor:pointer;font-family:var(--serif);font-weight:600;font-size:15.5px;padding:9px 14px;list-style:none;}
+  details.riv summary::-webkit-details-marker{display:none;}
+  details.riv summary::before{content:"▶";display:inline-block;font-size:11px;color:var(--gold);margin-right:8px;transition:transform .15s ease;}
+  details.riv[open] summary::before{transform:rotate(90deg);}
+  details.riv summary .en{font-weight:400;color:var(--muted);font-size:13px;margin-left:6px;}
+  details.riv .riv-body{padding:0 14px 12px;}
+  details.riv table.wt{margin:4px 0 0;}
   .kr-box{background:#eef4ff;border:1px solid #c3d6f7;border-radius:3px;padding:14px 16px;margin:10px 0 18px;}
   .kr-box h4{margin-top:0;color:#1e3a8a;}
   .medals{display:inline-flex;gap:6px;margin:0 0 8px;flex-wrap:wrap;}
@@ -78,9 +87,15 @@
         <div class="toc-title">목차</div>
         <ol>
           <li><a href="#overview">개요</a></li>
-          <li><a href="#rg">리듬체조</a></li>
-          <li><a href="#tramp">트램펄린</a></li>
-          <li><a href="#eq">승마</a></li>
+          <li><a href="#rg">리듬체조</a>
+            <ol><li><a href="#entries-rg">전체 출전자 명단</a></li></ol>
+          </li>
+          <li><a href="#tramp">트램펄린</a>
+            <ol><li><a href="#entries-tramp">전체 출전자 명단</a></li></ol>
+          </li>
+          <li><a href="#eq">승마</a>
+            <ol><li><a href="#entries-eq">전체 출전자 명단</a></li></ol>
+          </li>
         </ol>
       </div>
 
@@ -97,8 +112,145 @@
         <tr><td>서은채 · 하수이</td></tr>
       </table>
 
+      <h3 id="entries-rg">전체 출전자 명단</h3>
+      <p>2026 아이치·나고야 아시안게임 리듬체조 2개 세부종목의 공식 확정 출전자 명단 전체. 세부종목을 눌러 펼쳐보세요. 한국 선수는 강조 표시했다.</p>
+
+      <details class="riv">
+        <summary>개인종합 <span class="en">Total entries: 23</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><th>국가</th><th>선수</th><th>생년월일</th></tr>
+            <tr><td>CHN</td><td>WANG Qi</td><td>2010.09.16</td></tr>
+            <tr><td>CHN</td><td>WANG Zilu</td><td>2003.06.18</td></tr>
+            <tr><td>HKG</td><td>LI Ting Huen</td><td>2008.08.25</td></tr>
+            <tr><td>INA</td><td>WAHYUNI Tri</td><td>2000.08.10</td></tr>
+            <tr><td>JPN</td><td>KITA Mirano</td><td>2006.02.16</td></tr>
+            <tr><td>JPN</td><td>SUZUKI Naruha</td><td>2005.03.06</td></tr>
+            <tr><td>KAZ</td><td>YEREKESHEVA Akmaral</td><td>2010.03.20</td></tr>
+            <tr><td>KAZ</td><td>YERTAIKYZY Aibota</td><td>2004.03.28</td></tr>
+            <tr><td>KGZ</td><td>ARAPOVA Asel</td><td>2010.07.03</td></tr>
+            <tr><td>KGZ</td><td>ARKATOVA Zlata Olegovna</td><td>2010.07.28</td></tr>
+            <tr class="kr"><td>KOR</td><td>HA Suyi</td><td>2006.05.31</td></tr>
+            <tr class="kr"><td>KOR</td><td>SEO Eunchae</td><td>2010.11.04</td></tr>
+            <tr><td>LAO</td><td>PHILAPHANDETH Praewa Misato</td><td>2004.12.06</td></tr>
+            <tr><td>PHI</td><td>LABADAN Breanna</td><td>2006.07.13</td></tr>
+            <tr><td>PHI</td><td>RAMILO Jasmine Althea</td><td>2008.03.06</td></tr>
+            <tr><td>SGP</td><td>ANG Pebbyl Jing Ya</td><td>2007.01.04</td></tr>
+            <tr><td>SGP</td><td>YANG Mikayla Angeline</td><td>2007.09.06</td></tr>
+            <tr><td>SYR</td><td>DAUD Alisa</td><td>2009.02.18</td></tr>
+            <tr><td>SYR</td><td>DAUD Emili</td><td>2010.12.23</td></tr>
+            <tr><td>THA</td><td>EAKBUNNASING Sitanan</td><td>2010.11.30</td></tr>
+            <tr><td>THA</td><td>SUTTHIRAGSA Sikharee</td><td>2008.11.22</td></tr>
+            <tr><td>UZB</td><td>DJURAEVA Lola</td><td>2009.07.05</td></tr>
+            <tr><td>UZB</td><td>IKROMOVA Takhmina</td><td>2004.08.06</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="riv">
+        <summary>단체종합 <span class="en">Total entries: 50</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><th>국가</th><th>선수</th><th>생년월일</th></tr>
+            <tr><td>CHN</td><td>DING Xinyi</td><td>2004.08.27</td></tr>
+            <tr><td>CHN</td><td>LIU Miaoting</td><td>2005.05.01</td></tr>
+            <tr><td>CHN</td><td>PU Yanzhu</td><td>2005.04.18</td></tr>
+            <tr><td>CHN</td><td>WANG Lanjing</td><td>2005.03.10</td></tr>
+            <tr><td>CHN</td><td>ZHANG Xinyi</td><td>2006.07.31</td></tr>
+            <tr><td>JPN</td><td>HANAMURA Natsumi</td><td>2008.07.12</td></tr>
+            <tr><td>JPN</td><td>NISHIMOTO Megumi</td><td>2007.09.26</td></tr>
+            <tr><td>JPN</td><td>TAGUCHI Hisano</td><td>2006.09.15</td></tr>
+            <tr><td>JPN</td><td>TANABE Kaseno</td><td>2006.07.18</td></tr>
+            <tr><td>JPN</td><td>TANAKA Yuna</td><td>2009.03.09</td></tr>
+            <tr><td>KAZ</td><td>CHEPULSKAYA Kristina</td><td>2008.04.16</td></tr>
+            <tr><td>KAZ</td><td>JUNUSBAYEVA Jasmine</td><td>2008.08.27</td></tr>
+            <tr><td>KAZ</td><td>KHAKIMZHANOVA Aida</td><td>2008.01.29</td></tr>
+            <tr><td>KAZ</td><td>MYRZABAY Madina</td><td>2008.01.01</td></tr>
+            <tr><td>KAZ</td><td>NURMAGAMBETOVA Aizere</td><td>2008.02.13</td></tr>
+            <tr><td>KGZ</td><td>KELIOTIS Ariana</td><td>2009.09.24</td></tr>
+            <tr><td>KGZ</td><td>KUDAIBERGENOVA Bella Almazovna</td><td>2010.12.09</td></tr>
+            <tr><td>KGZ</td><td>KUTTUBEKOVA Nazik Nurlanovna</td><td>2010.07.20</td></tr>
+            <tr><td>KGZ</td><td>MELNICHUK Sofiia</td><td>2010.11.04</td></tr>
+            <tr><td>KGZ</td><td>SUERKULOVA Ailun</td><td>2009.08.20</td></tr>
+            <tr class="kr"><td>KOR</td><td>KIM Jiwoo</td><td>2007.07.24</td></tr>
+            <tr class="kr"><td>KOR</td><td>KIM Minseul</td><td>2007.08.09</td></tr>
+            <tr class="kr"><td>KOR</td><td>LEE Jungeun</td><td>2007.08.03</td></tr>
+            <tr class="kr"><td>KOR</td><td>PARK Suyeon</td><td>2009.08.04</td></tr>
+            <tr class="kr"><td>KOR</td><td>YAN Ekaterina</td><td>2007.05.19</td></tr>
+            <tr><td>MAS</td><td>LOW Ee Shuen</td><td>2010.07.27</td></tr>
+            <tr><td>MAS</td><td>NA Carol Yuan Qi</td><td>2008.10.01</td></tr>
+            <tr><td>MAS</td><td>ONG Maia Xiao Han</td><td>2006.02.16</td></tr>
+            <tr><td>MAS</td><td>SEE Bernice Qin Nin</td><td>2006.11.10</td></tr>
+            <tr><td>MAS</td><td>TAN Victoria Manalang Fu Hui</td><td>2006.10.01</td></tr>
+            <tr><td>SGP</td><td>ANG Yue Xuan Thadine</td><td>2010.07.11</td></tr>
+            <tr><td>SGP</td><td>CHEW Cleo</td><td>2007.06.23</td></tr>
+            <tr><td>SGP</td><td>LIEW Xin Yu</td><td>2010.03.15</td></tr>
+            <tr><td>SGP</td><td>TAN Megan Jiahui</td><td>2008.08.15</td></tr>
+            <tr><td>SGP</td><td>YET Mirabelle Yu Chelle</td><td>2009.07.25</td></tr>
+            <tr><td>THA</td><td>CHAICHONICH Rakkan</td><td>2008.04.16</td></tr>
+            <tr><td>THA</td><td>JEDTHUMRONG Pornnutcha</td><td>2002.04.30</td></tr>
+            <tr><td>THA</td><td>KETSAKUL Pichayatida</td><td>2006.10.20</td></tr>
+            <tr><td>THA</td><td>KHOONRUGSA I-aun</td><td>2010.06.12</td></tr>
+            <tr><td>THA</td><td>THONGSONG Puntita</td><td>2001.11.23</td></tr>
+            <tr><td>TPE</td><td>CHANG Chi-yun</td><td>2001.10.18</td></tr>
+            <tr><td>TPE</td><td>LEE Yu-wen</td><td>2003.10.26</td></tr>
+            <tr><td>TPE</td><td>LI Tzu-wen</td><td>1999.09.22</td></tr>
+            <tr><td>TPE</td><td>LU Yuan-lo</td><td>2007.05.09</td></tr>
+            <tr><td>TPE</td><td>SUN Keng-hsin</td><td>2006.11.30</td></tr>
+            <tr><td>UZB</td><td>DJURAEVA Yosina</td><td>2010.02.26</td></tr>
+            <tr><td>UZB</td><td>KHAKIMOVA Diana</td><td>2008.08.09</td></tr>
+            <tr><td>UZB</td><td>SADYKOVA Irodakhon</td><td>2007.09.05</td></tr>
+            <tr><td>UZB</td><td>SAFINA Milana</td><td>2010.02.15</td></tr>
+            <tr><td>UZB</td><td>USOVA Sofiya</td><td>2010.07.12</td></tr>
+          </table>
+        </div>
+      </details>
+
       <h2 id="tramp">트램펄린 <span style="font-weight:400;color:var(--muted);font-size:16px;">Trampoline</span></h2>
       <p>반동을 이용해 높이 튀어 오르며 여러 회전 동작을 연속으로 수행하는 종목이다.</p>
+
+      <h3 id="entries-tramp">전체 출전자 명단</h3>
+      <p>2026 아이치·나고야 아시안게임 트램펄린 2개 세부종목의 공식 확정 출전자 명단 전체. 한국은 출전자가 없다.</p>
+
+      <details class="riv">
+        <summary>남자 개인 <span class="en">Total entries: 12</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><th>국가</th><th>선수</th><th>생년월일</th></tr>
+            <tr><td>CHN</td><td>WANG Zisai</td><td>2006.06.18</td></tr>
+            <tr><td>CHN</td><td>YAN Langyu</td><td>1999.08.31</td></tr>
+            <tr><td>HKG</td><td>LAU Long Fung Ronald</td><td>2000.01.14</td></tr>
+            <tr><td>HKG</td><td>LEE Kwun Wai</td><td>1998.08.05</td></tr>
+            <tr><td>IRI</td><td>MAM ABDOLLAH Aria</td><td>2003.10.13</td></tr>
+            <tr><td>IRI</td><td>SAEIDABADI Mohammad</td><td>2001.11.09</td></tr>
+            <tr><td>JPN</td><td>KISHI Daiki</td><td>1994.09.22</td></tr>
+            <tr><td>JPN</td><td>MATSUMOTO Yusei</td><td>2006.11.14</td></tr>
+            <tr><td>KAZ</td><td>BARKOV Roman</td><td>2002.04.02</td></tr>
+            <tr><td>KAZ</td><td>TASMAGAMBETOV Yerlan</td><td>2004.02.06</td></tr>
+            <tr><td>PHI</td><td>ILANO Jerry Jr.</td><td>2007.12.20</td></tr>
+            <tr><td>TJK</td><td>GAIBOV Komron</td><td>2004.01.03</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="riv">
+        <summary>여자 개인 <span class="en">Total entries: 10</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><th>국가</th><th>선수</th><th>생년월일</th></tr>
+            <tr><td>CHN</td><td>QIU Zheng</td><td>2000.11.07</td></tr>
+            <tr><td>CHN</td><td>ZHU Xueying</td><td>1998.03.02</td></tr>
+            <tr><td>HKG</td><td>LIU Kit Ying Jennifer May Kwa</td><td>2001.11.17</td></tr>
+            <tr><td>HKG</td><td>XIAO Yiyao</td><td>2008.07.13</td></tr>
+            <tr><td>IRI</td><td>HASSAN SHOKATI Yalda</td><td>2008.12.24</td></tr>
+            <tr><td>IRI</td><td>TAVASSOLI Fatemeh</td><td>2008.05.28</td></tr>
+            <tr><td>JPN</td><td>MORI Hikaru</td><td>1999.07.07</td></tr>
+            <tr><td>JPN</td><td>UYAMA Megu</td><td>1996.01.14</td></tr>
+            <tr><td>KAZ</td><td>BUTOLINA Viktoriya</td><td>2004.10.20</td></tr>
+            <tr><td>PHI</td><td>PADILLA Luvicar Janine</td><td>1999.10.12</td></tr>
+          </table>
+        </div>
+      </details>
 
       <h2 id="eq">승마 <span style="font-weight:400;color:var(--muted);font-size:16px;">Equestrian</span></h2>
       <p>기수와 말이 함께 마장마술, 종합마술, 장애물비월 세 부문에서 개인전·단체전을 겨루는 종목으로 동물과의 교감이 핵심이다. 경기는 9월 21일부터 10월 4일까지 일본 도쿄 마술공원(Tokyo Equestrian Park)에서 열리며, 개최국 일본을 포함해 약 20개국 선수들이 출전할 예정이다.</p>
@@ -120,8 +272,225 @@
         <tr><td>이동화</td></tr>
       </table>
 
+      <h3 id="entries-eq">전체 출전자 명단</h3>
+      <p>2026 아이치·나고야 아시안게임 승마 세부종목의 공식 확정 출전자 명단. 세부종목을 눌러 펼쳐보세요. 한국 선수는 강조 표시했다. 장애물비월 개인전 A(1.40~1.50m급)는 취재 시점에 공식 출전자가 확정되지 않아 목록에서 제외했다.</p>
+
+      <details class="riv">
+        <summary>장애물비월 개인전 B(1.55m급 이하) <span class="en">Total entries: 16</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><th>국가</th><th>선수</th><th>생년월일</th></tr>
+            <tr><td>HKG</td><td>LAM Patrick</td><td>1983.06.24</td></tr>
+            <tr><td>JOR</td><td>BISHARAT Ibrahim</td><td>1984.02.22</td></tr>
+            <tr><td>JOR</td><td>NASER Raad</td><td>1977.08.06</td></tr>
+            <tr class="kr"><td>KOR</td><td>JUNG Chul Hee</td><td>1990.01.29</td></tr>
+            <tr><td>KSA</td><td>ALDUHAMI A Ramzy Hamad</td><td>1972.01.05</td></tr>
+            <tr><td>KSA</td><td>ALRAJHI M Abdulrahman Bader</td><td>1995.04.10</td></tr>
+            <tr><td>KUW</td><td>ALKHARAFI Ali</td><td>1989.12.12</td></tr>
+            <tr><td>KUW</td><td>RASHED Fawaz</td><td>2002.11.22</td></tr>
+            <tr><td>PLE</td><td>SHCHIBRIK Egor</td><td>2000.11.14</td></tr>
+            <tr><td>QAT</td><td>AL-THANI Ali</td><td>1982.09.01</td></tr>
+            <tr><td>QAT</td><td>MOHAMMED Basem</td><td>1987.05.31</td></tr>
+            <tr><td>TPE</td><td>LIN Yun-chi</td><td>2002.11.24</td></tr>
+            <tr><td>UAE</td><td>ALMAKTOOM Shaikha Latifa</td><td>1985.09.27</td></tr>
+            <tr><td>UAE</td><td>ALMARZOOQIALJNEIBI Omar</td><td>2003.03.28</td></tr>
+            <tr><td>UZB</td><td>ABDULLAEV Abdurakhmon</td><td>2004.06.01</td></tr>
+            <tr><td>UZB</td><td>KURBANOV Bekzod</td><td>1991.04.04</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="riv">
+        <summary>장애물비월 단체전 <span class="en">Total entries: 43</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><th>국가</th><th>선수</th><th>생년월일</th></tr>
+            <tr><td>HKG</td><td>DE LYRA Clarissa</td><td>1996.05.17</td></tr>
+            <tr><td>HKG</td><td>LAM Patrick</td><td>1983.06.24</td></tr>
+            <tr><td>HKG</td><td>LAI Jacqueline Jing Man</td><td>1991.02.15</td></tr>
+            <tr><td>HKG</td><td>LALIVE D'EPINAY Sheikara</td><td>2000.02.10</td></tr>
+            <tr><td>INA</td><td>SAHPUTRA Dirga Wira Ramadan</td><td>2000.12.17</td></tr>
+            <tr><td>INA</td><td>WOWILING Marco Hence</td><td>1996.03.29</td></tr>
+            <tr><td>INA</td><td>COOLEN Brayen Nathan Brata</td><td>1994.01.17</td></tr>
+            <tr><td>INA</td><td>BRAYUDHA Arserl Rizki</td><td>2005.06.07</td></tr>
+            <tr><td>JPN</td><td>SHIBAYAMA Takashi</td><td>1980.05.11</td></tr>
+            <tr><td>JPN</td><td>SAITO Koki</td><td>1989.09.16</td></tr>
+            <tr><td>JPN</td><td>SATO Eiken</td><td>1986.01.08</td></tr>
+            <tr><td>JPN</td><td>SUGITANI Taizo</td><td>1976.06.27</td></tr>
+            <tr><td>KAZ</td><td>BATALOVA Xeniya</td><td>1991.07.15</td></tr>
+            <tr><td>KAZ</td><td>SOKOLENKO Oleg</td><td>1999.07.04</td></tr>
+            <tr><td>KAZ</td><td>SOKOLENKO Raissa</td><td>2002.03.05</td></tr>
+            <tr><td>KAZ</td><td>TURISBEKOVA Nurila</td><td>2001.07.26</td></tr>
+            <tr class="kr"><td>KOR</td><td>LEE Hyeongyu</td><td>1999.11.18</td></tr>
+            <tr class="kr"><td>KOR</td><td>JUNG Chul Hee</td><td>1990.01.29</td></tr>
+            <tr class="kr"><td>KOR</td><td>HEO Jeonghoon</td><td>1999.08.01</td></tr>
+            <tr class="kr"><td>KOR</td><td>KWON Manjun</td><td>1996.07.12</td></tr>
+            <tr><td>KSA</td><td>ALMOBTY S Khaled Abdulrahman</td><td>1998.10.19</td></tr>
+            <tr><td>KSA</td><td>ALDUHAMI A Ramzy Hamad</td><td>1972.01.05</td></tr>
+            <tr><td>KSA</td><td>SHARBATLY A Abdullah Waleed</td><td>1982.09.21</td></tr>
+            <tr><td>KSA</td><td>ALRAJHI M Abdulrahman Bader</td><td>1995.04.10</td></tr>
+            <tr><td>KUW</td><td>ALKHARAFI Ali</td><td>1989.12.12</td></tr>
+            <tr><td>KUW</td><td>ALKHARAFI Hussain</td><td>2008.03.24</td></tr>
+            <tr><td>KUW</td><td>RASHED Fawaz</td><td>2002.11.22</td></tr>
+            <tr><td>QAT</td><td>AL-THANI Ali</td><td>1982.09.01</td></tr>
+            <tr><td>QAT</td><td>ALAJAMI Faleh</td><td>1986.06.05</td></tr>
+            <tr><td>QAT</td><td>AL-THANI Fahad</td><td>2008.10.10</td></tr>
+            <tr><td>QAT</td><td>MOHAMMED Basem</td><td>1987.05.31</td></tr>
+            <tr><td>TPE</td><td>CHEN Yu-lung</td><td>1991.09.12</td></tr>
+            <tr><td>TPE</td><td>LIN Yun-chi</td><td>2002.11.24</td></tr>
+            <tr><td>TPE</td><td>CHEN Hung-shen</td><td>2006.12.17</td></tr>
+            <tr><td>TPE</td><td>WANG Chong-hao</td><td>2008.02.27</td></tr>
+            <tr><td>UAE</td><td>ALMAKTOOM Shaikha Latifa</td><td>1985.09.27</td></tr>
+            <tr><td>UAE</td><td>ALMHEIRI Abdulla</td><td>1974.04.01</td></tr>
+            <tr><td>UAE</td><td>ALMARZOOQIALJNEIBI Omar</td><td>2003.03.28</td></tr>
+            <tr><td>UAE</td><td>ALMHEIRI Humaid</td><td>1999.02.26</td></tr>
+            <tr><td>UZB</td><td>KURBANOV Bekzod</td><td>1991.04.04</td></tr>
+            <tr><td>UZB</td><td>ABDULLAEV Abdurakhmon</td><td>2004.06.01</td></tr>
+            <tr><td>UZB</td><td>GAZIEV Bakhromjon</td><td>1979.09.21</td></tr>
+            <tr><td>UZB</td><td>SOBIRJONOV Okiljon</td><td>1997.10.20</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="riv">
+        <summary>종합마술 단체전 <span class="en">Total entries: 32</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><th>국가</th><th>선수</th><th>생년월일</th></tr>
+            <tr><td>CHN</td><td>HUA Tian</td><td>1989.10.25</td></tr>
+            <tr><td>CHN</td><td>SUN Huadong</td><td>1991.01.07</td></tr>
+            <tr><td>CHN</td><td>SHAO Han</td><td>1995.02.28</td></tr>
+            <tr><td>CHN</td><td>SHU Yuying</td><td>1996.11.12</td></tr>
+            <tr><td>HKG</td><td>HO Yuen Yan Annie</td><td>1983.09.07</td></tr>
+            <tr><td>HKG</td><td>LAM Patrick</td><td>1983.06.24</td></tr>
+            <tr><td>HKG</td><td>SU Yu Xuan</td><td>1997.08.20</td></tr>
+            <tr><td>HKG</td><td>FARDEL Nicole Michele</td><td>1967.03.03</td></tr>
+            <tr><td>INA</td><td>FAJAR Fergi Tri Nur</td><td>1999.06.23</td></tr>
+            <tr><td>INA</td><td>ZAKI Muhamad</td><td>1991.04.20</td></tr>
+            <tr><td>INA</td><td>ALEXANDRO Marcho</td><td>1996.01.27</td></tr>
+            <tr><td>INA</td><td>FEBRYYANTO Riko Ganda</td><td>1994.02.25</td></tr>
+            <tr><td>IND</td><td>MIRZA Fouaad</td><td>1992.03.06</td></tr>
+            <tr><td>IND</td><td>NAGRA Arjan Singh</td><td>2005.08.12</td></tr>
+            <tr><td>IND</td><td>LIMAYE Ashish Vivek</td><td>1993.11.22</td></tr>
+            <tr><td>IND</td><td>KUMAR Ahaan</td><td>1999.09.29</td></tr>
+            <tr><td>JPN</td><td>TOMOTO Kazuma</td><td>1983.06.05</td></tr>
+            <tr><td>JPN</td><td>TANAKA Toshiyuki</td><td>1985.02.02</td></tr>
+            <tr><td>JPN</td><td>OIWA Yoshiaki</td><td>1976.07.19</td></tr>
+            <tr><td>JPN</td><td>MURATA Ryo</td><td>1995.10.31</td></tr>
+            <tr class="kr"><td>KOR</td><td>KANG Hansu</td><td>1997.05.10</td></tr>
+            <tr class="kr"><td>KOR</td><td>PARK Heungsu</td><td>2008.06.11</td></tr>
+            <tr class="kr"><td>KOR</td><td>KIM Hyeongho</td><td>2008.06.18</td></tr>
+            <tr class="kr"><td>KOR</td><td>LEE Donghwa</td><td>2007.09.19</td></tr>
+            <tr><td>QAT</td><td>AL-NAIMI Mohammed</td><td>1991.09.05</td></tr>
+            <tr><td>QAT</td><td>AK-MARRI Mohammed</td><td>2001.02.19</td></tr>
+            <tr><td>QAT</td><td>AL-MUHANNADI Abdulaziz</td><td>1995.07.07</td></tr>
+            <tr><td>QAT</td><td>AL-QADI Mohammed</td><td>2002.01.23</td></tr>
+            <tr><td>THA</td><td>SITTIJU Woraphat</td><td>2001.05.19</td></tr>
+            <tr><td>THA</td><td>KHAW-NGAM Supap</td><td>1967.07.28</td></tr>
+            <tr><td>THA</td><td>SAMRAN Korntawat</td><td>1997.12.15</td></tr>
+            <tr><td>THA</td><td>PITAKANONDA Weerapat</td><td>1983.09.04</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="riv">
+        <summary>종합마술 개인전 <span class="en">Total entries: 12</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><th>국가</th><th>선수</th><th>생년월일</th></tr>
+            <tr><td>HKG</td><td>FARDEL Nicole Michele</td><td>1967.03.03</td></tr>
+            <tr><td>HKG</td><td>HO Yuen Yan Annie</td><td>1983.09.07</td></tr>
+            <tr><td>HKG</td><td>LAM Patrick</td><td>1983.06.24</td></tr>
+            <tr><td>HKG</td><td>SU Yu Xuan</td><td>1997.08.20</td></tr>
+            <tr><td>IND</td><td>KUMAR Ahaan</td><td>1999.09.29</td></tr>
+            <tr><td>IND</td><td>LIMAYE Ashish Vivek</td><td>1993.11.22</td></tr>
+            <tr><td>JOR</td><td>SHALAN Faris</td><td>1988.03.28</td></tr>
+            <tr><td>PAK</td><td>KHAN Usman</td><td>1981.04.22</td></tr>
+            <tr><td>QAT</td><td>AK-MARRI Mohammed</td><td>2001.02.19</td></tr>
+            <tr><td>QAT</td><td>AL-MUHANNADI Abdulaziz</td><td>1995.07.07</td></tr>
+            <tr><td>QAT</td><td>AL-NAIMI Mohammed</td><td>1991.09.05</td></tr>
+            <tr><td>QAT</td><td>AL-QADI Mohammed</td><td>2002.01.23</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="riv">
+        <summary>마장마술 단체전 <span class="en">Total entries: 37</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><th>국가</th><th>선수</th><th>생년월일</th></tr>
+            <tr><td>CHN</td><td>RAO Jiayi</td><td>1998.02.18</td></tr>
+            <tr><td>CHN</td><td>YU Jiayi</td><td>2004.10.16</td></tr>
+            <tr><td>CHN</td><td>GU Zhanzhao</td><td>2008.05.09</td></tr>
+            <tr><td>CHN</td><td>WU Yue</td><td>2005.02.14</td></tr>
+            <tr><td>HKG</td><td>HO Yuen Yan Annie</td><td>1983.09.07</td></tr>
+            <tr><td>HKG</td><td>CHENG Kai Hei Yuddy</td><td>2003.12.17</td></tr>
+            <tr><td>HKG</td><td>LI Kendra</td><td>2009.05.13</td></tr>
+            <tr><td>INA</td><td>HERJAWAN Karen Leticia</td><td>2001.08.23</td></tr>
+            <tr><td>INA</td><td>PUTRI Audirania Amanda</td><td>1999.07.04</td></tr>
+            <tr><td>INA</td><td>MENAYANG Alfaro</td><td>1990.05.09</td></tr>
+            <tr><td>INA</td><td>PRAMESWARI Dara Ninggar</td><td>2000.06.08</td></tr>
+            <tr><td>IND</td><td>PUNDIR Gaurav</td><td>1992.03.15</td></tr>
+            <tr><td>IND</td><td>CHHEDA Hriday Vipul</td><td>1998.07.24</td></tr>
+            <tr><td>IND</td><td>VORA Shruti</td><td>1971.01.06</td></tr>
+            <tr><td>IND</td><td>SUD Jai</td><td>2002.01.23</td></tr>
+            <tr><td>JPN</td><td>HAYASHI Shingo</td><td>1985.01.25</td></tr>
+            <tr><td>JPN</td><td>HIEDA Ryuma</td><td>1978.02.08</td></tr>
+            <tr><td>JPN</td><td>YONEMOTO Akiko</td><td>1977.07.11</td></tr>
+            <tr><td>JPN</td><td>NISHIWAKI Fumiyasu</td><td>1986.04.06</td></tr>
+            <tr class="kr"><td>KOR</td><td>NAM Dongheon</td><td>1988.12.21</td></tr>
+            <tr class="kr"><td>KOR</td><td>KIM Shiwoo</td><td>2010.05.04</td></tr>
+            <tr class="kr"><td>KOR</td><td>LEE Myeongseok</td><td>1989.02.13</td></tr>
+            <tr class="kr"><td>KOR</td><td>DO Hyunwoo</td><td>2002.12.23</td></tr>
+            <tr><td>QAT</td><td>AL-BOININ Saoud</td><td>1998.12.19</td></tr>
+            <tr><td>QAT</td><td>AL-KUWARI Jassim</td><td>2000.03.21</td></tr>
+            <tr><td>THA</td><td>SIRIVANNAVARI MAHIDOL H R H Princess</td><td>1987.01.08</td></tr>
+            <tr><td>THA</td><td>RUECKER Chanjanok</td><td>2002.01.07</td></tr>
+            <tr><td>THA</td><td>PUTTISOMBAT Nynn</td><td>2007.04.24</td></tr>
+            <tr><td>THA</td><td>YOTVIRIYAPANIT Chalermcharn</td><td>1978.12.05</td></tr>
+            <tr><td>TPE</td><td>YEH Hsiu-hua</td><td>1977.06.04</td></tr>
+            <tr><td>TPE</td><td>WANG Yu-jun</td><td>1969.10.14</td></tr>
+            <tr><td>TPE</td><td>SHYONG Tien-chi</td><td>2000.10.22</td></tr>
+            <tr><td>TPE</td><td>CHEN Yi-ju</td><td>1974.07.30</td></tr>
+            <tr><td>UAE</td><td>ALJAHOURI Ali</td><td>1975.07.29</td></tr>
+            <tr><td>UAE</td><td>ALSERKAL Mohamed</td><td>1989.06.09</td></tr>
+            <tr><td>UAE</td><td>SCHUTZ Bianca</td><td>1988.07.05</td></tr>
+            <tr><td>UAE</td><td>LANKESTER Natalie</td><td>1989.07.06</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="riv">
+        <summary>마장마술 개인전 <span class="en">Total entries: 20</span></summary>
+        <div class="riv-body">
+          <table class="wt">
+            <tr><th>국가</th><th>선수</th><th>생년월일</th></tr>
+            <tr><td>BRN</td><td>BLACK Megan</td><td>1995.06.19</td></tr>
+            <tr><td>BRN</td><td>MAHMOOD Aneesa</td><td>2003.09.15</td></tr>
+            <tr><td>HKG</td><td>CHENG Kai Hei Yuddy</td><td>2003.12.17</td></tr>
+            <tr><td>HKG</td><td>HO Yuen Yan Annie</td><td>1983.09.07</td></tr>
+            <tr><td>HKG</td><td>LI Kendra</td><td>2009.05.13</td></tr>
+            <tr><td>IND</td><td>PUNDIR Gaurav</td><td>1992.03.15</td></tr>
+            <tr><td>IND</td><td>VORA Shruti</td><td>1971.01.06</td></tr>
+            <tr><td>KSA</td><td>ALSAIFI H Saminta Mahdi</td><td>1976.09.23</td></tr>
+            <tr><td>KSA</td><td>SHARBATLY H Ahmed Adnan</td><td>1980.12.04</td></tr>
+            <tr><td>LBN</td><td>HADDAD Catherine</td><td>1964.03.26</td></tr>
+            <tr><td>MAS</td><td>LEE Cheng Ni Diani</td><td>1988.03.30</td></tr>
+            <tr><td>PHI</td><td>LEVISTE Marie Antonette</td><td>1973.08.05</td></tr>
+            <tr><td>PLE</td><td>MAKSAKOVA Aleksandra</td><td>1997.07.25</td></tr>
+            <tr><td>QAT</td><td>AL-BOININ Saoud</td><td>1998.12.19</td></tr>
+            <tr><td>QAT</td><td>AL-KUWARI Jassim</td><td>2000.03.21</td></tr>
+            <tr><td>TPE</td><td>SHYONG Tien-chi</td><td>2000.10.22</td></tr>
+            <tr><td>TPE</td><td>YEH Hsiu-hua</td><td>1977.06.04</td></tr>
+            <tr><td>UAE</td><td>LANKESTER Natalie</td><td>1989.07.06</td></tr>
+            <tr><td>UAE</td><td>SCHUTZ Bianca</td><td>1988.07.05</td></tr>
+            <tr><td>UZB</td><td>SHEVSOVA Alina</td><td>1999.10.19</td></tr>
+          </table>
+        </div>
+      </details>
+
       <div class="footer">
-        출처: 편집부 자체 정리.<br>
+        출처: 편집부 자체 정리. 전체 출전자 명단 출처: results.asiangames2026.org (공식 엔트리).<br>
         일정과 세부 사항은 대회 진행에 따라 변경될 수 있다.
       </div>
     </div>

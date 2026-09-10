@@ -126,8 +126,10 @@
   #schedAll{display:none;margin-bottom:20px;}
 
   /* Header logo */
-  .brand-row{display:flex;align-items:center;gap:16px;margin-bottom:6px;}
-  .brand-row img{height:56px;width:auto;}
+  .brand-row{display:flex;align-items:center;gap:16px;margin-bottom:14px;flex-wrap:wrap;}
+  .brand-row .emblem{height:56px;width:auto;}
+  .brand-row .banner{height:64px;width:auto;border-radius:4px;object-fit:cover;}
+  @media (max-width:520px){.brand-row .banner{height:48px;}.brand-row .emblem{height:44px;}}
 </style>
 </head>
 <body>
@@ -138,7 +140,8 @@
   </nav>
   <header class="hero">
     <div class="brand-row">
-      <img src="assets/emblem.svg" alt="2026 아이치·나고야 아시안게임 엠블럼">
+      <img class="emblem" src="assets/emblem.svg" alt="2026 아이치·나고야 아시안게임 엠블럼">
+      <img class="banner" src="assets/banner.jpg" alt="대한민국 아시안게임 국가대표">
       <span class="eyebrow">2026 Aichi · Nagoya</span>
     </div>
     <h1>제20회 아이치·나고야<br><em>아시안게임 종목</em> 안내</h1>
