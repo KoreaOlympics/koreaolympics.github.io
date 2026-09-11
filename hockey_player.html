@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>필드하키 전체 출전자 명단 - 2026 아이치·나고야 아시안게임</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff; --panel:#f8f9fa; --border:#c8ccd1; --border-soft:#eaecf0;
+    --ink:#202122; --muted:#54595d; --link:#3366cc; --link-visited:#795cb2; --link-red:#ba0000;
+    --serif:'Noto Serif KR',Georgia,'Times New Roman',serif;
+    --sans:'Pretendard','Helvetica Neue',Arial,sans-serif;
+    --accent:#2456c6; --ok:#1a7f37; --warn:#b45309; --gold:#a05a00;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.65;}
+  a{color:var(--link);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  a:visited{color:var(--link-visited);}
+  .topbar{border-bottom:1px solid var(--border);background:var(--panel);font-size:12.5px;color:var(--muted);}
+  .topbar .inner{max-width:1100px;margin:0 auto;padding:8px 20px;display:flex;gap:16px;flex-wrap:wrap;}
+  .topbar a{color:var(--link);}
+  .layout{max-width:1100px;margin:0 auto;padding:22px 20px 80px;}
+  h1.title{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.3;margin:0 0 2px;padding-bottom:6px;border-bottom:1px solid var(--border);}
+  .subtitle{color:var(--muted);font-size:13px;margin:0 0 18px;}
+  .hatnote{font-style:italic;color:var(--muted);background:var(--panel);border:1px solid var(--border-soft);padding:8px 14px;border-radius:2px;margin:0 0 20px;font-size:13.5px;}
+  .content{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;}
+  .main{flex:1 1 560px;min-width:0;}
+  h2{font-family:var(--serif);font-weight:600;font-size:22px;margin:26px 0 10px;padding-bottom:5px;border-bottom:1px solid var(--border-soft);scroll-margin-top:12px;}
+  h3{font-family:var(--serif);font-weight:600;font-size:17px;margin:20px 0 8px;}
+  h4{font-family:var(--sans);font-weight:700;font-size:14.5px;margin:16px 0 6px;color:#3a3f44;}
+  p{margin:0 0 12px;}
+  .toc{display:inline-block;background:var(--panel);border:1px solid var(--border);border-radius:2px;padding:12px 20px 12px 14px;margin:0 0 20px;font-size:14px;}
+  .toc-title{font-weight:700;text-align:center;font-size:13px;margin-bottom:6px;}
+  .toc ol{margin:0;padding-left:22px;}
+  .toc li{margin:3px 0;}
+  .infobox{flex:0 0 300px;background:var(--panel);border:1px solid var(--border);border-radius:2px;font-size:13px;align-self:flex-start;}
+  .infobox .ib-title{background:#eaecf0;font-family:var(--serif);font-weight:700;text-align:center;padding:10px 12px;font-size:15px;border-bottom:1px solid var(--border);}
+  .infobox table{width:100%;border-collapse:collapse;}
+  .infobox th,.infobox td{text-align:left;padding:7px 12px;vertical-align:top;border-bottom:1px solid var(--border-soft);}
+  .infobox th{width:38%;color:var(--muted);font-weight:600;}
+  .badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:2px;background:#e6f0ff;color:#2456c6;border:1px solid #b9d0f5;margin-left:6px;}
+  .badge.gold{background:#fff2e0;color:#a05a00;border-color:#f2d2a0;}
+  table.wt{border-collapse:collapse;width:100%;font-size:13.5px;margin:6px 0 16px;}
+  table.wt th,table.wt td{border:1px solid var(--border);padding:6px 10px;text-align:left;vertical-align:top;}
+  table.wt th{background:var(--panel);}
+  table.wt td.num, table.wt th.num{text-align:center;}
+  table.wt caption{font-size:12.5px;color:var(--muted);text-align:left;padding:2px 0 6px;}
+  table.wt tr.kr td{background:#eef4ff;font-weight:600;}
+  .note{font-size:12.5px;color:var(--muted);margin:-8px 0 16px;}
+  details.riv{border:1px solid var(--border);border-radius:3px;margin:0 0 10px;background:var(--panel);}
+  details.riv summary{cursor:pointer;font-family:var(--serif);font-weight:600;font-size:15.5px;padding:9px 14px;list-style:none;}
+  details.riv summary::-webkit-details-marker{display:none;}
+  details.riv summary::before{content:"▶";display:inline-block;font-size:11px;color:var(--gold);margin-right:8px;transition:transform .15s ease;}
+  details.riv[open] summary::before{transform:rotate(90deg);}
+  details.riv summary .en{font-weight:400;color:var(--muted);font-size:13px;margin-left:6px;}
+  details.riv .riv-body{padding:0 14px 12px;}
+  details.riv table.wt{margin:4px 0 0;}
+  .kr-box{background:#eef4ff;border:1px solid #c3d6f7;border-radius:3px;padding:14px 16px;margin:10px 0 18px;}
+  .kr-box h4{margin-top:0;color:#1e3a8a;}
+  .medals{display:inline-flex;gap:6px;margin:0 0 8px;flex-wrap:wrap;}
+  .medal{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;border:1px solid;}
+  .medal.g{color:#8a6d1a;border-color:#e4cd8c;background:#fdf6e3;}
+  .medal.s{color:#5b6168;border-color:#d5d9de;background:#f4f5f6;}
+  .medal.b{color:#8a5a30;border-color:#e0c3a3;background:#fbf1e6;}
+  .footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;}
+  @media (max-width:820px){.infobox{flex:1 1 100%;order:-1;}}
+  .jump-nav{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 20px;padding:14px 16px;background:var(--panel);border:1px solid var(--border);border-radius:3px;}
+  .jump-nav a{font-size:12.5px;font-weight:600;color:var(--ink);background:#fff;border:1px solid var(--border);border-radius:999px;padding:4px 11px;text-decoration:none;}
+  .jump-nav a:hover{background:var(--gold);border-color:var(--gold);color:#fff;text-decoration:none;}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="inner">
+  <a href="handball.html">← 핸드볼·하키 페이지</a>
+  <span>문서 · 필드하키 전체 출전자 명단</span>
+  <a href="index.html">전체 목차</a>
+</div></div>
+<div class="layout">
+  <h1 class="title">필드하키 전체 출전자 명단</h1>
+  <p class="subtitle">Field Hockey — Full Entry List · 2026 아이치·나고야 아시안게임</p>
+  <p class="hatnote">2026 아이치·나고야 아시안게임 필드하키 남녀 2개 종목의 공식 확정 출전자 명단 전체를 정리했다. 남자 12개국 230명, 여자 233명이 이름을 올렸다. 한국 선수는 강조 표시했다.</p>
+
+  <div class="jump-nav">
+    <a href="#ev-1">남자 (230명)</a>
+    <a href="#ev-2">여자 (233명)</a>
+  </div>
+
+  <details class="riv" id="ev-1">
+    <summary>남자 <span class="en">Total entries: 230</span></summary>
+    <div class="riv-body">
+      <table class="wt">
+        <tr><th>국가</th><th>선수</th><th>생년월일</th></tr>
+        <tr><td>BAN</td><td>BABU Rezaul Karim</td><td>24 Nov 1997</td></tr>
+        <tr><td>BAN</td><td>EMON Md Deen Islam</td><td>22 Sep 1997</td></tr>
+        <tr><td>BAN</td><td>HASAN Md Rakibul</td><td>09 Feb 2004</td></tr>
+        <tr><td>BAN</td><td>HOSSAIN Mahbub</td><td>22 Apr 1999</td></tr>
+        <tr><td>BAN</td><td>HOSSAIN Md Hozifa</td><td>15 Jan 2005</td></tr>
+        <tr><td>BAN</td><td>ISLAM Amirul</td><td>10 Nov 2005</td></tr>
+        <tr><td>BAN</td><td>ISLAM Md Ashraful</td><td>05 Jan 1999</td></tr>
+        <tr><td>BAN</td><td>ISLAM Md Mainul</td><td>20 Dec 1995</td></tr>
+        <tr><td>BAN</td><td>JOY Md Obidul Hossain</td><td>03 Aug 2005</td></tr>
+        <tr><td>BAN</td><td>KHISA Puskar</td><td>30 Jun 1993</td></tr>
+        <tr><td>BAN</td><td>KUJUR Biplob</td><td>22 Jan 2001</td></tr>
+        <tr><td>BAN</td><td>MAHMUD Rashel</td><td>05 May 1987</td></tr>
+        <tr><td>BAN</td><td>RAKIN Md Khaled Mhamud</td><td>16 Nov 1996</td></tr>
+        <tr><td>BAN</td><td>SAJU Md Shahidur Rohman</td><td>03 Mar 2006</td></tr>
+        <tr><td>BAN</td><td>SARKAR Md Roman</td><td>01 Jan 1998</td></tr>
+        <tr><td>BAN</td><td>SHAD Ashraful Haque</td><td>21 Jun 2005</td></tr>
+        <tr><td>BAN</td><td>SHETUL Md Farhad Ahmed</td><td>09 Dec 1995</td></tr>
+        <tr><td>BAN</td><td>SOBUJ Md Shohanur Rahman</td><td>02 Oct 2000</td></tr>
+        <tr><td>CHN</td><td>AO Xu</td><td>09 Jun 1996</td></tr>
+        <tr><td>CHN</td><td>CHEN Benhai</td><td>20 Oct 2002</td></tr>
+        <tr><td>CHN</td><td>CHEN Chengfu</td><td>14 Apr 1996</td></tr>
+        <tr><td>CHN</td><td>CHEN Chongcong</td><td>02 Jul 2000</td></tr>
+        <tr><td>CHN</td><td>CHEN Qijun</td><td>09 Apr 1997</td></tr>
+        <tr><td>CHN</td><td>DU Shihao</td><td>13 Sep 1998</td></tr>
+        <tr><td>CHN</td><td>GAO Jiesheng</td><td>12 Dec 1997</td></tr>
+        <tr><td>CHN</td><td>GUAN Quyang</td><td>28 Oct 1996</td></tr>
+        <tr><td>CHN</td><td>HE Yonghua</td><td>22 Sep 1999</td></tr>
+        <tr><td>CHN</td><td>LIN Changliang</td><td>05 Oct 1995</td></tr>
+        <tr><td>CHN</td><td>MENG Dihao</td><td>19 Oct 1996</td></tr>
+        <tr><td>CHN</td><td>MENG Nan</td><td>06 Mar 1999</td></tr>
+        <tr><td>CHN</td><td>MENG Yuanfeng</td><td>29 Jan 2000</td></tr>
+        <tr><td>CHN</td><td>SU Rui</td><td>21 Feb 2002</td></tr>
+        <tr><td>CHN</td><td>WANG Weihao</td><td>08 Jan 1996</td></tr>
+        <tr><td>CHN</td><td>WANG Yaqi</td><td>24 Aug 2002</td></tr>
+        <tr><td>CHN</td><td>ZHANG Jialiang</td><td>17 Apr 2006</td></tr>
+        <tr><td>CHN</td><td>ZHANG Pengyang</td><td>04 Jun 2005</td></tr>
+        <tr><td>CHN</td><td>ZHANG Xiaojia</td><td>30 Apr 2003</td></tr>
+        <tr><td>CHN</td><td>ZHAO Yulai</td><td>26 Jun 2000</td></tr>
+        <tr><td>INA</td><td>Suharyana</td><td>23 Sep 2003</td></tr>
+        <tr><td>INA</td><td>AL ARDH Aulia Akbar</td><td>23 Jun 1995</td></tr>
+        <tr><td>INA</td><td>ALAM Asrul</td><td>18 May 1997</td></tr>
+        <tr><td>INA</td><td>EFENDI Jerry</td><td>19 Jan 1990</td></tr>
+        <tr><td>INA</td><td>FIRDAUS Muhammad</td><td>31 Aug 1999</td></tr>
+        <tr><td>INA</td><td>KHAERULLOH Akmal</td><td>04 May 2007</td></tr>
+        <tr><td>INA</td><td>KUSUMA Alam Fajar</td><td>17 Apr 1999</td></tr>
+        <tr><td>INA</td><td>LEKSONO Adi Darmawan</td><td>22 Apr 1999</td></tr>
+        <tr><td>INA</td><td>MUHAMAD Fadli</td><td>18 Jan 2000</td></tr>
+        <tr><td>INA</td><td>PRASTYO Alfandy Aly Surya</td><td>27 Jul 1999</td></tr>
+        <tr><td>INA</td><td>PRILIANDRO Revo</td><td>22 Apr 1997</td></tr>
+        <tr><td>INA</td><td>RAHMAN Ferdian</td><td>14 Nov 1998</td></tr>
+        <tr><td>INA</td><td>ROHMAN Mochamad Fathur</td><td>30 Jan 2000</td></tr>
+        <tr><td>INA</td><td>RUMAROPEN Julius Rizhad</td><td>14 Jul 2004</td></tr>
+        <tr><td>INA</td><td>SANDREA Andrea Guntara Adi Very</td><td>11 Apr 1998</td></tr>
+        <tr><td>INA</td><td>UNO Ahdan Asasi Ramadhan</td><td>03 Dec 1998</td></tr>
+        <tr><td>INA</td><td>WIBOWO Arthur Blasius</td><td>22 Feb 2007</td></tr>
+        <tr><td>INA</td><td>YUSUF Nurul Maulana</td><td>21 Jul 1997</td></tr>
+        <tr><td>IND</td><td>Abhishek</td><td>15 Aug 1999</td></tr>
+        <tr><td>IND</td><td>Dilpreet Singh</td><td>12 Nov 1999</td></tr>
+        <tr><td>IND</td><td>Hardik Singh</td><td>23 Sep 1998</td></tr>
+        <tr><td>IND</td><td>Harmanpreet Singh</td><td>06 Jan 1996</td></tr>
+        <tr><td>IND</td><td>Jarmanpreet Singh</td><td>18 Jul 1996</td></tr>
+        <tr><td>IND</td><td>Jugraj Singh</td><td>11 Dec 1996</td></tr>
+        <tr><td>IND</td><td>Mandeep Singh</td><td>25 Jan 1995</td></tr>
+        <tr><td>IND</td><td>Manpreet Singh</td><td>26 Jun 1992</td></tr>
+        <tr><td>IND</td><td>Rajinder Singh</td><td>22 Dec 2002</td></tr>
+        <tr><td>IND</td><td>Sanjay</td><td>05 May 2001</td></tr>
+        <tr><td>IND</td><td>Sukhjeet Singh</td><td>05 Dec 1996</td></tr>
+        <tr><td>IND</td><td>Sumit</td><td>20 Dec 1996</td></tr>
+        <tr><td>IND</td><td>KARKERA Suraj</td><td>14 Oct 1995</td></tr>
+        <tr><td>IND</td><td>LAKRA Shilanand</td><td>05 May 1999</td></tr>
+        <tr><td>IND</td><td>PAL Raj Kumar</td><td>01 May 1998</td></tr>
+        <tr><td>IND</td><td>PRASAD Vivek Sagar</td><td>25 Feb 2000</td></tr>
+        <tr><td>IND</td><td>ROHIDAS Amit</td><td>10 May 1993</td></tr>
+        <tr><td>IND</td><td>SHARMA Nilakanta</td><td>02 May 1995</td></tr>
+        <tr><td>IND</td><td>SHASHIKUMAR Mohith Honnenahalli</td><td>27 Feb 2002</td></tr>
+        <tr><td>IND</td><td>SIWACH Yashdeep</td><td>26 Dec 2000</td></tr>
+        <tr><td>JPN</td><td>FUJISHIMA Raiki</td><td>29 Dec 1999</td></tr>
+        <tr><td>JPN</td><td>KAWABE Kosei</td><td>20 Jun 1999</td></tr>
+        <tr><td>JPN</td><td>KAWAHARA Yamato</td><td>21 Jan 2004</td></tr>
+        <tr><td>JPN</td><td>KAWAMURA Yusuke</td><td>24 Jul 2001</td></tr>
+        <tr><td>JPN</td><td>KIMURA Naru</td><td>27 Dec 2005</td></tr>
+        <tr><td>JPN</td><td>KITAGAWA Takumi</td><td>07 Oct 1999</td></tr>
+        <tr><td>JPN</td><td>MATSUMOTO Kazumasa</td><td>21 Jun 2000</td></tr>
+        <tr><td>JPN</td><td>NAGAI Yuma</td><td>18 Mar 1996</td></tr>
+        <tr><td>JPN</td><td>OOKA Ryoma</td><td>02 Oct 2001</td></tr>
+        <tr><td>JPN</td><td>SAITO Hiro</td><td>05 Apr 2002</td></tr>
+        <tr><td>JPN</td><td>TAKADE Taiki</td><td>18 Nov 2001</td></tr>
+        <tr><td>JPN</td><td>TANAKA Kaito</td><td>01 Nov 1995</td></tr>
+        <tr><td>JPN</td><td>TANAKA Seren</td><td>09 Nov 1992</td></tr>
+        <tr><td>JPN</td><td>TANAKA Tsubasa</td><td>10 Oct 2003</td></tr>
+        <tr><td>JPN</td><td>WATANABE Jun</td><td>17 May 2003</td></tr>
+        <tr><td>JPN</td><td>YAMADA Hyota</td><td>30 Jan 2003</td></tr>
+        <tr><td>JPN</td><td>YAMADA Shota</td><td>21 Dec 1994</td></tr>
+        <tr><td>JPN</td><td>YAMASAKI Koji</td><td>27 Feb 1996</td></tr>
+        <tr><td>JPN</td><td>YAMASHITA Manabu</td><td>04 Feb 1989</td></tr>
+        <tr><td>JPN</td><td>YOSHIKAWA Takashi</td><td>29 Nov 1994</td></tr>
+        <tr class="kr"><td>KOR</td><td>배성민 (BAE Soung Min)</td><td>10 Feb 2000</td></tr>
+        <tr class="kr"><td>KOR</td><td>최찬규 (CHOI Chankyu)</td><td>27 Feb 2006</td></tr>
+        <tr class="kr"><td>KOR</td><td>진건효 (JIN Geonhyo)</td><td>28 Apr 2004</td></tr>
+        <tr class="kr"><td>KOR</td><td>김형진 (KIM Hyeongjin)</td><td>14 Apr 1994</td></tr>
+        <tr class="kr"><td>KOR</td><td>김현홍 (KIM Hyeonhong)</td><td>21 Jun 1995</td></tr>
+        <tr class="kr"><td>KOR</td><td>김재한 (KIM Jaehan)</td><td>24 Dec 1998</td></tr>
+        <tr class="kr"><td>KOR</td><td>김재호 (KIM Jaeho)</td><td>15 Feb 2002</td></tr>
+        <tr class="kr"><td>KOR</td><td>김재현 (KIM Jaehyeon)</td><td>06 Mar 1988</td></tr>
+        <tr class="kr"><td>KOR</td><td>김규범 (KIM Kyubeom)</td><td>28 May 1996</td></tr>
+        <tr class="kr"><td>KOR</td><td>김용복 (KIM Yongbok)</td><td>16 Dec 1994</td></tr>
+        <tr class="kr"><td>KOR</td><td>이강산 (LEE Gangsan)</td><td>10 Sep 1997</td></tr>
+        <tr class="kr"><td>KOR</td><td>이혜승 (LEE Hyeseung)</td><td>22 Jun 1999</td></tr>
+        <tr class="kr"><td>KOR</td><td>이승우 (LEE Seungwoo)</td><td>10 Sep 2001</td></tr>
+        <tr class="kr"><td>KOR</td><td>임도현 (LIM Dohyun)</td><td>12 Jan 2002</td></tr>
+        <tr class="kr"><td>KOR</td><td>오세용 (OH Seyong)</td><td>24 Apr 1996</td></tr>
+        <tr class="kr"><td>KOR</td><td>박철언 (PARK Cheoleon)</td><td>02 Nov 1998</td></tr>
+        <tr class="kr"><td>KOR</td><td>임진강 (RIM Jinkang)</td><td>25 Jun 1992</td></tr>
+        <tr class="kr"><td>KOR</td><td>심재원 (SIM Jaewon)</td><td>13 Mar 1995</td></tr>
+        <tr class="kr"><td>KOR</td><td>손다인 (SON Dain)</td><td>17 May 1999</td></tr>
+        <tr class="kr"><td>KOR</td><td>양지훈 (YANG Jihun)</td><td>20 Aug 1991</td></tr>
+        <tr><td>MAS</td><td>ABDU RAUF Muhajir</td><td>06 Apr 2000</td></tr>
+        <tr><td>MAS</td><td>ABU KAMAL Muhammad Azrai Aizad</td><td>03 Oct 1999</td></tr>
+        <tr><td>MAS</td><td>ANUAR ESOOK Mohamad Akhimullah</td><td>02 May 2000</td></tr>
+        <tr><td>MAS</td><td>AZAHAR Muhammad Amirul Hamizan</td><td>05 May 2000</td></tr>
+        <tr><td>MAS</td><td>HAMSANI Mohamad Ashran</td><td>20 Apr 1995</td></tr>
+        <tr><td>MAS</td><td>HASSAN Muhammad Shafiq</td><td>23 Jan 1999</td></tr>
+        <tr><td>MAS</td><td>JALI Faiz Helmi</td><td>18 Feb 1992</td></tr>
+        <tr><td>MAS</td><td>JEFFRYNUS Andywalfian</td><td>08 Aug 2005</td></tr>
+        <tr><td>MAS</td><td>KAMARUDDIN Azimuddin Syakir</td><td>24 Jun 2005</td></tr>
+        <tr><td>MAS</td><td>MAT DERIS Muhamad Zaimi</td><td>18 Sep 1997</td></tr>
+        <tr><td>MAS</td><td>MOHD JALIL Muhammad Marhan</td><td>05 Mar 1990</td></tr>
+        <tr><td>MAS</td><td>MOHD JOHARI Muhammad Adam Ashraf</td><td>23 Mar 2006</td></tr>
+        <tr><td>MAS</td><td>MOHD ZAIN Muhamad Aminudin</td><td>23 May 1995</td></tr>
+        <tr><td>MAS</td><td>NIK ROZEMI Nik Muhammad Aiman</td><td>19 Jul 1996</td></tr>
+        <tr><td>MAS</td><td>OTHMAN Muhammad Hafizuddin</td><td>07 Jan 1992</td></tr>
+        <tr><td>MAS</td><td>SAARI Faizal</td><td>13 Jan 1991</td></tr>
+        <tr><td>MAS</td><td>SAARI Mohd Fitri</td><td>04 Mar 1993</td></tr>
+        <tr><td>MAS</td><td>SILVERIUS Shello</td><td>03 Apr 1999</td></tr>
+        <tr><td>MAS</td><td>SUMANTRI Norsyafiq</td><td>17 Jun 1996</td></tr>
+        <tr><td>MAS</td><td>SYED CHOLAN Syed Mohamad Syafiq</td><td>12 May 1995</td></tr>
+        <tr><td>OMA</td><td>AL ALAWI Rashid</td><td>07 May 2007</td></tr>
+        <tr><td>OMA</td><td>AL HASNI Khalid</td><td>13 Dec 2001</td></tr>
+        <tr><td>OMA</td><td>AL LAWATI Fahad</td><td>05 Apr 1998</td></tr>
+        <tr><td>OMA</td><td>AL NAABI Ahmed</td><td>10 Feb 2005</td></tr>
+        <tr><td>OMA</td><td>AL NOFLI Al Baraa</td><td>15 Dec 2006</td></tr>
+        <tr><td>OMA</td><td>AL WAHAIBI Maitham</td><td>07 Jul 2007</td></tr>
+        <tr><td>OMA</td><td>AL-FARSI Ibrahim</td><td>22 Mar 1997</td></tr>
+        <tr><td>OMA</td><td>AL-FAZARI Rashad</td><td>08 May 2000</td></tr>
+        <tr><td>OMA</td><td>AL-MAAINI Aseel</td><td>14 Jan 1999</td></tr>
+        <tr><td>OMA</td><td>AL-NOUFALI Aliyas</td><td>07 Dec 2001</td></tr>
+        <tr><td>OMA</td><td>AL-NOUFALI Alkhoder</td><td>17 Nov 2003</td></tr>
+        <tr><td>OMA</td><td>AL-NOUFALI Mohammed</td><td>22 Feb 1998</td></tr>
+        <tr><td>OMA</td><td>AL-SHAAIBI Khalid</td><td>07 Sep 1992</td></tr>
+        <tr><td>OMA</td><td>ALLOUN Fisal</td><td>08 Apr 1995</td></tr>
+        <tr><td>OMA</td><td>BAIT SHAMAIAA Akram</td><td>28 Jun 1998</td></tr>
+        <tr><td>OMA</td><td>BARAZAHAN Asama</td><td>02 Nov 2001</td></tr>
+        <tr><td>OMA</td><td>MADIT Aiman</td><td>07 May 2003</td></tr>
+        <tr><td>OMA</td><td>SBEIT Sanad</td><td>14 Feb 2007</td></tr>
+        <tr><td>PAK</td><td>ABDULLAH Muhammad</td><td>05 Nov 2002</td></tr>
+        <tr><td>PAK</td><td>AFRAZ</td><td>10 Apr 1999</td></tr>
+        <tr><td>PAK</td><td>ALI Ghazanfar</td><td>27 Feb 2002</td></tr>
+        <tr><td>PAK</td><td>AMMAD Muhammad</td><td>14 Nov 2006</td></tr>
+        <tr><td>PAK</td><td>ANJUM Muhammad Hammad Udin</td><td>12 Dec 2000</td></tr>
+        <tr><td>PAK</td><td>BUTT Ammad Shakeel</td><td>13 Jan 1996</td></tr>
+        <tr><td>PAK</td><td>HAYAT Zikriya</td><td>04 May 2004</td></tr>
+        <tr><td>PAK</td><td>KHAN Muhammad Sufyan</td><td>13 Mar 2004</td></tr>
+        <tr><td>PAK</td><td>LATIF Adeel</td><td>07 Aug 2000</td></tr>
+        <tr><td>PAK</td><td>LIAQAT Arshad</td><td>27 Mar 2002</td></tr>
+        <tr><td>PAK</td><td>MAHMOOD Abu Bakar</td><td>10 Feb 1998</td></tr>
+        <tr><td>PAK</td><td>MANAN Abdul</td><td>04 Dec 2002</td></tr>
+        <tr><td>PAK</td><td>MUSTAFA Umar</td><td>09 Aug 2002</td></tr>
+        <tr><td>PAK</td><td>NADEEM Ahmad</td><td>08 Mar 1998</td></tr>
+        <tr><td>PAK</td><td>RANA Abdul Waheed Ashraf</td><td>04 Feb 2000</td></tr>
+        <tr><td>PAK</td><td>RAZA Ali</td><td>04 Apr 2004</td></tr>
+        <tr><td>PAK</td><td>REHMAN Abdul</td><td>07 Feb 1999</td></tr>
+        <tr><td>PAK</td><td>SHAHID Abdul Hannan</td><td>07 Sep 2005</td></tr>
+        <tr><td>PAK</td><td>SHAKEEL Moin</td><td>08 Jun 2000</td></tr>
+        <tr><td>PAK</td><td>WAQAR</td><td>20 Dec 2000</td></tr>
+        <tr><td>SRI</td><td>BATUWITA ACHARIGE Lakshan Sadaruwan</td><td>06 Jan 2001</td></tr>
+        <tr><td>SRI</td><td>BOTHALE APPUHAMILAGE DON Ravidu Seran Nimanka</td><td>24 Feb 1997</td></tr>
+        <tr><td>SRI</td><td>BOTHALE APPUHAMILAGE DON Suren Hirusha Vimukthi</td><td>27 Mar 2003</td></tr>
+        <tr><td>SRI</td><td>FERNANDO Ross Abner Liptch</td><td>07 Dec 2005</td></tr>
+        <tr><td>SRI</td><td>FERNANDO P Weerakonda Arachchilage</td><td>31 Oct 1995</td></tr>
+        <tr><td>SRI</td><td>HENDENIYA MUDIYANSELAGE Tharindu Kumara Hendeniya</td><td>25 Jun 1992</td></tr>
+        <tr><td>SRI</td><td>HERATH MUDIYANSELAGE Madushan Pramodd Bandara</td><td>05 Jan 2002</td></tr>
+        <tr><td>SRI</td><td>KARUNAMUNIGE Nalantha Demian De Silva</td><td>05 Aug 1987</td></tr>
+        <tr><td>SRI</td><td>KULATHUNGA MUDIYANSELAGE Rajitha Dilan Kulathunga</td><td>05 Sep 1991</td></tr>
+        <tr><td>SRI</td><td>MADURAWALAGE DON Maleesha Malshan Madurawa</td><td>23 Oct 1996</td></tr>
+        <tr><td>SRI</td><td>PALLE WALLAWWE G Madumal Niluksha Vimala</td><td>17 Nov 1995</td></tr>
+        <tr><td>SRI</td><td>RANASINGHE ARACHCHIGE Dammika Prabath Ranasingh</td><td>19 Nov 1988</td></tr>
+        <tr><td>SRI</td><td>RATHNAYAKE MUDIYANSELAGE Anuradha Suresh</td><td>29 Oct 1992</td></tr>
+        <tr><td>SRI</td><td>SUDUSINGHE Sadaruwan Priyalanka</td><td>25 Jul 1988</td></tr>
+        <tr><td>SRI</td><td>VISIDAGAMAGE DON Nilaksha Amantha Silva</td><td>22 Jan 2001</td></tr>
+        <tr><td>SRI</td><td>WATHUTHANTRIGE Srimath Ramal Bathiya De</td><td>17 Sep 2000</td></tr>
+        <tr><td>SRI</td><td>WEERAPPULIHEWAGE Kusal Heshan Thilakasiri</td><td>31 May 1995</td></tr>
+        <tr><td>SRI</td><td>WEERASOORIYA Panthiya Gedara Madushan</td><td>11 Apr 1995</td></tr>
+        <tr><td>THA</td><td>BOONSRI Kankawee</td><td>18 Oct 2006</td></tr>
+        <tr><td>THA</td><td>CHAIMANEE Pichet</td><td>23 Dec 2004</td></tr>
+        <tr><td>THA</td><td>CHUEAMKAEW Kritsada</td><td>17 May 2004</td></tr>
+        <tr><td>THA</td><td>DEESA Narentorn</td><td>09 Sep 2003</td></tr>
+        <tr><td>THA</td><td>HARAPAN Borirak</td><td>15 Jan 1997</td></tr>
+        <tr><td>THA</td><td>HAYEEDA-OH Arfis</td><td>01 Sep 2005</td></tr>
+        <tr><td>THA</td><td>JAITAS Kunakorn</td><td>21 Apr 2004</td></tr>
+        <tr><td>THA</td><td>JUNTAKIAN Tanakit</td><td>29 Jan 1996</td></tr>
+        <tr><td>THA</td><td>KAEOCHIANGHWANG Worawut</td><td>04 Mar 2005</td></tr>
+        <tr><td>THA</td><td>KASONBUA Suriya</td><td>23 May 1999</td></tr>
+        <tr><td>THA</td><td>KHAMMI Konlawat</td><td>16 Aug 2010</td></tr>
+        <tr><td>THA</td><td>KIRAM Warakorn</td><td>04 Sep 2008</td></tr>
+        <tr><td>THA</td><td>KUENGSAMRONG Natthawat</td><td>02 Feb 2009</td></tr>
+        <tr><td>THA</td><td>MONGSRI Nithikon</td><td>19 Jan 2008</td></tr>
+        <tr><td>THA</td><td>PANSEEMEK Patinya</td><td>31 Oct 2008</td></tr>
+        <tr><td>THA</td><td>PHOKPHUN Udomchok</td><td>19 Jan 2007</td></tr>
+        <tr><td>THA</td><td>PHOMJUNT Thawin</td><td>07 Jul 2007</td></tr>
+        <tr><td>THA</td><td>RUNGNIYOM Chanachol</td><td>09 Nov 2001</td></tr>
+        <tr><td>THA</td><td>SAE-AEW Jiranat</td><td>14 Dec 2006</td></tr>
+        <tr><td>THA</td><td>SAMARNG Nopphadon</td><td>15 Sep 2006</td></tr>
+        <tr><td>UZB</td><td>ABBOSKHONOV Azamatkhon</td><td>15 Nov 2003</td></tr>
+        <tr><td>UZB</td><td>ABDURAKHMONOV Bakhodirjon</td><td>09 Jan 2007</td></tr>
+        <tr><td>UZB</td><td>ASLANOV Mukhammadkarim</td><td>16 Jan 2001</td></tr>
+        <tr><td>UZB</td><td>ASLIDDINOV Asadbek</td><td>16 Mar 2007</td></tr>
+        <tr><td>UZB</td><td>GANIEV Gayratbek</td><td>26 Oct 2007</td></tr>
+        <tr><td>UZB</td><td>HUSANOV Fozilbek</td><td>30 Nov 2007</td></tr>
+        <tr><td>UZB</td><td>IBROKHIMOV Azizbek</td><td>20 Oct 1997</td></tr>
+        <tr><td>UZB</td><td>KHAKIMOV Khakimboy</td><td>26 Apr 1994</td></tr>
+        <tr><td>UZB</td><td>KHAYTBOEV Gaybullo</td><td>09 Oct 1998</td></tr>
+        <tr><td>UZB</td><td>KOMILOV Jamshidbek</td><td>30 Jan 2003</td></tr>
+        <tr><td>UZB</td><td>MAMAJONOV Islombek</td><td>04 May 2001</td></tr>
+        <tr><td>UZB</td><td>MIRZAKARIMOV Shavkatbek</td><td>16 Aug 1990</td></tr>
+        <tr><td>UZB</td><td>NAZIROV Ruzimukhammad</td><td>29 Sep 2007</td></tr>
+        <tr><td>UZB</td><td>SALIMJONOV Shokhrukhbek</td><td>17 Oct 2004</td></tr>
+        <tr><td>UZB</td><td>SAYDULLAEV Fakhriddin</td><td>27 Aug 2008</td></tr>
+        <tr><td>UZB</td><td>SOTLIKOV Doston</td><td>12 Aug 2006</td></tr>
+        <tr><td>UZB</td><td>TOLIBBAEV Davlat</td><td>01 Jan 2002</td></tr>
+        <tr><td>UZB</td><td>YULDASHEV Nodirbek</td><td>05 Feb 2009</td></tr>
+      </table>
+    </div>
+  </details>
+
+  <details class="riv" id="ev-2">
+    <summary>여자 <span class="en">Total entries: 233</span></summary>
+    <div class="riv-body">
+      <p class="note">공식 엔트리에는 방글라데시·중국·인도네시아·인도·일본·카자흐스탄·말레이시아·싱가포르·태국·중화타이베이·우즈베키스탄까지 한국을 포함해 12개 팀이 등록되어 있다.</p>
+      <table class="wt">
+        <tr><th>국가</th><th>선수</th><th>생년월일</th></tr>
+        <tr><td>BAN</td><td>AKTER Mst Kona</td><td>10 Jul 2009</td></tr>
+        <tr><td>BAN</td><td>AKTER Ritu</td><td>14 Dec 2002</td></tr>
+        <tr><td>BAN</td><td>ANNIKA Mst Tabassum Akther</td><td>20 Apr 2009</td></tr>
+        <tr><td>BAN</td><td>EMA Nadira Talukdar</td><td>26 Mar 2008</td></tr>
+        <tr><td>BAN</td><td>KHATUN Mst Tonni</td><td>26 May 2012</td></tr>
+        <tr><td>BAN</td><td>LIMA Mst Jakia Afroj</td><td>01 Aug 2008</td></tr>
+        <tr><td>BAN</td><td>MOHUA</td><td>31 Oct 2003</td></tr>
+        <tr><td>BAN</td><td>MONI Sanjida Akter</td><td>07 May 2007</td></tr>
+        <tr><td>BAN</td><td>NADIRA</td><td>05 Jan 2006</td></tr>
+        <tr><td>BAN</td><td>NEEL Neeladri Barua</td><td>02 Apr 2006</td></tr>
+        <tr><td>BAN</td><td>PAL Orpita</td><td>13 Jan 2005</td></tr>
+        <tr><td>BAN</td><td>RAKHAIN Ninisen</td><td>08 May 2010</td></tr>
+        <tr><td>BAN</td><td>RATRY Fardia Akther</td><td>10 May 2002</td></tr>
+        <tr><td>BAN</td><td>RIMON Sharika Safa</td><td>06 Jul 2009</td></tr>
+        <tr><td>BAN</td><td>RISHI Mst Riyasha Akter</td><td>21 Feb 2007</td></tr>
+        <tr><td>BAN</td><td>RIYA Airin Akter</td><td>15 Jun 2008</td></tr>
+        <tr><td>BAN</td><td>SUKH Heemadri Barua</td><td>02 Apr 2006</td></tr>
+        <tr><td>BAN</td><td>TUZZOHORA Fatema</td><td>01 Mar 2006</td></tr>
+        <tr><td>CHN</td><td>CHEN Tong</td><td>19 Aug 2000</td></tr>
+        <tr><td>CHN</td><td>CHEN Yang</td><td>15 Feb 1997</td></tr>
+        <tr><td>CHN</td><td>CHEN Yi</td><td>28 Jan 1997</td></tr>
+        <tr><td>CHN</td><td>DAN Wen</td><td>14 Jun 1999</td></tr>
+        <tr><td>CHN</td><td>FAN Yunxia</td><td>07 Dec 2002</td></tr>
+        <tr><td>CHN</td><td>HE Jiangxin</td><td>19 Aug 1997</td></tr>
+        <tr><td>CHN</td><td>LI Hong</td><td>31 May 1999</td></tr>
+        <tr><td>CHN</td><td>LI Ting</td><td>23 Jul 2001</td></tr>
+        <tr><td>CHN</td><td>LIU Chencheng</td><td>13 Oct 2002</td></tr>
+        <tr><td>CHN</td><td>LIU Ping</td><td>13 Oct 1994</td></tr>
+        <tr><td>CHN</td><td>LUO Yaxi</td><td>29 Mar 2008</td></tr>
+        <tr><td>CHN</td><td>MA Ning</td><td>29 Sep 2000</td></tr>
+        <tr><td>CHN</td><td>OU Zixia</td><td>24 Sep 1995</td></tr>
+        <tr><td>CHN</td><td>PENG Yang</td><td>17 Jan 1992</td></tr>
+        <tr><td>CHN</td><td>TAN Jinzhuang</td><td>27 Jan 2003</td></tr>
+        <tr><td>CHN</td><td>YANG Liu</td><td>01 Sep 1998</td></tr>
+        <tr><td>CHN</td><td>YU Anhui</td><td>30 Apr 2001</td></tr>
+        <tr><td>CHN</td><td>ZHANG Ying</td><td>29 Aug 1998</td></tr>
+        <tr><td>CHN</td><td>ZHONG Jiaqi</td><td>23 Sep 1999</td></tr>
+        <tr><td>CHN</td><td>ZOU Meirong</td><td>01 Sep 2000</td></tr>
+        <tr><td>INA</td><td>Lispa</td><td>07 Apr 1997</td></tr>
+        <tr><td>INA</td><td>ADITIYA Innes</td><td>20 Sep 2004</td></tr>
+        <tr><td>INA</td><td>AZLIA Richa</td><td>20 Sep 2003</td></tr>
+        <tr><td>INA</td><td>DESTIAN Dea</td><td>14 Dec 2003</td></tr>
+        <tr><td>INA</td><td>FLORENTINA Selly Amalia</td><td>18 Jan 1993</td></tr>
+        <tr><td>INA</td><td>Greschela</td><td>15 Jun 1996</td></tr>
+        <tr><td>INA</td><td>HAPSARI Fatma Sri</td><td>14 Jan 2004</td></tr>
+        <tr><td>INA</td><td>INDIRA Nisa</td><td>24 Mar 2001</td></tr>
+        <tr><td>INA</td><td>KBAREK Erika Engelika</td><td>24 Jan 2007</td></tr>
+        <tr><td>INA</td><td>MAULANI Salma</td><td>18 Jan 2001</td></tr>
+        <tr><td>INA</td><td>MERSELLA Bernika</td><td>31 Jul 2005</td></tr>
+        <tr><td>INA</td><td>NAIBORHU Natasya</td><td>28 Jul 2004</td></tr>
+        <tr><td>INA</td><td>PASARIBU Lily Erlina</td><td>20 Sep 2000</td></tr>
+        <tr><td>INA</td><td>PRASASTI Asri Dewi</td><td>09 Apr 1996</td></tr>
+        <tr><td>INA</td><td>RAHAYU Sri</td><td>13 Nov 1997</td></tr>
+        <tr><td>INA</td><td>Rasgita</td><td>15 Jun 1999</td></tr>
+        <tr><td>INA</td><td>SALSABILA Keyssa Vinynda</td><td>20 May 2003</td></tr>
+        <tr><td>INA</td><td>WARDANI Desi Ratna</td><td>15 Dec 1998</td></tr>
+        <tr><td>IND</td><td>Baljeet Kaur</td><td>22 Mar 2001</td></tr>
+        <tr><td>IND</td><td>Deepika</td><td>06 Dec 2003</td></tr>
+        <tr><td>IND</td><td>Deepika Soreng</td><td>17 Dec 2003</td></tr>
+        <tr><td>IND</td><td>Ishika</td><td>05 Oct 2005</td></tr>
+        <tr><td>IND</td><td>Jyoti</td><td>11 Dec 1999</td></tr>
+        <tr><td>IND</td><td>Lalremsiami</td><td>30 Mar 2000</td></tr>
+        <tr><td>IND</td><td>Lalthantluangi</td><td>10 Nov 2005</td></tr>
+        <tr><td>IND</td><td>Navneet Kaur</td><td>26 Jan 1996</td></tr>
+        <tr><td>IND</td><td>Neha</td><td>15 Nov 1996</td></tr>
+        <tr><td>IND</td><td>Savita</td><td>11 Jul 1990</td></tr>
+        <tr><td>IND</td><td>CHAUDHARY Ishika</td><td>15 Apr 2000</td></tr>
+        <tr><td>IND</td><td>DABAS Shilpi</td><td>26 Jul 1998</td></tr>
+        <tr><td>IND</td><td>DUNGDUNG Beauty</td><td>21 Jul 2003</td></tr>
+        <tr><td>IND</td><td>KHARIBAM Bichu Devi</td><td>03 Dec 2000</td></tr>
+        <tr><td>IND</td><td>PISAL Rutuja Dadaso</td><td>28 Nov 2002</td></tr>
+        <tr><td>IND</td><td>PRADHAN Nikki</td><td>08 Dec 1993</td></tr>
+        <tr><td>IND</td><td>PUKHRAMBAM Sushila Chanu</td><td>25 Feb 1992</td></tr>
+        <tr><td>IND</td><td>RANA Sakshi</td><td>31 Aug 2007</td></tr>
+        <tr><td>IND</td><td>TETE Salima</td><td>27 Dec 2001</td></tr>
+        <tr><td>IND</td><td>TOPPO Sunelita</td><td>11 Apr 2007</td></tr>
+        <tr><td>JPN</td><td>HASEGAWA Miyu</td><td>20 Nov 2001</td></tr>
+        <tr><td>JPN</td><td>HORIKAWA Mayuri</td><td>10 Dec 2002</td></tr>
+        <tr><td>JPN</td><td>KANEKO Nanami</td><td>07 Jul 2006</td></tr>
+        <tr><td>JPN</td><td>KAWAGUCHI Haruka</td><td>21 Jan 2003</td></tr>
+        <tr><td>JPN</td><td>KOBAYAKAWA Shiho</td><td>12 Apr 1999</td></tr>
+        <tr><td>JPN</td><td>KUDO Yu</td><td>12 Nov 1998</td></tr>
+        <tr><td>JPN</td><td>MATSU Ikumi</td><td>08 Sep 1998</td></tr>
+        <tr><td>JPN</td><td>MURAYAMA Hiroka</td><td>13 Jan 2003</td></tr>
+        <tr><td>JPN</td><td>NAKAGOMI Akari</td><td>07 Mar 2000</td></tr>
+        <tr><td>JPN</td><td>NISHIKORI Emi</td><td>09 Jan 1993</td></tr>
+        <tr><td>JPN</td><td>SAITO Hanami</td><td>05 Jun 2004</td></tr>
+        <tr><td>JPN</td><td>SEGAWA Maho</td><td>23 Jun 1996</td></tr>
+        <tr><td>JPN</td><td>SHIMADA Amiru</td><td>23 Jun 1998</td></tr>
+        <tr><td>JPN</td><td>SUZUKI Miyu</td><td>08 Jan 1999</td></tr>
+        <tr><td>JPN</td><td>TAKASHIMA Rui</td><td>21 Nov 1999</td></tr>
+        <tr><td>JPN</td><td>TANAKA Akio</td><td>10 Sep 1997</td></tr>
+        <tr><td>JPN</td><td>TANAKA Saki</td><td>18 Sep 1998</td></tr>
+        <tr><td>JPN</td><td>TATEIWA Nanako</td><td>31 Aug 1999</td></tr>
+        <tr><td>JPN</td><td>TORIYAMA Mai</td><td>13 Apr 1995</td></tr>
+        <tr><td>JPN</td><td>UENO Maho</td><td>19 Jul 2002</td></tr>
+        <tr><td>KAZ</td><td>APSATAROVA Ismira</td><td>26 May 2010</td></tr>
+        <tr><td>KAZ</td><td>BAKHAVADDIN Guzal</td><td>30 Apr 1994</td></tr>
+        <tr><td>KAZ</td><td>BOLGANBAYEVA Karlygash</td><td>01 Jan 1992</td></tr>
+        <tr><td>KAZ</td><td>DOMASHNEVA Vera</td><td>23 May 1985</td></tr>
+        <tr><td>KAZ</td><td>DYMCHAN Albina</td><td>02 Apr 2011</td></tr>
+        <tr><td>KAZ</td><td>GATAULINA Natalya</td><td>18 Feb 1981</td></tr>
+        <tr><td>KAZ</td><td>IZBASSAR Zhanel</td><td>17 Sep 2006</td></tr>
+        <tr><td>KAZ</td><td>IZBASSAROVA Gulsina</td><td>22 Feb 2004</td></tr>
+        <tr><td>KAZ</td><td>KHAIRUSHEVA Dilnaz</td><td>03 Jun 2002</td></tr>
+        <tr><td>KAZ</td><td>LOBANOVA Viktoriya</td><td>18 Nov 2004</td></tr>
+        <tr><td>KAZ</td><td>LUTSENKO Elvira</td><td>03 Jun 1999</td></tr>
+        <tr><td>KAZ</td><td>LYAPINA Viktoriya</td><td>02 Jan 2002</td></tr>
+        <tr><td>KAZ</td><td>MAILYAN Eteliya</td><td>28 Mar 2012</td></tr>
+        <tr><td>KAZ</td><td>OLZHABAYEVA Dilnaz</td><td>13 Oct 2003</td></tr>
+        <tr><td>KAZ</td><td>OMIRKHANKYZY Assel</td><td>25 May 2010</td></tr>
+        <tr><td>KAZ</td><td>SAZONTOVA Natalya</td><td>23 Apr 1985</td></tr>
+        <tr><td>KAZ</td><td>SHAIMARDANOVA Viktoriya</td><td>18 Jul 1988</td></tr>
+        <tr><td>KAZ</td><td>TEMIRGALIYEVA Munira</td><td>09 Jan 2009</td></tr>
+        <tr><td>KAZ</td><td>YERSULTAN Akzhan</td><td>24 Jan 2008</td></tr>
+        <tr><td>KAZ</td><td>ZHETKERGENOVA Ulbossyn</td><td>13 Jul 2007</td></tr>
+        <tr class="kr"><td>KOR</td><td>안수진 (AN Sujin)</td><td>09 Jan 2002</td></tr>
+        <tr class="kr"><td>KOR</td><td>최지윤 (CHOI Jiyun)</td><td>22 Aug 2003</td></tr>
+        <tr class="kr"><td>KOR</td><td>홍솔벚나라 (HONG Solbeotnara)</td><td>28 May 2004</td></tr>
+        <tr class="kr"><td>KOR</td><td>진수연 (JIN Suyeon)</td><td>29 Jul 1998</td></tr>
+        <tr class="kr"><td>KOR</td><td>정성희 (JUNG Sunghee)</td><td>11 Nov 2001</td></tr>
+        <tr class="kr"><td>KOR</td><td>김은지 (KIM Eunji)</td><td>09 Feb 2000</td></tr>
+        <tr class="kr"><td>KOR</td><td>김정인 (KIM Jeongihn)</td><td>30 Nov 1998</td></tr>
+        <tr class="kr"><td>KOR</td><td>김정주 (KIM Jungju)</td><td>07 Jan 2002</td></tr>
+        <tr class="kr"><td>KOR</td><td>김선아 (KIM Seona)</td><td>23 Sep 2000</td></tr>
+        <tr class="kr"><td>KOR</td><td>김유진 (KIM Yujin)</td><td>21 Jan 1993</td></tr>
+        <tr class="kr"><td>KOR</td><td>이주연 (LEE Juyeon)</td><td>12 Feb 2001</td></tr>
+        <tr class="kr"><td>KOR</td><td>이서연 (LEE Seoyeon)</td><td>27 Jul 2002</td></tr>
+        <tr class="kr"><td>KOR</td><td>이유진 (LEE Yujin)</td><td>30 Sep 2002</td></tr>
+        <tr class="kr"><td>KOR</td><td>이유리 (LEE Yuri)</td><td>06 Sep 1994</td></tr>
+        <tr class="kr"><td>KOR</td><td>박미향 (PARK Mihyang)</td><td>13 Oct 2002</td></tr>
+        <tr class="kr"><td>KOR</td><td>박서연 (PARK Seoyeon)</td><td>14 Aug 2004</td></tr>
+        <tr class="kr"><td>KOR</td><td>박승애 (PARK Seungae)</td><td>31 Dec 1999</td></tr>
+        <tr class="kr"><td>KOR</td><td>박영은 (PARK Yeongeun)</td><td>08 Jul 2003</td></tr>
+        <tr class="kr"><td>KOR</td><td>서다해 (SEO Dahae)</td><td>11 Sep 1991</td></tr>
+        <tr class="kr"><td>KOR</td><td>손혜령 (SON Hyeryoung)</td><td>20 Sep 2001</td></tr>
+        <tr><td>MAS</td><td>Nur Shamine Azureen</td><td>18 Apr 2005</td></tr>
+        <tr><td>MAS</td><td>Nurmaizatul Hanim Syafi</td><td>14 Feb 2001</td></tr>
+        <tr><td>MAS</td><td>AZHAIRY Azmyra Mia Sofea</td><td>15 Dec 2004</td></tr>
+        <tr><td>MAS</td><td>AZHAR Nur Afiqah Syahzani</td><td>08 Apr 2000</td></tr>
+        <tr><td>MAS</td><td>BAHARUDIN Anith Humaira</td><td>07 Oct 2003</td></tr>
+        <tr><td>MAS</td><td>EFFARIZAL Nur Insyirah</td><td>24 Mar 2002</td></tr>
+        <tr><td>MAS</td><td>HARTOMO Zawiatul Akma</td><td>24 Oct 2004</td></tr>
+        <tr><td>MAS</td><td>HUSAIN Siti Zulaikha</td><td>26 Mar 2001</td></tr>
+        <tr><td>MAS</td><td>MAHD SUKRI Fatin Shafika</td><td>01 Nov 1995</td></tr>
+        <tr><td>MAS</td><td>MAZLAN Nur Zariefah Dania</td><td>19 Jun 2010</td></tr>
+        <tr><td>MAS</td><td>MD ALI Noor Hasliza</td><td>17 Jul 1989</td></tr>
+        <tr><td>MAS</td><td>MOHD NOR Siti Nur Irdina</td><td>04 Mar 2004</td></tr>
+        <tr><td>MAS</td><td>MOHD SHARUDDIN Khairunnisa Ayuni</td><td>11 Dec 2002</td></tr>
+        <tr><td>MAS</td><td>MOHD SUHAIMI Nur Iman Adawiyah</td><td>21 Jun 2006</td></tr>
+        <tr><td>MAS</td><td>MUHAMAD ZUBIR Zati Alyani</td><td>25 May 2005</td></tr>
+        <tr><td>MAS</td><td>RAMLEE Fitrinur Amiera</td><td>07 Dec 2002</td></tr>
+        <tr><td>MAS</td><td>SHAIKH MAZNAN Siti Nur Atika</td><td>21 Sep 2003</td></tr>
+        <tr><td>MAS</td><td>TARMIZI Nurhanie Najwa</td><td>29 Apr 2007</td></tr>
+        <tr><td>MAS</td><td>ZAINAL ABIDIN Nur Hazlinda</td><td>21 Jan 2003</td></tr>
+        <tr><td>MAS</td><td>ZULKIFLI Nuramirah Shakirah</td><td>13 Nov 2000</td></tr>
+        <tr><td>SGP</td><td>ALLY NATASHA Binte Zuraiddy</td><td>04 Jan 2008</td></tr>
+        <tr><td>SGP</td><td>CHAN Ai Wei Ivy</td><td>11 Jan 1996</td></tr>
+        <tr><td>SGP</td><td>CHAN Wei Lin</td><td>07 Jul 2002</td></tr>
+        <tr><td>SGP</td><td>CHIA Cheryll</td><td>17 Nov 1993</td></tr>
+        <tr><td>SGP</td><td>ELLIEA FAATIN Binte Rizal</td><td>09 Feb 2007</td></tr>
+        <tr><td>SGP</td><td>HO Puay Ling</td><td>02 Aug 1993</td></tr>
+        <tr><td>SGP</td><td>KWEK Nicole Xiao Qian</td><td>06 Jul 1998</td></tr>
+        <tr><td>SGP</td><td>LAI Felissa Shiqi</td><td>06 May 1991</td></tr>
+        <tr><td>SGP</td><td>LIU Taylor Yutong</td><td>08 May 2000</td></tr>
+        <tr><td>SGP</td><td>LOH Chloe Yen Kei</td><td>07 May 2006</td></tr>
+        <tr><td>SGP</td><td>NG Jin Xin Jolene</td><td>20 Oct 2000</td></tr>
+        <tr><td>SGP</td><td>NG Yu Xin Sardonna</td><td>03 Oct 2001</td></tr>
+        <tr><td>SGP</td><td>ONG Dayana Kia Sin</td><td>01 May 2007</td></tr>
+        <tr><td>SGP</td><td>ONG Jing Xuan Cindy</td><td>06 Nov 2008</td></tr>
+        <tr><td>SGP</td><td>ONG Nadiah Kia Hwee</td><td>24 Oct 2004</td></tr>
+        <tr><td>SGP</td><td>ONG Tiffany Zi Ting</td><td>23 Dec 1996</td></tr>
+        <tr><td>SGP</td><td>SIM Valerie Thong En</td><td>23 Dec 2000</td></tr>
+        <tr><td>SGP</td><td>TANANDIKA Phylicia</td><td>02 Apr 2001</td></tr>
+        <tr><td>SGP</td><td>TAY Valerie Wei Lin</td><td>20 Feb 2002</td></tr>
+        <tr><td>SGP</td><td>TOH Li Min</td><td>20 Jan 1989</td></tr>
+        <tr><td>THA</td><td>INPA Kunjira</td><td>01 Mar 2000</td></tr>
+        <tr><td>THA</td><td>INTHANAPHICHIT Voramon</td><td>15 Oct 2007</td></tr>
+        <tr><td>THA</td><td>JEONG Wooju</td><td>21 Dec 2004</td></tr>
+        <tr><td>THA</td><td>JIRAPITISATJA Trinetr</td><td>14 Sep 2004</td></tr>
+        <tr><td>THA</td><td>KAKKAEO Sawita</td><td>10 Jun 2006</td></tr>
+        <tr><td>THA</td><td>KAMMOON Wananchaporn</td><td>22 Oct 2006</td></tr>
+        <tr><td>THA</td><td>KHAMNON Thanaphon</td><td>11 Sep 2006</td></tr>
+        <tr><td>THA</td><td>KOMOLWIT Arucha</td><td>03 Jun 2004</td></tr>
+        <tr><td>THA</td><td>KONTHONG Suwapat</td><td>15 May 2002</td></tr>
+        <tr><td>THA</td><td>MOCK Ariya</td><td>08 Nov 2005</td></tr>
+        <tr><td>THA</td><td>NOO-KEAW Sudarat</td><td>30 Nov 2003</td></tr>
+        <tr><td>THA</td><td>PASAWAT Songkran</td><td>15 Apr 2003</td></tr>
+        <tr><td>THA</td><td>PROMMA Kaewkan</td><td>20 Dec 2008</td></tr>
+        <tr><td>THA</td><td>SAETAN Watsana</td><td>25 Aug 2004</td></tr>
+        <tr><td>THA</td><td>SAMANSO Supansa</td><td>21 Jul 1994</td></tr>
+        <tr><td>THA</td><td>SAOYOD Kwanruedee</td><td>11 Dec 2008</td></tr>
+        <tr><td>THA</td><td>SMEELEN Nadia</td><td>09 Nov 2008</td></tr>
+        <tr><td>THA</td><td>TASAENG Pattheera</td><td>18 Apr 2010</td></tr>
+        <tr><td>THA</td><td>WAEOJINGRIT Kornkanok</td><td>24 Jul 2006</td></tr>
+        <tr><td>THA</td><td>YIMKRAJANG Siraya</td><td>05 Dec 1991</td></tr>
+        <tr><td>TPE</td><td>CHANG Chih-hsien</td><td>24 Jul 2010</td></tr>
+        <tr><td>TPE</td><td>CHANG Tzu-ling</td><td>23 Jul 2007</td></tr>
+        <tr><td>TPE</td><td>CHEN Ting-chun</td><td>16 Mar 2003</td></tr>
+        <tr><td>TPE</td><td>FAN Hui-yun</td><td>26 Nov 2006</td></tr>
+        <tr><td>TPE</td><td>HUANG Pei-lun</td><td>17 Jul 2005</td></tr>
+        <tr><td>TPE</td><td>HUANG Yu-ting</td><td>23 Jul 2005</td></tr>
+        <tr><td>TPE</td><td>LAI Ya-han</td><td>22 Jul 2006</td></tr>
+        <tr><td>TPE</td><td>LIAO Pei-shan</td><td>26 Sep 1998</td></tr>
+        <tr><td>TPE</td><td>LO Tzu-yin</td><td>05 Jan 2006</td></tr>
+        <tr><td>TPE</td><td>MAO I-hsuan</td><td>30 Aug 2005</td></tr>
+        <tr><td>TPE</td><td>PU AGUSTIN Linmey</td><td>07 Dec 2002</td></tr>
+        <tr><td>TPE</td><td>TSAI Chen-wei</td><td>14 Nov 1995</td></tr>
+        <tr><td>TPE</td><td>WANG Shih-han</td><td>29 Jan 2007</td></tr>
+        <tr><td>TPE</td><td>WANG Wen-tsen</td><td>03 Mar 2008</td></tr>
+        <tr><td>TPE</td><td>WANG Yu-chiu</td><td>20 Jun 2005</td></tr>
+        <tr><td>TPE</td><td>YANG Wan-wen</td><td>12 Sep 1987</td></tr>
+        <tr><td>TPE</td><td>YAO Wen-xuan</td><td>16 Apr 2006</td></tr>
+        <tr><td>TPE</td><td>YE Shu-qin</td><td>17 Jun 2009</td></tr>
+        <tr><td>TPE</td><td>ZHU Yi-chun</td><td>09 Jul 2005</td></tr>
+        <tr><td>UZB</td><td>ABDUGAFOROVA Mekhrangiz</td><td>24 Feb 2007</td></tr>
+        <tr><td>UZB</td><td>ABDUGANIEVA Fotima</td><td>04 Jun 2008</td></tr>
+        <tr><td>UZB</td><td>AKHMEDOVA Aziza</td><td>04 Apr 2010</td></tr>
+        <tr><td>UZB</td><td>AMRIEVA Mutabar</td><td>17 Apr 2006</td></tr>
+        <tr><td>UZB</td><td>CHORIEVA Rushana</td><td>12 Feb 2008</td></tr>
+        <tr><td>UZB</td><td>DEMINA Mariya</td><td>21 Oct 1998</td></tr>
+        <tr><td>UZB</td><td>FAKHRIDDINOVA Ugiloy</td><td>25 Aug 2007</td></tr>
+        <tr><td>UZB</td><td>FAYZILLAEVA Parvina</td><td>20 Aug 2005</td></tr>
+        <tr><td>UZB</td><td>KHAKIMOVA Noilakhon</td><td>19 Dec 2005</td></tr>
+        <tr><td>UZB</td><td>KHAYDAROVA Zulkhumor</td><td>07 Jun 2004</td></tr>
+        <tr><td>UZB</td><td>KHAYTBOEVA Zulfiyakhon</td><td>27 Dec 2001</td></tr>
+        <tr><td>UZB</td><td>KHUJAEVA Madinabonu</td><td>21 May 2007</td></tr>
+        <tr><td>UZB</td><td>MAMATMURODOVA Marjona</td><td>26 Nov 2008</td></tr>
+        <tr><td>UZB</td><td>ODILOVA Nurkhayot</td><td>27 Dec 2008</td></tr>
+        <tr><td>UZB</td><td>SEMYONOVA Irina</td><td>26 Jun 2003</td></tr>
+        <tr><td>UZB</td><td>SOYIBJONOVA Roziyakhon</td><td>24 Jul 2009</td></tr>
+        <tr><td>UZB</td><td>YUBKO Yuliya</td><td>13 Aug 2000</td></tr>
+        <tr><td>UZB</td><td>ZARIPOVA Shahzoda</td><td>09 Jul 2009</td></tr>
+      </table>
+    </div>
+  </details>
+
+  <div class="footer">
+    전체 출전자 명단 출처: results.asiangames2026.org (공식 엔트리).<br>
+    일정과 세부 사항은 대회 진행에 따라 변경될 수 있다.
+  </div>
+</div>
+</body>
+</html>
