@@ -60,25 +60,52 @@
   .footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;}
   @media (max-width:820px){.infobox{flex:1 1 100%;order:-1;}}
 </style>
-</head>
+<style>
+/* 기존 위키의 색상·서체·문서 구조를 유지하는 가독성 보완 */
+table.wt{width:auto;max-width:100%;font-size:13px;line-height:1.5}
+table.wt th,table.wt td{padding:5px 8px}
+table.wt th{white-space:nowrap}
+table.wt tr:nth-child(even):not(.kr) td{background:#fafbfc}
+table.wt tr.kr td{background:#eef4ff}
+table.wt td:first-child{white-space:nowrap}
+table.wt.compact{width:100%}
+table.wt.compact th:first-child{width:4.5em}
+table.wt .short{width:1%;white-space:nowrap;text-align:center;font-variant-numeric:tabular-nums}
+.table-scroll{max-width:100%;overflow-x:auto;margin-bottom:12px}
+.table-scroll table{margin-bottom:0}
+.statusline{font-size:12px;color:var(--muted);margin:8px 0 18px}
+.quicklinks{display:flex;gap:7px 14px;flex-wrap:wrap;margin:10px 0}
+.sources{font-size:12.5px;padding-left:22px}
+.sources li{margin:6px 0;overflow-wrap:anywhere}
+.player-tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center;padding:10px 0}
+.player-tools input{font:inherit;padding:6px 9px;border:1px solid var(--border);max-width:100%;width:260px}
+.country-list summary{font-family:var(--sans)!important;font-size:14px!important}
+.country-list .riv-body{padding:0 10px 10px}
+.country-list table{width:100%;max-width:720px}
+.country-list td:last-child{width:7em;white-space:nowrap;font-variant-numeric:tabular-nums}
+.country-list td:nth-child(2){overflow-wrap:anywhere}
+a:focus-visible,summary:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+[hidden]{display:none!important}
+@media(max-width:600px){.layout{padding:16px 12px 48px}.content{gap:16px}.infobox{font-size:12px}table.wt{font-size:12px}table.wt th,table.wt td{padding:5px 6px}.riv-body{padding-left:8px!important;padding-right:8px!important}.country-list td:nth-child(2){min-width:9em}}
+</style></head>
 <body>
 <div class="topbar"><div class="inner">
-  <a href="index2.html">← 아시안게임 종목 목록</a>
+  <a href="https://koreaolympics.github.io/index2.html">← 아시안게임 종목 목록</a>
   <span>문서 · 남자 U23축구</span>
-  <a href="index.html">전체 목차</a>
+  <a href="https://koreaolympics.github.io/index.html">전체 목차</a>
 </div></div>
 <div class="layout">
   <h1 class="title">남자 U23축구</h1>
   <p class="subtitle">Men's U23 Football · 2026 아이치·나고야 아시안게임 (제20회)</p>
-  <p class="hatnote">축구는 아시안게임에서 남자부(23세 이하, 와일드카드 3명 허용)와 여자부(성인대표팀)로 나뉘어 열리는 단체구기 종목이다. 남자 U23축구는 15개국이 참가하며, 대한민국은 D조(사우디아라비아·카타르)에 편성됐다. 여자축구는 <a href="soccer_women.html">별도 페이지</a>에서 다룬다.</p>
-  <div class="content">
+  <p class="hatnote">축구는 아시안게임에서 남자부(23세 이하, 와일드카드 3명 허용)와 여자부(성인대표팀)로 나뉘어 열리는 단체구기 종목이다. 남자 U23축구는 15개국이 참가하며, 대한민국은 D조(사우디아라비아·카타르)에 편성됐다. 여자축구는 <a href="https://koreaolympics.github.io/soccer_women.html">별도 페이지</a>에서 다룬다.</p>
+  <p class="statusline">2026.9.13 확인 · 한국 23명 · D조 · 4연패 도전</p><div class="content">
     <div class="main">
       <div class="toc">
         <div class="toc-title">목차</div>
         <ol>
           <li><a href="#overview">개요</a></li>
           <li><a href="#groups">조 편성</a></li>
-          <li><a href="#roster">한국 대표팀</a></li>
+          <li><a href="#schedule">한국 대진과 일정</a></li><li><a href="#camp">이민성호의 준비 상황</a></li><li><a href="#roster">한국 대표팀</a></li>
           <li><a href="#entries">전체 출전자 명단</a></li>
           <li><a href="#form">최근 전적</a></li>
           <li><a href="#watch">전망과 관전 포인트</a></li>
@@ -97,42 +124,32 @@
         <tr><td>C조</td><td>베트남, 우즈베키스탄, 필리핀, 쿠웨이트</td></tr>
         <tr><td><b>D조</b> <span class="badge gold">대한민국 조</span></td><td><b>대한민국</b>, 사우디아라비아, 카타르</td></tr>
       </table>
-      <p><b>예선 일정</b> — 9월 16일 카타르전, 9월 23일 사우디아라비아전.</p>
-      <p class="note">조 2위 이내 팀이 8강 진출. 8강 이후 대진은 추후 결정된다.</p>
+      <h2 id="schedule">한국 대진과 경기 일정</h2>
+<div class="table-scroll"><table class="wt compact"><caption>2026년 · 한국과 일본은 시차 없음(UTC+9) · 시간은 KFA 잠정 안내</caption>
+<tr><th scope="col">단계</th><th scope="col">날짜</th><th scope="col">상대·진출 조건</th><th scope="col">시간</th></tr>
+<tr class="kr"><th scope="row">조별 1차</th><td class="short">9.15(화)</td><td>카타르</td><td class="short">19:30</td></tr>
+<tr class="kr"><th scope="row">조별 2차</th><td class="short">9.22(화)</td><td>사우디아라비아</td><td class="short">19:00</td></tr>
+<tr><th scope="row">8강</th><td class="short">9.25(금)</td><td>D조 1위 / 2위 진출 시</td><td>19:30 / 14:00</td></tr>
+<tr><th scope="row">준결승</th><td class="short">9.30(수)</td><td>8강 승리 시 · D조 1위 / 2위 경로</td><td>15:00 / 19:30</td></tr>
+<tr><th scope="row">동메달전</th><td class="short">10.3(토)</td><td>준결승 패배 시</td><td class="short">15:00</td></tr>
+<tr><th scope="row">결승</th><td class="short">10.3(토)</td><td>준결승 승리 시</td><td class="short">19:30</td></tr></table></div>
+<p class="note">조별리그·8강: 미즈호공원 럭비경기장 / 준결승: 오사카 나가이 스타디움 / 메달전: 도요타 스타디움. 토너먼트 상대는 조별리그 결과에 따라 결정된다. <a href="#ref-schedule">[2]</a></p>
+<p>D조는 3개 팀 중 상위 2개 팀이 8강에 오른다. 한국은 조별리그를 2경기만 치르므로 결승까지 총 5경기다. 첫 경기와 두 번째 경기는 7일 간격이지만, 두 번째 경기 후 8강까지는 3일 간격이어서 회복과 선수 운용이 중요하다.</p>
 
       <h2 id="roster">한국 대표팀</h2>
-      <p class="note">긴 선수 1인 1행 구조를 압축한 요약이며, 전체 공식 엔트리는 별도 선수명단 페이지로 유지한다.</p>
-      <table class="wt">
-        <tr><th>선수</th></tr>
-        <tr><td>강민준</td></tr>
-        <tr><td>강상윤</td></tr>
-        <tr><td>김명준</td></tr>
-        <tr><td>김민승</td></tr>
-        <tr><td>김준홍</td></tr>
-        <tr><td>김지수</td></tr>
-        <tr><td>박경섭</td></tr>
-        <tr><td>박성훈</td></tr>
-        <tr><td>박승수</td></tr>
-        <tr><td>배준호</td></tr>
-        <tr><td>배현서</td></tr>
-        <tr><td>신민하</td></tr>
-        <tr><td>양민혁</td></tr>
-        <tr><td>양현준</td></tr>
-        <tr><td>엄지성</td></tr>
-        <tr><td>이기혁</td></tr>
-        <tr><td>이승원</td></tr>
-        <tr><td>이승환</td></tr>
-        <tr><td>이영준</td></tr>
-        <tr><td>이현주</td></tr>
-        <tr><td>최석현</td></tr>
-        <tr><td>최우진</td></tr>
-        <tr><td>황도윤</td></tr>
-      </table>
-
-      <h2 id="entries">전체 출전자 명단</h2>
+<p>이민성 감독이 이끄는 23명. <b>GK 3 · DF 8 · MF 10 · FW 2</b>로 구성되며, 발표 당시 유럽 소속 9명과 국내 소속 14명이 선발됐다. <a href="#ref-roster">[1]</a></p>
+<table class="wt compact"><caption>포지션별 선수단 · WC = 와일드카드</caption>
+<tr><th scope="col">구분</th><th scope="col" class="short">인원</th><th scope="col">선수</th></tr>
+<tr><th scope="row">GK</th><td class="short">3</td><td>김민승 · 김준홍 · 이승환</td></tr>
+<tr><th scope="row">DF</th><td class="short">8</td><td>김지수 · 강민준 · 박경섭 · 박성훈 · 배현서 · 신민하 · 최석현 · 최우진</td></tr>
+<tr><th scope="row">MF</th><td class="short">10</td><td>박승수 · 배준호 · <b>양현준(WC) · 엄지성(WC)</b> · 양민혁 · 이현주 · 강상윤 · <b>이기혁(WC)</b> · 이승원 · 황도윤</td></tr>
+<tr><th scope="row">FW</th><td class="short">2</td><td>김명준 · 이영준</td></tr></table>
+<p class="note">포지션은 협회 명단 분류이며 실제 선발 위치·포메이션을 뜻하지 않는다. <a href="soccer_player.html#kor-men">한국 23명 소속팀·생년월일 보기 →</a></p>
+<h3>와일드카드와 선수 구성</h3>
+<p>연령 제한을 초과한 세 자리는 양현준·엄지성·이기혁에게 돌아갔다. 박승수는 명단에서 유일한 2007년생으로 최연소다. 와일드카드의 경험을 기존 연령별 대표팀 선수들과 어떻게 연결할지가 관전 요소다. <a href="#ref-roster">[1]</a></p><h2 id="entries">전체 출전자 명단</h2>
       <div class="kr-box">
         <h4>남자 U23축구 전체 출전자 명단</h4>
-        <p>전체 15개국 344명 출전자 명단은 별도 페이지로 정리했다.</p>
+        <p>기존 문서에 수록된 15개국 344명 명단은 별도 페이지로 정리했다.</p>
         <p><a href="soccer_player.html#ev-1"><b>→ 남자 U23축구 전체 출전자 명단 보기</b></a></p>
       </div>
 
@@ -147,7 +164,7 @@
         <tr><td>일본</td><td><span class="lose">0-1 패</span></td></tr>
         <tr><td>베트남</td><td><span class="draw">2-2 무</span> (승부차기 패, 4위)</td></tr>
       </table>
-      <h3>친선경기</h3>
+      <h3>친선경기</h3><p class="note">아래는 기존 문서 수록 기록이다. 경기 날짜·공식전/연습경기 구분을 추가 확인할 필요가 있다.</p>
       <table class="wt">
         <tr><th>상대</th><th>결과</th></tr>
         <tr><td>일본</td><td><span class="win">2-1 승</span></td></tr>
@@ -157,14 +174,21 @@
         <tr><td>키르기즈스탄</td><td><span class="lose">0-1 패</span></td></tr>
       </table>
 
-      <h2 id="watch">전망과 관전 포인트</h2>
-      <div class="kr-box">
-        <p><b>비교적 평이한 조 배정, 관건은 8강 이후다.</b> 올해 초 U23 아시안컵에서 카타르는 3패, 사우디아라비아는 1승 2패로 예선 탈락한 만큼 D조 통과 자체는 어렵지 않을 전망이며, 8강 이후 대진이 변수가 될 것으로 보인다.</p>
-        <p><b>일본과 우즈베키스탄이 가장 강력한 경쟁자다.</b> 중국·베트남·북한 등도 변수를 만들 수 있는 반면, 이라크·요르단 등 전통 강호는 이번 대회에 불참한다.</p>
-      </div>
-
-      <div class="footer">
-        출처: 편집부 취재 및 자체 정리 — 국가대표 명단·조 편성·최근 전적은 대한축구협회 발표 및 대회 기록 기준. 전체 출전자 명단 출처: results.asiangames2026.org (공식 엔트리). 일정과 세부 사항은 대회 진행에 따라 변경될 수 있다.
+      <h2 id="camp">이민성호의 준비 상황</h2>
+<table class="wt compact"><caption>9월 6일 보도 기준 · 이후 일정은 당시 계획</caption>
+<tr><th scope="col">시점</th><th scope="col">확인된 내용</th></tr>
+<tr><th scope="row">9.1</th><td>천안에서 소집 훈련 시작.</td></tr>
+<tr><th scope="row">9.6</th><td>본진 14명이 일본 시즈오카 사전캠프로 출국. 최석현은 별도 이동.</td></tr>
+<tr><th scope="row">9.6~10</th><td>유럽파가 일본에서 순차 합류하는 계획. 이영준의 합류 일정은 소속팀과 조율 중으로 보도.</td></tr>
+<tr><th scope="row">9.11~12</th><td>현지 연습경기 후 나고야 이동 예정. 이 문서에서는 실행 완료나 경기 결과로 단정하지 않는다.</td></tr></table>
+<p>선수마다 합류 시점이 달라 완전체로 손발을 맞출 시간이 관건이다. 명단에 선발된 사실, 캠프 합류, 경기 출전 가능 여부는 서로 다른 정보이므로 구분해서 읽어야 한다. <a href="#ref-camp">[3]</a></p><h2 id="watch">전망과 관전 포인트</h2>
+<p>한국은 2014 인천·2018 자카르타·팔렘방·2022 항저우(2023년 개최)에 이어 <b>4회 연속 우승</b>에 도전한다. <a href="#ref-schedule">[2]</a></p>
+<div class="kr-box"><h4>경기에서 확인할 세 가지</h4>
+<p><b>① 첫 경기 운영.</b> 2경기 조별리그에서는 한 경기 결과의 비중이 크다. 카타르전의 득점뿐 아니라 실점 이후 대응과 경기 후반 집중력도 함께 볼 필요가 있다.</p>
+<p><b>② 합류 이후 조직력.</b> 측면 공격 자원과 중앙 연결, 공격 가담 이후 수비 전환이 얼마나 맞춰졌는지가 중요하다. 와일드카드 선발만으로 전술 완성을 단정할 수는 없다.</p>
+<p><b>③ 토너먼트 대비.</b> 조별리그에서 출전 시간을 관리하면서도 조 순위를 확보해야 한다. 일본·우즈베키스탄 등이 경계 대상으로 언급됐으나, 한국의 실제 토너먼트 상대가 확정된 것은 아니다. <a href="#ref-camp">[3]</a></p></div>
+<p class="note">위 관전 포인트는 편집 해설이다. 과거 연령별 대회 결과를 이번 선수단의 승패 예측으로 그대로 적용하지 않는다.</p><h2 id='sources'>출처와 갱신 기준</h2><ol class='sources'><li id='ref-roster'><a href='https://media.kfa.or.kr/bbs/bbs.php?act=bbs_view&amp;con=2444718faafdd61acb0a15d5e12bc6e3&amp;idx=5103'>대한축구협회 · 최종 23명 명단 발표 (2026.7.9)</a> — 포지션·소속팀·와일드카드 기준.</li><li id='ref-schedule'><a href='https://www.kfa.or.kr/layer_popup/popup_live.php?act=news_tv_detail&amp;div_code=news&amp;idx=28146'>대한축구협회 · 조 편성 및 일정 (2026.7.23)</a> — 경기 날짜·진출 방식 기준. 킥오프 시간은 발표 당시 잠정 안내.</li><li id='ref-camp'><a href='https://www.yna.co.kr/view/AKR20260906028551007'>연합뉴스 · 대표팀 출국 및 합류 계획 (2026.9.6)</a> — 합류 예정은 완료 사실과 구분.</li><li><a href='https://results.asiangames2026.org/'>대회 공식 결과 사이트</a> — 기존 문서의 전체 엔트리 출처. 개별 원문 대조 전까지 기존 전재 명단으로 표시.</li></ol><p class='statusline'>편집 확인일: 2026.9.13 · 소속팀은 7월 9일 명단 발표 당시 기준. 이후 이적·임대 및 엔트리 교체는 별도 확인이 필요하다.</p><div class="footer">
+        출처: 편집부 취재 및 자체 정리 — 국가대표 명단·조 편성·최근 전적은 대한축구협회 발표 및 대회 기록 기준. 전체 엔트리는 기존 문서 전재 자료이며 개별 원문 대조 여부는 위 출처 안내를 따른다. 일정과 세부 사항은 대회 진행에 따라 변경될 수 있다.
       </div>
     </div>
     <aside class="infobox">
@@ -173,7 +197,7 @@
         <tr><th>영문명</th><td>Men's U23 Football</td></tr>
         <tr><th>참가국</th><td>15개국</td></tr>
         <tr><th>대한민국 조</th><td>D조 (대한민국·사우디아라비아·카타르)</td></tr>
-        <tr><th>관련 문서</th><td><a href="soccer_women.html">여자축구</a> · <a href="index2.html">아시안게임 종목 안내</a></td></tr>
+        <tr><th>관련 문서</th><td><a href="https://koreaolympics.github.io/soccer_women.html">여자축구</a> · <a href="https://koreaolympics.github.io/index2.html">아시안게임 종목 안내</a></td></tr>
       </table>
     </aside>
   </div>
