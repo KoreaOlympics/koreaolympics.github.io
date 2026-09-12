@@ -216,7 +216,7 @@
 
   <footer>
     <span>구조: 대분류 → 항목(2단계) · 항목 클릭 시 개별 페이지로 이동</span>
-    <span>예시: 축구 → soccer.html</span>
+    <span>예시: 역도 → weightlifting.html</span>
   </footer>
 </div>
 
@@ -363,7 +363,8 @@ document.getElementById('linkCount').textContent = totalLinks;
 
 // ===== 관심종목 검색 =====
 const SEARCH_INDEX = [
-  { label:'축구', cat:'단체구기', url:'soccer.html' },
+  { label:'축구(남자)', cat:'단체구기', url:'soccer_men.html' },
+  { label:'축구(여자)', cat:'단체구기', url:'soccer_women.html' },
   { label:'농구', cat:'단체구기', url:'basketball.html' },
   { label:'3x3농구', cat:'단체구기', url:'basketball.html#3x3' },
   { label:'야구', cat:'단체구기', url:'baseball.html' },
@@ -447,7 +448,7 @@ document.addEventListener('click', e => { if (!e.target.closest('.search-box')) 
 const SPORTS_SCHED = {
   bball:      { e:'🏀', n:'농구',        u:'basketball.html' },
   bball3x3:   { e:'🏀', n:'3x3농구',     u:'basketball.html#3x3' },
-  soccer:     { e:'⚽', n:'축구',        u:'soccer.html' },
+  soccer:     { e:'⚽', n:'축구',        u:'soccer_men.html', uw:'soccer_women.html' },
   hockey:     { e:'🏑', n:'필드하키',    u:'handball.html' },
   volleyball: { e:'🏐', n:'배구',        u:'volleyball.html' },
   tabletennis:{ e:'🏓', n:'탁구',        u:'tabletennis.html' },
@@ -644,8 +645,10 @@ const SCHEDULE2 = [
 ];
 function schedLabel(row){
   const sp = SPORTS_SCHED[row[2]];
-  const gender = row[3] === 'w' ? '여자 ' : '';
-  return { emoji: sp.e, name: gender + sp.n, url: sp.u, x: row[4] || '' };
+  const isW = row[3] === 'w';
+  const gender = isW ? '여자 ' : '';
+  const url = (isW && sp.uw) ? sp.uw : sp.u;
+  return { emoji: sp.e, name: gender + sp.n, url: url, x: row[4] || '' };
 }
 function toDate2(dstr, tstr){
   const [mo, da] = dstr.split('-').map(Number);
