@@ -89,13 +89,14 @@ function rows() {
     ...x,
     athletes: (m.athletes || {})[x.id] || (x.athletes || []).map(nm),
     note: (m.notes || {})[x.id] || "",
+    tv: (m.tv || {})[x.id],
     home: x.home && { ...x.home, nameKo: x.home.org === "KOR" && !x.home.team ? nm(x.home.nameKo) : x.home.nameKo },
     away: x.away && { ...x.away, nameKo: x.away.org === "KOR" && !x.away.team ? nm(x.away.nameKo) : x.away.nameKo },
   }));
   (m.add || []).filter(a => a.date && a.time).forEach((a, i) => out.push({
     id: `manual/${i}`, kind: "manual", date: a.date, time: a.time, dt: `${a.date}T${a.time}:00+09:00`,
     sportName: a.sport || "", unit: a.title || "", athletes: [].concat(a.athletes || []), vs: a.vs || "",
-    venue: a.venue || "", note: a.note || "", status: "", medal: a.medal ? "1" : "",
+    venue: a.venue || "", note: a.note || "", status: "", medal: a.medal ? "1" : "", tv: a.tv,
   }));
   return out.sort((a, b) => a.dt.localeCompare(b.dt));
 }
@@ -121,7 +122,7 @@ function row(x) {
   return `<tr class="${past ? "past" : ""}">
     <td class="time">${esc(x.hideTime ? (x.est || "TBD") : x.time)}</td>
     <td class="sport">${esc(x.sportName || KO[x.disc] || x.discDesc || "")}</td>
-    <td class="ev"><div class="unit" title="${esc(x.unitEn || "")}">${esc(x.unit)}${medal}${live}</div>${tag ? `<div>${tag}</div>` : ""}${x.note ? `<div class="note">📝 ${esc(x.note)}</div>` : ""}</td>
+    <td class="ev"><div class="unit" title="${esc(x.unitEn || "")}">${esc(x.unit)}${medal}${live}</div>${tag ? `<div>${tag}</div>` : ""}${tvLine(x.tv)}${x.note ? `<div class="note">📝 ${esc(x.note)}</div>` : ""}</td>
     <td class="who">${who(x)}</td>
     <td class="venue">${venue}</td>
     <td class="st">${esc(STATUS_KO[x.status] || x.status || "")}<button class="rid" data-id="${esc(x.id)}" title="행 ID 복사: ${esc(x.id)}">#</button></td></tr>`;

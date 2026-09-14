@@ -104,6 +104,14 @@ def main():
     (OUT / "kor.json").write_text(json.dumps(kor, ensure_ascii=False), encoding="utf-8")
     print("kor items", len(kor))
     try:
+        medals = sorted(get("ALL/medals/standings"), key=lambda r: r.get("RkPo") or 999)
+        rows = [{"org": r["Org"], "name": NOC_KO.get(r["Org"], r.get("OrgDesc", "")), "rk": r.get("Rk", ""),
+                 "g": r["Count"]["ME_GOLD"]["total"], "s": r["Count"]["ME_SILVER"]["total"], "b": r["Count"]["ME_BRONZE"]["total"],
+                 "t": r["Count"]["total"]["total"]} for r in medals]
+        (OUT / "medals.json").write_text(json.dumps(rows, ensure_ascii=False), encoding="utf-8")
+    except Exception as e:
+        print("medals failed", e)
+    try:
         brackets.build(get)
     except Exception as e:  # brackets are a bonus; never block the schedule refresh
         print("brackets failed", e)

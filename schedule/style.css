@@ -90,3 +90,11 @@ footer { color: var(--muted); font-size: 12px; padding: 30px 0 50px; }
 
 .toplinks { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
 .korlink { font-size: 13px; font-weight: 600; color: var(--accent); text-decoration: none; }
+
+.tv { display: inline-flex; gap: 3px; margin-left: 6px; vertical-align: 1px; }
+.tvb { display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: .02em; color: #fff; background: #6b6f78;
+  border-radius: 3px; padding: 0 4px; line-height: 16px; }
+.tvb.tv-KBS { background: #1f4fa3; }
+.tvb.tv-MBC { background: #2b2b2b; }
+.tvb.tv-SBS { background: #0a8a6a; }
+.tvline { font-size: 12px; color: var(--muted); margin-top: 3px; }

@@ -120,6 +120,15 @@
   .live-time{font-family:var(--serif);font-size:14px;color:var(--gold);white-space:nowrap;min-width:44px;}
   .live-sport{font-weight:700;font-size:13.5px;}
   .live-x{color:var(--muted);font-size:13px;}
+  .live-item a{color:inherit;text-decoration:none;}
+  .live-item a:hover .live-x{text-decoration:underline;}
+  .live-sub{margin:10px 0 2px;font-size:11.5px;font-weight:700;color:var(--muted);letter-spacing:.03em;}
+  .live-score{font-family:var(--serif);color:var(--ink);margin-left:4px;}
+  .live-win{color:#0b7a4b;font-weight:700;}
+  .live-lose{color:var(--muted);font-weight:700;}
+  .tv{display:inline-flex;gap:3px;margin-left:6px;vertical-align:1px;}
+  .tvb{display:inline-block;font-size:10px;font-weight:800;color:#fff;background:#6b6f78;border-radius:3px;padding:0 4px;line-height:16px;font-family:var(--sans);}
+  .tvb.tv-KBS{background:#1f4fa3;} .tvb.tv-MBC{background:#2b2b2b;} .tvb.tv-SBS{background:#0a8a6a;}
   .live-foot{padding:8px 16px;font-size:11px;color:var(--muted);border-top:1px solid var(--border-soft);background:var(--panel);display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;}
   .status-group{margin-bottom:14px;}
   .status-group:last-child{margin-bottom:0;}
@@ -191,7 +200,7 @@
   <div class="live-box">
     <div class="live-head" id="liveHead"><span class="live-dot"></span><span id="liveHeadText">불러오는 중...</span></div>
     <div class="live-body" id="liveBody"><p class="live-empty">일정을 확인하는 중입니다...</p></div>
-    <div class="live-foot"><span id="liveFootDate"></span><span>대한민국 경기 및 주요 경기 중심 · 시간은 현지(일본)=한국(KST) 기준</span></div>
+    <div class="live-foot"><span id="liveFootDate"></span><span>대한민국 경기 중심 · 공식 결과 사이트 기준 · 시간은 현지(일본)=한국(KST)</span></div>
   </div>
   <span class="sched-toggle" id="schedToggle">▸ 전체 일정 펼쳐보기</span>
   <div id="schedAll"></div>
@@ -210,7 +219,7 @@
         <p class="status-medals"><b>0</b>금 · <b>0</b>은 · <b>0</b>동 <span class="status-sub">(메달 종목은 9.20부터 시작)</span></p>
       </div>
     </div>
-    <div class="live-foot"><span>수동 업데이트</span><span>대회 기간(9.19~10.4) 중 갱신 예정</span></div>
+    <div class="live-foot"><span>10분마다 자동 갱신</span><span>공식 결과 사이트(results.asiangames2026.org) 기준</span></div>
   </div>
 
   <section class="featured-section">
@@ -460,7 +469,7 @@ const SPORTS_SCHED = {
   bball:      { e:'🏀', n:'농구',        u:'basketball.html' },
   bball3x3:   { e:'🏀', n:'3x3농구',     u:'basketball.html#3x3' },
   soccer:     { e:'⚽', n:'축구',        u:'soccer_men.html', uw:'soccer_women.html' },
-  hockey:     { e:'🏑', n:'필드하키',    u:'handball.html' },
+  hockey:     { e:'🏑', n:'필드하키',    u:'hockey.html' },
   volleyball: { e:'🏐', n:'배구',        u:'volleyball.html' },
   tabletennis:{ e:'🏓', n:'탁구',        u:'tabletennis.html' },
   badminton:  { e:'🏸', n:'배드민턴',    u:'badminton.html' },
@@ -484,240 +493,190 @@ const SPORTS_SCHED = {
   triathlon:  { e:'🏊‍♂️', n:'트라이애슬론', u:'triathlon.html' },
   ceremony:   { e:'🎆', n:'식',          u:null },
 };
-const SCHEDULE2 = [
-['09-10','16:00','bball','','대한민국 vs 사우디아라비아'],
-['09-11','16:00','bball','','인도네시아 vs 대한민국'],
-['09-13','19:00','bball','','일본 vs 대한민국'],
-['09-14','19:30','soccer','w','대한민국 vs 미얀마'],
-['09-15','19:30','soccer','','카타르 vs 대한민국'],
-['09-16','10:00','bball','','8강전'],
-['09-16','13:00','bball','','8강전'],
-['09-16','16:00','bball','','8강전'],
-['09-16','19:20','bball','','8강전'],
-['09-16','10:00','pentathlon','w','준결승'],
-['09-16','15:00','pentathlon','','준결승'],
-['09-16','16:00','volleyball','w','홍콩 vs 대한민국'],
-['09-17','10:00','pentathlon','w','결승'],
-['09-17','14:30','pentathlon','','결승'],
-['09-17','16:00','soccer','w','방글라데시 vs 대한민국'],
-['09-17','13:00','volleyball','w','카타르 vs 대한민국'],
-['09-18','11:00','hockey','','대한민국 vs 방글라데시'],
-['09-18','13:00','hockey','w','대한민국 vs 대만'],
-['09-18','16:00','volleyball','w','대한민국 vs 베트남'],
-['09-18','10:00','bball','w','대한민국 vs 말레이시아'],
-['09-18','16:00','bball','','준결승'],
-['09-18','19:20','bball','','준결승'],
-['09-19','18:00','ceremony','','개회식'],
-['09-20','08:30','triathlon','','남녀 개인전'],
-['09-20','09:00','shooting','w','10m 공기소총'],
-['09-20','09:30','badminton','','단체전 1라운드'],
-['09-20','10:00','tabletennis','','단체전'],
-['09-20','10:00','swimming','','경영 예선'],
-['09-20','16:40','bball','','동메달전'],
-['09-20','17:00','swimming','','경영 결승'],
-['09-20','19:40','bball','','결승'],
-['09-20',null,'volleyball','w','8강'],
-['09-21','09:00','hockey','w','대한민국 vs 카자흐스탄'],
-['09-21','09:30','badminton','','단체전 2라운드'],
-['09-21','10:00','tabletennis','','단체전'],
-['09-21','10:00','swimming','','경영 예선'],
-['09-21','10:00','gymnastics','','개인 종합'],
-['09-21','16:00','soccer','w','대한민국 vs 북한'],
-['09-21','17:00','swimming','','경영 결승'],
-['09-21','12:25','bball3x3','w','태국 vs 대한민국'],
-['09-21','13:00','bball','w','몽골 vs 대한민국'],
-['09-21','14:05','bball3x3','w','인도네시아 vs 대한민국'],
-['09-21','18:30','baseball','','대한민국 vs 대만'],
-['09-21','18:30','tabletennis','','개인전'],
-['09-21',null,'volleyball','w','준결승'],
-['09-22','10:00','swimming','','경영 예선'],
-['09-22','11:00','hockey','','인도네시아 vs 대한민국'],
-['09-22','12:00','gymnastics','w','개인 종합'],
-['09-22','19:00','soccer','','대한민국 vs 사우디아라비아'],
-['09-22','16:00','bball','w','대한민국 vs 대만'],
-['09-22','17:00','swimming','','경영 결승'],
-['09-22','17:40','fencing','','개인전'],
-['09-22','18:30','baseball','','홍콩 vs 대한민국'],
-['09-22','18:55','bball3x3','','대한민국 vs 태국'],
-['09-22','19:20','tabletennis','','단체전 8강'],
-['09-22','20:35','bball3x3','','일본 vs 대한민국'],
-['09-22',null,'volleyball','w','3-4위전'],
-['09-22',null,'volleyball','w','결승'],
-['09-23','09:00','hockey','w','방글라데시 vs 대한민국'],
-['09-23','09:30','badminton','',''],
-['09-23','10:00','tabletennis','','개인전'],
-['09-23','10:00','swimming','','경영 예선'],
-['09-23','12:00','baseball','','대한민국 vs 태국'],
-['09-23','12:00','bball3x3','w','싱가포르 vs 대한민국'],
-['09-23','13:00','gymnastics','','단체종합'],
-['09-23','16:50','fencing','','개인전'],
-['09-23','17:00','tabletennis','','단체전 준결승'],
-['09-23','17:00','swimming','','경영 결승'],
-['09-23','19:00','gymnastics','w','단체종합'],
-['09-23','20:10','bball3x3','','싱가포르 vs 대한민국'],
-['09-24','10:00','bball','w','8강'],
-['09-24','13:00','bball','w','8강'],
-['09-24','16:00','bball','w','8강'],
-['09-24','19:20','bball','w','8강'],
-['09-24','10:00','tabletennis','','개인전'],
-['09-24','10:00','swimming','','경영 예선'],
-['09-24','15:00','hockey','','대한민국 vs 인도'],
-['09-24','17:00','swimming','','경영 결승'],
-['09-24','17:00','tabletennis','','단체전 결승'],
-['09-24','17:00','gymnastics','w','도마'],
-['09-24','17:40','fencing','','개인전'],
-['09-24','19:30','athletics','','100m 예선'],
-['09-24','20:06','athletics','','세단뛰기 결승'],
-['09-24','20:11','athletics','','높이뛰기 예선'],
-['09-25','10:00','tabletennis','','개인전'],
-['09-25','10:00','swimming','','경영 예선'],
-['09-25','13:00','hockey','w','대한민국 vs 중국'],
-['09-25','14:00','soccer','','8강'],
-['09-25','19:30','soccer','','8강'],
-['09-25','15:00','soccer','w','8강'],
-['09-25','19:30','soccer','w','8강'],
-['09-25','15:00','fencing','','단체전'],
-['09-25','16:00','bball','w','준결승'],
-['09-25','19:20','bball','w','준결승'],
-['09-25','17:00','swimming','','경영 결승'],
-['09-25','17:00','gymnastics','','종목별 결승'],
-['09-25','18:30','baseball','','B조 1위 vs A조 1위'],
-['09-25','18:30','baseball','','B조 2위 vs A조 2위'],
-['09-25','22:23','athletics','','100m 결승'],
-['09-26','09:30','badminton','',''],
-['09-26','10:00','tabletennis','','개인전'],
-['09-26','10:00','skateboard','','스트리트 결승'],
-['09-26','15:00','hockey','','스리랑카 vs 대한민국'],
-['09-26','15:10','fencing','','개인전'],
-['09-26','15:30','tabletennis','','개인전'],
-['09-26','15:30','tabletennis','','혼합복식 결승'],
-['09-26','16:00','bball','w','동메달 결정전'],
-['09-26','19:20','bball','w','결승'],
-['09-26','18:30','baseball','','B조 1위 vs A조 2위'],
-['09-26','18:30','baseball','','B조 2위 vs A조 1위'],
-['09-26','20:43','athletics','','높이뛰기 결승'],
-['09-27','09:30','badminton','','8강'],
-['09-27','12:00','tabletennis','','준결승'],
-['09-27','12:00','squash','','결승'],
-['09-27','12:00','handball','w','메달 결정전'],
-['09-27','12:00','baseball','','동메달전'],
-['09-27','18:30','baseball','','결승'],
-['09-27','15:50','fencing','',''],
-['09-27','19:00','tabletennis','','결승'],
-['09-27','19:20','volleyball','','대한민국 vs 필리핀'],
-['09-27','21:43','athletics','','400m 계주 예선'],
-['09-28','07:00','surfing','','동메달 결정전·결승'],
-['09-28','09:30','badminton','','준결승'],
-['09-28','12:00','tabletennis','','준결승'],
-['09-28','17:00','hockey','','일본 vs 대한민국'],
-['09-28','19:00','tabletennis','','결승'],
-['09-28','19:20','volleyball','','대만 vs 대한민국'],
-['09-28','22:23','athletics','','400m 계주 결승'],
-['09-29','11:00','badminton','','결승'],
-['09-29','17:00','hockey','w','말레이시아 vs 대한민국'],
-['09-29','15:00','soccer','w','준결승'],
-['09-29','19:30','soccer','w','준결승'],
-['09-29','17:00','handball','','메달 결정전'],
-['09-29','19:20','volleyball','','중국 vs 대한민국'],
-['09-30','09:00','archery','','컴파운드 결승'],
-['09-30',null,'hockey','w','준결승'],
-['09-30','15:00','soccer','','준결승'],
-['09-30','19:30','soccer','','준결승'],
-['09-30','17:00','judo','',''],
-['09-30','18:00','climbing','','결승'],
-['10-01','17:00','judo','',''],
-['10-01','18:00','climbing','','결승'],
-['10-01',null,'hockey','','준결승'],
-['10-01',null,'volleyball','','8강'],
-['10-02','09:00','archery','','리커브 단체전'],
-['10-02','09:00','taekwondo','',''],
-['10-02','10:00','tennis','','결승'],
-['10-02','13:00','boxing','','결승'],
-['10-02','16:00','volleyball','','준결승'],
-['10-02','19:20','volleyball','','준결승'],
-['10-02','17:00','judo','',''],
-['10-02','17:30','boxing','','결승'],
-['10-02',null,'hockey','w','3-4위전'],
-['10-02',null,'hockey','w','결승'],
-['10-02',null,'soccer','w','3-4위전'],
-['10-02',null,'soccer','w','결승'],
-['10-03','09:00','taekwondo','',''],
-['10-03','09:00','archery','','리커브 개인전'],
-['10-03','10:00','tennis','','결승'],
-['10-03',null,'hockey','','3-4위전'],
-['10-03',null,'hockey','','결승'],
-['10-03',null,'soccer','','3-4위전'],
-['10-03',null,'soccer','','결승'],
-['10-03','16:00','volleyball','','3-4위전'],
-['10-03','19:20','volleyball','','결승'],
-['10-03','17:00','judo','','유도 혼성 단체전'],
-['10-03','18:00','climbing','','결승'],
-['10-04','18:00','ceremony','','폐회식'],
-];
-function schedLabel(row){
-  const sp = SPORTS_SCHED[row[2]];
-  const isW = row[3] === 'w';
-  const gender = isW ? '여자 ' : '';
-  const url = (isW && sp.uw) ? sp.uw : sp.u;
-  return { emoji: sp.e, name: gender + sp.n, url: url, x: row[4] || '' };
+// Schedule box + status box: fed by schedule/ (auto-refreshed every 10 minutes from the official results site).
+const DISC_INFO = {
+  FBL: { e:'⚽', n:'축구', u:'soccer_men.html', uw:'soccer_women.html' },
+  BKB: { e:'🏀', n:'농구', u:'basketball.html' },
+  BK3: { e:'🏀', n:'3x3 농구', u:'basketball.html#3x3' },
+  VVO: { e:'🏐', n:'배구', u:'volleyball.html' },
+  HOC: { e:'🏑', n:'하키', u:'hockey.html' },
+  HBL: { e:'🤾', n:'핸드볼', u:'handball.html' },
+  BBL: { e:'⚾', n:'야구', u:'baseball.html' },
+  SBL: { e:'🥎', n:'소프트볼', u:'baseball.html' },
+  WPO: { e:'🤽', n:'수구', u:'watersports.html' },
+  RU7: { e:'🏉', n:'7인제 럭비', u:'rugby.html' },
+  KAB: { e:'🤼', n:'카바디', u:'kabaddi.html' },
+  SPK: { e:'🦶', n:'세팍타크로', u:null },
+  CKT: { e:'🏏', n:'크리켓', u:null },
+  VBV: { e:'🏐', n:'비치발리볼', u:'volleyball.html' },
+  TTE: { e:'🏓', n:'탁구', u:'tabletennis.html' },
+  BDM: { e:'🏸', n:'배드민턴', u:'badminton.html' },
+  TEN: { e:'🎾', n:'테니스', u:'tennis.html' },
+  TST: { e:'🎾', n:'정구', u:'softtennis.html' },
+  SQU: { e:'🎯', n:'스쿼시', u:null },
+  TEQ: { e:'⚽', n:'테크볼', u:'teqball.html' },
+  ELS: { e:'🎮', n:'e스포츠', u:'esports.html' },
+};
+const noGender = s => (s || '').replace(/^(남자|여자|혼성)\s*/, '');
+function matchTitle(x) {
+  let t = noGender(x.unit), ph = noGender(x.phase);
+  if (!/조/.test(t) && /조/.test(ph)) t = `${ph} ${t}`;  // volleyball units are just "2경기"
+  return t.replace(/^예선\s*-\s*/, '');
 }
-function toDate2(dstr, tstr){
-  const [mo, da] = dstr.split('-').map(Number);
-  const [h, mi] = tstr.split(':').map(Number);
-  return new Date(2026, mo - 1, da, h, mi);
-}
-const DEFAULT_DURATION_MIN = 120;
+const NAME_INFO = Object.fromEntries(Object.values(SPORTS_SCHED).map(s => [s.n, s]));
+NAME_INFO['경영'] = SPORTS_SCHED.swimming;
+NAME_INFO['행사'] = SPORTS_SCHED.ceremony;
+const WDAY = ['일','월','화','수','목','금','토'];
+const escH = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]));
+const LIVE_RE = /Running|Live|Interrupted/;
+const DONE_RE = /Official|Unofficial|Finished/;
+const SCH = { items: [], medals: [], brackets: [], updated: null };
 
-function renderSchedule(){
+const tvHtml = tv => tv && Object.keys(tv).length
+  ? `<span class="tv">${Object.entries(tv).map(([ch, t]) => `<span class="tvb tv-${escH(ch)}" title="${escH(ch)} ${escH(t)} 중계">${escH(ch)}</span>`).join('')}</span>` : '';
+
+async function getJSON(path) {
+  const r = await fetch(`${path}?t=${Date.now()}`, { cache: 'no-store' });
+  if (!r.ok) throw new Error(path + ' ' + r.status);
+  return r.json();
+}
+
+async function loadSchedule() {
+  const [kor, manual, index, medals, brackets] = await Promise.all([
+    getJSON('schedule/data/kor.json'),
+    getJSON('schedule/kor_manual.json').catch(() => ({})),
+    getJSON('schedule/data/index.json'),
+    getJSON('schedule/data/medals.json').catch(() => []),
+    getJSON('schedule/data/brackets.json').catch(() => []),
+  ]);
+  const hide = new Set(manual.hide || []), tv = manual.tv || {}, notes = manual.notes || {};
+  const items = kor.filter(x => !hide.has(x.id)).map(x => {
+    const info = DISC_INFO[x.disc] || { e:'🏅', n:x.discDesc, u:null };
+    const w = x.ev && x.ev[0] === 'W';
+    const [k, o] = x.home?.org === 'KOR' ? [x.home, x.away] : [x.away, x.home];
+    return {
+      id: x.id, dt: x.dt, date: x.date, time: x.hideTime ? '' : x.time, status: x.status || '', tv: tv[x.id], note: notes[x.id] || '',
+      emoji: info.e, sport: (x.ev && /^[MW]\./.test(x.ev) ? (w ? '여자 ' : '남자 ') : '') + info.n,
+      url: w && info.uw ? info.uw : info.u,
+      title: matchTitle(x),
+      kor: k, opp: o,
+    };
+  });
+  (manual.add || []).filter(a => a.date && a.time).forEach((a, i) => {
+    const info = NAME_INFO[a.sport] || { e:'🏅', u:null };
+    items.push({
+      id: `manual/${i}`, dt: `${a.date}T${a.time}:00+09:00`, date: a.date, time: a.time, status: '', tv: a.tv, note: a.note || '',
+      emoji: info.e, sport: a.sport === '행사' ? '' : a.sport, url: info.u, title: a.title || '',
+      vs: a.vs || '', athletes: [].concat(a.athletes || []), manual: true,
+    });
+  });
+  items.sort((a, b) => a.dt.localeCompare(b.dt));
+  Object.assign(SCH, { items, medals, brackets, updated: index.updated });
+}
+
+function matchText(o) {
+  if (o.kor || o.opp) {
+    const score = (o.kor?.result ?? '') !== '' || (o.opp?.result ?? '') !== '' ? ` <b class="live-score">${escH(o.kor?.result || 0)} : ${escH(o.opp?.result || 0)}</b>` : '';
+    const res = o.kor?.win ? ' <span class="live-win">승</span>' : o.opp?.win ? ' <span class="live-lose">패</span>' : '';
+    return `${o.title ? escH(o.title) + ' · ' : ''}대한민국 vs ${escH(o.opp?.nameKo || o.opp?.name || '미정')}${score}${res}`;
+  }
+  const extra = [o.athletes?.join(', '), o.vs ? 'vs ' + o.vs : ''].filter(Boolean).join(' ');
+  return escH(o.title) + (extra ? ' · ' + escH(extra) : '');
+}
+function startOf(o) { return new Date(o.dt); }
+function isLive(o, now) {
+  if (LIVE_RE.test(o.status)) return true;
+  if (DONE_RE.test(o.status) || !o.time) return false;
+  // Manual rows have no status: treat the first two hours as possibly live.
+  return o.manual && now >= startOf(o) && now < new Date(startOf(o).getTime() + 120 * 60000);
+}
+function itemHtml(o, withDate) {
+  const d = new Date(o.dt), md = `${d.getMonth() + 1}.${String(d.getDate()).padStart(2, '0')}`;
+  const inner = `<span class="live-time">${withDate ? md + ' ' : ''}${escH(o.time || '미정')}</span>`
+    + `<span class="live-sport">${o.emoji} ${escH(o.sport)}</span><span class="live-x">${matchText(o)}${tvHtml(o.tv)}</span>`;
+  return `<div class="live-item">${o.url ? `<a href="${o.url}" style="display:flex;gap:12px;align-items:baseline;flex:1;">${inner}</a>` : inner}</div>`;
+}
+
+function renderSchedule() {
   const now = new Date();
-  const timed = SCHEDULE2.filter(r => r[1] !== null).map(r => ({ row:r, start: toDate2(r[0], r[1]) }));
-  const live = timed.filter(o => now >= o.start && now < new Date(o.start.getTime() + DEFAULT_DURATION_MIN*60000));
   const head = document.getElementById('liveHead');
   const headText = document.getElementById('liveHeadText');
   const body = document.getElementById('liveBody');
-  const footDate = document.getElementById('liveFootDate');
-  footDate.textContent = now.toLocaleString('ko-KR', { month:'long', day:'numeric', weekday:'short', hour:'2-digit', minute:'2-digit' });
+  const up = SCH.updated ? new Date(SCH.updated).toLocaleTimeString('ko-KR', { timeZone: 'Asia/Seoul', hour: '2-digit', minute: '2-digit' }) : '-';
+  document.getElementById('liveFootDate').textContent = `마지막 갱신 ${up} · 10분마다 자동 갱신`;
 
-  if (live.length){
+  const live = SCH.items.filter(o => isLive(o, now));
+  const upcoming = SCH.items.filter(o => startOf(o) > now && !live.includes(o)).slice(0, 5);
+  const recent = SCH.items.filter(o => (o.kor || o.opp) && DONE_RE.test(o.status) && now - startOf(o) < 36 * 3600e3).slice(-3).reverse();
+
+  let html = '';
+  if (live.length) {
     head.classList.add('on');
-    headText.textContent = `LIVE · 진행 중일 가능성이 있는 경기 ${live.length}건 (실제 진행 여부는 방송/현지 일정에 따라 다를 수 있음)`;
-    body.innerHTML = live.map(o => {
-      const L = schedLabel(o.row);
-      const inner = `<span class="live-time">${o.row[1]}</span><span class="live-sport">${L.emoji} ${L.name}</span><span class="live-x">${L.x}</span>`;
-      return `<div class="live-item">${L.url ? `<a href="${L.url}" style="display:flex;gap:12px;align-items:baseline;flex:1;">${inner}</a>` : inner}</div>`;
-    }).join('');
+    headText.textContent = `LIVE · 진행 중인 경기 ${live.length}건`;
+    html += live.map(o => itemHtml(o, false)).join('');
+    if (upcoming.length) html += `<p class="live-sub">다음 일정</p>` + upcoming.slice(0, 3).map(o => itemHtml(o, true)).join('');
   } else {
-    const upcoming = timed.filter(o => o.start > now).sort((a,b)=>a.start-b.start).slice(0,5);
     head.classList.remove('on');
     headText.textContent = '지금 진행 중인 경기 없음 · 다음 일정';
-    if (!upcoming.length){
-      body.innerHTML = '<p class="live-empty">등록된 다음 일정이 없습니다.</p>';
-    } else {
-      body.innerHTML = upcoming.map(o => {
-        const L = schedLabel(o.row);
-        const dd = `${o.row[0].slice(0,2)}.${o.row[0].slice(3)}`;
-        const inner = `<span class="live-time">${dd} ${o.row[1]}</span><span class="live-sport">${L.emoji} ${L.name}</span><span class="live-x">${L.x}</span>`;
-        return `<div class="live-item">${L.url ? `<a href="${L.url}" style="display:flex;gap:12px;align-items:baseline;flex:1;">${inner}</a>` : inner}</div>`;
-      }).join('');
-    }
+    html += upcoming.length ? upcoming.map(o => itemHtml(o, true)).join('') : '<p class="live-empty">등록된 다음 일정이 없습니다.</p>';
   }
+  if (recent.length) html += `<p class="live-sub">최근 결과</p>` + recent.map(o => itemHtml(o, true)).join('');
+  body.innerHTML = html;
 
   const byDay = {};
-  SCHEDULE2.forEach(r => { (byDay[r[0]] = byDay[r[0]] || []).push(r); });
-  const days = Object.keys(byDay).sort();
-  const schedAll = document.getElementById('schedAll');
-  schedAll.innerHTML = days.map(d => {
-    const rows = byDay[d].map(r => {
-      const L = schedLabel(r);
-      const t = r[1] || '시간 미정';
-      const inner = `<span class="tm">${t}</span><span>${L.emoji} ${L.name}${L.x ? ' — ' + L.x : ''}</span>`;
-      return `<div class="sched-row">${L.url ? `<a href="${L.url}">${inner}</a>` : inner}</div>`;
+  SCH.items.forEach(o => (byDay[o.date] = byDay[o.date] || []).push(o));
+  document.getElementById('schedAll').innerHTML = Object.keys(byDay).sort().map(d => {
+    const dt = new Date(d + 'T12:00:00+09:00');
+    const rows = byDay[d].map(o => {
+      const inner = `<span class="tm">${escH(o.time || '미정')}</span><span>${o.emoji} ${escH(o.sport)}${o.sport ? ' — ' : ''}${matchText(o)}${tvHtml(o.tv)}</span>`;
+      return `<div class="sched-row">${o.url ? `<a href="${o.url}">${inner}</a>` : inner}</div>`;
     }).join('');
-    return `<div class="sched-day"><h3>${d.slice(0,2)}.${d.slice(3)}</h3>${rows}</div>`;
-  }).join('');
+    return `<div class="sched-day"><h3>${d.slice(5, 7)}.${d.slice(8)} (${WDAY[dt.getDay()]})</h3>${rows}</div>`;
+  }).join('') + `<p class="live-empty"><a href="schedule/korea.html">🇰🇷 한국 경기 일정 전체 보기 →</a> · <a href="schedule/">📅 전 종목 일정 →</a></p>`;
 }
-renderSchedule();
-setInterval(renderSchedule, 60000);
+
+function renderStatus() {
+  const progress = [];
+  SCH.brackets.forEach(e => {
+    const info = DISC_INFO[e.disc] || {};
+    let text = '';
+    for (const g of e.standings) {
+      const i = g.rows.findIndex(r => r.org === 'KOR');
+      if (i < 0) continue;
+      const r = g.rows[i];
+      if (+r.p) text = `${g.name} ${r.rk || i + 1}위 · ${r.w}승${+r.t ? ' ' + r.t + '무' : ''} ${r.l}패`;
+    }
+    // Furthest knockout round with Korea in it.
+    const main = e.bracket[0];
+    if (main) main.cols.forEach(c => c.matches.forEach(m => {
+      const side = m.home.org === 'KOR' ? m.home : m.away.org === 'KOR' ? m.away : null;
+      if (!side) return;
+      const other = side === m.home ? m.away : m.home;
+      text = other.win ? `${c.name} 탈락` : side.win ? (c.name === '결승' ? '🥇 금메달' : `${c.name} 승리`) : `${c.name} 진출`;
+    }));
+    if (text) progress.push(`<li><a href="${info.u && e.ev[0] === 'W' && info.uw ? info.uw : info.u || 'schedule/brackets.html'}"><span class="status-sport">${info.e || '🏅'} ${escH(e.label)}</span><span class="status-note">${escH(text)}</span></a></li>`);
+  });
+  const medals = [...SCH.medals].sort((a, b) => b.g - a.g || b.s - a.s || b.b - a.b);
+  const k = medals.find(r => r.org === 'KOR') || { g: 0, s: 0, b: 0, t: 0 };
+  const started = medals.some(r => r.t > 0);
+  const rank = started ? medals.findIndex(r => r.org === 'KOR') + 1 : 0;
+  const top = started ? medals.slice(0, 3).map((r, i) => `${i + 1}위 ${escH(r.name)} ${r.g}·${r.s}·${r.b}`).join(' / ') : '';
+  document.getElementById('statusBody').innerHTML = `
+    <div class="status-group"><h4>종목별 진행상황 (구기종목)</h4>
+      <ul class="status-list">${progress.join('') || '<li class="live-empty">아직 경기를 치른 구기종목이 없습니다.</li>'}</ul>
+      <p class="live-empty" style="margin-top:6px"><a href="schedule/brackets.html">🏆 구기종목 대진표 보기 →</a></p></div>
+    <div class="status-group"><h4>메달 현황</h4>
+      <p class="status-medals"><b>${k.g}</b>금 · <b>${k.s}</b>은 · <b>${k.b}</b>동
+        <span class="status-sub">${started ? `(종합 ${rank}위 · ${top})` : '(메달 종목은 9.20부터 시작)'}</span></p></div>`;
+}
+
+async function refreshAll() {
+  try { await loadSchedule(); } catch (e) { document.getElementById('liveHeadText').textContent = '일정을 불러오지 못했습니다'; return; }
+  renderSchedule(); renderStatus();
+}
+refreshAll();
+setInterval(refreshAll, 10 * 60 * 1000);
+setInterval(renderSchedule, 60 * 1000);
 document.getElementById('schedToggle').addEventListener('click', function(){
   const el = document.getElementById('schedAll');
   const open = el.style.display === 'block';
