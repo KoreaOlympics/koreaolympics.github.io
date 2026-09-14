@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>대한민국 선수단 경기 일정 · 2026 아이치·나고야 아시안게임</title>
+<meta name="description" content="2026 아이치·나고야 아시안게임 대한민국 선수단 경기를 시간 순서로 정리 (10분마다 자동 갱신)">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="style.css">
+<style>
+section { scroll-margin-top: var(--stick, 0px); }
+.day-head { position: sticky; top: var(--stick, 0px); z-index: 5; background: var(--bg); padding: 16px 0 8px;
+  display: flex; align-items: baseline; gap: 10px; }
+.day-head h2 { margin: 0; font-size: 18px; }
+.day-head .cnt { color: var(--muted); font-size: 13px; }
+.day-head .today { font-size: 11px; font-weight: 700; color: #fff; background: var(--accent); border-radius: 4px; padding: 1px 6px; }
+.daybox { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.daybox table { table-layout: fixed; min-width: 640px; }
+.daybox th:nth-child(1) { width: 64px; } .daybox th:nth-child(2) { width: 96px; } .daybox th:nth-child(3) { width: 28%; }
+.daybox th:nth-child(4) { width: 30%; } .daybox th:nth-child(6) { width: 96px; }
+td.sport { font-weight: 600; }
+td.who { min-width: 180px; }
+.ath { font-size: 13px; }
+.tag.man { background: #e7f0ff; color: #2456b3; }
+.note { font-size: 12px; color: var(--accent); margin-top: 2px; }
+.vs { font-size: 13px; }
+.vs b { font-variant-numeric: tabular-nums; }
+button.rid { border: 0; background: none; color: var(--muted); cursor: pointer; font: inherit; font-size: 12px; padding: 0 4px; opacity: .5; }
+button.rid:hover { opacity: 1; }
+tr.past td { opacity: .6; }
+.jump { display: flex; gap: 6px; overflow-x: auto; padding: 10px 0; }
+.jump a { flex: 0 0 auto; text-decoration: none; border: 1px solid var(--line); background: var(--panel); border-radius: 8px;
+  padding: 4px 9px; font-size: 13px; color: var(--ink); }
+.jump a b { color: var(--muted); font-weight: 600; margin-left: 3px; font-variant-numeric: tabular-nums; }
+.jump a.is-today { border-color: var(--accent); color: var(--accent); }
+@media (max-width: 640px) { td.venue, th.venue { display: none; } .daybox table { min-width: 0; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <nav class="toplinks"><a class="home" href="index.html">← 전체 일정</a><a class="home" href="../index.html">메인</a></nav>
+    <h1>🇰🇷 대한민국 선수단 경기 일정</h1>
+    <p>시간 순서 · 현지시간(= 한국시간) · 10분마다 자동 갱신 · <span id="updated"></span></p>
+  </header>
+</div>
+<div class="sticky" id="stickybar">
+  <div class="wrap">
+    <nav class="jump" id="jump" aria-label="날짜 이동"></nav>
+    <div class="controls">
+      <input type="search" id="q" placeholder="검색: 선수 이름, 종목, 세부종목, 상대국…">
+      <label class="toggle"><input type="checkbox" id="showPast"> 지난 날짜 보기</label>
+      <label class="toggle"><input type="checkbox" id="onlyMedal"> 🏅 메달 결정</label>
+    </div>
+  </div>
+</div>
+<main class="wrap">
+  <div class="summary" id="summary"></div>
+  <div id="list"></div>
+  <footer>
+    <b>자동</b>: 공식 대진·출전명단에 대한민국이 포함되면 10분 안에 자동으로 추가됩니다(주로 단체 구기·토너먼트).
+    <b>직접 추가</b>: 개인전 등은 <code>schedule/kor_manual.json</code>의 <code>add</code>에 입력하면 표시됩니다. 각 행의 <b>#</b>을 누르면 행 ID가 복사됩니다(메모·숨기기에 사용).
+    데이터 출처: <a href="https://results.asiangames2026.org/" target="_blank" rel="noopener">results.asiangames2026.org</a>
+  </footer>
+</main>
+
+<script src="common.js"></script>
+<script>
+const $ = s => document.querySelector(s);
+const state = { items: [], manual: {}, q: "", showPast: false, onlyMedal: false, today: "" };
+const nowJST = () => new Date(Date.now() + 9 * 3600e3).toISOString();
+
+const bust = u => `${u}?t=${Date.now()}`;
+async function loadAll() {
+  const [items, manual, index] = await Promise.all([
+    fetch(bust("data/kor.json"), { cache: "no-store" }).then(r => r.json()),
+    fetch(bust("kor_manual.json"), { cache: "no-store" }).then(r => r.ok ? r.json() : {}).catch(() => ({})),
+    fetch(bust("data/index.json"), { cache: "no-store" }).then(r => r.json()),
+  ]);
+  state.items = items; state.manual = manual || {};
+  state.today = nowJST().slice(0, 10);
+  $("#updated").textContent = `마지막 갱신: ${new Date(index.updated).toLocaleString("ko-KR", { timeZone: "Asia/Seoul", dateStyle: "medium", timeStyle: "short" })}`;
+}
+
+function rows() {
+  const m = state.manual, names = m.names || {}, hide = new Set(m.hide || []);
+  const nm = s => (s || "").split(/\s*\/\s*/).map(p => names[p] || p).join(" / ");
+  const out = state.items.filter(x => !hide.has(x.id)).map(x => ({
+    ...x,
+    athletes: (m.athletes || {})[x.id] || (x.athletes || []).map(nm),
+    note: (m.notes || {})[x.id] || "",
+    home: x.home && { ...x.home, nameKo: x.home.org === "KOR" && !x.home.team ? nm(x.home.nameKo) : x.home.nameKo },
+    away: x.away && { ...x.away, nameKo: x.away.org === "KOR" && !x.away.team ? nm(x.away.nameKo) : x.away.nameKo },
+  }));
+  (m.add || []).filter(a => a.date && a.time).forEach((a, i) => out.push({
+    id: `manual/${i}`, kind: "manual", date: a.date, time: a.time, dt: `${a.date}T${a.time}:00+09:00`,
+    sportName: a.sport || "", unit: a.title || "", athletes: [].concat(a.athletes || []), vs: a.vs || "",
+    venue: a.venue || "", note: a.note || "", status: "", medal: a.medal ? "1" : "",
+  }));
+  return out.sort((a, b) => a.dt.localeCompare(b.dt));
+}
+
+function who(x) {
+  if (x.home || x.away) {
+    const [k, o] = x.home?.org === "KOR" ? [x.home, x.away] : [x.away, x.home];
+    const score = k?.result || o?.result ? ` <b>${esc(k?.result ?? "")} : ${esc(o?.result ?? "")}</b>` : "";
+    const res = k?.win ? " · 승" : o?.win ? " · 패" : "";
+    return `<div class="vs"><span class="kor">${esc(k?.nameKo || "대한민국")}</span> vs ${esc(o ? (o.nameKo || o.name) : "미정")}${score}${res}</div>` +
+      (x.athletes.length ? `<div class="ath">${esc(x.athletes.join(", "))}</div>` : "");
+  }
+  const vs = x.vs ? `<div class="vs">vs ${esc(x.vs)}</div>` : "";
+  return (x.athletes.length ? `<div class="ath">${esc(x.athletes.join(", "))}</div>` : `<div class="ath">대한민국</div>`) + vs;
+}
+
+function row(x) {
+  const tag = x.kind === "manual" ? `<span class="tag man">직접 추가</span>` : "";
+  const medal = x.medal === "1" ? `<span class="tag gold">메달</span>` : x.medal === "2" ? `<span class="tag bronze">동메달전</span>` : "";
+  const live = /Running|Live/.test(x.status || "") ? `<span class="tag live">LIVE</span>` : "";
+  const venue = [x.venue, x.loc && x.loc !== x.venue ? x.loc : ""].filter(Boolean).map(esc).join(" · ");
+  const past = x.dt < nowJST().slice(0, 16) && /Official|Unofficial|Finished/.test(x.status || "");
+  return `<tr class="${past ? "past" : ""}">
+    <td class="time">${esc(x.hideTime ? (x.est || "TBD") : x.time)}</td>
+    <td class="sport">${esc(x.sportName || KO[x.disc] || x.discDesc || "")}</td>
+    <td class="ev"><div class="unit" title="${esc(x.unitEn || "")}">${esc(x.unit)}${medal}${live}</div>${tag ? `<div>${tag}</div>` : ""}${x.note ? `<div class="note">📝 ${esc(x.note)}</div>` : ""}</td>
+    <td class="who">${who(x)}</td>
+    <td class="venue">${venue}</td>
+    <td class="st">${esc(STATUS_KO[x.status] || x.status || "")}<button class="rid" data-id="${esc(x.id)}" title="행 ID 복사: ${esc(x.id)}">#</button></td></tr>`;
+}
+
+function render() {
+  const q = state.q.trim().toLowerCase();
+  const all = rows();
+  const list = all.filter(x =>
+    (state.showPast || x.date >= state.today) &&
+    (!state.onlyMedal || x.medal === "1" || x.medal === "2") &&
+    (!q || [KO[x.disc], x.sportName, x.discDesc, x.unit, x.unitEn, x.phase, x.athletes.join(" "), x.vs, x.note,
+      x.home?.nameKo, x.home?.name, x.away?.nameKo, x.away?.name, x.venue].join(" ").toLowerCase().includes(q)));
+
+  const byDate = new Map();
+  list.forEach(x => { if (!byDate.has(x.date)) byDate.set(x.date, []); byDate.get(x.date).push(x); });
+  const label = d => { const [, m, dd] = d.split("-"); return `${+m}월 ${+dd}일 (${WD[new Date(d + "T12:00:00Z").getUTCDay()]})`; };
+
+  $("#jump").innerHTML = [...byDate].map(([d, xs]) =>
+    `<a href="#d-${d}" class="${d === state.today ? "is-today" : ""}">${label(d).replace(/ \(.\)/, "")}<b>${xs.length}</b></a>`).join("");
+  const manual = list.filter(x => x.kind === "manual").length;
+  $("#summary").textContent = `${byDate.size}일 · ${list.length}건${manual ? ` (직접 추가 ${manual}건 포함)` : ""}`;
+  $("#list").innerHTML = byDate.size ? [...byDate].map(([d, xs]) => `
+    <section id="d-${d}">
+      <div class="day-head"><h2>${label(d)}</h2>${d === state.today ? `<span class="today">오늘</span>` : ""}<span class="cnt">${xs.length}건</span></div>
+      <div class="daybox tbl"><table><thead><tr><th>시간</th><th>종목</th><th>세부종목 / 경기</th><th>선수 · 대진</th><th class="venue">경기장</th><th>상태</th></tr></thead>
+      <tbody>${xs.map(row).join("")}</tbody></table></div>
+    </section>`).join("") : `<div class="empty-msg">조건에 맞는 경기가 없습니다.</div>`;
+  document.documentElement.style.setProperty("--stick", $("#stickybar").offsetHeight + "px");
+}
+
+async function init() {
+  await loadAll(); render();
+  let t; $("#q").addEventListener("input", e => { clearTimeout(t); t = setTimeout(() => { state.q = e.target.value; render(); }, 150); });
+  for (const id of ["showPast", "onlyMedal"]) $("#" + id).addEventListener("change", e => { state[id] = e.target.checked; render(); });
+  $("#list").addEventListener("click", async e => {
+    const b = e.target.closest("button.rid"); if (!b) return;
+    try { await navigator.clipboard.writeText(b.dataset.id); b.textContent = "✓"; } catch { prompt("행 ID", b.dataset.id); }
+    setTimeout(() => b.textContent = "#", 1200);
+  });
+  window.addEventListener("resize", () => document.documentElement.style.setProperty("--stick", $("#stickybar").offsetHeight + "px"));
+  setInterval(async () => { try { await loadAll(); render(); } catch (e) {} }, 10 * 60 * 1000);
+}
+init();
+</script>
+</body>
+</html>

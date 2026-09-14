@@ -4,7 +4,8 @@
     python fetch.py --window 1 # yesterday..tomorrow (JST) only, for frequent refreshes
 """
 import argparse, json, zlib, datetime, pathlib, urllib.request, time
-from translate import ko
+from translate import ko, NOC_KO
+import korea
 
 BASE = "https://back.results.asiangames2026.org/s/AG2026/en/"
 HEADERS = {
@@ -35,10 +36,14 @@ def slim(u):
     def side(s):
         if not s or not s.get("HasData"):
             return None
-        return {"org": s.get("Org", ""), "name": s.get("Name", ""), "result": s.get("Result", ""), "win": s.get("Winner", False)}
+        org, name = s.get("Org", ""), s.get("Name", "")
+        team = u.get("Type") == "T" or not org
+        name_ko = NOC_KO.get(org, name) if team else korea.athlete_ko(name) if org == "KOR" else name
+        return {"org": org, "name": name, "nameKo": name_ko, "team": team, "result": s.get("Result", ""), "win": s.get("Winner", False)}
     disc = u["Disc"]
     unit = u.get("UnitDesc") or u.get("UnitDescA", "")
     return {
+        "key": u.get("Key", ""), "ev": u.get("Event", ""), "orgs": u.get("Orgs") or [],
         "disc": disc, "discDesc": u["DiscDesc"],
         "time": u["DateTimeRaw"][11:16], "dt": u["DateTimeRaw"],
         "hideTime": u.get("HideStartDate", False), "est": u.get("EstText", ""),
@@ -95,6 +100,10 @@ def main():
     while d <= LAST:
         days.append({"date": str(d), "count": counts.get(str(d), 0)})
         d += datetime.timedelta(days=1)
+    kor = korea.build()
+    (OUT / "kor.json").write_text(json.dumps(kor, ensure_ascii=False), encoding="utf-8")
+    print("kor items", len(kor))
+
     meta = {"updated": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="minutes"), "days": days}
     index_path.write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8")
 

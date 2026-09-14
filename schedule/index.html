@@ -6,102 +6,12 @@
 <title>2026 아이치·나고야 아시안게임 일자별 경기 일정</title>
 <meta name="description" content="2026 아이치·나고야 아시안게임 일자별 전 종목 세부 경기 일정 (공식 결과 사이트 기준)">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<style>
-:root {
-  --bg: #f6f5f2; --panel: #ffffff; --ink: #1b1d22; --muted: #6b6f78; --line: #e4e2dc;
-  --accent: #b3122e; --accent-soft: #fbe9ec; --gold: #b8860b; --gold-soft: #fbf3dc;
-  --bronze: #9a5b2e; --win: #0b7a4b; --chip: #efede8;
-}
-@media (prefers-color-scheme: dark) {
-  :root { --bg: #121317; --panel: #1b1d22; --ink: #ecebe7; --muted: #9a9ea8; --line: #2c2f36;
-    --accent: #ff5a74; --accent-soft: #3a1c23; --gold: #e3b341; --gold-soft: #332a12;
-    --bronze: #d49a6a; --win: #4cc38a; --chip: #262930; }
-}
-* { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--ink);
-  font: 15px/1.5 "Pretendard Variable", Pretendard, -apple-system, "Segoe UI", "Malgun Gothic", sans-serif; }
-a { color: inherit; }
-.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
-
-header.top { padding: 28px 0 14px; }
-header.top h1 { font-size: 24px; margin: 0; letter-spacing: -0.02em; }
-header.top p { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
-
-.sticky { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--line); }
-.days { display: flex; gap: 6px; overflow-x: auto; padding: 10px 0; scrollbar-width: thin; }
-.day { flex: 0 0 auto; border: 1px solid var(--line); background: var(--panel); border-radius: 10px;
-  padding: 6px 10px; min-width: 64px; text-align: center; cursor: pointer; color: var(--ink); font: inherit; }
-.day .dw { font-size: 11px; color: var(--muted); }
-.day .dd { font-size: 16px; font-weight: 700; line-height: 1.2; }
-.day .dc { font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
-.day.sun .dw { color: var(--accent); }
-.day.active { background: var(--ink); color: var(--bg); border-color: var(--ink); }
-.day.active .dw, .day.active .dc { color: var(--bg); opacity: .75; }
-.day.empty { opacity: .45; }
-
-.controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding: 0 0 10px; }
-.controls input[type=search] { flex: 1 1 220px; padding: 8px 12px; border-radius: 8px; border: 1px solid var(--line);
-  background: var(--panel); color: var(--ink); font: inherit; }
-.toggle { display: inline-flex; align-items: center; gap: 6px; padding: 7px 11px; border-radius: 8px;
-  border: 1px solid var(--line); background: var(--panel); cursor: pointer; user-select: none; font-size: 14px; }
-.toggle input { accent-color: var(--accent); margin: 0; }
-button.btn { padding: 7px 11px; border-radius: 8px; border: 1px solid var(--line); background: var(--panel);
-  color: var(--ink); font: inherit; font-size: 14px; cursor: pointer; }
-
-.chips { display: flex; flex-wrap: wrap; gap: 6px; padding: 14px 0 4px; }
-.chip { border: 1px solid transparent; background: var(--chip); color: var(--ink); border-radius: 999px;
-  padding: 4px 10px; font: inherit; font-size: 13px; cursor: pointer; }
-.chip b { font-weight: 600; color: var(--muted); margin-left: 3px; font-variant-numeric: tabular-nums; }
-.chip.on { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
-
-.summary { color: var(--muted); font-size: 13px; padding: 10px 0; }
-
-details.disc { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; margin: 0 0 10px; overflow: hidden; }
-details.disc > summary { list-style: none; cursor: pointer; padding: 12px 16px; display: flex; align-items: baseline; gap: 8px; }
-details.disc > summary::-webkit-details-marker { display: none; }
-details.disc > summary::before { content: "▸"; color: var(--muted); transition: transform .15s; display: inline-block; }
-details.disc[open] > summary::before { transform: rotate(90deg); }
-.disc-name { font-weight: 700; font-size: 16px; }
-.day .today { display: inline-block; font-size: 10px; font-weight: 700; color: #fff; background: var(--accent); border-radius: 4px; padding: 0 4px; margin-left: 2px; }
-.home { font-size: 13px; color: var(--muted); text-decoration: none; }
-.disc-meta { margin-left: auto; color: var(--muted); font-size: 12px; white-space: nowrap; }
-
-.tbl { overflow-x: auto; border-top: 1px solid var(--line); }
-table { width: 100%; border-collapse: collapse; font-size: 14px; }
-th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
-tr:last-child td { border-bottom: 0; }
-th { font-size: 12px; color: var(--muted); font-weight: 600; background: var(--bg); position: sticky; top: 0; }
-td.time { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; width: 64px; }
-td.ev .unit { font-weight: 600; }
-td.ev .ph { color: var(--muted); font-size: 12px; }
-td.venue { color: var(--muted); font-size: 13px; min-width: 150px; }
-td.st { white-space: nowrap; font-size: 12px; color: var(--muted); }
-.match { display: grid; grid-template-columns: auto 1fr auto; gap: 2px 8px; min-width: 190px; }
-.match .noc { font-weight: 700; font-size: 12px; letter-spacing: .03em; font-variant-numeric: tabular-nums; }
-.match .nm { font-size: 13px; }
-.match .sc { font-weight: 700; font-variant-numeric: tabular-nums; text-align: right; }
-.match .w { color: var(--win); }
-.kor { color: var(--accent); }
-tr.has-kor { background: var(--accent-soft); }
-.tag { display: inline-block; font-size: 11px; font-weight: 700; padding: 1px 6px; border-radius: 4px; margin-left: 6px; vertical-align: 1px; }
-.tag.gold { background: var(--gold-soft); color: var(--gold); }
-.tag.bronze { background: var(--gold-soft); color: var(--bronze); }
-.tag.live { background: var(--accent); color: #fff; }
-
-.empty-msg { text-align: center; color: var(--muted); padding: 60px 0; }
-footer { color: var(--muted); font-size: 12px; padding: 30px 0 50px; }
-
-@media (max-width: 640px) {
-  th.venue, td.venue { display: none; }
-  td, th { padding: 8px; }
-  header.top h1 { font-size: 20px; }
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="wrap">
   <header class="top">
-    <a class="home" href="../index.html">← 메인으로</a>
+    <nav class="toplinks"><a class="home" href="../index.html">← 메인으로</a><a class="korlink" href="korea.html">🇰🇷 한국 경기만 시간순으로 보기 →</a></nav>
     <h1>2026 아이치·나고야 아시안게임 일자별 경기 일정</h1>
     <p>전 종목 세부 경기 · 시간은 현지(JST = KST, 한국과 동일) · 10분마다 자동 갱신 · <span id="updated"></span></p>
   </header>
@@ -129,26 +39,10 @@ footer { color: var(--muted); font-size: 12px; padding: 30px 0 50px; }
   </footer>
 </main>
 
+<script src="common.js"></script>
 <script>
-const KO = {
-  ARC:"양궁", ATH:"육상", BDM:"배드민턴", BBL:"야구", SBL:"소프트볼", BKB:"농구", BK3:"3x3 농구", BKG:"브레이킹",
-  BOX:"복싱", CSL:"카누 슬라럼", CSP:"카누 스프린트", CKT:"크리켓", CRD:"사이클 도로", CTR:"사이클 트랙",
-  MTB:"사이클 산악자전거", BMX:"사이클 BMX 레이싱", BMF:"사이클 BMX 프리스타일", DIV:"다이빙", EQU:"승마",
-  ELS:"e스포츠", FEN:"펜싱", FBL:"축구", GLF:"골프", GAR:"기계체조", GRY:"리듬체조", GTR:"트램펄린",
-  HBL:"핸드볼", HOC:"하키", JJI:"주짓수", JUD:"유도", KAB:"카바디", KTE:"가라테", KUR:"쿠라시",
-  MMA:"종합격투기", MPN:"근대5종", PDL:"파델", ROW:"조정", RU7:"7인제 럭비", SAL:"요트", SHO:"사격",
-  SKB:"스케이트보드", CLB:"스포츠클라이밍", SQU:"스쿼시", SRF:"서핑", SWM:"경영", SWA:"아티스틱 스위밍",
-  SPK:"세팍타크로", TTE:"탁구", TKW:"태권도", TEN:"테니스", TST:"정구", TEQ:"테크볼", TRI:"트라이애슬론",
-  VVO:"배구", VBV:"비치발리볼", WPO:"수구", WLF:"역도", WRE:"레슬링", WSU:"우슈"
-};
-const STATUS_KO = { "Planned":"예정", "Scheduled":"예정", "Start List":"출전명단", "Getting Ready":"준비 중",
-  "Running":"진행 중", "Live":"진행 중", "Unofficial":"비공식 결과", "Official":"종료", "Finished":"종료",
-  "Postponed":"연기", "Cancelled":"취소", "Delayed":"지연", "Interrupted":"중단", "Rescheduled":"일정 변경" };
-const WD = ["일","월","화","수","목","금","토"];
-
 const $ = s => document.querySelector(s);
 const state = { date: null, discs: new Set(), q: "", onlyKor: false, onlyMedal: false, index: null, cache: {}, closed: new Set(), today: null };
-const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c]));
 
 function readHash() {
   const p = new URLSearchParams(location.hash.slice(1));
@@ -184,7 +78,7 @@ const medalTag = u => u.medal === "1" ? `<span class="tag gold">메달</span>` :
 
 function side(s) {
   const cls = [s.org === "KOR" ? "kor" : "", s.win ? "w" : ""].join(" ");
-  return `<span class="noc ${cls}">${esc(s.org)}</span><span class="nm ${cls}">${esc(s.name)}</span><span class="sc ${cls}">${esc(s.result)}</span>`;
+  return `<span class="noc ${cls}">${esc(s.org)}</span><span class="nm ${cls}" title="${esc(s.name)}">${esc(s.nameKo || s.name)}</span><span class="sc ${cls}">${esc(s.result)}</span>`;
 }
 
 function row(u) {
@@ -210,7 +104,7 @@ async function render() {
     (!state.onlyKor || involvesKor(u)) &&
     (!state.onlyMedal || u.medal === "1" || u.medal === "2") &&
     (!q || [u.unit, u.phase, u.event, u.venue, u.loc, KO[u.disc], u.discDesc,
-      u.unitEn, u.home?.org, u.home?.name, u.away?.org, u.away?.name].join(" ").toLowerCase().includes(q)));
+      u.unitEn, u.home?.org, u.home?.name, u.home?.nameKo, u.away?.org, u.away?.name, u.away?.nameKo].join(" ").toLowerCase().includes(q)));
 
   const counts = {};
   base.forEach(u => counts[u.disc] = (counts[u.disc] || 0) + 1);
