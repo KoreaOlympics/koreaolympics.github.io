@@ -120,9 +120,9 @@ function row(x) {
   const venue = [x.venue, x.loc && x.loc !== x.venue ? x.loc : ""].filter(Boolean).map(esc).join(" · ");
   const past = x.dt < nowJST().slice(0, 16) && /Official|Unofficial|Finished/.test(x.status || "");
   return `<tr class="${past ? "past" : ""}">
-    <td class="time">${esc(x.hideTime ? (x.est || "TBD") : x.time)}</td>
+    <td class="time">${esc(x.hideTime ? (x.est || "TBD") : x.time)}${x.endTime && x.endTime !== x.time ? `<div class="ath">~${esc(x.endTime)}</div>` : ""}</td>
     <td class="sport">${esc(x.sportName || KO[x.disc] || x.discDesc || "")}</td>
-    <td class="ev"><div class="unit" title="${esc(x.unitEn || "")}">${esc(x.unit)}${medal}${live}</div>${tag ? `<div>${tag}</div>` : ""}${tvLine(x.tv)}${x.note ? `<div class="note">📝 ${esc(x.note)}</div>` : ""}</td>
+    <td class="ev"><div class="unit" title="${esc(x.unitEn || "")}">${esc(!/조/.test(x.unit || "") && /조/.test(x.phase || "") ? `${x.phase.replace(/^예선\s*-\s*/, "")} ${x.unit}` : x.unit)}${medal}${live}</div>${tag ? `<div>${tag}</div>` : ""}${tvLine(x.tv)}${x.note ? `<div class="note">📝 ${esc(x.note)}</div>` : ""}</td>
     <td class="who">${who(x)}</td>
     <td class="venue">${venue}</td>
     <td class="st">${esc(STATUS_KO[x.status] || x.status || "")}<button class="rid" data-id="${esc(x.id)}" title="행 ID 복사: ${esc(x.id)}">#</button></td></tr>`;

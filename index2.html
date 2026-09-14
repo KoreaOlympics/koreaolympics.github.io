@@ -506,6 +506,27 @@ const DISC_INFO = {
   WPO: { e:'🤽', n:'수구', u:'watersports.html' },
   RU7: { e:'🏉', n:'7인제 럭비', u:'rugby.html' },
   KAB: { e:'🤼', n:'카바디', u:'kabaddi.html' },
+  MPN: { e:'🎽', n:'근대5종', u:'modernpentathlon.html' },
+  ARC: { e:'🏹', n:'양궁', u:'archery.html' },
+  ATH: { e:'🏃', n:'육상', u:'athletics.html' },
+  SWM: { e:'🏊', n:'경영', u:'swimming.html' },
+  FEN: { e:'🤺', n:'펜싱', u:'fencing.html' },
+  JUD: { e:'🥋', n:'유도', u:'judo.html' },
+  TKW: { e:'🥋', n:'태권도', u:'taekwondo.html' },
+  SHO: { e:'🎯', n:'사격', u:'shooting.html' },
+  BOX: { e:'🥊', n:'복싱', u:'boxing.html' },
+  WRE: { e:'🤼', n:'레슬링', u:'wrestling.html' },
+  WLF: { e:'🏋️', n:'역도', u:'weightlifting.html' },
+  GAR: { e:'🤸', n:'기계체조', u:'gymnastics.html' },
+  GRY: { e:'🎀', n:'리듬체조', u:'rhythmicgymnastics.html' },
+  CLB: { e:'🧗', n:'스포츠클라이밍', u:'climbing.html' },
+  SKB: { e:'🛹', n:'스케이트보드', u:'skateboard.html' },
+  BKG: { e:'🕺', n:'브레이킹', u:'breaking.html' },
+  TRI: { e:'🏊', n:'트라이애슬론', u:'triathlon.html' },
+  GLF: { e:'⛳', n:'골프', u:'golf.html' },
+  CRD: { e:'🚴', n:'사이클 도로', u:'cycling.html' },
+  CTR: { e:'🚴', n:'사이클 트랙', u:'cycling.html' },
+  KTE: { e:'🥋', n:'가라테', u:'karate.html' },
   SPK: { e:'🦶', n:'세팍타크로', u:null },
   CKT: { e:'🏏', n:'크리켓', u:null },
   VBV: { e:'🏐', n:'비치발리볼', u:'volleyball.html' },
@@ -549,13 +570,15 @@ async function loadSchedule() {
     getJSON('schedule/data/medals.json').catch(() => []),
     getJSON('schedule/data/brackets.json').catch(() => []),
   ]);
-  const hide = new Set(manual.hide || []), tv = manual.tv || {}, notes = manual.notes || {};
+  const hide = new Set(manual.hide || []), tv = manual.tv || {}, notes = manual.notes || {}, names = manual.names || {};
   const items = kor.filter(x => !hide.has(x.id)).map(x => {
     const info = DISC_INFO[x.disc] || { e:'🏅', n:x.discDesc, u:null };
     const w = x.ev && x.ev[0] === 'W';
     const [k, o] = x.home?.org === 'KOR' ? [x.home, x.away] : [x.away, x.home];
     return {
-      id: x.id, dt: x.dt, date: x.date, time: x.hideTime ? '' : x.time, status: x.status || '', tv: tv[x.id], note: notes[x.id] || '',
+      id: x.id, dt: x.dt, date: x.date, time: x.hideTime ? '' : x.time + (x.endTime && x.endTime !== x.time ? '~' + x.endTime : ''),
+      status: x.status || '', tv: tv[x.id], note: notes[x.id] || '',
+      athletes: ((manual.athletes || {})[x.id] || x.athletes || []).map(n => names[n] || n),
       emoji: info.e, sport: (x.ev && /^[MW]\./.test(x.ev) ? (w ? '여자 ' : '남자 ') : '') + info.n,
       url: w && info.uw ? info.uw : info.u,
       title: matchTitle(x),
