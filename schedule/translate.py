@@ -125,7 +125,7 @@ GENERIC = [
     (r"\b" + N + r"(?:st|nd|rd|th) Place Match", r"\1위 결정전"),
     (r"Placing " + N + r"th-" + N + r"th", r"\1–\2위 결정전"),
     (r"\b" + N + r"th-" + N + r"th\b", r"\1–\2위"),
-    (r"Classification", "순위결정전"), (r"Placement Round", "순위결정전"), (r"Playoff", "플레이오프"),
+    (r"Placing " + N + "-" + N + r"\b", r"\1–\2위 결정전"), (r"Classification Match", "순위결정전"), (r"Classification", "순위결정전"), (r"Placement Round", "순위결정전"), (r"Playoff", "플레이오프"),
     # rounds
     (r"\b1/" + N + r" (?:Finals?|Eliminations?)", lambda m: f"{2 * int(m.group(1))}강"),
     (r"(?:Elimination )?Round of " + N, r"\1강"), (r"Table of " + N, r"\1강"),
