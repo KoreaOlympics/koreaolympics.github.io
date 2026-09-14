@@ -100,7 +100,7 @@ def main():
     while d <= LAST:
         days.append({"date": str(d), "count": counts.get(str(d), 0)})
         d += datetime.timedelta(days=1)
-    kor = korea.build()
+    kor = korea.build(get)
     (OUT / "kor.json").write_text(json.dumps(kor, ensure_ascii=False), encoding="utf-8")
     print("kor items", len(kor))
     try:
