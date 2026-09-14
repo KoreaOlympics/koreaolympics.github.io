@@ -15,3 +15,9 @@ const STATUS_KO = { "Planned":"예정", "Scheduled":"예정", "Start List":"출�
 const WD = ["일","월","화","수","목","금","토"];
 
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c]));
+
+// Broadcaster badges from kor_manual.json "tv": {"SBS": "19:00", "KBS": "18:35 1TV"}
+const tvBadges = tv => tv && Object.keys(tv).length ? `<span class="tv">${Object.entries(tv).map(([ch, t]) =>
+  `<span class="tvb tv-${esc(ch)}" title="${esc(ch)} ${esc(t)} 중계">${esc(ch)}</span>`).join("")}</span>` : "";
+const tvLine = tv => tv && Object.keys(tv).length ? `<div class="tvline">📺 ${Object.entries(tv).map(([ch, t]) =>
+  `<span class="tvb tv-${esc(ch)}">${esc(ch)}</span> ${esc(t)}`).join(" · ")}</div>` : "";

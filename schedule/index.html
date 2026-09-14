@@ -42,7 +42,7 @@
 <script src="common.js"></script>
 <script>
 const $ = s => document.querySelector(s);
-const state = { date: null, discs: new Set(), q: "", onlyKor: false, onlyMedal: false, index: null, cache: {}, closed: new Set(), today: null };
+const state = { date: null, discs: new Set(), q: "", onlyKor: false, onlyMedal: false, index: null, cache: {}, closed: new Set(), today: null, tv: {} };
 
 function readHash() {
   const p = new URLSearchParams(location.hash.slice(1));
@@ -91,7 +91,7 @@ function row(u) {
   const venue = [u.venue, u.loc && u.loc !== u.venue ? u.loc : ""].filter(Boolean).map(esc).join(" · ");
   return `<tr class="${involvesKor(u) ? "has-kor" : ""}">
     <td class="time">${esc(time)}</td>
-    <td class="ev"><div class="unit" title="${esc(u.unitEn)}">${esc(u.unit)}${medalTag(u)}${live}</div>${ph}</td>
+    <td class="ev"><div class="unit" title="${esc(u.unitEn)}">${esc(u.unit)}${medalTag(u)}${live}${tvBadges(state.tv[`${state.date}/${u.disc}/${u.key}`])}</div>${ph}</td>
     <td>${match}</td>
     <td class="venue">${venue}</td>
     <td class="st">${esc(STATUS_KO[u.status] || u.status)}</td></tr>`;
@@ -144,6 +144,7 @@ async function loadIndex() {
 
 async function init() {
   await loadIndex();
+  state.tv = await fetch(`kor_manual.json?t=${Date.now()}`, { cache: "no-store" }).then(r => r.json()).then(m => m.tv || {}).catch(() => ({}));
   const h = readHash(), dates = state.index.days.map(d => d.date);
   // Open on today's date unless the link explicitly names another day.
   state.picked = dates.includes(h.date);
