@@ -89,6 +89,10 @@
   .corner-nav a{color:var(--muted);font-weight:600;padding:6px 12px;border:1px solid var(--border);border-radius:20px;background:var(--panel);}
   .corner-nav a:hover{color:var(--gold);border-color:var(--gold);text-decoration:none;}
   @media (max-width:560px){.corner-nav{font-size:12px;}.corner-nav a{padding:5px 9px;}}
+  .sched-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:-8px 0 26px;}
+  .sched-nav a{font-size:14px;font-weight:700;color:var(--ink);padding:9px 16px;border:1px solid var(--gold);border-radius:24px;background:var(--panel);}
+  .sched-nav a:hover{background:var(--gold);color:#fff;text-decoration:none;}
+  @media (max-width:560px){.sched-nav a{font-size:13px;padding:7px 12px;}}
 
   /* Search */
   .search-box{position:relative;margin:0 0 30px;}
@@ -152,6 +156,11 @@
   <nav class="corner-nav">
     <a href="korea-favorites.html">🏅 한국의 우승후보</a>
     <a href="asia-stars.html">⭐ 주요 아시아 스타 선수</a>
+  </nav>
+  <nav class="sched-nav" aria-label="경기 일정">
+    <a href="schedule/">📅 일자별 경기 일정</a>
+    <a href="schedule/korea.html">🇰🇷 한국 경기 일정</a>
+    <a href="schedule/brackets.html">🏆 구기종목 대진표</a>
   </nav>
   <header class="hero">
     <div class="hero-inner">

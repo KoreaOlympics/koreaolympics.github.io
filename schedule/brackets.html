@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>구기종목 대진표 · 2026 아이치·나고야 아시안게임</title>
+<meta name="description" content="2026 아이치·나고야 아시안게임 구기종목 조별 순위와 결선 대진표 (10분마다 자동 갱신)">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="style.css">
+<style>
+:root { --card: #ffffff; --tbd: #9a9ea8; --conn: #c9c6be; --kor-bar: #b3122e; --win-bg: #f1f8f4; }
+@media (prefers-color-scheme: dark) { :root { --card: #22252b; --tbd: #6f7480; --conn: #3a3e46; --kor-bar: #ff5a74; --win-bg: #1a2a22; } }
+
+.hero { padding: 28px 0 8px; }
+.hero h1 { font-size: 26px; margin: 4px 0 2px; letter-spacing: -0.02em; }
+.hero p { margin: 0; color: var(--muted); font-size: 13px; }
+
+.bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 10px 0; }
+.seg { display: inline-flex; background: var(--chip); border-radius: 10px; padding: 3px; }
+.seg button { border: 0; background: none; font: inherit; font-weight: 600; font-size: 15px; padding: 6px 18px; border-radius: 8px; cursor: pointer; color: var(--muted); }
+.seg button.on { background: var(--panel); color: var(--ink); box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+.sportnav { display: flex; gap: 6px; overflow-x: auto; flex: 1; }
+.sportnav a { flex: 0 0 auto; text-decoration: none; font-size: 13px; padding: 5px 10px; border-radius: 999px; background: var(--chip); color: var(--ink); }
+
+section.ev { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; margin: 16px 0; padding: 18px 20px 20px; scroll-margin-top: 70px; }
+.ev-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
+.ev-head h2 { margin: 0; font-size: 21px; letter-spacing: -0.01em; }
+.ev-emoji { font-size: 26px; line-height: 1; }
+.korbadge { font-size: 12px; font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 3px 9px; border-radius: 999px; }
+h3.sub { font-size: 14px; color: var(--muted); font-weight: 700; margin: 18px 0 8px; letter-spacing: .02em; }
+
+.groups { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 12px; }
+.gcard { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--card); }
+.gcard h4 { margin: 0; padding: 8px 12px; font-size: 14px; background: var(--bg); border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; }
+.gcard table { font-size: 13px; }
+.gcard th, .gcard td { padding: 6px 6px; border-bottom: 1px solid var(--line); text-align: center; position: static; background: none; }
+.gcard th { font-size: 11px; color: var(--muted); }
+.gcard td.tm, .gcard th.tm { text-align: left; }
+.gcard td.rk { color: var(--muted); width: 22px; font-variant-numeric: tabular-nums; }
+.gcard td.pts { font-weight: 700; }
+.gcard td { font-variant-numeric: tabular-nums; }
+.gcard tr.kor td { background: var(--accent-soft); }
+.gcard tr.kor td.tm { color: var(--accent); font-weight: 700; }
+.q { display: inline-block; font-size: 10px; font-weight: 700; color: #fff; background: var(--win); border-radius: 4px; padding: 0 4px; margin-left: 4px; vertical-align: 1px; }
+
+.flag { width: 20px; height: 14px; border-radius: 2px; object-fit: cover; vertical-align: -2px; margin-right: 6px; box-shadow: 0 0 0 1px rgba(0,0,0,.08); background: var(--chip); display: inline-block; }
+
+.bwrap { overflow-x: auto; padding-bottom: 6px; }
+.bracket { position: relative; }
+.bracket svg { position: absolute; inset: 0; pointer-events: none; }
+.bracket svg path { fill: none; stroke: var(--conn); stroke-width: 2; }
+.colhead { position: absolute; top: 0; font-size: 12px; font-weight: 700; color: var(--muted); text-align: center; }
+.colhead span { display: block; font-weight: 500; font-size: 11px; }
+.m { position: absolute; background: var(--card); border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 1px 2px rgba(0,0,0,.04); overflow: hidden; }
+.m .meta { font-size: 11px; color: var(--muted); padding: 4px 9px 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.m .meta .live { color: #fff; background: var(--accent); border-radius: 3px; padding: 0 4px; font-weight: 700; margin-right: 4px; }
+.t { display: flex; align-items: center; gap: 0; padding: 3px 9px; font-size: 13px; height: 24px; }
+.t .nm { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.t .sc { font-weight: 700; font-variant-numeric: tabular-nums; margin-left: 8px; min-width: 18px; text-align: right; }
+.t.tbd .nm { color: var(--tbd); font-style: italic; font-size: 12px; }
+.t.win { background: var(--win-bg); font-weight: 700; }
+.t.kor { box-shadow: inset 3px 0 0 var(--kor-bar); }
+.t.kor .nm { color: var(--accent); font-weight: 700; }
+.t.lose .nm, .t.lose .sc { color: var(--muted); }
+
+.minis { display: flex; flex-wrap: wrap; gap: 18px 28px; }
+.mini h5 { margin: 0 0 6px; font-size: 13px; }
+
+.rounds { display: flex; gap: 14px; overflow-x: auto; padding-bottom: 6px; }
+.round { flex: 0 0 auto; width: 226px; }
+.round h5 { margin: 0 0 6px; font-size: 13px; color: var(--muted); }
+.round .m { position: static; margin-bottom: 8px; width: 100%; }
+
+details.gm { margin-top: 10px; }
+details.gm summary { cursor: pointer; font-size: 13px; color: var(--muted); }
+.gmlist { display: grid; grid-template-columns: repeat(auto-fill, minmax(226px, 1fr)); gap: 8px; margin-top: 8px; }
+.gmlist .m { position: static; }
+.empty { color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <nav class="toplinks"><a class="home" href="index.html">← 전체 일정</a><span><a class="home" href="korea.html">🇰🇷 한국 경기</a> · <a class="home" href="../index2.html">아시안게임 페이지</a></span></nav>
+    <h1>🏆 구기종목 대진표</h1>
+    <p>조별 순위 · 결선 토너먼트 · 순위결정전 · 10분마다 자동 갱신 · <span id="updated"></span></p>
+  </header>
+</div>
+<div class="sticky">
+  <div class="wrap bar">
+    <div class="seg" role="tablist"><button data-g="M" class="on">남자</button><button data-g="W">여자</button></div>
+    <nav class="sportnav" id="sportnav"></nav>
+  </div>
+</div>
+<main class="wrap" id="main"></main>
+<div class="wrap"><footer>
+  데이터 출처: <a href="https://results.asiangames2026.org/" target="_blank" rel="noopener">results.asiangames2026.org</a> 공식 조 편성·대진 데이터. 빈 칸은 앞 경기 결과에 따라 채워집니다(예: "A조 1위").
+  대진 데이터가 공개되지 않은 라운드는 일정 기준 경기 카드로 표시합니다. 국기 이미지: flagcdn.com
+</footer></div>
+
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c]));
+const WD = ["일","월","화","수","목","금","토"];
+const EMOJI = { FBL:"⚽", BBL:"⚾", SBL:"🥎", BKB:"🏀", BK3:"🏀", VVO:"🏐", HOC:"🏑", HBL:"🤾", WPO:"🤽", RU7:"🏉" };
+const ORDER = ["FBL","BKB","BK3","VVO","HBL","HOC","WPO","RU7","BBL","SBL"];
+const TIES = new Set(["FBL","HOC","HBL","RU7","WPO"]);
+const ISO = { AFG:"af", BRN:"bh", BAN:"bd", BHU:"bt", BRU:"bn", CAM:"kh", CHN:"cn", PRK:"kp", HKG:"hk", IND:"in", INA:"id",
+  IRI:"ir", IRQ:"iq", JPN:"jp", JOR:"jo", KAZ:"kz", KOR:"kr", KUW:"kw", KGZ:"kg", LAO:"la", LBN:"lb", MAC:"mo", MAS:"my",
+  MDV:"mv", MGL:"mn", MYA:"mm", NEP:"np", OMA:"om", PAK:"pk", PLE:"ps", PHI:"ph", QAT:"qa", KSA:"sa", SGP:"sg", SRI:"lk",
+  SYR:"sy", TJK:"tj", THA:"th", TLS:"tl", TKM:"tm", UAE:"ae", UZB:"uz", VIE:"vn", YEM:"ye" };
+const flag = org => ISO[org]
+  ? `<img class="flag" src="https://flagcdn.com/w40/${ISO[org]}.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">`
+  : `<span class="flag"></span>`;
+const when = dt => { if (!dt) return ""; const d = new Date(dt); const k = new Date(d.getTime() + 9 * 3600e3);
+  return `${k.getUTCMonth() + 1}/${k.getUTCDate()}(${WD[k.getUTCDay()]}) ${dt.slice(11, 16)}`; };
+const LIVE = /RUNNING|LIVE|Running|Live/;
+const DONE = /FINISHED|OFFICIAL|UNOFFICIAL|Official|Unofficial/;
+
+let DATA = [], gender = "M";
+try { gender = localStorage.getItem("brk-g") || "M"; } catch (e) {}
+
+function teamRow(s, other, done) {
+  if (!s || (!s.org && !s.name)) return `<div class="t tbd"><span class="flag"></span><span class="nm">${esc(s?.from || "미정")}</span><span class="sc"></span></div>`;
+  const win = s.win || (done && s.res !== "" && other?.res !== "" && +s.res > +other.res);
+  const lose = done && !win && (other?.win || (s.res !== "" && other?.res !== "" && +s.res < +other.res));
+  return `<div class="t ${win ? "win" : ""} ${lose ? "lose" : ""} ${s.org === "KOR" ? "kor" : ""}">${flag(s.org)}<span class="nm">${esc(s.name)}</span><span class="sc">${esc(s.res ?? "")}</span></div>`;
+}
+function card(m, style = "") {
+  const done = DONE.test(m.status || "");
+  const meta = `${LIVE.test(m.status || "") ? `<span class="live">LIVE</span>` : ""}${esc(when(m.dt))}${m.loc || m.venue ? " · " + esc(m.loc || m.venue) : ""}`;
+  return `<div class="m" style="${style}"><div class="meta">${m.unit ? esc(m.unit) + " · " : ""}${meta}</div>${teamRow(m.home, m.away, done)}${teamRow(m.away, m.home, done)}</div>`;
+}
+
+const CW = 214, CH = 74, GX = 46, GY = 14, HEAD = 34;
+function orderCols(cols) {
+  // Feeds lists matches in schedule order; reorder each round so games sit next to the game they feed.
+  cols = cols.map(c => ({ ...c, matches: [...c.matches] }));
+  for (let ci = cols.length - 2; ci >= 0; ci--) {
+    const byKey = new Map(cols[ci].matches.map(m => [m.key, m]));
+    const ordered = [];
+    cols[ci + 1].matches.forEach(n => [n.home?.src, n.away?.src].forEach(k => {
+      if (k && byKey.has(k)) { ordered.push(byKey.get(k)); byKey.delete(k); }
+    }));
+    cols[ci].matches = [...ordered, ...cols[ci].matches.filter(m => byKey.has(m.key))];
+  }
+  return cols;
+}
+function bracketSvg(cols) {
+  cols = orderCols(cols);
+  const nmax = Math.max(...cols.map(c => c.matches.length), 1);
+  const H = HEAD + nmax * (CH + GY), W = cols.length * (CW + GX) - GX;
+  const pos = cols.map((c, ci) => c.matches.map((_, i) => {
+    const slot = (H - HEAD) / c.matches.length;
+    return { x: ci * (CW + GX), y: HEAD + slot * (i + 0.5) - CH / 2 };
+  }));
+  let paths = "", cards = "", heads = "";
+  cols.forEach((c, ci) => {
+    const days = [...new Set(c.matches.map(m => when(m.dt).split(" ")[0]).filter(Boolean))];
+    heads += `<div class="colhead" style="left:${ci * (CW + GX)}px;width:${CW}px">${esc(c.name)}<span>${esc(days.length > 1 ? days[0] + " ~ " + days[days.length - 1] : days[0] || "")}</span></div>`;
+    c.matches.forEach((m, i) => { const p = pos[ci][i]; cards += card(m, `left:${p.x}px;top:${p.y}px;width:${CW}px;height:${CH}px`); });
+    const next = pos[ci + 1];
+    if (!next) return;
+    pos[ci].forEach((p, i) => {
+      const key = c.matches[i].key;
+      const j = cols[ci + 1].matches.findIndex(nm => key && (nm.home?.src === key || nm.away?.src === key));
+      const n = j >= 0 ? next[j] : next.length * 2 === pos[ci].length ? next[Math.floor(i / 2)] : null;
+      if (!n) return;
+      const x1 = p.x + CW, y1 = p.y + CH / 2, x2 = n.x, y2 = n.y + CH / 2, mx = x1 + GX / 2;
+      paths += `<path d="M${x1} ${y1} H${mx} V${y2} H${x2}"/>`;
+    });
+  });
+  return `<div class="bwrap"><div class="bracket" style="width:${W}px;height:${H}px"><svg width="${W}" height="${H}">${paths}</svg>${heads}${cards}</div></div>`;
+}
+
+function standingsHtml(e) {
+  const ties = TIES.has(e.disc);
+  return `<div class="groups">${e.standings.map(g => `
+    <div class="gcard"><h4><span>${esc(g.name)}</span></h4><table>
+      <thead><tr><th></th><th class="tm">팀</th><th>경기</th><th>승</th>${ties ? "<th>무</th>" : ""}<th>패</th><th>득실</th><th>승점</th></tr></thead>
+      <tbody>${g.rows.map((r, i) => `<tr class="${r.org === "KOR" ? "kor" : ""}">
+        <td class="rk">${esc(r.rk || i + 1)}</td><td class="tm">${flag(r.org)}${esc(r.name)}${r.q ? `<span class="q">${esc(r.q)}</span>` : ""}</td>
+        <td>${esc(r.p)}</td><td>${esc(r.w)}</td>${ties ? `<td>${esc(r.t)}</td>` : ""}<td>${esc(r.l)}</td>
+        <td>${r.diff > 0 ? "+" : ""}${esc(r.diff)}</td><td class="pts">${esc(r.pts)}</td></tr>`).join("")}</tbody></table></div>`).join("")}</div>`;
+}
+
+function korStatus(e) {
+  for (const g of e.standings) {
+    const i = g.rows.findIndex(r => r.org === "KOR");
+    if (i >= 0) return +g.rows[i].p ? `🇰🇷 ${g.name} ${g.rows[i].rk || i + 1}위 (${g.rows[i].w}승 ${g.rows[i].l}패)` : `🇰🇷 ${g.name}`;
+  }
+  return "";
+}
+
+function section(e) {
+  const groupKeys = new Set(e.standings.map(g => g.key));
+  const bracketCodes = new Set(e.bracket.flatMap(t => t.cols.map(c => c.code)));
+  const groupRounds = e.rounds.filter(r => groupKeys.has(r.key));
+  const extra = e.rounds.filter(r => !groupKeys.has(r.key) && !bracketCodes.has(r.key));
+  const [main, ...minis] = e.bracket;
+  const k = korStatus(e);
+  let html = `<section class="ev" id="${e.disc}-${e.ev[0]}">
+    <div class="ev-head"><span class="ev-emoji">${EMOJI[e.disc] || "🏅"}</span><h2>${esc(e.label)}</h2>${k ? `<span class="korbadge">${esc(k)}</span>` : ""}</div>`;
+  if (e.standings.length) {
+    html += `<h3 class="sub">조별 순위</h3>${standingsHtml(e)}`;
+    if (groupRounds.length) html += `<details class="gm"><summary>조별 경기 일정·결과 보기 (${groupRounds.reduce((n, r) => n + r.matches.length, 0)}경기)</summary>
+      ${groupRounds.map(r => `<h3 class="sub">${esc(r.name)}</h3><div class="gmlist">${r.matches.map(m => card(m)).join("")}</div>`).join("")}</details>`;
+  }
+  if (main) html += `<h3 class="sub">${esc(main.title)}</h3>${bracketSvg(main.cols)}`;
+  if (minis.length) html += `<h3 class="sub">동메달 결정전 · 순위결정전</h3><div class="minis">${minis.map(t =>
+    `<div class="mini"><h5>${esc(t.title)}</h5>${bracketSvg(t.cols)}</div>`).join("")}</div>`;
+  const big = extra.filter(r => r.matches.length > 8), small = extra.filter(r => r.matches.length <= 8);
+  if (small.length) html += `<h3 class="sub">${main ? "그 밖의 라운드" : "결선 · 순위결정전 경기"}</h3><div class="rounds">${small.map(r =>
+    `<div class="round"><h5>${esc(r.name)}</h5>${r.matches.map(m => card(m)).join("")}</div>`).join("")}</div>`;
+  big.forEach(r => { html += `<details class="gm" ${e.standings.length ? "" : "open"}><summary>${esc(r.name)} 전체 경기 (${r.matches.length}경기)</summary><div class="gmlist">${r.matches.map(m => card(m)).join("")}</div></details>`; });
+  if (!e.standings.length && !e.bracket.length && !e.rounds.length) html += `<p class="empty">아직 공개된 대진 정보가 없습니다.</p>`;
+  return html + `</section>`;
+}
+
+function render() {
+  document.querySelectorAll(".seg button").forEach(b => b.classList.toggle("on", b.dataset.g === gender));
+  const list = DATA.filter(e => e.ev[0] === gender).sort((a, b) => ORDER.indexOf(a.disc) - ORDER.indexOf(b.disc));
+  $("#sportnav").innerHTML = list.map(e => `<a href="#${e.disc}-${e.ev[0]}">${EMOJI[e.disc] || ""} ${esc(e.label.replace(/^(남자|여자)\s*/, ""))}</a>`).join("");
+  $("#main").innerHTML = list.map(section).join("");
+}
+
+async function load() {
+  const [data, index] = await Promise.all([
+    fetch(`data/brackets.json?t=${Date.now()}`, { cache: "no-store" }).then(r => r.json()),
+    fetch(`data/index.json?t=${Date.now()}`, { cache: "no-store" }).then(r => r.json()),
+  ]);
+  DATA = data;
+  $("#updated").textContent = `마지막 갱신: ${new Date(index.updated).toLocaleString("ko-KR", { timeZone: "Asia/Seoul", dateStyle: "medium", timeStyle: "short" })}`;
+}
+
+document.querySelector(".seg").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  gender = b.dataset.g; try { localStorage.setItem("brk-g", gender); } catch (err) {}
+  render(); window.scrollTo({ top: 0 });
+});
+load().then(render);
+setInterval(() => load().then(() => { const y = scrollY; render(); scrollTo(0, y); }).catch(() => {}), 10 * 60 * 1000);
+</script>
+</body>
+</html>

@@ -5,7 +5,7 @@
 """
 import argparse, json, zlib, datetime, pathlib, urllib.request, time
 from translate import ko, NOC_KO
-import korea
+import korea, brackets
 
 BASE = "https://back.results.asiangames2026.org/s/AG2026/en/"
 HEADERS = {
@@ -103,6 +103,10 @@ def main():
     kor = korea.build()
     (OUT / "kor.json").write_text(json.dumps(kor, ensure_ascii=False), encoding="utf-8")
     print("kor items", len(kor))
+    try:
+        brackets.build(get)
+    except Exception as e:  # brackets are a bonus; never block the schedule refresh
+        print("brackets failed", e)
 
     meta = {"updated": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="minutes"), "days": days}
     index_path.write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8")
