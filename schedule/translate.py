@@ -3,6 +3,17 @@ import re
 
 N = r"(\d+)"
 
+NOC_KO = {
+    "AFG": "아프가니스탄", "BRN": "바레인", "BAN": "방글라데시", "BHU": "부탄", "BRU": "브루나이", "CAM": "캄보디아",
+    "CHN": "중국", "PRK": "북한", "HKG": "홍콩", "IND": "인도", "INA": "인도네시아", "IRI": "이란", "IRQ": "이라크",
+    "JPN": "일본", "JOR": "요르단", "KAZ": "카자흐스탄", "KOR": "대한민국", "KUW": "쿠웨이트", "KGZ": "키르기스스탄",
+    "LAO": "라오스", "LBN": "레바논", "MAC": "마카오", "MAS": "말레이시아", "MDV": "몰디브", "MGL": "몽골",
+    "MYA": "미얀마", "NEP": "네팔", "OMA": "오만", "PAK": "파키스탄", "PLE": "팔레스타인", "PHI": "필리핀",
+    "QAT": "카타르", "KSA": "사우디아라비아", "SGP": "싱가포르", "SRI": "스리랑카", "SYR": "시리아", "TPE": "대만",
+    "TJK": "타지키스탄", "THA": "태국", "TLS": "동티모르", "TKM": "투르크메니스탄", "UAE": "아랍에미리트",
+    "UZB": "우즈베키스탄", "VIE": "베트남", "YEM": "예멘", "ART": "아시아 난민팀",
+}
+
 # Sport-specific terms: applied only to that discipline, before the generic rules.
 SPORT = {
     "ARC": [(r"Qualification Round", "랭킹라운드"), (r"Compound", "컴파운드"), (r"Recurve", "리커브")],
