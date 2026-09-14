@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026 아이치·나고야 아시안게임 일자별 경기 일정</title>
+<meta name="description" content="2026 아이치·나고야 아시안게임 일자별 전 종목 세부 경기 일정 (공식 결과 사이트 기준)">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --bg: #f6f5f2; --panel: #ffffff; --ink: #1b1d22; --muted: #6b6f78; --line: #e4e2dc;
+  --accent: #b3122e; --accent-soft: #fbe9ec; --gold: #b8860b; --gold-soft: #fbf3dc;
+  --bronze: #9a5b2e; --win: #0b7a4b; --chip: #efede8;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #121317; --panel: #1b1d22; --ink: #ecebe7; --muted: #9a9ea8; --line: #2c2f36;
+    --accent: #ff5a74; --accent-soft: #3a1c23; --gold: #e3b341; --gold-soft: #332a12;
+    --bronze: #d49a6a; --win: #4cc38a; --chip: #262930; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink);
+  font: 15px/1.5 "Pretendard Variable", Pretendard, -apple-system, "Segoe UI", "Malgun Gothic", sans-serif; }
+a { color: inherit; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+
+header.top { padding: 28px 0 14px; }
+header.top h1 { font-size: 24px; margin: 0; letter-spacing: -0.02em; }
+header.top p { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
+
+.sticky { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--line); }
+.days { display: flex; gap: 6px; overflow-x: auto; padding: 10px 0; scrollbar-width: thin; }
+.day { flex: 0 0 auto; border: 1px solid var(--line); background: var(--panel); border-radius: 10px;
+  padding: 6px 10px; min-width: 64px; text-align: center; cursor: pointer; color: var(--ink); font: inherit; }
+.day .dw { font-size: 11px; color: var(--muted); }
+.day .dd { font-size: 16px; font-weight: 700; line-height: 1.2; }
+.day .dc { font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.day.sun .dw { color: var(--accent); }
+.day.active { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.day.active .dw, .day.active .dc { color: var(--bg); opacity: .75; }
+.day.empty { opacity: .45; }
+
+.controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding: 0 0 10px; }
+.controls input[type=search] { flex: 1 1 220px; padding: 8px 12px; border-radius: 8px; border: 1px solid var(--line);
+  background: var(--panel); color: var(--ink); font: inherit; }
+.toggle { display: inline-flex; align-items: center; gap: 6px; padding: 7px 11px; border-radius: 8px;
+  border: 1px solid var(--line); background: var(--panel); cursor: pointer; user-select: none; font-size: 14px; }
+.toggle input { accent-color: var(--accent); margin: 0; }
+button.btn { padding: 7px 11px; border-radius: 8px; border: 1px solid var(--line); background: var(--panel);
+  color: var(--ink); font: inherit; font-size: 14px; cursor: pointer; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 6px; padding: 14px 0 4px; }
+.chip { border: 1px solid transparent; background: var(--chip); color: var(--ink); border-radius: 999px;
+  padding: 4px 10px; font: inherit; font-size: 13px; cursor: pointer; }
+.chip b { font-weight: 600; color: var(--muted); margin-left: 3px; font-variant-numeric: tabular-nums; }
+.chip.on { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+
+.summary { color: var(--muted); font-size: 13px; padding: 10px 0; }
+
+details.disc { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; margin: 0 0 10px; overflow: hidden; }
+details.disc > summary { list-style: none; cursor: pointer; padding: 12px 16px; display: flex; align-items: baseline; gap: 8px; }
+details.disc > summary::-webkit-details-marker { display: none; }
+details.disc > summary::before { content: "▸"; color: var(--muted); transition: transform .15s; display: inline-block; }
+details.disc[open] > summary::before { transform: rotate(90deg); }
+.disc-name { font-weight: 700; font-size: 16px; }
+.day .today { display: inline-block; font-size: 10px; font-weight: 700; color: #fff; background: var(--accent); border-radius: 4px; padding: 0 4px; margin-left: 2px; }
+.home { font-size: 13px; color: var(--muted); text-decoration: none; }
+.disc-meta { margin-left: auto; color: var(--muted); font-size: 12px; white-space: nowrap; }
+
+.tbl { overflow-x: auto; border-top: 1px solid var(--line); }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+th { font-size: 12px; color: var(--muted); font-weight: 600; background: var(--bg); position: sticky; top: 0; }
+td.time { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; width: 64px; }
+td.ev .unit { font-weight: 600; }
+td.ev .ph { color: var(--muted); font-size: 12px; }
+td.venue { color: var(--muted); font-size: 13px; min-width: 150px; }
+td.st { white-space: nowrap; font-size: 12px; color: var(--muted); }
+.match { display: grid; grid-template-columns: auto 1fr auto; gap: 2px 8px; min-width: 190px; }
+.match .noc { font-weight: 700; font-size: 12px; letter-spacing: .03em; font-variant-numeric: tabular-nums; }
+.match .nm { font-size: 13px; }
+.match .sc { font-weight: 700; font-variant-numeric: tabular-nums; text-align: right; }
+.match .w { color: var(--win); }
+.kor { color: var(--accent); }
+tr.has-kor { background: var(--accent-soft); }
+.tag { display: inline-block; font-size: 11px; font-weight: 700; padding: 1px 6px; border-radius: 4px; margin-left: 6px; vertical-align: 1px; }
+.tag.gold { background: var(--gold-soft); color: var(--gold); }
+.tag.bronze { background: var(--gold-soft); color: var(--bronze); }
+.tag.live { background: var(--accent); color: #fff; }
+
+.empty-msg { text-align: center; color: var(--muted); padding: 60px 0; }
+footer { color: var(--muted); font-size: 12px; padding: 30px 0 50px; }
+
+@media (max-width: 640px) {
+  th.venue, td.venue { display: none; }
+  td, th { padding: 8px; }
+  header.top h1 { font-size: 20px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="home" href="../index.html">← 메인으로</a>
+    <h1>2026 아이치·나고야 아시안게임 일자별 경기 일정</h1>
+    <p>전 종목 세부 경기 · 시간은 현지(JST = KST, 한국과 동일) · 10분마다 자동 갱신 · <span id="updated"></span></p>
+  </header>
+</div>
+<div class="sticky">
+  <div class="wrap">
+    <nav class="days" id="days" aria-label="날짜 선택"></nav>
+    <div class="controls">
+      <input type="search" id="q" placeholder="검색: 국가코드(KOR), 국가명, 세부종목(한/영), 경기장…">
+      <label class="toggle"><input type="checkbox" id="onlyKor"> 🇰🇷 한국 경기</label>
+      <label class="toggle"><input type="checkbox" id="onlyMedal"> 🏅 메달 결정</label>
+      <button class="btn" id="expandAll">모두 펼치기</button>
+      <button class="btn" id="collapseAll">모두 접기</button>
+    </div>
+  </div>
+</div>
+<main class="wrap">
+  <div class="chips" id="chips"></div>
+  <div class="summary" id="summary"></div>
+  <div id="list"></div>
+  <footer>
+    데이터 출처: <a href="https://results.asiangames2026.org/" target="_blank" rel="noopener">results.asiangames2026.org</a> (공식 결과 사이트).
+    대진이 확정되지 않은 경기는 국가가 표시되지 않으며, 일정은 변경될 수 있으니 공식 사이트를 함께 확인하세요.
+    세부종목명에 마우스를 올리면 영문 원문이 표시됩니다. 한국 경기 필터는 대진(국가)이 확정된 단체 구기 종목 위주로 동작합니다.
+  </footer>
+</main>
+
+<script>
+const KO = {
+  ARC:"양궁", ATH:"육상", BDM:"배드민턴", BBL:"야구", SBL:"소프트볼", BKB:"농구", BK3:"3x3 농구", BKG:"브레이킹",
+  BOX:"복싱", CSL:"카누 슬라럼", CSP:"카누 스프린트", CKT:"크리켓", CRD:"사이클 도로", CTR:"사이클 트랙",
+  MTB:"사이클 산악자전거", BMX:"사이클 BMX 레이싱", BMF:"사이클 BMX 프리스타일", DIV:"다이빙", EQU:"승마",
+  ELS:"e스포츠", FEN:"펜싱", FBL:"축구", GLF:"골프", GAR:"기계체조", GRY:"리듬체조", GTR:"트램펄린",
+  HBL:"핸드볼", HOC:"하키", JJI:"주짓수", JUD:"유도", KAB:"카바디", KTE:"가라테", KUR:"쿠라시",
+  MMA:"종합격투기", MPN:"근대5종", PDL:"파델", ROW:"조정", RU7:"7인제 럭비", SAL:"요트", SHO:"사격",
+  SKB:"스케이트보드", CLB:"스포츠클라이밍", SQU:"스쿼시", SRF:"서핑", SWM:"경영", SWA:"아티스틱 스위밍",
+  SPK:"세팍타크로", TTE:"탁구", TKW:"태권도", TEN:"테니스", TST:"정구", TEQ:"테크볼", TRI:"트라이애슬론",
+  VVO:"배구", VBV:"비치발리볼", WPO:"수구", WLF:"역도", WRE:"레슬링", WSU:"우슈"
+};
+const STATUS_KO = { "Planned":"예정", "Scheduled":"예정", "Start List":"출전명단", "Getting Ready":"준비 중",
+  "Running":"진행 중", "Live":"진행 중", "Unofficial":"비공식 결과", "Official":"종료", "Finished":"종료",
+  "Postponed":"연기", "Cancelled":"취소", "Delayed":"지연", "Interrupted":"중단", "Rescheduled":"일정 변경" };
+const WD = ["일","월","화","수","목","금","토"];
+
+const $ = s => document.querySelector(s);
+const state = { date: null, discs: new Set(), q: "", onlyKor: false, onlyMedal: false, index: null, cache: {}, closed: new Set(), today: null };
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c]));
+
+function readHash() {
+  const p = new URLSearchParams(location.hash.slice(1));
+  return { date: p.get("d"), discs: (p.get("s") || "").split(",").filter(Boolean), kor: p.get("kor") === "1", medal: p.get("medal") === "1" };
+}
+function writeHash() {
+  const p = new URLSearchParams();
+  if (state.picked) p.set("d", state.date);
+  if (state.discs.size) p.set("s", [...state.discs].join(","));
+  if (state.onlyKor) p.set("kor", "1");
+  if (state.onlyMedal) p.set("medal", "1");
+  const q = p.toString();
+  history.replaceState(null, "", q ? "#" + q : location.pathname + location.search);
+}
+
+async function load(date) {
+  if (!state.cache[date]) state.cache[date] = fetch(`data/${date}.json?t=${Date.now()}`, { cache: "no-store" }).then(r => r.json());
+  return state.cache[date];
+}
+
+function renderDays() {
+  $("#days").innerHTML = state.index.days.map(({ date, count }) => {
+    const d = new Date(date + "T00:00:00+09:00"), wd = new Date(date + "T12:00:00Z").getUTCDay();
+    const [, m, dd] = date.split("-");
+    return `<button class="day ${date === state.date ? "active" : ""} ${wd === 0 ? "sun" : ""} ${count ? "" : "empty"}" data-date="${date}">
+      <div class="dw">${+m}월 · ${WD[wd]}</div><div class="dd">${+dd}${date === state.today ? '<span class="today">오늘</span>' : ""}</div><div class="dc">${count}경기</div></button>`;
+  }).join("");
+  $("#days .active")?.scrollIntoView({ inline: "center", block: "nearest" });
+}
+
+const involvesKor = u => [u.home, u.away].some(s => s && s.org === "KOR");
+const medalTag = u => u.medal === "1" ? `<span class="tag gold">메달</span>` : u.medal === "2" ? `<span class="tag bronze">동메달전</span>` : "";
+
+function side(s) {
+  const cls = [s.org === "KOR" ? "kor" : "", s.win ? "w" : ""].join(" ");
+  return `<span class="noc ${cls}">${esc(s.org)}</span><span class="nm ${cls}">${esc(s.name)}</span><span class="sc ${cls}">${esc(s.result)}</span>`;
+}
+
+function row(u) {
+  const match = u.home || u.away
+    ? `<div class="match">${u.home ? side(u.home) : "<span></span><span>—</span><span></span>"}${u.away ? side(u.away) : "<span></span><span>—</span><span></span>"}</div>`
+    : `<span style="color:var(--muted)">—</span>`;
+  const live = /Running|Live/.test(u.status) ? `<span class="tag live">LIVE</span>` : "";
+  const ph = u.phase && !u.unit.startsWith(u.phase) ? `<div class="ph">${esc(u.phase)}</div>` : "";
+  const time = u.hideTime ? (u.est || "TBD") : u.time;
+  const venue = [u.venue, u.loc && u.loc !== u.venue ? u.loc : ""].filter(Boolean).map(esc).join(" · ");
+  return `<tr class="${involvesKor(u) ? "has-kor" : ""}">
+    <td class="time">${esc(time)}</td>
+    <td class="ev"><div class="unit" title="${esc(u.unitEn)}">${esc(u.unit)}${medalTag(u)}${live}</div>${ph}</td>
+    <td>${match}</td>
+    <td class="venue">${venue}</td>
+    <td class="st">${esc(STATUS_KO[u.status] || u.status)}</td></tr>`;
+}
+
+async function render() {
+  const units = await load(state.date);
+  const q = state.q.trim().toLowerCase();
+  const base = units.filter(u =>
+    (!state.onlyKor || involvesKor(u)) &&
+    (!state.onlyMedal || u.medal === "1" || u.medal === "2") &&
+    (!q || [u.unit, u.phase, u.event, u.venue, u.loc, KO[u.disc], u.discDesc,
+      u.unitEn, u.home?.org, u.home?.name, u.away?.org, u.away?.name].join(" ").toLowerCase().includes(q)));
+
+  const counts = {};
+  base.forEach(u => counts[u.disc] = (counts[u.disc] || 0) + 1);
+  const allDiscs = [...new Set(units.map(u => u.disc))].sort((a, b) => (KO[a] || a).localeCompare(KO[b] || b, "ko"));
+  $("#chips").innerHTML = allDiscs.map(c =>
+    `<button class="chip ${state.discs.has(c) ? "on" : ""}" data-disc="${c}">${esc(KO[c] || c)}<b>${counts[c] || 0}</b></button>`).join("");
+
+  const shown = state.discs.size ? base.filter(u => state.discs.has(u.disc)) : base;
+  const groups = new Map();
+  shown.forEach(u => { if (!groups.has(u.disc)) groups.set(u.disc, []); groups.get(u.disc).push(u); });
+  const order = [...groups.keys()].sort((a, b) => (KO[a] || a).localeCompare(KO[b] || b, "ko"));
+
+  const [y, m, d] = state.date.split("-");
+  const wd = WD[new Date(state.date + "T12:00:00Z").getUTCDay()];
+  $("#summary").textContent = `${+m}월 ${+d}일 (${wd}) · ${order.length}개 종목 · ${shown.length}경기` +
+    (shown.length !== units.length ? ` (전체 ${units.length}경기 중)` : "");
+
+  $("#list").innerHTML = order.length ? order.map(c => {
+    const list = groups.get(c);
+    const medals = list.filter(u => u.medal === "1").length;
+    const first = list.find(u => !u.hideTime)?.time, last = [...list].reverse().find(u => !u.hideTime)?.time;
+    return `<details class="disc" data-disc="${c}" ${state.closed.has(c) ? "" : "open"}>
+      <summary><span class="disc-name">${esc(KO[c] || list[0].discDesc)}</span>
+        <span class="disc-meta">${list.length}경기${medals ? ` · 메달 ${medals}` : ""}${first ? ` · ${first}–${last}` : ""}</span></summary>
+      <div class="tbl"><table><thead><tr><th>시간</th><th>세부종목 / 경기</th><th>대진 · 결과</th><th class="venue">경기장</th><th>상태</th></tr></thead>
+      <tbody>${list.map(row).join("")}</tbody></table></div></details>`;
+  }).join("") : `<div class="empty-msg">${units.length ? "조건에 맞는 경기가 없습니다." : "이 날짜에 등록된 경기가 없습니다."}</div>`;
+  writeHash();
+}
+
+async function loadIndex() {
+  state.index = await fetch(`data/index.json?t=${Date.now()}`, { cache: "no-store" }).then(r => r.json());
+  state.today = new Date(Date.now() + 9 * 3600e3).toISOString().slice(0, 10);
+  const up = new Date(state.index.updated);
+  $("#updated").textContent = `마지막 갱신: ${up.toLocaleString("ko-KR", { timeZone: "Asia/Seoul", dateStyle: "medium", timeStyle: "short" })}`;
+}
+
+async function init() {
+  await loadIndex();
+  const h = readHash(), dates = state.index.days.map(d => d.date);
+  // Open on today's date unless the link explicitly names another day.
+  state.picked = dates.includes(h.date);
+  state.date = state.picked ? h.date : dates.includes(state.today) ? state.today : dates[0];
+  state.discs = new Set(h.discs); state.onlyKor = h.kor; state.onlyMedal = h.medal;
+  $("#onlyKor").checked = state.onlyKor; $("#onlyMedal").checked = state.onlyMedal;
+  renderDays(); render();
+
+  $("#days").addEventListener("click", e => {
+    const b = e.target.closest(".day"); if (!b) return;
+    state.date = b.dataset.date; state.picked = true; state.discs.clear(); renderDays(); render(); window.scrollTo({ top: 0 });
+  });
+  $("#chips").addEventListener("click", e => {
+    const b = e.target.closest(".chip"); if (!b) return;
+    const c = b.dataset.disc; state.discs.has(c) ? state.discs.delete(c) : state.discs.add(c); render();
+  });
+  let t; $("#q").addEventListener("input", e => { clearTimeout(t); t = setTimeout(() => { state.q = e.target.value; render(); }, 150); });
+  $("#onlyKor").addEventListener("change", e => { state.onlyKor = e.target.checked; render(); });
+  $("#onlyMedal").addEventListener("change", e => { state.onlyMedal = e.target.checked; render(); });
+  $("#list").addEventListener("toggle", e => {
+    const d = e.target; if (!d.matches?.("details.disc")) return;
+    d.open ? state.closed.delete(d.dataset.disc) : state.closed.add(d.dataset.disc);
+  }, true);
+  const setAll = open => document.querySelectorAll("details.disc").forEach(d => d.open = open);
+  $("#expandAll").addEventListener("click", () => setAll(true));
+  $("#collapseAll").addEventListener("click", () => setAll(false));
+
+  // Data is republished every 10 minutes; pull it without a page reload.
+  setInterval(async () => {
+    try {
+      await loadIndex(); state.cache = {}; renderDays(); render();
+    } catch (e) { /* offline or mid-deploy; try again next tick */ }
+  }, 10 * 60 * 1000);
+}
+init();
+</script>
+</body>
+</html>

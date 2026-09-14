@@ -1,0 +1,46 @@
+name: Update AG2026 schedule
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"   # quick: yesterday..tomorrow (JST)
+    - cron: "3 */3 * * *"    # full: every competition day
+  workflow_dispatch:
+    inputs:
+      full:
+        description: "Refresh every day"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: schedule-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch
+        run: |
+          if [ "${{ github.event.schedule }}" = "3 */3 * * *" ] || [ "${{ inputs.full }}" = "true" ]; then
+            python schedule/fetch.py
+          else
+            python schedule/fetch.py --window 1
+          fi
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git add schedule/data
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -q -m "schedule: update data"
+          # Someone may have pushed site edits meanwhile.
+          for i in 1 2 3; do git pull -q --rebase && git push -q && exit 0; sleep 5; done
+          exit 1
