@@ -34,6 +34,24 @@ tr.past td { opacity: .6; }
 .jump a b { color: var(--muted); font-weight: 600; margin-left: 3px; font-variant-numeric: tabular-nums; }
 .jump a.is-today { border-color: var(--accent); color: var(--accent); }
 @media (max-width: 640px) { td.venue, th.venue { display: none; } .daybox table { min-width: 0; } }
+.rbtn { border: 1px solid var(--line); background: var(--panel); color: var(--accent); border-radius: 6px;
+  font: inherit; font-size: 11px; font-weight: 700; padding: 1px 6px; cursor: pointer; margin-left: 6px; }
+.rbtn:hover { background: var(--accent-soft); }
+dialog.res { border: 0; border-radius: 14px; padding: 0; max-width: 680px; width: calc(100% - 24px); background: var(--panel); color: var(--ink); }
+dialog.res::backdrop { background: rgba(0,0,0,.45); }
+.res-head { display: flex; align-items: baseline; gap: 10px; padding: 16px 18px 10px; border-bottom: 1px solid var(--line); }
+.res-head h3 { margin: 0; font-size: 17px; }
+.res-head .st { color: var(--muted); font-size: 12px; }
+.res-head button { margin-left: auto; border: 0; background: none; font-size: 20px; line-height: 1; cursor: pointer; color: var(--muted); }
+.res-body { padding: 8px 18px 18px; max-height: 70vh; overflow: auto; }
+.res-body table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.res-body th, .res-body td { padding: 6px 8px; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap; }
+.res-body th:nth-child(2), .res-body td:nth-child(2) { text-align: left; white-space: normal; }
+.res-body th { font-size: 11px; color: var(--muted); }
+.res-body tr.kor td { background: var(--accent-soft); font-weight: 700; }
+.res-body tr.kor td:nth-child(2) { color: var(--accent); }
+.res-score { font-size: 22px; font-weight: 800; text-align: center; padding: 10px 0 4px; font-variant-numeric: tabular-nums; }
+.res-note { color: var(--muted); font-size: 12px; margin: 8px 0 0; }
 </style>
 </head>
 <body>
@@ -54,6 +72,10 @@ tr.past td { opacity: .6; }
     </div>
   </div>
 </div>
+<dialog class="res" id="resDlg">
+  <div class="res-head"><h3 id="resTitle"></h3><span class="st" id="resStatus"></span><button id="resClose" aria-label="닫기">×</button></div>
+  <div class="res-body" id="resBody"></div>
+</dialog>
 <main class="wrap">
   <div class="summary" id="summary"></div>
   <div id="list"></div>
@@ -67,7 +89,10 @@ tr.past td { opacity: .6; }
 <script src="common.js"></script>
 <script>
 const $ = s => document.querySelector(s);
-const state = { items: [], manual: {}, q: "", showPast: false, onlyMedal: false, today: "" };
+const COL_KO = { VICT: "승", DEF: "패", PEN: "반칙", PENALTIES: "반칙", POINTS: "점수", TOTAL: "합계", TIME: "기록",
+  SCORE: "점수", TOTAL_POINTS: "총점", SETS: "세트", GOALS: "득점", DIFF: "차이", LAPS: "랩", REACTION_TIME: "반응",
+  TOUCHES_SCORED: "찌른 수", TOUCHES_RECEIVED: "맞은 수" };
+const state = { items: [], manual: {}, results: new Set(), q: "", showPast: false, onlyMedal: false, today: "" };
 const nowJST = () => new Date(Date.now() + 9 * 3600e3).toISOString();
 
 const bust = u => `${u}?t=${Date.now()}`;
@@ -78,6 +103,7 @@ async function loadAll() {
     fetch(bust("data/index.json"), { cache: "no-store" }).then(r => r.json()),
   ]);
   state.items = items; state.manual = manual || {};
+  state.results = new Set(await fetch(bust("data/results_index.json"), { cache: "no-store" }).then(r => r.ok ? r.json() : []).catch(() => []));
   state.today = nowJST().slice(0, 10);
   $("#updated").textContent = `마지막 갱신: ${new Date(index.updated).toLocaleString("ko-KR", { timeZone: "Asia/Seoul", dateStyle: "medium", timeStyle: "short" })}`;
 }
@@ -125,7 +151,7 @@ function row(x) {
     <td class="ev"><div class="unit" title="${esc(x.unitEn || "")}">${esc(!/조/.test(x.unit || "") && /조/.test(x.phase || "") ? `${x.phase.replace(/^예선\s*-\s*/, "")} ${x.unit}` : x.unit)}${medal}${live}</div>${tag ? `<div>${tag}</div>` : ""}${tvLine(x.tv)}${x.note ? `<div class="note">📝 ${esc(x.note)}</div>` : ""}</td>
     <td class="who">${who(x)}</td>
     <td class="venue">${venue}</td>
-    <td class="st">${esc(STATUS_KO[x.status] || x.status || "")}<button class="rid" data-id="${esc(x.id)}" title="행 ID 복사: ${esc(x.id)}">#</button></td></tr>`;
+    <td class="st">${esc(STATUS_KO[x.status] || x.status || "")}${state.results.has(x.id.replace(/\//g, "_")) ? `<button class="rbtn" data-res="${esc(x.id)}">결과</button>` : ""}<button class="rid" data-id="${esc(x.id)}" title="행 ID 복사: ${esc(x.id)}">#</button></td></tr>`;
 }
 
 function render() {
@@ -154,11 +180,40 @@ function render() {
   document.documentElement.style.setProperty("--stick", $("#stickybar").offsetHeight + "px");
 }
 
+async function showResult(id) {
+  const names = state.manual.names || {};
+  const nm = s => (s || "").split(/\s*\/\s*/).map(p => names[p] || p).join(" / ");
+  $("#resTitle").textContent = "불러오는 중…"; $("#resStatus").textContent = ""; $("#resBody").innerHTML = "";
+  $("#resDlg").showModal();
+  let d;
+  try { d = await fetch(bust(`data/results/${id.replace(/\//g, "_")}.json`), { cache: "no-store" }).then(r => r.json()); }
+  catch (e) { $("#resTitle").textContent = "결과를 불러오지 못했습니다"; return; }
+  // the schedule's own Korean unit name reads better than the results feed's title
+  const row = rows().find(r => r.id === id);
+  $("#resTitle").textContent = [row && (KO[row.disc] || row.sportName), row ? row.unit : d.title].filter(Boolean).join(" · ");
+  $("#resStatus").textContent = [STATUS_KO[d.status] || d.status, d.venue].filter(Boolean).join(" · ");
+  const head = d.competitors.length === 2 && d.competitors.every(c => c.res !== "")
+    ? `<div class="res-score">${d.competitors.map(c => `${esc(c.name)} <b>${esc(c.res)}</b>`).join(" : ")}</div>`
+    + (d.periods.length ? `<p class="res-note">${d.periods.map(p => `${esc(p.name)} ${esc(p.home)}-${esc(p.away)}`).join(" · ")}</p>` : "")
+    : "";
+  const rows = d.competitors.map(c => `<tr class="${c.org === "KOR" ? "kor" : ""}">
+      <td>${esc(c.rk)}</td><td>${esc(c.org)} ${esc(nm(c.name))}${c.medal ? " 🏅" : ""}</td>
+      ${d.cols.map(k => `<td>${esc(c.cols[k] ?? "")}</td>`).join("")}
+      ${d.showRes ? `<td>${esc(c.res)}${c.irm && c.irm !== "OK" ? " " + esc(c.irm) : ""}</td>` : ""}</tr>`).join("");
+  $("#resBody").innerHTML = head + `<table><thead><tr><th>순위</th><th>선수 · 팀</th>
+    ${d.cols.map(k => `<th>${esc(COL_KO[k] || k)}</th>`).join("")}${d.showRes ? "<th>기록</th>" : ""}</tr></thead><tbody>${rows}</tbody></table>
+    <p class="res-note">공식 결과 사이트 기준 · 10분마다 갱신</p>`;
+}
+
 async function init() {
   await loadAll(); render();
   let t; $("#q").addEventListener("input", e => { clearTimeout(t); t = setTimeout(() => { state.q = e.target.value; render(); }, 150); });
   for (const id of ["showPast", "onlyMedal"]) $("#" + id).addEventListener("change", e => { state[id] = e.target.checked; render(); });
+  $("#resClose").addEventListener("click", () => $("#resDlg").close());
+  $("#resDlg").addEventListener("click", e => { if (e.target === $("#resDlg")) $("#resDlg").close(); });
   $("#list").addEventListener("click", async e => {
+    const r = e.target.closest("button.rbtn");
+    if (r) return showResult(r.dataset.res);
     const b = e.target.closest("button.rid"); if (!b) return;
     try { await navigator.clipboard.writeText(b.dataset.id); b.textContent = "✓"; } catch { prompt("행 ID", b.dataset.id); }
     setTimeout(() => b.textContent = "#", 1200);
