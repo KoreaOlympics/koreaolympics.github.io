@@ -27,7 +27,7 @@ td.who { min-width: 180px; }
 .vs b { font-variant-numeric: tabular-nums; }
 button.rid { border: 0; background: none; color: var(--muted); cursor: pointer; font: inherit; font-size: 12px; padding: 0 4px; opacity: .5; }
 button.rid:hover { opacity: 1; }
-tr.past td { opacity: .6; }
+tr.past td:not(.st) { opacity: .6; }
 .jump { display: flex; gap: 6px; overflow-x: auto; padding: 10px 0; }
 .jump a { flex: 0 0 auto; text-decoration: none; border: 1px solid var(--line); background: var(--panel); border-radius: 8px;
   padding: 4px 9px; font-size: 13px; color: var(--ink); }
@@ -196,12 +196,12 @@ async function showResult(id) {
     ? `<div class="res-score">${d.competitors.map(c => `${esc(c.name)} <b>${esc(c.res)}</b>`).join(" : ")}</div>`
     + (d.periods.length ? `<p class="res-note">${d.periods.map(p => `${esc(p.name)} ${esc(p.home)}-${esc(p.away)}`).join(" · ")}</p>` : "")
     : "";
-  const rows = d.competitors.map(c => `<tr class="${c.org === "KOR" ? "kor" : ""}">
+  const trs = d.competitors.map(c => `<tr class="${c.org === "KOR" ? "kor" : ""}">
       <td>${esc(c.rk)}</td><td>${esc(c.org)} ${esc(nm(c.name))}${c.medal ? " 🏅" : ""}</td>
       ${d.cols.map(k => `<td>${esc(c.cols[k] ?? "")}</td>`).join("")}
       ${d.showRes ? `<td>${esc(c.res)}${c.irm && c.irm !== "OK" ? " " + esc(c.irm) : ""}</td>` : ""}</tr>`).join("");
   $("#resBody").innerHTML = head + `<table><thead><tr><th>순위</th><th>선수 · 팀</th>
-    ${d.cols.map(k => `<th>${esc(COL_KO[k] || k)}</th>`).join("")}${d.showRes ? "<th>기록</th>" : ""}</tr></thead><tbody>${rows}</tbody></table>
+    ${d.cols.map(k => `<th>${esc(COL_KO[k] || k)}</th>`).join("")}${d.showRes ? "<th>기록</th>" : ""}</tr></thead><tbody>${trs}</tbody></table>
     <p class="res-note">공식 결과 사이트 기준 · 10분마다 갱신</p>`;
 }
 
