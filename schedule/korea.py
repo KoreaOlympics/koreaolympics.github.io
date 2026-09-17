@@ -1,8 +1,9 @@
 """Korea-only view: Korean athlete names and data/kor.json."""
-import glob, json, pathlib, re
+import datetime, glob, json, pathlib, re
 
 HERE = pathlib.Path(__file__).parent
 DATA = HERE / "data"
+JST = datetime.timezone(datetime.timedelta(hours=9))
 
 
 def name_key(s):
@@ -68,7 +69,59 @@ def load_entries(get=None, refresh=False):
         return {}
 
 
-def build(get=None, refresh_entries=False):
+def session_id(item):
+    """Parts of one session (modern pentathlon semi-final A: fencing, obstacle, swim, laser run) share a start list."""
+    parts = item["key"].split(".")
+    return f"{item['date']}/{item['disc']}/{'.'.join(parts[:-1])}.{parts[-1][:4]}"
+
+
+def apply_start_lists(get, items, days=1, limit=120):
+    """Entries name every Korean in the event, but a later round only has those who advanced, split across heats or
+    semi-finals. Each unit's official start list fixes that: athletes becomes the Koreans actually in it, and "lineup"
+    says where the names came from ("start", "none" = no Korean in it, "entries" = start list not out yet).
+    Cached in data/kor_startlists.json; finished units are not refetched. days=None looks at every day up to tomorrow."""
+    path = DATA / "kor_startlists.json"
+    try:
+        cache = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        cache = {}
+    today = datetime.datetime.now(JST).date()
+    hi = str(today + datetime.timedelta(days=days or 1))
+    lo = str(today - datetime.timedelta(days=days)) if days is not None else ""
+    calls = 0
+    for x in items:
+        if x.get("home") or x.get("away"):
+            continue
+        sid = session_id(x)
+        c = cache.get(sid)
+        if get and lo <= x["date"] <= hi and calls < limit and not (c and c["final"]):
+            calls += 1
+            try:
+                d = get(f"{x['disc']}/results/{(x.get('keys') or [x['key']])[0]}")
+            except Exception as e:
+                print("  start list fail", sid, e)
+                d = None
+            comps = (d or {}).get("Competitors") or []
+            if comps:
+                kor = [p for p in comps if p.get("Org") == "KOR"]
+                # a team competitor is named after its country; its members aren't listed, so keep the entries then
+                names = [athlete_ko(p.get("Name", "")) for p in kor if p.get("Name") != p.get("OrgDesc")]
+                c = cache[sid] = {"athletes": names, "team": len(kor) > len(names),
+                                  "final": "Official" in ((d.get("Info") or {}).get("StatusDesc") or "")}
+        if not c:
+            x["lineup"] = "entries"
+        elif c["athletes"] or c["team"]:
+            x["lineup"] = "start"
+            x["athletes"] = c["athletes"] or x["athletes"]
+        else:
+            x["lineup"] = "none"
+            x["athletes"] = []
+    if get:
+        path.write_text(json.dumps(cache, ensure_ascii=False, sort_keys=True), encoding="utf-8")
+        print("start lists fetched", calls)
+
+
+def build(get=None, refresh_entries=False, start_days=1):
     """Korea's games: every unit where Korea appears in the official draw/start list, every medal-deciding unit of an
     event Korea is entered in, and anything named in kor_manual.json "include" (ID prefixes like "2026-09-16/MPN").
     Multi-part sessions (e.g. modern pentathlon semi-final A) collapse into one row."""
@@ -110,4 +163,5 @@ def build(get=None, refresh_entries=False):
                     g["status"] = u["status"]  # a session is as finished as its last part
     items += sessions.values()
     items.sort(key=lambda x: (x["dt"], x["disc"]))
+    apply_start_lists(get, items, start_days)
     return items

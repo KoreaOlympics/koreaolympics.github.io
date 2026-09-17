@@ -21,6 +21,7 @@ section { scroll-margin-top: var(--stick, 0px); }
 td.sport { font-weight: 600; }
 td.who { min-width: 180px; }
 .ath { font-size: 13px; }
+.lineup { font-size: 11px; color: var(--muted); }
 .tag.man { background: #e7f0ff; color: #2456b3; }
 .note { font-size: 12px; color: var(--accent); margin-top: 2px; }
 .vs { font-size: 13px; }
@@ -114,6 +115,7 @@ function rows() {
   const out = state.items.filter(x => !hide.has(x.id)).map(x => ({
     ...x,
     athletes: (m.athletes || {})[x.id] || (x.athletes || []).map(nm),
+    manualAthletes: !!(m.athletes || {})[x.id],
     note: (m.notes || {})[x.id] || "",
     tv: (m.tv || {})[x.id],
     home: x.home && { ...x.home, nameKo: x.home.org === "KOR" && !x.home.team ? nm(x.home.nameKo) : x.home.nameKo },
@@ -136,7 +138,10 @@ function who(x) {
       (x.athletes.length ? `<div class="ath">${esc(x.athletes.join(", "))}</div>` : "");
   }
   const vs = x.vs ? `<div class="vs">vs ${esc(x.vs)}</div>` : "";
-  return (x.athletes.length ? `<div class="ath">${esc(x.athletes.join(", "))}</div>` : `<div class="ath">대한민국</div>`) + vs;
+  // lineup comes from the unit's official start list; before it is out the names are everyone entered in the event
+  const src = x.manualAthletes ? "" : x.lineup === "entries" && x.athletes.length > 1 ? `<div class="lineup">엔트리 기준 · 출전 명단 발표 전</div>`
+    : x.lineup === "none" ? `<div class="lineup">출전 한국 선수 없음</div>` : "";
+  return (x.athletes.length ? `<div class="ath">${esc(x.athletes.join(", "))}</div>` : x.lineup === "none" ? "" : `<div class="ath">대한민국</div>`) + vs + src;
 }
 
 function row(x) {
