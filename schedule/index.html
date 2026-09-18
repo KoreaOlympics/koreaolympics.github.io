@@ -6,7 +6,7 @@
 <title>2026 아이치·나고야 아시안게임 일자별 경기 일정</title>
 <meta name="description" content="2026 아이치·나고야 아시안게임 일자별 전 종목 세부 경기 일정 (공식 결과 사이트 기준)">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 <div class="wrap">
@@ -42,7 +42,7 @@
 <script src="common.js"></script>
 <script>
 const $ = s => document.querySelector(s);
-const state = { date: null, discs: new Set(), q: "", onlyKor: false, onlyMedal: false, index: null, cache: {}, closed: new Set(), today: null, tv: {} };
+const state = { date: null, discs: new Set(), q: "", onlyKor: false, onlyMedal: false, index: null, cache: {}, closed: new Set(), today: null, tv: {}, open: new Set() };
 
 function readHash() {
   const p = new URLSearchParams(location.hash.slice(1));
@@ -89,10 +89,11 @@ function row(u) {
   const ph = u.phase && !u.unit.startsWith(u.phase) ? `<div class="ph">${esc(u.phase)}</div>` : "";
   const time = u.hideTime ? (u.est || "TBD") : u.time;
   const venue = [u.venue, u.loc && u.loc !== u.venue ? u.loc : ""].filter(Boolean).map(esc).join(" · ");
-  return `<tr class="${involvesKor(u) ? "has-kor" : ""}">
+  const id = `${u.disc}/${u.key}`;
+  return `<tr class="${involvesKor(u) ? "has-kor" : ""} ${state.open.has(id) ? "open" : ""}" data-row="${esc(id)}">
     <td class="time">${esc(time)}</td>
     <td class="ev"><div class="unit" title="${esc(u.unitEn)}">${esc(u.unit)}${medalTag(u)}${live}${tvBadges(state.tv[`${state.date}/${u.disc}/${u.key}`])}</div>${ph}</td>
-    <td>${match}</td>
+    <td class="m">${match}</td>
     <td class="venue">${venue}</td>
     <td class="st">${esc(STATUS_KO[u.status] || u.status)}</td></tr>`;
 }
@@ -129,7 +130,7 @@ async function render() {
     return `<details class="disc" data-disc="${c}" ${state.closed.has(c) ? "" : "open"}>
       <summary><span class="disc-name">${esc(KO[c] || list[0].discDesc)}</span>
         <span class="disc-meta">${list.length}경기${medals ? ` · 메달 ${medals}` : ""}${first ? ` · ${first}–${last}` : ""}</span></summary>
-      <div class="tbl"><table><thead><tr><th>시간</th><th>세부종목 / 경기</th><th>대진 · 결과</th><th class="venue">경기장</th><th>상태</th></tr></thead>
+      <div class="tbl cards"><table><thead><tr><th>시간</th><th>세부종목 / 경기</th><th>대진 · 결과</th><th class="venue">경기장</th><th>상태</th></tr></thead>
       <tbody>${list.map(row).join("")}</tbody></table></div></details>`;
   }).join("") : `<div class="empty-msg">${units.length ? "조건에 맞는 경기가 없습니다." : "이 날짜에 등록된 경기가 없습니다."}</div>`;
   writeHash();
@@ -168,6 +169,14 @@ async function init() {
     const d = e.target; if (!d.matches?.("details.disc")) return;
     d.open ? state.closed.delete(d.dataset.disc) : state.closed.add(d.dataset.disc);
   }, true);
+  // phones: tapping a game card shows or hides its venue and status
+  $("#list").addEventListener("click", e => {
+    const tr = e.target.closest("tr[data-row]");
+    if (!tr || e.target.closest("a, button") || !matchMedia("(max-width: 640px)").matches) return;
+    const id = tr.dataset.row;
+    state.open.has(id) ? state.open.delete(id) : state.open.add(id);
+    tr.classList.toggle("open", state.open.has(id));
+  });
   const setAll = open => document.querySelectorAll("details.disc").forEach(d => d.open = open);
   $("#expandAll").addEventListener("click", () => setAll(true));
   $("#collapseAll").addEventListener("click", () => setAll(false));
