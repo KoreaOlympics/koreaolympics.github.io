@@ -53,6 +53,44 @@ dialog.res::backdrop { background: rgba(0,0,0,.45); }
 .res-body tr.kor td:nth-child(2) { color: var(--accent); }
 .res-score { font-size: 22px; font-weight: 800; text-align: center; padding: 10px 0 4px; font-variant-numeric: tabular-nums; }
 .res-note { color: var(--muted); font-size: 12px; margin: 8px 0 0; }
+.res-sub { margin: 16px 0 4px; font-size: 14px; }
+.res-sub:first-child { margin-top: 8px; }
+
+/* Phones: each game is a compact card (time, sport, event, athletes); tap it for TV, notes, venue and status. */
+.detail-toggle { display: none; }
+@media (max-width: 640px) {
+  .detail-toggle { display: inline-flex; }
+  .res-body { padding: 6px 10px 14px; }
+  .res-body table { font-size: 12px; }
+  .res-body th, .res-body td { padding: 5px 4px; }
+  .res-head { padding: 12px 12px 8px; }
+  /* keep the sticky bar to two short rows: dates, then search + filters in one scrollable line */
+  .jump { padding: 8px 0 6px; }
+  .controls { flex-wrap: nowrap; overflow-x: auto; gap: 6px; padding-bottom: 8px; scrollbar-width: none; }
+  .controls input[type=search] { flex: 0 0 150px; padding: 6px 10px; font-size: 14px; }
+  .controls .toggle { flex: 0 0 auto; padding: 5px 9px; font-size: 13px; white-space: nowrap; }
+  .daybox table { min-width: 0; table-layout: auto; }
+  .daybox thead { display: none; }
+  .daybox tbody { display: block; }
+  .daybox tr { display: grid; grid-template-columns: 44px minmax(0, 1fr); column-gap: 10px; padding: 10px 12px;
+    border-bottom: 1px solid var(--line); cursor: pointer; }
+  .daybox tr:last-child { border-bottom: 0; }
+  .daybox td { display: block; padding: 0; border: 0; width: auto; min-width: 0; }
+  .daybox td.time { grid-column: 1; grid-row: 1 / span 3; }
+  .daybox td.sport { grid-column: 2; font-size: 12px; font-weight: 700; color: var(--muted); }
+  .daybox td.sport::after { content: "자세히 ▾"; float: right; font-weight: 400; opacity: .7; }
+  .daybox tr.open td.sport::after, body.detail .daybox td.sport::after { content: ""; }
+  .daybox tr.open td.sport::after { content: "접기 ▴"; }
+  .daybox td.ev, .daybox td.who { grid-column: 2; }
+  .daybox td.ev .unit { font-size: 14px; }
+  .daybox td.venue, .daybox td.st, .daybox .tvline, .daybox .note, .daybox .lineup, .daybox .tag.man { display: none; }
+  .daybox tr.open td.venue, .daybox tr.open td.st, .daybox tr.open .tvline, .daybox tr.open .note, .daybox tr.open .lineup,
+  body.detail .daybox td.venue, body.detail .daybox td.st, body.detail .daybox .tvline, body.detail .daybox .note,
+  body.detail .daybox .lineup { display: block; }
+  .daybox tr.open .tag.man, body.detail .daybox .tag.man { display: inline-block; }
+  .daybox tr.open td.venue, body.detail .daybox td.venue { grid-column: 2; margin-top: 4px; font-size: 12px; }
+  .daybox tr.open td.st, body.detail .daybox td.st { grid-column: 2; margin-top: 4px; }
+}
 </style>
 </head>
 <body>
@@ -70,6 +108,7 @@ dialog.res::backdrop { background: rgba(0,0,0,.45); }
       <input type="search" id="q" placeholder="검색: 선수 이름, 종목, 세부종목, 상대국…">
       <label class="toggle"><input type="checkbox" id="showPast"> 지난 날짜 보기</label>
       <label class="toggle"><input type="checkbox" id="onlyMedal"> 🏅 메달 결정</label>
+      <label class="toggle detail-toggle"><input type="checkbox" id="allDetail"> 모두 자세히</label>
     </div>
   </div>
 </div>
@@ -93,7 +132,7 @@ const $ = s => document.querySelector(s);
 const COL_KO = { VICT: "승", DEF: "패", PEN: "반칙", PENALTIES: "반칙", POINTS: "점수", TOTAL: "합계", TIME: "기록",
   SCORE: "점수", TOTAL_POINTS: "총점", SETS: "세트", GOALS: "득점", DIFF: "차이", LAPS: "랩", REACTION_TIME: "반응",
   TOUCHES_SCORED: "찌른 수", TOUCHES_RECEIVED: "맞은 수" };
-const state = { items: [], manual: {}, results: new Set(), q: "", showPast: false, onlyMedal: false, today: "" };
+const state = { items: [], manual: {}, results: new Set(), q: "", showPast: false, onlyMedal: false, today: "", open: new Set() };
 const nowJST = () => new Date(Date.now() + 9 * 3600e3).toISOString();
 
 const bust = u => `${u}?t=${Date.now()}`;
@@ -150,7 +189,7 @@ function row(x) {
   const live = /Running|Live/.test(x.status || "") ? `<span class="tag live">LIVE</span>` : "";
   const venue = [x.venue, x.loc && x.loc !== x.venue ? x.loc : ""].filter(Boolean).map(esc).join(" · ");
   const past = x.dt < nowJST().slice(0, 16) && /Official|Unofficial|Finished/.test(x.status || "");
-  return `<tr class="${past ? "past" : ""}">
+  return `<tr class="${past ? "past" : ""} ${state.open.has(x.id) ? "open" : ""}" data-row="${esc(x.id)}">
     <td class="time">${esc(x.hideTime ? (x.est || "TBD") : x.time)}${x.endTime && x.endTime !== x.time ? `<div class="ath">~${esc(x.endTime)}</div>` : ""}</td>
     <td class="sport">${esc(x.sportName || KO[x.disc] || x.discDesc || "")}</td>
     <td class="ev"><div class="unit" title="${esc(x.unitEn || "")}">${esc(!/조/.test(x.unit || "") && /조/.test(x.phase || "") ? `${x.phase.replace(/^예선\s*-\s*/, "")} ${x.unit}` : x.unit)}${medal}${live}</div>${tag ? `<div>${tag}</div>` : ""}${tvLine(x.tv)}${x.note ? `<div class="note">📝 ${esc(x.note)}</div>` : ""}</td>
@@ -205,21 +244,45 @@ async function showResult(id) {
       <td>${esc(c.rk)}</td><td>${esc(c.org)} ${esc(nm(c.name))}${c.medal ? " 🏅" : ""}</td>
       ${d.cols.map(k => `<td>${esc(c.cols[k] ?? "")}</td>`).join("")}
       ${d.showRes ? `<td>${esc(c.res)}${c.irm && c.irm !== "OK" ? " " + esc(c.irm) : ""}</td>` : ""}</tr>`).join("");
-  $("#resBody").innerHTML = head + `<table><thead><tr><th>순위</th><th>선수 · 팀</th>
+  $("#resBody").innerHTML = head + totalTable(d.total, nm) + (d.total ? `<h4 class="res-sub">이 종목 순위</h4>` : "") +
+    `<table><thead><tr><th>순위</th><th>선수 · 팀</th>
     ${d.cols.map(k => `<th>${esc(COL_KO[k] || k)}</th>`).join("")}${d.showRes ? "<th>기록</th>" : ""}</tr></thead><tbody>${trs}</tbody></table>
     <p class="res-note">공식 결과 사이트 기준 · 10분마다 갱신</p>`;
+}
+
+// Modern pentathlon: summed standings across its parts (each part's own table only ranks that part).
+const PART_KO = { FE: "펜싱", OB: "장애물", SW: "수영", LR: "레이저런" };
+function totalTable(t, nm) {
+  if (!t) return "";
+  const trs = t.rows.map(r => `<tr class="${r.org === "KOR" ? "kor" : ""}">
+      <td>${r.tie ? "=" : ""}${r.rk}</td><td>${esc(r.org)} ${esc(nm(r.name))}${r.irm ? ` <small>${esc(r.irm)}</small>` : ""}</td>
+      <td><b>${r.sum}</b></td>${t.parts.map(p => `<td>${r.parts[p] ?? "–"}</td>`).join("")}</tr>`).join("");
+  return `<h4 class="res-sub">합산 순위 (${t.parts.map(p => PART_KO[p]).join("+")})</h4>
+    <table><thead><tr><th>순위</th><th>선수</th><th>합계</th>${t.parts.map(p => `<th title="${PART_KO[p]}">${PART_KO[p][0]}</th>`).join("")}</tr></thead><tbody>${trs}</tbody></table>
+    <p class="res-note">${t.complete ? "" : "아직 끝나지 않은 종목이 있어 현재까지의 합계입니다. "}종목별 점수를 더한 값이며, 공식 최종 순위와 다를 수 있습니다. =는 동점.</p>`;
 }
 
 async function init() {
   await loadAll(); render();
   let t; $("#q").addEventListener("input", e => { clearTimeout(t); t = setTimeout(() => { state.q = e.target.value; render(); }, 150); });
   for (const id of ["showPast", "onlyMedal"]) $("#" + id).addEventListener("change", e => { state[id] = e.target.checked; render(); });
+  $("#allDetail").addEventListener("change", e => document.body.classList.toggle("detail", e.target.checked));
   $("#resClose").addEventListener("click", () => $("#resDlg").close());
   $("#resDlg").addEventListener("click", e => { if (e.target === $("#resDlg")) $("#resDlg").close(); });
   $("#list").addEventListener("click", async e => {
     const r = e.target.closest("button.rbtn");
     if (r) return showResult(r.dataset.res);
-    const b = e.target.closest("button.rid"); if (!b) return;
+    const b = e.target.closest("button.rid");
+    if (!b) {
+      // phones: tapping a card shows or hides its details
+      const tr = e.target.closest("tr[data-row]");
+      if (tr && !e.target.closest("a, button") && matchMedia("(max-width: 640px)").matches) {
+        const id = tr.dataset.row;
+        state.open.has(id) ? state.open.delete(id) : state.open.add(id);
+        tr.classList.toggle("open", state.open.has(id));
+      }
+      return;
+    }
     try { await navigator.clipboard.writeText(b.dataset.id); b.textContent = "✓"; } catch { prompt("행 ID", b.dataset.id); }
     setTimeout(() => b.textContent = "#", 1200);
   });
