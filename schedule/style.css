@@ -86,6 +86,25 @@ footer { color: var(--muted); font-size: 12px; padding: 30px 0 50px; }
   th.venue, td.venue { display: none; }
   td, th { padding: 8px; }
   header.top h1 { font-size: 20px; }
+  /* sticky bar in two short rows: dates, then search + filters in one line that scrolls sideways */
+  .days { padding: 8px 0 6px; }
+  .day { padding: 4px 8px; min-width: 56px; }
+  .controls { flex-wrap: nowrap; overflow-x: auto; gap: 6px; padding-bottom: 8px; scrollbar-width: none; }
+  .controls input[type=search] { flex: 0 0 150px; padding: 6px 10px; font-size: 14px; }
+  .controls .toggle, .controls .btn { flex: 0 0 auto; padding: 5px 9px; font-size: 13px; white-space: nowrap; }
+  /* .cards tables: one game per card (time | event over matchup); tap a card for venue and status */
+  .cards table, .cards tbody { display: block; }
+  .cards thead { display: none; }
+  .cards tr { display: grid; grid-template-columns: 44px minmax(0, 1fr); column-gap: 10px; padding: 9px 12px;
+    border-bottom: 1px solid var(--line); cursor: pointer; }
+  .cards tr:last-child { border-bottom: 0; }
+  .cards td { display: block; padding: 0; border: 0; width: auto; min-width: 0; }
+  .cards td.time { grid-row: 1 / span 2; }
+  .cards td.ev, .cards td.m { grid-column: 2; }
+  .cards td.m { margin-top: 4px; }
+  .cards .match { min-width: 0; }
+  .cards td.venue, .cards td.st { display: none; }
+  .cards tr.open td.venue, .cards tr.open td.st { display: block; grid-column: 2; margin-top: 4px; font-size: 12px; }
 }
 
 .toplinks { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
