@@ -16,6 +16,56 @@ COLS = {
 }
 
 
+MPN_PARTS = {"FE--": "FE", "OB00": "OB", "SW00": "SW", "LR--": "LR"}
+
+
+def points(c):
+    for e in c.get("Extensions") or []:
+        if e.get("Code") == "POINTS" and not e.get("Pos"):
+            v = str(e.get("Value") or "")
+            return int(v) if v.isdigit() else 0
+    r = str(c.get("Result") or "")
+    return int(r) if r.isdigit() else 0
+
+
+def mpn_total(get, key, memo):
+    """Modern pentathlon ranks by the sum of fencing, obstacle, swim and laser run points, but each part's feed only
+    ranks that part (laser run order is not the overall order). Returns the summed standings, or None."""
+    prefix, part = key[:-4], key[-4:]
+    if part not in MPN_PARTS:
+        return None
+    rows, have, official = {}, [], 0
+    for p, code in MPN_PARTS.items():
+        k = prefix + p
+        if k not in memo:
+            try:
+                memo[k] = get(f"MPN/results/{k}")
+            except Exception:
+                memo[k] = None
+        d = memo[k] or {}
+        comps = d.get("Competitors") or []
+        if not comps or not any(points(c) for c in comps):
+            continue
+        have.append(code)
+        official += "Official" in ((d.get("Info") or {}).get("StatusDesc") or "")
+        for c in comps:
+            org, name = c.get("Org", ""), c.get("Name", "")
+            r = rows.setdefault((org, name), {"org": org, "name": athlete_ko(name) if org == "KOR" else name,
+                                              "parts": {}, "irm": ""})
+            r["parts"][code] = points(c)
+            if c.get("IRM") not in (None, "", "OK"):
+                r["irm"] = c["IRM"]
+    if len(have) < 2:
+        return None
+    for r in rows.values():
+        r["sum"] = sum(r["parts"].values())
+    out = sorted(rows.values(), key=lambda r: -r["sum"])
+    for i, r in enumerate(out):
+        r["rk"] = out[i - 1]["rk"] if i and r["sum"] == out[i - 1]["sum"] else i + 1
+        r["tie"] = sum(x["sum"] == r["sum"] for x in out) > 1
+    return {"parts": have, "complete": official == len(MPN_PARTS), "rows": out}
+
+
 def path_for(row_id):
     return OUT / (row_id.replace("/", "_") + ".json")
 
@@ -55,7 +105,7 @@ def build(get, rows, days_back=3, limit=60):
     """Fetch results for recently played rows; older files stay as they are."""
     OUT.mkdir(parents=True, exist_ok=True)
     today = datetime.datetime.now(JST).date()
-    done, index = 0, {}
+    done, index, memo = 0, {}, {}
     for f in OUT.glob("*.json"):
         index[f.stem] = True
     for r in rows:
@@ -72,6 +122,8 @@ def build(get, rows, days_back=3, limit=60):
             continue
         done += 1
         out = slim(data, r["disc"])
+        if r["disc"] == "MPN":
+            out["total"] = mpn_total(get, keys[0], memo)
         if out["competitors"] or out["periods"] or out["result"]:
             path_for(r["id"]).write_text(json.dumps(out, ensure_ascii=False), encoding="utf-8")
             index[r["id"].replace("/", "_")] = True
