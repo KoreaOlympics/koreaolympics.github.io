@@ -5,7 +5,7 @@
 """
 import argparse, json, zlib, datetime, pathlib, urllib.request, time
 from translate import ko, NOC_KO
-import korea, brackets, results
+import korea, brackets, results, ticker
 
 BASE = "https://back.results.asiangames2026.org/s/AG2026/en/"
 HEADERS = {
@@ -115,6 +115,11 @@ def main():
         (OUT / "medals.json").write_text(json.dumps(rows, ensure_ascii=False), encoding="utf-8")
     except Exception as e:
         print("medals failed", e)
+        rows = []
+    try:
+        ticker.build(kor, rows)
+    except Exception as e:
+        print("ticker failed", e)
     try:
         brackets.build(get, window=args.window)
     except Exception as e:  # brackets are a bonus; never block the schedule refresh
