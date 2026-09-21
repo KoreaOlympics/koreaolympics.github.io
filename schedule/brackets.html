@@ -20,6 +20,13 @@
 .seg button { border: 0; background: none; font: inherit; font-weight: 600; font-size: 15px; padding: 6px 18px; border-radius: 8px; cursor: pointer; color: var(--muted); }
 .seg button.on { background: var(--panel); color: var(--ink); box-shadow: 0 1px 3px rgba(0,0,0,.12); }
 .sportnav { display: flex; gap: 6px; overflow-x: auto; flex: 1; }
+/* 종목 메뉴: 기본은 한 줄(옆으로 넘김), 펼치면 여러 줄로 전부 보인다 */
+.bar { position: relative; }
+.navtoggle { flex: 0 0 auto; }
+.navtoggle span { display: inline-block; transition: transform .15s; }
+.bar.open .navtoggle span { transform: rotate(180deg); }
+.sportnav { max-height: 34px; }
+.bar.open .sportnav { flex: 1 0 100%; flex-wrap: wrap; overflow: visible; max-height: 40vh; overflow-y: auto; row-gap: 6px; padding-bottom: 2px; }
 .sportnav a { flex: 0 0 auto; text-decoration: none; font-size: 13px; padding: 5px 10px; border-radius: 999px; background: var(--chip); color: var(--ink); white-space: nowrap; }
 .sportnav a b { font-weight: 600; color: var(--muted); margin-left: 4px; font-variant-numeric: tabular-nums; }
 .sportnav a.on { background: var(--accent-soft); color: var(--accent); }
@@ -111,6 +118,7 @@ details.gm summary { cursor: pointer; font-size: 13px; color: var(--muted); }
   <div class="wrap bar">
     <div class="seg" role="tablist"><button data-g="A" class="on">전체</button><button data-g="M">남자</button><button data-g="W">여자</button><button data-g="X">혼성</button></div>
     <label class="toggle"><input type="checkbox" id="korOnly"> 🇰🇷 한국 출전</label>
+    <button class="btn navtoggle" id="navToggle" aria-expanded="false">종목 <span>▾</span></button>
     <nav class="sportnav" id="sportnav"></nav>
   </div>
 </div>
@@ -308,12 +316,24 @@ document.querySelector(".seg").addEventListener("click", async e => {
   gender = b.dataset.g; save("brk-g", gender);
   renderNav(); await loadSport(); render(); window.scrollTo({ top: 0 });
 });
+const bar = document.querySelector(".bar");
+function setNavOpen(open) {
+  bar.classList.toggle("open", open);
+  $("#navToggle").setAttribute("aria-expanded", open ? "true" : "false");
+  save("brk-n", open ? "1" : "0");
+}
+$("#navToggle").addEventListener("click", () => setNavOpen(!bar.classList.contains("open")));
 $("#sportnav").addEventListener("click", async e => {
   const a = e.target.closest("a[data-disc]"); if (!a) return;
   e.preventDefault();
   disc = a.dataset.disc; save("brk-d", disc);
+  if (matchMedia("(max-width: 640px)").matches) setNavOpen(false);  // 폰에서는 고르면 접는다
   await loadSport(); render(); window.scrollTo({ top: 0 });
 });
+// 기본값: 넓은 화면은 펼친 채로, 폰은 접은 채로 (고른 적이 있으면 그 설정을 따른다)
+let navOpen = !matchMedia("(max-width: 640px)").matches;
+try { const s = localStorage.getItem("brk-n"); if (s !== null) navOpen = s === "1"; } catch (e) {}
+setNavOpen(navOpen);
 $("#korOnly").addEventListener("change", async e => {
   korOnly = e.target.checked; save("brk-k", korOnly ? "1" : "0");
   renderNav(); await loadSport(); render();
