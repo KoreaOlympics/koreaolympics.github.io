@@ -116,7 +116,7 @@ def main():
     except Exception as e:
         print("medals failed", e)
     try:
-        brackets.build(get)
+        brackets.build(get, window=args.window)
     except Exception as e:  # brackets are a bonus; never block the schedule refresh
         print("brackets failed", e)
 
