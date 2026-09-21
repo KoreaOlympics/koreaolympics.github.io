@@ -67,6 +67,23 @@ h3.sub { font-size: 14px; color: var(--muted); font-weight: 700; margin: 18px 0 
 .t.kor .nm { color: var(--accent); font-weight: 700; }
 .t.lose .nm, .t.lose .sc { color: var(--muted); }
 
+/* 소형 전광판: 구기 위주 주요 소식 1~2줄 */
+.board { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 12px 0 0; padding: 10px 14px;
+  background: #12203a; color: #eef2fa; border-radius: 12px; font-size: 13.5px; }
+.board .rows { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; }
+.board .row { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.board .tag { flex: 0 0 auto; font-size: 11px; font-weight: 800; border-radius: 4px; padding: 1px 6px; }
+.board .tag.live { background: #e0294a; color: #fff; }
+.board .tag.medal { background: #e3b341; color: #2a1f00; }
+.board .tag.result { background: #2f4468; color: #cfe0ff; }
+.board .tag.next { background: #22304c; color: #a8bbdd; }
+.board .txt { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.board .when { color: #9fb3d9; font-variant-numeric: tabular-nums; flex: 0 0 auto; }
+.board .tally { flex: 0 0 auto; font-weight: 700; background: rgba(255,255,255,.08); border-radius: 999px; padding: 4px 10px; }
+.board .tally b { color: #ffd66b; }
+.board a.more { flex: 0 0 auto; color: #9fb3d9; font-size: 12px; text-decoration: none; }
+@media (max-width: 640px) { .board { font-size: 12.5px; padding: 9px 12px; } .board .when { display: none; } }
+
 .minis { display: flex; flex-wrap: wrap; gap: 18px 28px; }
 .mini h5 { margin: 0 0 6px; font-size: 13px; }
 
@@ -97,6 +114,7 @@ details.gm summary { cursor: pointer; font-size: 13px; color: var(--muted); }
     <nav class="sportnav" id="sportnav"></nav>
   </div>
 </div>
+<div class="wrap"><aside class="board" id="board" hidden></aside></div>
 <main class="wrap" id="main"></main>
 <div class="wrap"><footer>
   데이터 출처: <a href="https://results.asiangames2026.org/" target="_blank" rel="noopener">results.asiangames2026.org</a> 공식 조 편성·대진 데이터. 빈 칸은 앞 경기 결과에 따라 채워집니다(예: "A조 1위").
@@ -258,7 +276,22 @@ async function loadSport() {
   try { DATA = await CACHE[disc]; } catch (e) { delete CACHE[disc]; DATA = []; }
 }
 
+const TAG = { live: "LIVE", medal: "메달", result: "결과", next: "예정" };
+async function loadBoard() {
+  let t;
+  try { t = await fetch(`data/ticker.json?t=${Date.now()}`, { cache: "no-store" }).then(r => r.json()); } catch (e) { return; }
+  const rows = (t.items || []).map(i => `<div class="row"><span class="tag ${i.kind}">${TAG[i.kind] || ""}</span>
+    <span class="when">${esc(i.when || "")}</span><span class="txt">${esc(i.text)}</span></div>`).join("");
+  const m = t.medals;
+  if (!rows && !m) return;
+  $("#board").innerHTML = `<div class="rows">${rows || `<div class="row"><span class="txt">지금은 진행 중이거나 곧 시작하는 한국 경기가 없습니다.</span></div>`}</div>` +
+    (m ? `<span class="tally">🇰🇷 <b>금 ${m.g}</b> 은 ${m.s} 동 ${m.b}${m.rk ? ` · ${m.rk}위` : ""}</span>` : "") +
+    `<a class="more" href="korea.html">한국 경기 전체 →</a>`;
+  $("#board").hidden = false;
+}
+
 async function load() {
+  loadBoard();
   const [index, meta] = await Promise.all([
     fetch(`data/brackets_index.json?t=${Date.now()}`, { cache: "no-store" }).then(r => r.json()),
     fetch(`data/index.json?t=${Date.now()}`, { cache: "no-store" }).then(r => r.json()),
