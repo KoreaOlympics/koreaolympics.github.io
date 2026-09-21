@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>구기종목 대진표 · 2026 아이치·나고야 아시안게임</title>
-<meta name="description" content="2026 아이치·나고야 아시안게임 구기종목 조별 순위와 결선 대진표 (10분마다 자동 갱신)">
+<title>종목별 대진표 · 2026 아이치·나고야 아시안게임</title>
+<meta name="description" content="2026 아이치·나고야 아시안게임 전 종목 조별 순위와 결선 대진표 (10분마다 자동 갱신)">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="style.css?v=2">
 <style>
@@ -20,7 +20,11 @@
 .seg button { border: 0; background: none; font: inherit; font-weight: 600; font-size: 15px; padding: 6px 18px; border-radius: 8px; cursor: pointer; color: var(--muted); }
 .seg button.on { background: var(--panel); color: var(--ink); box-shadow: 0 1px 3px rgba(0,0,0,.12); }
 .sportnav { display: flex; gap: 6px; overflow-x: auto; flex: 1; }
-.sportnav a { flex: 0 0 auto; text-decoration: none; font-size: 13px; padding: 5px 10px; border-radius: 999px; background: var(--chip); color: var(--ink); }
+.sportnav a { flex: 0 0 auto; text-decoration: none; font-size: 13px; padding: 5px 10px; border-radius: 999px; background: var(--chip); color: var(--ink); white-space: nowrap; }
+.sportnav a b { font-weight: 600; color: var(--muted); margin-left: 4px; font-variant-numeric: tabular-nums; }
+.sportnav a.on { background: var(--accent-soft); color: var(--accent); }
+.sportnav a.on b { color: var(--accent); }
+@media (max-width: 640px) { .bar { gap: 6px; padding: 8px 0; } .seg button { padding: 5px 12px; font-size: 14px; } .hero h1 { font-size: 21px; } }
 
 section.ev { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; margin: 16px 0; padding: 18px 20px 20px; scroll-margin-top: 70px; }
 .ev-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
@@ -82,13 +86,14 @@ details.gm summary { cursor: pointer; font-size: 13px; color: var(--muted); }
 <div class="wrap">
   <header class="hero">
     <nav class="toplinks"><a class="home" href="index.html">← 전체 일정</a><span><a class="home" href="korea.html">🇰🇷 한국 경기</a> · <a class="home" href="../index2.html">아시안게임 페이지</a></span></nav>
-    <h1>🏆 구기종목 대진표</h1>
-    <p>조별 순위 · 결선 토너먼트 · 순위결정전 · 10분마다 자동 갱신 · <span id="updated"></span></p>
+    <h1>🏆 종목별 대진표</h1>
+    <p>조별 순위 · 결선 토너먼트 · 순위결정전 · 공식 대진이 공개된 전 종목 · 10분마다 자동 갱신 · <span id="updated"></span></p>
   </header>
 </div>
 <div class="sticky">
   <div class="wrap bar">
-    <div class="seg" role="tablist"><button data-g="M" class="on">남자</button><button data-g="W">여자</button></div>
+    <div class="seg" role="tablist"><button data-g="A" class="on">전체</button><button data-g="M">남자</button><button data-g="W">여자</button><button data-g="X">혼성</button></div>
+    <label class="toggle"><input type="checkbox" id="korOnly"> 🇰🇷 한국 출전</label>
     <nav class="sportnav" id="sportnav"></nav>
   </div>
 </div>
@@ -102,8 +107,9 @@ details.gm summary { cursor: pointer; font-size: 13px; color: var(--muted); }
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c]));
 const WD = ["일","월","화","수","목","금","토"];
-const EMOJI = { FBL:"⚽", BBL:"⚾", SBL:"🥎", BKB:"🏀", BK3:"🏀", VVO:"🏐", HOC:"🏑", HBL:"🤾", WPO:"🤽", RU7:"🏉" };
-const ORDER = ["FBL","BKB","BK3","VVO","HBL","HOC","WPO","RU7","BBL","SBL"];
+const EMOJI = { FBL:"⚽", BBL:"⚾", SBL:"🥎", BKB:"🏀", BK3:"🏀", VVO:"🏐", HOC:"🏑", HBL:"🤾", WPO:"🤽", RU7:"🏉",
+  TTE:"🏓", BDM:"🏸", TEN:"🎾", TST:"🎾", SQU:"🎾", TEQ:"⚽", VBV:"🏐", SPK:"🦶", KAB:"🤼", CKT:"🏏",
+  BOX:"🥊", KTE:"🥋", JUD:"🥋", TKW:"🥋", WRE:"🤼", WSU:"🥋", MMA:"🥊", JJI:"🥋", KUR:"🥋", ELS:"🎮", PDL:"🎾" };
 const TIES = new Set(["FBL","HOC","HBL","RU7","WPO"]);
 const ISO = { AFG:"af", BRN:"bh", BAN:"bd", BHU:"bt", BRU:"bn", CAM:"kh", CHN:"cn", PRK:"kp", HKG:"hk", IND:"in", INA:"id",
   IRI:"ir", IRQ:"iq", JPN:"jp", JOR:"jo", KAZ:"kz", KOR:"kr", KUW:"kw", KGZ:"kg", LAO:"la", LBN:"lb", MAC:"mo", MAS:"my",
@@ -117,8 +123,13 @@ const when = dt => { if (!dt) return ""; const d = new Date(dt); const k = new D
 const LIVE = /RUNNING|LIVE|Running|Live/;
 const DONE = /FINISHED|OFFICIAL|UNOFFICIAL|Official|Unofficial/;
 
-let DATA = [], gender = "M";
-try { gender = localStorage.getItem("brk-g") || "M"; } catch (e) {}
+let INDEX = [], DATA = [], disc = "", gender = "A", korOnly = false;
+const CACHE = {};  // 종목별 파일은 한 번만 받아 둔다
+try {
+  gender = localStorage.getItem("brk-g") || "A";
+  disc = localStorage.getItem("brk-d") || "";
+  korOnly = localStorage.getItem("brk-k") === "1";
+} catch (e) {}
 
 function teamRow(s, other, done) {
   if (!s || (!s.org && !s.name)) return `<div class="t tbd"><span class="flag"></span><span class="nm">${esc(s?.from || "미정")}</span><span class="sc"></span></div>`;
@@ -199,7 +210,7 @@ function section(e) {
   const extra = e.rounds.filter(r => !groupKeys.has(r.key) && !bracketCodes.has(r.key));
   const [main, ...minis] = e.bracket;
   const k = korStatus(e);
-  let html = `<section class="ev" id="${e.disc}-${e.ev[0]}">
+  let html = `<section class="ev" id="${e.disc}-${e.ev.replace(/[^A-Za-z0-9]/g, "")}">
     <div class="ev-head"><span class="ev-emoji">${EMOJI[e.disc] || "🏅"}</span><h2>${esc(e.label)}</h2>${k ? `<span class="korbadge">${esc(k)}</span>` : ""}</div>`;
   if (e.standings.length) {
     html += `<h3 class="sub">조별 순위</h3>${standingsHtml(e)}`;
@@ -217,29 +228,70 @@ function section(e) {
   return html + `</section>`;
 }
 
-function render() {
+const want = e => (gender === "A" || e.g === gender) && (!korOnly || e.kor);
+const sportOf = d => INDEX.find(s => s.disc === d);
+
+function renderNav() {
   document.querySelectorAll(".seg button").forEach(b => b.classList.toggle("on", b.dataset.g === gender));
-  const list = DATA.filter(e => e.ev[0] === gender).sort((a, b) => ORDER.indexOf(a.disc) - ORDER.indexOf(b.disc));
-  $("#sportnav").innerHTML = list.map(e => `<a href="#${e.disc}-${e.ev[0]}">${EMOJI[e.disc] || ""} ${esc(e.label.replace(/^(남자|여자)\s*/, ""))}</a>`).join("");
-  $("#main").innerHTML = list.map(section).join("");
+  $("#korOnly").checked = korOnly;
+  const sports = INDEX.filter(s => s.events.some(want));
+  if (!sports.some(s => s.disc === disc)) disc = (sports.find(s => s.events.some(e => e.kor)) || sports[0] || {}).disc || "";
+  $("#sportnav").innerHTML = sports.map(s => {
+    const n = s.events.filter(want).length, kor = s.events.some(e => e.kor && want(e));
+    return `<a href="#" class="${s.disc === disc ? "on" : ""}" data-disc="${s.disc}">${EMOJI[s.disc] || "🏅"} ${esc(s.name)}${kor ? " 🇰🇷" : ""}<b>${n}</b></a>`;
+  }).join("");
+}
+
+function render() {
+  renderNav();
+  const s = sportOf(disc);
+  const keep = new Set((s ? s.events.filter(want) : []).map(e => e.ev));
+  const list = DATA.filter(e => keep.has(e.ev));
+  $("#main").innerHTML = list.length ? list.map(section).join("")
+    : `<p class="empty">${s ? "조건에 맞는 세부 종목이 없습니다." : "대진 정보가 있는 종목이 없습니다."}</p>`;
+}
+
+async function loadSport() {
+  if (!disc) return (DATA = []);
+  // 종목 파일은 받아 두고, 10분 갱신 때만 다시 받는다
+  if (!CACHE[disc]) CACHE[disc] = fetch(`data/brackets/${disc}.json?t=${Date.now()}`, { cache: "no-store" }).then(r => r.json());
+  try { DATA = await CACHE[disc]; } catch (e) { delete CACHE[disc]; DATA = []; }
 }
 
 async function load() {
-  const [data, index] = await Promise.all([
-    fetch(`data/brackets.json?t=${Date.now()}`, { cache: "no-store" }).then(r => r.json()),
+  const [index, meta] = await Promise.all([
+    fetch(`data/brackets_index.json?t=${Date.now()}`, { cache: "no-store" }).then(r => r.json()),
     fetch(`data/index.json?t=${Date.now()}`, { cache: "no-store" }).then(r => r.json()),
   ]);
-  DATA = data;
-  $("#updated").textContent = `마지막 갱신: ${new Date(index.updated).toLocaleString("ko-KR", { timeZone: "Asia/Seoul", dateStyle: "medium", timeStyle: "short" })}`;
+  INDEX = index;
+  renderNav();
+  await loadSport();
+  $("#updated").textContent = `마지막 갱신: ${new Date(meta.updated).toLocaleString("ko-KR", { timeZone: "Asia/Seoul", dateStyle: "medium", timeStyle: "short" })}`;
 }
 
-document.querySelector(".seg").addEventListener("click", e => {
+const save = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
+document.querySelector(".seg").addEventListener("click", async e => {
   const b = e.target.closest("button"); if (!b) return;
-  gender = b.dataset.g; try { localStorage.setItem("brk-g", gender); } catch (err) {}
-  render(); window.scrollTo({ top: 0 });
+  gender = b.dataset.g; save("brk-g", gender);
+  renderNav(); await loadSport(); render(); window.scrollTo({ top: 0 });
+});
+$("#sportnav").addEventListener("click", async e => {
+  const a = e.target.closest("a[data-disc]"); if (!a) return;
+  e.preventDefault();
+  disc = a.dataset.disc; save("brk-d", disc);
+  await loadSport(); render(); window.scrollTo({ top: 0 });
+});
+$("#korOnly").addEventListener("change", async e => {
+  korOnly = e.target.checked; save("brk-k", korOnly ? "1" : "0");
+  renderNav(); await loadSport(); render();
 });
 load().then(render);
-setInterval(() => load().then(() => { const y = scrollY; render(); scrollTo(0, y); }).catch(() => {}), 10 * 60 * 1000);
+setInterval(async () => {
+  try {
+    for (const k of Object.keys(CACHE)) delete CACHE[k];
+    await load(); const y = scrollY; render(); scrollTo(0, y);
+  } catch (e) {}
+}, 10 * 60 * 1000);
 </script>
 </body>
 </html>

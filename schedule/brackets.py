@@ -1,28 +1,19 @@
-"""Team-sport standings and knockout brackets -> data/brackets.json.
+"""Standings and knockout brackets for every event the official feeds publish -> data/brackets/<DISC>.json.
 
-Standings and brackets come from the official groups/brackets feeds; the per-round match list is built
-from the daily schedule files, which also covers sports whose bracket feed is empty (hockey, softball...).
-To manage another event, add a line to EVENTS.
+Events are discovered from the feeds themselves (no hand-kept list): any (discipline, event) in the daily
+schedule whose groups/brackets feed has data becomes a bracket page entry, so sports whose draw is published
+later (judo, taekwondo, tennis...) show up on their own. Discovered events are remembered in
+data/bracket_events.json; quick runs refresh only what is playing today, full runs refresh everything.
 """
-import glob, json, pathlib, re
-from translate import ko, NOC_KO
+import datetime, glob, json, pathlib, re
+from translate import ko, DISC_KO, NOC_KO
 
 DATA = pathlib.Path(__file__).parent / "data"
-
-# (discipline, event key, label)
-EVENTS = [
-    ("FBL", "M.TEAM11------------", "남자 축구"), ("FBL", "W.TEAM11------------", "여자 축구"),
-    ("BBL", "M.TEAM9-------------", "야구"), ("SBL", "W.TEAM9-------------", "소프트볼"),
-    ("BKB", "M.TEAM5-------------", "남자 농구"), ("BKB", "W.TEAM5-------------", "여자 농구"),
-    ("BK3", "M.TEAM3-------------", "남자 3x3 농구"), ("BK3", "W.TEAM3-------------", "여자 3x3 농구"),
-    ("VVO", "M.TEAM6-------------", "남자 배구"), ("VVO", "W.TEAM6-------------", "여자 배구"),
-    ("HOC", "M.TEAM11------------", "남자 하키"), ("HOC", "W.TEAM11------------", "여자 하키"),
-    ("HBL", "M.TEAM7-------------", "남자 핸드볼"), ("HBL", "W.TEAM7-------------", "여자 핸드볼"),
-    ("WPO", "M.TEAM7-------------", "남자 수구"), ("WPO", "W.TEAM7-------------", "여자 수구"),
-    ("RU7", "M.TEAM7-------------", "남자 7인제 럭비"), ("RU7", "W.TEAM7-------------", "여자 7인제 럭비"),
-]
-
+OUT = DATA / "brackets"
+CACHE = DATA / "bracket_events.json"
+JST = datetime.timezone(datetime.timedelta(hours=9))
 GENDER = re.compile(r"^(남자|여자|혼성)\s*")
+RESCAN_DAYS = 3  # 아직 대진이 없는 이벤트를 다시 확인하기까지의 간격
 
 
 def short(name, disc):
@@ -105,18 +96,17 @@ def bracket(disc, data, phase_names):
     return trees
 
 
-def schedule_rounds(disc, ev):
+def schedule_rounds(units):
     """Every match of the event from the daily files, grouped by round in playing order."""
     rounds = {}
-    for f in sorted(glob.glob(str(DATA / "2026-*.json"))):
-        for u in json.loads(pathlib.Path(f).read_text(encoding="utf-8")):
-            if u["disc"] != disc or u.get("ev") != ev or "Ceremony" in u.get("unitEn", "") or "시상식" in u["phase"]:
-                continue
-            pkey = u["key"].rsplit(".", 1)[0]
-            r = rounds.setdefault(pkey, {"key": pkey, "name": short(u["phase"], "") or u["phase"], "matches": []})
-            side = lambda s: s and {"org": s["org"], "name": s.get("nameKo") or s["name"], "res": s.get("result", ""), "win": s.get("win", False)}
-            r["matches"].append({"dt": u["dt"], "unit": GENDER.sub("", u["unit"]), "venue": u.get("venue", ""),
-                                 "status": u.get("status", ""), "home": side(u.get("home")), "away": side(u.get("away"))})
+    for u in units:
+        if "Ceremony" in u.get("unitEn", "") or "시상식" in u["phase"]:
+            continue
+        pkey = u["key"].rsplit(".", 1)[0]
+        r = rounds.setdefault(pkey, {"key": pkey, "name": short(u["phase"], "") or u["phase"], "matches": []})
+        side = lambda s: s and {"org": s["org"], "name": s.get("nameKo") or s["name"], "res": s.get("result", ""), "win": s.get("win", False)}
+        r["matches"].append({"dt": u["dt"], "unit": GENDER.sub("", u["unit"]), "venue": u.get("venue", ""),
+                             "status": u.get("status", ""), "home": side(u.get("home")), "away": side(u.get("away"))})
     out = list(rounds.values())
     for r in out:
         r["matches"].sort(key=lambda m: m["dt"])
@@ -124,21 +114,140 @@ def schedule_rounds(disc, ev):
     return out
 
 
-def build(get):
-    events = []
-    for disc, ev, label in EVENTS:
+def unit_index():
+    """(discipline, event) -> its units, and the days it is played on."""
+    idx, days = {}, {}
+    for f in sorted(glob.glob(str(DATA / "2026-*.json"))):
+        day = pathlib.Path(f).stem
+        for u in json.loads(pathlib.Path(f).read_text(encoding="utf-8")):
+            ev = u.get("ev")
+            if not ev:
+                continue
+            idx.setdefault((u["disc"], ev), []).append(u)
+            days.setdefault((u["disc"], ev), set()).add(day)
+    return idx, days
+
+
+def label_of(units):
+    """"남자 단체", "여자 구미테 -61kg" — the event name the schedule already shows."""
+    for u in units:
+        if u.get("event"):
+            return u["event"]
+    return units[0]["unit"] if units else ""
+
+
+def load_cache():
+    try:
+        return json.loads(CACHE.read_text(encoding="utf-8"))
+    except Exception:
+        return {"events": {}, "empty": {}}
+
+
+def has_data(get, disc, ev):
+    """(pools, bracket matches) counts from the two feeds; either one makes the event worth keeping."""
+    pools = matches = 0
+    try:
+        g = get(f"{disc}/groups/{ev}")
+        pools = len([x for x in (g or {}).get("Groups", []) if x.get("Type") == "POOL" and x.get("Competitors")])
+    except Exception as e:
+        print("  groups fail", disc, ev, e)
+    try:
+        b = get(f"{disc}/brackets/{ev}")
+        matches = sum(len(p.get("Matches", [])) for top in (b or []) for p in top.get("Phases", []))
+    except Exception as e:
+        print("  bracket fail", disc, ev, e)
+    return pools, matches
+
+
+def build_event(get, disc, ev, units, label):
+    try:
+        groups = get(f"{disc}/groups/{ev}")
+    except Exception as e:
+        print("  groups fail", disc, ev, e)
+        groups = {}
+    table, phase_names = standings(disc, groups)
+    try:
+        tree = bracket(disc, get(f"{disc}/brackets/{ev}"), phase_names)
+    except Exception as e:
+        print("  bracket fail", disc, ev, e)
+        tree = []
+    return {"disc": disc, "ev": ev, "label": label, "standings": table, "bracket": tree,
+            "rounds": schedule_rounds(units)}
+
+
+def build(get, window=None, discover_limit=400):
+    """window=None (full run): re-check every event. window=N: only events played within N days of today."""
+    OUT.mkdir(parents=True, exist_ok=True)
+    idx, days = unit_index()
+    cache = load_cache()
+    today = datetime.datetime.now(JST).date()
+    span = None if window is None else (str(today - datetime.timedelta(days=window)), str(today + datetime.timedelta(days=window)))
+
+    def playing_now(key):
+        return span is None or any(span[0] <= d <= span[1] for d in days.get(key, ()))
+
+    # 1) 새 이벤트 찾기: 대진이 아직 없던 조합은 RESCAN_DAYS 간격으로만 다시 확인
+    probes = 0
+    for key in sorted(idx):
+        disc, ev = key
+        kid = f"{disc}/{ev}"
+        if kid in cache["events"] or probes >= discover_limit:
+            continue
+        last = cache["empty"].get(kid)
+        soon = any(str(today - datetime.timedelta(days=2)) <= d <= str(today + datetime.timedelta(days=5)) for d in days[key])
+        if not (span is None or soon):
+            continue
+        if last and datetime.date.fromisoformat(last) > today - datetime.timedelta(days=RESCAN_DAYS):
+            continue
+        probes += 1
+        pools, matches = has_data(get, disc, ev)
+        if pools or matches:
+            cache["events"][kid] = {"disc": disc, "ev": ev, "label": label_of(idx[key])}
+            cache["empty"].pop(kid, None)
+            print("  + bracket event", kid, cache["events"][kid]["label"])
+        else:
+            cache["empty"][kid] = str(today)
+
+    # 2) 갱신: 전체 갱신이면 전부, 빠른 갱신이면 오늘 전후 경기가 있는 이벤트만
+    by_disc = {}
+    for kid, meta in cache["events"].items():
+        by_disc.setdefault(meta["disc"], []).append(meta)
+    written = refreshed = 0
+    for disc, metas in sorted(by_disc.items()):
+        path = OUT / f"{disc}.json"
         try:
-            groups = get(f"{disc}/groups/{ev}")
-        except Exception as e:
-            print("  groups fail", disc, ev, e)
-            groups = {}
-        table, phase_names = standings(disc, groups)
-        try:
-            tree = bracket(disc, get(f"{disc}/brackets/{ev}"), phase_names)
-        except Exception as e:
-            print("  bracket fail", disc, ev, e)
-            tree = []
-        events.append({"disc": disc, "ev": ev, "label": label, "standings": table, "bracket": tree,
-                       "rounds": schedule_rounds(disc, ev)})
-    (DATA / "brackets.json").write_text(json.dumps(events, ensure_ascii=False), encoding="utf-8")
-    return events
+            prev = {e["ev"]: e for e in json.loads(path.read_text(encoding="utf-8"))}
+        except Exception:
+            prev = {}
+        events = []
+        for meta in sorted(metas, key=lambda m: m["ev"]):
+            key = (disc, meta["ev"])
+            units = idx.get(key, [])
+            meta["label"] = label_of(units) or meta["label"]
+            if playing_now(key) or meta["ev"] not in prev:
+                events.append(build_event(get, disc, meta["ev"], units, meta["label"]))
+                refreshed += 1
+            else:
+                e = prev[meta["ev"]]
+                e["rounds"] = schedule_rounds(units)  # 일정·점수는 매번 최신으로
+                events.append(e)
+        path.write_text(json.dumps(events, ensure_ascii=False), encoding="utf-8")
+        written += 1
+
+    # 3) 목록 파일: 페이지가 종목을 고를 때 쓰는 색인
+    index = []
+    for disc, metas in sorted(by_disc.items(), key=lambda kv: DISC_KO.get(kv[0], kv[0])):
+        evs = []
+        for meta in sorted(metas, key=lambda m: m["ev"]):
+            key = (disc, meta["ev"])
+            units = idx.get(key, [])
+            kor = any("KOR" in (u.get("orgs") or []) or any(s and s.get("org") == "KOR" for s in (u.get("home"), u.get("away")))
+                      for u in units)
+            ds = sorted(days.get(key, ()))
+            evs.append({"ev": meta["ev"], "label": meta["label"], "g": meta["ev"][0], "kor": kor,
+                        "from": ds[0] if ds else "", "to": ds[-1] if ds else ""})
+        index.append({"disc": disc, "name": DISC_KO.get(disc, disc), "events": evs})
+    (DATA / "brackets_index.json").write_text(json.dumps(index, ensure_ascii=False), encoding="utf-8")
+    CACHE.write_text(json.dumps(cache, ensure_ascii=False, sort_keys=True), encoding="utf-8")
+    print(f"brackets: {len(cache['events'])} events / {written} files (refreshed {refreshed}, probed {probes})")
+    return index
