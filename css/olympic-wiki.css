@@ -1,0 +1,45 @@
+/* Shared wiki skin: preserve the original site's document layout and blue links. */
+@import url('./olympic-golf.css');
+:root{--ink:#202122;--muted:#54595d;--line:#c8ccd1;--soft:#f8f9fa;--green:#2456c6;--link:#3366cc;--men:#2456c6;--women:#75548c;font-family:'Malgun Gothic','Apple SD Gothic Neo',Arial,sans-serif;line-height:1.7}
+body{background:#fff}
+a{text-decoration:none}a:hover{text-decoration:underline}
+.topbar-inner{max-width:1100px;padding:8px 20px;align-items:center;font-size:13px;gap:16px;justify-content:flex-start}
+.topbar-inner>span{margin-left:auto}
+.sport-nav{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.sport-nav a{padding:0;color:var(--link);font-weight:400}
+.sport-nav a[aria-current=page]{color:var(--ink);font-weight:700}
+.shell{max-width:1100px;padding:22px 20px 60px}
+.title{font-family:'Batang','Noto Serif KR',Georgia,serif;font-size:30px;font-weight:400;line-height:1.4;margin:0 0 14px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.intro{font-size:15px;line-height:1.8;margin-bottom:18px}
+.columns{grid-template-columns:minmax(0,1fr) 300px;gap:28px}
+h2{font-family:'Batang','Noto Serif KR',Georgia,serif;font-size:22px;margin:26px 0 10px;padding-bottom:5px;border-color:#eaecf0}
+h3{font-family:'Batang','Noto Serif KR',Georgia,serif;font-size:18px}
+.golf-nav{border:0;border-bottom:1px solid var(--line);background:transparent;gap:0;margin-bottom:20px;justify-content:flex-start}
+.golf-nav a{flex:0 1 auto;border:0;padding:8px 14px;color:var(--link);font-size:14px;font-weight:400;text-align:left}
+.golf-nav a[aria-current=page]{background:transparent;color:var(--ink);font-weight:700;border-bottom:2px solid var(--link)}
+.golf-nav a:hover{background:#f8f9fa;color:var(--link)}
+.toc{display:inline-block;padding:12px 20px 12px 14px;min-width:250px;border-radius:2px}
+.toc strong{text-align:center;font-size:14px}
+.toc ol{columns:1;font-size:14px;margin:6px 0 0;padding-left:24px}
+.infobox{font-size:13px;border-radius:2px}
+.infobox h2{font-family:'Batang',Georgia,serif;background:#eaecf0;text-align:center;padding:10px 12px;font-size:15px}
+.infobox dl{padding:0 12px}
+.infobox dt{font-size:13px;padding-top:8px}
+.infobox dd{font-weight:400;padding-bottom:8px;border-color:#eaecf0}
+.data{font-size:14px;margin:8px 0 14px}
+.data th,.data td{padding:7px 10px}
+.data tbody tr:nth-child(even){background:transparent}
+.data thead th{background:#f8f9fa}
+.event{border:0;padding:0;margin:22px 0 26px}
+.event h3{border-bottom:1px solid var(--line);border-left:4px solid var(--event);padding:5px 10px;color:var(--ink);background:#f8f9fa}
+.event-label{color:var(--muted);font-size:12px;letter-spacing:0}
+.summary-grid{border:1px solid var(--line);gap:0;background:#f8f9fa;margin:14px 0}
+.summary-card{border:0;border-right:1px solid var(--line);padding:10px 14px;background:transparent}
+.summary-card:last-child{border:0}.summary-card strong{font-size:20px;color:var(--ink)}
+.notice{background:#f8f9fa;border:1px solid #eaecf0;border-left:3px solid #a2a9b1;padding:10px 14px}
+.korea{background:#f8f9fa;border:1px solid var(--line);border-radius:2px}
+.footnotes,.note,.small,.sources{font-size:13px}
+.footer{font-size:13px}.footer-nav{font-size:14px}
+details{border-color:#eaecf0;border-radius:2px}
+@media(max-width:900px){.columns{grid-template-columns:minmax(0,1fr)}.infobox{display:none}.shell{max-width:800px}}
+@media(max-width:600px){.shell{padding:18px 16px 36px}.topbar-inner{padding:8px 16px;gap:10px 16px}.topbar-inner>span{display:none}.title{font-size:27px}.golf-nav{display:flex;flex-wrap:wrap}.golf-nav a{font-size:14px;padding:8px 12px}.intro{font-size:15px}.event{padding:0}.toc{min-width:0;max-width:100%;padding:12px 18px}.data th,.data td{padding:7px 6px}.summary-card{padding:8px}.summary-card strong{font-size:20px}.summary-card span{font-size:12px}}
