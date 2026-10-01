@@ -3,39 +3,3 @@
 @media(max-width:900px){.desktop-quota{display:none}.mobile-quota{display:block}.columns{grid-template-columns:minmax(0,1fr)}.infobox{display:none}.shell{max-width:800px}.golf-nav a{padding:9px 12px}}
 @media(max-width:600px){:root{font-size:14px}.shell{padding:20px 16px 32px}.topbar-inner{padding:8px 16px;gap:4px 12px}.topbar-inner span{display:none}.title{font-size:27px;margin-bottom:14px}.intro{font-size:14px}.golf-nav{display:grid;grid-template-columns:repeat(3,1fr);margin-bottom:20px}.golf-nav a{font-size:13px;padding:10px 5px;border:0;border-bottom:1px solid var(--line)}.toc{padding:12px 16px}.toc ol{columns:1}.summary-grid{gap:7px}.summary-card{padding:11px 8px}.summary-card strong{font-size:22px}.summary-card span{font-size:11px}.desktop-quota{display:none}.mobile-quota{display:block}.mobile-quota .data{font-size:12px}.mobile-quota .data th,.mobile-quota .data td{text-align:center;padding:8px 4px}.mobile-quota .data caption{font-weight:700;font-size:14px;color:var(--ink);margin-top:12px}.event{padding:15px 12px}.data{font-size:12px}.data th,.data td{padding:8px 6px}.event .data th:first-child{width:48%}.event .data th:nth-child(2){width:32%}.footnotes{font-size:12px;line-height:1.8}.korea{padding:15px 12px}h2{font-size:21px}h3{font-size:17px}.ranking th:first-child{width:26%}.ranking th:nth-child(2){width:20%}}
 @media print{.topbar,.golf-nav,.footer-nav,.toc,.infobox{display:none}.columns{display:block}.shell{padding:0}.event{break-inside:avoid}.mobile-quota{display:none}.desktop-quota{display:block}a{color:inherit}.data{font-size:10pt}}
-
-/* Original encyclopedia-style presentation, with responsive tables. */
-:root{--ink:#202122;--muted:#54595d;--line:#c8ccd1;--soft:#f8f9fa;--green:#2456c6;--link:#3366cc;--men:#2456a0;--women:#825477;--mixed:#856523;line-height:1.65}
-a{text-decoration:none}a:hover{text-decoration:underline}a:visited{color:#795cb2}
-.topbar-inner{max-width:1100px;padding:8px 20px;justify-content:flex-start;gap:16px;font-size:12.5px}
-.shell{max-width:1100px;padding:22px 20px 80px}
-.title{font-size:30px;font-weight:400;line-height:1.3;padding-bottom:6px;border-bottom:1px solid var(--line);margin:0 0 16px}
-.intro{font-size:15px;line-height:1.65;margin-bottom:18px;max-width:none}
-.golf-nav{display:flex;flex-wrap:wrap;gap:0;border:0;border-bottom:1px solid #eaecf0;background:transparent;margin:0 0 20px;padding:0 0 8px}
-.golf-nav a{flex:0 0 auto;text-align:left;white-space:normal;padding:0 13px;border:0;border-right:1px solid var(--line);font-size:13px;font-weight:400;line-height:1.5;color:var(--link)}
-.golf-nav a:first-child{padding-left:0}.golf-nav a:last-child{border:0}
-.golf-nav a[aria-current=page]{background:transparent;color:var(--ink);font-weight:700}
-.golf-nav a:hover{background:transparent;color:var(--link)}
-.columns{grid-template-columns:minmax(0,1fr) 300px;gap:28px}
-h2{font-size:22px;margin:26px 0 10px;padding-bottom:5px;border-color:#eaecf0}
-h3{font-family:Georgia,"Batang",serif;font-size:17px;font-weight:600;margin:20px 0 8px}
-p{margin-bottom:12px}
-.toc{display:inline-block;padding:12px 20px 12px 14px;border-radius:2px;font-size:14px}
-.toc strong{text-align:center;font-size:13px}.toc ol{columns:1;padding-left:22px;font-size:14px;margin-top:6px}.toc li{margin:3px 0}
-.infobox{display:block;border-radius:2px}
-.infobox h2{background:#eaecf0;text-align:center;font-family:Georgia,"Batang",serif;font-size:15px;padding:10px 12px;border-bottom:1px solid var(--line)}
-.infobox dl{display:grid;grid-template-columns:40% 60%;padding:0}
-.infobox dt,.infobox dd{margin:0;padding:7px 12px;border-bottom:1px solid #eaecf0;font-size:13px;line-height:1.65;overflow-wrap:anywhere}
-.infobox dt{font-weight:600}.infobox dd{font-weight:400}.infobox .small{padding:9px 12px}
-.data{font-size:13.5px;margin:6px 0 16px}.data th,.data td{padding:6px 10px}.data tbody tr:nth-child(even){background:#fff}.data caption{font-size:12.5px}
-.event{border:0;padding:0;margin:22px 0 26px}.event-label{display:none}
-.event h3{color:var(--ink);border-left:3px solid var(--event);padding-left:9px}
-.event.men .data thead th{background:#edf3fa}.event.women .data thead th{background:#f6eff4}.event.mixed .data thead th{background:#f8f4ea}
-.summary-grid{display:none}
-.footnotes{font-size:12.5px;margin:-6px 0 16px}.footnotes li{margin:5px 0}
-.notice{border:1px solid #eaecf0;background:var(--soft);padding:8px 14px;margin:10px 0 16px;font-size:13.5px}
-.korea{background:#eef4ff;border:1px solid #c3d6f7;border-radius:3px;padding:14px 16px;margin:10px 0 18px}.korea h3{margin-top:0;color:#1e3a8a}
-.footer{margin-top:36px;padding-top:14px}.note,.small{font-size:12.5px}
-@media(max-width:900px){.shell{max-width:1100px}.columns{grid-template-columns:minmax(0,1fr)}.infobox{max-width:100%}.infobox dl{grid-template-columns:35% 65%}.desktop-quota{display:none}.mobile-quota{display:block}}
-@media(max-width:600px){.shell{padding:18px 16px 48px}.title{font-size:27px}.intro{font-size:14px}.topbar-inner{padding:8px 16px;justify-content:space-between}.golf-nav{display:flex;gap:8px 0}.golf-nav a{padding:0 10px;font-size:13px}.toc{padding:12px 18px 12px 14px}.data{font-size:12px}.data th,.data td{padding:6px}.event{padding:0}.footnotes{font-size:12px}.korea{padding:12px}.infobox dt,.infobox dd{font-size:12px}h2{font-size:21px}}
-@media print{.infobox{display:none}.columns{display:block}.desktop-quota{display:block}.mobile-quota{display:none}}
