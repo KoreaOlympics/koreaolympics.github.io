@@ -21,9 +21,9 @@
   a:hover{text-decoration:underline;}
   a:visited{color:var(--link-visited);}
   .topbar{border-bottom:1px solid var(--border);background:var(--panel);font-size:12.5px;color:var(--muted);}
-  .topbar .inner{max-width:1040px;margin:0 auto;padding:8px 20px;display:flex;gap:16px;flex-wrap:wrap;}
+  .topbar .inner{max-width:1100px;margin:0 auto;padding:8px 20px;display:flex;gap:16px;flex-wrap:wrap;}
   .topbar a{color:var(--link);}
-  .layout{max-width:1040px;margin:0 auto;padding:22px 20px 80px;}
+  .layout{max-width:1100px;margin:0 auto;padding:22px 20px 80px;}
   h1.title{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.3;margin:0 0 2px;padding-bottom:6px;border-bottom:1px solid var(--border);}
   .subtitle{color:var(--muted);font-size:13px;margin:0 0 14px;}
   .hatnote{font-style:italic;color:var(--muted);background:var(--panel);border:1px solid var(--border-soft);padding:8px 14px;border-radius:2px;margin:0 0 16px;font-size:13px;}
@@ -47,30 +47,19 @@
   .cat{display:flex;align-items:baseline;gap:9px;margin:20px 0 9px;font-family:var(--serif);font-weight:600;font-size:18px;color:#2a2d31;}
   .cat:first-child{margin-top:6px;}
   .cat .cnt{font-family:var(--sans);font-size:12px;color:var(--muted);font-weight:500;}
-  .grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;}
-  @media (max-width:900px){.grid{grid-template-columns:repeat(4,1fr);}}
-  @media (max-width:560px){.grid{grid-template-columns:repeat(3,1fr);}}
-  @media (max-width:380px){.grid{grid-template-columns:repeat(2,1fr);}}
-  .card{display:flex;align-items:center;gap:8px;border:2px solid var(--border);border-radius:9px;padding:9px 10px;background:#fff;min-width:0;transition:box-shadow .14s,border-color .14s,transform .14s;}
-  .card:hover{box-shadow:0 3px 12px rgba(0,0,0,.08);transform:translateY(-1px);}
-  .card.y26{background:#d9f2e2;}
-  .card.y26:hover{border-color:#9db4e0;}
-  .card.asiad-direct{border-color:#c9791a;border-style:solid;}
-  .card.asiad-indirect{border-color:#c9791a;border-style:dashed;}
-  .card.asiad-cond{border-color:#8b5cd6;border-style:dotted;}
-  .card .ic{font-size:21px;width:26px;text-align:center;flex:0 0 auto;}
-  .ic-legend{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;font-size:12.5px;color:var(--muted);margin:14px 0 4px;padding:10px 12px;background:var(--panel);border:1px solid var(--border-soft);border-radius:4px;}
-  .ic-legend .sw{display:inline-flex;align-items:center;gap:7px;}
-  .ic-legend .sw2{display:inline-block;width:30px;height:20px;border-radius:5px;border:2px solid var(--border);background:#fff;vertical-align:middle;}
-  .ic-legend .sw2.y26{background:#d9f2e2;}
-  .ic-legend .sw2.asiad-direct{border-color:#c9791a;border-style:solid;}
-  .ic-legend .sw2.asiad-indirect{border-color:#c9791a;border-style:dashed;}
-  .ic-legend .sw2.asiad-cond{border-color:#8b5cd6;border-style:dotted;}
-  .card .nm{font-size:14px;font-weight:600;line-height:1.2;min-width:0;word-break:keep-all;}
+  .grid{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:8px;}
+  @media (max-width:960px){.grid{grid-template-columns:repeat(6,minmax(0,1fr));}}
+  @media (max-width:720px){.grid{grid-template-columns:repeat(4,minmax(0,1fr));}}
+  @media (max-width:420px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));}}
+  .card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center;min-height:88px;border:0;background:var(--panel);border-radius:9px;padding:10px 6px;min-width:0;transition:box-shadow .14s,border-color .14s,transform .14s;}
+  .card:hover{box-shadow:0 3px 12px rgba(0,0,0,.08);transform:translateY(-1px);background:#eef2f7;}
+  .card .ic{font-size:24px;line-height:1;text-align:center;flex:0 0 auto;}
+  .card .nm{font-size:13.5px;font-weight:600;line-height:1.25;min-width:0;word-break:keep-all;display:flex;flex-direction:column;align-items:center;gap:4px;}
+  .card .nm .tag{margin-left:0;}
   .card .nm a{color:var(--ink);}
-  .card.prep{background:var(--panel);border-style:dashed;}
+  .card.prep{background:var(--panel);}
   .card.prep .nm{color:#6b7075;}
-  .card.pending{background:var(--panel);border-style:dashed;}
+  .card.pending{background:var(--panel);}
   .card.pending .nm a{color:var(--link-red);}
   .tag{display:inline-block;font-size:10px;font-weight:700;padding:1px 6px;border-radius:10px;margin-left:5px;vertical-align:middle;}
   .tag.new{background:#eaf1ff;color:#2456c6;border:1px solid #c3d6f7;}
@@ -95,6 +84,23 @@
   .led.worlds{background:#f3e8ff;color:#6b21a8;border:1px solid #e2c9f5;}
   .led.asiad{background:#fff2e0;color:#a05a00;border:1px solid #f2d2a0;}
   .led.etc{background:#f8f9fa;color:#6b7075;border:1px solid #e0e3e7;}
+  .spot{border:2px solid #6b21a8;border-radius:10px;background:#faf6ff;padding:16px 18px;margin:4px 0 18px;}
+  .spot-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin-bottom:6px;}
+  .spot-kicker{font-size:12px;font-weight:700;color:#fff;background:#6b21a8;border-radius:3px;padding:2px 9px;}
+  .spot-dday{font-size:12px;font-weight:700;color:#6b21a8;border:1px solid #e2c9f5;background:#fff;border-radius:3px;padding:1px 8px;font-variant-numeric:tabular-nums;}
+  .spot h2.spot-title{font-family:var(--serif);font-size:22px;font-weight:600;margin:2px 0 4px;padding:0;border:0;}
+  .spot-sub{font-size:13.5px;color:var(--muted);margin:0 0 12px;}
+  .spot-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:0 0 12px;}
+  .spot-stat{background:#fff;border:1px solid #e2c9f5;border-radius:6px;padding:10px 12px;}
+  .spot-stat strong{display:block;font-size:22px;line-height:1.25;color:#3b0a6b;font-variant-numeric:tabular-nums;}
+  .spot-stat span{font-size:12px;color:var(--muted);}
+  .spot p{font-size:13.5px;margin:0 0 8px;}
+  .spot-links{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:13.5px;font-weight:600;}
+  table.ev8{border-collapse:collapse;width:100%;font-size:13px;margin:6px 0 14px;table-layout:fixed;}
+  table.ev8 th,table.ev8 td{border:1px solid var(--border-soft);padding:7px 4px;text-align:center;word-break:keep-all;}
+  table.ev8 thead th{background:var(--panel);font-size:12px;}
+  table.ev8 td.q{font-weight:700;color:#3b0a6b;}
+  @media (max-width:720px){.spot-stats{grid-template-columns:repeat(2,minmax(0,1fr));}.ev8-wrap{overflow-x:auto;}table.ev8{min-width:640px;}}
   .infoline{font-size:12.5px;color:var(--muted);background:#f0fbf3;border:1px solid #b7e0c2;border-radius:3px;padding:9px 13px;margin:0 0 14px;}
 </style>
 </head>
@@ -109,74 +115,68 @@
   <p class="subtitle">제34회 하계올림픽 로스앤젤레스 2028 · 종목별 출전권(Quota) 배분 방식 — 각 국제경기연맹 공식 예선 시스템(2026년 5~8월 버전) 기준</p>
   <p class="hatnote">종목 카드를 누르면 상세 페이지로 이동합니다. 각 상세 페이지에는 <b>위키 편집기</b>(직접 내용을 고쳐 저장)와 <b>쿼터 계산기</b>(세부종목별 확보 인원을 입력하면 잔여 쿼터 자동 계산)가 있습니다. 아래 탭으로 <b>종목별 예선</b>, <b>2026 예선 목록</b>, <b>개요·용어</b>를 오갈 수 있습니다.</p>
   <p class="hatnote">📊 <a href="la28-quota-status.html">LA28 출전권 확보 현황</a> — 실시간 확정 출전권 트래커 요약과 한국 개인 자격 출전권 전망(약 100개)을 정리한 별도 문서.</p>
+  <div class="spot" id="spotlight"><div class="spot-head"><span class="spot-kicker">다음 주요 예선</span><span class="spot-dday" id="spot-dday">2026.11.01 개막</span><span class="led worlds">세계선수권</span></div><h2 class="spot-title">🎯 ISSF 사격 세계선수권 — 카타르 도하</h2><p class="spot-sub">2026.11.01–14 · 소총·권총·산탄총 · LA28 사격 첫 세계선수권 예선</p><div class="spot-stats"><div class="spot-stat"><strong>36장</strong><span>LA28 출전권</span></div><div class="spot-stat"><strong>12종목 × 3</strong><span>개인종목별 상위 3명의 국가</span></div><div class="spot-stat"><strong>종목당 1장</strong><span>한 세계선수권 국가 상한</span></div><div class="spot-stat"><strong>72장</strong><span>세계선수권 몫 (사격 전체 340장)</span></div></div><p>각 개인종목 상위 선수의 국가 올림픽위원회(NOC)가 1장씩 얻는다. 한 국가는 한 세계선수권에서 종목당 1장만, 한 선수는 1장만 얻을 수 있다. 혼성팀 3종목은 별도 쿼터 없이 개인종목 출전 선수로 구성한다.</p><div class="spot-links"><a href="olshooting.html">사격 상세 페이지 →</a><a href="#major" onclick="showTab('t-major',document.getElementById('b-major'));return false;">주요 예선 메뉴 →</a></div></div>
   <div class="tabs">
     <button class="tab-btn active" id="b-sports" onclick="showTab('t-sports',this)">📋 종목별 예선</button>
     <button class="tab-btn" id="b-2026" onclick="showTab('t-2026',this)"><span class="dot"></span>2026 예선 목록</button>
+    <button class="tab-btn" id="b-major" onclick="showTab('t-major',this)">⭐ 주요 예선</button>
     <button class="tab-btn" id="b-info" onclick="showTab('t-info',this)">ℹ️ 개요·용어</button>
   </div>
 
   <!-- ════ 탭 1 : 종목별 예선 ════ -->
   <div class="tab-panel active" id="t-sports">
-    <div class="cat">전체 종목 <span class="cnt">가나다순 · 상세 페이지 37종 전부 완료</span></div>
+    <div class="cat">전체 종목 <span class="cnt">가나다순 · 상세 페이지 38종 전부 완료</span></div>
     <div class="grid">
-      <div class="card y26"><span class="ic">⛳</span><div class="nm"><a href="olgolf.html">골프</a></div></div>
+      <div class="card"><span class="ic">⛳</span><div class="nm"><a href="olgolf.html">골프</a></div></div>
       <div class="card"><span class="ic">🎽</span><div class="nm"><a href="olmodernpentathlon.html">근대5종</a></div></div>
-      <div class="card y26"><span class="ic">🏀</span><div class="nm"><a href="olbasketball.html">농구</a><span class="tag merge">2종목</span></div></div>
+      <div class="card"><span class="ic">🏀</span><div class="nm"><a href="olbasketball.html">농구</a><span class="tag merge">2종목</span></div></div>
       <div class="card"><span class="ic">🤿</span><div class="nm"><a href="oldiving.html">다이빙</a></div></div>
-      <div class="card y26"><span class="ic">🥍</span><div class="nm"><a href="ollacrosse.html">라크로스</a><span class="tag new">신규</span></div></div>
+      <div class="card"><span class="ic">🥍</span><div class="nm"><a href="ollacrosse.html">라크로스</a><span class="tag new">신규</span></div></div>
       <div class="card"><span class="ic">🏉</span><div class="nm"><a href="olrugby.html">럭비</a></div></div>
-      <div class="card asiad-indirect"><span class="ic">🤼</span><div class="nm"><a href="olwrestling.html">레슬링</a></div></div>
+      <div class="card"><span class="ic">🤼</span><div class="nm"><a href="olwrestling.html">레슬링</a></div></div>
       <div class="card"><span class="ic">🌊</span><div class="nm"><a href="olmarathonswim.html">마라톤 수영</a></div></div>
-      <div class="card y26"><span class="ic">🏐</span><div class="nm"><a href="olvolleyball.html">배구</a><span class="tag merge">2종목</span></div></div>
-      <div class="card asiad-indirect"><span class="ic">🏸</span><div class="nm"><a href="olbadminton.html">배드민턴</a></div></div>
+      <div class="card"><span class="ic">🏐</span><div class="nm"><a href="olvolleyball.html">배구</a><span class="tag merge">2종목</span></div></div>
+      <div class="card"><span class="ic">🏸</span><div class="nm"><a href="olbadminton.html">배드민턴</a></div></div>
       <div class="card"><span class="ic">🥊</span><div class="nm"><a href="olboxing.html">복싱</a></div></div>
-      <div class="card y26"><span class="ic">🎯</span><div class="nm"><a href="olshooting.html">사격</a></div></div>
-      <div class="card y26"><span class="ic">🚴</span><div class="nm"><a href="olcycling.html">사이클</a><span class="tag merge">5종목</span></div></div>
-      <div class="card y26"><span class="ic">🏄</span><div class="nm"><a href="olsurfing.html">서핑</a></div></div>
+      <div class="card"><span class="ic">🎯</span><div class="nm"><a href="olshooting.html">사격</a></div></div>
+      <div class="card"><span class="ic">🚴</span><div class="nm"><a href="olcycling.html">사이클</a><span class="tag merge">5종목</span></div></div>
+      <div class="card"><span class="ic">🏄</span><div class="nm"><a href="olsurfing.html">서핑</a></div></div>
       <div class="card"><span class="ic">🤽</span><div class="nm"><a href="olwaterpolo.html">수구</a></div></div>
       <div class="card"><span class="ic">🏊</span><div class="nm"><a href="olswimming.html">수영</a></div></div>
-      <div class="card y26"><span class="ic">🛹</span><div class="nm"><a href="olskateboard.html">스케이트보딩</a></div></div>
-      <div class="card asiad-cond"><span class="ic">⚫</span><div class="nm"><a href="olsquash.html">스쿼시</a><span class="tag new">신규</span></div></div>
+      <div class="card"><span class="ic">🛹</span><div class="nm"><a href="olskateboard.html">스케이트보딩</a></div></div>
+      <div class="card"><span class="ic">⚫</span><div class="nm"><a href="olsquash.html">스쿼시</a><span class="tag new">신규</span></div></div>
       <div class="card"><span class="ic">🧗</span><div class="nm"><a href="olclimbing.html">스포츠클라이밍</a><span class="tag merge">3종목</span></div></div>
-      <div class="card y26"><span class="ic">🏇</span><div class="nm"><a href="olequestrian.html">승마</a><span class="tag merge">3종목</span></div></div>
+      <div class="card"><span class="ic">🏇</span><div class="nm"><a href="olequestrian.html">승마</a><span class="tag merge">3종목</span></div></div>
       <div class="card"><span class="ic">🩰</span><div class="nm"><a href="olartisticswimming.html">아티스틱 스위밍</a></div></div>
-      <div class="card y26"><span class="ic">⚾</span><div class="nm"><a href="olbaseball.html">야구·소프트볼</a><span class="tag merge">2종목</span></div></div>
-      <div class="card y26 asiad-direct"><span class="ic">🏹</span><div class="nm"><a href="olarchery.html">양궁</a></div></div>
-      <div class="card y26 asiad-indirect"><span class="ic">🏋️</span><div class="nm"><a href="olweightlifting.html">역도</a></div></div>
-      <div class="card y26"><span class="ic">⛵</span><div class="nm"><a href="olsailing.html">요트</a></div></div>
-      <div class="card y26"><span class="ic">👘</span><div class="nm"><a href="oljudo.html">유도</a></div></div>
+      <div class="card"><span class="ic">⚾</span><div class="nm"><a href="olbaseball.html">야구·소프트볼</a><span class="tag merge">2종목</span></div></div>
+      <div class="card"><span class="ic">🏹</span><div class="nm"><a href="olarchery.html">양궁</a></div></div>
+      <div class="card"><span class="ic">🏋️</span><div class="nm"><a href="olweightlifting.html">역도</a></div></div>
+      <div class="card"><span class="ic">⛵</span><div class="nm"><a href="olsailing.html">요트</a></div></div>
+      <div class="card"><span class="ic">👘</span><div class="nm"><a href="oljudo.html">유도</a></div></div>
       <div class="card pending"><span class="ic">🏃</span><div class="nm"><a class="new" href="#" onclick="return false;">육상</a><span class="tag soon">미발표</span></div></div>
       <div class="card"><span class="ic">🚣</span><div class="nm"><a href="olrowing.html">조정</a><span class="tag merge">2종목</span></div></div>
-      <div class="card y26"><span class="ic">🤸</span><div class="nm"><a href="olgymnastics.html">체조</a><span class="tag merge">3종목</span></div></div>
+      <div class="card"><span class="ic">🤸</span><div class="nm"><a href="olgymnastics.html">체조</a><span class="tag merge">3종목</span></div></div>
       <div class="card pending"><span class="ic">⚽</span><div class="nm"><a class="new" href="#" onclick="return false;">축구</a><span class="tag soon">미발표</span></div></div>
       <div class="card"><span class="ic">🛶</span><div class="nm"><a href="olcanoe.html">카누</a><span class="tag merge">2종목</span></div></div>
-      <div class="card y26"><span class="ic">🏏</span><div class="nm"><a href="olcricket.html">크리켓</a><span class="tag new">신규</span></div></div>
+      <div class="card"><span class="ic">🏏</span><div class="nm"><a href="olcricket.html">크리켓</a><span class="tag new">신규</span></div></div>
       <div class="card"><span class="ic">🏓</span><div class="nm"><a href="oltabletennis.html">탁구</a></div></div>
-      <div class="card y26 asiad-indirect"><span class="ic">🥋</span><div class="nm"><a href="oltaekwondo.html">태권도</a></div></div>
-      <div class="card y26 asiad-direct"><span class="ic">🎾</span><div class="nm"><a href="oltennis.html">테니스</a></div></div>
-      <div class="card y26 asiad-direct"><span class="ic">🏅</span><div class="nm"><a href="oltriathlon.html">트라이애슬론</a></div></div>
+      <div class="card"><span class="ic">🥋</span><div class="nm"><a href="oltaekwondo.html">태권도</a></div></div>
+      <div class="card"><span class="ic">🎾</span><div class="nm"><a href="oltennis.html">테니스</a></div></div>
+      <div class="card"><span class="ic">🏅</span><div class="nm"><a href="oltriathlon.html">트라이애슬론</a></div></div>
       <div class="card"><span class="ic">🤺</span><div class="nm"><a href="olfencing.html">펜싱</a></div></div>
-      <div class="card y26"><span class="ic">🏈</span><div class="nm"><a href="olflagfootball.html">플래그풋볼</a><span class="tag new">신규</span></div></div>
-      <div class="card y26 asiad-direct"><span class="ic">🏑</span><div class="nm"><a href="olhockey.html">필드하키</a></div></div>
-      <div class="card y26"><span class="ic">🤾</span><div class="nm"><a href="olhandball.html">핸드볼</a></div></div>
+      <div class="card"><span class="ic">🏈</span><div class="nm"><a href="olflagfootball.html">플래그풋볼</a><span class="tag new">신규</span></div></div>
+      <div class="card"><span class="ic">🏑</span><div class="nm"><a href="olhockey.html">필드하키</a></div></div>
+      <div class="card"><span class="ic">🤾</span><div class="nm"><a href="olhandball.html">핸드볼</a></div></div>
     </div>
     <p class="legend"> 이번에 새로 수록된 종목 &nbsp;·&nbsp; <span class="tag new">신규</span> LA28 신규 채택 종목 &nbsp;·&nbsp; <span class="tag merge">N종목</span> 여러 세부종목을 한 페이지로 통합 &nbsp;·&nbsp; <span class="tag soon">미발표</span> 연맹 예선 규정 미공개</p>
     <p class="legend" style="margin-top:8px;">파란 링크 카드 <b>38종 전부 상세 페이지 완료</b>. 육상·축구는 연맹이 아직 예선 시스템을 공개하지 않아 규정 문서 자체가 없습니다.</p>
 
-    <div class="ic-legend" id="ic-legend">
-      <span class="sw"><span class="sw2 y26"></span> 2026년 실질 예선 활동</span>
-      <span class="sw"><span class="sw2 asiad-direct"></span> 아시안게임 직접 연동</span>
-      <span class="sw"><span class="sw2 asiad-indirect"></span> 아시안게임 간접 연동</span>
-      <span class="sw"><span class="sw2 asiad-cond"></span> 아시안게임 조건부 연동</span>
-      <span class="sw"><span class="sw2"></span> 해당 없음</span>
-    </div>
-    <p class="legend" style="margin-top:8px;">위 카드 전체의 색으로 두 가지를 함께 표시했습니다. <b>초록색 배경</b>인 21개 종목(골프·농구·라크로스·배구·사격·사이클·스케이트보딩·승마·야구·소프트볼·양궁·역도·요트·유도·체조·크리켓·태권도·테니스·트라이애슬론·플래그풋볼·필드하키·핸드볼)은 2026년 안에 랭킹 적립 개시나 세계·대륙선수권 등 <b>실질적인 예선 활동</b>이 시작되는 종목이며, 나머지 16개 종목(근대5종·다이빙·럭비·레슬링·마라톤 수영·배드민턴·복싱·수구·수영·스쿼시·스포츠클라이밍·아티스틱 스위밍·조정·카누·탁구·펜싱)은 실제 예선이 2027년 이후 시작되어 흰 배경 그대로입니다. 카드 테두리는 아시안게임과의 연동 정도를 나타내는데, <b>주황색 실선</b> 테두리인 양궁·테니스·트라이애슬론·필드하키 4종목은 2026 아이치·나고야 아시안게임 성적이 예선 경로에 직접 연결되고, <b>주황색 점선</b> 테두리인 레슬링·배드민턴·역도·태권도 4종목은 대륙종합대회 성적이 세계랭킹 포인트 등으로 간접 반영되는 수준입니다. <b>보라색 점선</b> 테두리인 스쿼시는 아시안게임이 예선 경로에 조건부로만 관련되며, 나머지 종목은 아시안게임과 예선 경로가 무관합니다.</p>
   </div>
 
   <!-- ════ 탭 2 : 2026 예선 목록 ════ -->
   <div class="tab-panel" id="t-2026">
-    <div class="cat">2026년 예선 일정 <span class="cnt">시간순 · 37종 전체 반영</span></div>
-    <p class="infoline">LA28 예선은 대부분 2026년 하반기에 <b>랭킹 적립</b> 또는 <b>세계·대륙선수권</b>으로 시작됩니다. 아래는 상세 페이지 37종 전체의 2026년 예선 이벤트를 시간순으로 모은 것입니다.</p>
+    <div class="cat">2026년 예선 일정 <span class="cnt">시간순 · 38종 전체 반영</span></div>
+    <p class="infoline">LA28 예선은 대부분 2026년 하반기에 <b>랭킹 적립</b> 또는 <b>세계·대륙선수권</b>으로 시작됩니다. 아래는 상세 페이지 38종 전체의 2026년 예선 이벤트를 시간순으로 모은 것입니다.</p>
     <div class="y-toolbar">
       <button class="y-btn active" onclick="filterY('all',this)">전체</button>
       <button class="y-btn" onclick="filterY('direct',this)">직행</button>
@@ -211,11 +211,14 @@
         <tr data-k="asiad"><td class="d">2026.09</td><td class="sp">🏹 양궁</td><td>2026 아이치·나고야 아시안게임(9.25~10.3) — 리커브 개인·혼성단체 등 직접 예선</td><td><span class="led asiad">아시안게임</span></td></tr>
         <tr data-k="asiad"><td class="d">2026.09.19~10.04</td><td class="sp">🏑 필드하키</td><td>제20회 아시안게임 하키(남·여), 아이치·나고야 — 아시아 대륙예선 겸용</td><td><span class="led asiad">아시안게임</span></td></tr>
         <tr data-k="asiad"><td class="d">2026.09.20~21</td><td class="sp">🏅 트라이애슬론</td><td>아이치·나고야 아시안게임(대륙종합대회 경로)</td><td><span class="led asiad">아시안게임</span></td></tr>
+        <tr data-k="asiad"><td class="d">2026.09.25~29</td><td class="sp">🏄 서핑</td><td>아이치·나고야 아시안게임 — 아시아 대륙 예선, 남녀 우승자 1명씩 쿼터(남 이가라시 가노아·여 이케다 미라이, 일본)</td><td><span class="led asiad">아시안게임</span></td></tr>
+        <tr data-k="asiad"><td class="d">2026.09.19~10.04</td><td class="sp">⚫ 스쿼시</td><td>아이치·나고야 아시안게임 단식 — 아시아 대륙 예선, 남녀 우승자 1명씩(남 응 아인 유·여 시바상가리 수브라마니암, 말레이시아 · 2028.5.22 PSA 50위 확인 후 확정)</td><td><span class="led asiad">아시안게임</span></td></tr>
         <tr data-k="asiad"><td class="d">2026(아이치·나고야)</td><td class="sp">🎾 테니스</td><td>아시안게임 단식 — 남녀 우승자 ITF 파이널퀄리피케이션 출전권 확보</td><td><span class="led asiad">아시안게임</span></td></tr>
         <tr data-k="worlds"><td class="d">2026.10</td><td class="sp">🤸 기계체조</td><td>제54회 FIG 세계선수권 — 남·여 각 3팀 배정</td><td><span class="led worlds">세계선수권</span></td></tr>
         <tr data-k="worlds"><td class="d">2026.10</td><td class="sp">🚴 사이클(트랙)</td><td>UCI 트랙 세계선수권 — 랭킹 반영</td><td><span class="led worlds">세계선수권</span></td></tr>
         <tr data-k="cont"><td class="d">2026.10</td><td class="sp">🥍 라크로스</td><td>아시아·태평양 대륙 예선</td><td><span class="led cont">대륙예선</span></td></tr>
         <tr data-k="worlds"><td class="d">2026.11</td><td class="sp">🎯 사격</td><td>ISSF 세계선수권(도하) — 소총·권총·산탄총</td><td><span class="led worlds">세계선수권</span></td></tr>
+        <tr data-k="worlds"><td class="d">2026.11.06~15</td><td class="sp">🏄 서핑</td><td>2026 ISA 세계서핑게임(페루 푼타 로카스) — 남녀 팀 순위 1위 국가 1자리씩</td><td><span class="led worlds">세계선수권</span></td></tr>
         <tr data-k="cont"><td class="d">2026.11</td><td class="sp">🥍 라크로스</td><td>유럽 대륙 예선</td><td><span class="led cont">대륙예선</span></td></tr>
         <tr data-k="cont"><td class="d">2026.12</td><td class="sp">🥍 라크로스</td><td>아프리카 대륙 예선</td><td><span class="led cont">대륙예선</span></td></tr>
         <tr data-k="etc"><td class="d">2026.12</td><td class="sp">🚣 조정</td><td>대륙별 예선 레가타 개최지 확정(조정·코스탈)</td><td><span class="led etc">준비</span></td></tr>
@@ -224,6 +227,17 @@
       </tbody>
     </table>
     <p class="legend">2026년 예선 활동이 없는 종목(2027년 이후 시작): 근대5종·다이빙·마라톤수영·배드민턴·복싱·수구·수영·아티스틱스위밍·펜싱·탁구(본 예선). 필드하키·테니스는 아시안게임이 곧 대륙예선을 겸하는 방식이라 위 표에도 함께 표시했습니다.</p>
+  </div>
+
+  <!-- ════ 탭 : 주요 예선 ════ -->
+  <div class="tab-panel" id="t-major">
+    <div class="cat">다음 주요 예선 <span class="cnt">출전권이 한 번에 많이 걸린 대회 · 시간순</span></div>
+    <p class="infoline">출전권이 대량으로 배정되는 대회를 따로 모은 메뉴입니다. 첫 항목은 2026.11 도하 사격 세계선수권입니다.</p>
+    <h2>🎯 ISSF 사격 세계선수권 · 도하 (2026.11.01–14)</h2>
+    <p>LA28 사격 출전권 340장 중 세계선수권 몫은 72장이며, 그중 36장이 이 대회에 걸려 있다. 12개 개인종목에서 상위 3명의 국가 올림픽위원회(NOC)가 1장씩 얻는다.</p>
+    <div class="ev8-wrap"><table class="ev8"><caption style="text-align:left;font-size:12px;color:var(--muted);padding-bottom:4px">도하 2026 종목별 출전권 · 여자 25m는 25m 권총</caption><thead><tr><th>성별</th><th>10m 공기소총</th><th>50m 소총3자세</th><th>10m 공기권총</th><th>25m 속사권총</th><th>트랩</th><th>스키트</th><th>합계</th></tr></thead><tbody><tr><th>남자</th><td class="q">3</td><td class="q">3</td><td class="q">3</td><td class="q">3</td><td class="q">3</td><td class="q">3</td><td class="q">18</td></tr><tr><th>여자</th><td class="q">3</td><td class="q">3</td><td class="q">3</td><td class="q">3</td><td class="q">3</td><td class="q">3</td><td class="q">18</td></tr></tbody></table></div>
+    <table class="wt"><tr><th>사격 세계선수권</th><th>기간</th><th>분야</th><th>쿼터</th></tr><tr><td>2026 도하 (카타르)</td><td>2026.11.01–14</td><td>소총·권총·산탄총</td><td>36장 (12종목 × 3)</td></tr><tr><td>2027 카이로 (이집트)</td><td>2027.09.23–10.02</td><td>산탄총</td><td>12장 (4종목 × 3)</td></tr><tr><td>2027 대구 (대한민국)</td><td>2027.10.28–11.09</td><td>소총·권총</td><td>24장 (8종목 × 3)</td></tr></table>
+    <p class="legend">특례: 한 선수는 소속 국가에 1장만 얻을 수 있다. 세계선수권에서는 국가당 종목별 1장, 다른 지정 예선대회에서는 종목별 최대 2장. 도하 직후 2026.11.21–12.01 아메리카선수권(리마)에 12장이 걸린다. 출처: ISSF LA28 Qualification System (2026.06.19) D.1·G. <a href="olshooting.html">사격 상세 →</a></p>
   </div>
 
   <!-- ════ 탭 3 : 개요·용어 ════ -->
@@ -241,7 +255,7 @@
       <tr><td>OQR / OGR / 랭킹</td><td>연맹별 올림픽 예선 랭킹(역도 OQR, 골프 OGR, 태권도·유도 세계랭킹 등)</td></tr>
     </table>
     <h2>아시안게임과의 관계</h2>
-    <p>이번 개정에서는 아시안게임 강조를 줄이고, 각 종목 페이지에서 <b>실제로 아시안게임이 예선 경로에 포함되는 경우</b>에만 이를 표기했습니다. 양궁·필드하키·트라이애슬론·테니스는 2026 아이치·나고야 아시안게임 성적이 예선 경로에 <b>직접</b> 연결됩니다. 태권도·역도 등은 대륙종합대회 성적이 세계랭킹 포인트로 간접 반영될 수 있는 정도이며, 복싱의 '아시아 예선전'은 아시안게임이 아니라 연맹이 여는 별도 대륙 자격전입니다.</p>
+    <p>이번 개정에서는 아시안게임 강조를 줄이고, 각 종목 페이지에서 <b>실제로 아시안게임이 예선 경로에 포함되는 경우</b>에만 이를 표기했습니다. 서핑·스쿼시·양궁·필드하키·트라이애슬론·테니스는 2026 아이치·나고야 아시안게임 성적이 예선 경로에 <b>직접</b> 연결됩니다. 태권도·역도 등은 대륙종합대회 성적이 세계랭킹 포인트로 간접 반영될 수 있는 정도이며, 복싱의 '아시아 예선전'은 아시안게임이 아니라 연맹이 여는 별도 대륙 자격전입니다.</p>
     <h2>위키 편집기 · 쿼터 계산기</h2>
     <p>각 종목 상세 페이지에는 두 가지 도구가 있습니다. <b>위키 편집기</b>는 상단 툴바의 [편집]을 누르면 본문·표를 위키백과처럼 직접 고쳐 쓰고 [저장]할 수 있으며(브라우저에 자동 저장, JSON 내보내기/불러오기 지원), 하단 <b>게시판</b>에 별도 글도 남길 수 있습니다. <b>쿼터 계산기</b>는 "체급/세부종목 및 출전권" 표의 배정 인원을 자동으로 읽어와, 확보(예상) 인원을 입력하면 잔여 쿼터를 즉시 계산해 줍니다. 이 사이트는 두 가지 형태로 배포됩니다: <b>편집판</b>(위키 편집기 포함, 개인 사용/초안 작성용)과 <b>게시판</b>(편집 도구 없이 계산기만 남긴 정적 버전, GitHub Pages 등 공개 배포용) — 두 폴더는 파일명이 완전히 동일해 그대로 바꿔 쓸 수 있습니다.</p>
     <h2>아직 발표되지 않은 종목</h2>
@@ -249,7 +263,7 @@
   </div>
 
   <div class="footer">
-    출처: 각 국제경기연맹 LA28 Qualification System (2026년 5~8월 버전) — WT·World Triathlon·FIVB·World Aquatics·IWF·UWW·ISSF·World Sailing·World Rugby·World Rowing·FIG·UCI·UIPM·World Lacrosse·IJF·FIH·World Boxing·FIBA·WBSC·BWF·World Archery·IHF·IGF·IFAF·FIE·FEI·ICC·ITTF·ITF. 본 페이지는 요약이며 정확한 규정은 각 연맹 원문을 따릅니다.
+    출처: 각 국제경기연맹 LA28 Qualification System (2026년 5~8월 버전) — WT·World Triathlon·FIVB·World Aquatics·IWF·UWW·ISSF·World Sailing·World Rugby·World Rowing·FIG·UCI·UIPM·World Lacrosse·IJF·FIH·World Boxing·FIBA·WBSC·BWF·World Archery·IHF·IGF·IFAF·FIE·FEI·ICC·ITTF·ITF·ISA·WSF. 본 페이지는 요약이며 정확한 규정은 각 연맹 원문을 따릅니다.
   </div>
 </div>
 <script>
@@ -270,6 +284,8 @@
   }
   if(location.hash==='#2026'){showTab('t-2026',document.getElementById('b-2026'));}
   else if(location.hash==='#info'){showTab('t-info',document.getElementById('b-info'));}
+  else if(location.hash==='#major'){showTab('t-major',document.getElementById('b-major'));}
+  (function(){var el=document.getElementById('spot-dday');if(!el)return;var start=new Date('2026-11-01T00:00:00+03:00'),end=new Date('2026-11-15T00:00:00+03:00'),now=new Date();var d=Math.ceil((start-now)/86400000);if(now>=end){el.textContent='종료 · 결과 확인';}else if(now>=start){el.textContent='진행 중';}else{el.textContent='D-'+d+' · 2026.11.01 개막';}})();
 </script>
 </body>
 </html>
