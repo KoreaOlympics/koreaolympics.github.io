@@ -43,3 +43,4 @@ h3{font-family:'Batang','Noto Serif KR',Georgia,serif;font-size:18px}
 details{border-color:#eaecf0;border-radius:2px}
 @media(max-width:900px){.columns{grid-template-columns:minmax(0,1fr)}.infobox{display:none}.shell{max-width:800px}}
 @media(max-width:600px){.shell{padding:18px 16px 36px}.topbar-inner{padding:8px 16px;gap:10px 16px}.topbar-inner>span{display:none}.title{font-size:27px}.golf-nav{display:flex;flex-wrap:wrap}.golf-nav a{font-size:14px;padding:8px 12px}.intro{font-size:15px}.event{padding:0}.toc{min-width:0;max-width:100%;padding:12px 18px}.data th,.data td{padding:7px 6px}.summary-card{padding:8px}.summary-card strong{font-size:20px}.summary-card span{font-size:12px}}
+.figure{margin:18px 0 22px}.figure img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:2px;background:#f8f9fa}.figure figcaption{margin-top:6px;font-size:12.5px;color:var(--muted);line-height:1.5}
