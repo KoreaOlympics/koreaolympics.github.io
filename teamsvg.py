@@ -258,6 +258,27 @@ COMMON_NOTE_NEW = "IOC 게시 규정 PDF는 2026.10.04에 전문을 확인했습
 SNAP = '<p class="snapshot">{}</p>'
 
 
+SPORTS = [("olfootball", "축구"), ("olbaseball", "야구·소프트볼"), ("olbasketball", "농구"), ("olvolleyball", "배구"),
+          ("olhockey", "필드하키"), ("olflagfootball", "플래그풋볼"), ("olrugby", "7인제 럭비"), ("olhandball", "핸드볼"),
+          ("olwaterpolo", "수구"), ("olcricket", "크리켓"), ("ollacrosse", "라크로스")]
+NAV_CSS = (".sportnav{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;margin:0 0 22px}"
+           ".sportnav a[aria-current]{color:#202122;font-weight:700}@media print{.sportnav{display:none}}")
+
+
+def sportnav(cur):
+    links = "".join(f'<a href="{f}.html"' + (' aria-current="page"' if f == cur else "") + f'>{n}</a>' for f, n in SPORTS)
+    return f'<nav class="sportnav" aria-label="단체 구기종목">{links}</nav>'
+
+
+def set_sportnav(name, t):
+    nav = sportnav(name)
+    if '<nav class="sportnav"' in t:
+        return re.sub(r'<nav class="sportnav"[\s\S]*?</nav>', lambda m: nav, t, count=1)
+    if ".sportnav{" not in t:
+        t = t.replace("</style>", NAV_CSS + "</style>", 1)
+    return t.replace('<main id="main">', '<main id="main">' + nav, 1)
+
+
 def insert_before_refline(t, sec_id, block):
     i = t.index(f'<h2 id="{sec_id}">')
     j = t.index('<p class="refline">', i)
@@ -289,7 +310,7 @@ def alias(t, tab, panels):
 
 
 def fix(name, t):
-    t = add_css(t).replace(COMMON_NOTE_OLD, COMMON_NOTE_NEW)
+    t = set_sportnav(name, add_css(t).replace(COMMON_NOTE_OLD, COMMON_NOTE_NEW))
     if name == "olflagfootball":
         t = t.replace('<li><a href="https://en.wikipedia.org/wiki/Handball_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_qualification">형식 참고 · 핸드볼 올림픽 예선</a></li>',
                       '<li><a href="https://en.wikipedia.org/wiki/2026_IFAF_Men%27s_Flag_Football_World_Championship">Wikipedia · 2026 IFAF 남자 세계선수권</a></li><li><a href="https://en.wikipedia.org/wiki/2026_IFAF_Women%27s_Flag_Football_World_Championship">Wikipedia · 2026 IFAF 여자 세계선수권</a></li>')
@@ -344,7 +365,7 @@ FILES = {
     "olfootball": ("20beadf2-olfootball.html", ["men", "women"], {}),
     "olhockey": ("efddf629-olhockey.html", ["men", "women"], {"olhockey-men": "men", "olhockey-women": "women"}),
     "olrugby": ("bf846a29-olrugby.html", ["men", "women"], {"olrugby-men": "men", "olrugby-women": "women"}),
-    "olhandball": ("71cbcca5-olhandball.html", None, {}),
+    "olhandball": ("71cbcca5-olhandball.html", ["men", "women", "rules"], {"olhandball-men": "men", "olhandball-women": "women"}),
     "olbasketball": ("481a83d1-olbasketball.html", ["men", "women", "men3", "women3"], {"olbasketball-men": "men", "olbasketball-women": "women", "olbasketball-3x3": "men3"}),
     "olvolleyball": ("e89a81f6-olvolleyball.html", ["men", "women", "menbeach", "womenbeach"], {"olvolleyball-indoor": "men", "olvolleyball-beach": "menbeach"}),
 }
