@@ -72,34 +72,57 @@ def qseries_flag(g):
                b, f"<b>Q-시리즈 구조 ({n})</b> · 대륙별 2팀씩 10팀이 몬트리올·올랜도 두 대회를 치러 상위 3팀이 출전합니다. 3팀은 최소 2개 대륙이어야 합니다(IFAF 규정 D.3). 한국은 2026 세계선수권에 나가지 않아 이 경로가 유일합니다.")
 
 
+AFCW = [("AUS", "호주"), ("CHN", "중국"), ("TPE", "대만"), ("JPN", "일본"), ("PRK", "북한"), ("PHI", "필리핀"), ("KOR", "대한민국"), ("UZB", "우즈베키스탄")]
+
+
 def football_w():
-    b = T(20, 28, "아시아 여자 올림픽 예선", 15, MUTE) + T(470, 28, "LA28", 15, MUTE)
-    for i, (lab, col) in enumerate([("1위", BLUE), ("2위", BLUE), ("3위", ORG)]):
-        y = 44 + i * 56
-        b += R(20, y, 170, 44, LORG if col == ORG else "#fff", col) + T(40, y + 28, f"아시아 {lab}", 16, INK, weight="600")
-    b += A(192, 66, 460, 66) + A(192, 122, 460, 122)
-    b += R(470, 46, 210, 40, DARK, DARK) + T(575, 72, "직행 1", 16, "#fff", "middle") + R(470, 102, 210, 40, DARK, DARK) + T(575, 128, "직행 2", 16, "#fff", "middle")
-    b += R(20, 214, 170, 44, "#fff", LINE) + T(40, 242, "남미 3위", 16, INK, weight="600")
-    b += A(192, 178, 262, 200, ORG) + A(192, 236, 262, 214, ORG)
-    b += R(268, 186, 170, 44, LORG, ORG) + T(353, 213, "대륙 간 플레이오프", 15, INK, "middle", "600")
-    b += A(440, 208, 466, 208, ORG)
-    b += R(470, 188, 210, 40, DARK, DARK) + T(575, 214, "승자 1팀", 16, "#fff", "middle")
-    return fig("fb-w-po", 700, 278, "여자 축구 아시아 2.5장 구조", "아시아 1·2위는 직행하고 3위는 남미 3위와 대륙 간 플레이오프를 치러 승자 1팀이 출전한다.",
-               b, "<b>아시아 2.5장의 뜻</b> · 0.5장은 반쪽 자리가 아니라, 아시아 3위와 남미 3위가 본선 1자리를 놓고 치르는 대륙 간 플레이오프입니다.")
+    b = T(20, 26, "AFC 여자 올림픽 예선 · 8개국 2개 조 (2027.04–12)", 15, MUTE) + T(590, 26, "LA28", 15, MUTE)
+    for gi, (g, y0) in enumerate([("A조", 38), ("B조", 178)]):
+        b += R(20, y0, 172, 122, "#fff", LINE) + T(32, y0 + 18, f"{g} · 4팀 리그", 13, MUTE, weight="600")
+        for k in range(4):
+            y = y0 + 26 + k * 23
+            col = ORG if k == 0 else (BLUE if k == 1 else LINE)
+            b += R(30, y, 152, 20, LORG if k == 0 else (LBLUE if k == 1 else "#fff"), col, 2, 1.5 if k > 1 else 1.8) + T(42, y + 15, f"{k + 1}위", 13, INK, weight="600" if k < 2 else "400")
+        cy1, cy2 = y0 + 36, y0 + 59
+        b += A(184, cy1, 584, cy1, ORG) + R(590, cy1 - 17, 132, 34, DARK, DARK) + T(656, cy1 + 6, f"직행 ({g} 1위)", 14, "#fff", "middle", "600")
+        b += A(184, cy2, 238, 150 + (gi * 2 - 1) * 10, BLUE)
+    b += T(380, 66, "조 1위 → 직행", 13, ORG, "middle", "600")
+    b += R(244, 124, 150, 52, LBLUE, BLUE) + T(319, 146, "AFC 플레이오프", 14, INK, "middle", "600") + T(319, 165, "조 2위끼리 2경기", 12, MUTE, "middle")
+    b += T(319, 192, "2028.02.28 · 03.04", 12, MUTE, "middle")
+    b += A(396, 150, 418, 150, BLUE)
+    b += R(424, 84, 140, 32, "#fff", LINE) + T(494, 105, "아르헨티나 (남미 3위)", 12, INK, "middle") + A(494, 118, 494, 124, "#99a9bb")
+    b += R(424, 126, 140, 48, LBLUE, BLUE) + T(494, 147, "AFC–CONMEBOL", 13, INK, "middle", "600") + T(494, 165, "플레이오프", 12, MUTE, "middle")
+    b += A(566, 150, 584, 150, BLUE) + R(590, 133, 132, 34, DARK, DARK) + T(656, 155, "승자 1팀", 14, "#fff", "middle", "600")
+    return fig("fb-w-po", 740, 312, "여자 축구 아시아 2.5장 구조", "AFC 여자 올림픽 예선 8개국이 4팀씩 2개 조 리그를 치러 조 1위 2팀이 직행한다. 조 2위 2팀은 2경기 플레이오프를 치르고, 승자가 남미 3위 아르헨티나와 AFC–CONMEBOL 플레이오프에서 마지막 1자리를 다툰다.",
+               b, "<b>아시아 2.5장의 뜻</b> · 두 조의 1위 2팀이 직행합니다. 조 2위 2팀이 홈·원정 2경기(2028.02.28·03.04)로 맞붙고, 승자가 2025 코파 아메리카 페메니나 3위 아르헨티나와 본선 마지막 1자리를 놓고 대륙 간 플레이오프를 치릅니다.")
+
+
+def football_afcw():
+    b = T(20, 26, "AFC 여자 올림픽 예선 참가 8개국", 15, MUTE)
+    for i, (c, n) in enumerate(AFCW):
+        x, y = 20 + (i % 4) * 118, 40 + (i // 4) * 62
+        k = c == "KOR"
+        b += R(x, y, 108, 52, LORG if k else "#fff", ORG if k else LINE, sw=2 if k else 1.5)
+        b += T(x + 54, y + 22, c, 13, ORG if k else MUTE, "middle", "600") + T(x + 54, y + 42, n, 15, INK, "middle", "600" if k else "400")
+    b += A(494, 100, 540, 70, ORG) + A(494, 110, 540, 150, BLUE)
+    b += R(546, 46, 150, 48, DARK, DARK) + T(621, 68, "조 1위 → LA28", 15, "#fff", "middle", "600") + T(621, 86, "A·B조 1위 2개국 직행", 12, "#d9e5ec", "middle")
+    b += R(546, 126, 150, 48, LBLUE, BLUE) + T(621, 148, "조 2위 → 플레이오프", 14, INK, "middle", "600") + T(621, 166, "승자 vs 아르헨티나", 12, MUTE, "middle")
+    return fig("fb-afcw", 716, 190, "AFC 여자 올림픽 예선 8개국과 출전권", "호주·중국·대만·일본·북한·필리핀·대한민국·우즈베키스탄 8개국이 4팀씩 2개 조로 나뉘어 조 1위 2개국이 LA28에 직행하고, 조 2위 2개국의 플레이오프 승자가 아르헨티나와 대륙 간 플레이오프를 치른다.",
+               b, "<b>8개국 중 2개국 직행</b> · 2026 AFC 여자 아시안컵 8강 진출 8개국이 참가합니다. 조 추첨(2026.11.12)으로 4팀씩 A·B조를 나누고, 각 조 1위가 LA28 본선에 바로 나갑니다. 조 2위 2개국은 AFC 플레이오프를 거쳐 승자가 아르헨티나와 마지막 1자리를 다툽니다.")
 
 
 def football_m():
-    b = T(20, 28, "2028 AFC U23 아시안컵 (일본)", 15, MUTE)
+    b = T(20, 28, "2028 AFC U23 아시안컵 (일본)", 15, MUTE) + T(420, 28, "LA28", 15, MUTE)
     for i in range(4):
         y = 44 + i * 48
         top = i < 2
-        b += R(20, y, 190, 38, "#fff", BLUE if top else LINE) + T(40, y + 25, f"{i + 1}위", 16, INK, weight="600" if top else "400")
+        b += R(20, y, 200, 38, LORG if top else "#fff", ORG if top else LINE, sw=2 if top else 1.5) + T(40, y + 25, f"{i + 1}위", 16, INK, weight="600" if top else "400")
         if top:
-            b += A(212, y + 19, 286, y + 19)
-            b += R(292, y, 150, 38, DARK, DARK) + T(367, y + 25, f"LA28 {i + 1}", 16, "#fff", "middle")
-    b += T(232, 160, "플레이오프 없음", 15, MUTE) + T(232, 182, "(파리 2024의 아시아 4위 PO와 다름)", 13, MUTE)
-    return fig("fb-m", 470, 240, "남자 축구 아시아 2장", "2028 AFC U23 아시안컵 1·2위가 LA28에 출전한다. 대륙 간 플레이오프는 없다.",
-               b, "<b>남자 아시아 2장</b> · U23 아시안컵 상위 2팀이 직행합니다. 3위 이하에는 추가 기회가 없습니다.")
+            b += A(222, y + 19, 412, y + 19, ORG) + R(418, y, 130, 38, DARK, DARK) + T(483, y + 25, f"직행 {i + 1}", 16, "#fff", "middle")
+        else:
+            b += T(240, y + 25, "출전권 없음 · 플레이오프 없음", 14, MUTE)
+    return fig("fb-m", 570, 240, "남자 축구 아시아 2장", "2028 AFC U23 아시안컵 1·2위가 LA28에 출전한다. 대륙 간 플레이오프는 없다.",
+               b, "<b>남자 아시아 2장</b> · U23 아시안컵 상위 2팀이 직행합니다. 3위 이하에는 추가 기회가 없습니다(파리 2024의 아시아 4위 플레이오프 방식과 다름).")
 
 
 def hockey(g):
@@ -309,6 +332,69 @@ def alias(t, tab, panels):
     return t
 
 
+FB_CSS = "tr.hl td{background:#f6e9e1;border-color:#d9b9a5}tr.hl td:first-child{box-shadow:inset 3px 0 0 #b9734f}.afcw-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:14px 0 18px}.afcw-grid div{border:1px solid #c8ccd1;padding:10px 8px;text-align:center;background:#fff}.afcw-grid div b{display:block;font-size:12px;color:#54595d;letter-spacing:.06em}.afcw-grid div.kor{border:2px solid #b9734f;background:#f6e9e1;font-weight:700}@media(max-width:540px){.afcw-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}"
+
+
+def must(t, old, new):
+    assert old in t, old[:60]
+    return t.replace(old, new, 1)
+
+
+def football_page(t):
+    t = t.replace("</style>", FB_CSS + "</style>", 1)
+    # (1) 리드 문단 제거
+    t = re.sub(r'<p class="lead">남자 12팀·여자 16팀\..*?</p>', "", t, count=1, flags=re.S)
+    # (2)(6) 아시아 행 강조
+    t = must(t, "<tr><td>아시아 · AFC</td><td>2028 U23 아시안컵</td><td>2팀</td><td>상위 2팀</td></tr>",
+             '<tr class="hl"><td>아시아 · AFC</td><td>2028 U23 아시안컵 (일본)</td><td><strong>2팀</strong></td><td><strong>상위 2팀 직행</strong></td></tr>')
+    t = must(t, "<tr><td>아시아 · AFC</td><td>아시아 올림픽 예선</td><td>2팀</td><td>상위 2팀 직행</td></tr>",
+             '<tr class="hl"><td>아시아 · AFC</td><td>AFC 여자 올림픽 예선 (8개국)</td><td><strong>2팀</strong></td><td><strong>A·B조 1위 2팀 직행</strong> · 조 2위끼리 플레이오프</td></tr>')
+    t = must(t, "<td>AFC 3위 vs CONMEBOL 3위</td>", "<td>AFC 플레이오프 승자 vs 아르헨티나 (CONMEBOL 3위)</td>")
+    # 로드 그림의 아시아 행 강조 (데스크톱·모바일)
+    t = re.sub(r'fill="#fff" stroke="#bdc8d4"(/><text [^>]*>아시아 · AFC</text>)', r'fill="#f6e9e1" stroke="#b9734f" stroke-width="2"\1', t)
+    # (4) 남자 아시아 설명 문단 제거
+    t = re.sub(r'(<h2 id="men-asia">[^<]*</h2>)<p>2028 AFC U23 아시안컵에서.*?</p>', r"\1", t, count=1, flags=re.S)
+    # (6) 여자 아시아 설명 보강
+    t = re.sub(r'(<h2 id="women-asia">[^<]*</h2>)<p>.*?</p>',
+               r'\1<p><strong>AFC 여자 올림픽 예선</strong>에 나서는 8개국(호주·중국·대만·일본·북한·필리핀·대한민국·우즈베키스탄) 가운데 '
+               r'4팀씩 2개 조 리그를 치러 <strong>각 조 1위 2개국이 LA28에 직행</strong>합니다. 조 2위 2개국은 홈·원정 2경기 AFC 플레이오프(2028.02.28·03.04)를 치르고, 승자가 남미 3위 <strong>아르헨티나</strong>(2025 코파 아메리카 페메니나 3위)와 AFC–CONMEBOL 플레이오프에서 마지막 1자리를 다툽니다. '
+               r'한국은 조 1위로 직행하거나, 조 2위로 두 차례 플레이오프를 모두 이겨야 합니다. 조별리그는 2027.04.19부터 12.04까지 6경기일에 걸쳐 열립니다. 참가국 목록은 <a href="#panel-asiaw">아시아 여자 최종예선 탭</a>에 정리했습니다.</p>', t, count=1, flags=re.S)
+    t = must(t, "<strong>아시아 올림픽 예선</strong><p>1·2위 → 직행</p>", "<strong>AFC 여자 올림픽 예선</strong><p>A·B조 1위 → 직행</p>")
+    t = must(t, "<strong>플레이오프 승리</strong><p>추가 1팀 진출</p>", "<strong>두 플레이오프 승리</strong><p>아르헨티나 꺾으면 마지막 1자리</p>")
+    t = must(t, "<strong>아시아 3위인 경우</strong>", "<strong>조 2위인 경우</strong>")
+    t = must(t, "구체적인 아시아 라운드 운영과 플레이오프 일정은 별도 공지를 따릅니다.",
+             "아시아는 8개국이 4팀씩 2개 조 리그를 치르고, 조 2위 2팀의 AFC 플레이오프(2028.02.28·03.04) 승자가 그 한 자리를 놓고 아르헨티나와 맞붙습니다.")
+    t = t.replace("<p>남미 3위와 플레이오프</p>", "<p>AFC 플레이오프 승자 → 아르헨티나와 대결</p>")
+    t = t.replace("남미 3위는 아시아 3위와 플레이오프에 참가합니다.", "남미 3위 아르헨티나는 AFC 플레이오프 승자(아시아 조 2위 2팀 중 승자)와 대륙 간 플레이오프를 치릅니다.")
+    # (5)(8) 참가 자격 섹션 제거
+    t = re.sub(r'<section id="eligibility">.*?</section>', "", t, count=1, flags=re.S)
+    t = t.replace('<a href="#eligibility">참가 자격</a>', "")
+    # 그림
+    t = insert_before_refline(t, "men-oqt", football_m())
+    t = insert_before_refline(t, "women-oqt", football_w())
+    # (7) 새 탭: 아시아 여자 최종예선
+    t = must(t, 'data-tab="women">여자 예선</button>',
+             'data-tab="women">여자 예선</button><button id="tab-asiaw" role="tab" aria-controls="panel-asiaw" aria-selected="false" tabindex="-1" data-tab="asiaw">아시아 여자 최종예선</button>')
+    cards = "".join(f'<div{" class=kor" if c == "KOR" else ""}><b>{c}</b>{n}</div>' for c, n in AFCW)
+    panel = ('<section id="panel-asiaw" role="tabpanel" aria-labelledby="tab-asiaw" hidden>\n <h2 class="panel-title">아시아 여자 최종예선</h2>\n'
+             ' <nav class="section-links" aria-label="아시아 여자 최종예선 목차"><a href="#asiaw-summary">참가 8개국</a><a href="#asiaw-asia">대한민국</a><a href="#asiaw-oqt">AFC–CONMEBOL 플레이오프</a><a href="#asiaw-others">확인 예정</a></nav>\n'
+             ' <h2 id="asiaw-summary">참가 8개국 · 2개국 직행</h2><p>AFC 여자 올림픽 예선에는 아래 8개국이 나섭니다. 2026 AFC 여자 아시안컵 8강 진출국이며, 4팀씩 2개 조로 나뉘어 <strong>각 조 1위 2개국</strong>이 LA28 본선에 직행합니다.</p>'
+             + football_afcw() +
+             ' <div class="asia-focus"><h2 id="asiaw-asia">대한민국의 경로</h2><p>한국은 조별리그에서 <strong>조 1위</strong>를 하면 직행합니다. 조 2위면 다른 조 2위와의 AFC 플레이오프, 이어서 아르헨티나와의 AFC–CONMEBOL 플레이오프를 모두 이겨야 본선에 나갑니다.</p>'
+             '<div class="steps"><div class="step"><span>경로 01</span><strong>AFC 여자 올림픽 예선</strong><p>A·B조 1위 → 직행</p></div><div class="step"><span>경로 02</span><strong>조 2위</strong><p>AFC 플레이오프 2경기</p></div>'
+             '<div class="step"><span>경로 03</span><strong>아르헨티나전 승리</strong><p>LA28 마지막 1자리</p></div></div></div>\n'
+             ' <h2 id="asiaw-oqt">AFC–CONMEBOL 플레이오프</h2><p>AFC 플레이오프 승자(아시아 조 2위 2팀 중 승자)와 2025 코파 아메리카 페메니나 3위 <strong>아르헨티나</strong>가 맞붙어 마지막 올림픽 출전팀을 정합니다. '
+             '아시아 쪽 AFC 플레이오프는 2028.02.28·03.04 두 경기로 열리며, AFC–CONMEBOL 플레이오프의 방식·일정은 2026년 5월 기준 아직 발표되지 않았습니다.</p>'
+             '<div class="table-wrap"><table><caption>AFC 여자 올림픽 예선 일정 (AFC 2026.05 발표)</caption><thead><tr><th scope="col">단계</th><th scope="col">날짜</th><th scope="col">내용</th></tr></thead><tbody>'
+             '<tr><td>조 추첨</td><td>2026.11.12</td><td>8개국 → A·B조 4팀씩</td></tr><tr><td>조별리그 1·2차</td><td>2027.04.19 · 04.24</td><td>4팀 홈·원정 리그 (6경기일)</td></tr>'
+             '<tr><td>조별리그 3·4차</td><td>2027.10.07 · 10.12</td><td></td></tr><tr><td>조별리그 5·6차</td><td>2027.11.29 · 12.04</td><td>조 1위 2팀 LA28 확정</td></tr>'
+             '<tr><td>AFC 플레이오프</td><td>2028.02.28 · 03.04</td><td>조 2위끼리 2경기 → 승자 대륙 간 플레이오프</td></tr><tr><td>AFC–CONMEBOL 플레이오프</td><td>미발표</td><td>vs 아르헨티나 · 승자 LA28</td></tr></tbody></table></div><p class="refline">근거: <a href="#references">FIFA 회람 · 위키백과 2028 AFC 여자 올림픽 예선</a></p>\n'
+             ' <h2 id="asiaw-others">확인 예정 사항</h2><p>조 편성(2026.11.12 추첨)·경기 장소, AFC–CONMEBOL 플레이오프의 방식과 일정은 공식 발표가 나오는 대로 추가합니다.</p></section>')
+    t = must(t, '<section id="references">', panel + '<section id="references">')
+    t = must(t, '<ol class="source-list">', '<ol class="source-list"><li><a href="https://en.wikipedia.org/wiki/2028_AFC_Women%27s_Olympic_Qualifying_Tournament">위키백과 · 2028 AFC Women\'s Olympic Qualifying Tournament (참가 8개국·조 편성·일정·플레이오프)</a></li>')
+    return t
+
+
 def fix(name, t):
     t = set_sportnav(name, add_css(t).replace(COMMON_NOTE_OLD, COMMON_NOTE_NEW))
     if name == "olflagfootball":
@@ -318,9 +404,7 @@ def fix(name, t):
             t = insert_before_refline(t, f"{g}-oqt", qseries_flag(g))
     elif name == "olfootball":
         t = t.replace(COMMON_NOTE_NEW, "축구는 IOC 게시 PDF가 아니라 FIFA 회람(2026.02.04)과 AFC·JFA 발표를 기준으로 했습니다.")
-        t = insert_before_refline(t, "men-oqt", football_m())
-        t = insert_before_refline(t, "women-oqt", football_w())
-        t = append_after_summary_note(t, "men", "참고(아시안게임, LA28 예선 아님): 한국 남자는 2026 아시안게임 결승에서 일본을 꺾고 4회 연속 우승했습니다.")
+        t = football_page(t)
     elif name == "olhockey":
         for g in ["men", "women"]:
             t = insert_before_refline(t, f"{g}-oqt", hockey(g))
