@@ -10,8 +10,8 @@ from datetime import date
 import weightrules as WR
 WEIGHT = ("judo", "taekwondo", "weightlifting", "wrestling", "boxingw")
 
-SITE = "/root/site/"
-RS = "/tmp/claude-0/-home-claude/d605e20f-a928-5cf2-a6a8-5bb76056abad/scratchpad/research/"
+SITE = __import__("os").path.dirname(__import__("os").path.dirname(__import__("os").path.abspath(__file__))) + "/"
+RS = __import__("os").path.dirname(__import__("os").path.abspath(__file__)) + "/research/"
 TODAY = date(2026, 10, 5)
 EDIT = "2026.10.05"
 INDEX = "https://koreaolympics.github.io/index.html"
