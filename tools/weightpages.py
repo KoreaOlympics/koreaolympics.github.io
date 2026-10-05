@@ -6,7 +6,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import weightrules as WR
 from athletes import D, EV, e
 
-SITE = "/root/site/"
+SITE = __import__("os").path.dirname(__import__("os").path.dirname(__import__("os").path.abspath(__file__))) + "/"
 MS, ME = "<!-- wclass:start -->", "<!-- wclass:end -->"
 
 POOL_TXT = {

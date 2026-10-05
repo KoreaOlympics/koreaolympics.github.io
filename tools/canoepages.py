@@ -5,7 +5,7 @@ import json, os, re, glob, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from athletes import page, toc, infobox, tabs_html, footer_nav, ICON, e
 
-SITE = "/root/site/"
+SITE = __import__("os").path.dirname(__import__("os").path.dirname(__import__("os").path.abspath(__file__))) + "/"
 HERE = os.path.dirname(os.path.abspath(__file__))
 O = json.load(open(os.path.join(HERE, "csp", "oqr.json"), encoding="utf-8"))
 P = "olcanoe"

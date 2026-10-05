@@ -8,7 +8,7 @@ import re, glob, os, sys, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from athletes import D, e
 
-SITE = "/root/site/"
+SITE = __import__("os").path.dirname(__import__("os").path.dirname(__import__("os").path.abspath(__file__))) + "/"
 P = "olswimming"
 NAV_S, NAV_E = "<!-- swnav:start -->", "<!-- swnav:end -->"
 STD_S, STD_E = "<!-- swstd:start -->", "<!-- swstd:end -->"

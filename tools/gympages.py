@@ -6,7 +6,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import weightrules as WR
 from athletes import D, e, page, toc, infobox, tabs_html, footer_nav, ath_block, STUB, sources_list, ICON, EDIT
 
-SITE = "/root/site/"
+SITE = __import__("os").path.dirname(__import__("os").path.dirname(__import__("os").path.abspath(__file__))) + "/"
 PREFIX, NAME = "olgymnastics", "체조"
 PDF = "https://stillmed.olympics.com/media/Documents/Olympic-Games/LA28/GAR-LA28-Qualification-System.pdf"
 NAV_S, NAV_E = "<!-- agnav:start -->", "<!-- agnav:end -->"
