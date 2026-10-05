@@ -64,7 +64,7 @@
   .tag{display:inline-block;font-size:10px;font-weight:700;padding:1px 6px;border-radius:10px;margin-left:5px;vertical-align:middle;}
   .tag.new{background:#eaf1ff;color:#2456c6;border:1px solid #c3d6f7;}
   .tag.soon{background:#fde8e8;color:#b02a2a;border:1px solid #f3c0c0;}
-  .tag.merge{background:#eef0f2;color:#5b6168;border:1px solid #d5d9de;}
+  .tag.interest{background:#eef0f2;color:#202122;border:1px solid #a2a9b1;}.tag.merge{background:#eef0f2;color:#5b6168;border:1px solid #d5d9de;}
   .tag.prep{background:#eef0f2;color:#6b7075;border:1px solid #d5d9de;}
   .tag.add{background:#e6f4ea;color:#1a7f37;border:1px solid #b7e0c2;}
   .legend{font-size:12px;color:var(--muted);margin:14px 0 0;}
@@ -161,7 +161,7 @@
 </head>
 <body>
 <div class="topbar"><div class="inner">
-  <a href="index.html">← 메인</a>
+  <a href="oldindex.html">← 메인</a>
   <span>문서 · 올림픽예선</span>
   <span>LA28 종목별 예선 시스템</span>
 </div></div>
@@ -179,6 +179,7 @@
     <button class="tab-btn active" id="b-sports" onclick="showTab('t-sports',this)">📋 전체 종목</button>
     <button class="tab-btn" id="b-upcoming" onclick="showTab('t-upcoming',this)"><span class="dot"></span>다가오는 예선</button>
     <button class="tab-btn" id="b-korea" onclick="showTab('t-korea',this)">🇰🇷 한국 확보 쿼터</button>
+    <button class="tab-btn" id="b-athletes" onclick="showTab('t-athletes',this)">🏅 한국 선수</button>
     <button class="tab-btn" id="b-ranking" onclick="showTab('t-ranking',this)">📈 랭킹</button>
     <button class="tab-btn" id="b-major" onclick="showTab('t-major',this)">⭐ 주요 예선</button>
     <button class="tab-btn" id="b-info" onclick="showTab('t-info',this)">ℹ️ 개요·용어</button>
@@ -188,8 +189,8 @@
   <div class="tab-panel active" id="t-sports">
     <div class="cat">전체 종목 <span class="cnt">가나다순 · 상세 페이지 38종 · 육상·축구 미발표</span></div>
     <div class="grid">
-      <div class="card"><span class="ic">⛳</span><div class="nm"><a href="olgolf.html">골프</a></div></div>
-      <div class="card"><span class="ic">🎽</span><div class="nm"><a href="olmodernpentathlon.html">근대5종</a></div></div>
+      <div class="card"><span class="ic">⛳</span><div class="nm"><a href="olgolf.html">골프</a><span class="tag interest">관심</span></div></div>
+      <div class="card"><span class="ic">🎽</span><div class="nm"><a href="olmodernpentathlon.html">근대5종</a><span class="tag interest">관심</span></div></div>
       <div class="card"><span class="ic">🏀</span><div class="nm"><a href="olbasketball.html">농구</a><span class="tag merge">2종목</span></div></div>
       <div class="card"><span class="ic">🤿</span><div class="nm"><a href="oldiving.html">다이빙</a></div></div>
       <div class="card"><span class="ic">🥍</span><div class="nm"><a href="ollacrosse.html">라크로스</a><span class="tag new">신규</span></div></div>
@@ -198,31 +199,31 @@
       <div class="card"><span class="ic">🌊</span><div class="nm"><a href="olmarathonswim.html">마라톤 수영</a></div></div>
       <div class="card"><span class="ic">🏐</span><div class="nm"><a href="olvolleyball.html">배구</a><span class="tag merge">2종목</span></div></div>
       <div class="card"><span class="ic">🏸</span><div class="nm"><a href="olbadminton.html">배드민턴</a></div></div>
-      <div class="card"><span class="ic">🥊</span><div class="nm"><a href="olboxing.html">복싱</a></div></div>
+      <div class="card"><span class="ic">🥊</span><div class="nm"><a href="olboxing.html">복싱</a><span class="tag interest">관심</span></div></div>
       <div class="card"><span class="ic">🎯</span><div class="nm"><a href="olshooting.html">사격</a></div></div>
       <div class="card"><span class="ic">🚴</span><div class="nm"><a href="olcycling.html">사이클</a><span class="tag merge">5종목</span></div></div>
       <div class="card"><span class="ic">🏄</span><div class="nm"><a href="olsurfing.html">서핑</a></div></div>
       <div class="card"><span class="ic">🤽</span><div class="nm"><a href="olwaterpolo.html">수구</a></div></div>
       <div class="card"><span class="ic">🏊</span><div class="nm"><a href="olswimming.html">수영</a></div></div>
-      <div class="card"><span class="ic">🛹</span><div class="nm"><a href="olskateboard.html">스케이트보딩</a></div></div>
+      <div class="card"><span class="ic">🛹</span><div class="nm"><a href="olskateboard.html">스케이트보딩</a><span class="tag interest">관심</span></div></div>
       <div class="card"><span class="ic">⚫</span><div class="nm"><a href="olsquash.html">스쿼시</a><span class="tag new">신규</span></div></div>
-      <div class="card"><span class="ic">🧗</span><div class="nm"><a href="olclimbing.html">스포츠클라이밍</a><span class="tag merge">3종목</span></div></div>
+      <div class="card"><span class="ic">🧗</span><div class="nm"><a href="olclimbing.html">스포츠클라이밍</a><span class="tag interest">관심</span><span class="tag merge">3종목</span></div></div>
       <div class="card"><span class="ic">🏇</span><div class="nm"><a href="olequestrian.html">승마</a><span class="tag merge">3종목</span></div></div>
       <div class="card"><span class="ic">🩰</span><div class="nm"><a href="olartisticswimming.html">아티스틱 스위밍</a></div></div>
       <div class="card"><span class="ic">⚾</span><div class="nm"><a href="olbaseball.html">야구·소프트볼</a><span class="tag merge">2종목</span></div></div>
       <div class="card"><span class="ic">🏹</span><div class="nm"><a href="olarchery.html">양궁</a></div></div>
       <div class="card"><span class="ic">🏋️</span><div class="nm"><a href="olweightlifting.html">역도</a></div></div>
-      <div class="card"><span class="ic">⛵</span><div class="nm"><a href="olsailing.html">요트</a></div></div>
+      <div class="card"><span class="ic">⛵</span><div class="nm"><a href="olsailing.html">요트</a><span class="tag interest">관심</span></div></div>
       <div class="card"><span class="ic">👘</span><div class="nm"><a href="oljudo.html">유도</a></div></div>
       <div class="card pending"><span class="ic">🏃</span><div class="nm"><a class="new" href="#" onclick="return false;">육상</a><span class="tag soon">미발표</span></div></div>
       <div class="card"><span class="ic">🚣</span><div class="nm"><a href="olrowing.html">조정</a><span class="tag merge">2종목</span></div></div>
-      <div class="card"><span class="ic">🤸</span><div class="nm"><a href="olgymnastics.html">체조</a><span class="tag merge">3종목</span></div></div>
+      <div class="card"><span class="ic">🤸</span><div class="nm"><a href="olgymnastics.html">체조</a><span class="tag interest">관심</span><span class="tag merge">3종목</span></div></div>
       <div class="card pending"><span class="ic">⚽</span><div class="nm"><a class="new" href="#" onclick="return false;">축구</a><span class="tag soon">미발표</span></div></div>
       <div class="card"><span class="ic">🛶</span><div class="nm"><a href="olcanoe.html">카누</a><span class="tag merge">2종목</span></div></div>
       <div class="card"><span class="ic">🏏</span><div class="nm"><a href="olcricket.html">크리켓</a><span class="tag new">신규</span></div></div>
       <div class="card"><span class="ic">🏓</span><div class="nm"><a href="oltabletennis.html">탁구</a></div></div>
       <div class="card"><span class="ic">🥋</span><div class="nm"><a href="oltaekwondo.html">태권도</a></div></div>
-      <div class="card"><span class="ic">🎾</span><div class="nm"><a href="oltennis.html">테니스</a></div></div>
+      <div class="card"><span class="ic">🎾</span><div class="nm"><a href="oltennis.html">테니스</a><span class="tag interest">관심</span></div></div>
       <div class="card"><span class="ic">🏅</span><div class="nm"><a href="oltriathlon.html">트라이애슬론</a></div></div>
       <div class="card"><span class="ic">🤺</span><div class="nm"><a href="olfencing.html">펜싱</a></div></div>
       <div class="card"><span class="ic">🏈</span><div class="nm"><a href="olflagfootball.html">플래그풋볼</a><span class="tag new">신규</span></div></div>
@@ -264,6 +265,16 @@
   </div>
 
   <!-- ════ 탭 : 랭킹 ════ -->
+<!-- athletes-tab:start -->
+  <div class="tab-panel" id="t-athletes">
+    <div class="cat">한국 선수 <span class="cnt">관심 개인종목 9 · 세부종목별 7 · 기본 정보 기준 2026.10.05</span></div>
+    <p class="infoline">종목 문서 상단의 <b>👤 한국 선수</b> 아이콘에서도 열 수 있습니다. 각 선수 문서는 기본 정보(출생·소속·주요 수상 성적)만 담고, 본문은 추후 작성합니다.</p>
+    <h2>관심 개인종목</h2>
+    <table class="wt"><tr><th>종목</th><th>선수 문서</th></tr><tr><th><a href="olclimbing-athletes.html">스포츠클라이밍</a></th><td><a href="olclimbing-p-lee-dohyun.html">이도현</a> · <a href="olclimbing-p-seo-chaehyun.html">서채현</a> · <a href="olclimbing-p-jeong-jimin.html">정지민</a> · <a href="olclimbing-p-others.html">기타</a></td></tr><tr><th><a href="olgolf-athletes.html">골프</a></th><td><a href="olgolf-p-kim-si-woo.html">김시우</a> · <a href="olgolf-p-kim-joo-hyung.html">김주형</a> · <a href="olgolf-p-ryu-hae-ran.html">유해란</a> · <a href="olgolf-p-kim-sei-young.html">김세영</a> · <a href="olgolf-p-others.html">기타</a></td></tr><tr><th><a href="olathletics-athletes.html">육상</a></th><td><a href="olathletics-p-woo-sanghyeok.html">우상혁</a> · <a href="olathletics-p-kim-jangwoo-yu-gyumin.html">김장우·유규민</a> · <a href="olathletics-p-cho-eljin-biwesa.html">조엘진·비웨사</a> · <a href="olathletics-p-lee-jaewoong.html">이재웅</a> · <a href="olathletics-p-park-sihun.html">박시훈</a> · <a href="olathletics-p-other-track.html">기타 트랙</a> · <a href="olathletics-p-other-field.html">기타 필드</a></td></tr><tr><th><a href="olskateboard-athletes.html">스케이트보딩</a></th><td><a href="olskateboard-p-kang-juni.html">강준이</a> · <a href="olskateboard-p-shin-jiyul.html">신지율</a> · <a href="olskateboard-p-others.html">기타</a></td></tr><tr><th><a href="olboxing-athletes.html">복싱</a></th><td><a href="olboxing-p-im-ae-ji.html">임애지</a> · <a href="olboxing-p-kim-min-seong.html">김민성</a> · <a href="olboxing-p-jang-dong-hwan.html">장동환</a> · <a href="olboxing-p-others.html">기타</a></td></tr><tr><th><a href="olmodernpentathlon-athletes.html">근대5종</a></th><td><a href="olmodernpentathlon-p-seo-chang-wan.html">서창완</a> · <a href="olmodernpentathlon-p-jun-woong-tae.html">전웅태</a> · <a href="olmodernpentathlon-p-seong-seung-min.html">성승민</a> · <a href="olmodernpentathlon-p-others.html">기타</a></td></tr><tr><th><a href="olsailing-athletes.html">요트</a></th><td><a href="olsailing-p-ha-jee-min.html">하지민</a> · <a href="olsailing-p-others.html">기타</a></td></tr><tr><th><a href="oltennis-athletes.html">테니스</a></th><td><a href="oltennis-p-kwon-soon-woo.html">권순우</a> · <a href="oltennis-p-others.html">기타</a></td></tr><tr><th><a href="olgymnastics-athletes.html">체조</a></th><td><a href="olgymnastics-p-yeo-seo-jeong.html">여서정</a> · <a href="olgymnastics-p-hwang-seo-hyun.html">황서현</a> · <a href="olgymnastics-p-ryu-sung-hyun.html">류성현</a> · <a href="olgymnastics-p-others.html">기타</a></td></tr></table>
+    <h2>세부종목·체급별 선수</h2>
+    <table class="wt"><tr><th>종목</th><th>세부 문서</th></tr><tr><th><a href="olswimming-athletes.html">수영</a></th><td>세부종목별 문서 21개 · <a href="olswimming-athletes.html#g1">자유형</a> · <a href="olswimming-athletes.html#g2">배영</a> · <a href="olswimming-athletes.html#g3">평영</a> · <a href="olswimming-athletes.html#g4">접영</a> · <a href="olswimming-athletes.html#g5">개인혼영</a> · <a href="olswimming-athletes.html#g6">계영·혼계영</a></td></tr><tr><th><a href="oltaekwondo-athletes.html">태권도</a></th><td>체급별 문서 8개 · <a href="oltaekwondo-athletes.html#g1">남자</a> · <a href="oltaekwondo-athletes.html#g2">여자</a></td></tr><tr><th><a href="oljudo-athletes.html">유도</a></th><td>체급별 문서 15개 · <a href="oljudo-athletes.html#g1">남자</a> · <a href="oljudo-athletes.html#g2">여자</a> · <a href="oljudo-athletes.html#g3">혼성</a></td></tr><tr><th><a href="olarchery-athletes.html">양궁</a></th><td>세부종목별 문서 6개 · <a href="olarchery-athletes.html#g1">리커브</a> · <a href="olarchery-athletes.html#g2">컴파운드</a></td></tr><tr><th><a href="olshooting-athletes.html">사격</a></th><td>세부종목별 문서 15개 · <a href="olshooting-athletes.html#g1">소총</a> · <a href="olshooting-athletes.html#g2">권총</a> · <a href="olshooting-athletes.html#g3">산탄총</a></td></tr><tr><th><a href="olfencing-athletes.html">펜싱</a></th><td>세부종목별 문서 12개 · <a href="olfencing-athletes.html#g1">남자 개인</a> · <a href="olfencing-athletes.html#g2">여자 개인</a> · <a href="olfencing-athletes.html#g3">남자 단체</a> · <a href="olfencing-athletes.html#g4">여자 단체</a></td></tr><tr><th><a href="olbadminton-athletes.html">배드민턴</a></th><td>세부종목별 문서 5개 · <a href="olbadminton-athletes.html#g1">단식</a> · <a href="olbadminton-athletes.html#g2">복식</a></td></tr></table>
+  </div>
+<!-- athletes-tab:end -->
   <div class="tab-panel" id="t-ranking">
     <div class="cat">종목별 세계랭킹 <span class="cnt">LA28 출전권에 영향을 주는 랭킹 25종목</span></div>
     <p class="infoline">같은 종목이라도 '세계랭킹'과 '올림픽 랭킹(예선 랭킹)'이 따로 있는 경우가 많습니다. 아래는 각 종목 LA28 예선 규정이 실제로 쓰는 랭킹과 공식 확인처입니다.</p>
