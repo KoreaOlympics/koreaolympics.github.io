@@ -7,9 +7,11 @@
 """
 import json, re, os, glob, html as H
 from datetime import date
+import weightrules as WR
+WEIGHT = ("judo", "taekwondo", "weightlifting", "wrestling", "boxingw")
 
-SITE = "/root/site/"
-RS = "/tmp/claude-0/-home-claude/d605e20f-a928-5cf2-a6a8-5bb76056abad/scratchpad/research/"
+SITE = __import__("os").path.dirname(__import__("os").path.dirname(__import__("os").path.abspath(__file__))) + "/"
+RS = __import__("os").path.dirname(__import__("os").path.abspath(__file__)) + "/research/"
 TODAY = date(2026, 10, 5)
 EDIT = "2026.10.05"
 INDEX = "https://koreaolympics.github.io/index.html"
@@ -26,10 +28,31 @@ def load(f):
 
 
 D = {}
-for f in ["climb_skate.json", "golf.json", "box_mp_sail_ten.json", "gymnastics.json", "swimming.json", "tkd_judo.json", "arch_bad.json", "shoot_fence.json"]:
+for f in ["climb_skate.json", "golf.json", "box_mp_sail_ten.json", "gymnastics.json", "swimming.json", "tkd_judo.json", "arch_bad.json", "shoot_fence.json", "weightlifting.json", "wrestling.json"]:
     D.update(load(f))
 
 # ------------------------------------------------------------------ 종목 정의
+BOX_MAP = {"신재용": "m55", "장동환": "m60", "김준수": "m70", "김민성": "m80", "김기채": "m90", "주태웅": "mo90",
+           "박초롱": "w51", "임애지": "w54", "오연지": "w60"}
+
+
+def _boxing_classes():
+    ev = {}
+    for p in D["boxing"]["persons"]:
+        c = BOX_MAP.get(p["name"])
+        if c:
+            q = dict(p); q["link"] = f"olboxing-p-{p['slug']}.html"; q["note"] = p.get("status_note")
+            ev.setdefault(c, {"athletes": [], "sources": []})["athletes"].append(q)
+    for o in D["boxing"].get("others", []):
+        c = BOX_MAP.get(o["name"])
+        if c:
+            ev.setdefault(c, {"athletes": [], "sources": []})["athletes"].append(
+                {"name": o["name"], "sex": o.get("sex"), "note": o.get("note"), "results": [], "sources": [{"title": "출처", "url": o["source_url"]}] if o.get("source_url") else []})
+    return {"events": ev}
+
+
+D["boxingw"] = _boxing_classes()
+
 INTEREST = [  # (key, prefix, 이름, 데이터키, 사용자 지정 순서)
     ("climbing", "olclimbing", "스포츠클라이밍", ["이도현", "서채현", "정지민"]),
     ("golf", "olgolf", "골프", ["김시우", "김주형", "유해란", "김세영"]),
@@ -81,6 +104,19 @@ EV = {
         ("단식", [("ms", "남자 단식"), ("ws", "여자 단식")]),
         ("복식", [("md", "남자 복식"), ("wd", "여자 복식"), ("xd", "혼합 복식")]),
     ]),
+    "weightlifting": ("olweightlifting", "역도", [
+        ("남자", [("m65", "남자 65kg"), ("m75", "남자 75kg"), ("m85", "남자 85kg"), ("m95", "남자 95kg"), ("m110", "남자 110kg"), ("mo110", "남자 +110kg")]),
+        ("여자", [("w53", "여자 53kg"), ("w61", "여자 61kg"), ("w69", "여자 69kg"), ("w77", "여자 77kg"), ("w86", "여자 86kg"), ("wo86", "여자 +86kg")]),
+    ]),
+    "wrestling": ("olwrestling", "레슬링", [
+        ("남자 자유형", [("fs57", "남자 자유형 57kg"), ("fs65", "남자 자유형 65kg"), ("fs74", "남자 자유형 74kg"), ("fs86", "남자 자유형 86kg"), ("fs97", "남자 자유형 97kg"), ("fs125", "남자 자유형 125kg")]),
+        ("그레코로만형", [("gr60", "그레코로만형 60kg"), ("gr67", "그레코로만형 67kg"), ("gr77", "그레코로만형 77kg"), ("gr87", "그레코로만형 87kg"), ("gr97", "그레코로만형 97kg"), ("gr130", "그레코로만형 130kg")]),
+        ("여자 자유형", [("ww50", "여자 자유형 50kg"), ("ww53", "여자 자유형 53kg"), ("ww57", "여자 자유형 57kg"), ("ww62", "여자 자유형 62kg"), ("ww68", "여자 자유형 68kg"), ("ww76", "여자 자유형 76kg")]),
+    ]),
+    "boxingw": ("olboxing", "복싱", [
+        ("남자", [("m55", "남자 55kg"), ("m60", "남자 60kg"), ("m65", "남자 65kg"), ("m70", "남자 70kg"), ("m80", "남자 80kg"), ("m90", "남자 90kg"), ("mo90", "남자 +90kg")]),
+        ("여자", [("w51", "여자 51kg"), ("w54", "여자 54kg"), ("w57", "여자 57kg"), ("w60", "여자 60kg"), ("w65", "여자 65kg"), ("w70", "여자 70kg"), ("w75", "여자 75kg")]),
+    ]),
 }
 
 
@@ -97,6 +133,8 @@ def ev_rule_page(key, code):
     if key == "shooting": return f"{p}-" + ("rifle" if code[0] in "ar" and code not in ("apm", "apw", "apx", "rfm") else "pistol" if code in ("apm", "apw", "apx", "rfm", "p25w") else "shotgun") + ".html"
     if key == "fencing": return f"{p}-{'team' if code.endswith('t') else 'individual'}.html"
     if key == "badminton": return f"{p}-{'singles' if code.endswith('s') else 'doubles'}.html"
+    if key in ("weightlifting", "boxingw"): return f"{p}-{'men' if code[0] == 'm' else 'women'}.html"
+    if key == "wrestling": return f"{p}-" + {"fs": "freestyle", "gr": "greco", "ww": "women"}[code[:2]] + ".html"
 
 
 # ------------------------------------------------------------------ 공통 조각
@@ -169,9 +207,11 @@ def sport_tabs(prefix):
     return [(h.lstrip("./"), H.unescape(re.sub("<[^>]+>", "", x))) for h, x in re.findall(r'<a href="([^"#]+)"[^>]*>(.*?)</a>', m.group(1)) if "-athletes" not in h]
 
 
-def tabs_html(prefix, name, cur_athletes=True):
+def tabs_html(prefix, name, cur_athletes=True, cur=None):
     tabs = sport_tabs(prefix) + [(f"{prefix}-athletes.html", "한국 선수")]
-    a = "".join(f'<a href="./{h}"' + (' aria-current="page"' if (cur_athletes and h.endswith("-athletes.html")) else "") + f">{x}</a>" for h, x in tabs)
+    def on(h):
+        return (h == cur) if cur else (cur_athletes and h.endswith("-athletes.html"))
+    a = "".join(f'<a href="./{h}"' + (' aria-current="page"' if on(h) else "") + f">{x}</a>" for h, x in tabs)
     return f'<nav class="golf-nav" aria-label="{name} 문서">{a}</nav>', a.replace(' aria-current="page"', ' aria-current="page"')
 
 
@@ -245,6 +285,14 @@ def interest_hub(key, prefix, name, persons, others, blank_list=None):
     table = ('<table class="data"><caption>선수 문서</caption><thead><tr><th scope="col">선수</th><th scope="col">세부종목</th>'
              f'<th scope="col">출생</th><th scope="col">최근 주요 성적</th></tr></thead><tbody>{rows}</tbody></table>')
     allsrc = [s for p in persons for s in p.get("sources", [])]
+    if key == "boxing":
+        crow = ""
+        for gl, items in EV["boxingw"][2]:
+            for c, l in items:
+                ns = ", ".join(a["name"] for a in D["boxingw"]["events"].get(c, {}).get("athletes", []))
+                crow += f'<tr><th scope="row"><a href="./olboxing-ev-{c}.html">{l}</a></th><td>{WR.total("boxingw", c)}</td><td>{e(ns) or "<span class=muted>—</span>"}</td></tr>'
+        table += ('<h3 id="classes">체급별 문서</h3><table class="data"><caption>체급별 예선 규정·한국 선수</caption><thead><tr><th scope="col">체급</th>'
+                  f'<th scope="col">정원</th><th scope="col">한국 주요 선수</th></tr></thead><tbody>{crow}</tbody></table>')
     main = (toc([("list", "선수 문서"), ("about", "문서 기준"), ("sources", "출처")])
             + f'<section id="list"><h2>선수 문서</h2>{table}</section>'
             + '<section id="about"><h2>문서 기준</h2><p>관심 개인종목으로 분류한 종목의 한국 주요 선수입니다. 각 문서는 위키 스타일의 기본 정보(출생·소속·주요 수상 성적)만 담고, 본문은 추후 작성합니다. '
@@ -264,8 +312,10 @@ def ath_block(a):
     meta = [("영문", a.get("name_en")), ("성별", sexw), ("출생", age(a.get("birth"))), ("소속", a.get("affiliation")),
             ("파트너", a.get("pair")), ("개인기록", a.get("pb")), ("랭킹", a.get("ranking"))]
     dl = "".join(f"<dt>{k}</dt><dd>{e(v)}</dd>" for k, v in meta if v)
-    return (f'<div class="ath-block"><h3>{e(a["name"])}</h3><dl class="ath-meta">{dl}</dl>'
-            f'{results_table(a.get("results"), e(a["name"]) + " 주요 성적")}</div>')
+    link = f' <a class="small" href="./{a["link"]}">선수 문서 →</a>' if a.get("link") else ""
+    note = f'<p class="small">{e(a["note"])}</p>' if a.get("note") else ""
+    res = results_table(a.get("results"), e(a["name"]) + " 주요 성적") if (a.get("results") or not note) else ""
+    return (f'<div class="ath-block"><h3>{e(a["name"])}{link}</h3><dl class="ath-meta">{dl}</dl>{note}{res}</div>')
 
 
 def event_page(key, code, label, data, group_label):
@@ -285,6 +335,9 @@ def event_page(key, code, label, data, group_label):
         body = "".join(ath_block(a) for a in lst) if lst else '<p class="stub">현재 정리된 한국 주요 선수 없음 · 추후 작성.</p>'
         secs = [("athletes", "한국 주요 선수", body)]
         names = [a["name"] for a in lst]
+        if key in WEIGHT:
+            secs.insert(0, ("rules", f"{label} 예선 규정", WR.rule_html(key, code, label)))
+            srcs.insert(0, {"title": WR.src_title(key), "url": WR.rule_pdf(key)})
     note = f'<div class="notice">{e(data["note"])}</div>' if data.get("note") else ""
     main = (toc([(a, b) for a, b, _ in secs] + [("overview", "개요"), ("sources", "출처")])
             + "".join(f'<section id="{a}"><h2>{b}</h2>{c}</section>' for a, b, c in secs)
@@ -292,7 +345,14 @@ def event_page(key, code, label, data, group_label):
             + f'<section id="sources"><h2>출처</h2>{sources_list(srcs)}<p class="small">기본 정보 기준일 {EDIT}. 확인하지 못한 항목은 비워 두었습니다.</p></section>')
     rule = ev_rule_page(key, code)
     box = infobox(f"{name} · {label}", [("종목", name), ("구분", group_label), ("세부종목", label), ("한국 주요 선수", ", ".join(names) or "—"), ("기준일", EDIT)],
-                  f'<p class="small"><a href="./{rule}">이 세부종목 LA28 예선 규정 →</a></p>')
+                  f'<p class="small"><a href="./{rule}">{"성별 예선 규정 전체" if key in WEIGHT else "이 세부종목 LA28 예선 규정"} →</a></p>')
+    if key in WEIGHT:
+        tabs, _ = tabs_html(prefix, name, cur=rule)
+        tl = dict(sport_tabs(prefix)).get(rule, "")
+        nav = (f'<nav class="sport-nav" aria-label="상위 문서"><a href="./{prefix}.html">{name}</a><a href="./{rule}">↑ {name} {tl}</a></nav>'
+               f'<a class="athlete-link" href="./{prefix}-athletes.html">{ICON}<span>한국 선수</span></a>')
+        return page(f"{label} | {name} · 올림픽예선", f"LA28 {name} {label} 예선 규정과 한국 주요 선수", nav, f"{name} {label}",
+                    f"LA28 {name} <b>{label}</b>의 체급별 예선 규정과 한국 주요 선수 기본 정보입니다.", tabs, main, box, footer_nav(prefix, name), f"{name} · {label} | 규정 {WR.PDF[key][2]}판 · 기준 {EDIT}")
     tabs, _ = tabs_html(prefix, name)
     return page(f"{label} | {name} 한국 선수", f"LA28 {name} {label} 한국 주요 선수", top_nav(prefix, name, True), f"{name} {label}",
                 f"LA28 {name} <b>{label}</b> 세부종목의 한국 주요 선수 기본 정보입니다.", tabs, main, box, footer_nav(prefix, name), f"{name} · 한국 선수 | 기준 {EDIT}")
@@ -317,7 +377,7 @@ def event_hub(key):
         secs += (f'<section id="{sid}"><h2>{gl}</h2><table class="data"><caption>{gl} · 세부종목별 문서</caption><thead><tr><th scope="col">세부종목</th>'
                  f'<th scope="col">한국 주요 선수</th></tr></thead><tbody>{rows}</tbody></table></section>')
     n = sum(len(i) for _, i in groups)
-    unit = "체급" if key in ("taekwondo", "judo") else "세부종목"
+    unit = "체급" if key in WEIGHT else "세부종목"
     main = toc(tocs + [("about", "문서 기준")]) + secs + \
         (f'<section id="about"><h2>문서 기준</h2><p>{name}은 {unit}별로 별도 문서를 둡니다. 각 문서는 한국 주요 선수의 기본 정보(출생·소속·주요 수상 성적)만 담고, 본문은 추후 작성합니다. '
          + ("경영은 남녀를 한 문서의 두 섹션으로 나눴습니다. " if key == "swimming" else "") + "확인하지 못한 항목은 비워 두었습니다.</p></section>")
@@ -358,7 +418,7 @@ CSS = (CSS_MARK + "\n.athlete-link{display:inline-flex;align-items:center;gap:5p
        ".stub{background:var(--soft);border:1px solid #eaecf0;border-left:3px solid #a2a9b1;padding:10px 14px;color:var(--muted);font-size:14px}"
        ".ath-block{border-top:1px solid #eaecf0;margin-top:18px;padding-top:4px}.ath-block h3{margin:10px 0 6px}"
        ".ath-meta{display:grid;grid-template-columns:90px minmax(0,1fr);gap:3px 12px;font-size:14px;margin:6px 0 10px}.ath-meta dt{color:var(--muted)}.ath-meta dd{margin:0}"
-       ".ath-res td.m-g{font-weight:700}.ath-res td.m-s,.ath-res td.m-b{font-weight:600}.muted{color:var(--muted)}"
+       + WR.CSS + ".ath-res td.m-g{font-weight:700}.ath-res td.m-s,.ath-res td.m-b{font-weight:600}.muted{color:var(--muted)}"
        "@media(max-width:900px){.infobox.ath-box{display:block;order:-1;margin:0 0 14px}}@media print{.infobox.ath-box{display:block}}@media(max-width:600px){.athlete-link span{display:none}.athlete-link{padding:3px 7px}.ath-meta{grid-template-columns:72px minmax(0,1fr)}}\n")
 
 
@@ -395,11 +455,13 @@ def patch_index():
         cards += f'<tr><th><a href="{prefix}-athletes.html">{name}</a></th><td>{links}</td></tr>'
     evrows = ""
     for key, (prefix, name, groups) in EV.items():
+        if key == "boxingw":
+            continue
         n = sum(len(i) for _, i in groups)
-        unit = "체급" if key in ("taekwondo", "judo") else "세부종목"
+        unit = "체급" if key in WEIGHT else "세부종목"
         evrows += f'<tr><th><a href="{prefix}-athletes.html">{name}</a></th><td>{unit}별 문서 {n}개 · ' + " · ".join(f'<a href="{prefix}-athletes.html#g{i + 1}">{gl}</a>' for i, (gl, _) in enumerate(groups)) + "</td></tr>"
     panel = (f'{IDX_MARK_S}{nl}  <div class="tab-panel" id="t-athletes">{nl}'
-             f'    <div class="cat">한국 선수 <span class="cnt">관심 개인종목 9 · 세부종목별 7 · 기본 정보 기준 {EDIT}</span></div>{nl}'
+             f'    <div class="cat">한국 선수 <span class="cnt">관심 개인종목 9 · 세부종목·체급별 9 · 기본 정보 기준 {EDIT}</span></div>{nl}'
              '    <p class="infoline">종목 문서 상단의 <b>👤 한국 선수</b> 아이콘에서도 열 수 있습니다. 각 선수 문서는 기본 정보(출생·소속·주요 수상 성적)만 담고, 본문은 추후 작성합니다.</p>' + nl +
              f'    <h2>관심 개인종목</h2>{nl}    <table class="wt"><tr><th>종목</th><th>선수 문서</th></tr>{cards}</table>{nl}'
              f'    <h2>세부종목·체급별 선수</h2>{nl}    <table class="wt"><tr><th>종목</th><th>세부 문서</th></tr>{evrows}</table>{nl}'
@@ -424,6 +486,8 @@ def write(name, t):
 
 
 if __name__ == "__main__":
+    from fencing_pages import preserve_hub, finish_generation
+    fencing_hub = preserve_hub()
     n = 0
     for key, prefix, name, order in INTEREST:
         if key == "athletics":
@@ -442,8 +506,11 @@ if __name__ == "__main__":
         for gl, items in groups:
             for code, label in items:
                 write(f"{prefix}-ev-{code}", event_page(key, code, label, D[key]["events"].get(code, {}), gl)); n += 1
+        if key == "boxingw":
+            continue
         write(f"{prefix}-athletes", event_hub(key)); n += 1
         print(key, "events", sum(len(i) for _, i in groups), "patched", patch_existing(prefix, name))
     patch_css()
     patch_index()
+    finish_generation(fencing_hub)
     print("pages written", n)
