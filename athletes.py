@@ -513,4 +513,6 @@ if __name__ == "__main__":
     patch_css()
     patch_index()
     finish_generation(fencing_hub)
+    from taekwondo_pages import update_pages
+    update_pages()
     print("pages written", n)
