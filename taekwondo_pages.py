@@ -8,13 +8,51 @@ import html,json,re
 SITE=Path(__file__).resolve().parents[1]
 D=json.loads((SITE/'data/taekwondo-pathways.json').read_text(encoding='utf-8'))
 E={x['id']:x for x in D['events']}
+AXES=[('2025-wc','2025 세선',['wc25']),('2025-gp-challenge','2025 GP 챌린지',['gpc1','gpc2','gpc3']),('2025-gs-qual','2025 GS 예선',['gsc25']),('2026-entries','2026 1기 이후 출전권 결산',[]),('2026-gp','2026 GP',['gp26a','gp26b','gp26c','gpf26']),('2026-gs','2026 GS',['gsc26','gscs26']),('2026-other','2026 기타 주요대회',['cu26','women26','ag26']),('2027-wc','2027 세선',['wc27']),('2027-gp','2027 GP·챌린지',['gp27a','gp27b','gp27c','gpc27','gpf27']),('2027-gs','2027 GS',['gsc27','gscs27']),('2028-quota','2028 쿼터 판정',[])]
+def axis_for(event_id):
+    return next((key for key,title,ids in AXES if event_id in ids),None)
 H=lambda s:html.escape(str(s),quote=True)
 KO={'KIM Jongmyeong':'김종명','BAE Jun-Seo':'배준서','JUNG Woo-Hyeok':'정우혁','JUNG Woo-hyeok':'정우혁','SEO Geon-woo':'서건우','MUN Jinho':'문진호','JANG Jun':'장준','KIM Woojin':'김우진','LEE Ye-Ji':'이예지','KWAK Minju':'곽민주','SEO Eunsu':'서은수','PARK Tae-Joon':'박태준','PARK Tae-joon':'박태준','PARK Woo hyeok':'박우혁','PARK Woo-Hyeok':'박우혁','KANG Jaegwon':'강재권','JUNSANG Park':'박준상','LEE Yumin':'이유민','KIM Gahyeon':'김가현','HONG Hyo rim':'홍효림','PARK Min kyu':'박민규','KANG Sanghyun':'강상현','KIM Yujin':'김유진','SONG Dabin':'송다빈'}
 def link(key):
     s=D['sources'][key]; return f'<a href="{H(s["url"])}">{H(s["title"])}</a>'
-def athlete(a):
-    name=KO.get(a['name'],a['name']); name=H(name)
-    if a.get('profile'): name=f'<a href="{H(a["profile"])}">{name}</a>'
+def family_parts(name):
+    parts=name.split(); capitals=[]
+    for part in parts:
+        if part.isupper():capitals.append(part)
+        else:break
+    if capitals and len(capitals)<len(parts):return ' '.join(capitals).title(),' '.join(parts[len(capitals):])
+    return parts[-1].title(),' '.join(parts[:-1])
+
+def short_labels():
+    people={}
+    for event in D['events']:
+        records=event['medals'][:]
+        for values in event.get('participants',{}).values():records+=values
+        for values in event.get('placements',{}).values():records+=values
+        for a in records:
+            if a['country']=='KOR':continue
+            family,given=family_parts(a['name'])
+            people.setdefault((a['country'],family),{})[a['name']]=given
+    labels={}
+    for (_,family),names in people.items():
+        for full,given in names.items():
+            label=family
+            if len(names)>1:
+                token=re.sub(r'[^a-z]','',given.lower())
+                others=[re.sub(r'[^a-z]','',g.lower()) for n,g in names.items() if n!=full]
+                length=1
+                while length<len(token) and any(x[:length]==token[:length] for x in others):length+=1
+                label+=' '+token[:length].title()+'.'
+            labels[full]=label
+    return labels
+SHORT=short_labels()
+
+def athlete(a,compact=False):
+    full=KO.get(a['name'],a['name'])
+    name=H(SHORT.get(a['name'],full) if compact else full)
+    attrs=f' title="{H(full)}" aria-label="{H(full)}"' if compact else ''
+    if a.get('profile'): name=f'<a href="{H(a["profile"])}"{attrs}>{name}</a>'
+    elif compact:name=f'<span{attrs}>{name}</span>'
     return name+f' <span class="tkd-country">{H(a["country"])}</span>'
 def weightnav(group=None):
     return '<nav class="tkd-weights" aria-label="체급별 분석">'+''.join(f'<a href="./oltaekwondo-ev-{c}.html">{H(w["label"])}</a>' for c,w in D['weights'].items() if not group or c[0]==group)+'</nav>'
@@ -39,6 +77,34 @@ def ledger(code,cycle):
         if event.get('resultUrl'): refs=f'<a href="{H(event["resultUrl"])}">WT 공식 결과</a> · '+refs
         out+=f'<details class="tkd-meet" id="meet-{event["id"]}"><summary><b>{H(event["title"])}</b> <span class="tkd-grade">{H(event["grade"])}</span><span class="tkd-date">{H(date)} · {H(event["status"])}</span></summary>{body}<p class="small">{refs}</p></details>'
     return f'<section id="cycle{cycle}"><h2>{cycle}기 주요 대회 · 시간순</h2>'+('<p>동일한 연도만 확인된 2027 대회는 계획 항목으로 묶었습니다. 대회 간 실제 선후관계는 최종 날짜 공표 후 확정합니다.</p>' if cycle==2 else '<p>1기 점수를 2기에 더하지 않습니다. 아래 결과는 이후 대회의 초청권을 판단하는 기록입니다.</p>')+out+'</section>'
+
+def combined_results(code,event_ids=None,suffix='',crosslink=True):
+    w=D['weights'][code];body='';previous=None
+    for event in D['events']:
+        if event_ids is not None and event['id'] not in event_ids:continue
+        if event.get('gender') and event['gender']!=code[0]:continue
+        if event['cycle']!=previous:
+            previous=event['cycle']
+            body+=f'<tr class="tkd-cycle-row" id="cycle{previous}{suffix}"><th colspan="2" scope="colgroup">랭킹 {previous}기</th></tr>'
+        rows=[a for a in event['medals'] if a['weight']==w['olympic'] or ((event['id'].startswith('wc') or event['id']=='women26') and a['weight'] in w['worldWeights'])]
+        result=''
+        for cat in dict.fromkeys(a['weight'] for a in rows):
+            if len(set(a['weight'] for a in rows))>1:result+=f'<div class="tkd-result-weight">{H(cat.replace("Men","남자").replace("Women","여자"))}</div>'
+            result+='<ul class="tkd-result-names">'
+            for a in rows:
+                if a['weight']!=cat:continue
+                label={'Gold':'금','Silver':'은','Bronze':'동'}[a['medal']]
+                result+=f'<li class="{"tkd-name-kor" if a["country"]=="KOR" else ""}"><span class="tkd-medal tkd-{a["medal"].lower()}">{label}</span><span>{athlete(a,compact=True)}</span></li>'
+            result+='</ul>'
+        if not rows:
+            status='부분 결과 미공표' if event.get('partialResults') else '미확인' if event['start']<=D['asOf'] else '예정'
+            result=f'<span class="small">— · {H(status)}</span>'
+        title=event['title'];date=event['start']
+        url=event.get('resultUrl') or D['sources'][event['sources'][0]]['url']
+        target=f'./oltaekwondo-{axis_for(event["id"])}.html#weight-{code}' if crosslink else f'./oltaekwondo-ev-{code}.html#meet-{event["id"]}'
+        body+=f'<tr id="meet-{event["id"]}{suffix}"><th scope="row"><a href="{H(target)}">{H(title)}</a><span class="tkd-date">{H(date)}</span><span class="tkd-grade">{H(event["grade"])}</span> <a class="small" href="{H(url)}">공식</a></th><td>{result}</td></tr>'
+    if not body:body='<tr><td colspan="2">해당 항목의 공표 결과 없음 · 일정·결과 확인 후 반영</td></tr>'
+    return f'<section id="results{suffix}"><h2>대회 결과 · 체급 통합</h2><p class="small">외국 선수는 성 중심, 동성은 이니셜 · 전체 이름은 링크 설명에 보존 · 노란색은 한국 선수</p><table class="tkd-recipients tkd-results-table"><thead><tr><th scope="col">대회명</th><th scope="col">입상자</th></tr></thead><tbody>'+body+'</tbody></table><p class="small">세계체급 연결은 체급별 표시. 날짜 미정은 공표 후 정렬. 파리 GP는 공식 1일차 부분 결과만 반영.</p></section>'
 def medals(rows):
     out=''; cats=list(dict.fromkeys(a['weight'] for a in rows))
     for cat in cats:
@@ -78,7 +144,7 @@ def ticket_note(event,rows):
     else:
         text='<b>2026 GS의 GP 우승 경로:</b> '+', '.join(athlete(a) for a in rows if a['medal']=='Gold')+'. GP 은메달은 GS 직행 경로가 아니라 GP 파이널 진출 경로다.'
     return '<div class="tkd-callout">'+text+'</div>'
-def recipients(code):
+def recipients(code,event_ids=None,suffix='',target_year=None):
     """Qualification tables: destination is the caption, source event and names only."""
     w=D['weights'][code]
     groups={x:[] for x in ['2026 로마 GP1','2026 무주 GP2','2026 파리 GP3','2026 GP 파이널','2026 GS 본선']}
@@ -110,18 +176,23 @@ def recipients(code):
     groups['2026 GS 본선'].append(('GP 파이널 2026',[],'meet-gpf26'))
     groups['2027 GS 본선']=[(title,[],event_id) for title,event_id in [('세계선수권 2027','wc27'),('로마 GP1 2027','gp27a'),('파리 GP2 2027','gp27b'),('맨체스터 GP3 2027','gp27c'),('GP 파이널 2027','gpf27'),('GS 챌린지 2026','gsc26'),('GS 챌린지 2027','gsc27')]]
     groups['2027 GP 파이널']=[(title,[],event_id) for title,event_id in [('로마 GP1 2027','gp27a'),('파리 GP2 2027','gp27b'),('맨체스터 GP3 2027','gp27c')]]
-    blocks=''
+    blocks='<table class="tkd-recipients tkd-pathways-table"><thead><tr><th scope="col">진출 대회·경로</th><th scope="col">선수명</th></tr></thead><tbody>'
     for target,entries in groups.items():
-        table=f'<table class="tkd-recipients"><caption>{H(target)} · 출전 경로 명단</caption><thead><tr><th scope="col">대회명</th><th scope="col">선수명</th></tr></thead><tbody>'
+        if target_year and not target.startswith(str(target_year)):continue
+        if event_ids is not None:
+            entries=[r for r in entries if r[2].removeprefix('meet-') in event_ids]
+        if not entries:continue
+        blocks+=f'<tr class="tkd-cycle-row"><th colspan="2" scope="colgroup">{H(target)}</th></tr>'
         for source,names,event_id in entries:
             anchor=event_id if event_id in ['grand-slam','meet-gpf26'] else 'meet-'+event_id
-            table+=f'<tr><th scope="row"><a href="#{anchor}">{H(source)}</a></th><td>'+(recipient_names(names) if names else '—')+'</td></tr>'
-        table+='</tbody></table>'
-        blocks+='<div class="tkd-recipient-block">'+table+'</div>'
-    return '<section id="recipients"><h2>대회별 참가 경로 명단</h2><p class="small">성적에 따른 초청 경로 후보 · 최종 참가 확정 별도 · — 미확인/미정 · 한국 선수는 노란색</p>'+blocks+'</section>'
+            href=f'./oltaekwondo-ev-{code}.html#{anchor}' if suffix else '#'+anchor
+            note='<small>두 번째 국가 후보 미확인</small>' if event_id=='gsc25' and names and len(names)<2 else ''
+            blocks+=f'<tr><th scope="row"><a href="{href}">{H(source)}</a></th><td>'+(recipient_names(names) if names else '—')+note+'</td></tr>'
+    blocks+='</tbody></table>'
+    return f'<section id="recipients{suffix}"><h2>성적에 따른 진출·초청 명단</h2><p class="small">대회별 경로 후보 · 최종 초청·등록 별도 · — 미확인/미정 · GP 챌린지 국가별 1명 등 제한 적용</p>'+blocks+'</section>'
 
 def recipient_names(names):
-    return '<ul class="tkd-name-list">'+''.join(f'<li class="{"tkd-name-kor" if a["country"]=="KOR" else ""}">{athlete(a)}</li>' for a in names)+'</ul>'
+    return '<ul class="tkd-name-list">'+''.join(f'<li class="{"tkd-name-kor" if a["country"]=="KOR" else ""}">{athlete(a,compact=True)}</li>' for a in names)+'</ul>'
 
 def participants(code):
     weight=D['weights'][code]['olympic'];blocks=''
@@ -189,14 +260,58 @@ def event_page(code):
         athletes=athletes.replace('</section>','<details id="tkd-legacy-sources"><summary>기존 선수 자료 출처</summary><ul>'+''.join(f'<li><a href="{H(u)}">{H(title)}</a></li>' for u,title in refs.items())+'</ul></details></section>')
     overview=re.search(r'<section id="overview">.*?</section>',t,re.S)
     overview=re.sub(r'<p class="stub">.*?</p>','',overview[0],flags=re.S) if overview else ''
-    body=toc([('recipients','대회별 참가 경로'),('participants','완료 대회 참가 명단'),('strategy','체급별 핵심 판정'),('cycle1','1기 결과·초청 경로'),('cycle2','2기 대회·배점'),('grand-slam','GS 초청·메리트'),('rules','올림픽 쿼터'),('athletes','한국 주요 선수'),('sources','근거')])+weightnav(code[0])+recipients(code)+participants(code)+strategy(code)+cycles()+ledger(code,1)+ledger(code,2)+entry()+points()+grand_slam()+quota()+athletes+overview+evidence()+sources()
+    body=toc([('results','대회 결과 통합표'),('recipients','진출·초청 명단'),('participants','완료 대회 참가 명단'),('strategy','체급별 핵심 판정'),('cycles','랭킹 1기·2기'),('grand-slam','GS 초청·메리트'),('rules','올림픽 쿼터'),('athletes','한국 주요 선수'),('sources','근거')])+weightnav(code[0])+combined_results(code)+recipients(code)+participants(code)+strategy(code)+cycles()+entry()+points()+grand_slam()+quota()+athletes+overview+evidence()+sources()
     t=replace_main(t,body)
     t=re.sub(r'<p class="intro">.*?</p>',f'<p class="intro">{H(D["weights"][code]["label"])} · 대회별 출전 경로와 참가 명단 · 2026.10.11 기준</p>',t,count=1,flags=re.S)
     p.write_text(normalise(t),encoding='utf-8',newline='\n')
+def axisnav():
+    return '<nav class="tkd-axis-links" aria-label="연도·대회 문서">'+''.join(f'<a href="./oltaekwondo-{key}.html">{H(title)}</a>' for key,title,ids in AXES)+'</nav>'
+
+def orthogonal(group=None):
+    heading='<section id="classes"><h2>1 · 8개 체급 문서</h2>'+weightnav(group)+'</section><section id="meets"><h2>2 · 연도별 주요 대회 문서</h2>'+axisnav()+'</section>'
+    grid='<section id="matrix"><h2>체급 × 연도·대회</h2><p class="small">체급명은 체급 통합 문서, 열 제목은 해당 연도·대회 문서. 교차 칸은 해당 대회 문서의 체급 결과로 이동합니다. 모바일에서는 표를 좌우로 넘깁니다.</p><div class="tkd-matrix-scroll" tabindex="0" role="region" aria-label="체급과 대회 링크 표"><table class="tkd-matrix"><thead><tr><th scope="col">체급</th>'
+    grid+=''.join(f'<th scope="col"><a href="./oltaekwondo-{key}.html">{H(title[:4])}<br>{H(title[5:])}</a></th>' for key,title,ids in AXES)+'</tr></thead><tbody>'
+    for code,w in D['weights'].items():
+        if group and code[0]!=group:continue
+        grid+=f'<tr><th scope="row"><a href="./oltaekwondo-ev-{code}.html">{H(w["label"])}</a></th>'
+        grid+=''.join(f'<td><a href="./oltaekwondo-{key}.html#weight-{code}" aria-label="{H(w["label"]+" · "+title)}">{"명단" if key.endswith("entries") else "판정" if key.endswith("quota") else "결과"}</a></td>' for key,title,ids in AXES)+'</tr>'
+    return heading+grid+'</tbody></table></div></section>'
+
+def year_page(key,title,ids):
+    links='<nav class="tkd-weights" aria-label="이 문서의 체급">'+''.join(f'<a href="#weight-{c}">{H(w["label"])}</a>' for c,w in D['weights'].items())+'</nav>'
+    body='<section id="year-summary"><h2>'+H(title)+'</h2><p>각 체급 문서와 동일한 결과 데이터를 사용합니다. 체급 이름이나 대회 이름으로 서로의 문서에 이동할 수 있습니다.</p>'+links+'</section>'
+    if key.endswith('entries'):
+        body+='<p>1기 성적에서 확보한 2026 GP·GS 출전 경로 결산. 랭킹 점수 이월과 초청권은 구분합니다. 최종 등록 확정 명단은 별도입니다.</p>'
+    elif key.endswith('quota'):
+        body+='<p>2028년 1월 올림픽 랭킹·GS 메리트 및 대륙 예선의 판정 문서입니다. 아직 공표되지 않은 선수 합격 순위는 표시하지 않습니다.</p>'+quota()
+    for code,w in D['weights'].items():
+        suffix='-'+code
+        body+=f'<section class="tkd-year-weight" id="weight-{code}"><h2><a href="./oltaekwondo-ev-{code}.html">{H(w["label"])}</a></h2>'
+        if key.endswith('entries'):
+            first=[e['id'] for e in D['events'] if e['cycle']==1]+['grand-slam']
+            body+=recipients(code,first,suffix,2026)
+        elif key.endswith('quota'):
+            body+='<p>올림픽 랭킹·메리트 최종 공표 대기 · 대표 선발 별도.</p><p><a href="./oltaekwondo-ev-'+code+'.html#rules">이 체급 쿼터·선수 자료 →</a></p>'
+        else:
+            body+=combined_results(code,ids,suffix,False)+recipients(code,ids,suffix)
+            if key.endswith('-gp'):
+                # Completed GP rosters remain the same records shown in the weight view.
+                roster=participants(code)
+                roster=re.sub(r'id="participants"',f'id="participants{suffix}"',roster)
+                if key.startswith('2026'):body+=roster
+        body+='</section>'
+    body+=sources()
+    t=(SITE/'oltaekwondo.html').read_text(encoding='utf-8')
+    t=replace_main(t,body)
+    t=re.sub(r'<h1 class="title">.*?</h1>',f'<h1 class="title">태권도 · {H(title)}</h1>',t,count=1,flags=re.S)
+    t=re.sub(r'<title>.*?</title>',f'<title>{H(title)} | LA28 태권도</title>',t,count=1)
+    t=re.sub(r'<p class="intro">.*?</p>',f'<p class="intro">{H(title)} · 8개 체급 결과와 진출 경로 · 기준 2026.10.11</p>',t,count=1,flags=re.S)
+    (SITE/f'oltaekwondo-{key}.html').write_text(normalise(t),encoding='utf-8',newline='\n')
+
 def overview_page(p,group=None):
     t=p.read_text(encoding='utf-8')
     title='체급별 대회·출전 경로'
-    body=toc([('classes','체급별 분석'),('cycles','랭킹 1기·2기'),('timeline','주요 대회 정렬'),('entry','GP 초청 경로'),('points','배점·감점'),('grand-slam','GS 초청·쿼터'),('rules','올림픽 쿼터'),('sources','공식 근거')])+f'<section id="classes"><h2>{title}</h2><p>체급을 선택하면 2025 샬럿·무주·방콕 GP 챌린지, 우시 세계선수권·GS 챌린지 입상자와 2026 GP 입상자를 시간순으로 볼 수 있습니다.</p>'+weightnav(group)+'</section>'+cycles()+calendar(group)+entry()+points()+grand_slam()+quota()+evidence()+sources()
+    body=toc([('classes','8개 체급'),('meets','연도·대회 문서'),('matrix','체급 × 대회 링크표'),('cycles','랭킹 1기·2기'),('entry','GP 초청 경로'),('points','배점·감점'),('grand-slam','GS 초청·쿼터'),('rules','올림픽 쿼터'),('sources','공식 근거')])+orthogonal(group)+cycles()+entry()+points()+grand_slam()+quota()+evidence()+sources()
     t=replace_main(t,body)
     t=re.sub(r'<p class="intro">.*?</p>','<p class="intro">LA28 태권도 예선의 핵심은 1기에서 출전 경로를 확보하고, 2026년 6월부터 시작된 2기에서 올림픽 랭킹과 GS 메리트를 따로 판정하는 것입니다. 2027 세계선수권·G6 그랑프리·G10 파이널의 연결을 체급별로 추적합니다.</p>',t,count=1,flags=re.S)
     p.write_text(normalise(t),encoding='utf-8',newline='\n')
@@ -210,11 +325,12 @@ def update_pages():
         t=re.sub(r'<title>.*?</title>','<title>랭킹·대회 경로 | LA28 태권도</title>',t,count=1)
         ranking.write_text(t,encoding='utf-8')
     overview_page(ranking)
+    for key,title,ids in AXES:year_page(key,title,ids)
     for name in ['oltaekwondo-continental.html','oltaekwondo-athletes.html','oltaekwondo-squad.html']:
         p=SITE/name; t=p.read_text(encoding='utf-8')
         block='<div class="tkd-callout" id="tkd-pathway-links"><b>체급별 랭킹·출전 경로 분석</b><p>2025 챌린지 초청권, 2026/27 GP 점수, 2027 세계선수권 및 GS 메리트는 각 체급 문서에서 함께 확인합니다. 2기 시작은 2026.06.01입니다.</p>'+weightnav()+'</div>'
         if 'id="tkd-pathway-links"' not in t: t=t.replace('<main id="main">','<main id="main">'+block,1)
         t=re.sub(r'<dt>랭킹</dt><dd>.*?기준일 미상.*?</dd>','',t,flags=re.S)
         p.write_text(normalise(t),encoding='utf-8',newline='\n')
-    print('Updated 8 weight pages, 4 guides and 3 related pages')
+    print('Updated 8 weight pages, 11 year/pathway pages, 4 guides and 3 related pages')
 if __name__=='__main__': update_pages()
