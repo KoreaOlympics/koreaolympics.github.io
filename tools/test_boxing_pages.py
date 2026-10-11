@@ -31,7 +31,11 @@ for r in load_data()['results']:
     def row(f):
         text=(ROOT/f).read_text(encoding='utf-8')
         return re.search('<tr '+marker+'.*?</tr>',text).group()
-    assert row(page(r['axis']))==row('olboxing-ev-'+r['weight']+'.html')
+    if r['weight'] in {c for c,_ in WEIGHTS}:
+        assert row(page(r['axis']))==row('olboxing-ev-'+r['weight']+'.html')
+    else:
+        assert 'weight-'+r['weight'] in docs[page(r['axis'])].ids
+        row(page(r['axis']))
 before={f:hashlib.sha256((ROOT/f).read_bytes()).hexdigest() for f in files}
 render()
 assert before=={f:hashlib.sha256((ROOT/f).read_bytes()).hexdigest() for f in files}
