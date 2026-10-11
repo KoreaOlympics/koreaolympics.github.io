@@ -1,0 +1,9 @@
+/* Compact wiki results. Cells remain whole; the wrapper scrolls. */
+.shoot-axis-scroll{min-width:0;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.shoot-axis-scroll table{table-layout:auto!important;width:max-content!important;min-width:100%;max-width:none!important}
+.shoot-axis-scroll th,.shoot-axis-scroll td{white-space:nowrap!important;word-break:normal!important;overflow-wrap:normal!important}
+.shoot-summary{border-collapse:collapse;font-size:13px}.shoot-summary th,.shoot-summary td{border:1px solid #a2a9b1;padding:8px 10px;text-align:left}.shoot-summary thead th{background:#eaecf0}.shoot-summary td:last-child{background:#f5f8fc}
+.shoot-summary td.qualifier{background:#fff8d6}
+.shoot-doc-nav{display:flex;flex-wrap:wrap;gap:8px 18px;border-bottom:1px solid #a2a9b1;padding:8px 0;margin-bottom:16px}
+.quota-chart{display:block;width:100%;max-width:620px;height:auto;background:#fff}.quota-chart text{font:14px sans-serif;fill:#202122}.quota-chart a:hover rect{fill:#b99528}.mixed-route{display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:16px 0}.mixed-route a,.mixed-route strong{border:1px solid #a2a9b1;padding:10px}
+.columns.no-infobox{grid-template-columns:minmax(0,1fr)!important}.columns main,.shell{min-width:0}
