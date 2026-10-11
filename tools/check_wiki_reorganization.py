@@ -26,9 +26,17 @@ def validate():
    if not (R/target).exists():errors.append((name,'missing file',href));continue
    if u.fragment and target in docs and unquote(u.fragment) not in docs[target].ids:errors.append((name,'missing anchor',href))
  assert len(list(R.glob('oltaekwondo-ev-*.html')))==8
- assert len(list(R.glob('oltaekwondo-p-*.html')))==15
+ assert len(list(R.glob('oltaekwondo-p-*.html')))==16
  assert len(list(R.glob('olbadminton-202?-??.html')))==20
  assert docs['oltaekwondo.html'].sections[0]=='classes'
+ assert docs['oltaekwondo.html'].sections.index('rules')<docs['oltaekwondo.html'].sections.index('timeline')
+ assert 'competition-routes' in docs['oltaekwondo.html'].sections
+ assert 'cycles' in docs['oltaekwondo.html'].sections
+ assert 'eligibility' in docs['oltaekwondo.html'].sections
+ assert 'oltaekwondo-p-park-woo-hyeok.html' in (R/'oltaekwondo-ev-mo80.html').read_text(encoding='utf-8')
+ m80=(R/'oltaekwondo-ev-m80.html').read_text(encoding='utf-8').split('<section id="athletes">',1)[1].split('</section>',1)[0]
+ assert 'oltaekwondo-p-park-woo-hyeok.html' not in m80
+ assert 'oltaekwondo-p-hong-hyorim.html' in (R/'oltaekwondo-ev-w67.html').read_text(encoding='utf-8')
  assert docs['olbadminton.html'].sections[0]=='tour-index'
  for sport in ['wrestling','boxing']:
   d=docs[f'ol{sport}.html'];assert d.sections.index('qualifying')<d.sections.index('reference')
