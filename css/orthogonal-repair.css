@@ -1,0 +1,14 @@
+/* Layout repair: constrain grids; wide tables scroll within their wrappers. */
+.columns>main,.columns>aside,.shell,.tour-index{min-width:0}
+.columns.no-infobox{grid-template-columns:minmax(0,1fr)}
+.tour-scroll,.four-scroll,.wl-scroll,.priority-scroll,.boxing-scroll,.archery-scroll,.tkd-scroll{box-sizing:border-box;width:100%;max-width:100%;overflow-x:auto}
+.tour-links,.four-links,.wl-links,.priority-links{gap:8px;line-height:1.5}
+.ranking-reference{margin:20px 0;border:1px solid #c8ccd1;padding:12px;background:#f8f9fa}
+.ranking-reference summary{cursor:pointer;font-weight:600}
+@media(max-width:600px){.columns{grid-template-columns:minmax(0,1fr)}.shell{width:100%;box-sizing:border-box}.tour-links a,.four-links a,.wl-links a,.priority-links a{max-width:100%;box-sizing:border-box}}
+
+/* Wiki form: plain links, restrained borders, no decorative callout cards. */
+.tour-links,.four-links,.wl-links,.priority-links,.boxing-links,.archery-links{display:flex;flex-wrap:wrap;gap:6px 14px}
+.tour-links a,.four-links a,.wl-links a,.priority-links a,.boxing-links a,.archery-links a{background:transparent;border:0;border-radius:0;padding:0;color:#3366cc}
+.four-note,.priority-note,.wl-period{background:transparent;border:0;padding:0}
+.data,.tour-results,.tour-matrix{border-collapse:collapse}.data th,.data td{border:1px solid #a2a9b1}.data thead th{background:#eaecf0}
