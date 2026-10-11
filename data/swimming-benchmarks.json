@@ -1,0 +1,583 @@
+{
+  "pool": "50m",
+  "checked_at": "2026-10-11T03:17:51+00:00",
+  "world_source": "https://www.worldaquatics.com/swimming/records",
+  "standard_source": "https://stillmed.olympics.com/media/Documents/Olympic-Games/LA28/SWM-LA28-Qualification-System.pdf",
+  "standard_version": "12 May 2026 · 기존 문서 규정 H 표",
+  "events": {
+    "mfree50": {
+      "name": "남자 자유형 50m",
+      "gender": "m",
+      "stroke": "free",
+      "a": "21.69",
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "20.88",
+        "holder": "MCEVOY Cameron",
+        "noc": "AUS",
+        "date": "2026-03-20",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=M&pool=LCM"
+      }
+    },
+    "mfree100": {
+      "name": "남자 자유형 100m",
+      "gender": "m",
+      "stroke": "free",
+      "a": "47.86",
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "46.40",
+        "holder": "PAN Zhanle",
+        "noc": "CHN",
+        "date": "2024-07-31",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=M&pool=LCM"
+      }
+    },
+    "mfree200": {
+      "name": "남자 자유형 200m",
+      "gender": "m",
+      "stroke": "free",
+      "a": "1:45.83",
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "01:42.00",
+        "holder": "BIEDERMANN Paul",
+        "noc": "GER",
+        "date": "2009-07-28",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=M&pool=LCM"
+      }
+    },
+    "mfree400": {
+      "name": "남자 자유형 400m",
+      "gender": "m",
+      "stroke": "free",
+      "a": "3:45.46",
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "03:39.96",
+        "holder": "MAERTENS Lukas",
+        "noc": "GER",
+        "date": "2025-04-12",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=M&pool=LCM"
+      }
+    },
+    "mfree800": {
+      "name": "남자 자유형 800m",
+      "gender": "m",
+      "stroke": "free",
+      "a": "7:47.04",
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "07:32.12",
+        "holder": "ZHANG Lin",
+        "noc": "CHN",
+        "date": "2009-07-29",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=M&pool=LCM"
+      }
+    },
+    "mfree1500": {
+      "name": "남자 자유형 1500m",
+      "gender": "m",
+      "stroke": "free",
+      "a": "14:51.62",
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "14:26.79",
+        "holder": "LIEBMANN Johannes Wilhel",
+        "noc": "GER",
+        "date": "2026-08-15",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=M&pool=LCM"
+      }
+    },
+    "mback50": {
+      "name": "남자 배영 50m",
+      "gender": "m",
+      "stroke": "back",
+      "a": null,
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "23.55",
+        "holder": "KOLESNIKOV Kliment",
+        "noc": "RUS",
+        "date": "2023-07-27",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=M&pool=LCM"
+      }
+    },
+    "mback100": {
+      "name": "남자 배영 100m",
+      "gender": "m",
+      "stroke": "back",
+      "a": "53.00",
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "51.60",
+        "holder": "CECCON Thomas",
+        "noc": "ITA",
+        "date": "2022-06-20",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=M&pool=LCM"
+      }
+    },
+    "mback200": {
+      "name": "남자 배영 200m",
+      "gender": "m",
+      "stroke": "back",
+      "a": "1:56.05",
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "01:51.92",
+        "holder": "PEIRSOL Aaron",
+        "noc": "USA",
+        "date": "2009-07-31",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=M&pool=LCM"
+      }
+    },
+    "mbreast50": {
+      "name": "남자 평영 50m",
+      "gender": "m",
+      "stroke": "breast",
+      "a": null,
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "25.95",
+        "holder": "RAMSAY-PEATY Adam",
+        "noc": "GBR",
+        "date": "2017-07-25",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=M&pool=LCM"
+      }
+    },
+    "mbreast100": {
+      "name": "남자 평영 100m",
+      "gender": "m",
+      "stroke": "breast",
+      "a": "59.27",
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "56.88",
+        "holder": "RAMSAY-PEATY Adam",
+        "noc": "GBR",
+        "date": "2019-07-21",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=M&pool=LCM"
+      }
+    },
+    "mbreast200": {
+      "name": "남자 평영 200m",
+      "gender": "m",
+      "stroke": "breast",
+      "a": "2:09.35",
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "02:05.48",
+        "holder": "QIN Haiyang",
+        "noc": "CHN",
+        "date": "2023-07-28",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=M&pool=LCM"
+      }
+    },
+    "mfly50": {
+      "name": "남자 접영 50m",
+      "gender": "m",
+      "stroke": "fly",
+      "a": null,
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "22.27",
+        "holder": "GOVOROV Andrii",
+        "noc": "UKR",
+        "date": "2018-07-01",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=M&pool=LCM"
+      }
+    },
+    "mfly100": {
+      "name": "남자 접영 100m",
+      "gender": "m",
+      "stroke": "fly",
+      "a": "51.06",
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "49.45",
+        "holder": "DRESSEL Caeleb",
+        "noc": "USA",
+        "date": "2021-07-31",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=M&pool=LCM"
+      }
+    },
+    "mfly200": {
+      "name": "남자 접영 200m",
+      "gender": "m",
+      "stroke": "fly",
+      "a": "1:54.69",
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "01:50.34",
+        "holder": "MILAK Kristof",
+        "noc": "HUN",
+        "date": "2022-06-21",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=M&pool=LCM"
+      }
+    },
+    "mim200": {
+      "name": "남자 개인혼영 200m",
+      "gender": "m",
+      "stroke": "im",
+      "a": "1:57.54",
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "01:52.69",
+        "holder": "MARCHAND Leon",
+        "noc": "FRA",
+        "date": "2025-07-30",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=M&pool=LCM"
+      }
+    },
+    "mim400": {
+      "name": "남자 개인혼영 400m",
+      "gender": "m",
+      "stroke": "im",
+      "a": "4:11.52",
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "04:02.50",
+        "holder": "MARCHAND Leon",
+        "noc": "FRA",
+        "date": "2023-07-23",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=M&pool=LCM"
+      }
+    },
+    "mrelay4x100free": {
+      "name": "남자 자유형 계영 4×100m",
+      "gender": "m",
+      "stroke": "relay",
+      "a": null,
+      "a_reason": "계영은 기준기록 선발 아님",
+      "world": {
+        "time": "03:08.24",
+        "holder": "United States of America",
+        "noc": "USA",
+        "date": "2008-08-11",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=M&pool=LCM"
+      }
+    },
+    "mrelay4x200free": {
+      "name": "남자 자유형 계영 4×200m",
+      "gender": "m",
+      "stroke": "relay",
+      "a": null,
+      "a_reason": "계영은 기준기록 선발 아님",
+      "world": {
+        "time": "06:58.55",
+        "holder": "United States of America",
+        "noc": "USA",
+        "date": "2009-07-31",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=M&pool=LCM"
+      }
+    },
+    "mrelay4x100medley": {
+      "name": "남자 혼계영 4×100m",
+      "gender": "m",
+      "stroke": "relay",
+      "a": null,
+      "a_reason": "계영은 기준기록 선발 아님",
+      "world": {
+        "time": "03:26.78",
+        "holder": "United States of America",
+        "noc": "USA",
+        "date": "2021-08-01",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=M&pool=LCM"
+      }
+    },
+    "wfree50": {
+      "name": "여자 자유형 50m",
+      "gender": "w",
+      "stroke": "free",
+      "a": "24.56",
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "23.19",
+        "holder": "DOUGLASS Kate",
+        "noc": "USA",
+        "date": "2026-08-15",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=F&pool=LCM"
+      }
+    },
+    "wfree100": {
+      "name": "여자 자유형 100m",
+      "gender": "w",
+      "stroke": "free",
+      "a": "53.60",
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "51.68",
+        "holder": "STEENBERGEN Marrit",
+        "noc": "NED",
+        "date": "2026-06-27",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=F&pool=LCM"
+      }
+    },
+    "wfree200": {
+      "name": "여자 자유형 200m",
+      "gender": "w",
+      "stroke": "free",
+      "a": "1:56.43",
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "01:52.23",
+        "holder": "TITMUS Ariarne",
+        "noc": "AUS",
+        "date": "2024-06-12",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=F&pool=LCM"
+      }
+    },
+    "wfree400": {
+      "name": "여자 자유형 400m",
+      "gender": "w",
+      "stroke": "free",
+      "a": "4:06.27",
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "03:54.18",
+        "holder": "MCINTOSH Summer",
+        "noc": "CAN",
+        "date": "2025-06-07",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=F&pool=LCM"
+      }
+    },
+    "wfree800": {
+      "name": "여자 자유형 800m",
+      "gender": "w",
+      "stroke": "free",
+      "a": "8:26.71",
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "08:04.12",
+        "holder": "LEDECKY Katie",
+        "noc": "USA",
+        "date": "2025-05-03",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=F&pool=LCM"
+      }
+    },
+    "wfree1500": {
+      "name": "여자 자유형 1500m",
+      "gender": "w",
+      "stroke": "free",
+      "a": "16:08.65",
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "15:20.48",
+        "holder": "LEDECKY Katie",
+        "noc": "USA",
+        "date": "2018-05-16",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=F&pool=LCM"
+      }
+    },
+    "wback50": {
+      "name": "여자 배영 50m",
+      "gender": "w",
+      "stroke": "back",
+      "a": null,
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "26.56",
+        "holder": "CURTIS Sara",
+        "noc": "ITA",
+        "date": "2026-08-13",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=F&pool=LCM"
+      }
+    },
+    "wback100": {
+      "name": "여자 배영 100m",
+      "gender": "w",
+      "stroke": "back",
+      "a": "59.49",
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "57.13",
+        "holder": "SMITH Regan",
+        "noc": "USA",
+        "date": "2024-06-18",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=F&pool=LCM"
+      }
+    },
+    "wback200": {
+      "name": "여자 배영 200m",
+      "gender": "w",
+      "stroke": "back",
+      "a": "2:08.95",
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "02:03.14",
+        "holder": "MCKEOWN Kaylee",
+        "noc": "AUS",
+        "date": "2023-03-10",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=F&pool=LCM"
+      }
+    },
+    "wbreast50": {
+      "name": "여자 평영 50m",
+      "gender": "w",
+      "stroke": "breast",
+      "a": null,
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "29.16",
+        "holder": "MEILUTYTE Ruta",
+        "noc": "LTU",
+        "date": "2023-07-30",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=F&pool=LCM"
+      }
+    },
+    "wbreast100": {
+      "name": "여자 평영 100m",
+      "gender": "w",
+      "stroke": "breast",
+      "a": "1:06.10",
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "01:04.13",
+        "holder": "KING Lilly",
+        "noc": "USA",
+        "date": "2017-07-25",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=F&pool=LCM"
+      }
+    },
+    "wbreast200": {
+      "name": "여자 평영 200m",
+      "gender": "w",
+      "stroke": "breast",
+      "a": "2:23.49",
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "02:17.55",
+        "holder": "CHIKUNOVA Evgeniia",
+        "noc": "RUS",
+        "date": "2023-04-21",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=F&pool=LCM"
+      }
+    },
+    "wfly50": {
+      "name": "여자 접영 50m",
+      "gender": "w",
+      "stroke": "fly",
+      "a": null,
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "24.43",
+        "holder": "SJOESTROEM Sarah",
+        "noc": "SWE",
+        "date": "2014-07-05",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=F&pool=LCM"
+      }
+    },
+    "wfly100": {
+      "name": "여자 접영 100m",
+      "gender": "w",
+      "stroke": "fly",
+      "a": "57.38",
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "54.33",
+        "holder": "WALSH Gretchen",
+        "noc": "USA",
+        "date": "2026-05-02",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=F&pool=LCM"
+      }
+    },
+    "wfly200": {
+      "name": "여자 접영 200m",
+      "gender": "w",
+      "stroke": "fly",
+      "a": "2:08.15",
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "02:01.65",
+        "holder": "MCINTOSH Summer",
+        "noc": "CAN",
+        "date": "2026-07-05",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=F&pool=LCM"
+      }
+    },
+    "wim200": {
+      "name": "여자 개인혼영 200m",
+      "gender": "w",
+      "stroke": "im",
+      "a": "2:09.90",
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "02:05.70",
+        "holder": "MCINTOSH Summer",
+        "noc": "CAN",
+        "date": "2025-06-09",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=F&pool=LCM"
+      }
+    },
+    "wim400": {
+      "name": "여자 개인혼영 400m",
+      "gender": "w",
+      "stroke": "im",
+      "a": "4:37.33",
+      "a_reason": "신설 50m · 별도 선발 경로",
+      "world": {
+        "time": "04:23.65",
+        "holder": "MCINTOSH Summer",
+        "noc": "CAN",
+        "date": "2025-06-11",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=F&pool=LCM"
+      }
+    },
+    "wrelay4x100free": {
+      "name": "여자 자유형 계영 4×100m",
+      "gender": "w",
+      "stroke": "relay",
+      "a": null,
+      "a_reason": "계영은 기준기록 선발 아님",
+      "world": {
+        "time": "03:27.96",
+        "holder": "Australia",
+        "noc": "AUS",
+        "date": "2023-07-23",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=F&pool=LCM"
+      }
+    },
+    "wrelay4x200free": {
+      "name": "여자 자유형 계영 4×200m",
+      "gender": "w",
+      "stroke": "relay",
+      "a": null,
+      "a_reason": "계영은 기준기록 선발 아님",
+      "world": {
+        "time": "07:37.50",
+        "holder": "Australia",
+        "noc": "AUS",
+        "date": "2023-07-27",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=F&pool=LCM"
+      }
+    },
+    "wrelay4x100medley": {
+      "name": "여자 혼계영 4×100m",
+      "gender": "w",
+      "stroke": "relay",
+      "a": null,
+      "a_reason": "계영은 기준기록 선발 아님",
+      "world": {
+        "time": "03:49.34",
+        "holder": "United States of America",
+        "noc": "USA",
+        "date": "2025-08-03",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=F&pool=LCM"
+      }
+    },
+    "xrelay4x100medley": {
+      "name": "혼성 혼계영 4×100m",
+      "gender": "x",
+      "stroke": "relay",
+      "a": null,
+      "a_reason": "계영은 기준기록 선발 아님",
+      "world": {
+        "time": "03:36.70",
+        "holder": "United States of America",
+        "noc": "USA",
+        "date": "2026-08-12",
+        "source": "https://api.worldaquatics.com/fina/records/SW?recordCode=WR&eventTypeId=&region=&countryId=&gender=X&pool=LCM"
+      }
+    }
+  }
+}
