@@ -1,4 +1,4 @@
-"""Build the reference-format dual-axis views from existing reviewed site data."""
+"""Build reviewed result data for integration into existing wiki documents."""
 import json,re,html,subprocess
 from pathlib import Path
 import boxing_pages as B,tour_pages as T,shooting_pages as S
@@ -87,15 +87,9 @@ def build():
   for rank,people in r.get('medals',{}).items():
    for p in people:add('golf',r['event'],r['label'],r['id'],r['name'],r['year'],rank,person(p['name'],p.get('country',''),r['source']),r['source'])
  (R/'data/medal-views.json').write_text(json.dumps(DATA,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
- template=(R/'tools/research/medal-view-template.html').read_text(encoding='utf-8')
- for sport,d in DATA.items():
-  if not d['records']:continue
-  title=d['label']+' 수상 기록';t=template.replace('SPORT',sport).replace('TITLE',title).replace('MAINPAGE','ol'+sport+'.html')
-  (R/('ol'+sport+'-medals.html')).write_text(t,encoding='utf-8',newline='\n')
-  p=R/('ol'+sport+'.html');s=p.read_text(encoding='utf-8');link='<a class="medal-view-link" href="ol'+sport+'-medals.html">수상 기록 · 종목별/대회별</a>'
-  if 'class="medal-view-link"' not in s:s=re.sub(r'(<nav class="golf-nav"[^>]*>)',lambda m:m[1]+link,s,count=1);p.write_text(s,encoding='utf-8',newline='\n')
- links=''.join('<li><a href="ol'+s+'-medals.html">'+d['label']+'</a> · '+str(len(d['records']))+'개 종목·대회 기록</li>' for s,d in DATA.items() if d['records'])
- hub='<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>종목별 수상 기록</title><link rel="stylesheet" href="css/medal-views.css?v=20261013"></head><body><header><a href="index.html">← 올림픽예선 목차</a></header><main style="max-width:900px;margin:35px auto;padding:0 20px"><h1>종목별 수상 기록</h1><p>체급·세부종목과 대회별로 전환해 금·은·동을 비교합니다.</p><ul>'+links+'</ul><p class="meta">레슬링 전체 국제 입상자, 일부 시즌 대회 4강 및 골프 메이저의 일부 2·3위는 미수록입니다. 확인된 기록만 표시하며 원본 링크로 연결합니다.</p></main></body></html>'
- (R/'olmedals.html').write_text(hub,encoding='utf-8',newline='\n')
+ from import_wikipedia_podiums import update
+ update()
+ from integrate_wiki_results import run
+ run()
  print({s:len(d['records']) for s,d in DATA.items()})
 if __name__=='__main__':build()

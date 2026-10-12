@@ -44,7 +44,7 @@ def validate():
  assert any(a['name']=='KIM Hyanggi' and a['medal']=='Silver' for a in e['gp26c']['medals'])
  assert len(e['gp26c']['medals'])==25
  for p in R.glob('olbadminton-202?-??.html'):
-  s=p.read_text(encoding='utf-8');assert all(h in s for h in ['대회명','우승자','준우승자','비고'])
+  s=p.read_text(encoding='utf-8');assert all(h in s for h in (['금 · 우승','은 · 준우승','동 · 4강'] if '<!-- integrated-wiki-results:start -->' in s else ['대회명','우승자','준우승자','비고']))
  print(json.dumps({'pages':len(files),'errors':errors},ensure_ascii=False,indent=2))
  return errors
 if __name__=='__main__':raise SystemExit(bool(validate()))
