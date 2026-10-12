@@ -1,6 +1,7 @@
 """Single-source rendering for weight, annual tournament and athlete wiki pages."""
 from pathlib import Path
 import html,json,re
+from build_medal_views import CHINESE
 import taekwondo_rules as rules
 ROOT=Path(__file__).resolve().parents[1]
 D=rules.D;E=rules.E;H=rules.H
@@ -9,7 +10,7 @@ rules.AXES=AXES
 AX={eid:key for key,title,ids in AXES for eid in ids}
 PEOPLE=json.loads((ROOT/'tools/research/tkd_judo.json').read_text(encoding='utf-8'))['taekwondo']['events']
 SLUGS={'박태준':'park-tae-joon','배준서':'bae-jun-seo','문진호':'mun-jinho','성유현':'seong-yu-hyeon','서건우':'seo-geon-woo','강재권':'kang-jaegwon','강상현':'kang-sanghyun','김향기':'kim-hyanggi','이유민':'lee-yumin','김유진':'kim-yujin','곽민주':'kwak-minju','송다빈':'song-dabin','서은수':'seo-eunsu','장준':'jang-jun','박우혁':'park-woo-hyeok','홍효림':'hong-hyorim'}
-rules.KO.update({'KIM Hyanggi':'김향기','AN Hyangsik':'안향식','KWAK Min Ju':'곽민주','MUN Jinho':'문진호','HONG Hyo Rim':'홍효림','HONG Hyo rim':'홍효림'})
+rules.KO.update({'KIM Hyanggi':'김향기','AN Hyangsik':'안향식','KWAK Min Ju':'곽민주','MUN Jinho':'문진호','HONG Hyo Rim':'홍효림','HONG Hyo rim':'홍효림','YANG Hui-chan':'양희찬','SEO Yeo-won':'서여원','LEE Ga-eun':'이가은'})
 for code,name,en in [('m58','서은수','SEO Eunsu'),('m68','장준','JANG Jun'),('mo80','박우혁','PARK Woo-Hyeok'),('w67','홍효림','HONG Hyo Rim')]:
  if not any(a['name']==name for a in PEOPLE[code]['athletes']):PEOPLE[code]['athletes'].append({'name':name,'name_en':en,'birth':None,'affiliation':None,'results':[],'sources':[]})
 TEMPLATE=(ROOT/'oltaekwondo.html').read_text(encoding='utf-8')
@@ -20,7 +21,7 @@ def personlink(name):
 def athlete(a,compact=False):
  name=rules.KO.get(a['name'],a['name'])
  if name in SLUGS:return personlink(name)+f' <span class="tkd-country">{H(a["country"])}</span>'
- label=rules.SHORT.get(a['name'],name) if compact else name
+ label=CHINESE.get(a['name'],name) if a['country']=='CHN' else rules.SHORT.get(a['name'],name) if compact else name
  return f'<span title="{H(name)}">{H(label)}</span> <span class="tkd-country">{H(a["country"])}</span>'
 rules.athlete=athlete
 def refs(e):
@@ -33,7 +34,7 @@ def dates(e,code=None):
  return e['start']+(' – '+e['end'] if e['start']!=e['end'] else '')
 def rows(e,code):
  w=D['weights'][code]
- return [a for a in e['medals'] if a['weight']==w['olympic'] or ((e['id'].startswith('wc') or e['id']=='women26') and a['weight'] in w['worldWeights'])]
+ return [a for a in e['medals'] if a['weight']==w['olympic'] or ((e['id'].startswith('wc') or e['id'] in ['women26','cu26']) and a['weight'] in w['worldWeights'])]
 def result(e,code):
  r=rows(e,code)
  if not r:return '<span class="tkd-muted">'+('예정 · 결과 없음' if e['start']>D['asOf'] else '결과 미확인')+'</span>'
@@ -66,7 +67,7 @@ def render(path,title,intro,body):
  t=re.sub(r'taekwondo.css(?:\?[^\"]*)?', 'taekwondo.css?v=20261012r3',t)
  t=re.sub(r'(<meta name="description" content=")[^"]*',r'\g<1>'+H(intro),t,count=1)
  t=t.replace('class="columns"','class="columns no-infobox"')
- t=re.sub(r'규정 확인 2026\.10\.04 · 한국 전망 기준 2026\.10\.04','자료 정리 2026.10.12',t)
+ t=re.sub(r'규정 확인 2026\.10\.04 · 한국 전망 기준 2026\.10\.04','자료 정리 2026.10.13',t)
  for old,new in REMOVED.items():t=t.replace(old,new)
  (ROOT/path).write_text(t,encoding='utf-8',newline='\n')
 def tournaments():
@@ -84,7 +85,9 @@ def timeline(code=None):
    previous=e['cycle'];out+=f'<tr class="tkd-cycle-row"><th colspan="3">{previous}기 · '+('2024.06–2026.05 · 초청 경로 확보' if previous==1 else '2026.06–2028.05 · LA28 랭킹 경쟁')+'</th></tr>'
   key=AX[e['id']];target=f'./oltaekwondo-{key}.html#meet-{e["id"]}'+(f'-{code}' if code else '')
   final=result(e,code) if code else f'{"여자 4 올림픽체급 · 세계체급 8개" if e.get("gender")=="w" else "올림픽 8체급 · 세계체급 16개" if e["id"].startswith("wc") else "올림픽 8체급"}<br><span class="tkd-muted">'+(f'메달 기록 {len(e["medals"])}건' if e['medals'] else '공표 결과 미확인' if e['start']<=D['asOf'] else '예정')+'</span>'
-  out+=f'<tr id="meet-{e["id"]}"><td><time>{H(dates(e,code))}</time><span class="tkd-state">{H(e["status"])}</span></td><th scope="row"><a href="{target}">{H(e["title"])}</a> <span class="tkd-grade">{H(e["grade"])}</span><small>{H(e["route"])}</small></th><td>{final}</td></tr>'
+  route='금 → GS · 금·은 → GP 파이널' if e['id'].startswith('gp26') or e['id'].startswith('gp27') else '금 → GS 초청' if e['id'].startswith('gpf') else '결승 → GS 초청' if e['id'].startswith('gsc') and not e['id'].startswith('gscs') else '올림픽 쿼터 · 메리트 판정' if e['id'].startswith('gscs') else '우승 → GS 초청' if e['id'].startswith('wc') else '다음 GP 초청 경로' if e['id'].startswith('gpc') else '랭킹 점수 · 직접 쿼터 없음'
+  if e['id']=='cu26':final='세계체급 16개<br><span class="tkd-muted">메달 기록 64건</span>' if not code else final
+  out+=f'<tr id="meet-{e["id"]}"><td><time>{H(dates(e,code))}</time><span class="tkd-state">{H(e["status"])}</span></td><th scope="row"><a href="{target}">{H(e["title"])}</a> <span class="tkd-grade">{H(e["grade"])}</span><small>{H(route)}</small></th><td>{final}</td></tr>'
  return out+'</tbody></table></div></section>'
 def peoplecards(code):
  return '<section id="athletes"><h2>한국 선수 · 인물 위키</h2><div class="tkd-grid">'+''.join(f'<article class="tkd-card"><h3>{personlink(a["name"])}</h3><p>{H(a.get("name_en",""))}</p><p>{H(a.get("affiliation") or "대한민국 태권도 선수")}</p><a href="./oltaekwondo-p-{SLUGS[a["name"]]}.html">기본 정보·주요 성적 →</a></article>' for a in PEOPLE[code]['athletes'])+'</div></section>'
@@ -135,7 +138,7 @@ def eventpage(key,title,ids):
   body+='</div><p class="small">'+refs(e)+'</p></section>'
  if key=='2028-continental':body+='<section id="continental"><h2>2028 대륙 예선</h2><p>2028년 2–4월 예정 · 세부 개최지·날짜 미확인. 아시아·유럽·아프리카·팬아메리카는 체급별 상위 2명, 오세아니아는 체급별 상위 1명 경로입니다.</p>'+rules.quota().replace('id="rules"','id="quota"')+'</section>'
  for c,w in D['weights'].items():body+=f'<p id="weight-{c}"><a href="./oltaekwondo-ev-{c}.html">{H(w["label"])} 전체 시간순 기록 →</a></p>'
- render(f'oltaekwondo-{key}.html','태권도 · '+title,'연도별 대회 기록 · 일정·체급별 입상자·참가 명단 · 2026.10.12 기준',body)
+ render(f'oltaekwondo-{key}.html','태권도 · '+title,'연도별 대회 기록 · 일정·체급별 입상자·참가 명단 · 2026.10.13 기준',body)
 def personpage(code,a):
  name=a['name'];body=f'<p class="tkd-breadcrumb"><a href="./oltaekwondo.html">태권도</a> / <a href="./oltaekwondo-ev-{code}.html">{H(D["weights"][code]["label"])}</a> / {H(name)}</p><section id="profile"><h2>기본 정보</h2><dl class="tkd-facts"><dt>이름</dt><dd>{H(name)} · {H(a.get("name_en",""))}</dd><dt>국적·종목</dt><dd>대한민국 · 태권도 겨루기</dd><dt>연결 체급</dt><dd><a href="./oltaekwondo-ev-{code}.html">{H(D["weights"][code]["label"])}</a></dd>'
  if a.get('birth'):body+='<dt>생년월일</dt><dd>'+H(a['birth'])+'</dd>'
@@ -157,12 +160,12 @@ def personpage(code,a):
 def update_pages():
  for c,w in D['weights'].items():
   body=weightnav()+peoplecards(c)+'<div class="tkd-callout"><b>이 체급의 예선 흐름</b><p>GP·세계선수권 성적은 올림픽 랭킹 점수와 GP 파이널·GS 초청 경로를 만듭니다. GS 본선은 별도 메리트, 2028 대륙 예선은 직접 출전권을 다룹니다. 아래 기록의 초청 경로와 올림픽 출전권 판정을 구분해서 확인합니다.</p><a href="./oltaekwondo.html#rules">예선 규정·대회별 역할 전체 →</a></div>'+timeline(c)+rules.recipients(c)+ruleblocks()+tournaments()
-  render(f'oltaekwondo-ev-{c}.html','태권도 · '+w['label'],'1기 → 2기 · 시간순 대회 결과와 GP·GS 초청 경로 · 2026.10.12 기준',body)
+  render(f'oltaekwondo-ev-{c}.html','태권도 · '+w['label'],'1기 → 2기 · 시간순 대회 결과와 GP·GS 초청 경로 · 2026.10.13 기준',body)
  for key,title,ids in AXES:eventpage(key,title,ids)
  for code,p in PEOPLE.items():
   for a in p['athletes']:personpage(code,a)
  body='<section id="classes"><h2>8개 올림픽 체급</h2><p>남자 4체급 · 여자 4체급 · 체급별 대회 흐름과 한국 선수</p>'+weightnav()+'</section>'+ruleblocks(False)+timeline()+'<section id="athletes"><h2>한국 선수 · 체급별 인물 위키</h2><div class="tkd-table-wrap"><table class="tkd-timeline"><thead><tr><th>체급</th><th>선수 위키</th></tr></thead><tbody>'+''.join(f'<tr><th><a href="./oltaekwondo-ev-{c}.html">{H(w["label"])}</a></th><td>'+ ' · '.join(personlink(a['name']) for a in PEOPLE[c]['athletes'])+'</td></tr>' for c,w in D['weights'].items())+'</tbody></table></div></section>'+rules.sources()+tournaments()
- render('oltaekwondo.html','태권도 (Taekwondo)','LA28 · 남녀 8체급 · 시간순 대회 결과·초청 경로·한국 선수 위키 · 2026.10.12 기준',body)
+ render('oltaekwondo.html','태권도 (Taekwondo)','LA28 · 남녀 8체급 · 시간순 대회 결과·초청 경로·한국 선수 위키 · 2026.10.13 기준',body)
  for old in REMOVED:
   p=ROOT/old
   if p.exists():p.unlink()
