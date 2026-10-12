@@ -26,11 +26,12 @@ def load_data(): return json.loads((ROOT/'data/boxing-pathways.json').read_text(
 NOC={'Kazakhstan':'KAZ','Uzbekistan':'UZB','Brazil':'BRA','India':'IND','England':'ENG','Poland':'POL','China':'CHN','Chinese Taipei':'TPE','South Korea':'KOR','Japan':'JPN','United States':'USA','Australia':'AUS','Ireland':'IRL','Turkey':'TUR','Türkiye':'TUR','France':'FRA','Spain':'ESP','Cuba':'CUB','Mongolia':'MGL','Georgia':'GEO','Bulgaria':'BUL','Italy':'ITA','Hungary':'HUN','Croatia':'CRO','Austria':'AUT','Ukraine':'UKR','Azerbaijan':'AZE','Colombia':'COL','Venezuela':'VEN','Jordan':'JOR','Canada':'CAN','Norway':'NOR','Finland':'FIN','Germany':'GER','Argentina':'ARG','Kyrgyzstan':'KGZ','Guatemala':'GUA','Dominican Republic':'DOM','Philippines':'PHI','Nigeria':'NGR'}
 def display_name(r):
  name=r['athlete'];country=r.get('country','');parts=name.split()
- if name in ('Xuan Yi Guo','Taguchi Ayaka'):short={'Xuan Yi Guo':'Guo','Taguchi Ayaka':'Taguchi'}[name]
+ if r.get('family_name') and country!='South Korea':short=r['family_name'].title()
+ elif name in ('Xuan Yi Guo','Taguchi Ayaka'):short={'Xuan Yi Guo':'Guo','Taguchi Ayaka':'Taguchi'}[name]
  elif country=='South Korea' or len(parts)==1: short=name
  elif country in ('China','Chinese Taipei'):short=parts[0]
  else:short=parts[-1]
- noc=NOC.get(country,country)
+ noc=r.get('noc') or NOC.get(country,country)
  return short+(' ('+noc+')' if noc else '')
 def results(data,code,key=None):
  rows=[r for r in data['results'] if r['weight']==code and (key is None or r['axis']==key)]
@@ -42,7 +43,9 @@ def results(data,code,key=None):
   full=r['athlete']+(' · '+r['country'] if r.get('country') else '')
   athlete='<a href="'+e(r['source'])+'" title="'+e(full)+'" aria-label="'+e(full+' · '+r['result'])+'">'+e(name+' · '+r['result'])+'</a>'
   body+=f'<tr id="meet-{e(r["id"])}"'+(' class="box-gold"' if r['result']=='금' else '')+f'><th scope="row">{link(page(r["axis"])+"#weight-"+code,r["competition"])}</th><td>{athlete}</td></tr>'
- if not body: body='<tr><td colspan="2">— · 결과 미입력</td></tr>'
+ if not body:
+  absent=key=='2026-ag' and code not in data.get('competitions',{}).get('2026-ag',{}).get('weights',[code])
+  body='<tr><td colspan="2">'+('이번 아시안게임 미개최 체급' if absent else '— · 결과 미입력')+'</td></tr>'
  return scroll('<table class="box-results"><caption>대회 결과 · 국제 입상자와 한국 성적</caption><thead><tr><th scope="col">대회</th><th scope="col">선수 · 결과</th></tr></thead><tbody>'+body+'</tbody></table>')
 def qualified(data,code,key=None):
  rows=[r for r in data['qualifiers'] if r['weight']==code and (key is None or key=='2028-quota' or r['axis']==key)]
@@ -68,13 +71,18 @@ def css(text):
 def write(path,text): path.write_text(text,encoding='utf-8',newline='\n')
 def render():
  data=load_data()
- for file in ('olboxing.html','olboxing-events.html'):
-  p=ROOT/file;write(p,css(insert(p.read_text(encoding='utf-8'),index())))
+ # The main uses the consolidated two-table navigation; removed guide tabs stay removed.
+ mainpath=ROOT/'olboxing.html';maintext=mainpath.read_text(encoding='utf-8')
+ maintext=re.sub(r'<p id="ag2026-status".*?</p>','',maintext,flags=re.S)
+ summary='<p id="ag2026-status" class="wiki-caption">'+link(page('2026-ag'),'2026 아시안게임 · 완료 · 11체급 44명 입상')+' · 한국 장동환·김민성 은메달 · LA28 직접 예선과 구분</p>'
+ if data.get('competitions',{}).get('2026-ag'):maintext=maintext.replace('<h3>올림픽 예선과 직접 무관한 대회</h3>','<h3>올림픽 예선과 직접 무관한 대회</h3>'+summary,1)
+ write(mainpath,maintext)
  for c,n in WEIGHTS:
   p=ROOT/f'olboxing-ev-{c}.html'
   block='<section class="box-section" id="competition-results"><h2>'+e(n)+' · 대회 결과와 출전권</h2><p>'+link('olboxing.html#boxing-index','체급 × 대회 전체 목차')+' · 성적과 출전권 배정을 별도로 기록합니다.</p>'+results(data,c)+qualified(data,c)+'</section>'
   write(p,css(insert(p.read_text(encoding='utf-8'),block)))
  template=(ROOT/'olboxing.html').read_text(encoding='utf-8')
+ template=re.sub(r'href="#(qualifying|reference)"',r'href="olboxing.html#\1"',template)
  for k,n,q,description in AXES:
   sections=''.join('<section class="box-section" id="weight-'+c+'"><h2>'+link('olboxing-ev-'+c+'.html#competition-results',label)+'</h2>'+results(data,c,k)+(qualified(data,c,k) if q else '')+'<p class="box-source">'+link('olboxing-ev-'+c+'.html#rules','체급별 배정 규정')+'</p></section>' for c,label in WEIGHTS)
   extras=sorted({r['weight'] for r in data['results'] if r['axis']==k}-{c for c,_ in WEIGHTS})
@@ -82,10 +90,15 @@ def render():
    sections+='<section id="other-weights"><h2>LA28 밖 원문 체급</h2><p>다음 성적은 해당 대회의 원문 체급에만 보존합니다.</p></section>'
    for c in extras:sections+='<section id="weight-'+c+'"><h3>'+e(('남자 ' if c.startswith('m') else '여자 ')+c[1:].replace('o','+')+'kg')+'</h3>'+results(data,c,k)+'</section>'
   source_extra=''
+  meet_info=''
+  if k=='2026-ag' and k in data.get('competitions',{}):
+   info=data['competitions'][k]
+   meet_info='<section id="meeting"><h2>대회 정보</h2><p>'+e(info['start']+'–'+info['end']+' · '+info['venue']+' · '+info['status'])+'</p><p><b>11체급 · 입상자 44명 · 한국 '+e(info['koreanSummary'])+'</b></p><p>남자 55·60·70·80·90·+90kg, 여자 51·54·60·65·75kg. LA28의 남자 65kg·여자 57kg·70kg은 이번 대회에서 열리지 않았습니다.</p><p>2026 아시안게임은 LA28 직접 예선이 아닙니다. 2027–28 대륙 예선과 구분해 국제 경쟁력 참고 성적으로 확인합니다.</p></section>'
+   source_extra='<p>'+link(info['source'],'AINAGOC · 공식 메달리스트')+' · '+link(info['scheduleSource'],'AINAGOC · 체급별 일정')+'</p>'
   if k in ('2025-wc','2025-cup'):
    title='2025_World_Boxing_Championships' if k=='2025-wc' else '2025_World_Boxing_Cup'
    source_extra='<p>'+link('https://en.wikipedia.org/wiki/'+title,'Wikipedia · '+title.replace('_',' '))+' · 입상 표 파싱, 2026.10.11. 선수 성을 축약 표시하며 전체 이름은 링크 설명에 보존합니다.</p>'
-  content='<p>'+e(description)+'</p><nav class="box-links" aria-label="이 대회의 체급">'+''.join(link('#weight-'+c,label) for c,label in WEIGHTS)+'</nav><p class="note">2025 세선은 20체급 입상자 80명, 월드컵은 1차·2차·파이널의 원문 기재 입상자 199건을 수록합니다. 파이널 일부 동메달 선수명은 원문 미기재입니다. 2026 한국 성적은 기존 자료입니다. 금메달 음영은 올림픽 출전권을 뜻하지 않습니다. 체급이 다른 성적은 자동 환산하지 않습니다.</p>'+sections+'<section id="sources"><h2>근거·수록 범위</h2>'+source_extra+'<p>'+link(RULE,'World Boxing · LA28 예선 경로')+' · '+link(DOCS,'World Boxing · 공식 대회 문서')+'</p><p>수록 성적의 개별 근거는 선수·결과 링크에 있습니다. 자료 기준 2026.10.11.</p></section>'
+  content='<p>'+e(description)+'</p>'+meet_info+'<nav class="box-links" aria-label="이 대회의 체급">'+''.join(link('#weight-'+c,label) for c,label in WEIGHTS)+'</nav><p class="note">2025 세선·월드컵은 기존 입상 표, 2026 아시안게임은 AINAGOC 공식 메달표를 사용합니다. 금메달 음영은 올림픽 출전권을 뜻하지 않습니다. 체급이 다른 성적은 자동 환산하지 않습니다.</p>'+sections+'<section id="sources"><h2>근거·수록 범위</h2>'+source_extra+'<p>'+link(RULE,'World Boxing · LA28 예선 경로')+' · '+link(DOCS,'World Boxing · 공식 대회 문서')+'</p><p>수록 성적의 개별 근거는 선수·결과 링크에 있습니다. 자료 기준 '+e(data['as_of'])+'.</p></section>'
   text=re.sub(r'<title>.*?</title>','<title>'+e(n)+' | 복싱 · 올림픽예선</title>',template)
   text=re.sub(r'<h1 class="title">.*?</h1>','<h1 class="title">복싱 · '+e(n)+'</h1>',text)
   text=re.sub(r'<p class="intro">.*?</p>','<p class="intro">'+link('olboxing.html#boxing-index','← 체급 × 연도·대회 목차')+'</p>',text)

@@ -16,6 +16,12 @@ class Doc(HTMLParser):
 
 files=sorted(O.ROOT.glob('olshooting*.html'))
 docs={p.name:Doc(p.read_text(encoding='utf-8')) for p in files}
+for name in ['olshooting.html','olshooting-events.html','olshooting-projection.html']:
+ text=(O.ROOT/name).read_text(encoding='utf-8')
+ assert text.index('id="shooting-qualifying"')<text.index('id="shooting-reference"')
+ assert text.count('<table class="shoot-axis-matrix ')==2
+ for _,v in O.E.items():
+  assert text.count('href="olshooting-ev-'+v['code']+'.html"')>=2
 for p in files:
  d=docs[p.name]
  assert len(d.ids)==len(set(d.ids)),p.name+' duplicate IDs'

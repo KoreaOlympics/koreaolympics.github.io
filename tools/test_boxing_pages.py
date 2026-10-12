@@ -12,7 +12,7 @@ class Document(HTMLParser):
         if 'id' in a: self.ids.append(a['id'])
         if tag in ('a','link') and 'href' in a: self.links.append(a['href'])
 
-files=['olboxing.html','olboxing-events.html']+[f'olboxing-ev-{c}.html' for c,_ in WEIGHTS]+[page(k) for k,_,_,_ in AXES]
+files=['olboxing.html']+[f'olboxing-ev-{c}.html' for c,_ in WEIGHTS]+[page(k) for k,_,_,_ in AXES]
 docs={f:Document((ROOT/f).read_text(encoding='utf-8')) for f in files}
 for f,d in docs.items():
     assert len(d.ids)==len(set(d.ids)),f+' duplicate IDs'
@@ -26,6 +26,10 @@ for f,d in docs.items():
             assert unquote(u.fragment) in other.ids,(f,href)
 for k,_,_,_ in AXES:
     for c,_ in WEIGHTS: assert 'weight-'+c in docs[page(k)].ids
+ag=[r for r in load_data()['results'] if r['axis']=='2026-ag']
+assert len(ag)==44 and len({r['weight'] for r in ag})==11
+assert [(r['athlete'],r['result']) for r in ag if r['country']=='South Korea']==[('장동환','은'),('김민성','은')]
+assert (ROOT/'olboxing-2026-ag.html').read_text(encoding='utf-8').count('이번 아시안게임 미개최 체급')==3
 for r in load_data()['results']:
     marker='id="meet-'+r['id']+'"'
     def row(f):

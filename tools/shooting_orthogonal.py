@@ -45,12 +45,23 @@ def recipients(event,key=None):
  if not rows:rows='<tr><td colspan="2">— · 확인된 명단 미입력</td></tr>'
  note='혼성은 해당 개인종목 출전자격을 갖춘 남녀의 조합이며, 별도의 혼성 쿼터를 배정하지 않습니다.' if event.endswith('MT') else '파이널 참가권과 LA28 NOC 쿼터를 구분합니다. 노란색은 확인된 참가 경로 명단입니다.'
  return scroll('<table class="shoot-axis-results"><caption>참가권·쿼터 경로 명단</caption><thead><tr><th scope="col">대회 → 다음 경로</th><th scope="col">선수·팀</th></tr></thead><tbody>'+rows+'</tbody></table>')+'<p class="small">'+note+'</p>'
+AXIS_NOTES={'2026-world':'첫 쿼터 · 총 36장','2026-28-continental':'ISSF 지정 대회','2027-world':'대구·카이로 · 총 36장','2027-wc':'지정 월드컵 · 총 48장','2028-quota':'랭킹·최종 배정','2025-world':'예선 기간 이전','2025-wc':'예선 기간 이전','2025-final':'파이널 참가·성적','2026-wc':'직접 쿼터 없음 · MQS 참고'}
+GROUPS=[('소총',['ARM','ARW','R3PM','R3PW','ARMT']),('권총',['APM','APW','RFPM','SPW','APMT']),('산탄총',['TRM','TRW','SKM','SKW','TRMT'])]
+def matrix(qualifying):
+ axes=[axis for axis in AXES if axis[2]==qualifying];ident='shooting-qualifying' if qualifying else 'shooting-reference'
+ title='올림픽 예선 · 출전권 경로' if qualifying else '비예선 대회 · 성적·MQS 참고'
+ caption='12개 개인종목 쿼터 · 혼성 3종목은 개인 출전자격으로 구성' if qualifying else '직접 출전권 배정 없음 · 2026 월드컵의 MQS 인정 여부는 기간·지정 조건 확인'
+ out='<section id="'+ident+'" class="shoot-matrix-section"><h3>'+title+'</h3><p class="small">'+caption+'</p>'
+ heads='<th scope="col">세부종목</th>'+''.join('<th scope="col">'+a(page(k),n)+'<small>'+h(AXIS_NOTES[k])+'</small></th>' for k,n,_ in axes)
+ rows=''
+ for group,events in GROUPS:
+  rows+='<tr class="shoot-matrix-group"><th colspan="'+str(len(axes)+1)+'" scope="colgroup">'+group+' <span>개인 4 · 혼성 1</span></th></tr>'
+  for event in events:
+   v=E[event];mixed=event.endswith('MT')
+   rows+='<tr><th scope="row">'+a('olshooting-ev-'+v['code']+'.html',v['label'])+'</th>'+''.join('<td>'+a(page(k)+'#event-'+v['code'],'팀 구성' if mixed and qualifying else '명단' if k=='2028-quota' else '결과·쿼터' if qualifying else '결과')+'</td>' for k,_,_ in axes)+'</tr>'
+ return out+scroll('<table class="shoot-axis-matrix '+('shoot-qualifying' if qualifying else 'shoot-reference')+'"><thead><tr>'+heads+'</tr></thead><tbody>'+rows+'</tbody></table>')+'</section>'
 def index():
- links=''.join(a('olshooting-ev-'+v['code']+'.html',v['label']) for v in E.values())
- axes=''.join(a(page(k),n) for k,n,_ in AXES)
- heads='<th scope="col">세부종목</th>'+''.join('<th scope="col">'+a(page(k),n)+'</th>' for k,n,_ in AXES)
- rows=''.join('<tr><th scope="row">'+a('olshooting-ev-'+v['code']+'.html',v['label'])+'</th>'+''.join('<td'+(' class="qualifier"' if q else '')+'>'+a(page(k)+'#event-'+v['code'],'결과·명단' if q else '결과')+'</td>' for k,_,q in AXES)+'</tr>' for v in E.values())
- return '<section id="shooting-index" class="shoot-axis-index"><h2>세부종목 × 연도·대회</h2><p>종목 문서는 여러 대회의 성적을, 대회 문서는 15종목의 성적을 모읍니다. 노란 열은 LA28 출전권 경로입니다. 모바일에서는 표를 좌우로 넘깁니다.</p><h3>15개 올림픽 종목</h3><nav class="shoot-axis-links" aria-label="세부종목">'+links+'</nav><h3>연도·대회 문서</h3><nav class="shoot-axis-links" aria-label="연도·대회">'+axes+'</nav>'+scroll('<table class="shoot-axis-matrix"><thead><tr>'+heads+'</tr></thead><tbody>'+rows+'</tbody></table>')+'</section>'
+ return '<section id="shooting-index" class="shoot-axis-index"><h2>15종목 × 연도·대회</h2><p>소총·권총·산탄총 각 5종목. 출전권 경로를 위에, 직접 쿼터가 없는 참고 대회를 아래에 배치했습니다. 종목명은 전체 성적·선수 정보, 교차 칸은 해당 대회의 종목 기록으로 연결됩니다.</p><nav class="shoot-axis-links" aria-label="예선·비예선 표"><a href="#shooting-qualifying">예선·출전권</a><a href="#shooting-reference">비예선·참고 성적</a><a href="olshooting.html#pathway">예선 규정</a></nav>'+matrix(True)+matrix(False)+'<p class="small">혼성팀은 해당 개인종목 자격을 확보한 남녀로 구성하며 별도 혼성 쿼터는 없습니다. 비예선 표의 메달·파이널 참가권을 올림픽 출전권으로 계산하지 않습니다. 모바일에서는 각 표를 좌우로 넘깁니다.</p></section>'
 def css(t):
  t=re.sub(r'<link rel="stylesheet" href="\./css/shooting-orthogonal.css[^\"]*">','',t)
  version=hashlib.sha256((ROOT/'css/shooting-orthogonal.css').read_bytes()).hexdigest()[:12]
@@ -69,7 +80,10 @@ def render():
  for event,v in E.items():
   p=ROOT/('olshooting-ev-'+v['code']+'.html');t=p.read_text(encoding='utf-8')
   block='<section id="season2025"><h2>대회 결과 · 통합</h2><p>'+a('olshooting.html#shooting-index','세부종목 × 대회 전체 목차')+' · 노란 성적은 메달이며 올림픽 쿼터 표시가 아닙니다.</p>'+result_table(event)+recipients(event)+S.rival_section(event)+'</section>'
-  t=re.sub(r'<section id="season2025">.*?</section>',lambda m:block,t,count=1,flags=re.S)
+  if '<section id="season2025">' in t:
+   t=re.sub(r'<section id="season2025">.*?</section>',lambda m:block,t,count=1,flags=re.S)
+  else:
+   t=re.sub(r'(<main[^>]*>)',lambda m:m[1]+block,t,count=1)
   put(p,css(t))
  template=(ROOT/'olshooting-projection.html').read_text(encoding='utf-8')
  for key,title,q in AXES:
