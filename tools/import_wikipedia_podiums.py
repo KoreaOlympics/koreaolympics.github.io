@@ -42,6 +42,12 @@ def update():
    if ' / ' in x['fullName']:x['name']=' / '.join(n if x['country'] in ['CHN','TPE','HKG'] else n.split()[-1] for n in x['fullName'].split(' / '))
    people.append(x)
   row['medals']['bronze']=people
+ for comp,title,names in [
+  ('Malaysia Open','2026_Malaysia_Open_(badminton)',['Anders Antonsen|DEN','Jonatan Christie|INA']),
+  ('Indonesia Open','2026_Indonesia_Open',['Panitchaphon Teeraratsakul|THA','Chou Tien-chen|TPE']),
+  ('China Open','2026_China_Open_(badminton)',['Lin Chun-yi|TPE','Victor Lai|CAN'])]:
+  row=next(x for x in data['badminton']['records'] if x['weight']=='ms' and x['meet']=='2026-'+comp)
+  row['medals']['bronze']=[p(n,'https://en.wikipedia.org/wiki/'+title) for n in names]
  path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
- print('Imported 72 wrestling medals and 8 badminton semifinalists')
+ print('Imported 72 wrestling medals and 14 badminton semifinalists')
 if __name__=='__main__':update()
