@@ -5,6 +5,8 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  pages: write
+  id-token: write
 concurrency:
   group: winter-update
   cancel-in-progress: false
@@ -12,6 +14,9 @@ jobs:
   update:
     runs-on: ubuntu-latest
     timeout-minutes: 8
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -32,6 +37,11 @@ jobs:
           git commit -m "winter: refresh results and annual calendar"
           git pull --rebase
           git push
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - uses: actions/deploy-pages@v4
+        id: deployment
       - name: Report source failures
         if: steps.collect.outcome == 'failure'
         run: exit 1
