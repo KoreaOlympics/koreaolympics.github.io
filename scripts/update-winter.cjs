@@ -145,14 +145,14 @@ async function collectCurling() {
       if (g) group = g[0];
       const ci = c.findIndex(v => /^[A-Z]{3}$/.test(v));
       if (ci >= 0 && /^\d+$/.test(c[ci+1]) && /^\d+$/.test(c[ci+2])) {
-        results.push({event:e.name, discipline:group || '라운드로빈', date:e.end, rank:'—', athlete:c[ci], country:c[ci],
+        results.push({event:e.name, discipline:group || '라운드로빈', date:today, rank:'—', athlete:c[ci], country:c[ci],
           score:`${c[ci+1]}승 ${c[ci+2]}패`, details:'라운드로빈 성적 · 최종 메달 순위와 구분', source:url});
       }
     }
   }
   if (!results.length) throw new Error('No curling standings found');
   return {source, checked_at:stamp(), status:'ok', events, results, recent:current,
-    note:'최근 개최 대회 2개의 라운드로빈 승패. 조별 성적이며 플레이오프 최종 순위가 아니다. 원문 Live Game Center에서 엔드별 점수를 확인할 수 있다.'};
+    note:'최근 개최 대회 2개의 라운드로빈 승패. 기준 날짜는 수집일(한국 날짜)이며 경기일이나 대회 종료일이 아니다. 조별 성적이며 플레이오프 최종 순위가 아니다. 원문 Live Game Center에서 엔드별 점수를 확인할 수 있다.'};
 }
 async function main() {
   const old = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT,'utf8')) : {sports:{}};

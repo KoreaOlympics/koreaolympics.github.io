@@ -15,4 +15,11 @@ for(const [file,key] of Object.entries({'wishorttrack.html':'short-track','wifig
   fs.writeFileSync(p,s);
 }
 let p=path.join(root,'index.html');fs.writeFileSync(p,fs.readFileSync(p,'utf8').replaceAll('롱트랙(스피드스케이팅)','스피드스케이팅'));
-console.log('Rendered 4 winter pages and index label');
+for(const file of ['wishorttrack.html','wifigure.html','wispeedskating.html','wicurling.html','wisnowboard.html','wisliding.html','wiothers.html']){
+  const p=path.join(root,file);
+  let html=fs.readFileSync(p,'utf8');
+  // Existing scroll wrappers are kept; wrap other tables for narrow screens.
+  html=html.replace(/(<div\b[^>]*class="wi-wrap"[^>]*>\s*)?<table\b[\s\S]*?<\/table>/g,(match,wrapper)=>wrapper?match:`<div class="wi-wrap" tabindex="0" role="region" aria-label="가로 스크롤 자료표">${match}</div>`);
+  fs.writeFileSync(p,html.replace(/\r\n/g,'\n'));
+}
+console.log('Rendered 4 feeds; improved table scrolling on all 7 winter pages');
