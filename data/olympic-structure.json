@@ -1,0 +1,2992 @@
+{
+ "version": 1,
+ "summer": {
+  "label": "하계",
+  "games": "2028 LA 올림픽",
+  "previous": "2024 파리 올림픽",
+  "sports": [
+   {
+    "file": "olarchery",
+    "name": "양궁",
+    "name_en": "Archery",
+    "events": [
+     {
+      "file": "menrecurve",
+      "name": "남자 리커브 개인",
+      "gender": "men"
+     },
+     {
+      "file": "menrecurveteam",
+      "name": "남자 리커브 단체",
+      "gender": "men"
+     },
+     {
+      "file": "womenrecurve",
+      "name": "여자 리커브 개인",
+      "gender": "women"
+     },
+     {
+      "file": "womenrecurveteam",
+      "name": "여자 리커브 단체",
+      "gender": "women"
+     },
+     {
+      "file": "mixedrecurveteam",
+      "name": "혼성 리커브 단체",
+      "gender": "mixed"
+     },
+     {
+      "file": "mixedcompoundteam",
+      "name": "혼성 컴파운드 단체",
+      "gender": "mixed",
+      "new": true
+     }
+    ]
+   },
+   {
+    "file": "olartisticswimming",
+    "name": "아티스틱 스위밍",
+    "name_en": "Artistic swimming",
+    "events": [
+     {
+      "file": "womenduet",
+      "name": "여자 듀엣",
+      "gender": "women"
+     },
+     {
+      "file": "openteam",
+      "name": "단체",
+      "gender": "open"
+     }
+    ]
+   },
+   {
+    "file": "olathletics",
+    "name": "육상",
+    "name_en": "Athletics",
+    "events": [
+     {
+      "file": "men100m",
+      "name": "남자 100m",
+      "gender": "men"
+     },
+     {
+      "file": "men200m",
+      "name": "남자 200m",
+      "gender": "men"
+     },
+     {
+      "file": "men400m",
+      "name": "남자 400m",
+      "gender": "men"
+     },
+     {
+      "file": "men800m",
+      "name": "남자 800m",
+      "gender": "men"
+     },
+     {
+      "file": "men1500m",
+      "name": "남자 1500m",
+      "gender": "men"
+     },
+     {
+      "file": "men5000m",
+      "name": "남자 5000m",
+      "gender": "men"
+     },
+     {
+      "file": "men10000m",
+      "name": "남자 10000m",
+      "gender": "men"
+     },
+     {
+      "file": "men110mhurdles",
+      "name": "남자 110m 허들",
+      "gender": "men"
+     },
+     {
+      "file": "men400mhurdles",
+      "name": "남자 400m 허들",
+      "gender": "men"
+     },
+     {
+      "file": "men3000msteeplechase",
+      "name": "남자 3000m 장애물",
+      "gender": "men"
+     },
+     {
+      "file": "men4x100mrelay",
+      "name": "남자 4×100m 계주",
+      "gender": "men"
+     },
+     {
+      "file": "men4x400mrelay",
+      "name": "남자 4×400m 계주",
+      "gender": "men"
+     },
+     {
+      "file": "menmarathon",
+      "name": "남자 마라톤",
+      "gender": "men"
+     },
+     {
+      "file": "menhalfmarathonwalk",
+      "name": "남자 하프마라톤 경보",
+      "gender": "men",
+      "new": true
+     },
+     {
+      "file": "menhighjump",
+      "name": "남자 높이뛰기",
+      "gender": "men"
+     },
+     {
+      "file": "menpolevault",
+      "name": "남자 장대높이뛰기",
+      "gender": "men"
+     },
+     {
+      "file": "menlongjump",
+      "name": "남자 멀리뛰기",
+      "gender": "men"
+     },
+     {
+      "file": "mentriplejump",
+      "name": "남자 세단뛰기",
+      "gender": "men"
+     },
+     {
+      "file": "menshotput",
+      "name": "남자 포환던지기",
+      "gender": "men"
+     },
+     {
+      "file": "mendiscus",
+      "name": "남자 원반던지기",
+      "gender": "men"
+     },
+     {
+      "file": "menhammer",
+      "name": "남자 해머던지기",
+      "gender": "men"
+     },
+     {
+      "file": "menjavelin",
+      "name": "남자 창던지기",
+      "gender": "men"
+     },
+     {
+      "file": "mendecathlon",
+      "name": "남자 10종경기",
+      "gender": "men"
+     },
+     {
+      "file": "women100m",
+      "name": "여자 100m",
+      "gender": "women"
+     },
+     {
+      "file": "women200m",
+      "name": "여자 200m",
+      "gender": "women"
+     },
+     {
+      "file": "women400m",
+      "name": "여자 400m",
+      "gender": "women"
+     },
+     {
+      "file": "women800m",
+      "name": "여자 800m",
+      "gender": "women"
+     },
+     {
+      "file": "women1500m",
+      "name": "여자 1500m",
+      "gender": "women"
+     },
+     {
+      "file": "women5000m",
+      "name": "여자 5000m",
+      "gender": "women"
+     },
+     {
+      "file": "women10000m",
+      "name": "여자 10000m",
+      "gender": "women"
+     },
+     {
+      "file": "women100mhurdles",
+      "name": "여자 100m 허들",
+      "gender": "women"
+     },
+     {
+      "file": "women400mhurdles",
+      "name": "여자 400m 허들",
+      "gender": "women"
+     },
+     {
+      "file": "women3000msteeplechase",
+      "name": "여자 3000m 장애물",
+      "gender": "women"
+     },
+     {
+      "file": "women4x100mrelay",
+      "name": "여자 4×100m 계주",
+      "gender": "women"
+     },
+     {
+      "file": "women4x400mrelay",
+      "name": "여자 4×400m 계주",
+      "gender": "women"
+     },
+     {
+      "file": "womenmarathon",
+      "name": "여자 마라톤",
+      "gender": "women"
+     },
+     {
+      "file": "womenhalfmarathonwalk",
+      "name": "여자 하프마라톤 경보",
+      "gender": "women",
+      "new": true
+     },
+     {
+      "file": "womenhighjump",
+      "name": "여자 높이뛰기",
+      "gender": "women"
+     },
+     {
+      "file": "womenpolevault",
+      "name": "여자 장대높이뛰기",
+      "gender": "women"
+     },
+     {
+      "file": "womenlongjump",
+      "name": "여자 멀리뛰기",
+      "gender": "women"
+     },
+     {
+      "file": "womentriplejump",
+      "name": "여자 세단뛰기",
+      "gender": "women"
+     },
+     {
+      "file": "womenshotput",
+      "name": "여자 포환던지기",
+      "gender": "women"
+     },
+     {
+      "file": "womendiscus",
+      "name": "여자 원반던지기",
+      "gender": "women"
+     },
+     {
+      "file": "womenhammer",
+      "name": "여자 해머던지기",
+      "gender": "women"
+     },
+     {
+      "file": "womenjavelin",
+      "name": "여자 창던지기",
+      "gender": "women"
+     },
+     {
+      "file": "womenheptathlon",
+      "name": "여자 7종경기",
+      "gender": "women"
+     },
+     {
+      "file": "mixed4x100mrelay",
+      "name": "혼성 4×100m 계주",
+      "gender": "mixed",
+      "new": true
+     },
+     {
+      "file": "mixed4x400mrelay",
+      "name": "혼성 4×400m 계주",
+      "gender": "mixed"
+     }
+    ]
+   },
+   {
+    "file": "olbadminton",
+    "name": "배드민턴",
+    "name_en": "Badminton",
+    "events": [
+     {
+      "file": "mensingles",
+      "name": "남자 단식",
+      "gender": "men",
+      "live": "bwf:ms"
+     },
+     {
+      "file": "mendoubles",
+      "name": "남자 복식",
+      "gender": "men",
+      "live": "bwf:md"
+     },
+     {
+      "file": "womensingles",
+      "name": "여자 단식",
+      "gender": "women",
+      "live": "bwf:ws"
+     },
+     {
+      "file": "womendoubles",
+      "name": "여자 복식",
+      "gender": "women",
+      "live": "bwf:wd"
+     },
+     {
+      "file": "mixeddoubles",
+      "name": "혼합 복식",
+      "gender": "mixed",
+      "live": "bwf:xd"
+     }
+    ]
+   },
+   {
+    "file": "olbaseball",
+    "name": "야구·소프트볼",
+    "name_en": "Baseball and softball",
+    "groups": [
+     "야구",
+     "소프트볼"
+    ],
+    "events": [
+     {
+      "file": "menbaseball",
+      "name": "야구",
+      "gender": "men",
+      "group": "야구"
+     },
+     {
+      "file": "womensoftball",
+      "name": "소프트볼",
+      "gender": "women",
+      "group": "소프트볼"
+     }
+    ]
+   },
+   {
+    "file": "olbasketball",
+    "name": "농구",
+    "name_en": "Basketball",
+    "groups": [
+     "5인제",
+     "3×3"
+    ],
+    "events": [
+     {
+      "file": "men",
+      "name": "남자",
+      "gender": "men",
+      "group": "5인제"
+     },
+     {
+      "file": "women",
+      "name": "여자",
+      "gender": "women",
+      "group": "5인제"
+     },
+     {
+      "file": "men3x3",
+      "name": "남자 3×3",
+      "gender": "men",
+      "group": "3×3"
+     },
+     {
+      "file": "women3x3",
+      "name": "여자 3×3",
+      "gender": "women",
+      "group": "3×3"
+     }
+    ]
+   },
+   {
+    "file": "olboxing",
+    "name": "복싱",
+    "name_en": "Boxing",
+    "events": [
+     {
+      "file": "men55kg",
+      "name": "남자 55kg",
+      "gender": "men"
+     },
+     {
+      "file": "men60kg",
+      "name": "남자 60kg",
+      "gender": "men"
+     },
+     {
+      "file": "men65kg",
+      "name": "남자 65kg",
+      "gender": "men"
+     },
+     {
+      "file": "men70kg",
+      "name": "남자 70kg",
+      "gender": "men"
+     },
+     {
+      "file": "men80kg",
+      "name": "남자 80kg",
+      "gender": "men"
+     },
+     {
+      "file": "men90kg",
+      "name": "남자 90kg",
+      "gender": "men"
+     },
+     {
+      "file": "menover90kg",
+      "name": "남자 +90kg",
+      "gender": "men"
+     },
+     {
+      "file": "women51kg",
+      "name": "여자 51kg",
+      "gender": "women"
+     },
+     {
+      "file": "women54kg",
+      "name": "여자 54kg",
+      "gender": "women"
+     },
+     {
+      "file": "women57kg",
+      "name": "여자 57kg",
+      "gender": "women"
+     },
+     {
+      "file": "women60kg",
+      "name": "여자 60kg",
+      "gender": "women"
+     },
+     {
+      "file": "women65kg",
+      "name": "여자 65kg",
+      "gender": "women"
+     },
+     {
+      "file": "women70kg",
+      "name": "여자 70kg",
+      "gender": "women"
+     },
+     {
+      "file": "women75kg",
+      "name": "여자 75kg",
+      "gender": "women"
+     }
+    ]
+   },
+   {
+    "file": "olcanoe",
+    "name": "카누",
+    "name_en": "Canoeing",
+    "groups": [
+     "스프린트",
+     "슬라롬"
+    ],
+    "events": [
+     {
+      "file": "men1000mc1",
+      "name": "남자 C1 1000m",
+      "gender": "men",
+      "group": "스프린트"
+     },
+     {
+      "file": "men500mc2",
+      "name": "남자 C2 500m",
+      "gender": "men",
+      "group": "스프린트"
+     },
+     {
+      "file": "men1000mk1",
+      "name": "남자 K1 1000m",
+      "gender": "men",
+      "group": "스프린트"
+     },
+     {
+      "file": "men500mk2",
+      "name": "남자 K2 500m",
+      "gender": "men",
+      "group": "스프린트"
+     },
+     {
+      "file": "men500mk4",
+      "name": "남자 K4 500m",
+      "gender": "men",
+      "group": "스프린트"
+     },
+     {
+      "file": "women200mc1",
+      "name": "여자 C1 200m",
+      "gender": "women",
+      "group": "스프린트"
+     },
+     {
+      "file": "women500mc2",
+      "name": "여자 C2 500m",
+      "gender": "women",
+      "group": "스프린트"
+     },
+     {
+      "file": "women500mk1",
+      "name": "여자 K1 500m",
+      "gender": "women",
+      "group": "스프린트"
+     },
+     {
+      "file": "women500mk2",
+      "name": "여자 K2 500m",
+      "gender": "women",
+      "group": "스프린트"
+     },
+     {
+      "file": "women500mk4",
+      "name": "여자 K4 500m",
+      "gender": "women",
+      "group": "스프린트"
+     },
+     {
+      "file": "menslalomc1",
+      "name": "남자 슬라롬 C1",
+      "gender": "men",
+      "group": "슬라롬"
+     },
+     {
+      "file": "menslalomk1",
+      "name": "남자 슬라롬 K1",
+      "gender": "men",
+      "group": "슬라롬"
+     },
+     {
+      "file": "menkayakcross",
+      "name": "남자 카약 크로스",
+      "gender": "men",
+      "group": "슬라롬"
+     },
+     {
+      "file": "womenslalomc1",
+      "name": "여자 슬라롬 C1",
+      "gender": "women",
+      "group": "슬라롬"
+     },
+     {
+      "file": "womenslalomk1",
+      "name": "여자 슬라롬 K1",
+      "gender": "women",
+      "group": "슬라롬"
+     },
+     {
+      "file": "womenkayakcross",
+      "name": "여자 카약 크로스",
+      "gender": "women",
+      "group": "슬라롬"
+     }
+    ]
+   },
+   {
+    "file": "olclimbing",
+    "name": "스포츠클라이밍",
+    "name_en": "Sport climbing",
+    "events": [
+     {
+      "file": "menboulder",
+      "name": "남자 볼더",
+      "gender": "men",
+      "new": true
+     },
+     {
+      "file": "menlead",
+      "name": "남자 리드",
+      "gender": "men",
+      "new": true
+     },
+     {
+      "file": "menspeed",
+      "name": "남자 스피드",
+      "gender": "men"
+     },
+     {
+      "file": "womenboulder",
+      "name": "여자 볼더",
+      "gender": "women",
+      "new": true
+     },
+     {
+      "file": "womenlead",
+      "name": "여자 리드",
+      "gender": "women",
+      "new": true
+     },
+     {
+      "file": "womenspeed",
+      "name": "여자 스피드",
+      "gender": "women"
+     }
+    ]
+   },
+   {
+    "file": "olcricket",
+    "name": "크리켓",
+    "name_en": "Cricket",
+    "events": [
+     {
+      "file": "men",
+      "name": "남자",
+      "gender": "men"
+     },
+     {
+      "file": "women",
+      "name": "여자",
+      "gender": "women"
+     }
+    ]
+   },
+   {
+    "file": "olcycling",
+    "name": "사이클",
+    "name_en": "Cycling",
+    "groups": [
+     "도로",
+     "트랙",
+     "산악자전거",
+     "BMX 레이싱",
+     "BMX 프리스타일"
+    ],
+    "events": [
+     {
+      "file": "menroadrace",
+      "name": "남자 도로 경주",
+      "gender": "men",
+      "group": "도로"
+     },
+     {
+      "file": "menroadtimetrial",
+      "name": "남자 도로 독주",
+      "gender": "men",
+      "group": "도로"
+     },
+     {
+      "file": "womenroadrace",
+      "name": "여자 도로 경주",
+      "gender": "women",
+      "group": "도로"
+     },
+     {
+      "file": "womenroadtimetrial",
+      "name": "여자 도로 독주",
+      "gender": "women",
+      "group": "도로"
+     },
+     {
+      "file": "mensprint",
+      "name": "남자 스프린트",
+      "gender": "men",
+      "group": "트랙"
+     },
+     {
+      "file": "menteamsprint",
+      "name": "남자 팀 스프린트",
+      "gender": "men",
+      "group": "트랙"
+     },
+     {
+      "file": "menkeirin",
+      "name": "남자 케이린",
+      "gender": "men",
+      "group": "트랙"
+     },
+     {
+      "file": "menteampursuit",
+      "name": "남자 팀 추발",
+      "gender": "men",
+      "group": "트랙"
+     },
+     {
+      "file": "menomnium",
+      "name": "남자 옴니엄",
+      "gender": "men",
+      "group": "트랙"
+     },
+     {
+      "file": "menmadison",
+      "name": "남자 매디슨",
+      "gender": "men",
+      "group": "트랙"
+     },
+     {
+      "file": "womensprint",
+      "name": "여자 스프린트",
+      "gender": "women",
+      "group": "트랙"
+     },
+     {
+      "file": "womenteamsprint",
+      "name": "여자 팀 스프린트",
+      "gender": "women",
+      "group": "트랙"
+     },
+     {
+      "file": "womenkeirin",
+      "name": "여자 케이린",
+      "gender": "women",
+      "group": "트랙"
+     },
+     {
+      "file": "womenteampursuit",
+      "name": "여자 팀 추발",
+      "gender": "women",
+      "group": "트랙"
+     },
+     {
+      "file": "womenomnium",
+      "name": "여자 옴니엄",
+      "gender": "women",
+      "group": "트랙"
+     },
+     {
+      "file": "womenmadison",
+      "name": "여자 매디슨",
+      "gender": "women",
+      "group": "트랙"
+     },
+     {
+      "file": "menmountainbike",
+      "name": "남자 산악자전거 크로스컨트리",
+      "gender": "men",
+      "group": "산악자전거"
+     },
+     {
+      "file": "womenmountainbike",
+      "name": "여자 산악자전거 크로스컨트리",
+      "gender": "women",
+      "group": "산악자전거"
+     },
+     {
+      "file": "menbmxracing",
+      "name": "남자 BMX 레이싱",
+      "gender": "men",
+      "group": "BMX 레이싱"
+     },
+     {
+      "file": "womenbmxracing",
+      "name": "여자 BMX 레이싱",
+      "gender": "women",
+      "group": "BMX 레이싱"
+     },
+     {
+      "file": "menbmxpark",
+      "name": "남자 BMX 프리스타일 파크",
+      "gender": "men",
+      "group": "BMX 프리스타일"
+     },
+     {
+      "file": "womenbmxpark",
+      "name": "여자 BMX 프리스타일 파크",
+      "gender": "women",
+      "group": "BMX 프리스타일"
+     }
+    ]
+   },
+   {
+    "file": "oldiving",
+    "name": "다이빙",
+    "name_en": "Diving",
+    "events": [
+     {
+      "file": "men3mspringboard",
+      "name": "남자 3m 스프링보드",
+      "gender": "men"
+     },
+     {
+      "file": "men10mplatform",
+      "name": "남자 10m 플랫폼",
+      "gender": "men"
+     },
+     {
+      "file": "men3msynchro",
+      "name": "남자 3m 싱크로나이즈드",
+      "gender": "men"
+     },
+     {
+      "file": "men10msynchro",
+      "name": "남자 10m 싱크로나이즈드",
+      "gender": "men"
+     },
+     {
+      "file": "women3mspringboard",
+      "name": "여자 3m 스프링보드",
+      "gender": "women"
+     },
+     {
+      "file": "women10mplatform",
+      "name": "여자 10m 플랫폼",
+      "gender": "women"
+     },
+     {
+      "file": "women3msynchro",
+      "name": "여자 3m 싱크로나이즈드",
+      "gender": "women"
+     },
+     {
+      "file": "women10msynchro",
+      "name": "여자 10m 싱크로나이즈드",
+      "gender": "women"
+     }
+    ]
+   },
+   {
+    "file": "olequestrian",
+    "name": "승마",
+    "name_en": "Equestrian",
+    "events": [
+     {
+      "file": "opendressage",
+      "name": "마장마술 개인",
+      "gender": "open"
+     },
+     {
+      "file": "opendressageteam",
+      "name": "마장마술 단체",
+      "gender": "open"
+     },
+     {
+      "file": "openeventing",
+      "name": "종합마술 개인",
+      "gender": "open"
+     },
+     {
+      "file": "openeventingteam",
+      "name": "종합마술 단체",
+      "gender": "open"
+     },
+     {
+      "file": "openjumping",
+      "name": "장애물 개인",
+      "gender": "open"
+     },
+     {
+      "file": "openjumpingteam",
+      "name": "장애물 단체",
+      "gender": "open"
+     }
+    ]
+   },
+   {
+    "file": "olfencing",
+    "name": "펜싱",
+    "name_en": "Fencing",
+    "events": [
+     {
+      "file": "menepee",
+      "name": "남자 에페 개인",
+      "gender": "men"
+     },
+     {
+      "file": "menepeeteam",
+      "name": "남자 에페 단체",
+      "gender": "men",
+      "live": "fie:em"
+     },
+     {
+      "file": "menfoil",
+      "name": "남자 플뢰레 개인",
+      "gender": "men"
+     },
+     {
+      "file": "menfoilteam",
+      "name": "남자 플뢰레 단체",
+      "gender": "men",
+      "live": "fie:fm"
+     },
+     {
+      "file": "mensabre",
+      "name": "남자 사브르 개인",
+      "gender": "men"
+     },
+     {
+      "file": "mensabreteam",
+      "name": "남자 사브르 단체",
+      "gender": "men",
+      "live": "fie:sm"
+     },
+     {
+      "file": "womenepee",
+      "name": "여자 에페 개인",
+      "gender": "women"
+     },
+     {
+      "file": "womenepeeteam",
+      "name": "여자 에페 단체",
+      "gender": "women",
+      "live": "fie:ew"
+     },
+     {
+      "file": "womenfoil",
+      "name": "여자 플뢰레 개인",
+      "gender": "women"
+     },
+     {
+      "file": "womenfoilteam",
+      "name": "여자 플뢰레 단체",
+      "gender": "women",
+      "live": "fie:fw"
+     },
+     {
+      "file": "womensabre",
+      "name": "여자 사브르 개인",
+      "gender": "women"
+     },
+     {
+      "file": "womensabreteam",
+      "name": "여자 사브르 단체",
+      "gender": "women",
+      "live": "fie:sw"
+     }
+    ]
+   },
+   {
+    "file": "olflagfootball",
+    "name": "플래그 풋볼",
+    "name_en": "Flag football",
+    "events": [
+     {
+      "file": "men",
+      "name": "남자",
+      "gender": "men",
+      "new": true
+     },
+     {
+      "file": "women",
+      "name": "여자",
+      "gender": "women",
+      "new": true
+     }
+    ]
+   },
+   {
+    "file": "olfootball",
+    "name": "축구",
+    "name_en": "Football",
+    "events": [
+     {
+      "file": "men",
+      "name": "남자",
+      "gender": "men"
+     },
+     {
+      "file": "women",
+      "name": "여자",
+      "gender": "women"
+     }
+    ]
+   },
+   {
+    "file": "olgolf",
+    "name": "골프",
+    "name_en": "Golf",
+    "events": [
+     {
+      "file": "men",
+      "name": "남자 개인",
+      "gender": "men"
+     },
+     {
+      "file": "women",
+      "name": "여자 개인",
+      "gender": "women"
+     },
+     {
+      "file": "mixedteam",
+      "name": "혼성 단체",
+      "gender": "mixed",
+      "new": true
+     }
+    ]
+   },
+   {
+    "file": "olgymnastics",
+    "name": "체조",
+    "name_en": "Gymnastics",
+    "groups": [
+     "기계체조",
+     "리듬체조",
+     "트램펄린"
+    ],
+    "events": [
+     {
+      "file": "menteam",
+      "name": "남자 단체",
+      "gender": "men",
+      "group": "기계체조"
+     },
+     {
+      "file": "menallaround",
+      "name": "남자 개인종합",
+      "gender": "men",
+      "group": "기계체조"
+     },
+     {
+      "file": "menfloor",
+      "name": "남자 마루",
+      "gender": "men",
+      "group": "기계체조"
+     },
+     {
+      "file": "menpommelhorse",
+      "name": "남자 안마",
+      "gender": "men",
+      "group": "기계체조"
+     },
+     {
+      "file": "menrings",
+      "name": "남자 링",
+      "gender": "men",
+      "group": "기계체조"
+     },
+     {
+      "file": "menvault",
+      "name": "남자 도마",
+      "gender": "men",
+      "group": "기계체조"
+     },
+     {
+      "file": "menparallelbars",
+      "name": "남자 평행봉",
+      "gender": "men",
+      "group": "기계체조"
+     },
+     {
+      "file": "menhorizontalbar",
+      "name": "남자 철봉",
+      "gender": "men",
+      "group": "기계체조"
+     },
+     {
+      "file": "womenteam",
+      "name": "여자 단체",
+      "gender": "women",
+      "group": "기계체조"
+     },
+     {
+      "file": "womenallaround",
+      "name": "여자 개인종합",
+      "gender": "women",
+      "group": "기계체조"
+     },
+     {
+      "file": "womenvault",
+      "name": "여자 도마",
+      "gender": "women",
+      "group": "기계체조"
+     },
+     {
+      "file": "womenunevenbars",
+      "name": "여자 이단평행봉",
+      "gender": "women",
+      "group": "기계체조"
+     },
+     {
+      "file": "womenbeam",
+      "name": "여자 평균대",
+      "gender": "women",
+      "group": "기계체조"
+     },
+     {
+      "file": "womenfloor",
+      "name": "여자 마루",
+      "gender": "women",
+      "group": "기계체조"
+     },
+     {
+      "file": "mixedteam",
+      "name": "혼성 단체",
+      "gender": "mixed",
+      "group": "기계체조",
+      "new": true
+     },
+     {
+      "file": "womenrhythmic",
+      "name": "여자 리듬체조 개인종합",
+      "gender": "women",
+      "group": "리듬체조"
+     },
+     {
+      "file": "womenrhythmicgroup",
+      "name": "여자 리듬체조 단체종합",
+      "gender": "women",
+      "group": "리듬체조"
+     },
+     {
+      "file": "mentrampoline",
+      "name": "남자 트램펄린",
+      "gender": "men",
+      "group": "트램펄린"
+     },
+     {
+      "file": "womentrampoline",
+      "name": "여자 트램펄린",
+      "gender": "women",
+      "group": "트램펄린"
+     }
+    ]
+   },
+   {
+    "file": "olhandball",
+    "name": "핸드볼",
+    "name_en": "Handball",
+    "events": [
+     {
+      "file": "men",
+      "name": "남자",
+      "gender": "men"
+     },
+     {
+      "file": "women",
+      "name": "여자",
+      "gender": "women"
+     }
+    ]
+   },
+   {
+    "file": "olhockey",
+    "name": "하키",
+    "name_en": "Field hockey",
+    "events": [
+     {
+      "file": "men",
+      "name": "남자",
+      "gender": "men"
+     },
+     {
+      "file": "women",
+      "name": "여자",
+      "gender": "women"
+     }
+    ]
+   },
+   {
+    "file": "oljudo",
+    "name": "유도",
+    "name_en": "Judo",
+    "events": [
+     {
+      "file": "men60kg",
+      "name": "남자 -60kg",
+      "gender": "men",
+      "live": "ijf:m60"
+     },
+     {
+      "file": "men66kg",
+      "name": "남자 -66kg",
+      "gender": "men",
+      "live": "ijf:m66"
+     },
+     {
+      "file": "men73kg",
+      "name": "남자 -73kg",
+      "gender": "men",
+      "live": "ijf:m73"
+     },
+     {
+      "file": "men81kg",
+      "name": "남자 -81kg",
+      "gender": "men",
+      "live": "ijf:m81"
+     },
+     {
+      "file": "men90kg",
+      "name": "남자 -90kg",
+      "gender": "men",
+      "live": "ijf:m90"
+     },
+     {
+      "file": "men100kg",
+      "name": "남자 -100kg",
+      "gender": "men",
+      "live": "ijf:m100"
+     },
+     {
+      "file": "menover100kg",
+      "name": "남자 +100kg",
+      "gender": "men",
+      "live": "ijf:mo100"
+     },
+     {
+      "file": "women48kg",
+      "name": "여자 -48kg",
+      "gender": "women",
+      "live": "ijf:w48"
+     },
+     {
+      "file": "women52kg",
+      "name": "여자 -52kg",
+      "gender": "women",
+      "live": "ijf:w52"
+     },
+     {
+      "file": "women57kg",
+      "name": "여자 -57kg",
+      "gender": "women",
+      "live": "ijf:w57"
+     },
+     {
+      "file": "women63kg",
+      "name": "여자 -63kg",
+      "gender": "women",
+      "live": "ijf:w63"
+     },
+     {
+      "file": "women70kg",
+      "name": "여자 -70kg",
+      "gender": "women",
+      "live": "ijf:w70"
+     },
+     {
+      "file": "women78kg",
+      "name": "여자 -78kg",
+      "gender": "women",
+      "live": "ijf:w78"
+     },
+     {
+      "file": "womenover78kg",
+      "name": "여자 +78kg",
+      "gender": "women",
+      "live": "ijf:wo78"
+     },
+     {
+      "file": "mixedteam",
+      "name": "혼성 단체",
+      "gender": "mixed"
+     }
+    ]
+   },
+   {
+    "file": "ollacrosse",
+    "name": "라크로스",
+    "name_en": "Lacrosse",
+    "events": [
+     {
+      "file": "men",
+      "name": "남자",
+      "gender": "men",
+      "new": true
+     },
+     {
+      "file": "women",
+      "name": "여자",
+      "gender": "women",
+      "new": true
+     }
+    ]
+   },
+   {
+    "file": "olmarathonswim",
+    "name": "마라톤 수영",
+    "name_en": "Marathon swimming",
+    "events": [
+     {
+      "file": "men10km",
+      "name": "남자 10km",
+      "gender": "men"
+     },
+     {
+      "file": "women10km",
+      "name": "여자 10km",
+      "gender": "women"
+     }
+    ]
+   },
+   {
+    "file": "olmodernpentathlon",
+    "name": "근대5종",
+    "name_en": "Modern pentathlon",
+    "events": [
+     {
+      "file": "men",
+      "name": "남자 개인",
+      "gender": "men"
+     },
+     {
+      "file": "women",
+      "name": "여자 개인",
+      "gender": "women"
+     }
+    ]
+   },
+   {
+    "file": "olrowing",
+    "name": "조정",
+    "name_en": "Rowing",
+    "groups": [
+     "조정",
+     "코스탈 조정"
+    ],
+    "events": [
+     {
+      "file": "mensinglesculls",
+      "name": "남자 싱글 스컬",
+      "gender": "men",
+      "group": "조정"
+     },
+     {
+      "file": "mendoublesculls",
+      "name": "남자 더블 스컬",
+      "gender": "men",
+      "group": "조정"
+     },
+     {
+      "file": "menquadruplesculls",
+      "name": "남자 쿼드러플 스컬",
+      "gender": "men",
+      "group": "조정"
+     },
+     {
+      "file": "menpair",
+      "name": "남자 페어",
+      "gender": "men",
+      "group": "조정"
+     },
+     {
+      "file": "menfour",
+      "name": "남자 포어",
+      "gender": "men",
+      "group": "조정"
+     },
+     {
+      "file": "meneight",
+      "name": "남자 에이트",
+      "gender": "men",
+      "group": "조정"
+     },
+     {
+      "file": "womensinglesculls",
+      "name": "여자 싱글 스컬",
+      "gender": "women",
+      "group": "조정"
+     },
+     {
+      "file": "womendoublesculls",
+      "name": "여자 더블 스컬",
+      "gender": "women",
+      "group": "조정"
+     },
+     {
+      "file": "womenquadruplesculls",
+      "name": "여자 쿼드러플 스컬",
+      "gender": "women",
+      "group": "조정"
+     },
+     {
+      "file": "womenpair",
+      "name": "여자 페어",
+      "gender": "women",
+      "group": "조정"
+     },
+     {
+      "file": "womenfour",
+      "name": "여자 포어",
+      "gender": "women",
+      "group": "조정"
+     },
+     {
+      "file": "womeneight",
+      "name": "여자 에이트",
+      "gender": "women",
+      "group": "조정"
+     },
+     {
+      "file": "menbeachsprint",
+      "name": "남자 비치 스프린트 솔로",
+      "gender": "men",
+      "group": "코스탈 조정",
+      "new": true
+     },
+     {
+      "file": "womenbeachsprint",
+      "name": "여자 비치 스프린트 솔로",
+      "gender": "women",
+      "group": "코스탈 조정",
+      "new": true
+     },
+     {
+      "file": "mixedbeachsprintdouble",
+      "name": "혼성 비치 스프린트 더블",
+      "gender": "mixed",
+      "group": "코스탈 조정",
+      "new": true
+     }
+    ]
+   },
+   {
+    "file": "olrugby",
+    "name": "럭비",
+    "name_en": "Rugby sevens",
+    "events": [
+     {
+      "file": "men",
+      "name": "남자",
+      "gender": "men"
+     },
+     {
+      "file": "women",
+      "name": "여자",
+      "gender": "women"
+     }
+    ]
+   },
+   {
+    "file": "olsailing",
+    "name": "요트",
+    "name_en": "Sailing",
+    "events": [
+     {
+      "file": "menwindsurfing",
+      "name": "남자 윈드서핑 (iQFOiL)",
+      "gender": "men"
+     },
+     {
+      "file": "menkite",
+      "name": "남자 카이트 (Formula Kite)",
+      "gender": "men"
+     },
+     {
+      "file": "mendinghy",
+      "name": "남자 1인승 딩기 (ILCA 7)",
+      "gender": "men"
+     },
+     {
+      "file": "menskiff",
+      "name": "남자 스키프 (49er)",
+      "gender": "men"
+     },
+     {
+      "file": "womenwindsurfing",
+      "name": "여자 윈드서핑 (iQFOiL)",
+      "gender": "women"
+     },
+     {
+      "file": "womenkite",
+      "name": "여자 카이트 (Formula Kite)",
+      "gender": "women"
+     },
+     {
+      "file": "womendinghy",
+      "name": "여자 1인승 딩기 (ILCA 6)",
+      "gender": "women"
+     },
+     {
+      "file": "womenskiff",
+      "name": "여자 스키프 (49erFX)",
+      "gender": "women"
+     },
+     {
+      "file": "mixeddinghy",
+      "name": "혼성 2인승 딩기 (470)",
+      "gender": "mixed"
+     },
+     {
+      "file": "mixedmultihull",
+      "name": "혼성 멀티헐 (Nacra 17)",
+      "gender": "mixed"
+     }
+    ]
+   },
+   {
+    "file": "olshooting",
+    "name": "사격",
+    "name_en": "Shooting",
+    "events": [
+     {
+      "file": "men10mairpistol",
+      "name": "남자 10m 공기권총",
+      "gender": "men"
+     },
+     {
+      "file": "men25mrapidfirepistol",
+      "name": "남자 25m 속사권총",
+      "gender": "men"
+     },
+     {
+      "file": "men10mairrifle",
+      "name": "남자 10m 공기소총",
+      "gender": "men"
+     },
+     {
+      "file": "men50mrifle3positions",
+      "name": "남자 50m 소총 3자세",
+      "gender": "men"
+     },
+     {
+      "file": "mentrap",
+      "name": "남자 트랩",
+      "gender": "men"
+     },
+     {
+      "file": "menskeet",
+      "name": "남자 스키트",
+      "gender": "men"
+     },
+     {
+      "file": "women10mairpistol",
+      "name": "여자 10m 공기권총",
+      "gender": "women"
+     },
+     {
+      "file": "women25mpistol",
+      "name": "여자 25m 권총",
+      "gender": "women"
+     },
+     {
+      "file": "women10mairrifle",
+      "name": "여자 10m 공기소총",
+      "gender": "women"
+     },
+     {
+      "file": "women50mrifle3positions",
+      "name": "여자 50m 소총 3자세",
+      "gender": "women"
+     },
+     {
+      "file": "womentrap",
+      "name": "여자 트랩",
+      "gender": "women"
+     },
+     {
+      "file": "womenskeet",
+      "name": "여자 스키트",
+      "gender": "women"
+     },
+     {
+      "file": "mixed10mairpistolteam",
+      "name": "혼성 10m 공기권총 단체",
+      "gender": "mixed"
+     },
+     {
+      "file": "mixed10mairrifleteam",
+      "name": "혼성 10m 공기소총 단체",
+      "gender": "mixed"
+     },
+     {
+      "file": "mixedtrapteam",
+      "name": "혼성 트랩 단체",
+      "gender": "mixed",
+      "new": true
+     }
+    ]
+   },
+   {
+    "file": "olskateboard",
+    "name": "스케이트보드",
+    "name_en": "Skateboarding",
+    "events": [
+     {
+      "file": "menstreet",
+      "name": "남자 스트리트",
+      "gender": "men"
+     },
+     {
+      "file": "menpark",
+      "name": "남자 파크",
+      "gender": "men"
+     },
+     {
+      "file": "womenstreet",
+      "name": "여자 스트리트",
+      "gender": "women"
+     },
+     {
+      "file": "womenpark",
+      "name": "여자 파크",
+      "gender": "women"
+     }
+    ]
+   },
+   {
+    "file": "olsquash",
+    "name": "스쿼시",
+    "name_en": "Squash",
+    "events": [
+     {
+      "file": "men",
+      "name": "남자 단식",
+      "gender": "men",
+      "new": true
+     },
+     {
+      "file": "women",
+      "name": "여자 단식",
+      "gender": "women",
+      "new": true
+     }
+    ]
+   },
+   {
+    "file": "olsurfing",
+    "name": "서핑",
+    "name_en": "Surfing",
+    "events": [
+     {
+      "file": "men",
+      "name": "남자 숏보드",
+      "gender": "men"
+     },
+     {
+      "file": "women",
+      "name": "여자 숏보드",
+      "gender": "women"
+     }
+    ]
+   },
+   {
+    "file": "olswimming",
+    "name": "수영",
+    "name_en": "Swimming",
+    "events": [
+     {
+      "file": "men50mfree",
+      "name": "남자 자유형 50m",
+      "gender": "men",
+      "live": "swim:mfree50"
+     },
+     {
+      "file": "men100mfree",
+      "name": "남자 자유형 100m",
+      "gender": "men",
+      "live": "swim:mfree100"
+     },
+     {
+      "file": "men200mfree",
+      "name": "남자 자유형 200m",
+      "gender": "men",
+      "live": "swim:mfree200"
+     },
+     {
+      "file": "men400mfree",
+      "name": "남자 자유형 400m",
+      "gender": "men",
+      "live": "swim:mfree400"
+     },
+     {
+      "file": "men800mfree",
+      "name": "남자 자유형 800m",
+      "gender": "men",
+      "live": "swim:mfree800"
+     },
+     {
+      "file": "men1500mfree",
+      "name": "남자 자유형 1500m",
+      "gender": "men",
+      "live": "swim:mfree1500"
+     },
+     {
+      "file": "men50mback",
+      "name": "남자 배영 50m",
+      "gender": "men",
+      "live": "swim:mback50",
+      "new": true
+     },
+     {
+      "file": "men100mback",
+      "name": "남자 배영 100m",
+      "gender": "men",
+      "live": "swim:mback100"
+     },
+     {
+      "file": "men200mback",
+      "name": "남자 배영 200m",
+      "gender": "men",
+      "live": "swim:mback200"
+     },
+     {
+      "file": "men50mbreast",
+      "name": "남자 평영 50m",
+      "gender": "men",
+      "live": "swim:mbreast50",
+      "new": true
+     },
+     {
+      "file": "men100mbreast",
+      "name": "남자 평영 100m",
+      "gender": "men",
+      "live": "swim:mbreast100"
+     },
+     {
+      "file": "men200mbreast",
+      "name": "남자 평영 200m",
+      "gender": "men",
+      "live": "swim:mbreast200"
+     },
+     {
+      "file": "men50mfly",
+      "name": "남자 접영 50m",
+      "gender": "men",
+      "live": "swim:mfly50",
+      "new": true
+     },
+     {
+      "file": "men100mfly",
+      "name": "남자 접영 100m",
+      "gender": "men",
+      "live": "swim:mfly100"
+     },
+     {
+      "file": "men200mfly",
+      "name": "남자 접영 200m",
+      "gender": "men",
+      "live": "swim:mfly200"
+     },
+     {
+      "file": "men200mim",
+      "name": "남자 개인혼영 200m",
+      "gender": "men",
+      "live": "swim:mim200"
+     },
+     {
+      "file": "men400mim",
+      "name": "남자 개인혼영 400m",
+      "gender": "men",
+      "live": "swim:mim400"
+     },
+     {
+      "file": "men4x100mfreerelay",
+      "name": "남자 4×100m 자유형 계주",
+      "gender": "men",
+      "live": "swim:mrelay4x100free"
+     },
+     {
+      "file": "men4x200mfreerelay",
+      "name": "남자 4×200m 자유형 계주",
+      "gender": "men",
+      "live": "swim:mrelay4x200free"
+     },
+     {
+      "file": "men4x100mmedleyrelay",
+      "name": "남자 4×100m 혼계영",
+      "gender": "men",
+      "live": "swim:mrelay4x100medley"
+     },
+     {
+      "file": "women50mfree",
+      "name": "여자 자유형 50m",
+      "gender": "women",
+      "live": "swim:wfree50"
+     },
+     {
+      "file": "women100mfree",
+      "name": "여자 자유형 100m",
+      "gender": "women",
+      "live": "swim:wfree100"
+     },
+     {
+      "file": "women200mfree",
+      "name": "여자 자유형 200m",
+      "gender": "women",
+      "live": "swim:wfree200"
+     },
+     {
+      "file": "women400mfree",
+      "name": "여자 자유형 400m",
+      "gender": "women",
+      "live": "swim:wfree400"
+     },
+     {
+      "file": "women800mfree",
+      "name": "여자 자유형 800m",
+      "gender": "women",
+      "live": "swim:wfree800"
+     },
+     {
+      "file": "women1500mfree",
+      "name": "여자 자유형 1500m",
+      "gender": "women",
+      "live": "swim:wfree1500"
+     },
+     {
+      "file": "women50mback",
+      "name": "여자 배영 50m",
+      "gender": "women",
+      "live": "swim:wback50",
+      "new": true
+     },
+     {
+      "file": "women100mback",
+      "name": "여자 배영 100m",
+      "gender": "women",
+      "live": "swim:wback100"
+     },
+     {
+      "file": "women200mback",
+      "name": "여자 배영 200m",
+      "gender": "women",
+      "live": "swim:wback200"
+     },
+     {
+      "file": "women50mbreast",
+      "name": "여자 평영 50m",
+      "gender": "women",
+      "live": "swim:wbreast50",
+      "new": true
+     },
+     {
+      "file": "women100mbreast",
+      "name": "여자 평영 100m",
+      "gender": "women",
+      "live": "swim:wbreast100"
+     },
+     {
+      "file": "women200mbreast",
+      "name": "여자 평영 200m",
+      "gender": "women",
+      "live": "swim:wbreast200"
+     },
+     {
+      "file": "women50mfly",
+      "name": "여자 접영 50m",
+      "gender": "women",
+      "live": "swim:wfly50",
+      "new": true
+     },
+     {
+      "file": "women100mfly",
+      "name": "여자 접영 100m",
+      "gender": "women",
+      "live": "swim:wfly100"
+     },
+     {
+      "file": "women200mfly",
+      "name": "여자 접영 200m",
+      "gender": "women",
+      "live": "swim:wfly200"
+     },
+     {
+      "file": "women200mim",
+      "name": "여자 개인혼영 200m",
+      "gender": "women",
+      "live": "swim:wim200"
+     },
+     {
+      "file": "women400mim",
+      "name": "여자 개인혼영 400m",
+      "gender": "women",
+      "live": "swim:wim400"
+     },
+     {
+      "file": "women4x100mfreerelay",
+      "name": "여자 4×100m 자유형 계주",
+      "gender": "women",
+      "live": "swim:wrelay4x100free"
+     },
+     {
+      "file": "women4x200mfreerelay",
+      "name": "여자 4×200m 자유형 계주",
+      "gender": "women",
+      "live": "swim:wrelay4x200free"
+     },
+     {
+      "file": "women4x100mmedleyrelay",
+      "name": "여자 4×100m 혼계영",
+      "gender": "women",
+      "live": "swim:wrelay4x100medley"
+     },
+     {
+      "file": "mixed4x100mmedleyrelay",
+      "name": "혼성 4×100m 혼계영",
+      "gender": "mixed",
+      "live": "swim:xrelay4x100medley"
+     }
+    ]
+   },
+   {
+    "file": "oltabletennis",
+    "name": "탁구",
+    "name_en": "Table tennis",
+    "events": [
+     {
+      "file": "mensingles",
+      "name": "남자 단식",
+      "gender": "men",
+      "live": "ittf:ms"
+     },
+     {
+      "file": "mendoubles",
+      "name": "남자 복식",
+      "gender": "men",
+      "live": "ittf:md",
+      "new": true
+     },
+     {
+      "file": "womensingles",
+      "name": "여자 단식",
+      "gender": "women",
+      "live": "ittf:ws"
+     },
+     {
+      "file": "womendoubles",
+      "name": "여자 복식",
+      "gender": "women",
+      "live": "ittf:wd",
+      "new": true
+     },
+     {
+      "file": "mixeddoubles",
+      "name": "혼합 복식",
+      "gender": "mixed",
+      "live": "ittf:xd"
+     },
+     {
+      "file": "mixedteam",
+      "name": "혼성 단체",
+      "gender": "mixed",
+      "new": true
+     }
+    ]
+   },
+   {
+    "file": "oltaekwondo",
+    "name": "태권도",
+    "name_en": "Taekwondo",
+    "events": [
+     {
+      "file": "men58kg",
+      "name": "남자 -58kg",
+      "gender": "men"
+     },
+     {
+      "file": "men68kg",
+      "name": "남자 -68kg",
+      "gender": "men"
+     },
+     {
+      "file": "men80kg",
+      "name": "남자 -80kg",
+      "gender": "men"
+     },
+     {
+      "file": "menover80kg",
+      "name": "남자 +80kg",
+      "gender": "men"
+     },
+     {
+      "file": "women49kg",
+      "name": "여자 -49kg",
+      "gender": "women"
+     },
+     {
+      "file": "women57kg",
+      "name": "여자 -57kg",
+      "gender": "women"
+     },
+     {
+      "file": "women67kg",
+      "name": "여자 -67kg",
+      "gender": "women"
+     },
+     {
+      "file": "womenover67kg",
+      "name": "여자 +67kg",
+      "gender": "women"
+     }
+    ]
+   },
+   {
+    "file": "oltennis",
+    "name": "테니스",
+    "name_en": "Tennis",
+    "events": [
+     {
+      "file": "mensingles",
+      "name": "남자 단식",
+      "gender": "men"
+     },
+     {
+      "file": "mendoubles",
+      "name": "남자 복식",
+      "gender": "men"
+     },
+     {
+      "file": "womensingles",
+      "name": "여자 단식",
+      "gender": "women"
+     },
+     {
+      "file": "womendoubles",
+      "name": "여자 복식",
+      "gender": "women"
+     },
+     {
+      "file": "mixeddoubles",
+      "name": "혼합 복식",
+      "gender": "mixed"
+     }
+    ]
+   },
+   {
+    "file": "oltriathlon",
+    "name": "트라이애슬론",
+    "name_en": "Triathlon",
+    "events": [
+     {
+      "file": "men",
+      "name": "남자 개인",
+      "gender": "men"
+     },
+     {
+      "file": "women",
+      "name": "여자 개인",
+      "gender": "women"
+     },
+     {
+      "file": "mixedrelay",
+      "name": "혼성 계주",
+      "gender": "mixed"
+     }
+    ]
+   },
+   {
+    "file": "olvolleyball",
+    "name": "배구",
+    "name_en": "Volleyball",
+    "groups": [
+     "배구",
+     "비치발리볼"
+    ],
+    "events": [
+     {
+      "file": "men",
+      "name": "남자",
+      "gender": "men",
+      "group": "배구"
+     },
+     {
+      "file": "women",
+      "name": "여자",
+      "gender": "women",
+      "group": "배구"
+     },
+     {
+      "file": "menbeach",
+      "name": "남자 비치발리볼",
+      "gender": "men",
+      "group": "비치발리볼"
+     },
+     {
+      "file": "womenbeach",
+      "name": "여자 비치발리볼",
+      "gender": "women",
+      "group": "비치발리볼"
+     }
+    ]
+   },
+   {
+    "file": "olwaterpolo",
+    "name": "수구",
+    "name_en": "Water polo",
+    "events": [
+     {
+      "file": "men",
+      "name": "남자",
+      "gender": "men"
+     },
+     {
+      "file": "women",
+      "name": "여자",
+      "gender": "women"
+     }
+    ]
+   },
+   {
+    "file": "olweightlifting",
+    "name": "역도",
+    "name_en": "Weightlifting",
+    "events": [
+     {
+      "file": "men65kg",
+      "name": "남자 65kg",
+      "gender": "men"
+     },
+     {
+      "file": "men75kg",
+      "name": "남자 75kg",
+      "gender": "men"
+     },
+     {
+      "file": "men85kg",
+      "name": "남자 85kg",
+      "gender": "men"
+     },
+     {
+      "file": "men95kg",
+      "name": "남자 95kg",
+      "gender": "men"
+     },
+     {
+      "file": "men110kg",
+      "name": "남자 110kg",
+      "gender": "men"
+     },
+     {
+      "file": "menover110kg",
+      "name": "남자 +110kg",
+      "gender": "men"
+     },
+     {
+      "file": "women53kg",
+      "name": "여자 53kg",
+      "gender": "women"
+     },
+     {
+      "file": "women61kg",
+      "name": "여자 61kg",
+      "gender": "women"
+     },
+     {
+      "file": "women69kg",
+      "name": "여자 69kg",
+      "gender": "women"
+     },
+     {
+      "file": "women77kg",
+      "name": "여자 77kg",
+      "gender": "women"
+     },
+     {
+      "file": "women86kg",
+      "name": "여자 86kg",
+      "gender": "women"
+     },
+     {
+      "file": "womenover86kg",
+      "name": "여자 +86kg",
+      "gender": "women"
+     }
+    ]
+   },
+   {
+    "file": "olwrestling",
+    "name": "레슬링",
+    "name_en": "Wrestling",
+    "groups": [
+     "남자 자유형",
+     "그레코로만형",
+     "여자 자유형"
+    ],
+    "events": [
+     {
+      "file": "men57kgfreestyle",
+      "name": "남자 자유형 57kg",
+      "gender": "men",
+      "group": "남자 자유형"
+     },
+     {
+      "file": "men65kgfreestyle",
+      "name": "남자 자유형 65kg",
+      "gender": "men",
+      "group": "남자 자유형"
+     },
+     {
+      "file": "men74kgfreestyle",
+      "name": "남자 자유형 74kg",
+      "gender": "men",
+      "group": "남자 자유형"
+     },
+     {
+      "file": "men86kgfreestyle",
+      "name": "남자 자유형 86kg",
+      "gender": "men",
+      "group": "남자 자유형"
+     },
+     {
+      "file": "men97kgfreestyle",
+      "name": "남자 자유형 97kg",
+      "gender": "men",
+      "group": "남자 자유형"
+     },
+     {
+      "file": "men125kgfreestyle",
+      "name": "남자 자유형 125kg",
+      "gender": "men",
+      "group": "남자 자유형"
+     },
+     {
+      "file": "men60kggreco",
+      "name": "남자 그레코로만형 60kg",
+      "gender": "men",
+      "group": "그레코로만형"
+     },
+     {
+      "file": "men67kggreco",
+      "name": "남자 그레코로만형 67kg",
+      "gender": "men",
+      "group": "그레코로만형"
+     },
+     {
+      "file": "men77kggreco",
+      "name": "남자 그레코로만형 77kg",
+      "gender": "men",
+      "group": "그레코로만형"
+     },
+     {
+      "file": "men87kggreco",
+      "name": "남자 그레코로만형 87kg",
+      "gender": "men",
+      "group": "그레코로만형"
+     },
+     {
+      "file": "men97kggreco",
+      "name": "남자 그레코로만형 97kg",
+      "gender": "men",
+      "group": "그레코로만형"
+     },
+     {
+      "file": "men130kggreco",
+      "name": "남자 그레코로만형 130kg",
+      "gender": "men",
+      "group": "그레코로만형"
+     },
+     {
+      "file": "women50kgfreestyle",
+      "name": "여자 자유형 50kg",
+      "gender": "women",
+      "group": "여자 자유형"
+     },
+     {
+      "file": "women53kgfreestyle",
+      "name": "여자 자유형 53kg",
+      "gender": "women",
+      "group": "여자 자유형"
+     },
+     {
+      "file": "women57kgfreestyle",
+      "name": "여자 자유형 57kg",
+      "gender": "women",
+      "group": "여자 자유형"
+     },
+     {
+      "file": "women62kgfreestyle",
+      "name": "여자 자유형 62kg",
+      "gender": "women",
+      "group": "여자 자유형"
+     },
+     {
+      "file": "women68kgfreestyle",
+      "name": "여자 자유형 68kg",
+      "gender": "women",
+      "group": "여자 자유형"
+     },
+     {
+      "file": "women76kgfreestyle",
+      "name": "여자 자유형 76kg",
+      "gender": "women",
+      "group": "여자 자유형"
+     }
+    ]
+   }
+  ]
+ },
+ "winter": {
+  "label": "동계",
+  "games": "2030 프렌치 알프스 올림픽",
+  "program_basis": "2026 밀라노·코르티나 올림픽 세부종목 (2030 확정 명단 확인 전)",
+  "previous": "2026 밀라노·코르티나 올림픽",
+  "sports": [
+   {
+    "file": "wialpine",
+    "name": "알파인 스키",
+    "name_en": "Alpine skiing",
+    "events": [
+     {
+      "file": "mendownhill",
+      "name": "남자 활강",
+      "gender": "men"
+     },
+     {
+      "file": "mensuperg",
+      "name": "남자 슈퍼대회전",
+      "gender": "men"
+     },
+     {
+      "file": "mengiantslalom",
+      "name": "남자 대회전",
+      "gender": "men"
+     },
+     {
+      "file": "menslalom",
+      "name": "남자 회전",
+      "gender": "men"
+     },
+     {
+      "file": "menteamcombined",
+      "name": "남자 팀 복합",
+      "gender": "men"
+     },
+     {
+      "file": "womendownhill",
+      "name": "여자 활강",
+      "gender": "women"
+     },
+     {
+      "file": "womensuperg",
+      "name": "여자 슈퍼대회전",
+      "gender": "women"
+     },
+     {
+      "file": "womengiantslalom",
+      "name": "여자 대회전",
+      "gender": "women"
+     },
+     {
+      "file": "womenslalom",
+      "name": "여자 회전",
+      "gender": "women"
+     },
+     {
+      "file": "womenteamcombined",
+      "name": "여자 팀 복합",
+      "gender": "women"
+     }
+    ]
+   },
+   {
+    "file": "wibiathlon",
+    "name": "바이애슬론",
+    "name_en": "Biathlon",
+    "events": [
+     {
+      "file": "menindividual",
+      "name": "남자 개인",
+      "gender": "men"
+     },
+     {
+      "file": "mensprint",
+      "name": "남자 스프린트",
+      "gender": "men"
+     },
+     {
+      "file": "menpursuit",
+      "name": "남자 추적",
+      "gender": "men"
+     },
+     {
+      "file": "menmassstart",
+      "name": "남자 매스스타트",
+      "gender": "men"
+     },
+     {
+      "file": "menrelay",
+      "name": "남자 계주",
+      "gender": "men"
+     },
+     {
+      "file": "womenindividual",
+      "name": "여자 개인",
+      "gender": "women"
+     },
+     {
+      "file": "womensprint",
+      "name": "여자 스프린트",
+      "gender": "women"
+     },
+     {
+      "file": "womenpursuit",
+      "name": "여자 추적",
+      "gender": "women"
+     },
+     {
+      "file": "womenmassstart",
+      "name": "여자 매스스타트",
+      "gender": "women"
+     },
+     {
+      "file": "womenrelay",
+      "name": "여자 계주",
+      "gender": "women"
+     },
+     {
+      "file": "mixedrelay",
+      "name": "혼성 계주",
+      "gender": "mixed"
+     }
+    ]
+   },
+   {
+    "file": "wibobsleigh",
+    "name": "봅슬레이",
+    "name_en": "Bobsleigh",
+    "events": [
+     {
+      "file": "mentwo",
+      "name": "남자 2인승",
+      "gender": "men"
+     },
+     {
+      "file": "menfour",
+      "name": "남자 4인승",
+      "gender": "men"
+     },
+     {
+      "file": "womentwo",
+      "name": "여자 2인승",
+      "gender": "women"
+     },
+     {
+      "file": "womenmonobob",
+      "name": "여자 모노봅",
+      "gender": "women"
+     }
+    ]
+   },
+   {
+    "file": "wicrosscountry",
+    "name": "크로스컨트리 스키",
+    "name_en": "Cross-country skiing",
+    "events": [
+     {
+      "file": "mensprint",
+      "name": "남자 스프린트",
+      "gender": "men"
+     },
+     {
+      "file": "menteamsprint",
+      "name": "남자 팀 스프린트",
+      "gender": "men"
+     },
+     {
+      "file": "men10km",
+      "name": "남자 10km",
+      "gender": "men"
+     },
+     {
+      "file": "menskiathlon",
+      "name": "남자 스키애슬론",
+      "gender": "men"
+     },
+     {
+      "file": "menmassstart",
+      "name": "남자 매스스타트",
+      "gender": "men"
+     },
+     {
+      "file": "menrelay",
+      "name": "남자 계주",
+      "gender": "men"
+     },
+     {
+      "file": "womensprint",
+      "name": "여자 스프린트",
+      "gender": "women"
+     },
+     {
+      "file": "womenteamsprint",
+      "name": "여자 팀 스프린트",
+      "gender": "women"
+     },
+     {
+      "file": "women10km",
+      "name": "여자 10km",
+      "gender": "women"
+     },
+     {
+      "file": "womenskiathlon",
+      "name": "여자 스키애슬론",
+      "gender": "women"
+     },
+     {
+      "file": "womenmassstart",
+      "name": "여자 매스스타트",
+      "gender": "women"
+     },
+     {
+      "file": "womenrelay",
+      "name": "여자 계주",
+      "gender": "women"
+     }
+    ]
+   },
+   {
+    "file": "wicurling",
+    "name": "컬링",
+    "name_en": "Curling",
+    "events": [
+     {
+      "file": "men",
+      "name": "남자",
+      "gender": "men"
+     },
+     {
+      "file": "women",
+      "name": "여자",
+      "gender": "women"
+     },
+     {
+      "file": "mixeddoubles",
+      "name": "믹스더블",
+      "gender": "mixed"
+     }
+    ]
+   },
+   {
+    "file": "wifigure",
+    "name": "피겨 스케이팅",
+    "name_en": "Figure skating",
+    "events": [
+     {
+      "file": "mensingles",
+      "name": "남자 싱글",
+      "gender": "men"
+     },
+     {
+      "file": "womensingles",
+      "name": "여자 싱글",
+      "gender": "women"
+     },
+     {
+      "file": "mixedpairs",
+      "name": "페어",
+      "gender": "mixed"
+     },
+     {
+      "file": "mixedicedance",
+      "name": "아이스댄스",
+      "gender": "mixed"
+     },
+     {
+      "file": "mixedteam",
+      "name": "단체전",
+      "gender": "mixed"
+     }
+    ]
+   },
+   {
+    "file": "wifreestyle",
+    "name": "프리스타일 스키",
+    "name_en": "Freestyle skiing",
+    "events": [
+     {
+      "file": "menmoguls",
+      "name": "남자 모굴",
+      "gender": "men"
+     },
+     {
+      "file": "mendualmoguls",
+      "name": "남자 듀얼 모굴",
+      "gender": "men"
+     },
+     {
+      "file": "menaerials",
+      "name": "남자 에어리얼",
+      "gender": "men"
+     },
+     {
+      "file": "menskicross",
+      "name": "남자 스키 크로스",
+      "gender": "men"
+     },
+     {
+      "file": "menhalfpipe",
+      "name": "남자 하프파이프",
+      "gender": "men"
+     },
+     {
+      "file": "menslopestyle",
+      "name": "남자 슬로프스타일",
+      "gender": "men"
+     },
+     {
+      "file": "menbigair",
+      "name": "남자 빅에어",
+      "gender": "men"
+     },
+     {
+      "file": "womenmoguls",
+      "name": "여자 모굴",
+      "gender": "women"
+     },
+     {
+      "file": "womendualmoguls",
+      "name": "여자 듀얼 모굴",
+      "gender": "women"
+     },
+     {
+      "file": "womenaerials",
+      "name": "여자 에어리얼",
+      "gender": "women"
+     },
+     {
+      "file": "womenskicross",
+      "name": "여자 스키 크로스",
+      "gender": "women"
+     },
+     {
+      "file": "womenhalfpipe",
+      "name": "여자 하프파이프",
+      "gender": "women"
+     },
+     {
+      "file": "womenslopestyle",
+      "name": "여자 슬로프스타일",
+      "gender": "women"
+     },
+     {
+      "file": "womenbigair",
+      "name": "여자 빅에어",
+      "gender": "women"
+     },
+     {
+      "file": "mixedaerialsteam",
+      "name": "혼성 에어리얼 단체",
+      "gender": "mixed"
+     }
+    ]
+   },
+   {
+    "file": "wiicehockey",
+    "name": "아이스하키",
+    "name_en": "Ice hockey",
+    "events": [
+     {
+      "file": "men",
+      "name": "남자",
+      "gender": "men"
+     },
+     {
+      "file": "women",
+      "name": "여자",
+      "gender": "women"
+     }
+    ]
+   },
+   {
+    "file": "wiluge",
+    "name": "루지",
+    "name_en": "Luge",
+    "events": [
+     {
+      "file": "mensingles",
+      "name": "남자 싱글",
+      "gender": "men"
+     },
+     {
+      "file": "mendoubles",
+      "name": "남자 더블",
+      "gender": "men"
+     },
+     {
+      "file": "womensingles",
+      "name": "여자 싱글",
+      "gender": "women"
+     },
+     {
+      "file": "womendoubles",
+      "name": "여자 더블",
+      "gender": "women"
+     },
+     {
+      "file": "mixedteamrelay",
+      "name": "팀 릴레이",
+      "gender": "mixed"
+     }
+    ]
+   },
+   {
+    "file": "winordiccombined",
+    "name": "노르딕 복합",
+    "name_en": "Nordic combined",
+    "events": [
+     {
+      "file": "mennormalhill",
+      "name": "남자 노멀힐 개인",
+      "gender": "men"
+     },
+     {
+      "file": "menlargehill",
+      "name": "남자 라지힐 개인",
+      "gender": "men"
+     },
+     {
+      "file": "menteamsprint",
+      "name": "남자 팀 스프린트",
+      "gender": "men"
+     }
+    ]
+   },
+   {
+    "file": "wishorttrack",
+    "name": "쇼트트랙",
+    "name_en": "Short track speed skating",
+    "events": [
+     {
+      "file": "men500m",
+      "name": "남자 500m",
+      "gender": "men"
+     },
+     {
+      "file": "men1000m",
+      "name": "남자 1000m",
+      "gender": "men"
+     },
+     {
+      "file": "men1500m",
+      "name": "남자 1500m",
+      "gender": "men"
+     },
+     {
+      "file": "men5000mrelay",
+      "name": "남자 5000m 계주",
+      "gender": "men"
+     },
+     {
+      "file": "women500m",
+      "name": "여자 500m",
+      "gender": "women"
+     },
+     {
+      "file": "women1000m",
+      "name": "여자 1000m",
+      "gender": "women"
+     },
+     {
+      "file": "women1500m",
+      "name": "여자 1500m",
+      "gender": "women"
+     },
+     {
+      "file": "women3000mrelay",
+      "name": "여자 3000m 계주",
+      "gender": "women"
+     },
+     {
+      "file": "mixed2000mrelay",
+      "name": "혼성 2000m 계주",
+      "gender": "mixed"
+     }
+    ]
+   },
+   {
+    "file": "wiskeleton",
+    "name": "스켈레톤",
+    "name_en": "Skeleton",
+    "events": [
+     {
+      "file": "men",
+      "name": "남자",
+      "gender": "men"
+     },
+     {
+      "file": "women",
+      "name": "여자",
+      "gender": "women"
+     },
+     {
+      "file": "mixedteam",
+      "name": "혼성 단체",
+      "gender": "mixed"
+     }
+    ]
+   },
+   {
+    "file": "wiskijumping",
+    "name": "스키점프",
+    "name_en": "Ski jumping",
+    "events": [
+     {
+      "file": "mennormalhill",
+      "name": "남자 노멀힐",
+      "gender": "men"
+     },
+     {
+      "file": "menlargehill",
+      "name": "남자 라지힐",
+      "gender": "men"
+     },
+     {
+      "file": "mensuperteam",
+      "name": "남자 슈퍼팀",
+      "gender": "men"
+     },
+     {
+      "file": "womennormalhill",
+      "name": "여자 노멀힐",
+      "gender": "women"
+     },
+     {
+      "file": "womenlargehill",
+      "name": "여자 라지힐",
+      "gender": "women"
+     },
+     {
+      "file": "mixedteam",
+      "name": "혼성 단체",
+      "gender": "mixed"
+     }
+    ]
+   },
+   {
+    "file": "wiskimountaineering",
+    "name": "산악스키",
+    "name_en": "Ski mountaineering",
+    "events": [
+     {
+      "file": "mensprint",
+      "name": "남자 스프린트",
+      "gender": "men"
+     },
+     {
+      "file": "womensprint",
+      "name": "여자 스프린트",
+      "gender": "women"
+     },
+     {
+      "file": "mixedrelay",
+      "name": "혼성 계주",
+      "gender": "mixed"
+     }
+    ]
+   },
+   {
+    "file": "wisnowboard",
+    "name": "스노보드",
+    "name_en": "Snowboard",
+    "events": [
+     {
+      "file": "menparallelgiantslalom",
+      "name": "남자 평행 대회전",
+      "gender": "men"
+     },
+     {
+      "file": "mencross",
+      "name": "남자 스노보드 크로스",
+      "gender": "men"
+     },
+     {
+      "file": "menhalfpipe",
+      "name": "남자 하프파이프",
+      "gender": "men"
+     },
+     {
+      "file": "menslopestyle",
+      "name": "남자 슬로프스타일",
+      "gender": "men"
+     },
+     {
+      "file": "menbigair",
+      "name": "남자 빅에어",
+      "gender": "men"
+     },
+     {
+      "file": "womenparallelgiantslalom",
+      "name": "여자 평행 대회전",
+      "gender": "women"
+     },
+     {
+      "file": "womencross",
+      "name": "여자 스노보드 크로스",
+      "gender": "women"
+     },
+     {
+      "file": "womenhalfpipe",
+      "name": "여자 하프파이프",
+      "gender": "women"
+     },
+     {
+      "file": "womenslopestyle",
+      "name": "여자 슬로프스타일",
+      "gender": "women"
+     },
+     {
+      "file": "womenbigair",
+      "name": "여자 빅에어",
+      "gender": "women"
+     },
+     {
+      "file": "mixedteamcross",
+      "name": "혼성 단체 스노보드 크로스",
+      "gender": "mixed"
+     }
+    ]
+   },
+   {
+    "file": "wispeedskating",
+    "name": "스피드 스케이팅",
+    "name_en": "Speed skating",
+    "events": [
+     {
+      "file": "men500m",
+      "name": "남자 500m",
+      "gender": "men"
+     },
+     {
+      "file": "men1000m",
+      "name": "남자 1000m",
+      "gender": "men"
+     },
+     {
+      "file": "men1500m",
+      "name": "남자 1500m",
+      "gender": "men"
+     },
+     {
+      "file": "men5000m",
+      "name": "남자 5000m",
+      "gender": "men"
+     },
+     {
+      "file": "men10000m",
+      "name": "남자 10000m",
+      "gender": "men"
+     },
+     {
+      "file": "menmassstart",
+      "name": "남자 매스스타트",
+      "gender": "men"
+     },
+     {
+      "file": "menteampursuit",
+      "name": "남자 팀 추월",
+      "gender": "men"
+     },
+     {
+      "file": "women500m",
+      "name": "여자 500m",
+      "gender": "women"
+     },
+     {
+      "file": "women1000m",
+      "name": "여자 1000m",
+      "gender": "women"
+     },
+     {
+      "file": "women1500m",
+      "name": "여자 1500m",
+      "gender": "women"
+     },
+     {
+      "file": "women3000m",
+      "name": "여자 3000m",
+      "gender": "women"
+     },
+     {
+      "file": "women5000m",
+      "name": "여자 5000m",
+      "gender": "women"
+     },
+     {
+      "file": "womenmassstart",
+      "name": "여자 매스스타트",
+      "gender": "women"
+     },
+     {
+      "file": "womenteampursuit",
+      "name": "여자 팀 추월",
+      "gender": "women"
+     }
+    ]
+   }
+  ]
+ }
+}

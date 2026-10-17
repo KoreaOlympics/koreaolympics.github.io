@@ -1,0 +1,63 @@
+/* koreaolympics 공통 스타일 — 관리 대상 문서는 이 파일 하나만 쓴다 (PRINCIPLES.md 5장) */
+:root {
+  --text: #202122; --muted: #54595d; --link: #3366cc; --border: #a2a9b1; --line: #c8ccd1;
+  --bg: #ffffff; --box: #f8f9fa; --head: #eaecf0; --kor: #dbe8fb; --live: #d33;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text);
+  font: 15px/1.6 "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+header.site { border-bottom: 1px solid var(--line); padding: 8px 16px; font-weight: 700; }
+header.site a { color: var(--text); }
+main.article { max-width: 1080px; margin: 0 auto; padding: 8px 16px 48px; }
+
+h1 { font: 400 1.9em/1.3 "Noto Serif KR", Georgia, serif; border-bottom: 1px solid var(--border); margin: .3em 0 .5em; padding-bottom: .15em; }
+h1 .en { color: var(--muted); font-size: .7em; }
+h2 { font: 400 1.45em/1.3 "Noto Serif KR", Georgia, serif; border-bottom: 1px solid var(--border); margin: 1.4em 0 .5em; padding-bottom: .1em; }
+h3 { font-size: 1.1em; margin: 1.1em 0 .4em; }
+.crumb { font-size: .85em; color: var(--muted); }
+
+/* 인포박스: 왼쪽 정렬 */
+.top { display: flex; gap: 20px; align-items: flex-start; }
+.infobox { flex: 0 0 280px; order: -1; }
+.infobox table { width: 100%; border: 1px solid var(--border); background: var(--box); border-collapse: collapse; font-size: .88em; }
+.infobox caption { font-weight: 700; padding: 6px; font-size: 1.1em; }
+.infobox th, .infobox td { padding: 4px 8px; vertical-align: top; text-align: left; border-top: 1px solid var(--line); }
+.infobox th { width: 40%; }
+.lead { flex: 1; min-width: 0; }
+.event-list { padding-left: 1.2em; }
+.event-list li { margin: .2em 0; }
+
+.toc { display: inline-block; border: 1px solid var(--border); background: var(--box); padding: 6px 16px 6px 8px; margin-top: 12px; font-size: .9em; }
+.toc h2 { font: 700 1em sans-serif; border: 0; margin: 0 0 4px; text-align: center; }
+.toc ol { margin: 0; padding-left: 1.6em; }
+
+/* 표: 단촐하게, 모바일에서는 가로 스크롤 */
+table.wikitable { border-collapse: collapse; background: var(--box); border: 1px solid var(--border); margin: .6em 0; font-size: .92em;
+  display: block; width: fit-content; max-width: 100%; overflow-x: auto; }
+.wikitable th, .wikitable td { border: 1px solid var(--border); padding: 4px 8px; white-space: nowrap; }
+.wikitable th { background: var(--head); text-align: center; }
+.wikitable tbody th { text-align: left; font-weight: 400; }
+.wikitable caption { text-align: left; font-weight: 700; padding: 4px 0; }
+tr.kor > *, td.kor { background: var(--kor); }
+.live { display: inline-block; background: var(--live); color: #fff; font-size: .72em; font-weight: 700;
+  padding: 0 5px; border-radius: 3px; vertical-align: middle; letter-spacing: .03em; }
+.note { color: var(--muted); font-size: .9em; }
+.references { font-size: .9em; }
+
+/* 내비박스 */
+.navbox { margin-top: 32px; }
+.navbox table { width: 100%; border: 1px solid var(--border); border-collapse: collapse; font-size: .88em; }
+.navbox caption { background: #ccf; padding: 4px; font-weight: 700; border: 1px solid var(--border); border-bottom: 0; }
+.navbox th { background: #ddf; padding: 4px 8px; text-align: right; white-space: nowrap; width: 1%; border-top: 2px solid #fff; }
+.navbox td { padding: 4px 8px; border-top: 2px solid #f6f6f6; }
+
+table.portal td:last-child { text-align: right; }
+
+@media (max-width: 720px) {
+  .top { display: block; }
+  .infobox { margin-bottom: 12px; }
+  .toc { display: block; }
+}

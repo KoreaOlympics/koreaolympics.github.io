@@ -1,0 +1,32 @@
+# 사이트 배포. 예전에는 동계 갱신 워크플로가 배포를 겸했다.
+# 봇 커밋(데이터 갱신)은 push 이벤트를 만들지 않으므로 갱신 워크플로가 끝날 때도 배포한다.
+name: Deploy site
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  workflow_run:
+    workflows: ['Daily IJF rankings', 'FIE team ranking update', 'Update AG2026 schedule']
+    types: [completed]
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - uses: actions/deploy-pages@v4
+        id: deployment

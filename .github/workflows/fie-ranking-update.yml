@@ -1,0 +1,32 @@
+name: FIE team ranking update
+on:
+  schedule:
+    - cron: '20 */6 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: fie-team-rankings
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python tools/update/update_fie_rankings.py
+      - name: Render ranking blocks
+        run: |
+          python tools/olympic.py build
+          python tools/olympic.py check
+      - name: Save complete official rankings
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/fie-team-ranking.json data/fie-team-history olfencing
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update FIE senior team ranking snapshot'
+            git push
+          fi

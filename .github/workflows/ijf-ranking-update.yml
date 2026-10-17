@@ -16,12 +16,16 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: python tools/update_ijf_rankings.py
+      - run: python tools/update/update_ijf_rankings.py
+      - name: Render ranking blocks
+        run: |
+          python tools/olympic.py build
+          python tools/olympic.py check
       - name: Save validated rankings
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/ijf-ranking.json data/ijf-history
+          git add data/ijf-ranking.json data/ijf-history oljudo
           if ! git diff --cached --quiet; then
             git commit -m 'Update official IJF ranking snapshot'
             git push
