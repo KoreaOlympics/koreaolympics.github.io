@@ -125,3 +125,6 @@ table.wikitable.narrow { width: auto; max-width: 640px; }
 table.upcoming td.content { font-size: .8em; line-height: 1.35; max-width: 340px; }
 table.upcoming td:nth-child(3) { white-space: nowrap; }
 h4 { font-size: 1em; margin: 1em 0 .3em; }
+
+/* 국가명 (표의 확보 NOC · 메달 칸): 국기 없이 볼드·색으로 구분 */
+td.nat, .wikitable td .nat { font-weight: 700; color: #0f6b5c; }
