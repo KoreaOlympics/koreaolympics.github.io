@@ -6,7 +6,8 @@
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--text);
-  font: 15px/1.6 "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+  font: 15px/1.65 "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  word-break: keep-all; overflow-wrap: break-word; -webkit-text-size-adjust: 100%; }
 a { color: var(--link); text-decoration: none; }
 a:hover { text-decoration: underline; }
 header.site { border-bottom: 1px solid var(--line); padding: 8px 16px; font-weight: 700; }
@@ -35,9 +36,12 @@ h3 { font-size: 1.1em; margin: 1.1em 0 .4em; }
 .toc ol { margin: 0; padding-left: 1.6em; }
 
 /* 표: 단촐하게, 모바일에서는 가로 스크롤 */
-table.wikitable { border-collapse: collapse; background: var(--box); border: 1px solid var(--border); margin: .6em 0; font-size: .92em;
-  display: block; width: fit-content; max-width: 100%; overflow-x: auto; }
-.wikitable th, .wikitable td { border: 1px solid var(--border); padding: 4px 8px; white-space: nowrap; }
+/* 표는 본문 폭에 맞춰 같은 너비로 두고, 넘치면 상자 안에서만 가로로 넘긴다 */
+.tw { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: .6em 0 1em; }
+table.wikitable { border-collapse: collapse; background: var(--box); border: 1px solid var(--border); margin: .6em 0; font-size: .92em; width: 100%; }
+.tw > table.wikitable { margin: 0; }
+.wikitable th, .wikitable td { border: 1px solid var(--border); padding: 5px 8px; vertical-align: top; }
+.wikitable thead th { white-space: nowrap; }
 .wikitable th { background: var(--head); text-align: center; }
 .wikitable tbody th { text-align: left; font-weight: 400; }
 .wikitable caption { text-align: left; font-weight: 700; padding: 4px 0; }
@@ -57,9 +61,23 @@ tr.kor > *, td.kor { background: var(--kor); }
 table.portal td:last-child { text-align: right; }
 
 @media (max-width: 720px) {
+  body { font-size: 16px; line-height: 1.7; }
+  header.site { padding: 10px 14px; }
+  main.article { padding: 4px 14px 40px; }
+  h1 { font-size: 1.55em; }
+  h2 { font-size: 1.3em; margin-top: 1.6em; }
+  h3 { font-size: 1.05em; }
   .top { display: block; }
-  .infobox { margin-bottom: 12px; }
+  .infobox { margin-bottom: 14px; }
+  .infobox table { font-size: .9em; }
   .toc { display: block; }
+  .event-list { padding-left: 1em; }
+  .event-list li { margin: .45em 0; }
+  table.wikitable { font-size: .86em; }
+  .wikitable th, .wikitable td { padding: 6px 7px; }
+  .tw { margin-left: -14px; margin-right: -14px; padding: 0 14px; }
+  .navbox th, .navbox td { display: block; width: auto; text-align: left; }
+  .navbox td { line-height: 1.9; }
 }
 
 /* index: 임박한 대회 · 종목 검색 */
@@ -70,3 +88,15 @@ table.portal td:last-child { text-align: right; }
 table.upcoming td:nth-child(3) { white-space: normal; min-width: 260px; }
 table.upcoming .status { text-align: center; }
 #sport-search { font: inherit; width: 100%; max-width: 420px; padding: 6px 8px; border: 1px solid var(--border); border-radius: 2px; }
+
+/* index: 맨 위 종목 박스, 목차 오른쪽 한국 출전권 박스 */
+h1 + .navbox { margin-top: 8px; }
+.navbox + .navbox { margin-top: 6px; }
+.navbox + .lead, .navbox + section { margin-top: 16px; }
+.toc-row { display: flex; gap: 20px; align-items: flex-start; margin-top: 12px; }
+.toc-row .toc { margin-top: 0; flex: 0 0 auto; }
+.quota-box { flex: 1; min-width: 0; border: 1px solid var(--border); background: var(--box); padding: 6px 12px 8px; font-size: .9em; }
+.quota-box h2 { font: 700 1.05em/1.4 sans-serif; border-bottom: 1px solid var(--line); margin: 0 0 6px; padding-bottom: 4px; }
+.quota-box table.wikitable { margin: 4px 0; background: #fff; }
+.quota-box p { margin: 4px 0; }
+@media (max-width: 720px) { .toc-row { display: block; } .quota-box { margin-top: 12px; } }
