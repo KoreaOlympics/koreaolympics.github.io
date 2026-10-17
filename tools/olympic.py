@@ -348,9 +348,12 @@ def render_hub(reg, s):
         parts.setdefault(k, v)
     info = parts.get('infobox') or hub_infobox(reg, s)
     g = reg[s['season']]
-    lines = ''.join(
-        f'<li><b>{E(label)}</b> ' + ' · '.join(f'<a href="{E(event_path(s, e))}">{E(short(e, s, label))}</a>' for e in evs) + '</li>'
-        for label, evs in event_groups(s))
+    def line(label, evs):
+        if len(evs) == 1 and evs[0]['name'] == label:  # 단체 구기: 남자 / 여자
+            return f'<li><a href="{E(event_path(s, evs[0]))}">{E(label)}</a></li>'
+        return (f'<li><b>{E(label)}</b> ' + ' · '.join(
+            f'<a href="{E(event_path(s, e))}">{E(short(e, s, label))}</a>' for e in evs) + '</li>')
+    lines = ''.join(line(label, evs) for label, evs in event_groups(s))
     basis = f' 세부종목은 {E(g["program_basis"])} 기준이다.' if g.get('program_basis') else ''
     lead = (f'<section id="intro" class="lead"><p>{E(g["games"])} {E(s["name"])}에는 '
             f'<b>{len(s["events"])}개</b> 세부종목이 있다.{basis}</p><ul class="event-list">{lines}</ul></section>')
