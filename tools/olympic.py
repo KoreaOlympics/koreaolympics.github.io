@@ -473,13 +473,17 @@ def render_index(reg, today=None):
     toc = []
     for sid, title in INDEX_SECTIONS:
         body = gen.get(sid) or fill_live(parts.get(sid, '<!-- 추가 -->'))
+        if sid == 'korea':  # 목차 오른쪽 박스
+            korea = f'<section id="korea" class="quota-box">\n<h2>{E(title)}</h2>\n{body}\n</section>'
+            continue
         toc.append(f'<li><a href="#{sid}">{E(title)}</a></li>')
         secs.append(f'<section id="{sid}">\n<h2>{E(title)}</h2>\n{body}\n</section>')
     body = '\n'.join([
         '<h1>올림픽예선 <span class="en">(LA28 종목별 예선 시스템)</span></h1>',
+        season_navbox(reg, 'summer', ''), season_navbox(reg, 'winter', ''),
         f'<section id="intro" class="lead">\n{intro}\n</section>',
-        f'<nav class="toc"><h2>목차</h2><ol>{"".join(toc)}</ol></nav>', *secs,
-        season_navbox(reg, 'summer', ''), season_navbox(reg, 'winter', '')])
+        '<div class="toc-row">', f'<nav class="toc"><h2>목차</h2><ol>{"".join(toc)}</ol></nav>', korea, '</div>',
+        *secs])
     html_ = page('올림픽예선 | 코리아 올림픽스', '', body, '2028 LA 올림픽·동계 올림픽 종목별 예선, 임박한 대회, 한국 출전권과 랭킹')
     return path, html_.replace('</body>', INDEX_SCRIPT + '\n</body>')
 

@@ -70,3 +70,15 @@ table.portal td:last-child { text-align: right; }
 table.upcoming td:nth-child(3) { white-space: normal; min-width: 260px; }
 table.upcoming .status { text-align: center; }
 #sport-search { font: inherit; width: 100%; max-width: 420px; padding: 6px 8px; border: 1px solid var(--border); border-radius: 2px; }
+
+/* index: 맨 위 종목 박스, 목차 오른쪽 한국 출전권 박스 */
+h1 + .navbox { margin-top: 8px; }
+.navbox + .navbox { margin-top: 6px; }
+.navbox + .lead, .navbox + section { margin-top: 16px; }
+.toc-row { display: flex; gap: 20px; align-items: flex-start; margin-top: 12px; }
+.toc-row .toc { margin-top: 0; flex: 0 0 auto; }
+.quota-box { flex: 1; min-width: 0; border: 1px solid var(--border); background: var(--box); padding: 6px 12px 8px; font-size: .9em; }
+.quota-box h2 { font: 700 1.05em/1.4 sans-serif; border-bottom: 1px solid var(--line); margin: 0 0 6px; padding-bottom: 4px; }
+.quota-box table.wikitable { margin: 4px 0; background: #fff; }
+.quota-box p { margin: 4px 0; }
+@media (max-width: 720px) { .toc-row { display: block; } .quota-box { margin-top: 12px; } }
