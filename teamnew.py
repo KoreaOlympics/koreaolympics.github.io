@@ -255,14 +255,14 @@ def build(s):
     page = (f'<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
             f'<title>2028 로스앤젤레스 올림픽 {s["sport"]} 예선</title><meta name="description" content="{esc(s["desc"])}">'
             f'<link rel="canonical" href="https://koreaolympics.github.io/{s["name"]}.html">{HEAD_CSS}</head><body>'
-            f'<a class="skip" href="#main">본문 바로가기</a><header class="topbar"><a class="brand" href="https://koreaolympics.github.io/index1.html">KOREA OLYMPICS</a><span>LA28 · 종목별 예선</span></header>'
+            f'<a class="skip" href="#main">본문 바로가기</a><header class="topbar"><a class="brand" href="https://koreaolympics.github.io/index.html">KOREA OLYMPICS</a><span>LA28 · 종목별 예선</span></header>'
             f'<div class="layout">{toc}<main id="main">{sportnav(s["name"])}<p class="eyebrow">ROAD TO LA28 / {s["eyebrow"]}</p>'
             f'<h1>2028 로스앤젤레스 올림픽 {s["sport"]} 예선</h1><p class="subtitle">본선 출전권 · 아시아 예선 · 대한민국의 진출 경로</p>'
             f'<p class="lead">{s["lead"]}</p>{facts}{tabs}{panels}'
             f'<section id="eligibility"><h2>참가 자격</h2>{s["elig"]}</section>'
             f'<section id="references"><h2>출처·자료 기준</h2>{refs}<p class="note">{s["refnote"]}</p></section>'
             f'<details class="compact"><summary>기존 상세 문서 주소</summary><p>{old}</p></details>'
-            f'<footer class="footer"><a href="https://koreaolympics.github.io/index1.html">← 올림픽 예선 전체 목차</a> · <a href="#main">본문 위로</a>'
+            f'<footer class="footer"><a href="https://koreaolympics.github.io/index.html">← 올림픽 예선 전체 목차</a> · <a href="#main">본문 위로</a>'
             f'<p>Korea Olympics · 비공식 한국어 안내 · 편집 2026.10.05</p></footer></main></div>{SCRIPT}</body></html>')
     return page
 

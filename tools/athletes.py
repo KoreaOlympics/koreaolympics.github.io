@@ -396,7 +396,7 @@ def patch_existing(prefix, name):
     for f in files:
         t = open(f, encoding="utf-8", newline="").read()
         o = t
-        t = t.replace("koreaolympics.github.io/index1.html", "koreaolympics.github.io/index.html")
+        t = t.replace("koreaolympics.github.io/index.html", "koreaolympics.github.io/index.html")
         link = f"./{prefix}-athletes.html"
         if 'class="athlete-link"' not in t:
             t = re.sub(r'(<header class="topbar"><div class="topbar-inner">.*?</nav>)', lambda m: m.group(1) + f'<a class="athlete-link" href="{link}">{ICON}<span>한국 선수</span></a>', t, count=1, flags=re.S)

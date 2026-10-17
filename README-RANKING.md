@@ -1,6 +1,6 @@
 # LA28 실제 예선 랭킹 자동 갱신
 
-이 폴더의 내용물을 GitHub Pages 저장소 루트에 합칩니다. `index.html`과 `index1.html`에는 `la28-qualifier-ranking.html` 진입 링크가 이미 포함되어 있습니다.
+이 폴더의 내용물을 GitHub Pages 저장소 루트에 합칩니다. `index.html`과 `index.html`에는 `la28-qualifier-ranking.html` 진입 링크가 이미 포함되어 있습니다.
 
 ## 자동 갱신
 

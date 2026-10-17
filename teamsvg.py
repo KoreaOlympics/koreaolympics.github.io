@@ -414,7 +414,7 @@ def fix(name, t):
         t = t.replace('<p class="note">도표는 기본 1+4+6+1 배정입니다. 지역 직행 자리의 이전이 발생하면 지역 예선 선발 수가 줄고 리페차지 선발 수가 늘어납니다.</p>\n <div class="asia-focus"><h2 id="men-asia">',
                       '<p class="note">도표는 기본 1+4+6+1 배정입니다. 지역 직행 자리의 이전이 발생하면 지역 예선 선발 수가 줄고 리페차지 선발 수가 늘어납니다.</p><p class="snapshot">참고(아시안게임, LA28 예선 아님): 한국 남자는 2026 아시안게임 준결승에서 홍콩에 14–35, 3위 결정전에서 일본에 5–17로 져 4위였습니다.</p>\n <div class="asia-focus"><h2 id="men-asia">', 1)
     elif name == "olhandball":
-        t = t.replace('<a class="brand" href="https://koreaolympics.github.io/">', '<a class="brand" href="https://koreaolympics.github.io/index1.html">')
+        t = t.replace('<a class="brand" href="https://koreaolympics.github.io/">', '<a class="brand" href="https://koreaolympics.github.io/index.html">')
         t = t.replace("<h3>누가 참가하나? — 2024년 규정을 동일하게 적용한다면</h3>", "<h3>누가 참가하나? — LA28 규정 D.3·D.7</h3>")
         t = t.replace('<p class="note">아래는 파리 2024의 선발 방식을 LA28에 적용해 설명한 가정입니다. 2024년의 실제 대륙별 배정 수나 참가국을 2028년 확정 결과로 옮긴 것은 아닙니다.</p>',
                       '<p class="note">아래 편성은 LA28 규정(D.3 남자·D.7 여자)이 직접 정한 방식입니다. 파리 2024 사례는 이해를 돕는 참고일 뿐, 2028년 대륙별 배정 결과가 아닙니다.</p>')

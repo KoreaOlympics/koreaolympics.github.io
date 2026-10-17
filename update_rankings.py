@@ -108,7 +108,7 @@ def detail(url):
             break
     parts=urlparse(url).path.split('/')
     slug=parts[parts.index('qualification-by-sport')+1]
-    sport,icon,page=SPORTS.get(slug,(slug,"🏅","index1.html"))
+    sport,icon,page=SPORTS.get(slug,(slug,"🏅","index.html"))
     return {"sport":sport,"sportSlug":slug,"icon":icon,"page":page,"name":ko_title(title),"originalName":title,"source":url,"updated":mod.group(1) if mod else "","rows":rows,"korea":[r for r in rows if r["noc"]=="KOR"]}
 
 def main():

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """골프 포맷 공통 생성기 (수구·스쿼시 등 배포본과 같은 마크업)."""
 
-INDEX = "https://koreaolympics.github.io/index1.html"
+INDEX = "https://koreaolympics.github.io/index.html"
 
 
 def table(head, rows, caption=None, cls=""):

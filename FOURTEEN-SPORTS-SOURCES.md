@@ -8,7 +8,7 @@
 
 ## olbadminton
 - 페이지: olbadminton-doubles.html olbadminton-ranking.html olbadminton-singles.html olbadminton.html 
-- https://koreaolympics.github.io/index1.html
+- https://koreaolympics.github.io/index.html
 - https://stillmed.olympics.com/media/Documents/Olympic-Games/LA28/BDM-LA28-Qualification-System.pdf
 - https://www.olympics.com/ko/news/an-seyoung-wins-gold-w-singles-badminton-asian-games-2026
 - https://www.olympics.com/ko/news/korea-complete-list-winners-medallists-asian-games-2026
@@ -16,7 +16,7 @@
 
 ## olbasketball
 - 페이지: olbasketball-3x3.html olbasketball-men.html olbasketball-women.html olbasketball.html 
-- https://koreaolympics.github.io/index1.html
+- https://koreaolympics.github.io/index.html
 - https://stillmed.olympics.com/media/Documents/Olympic-Games/LA28/BK3-LA28-Qualification-System.pdf
 - https://stillmed.olympics.com/media/Documents/Olympic-Games/LA28/BKB-LA28-Qualification-System.pdf
 - https://www.nba.com/news/u-s-women-win-fifth-straight-womens-fiba-world-cup-title
@@ -25,7 +25,7 @@
 
 ## olboxing
 - 페이지: olboxing-events.html olboxing-men.html olboxing-women.html olboxing.html 
-- https://koreaolympics.github.io/index1.html
+- https://koreaolympics.github.io/index.html
 - https://stillmed.olympics.com/media/Documents/Olympic-Games/LA28/BOX-LA28-Qualification-System.pdf
 - https://www.hankookilbo.com/news/article/A2026100218500003311
 - https://www.olympics.com/ko/news/korea-complete-list-winners-medallists-asian-games-2026
@@ -33,7 +33,7 @@
 
 ## oldiving
 - 페이지: oldiving-individual.html oldiving-synchro.html oldiving.html 
-- https://koreaolympics.github.io/index1.html
+- https://koreaolympics.github.io/index.html
 - https://stillmed.olympics.com/media/Documents/Olympic-Games/LA28/DIV-LA28-Qualification-System.pdf
 - https://www.newspim.com/news/view/20260930001335
 - https://www.olympics.com/ko/news/korea-complete-list-winners-medallists-asian-games-2026
@@ -41,7 +41,7 @@
 
 ## olfencing
 - 페이지: olfencing-individual.html olfencing-team.html olfencing.html 
-- https://koreaolympics.github.io/index1.html
+- https://koreaolympics.github.io/index.html
 - https://stillmed.olympics.com/media/Documents/Olympic-Games/LA28/FEN-LA28-Qualification-System.pdf
 - https://www.olympics.com/ko/news/korea-complete-list-winners-medallists-asian-games-2026
 - https://www.olympics.com/ko/news/team-korea-all-results-fencing-asian-games-2026
@@ -51,20 +51,20 @@
 - 페이지: olflagfootball-men.html olflagfootball-women.html olflagfootball.html 
 - https://en.wikipedia.org/wiki/2026_IFAF_Men%27s_Flag_Football_World_Championship
 - https://en.wikipedia.org/wiki/2026_IFAF_Women%27s_Flag_Football_World_Championship
-- https://koreaolympics.github.io/index1.html
+- https://koreaolympics.github.io/index.html
 - https://stillmed.olympics.com/media/Documents/Olympic-Games/LA28/FFB-LA28-Qualification-System.pdf
 - 비고: 규정 확인일: 2026.10.04. IOC가 게시한 IFAF 원문 PDF(5쪽, Version as of 10 July 2026)를 기준으로 정리했다. 기존 플래그풋볼 페이지의 2026.7.10 버전 표기와 일치한다. 원문 일정표는 아시아와 오세아니아를 한 대회로 적는다. 본 문서는 비공식 한국어 요약이며 최종 적용은 IFAF 공지를 따른다.
 
 ## olhandball
 - 페이지: olhandball-men.html olhandball-women.html olhandball.html 
-- https://koreaolympics.github.io/index1.html
+- https://koreaolympics.github.io/index.html
 - https://stillmed.olympics.com/media/Documents/Olympic-Games/LA28/HBL-LA28-Qualification-System.pdf
 - https://www.olympics.com/ko/news/korea-complete-list-winners-medallists-asian-games-2026
 - 비고: 규정 확인일: 2026.10.04. IOC가 게시한 IHF 원문 PDF(10쪽, Version as of 12 May 2026)를 기준으로 정리했다. 남자 유럽 예선 개최지는 원문 D.2(스페인·포르투갈·스위스)와 일정표(독일)가 다르다. 기존 핸드볼 페이지의 2026.5.12 버전 표기와 일치한다. 본 문서는 비공식 한국어 요약이며 최종 적용은 IHF 공지를 따른다.
 
 ## olhockey
 - 페이지: olhockey-men.html olhockey-women.html olhockey.html 
-- https://koreaolympics.github.io/index1.html
+- https://koreaolympics.github.io/index.html
 - https://stillmed.olympics.com/media/Documents/Olympic-Games/LA28/HOC-LA28-Qualification-System.pdf
 - https://www.businesstoday.in/sports/story/asian-games-2026-indias-mens-hockey-team-wins-gold-books-place-at-la-olympics-2028-559323-2026-10-03
 - https://www.fih.hockey/events/fih-pro-league/news/belgium-crowned-mens-pro-league-champions-secure-la28-olympic-ticket
@@ -76,27 +76,27 @@
 
 ## ollacrosse
 - 페이지: ollacrosse-men.html ollacrosse-women.html ollacrosse.html 
-- https://koreaolympics.github.io/index1.html
+- https://koreaolympics.github.io/index.html
 - https://lacrosse.com.au/news/2026/08/11/olympic-qualifier-to-bring-asia-pacifics-best-lacrosse-teams-to-the-sunshine-coast/
 - https://stillmed.olympics.com/media/Documents/Olympic-Games/LA28/LAC-LA28-Qualification-System.pdf
 - 비고: 규정 확인일: 2026.10.04. IOC가 게시한 World Lacrosse 원문 PDF(5쪽, Version as of 12 May 2026)를 기준으로 정리했다. 기존 라크로스 페이지의 2026.5.12 버전 표기와 일치한다. 본 문서는 비공식 한국어 요약이며 최종 적용은 World Lacrosse 공지를 따른다.
 
 ## olmarathonswim
 - 페이지: olmarathonswim-priority.html olmarathonswim.html 
-- https://koreaolympics.github.io/index1.html
+- https://koreaolympics.github.io/index.html
 - https://stillmed.olympics.com/media/Documents/Olympic-Games/LA28/OWS-LA28-Qualification-System.pdf
 - 비고: 규정 확인일: 2026.10.04. IOC가 게시한 World Aquatics 원문 PDF(6쪽, Version as of 12 May 2026)를 기준으로 정리했다. 원문 제목은 Open Water Swimming이다. 기존 마라톤 수영 페이지의 2026.5.12 버전 표기와 일치한다. 본 문서는 비공식 한국어 요약이며 최종 적용은 World Aquatics 공지를 따른다.
 
 ## olrugby
 - 페이지: olrugby-men.html olrugby-women.html olrugby.html 
-- https://koreaolympics.github.io/index1.html
+- https://koreaolympics.github.io/index.html
 - https://stillmed.olympics.com/media/Documents/Olympic-Games/LA28/RU7-LA28-Qualification-System.pdf
 - https://www.ajunews.com/view/20261003201038582
 - 비고: 규정 확인일: 2026.10.04. IOC가 게시한 World Rugby 원문 PDF(11쪽, Version as of 12 May 2026)를 기준으로 정리했다. 원문은 지역 선수권 일정을 모두 미정(TBC)으로 적었다. 기존 럭비 페이지의 2026.5.12 버전 표기와 일치한다. 본 문서는 비공식 한국어 요약이며 최종 적용은 World Rugby 공지를 따른다.
 
 ## olshooting
 - 페이지: olshooting-events.html olshooting-pistol.html olshooting-rifle.html olshooting-shotgun.html olshooting.html 
-- https://koreaolympics.github.io/index1.html
+- https://koreaolympics.github.io/index.html
 - https://stillmed.olympics.com/media/Documents/Olympic-Games/LA28/SHO-LA28-Qualification-System.pdf
 - https://www.olympics.com/ko/news/korea-complete-list-winners-medallists-asian-games-2026
 - https://www.olympics.com/ko/news/team-korea-list-of-medallists-shooting-asian-games-2026
@@ -106,7 +106,7 @@
 - 페이지: olvolleyball-beach.html olvolleyball-indoor.html olvolleyball.html 
 - https://en.volleyballworld.com/news/nigeria-and-morocco-snatch-africa-s-olympic-beach-passes
 - https://en.wikipedia.org/wiki/2026_Men%27s_South_American_Volleyball_Championship
-- https://koreaolympics.github.io/index1.html
+- https://koreaolympics.github.io/index.html
 - https://olympic.ca/2026/08/29/canada-punches-ticket-to-la-2028-in-womens-volleyball-at-norceca-qualifier/
 - https://stillmed.olympics.com/media/Documents/Olympic-Games/LA28/VBV-LA28-Qualification-System.pdf
 - https://stillmed.olympics.com/media/Documents/Olympic-Games/LA28/VVO-LA28-Qualification-System.pdf
@@ -124,7 +124,7 @@
 
 ## olwrestling
 - 페이지: olwrestling-freestyle.html olwrestling-greco.html olwrestling-ranking.html olwrestling-women.html olwrestling.html 
-- https://koreaolympics.github.io/index1.html
+- https://koreaolympics.github.io/index.html
 - https://stillmed.olympics.com/media/Documents/Olympic-Games/LA28/WRE-LA28-Qualification-System.pdf
 - https://www.olympics.com/ko/news/korea-complete-list-winners-medallists-asian-games-2026
 - 비고: 규정 확인일: 2026.10.04. IOC가 게시한 UWW 원문 PDF(8쪽, Version as of 13 August 2026)를 기준으로 정리했다. 기존 레슬링 페이지는 2026.7.31 버전이었으나 IOC 게시본이 2026.08.13 버전으로 갱신되어 새 버전으로 정리했다. 본 문서는 비공식 한국어 요약이며 최종 적용은 UWW 공지를 따른다.
