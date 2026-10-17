@@ -28,7 +28,22 @@ TAEKWONDO_EVENT_SECTIONS = [('rules', '예선 규정 및 통과자'), ('results'
 OPTIONAL = {'rules'}  # 내용이 없으면 화면에서 숨긴다 (원칙 5.5)
 
 
+# 종목별 맞춤 구조 (영어 Wikipedia 구조 기준). 없는 종목은 기본 구조를 쓴다.
+LAYOUT = {
+    'olvolleyball': {
+        'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('refs', '각주'), ('links', '외부 링크')],
+        'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')],
+    },
+}
+
+
+def hub_sections(s):
+    return LAYOUT.get(s['file'], {}).get('hub', HUB_SECTIONS)
+
+
 def event_sections(s):
+    if s['file'] in LAYOUT:
+        return LAYOUT[s['file']]['event']
     return TAEKWONDO_EVENT_SECTIONS if s['file'] == 'oltaekwondo' else EVENT_SECTIONS
 
 
@@ -382,7 +397,7 @@ def render_hub(reg, s):
     basis = f' 세부종목은 {E(g["program_basis"])} 기준이다.' if g.get('program_basis') else ''
     lead = (f'<section id="intro" class="lead"><p>{E(g["games"])} {E(s["name"])}에는 '
             f'<b>{len(s["events"])}개</b> 세부종목이 있다.{basis}</p><ul class="event-list">{lines}</ul></section>')
-    toc, secs = render_sections(HUB_SECTIONS, parts)
+    toc, secs = render_sections(hub_sections(s), parts)
     body = '\n'.join([
         f'<nav class="crumb"><a href="index.html">목차</a> › {E(s["name"])}</nav>',
         f'<h1>{E(s["name"])} <span class="en">({E(s["name_en"])})</span></h1>',
@@ -669,7 +684,7 @@ def check():
         if '<script' in t:
             errors.append(f'{rel}: JavaScript 사용')
         ids = re.findall(r'<section id="([a-z]+)"', t)
-        want = ['intro'] + [k for k, _ in (HUB_SECTIONS if kind == 'hub' else event_sections(s))]
+        want = ['intro'] + [k for k, _ in (hub_sections(s) if kind == 'hub' else event_sections(s))]
         if ids != want:
             errors.append(f'{rel}: 섹션 순서 {ids} ≠ {want}')
         # Validate local anchors on the taekwondo pages, including headings
