@@ -23,7 +23,13 @@ HUB_SECTIONS = [('rules', '예선 규정'), ('schedule', '예선 일정'), ('pre
                 ('korea', '대한민국'), ('refs', '각주'), ('links', '외부 링크')]
 EVENT_SECTIONS = [('rules', '예선 규정'), ('quota', '쿼터 획득 현황'), ('results', '주요 대회 결과'),
                   ('athletes', '주목 선수'), ('refs', '각주'), ('links', '외부 링크')]
+TAEKWONDO_EVENT_SECTIONS = [('rules', '예선 규정 및 통과자'), ('results', '주요 대회 결과'),
+                            ('athletes', '주목 선수'), ('refs', '각주'), ('links', '외부 링크')]
 OPTIONAL = {'rules'}  # 내용이 없으면 화면에서 숨긴다 (원칙 5.5)
+
+
+def event_sections(s):
+    return TAEKWONDO_EVENT_SECTIONS if s['file'] == 'oltaekwondo' else EVENT_SECTIONS
 
 
 # ---------------------------------------------------------------- registry
@@ -272,12 +278,28 @@ def hub_skeleton(reg, s):
 
 def event_skeleton(reg, s, e):
     rules = '<!-- 추가: 종목 규정 중 이 세부종목에 해당하는 것 -->'
+    if s['file'] == 'oltaekwondo':
+        rule_rows = [
+            ('D1 · WT 세계 랭킹', '2028년 1월 올림픽 랭킹 체급별 상위 5명'),
+            ('D2 · 그랜드슬램 메리트', '2028년 1월 체급별 메리트 랭킹 1위'),
+            ('D3 · 대륙 예선', '아시아·유럽·아프리카·아메리카 상위 2명씩, 오세아니아 상위 1명 (체급별 9명). D1·D2로 해당 성별 2명 이상을 확보한 NOC는 참가할 수 없다.'),
+            ('D4 · 개최국', '미국에 남녀 각 최소 2명 보장. 미국이 일반 경로로 얻은 출전권 수에 따라 조정된다.'),
+            ('D5 · 보편성', '남녀 각 2명, 총 4명. 3자위원회가 배정한다.'),
+        ]
+        rules = ('<div class="tk-table-wrap tk-compact">'
+                 '<table class="wikitable"><thead><tr><th>예선 항목</th><th>예선 방식</th></tr></thead><tbody>\n'
+                 + ''.join(f'<tr><th scope="row">{E(label)}</th><td>{E(method)}</td></tr>\n' for label, method in rule_rows)
+                 + '</tbody></table></div>\n'
+                 + '<div class="tk-table-wrap tk-compact">'
+                 + '<table class="wikitable"><thead><tr><th>예선 항목</th><th>합격자 명단</th></tr></thead><tbody>\n'
+                 + ''.join(f'<tr><th scope="row">{E(label.split(" · ")[0])}</th><td></td></tr>\n' for label, _ in rule_rows)
+                 + '</tbody></table></div>')
     athletes = '<!-- 추가: 선수 · NOC · 근거(랭킹 · 주요 성적). 한국 선수 행은 class="kor" -->'
     if e.get('live', '').startswith('swim:'):
         rules = live_block(e) + '\n' + rules
     elif e.get('live'):
         athletes = live_block(e) + '\n' + athletes
-    return {
+    result = {
         'rules': rules,
         'quota': ('<table class="wikitable"><thead><tr><th>NOC</th><th>선수</th><th>획득 경로</th><th>일자</th></tr></thead>'
                   '<tbody>\n<!-- 추가: 출전권 획득 (기준일 · 남은 쿼터 수 함께 표기) -->\n</tbody></table>'),
@@ -287,6 +309,9 @@ def event_skeleton(reg, s, e):
         'refs': '<ol class="references">\n<!-- 추가: 출처 (확인일 포함) -->\n</ol>',
         'links': '<ul>\n<!-- 추가: 공식 페이지 · 대회 정보 · 칼럼 -->\n</ul>',
     }
+    if s['file'] == 'oltaekwondo':
+        result.pop('quota')
+    return result
 
 
 # ---------------------------------------------------------------- render
@@ -374,7 +399,7 @@ def render_event(reg, s, e):
     info = parts.get('infobox') or event_infobox(reg, s, e)
     intro = parts.get('intro') or '<p><!-- 추가: 이 세부종목이 무엇인지, 몇 명이 어떻게 겨루는지 2~3문장 --></p>'
     g = reg[s['season']]
-    toc, secs = render_sections(EVENT_SECTIONS, parts)
+    toc, secs = render_sections(event_sections(s), parts)
     groups = [(label, [(e2['file'] + '.html', short(e2, s, label)) for e2 in evs]) for label, evs in event_groups(s)]
     nb = navbox(f'<a href="../{E(hub_path(s))}">{E(s["name"])}</a> 세부종목', groups, e['file'] + '.html')
     body = '\n'.join([
@@ -590,6 +615,10 @@ def check():
                     errors.append(f'{rel}: 없는 파일 → {target}')
                 continue
             if target not in files:
+                if (files[rel][1] is not None and files[rel][1]['file'] == 'oltaekwondo'
+                        and re.fullmatch(r'oltaekwondo-p-[a-z0-9-]+\.html', target)
+                        and (ROOT / target).is_file()):
+                    continue
                 if rel != 'index.html':
                     errors.append(f'{rel}: 관리 대상 밖 내부 링크 → {target}')
             elif not (ROOT / target).exists():
@@ -620,9 +649,27 @@ def check():
         if '<script' in t:
             errors.append(f'{rel}: JavaScript 사용')
         ids = re.findall(r'<section id="([a-z]+)"', t)
-        want = ['intro'] + [k for k, _ in (HUB_SECTIONS if kind == 'hub' else EVENT_SECTIONS)]
+        want = ['intro'] + [k for k, _ in (HUB_SECTIONS if kind == 'hub' else event_sections(s))]
         if ids != want:
             errors.append(f'{rel}: 섹션 순서 {ids} ≠ {want}')
+        # Validate local anchors on the taekwondo pages, including headings
+        # that look like links and point to sections that have been removed.
+        if s['file'] == 'oltaekwondo':
+            page_ids = set(re.findall(r'\bid="([^"]+)"', t))
+            for href in re.findall(r'<a\b[^>]*\bhref="([^"]*)"', t):
+                if not href or re.match(r'^(?:[a-z]+:|//)', href, re.I):
+                    continue
+                raw_path, _, fragment = href.partition('#')
+                target = (Path(rel).parent / raw_path).as_posix() if raw_path else rel
+                target = str(Path(target))
+                target_text = texts.get(target)
+                if target_text is None and (ROOT / target).is_file():
+                    target_text = (ROOT / target).read_text(encoding='utf-8')
+                if target_text is None:
+                    errors.append(f'{rel}: 끊긴 내부 링크 → {href}')
+                    continue
+                if fragment and not re.search(r'\bid="' + re.escape(fragment) + r'"', target_text):
+                    errors.append(f'{rel}: 없는 내부 문서 위치 → {href}')
         if kind == 'hub':
             lead = re.search(r'<section id="intro".*?</section>', t, re.S).group(0)
             n = len(re.findall(r'<a href="' + re.escape(s['file']) + r'/', lead))

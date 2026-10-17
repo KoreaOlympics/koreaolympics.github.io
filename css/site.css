@@ -100,3 +100,21 @@ h1 + .navbox { margin-top: 8px; }
 .quota-box table.wikitable { margin: 4px 0; background: #fff; }
 .quota-box p { margin: 4px 0; }
 @media (max-width: 720px) { .toc-row { display: block; } .quota-box { margin-top: 12px; } }
+
+/* 태권도 본문 표: 다른 종목에는 적용하지 않는다. */
+.tk-table-wrap { width: 100%; max-width: 100%; overflow-x: auto; margin: .7em 0 1em; }
+.tk-table-wrap table.wikitable { display: table; width: 100%; max-width: none; margin: 0; table-layout: auto; }
+.tk-table-wrap .wikitable th, .tk-table-wrap .wikitable td { white-space: normal; word-break: keep-all; overflow-wrap: break-word; padding: 7px 10px; vertical-align: top; }
+.tk-table-wrap .wikitable tbody th { font-weight: 400; }
+.tk-table-wrap.tk-wide .wikitable { min-width: 620px; }
+.tk-table-wrap.tk-medium .wikitable { min-width: 450px; }
+.tk-table-wrap.tk-compact .wikitable { min-width: 280px; }
+.tk-table-wrap.tk-calendar .wikitable { min-width: 0; table-layout: fixed; }
+.tk-calendar .wikitable th:first-child, .tk-calendar .wikitable td:first-child { width: 36%; }
+.tk-calendar .wikitable td:first-child { white-space: nowrap; }
+.tk-table-wrap .wikitable td > a + a { margin-left: .5em; }
+@media(max-width: 720px) {
+  .tk-table-wrap .wikitable { font-size: .88em; }
+  .tk-calendar .wikitable th:first-child, .tk-calendar .wikitable td:first-child { width: 45%; }
+  .tk-table-wrap .wikitable th, .tk-table-wrap .wikitable td { padding: 7px 8px; }
+}
