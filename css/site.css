@@ -118,3 +118,10 @@ h1 + .navbox { margin-top: 8px; }
   .tk-calendar .wikitable th:first-child, .tk-calendar .wikitable td:first-child { width: 45%; }
   .tk-table-wrap .wikitable th, .tk-table-wrap .wikitable td { padding: 7px 8px; }
 }
+
+/* 좁은 표 (양궁 허브 등): 본문 폭을 채우지 않고 내용 폭에 맞춰 제한 */
+table.wikitable.narrow { width: auto; max-width: 640px; }
+.tw:has(> table.narrow) { width: fit-content; max-width: 100%; }
+table.upcoming td.content { font-size: .8em; line-height: 1.35; max-width: 340px; }
+table.upcoming td:nth-child(3) { white-space: nowrap; }
+h4 { font-size: 1em; margin: 1em 0 .3em; }

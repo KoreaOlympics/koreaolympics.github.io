@@ -411,9 +411,29 @@ def render_event(reg, s, e):
                       f'{g["games"]} {s["name"]} {e["name"]} 예선·쿼터·주요 선수')
 
 
-INDEX_SECTIONS = [('upcoming', '임박한 대회'), ('korea', '한국 출전권'), ('sports', '종목'), ('ranking', '랭킹'),
-                  ('major', '주요 대회'), ('athletes', '한국 선수 문서'), ('links', '외부 링크')]
-INDEX_GENERATED = {'upcoming', 'sports'}
+INDEX_SECTIONS = [('upcoming', '임박한 대회'), ('korea', '한국 출전권'), ('ranking', '랭킹'),
+                  ('athletes', '한국 선수 문서'), ('links', '외부 링크')]
+INDEX_GENERATED = {'upcoming'}
+SPORT_BOLD = {'summer': ['배드민턴', '사격', '양궁', '유도', '태권도', '펜싱'], 'winter': ['쇼트트랙', '컬링', '스노보드']}
+
+
+def sport_box(reg, season):
+    """index 상단 종목 박스. 하계는 첫 줄 볼드 종목 + 줄바꿈 + 가나다순, 동계는 가나다순 한 줄(볼드 표시)."""
+    g = reg[season]
+    links = {s['name']: hub_path(s) for s in g['sports']}
+    bold = [n for n in SPORT_BOLD[season] if n in links]
+    link = lambda n: f'<a href="{E(links[n])}">{E(n)}</a>'
+    if season == 'summer':
+        rest = sorted(n for n in links if n not in bold)
+        top = ' · '.join(f'<b>{link(n)}</b>' for n in bold)
+        body = f'{top}<br>' + ' · '.join(link(n) for n in rest)
+        caption = f'{E(g["games"])} 종목'
+    else:
+        names = sorted(links)
+        body = ' · '.join(f'<b>{link(n)}</b>' if n in bold else link(n) for n in names)
+        caption = f'{E(g["games"])} 종목'
+    return (f'<nav class="navbox"><table><caption>{caption}</caption>'
+            f'<tbody><tr><th>{E(g["label"])}</th><td>{body}</td></tr></tbody></table></nav>')
 SCHEDULE = 'data/index-schedule.json'
 
 
@@ -439,13 +459,13 @@ def render_upcoming(reg, today):
         title = f'<b>{E(x["title"])}</b>' if x.get('major') else E(x['title'])
         rows += (f'<tr data-start="{x["start"]}" data-end="{end}" data-kind="{x["kind"]}"{" class=\"major\"" if x.get("major") else ""}>'
                  f'<td>{when}</td><td><a href="{E(x["sport"])}.html">{E(x.get("label") or names.get(x["sport"], x["sport"]))}</a></td>'
-                 f'<td>{title}</td><td>{E(kinds[x["kind"]])}</td><td class="status">{status}</td></tr>\n')
+                 f'<td>{E(kinds[x["kind"]])}</td><td class="status">{status}</td><td class="content">{title}</td></tr>\n')
     buttons = '<button type="button" data-kind="" class="on">전체</button>' + ''.join(
         f'<button type="button" data-kind="{k}">{E(v)}</button>' for k, v in kinds.items())
     return (f'<p>진행 중이거나 다가오는 예선 대회·랭킹 기간·마감일. <b>굵은 글씨</b>는 출전권이 많이 걸린 주요 대회다. '
             f'일정 자료: <code>{SCHEDULE}</code></p>\n'
             f'<div class="filters" role="group" aria-label="경로별 보기">{buttons}</div>\n'
-            '<table class="wikitable upcoming"><thead><tr><th>날짜</th><th>종목</th><th>내용</th><th>경로</th><th>상태</th></tr></thead>'
+            '<table class="wikitable upcoming"><thead><tr><th>날짜</th><th>종목</th><th>경로</th><th>상태</th><th>내용</th></tr></thead>'
             f'<tbody>\n{rows}</tbody></table>\n<p><button type="button" id="upcoming-more">전체 일정 보기</button></p>')
 
 
@@ -521,7 +541,7 @@ def render_index(reg, today=None):
     today = today or dt.date.today().isoformat()
     path = ROOT / 'index.html'
     parts = preserved(path) or {}
-    gen = {'upcoming': render_upcoming(reg, today), 'sports': render_sports_index(reg)}
+    gen = {'upcoming': render_upcoming(reg, today)}
     intro = parts.get('intro') or '<p><!-- 추가: 사이트 소개 --></p>'
     secs = []
     toc = []
@@ -534,7 +554,7 @@ def render_index(reg, today=None):
         secs.append(f'<section id="{sid}">\n<h2>{E(title)}</h2>\n{body}\n</section>')
     body = '\n'.join([
         '<h1>올림픽예선 <span class="en">(LA28 종목별 예선 시스템)</span></h1>',
-        season_navbox(reg, 'summer', ''), season_navbox(reg, 'winter', ''),
+        sport_box(reg, 'summer'), sport_box(reg, 'winter'),
         f'<section id="intro" class="lead">\n{intro}\n</section>',
         '<div class="toc-row">', f'<nav class="toc"><h2>목차</h2><ol>{"".join(toc)}</ol></nav>', korea, '</div>',
         *secs])
