@@ -131,19 +131,30 @@ index.html
 
 ## 8. index.html (예외)
 
-index는 사람이 관리하는 대시보드다. 다음은 예외로 허용한다.
+index는 Wikipedia 대문 형식으로 툴이 만든다. 섹션 순서는 다음과 같다.
 
-- 종목 문서 외의 내부 페이지 연결: 랭킹(`la28-qualifier-ranking.html`), 출전권 현황(`la28-quota-status.html`), 이슈, 선수 문서 등 현재 수준의 연결.
-- 자체 스타일과 JavaScript.
+| 섹션 (`id`) | 작성 |
+|---|---|
+| 소개 (`intro`) | 사람 |
+| 임박한 대회 (`upcoming`) | 툴: `data/index-schedule.json`에서 생성. 진행 중은 LIVE, 다가오는 것은 D-n, 지난 일정은 숨김 (작은 스크립트가 오늘 날짜로 다시 계산) |
+| 한국 출전권 (`korea`) | 사람 |
+| 종목 (`sports`) | 툴: 명단의 하계·동계 종목 전부와 검색창 |
+| 랭킹 (`ranking`) | 사람 + 실시간 블록 `rankings:all` (`data/la28-ranking-details.json`) |
+| 주요 대회 (`major`) · 한국 선수 문서 (`athletes`) · 외부 링크 (`links`) | 사람 |
 
-지켜야 할 것은 하나다. **모든 종목 문서(하계 40 · 동계 16)를 index에서 연결한다.**
-툴은 index를 새로 만들지 않는다. 동계 종목 목록(`<nav class="wd-grid">`)만 명단대로 다시 쓰고, 나머지는 손대지 않는다. 하계 종목 연결은 `check`가 확인한다.
+예외로 허용하는 것:
+
+- 종목 문서 외의 내부 페이지 연결(랭킹, 출전권 현황판, 선수 문서 등 현재 수준의 연결).
+- 위 기능을 위한 스크립트.
+
+**임박한 대회 추가·수정**은 `data/index-schedule.json`의 `events`만 고친다.
+항목은 `start` · `end`(없으면 null) · `sport`(종목 파일명) · `label`(표시 이름, 선택) · `title` · `kind`(direct · worlds · cont · rank · etc) · `major`(주요 대회면 true)이다.
 
 ## 9. 관리 툴 (`tools/olympic.py`)
 
 | 명령 | 하는 일 |
 |---|---|
-| `python tools/olympic.py build` | 명단대로 종목·세부종목 문서를 만들거나 갱신하고, index의 동계 목록을 갱신한다. 툴 영역(경로·제목·도입문 링크·목차·내비박스·실시간 블록)만 다시 쓰고, 사람이 쓴 섹션 본문과 인포박스는 보존한다. 여러 번 실행해도 결과가 같다. |
+| `python tools/olympic.py build` | 명단대로 index · 종목 · 세부종목 문서를 만들거나 갱신한다. 툴 영역(경로·제목·도입문 링크·목차·내비박스·실시간 블록)만 다시 쓰고, 사람이 쓴 섹션 본문과 인포박스는 보존한다. 여러 번 실행해도 결과가 같다. |
 | `python tools/olympic.py check` | 아래 항목을 검사하고, 실패하면 종료 코드 1을 낸다. |
 | `python tools/olympic.py todo` | 문서별 LIVE 표시와 `<!-- 추가: -->` 자리 수를 보여 준다. |
 

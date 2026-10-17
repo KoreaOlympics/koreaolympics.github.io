@@ -357,19 +357,131 @@ def render_event(reg, s, e):
                       f'{g["games"]} {s["name"]} {e["name"]} 예선·쿼터·주요 선수')
 
 
-WD_RE = re.compile(r'(<nav class="wd-grid"[^>]*>).*?(</nav>)', re.S)
+INDEX_SECTIONS = [('upcoming', '임박한 대회'), ('korea', '한국 출전권'), ('sports', '종목'), ('ranking', '랭킹'),
+                  ('major', '주요 대회'), ('athletes', '한국 선수 문서'), ('links', '외부 링크')]
+INDEX_GENERATED = {'upcoming', 'sports'}
+SCHEDULE = 'data/index-schedule.json'
 
 
-def render_index(reg):
-    """index는 예외: 사람이 관리하는 대시보드다 (랭킹·현황 등 다른 내부 링크 허용).
-    툴은 동계 종목 목록(wd-grid)만 명단대로 다시 쓴다. 하계 종목 연결은 check가 확인한다."""
+def _d(s):
+    return s.replace('-', '.')
+
+
+def render_upcoming(reg, today):
+    """임박한 대회 표: data/index-schedule.json에서 만든다. 상태(LIVE · D-n)와 지난 일정 숨김은 스크립트가 오늘 날짜로 다시 계산한다."""
+    import datetime as dt
+    d = json.loads((ROOT / SCHEDULE).read_text(encoding='utf-8'))
+    kinds = d['kinds']
+    names = {s['file']: s['name'] for s in sports(reg)}
+    rows = ''
+    for x in sorted(d['events'], key=lambda x: x['start']):
+        end = x.get('end') or x['start']
+        if end < today:
+            continue
+        a, b = dt.date.fromisoformat(x['start']), dt.date.fromisoformat(today)
+        status = '<span class="live">LIVE</span>' if x['start'] <= today else f'D-{(a - b).days}'
+        when = _d(x['start']) + (f'–{_d(x["end"])[5:]}' if x.get('end') and x['end'][:4] == x['start'][:4]
+                                  else f'–{_d(x["end"])}' if x.get('end') else '')
+        title = f'<b>{E(x["title"])}</b>' if x.get('major') else E(x['title'])
+        rows += (f'<tr data-start="{x["start"]}" data-end="{end}" data-kind="{x["kind"]}"{" class=\"major\"" if x.get("major") else ""}>'
+                 f'<td>{when}</td><td><a href="{E(x["sport"])}.html">{E(x.get("label") or names.get(x["sport"], x["sport"]))}</a></td>'
+                 f'<td>{title}</td><td>{E(kinds[x["kind"]])}</td><td class="status">{status}</td></tr>\n')
+    buttons = '<button type="button" data-kind="" class="on">전체</button>' + ''.join(
+        f'<button type="button" data-kind="{k}">{E(v)}</button>' for k, v in kinds.items())
+    return (f'<p>진행 중이거나 다가오는 예선 대회·랭킹 기간·마감일. <b>굵은 글씨</b>는 출전권이 많이 걸린 주요 대회다. '
+            f'일정 자료: <code>{SCHEDULE}</code></p>\n'
+            f'<div class="filters" role="group" aria-label="경로별 보기">{buttons}</div>\n'
+            '<table class="wikitable upcoming"><thead><tr><th>날짜</th><th>종목</th><th>내용</th><th>경로</th><th>상태</th></tr></thead>'
+            f'<tbody>\n{rows}</tbody></table>\n<p><button type="button" id="upcoming-more">전체 일정 보기</button></p>')
+
+
+def render_sports_index(reg):
+    out = ['<p><input type="search" id="sport-search" placeholder="종목·세부종목 검색 (예: 리커브, judo, 쇼트트랙)" aria-label="종목 검색"></p>']
+    for season in ('summer', 'winter'):
+        g = reg[season]
+        n = sum(len(s['events']) for s in g['sports'])
+        rows = ''
+        for s in g['sports']:
+            kw = ' '.join([s['name_en'].lower()] + [e['name'] for e in s['events']] + s.get('groups', []))
+            rows += (f'<tr data-kw="{E(kw)}"><td><a href="{E(hub_path(s))}">{E(s["name"])}</a></td>'
+                     f'<td>{E(s["name_en"])}</td><td>{len(s["events"])}</td></tr>')
+        note = f' 세부종목은 {E(g["program_basis"])} 기준.' if g.get('program_basis') else ''
+        out.append(f'<h3>{E(g["label"])} · {E(g["games"])}</h3><p>{len(g["sports"])}개 종목 · {n}개 세부종목.{note}</p>'
+                   f'<table class="wikitable portal sports-table"><thead><tr><th>종목</th><th>영문</th><th>세부종목</th></tr></thead>'
+                   f'<tbody>{rows}</tbody></table>')
+    return '\n'.join(out)
+
+
+def live_rankings(_key):
+    d = _json('data/la28-ranking-details.json')
+    if not d:
+        return None
+    by = {}
+    for r in d['rankings']:
+        if not r.get('rows'):
+            continue
+        x = by.setdefault(r['sport'], {'count': 0, 'kor': 0})
+        x['count'] += 1
+        if r.get('korea') or any(v.get('noc') == 'KOR' for v in r['rows']):
+            x['kor'] += 1
+    from urllib.parse import quote
+    items = ' · '.join(
+        (f'<a href="la28-qualifier-ranking.html?sport={quote(s)}{"&amp;korea=1" if x["kor"] else ""}">'
+         + (f'<b>{E(s)}</b>' if x['kor'] else E(s)) + '</a>')
+        for s, x in sorted(by.items(), key=lambda kv: (-(kv[1]['kor'] > 0), kv[0])))
+    return (f'<p>현재 순위표가 형성된 예선 랭킹 {len(by)}개 종목 ({E(d["generated"][:10])} 기준). '
+            f'<b>굵은 글씨</b>는 대한민국이 랭킹에 있는 종목.</p><p>{items}</p>')
+
+
+LIVE['rankings'] = live_rankings
+
+INDEX_SCRIPT = """<script>
+(function(){
+  function day(s){var a=s.split('-');return new Date(+a[0],+a[1]-1,+a[2]);}
+  var now=new Date(),today=new Date(now.getFullYear(),now.getMonth(),now.getDate());
+  var rows=[].slice.call(document.querySelectorAll('table.upcoming tbody tr')),kind='',all=false;
+  rows.forEach(function(tr){
+    var a=day(tr.dataset.start),b=day(tr.dataset.end),st=tr.querySelector('.status');
+    tr.dataset.past=b<today?'1':'';
+    st.innerHTML=a<=today?'<span class="live">LIVE</span>':'D-'+Math.round((a-today)/864e5);
+  });
+  function show(){var n=0;rows.forEach(function(tr){var ok=!tr.dataset.past&&(!kind||tr.dataset.kind===kind);
+    if(ok)n++;tr.hidden=!ok||(!all&&n>10);});
+    var m=document.getElementById('upcoming-more');if(m)m.textContent=all?'처음 10개만 보기':'전체 일정 보기';}
+  document.querySelectorAll('.filters button').forEach(function(btn){btn.addEventListener('click',function(){
+    kind=btn.dataset.kind;document.querySelectorAll('.filters button').forEach(function(b){b.classList.toggle('on',b===btn);});show();});});
+  var more=document.getElementById('upcoming-more');if(more)more.addEventListener('click',function(){all=!all;show();});
+  show();
+  var q=document.getElementById('sport-search');
+  if(q)q.addEventListener('input',function(){var v=q.value.trim().toLowerCase().replace(/\\s/g,'');
+    document.querySelectorAll('.sports-table tbody tr').forEach(function(tr){
+      var h=(tr.textContent+' '+tr.dataset.kw).toLowerCase().replace(/\\s/g,'');tr.hidden=!!v&&h.indexOf(v)<0;});});
+})();
+</script>"""
+
+
+def render_index(reg, today=None):
+    """index: 대문. 임박한 대회·종목 목록·랭킹 블록은 툴이 만들고, 나머지 섹션은 사람이 쓴다.
+    예외 규정(원칙 8장): 종목 문서 외 내부 페이지 링크와 스크립트를 허용한다."""
+    import datetime as dt
+    today = today or dt.date.today().isoformat()
     path = ROOT / 'index.html'
-    with open(path, encoding='utf-8', newline='') as f:  # 원본 줄바꿈(CRLF) 유지
-        text = f.read()
-    pills = ''.join(f'<a class="wd-pill" href="./{E(hub_path(s))}">{E(s["name"])}</a>' for s in reg['winter']['sports'])
-    if WD_RE.search(text):
-        text = WD_RE.sub(lambda m: m.group(1) + pills + m.group(2), text, count=1)
-    return path, text
+    parts = preserved(path) or {}
+    gen = {'upcoming': render_upcoming(reg, today), 'sports': render_sports_index(reg)}
+    intro = parts.get('intro') or '<p><!-- 추가: 사이트 소개 --></p>'
+    secs = []
+    toc = []
+    for sid, title in INDEX_SECTIONS:
+        body = gen.get(sid) or fill_live(parts.get(sid, '<!-- 추가 -->'))
+        toc.append(f'<li><a href="#{sid}">{E(title)}</a></li>')
+        secs.append(f'<section id="{sid}">\n<h2>{E(title)}</h2>\n{body}\n</section>')
+    body = '\n'.join([
+        '<h1>올림픽예선 <span class="en">(LA28 종목별 예선 시스템)</span></h1>',
+        f'<section id="intro" class="lead">\n{intro}\n</section>',
+        f'<nav class="toc"><h2>목차</h2><ol>{"".join(toc)}</ol></nav>', *secs,
+        season_navbox(reg, 'summer', ''), season_navbox(reg, 'winter', '')])
+    html_ = page('올림픽예선 | 코리아 올림픽스', '', body, '2028 LA 올림픽·동계 올림픽 종목별 예선, 임박한 대회, 한국 출전권과 랭킹')
+    return path, html_.replace('</body>', INDEX_SCRIPT + '\n</body>')
 
 
 def build():
@@ -439,6 +551,10 @@ def check():
         graph[rel] = []
         for target in links_of(rel, t):
             if target == CSS:
+                continue
+            if re.search(r'\.(png|jpe?g|webp|gif|svg|pdf)$', target):  # 이미지·첨부 파일은 허용 (존재만 확인)
+                if not (ROOT / target).exists():
+                    errors.append(f'{rel}: 없는 파일 → {target}')
                 continue
             if target not in files:
                 if rel != 'index.html':

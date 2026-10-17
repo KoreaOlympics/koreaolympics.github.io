@@ -1,0 +1,312 @@
+{
+ "kinds": {
+  "direct": "직행",
+  "worlds": "세계선수권",
+  "cont": "대륙예선",
+  "rank": "랭킹·기간",
+  "etc": "준비·마감"
+ },
+ "events": [
+  {
+   "start": "2026-10-05",
+   "end": "2026-10-10",
+   "sport": "ollacrosse",
+   "label": "라크로스",
+   "title": "아시아·태평양 대륙 세계선수권 예선",
+   "kind": "cont"
+  },
+  {
+   "start": "2026-10-14",
+   "end": "2026-10-18",
+   "sport": "olcycling",
+   "label": "사이클(트랙)",
+   "title": "UCI 트랙 세계선수권 · 상하이 — 트랙 예선 기간 개시(10.14~2028.04.10), 성적 랭킹 반영",
+   "kind": "worlds",
+   "major": true
+  },
+  {
+   "start": "2026-10-17",
+   "end": "2026-10-25",
+   "sport": "olgymnastics",
+   "label": "기계체조",
+   "title": "제54회 FIG 세계선수권 · 로테르담 — 남녀 단체 결승 상위 3개국 직행",
+   "kind": "direct",
+   "major": true
+  },
+  {
+   "start": "2026-10-20",
+   "end": null,
+   "sport": "olcycling",
+   "label": "사이클(도로)",
+   "title": "도로 예선 기간 개시(~2027.10.19) — UCI 국가 랭킹 적립",
+   "kind": "rank"
+  },
+  {
+   "start": "2026-10-27",
+   "end": "2026-11-08",
+   "sport": "olweightlifting",
+   "label": "역도",
+   "title": "IWF 세계선수권 · 닝보 — 올림픽예선랭킹(OQR) 1기간 첫 대회",
+   "kind": "worlds",
+   "major": true
+  },
+  {
+   "start": "2026-11-01",
+   "end": "2026-11-14",
+   "sport": "olshooting",
+   "label": "사격",
+   "title": "ISSF 세계선수권 · 도하 — 12개 개인종목 × 3장 = 36장",
+   "kind": "worlds",
+   "major": true
+  },
+  {
+   "start": "2026-11-02",
+   "end": "2026-11-18",
+   "sport": "ollacrosse",
+   "label": "라크로스",
+   "title": "유럽 대륙 세계선수권 예선",
+   "kind": "cont"
+  },
+  {
+   "start": "2026-11-03",
+   "end": "2026-11-07",
+   "sport": "olcycling",
+   "label": "사이클(BMX 프리스타일)",
+   "title": "UCI 어반 사이클링 세계선수권 · 리야드 — 파크 엘리트 2자리",
+   "kind": "worlds"
+  },
+  {
+   "start": "2026-11-06",
+   "end": "2026-11-15",
+   "sport": "olsurfing",
+   "label": "서핑",
+   "title": "ISA 세계서핑게임 · 페루 푼타 로카스 — 남녀 팀 순위 1위 국가 1자리씩",
+   "kind": "worlds"
+  },
+  {
+   "start": "2026-11-15",
+   "end": null,
+   "sport": "olvolleyball",
+   "label": "비치발리볼",
+   "title": "대륙선수권·대륙투어 파이널 마감(2026.08.01~) — 대륙별 첫 출전권",
+   "kind": "cont"
+  },
+  {
+   "start": "2026-11-21",
+   "end": "2026-12-01",
+   "sport": "olshooting",
+   "label": "사격",
+   "title": "아메리카선수권 · 리마 — 12장",
+   "kind": "cont"
+  },
+  {
+   "start": "2026-11-23",
+   "end": null,
+   "sport": "olvolleyball",
+   "label": "배구",
+   "title": "FIVB, 대륙 예선 출전권 서면 확정",
+   "kind": "etc"
+  },
+  {
+   "start": "2026-12-03",
+   "end": "2026-12-20",
+   "sport": "olhandball",
+   "label": "핸드볼",
+   "title": "여자 유럽선수권(대륙예선 겸용) · 폴란드·체코·루마니아·슬로바키아·튀르키예",
+   "kind": "cont"
+  },
+  {
+   "start": "2026-12-07",
+   "end": "2026-12-16",
+   "sport": "olweightlifting",
+   "label": "역도",
+   "title": "IWF 예선 I · 도하 — OQR 1기간",
+   "kind": "rank",
+   "major": true
+  },
+  {
+   "start": "2026-12-08",
+   "end": null,
+   "sport": "olhockey",
+   "label": "필드하키",
+   "title": "FIH 프로리그 시즌8 개막(~2027.06.20)",
+   "kind": "rank"
+  },
+  {
+   "start": "2026-12-15",
+   "end": null,
+   "sport": "olequestrian",
+   "label": "승마",
+   "title": "FEI 올림픽 랭킹 규정 발표(마장마술·종합마술·장애물)",
+   "kind": "etc"
+  },
+  {
+   "start": "2026-12-31",
+   "end": null,
+   "sport": "olcricket",
+   "label": "크리켓",
+   "title": "남자 ICC T20 랭킹 마감 — 남자 4팀·최종예선(FOGQT) 진출국 확정",
+   "kind": "rank"
+  },
+  {
+   "start": "2026-12-31",
+   "end": null,
+   "sport": "olarchery",
+   "label": "양궁",
+   "title": "대륙 예선 대회(CQT) 지정 마감",
+   "kind": "etc"
+  },
+  {
+   "start": "2026-12-31",
+   "end": null,
+   "sport": "olswimming",
+   "label": "수영",
+   "title": "2027년 예선 대회 승인 신청 마감(국가 연맹)",
+   "kind": "etc"
+  },
+  {
+   "start": "2027-01-01",
+   "end": null,
+   "sport": "olmodernpentathlon",
+   "label": "근대5종",
+   "title": "올림픽 세계랭킹 산정 시작(~2028.06.05)",
+   "kind": "rank"
+  },
+  {
+   "start": "2027-01-01",
+   "end": null,
+   "sport": "olwrestling",
+   "label": "레슬링",
+   "title": "올림픽 예선 기간 개시(~2028.05.28)",
+   "kind": "rank"
+  },
+  {
+   "start": "2027-01-01",
+   "end": null,
+   "sport": "olequestrian",
+   "label": "승마",
+   "title": "FEI 올림픽 랭킹 집계 · 최소자격(MER) 인정 시작",
+   "kind": "rank"
+  },
+  {
+   "start": "2027-01-13",
+   "end": "2027-01-31",
+   "sport": "olhandball",
+   "label": "핸드볼",
+   "title": "남자 세계선수권 · 독일",
+   "kind": "worlds"
+  },
+  {
+   "start": "2027-01-15",
+   "end": "2027-01-23",
+   "sport": "olsailing",
+   "label": "요트",
+   "title": "세계선수권 · 포르탈레자 — 윈드서핑·카이트·딩기",
+   "kind": "worlds"
+  },
+  {
+   "start": "2027-01-20",
+   "end": "2027-02-07",
+   "sport": "oltriathlon",
+   "label": "트라이애슬론",
+   "title": "아프리카게임(아프리카 대륙종합대회 경로)",
+   "kind": "cont"
+  },
+  {
+   "start": "2027-02-08",
+   "end": null,
+   "sport": "olsailing",
+   "label": "요트",
+   "title": "1인승 종목 세계선수권 쿼터 통보",
+   "kind": "etc"
+  },
+  {
+   "start": "2027-02-15",
+   "end": null,
+   "sport": "olswimming",
+   "label": "수영",
+   "title": "2027년 승인 예선 대회 목록 공표",
+   "kind": "etc"
+  },
+  {
+   "start": "2027-02-15",
+   "end": "2027-02-21",
+   "sport": "olwrestling",
+   "label": "레슬링",
+   "title": "제1차 랭킹 시리즈",
+   "kind": "rank"
+  },
+  {
+   "start": "2027-02-24",
+   "end": "2027-02-28",
+   "sport": "olwaterpolo",
+   "label": "수구",
+   "title": "월드아쿠아틱스 수구 월드컵 — 남녀 1팀씩 직행",
+   "kind": "direct"
+  },
+  {
+   "start": "2027-03-01",
+   "end": null,
+   "sport": "olcricket",
+   "label": "크리켓",
+   "title": "여자 ICC T20 랭킹 마감 — 여자 최종예선(FOGQT) 진출국 확정",
+   "kind": "rank"
+  },
+  {
+   "start": "2027-03-01",
+   "end": null,
+   "sport": "olswimming",
+   "label": "수영",
+   "title": "올림픽 기준기록 인정 기간 시작",
+   "kind": "rank"
+  },
+  {
+   "start": "2027-03-01",
+   "end": "2027-03-31",
+   "sport": "olboxing",
+   "label": "복싱",
+   "title": "LA28 월드복싱 이벤트 규정 공표 예정",
+   "kind": "etc"
+  },
+  {
+   "start": "2027-03-30",
+   "end": "2027-04-04",
+   "sport": "olwrestling",
+   "label": "레슬링",
+   "title": "아시아선수권(랭킹 반영)",
+   "kind": "cont"
+  },
+  {
+   "start": "2027-04-01",
+   "end": null,
+   "sport": "olfencing",
+   "label": "펜싱",
+   "title": "예선 기간 개시 — FIE 랭킹 포인트 적립 시작",
+   "kind": "rank"
+  },
+  {
+   "start": "2027-04-01",
+   "end": "2027-04-30",
+   "sport": "olboxing",
+   "label": "복싱",
+   "title": "세계복싱선수권 · 아스타나 — 예선 기간 개시",
+   "kind": "worlds"
+  },
+  {
+   "start": "2027-04-01",
+   "end": "2027-06-06",
+   "sport": "olrugby",
+   "label": "럭비",
+   "title": "월드럭비 SVNS 세계선수권(남·여, 3개 대회)",
+   "kind": "worlds"
+  },
+  {
+   "start": "2027-04-05",
+   "end": "2027-05-02",
+   "sport": "olwrestling",
+   "label": "레슬링",
+   "title": "유럽·아프리카·오세아니아·팬아메리카 선수권(랭킹 반영)",
+   "kind": "cont"
+  }
+ ]
+}
