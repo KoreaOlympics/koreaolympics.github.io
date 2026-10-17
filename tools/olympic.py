@@ -192,6 +192,32 @@ def fill_live(body):
     return LIVE_RE.sub(sub, body)
 
 
+
+TW_OPEN, TW_CLOSE = '<div class="tw">', '</div><!-- /tw -->'
+
+
+def wrap_tables(body):
+    """본문 표를 전체 폭 + 가로 스크롤 상자로 감싼다 (여러 번 실행해도 같다)."""
+    body = body.replace(TW_OPEN, '').replace(TW_CLOSE, '')
+    out, i = [], 0
+    tok = re.compile(r'<(/?)table\b[^>]*>')
+    while True:
+        m = re.compile(r'<table class="wikitable[^"]*"[^>]*>').search(body, i)
+        if not m:
+            out.append(body[i:])
+            return ''.join(out)
+        depth = 0
+        for t in tok.finditer(body, m.start()):
+            depth += -1 if t.group(1) else 1
+            if depth == 0:
+                out.append(body[i:m.start()] + TW_OPEN + body[m.start():t.end()] + TW_CLOSE)
+                i = t.end()
+                break
+        else:
+            out.append(body[i:])
+            return ''.join(out)
+
+
 def live_block(e):
     return f"<!-- live:start {e['live']} -->\n<!-- live:end -->" if e.get('live') else ''
 
@@ -288,7 +314,7 @@ def page(title, up, body, desc):
 def render_sections(defs, parts):
     toc, out = [], []
     for sid, title in defs:
-        body = fill_live(parts.get(sid, ''))
+        body = wrap_tables(fill_live(parts.get(sid, '')))
         hidden = sid in OPTIONAL and not visible(body)
         if not hidden:
             toc.append(f'<li><a href="#{sid}">{E(title)}</a></li>')
@@ -472,7 +498,7 @@ def render_index(reg, today=None):
     secs = []
     toc = []
     for sid, title in INDEX_SECTIONS:
-        body = gen.get(sid) or fill_live(parts.get(sid, '<!-- 추가 -->'))
+        body = wrap_tables(gen.get(sid) or fill_live(parts.get(sid, '<!-- 추가 -->')))
         if sid == 'korea':  # 목차 오른쪽 박스
             korea = f'<section id="korea" class="quota-box">\n<h2>{E(title)}</h2>\n{body}\n</section>'
             continue
