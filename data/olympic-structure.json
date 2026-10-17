@@ -2411,6 +2411,11 @@
       "file": "mixedrelay",
       "name": "혼성 계주",
       "gender": "mixed"
+     },
+     {
+      "file": "mixedsinglesrelay",
+      "name": "혼성 싱글 계주",
+      "gender": "mixed"
      }
     ]
    },
@@ -2559,6 +2564,11 @@
       "file": "mixedteam",
       "name": "단체전",
       "gender": "mixed"
+     },
+     {
+      "file": "womensynchro9",
+      "name": "여자 싱크로나이즈드 9인",
+      "gender": "women"
      }
     ]
    },
@@ -2641,6 +2651,11 @@
       "file": "mixedaerialsteam",
       "name": "혼성 에어리얼 단체",
       "gender": "mixed"
+     },
+     {
+      "file": "mixedskicrossteam",
+      "name": "혼성 팀 스키 크로스",
+      "gender": "mixed"
      }
     ]
    },
@@ -2697,7 +2712,28 @@
     "file": "wifreeride",
     "name": "프리라이딩",
     "name_en": "Freeride",
-    "events": []
+    "events": [
+     {
+      "file": "menski",
+      "name": "남자 스키",
+      "gender": "men"
+     },
+     {
+      "file": "mensnowboard",
+      "name": "남자 스노보드",
+      "gender": "men"
+     },
+     {
+      "file": "womenski",
+      "name": "여자 스키",
+      "gender": "women"
+     },
+     {
+      "file": "womensnowboard",
+      "name": "여자 스노보드",
+      "gender": "women"
+     }
+    ]
    },
    {
     "file": "wishorttrack",
@@ -2745,8 +2781,8 @@
       "gender": "women"
      },
      {
-      "file": "mixed2000mrelay",
-      "name": "혼성 2000m 계주",
+      "file": "mixedteamrelay",
+      "name": "혼성 팀 계주",
       "gender": "mixed"
      }
     ]
@@ -2807,6 +2843,11 @@
       "file": "mixedteam",
       "name": "혼성 단체",
       "gender": "mixed"
+     },
+     {
+      "file": "womensuperteam",
+      "name": "여자 슈퍼팀",
+      "gender": "women"
      }
     ]
    },
@@ -2829,6 +2870,16 @@
       "file": "mixedrelay",
       "name": "혼성 계주",
       "gender": "mixed"
+     },
+     {
+      "file": "menindividual",
+      "name": "남자 개인 (OCOG 제안)",
+      "gender": "men"
+     },
+     {
+      "file": "womenindividual",
+      "name": "여자 개인 (OCOG 제안)",
+      "gender": "women"
      }
     ]
    },
@@ -2890,6 +2941,11 @@
      {
       "file": "mixedteamcross",
       "name": "혼성 단체 스노보드 크로스",
+      "gender": "mixed"
+     },
+     {
+      "file": "mixedteamparallel",
+      "name": "혼성 팀 평행 대회전",
       "gender": "mixed"
      }
     ]
@@ -2967,6 +3023,16 @@
      {
       "file": "womenteampursuit",
       "name": "여자 팀 추월",
+      "gender": "women"
+     },
+     {
+      "file": "menteamsprint",
+      "name": "남자 팀 스프린트",
+      "gender": "men"
+     },
+     {
+      "file": "womenteamsprint",
+      "name": "여자 팀 스프린트",
       "gender": "women"
      }
     ]
