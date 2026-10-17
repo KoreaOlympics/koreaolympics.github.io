@@ -31,7 +31,7 @@ OPTIONAL = {'rules'}  # 내용이 없으면 화면에서 숨긴다 (원칙 5.5)
 # 종목별 맞춤 구조 (영어 Wikipedia 구조 기준). 없는 종목은 기본 구조를 쓴다.
 LAYOUT = {
     'olvolleyball': {
-        'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('refs', '각주'), ('links', '외부 링크')],
+        'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')],
         'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')],
     },
 }
