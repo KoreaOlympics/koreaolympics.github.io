@@ -32,7 +32,7 @@ OPTIONAL = {'rules'}  # 내용이 없으면 화면에서 숨긴다 (원칙 5.5)
 # 종목별 맞춤 구조 (영어 Wikipedia 구조 기준). 없는 종목은 기본 구조를 쓴다.
 LAYOUT = {
     'olwrestling': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
-    'olweightlifting': {'hub': [('timeline', '예선 일정 (Timeline)'), ('men', "남자 종목 (Men's events)"), ('women', "여자 종목 (Women's events)"), ('medals', '2024 메달리스트'), ('korea', '한국 역도 역사와 현황'), ('refs', '각주'), ('links', '외부 링크'), ('qualification', '기존 예선 요약 자료'), ('rules', '기존 예선 규정 자료'), ('schedule', '기존 예선 일정 자료'), ('previous', '기존 직전 메달 자료'), ('results_summary', '대회별 메달 요약')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
+    'olweightlifting': {'hub': [('timeline', '예선 일정 (Timeline)'), ('qualification', '예선 규정 (Qualification)'), ('men', "남자 종목 (Men's events)"), ('women', "여자 종목 (Women's events)"), ('medals', '2024 메달리스트'), ('korea', '한국 역도 역사와 현황'), ('refs', '각주'), ('links', '외부 링크'), ('results_summary', '대회별 메달 요약')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
     'olboxing': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
     'oljudo': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
     'olbasketball': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
@@ -433,8 +433,10 @@ def render_hub(reg, s):
     path = ROOT / hub_path(s)
     parts = preserved(path) or {}
     sk = hub_skeleton(reg, s)
+    layout_ids = {k for k, _ in hub_sections(s)}
     for k, v in sk.items():
-        parts.setdefault(k, v)
+        if k in layout_ids:  # 허브 구조에 없는 빈 기본 섹션(규정·일정·직전 메달 표)은 만들지 않는다
+            parts.setdefault(k, v)
     info = parts.get('infobox') or hub_infobox(reg, s)
     g = reg[s['season']]
     def line(label, evs):
