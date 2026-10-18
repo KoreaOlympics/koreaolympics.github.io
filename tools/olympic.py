@@ -9,6 +9,7 @@ build는 틀(경로·제목·도입문 링크·목차·내비박스·실시간 �
 각 섹션 본문과 인포박스는 기존 파일에서 그대로 가져온다.
 """
 import html, json, re, sys
+from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -30,6 +31,20 @@ OPTIONAL = {'rules'}  # 내용이 없으면 화면에서 숨긴다 (원칙 5.5)
 
 # 종목별 맞춤 구조 (영어 Wikipedia 구조 기준). 없는 종목은 기본 구조를 쓴다.
 LAYOUT = {
+    'olwrestling': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
+    'olweightlifting': {'hub': [('timeline', '예선 일정 (Timeline)'), ('men', "남자 종목 (Men's events)"), ('women', "여자 종목 (Women's events)"), ('medals', '2024 메달리스트'), ('korea', '한국 역도 역사와 현황'), ('refs', '각주'), ('links', '외부 링크'), ('qualification', '기존 예선 요약 자료'), ('rules', '기존 예선 규정 자료'), ('schedule', '기존 예선 일정 자료'), ('previous', '기존 직전 메달 자료'), ('results_summary', '대회별 메달 요약')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
+    'olboxing': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
+    'oljudo': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
+    'olbasketball': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
+    'olfootball': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
+    'olwaterpolo': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
+    'olrugby': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
+    'olbaseball': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
+    'ollacrosse': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
+    'olcricket': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
+    'olflagfootball': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
+    'olhockey': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
+    'olhandball': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
     'olvolleyball': {
         'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')],
         'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')],
@@ -91,7 +106,7 @@ def short(e, s, label):
 
 
 # ---------------------------------------------------------------- preserve
-SEC_RE = re.compile(r'<section id="([a-z]+)"[^>]*>\s*(?:<h2[^>]*>.*?</h2>)?(.*?)</section>', re.S)
+SEC_RE = re.compile(r'<section id="([a-z0-9]+)"[^>]*>\s*(?:<h2[^>]*>(.*?)</h2>)?(.*?)</section>', re.S)
 INFO_RE = re.compile(r'<aside class="infobox"[^>]*>.*?<tbody>(.*?)</tbody>', re.S)
 
 
@@ -101,7 +116,9 @@ def preserved(path):
     text = path.read_text(encoding='utf-8')
     if f'content="{GEN}"' not in text:
         return None  # 구 구조 문서: 새 틀로 교체
-    parts = {m.group(1): m.group(2).strip('\n') for m in SEC_RE.finditer(text)}
+    parts = {m.group(1): m.group(3).strip('\n') for m in SEC_RE.finditer(text)}
+    titles = {m.group(1): re.sub(r'<[^>]+>', '', m.group(2) or m.group(1)).strip() for m in SEC_RE.finditer(text)}
+    parts['__titles__'] = titles
     m = INFO_RE.search(text)
     if m:
         parts['infobox'] = m.group(1).strip('\n')
@@ -351,8 +368,40 @@ def page(title, up, body, desc):
 '''
 
 
+def related_block(s, today=None):
+    """관련 대회·랭킹 (자동): 일정 자료(index-schedule)와 랭킹 자료(la28-ranking-details)에서 종목별로 가져온다."""
+    today = today or date.today().isoformat()
+    html_parts = []
+    sched = _json('data/index-schedule.json') or {'events': []}
+    evs = [x for x in sched['events'] if x['sport'] == s['file'] and (x.get('end') or x['start']) >= today]
+    if evs:
+        rows = ''.join(
+            f'<tr><td>{E(x["start"])}{("–" + E(x["end"][5:])) if x.get("end") else ""}</td>'
+            f'<td>{E(x["title"])}</td><td>{E(x.get("kind", ""))}</td></tr>'
+            for x in sorted(evs, key=lambda x: x['start'])[:8])
+        html_parts.append('<h3>관련 대회</h3><table class="wikitable narrow"><thead><tr><th>기간</th><th>대회</th><th>경로</th></tr></thead>'
+                          f'<tbody>{rows}</tbody></table>')
+    d = _json('data/la28-ranking-details.json') or {'rankings': []}
+    for r in d['rankings']:
+        if r.get('page') != hub_path(s) or not r.get('rows'):
+            continue
+        body = ''
+        for row in r['rows'][:10]:
+            cls = ' class="kor"' if row.get('noc') == 'KOR' else ''
+            body += f'<tr{cls}><td>{E(row.get("rank", ""))}</td><td>{E(row.get("name", ""))}</td><td>{E(row.get("noc", ""))}</td><td>{E(row.get("score", ""))}</td></tr>'
+        html_parts.append(f'<h3>{E(r.get("name", ""))}</h3><p class="note">기준: {E(r.get("updated", ""))} · <a href="{E(r.get("source", ""))}">원문</a></p>'
+                          '<table class="wikitable narrow"><thead><tr><th>순위</th><th>선수·팀</th><th>NOC</th><th>점수</th></tr></thead>'
+                          f'<tbody>{body}</tbody></table>')
+    if not html_parts:
+        return ''
+    return '<section id="related">\n<h2>관련 대회 · 랭킹</h2>\n' + '\n'.join(html_parts) + '\n</section>'
+
+
 def render_sections(defs, parts):
     toc, out = [], []
+    titles = parts.get('__titles__', {})
+    extra = [k for k in parts if k not in {d[0] for d in defs} | {'__titles__', 'infobox', 'intro', 'related'}]
+    defs = list(defs) + [(k, titles.get(k, k)) for k in extra if k not in {d[0] for d in defs}]
     for sid, title in defs:
         body = wrap_tables(fill_live(parts.get(sid, '')))
         hidden = sid in OPTIONAL and not visible(body)
@@ -398,10 +447,14 @@ def render_hub(reg, s):
     lead = (f'<section id="intro" class="lead"><p>{E(g["games"])} {E(s["name"])}에는 '
             f'<b>{len(s["events"])}개</b> 세부종목이 있다.{basis}</p><ul class="event-list">{lines}</ul></section>')
     toc, secs = render_sections(hub_sections(s), parts)
+    rel = related_block(s)
+    if rel and '<section id="results_summary"' in secs:  # 마지막 섹션(대회별 메달 요약)을 맨 아래에 둔다
+        secs = secs.replace('<section id="results_summary"', rel + '\n<section id="results_summary"', 1)
+        rel = ''
     body = '\n'.join([
         f'<nav class="crumb"><a href="index.html">목차</a> › {E(s["name"])}</nav>',
         f'<h1>{E(s["name"])} <span class="en">({E(s["name_en"])})</span></h1>',
-        '<div class="top">', infobox(s['name'], info), lead, '</div>', toc, secs,
+        '<div class="top">', infobox(s['name'], info), lead, '</div>', toc, secs, rel,
         season_navbox(reg, s['season'], '', hub_path(s))])
     return path, page(f'{s["name"]} | {g["games"]}', '', body, f'{g["games"]} {s["name"]} 세부종목·예선·한국 현황')
 
@@ -683,7 +736,8 @@ def check():
             errors.append(f'{rel}: 공통 CSS 하나만 써야 함')
         if '<script' in t:
             errors.append(f'{rel}: JavaScript 사용')
-        ids = re.findall(r'<section id="([a-z]+)"', t)
+        layout_ids = {k for k, _ in (hub_sections(s) if kind == 'hub' else event_sections(s))}
+        ids = [i for i in re.findall(r'<section id="([a-z0-9_]+)"', t) if i == 'intro' or i in layout_ids]
         want = ['intro'] + [k for k, _ in (hub_sections(s) if kind == 'hub' else event_sections(s))]
         if ids != want:
             errors.append(f'{rel}: 섹션 순서 {ids} ≠ {want}')
