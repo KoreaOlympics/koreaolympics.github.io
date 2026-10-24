@@ -501,6 +501,7 @@ def sport_box(reg, season):
     else:
         names = sorted(links)
         body = ' · '.join(f'<b>{link(n)}</b>' if n in bold else link(n) for n in names)
+        body += ' · <a href="winter/">🔴 동계 실시간 센터</a>'  # 일정·결과 자동 수집 앱 (winter/, 원칙 8장 예외)
         caption = f'{E(g["games"])} 종목'
     return (f'<nav class="navbox"><table><caption>{caption}</caption>'
             f'<tbody><tr><th>{E(g["label"])}</th><td>{body}</td></tr></tbody></table></nav>')
