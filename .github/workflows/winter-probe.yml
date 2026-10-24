@@ -2,7 +2,7 @@ name: Winter source probe
 on:
   push:
     branches: [claude/winter-probe]
-    paths: [probe/urls.txt, probe/probe.py, probe/js.txt]
+    paths: [probe/**, .github/workflows/winter-probe.yml]
 permissions:
   contents: write
 jobs:
