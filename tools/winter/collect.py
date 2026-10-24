@@ -11,12 +11,12 @@ Outputs (all UTC timestamps; pages convert to KST):
 """
 import argparse, datetime as dt, json, sys, traceback
 from pathlib import Path
-from . import isu, fis, bracket
+from . import isu, fis, bracket, speed
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / 'data' / 'winter'
 KOR = 'KOR'
-ISU_SPORTS = ('short-track', 'speed-skating', 'figure-skating')
+ISU_SPORTS = ('short-track', 'figure-skating')
 
 def now():
     return dt.datetime.now(dt.timezone.utc)
@@ -118,8 +118,7 @@ def collect_isu(sport, season, mode, status):
     events = [isu_event(sport, e) for e in isu.events(sport, season)]
     today = now().date()
     for ev in events:
-        start, end = dt.date.fromisoformat(ev['start']), dt.date.fromisoformat(ev['end'])
-        active = ev['state'] == 'Live' or (start - dt.timedelta(days=1) <= today <= end + dt.timedelta(days=1))
+        active = is_active(ev, today)
         path = OUT / 'events' / f"{ev['id']}.json"
         if not (active or (mode == 'full' and not path.exists())) or not ev['slug']:
             continue
@@ -135,6 +134,39 @@ def collect_isu(sport, season, mode, status):
             status[f"{sport}:{ev['id']}"] = {'ok': True, 'at': now().isoformat()}
         except Exception as exc:
             status[f"{sport}:{ev['id']}"] = {'ok': False, 'at': now().isoformat(), 'error': f'{type(exc).__name__}: {exc}'[:300]}
+            traceback.print_exc()
+    return events
+
+def is_active(ev, today):
+    start, end = dt.date.fromisoformat(ev['start']), dt.date.fromisoformat(ev['end'])
+    return ev['state'] == 'Live' or start - dt.timedelta(days=1) <= today <= end + dt.timedelta(days=1)
+
+def collect_speed(start_year, mode, status):
+    events = [speed.event(e) for e in speed.events(start_year + 1)]
+    today = now().date()
+    for ev in events:
+        path = OUT / 'events' / f"{ev['id']}.json"
+        finished = dt.date.fromisoformat(ev['end']) < today
+        if not (is_active(ev, today) or (mode == 'full' and (not path.exists() or not finished))):
+            continue
+        try:
+            sessions = [{'start_utc': s['start'], 'title': s['title'],
+                         'number': next((l['identifier'] for l in s.get('links', []) if l['type'] == 'results'), None)}
+                        for s in speed.schedule(ev['isu_id'])]
+            races = {}
+            for c in speed.competitions(ev['isu_id']):
+                if not (c.get('isOfficial') or c.get('isLive')): continue
+                rows = [speed.row(r) for r in speed.results(ev['isu_id'], c['number'])]
+                races[str(c['number'])] = {'title': c['title'], 'start_utc': c.get('start'), 'live': c.get('isLive'),
+                                           'official': c.get('isOfficial'), 'distance': (c.get('distance') or {}).get('name'),
+                                           'division': c.get('division'), 'rows': sorted(rows, key=lambda r: (r['rank'] is None, r['rank'] or 0))}
+            korea = [{'event_id': ev['id'], 'sport': 'speed-skating', 'event': ev['name'], 'distance': r['title'],
+                      'round': r.get('division') and f"Division {r['division']}" or '', 'heat': '', 'start_utc': r['start_utc'], **x}
+                     for r in races.values() for x in r['rows'] if x['noc'] == KOR]
+            save(path, {'event': ev, 'checked_at': now().isoformat(), 'sessions': sessions, 'results': races, 'korea': korea})
+            status[f"speed-skating:{ev['id']}"] = {'ok': True, 'at': now().isoformat()}
+        except Exception as exc:
+            status[f"speed-skating:{ev['id']}"] = {'ok': False, 'at': now().isoformat(), 'error': f'{type(exc).__name__}: {exc}'[:300]}
             traceback.print_exc()
     return events
 
@@ -156,6 +188,14 @@ def main(argv=None):
             failed += 1
             status[sport] = {'ok': False, 'at': now().isoformat(), 'error': f'{type(exc).__name__}: {exc}'[:300]}
             traceback.print_exc()
+    try:
+        cal['sports']['speed-skating'] = {'source': 'https://live.isuresults.eu/', 'checked_at': now().isoformat(),
+                                          'events': collect_speed(start_year, mode, status)}
+        status['speed-skating'] = {'ok': True, 'at': now().isoformat()}
+    except Exception as exc:
+        failed += 1
+        status['speed-skating'] = {'ok': False, 'at': now().isoformat(), 'error': f'{type(exc).__name__}: {exc}'[:300]}
+        traceback.print_exc()
     if mode == 'full' or 'snowboard' not in cal['sports']:
         try:
             cal['sports']['snowboard'] = {'source': 'https://www.fis-ski.com/DB/snowboard/calendar-results.html',
@@ -174,7 +214,7 @@ def main(argv=None):
     save(OUT / 'korea.json', {'season': season, 'rows': korea})
     save(OUT / 'status.json', {'updated_at': now().isoformat(), 'mode': mode, 'sources': status})
     print(f'{mode}: {sum(len(s["events"]) for s in cal["sports"].values())} events, {len(korea)} Korean results, {failed} source failures')
-    return 1 if failed == len(ISU_SPORTS) + 1 else 0
+    return 1 if failed == len(ISU_SPORTS) + 2 else 0
 
 if __name__ == '__main__':
     sys.exit(main())

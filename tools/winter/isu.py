@@ -16,7 +16,7 @@ def _data(r):
 def events(sport, season):
     """All ISU-level events of one discipline in a season ('2026/2027')."""
     out, seen = [], set()
-    for state in ('Live', 'Upcoming', 'Finished'):
+    for state in ('Live', 'On', 'Finished'):
         for page in range(1, 40):
             r = get_json(f'{API}/events/list', data={'discipline_id': DISCIPLINES[sport], 'state': state,
                                                      'page': page, 'pagesize': 50, 'event_level': 'ISU'})
