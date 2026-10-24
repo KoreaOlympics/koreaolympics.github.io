@@ -2,7 +2,7 @@ name: Winter source probe
 on:
   push:
     branches: [claude/winter-probe]
-    paths: [probe/**, .github/workflows/winter-probe.yml]
+    paths: [probe/**, tools/winter/**, .github/workflows/winter-probe.yml]
 permissions:
   contents: write
 jobs:
@@ -11,8 +11,9 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-      - run: pip install -q playwright && python -m playwright install --with-deps chromium >/dev/null
-      - run: timeout 600 python3 probe/browser.py
+      - run: python3 probe/walk.py
+        continue-on-error: true
+      - run: python3 -m tools.winter.collect --full && mkdir -p probe/out && cp -r data/winter probe/out/winter
         continue-on-error: true
       - if: always()
         run: |
