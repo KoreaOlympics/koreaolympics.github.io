@@ -8,11 +8,11 @@ permissions:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - run: pip install -q playwright && python -m playwright install --with-deps chromium >/dev/null
-      - run: python3 probe/browser.py
+      - run: timeout 600 python3 probe/browser.py
         continue-on-error: true
       - if: always()
         run: |

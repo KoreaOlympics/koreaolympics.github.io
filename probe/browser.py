@@ -7,7 +7,6 @@ PAGES = [
     ("fs-skate-america", "https://isu-skating.com/figure-skating/events/eventdetail/isu-gp-skate-america-2026/"),
     ("ss-finished", "https://isu-skating.com/speed-skating/results/"),
     ("fis-event", "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=SB&eventid=62743&seasoncode=2027"),
-    ("curl-wmdqe", "https://livescores.worldcurling.org/wmdqe26"),
 ]
 OLD = [
     ("st-schedule", "https://isu-skating.com/short-track/events/eventdetail/isu-short-track-world-tour-1/?tab=schedule_16230"),
@@ -33,10 +32,10 @@ async def main():
         for name, url in PAGES:
             cur[0] = name
             try:
-                await page.goto(url, wait_until="networkidle", timeout=60000)
+                await page.goto(url, wait_until="domcontentloaded", timeout=30000)
             except Exception as e:
                 print(name, "goto", e)
-            await page.wait_for_timeout(4000)
+            await page.wait_for_timeout(6000)
             # click every element that looks like a results / schedule link inside the tab content
             await page.screenshot(path=str(OUT / f"{name}.png"), full_page=False)
             (OUT / f"{name}.html").write_text(await page.content())
@@ -47,7 +46,7 @@ async def main():
                 (OUT / f"{name}.cand.json").write_text(json.dumps(cand[:80], ensure_ascii=False))
                 for i, (t, href) in enumerate(cand[:2]):
                     try:
-                        await page.goto(href, wait_until="networkidle", timeout=60000); await page.wait_for_timeout(4000)
+                        await page.goto(href, wait_until="domcontentloaded", timeout=30000); await page.wait_for_timeout(6000)
                         await page.screenshot(path=str(OUT / f"{name}-c{i}.png"))
                         (OUT / f"{name}-c{i}.html").write_text(await page.content())
                         links2 = await page.eval_on_selector_all("a", "els => els.map(e => [e.innerText.trim().slice(0,60), e.href]).filter(x => x[1])")
@@ -55,7 +54,7 @@ async def main():
                         # one level deeper: first round/result link
                         deeper = [l for l in links2 if re.search(r"round=|raceid=|type=", l[1])]
                         if deeper:
-                            await page.goto(deeper[0][1], wait_until="networkidle", timeout=60000); await page.wait_for_timeout(4000)
+                            await page.goto(deeper[0][1], wait_until="domcontentloaded", timeout=30000); await page.wait_for_timeout(6000)
                             await page.screenshot(path=str(OUT / f"{name}-c{i}-d.png"))
                             (OUT / f"{name}-c{i}-d.html").write_text(await page.content())
                     except Exception as e:
@@ -64,7 +63,7 @@ async def main():
                 for txt in ["Men 500 m", "Women 500 m", "Men 1500 m"]:
                     try:
                         await page.get_by_text(txt).first.click(timeout=5000)
-                        await page.wait_for_timeout(4000)
+                        await page.wait_for_timeout(6000)
                         await page.screenshot(path=str(OUT / f"{name}-{txt.replace(' ','_')}.png"))
                     except Exception as e:
                         print("click", txt, e)
