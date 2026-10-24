@@ -27,3 +27,19 @@ for url in urls:
                   "api_like": [f.decode("utf-8", "replace") for f in found]})
     print(status, len(body), url)
 (OUT / "index.json").write_text(json.dumps(index, indent=1, ensure_ascii=False))
+
+# JS discovery: fetch script chunks of pages in js.txt and keep snippets mentioning APIs.
+jsfile = pathlib.Path("probe/js.txt")
+if jsfile.exists():
+    from urllib.parse import urljoin
+    snippets = []
+    for page in [u.strip() for u in jsfile.read_text().splitlines() if u.strip()]:
+        _, _, html = fetch(page)
+        srcs = sorted(set(re.findall(rb'src="([^"]+\.js[^"]*)"', html) + re.findall(rb'"(/_next/static/[^"]+\.js)"', html)))
+        for src in srcs:
+            js_url = urljoin(page, src.decode())
+            _, _, js = fetch(js_url)
+            for m in re.finditer(rb"azurefd|/api/|apiUrl|API_URL|baseURL|NEXT_PUBLIC", js):
+                snippets.append({"js": js_url, "at": m.start(), "text": js[max(0, m.start()-250):m.start()+350].decode("utf-8", "replace")})
+    (OUT / "js-snippets.json").write_text(json.dumps(snippets[:400], indent=1, ensure_ascii=False))
+    print("snippets", len(snippets))

@@ -2,7 +2,7 @@ name: Winter source probe
 on:
   push:
     branches: [claude/winter-probe]
-    paths: [probe/urls.txt, probe/probe.py]
+    paths: [probe/urls.txt, probe/probe.py, probe/js.txt]
 permissions:
   contents: write
 jobs:
@@ -15,4 +15,4 @@ jobs:
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
-          git add probe/out && git commit -q -m "probe: output" && git push -q
+          git rm -rq --cached probe/out 2>/dev/null; git add probe/out && git commit -q -m "probe: output" && git push -q
