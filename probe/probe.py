@@ -33,7 +33,7 @@ jsfile = pathlib.Path("probe/js.txt")
 if jsfile.exists():
     from urllib.parse import urljoin
     snippets = []
-    for page in [u.strip() for u in jsfile.read_text().splitlines() if u.strip()]:
+    for page in [u.strip() for u in jsfile.read_text().splitlines() if u.strip() and not u.startswith("#")]:
         _, _, html = fetch(page)
         srcs = sorted(set(re.findall(rb'src="([^"]+\.js[^"]*)"', html) + re.findall(rb'"(/_next/static/[^"]+\.js)"', html)))
         for src in srcs:
