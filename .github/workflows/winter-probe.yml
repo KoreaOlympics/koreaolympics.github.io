@@ -11,7 +11,9 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      - run: python3 probe/probe.py probe/urls.txt
+      - run: pip install -q playwright && python -m playwright install --with-deps chromium >/dev/null
+      - run: python3 probe/browser.py
+        continue-on-error: true
       - if: always()
         run: |
           cd probe/out
