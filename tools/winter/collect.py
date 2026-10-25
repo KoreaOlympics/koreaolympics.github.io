@@ -10,6 +10,7 @@ Outputs (all UTC timestamps; pages convert to KST):
   data/winter/status.json          per-source success/failure for the admin page
 """
 import argparse, datetime as dt, json, sys, traceback
+from collections import Counter
 from pathlib import Path
 from . import isu, fis, bracket, speed
 
@@ -56,7 +57,7 @@ def slug_from(e):
 def competitor(c):
     s = c.get('skaters') or {}
     team = c.get('skaters_team') or {}
-    return {'rank': c.get('final_rank'), 'name': s.get('full_name') or team.get('name') or '',
+    return {'rank': c.get('final_rank'), 'name': s.get('full_name') or team.get('name') or c.get('started_for_nf_country_name') or '',
             'noc': c.get('started_for_nf_code') or s.get('nationality_code') or '',
             'time': c.get('final_result') or '', 'qual': c.get('qualification_code') or '',
             'status': c.get('result_status') or '', 'record': c.get('record_flag') or '',
@@ -66,14 +67,15 @@ def short_track_results(ev, sessions):
     """Rounds and heats for every distance seen in the schedule; adds projections."""
     out = {}
     for rid in dict.fromkeys(s['event_result_id'] for s in sessions if s.get('event_result_id')):
-        title = next(s['title'] for s in sessions if s['event_result_id'] == rid)
+        title, kind = next((s['title'], s.get('type')) for s in sessions if s['event_result_id'] == rid)
         rounds = sorted(isu.rounds(rid), key=lambda r: r.get('date') or '')
         dist = {'title': title, 'rounds': []}
         for r in rounds:
             heats = []
             if r.get('status') in ('Live', 'Finished'):
                 try:
-                    for h in isu.heats_st(rid, r['event_result_round_id']):
+                    fetch = isu.heats_st_team if kind == 'Couples' else isu.heats_st
+                    for h in fetch(rid, r['event_result_round_id']):
                         heats.append({'name': h['name'], 'status': h.get('status'), 'official': h.get('result_status'),
                                       'competitors': sorted((competitor(c) for c in h.get('event_result_round_heats_competitors') or []),
                                                             key=lambda c: (c['rank'] is None, c['rank'] or 0))})
@@ -81,35 +83,90 @@ def short_track_results(ev, sessions):
                     heats = [{'name': '수집 실패', 'error': str(exc)[:200], 'competitors': []}]
             dist['rounds'].append({'id': r['event_result_round_id'], 'name': r['name'], 'status': r.get('status'),
                                    'start_utc': r.get('date'), 'rule': r.get('qualification_rule') or '', 'heats': heats})
-        add_projections(dist)
         out[str(rid)] = dist
+    counts = heat_counts(out)
+    for dist in out.values():
+        add_projections(dist, counts)
     return out
 
-ORDER = ['Preliminaries', 'Heats', 'Rep. Heats', 'Rep. Quarterfinals', 'Quarterfinals', 'Semifinals', 'Final B', 'Final A']
+def round_key(name):
+    """'Rep. Quarterfinals' / 'Rep Quarterfinals' -> 'rep quarterfinals'; 'Final A' / 'Final' -> 'finals'."""
+    k = ' '.join(name.lower().replace('.', '').split())
+    return 'finals' if k in ('final', 'final a', 'finals') else k
 
-def add_projections(dist):
-    """For each finished round, project the round named in its rule if that round has no heats yet."""
-    by_name = {r['name'].lower().replace('.', ''): r for r in dist['rounds']}
+def heat_counts(event_dists):
+    """{(distance title, round key): number of races} from this event and earlier events this season.
+
+    The race count of a round is fixed by the competition format, so a round that has
+    already been raced (same distance elsewhere this season, or another distance of the
+    same length class here) tells us how many races the projected round will have."""
+    seen = {}
+    files = [load(f, {}) for f in sorted((OUT / 'events').glob('isu-*.json'))]
+    sources = [d.get('results') or {} for d in files if (d.get('event') or {}).get('sport') == 'short-track'] + [event_dists]
+    for results in sources:
+        for dist in results.values():
+            for r in dist.get('rounds', []):
+                n = len([h for h in r.get('heats', []) if h.get('competitors')])
+                if n and round_key(r['name']) != 'finals':
+                    seen.setdefault((dist['title'], round_key(r['name'])), Counter())[n] += 1
+    return {k: c.most_common(1)[0][0] for k, c in seen.items()}
+
+def races_for(dist_title, target_key, counts, qualified):
+    if target_key == 'finals':
+        return 1  # the rule's "qualify for Final A": one race
+    if (dist_title, target_key) in counts:
+        return counts[(dist_title, target_key)]
+    long_race = '1500' in dist_title
+    similar = [(gender_of(title) == gender_of(dist_title), n) for (title, key), n in counts.items()
+               if key == target_key and ('1500' in title) == long_race]  # same round, same length class
+    if similar:
+        return max(similar)[1]  # prefer the same gender
+    if target_key in ('semifinals', 'rep semifinals'):
+        return 2
+    return max(1, -(-qualified // (6 if long_race else 4)))
+
+def gender_of(title):
+    return title.split()[0]
+
+def add_projections(dist, counts):
+    """Project each upcoming round from every round that feeds it.
+
+    A round can be fed by several earlier rounds (e.g. the quarterfinals take the heat
+    qualifiers plus the repechage-semifinal winners), so qualifiers are pooled per target
+    round and the projection is attached to the most recent finished feeder. Official
+    heats are used as soon as the ISU publishes them; otherwise the number of races comes
+    from races_for(), never from a plain head count."""
+    by_key = {round_key(r['name']): r for r in dist['rounds']}
+    feeders = {}
     for r in dist['rounds']:
-        if r['status'] != 'Finished' or not r['heats']: continue
+        r.pop('projection', None)
         rule = bracket.parse_rule(r['rule'])
-        if not rule: continue
-        target = by_name.get(rule['next'].lower().replace('.', ''))
-        official = bool(target and any(h['competitors'] for h in target['heats']))
-        proj = bracket.project(r['heats'], r['rule'], target['heats'] if official else None,
-                               per_race=6 if '1500' in dist['title'] else 4)
-        if proj:
-            r['projection'] = {'next': rule['next'], 'official_draw_published': official,
-                               'qualified': [{k: c[k] for k in ('name', 'noc', 'rank', 'time', 'qual')} for c in proj['qualified']],
-                               'races': [[c['name'] + ' (' + c['noc'] + ')' for c in race] for race in proj['races']]}
+        if rule:
+            feeders.setdefault(round_key(rule['next']), []).append((r, rule))
+    for key, group in feeders.items():
+        done = [(r, rule) for r, rule in group if r['status'] == 'Finished' and r['heats']]
+        if not done: continue
+        ranked = [c for r, rule in done for c in bracket.qualifiers(r['heats'], rule)]
+        if not ranked: continue
+        target = by_key.get(key)
+        official_heats = [h for h in (target or {}).get('heats', []) if h.get('competitors') and h['name'] != 'Final B']
+        official = bool(official_heats)
+        n = len(official_heats) if official else races_for(dist['title'], key, counts, len(ranked))
+        latest = max(done, key=lambda x: x[0].get('start_utc') or '')[0]
+        latest['projection'] = {
+            'next': target['name'] if target else done[0][1]['next'], 'official_draw_published': official,
+            'pending': [r['name'] for r, _ in group if (r, _) not in done],
+            'qualified': [{k: c[k] for k in ('name', 'noc', 'rank', 'time', 'qual')} for c in ranked],
+            'races': [[c['name'] + ' (' + c['noc'] + ')' for c in race] for race in bracket.distribute(ranked, n)]}
 
 def figure_results(ev, sessions):
     out = {}
     event_id = ev['id'].split('-', 1)[1]
     for rid in dict.fromkeys(s['event_result_id'] for s in sessions if s.get('event_result_id')):
-        title = next(s['title'] for s in sessions if s['event_result_id'] == rid)
+        title, kind = next((s['title'], s.get('type')) for s in sessions if s['event_result_id'] == rid)
         rows = []
-        for c in isu.results_fs(event_id, rid):
+        fetch = isu.results_fs_team if kind == 'Couples' else isu.results_fs
+        for c in fetch(event_id, rid):
             sk = c.get('skaters') or c.get('skaters_team') or {}
             segs = {}
             for r in c.get('event_result_round_competitors') or []:
@@ -181,7 +238,7 @@ def collect_isu(sport, season, mode, status):
                          'type': s.get('discipline_type', '')} for s in isu.schedule(ev['slug'])]
             data = {'event': ev, 'checked_at': now().isoformat(), 'sessions': sessions, 'results': {}}
             if sport == 'short-track' and (active or ev['state'] == 'Finished'):
-                data['results'] = short_track_results(ev, [s for s in sessions if s['type'] == 'Singles'])
+                data['results'] = short_track_results(ev, sessions)
                 data['korea'] = korea_rows(ev, data['results'])
             elif sport == 'figure-skating' and (active or ev['state'] == 'Finished'):
                 data['results'] = figure_results(ev, sessions)

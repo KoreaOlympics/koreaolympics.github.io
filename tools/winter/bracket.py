@@ -25,7 +25,7 @@ def parse_rule(text):
     extra, extra_place = 0, places + 1
     e = re.search(r'maximum of (\w+) fastest (\w+) place', t, re.I)
     if e: extra, extra_place = _num(e.group(1)) or 0, _num(e.group(2)) or places + 1
-    nxt = re.search(r'qualify for (?:the )?(.+?)\.?$', t, re.I)
+    nxt = re.search(r'qualify for (?:the )?([A-Za-z .]+?)\s*(?:[,;]|\.(?:\s|$)|$)', t, re.I)
     return {'places': places, 'extra': extra, 'extra_place': extra_place, 'next': nxt.group(1) if nxt else ''}
 
 def _time(v):

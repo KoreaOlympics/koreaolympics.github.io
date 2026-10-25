@@ -44,3 +44,13 @@ def results_fs(event_id, event_result_id):
     """Figure skating category standings with per-segment (SP/FS, RD/FD) scores."""
     return _data(get_json(f'{API}/events/get-event-result-fsk-single',
                           form={'event_id': event_id, 'event_result_id': event_result_id, 'code': '', 'country_code': ''}))
+
+def heats_st_team(event_result_id, round_id):
+    """Short track relays: same shape as heats_st, competitors are teams (skaters_team)."""
+    return _data(get_json(f'{API}/events/get-event-result-round-heats-stk-team',
+                          form={'event_result_id': event_result_id, 'event_result_round_id': round_id, 'country_code': ''}))
+
+def results_fs_team(event_id, event_result_id):
+    """Figure skating pairs / ice dance: same shape as results_fs, skaters_team instead of skaters."""
+    return _data(get_json(f'{API}/events/get-event-result-fsksys-team',
+                          form={'event_id': event_id, 'event_result_id': event_result_id, 'code': '', 'country_code': ''}))

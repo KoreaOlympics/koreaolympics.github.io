@@ -27,5 +27,18 @@ class Podiums(unittest.TestCase):
         cat['rows'][0]['segments'] = seg('Finished')
         self.assertEqual(collect.podium_fs(cat)[0]['time'], '250')
 
+
+class RaceCounts(unittest.TestCase):
+    def test_finals_is_one_race(self):
+        self.assertEqual(collect.races_for('Men 1500 m', 'finals', {}, 8), 1)
+
+    def test_semifinals_default_two(self):
+        self.assertEqual(collect.races_for('Women 500 m', 'rep semifinals', {}, 12), 2)
+
+    def test_uses_season_history(self):
+        counts = {('Men 1500 m', 'semifinals'): 3}
+        self.assertEqual(collect.races_for('Women 1500 m', 'semifinals', counts, 19), 3)
+        self.assertEqual(collect.races_for('Women 500 m', 'semifinals', counts, 10), 2)  # 1500 history never sizes a 500
+
 if __name__ == '__main__':
     unittest.main()

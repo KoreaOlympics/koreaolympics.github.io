@@ -140,8 +140,9 @@ function projection(p) {
   const head = p.official_draw_published ? `${round(p.next)} 진출자 (공식 조 편성 발표됨)` : `${round(p.next)} 예상 대진 <span class="badge proj">예상</span>`;
   return `<div class="proj"><div class="ph">${head}</div>
     <div class="small muted">진출 ${p.qualified.length}명${kor.length ? ` · 한국 ${kor.length}명: ${esc(kor.join(', '))}` : ''}</div>
+    ${p.pending?.length ? `<div class="small" style="color:var(--proj)">${esc(p.pending.map(round).join(', '))} 결과가 아직 반영되지 않아 진출자 일부만 배정했습니다.</div>` : ''}
     ${p.official_draw_published ? '' : `<div class="bracket">${p.races.map((r, i) => `<div class="race"><b>${i + 1}조 (예상)</b><br>${r.map(x => x.includes('(KOR)') ? `<b>${esc(x)}</b>` : esc(x)).join('<br>')}</div>`).join('')}</div>
-    <div class="small muted" style="margin-top:4px">순위→기록 순으로 정렬해 지그재그로 배정한 참고용입니다. 실제 조 편성은 ISU 배정표를 따릅니다.</div>`}</div>`;
+    <div class="small muted" style="margin-top:4px">조 수는 이 라운드가 이번 시즌 실제로 열린 조 수(없으면 규정상 조 수)를 따르고, 선수는 순위→기록 순 지그재그로 배정한 참고용입니다. 실제 조 편성은 ISU 배정표를 따릅니다.</div>`}</div>`;
 }
 
 // ---------- event detail ----------
@@ -219,8 +220,7 @@ function koreaMatrix(d) {
 
 function stSummary(d) {
   const items = withStRows(Object.values(d.results || {}).map(x => ({ title: x.title, podium: stPodium(x) })));
-  return '<h3>메달리스트</h3>' + medalTables(items) + koreaMatrix(d) +
-    '<p class="small muted">계주 결과는 아직 자동 수집 대상이 아닙니다.</p>';
+  return '<h3>메달리스트</h3>' + medalTables(items) + koreaMatrix(d);
 }
 
 function distChips(d, current) {
