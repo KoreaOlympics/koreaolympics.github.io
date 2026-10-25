@@ -18,7 +18,7 @@
   "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-1/"
  },
- "checked_at": "2026-10-25T19:10:58.369901+00:00",
+ "checked_at": "2026-10-25T19:21:38.630316+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-23T16:00:00.000Z",
@@ -9927,7 +9927,7 @@
          "name": "Maxim MAXIMOV",
          "noc": "BUL",
          "time": "1:32.042",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 63,
@@ -10109,14 +10109,14 @@
       {
        "name": "Heat 4",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "Melle VAN 'T WOUT",
          "noc": "NED",
-         "time": "1:29.230",
-         "qual": "",
+         "time": "1:29.220",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 21,
@@ -10127,8 +10127,8 @@
          "rank": 2,
          "name": "Pawel ADAMSKI",
          "noc": "POL",
-         "time": "1:30.720",
-         "qual": "",
+         "time": "1:30.711",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 103,
@@ -10139,7 +10139,7 @@
          "rank": 3,
          "name": "Ivan DONCHEV",
          "noc": "BUL",
-         "time": "1:30.860",
+         "time": "1:30.844",
          "qual": "",
          "status": "",
          "record": "",
@@ -10148,10 +10148,10 @@
          "slug": "ivan-donchev"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Takumi WADA",
          "noc": "JPN",
-         "time": "no time",
+         "time": "1:54.681",
          "qual": "",
          "status": "",
          "record": "",
@@ -10160,7 +10160,7 @@
          "slug": "takumi-wada"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Krzysztof MADRY",
          "noc": "POL",
          "time": "no time",
@@ -10175,20 +10175,44 @@
       },
       {
        "name": "Heat 5",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Live",
        "competitors": [
         {
-         "rank": null,
-         "name": "Lukas MACDONALD",
-         "noc": "NZL",
-         "time": "no time",
+         "rank": 1,
+         "name": "Assen GYUROV",
+         "noc": "BUL",
+         "time": "1:47.400",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 101,
-         "lane": 1,
-         "slug": "lukas-macdonald"
+         "bib": 61,
+         "lane": 4,
+         "slug": "assen-gyurov"
+        },
+        {
+         "rank": 2,
+         "name": "David WU JIA WEI",
+         "noc": "HUN",
+         "time": "1:47.470",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 83,
+         "lane": 5,
+         "slug": "david-wu-jia-wei"
+        },
+        {
+         "rank": 3,
+         "name": "Marek PROCHAZKA",
+         "noc": "CZE",
+         "time": "1:48.140",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 72,
+         "lane": 3,
+         "slug": "marek-prochazka"
         },
         {
          "rank": null,
@@ -10204,39 +10228,15 @@
         },
         {
          "rank": null,
-         "name": "Marek PROCHAZKA",
-         "noc": "CZE",
+         "name": "Lukas MACDONALD",
+         "noc": "NZL",
          "time": "no time",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 72,
-         "lane": 3,
-         "slug": "marek-prochazka"
-        },
-        {
-         "rank": null,
-         "name": "Assen GYUROV",
-         "noc": "BUL",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 61,
-         "lane": 4,
-         "slug": "assen-gyurov"
-        },
-        {
-         "rank": null,
-         "name": "David WU JIA WEI",
-         "noc": "HUN",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 83,
-         "lane": 5,
-         "slug": "david-wu-jia-wei"
+         "bib": 101,
+         "lane": 1,
+         "slug": "lukas-macdonald"
         }
        ]
       }
