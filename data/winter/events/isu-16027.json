@@ -18,7 +18,7 @@
   "live": "FAULA Aurelie / BELLE Theo",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-grand-prix-de-france-2026/"
  },
- "checked_at": "2026-10-25T11:04:59.564960+00:00",
+ "checked_at": "2026-10-25T11:15:44.879975+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-23T16:00:00.000Z",
@@ -991,12 +991,37 @@
        "total": "105.61",
        "tes": "50.87",
        "pcs": "54.74",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
     {
      "rank": 2,
+     "name": "Aurelie FAULA / Theo BELLE",
+     "noc": "FRA",
+     "points": "161.32",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 5,
+       "total": "60.85",
+       "tes": "34.12",
+       "pcs": "26.73",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 2,
+       "total": "100.47",
+       "tes": "47.36",
+       "pcs": "53.11",
+       "status": "Scheduled Break"
+      }
+     }
+    },
+    {
+     "rank": 3,
      "name": "Jiaxuan ZHANG / Yihang HUANG",
      "noc": "CHN",
      "points": "153.71",
@@ -1012,16 +1037,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 2,
+       "rank": 3,
        "total": "99.55",
        "tes": "49.82",
        "pcs": "50.73",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
     {
-     "rank": 3,
+     "rank": 4,
      "name": "Hannah HERRERA / Ivan KHOBTA",
      "noc": "UKR",
      "points": "141.96",
@@ -1037,11 +1062,11 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 3,
+       "rank": 4,
        "total": "88.23",
        "tes": "39.92",
        "pcs": "49.31",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -1066,7 +1091,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -1091,7 +1116,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -1116,7 +1141,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -1141,32 +1166,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Aurelie FAULA / Theo BELLE",
-     "noc": "FRA",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 5,
-       "total": "60.85",
-       "tes": "34.12",
-       "pcs": "26.73",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     }
