@@ -94,7 +94,7 @@
    "end": "2026-10-25",
    "city": "Angers",
    "country": "FRA",
-   "state": "Live",
+   "state": "Finished",
    "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-grand-prix-de-france-2026/",
    "podiums": [
     {
@@ -145,7 +145,26 @@
     },
     {
      "title": "Men",
-     "podium": null
+     "podium": [
+      {
+       "rank": 1,
+       "name": "Adam SIAO HIM FA",
+       "noc": "FRA",
+       "time": "284.24"
+      },
+      {
+       "rank": 2,
+       "name": "Kao MIURA",
+       "noc": "JPN",
+       "time": "247.96"
+      },
+      {
+       "rank": 3,
+       "name": "Minkyu SEO",
+       "noc": "KOR",
+       "time": "244.90"
+      }
+     ]
     },
     {
      "title": "Pairs",
@@ -307,6 +326,13 @@
  ],
  "medals": [
   [
+   "FRA",
+   2,
+   0,
+   0,
+   2
+  ],
+  [
    "GEO",
    1,
    2,
@@ -314,18 +340,11 @@
    3
   ],
   [
-   "FRA",
-   1,
-   0,
-   0,
-   1
-  ],
-  [
    "JPN",
    1,
+   1,
    0,
-   0,
-   1
+   2
   ],
   [
    "AIN2",
@@ -343,6 +362,13 @@
   ],
   [
    "ITA",
+   0,
+   0,
+   1,
+   1
+  ],
+  [
+   "KOR",
    0,
    0,
    1,
@@ -503,6 +529,13 @@
   ],
   "Men": [
    {
+    "name": "Adam SIAO HIM FA",
+    "noc": "FRA",
+    "points": 284.24,
+    "event": "ISU Figure Skating Grand Prix de France 2026",
+    "event_id": "isu-16027"
+   },
+   {
     "name": "Kao MIURA",
     "noc": "JPN",
     "points": 247.96,
@@ -562,13 +595,6 @@
     "name": "Mikhail SHAIDOROV",
     "noc": "KAZ",
     "points": 206.55,
-    "event": "ISU Figure Skating Grand Prix de France 2026",
-    "event_id": "isu-16027"
-   },
-   {
-    "name": "Samy HAMMI",
-    "noc": "FRA",
-    "points": 195.13,
     "event": "ISU Figure Skating Grand Prix de France 2026",
     "event_id": "isu-16027"
    }
