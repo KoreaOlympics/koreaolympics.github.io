@@ -99,7 +99,26 @@
    "podiums": [
     {
      "title": "Ice Dance",
-     "podium": null
+     "podium": [
+      {
+       "rank": 1,
+       "name": "Laurence FOURNIER BEAUDRY / Guillaume CIZERON",
+       "noc": "FRA",
+       "time": "207.57"
+      },
+      {
+       "rank": 2,
+       "name": "Diana DAVIS / Gleb SMOLKIN",
+       "noc": "GEO",
+       "time": "193.93"
+      },
+      {
+       "rank": 3,
+       "name": "Christina CARREIRA / Anthony PONOMARENKO",
+       "noc": "USA",
+       "time": "189.36"
+      }
+     ]
     },
     {
      "title": "Women",
@@ -269,6 +288,13 @@
  ],
  "medals": [
   [
+   "FRA",
+   1,
+   0,
+   0,
+   1
+  ],
+  [
    "JPN",
    1,
    0,
@@ -278,9 +304,9 @@
   [
    "GEO",
    0,
-   1,
+   2,
    0,
-   1
+   2
   ],
   [
    "ITA",
@@ -288,9 +314,88 @@
    0,
    1,
    1
+  ],
+  [
+   "USA",
+   0,
+   0,
+   1,
+   1
   ]
  ],
  "season_best": {
+  "Ice Dance": [
+   {
+    "name": "Laurence FOURNIER BEAUDRY / Guillaume CIZERON",
+    "noc": "FRA",
+    "points": 207.57,
+    "event": "ISU Figure Skating Grand Prix de France 2026",
+    "event_id": "isu-16027"
+   },
+   {
+    "name": "Diana DAVIS / Gleb SMOLKIN",
+    "noc": "GEO",
+    "points": 193.93,
+    "event": "ISU Figure Skating Grand Prix de France 2026",
+    "event_id": "isu-16027"
+   },
+   {
+    "name": "Christina CARREIRA / Anthony PONOMARENKO",
+    "noc": "USA",
+    "points": 189.36,
+    "event": "ISU Figure Skating Grand Prix de France 2026",
+    "event_id": "isu-16027"
+   },
+   {
+    "name": "Sofia VAL / Asaf KAZIMOV",
+    "noc": "ESP",
+    "points": 165.99,
+    "event": "ISU Figure Skating Grand Prix de France 2026",
+    "event_id": "isu-16027"
+   },
+   {
+    "name": "Leah NESET / Artem MARKELOV",
+    "noc": "USA",
+    "points": 164.72,
+    "event": "ISU Figure Skating Grand Prix de France 2026",
+    "event_id": "isu-16027"
+   },
+   {
+    "name": "Eva PATE / Logan BYE",
+    "noc": "USA",
+    "points": 156.07,
+    "event": "ISU Figure Skating Grand Prix de France 2026",
+    "event_id": "isu-16027"
+   },
+   {
+    "name": "Milla Ruud REITAN / Nikolaj MAJOROV",
+    "noc": "SWE",
+    "points": 155.95,
+    "event": "ISU Figure Skating Grand Prix de France 2026",
+    "event_id": "isu-16027"
+   },
+   {
+    "name": "Holly HARRIS / Jason CHAN",
+    "noc": "AUS",
+    "points": 154.79,
+    "event": "ISU Figure Skating Grand Prix de France 2026",
+    "event_id": "isu-16027"
+   },
+   {
+    "name": "Celina FRADJI / Jean-Hans FOURNEAUX",
+    "noc": "FRA",
+    "points": 151.24,
+    "event": "ISU Figure Skating Grand Prix de France 2026",
+    "event_id": "isu-16027"
+   },
+   {
+    "name": "Louise BORDET / Martin CHARDAIN",
+    "noc": "FRA",
+    "points": 141.94,
+    "event": "ISU Figure Skating Grand Prix de France 2026",
+    "event_id": "isu-16027"
+   }
+  ],
   "Women": [
    {
     "name": "Ami NAKAI",
