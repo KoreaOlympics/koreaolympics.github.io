@@ -18,7 +18,7 @@
   "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-1/"
  },
- "checked_at": "2026-10-25T19:53:39.852251+00:00",
+ "checked_at": "2026-10-25T19:54:31.262598+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-23T16:00:00.000Z",
@@ -10785,13 +10785,49 @@
       {
        "name": "Heat 1",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
+        {
+         "rank": 1,
+         "name": "Gleb IVCHENKO",
+         "noc": "KAZ",
+         "time": "1:30.820",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 47,
+         "lane": 2,
+         "slug": "gleb-ivchenko"
+        },
+        {
+         "rank": 2,
+         "name": "Jeongmin LEE",
+         "noc": "KOR",
+         "time": "1:30.833",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 32,
+         "lane": 4,
+         "slug": "jeongmin-lee"
+        },
+        {
+         "rank": 3,
+         "name": "Kazuki YOSHINAGA",
+         "noc": "JPN",
+         "time": "1:30.842",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 19,
+         "lane": 1,
+         "slug": "kazuki-yoshinaga"
+        },
         {
          "rank": 4,
          "name": "Yanghun Ben JUNG",
          "noc": "GER",
-         "time": "1:31.110",
+         "time": "1:31.098",
          "qual": "",
          "status": "",
          "record": "",
@@ -10803,49 +10839,13 @@
          "rank": 5,
          "name": "Ward PETRE",
          "noc": "BEL",
-         "time": "1:32.050",
+         "time": "1:32.030",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 55,
          "lane": 3,
          "slug": "ward-petre"
-        },
-        {
-         "rank": null,
-         "name": "Gleb IVCHENKO",
-         "noc": "KAZ",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 47,
-         "lane": 2,
-         "slug": "gleb-ivchenko"
-        },
-        {
-         "rank": null,
-         "name": "Jeongmin LEE",
-         "noc": "KOR",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 32,
-         "lane": 4,
-         "slug": "jeongmin-lee"
-        },
-        {
-         "rank": null,
-         "name": "Kazuki YOSHINAGA",
-         "noc": "JPN",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 19,
-         "lane": 1,
-         "slug": "kazuki-yoshinaga"
         }
        ]
       },
@@ -17572,11 +17572,11 @@
    "round": "Rep. Quarterfinals",
    "heat": "Heat 1",
    "start_utc": "2026-10-25T19:47:00.000Z",
-   "rank": null,
+   "rank": 2,
    "name": "Jeongmin LEE",
    "noc": "KOR",
-   "time": "no time",
-   "qual": "",
+   "time": "1:30.833",
+   "qual": "p",
    "status": "",
    "record": "",
    "bib": 32,
