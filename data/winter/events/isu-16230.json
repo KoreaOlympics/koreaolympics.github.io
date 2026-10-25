@@ -18,7 +18,7 @@
   "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-1/"
  },
- "checked_at": "2026-10-25T19:21:38.630316+00:00",
+ "checked_at": "2026-10-25T19:32:20.241731+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-23T16:00:00.000Z",
@@ -9901,7 +9901,7 @@
     {
      "id": 22887,
      "name": "Rep. Heats",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-10-25T18:53:29.000Z",
      "rule": "The first placed skater from each race and up to a maximum of three fastest second place skaters qualify for Rep Quarterfinals.",
      "heats": [
@@ -9994,7 +9994,7 @@
          "name": "Lucas Henry KOO",
          "noc": "BRA",
          "time": "1:31.154",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 59,
@@ -10061,7 +10061,7 @@
          "name": "Peter Joseph GROSECLOSE",
          "noc": "PHI",
          "time": "1:27.386",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 102,
@@ -10128,7 +10128,7 @@
          "name": "Pawel ADAMSKI",
          "noc": "POL",
          "time": "1:30.711",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 103,
@@ -10176,26 +10176,14 @@
       {
        "name": "Heat 5",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
-         "name": "Assen GYUROV",
-         "noc": "BUL",
-         "time": "1:47.400",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 61,
-         "lane": 4,
-         "slug": "assen-gyurov"
-        },
-        {
-         "rank": 2,
          "name": "David WU JIA WEI",
          "noc": "HUN",
-         "time": "1:47.470",
-         "qual": "",
+         "time": "1:47.455",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 83,
@@ -10203,10 +10191,10 @@
          "slug": "david-wu-jia-wei"
         },
         {
-         "rank": 3,
+         "rank": 2,
          "name": "Marek PROCHAZKA",
          "noc": "CZE",
-         "time": "1:48.140",
+         "time": "1:48.120",
          "qual": "",
          "status": "",
          "record": "",
@@ -10215,10 +10203,10 @@
          "slug": "marek-prochazka"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Marten TAUBERT",
          "noc": "GER",
-         "time": "no time",
+         "time": "2:06.226",
          "qual": "",
          "status": "",
          "record": "",
@@ -10227,20 +10215,117 @@
          "slug": "marten-taubert"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Lukas MACDONALD",
          "noc": "NZL",
-         "time": "no time",
+         "time": "DNF",
          "qual": "",
-         "status": "",
+         "status": "Did Not Finish",
          "record": "",
          "bib": 101,
          "lane": 1,
          "slug": "lukas-macdonald"
+        },
+        {
+         "rank": null,
+         "name": "Assen GYUROV",
+         "noc": "BUL",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 61,
+         "lane": 4,
+         "slug": "assen-gyurov"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Rep. Quarterfinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Yiding ZHU",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "1:26.959",
+        "qual": "Q"
+       },
+       {
+        "name": "Melle VAN 'T WOUT",
+        "noc": "NED",
+        "rank": 1,
+        "time": "1:29.220",
+        "qual": "Q"
+       },
+       {
+        "name": "Jeongmin LEE",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "1:30.538",
+        "qual": "Q"
+       },
+       {
+        "name": "Yanghun Ben JUNG",
+        "noc": "GER",
+        "rank": 1,
+        "time": "1:31.851",
+        "qual": "Q"
+       },
+       {
+        "name": "David WU JIA WEI",
+        "noc": "HUN",
+        "rank": 1,
+        "time": "1:47.455",
+        "qual": "Q"
+       },
+       {
+        "name": "Peter Joseph GROSECLOSE",
+        "noc": "PHI",
+        "rank": 2,
+        "time": "1:27.386",
+        "qual": "q"
+       },
+       {
+        "name": "Pawel ADAMSKI",
+        "noc": "POL",
+        "rank": 2,
+        "time": "1:30.711",
+        "qual": "q"
+       },
+       {
+        "name": "Lucas Henry KOO",
+        "noc": "BRA",
+        "rank": 2,
+        "time": "1:31.154",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Yiding ZHU (CHN)"
+       ],
+       [
+        "Melle VAN 'T WOUT (NED)"
+       ],
+       [
+        "Jeongmin LEE (KOR)"
+       ],
+       [
+        "Yanghun Ben JUNG (GER)"
+       ],
+       [
+        "David WU JIA WEI (HUN)",
+        "Lucas Henry KOO (BRA)"
+       ],
+       [
+        "Peter Joseph GROSECLOSE (PHI)",
+        "Pawel ADAMSKI (POL)"
+       ]
+      ]
+     }
     },
     {
      "id": 22889,
