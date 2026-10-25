@@ -15,10 +15,10 @@
   "city": "Vancouver",
   "country": "CAN",
   "state": "Live",
-  "live": "Men 1000 m",
+  "live": "Women 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-1/"
  },
- "checked_at": "2026-10-25T21:11:07.884797+00:00",
+ "checked_at": "2026-10-25T21:21:50.729499+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-23T16:00:00.000Z",
@@ -10330,170 +10330,7 @@
         }
        ]
       }
-     ],
-     "projection": {
-      "next": "Quarterfinals",
-      "official_draw_published": false,
-      "pending": [
-       "Rep. Semifinals"
-      ],
-      "qualified": [
-       {
-        "name": "Niall TREACY",
-        "noc": "GBR",
-        "rank": 1,
-        "time": "1:25.678",
-        "qual": "Q"
-       },
-       {
-        "name": "Shogo MIYATA",
-        "noc": "JPN",
-        "rank": 1,
-        "time": "1:26.509",
-        "qual": "Q"
-       },
-       {
-        "name": "Jens VAN 'T WOUT",
-        "noc": "NED",
-        "rank": 1,
-        "time": "1:26.661",
-        "qual": "Q"
-       },
-       {
-        "name": "Maxime LAOUN",
-        "noc": "CAN",
-        "rank": 1,
-        "time": "1:27.666",
-        "qual": "Q"
-       },
-       {
-        "name": "Jongun RIM",
-        "noc": "KOR",
-        "rank": 1,
-        "time": "1:27.680",
-        "qual": "Q"
-       },
-       {
-        "name": "Roberts KRUZBERGS",
-        "noc": "LAT",
-        "rank": 1,
-        "time": "1:27.769",
-        "qual": "Q"
-       },
-       {
-        "name": "Steven DUBOIS",
-        "noc": "CAN",
-        "rank": 1,
-        "time": "1:28.103",
-        "qual": "Q"
-       },
-       {
-        "name": "Furkan AKAR",
-        "noc": "TUR",
-        "rank": 1,
-        "time": "1:29.320",
-        "qual": "Q"
-       },
-       {
-        "name": "Luca SPECHENHAUSER",
-        "noc": "ITA",
-        "rank": 2,
-        "time": "1:25.820",
-        "qual": "Q"
-       },
-       {
-        "name": "Felix ROUSSEL",
-        "noc": "CAN",
-        "rank": 2,
-        "time": "1:26.688",
-        "qual": "Q"
-       },
-       {
-        "name": "Brandon KIM",
-        "noc": "USA",
-        "rank": 2,
-        "time": "1:26.747",
-        "qual": "Q"
-       },
-       {
-        "name": "Thomas NADALINI",
-        "noc": "ITA",
-        "rank": 2,
-        "time": "1:27.705",
-        "qual": "Q"
-       },
-       {
-        "name": "Wonjun MOON",
-        "noc": "HUN",
-        "rank": 2,
-        "time": "1:27.911",
-        "qual": "Q"
-       },
-       {
-        "name": "Michal NIEWINSKI",
-        "noc": "POL",
-        "rank": 2,
-        "time": "1:28.202",
-        "qual": "Q"
-       },
-       {
-        "name": "Benjamin SULLIVAN",
-        "noc": "USA",
-        "rank": 2,
-        "time": "1:28.232",
-        "qual": "Q"
-       },
-       {
-        "name": "Long SUN",
-        "noc": "CHN",
-        "rank": 2,
-        "time": "1:29.362",
-        "qual": "Q"
-       },
-       {
-        "name": "Seochan BAE",
-        "noc": "KOR",
-        "rank": 3,
-        "time": "1:25.993",
-        "qual": "q"
-       },
-       {
-        "name": "Bogdan VEKHOV",
-        "noc": "KAZ",
-        "rank": 3,
-        "time": "1:27.463",
-        "qual": "q"
-       }
-      ],
-      "races": [
-       [
-        "Niall TREACY (GBR)",
-        "Furkan AKAR (TUR)",
-        "Luca SPECHENHAUSER (ITA)",
-        "Long SUN (CHN)",
-        "Seochan BAE (KOR)"
-       ],
-       [
-        "Shogo MIYATA (JPN)",
-        "Steven DUBOIS (CAN)",
-        "Felix ROUSSEL (CAN)",
-        "Benjamin SULLIVAN (USA)",
-        "Bogdan VEKHOV (KAZ)"
-       ],
-       [
-        "Jens VAN 'T WOUT (NED)",
-        "Roberts KRUZBERGS (LAT)",
-        "Brandon KIM (USA)",
-        "Michal NIEWINSKI (POL)"
-       ],
-       [
-        "Maxime LAOUN (CAN)",
-        "Jongun RIM (KOR)",
-        "Thomas NADALINI (ITA)",
-        "Wonjun MOON (HUN)"
-       ]
-      ]
-     }
+     ]
     },
     {
      "id": 22887,
@@ -11419,8 +11256,8 @@
     {
      "id": 22890,
      "name": "Rep. Semifinals",
-     "status": "Live",
-     "start_utc": "2026-10-25T21:01:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-10-25T21:04:49.000Z",
      "rule": "The first placed skater from each race qualify for Quarterfinals.",
      "heats": [
       {
@@ -11492,14 +11329,26 @@
       },
       {
        "name": "Heat 2",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Teun BOER",
+         "noc": "NED",
+         "time": "1:27.050",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 46,
+         "lane": 2,
+         "slug": "teun-boer"
+        },
+        {
+         "rank": 2,
          "name": "Yiding ZHU",
          "noc": "CHN",
-         "time": "no time",
+         "time": "1:27.530",
          "qual": "",
          "status": "",
          "record": "",
@@ -11508,34 +11357,10 @@
          "slug": "yiding-zhu"
         },
         {
-         "rank": null,
-         "name": "Teun BOER",
-         "noc": "NED",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 46,
-         "lane": 2,
-         "slug": "teun-boer"
-        },
-        {
-         "rank": null,
-         "name": "Gleb IVCHENKO",
-         "noc": "KAZ",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 47,
-         "lane": 3,
-         "slug": "gleb-ivchenko"
-        },
-        {
-         "rank": null,
+         "rank": 3,
          "name": "Niels KINGMA",
          "noc": "NED",
-         "time": "no time",
+         "time": "1:27.701",
          "qual": "",
          "status": "",
          "record": "",
@@ -11544,20 +11369,209 @@
          "slug": "niels-kingma"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Willem MURRAY",
          "noc": "GBR",
-         "time": "no time",
+         "time": "1:27.891",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 76,
          "lane": 5,
          "slug": "willem-murray"
+        },
+        {
+         "rank": null,
+         "name": "Gleb IVCHENKO",
+         "noc": "KAZ",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 47,
+         "lane": 3,
+         "slug": "gleb-ivchenko"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Quarterfinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Niall TREACY",
+        "noc": "GBR",
+        "rank": 1,
+        "time": "1:25.678",
+        "qual": "Q"
+       },
+       {
+        "name": "Shogo MIYATA",
+        "noc": "JPN",
+        "rank": 1,
+        "time": "1:26.509",
+        "qual": "Q"
+       },
+       {
+        "name": "Jens VAN 'T WOUT",
+        "noc": "NED",
+        "rank": 1,
+        "time": "1:26.661",
+        "qual": "Q"
+       },
+       {
+        "name": "Maxime LAOUN",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "1:27.666",
+        "qual": "Q"
+       },
+       {
+        "name": "Jongun RIM",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "1:27.680",
+        "qual": "Q"
+       },
+       {
+        "name": "Roberts KRUZBERGS",
+        "noc": "LAT",
+        "rank": 1,
+        "time": "1:27.769",
+        "qual": "Q"
+       },
+       {
+        "name": "Steven DUBOIS",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "1:28.103",
+        "qual": "Q"
+       },
+       {
+        "name": "Furkan AKAR",
+        "noc": "TUR",
+        "rank": 1,
+        "time": "1:29.320",
+        "qual": "Q"
+       },
+       {
+        "name": "Luca SPECHENHAUSER",
+        "noc": "ITA",
+        "rank": 2,
+        "time": "1:25.820",
+        "qual": "Q"
+       },
+       {
+        "name": "Felix ROUSSEL",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "1:26.688",
+        "qual": "Q"
+       },
+       {
+        "name": "Brandon KIM",
+        "noc": "USA",
+        "rank": 2,
+        "time": "1:26.747",
+        "qual": "Q"
+       },
+       {
+        "name": "Thomas NADALINI",
+        "noc": "ITA",
+        "rank": 2,
+        "time": "1:27.705",
+        "qual": "Q"
+       },
+       {
+        "name": "Wonjun MOON",
+        "noc": "HUN",
+        "rank": 2,
+        "time": "1:27.911",
+        "qual": "Q"
+       },
+       {
+        "name": "Michal NIEWINSKI",
+        "noc": "POL",
+        "rank": 2,
+        "time": "1:28.202",
+        "qual": "Q"
+       },
+       {
+        "name": "Benjamin SULLIVAN",
+        "noc": "USA",
+        "rank": 2,
+        "time": "1:28.232",
+        "qual": "Q"
+       },
+       {
+        "name": "Long SUN",
+        "noc": "CHN",
+        "rank": 2,
+        "time": "1:29.362",
+        "qual": "Q"
+       },
+       {
+        "name": "Seochan BAE",
+        "noc": "KOR",
+        "rank": 3,
+        "time": "1:25.993",
+        "qual": "q"
+       },
+       {
+        "name": "Bogdan VEKHOV",
+        "noc": "KAZ",
+        "rank": 3,
+        "time": "1:27.463",
+        "qual": "q"
+       },
+       {
+        "name": "Teun BOER",
+        "noc": "NED",
+        "rank": 1,
+        "time": "1:27.050",
+        "qual": "Q"
+       },
+       {
+        "name": "Clayton DE CLEMENTE",
+        "noc": "USA",
+        "rank": 1,
+        "time": "1:28.695",
+        "qual": "Q"
+       }
+      ],
+      "races": [
+       [
+        "Niall TREACY (GBR)",
+        "Furkan AKAR (TUR)",
+        "Luca SPECHENHAUSER (ITA)",
+        "Long SUN (CHN)",
+        "Seochan BAE (KOR)"
+       ],
+       [
+        "Shogo MIYATA (JPN)",
+        "Steven DUBOIS (CAN)",
+        "Felix ROUSSEL (CAN)",
+        "Benjamin SULLIVAN (USA)",
+        "Bogdan VEKHOV (KAZ)"
+       ],
+       [
+        "Jens VAN 'T WOUT (NED)",
+        "Roberts KRUZBERGS (LAT)",
+        "Brandon KIM (USA)",
+        "Michal NIEWINSKI (POL)",
+        "Teun BOER (NED)"
+       ],
+       [
+        "Maxime LAOUN (CAN)",
+        "Jongun RIM (KOR)",
+        "Thomas NADALINI (ITA)",
+        "Wonjun MOON (HUN)",
+        "Clayton DE CLEMENTE (USA)"
+       ]
+      ]
+     }
     },
     {
      "id": 22891,
@@ -16303,10 +16317,193 @@
     {
      "id": 22903,
      "name": "Rep. Semifinals",
-     "status": "Scheduled",
+     "status": "Live",
      "start_utc": "2026-10-25T21:14:00.000Z",
      "rule": "The first placed skater from each race qualify for Semifinals.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Danae BLAIS",
+         "noc": "CAN",
+         "time": "2:45.963",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 25,
+         "lane": 1,
+         "slug": "danae-blais"
+        },
+        {
+         "rank": 2,
+         "name": "Yan ZHANG",
+         "noc": "CHN",
+         "time": "2:45.984",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 56,
+         "lane": 2,
+         "slug": "yan-zhang-1"
+        },
+        {
+         "rank": 3,
+         "name": "Maja Dora SOMODI",
+         "noc": "HUN",
+         "time": "2:46.075",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 32,
+         "lane": 4,
+         "slug": "maja-dora-somodi"
+        },
+        {
+         "rank": 4,
+         "name": "Nikola MAZUR",
+         "noc": "POL",
+         "time": "2:46.199",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 34,
+         "lane": 3,
+         "slug": "nikola-mazur"
+        },
+        {
+         "rank": 5,
+         "name": "Kiek STRAATHOF",
+         "noc": "NED",
+         "time": "2:46.297",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 80,
+         "lane": 5,
+         "slug": "kiek-straathof"
+        },
+        {
+         "rank": 6,
+         "name": "Chien Hua HUANG",
+         "noc": "TPE",
+         "time": "2:48.407",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 85,
+         "lane": 6,
+         "slug": "chien-hua-huang"
+        },
+        {
+         "rank": 7,
+         "name": "Sarasa KINAMI",
+         "noc": "JPN",
+         "time": "2:49.407",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 68,
+         "lane": 7,
+         "slug": "sarasa-kinami-1"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Florence BRUNELLE",
+         "noc": "CAN",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 10,
+         "lane": 1,
+         "slug": "florence-brunelle"
+        },
+        {
+         "rank": null,
+         "name": "Margherita BETTI",
+         "noc": "ITA",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 66,
+         "lane": 2,
+         "slug": "margherita-betti"
+        },
+        {
+         "rank": null,
+         "name": "Diede VAN OORSCHOT",
+         "noc": "NED",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 36,
+         "lane": 3,
+         "slug": "diede-van-oorschot"
+        },
+        {
+         "rank": null,
+         "name": "Wakaba KENJO",
+         "noc": "JPN",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 67,
+         "lane": 4,
+         "slug": "wakaba-kenjo"
+        },
+        {
+         "rank": null,
+         "name": "Diana Laura VEGI",
+         "noc": "HUN",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 46,
+         "lane": 5,
+         "slug": "diana-laura-vegi"
+        },
+        {
+         "rank": null,
+         "name": "Malika YERMEK",
+         "noc": "KAZ",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 42,
+         "lane": 6,
+         "slug": "malika-yermek-1"
+        },
+        {
+         "rank": null,
+         "name": "Annabelle GREEN",
+         "noc": "GBR",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 61,
+         "lane": 7,
+         "slug": "annabelle-green"
+        }
+       ]
+      }
+     ]
     },
     {
      "id": 22904,
