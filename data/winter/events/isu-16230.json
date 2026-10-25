@@ -3,6 +3,7 @@
   "id": "isu-16230",
   "sport": "short-track",
   "source": "ISU",
+  "season": "2026/2027",
   "slug": "isu-short-track-world-tour-1",
   "name": "ISU Short Track World Tour #1",
   "category": "ISU World Tour",
@@ -14,10 +15,10 @@
   "city": "Vancouver",
   "country": "CAN",
   "state": "Live",
-  "live": "Men 500 m",
+  "live": "Women 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-1/"
  },
- "checked_at": "2026-10-25T18:37:44.488490+00:00",
+ "checked_at": "2026-10-25T18:48:29.067364+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-23T16:00:00.000Z",
@@ -1822,10 +1823,164 @@
     {
      "id": 22863,
      "name": "Rep. Heats",
-     "status": "Scheduled",
+     "status": "Live",
      "start_utc": "2026-10-25T18:45:00.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of two fastest third place skaters qualify for Rep Quarterfinals.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Guldana ZHALMUKHAN",
+         "noc": "KAZ",
+         "time": "46.218",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 75,
+         "lane": 1,
+         "slug": "guldana-zhalmukhan"
+        },
+        {
+         "rank": 2,
+         "name": "Lia MEAD",
+         "noc": "NZL",
+         "time": "46.301",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 81,
+         "lane": 3,
+         "slug": "lia-mead"
+        },
+        {
+         "rank": 3,
+         "name": "Barbora GAKOVA",
+         "noc": "CZE",
+         "time": "46.594",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 57,
+         "lane": 2,
+         "slug": "barbora-gakova"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Getting Ready",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Louisiana STAHL",
+         "noc": "USA",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 87,
+         "lane": 1,
+         "slug": "louisiana-stahl"
+        },
+        {
+         "rank": null,
+         "name": "Chien Hua HUANG",
+         "noc": "TPE",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 85,
+         "lane": 2,
+         "slug": "chien-hua-huang"
+        },
+        {
+         "rank": null,
+         "name": "Maja Dora SOMODI",
+         "noc": "HUN",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 32,
+         "lane": 3,
+         "slug": "maja-dora-somodi"
+        },
+        {
+         "rank": null,
+         "name": "Anna FALKOWSKA",
+         "noc": "POL",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 82,
+         "lane": 4,
+         "slug": "anna-falkowska"
+        }
+       ]
+      },
+      {
+       "name": "Heat 3",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Rina YAMANA",
+         "noc": "JPN",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 70,
+         "lane": 1,
+         "slug": "rina-yamana"
+        },
+        {
+         "rank": null,
+         "name": "Sarasa KINAMI",
+         "noc": "JPN",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 68,
+         "lane": 2,
+         "slug": "sarasa-kinami-1"
+        },
+        {
+         "rank": null,
+         "name": "Chloe CAMERON",
+         "noc": "GBR",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 60,
+         "lane": 3,
+         "slug": "chloe-cameron"
+        },
+        {
+         "rank": null,
+         "name": "Ching Shun Nicole LAW",
+         "noc": "HKG",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 65,
+         "lane": 4,
+         "slug": "ching-shun-nicole-law"
+        }
+       ]
+      }
+     ]
     },
     {
      "id": 22865,
