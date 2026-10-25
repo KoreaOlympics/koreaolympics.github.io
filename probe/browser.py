@@ -1,50 +1,34 @@
-"""Open pages in headless Chromium, click into results, record XHR JSON and screenshots."""
+"""Capture XHR on the GP de France results tab and the first category click."""
 import asyncio, json, pathlib, re
 from playwright.async_api import async_playwright
-
 OUT = pathlib.Path("probe/out/browser"); OUT.mkdir(parents=True, exist_ok=True)
-PAGES = [
-    ("ss-wc5", "https://isu-skating.com/en/speed-skating/events/eventdetail/isu-speed-skating-world-cup-5/?tab=results_1311", r"^(Men|Women|Ladies).*\d+ ?m"),
-    ("ss-wc5-sched", "https://isu-skating.com/en/speed-skating/events/eventdetail/isu-speed-skating-world-cup-5/?tab=schedule_1311", None),
-    ("fs-sa", "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-skate-america-2026/?tab=results_16006", r"^(Men|Women|Pairs|Ice Dance)"),
-    ("fs-sa-sched", "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-skate-america-2026/?tab=schedule_16006", None),
-    ("isulive", "https://live.isuresults.eu/home", None),
-]
-records, cur = [], [""]
-
+records = []
 async def main():
     async with async_playwright() as p:
         b = await p.chromium.launch()
         page = await (await b.new_context(viewport={"width": 1400, "height": 2200}, locale="en-US")).new_page()
         async def on_resp(r):
-            if r.request.resource_type in ("xhr", "fetch") and not re.search(r"_rsc=|google|cookiebot|cdn-cgi|menus|Localization", r.url):
+            if r.request.resource_type in ("xhr", "fetch") and not re.search(r"_rsc=|google|cookiebot|cdn-cgi|menus|Localization|Partners", r.url):
                 try: body = await r.text()
                 except Exception: body = ""
-                records.append({"page": cur[0], "url": r.url, "method": r.request.method, "post": r.request.post_data,
-                                "status": r.status, "len": len(body), "body": body[:200000]})
+                records.append({"url": r.url, "method": r.request.method, "post": r.request.post_data, "status": r.status, "body": body[:150000]})
         page.on("response", lambda r: asyncio.ensure_future(on_resp(r)))
-        for name, url, clickre in PAGES:
-            cur[0] = name
-            try:
-                await page.goto(url, wait_until="domcontentloaded", timeout=30000)
-                await page.wait_for_timeout(7000)
-                await page.screenshot(path=str(OUT / f"{name}.png"))
-                (OUT / f"{name}.html").write_text(await page.content())
-                if clickre:
-                    texts = await page.eval_on_selector_all("button, a, li, div[role=button], span",
-                        "els => els.filter(e => e.children.length < 3).map(e => e.innerText.trim()).filter(t => t && t.length < 40)")
-                    hits = list(dict.fromkeys(t for t in texts if re.search(clickre, t)))[:3]
-                    (OUT / f"{name}.clickable.json").write_text(json.dumps(texts[:300], ensure_ascii=False))
-                    for i, t in enumerate(hits):
-                        try:
-                            await page.get_by_text(t, exact=True).first.click(timeout=5000)
-                            await page.wait_for_timeout(5000)
-                            await page.screenshot(path=str(OUT / f"{name}-{i}.png"))
-                        except Exception as e:
-                            print(name, "click", t, e)
-            except Exception as e:
-                print(name, e)
+        base = "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-grand-prix-de-france-2026/"
+        await page.goto(base, wait_until="domcontentloaded", timeout=30000); await page.wait_for_timeout(6000)
+        links = await page.eval_on_selector_all("a", "els => els.map(e => [e.innerText.trim().slice(0,50), e.href])")
+        (OUT / "links.json").write_text(json.dumps(links, ensure_ascii=False))
+        res = [h for t, h in links if "tab=results" in h]
+        if res:
+            await page.goto(res[0], wait_until="domcontentloaded", timeout=30000); await page.wait_for_timeout(7000)
+            await page.screenshot(path=str(OUT / "results.png"))
+            texts = await page.eval_on_selector_all("button, a, li, span, div", "els => els.filter(e => e.children.length < 2).map(e => e.innerText.trim()).filter(t => t && t.length < 30)")
+            for t in [x for x in dict.fromkeys(texts) if re.match(r"^(Men|Women|Pairs|Ice Dance)$", x)][:2]:
+                try:
+                    await page.get_by_text(t, exact=True).first.click(timeout=5000); await page.wait_for_timeout(5000)
+                except Exception as e: print("click", t, e)
+            l2 = await page.eval_on_selector_all("a", "els => els.map(e => [e.innerText.trim().slice(0,50), e.href])")
+            (OUT / "links2.json").write_text(json.dumps(l2, ensure_ascii=False))
+            await page.screenshot(path=str(OUT / "results2.png"))
         await asyncio.sleep(2); await b.close()
     (OUT / "xhr.json").write_text(json.dumps(records, ensure_ascii=False, indent=1))
-
 asyncio.run(main())
