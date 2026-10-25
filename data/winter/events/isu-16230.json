@@ -18,7 +18,7 @@
   "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-1/"
  },
- "checked_at": "2026-10-25T20:05:26.810467+00:00",
+ "checked_at": "2026-10-25T20:16:13.167461+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-23T16:00:00.000Z",
@@ -10804,7 +10804,7 @@
          "name": "Jeongmin LEE",
          "noc": "KOR",
          "time": "1:30.833",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 32,
@@ -10938,7 +10938,7 @@
          "name": "Fre VAN DAMME",
          "noc": "BEL",
          "time": "1:39.337",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 57,
@@ -10985,27 +10985,15 @@
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Zhanshuo LOU",
-         "noc": "HKG",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 45,
-         "lane": 1,
-         "slug": "zhanshuo-lou"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Brendan COREY",
          "noc": "AUS",
-         "time": "no time",
-         "qual": "",
+         "time": "1:29.432",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 18,
@@ -11013,22 +11001,22 @@
          "slug": "brendan-corey"
         },
         {
-         "rank": null,
-         "name": "Muhammed BOZDAG",
-         "noc": "TUR",
-         "time": "no time",
-         "qual": "",
+         "rank": 2,
+         "name": "Zhanshuo LOU",
+         "noc": "HKG",
+         "time": "1:29.536",
+         "qual": "p",
          "status": "",
          "record": "",
-         "bib": 109,
-         "lane": 3,
-         "slug": "muhammed-bozdag"
+         "bib": 45,
+         "lane": 1,
+         "slug": "zhanshuo-lou"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Luka JASIC",
          "noc": "SRB",
-         "time": "no time",
+         "time": "1:29.684",
          "qual": "",
          "status": "",
          "record": "",
@@ -11037,30 +11025,42 @@
          "slug": "luka-jasic"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Pawel ADAMSKI",
          "noc": "POL",
-         "time": "no time",
+         "time": "1:30.088",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 103,
          "lane": 5,
          "slug": "pawel-adamski"
+        },
+        {
+         "rank": 5,
+         "name": "Muhammed BOZDAG",
+         "noc": "TUR",
+         "time": "DNF",
+         "qual": "",
+         "status": "Did Not Finish",
+         "record": "",
+         "bib": 109,
+         "lane": 3,
+         "slug": "muhammed-bozdag"
         }
        ]
       },
       {
        "name": "Heat 5",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Teun BOER",
          "noc": "NED",
-         "time": "no time",
-         "qual": "",
+         "time": "1:28.211",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 46,
@@ -11068,10 +11068,22 @@
          "slug": "teun-boer"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Lucas Henry KOO",
+         "noc": "BRA",
+         "time": "1:28.499",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 59,
+         "lane": 5,
+         "slug": "lucas-henry-koo"
+        },
+        {
+         "rank": 3,
          "name": "Tobias WOLF",
          "noc": "AUT",
-         "time": "no time",
+         "time": "1:29.640",
          "qual": "",
          "status": "",
          "record": "",
@@ -11080,22 +11092,10 @@
          "slug": "tobias-wolf"
         },
         {
-         "rank": null,
-         "name": "Aibek NASSEN",
-         "noc": "KAZ",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 91,
-         "lane": 3,
-         "slug": "aibek-nassen"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Robin BENDIG",
          "noc": "GER",
-         "time": "no time",
+         "time": "1:30.258",
          "qual": "",
          "status": "",
          "record": "",
@@ -11105,21 +11105,21 @@
         },
         {
          "rank": null,
-         "name": "Lucas Henry KOO",
-         "noc": "BRA",
-         "time": "no time",
+         "name": "Aibek NASSEN",
+         "noc": "KAZ",
+         "time": "PEN",
          "qual": "",
-         "status": "",
+         "status": "Penalty",
          "record": "",
-         "bib": 59,
-         "lane": 5,
-         "slug": "lucas-henry-koo"
+         "bib": 91,
+         "lane": 3,
+         "slug": "aibek-nassen"
         }
        ]
       },
       {
        "name": "Heat 6",
-       "status": "Scheduled",
+       "status": "Getting Ready",
        "official": "Start List",
        "competitors": [
         {
@@ -17576,7 +17576,7 @@
    "name": "Jeongmin LEE",
    "noc": "KOR",
    "time": "1:30.833",
-   "qual": "p",
+   "qual": "",
    "status": "",
    "record": "",
    "bib": 32,
