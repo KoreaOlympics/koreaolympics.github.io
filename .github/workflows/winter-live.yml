@@ -1,14 +1,15 @@
-# 동계 4종목(쇼트트랙·스피드·피겨·스노보드) 일정·결과 수집 + 한국 선수 AI 칼럼.
-# quick: 10분마다 진행 중/±1일 대회만. full: 하루 두 번 시즌 전체 달력·일정.
+# 동계 4종목(쇼트트랙·스피드·피겨·스노보드) 일정·결과 수집.
+# GitHub 예약 실행은 혼잡하면 몇 시간씩 밀리므로, 한 번 실행되면 대회 중에는 10분 간격으로 약 50분 반복하고
+# 끝날 때 다음 실행을 직접 이어 붙인다. 시간마다 도는 예약은 사슬이 끊겼을 때의 예비다.
 name: Winter live
 on:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '7 * * * *'
     - cron: '41 5,17 * * *'
   workflow_dispatch:
     inputs:
       full:
-        description: 'Refresh the whole season'
+        description: 'Refresh the whole season first'
         type: boolean
         default: false
 permissions:
@@ -20,38 +21,33 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 70
+    env:
+      GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Collect
-        run: |
-          if [ "${{ github.event.schedule }}" = "41 5,17 * * *" ] || [ "${{ inputs.full }}" = "true" ]; then
-            python -m tools.winter.collect --full
-          else
-            python -m tools.winter.collect
-          fi
-      - name: AI columns
-        continue-on-error: true
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: |
-          if [ -n "$ANTHROPIC_API_KEY" ]; then pip install -q 'anthropic>=1,<2' && python -m tools.winter.column; fi
-      - name: Commit and push
+      - name: Collect, publish, repeat while events are live
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
-          git add data/winter
-          # status.json alone changes every run; only publish when real data changed (or on full runs)
-          if git diff --cached --quiet -- . ':(exclude)data/winter/status.json' && [ "${{ github.event.schedule }}" != "41 5,17 * * *" ]; then
-            echo "no data changes"; exit 0
-          fi
-          git commit -q -m "winter: update live data"
-          for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done
-          git diff --quiet HEAD @{u} || exit 1
-          # bot pushes do not trigger push-based deploys; start the Pages deploy explicitly
-          gh workflow run pages.yml --ref main
-        env:
-          GH_TOKEN: ${{ github.token }}
+          flag=""; force=""
+          if [ "${{ github.event.schedule }}" = "41 5,17 * * *" ] || [ "${{ inputs.full }}" = "true" ]; then flag="--full"; force="force"; fi
+          end=$((SECONDS + 50*60))
+          while :; do
+            python -m tools.winter.collect $flag || true
+            python tools/olympic.py winter
+            # AI 칼럼(tools/winter/column.py)은 보류 중
+            tools/winter/publish.sh $force
+            flag=""; force=""
+            active=$(python -c "import json;print(len(json.load(open('data/winter/status.json')).get('active',[])))")
+            echo "active events: $active"
+            if [ "$active" = 0 ] || [ $SECONDS -ge $end ]; then break; fi
+            sleep 600
+          done
+          echo "ACTIVE=$active" >> "$GITHUB_ENV"
+      - name: Chain the next run while events are live
+        if: env.ACTIVE != '0'
+        run: gh workflow run winter-live.yml --ref main

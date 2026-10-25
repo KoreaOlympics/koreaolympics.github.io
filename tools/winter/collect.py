@@ -38,7 +38,7 @@ def save(path, obj):
     return False
 
 def isu_event(sport, e):
-    return {'id': f"isu-{e['event_id']}", 'sport': sport, 'source': 'ISU', 'slug': e.get('slug') or slug_from(e),
+    return {'id': f"isu-{e['event_id']}", 'sport': sport, 'source': 'ISU', 'season': e.get('season'), 'slug': e.get('slug') or slug_from(e),
             'name': e['name'], 'category': e.get('event_sub_type_name', ''),
             'start': e['from_date'][:10], 'end': e['to_date'][:10],
             'start_utc': e['from_date_utc'], 'end_utc': e['to_date_utc'], 'tz': e.get('time_zone'),
@@ -103,6 +103,44 @@ def add_projections(dist):
                                'qualified': [{k: c[k] for k in ('name', 'noc', 'rank', 'time', 'qual')} for c in proj['qualified']],
                                'races': [[c['name'] + ' (' + c['noc'] + ')' for c in race] for race in proj['races']]}
 
+def figure_results(ev, sessions):
+    out = {}
+    event_id = ev['id'].split('-', 1)[1]
+    for rid in dict.fromkeys(s['event_result_id'] for s in sessions if s.get('event_result_id')):
+        title = next(s['title'] for s in sessions if s['event_result_id'] == rid)
+        rows = []
+        for c in isu.results_fs(event_id, rid):
+            sk = c.get('skaters') or c.get('skaters_team') or {}
+            segs = {}
+            for r in c.get('event_result_round_competitors') or []:
+                rnd = r.get('event_result_round') or {}
+                segs[r.get('code') or rnd.get('code') or rnd.get('name', '')] = {
+                    'name': rnd.get('name', ''), 'rank': r.get('rank'), 'total': r.get('total_points') or '',
+                    'tes': r.get('technical_score') or '', 'pcs': r.get('component_score') or '', 'status': rnd.get('status', '')}
+            rows.append({'rank': c.get('final_rank'), 'name': sk.get('full_name') or sk.get('name') or '',
+                         'noc': c.get('started_for_nf_code') or sk.get('nationality_code') or '',
+                         'points': c.get('final_points') or '', 'status': c.get('participant_status_name') or '', 'segments': segs})
+        rows.sort(key=lambda r: (r['rank'] is None, r['rank'] or 0, -float(next((x['total'] for x in r['segments'].values() if x['total']), 0) or 0)))
+        order = []
+        for r in rows:
+            for code, sg in r['segments'].items():
+                if code not in order: order.append(code)
+        out[str(rid)] = {'title': title, 'segments': order, 'rows': rows}
+    return out
+
+def korea_rows_figure(ev, results):
+    rows = []
+    for cat in results.values():
+        for r in cat['rows']:
+            if r['noc'] != KOR: continue
+            done = [(k, v) for k, v in r['segments'].items() if v['total']]
+            last = done[-1] if done else (None, {})
+            rows.append({'event_id': ev['id'], 'sport': ev['sport'], 'event': ev['name'], 'distance': cat['title'],
+                         'round': last[1].get('name', ''), 'heat': '', 'start_utc': None, 'rank': r['rank'] or last[1].get('rank'),
+                         'name': r['name'], 'noc': r['noc'], 'time': r['points'] or last[1].get('total', ''),
+                         'qual': '', 'status': '', 'segments': {k: v['total'] for k, v in r['segments'].items()}})
+    return rows
+
 def korea_rows(ev, results):
     rows = []
     for dist in results.values():
@@ -114,8 +152,23 @@ def korea_rows(ev, results):
                                      'round': r['name'], 'heat': h['name'], 'start_utc': r.get('start_utc'), **c})
     return rows
 
+def merge_previous(sport, season, events):
+    """ISU's events/list sometimes drops an event (seen with an in-progress Grand Prix);
+    keep anything we saw earlier this season so it never disappears from the calendar."""
+    prev = load(OUT / 'calendar.json', {}).get('sports', {}).get(sport, {}).get('events', [])
+    prev += [d['event'] for f in sorted((OUT / 'events').glob('isu-*.json'))
+             if (d := load(f, {})).get('event', {}).get('sport') == sport]
+    seen = {e['id'] for e in events}
+    today = now().date().isoformat()
+    for e in prev:
+        if e['id'] not in seen and e.get('season', season) == season and e['start'] >= f"{season[:4]}-07-01":
+            seen.add(e['id'])
+            e = dict(e, state='Finished' if e['end'] < today else e.get('state', ''))
+            events.append(e)
+    return sorted(events, key=lambda e: e['start'])
+
 def collect_isu(sport, season, mode, status):
-    events = [isu_event(sport, e) for e in isu.events(sport, season)]
+    events = merge_previous(sport, season, [isu_event(sport, e) for e in isu.events(sport, season)])
     today = now().date()
     for ev in events:
         active = is_active(ev, today)
@@ -129,7 +182,16 @@ def collect_isu(sport, season, mode, status):
             data = {'event': ev, 'checked_at': now().isoformat(), 'sessions': sessions, 'results': {}}
             if sport == 'short-track' and (active or ev['state'] == 'Finished'):
                 data['results'] = short_track_results(ev, [s for s in sessions if s['type'] == 'Singles'])
-            data['korea'] = korea_rows(ev, data['results'])
+                data['korea'] = korea_rows(ev, data['results'])
+            elif sport == 'figure-skating' and (active or ev['state'] == 'Finished'):
+                data['results'] = figure_results(ev, sessions)
+                last = {}
+                for x in sessions:
+                    last[str(x['event_result_id'])] = x['start_utc']
+                data['korea'] = [dict(r, start_utc=last.get(next((k for k, c in data['results'].items() if c['title'] == r['distance']), ''), ev['start_utc']))
+                                 for r in korea_rows_figure(ev, data['results'])]
+            else:
+                data['korea'] = []
             save(path, data)
             status[f"{sport}:{ev['id']}"] = {'ok': True, 'at': now().isoformat()}
         except Exception as exc:
@@ -170,6 +232,60 @@ def collect_speed(start_year, mode, status):
             traceback.print_exc()
     return events
 
+def podium_st(dist):
+    """Final A (heat named 'Final' or 'Final A') ranks 1-3, once that heat has results."""
+    for r in dist['rounds']:
+        if 'final' not in r['name'].lower() or r['name'].lower().startswith('rep'):
+            continue
+        for h in r['heats']:
+            if h['name'] in ('Final', 'Final A') or (r['name'] == 'Final A' and h['competitors']):
+                done = h.get('status') == 'Finished' or h.get('official') == 'Official'
+                top = [c for c in h['competitors'] if c.get('rank') in (1, 2, 3)]
+                if done and top:
+                    return [{k: c[k] for k in ('rank', 'name', 'noc', 'time')} for c in sorted(top, key=lambda c: c['rank'])]
+    return None
+
+def podium_fs(cat):
+    rows = cat['rows']
+    finished = rows and all(v['status'] == 'Finished' for v in rows[0]['segments'].values())
+    top = [r for r in rows if r['rank'] in (1, 2, 3)]
+    if finished and top:
+        return [{'rank': r['rank'], 'name': r['name'], 'noc': r['noc'], 'time': r['points']} for r in top]
+    return None
+
+def podium_ss(race):
+    """Division A (or undivided) official race: ranks 1-3."""
+    if race.get('division') not in (None, '', 'A') or not race.get('official'):
+        return None
+    top = [r for r in race['rows'] if r.get('rank') in (1, 2, 3)]
+    return [{k: r[k] for k in ('rank', 'name', 'noc', 'time')} for r in top] or None
+
+def build_season(sport, cal):
+    """Season summary in the shape of a Wikipedia/Namu season article: schedule, podiums, medal table."""
+    events, tally, best = [], {}, {}
+    for ev in (cal['sports'].get(sport) or {}).get('events', []):
+        d = load(OUT / 'events' / f"{ev['id']}.json", {})
+        podiums = []
+        for key, item in (d.get('results') or {}).items():
+            pod = {'short-track': podium_st, 'figure-skating': podium_fs, 'speed-skating': podium_ss}[sport](item)
+            if sport == 'speed-skating' and item.get('division') not in (None, '', 'A'):
+                continue
+            podiums.append({'title': item['title'], 'podium': pod})
+            for p in pod or []:
+                t = tally.setdefault(p['noc'], [0, 0, 0]); t[p['rank'] - 1] += 1
+            if sport == 'figure-skating':
+                for r in item['rows']:
+                    try: pts = float(r['points'])
+                    except (TypeError, ValueError): continue
+                    b = best.setdefault(item['title'], [])
+                    b.append({'name': r['name'], 'noc': r['noc'], 'points': pts, 'event': ev['name'], 'event_id': ev['id']})
+        events.append({k: ev.get(k) for k in ('id', 'name', 'category', 'start', 'end', 'city', 'country', 'state', 'url')} | {'podiums': podiums})
+    medals = sorted(([noc, *m, sum(m)] for noc, m in tally.items()), key=lambda x: (-x[1], -x[2], -x[3], x[0]))
+    out = {'sport': sport, 'season': cal.get('season'), 'events': events, 'medals': medals}
+    if best:
+        out['season_best'] = {k: sorted(v, key=lambda x: -x['points'])[:10] for k, v in best.items()}
+    save(OUT / f'season-{sport}.json', out)
+
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument('--full', action='store_true')
@@ -207,12 +323,17 @@ def main(argv=None):
             traceback.print_exc()
     cal['season'] = season
     save(OUT / 'calendar.json', cal)
+    for sport in (*ISU_SPORTS, 'speed-skating'):
+        build_season(sport, cal)
     korea = []
     for f in sorted((OUT / 'events').glob('*.json')):
         korea += load(f, {}).get('korea', [])
     korea.sort(key=lambda r: r.get('start_utc') or '', reverse=True)
     save(OUT / 'korea.json', {'season': season, 'rows': korea})
-    save(OUT / 'status.json', {'updated_at': now().isoformat(), 'mode': mode, 'sources': status})
+    today = now().date()
+    active = sorted(e['id'] for sp in ('short-track', 'speed-skating', 'figure-skating') for e in cal['sports'].get(sp, {}).get('events', [])
+                    if e.get('state') != 'Cancelled' and is_active(e, today))
+    save(OUT / 'status.json', {'updated_at': now().isoformat(), 'mode': mode, 'active': active, 'sources': status})
     print(f'{mode}: {sum(len(s["events"]) for s in cal["sports"].values())} events, {len(korea)} Korean results, {failed} source failures')
     return 1 if failed == len(ISU_SPORTS) + 2 else 0
 

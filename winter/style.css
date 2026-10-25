@@ -92,3 +92,29 @@ footer { color: var(--muted); font-size: 12px; padding: 20px 0 40px; border-top:
 .stat .s span { font-size: 12px; color: var(--muted); }
 @media (max-width: 600px) { header.top h1 { font-size: 20px; } .heats { grid-template-columns: 1fr; } th, td { padding: 4px 5px; } }
 .column p { line-height: 1.75; }
+/* v2: event sub-navigation, round stepper, medal tables */
+.subtabs { display: flex; gap: 4px; border-bottom: 1px solid var(--line); margin: 6px 0 14px; }
+.subtabs a { padding: 8px 12px; text-decoration: none; color: var(--muted); font-weight: 600; border-bottom: 3px solid transparent; }
+.subtabs a.on { color: var(--ink); border-color: var(--ink); }
+.chiprow { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 0 0 8px; }
+.chiprow .lbl { font-size: 12px; font-weight: 700; color: var(--muted); width: 34px; }
+a.chip { text-decoration: none; }
+.rounds { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin: 12px 0 8px; }
+.rounds i { color: var(--muted); font-style: normal; }
+.rstep { text-decoration: none; border: 1px solid var(--line); background: var(--panel); border-radius: 8px; padding: 4px 9px; font-size: 13px; font-weight: 600; line-height: 1.25; }
+.rstep span { display: block; font-size: 10px; font-weight: 500; color: var(--muted); }
+.rstep.st-scheduled { opacity: .55; }
+.rstep.st-live { border-color: var(--live); } .rstep.st-live span { color: var(--live); font-weight: 700; }
+.rstep.on { background: var(--ink); color: var(--bg); border-color: var(--ink); opacity: 1; } .rstep.on span { color: var(--bg); }
+.roundhead { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 8px 0 4px; }
+.roundhead h3 { margin: 0; }
+.roundhead input[type=search] { flex: 1 1 180px; padding: 5px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); font: inherit; font-size: 13px; }
+tr.hit td { outline: 2px solid var(--proj); outline-offset: -2px; }
+table.medals { border: 2px solid #3d3b6e; margin-bottom: 12px; }
+table.medals thead th { color: #fff; text-align: center; font-size: 14px; background: #3d3b6e; }
+table.medals thead th.g { background: #d4a900; } table.medals thead th.s { background: #9aa0a6; } table.medals thead th.b { background: #b8733a; }
+table.medals tbody th { text-align: center; width: 14%; font-size: 14px; color: var(--ink); }
+table.medals td.medal-name { white-space: nowrap; }
+table.matrix td { font-size: 13px; white-space: nowrap; } table.matrix td a { text-decoration: none; display: block; }
+table.narrow { width: auto; min-width: 50%; }
+h4 { margin: 18px 0 6px; font-size: 15px; }

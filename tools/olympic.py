@@ -397,10 +397,44 @@ def related_block(s, today=None):
     return '<section id="related">\n<h2>관련 대회 · 랭킹</h2>\n' + '\n'.join(html_parts) + '\n</section>'
 
 
+WINTER_LIVE = {'wishorttrack': 'short-track', 'wispeedskating': 'speed-skating', 'wifigure': 'figure-skating', 'wisnowboard': 'snowboard'}
+
+
+def winter_live_block(s, today=None):
+    """실시간 일정·결과 (자동): tools/winter/collect.py가 모은 data/winter/에서 이번 시즌 대회와 한국 선수 기록을 가져온다."""
+    sport = WINTER_LIVE.get(s['file'])
+    cal = _json('data/winter/calendar.json') if sport else None
+    if not cal or sport not in cal.get('sports', {}):
+        return ''
+    today = today or date.today().isoformat()
+    center = f'winter/#tab=calendar&amp;sport={sport}'
+    evs = cal['sports'][sport]['events']
+    if sport == 'figure-skating':
+        evs = [e for e in evs if 'Junior' not in (e.get('category') or '') + e['name']]
+    def status(e):
+        if e.get('state') == 'Cancelled': return '취소'
+        if e['start'] <= today <= e['end'] or e.get('state') == 'Live': return '<b>진행 중</b>'
+        return '종료' if e['end'] < today else '예정'
+    rows = ''.join(
+        f'<tr><td>{E(e["start"])}{("–" + E(e["end"][5:])) if e["end"] != e["start"] else ""}</td>'
+        f'<td><a href="winter/#tab=event&amp;e={E(e["id"])}">{E(e["name"])}</a></td><td>{E(e.get("city", ""))} ({E(e.get("country", ""))})</td><td>{status(e)}</td></tr>'
+        for e in evs)
+    out = [f'<p>{E(cal.get("season", ""))} 시즌 국제연맹 공식 일정·결과를 약 10분마다 자동으로 모은다. 조별 결과·예상 대진·한국 선수 기록은 '
+           f'<a href="{center}">동계 실시간 센터</a>에서 본다.</p>',
+           f'<table class="wikitable"><thead><tr><th>기간</th><th>대회</th><th>개최지</th><th>상태</th></tr></thead><tbody>{rows}</tbody></table>']
+    season = _json(f'data/winter/season-{sport}.json')
+    if season and season.get('medals'):
+        kor = next((m for m in season['medals'] if m[0] == 'KOR'), None)
+        if kor:
+            out.append(f'<p>대한민국 시즌 메달: 금 {kor[1]} · 은 {kor[2]} · 동 {kor[3]} '
+                       f'(<a href="winter/#tab=season&amp;sport={sport}">시즌 정리</a>)</p>')
+    return '<section id="winter_live">\n<h2>이번 시즌 대회 (실시간)</h2>\n' + wrap_tables('\n'.join(out)) + '\n</section>'
+
+
 def render_sections(defs, parts):
     toc, out = [], []
     titles = parts.get('__titles__', {})
-    extra = [k for k in parts if k not in {d[0] for d in defs} | {'__titles__', 'infobox', 'intro', 'related'}]
+    extra = [k for k in parts if k not in {d[0] for d in defs} | {'__titles__', 'infobox', 'intro', 'related', 'winter_live'}]
     defs = list(defs) + [(k, titles.get(k, k)) for k in extra if k not in {d[0] for d in defs}]
     for sid, title in defs:
         body = wrap_tables(fill_live(parts.get(sid, '')))
@@ -456,7 +490,7 @@ def render_hub(reg, s):
     body = '\n'.join([
         f'<nav class="crumb"><a href="index.html">목차</a> › {E(s["name"])}</nav>',
         f'<h1>{E(s["name"])} <span class="en">({E(s["name_en"])})</span></h1>',
-        '<div class="top">', infobox(s['name'], info), lead, '</div>', toc, secs, rel,
+        '<div class="top">', infobox(s['name'], info), lead, '</div>', toc, winter_live_block(s), secs, rel,
         season_navbox(reg, s['season'], '', hub_path(s))])
     return path, page(f'{s["name"]} | {g["games"]}', '', body, f'{g["games"]} {s["name"]} 세부종목·예선·한국 현황')
 
@@ -705,6 +739,8 @@ def check():
                 if not (ROOT / target).exists():
                     errors.append(f'{rel}: 없는 파일 → {target}')
                 continue
+            if target == 'winter' and rel.split('/')[0].removesuffix('.html') in WINTER_LIVE:  # 동계 실시간 센터 (원칙 8장 예외와 같은 성격)
+                continue
             if target not in files:
                 if (files[rel][1] is not None and files[rel][1]['file'] == 'oltaekwondo'
                         and re.fullmatch(r'oltaekwondo-p-[a-z0-9-]+\.html', target)
@@ -794,5 +830,11 @@ if __name__ == '__main__':
         sys.exit(check())
     elif cmd == 'todo':
         todo()
+    elif cmd == 'winter':  # 동계 실시간 블록이 있는 허브만 다시 쓴다 (tools/winter 워크플로)
+        reg = load()
+        for sp in sports(reg):
+            if sp['file'] in WINTER_LIVE:
+                path, text = render_hub(reg, sp)
+                path.write_text(text, encoding='utf-8', newline='\n')
     else:
         sys.exit(__doc__)

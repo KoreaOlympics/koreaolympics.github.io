@@ -174,6 +174,13 @@ index는 Wikipedia 대문 형식으로 툴이 만든다. 배치는 제목 → �
 | 랭킹 (`ranking`) | 사람 + 실시간 블록 `rankings:all` (`data/la28-ranking-details.json`) |
 | 주요 대회 (`major`) · 한국 선수 문서 (`athletes`) · 외부 링크 (`links`) | 사람 |
 
+### 8-1. 동계 실시간 센터 (`winter/`)
+
+- `winter/`는 `tools/winter/`가 모은 `data/winter/*.json`을 그리는 앱이다. 원칙의 문서 포맷을 따르지 않으며 스크립트를 쓴다.
+- 동계 종목 박스의 끝에 센터 링크를 둔다 (툴이 생성).
+- 쇼트트랙·스피드 스케이팅·피겨 스케이팅·스노보드 허브는 목차 다음에 `이번 시즌 대회 (실시간)` 섹션(`winter_live`)을 툴이 만든다. 이 섹션과 센터 링크는 관리 대상 밖 링크 검사의 예외다.
+- 워크플로 `winter-live.yml`이 수집 후 `python tools/olympic.py winter`로 이 네 허브만 다시 쓴다.
+
 예외로 허용하는 것:
 
 - 종목 문서 외의 내부 페이지 연결(랭킹, 출전권 현황판, 선수 문서 등 현재 수준의 연결).

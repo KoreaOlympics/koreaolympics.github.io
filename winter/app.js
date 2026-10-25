@@ -128,9 +128,9 @@ function sessionsTable(d, { windowHours } = {}) {
   }).join('')}</tbody></table></div>`;
 }
 
-function heatTable(h) {
+function heatTable(h, q = '') {
   return `<div class="heat"><div class="hn">${esc(h.name.replace('Heat', '조'))} ${h.official === 'Official' ? '' : `<span class="badge">${esc(h.official || h.status || '')}</span>`}</div>
-    <table><tbody>${h.competitors.map(c => `<tr class="${c.noc === 'KOR' ? 'kor' : ''}"><td class="num">${c.rank ?? '-'}</td>
+    <table><tbody>${h.competitors.map(c => `<tr class="${c.noc === 'KOR' ? 'kor' : ''}${q && [c.name, state.names[c.name], c.noc].join(' ').toLowerCase().includes(q) ? ' hit' : ''}"><td class="num">${c.rank ?? '-'}</td>
       <td class="name">${name(c.name)} <span class="noc">${esc(c.noc)}</span></td><td class="num">${esc(c.time)}${c.status ? ' ' + esc(c.status) : ''}</td>
       <td class="q">${esc(c.qual)}</td></tr>`).join('')}</tbody></table></div>`;
 }
@@ -144,48 +144,199 @@ function projection(p) {
     <div class="small muted" style="margin-top:4px">순위→기록 순으로 정렬해 지그재그로 배정한 참고용입니다. 실제 조 편성은 ISU 배정표를 따릅니다.</div>`}</div>`;
 }
 
-function shortTrack(d) {
-  const dists = Object.values(d.results || {});
-  if (!dists.length) return '<p class="muted">아직 결과가 없습니다.</p>';
-  return dists.map(dist => {
-    const hasKor = dist.rounds.some(r => r.heats.some(h => h.competitors.some(c => c.noc === 'KOR')));
-    const live = dist.rounds.some(r => r.status === 'Live');
-    const last = [...dist.rounds].reverse().find(r => r.heats.length);
-    return `<details class="dist" ${live || hasKor ? 'open' : ''}><summary>${esc(title(dist.title))} ${live ? BADGE.live : ''}${hasKor ? ' 🇰🇷' : ''}
-      <span class="muted small">${last ? '최근: ' + esc(round(last.name)) : '시작 전'}</span></summary><div class="body">${
-      dist.rounds.filter(r => r.heats.length || r.status !== 'Scheduled').reverse().map(r => `<div class="round"><div class="rh"><b>${esc(round(r.name))}</b>
-        ${r.status === 'Live' ? BADGE.live : `<span class="badge">${esc(r.status)}</span>`} <span class="small muted">${r.start_utc ? kstDay(r.start_utc) + ' ' + kstTime(r.start_utc) : ''}</span></div>
-        ${r.rule ? `<div class="rule">진출 규칙: ${esc(r.rule)}</div>` : ''}
-        <div class="heats">${r.heats.map(heatTable).join('')}</div>${r.projection ? projection(r.projection) : ''}</div>`).join('')
-      }${dist.rounds.filter(r => r.status === 'Scheduled' && !r.heats.length).length ? `<div class="round small muted">예정 라운드: ${dist.rounds.filter(r => r.status === 'Scheduled' && !r.heats.length).map(r => esc(round(r.name))).join(' → ')}</div>` : ''}</div></details>`;
+// ---------- event detail ----------
+// URL: #tab=event&e=<id>&v=summary|results|schedule&d=<event_result_id>&r=<round id>
+const GENDERS = [['Women', '여자'], ['Men', '남자'], ['Mixed', '혼성']];
+const gender = t => /^Women|Women\b|Ladies/.test(t) ? 'Women' : /^Men|\bMen\b/.test(t) ? 'Men' : 'Mixed';
+const distKey = t => (/relay/i.test(t) ? 1e5 : 0) + (parseInt((t.match(/(\d+)\s*m\b/) || [])[1], 10) || 9e4);
+const byDist = (a, b) => distKey(a.title) - distKey(b.title);
+const gIdx = t => ['Women', 'Men', 'Mixed'].indexOf(gender(t));
+const byGenderDist = (a, b) => gIdx(a.title) - gIdx(b.title) || byDist(a, b);
+const ST_ROWS = ['Women 500 m', 'Women 1000 m', 'Women 1500 m', 'Women 3000 m Relay', 'Men 500 m', 'Men 1000 m', 'Men 1500 m', 'Men 5000 m Relay', 'Mixed Team Relay'];
+const withStRows = items => [...items, ...ST_ROWS.filter(t => !items.some(x => x.title === t)).map(t => ({ title: t, podium: null }))];
+const isFinal = n => n === 'Finals' || n === 'Final A' || n === 'Final';
+const evLink = (extra) => '#' + new URLSearchParams({ tab: 'event', e: state.event, ...extra });
+const medalCell = p => p ? `<td class="medal-name">${name(p.name)} <span class="noc">${esc(p.noc)}</span></td><td class="num small">${esc(p.time)}</td>` : '<td></td><td></td>';
+
+// The shape on the Namu/Wikipedia season articles: one table per gender, a row per distance, gold/silver/bronze columns.
+function medalTables(items, { byGender = true } = {}) {
+  items = items.slice().sort(byDist);
+  const groups = byGender ? GENDERS.map(([g, ko]) => [ko, items.filter(x => gender(x.title) === g)]) : [['종목', items]];
+  return groups.filter(([, xs]) => xs.length).map(([label, xs]) => `<div class="tablewrap"><table class="medals">
+    <thead><tr><th>${label}</th><th colspan="2" class="g">금</th><th colspan="2" class="s">은</th><th colspan="2" class="b">동</th></tr></thead><tbody>${
+    xs.map(x => `<tr><th>${esc(title(x.title).replace(/^(남자|여자) /, ''))}</th>${[1, 2, 3].map(rk => medalCell((x.podium || []).find(p => p.rank === rk))).join('')}</tr>`).join('')
+  }</tbody></table></div>`).join('');
+}
+
+function stPodium(dist) {
+  for (const r of dist.rounds) {
+    if (!isFinal(r.name)) continue;
+    for (const h of r.heats) {
+      if (['Final', 'Final A'].includes(h.name) && (h.status === 'Finished' || h.official === 'Official')) {
+        const top = h.competitors.filter(c => [1, 2, 3].includes(c.rank));
+        if (top.length) return top;
+      }
+    }
+  }
+  return null;
+}
+function fsPodium(cat) {
+  const done = cat.rows.length && Object.values(cat.rows[0].segments).every(s => s.status === 'Finished');
+  return done ? cat.rows.filter(r => [1, 2, 3].includes(r.rank)).map(r => ({ ...r, time: r.points })) : null;
+}
+function ssPodium(race) {
+  if (!['A', null, undefined, ''].includes(race.division) || !race.official) return null;
+  const top = race.rows.filter(r => [1, 2, 3].includes(r.rank));
+  return top.length ? top : null;
+}
+
+// furthest round each Korean skater reached per distance
+function koreaMatrix(d) {
+  const dists = Object.entries(d.results || {}).sort((a, b) => byGenderDist(a[1], b[1]));
+  const who = new Map();
+  for (const [rid, dist] of dists) {
+    for (const r of dist.rounds) for (const h of r.heats) for (const c of h.competitors) {
+      if (c.noc !== 'KOR') continue;
+      const row = who.get(c.name) || {};
+      if (row[rid] && (row[rid].start || '') > (r.start_utc || '')) continue;
+      row[rid] = { start: r.start_utc, round: r.name, heat: h.name, rank: c.rank, time: c.time, qual: c.qual, status: c.status, r: r.id };
+      who.set(c.name, row);
+    }
+  }
+  if (!who.size) return '';
+  const used = dists.filter(([rid]) => [...who.values()].some(x => x[rid]));
+  return `<h3>🇰🇷 한국 선수 진행 현황</h3><p class="small muted">종목별로 가장 마지막에 출전한 라운드 · 칸을 누르면 그 라운드 결과로 이동</p>
+    <div class="tablewrap"><table class="matrix"><thead><tr><th>선수</th>${used.map(([, x]) => `<th>${esc(title(x.title))}</th>`).join('')}</tr></thead><tbody>${
+    [...who.entries()].map(([n, row]) => `<tr><td class="name">${name(n)}</td>${used.map(([rid]) => {
+      const x = row[rid];
+      if (!x) return '<td class="muted">–</td>';
+      const medal = isFinal(x.round) && x.heat !== 'Final B' && [1, 2, 3].includes(x.rank) ? ['', '🥇', '🥈', '🥉'][x.rank] : '';
+      const res = x.rank == null && (!x.time || x.time === 'no time') && !x.status ? '출전 예정' : `${x.rank ?? '-'}위 ${esc(x.time)} <b class="q">${esc(x.qual)}</b>${x.status ? ' ' + esc(x.status) : ''}`;
+      return `<td><a href="${evLink({ v: 'results', d: rid, r: x.r })}">${medal}${esc(round(x.round))}${x.heat === 'Final B' ? ' B' : ''}<br><span class="small">${res}</span></a></td>`;
+    }).join('')}</tr>`).join('')
+  }</tbody></table></div>`;
+}
+
+function stSummary(d) {
+  const items = withStRows(Object.values(d.results || {}).map(x => ({ title: x.title, podium: stPodium(x) })));
+  return '<h3>메달리스트</h3>' + medalTables(items) + koreaMatrix(d) +
+    '<p class="small muted">계주 결과는 아직 자동 수집 대상이 아닙니다.</p>';
+}
+
+function distChips(d, current) {
+  const entries = Object.entries(d.results || {});
+  return GENDERS.map(([g, ko]) => {
+    const xs = entries.filter(([, x]) => gender(x.title) === g).sort((a, b) => byDist(a[1], b[1]));
+    if (!xs.length) return '';
+    return `<div class="chiprow"><span class="lbl">${ko}</span>${xs.map(([rid, x]) => {
+      const live = (x.rounds || []).some(r => r.status === 'Live');
+      const kor = (x.rounds || []).some(r => r.heats.some(h => h.competitors.some(c => c.noc === 'KOR'))) || (x.rows || []).some(c => c.noc === 'KOR');
+      return `<a class="chip ${rid === current ? 'on' : ''}" href="${evLink({ v: 'results', d: rid })}">${esc(title(x.title).replace(/^(남자|여자) /, ''))}${live ? ' 🔴' : ''}${kor ? ' 🇰🇷' : ''}</a>`;
+    }).join('')}</div>`;
   }).join('');
 }
 
-function speedRaces(d) {
-  const races = Object.values(d.results || {});
-  if (!races.length) return '<p class="muted">아직 결과가 없습니다.</p>';
-  return races.map(r => {
-    const hasKor = r.rows.some(x => x.noc === 'KOR');
-    return `<details class="dist" ${r.live || hasKor ? 'open' : ''}><summary>${esc(r.title)} ${r.live ? BADGE.live : ''}${hasKor ? ' 🇰🇷' : ''}
-      <span class="muted small">${r.start_utc ? kstDay(r.start_utc) + ' ' + kstTime(r.start_utc) : ''}</span></summary><div class="body tablewrap">
-      <table><thead><tr><th class="num">순위</th><th>선수</th><th class="num">기록</th><th class="num">차이</th><th>조·레인</th></tr></thead><tbody>${
-      r.rows.map(x => `<tr class="${x.noc === 'KOR' ? 'kor' : ''}"><td class="num">${x.rank ?? '-'}</td><td class="name">${name(x.name)} <span class="noc">${esc(x.noc)}</span></td>
-        <td class="num">${esc(x.time)}</td><td class="num">${x.behind && x.behind !== '0.000' ? '+' + esc(x.behind) : ''}</td><td class="small muted">${x.pair ?? ''} ${esc(x.lane || '')}</td></tr>`).join('')
-      }</tbody></table></div></details>`;
-  }).join('');
+function stResults(d) {
+  const entries = Object.entries(d.results || {});
+  if (!entries.length) return '<p class="muted">아직 결과가 없습니다.</p>';
+  const rid = state.d && d.results[state.d] ? state.d : (entries.find(([, x]) => x.rounds.some(r => r.status === 'Live')) || entries[0])[0];
+  const dist = d.results[rid];
+  const rounds = dist.rounds.slice().sort((a, b) => (a.start_utc || '9').localeCompare(b.start_utc || '9'));
+  const withData = rounds.filter(r => r.heats.length);
+  const cur = rounds.find(r => String(r.id) === state.r) || withData.find(r => r.status === 'Live') || withData[withData.length - 1] || rounds[0];
+  const q = (state.eq || '').trim().toLowerCase();
+  const heatMatch = h => (!state.onlyKor || h.competitors.some(c => c.noc === 'KOR')) &&
+    (!q || h.competitors.some(c => [c.name, state.names[c.name], c.noc].join(' ').toLowerCase().includes(q)));
+  const heats = cur.heats.filter(heatMatch);
+  return distChips(d, rid) +
+    `<div class="rounds">${rounds.map(r => `<a class="rstep ${r === cur ? 'on' : ''} st-${(r.status || '').toLowerCase()}" href="${evLink({ v: 'results', d: rid, r: r.id })}">${esc(round(r.name))}<span>${r.status === 'Live' ? 'LIVE' : r.status === 'Finished' ? '종료' : r.start_utc ? kstDay(r.start_utc) : '예정'}</span></a>`).join('<i>›</i>')}</div>
+    <div class="roundhead"><h3>${esc(title(dist.title))} · ${esc(round(cur.name))}</h3>
+      <span class="small muted">${cur.start_utc ? kstDay(cur.start_utc) + ' ' + kstTime(cur.start_utc) + ' KST' : ''}</span>
+      <label class="toggle"><input type="checkbox" id="onlyKor" ${state.onlyKor ? 'checked' : ''}> 한국 선수 조만</label>
+      <input type="search" id="eq" placeholder="이 종목에서 선수·국가 찾기" value="${esc(state.eq || '')}"></div>
+    ${cur.rule ? `<div class="rule">진출 규칙: ${esc(cur.rule)}</div>` : ''}
+    ${cur.heats.length ? (heats.length ? `<div class="heats">${heats.map(h => heatTable(h, q)).join('')}</div>` : '<p class="muted">조건에 맞는 조가 없습니다.</p>') : '<p class="muted">아직 결과가 없습니다.</p>'}
+    ${cur.projection ? projection(cur.projection) : ''}`;
+}
+
+function fsTable(cat) {
+  const segs = cat.segments || [];
+  const SEG = { SP: '쇼트', FS: '프리', RD: '리듬', FD: '프리 댄스' };
+  return `<div class="tablewrap"><table><thead><tr><th class="num">순위</th><th>선수</th>${segs.map(s => `<th class="num">${SEG[s] || esc(s)}</th>`).join('')}<th class="num">총점</th></tr></thead><tbody>${
+    cat.rows.map(r => `<tr class="${r.noc === 'KOR' ? 'kor' : ''}"><td class="num">${r.rank ?? '-'}</td><td class="name">${name(r.name)} <span class="noc">${esc(r.noc)}</span></td>${
+      segs.map(s => { const x = r.segments[s] || {}; return `<td class="num">${esc(x.total || '')}${x.rank ? ` <span class="small muted">(${x.rank})</span>` : ''}${x.tes ? `<br><span class="small muted">TES ${esc(x.tes)} · PCS ${esc(x.pcs)}</span>` : ''}</td>`; }).join('')
+    }<td class="num"><b>${esc(r.points)}</b></td></tr>`).join('')}</tbody></table></div>`;
+}
+function fsResults(d) {
+  const entries = Object.entries(d.results || {});
+  if (!entries.length) return '<p class="muted">아직 결과가 없습니다.</p>';
+  const rid = state.d && d.results[state.d] ? state.d : entries[0][0];
+  return `<div class="chiprow">${entries.map(([k, x]) => `<a class="chip ${k === rid ? 'on' : ''}" href="${evLink({ v: 'results', d: k })}">${esc(title(x.title))}${x.rows.some(r => r.noc === 'KOR') ? ' 🇰🇷' : ''}</a>`).join('')}</div>
+    <h3>${esc(title(d.results[rid].title))}</h3>${fsTable(d.results[rid])}`;
+}
+function fsSummary(d) {
+  const items = Object.values(d.results || {}).map(x => ({ title: x.title, podium: fsPodium(x) }));
+  const kor = Object.values(d.results || {}).flatMap(x => x.rows.filter(r => r.noc === 'KOR').map(r => ({ ...r, cat: x.title })));
+  return '<h3>메달리스트</h3>' + medalTables(items, { byGender: false }) +
+    (kor.length ? `<h3>🇰🇷 한국 선수</h3><div class="tablewrap"><table><thead><tr><th>종목</th><th>선수</th><th class="num">순위</th><th class="num">총점</th></tr></thead><tbody>${
+      kor.map(r => `<tr class="kor"><td><a href="${evLink({ v: 'results', d: Object.keys(d.results).find(k => d.results[k].title === r.cat) })}">${esc(title(r.cat))}</a></td><td class="name">${name(r.name)}</td><td class="num">${r.rank ?? '-'}</td><td class="num">${esc(r.points)}</td></tr>`).join('')}</tbody></table></div>` : '');
+}
+
+function ssResults(d) {
+  const entries = Object.entries(d.results || {});
+  if (!entries.length) return '<p class="muted">아직 결과가 없습니다.</p>';
+  const rid = state.d && d.results[state.d] ? state.d : entries[0][0];
+  const r = d.results[rid];
+  return distChips(d, rid) +
+    `<h3>${esc(r.title)}</h3><div class="tablewrap"><table><thead><tr><th class="num">순위</th><th>선수</th><th class="num">기록</th><th class="num">차이</th><th>조·레인</th></tr></thead><tbody>${
+    r.rows.map(x => `<tr class="${x.noc === 'KOR' ? 'kor' : ''}"><td class="num">${x.rank ?? '-'}</td><td class="name">${name(x.name)} <span class="noc">${esc(x.noc)}</span></td>
+      <td class="num">${esc(x.time)}</td><td class="num">${x.behind && x.behind !== '0.000' ? '+' + esc(x.behind) : ''}</td><td class="small muted">${x.pair ?? ''} ${esc(x.lane || '')}</td></tr>`).join('')}</tbody></table></div>`;
+}
+function ssSummary(d) {
+  const items = Object.values(d.results || {}).filter(x => ['A', null, undefined, ''].includes(x.division)).map(x => ({ title: x.title.replace(/\s*Division A/, ''), podium: ssPodium(x) }));
+  return '<h3>메달리스트 (디비전 A)</h3>' + (items.length ? medalTables(items) : '<p class="muted">아직 결과가 없습니다.</p>');
 }
 
 async function viewEvent() {
-  const e = allEvents().find(x => x.id === state.event);
+  const d = await loadEvent(state.event, true);
+  const e = allEvents().find(x => x.id === state.event) || d?.event;  // the calendar can briefly miss an event the source dropped
   if (!e) return '<div class="empty">대회를 찾을 수 없습니다.</div>';
-  const d = await loadEvent(e.id, true);
+  const v = state.v || (phase(e) === 'live' && e.sport === 'short-track' ? 'results' : 'summary');
   let h = `<div class="sport ${e.sport}">${SPORTS[e.sport]} ${BADGE[phase(e)]}</div><h2 style="margin-top:4px">${esc(e.name)}</h2>
     <p class="muted">${fmtRange(e.start, e.end)} · ${esc(e.city)} (${esc(e.country)}) · <a href="${esc(e.url)}" target="_blank" rel="noopener">공식 페이지 ↗</a>${d?.checked_at ? ` · 수집 ${ago(d.checked_at)}` : ''}</p>`;
   if (!d) return h + '<div class="card muted">이 대회의 상세 일정·결과는 아직 수집되지 않았습니다. 대회 하루 전부터 자동 수집합니다.</div>';
-  if (d.korea?.length) h += `<h2>🇰🇷 한국 선수</h2>${koreaTable(d.korea.slice().sort((a, b) => (b.start_utc || '').localeCompare(a.start_utc || '')), false)}`;
-  if (e.sport === 'short-track') h += '<h2>종목별 결과 · 대진</h2>' + shortTrack(d);
-  if (e.sport === 'speed-skating') h += '<h2>경기 결과</h2>' + speedRaces(d);
-  if (d.sessions?.length) h += '<h2>경기 일정 (KST)</h2>' + sessionsTable(d);
+  h += `<nav class="subtabs">${[['summary', '요약'], ['results', '종목별 결과'], ['schedule', '경기 일정']].map(([k, l]) => `<a class="${k === v ? 'on' : ''}" href="${evLink({ v: k })}">${l}</a>`).join('')}</nav>`;
+  const fn = {
+    'short-track': { summary: stSummary, results: stResults },
+    'figure-skating': { summary: fsSummary, results: fsResults },
+    'speed-skating': { summary: ssSummary, results: ssResults },
+  }[e.sport] || {};
+  if (v === 'schedule') return h + (sessionsTable(d) || '<p class="muted">일정 자료가 없습니다.</p>');
+  return h + (fn[v] ? fn[v](d) : '<p class="muted">결과 자료가 없습니다.</p>');
+}
+
+// ---------- season summary (Wikipedia / Namu season-article layout) ----------
+async function viewSeason() {
+  const sport = ['short-track', 'speed-skating', 'figure-skating'].includes(state.sport) ? state.sport : 'short-track';
+  let s;
+  try { s = await getJSON(`season-${sport}.json`); } catch { return '<div class="empty">시즌 정리 자료가 아직 없습니다.</div>'; }
+  const evs = s.events.filter(e => sport !== 'figure-skating' || !/Junior/.test(e.category || e.name));
+  const label = e => e.name.replace(/^ISU (CNSG )?/, '').replace(/ Speed Skating| Short Track| Figure Skating/g, '').replace(/ 20\d\d$/, '')
+    .replace(/^World Tour #(\d+)$/, '월드투어 $1차').replace(/^World Cup #(\d+)$/, '월드컵 $1차').replace(/^Junior World Cup #(\d+)$/, '주니어 월드컵 $1차')
+    .replace(/^Grand Prix /, '그랑프리 ').replace(/^World Championships$/, '세계선수권').replace(/^Four Continents Championships$/, '4대륙선수권')
+    .replace(/^European Championships$/, '유럽선수권').replace(/^Grand Prix Final$/, '그랑프리 파이널');
+  let h = `<h2>${s.season} ${SPORTS[sport]} 시즌</h2>`;
+  if (!state.sport) h += '<p class="small muted">위의 종목 버튼으로 쇼트트랙·스피드·피겨 시즌을 바꿔 볼 수 있습니다.</p>';
+  h += `<h3>대회 일정</h3><div class="tablewrap"><table><thead><tr><th>기간</th><th>대회</th><th>개최지</th><th>상태</th></tr></thead><tbody>${
+    evs.map(e => `<tr><td class="num">${fmtRange(e.start, e.end)}</td><td><a href="#tab=event&e=${encodeURIComponent(e.id)}">${esc(label(e))}</a></td><td>${esc(e.city)} (${esc(e.country)})</td><td>${BADGE[phase(e)]}</td></tr>`).join('')}</tbody></table></div>`;
+  const played = evs.filter(e => e.podiums.length && phase(e) !== 'soon');
+  h += '<h3>대회별 메달리스트</h3>' + (played.length ? played.map(e =>
+    `<h4><a href="#tab=event&e=${encodeURIComponent(e.id)}">${esc(label(e))}</a>: ${esc(e.city)} <span class="muted small">${fmtRange(e.start, e.end)}</span></h4>` +
+    medalTables(sport === 'short-track' ? withStRows(e.podiums) : e.podiums, { byGender: sport !== 'figure-skating' })).join('') : '<p class="muted">아직 시작된 대회가 없습니다.</p>');
+  if (s.medals.length) h += `<h3>국가별 메달 집계</h3><div class="tablewrap"><table class="narrow"><thead><tr><th>국가</th><th class="num">금</th><th class="num">은</th><th class="num">동</th><th class="num">합계</th></tr></thead><tbody>${
+    s.medals.map(([noc, g, sv, b, t]) => `<tr class="${noc === 'KOR' ? 'kor' : ''}"><td><b>${esc(noc)}</b></td><td class="num">${g}</td><td class="num">${sv}</td><td class="num">${b}</td><td class="num">${t}</td></tr>`).join('')}</tbody></table></div>`;
+  if (s.season_best) h += '<h3>시즌 최고점</h3>' + Object.entries(s.season_best).map(([cat, rows]) => `<h4>${esc(title(cat))}</h4><div class="tablewrap"><table class="narrow"><tbody>${
+    rows.slice(0, 5).map((r, i) => `<tr class="${r.noc === 'KOR' ? 'kor' : ''}"><td class="num">${i + 1}</td><td class="name">${name(r.name)} <span class="noc">${esc(r.noc)}</span></td><td class="num">${r.points.toFixed(2)}</td><td class="small"><a href="#tab=event&e=${encodeURIComponent(r.event_id)}">${esc(label({ name: r.event }))}</a></td></tr>`).join('')}</tbody></table></div>`).join('');
   return h;
 }
 
@@ -217,12 +368,12 @@ function viewStatus() {
 // ---------- routing ----------
 function readHash() {
   const p = new URLSearchParams(location.hash.slice(1));
-  state.tab = p.get('tab') || 'now'; state.event = p.get('e'); state.column = p.get('c'); state.sport = p.get('sport') || '';
+  state.tab = p.get('tab') || 'now'; state.event = p.get('e'); state.column = p.get('c'); state.v = p.get('v'); state.d = p.get('d'); state.r = p.get('r'); state.sport = p.get('sport') || '';
 }
 function writeHash() {
   const p = new URLSearchParams();
   if (state.tab !== 'now') p.set('tab', state.tab);
-  if (state.tab === 'event' && state.event) p.set('e', state.event);
+  if (state.tab === 'event' && state.event) { p.set('e', state.event); for (const k of ['v', 'd', 'r']) if (state[k]) p.set(k, state[k]); }
   if (state.tab === 'columns' && state.column) p.set('c', state.column);
   if (state.sport) p.set('sport', state.sport);
   history.replaceState(null, '', p.toString() ? '#' + p : location.pathname);
@@ -233,7 +384,7 @@ async function render() {
   document.querySelectorAll('.tab').forEach(t => t.classList.toggle('on', t.dataset.tab === state.tab));
   document.querySelectorAll('[data-sport]').forEach(c => c.classList.toggle('on', c.dataset.sport === state.sport));
   $('#eventTab').hidden = !state.event;
-  const html = await ({ now: viewNow, calendar: viewCalendar, korea: viewKorea, event: viewEvent, columns: viewColumns, status: viewStatus }[state.tab] || viewNow)();
+  const html = await ({ now: viewNow, calendar: viewCalendar, korea: viewKorea, event: viewEvent, season: viewSeason, columns: viewColumns, status: viewStatus }[state.tab] || viewNow)();
   if (n !== rendering) return;
   const open = [...document.querySelectorAll('details.dist')].map(d => d.open);
   $('#view').innerHTML = html;
@@ -246,6 +397,12 @@ document.addEventListener('click', e => {
   const a = e.target.closest('[data-athlete]'); if (a) { $('#q').value = state.q = a.dataset.athlete; render(); }
 });
 $('#q').addEventListener('input', e => { state.q = e.target.value; render(); });
+document.addEventListener('change', e => { if (e.target.id === 'onlyKor') { state.onlyKor = e.target.checked; render(); } });
+document.addEventListener('input', e => {
+  if (e.target.id !== 'eq') return;
+  state.eq = e.target.value; const pos = e.target.selectionStart;
+  render().then(() => { const el = $('#eq'); if (el) { el.focus(); el.setSelectionRange(pos, pos); } });
+});
 window.addEventListener('hashchange', () => { readHash(); render(); });
 
 (async function main() {
