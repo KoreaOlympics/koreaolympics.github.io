@@ -149,7 +149,26 @@
     },
     {
      "title": "Pairs",
-     "podium": null
+     "podium": [
+      {
+       "rank": 1,
+       "name": "Anastasiia METELKINA / Luka BERULAVA",
+       "noc": "GEO",
+       "time": "204.65"
+      },
+      {
+       "rank": 2,
+       "name": "Aleksandra BOIKOVA / Dmitrii KOZLOVSKII",
+       "noc": "AIN2",
+       "time": "197.66"
+      },
+      {
+       "rank": 3,
+       "name": "Annika HOCKE / Robert KUNKEL",
+       "noc": "GER",
+       "time": "179.74"
+      }
+     ]
     }
    ]
   },
@@ -288,6 +307,13 @@
  ],
  "medals": [
   [
+   "GEO",
+   1,
+   2,
+   0,
+   3
+  ],
+  [
    "FRA",
    1,
    0,
@@ -302,11 +328,18 @@
    1
   ],
   [
-   "GEO",
+   "AIN2",
    0,
-   2,
+   1,
    0,
-   2
+   1
+  ],
+  [
+   "GER",
+   0,
+   0,
+   1,
+   1
   ],
   [
    "ITA",
@@ -541,6 +574,13 @@
    }
   ],
   "Pairs": [
+   {
+    "name": "Anastasiia METELKINA / Luka BERULAVA",
+    "noc": "GEO",
+    "points": 204.65,
+    "event": "ISU Figure Skating Grand Prix de France 2026",
+    "event_id": "isu-16027"
+   },
    {
     "name": "Aleksandra BOIKOVA / Dmitrii KOZLOVSKII",
     "noc": "AIN2",
