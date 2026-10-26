@@ -18,7 +18,7 @@
   "live": "Women 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-1/"
  },
- "checked_at": "2026-10-26T00:37:42.827247+00:00",
+ "checked_at": "2026-10-26T00:48:35.763753+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-23T16:00:00.000Z",
@@ -12515,20 +12515,20 @@
      "id": 22892,
      "name": "Semifinals",
      "status": "Live",
-     "start_utc": "2026-10-26T00:36:00.000Z",
+     "start_utc": "2026-10-26T00:36:14.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final, the third and fourth placed skaters from each race and up to a maximum of next two fastest fifth place skaters qualify for Final B.",
      "heats": [
       {
        "name": "Heat 1",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Seochan BAE",
          "noc": "KOR",
-         "time": "no time",
-         "qual": "",
+         "time": "1:26.781",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 96,
@@ -12536,35 +12536,11 @@
          "slug": "seochan-bae"
         },
         {
-         "rank": null,
-         "name": "Luca SPECHENHAUSER",
-         "noc": "ITA",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 24,
-         "lane": 3,
-         "slug": "luca-spechenhauser"
-        },
-        {
-         "rank": null,
-         "name": "Furkan AKAR",
-         "noc": "TUR",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 27,
-         "lane": 1,
-         "slug": "furkan-akar"
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Jens VAN 'T WOUT",
          "noc": "NED",
-         "time": "no time",
-         "qual": "",
+         "time": "1:26.866",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 7,
@@ -12572,23 +12548,47 @@
          "slug": "jens-van-t-wout"
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Furkan AKAR",
+         "noc": "TUR",
+         "time": "1:26.959",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 27,
+         "lane": 1,
+         "slug": "furkan-akar"
+        },
+        {
+         "rank": 4,
          "name": "Brandon KIM",
          "noc": "USA",
-         "time": "no time",
-         "qual": "",
+         "time": "1:26.996",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 14,
          "lane": 4,
          "slug": "brandon-kim"
+        },
+        {
+         "rank": 5,
+         "name": "Luca SPECHENHAUSER",
+         "noc": "ITA",
+         "time": "1:27.499",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 24,
+         "lane": 3,
+         "slug": "luca-spechenhauser"
         }
        ]
       },
       {
        "name": "Heat 2",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
         {
          "rank": null,
@@ -19984,12 +19984,12 @@
    "distance": "Men 1000 m",
    "round": "Semifinals",
    "heat": "Heat 1",
-   "start_utc": "2026-10-26T00:36:00.000Z",
-   "rank": null,
+   "start_utc": "2026-10-26T00:36:14.000Z",
+   "rank": 1,
    "name": "Seochan BAE",
    "noc": "KOR",
-   "time": "no time",
-   "qual": "",
+   "time": "1:26.781",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 96,
@@ -20003,7 +20003,7 @@
    "distance": "Men 1000 m",
    "round": "Semifinals",
    "heat": "Heat 2",
-   "start_utc": "2026-10-26T00:36:00.000Z",
+   "start_utc": "2026-10-26T00:36:14.000Z",
    "rank": null,
    "name": "Jongun RIM",
    "noc": "KOR",
