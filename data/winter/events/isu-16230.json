@@ -18,7 +18,7 @@
   "live": "Women 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-1/"
  },
- "checked_at": "2026-10-26T02:16:18.383657+00:00",
+ "checked_at": "2026-10-26T02:17:11.779187+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-23T16:00:00.000Z",
@@ -18277,20 +18277,20 @@
     {
      "id": 22905,
      "name": "Finals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-10-26T02:02:04.000Z",
      "rule": "",
      "heats": [
       {
        "name": "Final",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "Courtney SARAULT",
          "noc": "CAN",
-         "time": "2:28.090",
+         "time": "2:28.091",
          "qual": "",
          "status": "",
          "record": "",
@@ -18299,10 +18299,46 @@
          "slug": "courtney-sarault"
         },
         {
+         "rank": 2,
+         "name": "Hanne DESMET",
+         "noc": "BEL",
+         "time": "2:28.169",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 6,
+         "lane": 2,
+         "slug": "hanne-desmet"
+        },
+        {
+         "rank": 3,
+         "name": "Minjeong CHOI",
+         "noc": "KOR",
+         "time": "2:28.183",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 4,
+         "lane": 3,
+         "slug": "minjeong-choi"
+        },
+        {
+         "rank": 4,
+         "name": "Gloria IORIATTI",
+         "noc": "ITA",
+         "time": "2:28.185",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 21,
+         "lane": 7,
+         "slug": "gloria-ioriatti"
+        },
+        {
          "rank": 5,
          "name": "Jianing ZHANG",
          "noc": "CHN",
-         "time": "2:28.390",
+         "time": "2:28.388",
          "qual": "",
          "status": "",
          "record": "",
@@ -18314,7 +18350,7 @@
          "rank": 6,
          "name": "Sukhee SHIM",
          "noc": "KOR",
-         "time": "2:28.700",
+         "time": "2:28.694",
          "qual": "",
          "status": "",
          "record": "",
@@ -18324,15 +18360,15 @@
         },
         {
          "rank": 7,
-         "name": "Rina YAMANA",
-         "noc": "JPN",
-         "time": "2:39.890",
+         "name": "Gilli KIM",
+         "noc": "KOR",
+         "time": "3:12.148",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 70,
-         "lane": 5,
-         "slug": "rina-yamana"
+         "bib": 5,
+         "lane": 6,
+         "slug": "gilli-kim"
         },
         {
          "rank": null,
@@ -18360,18 +18396,6 @@
         },
         {
          "rank": null,
-         "name": "Hanne DESMET",
-         "noc": "BEL",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 6,
-         "lane": 2,
-         "slug": "hanne-desmet"
-        },
-        {
-         "rank": null,
          "name": "Minjeong CHOI",
          "noc": "KOR",
          "time": "no time",
@@ -18381,30 +18405,6 @@
          "bib": 4,
          "lane": 3,
          "slug": "minjeong-choi"
-        },
-        {
-         "rank": null,
-         "name": "Minjeong CHOI",
-         "noc": "KOR",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 4,
-         "lane": 3,
-         "slug": "minjeong-choi"
-        },
-        {
-         "rank": null,
-         "name": "Gloria IORIATTI",
-         "noc": "ITA",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 21,
-         "lane": 7,
-         "slug": "gloria-ioriatti"
         },
         {
          "rank": null,
@@ -18468,15 +18468,15 @@
         },
         {
          "rank": null,
-         "name": "Gilli KIM",
-         "noc": "KOR",
-         "time": "no time",
+         "name": "Rina YAMANA",
+         "noc": "JPN",
+         "time": "PEN",
          "qual": "",
-         "status": "",
+         "status": "Penalty",
          "record": "",
-         "bib": 5,
-         "lane": 6,
-         "slug": "gilli-kim"
+         "bib": 70,
+         "lane": 5,
+         "slug": "rina-yamana"
         }
        ]
       },
@@ -21505,10 +21505,29 @@
    "round": "Finals",
    "heat": "Final",
    "start_utc": "2026-10-26T02:02:04.000Z",
+   "rank": 3,
+   "name": "Minjeong CHOI",
+   "noc": "KOR",
+   "time": "2:28.183",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 4,
+   "lane": 3,
+   "slug": "minjeong-choi"
+  },
+  {
+   "event_id": "isu-16230",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #1",
+   "distance": "Women 1500 m",
+   "round": "Finals",
+   "heat": "Final",
+   "start_utc": "2026-10-26T02:02:04.000Z",
    "rank": 6,
    "name": "Sukhee SHIM",
    "noc": "KOR",
-   "time": "2:28.700",
+   "time": "2:28.694",
    "qual": "",
    "status": "",
    "record": "",
@@ -21524,16 +21543,16 @@
    "round": "Finals",
    "heat": "Final",
    "start_utc": "2026-10-26T02:02:04.000Z",
-   "rank": null,
-   "name": "Minjeong CHOI",
+   "rank": 7,
+   "name": "Gilli KIM",
    "noc": "KOR",
-   "time": "no time",
+   "time": "3:12.148",
    "qual": "",
    "status": "",
    "record": "",
-   "bib": 4,
-   "lane": 3,
-   "slug": "minjeong-choi"
+   "bib": 5,
+   "lane": 6,
+   "slug": "gilli-kim"
   },
   {
    "event_id": "isu-16230",
@@ -21591,25 +21610,6 @@
    "bib": 79,
    "lane": 8,
    "slug": "sukhee-shim"
-  },
-  {
-   "event_id": "isu-16230",
-   "sport": "short-track",
-   "event": "ISU Short Track World Tour #1",
-   "distance": "Women 1500 m",
-   "round": "Finals",
-   "heat": "Final",
-   "start_utc": "2026-10-26T02:02:04.000Z",
-   "rank": null,
-   "name": "Gilli KIM",
-   "noc": "KOR",
-   "time": "no time",
-   "qual": "",
-   "status": "",
-   "record": "",
-   "bib": 5,
-   "lane": 6,
-   "slug": "gilli-kim"
   },
   {
    "event_id": "isu-16230",
