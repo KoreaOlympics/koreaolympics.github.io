@@ -18,7 +18,7 @@
   "live": "Women 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-1/"
  },
- "checked_at": "2026-10-26T00:15:07.867450+00:00",
+ "checked_at": "2026-10-26T00:25:49.209803+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-23T16:00:00.000Z",
@@ -2970,7 +2970,7 @@
      ],
      "projection": {
       "next": "Semifinals",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -3065,10 +3065,196 @@
     {
      "id": 22868,
      "name": "Semifinals",
-     "status": "Scheduled",
-     "start_utc": "2026-10-26T00:13:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-10-26T00:14:58.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final A. Remainder may qualify for Final B.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Selma POUTSMA",
+         "noc": "NED",
+         "time": "42.851",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 15,
+         "lane": 1,
+         "slug": "selma-poutsma"
+        },
+        {
+         "rank": 2,
+         "name": "Gabriela TOPOLSKA",
+         "noc": "POL",
+         "time": "43.719",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 13,
+         "lane": 3,
+         "slug": "gabriela-topolska"
+        },
+        {
+         "rank": 3,
+         "name": "Jianing ZHANG",
+         "noc": "CHN",
+         "time": "43.725",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 55,
+         "lane": 4,
+         "slug": "jianing-zhang"
+        },
+        {
+         "rank": 4,
+         "name": "Victoria JEAN-BAPTISTE",
+         "noc": "CAN",
+         "time": "43.882",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 53,
+         "lane": 5,
+         "slug": "victoria-jean-baptiste"
+        },
+        {
+         "rank": 5,
+         "name": "Florence BRUNELLE",
+         "noc": "CAN",
+         "time": "56.934",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 10,
+         "lane": 2,
+         "slug": "florence-brunelle"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Xandra VELZEBOER",
+         "noc": "NED",
+         "time": "42.901",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 3,
+         "lane": 2,
+         "slug": "xandra-velzeboer"
+        },
+        {
+         "rank": 2,
+         "name": "Courtney SARAULT",
+         "noc": "CAN",
+         "time": "42.993",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 1,
+         "lane": 1,
+         "slug": "courtney-sarault"
+        },
+        {
+         "rank": 3,
+         "name": "Kornelia WOZNIAK",
+         "noc": "POL",
+         "time": "43.215",
+         "qual": "q",
+         "status": "",
+         "record": "",
+         "bib": 84,
+         "lane": 5,
+         "slug": "kornelia-wozniak"
+        },
+        {
+         "rank": 4,
+         "name": "Ye WANG",
+         "noc": "CHN",
+         "time": "43.259",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 40,
+         "lane": 3,
+         "slug": "ye-wang"
+        },
+        {
+         "rank": 5,
+         "name": "Jiarui SONG",
+         "noc": "CHN",
+         "time": "43.296",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 54,
+         "lane": 4,
+         "slug": "jiarui-song"
+        }
+       ]
+      }
+     ],
+     "projection": {
+      "next": "Finals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Selma POUTSMA",
+        "noc": "NED",
+        "rank": 1,
+        "time": "42.851",
+        "qual": "Q"
+       },
+       {
+        "name": "Xandra VELZEBOER",
+        "noc": "NED",
+        "rank": 1,
+        "time": "42.901",
+        "qual": "Q"
+       },
+       {
+        "name": "Courtney SARAULT",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "42.993",
+        "qual": "Q"
+       },
+       {
+        "name": "Gabriela TOPOLSKA",
+        "noc": "POL",
+        "rank": 2,
+        "time": "43.719",
+        "qual": "Q"
+       },
+       {
+        "name": "Kornelia WOZNIAK",
+        "noc": "POL",
+        "rank": 3,
+        "time": "43.215",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Selma POUTSMA (NED)",
+        "Xandra VELZEBOER (NED)",
+        "Courtney SARAULT (CAN)",
+        "Gabriela TOPOLSKA (POL)",
+        "Kornelia WOZNIAK (POL)"
+       ]
+      ]
+     }
     },
     {
      "id": 22869,
