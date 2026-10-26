@@ -18,7 +18,7 @@
   "live": "Women 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-1/"
  },
- "checked_at": "2026-10-26T01:33:21.390385+00:00",
+ "checked_at": "2026-10-26T01:44:04.922468+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-23T16:00:00.000Z",
@@ -17920,45 +17920,21 @@
     {
      "id": 22904,
      "name": "Semifinals",
-     "status": "Live",
-     "start_utc": "2026-10-26T01:21:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-10-26T01:29:00.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final, the third and fourth placed skaters from each race and up to a maximum of next two fastest fifth place skaters qualify for Final B.",
      "heats": [
       {
        "name": "Heat 1",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Gilli KIM",
-         "noc": "KOR",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 5,
-         "lane": 1,
-         "slug": "gilli-kim"
-        },
-        {
-         "rank": null,
-         "name": "Li GONG",
-         "noc": "CHN",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 19,
-         "lane": 3,
-         "slug": "li-gong"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Minjeong CHOI",
          "noc": "KOR",
-         "time": "no time",
-         "qual": "",
+         "time": "2:31.655",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 4,
@@ -17966,23 +17942,35 @@
          "slug": "minjeong-choi"
         },
         {
-         "rank": null,
-         "name": "Chiara BETTI",
-         "noc": "ITA",
-         "time": "no time",
-         "qual": "",
+         "rank": 2,
+         "name": "Gilli KIM",
+         "noc": "KOR",
+         "time": "2:31.721",
+         "qual": "Q",
          "status": "",
          "record": "",
-         "bib": 16,
-         "lane": 5,
-         "slug": "chiara-betti"
+         "bib": 5,
+         "lane": 1,
+         "slug": "gilli-kim"
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Li GONG",
+         "noc": "CHN",
+         "time": "2:31.798",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 19,
+         "lane": 3,
+         "slug": "li-gong"
+        },
+        {
+         "rank": 4,
          "name": "Alina AZHGALIYEVA",
          "noc": "KAZ",
-         "time": "no time",
-         "qual": "",
+         "time": "2:31.901",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 71,
@@ -17990,10 +17978,22 @@
          "slug": "alina-azhgaliyeva"
         },
         {
-         "rank": null,
+         "rank": 5,
+         "name": "Chiara BETTI",
+         "noc": "ITA",
+         "time": "2:32.283",
+         "qual": "pB",
+         "status": "",
+         "record": "",
+         "bib": 16,
+         "lane": 5,
+         "slug": "chiara-betti"
+        },
+        {
+         "rank": 6,
          "name": "Haruna NAGAMORI",
          "noc": "JPN",
-         "time": "no time",
+         "time": "2:32.462",
          "qual": "",
          "status": "",
          "record": "",
@@ -18002,10 +18002,10 @@
          "slug": "haruna-nagamori"
         },
         {
-         "rank": null,
+         "rank": 7,
          "name": "Petra VANKOVA",
          "noc": "CZE",
-         "time": "no time",
+         "time": "2:32.475",
          "qual": "",
          "status": "",
          "record": "",
@@ -18017,15 +18017,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Courtney SARAULT",
          "noc": "CAN",
-         "time": "no time",
-         "qual": "",
+         "time": "2:30.251",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 1,
@@ -18033,7 +18033,55 @@
          "slug": "courtney-sarault"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Jianing ZHANG",
+         "noc": "CHN",
+         "time": "2:30.309",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 55,
+         "lane": 5,
+         "slug": "jianing-zhang"
+        },
+        {
+         "rank": 3,
+         "name": "Florence BRUNELLE",
+         "noc": "CAN",
+         "time": "2:30.682",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 10,
+         "lane": 7,
+         "slug": "florence-brunelle"
+        },
+        {
+         "rank": 4,
+         "name": "Gloria IORIATTI",
+         "noc": "ITA",
+         "time": "2:30.767",
+         "qual": "ADV",
+         "status": "",
+         "record": "",
+         "bib": 21,
+         "lane": 3,
+         "slug": "gloria-ioriatti"
+        },
+        {
+         "rank": 5,
+         "name": "Sukhee SHIM",
+         "noc": "KOR",
+         "time": "2:31.168",
+         "qual": "ADV",
+         "status": "",
+         "record": "",
+         "bib": 79,
+         "lane": 6,
+         "slug": "sukhee-shim"
+        },
+        {
+         "rank": 6,
          "name": "Elisa CONFORTOLA",
          "noc": "ITA",
          "time": "no time",
@@ -18046,70 +18094,22 @@
         },
         {
          "rank": null,
-         "name": "Gloria IORIATTI",
-         "noc": "ITA",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 21,
-         "lane": 3,
-         "slug": "gloria-ioriatti"
-        },
-        {
-         "rank": null,
          "name": "Kristen SANTOS-GRISWOLD",
          "noc": "USA",
-         "time": "no time",
+         "time": "PEN",
          "qual": "",
-         "status": "",
+         "status": "Penalty",
          "record": "",
          "bib": 7,
          "lane": 4,
          "slug": "kristen-santos-griswold"
-        },
-        {
-         "rank": null,
-         "name": "Jianing ZHANG",
-         "noc": "CHN",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 55,
-         "lane": 5,
-         "slug": "jianing-zhang"
-        },
-        {
-         "rank": null,
-         "name": "Sukhee SHIM",
-         "noc": "KOR",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 79,
-         "lane": 6,
-         "slug": "sukhee-shim"
-        },
-        {
-         "rank": null,
-         "name": "Florence BRUNELLE",
-         "noc": "CAN",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 10,
-         "lane": 7,
-         "slug": "florence-brunelle"
         }
        ]
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
         {
          "rank": null,
@@ -18197,7 +18197,66 @@
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Finals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Courtney SARAULT",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "2:30.251",
+        "qual": "Q"
+       },
+       {
+        "name": "Minjeong CHOI",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "2:31.655",
+        "qual": "Q"
+       },
+       {
+        "name": "Jianing ZHANG",
+        "noc": "CHN",
+        "rank": 2,
+        "time": "2:30.309",
+        "qual": "Q"
+       },
+       {
+        "name": "Gilli KIM",
+        "noc": "KOR",
+        "rank": 2,
+        "time": "2:31.721",
+        "qual": "Q"
+       },
+       {
+        "name": "Gloria IORIATTI",
+        "noc": "ITA",
+        "rank": 4,
+        "time": "2:30.767",
+        "qual": "ADV"
+       },
+       {
+        "name": "Sukhee SHIM",
+        "noc": "KOR",
+        "rank": 5,
+        "time": "2:31.168",
+        "qual": "ADV"
+       }
+      ],
+      "races": [
+       [
+        "Courtney SARAULT (CAN)",
+        "Minjeong CHOI (KOR)",
+        "Jianing ZHANG (CHN)",
+        "Gilli KIM (KOR)",
+        "Gloria IORIATTI (ITA)",
+        "Sukhee SHIM (KOR)"
+       ]
+      ]
+     }
     },
     {
      "id": 22905,
@@ -20978,31 +21037,12 @@
    "distance": "Women 1500 m",
    "round": "Semifinals",
    "heat": "Heat 1",
-   "start_utc": "2026-10-26T01:21:00.000Z",
-   "rank": null,
-   "name": "Gilli KIM",
-   "noc": "KOR",
-   "time": "no time",
-   "qual": "",
-   "status": "",
-   "record": "",
-   "bib": 5,
-   "lane": 1,
-   "slug": "gilli-kim"
-  },
-  {
-   "event_id": "isu-16230",
-   "sport": "short-track",
-   "event": "ISU Short Track World Tour #1",
-   "distance": "Women 1500 m",
-   "round": "Semifinals",
-   "heat": "Heat 1",
-   "start_utc": "2026-10-26T01:21:00.000Z",
-   "rank": null,
+   "start_utc": "2026-10-26T01:29:00.000Z",
+   "rank": 1,
    "name": "Minjeong CHOI",
    "noc": "KOR",
-   "time": "no time",
-   "qual": "",
+   "time": "2:31.655",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 4,
@@ -21015,13 +21055,32 @@
    "event": "ISU Short Track World Tour #1",
    "distance": "Women 1500 m",
    "round": "Semifinals",
+   "heat": "Heat 1",
+   "start_utc": "2026-10-26T01:29:00.000Z",
+   "rank": 2,
+   "name": "Gilli KIM",
+   "noc": "KOR",
+   "time": "2:31.721",
+   "qual": "Q",
+   "status": "",
+   "record": "",
+   "bib": 5,
+   "lane": 1,
+   "slug": "gilli-kim"
+  },
+  {
+   "event_id": "isu-16230",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #1",
+   "distance": "Women 1500 m",
+   "round": "Semifinals",
    "heat": "Heat 2",
-   "start_utc": "2026-10-26T01:21:00.000Z",
-   "rank": null,
+   "start_utc": "2026-10-26T01:29:00.000Z",
+   "rank": 5,
    "name": "Sukhee SHIM",
    "noc": "KOR",
-   "time": "no time",
-   "qual": "",
+   "time": "2:31.168",
+   "qual": "ADV",
    "status": "",
    "record": "",
    "bib": 79,
@@ -21035,7 +21094,7 @@
    "distance": "Women 1500 m",
    "round": "Semifinals",
    "heat": "Heat 3",
-   "start_utc": "2026-10-26T01:21:00.000Z",
+   "start_utc": "2026-10-26T01:29:00.000Z",
    "rank": null,
    "name": "Minji KIM",
    "noc": "KOR",
