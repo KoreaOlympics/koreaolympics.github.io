@@ -18,7 +18,7 @@
   "live": "Women 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-1/"
  },
- "checked_at": "2026-10-26T00:48:35.763753+00:00",
+ "checked_at": "2026-10-26T00:59:33.220580+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-23T16:00:00.000Z",
@@ -3206,7 +3206,7 @@
      ],
      "projection": {
       "next": "Finals",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -3259,10 +3259,145 @@
     {
      "id": 22869,
      "name": "Finals",
-     "status": "Scheduled",
-     "start_utc": "2026-10-26T00:45:00.000Z",
+     "status": "Live",
+     "start_utc": "2026-10-26T00:47:00.000Z",
      "rule": "",
-     "heats": []
+     "heats": [
+      {
+       "name": "Final",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Selma POUTSMA",
+         "noc": "NED",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 15,
+         "lane": 1,
+         "slug": "selma-poutsma"
+        },
+        {
+         "rank": null,
+         "name": "Xandra VELZEBOER",
+         "noc": "NED",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 3,
+         "lane": 2,
+         "slug": "xandra-velzeboer"
+        },
+        {
+         "rank": null,
+         "name": "Courtney SARAULT",
+         "noc": "CAN",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 1,
+         "lane": 3,
+         "slug": "courtney-sarault"
+        },
+        {
+         "rank": null,
+         "name": "Gabriela TOPOLSKA",
+         "noc": "POL",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 13,
+         "lane": 4,
+         "slug": "gabriela-topolska"
+        },
+        {
+         "rank": null,
+         "name": "Kornelia WOZNIAK",
+         "noc": "POL",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 84,
+         "lane": 5,
+         "slug": "kornelia-wozniak"
+        }
+       ]
+      },
+      {
+       "name": "Final B",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Jianing ZHANG",
+         "noc": "CHN",
+         "time": "43.910",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 55,
+         "lane": 1,
+         "slug": "jianing-zhang"
+        },
+        {
+         "rank": 2,
+         "name": "Victoria JEAN-BAPTISTE",
+         "noc": "CAN",
+         "time": "44.160",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 53,
+         "lane": 3,
+         "slug": "victoria-jean-baptiste"
+        },
+        {
+         "rank": 3,
+         "name": "Florence BRUNELLE",
+         "noc": "CAN",
+         "time": "44.324",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 10,
+         "lane": 5,
+         "slug": "florence-brunelle"
+        },
+        {
+         "rank": 4,
+         "name": "Ye WANG",
+         "noc": "CHN",
+         "time": "50.245",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 40,
+         "lane": 2,
+         "slug": "ye-wang"
+        },
+        {
+         "rank": 5,
+         "name": "Jiarui SONG",
+         "noc": "CHN",
+         "time": "1:03.879",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 54,
+         "lane": 4,
+         "slug": "jiarui-song"
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -12514,7 +12649,7 @@
     {
      "id": 22892,
      "name": "Semifinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-10-26T00:36:14.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final, the third and fourth placed skaters from each race and up to a maximum of next two fastest fifth place skaters qualify for Final B.",
      "heats": [
@@ -12552,7 +12687,7 @@
          "name": "Furkan AKAR",
          "noc": "TUR",
          "time": "1:26.959",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 27,
@@ -12587,39 +12722,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Jongun RIM",
-         "noc": "KOR",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 8,
-         "lane": 1,
-         "slug": "jongun-rim"
-        },
-        {
-         "rank": null,
-         "name": "Felix ROUSSEL",
-         "noc": "CAN",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 11,
-         "lane": 2,
-         "slug": "felix-roussel"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Thomas NADALINI",
          "noc": "ITA",
-         "time": "no time",
-         "qual": "",
+         "time": "1:37.276",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 6,
@@ -12627,11 +12738,23 @@
          "slug": "thomas-nadalini"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Jongun RIM",
+         "noc": "KOR",
+         "time": "1:37.448",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 8,
+         "lane": 1,
+         "slug": "jongun-rim"
+        },
+        {
+         "rank": 3,
          "name": "Shogo MIYATA",
          "noc": "JPN",
-         "time": "no time",
-         "qual": "",
+         "time": "1:37.603",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 9,
@@ -12639,11 +12762,11 @@
          "slug": "shogo-miyata"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Michal NIEWINSKI",
          "noc": "POL",
-         "time": "no time",
-         "qual": "",
+         "time": "1:38.394",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 33,
@@ -12651,20 +12774,83 @@
          "slug": "michal-niewinski"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Wonjun MOON",
          "noc": "HUN",
          "time": "no time",
-         "qual": "",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 28,
          "lane": 6,
          "slug": "wonjun-moon"
+        },
+        {
+         "rank": null,
+         "name": "Felix ROUSSEL",
+         "noc": "CAN",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 11,
+         "lane": 2,
+         "slug": "felix-roussel"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Finals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Seochan BAE",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "1:26.781",
+        "qual": "Q"
+       },
+       {
+        "name": "Thomas NADALINI",
+        "noc": "ITA",
+        "rank": 1,
+        "time": "1:37.276",
+        "qual": "Q"
+       },
+       {
+        "name": "Jens VAN 'T WOUT",
+        "noc": "NED",
+        "rank": 2,
+        "time": "1:26.866",
+        "qual": "Q"
+       },
+       {
+        "name": "Jongun RIM",
+        "noc": "KOR",
+        "rank": 2,
+        "time": "1:37.448",
+        "qual": "Q"
+       },
+       {
+        "name": "Furkan AKAR",
+        "noc": "TUR",
+        "rank": 3,
+        "time": "1:26.959",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Seochan BAE (KOR)",
+        "Thomas NADALINI (ITA)",
+        "Jens VAN 'T WOUT (NED)",
+        "Jongun RIM (KOR)",
+        "Furkan AKAR (TUR)"
+       ]
+      ]
+     }
     },
     {
      "id": 22893,
@@ -20004,11 +20190,11 @@
    "round": "Semifinals",
    "heat": "Heat 2",
    "start_utc": "2026-10-26T00:36:14.000Z",
-   "rank": null,
+   "rank": 2,
    "name": "Jongun RIM",
    "noc": "KOR",
-   "time": "no time",
-   "qual": "",
+   "time": "1:37.448",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 8,
