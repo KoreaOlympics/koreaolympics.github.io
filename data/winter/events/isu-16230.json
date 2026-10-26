@@ -18,7 +18,7 @@
   "live": "Women 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-1/"
  },
- "checked_at": "2026-10-26T01:10:30.911035+00:00",
+ "checked_at": "2026-10-26T01:21:24.530296+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-23T16:00:00.000Z",
@@ -12802,7 +12802,7 @@
      ],
      "projection": {
       "next": "Finals",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -12855,10 +12855,145 @@
     {
      "id": 22893,
      "name": "Finals",
-     "status": "Scheduled",
-     "start_utc": "2026-10-26T01:04:00.000Z",
+     "status": "Live",
+     "start_utc": "2026-10-26T01:07:00.000Z",
      "rule": "",
-     "heats": []
+     "heats": [
+      {
+       "name": "Final",
+       "status": "Live",
+       "official": "Live",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Jens VAN 'T WOUT",
+         "noc": "NED",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 7,
+         "lane": 3,
+         "slug": "jens-van-t-wout"
+        },
+        {
+         "rank": null,
+         "name": "Furkan AKAR",
+         "noc": "TUR",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 27,
+         "lane": 5,
+         "slug": "furkan-akar"
+        },
+        {
+         "rank": null,
+         "name": "Jongun RIM",
+         "noc": "KOR",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 8,
+         "lane": 4,
+         "slug": "jongun-rim"
+        },
+        {
+         "rank": null,
+         "name": "Seochan BAE",
+         "noc": "KOR",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 96,
+         "lane": 1,
+         "slug": "seochan-bae"
+        },
+        {
+         "rank": null,
+         "name": "Thomas NADALINI",
+         "noc": "ITA",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 6,
+         "lane": 2,
+         "slug": "thomas-nadalini"
+        }
+       ]
+      },
+      {
+       "name": "Final B",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Michal NIEWINSKI",
+         "noc": "POL",
+         "time": "1:40.696",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 33,
+         "lane": 3,
+         "slug": "michal-niewinski"
+        },
+        {
+         "rank": 2,
+         "name": "Brandon KIM",
+         "noc": "USA",
+         "time": "1:40.788",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 14,
+         "lane": 2,
+         "slug": "brandon-kim"
+        },
+        {
+         "rank": 3,
+         "name": "Luca SPECHENHAUSER",
+         "noc": "ITA",
+         "time": "1:40.858",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 24,
+         "lane": 4,
+         "slug": "luca-spechenhauser"
+        },
+        {
+         "rank": null,
+         "name": "Wonjun MOON",
+         "noc": "HUN",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 28,
+         "lane": 5,
+         "slug": "wonjun-moon"
+        },
+        {
+         "rank": null,
+         "name": "Shogo MIYATA",
+         "noc": "JPN",
+         "time": "DNS",
+         "qual": "",
+         "status": "Did Not Start",
+         "record": "",
+         "bib": 9,
+         "lane": 1,
+         "slug": "shogo-miyata"
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -20200,6 +20335,44 @@
    "bib": 8,
    "lane": 1,
    "slug": "jongun-rim"
+  },
+  {
+   "event_id": "isu-16230",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #1",
+   "distance": "Men 1000 m",
+   "round": "Finals",
+   "heat": "Final",
+   "start_utc": "2026-10-26T01:07:00.000Z",
+   "rank": null,
+   "name": "Jongun RIM",
+   "noc": "KOR",
+   "time": "no time",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 8,
+   "lane": 4,
+   "slug": "jongun-rim"
+  },
+  {
+   "event_id": "isu-16230",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #1",
+   "distance": "Men 1000 m",
+   "round": "Finals",
+   "heat": "Final",
+   "start_utc": "2026-10-26T01:07:00.000Z",
+   "rank": null,
+   "name": "Seochan BAE",
+   "noc": "KOR",
+   "time": "no time",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 96,
+   "lane": 1,
+   "slug": "seochan-bae"
   },
   {
    "event_id": "isu-16230",
