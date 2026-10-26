@@ -18,7 +18,7 @@
   "live": "Women 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-1/"
  },
- "checked_at": "2026-10-26T02:39:14.466443+00:00",
+ "checked_at": "2026-10-26T02:50:08.414058+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-23T16:00:00.000Z",
@@ -19109,44 +19109,32 @@
     {
      "id": 22908,
      "name": "Finals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-10-26T02:24:39.000Z",
      "rule": "",
      "heats": [
       {
        "name": "Final",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "China",
-         "noc": "CHN",
-         "time": "no time",
+         "rank": 1,
+         "name": "Republic of Korea",
+         "noc": "KOR",
+         "time": "7:35.598",
          "qual": "",
          "status": "",
          "record": "",
          "bib": null,
-         "lane": 4,
+         "lane": 1,
          "slug": ""
         },
         {
-         "rank": null,
-         "name": "Japan",
-         "noc": "JPN",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 2,
-         "slug": ""
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Canada",
          "noc": "CAN",
-         "time": "no time",
+         "time": "7:35.715",
          "qual": "",
          "status": "",
          "record": "",
@@ -19155,15 +19143,27 @@
          "slug": ""
         },
         {
-         "rank": null,
-         "name": "Republic of Korea",
-         "noc": "KOR",
-         "time": "no time",
+         "rank": 3,
+         "name": "China",
+         "noc": "CHN",
+         "time": "7:35.929",
          "qual": "",
          "status": "",
          "record": "",
          "bib": null,
-         "lane": 1,
+         "lane": 4,
+         "slug": ""
+        },
+        {
+         "rank": 4,
+         "name": "Japan",
+         "noc": "JPN",
+         "time": "7:38.342",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 2,
          "slug": ""
         }
        ]
@@ -21806,10 +21806,10 @@
    "round": "Finals",
    "heat": "Final",
    "start_utc": "2026-10-26T02:24:39.000Z",
-   "rank": null,
+   "rank": 1,
    "name": "Republic of Korea",
    "noc": "KOR",
-   "time": "no time",
+   "time": "7:35.598",
    "qual": "",
    "status": "",
    "record": "",
