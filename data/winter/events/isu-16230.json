@@ -18,7 +18,7 @@
   "live": "Women 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-1/"
  },
- "checked_at": "2026-10-26T01:44:04.922468+00:00",
+ "checked_at": "2026-10-26T01:54:48.060088+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-23T16:00:00.000Z",
@@ -17982,7 +17982,7 @@
          "name": "Chiara BETTI",
          "noc": "ITA",
          "time": "2:32.283",
-         "qual": "pB",
+         "qual": "qB",
          "status": "",
          "record": "",
          "bib": 16,
@@ -18108,15 +18108,15 @@
       },
       {
        "name": "Heat 3",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Hanne DESMET",
          "noc": "BEL",
-         "time": "no time",
-         "qual": "",
+         "time": "2:30.969",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 6,
@@ -18124,11 +18124,11 @@
          "slug": "hanne-desmet"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Rina YAMANA",
          "noc": "JPN",
-         "time": "no time",
-         "qual": "",
+         "time": "2:31.059",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 70,
@@ -18136,11 +18136,11 @@
          "slug": "rina-yamana"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Minji KIM",
          "noc": "KOR",
-         "time": "no time",
-         "qual": "",
+         "time": "2:31.132",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 78,
@@ -18148,11 +18148,11 @@
          "slug": "minji-kim"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Zoe Florence DELTRAP",
          "noc": "NED",
-         "time": "no time",
-         "qual": "",
+         "time": "2:31.149",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 49,
@@ -18160,11 +18160,11 @@
          "slug": "zoe-florence-deltrap"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Chutong ZHANG",
          "noc": "CHN",
-         "time": "no time",
-         "qual": "",
+         "time": "2:31.229",
+         "qual": "qB",
          "status": "",
          "record": "",
          "bib": 11,
@@ -18172,28 +18172,28 @@
          "slug": "chutong-zhang"
         },
         {
-         "rank": null,
-         "name": "Claudia GAGNON",
-         "noc": "CAN",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 52,
-         "lane": 6,
-         "slug": "claudia-gagnon"
-        },
-        {
-         "rank": null,
+         "rank": 6,
          "name": "Danae BLAIS",
          "noc": "CAN",
-         "time": "no time",
+         "time": "2:31.718",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 25,
          "lane": 7,
          "slug": "danae-blais"
+        },
+        {
+         "rank": 7,
+         "name": "Claudia GAGNON",
+         "noc": "CAN",
+         "time": "2:32.031",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 52,
+         "lane": 6,
+         "slug": "claudia-gagnon"
         }
        ]
       }
@@ -18211,6 +18211,13 @@
         "qual": "Q"
        },
        {
+        "name": "Hanne DESMET",
+        "noc": "BEL",
+        "rank": 1,
+        "time": "2:30.969",
+        "qual": "Q"
+       },
+       {
         "name": "Minjeong CHOI",
         "noc": "KOR",
         "rank": 1,
@@ -18222,6 +18229,13 @@
         "noc": "CHN",
         "rank": 2,
         "time": "2:30.309",
+        "qual": "Q"
+       },
+       {
+        "name": "Rina YAMANA",
+        "noc": "JPN",
+        "rank": 2,
+        "time": "2:31.059",
         "qual": "Q"
        },
        {
@@ -18249,8 +18263,10 @@
       "races": [
        [
         "Courtney SARAULT (CAN)",
+        "Hanne DESMET (BEL)",
         "Minjeong CHOI (KOR)",
         "Jianing ZHANG (CHN)",
+        "Rina YAMANA (JPN)",
         "Gilli KIM (KOR)",
         "Gloria IORIATTI (ITA)",
         "Sukhee SHIM (KOR)"
@@ -21095,11 +21111,11 @@
    "round": "Semifinals",
    "heat": "Heat 3",
    "start_utc": "2026-10-26T01:29:00.000Z",
-   "rank": null,
+   "rank": 3,
    "name": "Minji KIM",
    "noc": "KOR",
-   "time": "no time",
-   "qual": "",
+   "time": "2:31.132",
+   "qual": "QB",
    "status": "",
    "record": "",
    "bib": 78,
