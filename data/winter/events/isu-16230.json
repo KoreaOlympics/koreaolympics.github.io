@@ -18,7 +18,7 @@
   "live": "Women 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-1/"
  },
- "checked_at": "2026-10-26T01:21:24.530296+00:00",
+ "checked_at": "2026-10-26T01:22:30.035371+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-23T16:00:00.000Z",
@@ -12861,14 +12861,14 @@
      "heats": [
       {
        "name": "Final",
-       "status": "Live",
+       "status": "Finished",
        "official": "Live",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Jens VAN 'T WOUT",
          "noc": "NED",
-         "time": "no time",
+         "time": "1:29.030",
          "qual": "",
          "status": "",
          "record": "",
@@ -12877,10 +12877,34 @@
          "slug": "jens-van-t-wout"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Thomas NADALINI",
+         "noc": "ITA",
+         "time": "1:29.330",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 6,
+         "lane": 2,
+         "slug": "thomas-nadalini"
+        },
+        {
+         "rank": 3,
+         "name": "Seochan BAE",
+         "noc": "KOR",
+         "time": "1:29.460",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 96,
+         "lane": 1,
+         "slug": "seochan-bae"
+        },
+        {
+         "rank": 4,
          "name": "Furkan AKAR",
          "noc": "TUR",
-         "time": "no time",
+         "time": "1:42.630",
          "qual": "",
          "status": "",
          "record": "",
@@ -12899,30 +12923,6 @@
          "bib": 8,
          "lane": 4,
          "slug": "jongun-rim"
-        },
-        {
-         "rank": null,
-         "name": "Seochan BAE",
-         "noc": "KOR",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 96,
-         "lane": 1,
-         "slug": "seochan-bae"
-        },
-        {
-         "rank": null,
-         "name": "Thomas NADALINI",
-         "noc": "ITA",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 6,
-         "lane": 2,
-         "slug": "thomas-nadalini"
         }
        ]
       },
@@ -20344,16 +20344,16 @@
    "round": "Finals",
    "heat": "Final",
    "start_utc": "2026-10-26T01:07:00.000Z",
-   "rank": null,
-   "name": "Jongun RIM",
+   "rank": 3,
+   "name": "Seochan BAE",
    "noc": "KOR",
-   "time": "no time",
+   "time": "1:29.460",
    "qual": "",
    "status": "",
    "record": "",
-   "bib": 8,
-   "lane": 4,
-   "slug": "jongun-rim"
+   "bib": 96,
+   "lane": 1,
+   "slug": "seochan-bae"
   },
   {
    "event_id": "isu-16230",
@@ -20364,15 +20364,15 @@
    "heat": "Final",
    "start_utc": "2026-10-26T01:07:00.000Z",
    "rank": null,
-   "name": "Seochan BAE",
+   "name": "Jongun RIM",
    "noc": "KOR",
    "time": "no time",
    "qual": "",
    "status": "",
    "record": "",
-   "bib": 96,
-   "lane": 1,
-   "slug": "seochan-bae"
+   "bib": 8,
+   "lane": 4,
+   "slug": "jongun-rim"
   },
   {
    "event_id": "isu-16230",
