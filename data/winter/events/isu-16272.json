@@ -9,7 +9,7 @@
   "category": "ISU World Tour",
   "start": "2026-10-30",
   "end": "2026-11-01",
-  "start_utc": "2026-10-30T03:00:00.000Z",
+  "start_utc": "2026-10-30T11:00:00.000Z",
   "end_utc": "2026-11-02T03:59:59.000Z",
   "tz": "America/Halifax",
   "city": "Montreal",
@@ -18,7 +18,7 @@
   "live": "",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-29T16:38:56.213320+00:00",
+ "checked_at": "2026-10-29T16:49:10.209652+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T12:00:00.000Z",
@@ -97,7 +97,7 @@
    "title": "Women 1500 m",
    "round": "Quarterfinals",
    "event_result_id": 16040,
-   "round_id": null,
+   "round_id": 22954,
    "type": "Singles"
   },
   {
@@ -113,7 +113,7 @@
    "title": "Mixed Team Relay",
    "round": "Quarterfinals",
    "event_result_id": 16033,
-   "round_id": null,
+   "round_id": 22959,
    "type": "Couples"
   },
   {
@@ -121,7 +121,7 @@
    "title": "Men 5000 m Relay",
    "round": "Quarterfinals",
    "event_result_id": 16036,
-   "round_id": null,
+   "round_id": 22962,
    "type": "Couples"
   },
   {
@@ -193,7 +193,7 @@
    "title": "Mixed Team Relay",
    "round": "Semifinals",
    "event_result_id": 16033,
-   "round_id": null,
+   "round_id": 22960,
    "type": "Couples"
   },
   {
@@ -257,7 +257,7 @@
    "title": "Women 3000 m Relay",
    "round": "Semifinals",
    "event_result_id": 16038,
-   "round_id": null,
+   "round_id": 22965,
    "type": "Couples"
   },
   {
@@ -273,7 +273,7 @@
    "title": "Women 3000 m Relay",
    "round": "Finals",
    "event_result_id": 16038,
-   "round_id": null,
+   "round_id": 22966,
    "type": "Couples"
   },
   {
@@ -281,7 +281,7 @@
    "title": "Men 5000 m Relay",
    "round": "Semifinals",
    "event_result_id": 16036,
-   "round_id": null,
+   "round_id": 22963,
    "type": "Couples"
   },
   {
@@ -329,7 +329,7 @@
    "title": "Women 1500 m",
    "round": "Rep. Quarterfinals",
    "event_result_id": 16040,
-   "round_id": null,
+   "round_id": 22955,
    "type": "Singles"
   },
   {
@@ -345,7 +345,7 @@
    "title": "Women 1500 m",
    "round": "Rep. Semifinals",
    "event_result_id": 16040,
-   "round_id": null,
+   "round_id": 22956,
    "type": "Singles"
   },
   {
@@ -353,7 +353,7 @@
    "title": "Mixed Team Relay",
    "round": "Finals",
    "event_result_id": 16033,
-   "round_id": null,
+   "round_id": 22961,
    "type": "Couples"
   },
   {
@@ -409,7 +409,7 @@
    "title": "Women 1500 m",
    "round": "Semifinals",
    "event_result_id": 16040,
-   "round_id": null,
+   "round_id": 22957,
    "type": "Singles"
   },
   {
@@ -417,7 +417,7 @@
    "title": "Women 1500 m",
    "round": "Finals",
    "event_result_id": 16040,
-   "round_id": null,
+   "round_id": 22958,
    "type": "Singles"
   },
   {
@@ -425,7 +425,7 @@
    "title": "Men 5000 m Relay",
    "round": "Finals",
    "event_result_id": 16036,
-   "round_id": null,
+   "round_id": 22964,
    "type": "Couples"
   }
  ],
@@ -700,23 +700,188 @@
   },
   "16041": {
    "title": "Men 1500 m",
-   "rounds": []
+   "rounds": [
+    {
+     "id": 22947,
+     "name": "Heats",
+     "status": "Scheduled",
+     "start_utc": "2026-10-30T14:29:00.000Z",
+     "rule": "The first and second placed skaters from each race and up to a maximum of six fastest third place skaters qualify for Quarterfinals.",
+     "heats": []
+    },
+    {
+     "id": 22949,
+     "name": "Quarterfinals",
+     "status": "Scheduled",
+     "start_utc": "2026-10-30T19:12:00.000Z",
+     "rule": "The first and second placed skaters from each race and up to a maximum of five fastest third place skaters qualify for Semifinals.",
+     "heats": []
+    },
+    {
+     "id": 22948,
+     "name": "Rep. Heats",
+     "status": "Scheduled",
+     "start_utc": "2026-10-31T12:15:00.000Z",
+     "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Rep Quarterfinals.",
+     "heats": []
+    },
+    {
+     "id": 22950,
+     "name": "Rep. Quarterfinals",
+     "status": "Scheduled",
+     "start_utc": "2026-10-31T13:53:00.000Z",
+     "rule": "The first and second placed skaters from each race and up to a maximum of four fastest third place skaters qualify for Rep Semifinals.",
+     "heats": []
+    },
+    {
+     "id": 22951,
+     "name": "Rep. Semifinals",
+     "status": "Scheduled",
+     "start_utc": "2026-10-31T14:33:00.000Z",
+     "rule": "The first placed skater from each race qualify for Semifinals.",
+     "heats": []
+    },
+    {
+     "id": 22952,
+     "name": "Semifinals",
+     "status": "Scheduled",
+     "start_utc": "2026-10-31T18:28:00.000Z",
+     "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final, the third and fourth placed skaters from each race and up to a maximum of next two fastest fifth place skaters qualify for Final B.",
+     "heats": []
+    },
+    {
+     "id": 22953,
+     "name": "Finals",
+     "status": "Scheduled",
+     "start_utc": "2026-10-31T19:18:00.000Z",
+     "rule": "",
+     "heats": []
+    }
+   ]
   },
   "16040": {
    "title": "Women 1500 m",
-   "rounds": []
+   "rounds": [
+    {
+     "id": 22954,
+     "name": "Quarterfinals",
+     "status": "Scheduled",
+     "start_utc": "2026-10-30T18:37:00.000Z",
+     "rule": "The first and second placed skaters from each race and up to a maximum of five fastest third place skaters qualify for Semifinals.",
+     "heats": []
+    },
+    {
+     "id": 22955,
+     "name": "Rep. Quarterfinals",
+     "status": "Scheduled",
+     "start_utc": "2026-11-01T15:29:00.000Z",
+     "rule": "The first and second placed skaters from each race and up to a maximum of four fastest third place skaters qualify for Rep. Semifinals.",
+     "heats": []
+    },
+    {
+     "id": 22956,
+     "name": "Rep. Semifinals",
+     "status": "Scheduled",
+     "start_utc": "2026-11-01T16:09:00.000Z",
+     "rule": "The first placed skater from each race qualify for Semifinals.",
+     "heats": []
+    },
+    {
+     "id": 22957,
+     "name": "Semifinals",
+     "status": "Scheduled",
+     "start_utc": "2026-11-01T19:51:00.000Z",
+     "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final, the third and fourth placed skaters from each race and up to a maximum of next two fastest fifth place skaters qualify for Final B.",
+     "heats": []
+    },
+    {
+     "id": 22958,
+     "name": "Finals",
+     "status": "Scheduled",
+     "start_utc": "2026-11-01T20:29:00.000Z",
+     "rule": "",
+     "heats": []
+    }
+   ]
   },
   "16033": {
    "title": "Mixed Team Relay",
-   "rounds": []
+   "rounds": [
+    {
+     "id": 22959,
+     "name": "Quarterfinals",
+     "status": "Scheduled",
+     "start_utc": "2026-10-30T20:07:00.000Z",
+     "rule": "The first and second placed teams from each race qualify for Semifinals.",
+     "heats": []
+    },
+    {
+     "id": 22960,
+     "name": "Semifinals",
+     "status": "Scheduled",
+     "start_utc": "2026-10-31T15:03:00.000Z",
+     "rule": "The first and second placed teams from each race qualify for Final, the third and fourth placed teams from each race qualify for Final B.",
+     "heats": []
+    },
+    {
+     "id": 22961,
+     "name": "Finals",
+     "status": "Scheduled",
+     "start_utc": "2026-11-01T17:35:00.000Z",
+     "rule": "",
+     "heats": []
+    }
+   ]
   },
   "16036": {
    "title": "Men 5000 m Relay",
-   "rounds": []
+   "rounds": [
+    {
+     "id": 22962,
+     "name": "Quarterfinals",
+     "status": "Scheduled",
+     "start_utc": "2026-10-30T20:51:00.000Z",
+     "rule": "The first and second placed teams from each race qualify for Semifinals.",
+     "heats": []
+    },
+    {
+     "id": 22963,
+     "name": "Semifinals",
+     "status": "Scheduled",
+     "start_utc": "2026-10-31T20:06:00.000Z",
+     "rule": "The first and second placed teams from each race qualify for Final, the third and fourth placed teams from each race qualify for Final B.",
+     "heats": []
+    },
+    {
+     "id": 22964,
+     "name": "Finals",
+     "status": "Scheduled",
+     "start_utc": "2026-11-01T20:49:00.000Z",
+     "rule": "",
+     "heats": []
+    }
+   ]
   },
   "16038": {
    "title": "Women 3000 m Relay",
-   "rounds": []
+   "rounds": [
+    {
+     "id": 22965,
+     "name": "Semifinals",
+     "status": "Scheduled",
+     "start_utc": "2026-10-31T18:47:00.000Z",
+     "rule": "The first and second placed teams from each race qualify for Final, the third and fourth placed teams from each race qualify for Final B.",
+     "heats": []
+    },
+    {
+     "id": 22966,
+     "name": "Finals",
+     "status": "Scheduled",
+     "start_utc": "2026-10-31T19:39:00.000Z",
+     "rule": "",
+     "heats": []
+    }
+   ]
   }
  },
  "korea": []
