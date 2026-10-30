@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
-      - run: python probe/probe.py
+      - run: python -m tools.winter.collect --full && mkdir -p probe-out && cp -r data/winter probe-out/
       - name: Push output branch
         run: |
           cd probe-out
