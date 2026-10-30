@@ -18,7 +18,7 @@
   "live": "Men 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-30T17:48:08.717574+00:00",
+ "checked_at": "2026-10-30T17:58:30.734314+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -2653,7 +2653,7 @@
      "id": 22926,
      "name": "Heats",
      "status": "Live",
-     "start_utc": "2026-10-30T16:41:00.000Z",
+     "start_utc": "2026-10-30T16:44:24.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of two fastest third place skaters qualify for Quarterfinals.",
      "heats": [
       {
@@ -2690,7 +2690,7 @@
          "name": "Justin LIU",
          "noc": "USA",
          "time": "41.332",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 111,
@@ -2725,27 +2725,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Steven DUBOIS",
-         "noc": "CAN",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 3,
-         "lane": 1,
-         "slug": "steven-dubois"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Teun BOER",
          "noc": "NED",
-         "time": "no time",
-         "qual": "",
+         "time": "40.347",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 46,
@@ -2753,22 +2741,22 @@
          "slug": "teun-boer"
         },
         {
-         "rank": null,
-         "name": "Michal NIEWINSKI",
-         "noc": "POL",
-         "time": "no time",
-         "qual": "",
+         "rank": 2,
+         "name": "Steven DUBOIS",
+         "noc": "CAN",
+         "time": "40.389",
+         "qual": "Q",
          "status": "",
          "record": "",
-         "bib": 33,
-         "lane": 3,
-         "slug": "michal-niewinski"
+         "bib": 3,
+         "lane": 1,
+         "slug": "steven-dubois"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Kun LI",
          "noc": "CHN",
-         "time": "no time",
+         "time": "41.135",
          "qual": "",
          "status": "",
          "record": "",
@@ -2777,42 +2765,42 @@
          "slug": "kun-li"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Ivan DONCHEV",
          "noc": "BUL",
-         "time": "no time",
+         "time": "41.200",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 60,
          "lane": 5,
          "slug": "ivan-donchev"
+        },
+        {
+         "rank": 5,
+         "name": "Michal NIEWINSKI",
+         "noc": "POL",
+         "time": "44.000",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 33,
+         "lane": 3,
+         "slug": "michal-niewinski"
         }
        ]
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Furkan AKAR",
-         "noc": "TUR",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 27,
-         "lane": 1,
-         "slug": "furkan-akar"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Mathieu PELLETIER",
          "noc": "CAN",
-         "time": "no time",
-         "qual": "",
+         "time": "40.337",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 66,
@@ -2820,11 +2808,23 @@
          "slug": "mathieu-pelletier"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Furkan AKAR",
+         "noc": "TUR",
+         "time": "40.672",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 27,
+         "lane": 1,
+         "slug": "furkan-akar"
+        },
+        {
+         "rank": 3,
          "name": "Zixia ZHANG",
          "noc": "CHN",
-         "time": "no time",
-         "qual": "",
+         "time": "40.735",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 69,
@@ -2832,42 +2832,42 @@
          "slug": "zixia-zhang"
         },
         {
-         "rank": null,
-         "name": "Shuta MATSUZU",
-         "noc": "JPN",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 89,
-         "lane": 4,
-         "slug": "shuta-matsuzu"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Daniel TIBORCZ",
          "noc": "HUN",
-         "time": "no time",
+         "time": "40.987",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 82,
          "lane": 5,
          "slug": "daniel-tiborcz"
+        },
+        {
+         "rank": 5,
+         "name": "Shuta MATSUZU",
+         "noc": "JPN",
+         "time": "41.029",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 89,
+         "lane": 4,
+         "slug": "shuta-matsuzu"
         }
        ]
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Long SUN",
          "noc": "CHN",
-         "time": "no time",
-         "qual": "",
+         "time": "40.852",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 4,
@@ -2875,23 +2875,11 @@
          "slug": "long-sun"
         },
         {
-         "rank": null,
-         "name": "Roberts KRUZBERGS",
-         "noc": "LAT",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 10,
-         "lane": 2,
-         "slug": "roberts-kruzbergs"
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Marcus HOWARD",
          "noc": "USA",
-         "time": "no time",
-         "qual": "",
+         "time": "40.937",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 110,
@@ -2899,10 +2887,22 @@
          "slug": "marcus-howard"
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Aibek NASSEN",
+         "noc": "KAZ",
+         "time": "41.023",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 91,
+         "lane": 5,
+         "slug": "aibek-nassen"
+        },
+        {
+         "rank": 4,
          "name": "Nicolas ANDERMANN",
          "noc": "AUT",
-         "time": "no time",
+         "time": "41.661",
          "qual": "",
          "status": "",
          "record": "",
@@ -2911,54 +2911,30 @@
          "slug": "nicolas-andermann"
         },
         {
-         "rank": null,
-         "name": "Aibek NASSEN",
-         "noc": "KAZ",
-         "time": "no time",
+         "rank": 5,
+         "name": "Roberts KRUZBERGS",
+         "noc": "LAT",
+         "time": "DNF",
          "qual": "",
-         "status": "",
+         "status": "Did Not Finish",
          "record": "",
-         "bib": 91,
-         "lane": 5,
-         "slug": "aibek-nassen"
+         "bib": 10,
+         "lane": 2,
+         "slug": "roberts-kruzbergs"
         }
        ]
       },
       {
        "name": "Heat 5",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Andrew HEO",
-         "noc": "USA",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 15,
-         "lane": 1,
-         "slug": "andrew-heo"
-        },
-        {
-         "rank": null,
-         "name": "Kay HUISMAN",
-         "noc": "NED",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 41,
-         "lane": 2,
-         "slug": "kay-huisman"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Felix ROUSSEL",
          "noc": "CAN",
-         "time": "no time",
-         "qual": "",
+         "time": "39.966",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 11,
@@ -2966,10 +2942,34 @@
          "slug": "felix-roussel"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Kay HUISMAN",
+         "noc": "NED",
+         "time": "40.445",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 41,
+         "lane": 2,
+         "slug": "kay-huisman"
+        },
+        {
+         "rank": 3,
+         "name": "Andrew HEO",
+         "noc": "USA",
+         "time": "40.640",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 15,
+         "lane": 1,
+         "slug": "andrew-heo"
+        },
+        {
+         "rank": 4,
          "name": "Brendan COREY",
          "noc": "AUS",
-         "time": "no time",
+         "time": "40.706",
          "qual": "",
          "status": "",
          "record": "",
@@ -2978,10 +2978,10 @@
          "slug": "brendan-corey"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Peter JASZAPATI",
          "noc": "HUN",
-         "time": "no time",
+         "time": "40.971",
          "qual": "",
          "status": "",
          "record": "",
@@ -2993,9 +2993,21 @@
       },
       {
        "name": "Heat 6",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
+        {
+         "rank": null,
+         "name": "Takumi WADA",
+         "noc": "JPN",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 90,
+         "lane": 4,
+         "slug": "takumi-wada"
+        },
         {
          "rank": null,
          "name": "Maxime LAOUN",
@@ -3031,18 +3043,6 @@
          "bib": 48,
          "lane": 3,
          "slug": "lorenzo-previtali"
-        },
-        {
-         "rank": null,
-         "name": "Takumi WADA",
-         "noc": "JPN",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 90,
-         "lane": 4,
-         "slug": "takumi-wada"
         },
         {
          "rank": null,
@@ -6058,7 +6058,7 @@
    "distance": "Men 500 m",
    "round": "Heats",
    "heat": "Heat 1",
-   "start_utc": "2026-10-30T16:41:00.000Z",
+   "start_utc": "2026-10-30T16:44:24.000Z",
    "rank": 2,
    "name": "Dong Min SHIN",
    "noc": "KOR",
@@ -6077,7 +6077,7 @@
    "distance": "Men 500 m",
    "round": "Heats",
    "heat": "Heat 6",
-   "start_utc": "2026-10-30T16:41:00.000Z",
+   "start_utc": "2026-10-30T16:44:24.000Z",
    "rank": null,
    "name": "Jeongmin LEE",
    "noc": "KOR",
@@ -6096,7 +6096,7 @@
    "distance": "Men 500 m",
    "round": "Heats",
    "heat": "Heat 7",
-   "start_utc": "2026-10-30T16:41:00.000Z",
+   "start_utc": "2026-10-30T16:44:24.000Z",
    "rank": null,
    "name": "Seochan BAE",
    "noc": "KOR",
