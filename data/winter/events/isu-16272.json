@@ -15,10 +15,10 @@
   "city": "Montreal",
   "country": "CAN",
   "state": "Live",
-  "live": "Mixed Team Relay",
+  "live": "Men 5000 m Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-30T22:00:25.310209+00:00",
+ "checked_at": "2026-10-30T22:10:58.196793+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -9191,15 +9191,15 @@
      "heats": [
       {
        "name": "Heat 1",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Republic of Korea",
          "noc": "KOR",
-         "time": "no time",
-         "qual": "",
+         "time": "7:14.808",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -9207,11 +9207,11 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Poland",
          "noc": "POL",
-         "time": "no time",
-         "qual": "",
+         "time": "7:15.648",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -9219,10 +9219,10 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "United States of America",
          "noc": "USA",
-         "time": "no time",
+         "time": "7:15.666",
          "qual": "",
          "status": "",
          "record": "",
@@ -9234,15 +9234,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Netherlands",
          "noc": "NED",
-         "time": "no time",
-         "qual": "",
+         "time": "7:05.291",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -9250,21 +9250,40 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Hungary",
+         "noc": "HUN",
+         "time": "7:06.215",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
+         "slug": ""
+        },
+        {
+         "rank": 3,
          "name": "Belgium",
          "noc": "BEL",
-         "time": "no time",
+         "time": "7:07.731",
          "qual": "",
          "status": "",
          "record": "",
          "bib": null,
          "lane": 2,
          "slug": ""
-        },
+        }
+       ]
+      },
+      {
+       "name": "Heat 3",
+       "status": "Live",
+       "official": "Live",
+       "competitors": [
         {
          "rank": null,
-         "name": "Hungary",
-         "noc": "HUN",
+         "name": "Great Britain",
+         "noc": "GBR",
          "time": "no time",
          "qual": "",
          "status": "",
@@ -9272,14 +9291,7 @@
          "bib": null,
          "lane": 3,
          "slug": ""
-        }
-       ]
-      },
-      {
-       "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
-       "competitors": [
+        },
         {
          "rank": null,
          "name": "China",
@@ -9302,18 +9314,6 @@
          "record": "",
          "bib": null,
          "lane": 2,
-         "slug": ""
-        },
-        {
-         "rank": null,
-         "name": "Great Britain",
-         "noc": "GBR",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 3,
          "slug": ""
         },
         {
@@ -10063,11 +10063,11 @@
    "round": "Quarterfinals",
    "heat": "Heat 1",
    "start_utc": "2026-10-30T20:51:41.000Z",
-   "rank": null,
+   "rank": 1,
    "name": "Republic of Korea",
    "noc": "KOR",
-   "time": "no time",
-   "qual": "",
+   "time": "7:14.808",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": null,
