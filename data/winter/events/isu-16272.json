@@ -18,7 +18,7 @@
   "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-30T19:01:20.541745+00:00",
+ "checked_at": "2026-10-30T19:11:39.817957+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -5593,27 +5593,31 @@
       "races": [
        [
         "Zhanshuo LOU (HKG)",
-        "Bohao ZHANG (CHN)",
-        "Jeongmin LEE (KOR)",
-        "Pawel ADAMSKI (POL)",
-        "Mathieu PELLETIER (CAN)",
-        "Taesung KIM (KOR)",
-        "Reinis BERZINS (LAT)"
-       ],
-       [
-        "Kerui SONG (CHN)",
-        "Peter JASZAPATI (HUN)",
-        "Lucas Henry KOO (BRA)",
+        "Gleb IVCHENKO (KAZ)",
         "Andrew HEO (USA)",
-        "Etienne BASTIER (FRA)",
-        "Marten TAUBERT (GER)",
         "Metehan ATAN (TUR)"
        ],
        [
-        "Melle VAN 'T WOUT (NED)",
-        "Niels KINGMA (NED)",
+        "Kerui SONG (CHN)",
         "Zixia ZHANG (CHN)",
-        "Gleb IVCHENKO (KAZ)",
+        "Pawel ADAMSKI (POL)",
+        "Reinis BERZINS (LAT)"
+       ],
+       [
+        "Melle VAN 'T WOUT (NED)",
+        "Lucas Henry KOO (BRA)",
+        "Mathieu PELLETIER (CAN)",
+        "Taesung KIM (KOR)"
+       ],
+       [
+        "Niels KINGMA (NED)",
+        "Jeongmin LEE (KOR)",
+        "Etienne BASTIER (FRA)",
+        "Marten TAUBERT (GER)"
+       ],
+       [
+        "Peter JASZAPATI (HUN)",
+        "Bohao ZHANG (CHN)",
         "Willem MURRAY (GBR)",
         "Kazuki YOSHINAGA (JPN)"
        ]
@@ -5661,7 +5665,7 @@
          "name": "Clayton DE CLEMENTE",
          "noc": "USA",
          "time": "1:26.593",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 25,
@@ -5728,7 +5732,7 @@
          "name": "Steven DUBOIS",
          "noc": "CAN",
          "time": "1:26.695",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 3,
@@ -5830,20 +5834,130 @@
       },
       {
        "name": "Heat 4",
-       "status": "Getting Ready",
-       "official": "Start List",
-       "competitors": []
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Kazuki YOSHINAGA",
+         "noc": "JPN",
+         "time": "1:25.285",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 19,
+         "lane": 5,
+         "slug": "kazuki-yoshinaga"
+        },
+        {
+         "rank": 2,
+         "name": "Bogdan VEKHOV",
+         "noc": "KAZ",
+         "time": "1:26.586",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 94,
+         "lane": 3,
+         "slug": "bogdan-vekhov"
+        },
+        {
+         "rank": 3,
+         "name": "Zixia ZHANG",
+         "noc": "CHN",
+         "time": "1:39.182",
+         "qual": "ADV",
+         "status": "",
+         "record": "",
+         "bib": 69,
+         "lane": 4,
+         "slug": "zixia-zhang"
+        },
+        {
+         "rank": null,
+         "name": "Roberts KRUZBERGS",
+         "noc": "LAT",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 10,
+         "lane": 1,
+         "slug": "roberts-kruzbergs"
+        }
+       ]
       },
       {
        "name": "Heat 5",
-       "status": "Scheduled",
-       "official": "Start List",
-       "competitors": []
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Felix ROUSSEL",
+         "noc": "CAN",
+         "time": "1:25.718",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 11,
+         "lane": 1,
+         "slug": "felix-roussel"
+        },
+        {
+         "rank": 2,
+         "name": "Shogo MIYATA",
+         "noc": "JPN",
+         "time": "1:25.993",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 9,
+         "lane": 2,
+         "slug": "shogo-miyata"
+        },
+        {
+         "rank": 3,
+         "name": "Bohao ZHANG",
+         "noc": "CHN",
+         "time": "1:26.147",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 42,
+         "lane": 4,
+         "slug": "bohao-zhang"
+        },
+        {
+         "rank": 4,
+         "name": "Taesung KIM",
+         "noc": "KOR",
+         "time": "1:26.241",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 97,
+         "lane": 5,
+         "slug": "taesung-kim"
+        },
+        {
+         "rank": 5,
+         "name": "Zhanshuo LOU",
+         "noc": "HKG",
+         "time": "1:26.326",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 45,
+         "lane": 3,
+         "slug": "zhanshuo-lou"
+        }
+       ]
       },
       {
        "name": "Heat 6",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": []
       },
       {
@@ -7324,6 +7438,25 @@
    "record": "",
    "bib": 97,
    "lane": 3,
+   "slug": "taesung-kim"
+  },
+  {
+   "event_id": "isu-16272",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #2",
+   "distance": "Men 1000 m",
+   "round": "Heats",
+   "heat": "Heat 5",
+   "start_utc": "2026-10-30T17:51:13.000Z",
+   "rank": 4,
+   "name": "Taesung KIM",
+   "noc": "KOR",
+   "time": "1:26.241",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 97,
+   "lane": 5,
    "slug": "taesung-kim"
   },
   {
