@@ -18,7 +18,7 @@
   "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-30T19:22:44.099434+00:00",
+ "checked_at": "2026-10-30T19:33:09.833552+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -69,7 +69,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-10-30T17:44:00.000Z",
+   "start_utc": "2026-10-30T17:39:00.000Z",
    "title": "Men 500 m",
    "round": "Heats",
    "event_result_id": 16034,
@@ -77,7 +77,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-10-30T18:19:00.000Z",
+   "start_utc": "2026-10-30T18:18:00.000Z",
    "title": "Women 1000 m",
    "round": "Heats",
    "event_result_id": 16037,
@@ -85,7 +85,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-10-30T18:51:00.000Z",
+   "start_utc": "2026-10-30T18:50:00.000Z",
    "title": "Men 1000 m",
    "round": "Heats",
    "event_result_id": 16039,
@@ -2653,7 +2653,7 @@
      "id": 22926,
      "name": "Heats",
      "status": "Finished",
-     "start_utc": "2026-10-30T16:44:24.000Z",
+     "start_utc": "2026-10-30T16:39:00.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of two fastest third place skaters qualify for Quarterfinals.",
      "heats": [
       {
@@ -3033,18 +3033,6 @@
          "slug": "lorenzo-previtali"
         },
         {
-         "rank": 4,
-         "name": "Takumi WADA",
-         "noc": "JPN",
-         "time": "43.916",
-         "qual": "ADV",
-         "status": "",
-         "record": "",
-         "bib": 90,
-         "lane": 4,
-         "slug": "takumi-wada"
-        },
-        {
          "rank": 5,
          "name": "Tibor KOMERICKI",
          "noc": "SLO",
@@ -3055,6 +3043,18 @@
          "bib": 106,
          "lane": 5,
          "slug": "tibor-komericki"
+        },
+        {
+         "rank": null,
+         "name": "Takumi WADA",
+         "noc": "JPN",
+         "time": "43.916",
+         "qual": "ADV",
+         "status": "",
+         "record": "",
+         "bib": 90,
+         "lane": 4,
+         "slug": "takumi-wada"
         }
        ]
       },
@@ -3315,7 +3315,7 @@
        {
         "name": "Takumi WADA",
         "noc": "JPN",
-        "rank": 4,
+        "rank": null,
         "time": "43.916",
         "qual": "ADV"
        },
@@ -3986,7 +3986,7 @@
      "id": 22933,
      "name": "Heats",
      "status": "Finished",
-     "start_utc": "2026-10-30T17:19:08.000Z",
+     "start_utc": "2026-10-30T17:18:00.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of two fastest third place skaters qualify for Quarterfinals.",
      "heats": [
       {
@@ -5634,7 +5634,7 @@
      "id": 22941,
      "name": "Heats",
      "status": "Finished",
-     "start_utc": "2026-10-30T17:51:13.000Z",
+     "start_utc": "2026-10-30T17:50:00.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of two fastest third place skaters qualify for Quarterfinals.",
      "heats": [
       {
@@ -6383,7 +6383,7 @@
      "id": 22947,
      "name": "Heats",
      "status": "Finished",
-     "start_utc": "2026-10-30T14:29:55.000Z",
+     "start_utc": "2026-10-30T14:29:00.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of six fastest third place skaters qualify for Quarterfinals.",
      "heats": [
       {
@@ -7609,7 +7609,7 @@
    "distance": "Men 500 m",
    "round": "Heats",
    "heat": "Heat 1",
-   "start_utc": "2026-10-30T16:44:24.000Z",
+   "start_utc": "2026-10-30T16:39:00.000Z",
    "rank": 2,
    "name": "Dong Min SHIN",
    "noc": "KOR",
@@ -7628,7 +7628,7 @@
    "distance": "Men 500 m",
    "round": "Heats",
    "heat": "Heat 6",
-   "start_utc": "2026-10-30T16:44:24.000Z",
+   "start_utc": "2026-10-30T16:39:00.000Z",
    "rank": 2,
    "name": "Jeongmin LEE",
    "noc": "KOR",
@@ -7647,7 +7647,7 @@
    "distance": "Men 500 m",
    "round": "Heats",
    "heat": "Heat 7",
-   "start_utc": "2026-10-30T16:44:24.000Z",
+   "start_utc": "2026-10-30T16:39:00.000Z",
    "rank": 3,
    "name": "Seochan BAE",
    "noc": "KOR",
@@ -7685,7 +7685,7 @@
    "distance": "Women 1000 m",
    "round": "Heats",
    "heat": "Heat 2",
-   "start_utc": "2026-10-30T17:19:08.000Z",
+   "start_utc": "2026-10-30T17:18:00.000Z",
    "rank": 1,
    "name": "Minjeong CHOI",
    "noc": "KOR",
@@ -7704,7 +7704,7 @@
    "distance": "Women 1000 m",
    "round": "Heats",
    "heat": "Heat 4",
-   "start_utc": "2026-10-30T17:19:08.000Z",
+   "start_utc": "2026-10-30T17:18:00.000Z",
    "rank": 2,
    "name": "Sukhee SHIM",
    "noc": "KOR",
@@ -7723,7 +7723,7 @@
    "distance": "Women 1000 m",
    "round": "Heats",
    "heat": "Heat 7",
-   "start_utc": "2026-10-30T17:19:08.000Z",
+   "start_utc": "2026-10-30T17:18:00.000Z",
    "rank": 4,
    "name": "Gilli KIM",
    "noc": "KOR",
@@ -7742,7 +7742,7 @@
    "distance": "Women 1000 m",
    "round": "Heats",
    "heat": "Heat 8",
-   "start_utc": "2026-10-30T17:19:08.000Z",
+   "start_utc": "2026-10-30T17:18:00.000Z",
    "rank": 1,
    "name": "Minji KIM",
    "noc": "KOR",
@@ -7799,7 +7799,7 @@
    "distance": "Men 1000 m",
    "round": "Heats",
    "heat": "Heat 5",
-   "start_utc": "2026-10-30T17:51:13.000Z",
+   "start_utc": "2026-10-30T17:50:00.000Z",
    "rank": 4,
    "name": "Taesung KIM",
    "noc": "KOR",
@@ -7818,7 +7818,7 @@
    "distance": "Men 1000 m",
    "round": "Heats",
    "heat": "Heat 6",
-   "start_utc": "2026-10-30T17:51:13.000Z",
+   "start_utc": "2026-10-30T17:50:00.000Z",
    "rank": 1,
    "name": "Dong Min SHIN",
    "noc": "KOR",
@@ -7837,7 +7837,7 @@
    "distance": "Men 1000 m",
    "round": "Heats",
    "heat": "Heat 7",
-   "start_utc": "2026-10-30T17:51:13.000Z",
+   "start_utc": "2026-10-30T17:50:00.000Z",
    "rank": 5,
    "name": "Jeongmin LEE",
    "noc": "KOR",
@@ -7856,7 +7856,7 @@
    "distance": "Men 1000 m",
    "round": "Heats",
    "heat": "Heat 8",
-   "start_utc": "2026-10-30T17:51:13.000Z",
+   "start_utc": "2026-10-30T17:50:00.000Z",
    "rank": null,
    "name": "Seochan BAE",
    "noc": "KOR",
@@ -7875,7 +7875,7 @@
    "distance": "Men 1500 m",
    "round": "Heats",
    "heat": "Heat 3",
-   "start_utc": "2026-10-30T14:29:55.000Z",
+   "start_utc": "2026-10-30T14:29:00.000Z",
    "rank": 2,
    "name": "Gyuho LEE",
    "noc": "KOR",
