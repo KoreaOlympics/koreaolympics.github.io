@@ -18,7 +18,7 @@
   "live": "Men 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-30T15:42:06.626710+00:00",
+ "checked_at": "2026-10-30T15:52:33.642187+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -3782,15 +3782,15 @@
       },
       {
        "name": "Heat 3",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Bohao ZHANG",
          "noc": "CHN",
-         "time": "no time",
-         "qual": "",
+         "time": "2:23.153",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 42,
@@ -3798,10 +3798,70 @@
          "slug": "bohao-zhang"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Gyuho LEE",
+         "noc": "KOR",
+         "time": "2:23.253",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 98,
+         "lane": 7,
+         "slug": "gyuho-lee"
+        },
+        {
+         "rank": 3,
+         "name": "Jesper SCHMITZ",
+         "noc": "NED",
+         "time": "2:23.410",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 100,
+         "lane": 2,
+         "slug": "jesper-schmitz"
+        },
+        {
+         "rank": 4,
+         "name": "Ryan SHANE",
+         "noc": "USA",
+         "time": "2:23.479",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 112,
+         "lane": 6,
+         "slug": "ryan-shane"
+        },
+        {
+         "rank": 5,
+         "name": "Willem MURRAY",
+         "noc": "GBR",
+         "time": "2:23.712",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 76,
+         "lane": 3,
+         "slug": "willem-murray"
+        },
+        {
+         "rank": 6,
+         "name": "Robin BENDIG",
+         "noc": "GER",
+         "time": "2:25.120",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 77,
+         "lane": 5,
+         "slug": "robin-bendig"
+        },
+        {
+         "rank": 7,
          "name": "Assen GYUROV",
          "noc": "BUL",
-         "time": "no time",
+         "time": "2:26.540",
          "qual": "",
          "status": "",
          "record": "",
@@ -3813,15 +3873,15 @@
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Zhanshuo LOU",
          "noc": "HKG",
-         "time": "no time",
-         "qual": "",
+         "time": "2:23.417",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 45,
@@ -3829,23 +3889,71 @@
          "slug": "zhanshuo-lou"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Fre VAN DAMME",
+         "noc": "BEL",
+         "time": "2:25.166",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 57,
+         "lane": 3,
+         "slug": "fre-van-damme"
+        },
+        {
+         "rank": 3,
          "name": "Maxim MAXIMOV",
          "noc": "BUL",
-         "time": "no time",
-         "qual": "",
+         "time": "2:25.687",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 63,
          "lane": 5,
          "slug": "maxim-maximov"
+        },
+        {
+         "rank": 4,
+         "name": "Linus August RISNES",
+         "noc": "NOR",
+         "time": "2:26.779",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 121,
+         "lane": 6,
+         "slug": "linus-august-risnes"
+        },
+        {
+         "rank": 5,
+         "name": "Simon BASTIER",
+         "noc": "FRA",
+         "time": "2:38.557",
+         "qual": "ADV",
+         "status": "",
+         "record": "",
+         "bib": 115,
+         "lane": 2,
+         "slug": "simon-bastier"
+        },
+        {
+         "rank": null,
+         "name": "Metehan ATAN",
+         "noc": "TUR",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 108,
+         "lane": 4,
+         "slug": "metehan-atan"
         }
        ]
       },
       {
        "name": "Heat 5",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
         {
          "rank": null,
@@ -4259,6 +4367,25 @@
    "bib": 97,
    "lane": 3,
    "slug": "taesung-kim"
+  },
+  {
+   "event_id": "isu-16272",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #2",
+   "distance": "Men 1500 m",
+   "round": "Heats",
+   "heat": "Heat 3",
+   "start_utc": "2026-10-30T14:29:55.000Z",
+   "rank": 2,
+   "name": "Gyuho LEE",
+   "noc": "KOR",
+   "time": "2:23.253",
+   "qual": "Q",
+   "status": "",
+   "record": "",
+   "bib": 98,
+   "lane": 7,
+   "slug": "gyuho-lee"
   }
  ]
 }
