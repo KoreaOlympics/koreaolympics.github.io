@@ -18,7 +18,7 @@
   "live": "Men 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-30T15:31:22.238029+00:00",
+ "checked_at": "2026-10-30T15:41:38.978277+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -754,14 +754,14 @@
       {
        "name": "Heat 6",
        "status": "Finished",
-       "official": "Unofficial",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "Zeinep KUMARKAN",
          "noc": "KAZ",
          "time": "45.464",
-         "qual": "",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 73,
@@ -773,7 +773,7 @@
          "name": "Tineke DEN DULK",
          "noc": "BEL",
          "time": "45.623",
-         "qual": "",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 44,
@@ -785,7 +785,7 @@
          "name": "Maja Dora SOMODI",
          "noc": "HUN",
          "time": "45.707",
-         "qual": "",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 32,
@@ -841,6 +841,13 @@
         "qual": "Q"
        },
        {
+        "name": "Zeinep KUMARKAN",
+        "noc": "KAZ",
+        "rank": 1,
+        "time": "45.464",
+        "qual": "Q"
+       },
+       {
         "name": "Petra VANKOVA",
         "noc": "CZE",
         "rank": 1,
@@ -873,6 +880,13 @@
         "noc": "FRA",
         "rank": 2,
         "time": "44.920",
+        "qual": "Q"
+       },
+       {
+        "name": "Tineke DEN DULK",
+        "noc": "BEL",
+        "rank": 2,
+        "time": "45.623",
         "qual": "Q"
        },
        {
@@ -911,6 +925,13 @@
         "qual": "Q"
        },
        {
+        "name": "Maja Dora SOMODI",
+        "noc": "HUN",
+        "rank": 3,
+        "time": "45.707",
+        "qual": "Q"
+       },
+       {
         "name": "Haruna NAGAMORI",
         "noc": "JPN",
         "rank": 3,
@@ -935,36 +956,39 @@
       "races": [
        [
         "Danae BLAIS (CAN)",
-        "Polina OMELCHUK (KAZ)",
-        "Guldana ZHALMUKHAN (KAZ)"
+        "Betty MOESKE (GER)",
+        "Maja Dora SOMODI (HUN)"
        ],
        [
         "Gloria IORIATTI (ITA)",
+        "Zoe Florence DELTRAP (NED)",
         "Haruna NAGAMORI (JPN)"
        ],
        [
         "Minji KIM (KOR)",
-        "Betty MOESKE (GER)"
+        "Diana Laura VEGI (HUN)",
+        "Polina OMELCHUK (KAZ)"
        ],
        [
         "Rina YAMANA (JPN)",
-        "Zoe Florence DELTRAP (NED)"
+        "Kateryna SOLOVIOVA (GER)",
+        "Guldana ZHALMUKHAN (KAZ)"
        ],
        [
-        "Petra VANKOVA (CZE)",
-        "Diana Laura VEGI (HUN)"
-       ],
-       [
-        "Ji Hyun CHOI (KOR)",
-        "Kateryna SOLOVIOVA (GER)"
-       ],
-       [
-        "Anna FALKOWSKA (POL)",
+        "Zeinep KUMARKAN (KAZ)",
         "Cloe OLLIVIER (FRA)"
        ],
        [
-        "Annabelle GREEN (GBR)",
+        "Petra VANKOVA (CZE)",
+        "Tineke DEN DULK (BEL)"
+       ],
+       [
+        "Ji Hyun CHOI (KOR)",
         "Eva GRENOUILLOUX (FRA)"
+       ],
+       [
+        "Anna FALKOWSKA (POL)",
+        "Annabelle GREEN (GBR)"
        ]
       ]
      }
@@ -3571,19 +3595,55 @@
      "id": 22947,
      "name": "Heats",
      "status": "Live",
-     "start_utc": "2026-10-30T14:29:00.000Z",
+     "start_utc": "2026-10-30T14:29:55.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of six fastest third place skaters qualify for Quarterfinals.",
      "heats": [
       {
        "name": "Heat 1",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Michal NIEWINSKI",
+         "noc": "POL",
+         "time": "2:22.921",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 33,
+         "lane": 1,
+         "slug": "michal-niewinski"
+        },
+        {
+         "rank": 2,
+         "name": "Niels KINGMA",
+         "noc": "NED",
+         "time": "2:23.290",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 99,
+         "lane": 6,
+         "slug": "niels-kingma"
+        },
+        {
+         "rank": 3,
+         "name": "Mattia ANTONIOLI",
+         "noc": "ITA",
+         "time": "2:23.448",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 85,
+         "lane": 2,
+         "slug": "mattia-antonioli"
+        },
+        {
+         "rank": 4,
          "name": "Peter Joseph GROSECLOSE",
          "noc": "PHI",
-         "time": "no time",
+         "time": "2:23.607",
          "qual": "",
          "status": "",
          "record": "",
@@ -3592,54 +3652,78 @@
          "slug": "peter-joseph-groseclose"
         },
         {
-         "rank": null,
-         "name": "Michal NIEWINSKI",
-         "noc": "POL",
-         "time": "no time",
+         "rank": 5,
+         "name": "Lucas Henry KOO",
+         "noc": "BRA",
+         "time": "2:25.389",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 33,
-         "lane": 1,
-         "slug": "michal-niewinski"
+         "bib": 59,
+         "lane": 3,
+         "slug": "lucas-henry-koo"
         },
         {
-         "rank": null,
-         "name": "Mattia ANTONIOLI",
-         "noc": "ITA",
-         "time": "no time",
+         "rank": 6,
+         "name": "Ingemar MIDJO",
+         "noc": "NOR",
+         "time": "2:48.065",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 85,
-         "lane": 2,
-         "slug": "mattia-antonioli"
+         "bib": 119,
+         "lane": 7,
+         "slug": "ingemar-midjo"
         },
         {
-         "rank": null,
-         "name": "Niels KINGMA",
-         "noc": "NED",
-         "time": "no time",
+         "rank": 7,
+         "name": "Radek FAJKUS",
+         "noc": "CZE",
+         "time": "2:56.473",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 99,
-         "lane": 6,
-         "slug": "niels-kingma"
+         "bib": 71,
+         "lane": 5,
+         "slug": "radek-fajkus"
         }
        ]
       },
       {
        "name": "Heat 2",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Kerui SONG",
+         "noc": "CHN",
+         "time": "2:24.047",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 68,
+         "lane": 4,
+         "slug": "kerui-song"
+        },
+        {
+         "rank": 2,
+         "name": "Lorenzo PREVITALI",
+         "noc": "ITA",
+         "time": "2:24.055",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 48,
+         "lane": 6,
+         "slug": "lorenzo-previtali"
+        },
+        {
+         "rank": 3,
          "name": "Reinis BERZINS",
          "noc": "LAT",
-         "time": "no time",
-         "qual": "",
+         "time": "2:24.374",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 34,
@@ -3647,22 +3731,58 @@
          "slug": "reinis-berzins"
         },
         {
-         "rank": null,
-         "name": "Lorenzo PREVITALI",
-         "noc": "ITA",
-         "time": "no time",
+         "rank": 4,
+         "name": "Fredrik PEDERSEN",
+         "noc": "NOR",
+         "time": "2:25.510",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 48,
-         "lane": 6,
-         "slug": "lorenzo-previtali"
+         "bib": 120,
+         "lane": 2,
+         "slug": "fredrik-pedersen"
+        },
+        {
+         "rank": 5,
+         "name": "Krzysztof MADRY",
+         "noc": "POL",
+         "time": "2:25.749",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 105,
+         "lane": 7,
+         "slug": "krzysztof-madry"
+        },
+        {
+         "rank": 6,
+         "name": "Muhammed BOZDAG",
+         "noc": "TUR",
+         "time": "2:27.431",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 109,
+         "lane": 3,
+         "slug": "muhammed-bozdag"
+        },
+        {
+         "rank": 7,
+         "name": "Marcus HOWARD",
+         "noc": "USA",
+         "time": "2:27.560",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 110,
+         "lane": 5,
+         "slug": "marcus-howard"
         }
        ]
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
+       "status": "Getting Ready",
        "official": "Start List",
        "competitors": [
         {
