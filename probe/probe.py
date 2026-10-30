@@ -1,8 +1,9 @@
 """One-off source probe run in GitHub Actions: saves raw federation pages so parsers can be written against real markup."""
-import re, json, pathlib, traceback, sys
+import re, pathlib, sys
 sys.path.insert(0, '.')
 from tools.winter.net import request
 OUT = pathlib.Path('probe-out'); OUT.mkdir(exist_ok=True)
+HTML = {'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en'}
 def get(name, url, **kw):
     try:
         t = request(url, **kw)
@@ -11,35 +12,18 @@ def get(name, url, **kw):
     (OUT / name).write_text(t)
     print(name, len(t), url, flush=True)
     return t
-CAL = ('https://www.fis-ski.com/DB/general/calendar-results.html?eventselection=&place=&sectorcode={s}&seasoncode={c}'
-       '&categorycode={cat}&disciplinecode=&gendercode=&racedate=&racecodex=&nationcode=&seasonmonth=X-{c}&saveselection=-1&seasonselection=')
-for s in ('AL', 'CC', 'JP', 'NK', 'FS', 'SB'):
-    for c in ('2026', '2027'):
-        t = get(f'fis-cal-{s}-{c}.html', CAL.format(s=s, c=c, cat='WC'))
-        ids = re.findall(r'id="(\d{4,6})"', t)
-        if ids:
-            for j, eid in enumerate([ids[len(ids) // 2]] if c == '2026' else ids[:1]):
-                ev = get(f'fis-ev-{s}-{c}.html', f'https://www.fis-ski.com/DB/general/event-details.html?sectorcode={s}&eventid={eid}&seasoncode={c}')
-                races = list(dict.fromkeys(re.findall(r'raceid=(\d+)', ev)))
-                for i, r in enumerate(races[:3]):
-                    get(f'fis-res-{s}-{c}-{i}.html', f'https://www.fis-ski.com/DB/general/results.html?sectorcode={s}&raceid={r}')
-get('fis-live-index.html', 'https://live.fis-ski.com/')
-B = 'https://www.biathlonresults.com/modules/sportapi/api/'
-ev = get('ibu-events-2526.json', B + 'Events?SeasonId=2526&Level=1')
-get('ibu-events-2627.json', B + 'Events?SeasonId=2627&Level=1')
-try:
-    e0 = json.loads(ev)[3]['EventId']
-    comp = get('ibu-comp.json', B + f'Competitions?EventId={e0}')
-    r0 = json.loads(comp)[0]['RaceId']
-    get('ibu-results.json', B + f'Results?RaceId={r0}')
-except Exception: traceback.print_exc()
-for n, u in [('ibsf-home.html', 'https://www.ibsf.org/en/'), ('ibsf-races.html', 'https://www.ibsf.org/en/races-results'),
-             ('ibsf-calendar.html', 'https://www.ibsf.org/en/calendar'),
-             ('fil-home.html', 'https://www.fil-luge.org/en'), ('fil-results.html', 'https://www.fil-luge.org/en/results'),
-             ('fil-calendar.html', 'https://www.fil-luge.org/en/calendar')]:
-    t = get(n, u)
-    for js in list(dict.fromkeys(re.findall(r'src="([^"]+\.js[^"]*)"', t)))[:15]:
-        if js.startswith('//'): js = 'https:' + js
-        elif js.startswith('/'): js = 'https://' + u.split('/')[2] + js
-        if js.startswith('http'):
-            get(n + '.' + re.sub(r'\W', '_', js)[-60:] + '.js', js)
+def page_and_links(prefix, url, pat, limit=6):
+    t = get(prefix + '.html', url, headers=HTML)
+    host = 'https://' + url.split('/')[2]
+    links = [l if l.startswith('http') else host + l for l in dict.fromkeys(re.findall(r'href="([^"]*(?:%s)[^"]*)"' % pat, t))]
+    (OUT / (prefix + '-links.txt')).write_text('\n'.join(links))
+    for i, l in enumerate(links[:limit]):
+        get(f'{prefix}-{i}.html', l.replace('&amp;', '&'), headers=HTML)
+    for i, js in enumerate(list(dict.fromkeys(re.findall(r'src="([^"]+\.js[^"]*)"', t)))[:12]):
+        js = js if js.startswith('http') else ('https:' + js if js.startswith('//') else host + js)
+        get(f'{prefix}-js{i}.js', js)
+page_and_links('ibsf-rr', 'https://www.ibsf.org/en/races-and-results', r'race|result|event|season')
+page_and_links('ibsf-live', 'https://www.ibsf.org/en/live', r'live|race|result')
+for u in ('https://www.fil-luge.org/en/results', 'https://www.fil-luge.org/en', 'https://www.fil-luge.org/'):
+    page_and_links('fil-' + re.sub(r'\W', '', u.split('.org')[1]) or 'fil-root', u, r'result|race|calendar|event', 4)
+get('fil-api-try.json', 'https://www.fil-luge.org/api/results')
