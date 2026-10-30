@@ -1,11 +1,21 @@
 'use strict';
 // 동계 실시간 센터: data/winter/*.json (tools/winter/collect.py 산출물)을 읽어 그린다.
 const DATA = '../data/winter/';
-const SPORTS = { 'short-track': '쇼트트랙', 'speed-skating': '스피드스케이팅', 'figure-skating': '피겨스케이팅', 'snowboard': '스노보드' };
+const SPORTS = { 'short-track': '쇼트트랙', 'speed-skating': '스피드스케이팅', 'figure-skating': '피겨스케이팅',
+  'alpine': '알파인 스키', 'cross-country': '크로스컨트리', 'ski-jumping': '스키점프', 'nordic-combined': '노르딕 복합', 'freestyle': '프리스타일 스키',
+  'snowboard': '스노보드', 'biathlon': '바이애슬론', 'bobsleigh': '봅슬레이', 'skeleton': '스켈레톤', 'luge': '루지' };
+const GROUPS = [['빙상', ['short-track', 'speed-skating', 'figure-skating']],
+  ['설상', ['alpine', 'cross-country', 'ski-jumping', 'nordic-combined', 'freestyle', 'snowboard', 'biathlon']], ['썰매', ['bobsleigh', 'skeleton', 'luge']]];
+// FIS / IBU: an event is a list of races, each with one results table (tools/winter/fis.py, ibu.py)
+const RACE_SPORTS = ['alpine', 'cross-country', 'ski-jumping', 'nordic-combined', 'freestyle', 'snowboard', 'biathlon'];
+const CALENDAR_ONLY = ['bobsleigh', 'skeleton', 'luge'];
+const HUBS = { 'short-track': 'wishorttrack', 'speed-skating': 'wispeedskating', 'figure-skating': 'wifigure', 'alpine': 'wialpine',
+  'cross-country': 'wicrosscountry', 'ski-jumping': 'wiskijumping', 'freestyle': 'wifreestyle', 'snowboard': 'wisnowboard',
+  'biathlon': 'wibiathlon', 'bobsleigh': 'wibobsleigh', 'skeleton': 'wiskeleton', 'luge': 'wiluge' };
 const ROUNDS = { 'Preliminaries': '1차 예선', 'Heats': '예선', 'Rep. Heats': '패자부활 예선', 'Rep. Quarterfinals': '패자부활 준준결승',
   'Rep. Semifinals': '패자부활 준결승', 'Quarterfinals': '준준결승', 'Semifinals': '준결승', 'Final A': '결승 A', 'Final B': '결승 B', 'Finals': '결승',
   'Short Program': '쇼트 프로그램', 'Free Skating': '프리 스케이팅', 'Rhythm Dance': '리듬 댄스', 'Free Dance': '프리 댄스' };
-const TITLES = [[/^Men /, '남자 '], [/^Women /, '여자 '], [/^Mixed Team Relay/, '혼성 계주'], [/ Relay$/, ' 계주'], [/^Men$/, '남자 싱글'],
+const TITLES = [[/^Women's /, '여자 '], [/^Men's /, '남자 '], [/^Ladies' /, '여자 '], [/^Men /, '남자 '], [/^Women /, '여자 '], [/^Mixed Team Relay/, '혼성 계주'], [/ Relay$/, ' 계주'], [/^Men$/, '남자 싱글'],
   [/^Women$/, '여자 싱글'], [/^Pairs$/, '페어'], [/^Ice Dance$/, '아이스댄스'], [/ m\b/, 'm']];
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -19,7 +29,18 @@ const kstDay = d => new Date(d).toLocaleDateString('ko-KR', { ...KST, month: 'nu
 const today = () => kstDate(Date.now());
 const fmtRange = (a, b) => a === b ? a.slice(5).replace('-', '.') : `${a.slice(5).replace('-', '.')} ~ ${b.slice(5).replace('-', '.')}`;
 const ago = d => { const m = Math.round((Date.now() - Date.parse(d)) / 60000); return m < 1 ? '방금' : m < 60 ? `${m}분 전` : m < 1440 ? `${Math.round(m / 60)}시간 전` : `${Math.round(m / 1440)}일 전`; };
-const title = t => TITLES.reduce((s, [re, ko]) => s.replace(re, ko), t || '');
+// FIS / IBU race names, longest phrase first
+const RACE_WORDS = [['Parallel Giant Slalom', '평행대회전'], ['Parallel Slalom', '평행회전'], ['Snowboard Cross', '스노보드크로스'],
+  ['Freeski Big Air', '빅에어'], ['Freeski Slopestyle', '슬로프스타일'], ['Freeski Halfpipe', '하프파이프'], ['Big Air', '빅에어'],
+  ['Slopestyle', '슬로프스타일'], ['Halfpipe', '하프파이프'], ['Ski Cross', '스키크로스'], ['Dual Moguls', '듀얼 모굴'], ['Moguls', '모굴'],
+  ['Aerials', '에어리얼'], ['Giant Slalom', '대회전'], ['Super G', '슈퍼대회전'], ['Slalom', '회전'], ['Downhill', '활강'],
+  ['Team Combined', '팀 복합'], ['Alpine Combined', '복합'], ['Single Mixed Relay', '싱글 혼성 계주'], ['Mixed Relay', '혼성 계주'],
+  ['Team Sprint', '팀 스프린트'], ['Super Team', '슈퍼팀'], ['Mixed Team', '혼성 단체'], ['Interval Start', '인터벌 출발'],
+  ['Mass Start', '매스스타트'], ['Skiathlon', '스키애슬론'], ['Pursuit', '추적'], ['Sprint', '스프린트'], ['Relay', '계주'],
+  ['Individual Compact', '개인 컴팩트'], ['Individual Gundersen', '개인 군더센'], ['Individual', '개인'], ['Large Hill', '라지힐'],
+  ['Normal Hill', '노멀힐'], ['Team', '단체'], ['Qualification', '예선'], ['Training', '연습 주행'], ['Final', '결승'],
+  ['Classic', '클래식'], ['Free', '프리']].map(([en, ko]) => [new RegExp(`\\b${en}\\b`, 'g'), ko]);
+const title = t => RACE_WORDS.reduce((s, [re, ko]) => s.replace(re, ko), TITLES.reduce((s, [re, ko]) => s.replace(re, ko), t || ''));
 const round = r => ROUNDS[r] || r || '';
 const name = n => state.names[n] ? `${state.names[n]} <span class="muted small">${esc(n)}</span>` : esc(n);
 
@@ -229,7 +250,7 @@ function distChips(d, current, link = rid => evLink({ v: 'results', d: rid })) {
     const xs = entries.filter(([, x]) => gender(x.title) === g).sort((a, b) => byDist(a[1], b[1]));
     if (!xs.length) return '';
     return `<div class="chiprow"><span class="lbl">${ko}</span>${xs.map(([rid, x]) => {
-      const live = (x.rounds || []).some(r => r.status === 'Live');
+      const live = x.live || (x.rounds || []).some(r => r.status === 'Live');
       const kor = (x.rounds || []).some(r => r.heats.some(h => h.competitors.some(c => c.noc === 'KOR'))) || (x.rows || []).some(c => c.noc === 'KOR');
       return `<a class="chip ${rid === current ? 'on' : ''}" href="${link(rid)}">${esc(title(x.title).replace(/^(남자|여자) /, ''))}${live ? ' 🔴' : ''}${kor ? ' 🇰🇷' : ''}</a>`;
     }).join('')}</div>`;
@@ -293,6 +314,12 @@ function ssTable(r) {
     r.rows.map(x => `<tr class="${x.noc === 'KOR' ? 'kor' : ''}"><td class="num">${x.rank ?? '-'}</td><td class="name">${name(x.name)} <span class="noc">${esc(x.noc)}</span></td>
       <td class="num">${esc(x.time)}</td><td class="num">${x.behind && x.behind !== '0.000' ? '+' + esc(x.behind) : ''}</td><td class="small muted">${x.pair ?? ''} ${esc(x.lane || '')}</td></tr>`).join('')}</tbody></table></div>`;
 }
+function raceResults(d) {
+  const entries = Object.entries(d.results || {});
+  if (!entries.length) return '<p class="muted">아직 결과가 없습니다.</p>';
+  const rid = state.d && d.results[state.d] ? state.d : (entries.find(([, x]) => x.live) || entries.filter(([, x]) => x.rows?.length).pop() || entries[0])[0];
+  return distChips(d, rid) + `<h3>${esc(title(d.results[rid].title))}</h3>` + raceTable(d.results[rid]);
+}
 function ssSummary(d) {
   const items = Object.values(d.results || {}).filter(x => ['A', null, undefined, ''].includes(x.division)).map(x => ({ title: x.title.replace(/\s*Division A/, ''), podium: ssPodium(x) }));
   return '<h3>메달리스트 (디비전 A)</h3>' + (items.length ? medalTables(items) : '<p class="muted">아직 결과가 없습니다.</p>');
@@ -311,11 +338,44 @@ async function viewEvent() {
     'short-track': { summary: stSummary, results: stResults },
     'figure-skating': { summary: fsSummary, results: fsResults },
     'speed-skating': { summary: ssSummary, results: ssResults },
-  }[e.sport] || {};
+  }[e.sport] || (RACE_SPORTS.includes(e.sport) ? { summary: raceSummary, results: raceResults } : {});
   if (v === 'schedule') return h + (sessionsTable(d) || '<p class="muted">일정 자료가 없습니다.</p>');
   return h + (fn[v] ? fn[v](d) : '<p class="muted">결과 자료가 없습니다.</p>');
 }
 
+
+// ---------- FIS / IBU race tables ----------
+const COLS = { 'Run 1': '1차', 'Run 2': '2차', 'Tot. Time': '합계', 'Diff. Time': '차이', 'Time': '기록', 'FIS Points': 'FIS 포인트',
+  'Cup Points': '월드컵 포인트', 'Result': '결과', 'Tot. Points': '총점', 'Total Points': '총점', 'Diff. Points': '차이', 'Distance': '거리',
+  'Points': '점수', 'Jump Rank': '점프 순위', 'Round Rank': '라운드 순위' };
+const colName = c => COLS[c] || c.replace(/^(\d+)R (.*)$/, (_, n, x) => `${n}R ${COLS[x] || x}`);
+const RSTATUS = { 'Did not qualify': '진출 실패', 'Did not finish 1st run': '1차 완주 실패', 'Did not finish 2nd run': '2차 완주 실패',
+  'Did not finish': '완주 실패', 'Did not start': '미출발', 'Did not start 1st run': '미출발', 'Did not start 2nd run': '2차 미출발',
+  'Disqualified': '실격', 'Disqualified 1st run': '1차 실격', 'Disqualified 2nd run': '2차 실격', 'DNF': '완주 실패', 'DNS': '미출발', 'DSQ': '실격', 'LAP': '랩드' };
+const isFinalRace = x => !x.start_list && !/Qualification|Training/i.test(x.title || '');
+const racePodium = x => { const top = (x.rows || []).filter(r => [1, 2, 3].includes(r.rank)); return isFinalRace(x) && top.length ? top.map(r => ({ ...r, time: mainResult(r) })) : null; };
+const MAIN = ['Tot. Time', 'Tot. Points', 'Total Points', 'Time', 'Result', '기록', 'Points'];
+const mainResult = r => (MAIN.map(k => (r.cells || {})[k]).find(v => v) || '');
+
+function raceTable(x) {
+  const when = x.start_utc ? (x.start_utc.length > 10 ? `${kstDay(x.start_utc)} ${kstTime(x.start_utc)} KST` : kstDay(x.start_utc)) : '';
+  let h = `<p class="small muted">${when}${x.live ? ' · <span class="badge live">LIVE</span>' : ''}${x.runs?.length ? ' · ' + esc(x.runs.join(' / ').replace(/Official results/g, '공식 결과').replace(/Cancelled/g, '취소')) : ''}</p>`;
+  if (!x.rows?.length) return h + '<p class="muted">아직 결과가 없습니다.</p>';
+  if (x.start_list) h += '<p class="small"><b>출발 순서</b> (결과 발표 전)</p>';
+  const cols = x.columns || [];
+  return h + `<div class="tablewrap"><table><thead><tr><th class="num">${x.start_list ? '순서' : '순위'}</th><th class="num">번호</th><th>선수</th>${cols.map(c => `<th class="num">${esc(colName(c))}</th>`).join('')}</tr></thead><tbody>${
+    x.rows.map(r => `<tr class="${r.noc === 'KOR' ? 'kor' : ''}"><td class="num">${r.rank ?? esc(r.order || '')}${!r.rank && r.status ? `<span class="small muted">${esc(RSTATUS[r.status] || r.status)}</span>` : ''}</td>
+      <td class="num small muted">${esc(r.bib || '')}</td><td class="name">${name(r.name)} <span class="noc">${esc(r.noc)}</span></td>${
+      cols.map(c => `<td class="num">${esc((r.cells || {})[c] || '')}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+}
+function raceSummary(d) {
+  const races = Object.values(d.results || {});
+  const finals = races.filter(isFinalRace).map(x => ({ title: x.title, podium: racePodium(x) }));
+  const kor = races.filter(x => !x.start_list).flatMap(x => x.rows.filter(r => r.noc === 'KOR').map(r => ({ ...r, race: x.title })));
+  return '<h3>메달리스트</h3>' + (finals.length ? medalTables(finals) : '<p class="muted">아직 결과가 없습니다.</p>') +
+    (kor.length ? `<h3>🇰🇷 한국 선수</h3><div class="tablewrap"><table><thead><tr><th>종목</th><th>선수</th><th class="num">순위</th><th class="num">기록</th></tr></thead><tbody>${
+      kor.map(r => `<tr class="kor"><td>${esc(title(r.race))}</td><td class="name">${name(r.name)}</td><td class="num">${r.rank ?? esc(RSTATUS[r.status] || r.status || '-')}</td><td class="num">${esc(mainResult(r))}</td></tr>`).join('')}</tbody></table></div>` : '');
+}
 
 // ---------- 종목별 (기본 탭): 종목 → 대회 → 세부종목 → 그 세부종목의 모든 라운드·조를 아래로 펼친다 ----------
 // URL: #sport=<sport>&e=<event id>&d=<result key>
@@ -329,10 +389,10 @@ const browseLink = (extra = {}) => '#' + new URLSearchParams(Object.fromEntries(
 
 function viewBrowse() {
   const evs = allEvents();
-  const bar = `<nav class="sportbar">${Object.entries(SPORTS).map(([k, ko]) => {
+  const bar = GROUPS.map(([g, keys]) => `<div class="sportgroup"><span class="glbl">${g}</span><nav class="sportbar">${keys.map(k => {
     const live = evs.filter(e => e.sport === k && phase(e) === 'live').length;
-    return `<a class="sportbtn ${k} ${k === state.sport ? 'on' : ''}" href="${browseLink(k === state.sport ? {} : { sport: k })}">${ko}${live ? ' <span class="badge live">LIVE</span>' : ''}</a>`;
-  }).join('')}</nav>`;
+    return `<a class="sportbtn ${k} ${k === state.sport ? 'on' : ''}" href="${browseLink(k === state.sport ? {} : { sport: k })}">${SPORTS[k]}${live ? ' <span class="badge live">LIVE</span>' : ''}</a>`;
+  }).join('')}</nav></div>`).join('');
   if (!state.sport || !SPORTS[state.sport]) return Promise.resolve(bar + '<div class="empty">종목을 누르면 이번 시즌 대회가 펼쳐집니다.</div>');
   return sportPanel(evs.filter(e => e.sport === state.sport)).then(h => bar + h);
 }
@@ -357,20 +417,23 @@ async function sportPanel(evs) {
 async function eventBody(e) {
   const d = await loadEvent(e.id);
   const official = e.url ? ` · <a href="${esc(e.url)}" target="_blank" rel="noopener">공식 페이지 ↗</a>` : '';
-  if (!d) return `<p class="muted">상세 일정·결과가 아직 수집되지 않았습니다. 대회 하루 전부터 자동 수집합니다.${official}</p>`;
+  if (!d) return CALENDAR_ONLY.includes(e.sport)
+    ? `<p class="muted">이 종목은 일정만 자동 수집합니다. 경기 결과는 공식 페이지에서 확인해 주세요.${official}</p>`
+    : `<p class="muted">상세 일정·결과가 아직 수집되지 않았습니다. 대회 하루 전부터 자동 수집합니다.${official}</p>`;
   const entries = Object.entries(d.results || {});
   let h = `<p class="small muted">${d.checked_at ? `수집 ${ago(d.checked_at)}` : ''}${official} · <a href="#tab=event&e=${encodeURIComponent(e.id)}">대회 상세 화면 →</a></p>`;
   if (!entries.length) return h + (sessionsTable(d) || '<p class="muted">아직 결과가 없습니다.</p>');
   const rid = state.d && d.results[state.d] ? state.d : null;
   h += distChips(d, rid, k => browseLink({ sport: state.sport, e: e.id, d: k === rid ? '' : k }));
   if (!rid) {
-    const sum = { 'short-track': stSummary, 'figure-skating': fsSummary, 'speed-skating': ssSummary }[e.sport];
+    const sum = { 'short-track': stSummary, 'figure-skating': fsSummary, 'speed-skating': ssSummary }[e.sport] || (RACE_SPORTS.includes(e.sport) && raceSummary);
     return h + '<p class="small muted">세부종목을 누르면 모든 라운드·조 결과가 아래에 펼쳐집니다.</p>' + (sum ? sum(d) : '');
   }
   const x = d.results[rid];
   h += `<h3>${esc(title(x.title))}</h3>`;
   if (e.sport === 'short-track') return h + stAll(x);
   if (e.sport === 'figure-skating') return h + fsTable(x);
+  if (RACE_SPORTS.includes(e.sport)) return h + raceTable(x);
   return h + ssTable(x);
 }
 
@@ -389,13 +452,13 @@ function stAll(dist) {
 
 // ---------- season summary (Wikipedia / Namu season-article layout) ----------
 async function viewSeason() {
-  const sport = ['short-track', 'speed-skating', 'figure-skating'].includes(state.sport) ? state.sport : 'short-track';
+  const sport = ['short-track', 'speed-skating', 'figure-skating', ...RACE_SPORTS].includes(state.sport) ? state.sport : 'short-track';
   let s;
   try { s = await getJSON(`season-${sport}.json`); } catch { return '<div class="empty">시즌 정리 자료가 아직 없습니다.</div>'; }
   const evs = s.events.filter(e => sport !== 'figure-skating' || !/Junior/.test(e.category || e.name));
   const label = evLabel;
   let h = `<h2>${s.season} ${SPORTS[sport]} 시즌</h2>`;
-  if (!state.sport) h += '<p class="small muted">위의 종목 버튼으로 쇼트트랙·스피드·피겨 시즌을 바꿔 볼 수 있습니다.</p>';
+  if (!state.sport) h += '<p class="small muted">위의 종목 버튼으로 다른 종목 시즌을 볼 수 있습니다 (썰매 종목 제외).</p>';
   h += `<h3>대회 일정</h3><div class="tablewrap"><table><thead><tr><th>기간</th><th>대회</th><th>개최지</th><th>상태</th></tr></thead><tbody>${
     evs.map(e => `<tr><td class="num">${fmtRange(e.start, e.end)}</td><td><a href="#tab=event&e=${encodeURIComponent(e.id)}">${esc(label(e))}</a></td><td>${esc(e.city)} (${esc(e.country)})</td><td>${BADGE[phase(e)]}</td></tr>`).join('')}</tbody></table></div>`;
   const played = evs.filter(e => e.podiums.length && phase(e) !== 'soon');
@@ -477,6 +540,9 @@ document.addEventListener('input', e => {
 window.addEventListener('hashchange', () => { readHash(); render(); });
 
 (async function main() {
+  $('#hublinks').innerHTML = Object.entries(HUBS).map(([k, f]) => `<a href="../${f}.html">${SPORTS[k]}</a>`).join(' · ');
+  $('#controls').insertAdjacentHTML('afterbegin', `<button class="chip" data-sport="">전체</button>` +
+    Object.entries(SPORTS).map(([k, ko]) => `<button class="chip" data-sport="${k}">${ko}</button>`).join(''));
   readHash();
   try { await loadAll(); } catch (err) { $('#view').innerHTML = `<div class="empty">자료를 불러오지 못했습니다: ${esc(err.message)}</div>`; return; }
   render();

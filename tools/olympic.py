@@ -397,7 +397,10 @@ def related_block(s, today=None):
     return '<section id="related">\n<h2>관련 대회 · 랭킹</h2>\n' + '\n'.join(html_parts) + '\n</section>'
 
 
-WINTER_LIVE = {'wishorttrack': 'short-track', 'wispeedskating': 'speed-skating', 'wifigure': 'figure-skating', 'wisnowboard': 'snowboard'}
+WINTER_LIVE = {'wishorttrack': 'short-track', 'wispeedskating': 'speed-skating', 'wifigure': 'figure-skating', 'wisnowboard': 'snowboard',
+               'wialpine': 'alpine', 'wicrosscountry': 'cross-country', 'wiskijumping': 'ski-jumping', 'wifreestyle': 'freestyle',
+               'wibiathlon': 'biathlon', 'wibobsleigh': 'bobsleigh', 'wiskeleton': 'skeleton', 'wiluge': 'luge'}
+WINTER_CALENDAR_ONLY = {'bobsleigh', 'skeleton', 'luge'}  # 일정만 수집 (결과는 공식 페이지)
 
 
 def winter_live_block(s, today=None):
@@ -407,7 +410,7 @@ def winter_live_block(s, today=None):
     if not cal or sport not in cal.get('sports', {}):
         return ''
     today = today or date.today().isoformat()
-    center = f'winter/#tab=calendar&amp;sport={sport}'
+    center = f'winter/#sport={sport}'
     evs = cal['sports'][sport]['events']
     if sport == 'figure-skating':
         evs = [e for e in evs if 'Junior' not in (e.get('category') or '') + e['name']]
@@ -417,10 +420,12 @@ def winter_live_block(s, today=None):
         return '종료' if e['end'] < today else '예정'
     rows = ''.join(
         f'<tr><td>{E(e["start"])}{("–" + E(e["end"][5:])) if e["end"] != e["start"] else ""}</td>'
-        f'<td><a href="winter/#tab=event&amp;e={E(e["id"])}">{E(e["name"])}</a></td><td>{E(e.get("city", ""))} ({E(e.get("country", ""))})</td><td>{status(e)}</td></tr>'
+        f'<td><a href="winter/#sport={sport}&amp;e={E(e["id"])}">{E(e["name"])}</a></td><td>{E(e.get("city", ""))} ({E(e.get("country", ""))})</td><td>{status(e)}</td></tr>'
         for e in evs)
-    out = [f'<p>{E(cal.get("season", ""))} 시즌 국제연맹 공식 일정·결과를 약 10분마다 자동으로 모은다. 조별 결과·예상 대진·한국 선수 기록은 '
-           f'<a href="{center}">동계 실시간 센터</a>에서 본다.</p>',
+    lead = (f'{E(cal.get("season", ""))} 시즌 국제연맹 공식 일정을 자동으로 모은다. 경기 결과는 각 대회의 공식 페이지에서 본다. '
+            if sport in WINTER_CALENDAR_ONLY else
+            f'{E(cal.get("season", ""))} 시즌 국제연맹 공식 일정·결과를 대회 기간에 약 10분마다 자동으로 모은다. 경기별 결과·한국 선수 기록은 ')
+    out = [f'<p>{lead}<a href="{center}">동계 실시간 센터</a>에서 종목별로 펼쳐 볼 수 있다.</p>',
            f'<table class="wikitable"><thead><tr><th>기간</th><th>대회</th><th>개최지</th><th>상태</th></tr></thead><tbody>{rows}</tbody></table>']
     season = _json(f'data/winter/season-{sport}.json')
     if season and season.get('medals'):

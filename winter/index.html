@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>동계 종목 실시간 센터 · 2026/27 시즌</title>
-<meta name="description" content="쇼트트랙·스피드스케이팅·피겨스케이팅·스노보드 2026/27 시즌 일정, 실시간 결과, 한국 선수 기록, 다음 라운드 예상 대진">
+<meta name="description" content="빙상·설상·썰매 동계 종목 2026/27 시즌 일정, 실시간 결과, 한국 선수 기록, 쇼트트랙 다음 라운드 예상 대진">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 <div class="wrap">
   <header class="top">
-    <nav class="toplinks"><a href="../index.html">← koreaolympics 메인</a><span><a href="../wishorttrack.html">쇼트트랙</a> · <a href="../wispeedskating.html">스피드</a> · <a href="../wifigure.html">피겨</a> · <a href="../wisnowboard.html">스노보드</a></span></nav>
+    <nav class="toplinks"><a href="../index.html">← koreaolympics 메인</a><span id="hublinks"></span></nav>
     <h1>동계 종목 실시간 센터 <span class="muted" id="season"></span></h1>
     <p>국제연맹 공식 데이터를 약 10분마다 자동 수집 · 모든 시각은 한국시간(KST) · <span id="updated">불러오는 중…</span></p>
   </header>
@@ -29,11 +29,6 @@
       <button class="tab" data-tab="status">수집 상태</button>
     </nav>
     <div class="controls" id="controls">
-      <button class="chip" data-sport="">전체</button>
-      <button class="chip" data-sport="short-track">쇼트트랙</button>
-      <button class="chip" data-sport="speed-skating">스피드</button>
-      <button class="chip" data-sport="figure-skating">피겨</button>
-      <button class="chip" data-sport="snowboard">스노보드</button>
       <input type="search" id="q" placeholder="검색: 대회, 도시, 선수, 국가코드…">
     </div>
   </div>
@@ -43,11 +38,13 @@
   <footer>
     데이터 출처: <a href="https://isu-skating.com/" target="_blank" rel="noopener">ISU</a> (쇼트트랙·피겨 일정·결과),
     <a href="https://live.isuresults.eu/" target="_blank" rel="noopener">ISU Live Results</a> (스피드스케이팅),
-    <a href="https://www.fis-ski.com/" target="_blank" rel="noopener">FIS</a> (스노보드).
+    <a href="https://www.fis-ski.com/" target="_blank" rel="noopener">FIS</a> (알파인·크로스컨트리·스키점프·노르딕 복합·프리스타일·스노보드),
+    <a href="https://www.biathlonresults.com/" target="_blank" rel="noopener">IBU</a> (바이애슬론),
+    <a href="https://www.ibsf.org/" target="_blank" rel="noopener">IBSF</a> (봅슬레이·스켈레톤, 일정만), <a href="https://www.fil-luge.org/" target="_blank" rel="noopener">FIL</a> (루지, 일정만).
     <b>예상 대진</b>은 공식 진출 규칙과 순위·기록으로 계산한 참고용이며, 공식 조 편성이 발표되면 자동으로 공식 대진으로 바뀝니다.
     수집 시각과 경기 결과 확정 시각은 다를 수 있습니다.
   </footer>
 </div>
-<script src="app.js?v=4"></script>
+<script src="app.js?v=5"></script>
 </body>
 </html>

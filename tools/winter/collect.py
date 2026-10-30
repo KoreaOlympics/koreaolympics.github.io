@@ -9,15 +9,20 @@ Outputs (all UTC timestamps; pages convert to KST):
   data/winter/korea.json           every Korean result found, newest first
   data/winter/status.json          per-source success/failure for the admin page
 """
-import argparse, datetime as dt, json, sys, traceback
+import argparse, datetime as dt, json, re, sys, traceback
 from collections import Counter
 from pathlib import Path
-from . import isu, fis, bracket, speed
+from . import isu, fis, bracket, speed, ibu, sliding
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / 'data' / 'winter'
 KOR = 'KOR'
 ISU_SPORTS = ('short-track', 'figure-skating')
+FIS_SPORTS = tuple(fis.SECTORS)          # alpine, cross-country, ski-jumping, nordic-combined, freestyle, snowboard
+RACE_SPORTS = FIS_SPORTS + ('biathlon',)  # race-list sports: one results table per race
+CALENDAR_ONLY = ('bobsleigh', 'skeleton', 'luge')
+# main result column per race table, first match wins
+MAIN = ('Tot. Time', 'Tot. Points', 'Total Points', 'Time', 'Result', '기록', 'Points')
 
 def now():
     return dt.datetime.now(dt.timezone.utc)
@@ -289,6 +294,55 @@ def collect_speed(start_year, mode, status):
             traceback.print_exc()
     return events
 
+def main_result(row):
+    cells = row.get('cells') or {}
+    return next((cells[k] for k in MAIN if cells.get(k)), '')
+
+def collect_races(sport, ev, list_races, get_results, mode, status, today):
+    """FIS / IBU events: race list + one results table per race (data/winter/events/<id>.json)."""
+    path = OUT / 'events' / f"{ev['id']}.json"
+    active = is_active(ev, today)
+    started = ev['start'] <= today.isoformat()
+    if ev.get('state') == 'Cancelled' or not (active or (mode == 'full' and started and not path.exists())):
+        return
+    try:
+        prev = load(path, {}).get('results', {})
+        races = list_races()
+        results = {}
+        for r in races:
+            key = str(r['id'])
+            if r.get('cancelled'):
+                continue
+            if r.get('has_results') or r.get('live'):
+                try:
+                    res = get_results(r['id'])
+                except Exception as exc:
+                    res = prev.get(key) or {'columns': [], 'rows': [], 'error': f'{type(exc).__name__}: {exc}'[:200]}
+                if not res.get('rows') and prev.get(key, {}).get('rows'):
+                    res = prev[key]  # a transient empty page must not wipe earlier results
+            else:
+                res = {'columns': [], 'rows': []}
+            results[key] = {**res, 'title': res.get('title') or r['name'], 'start_utc': r.get('start_utc') or r.get('date') or None,
+                            'gender': r.get('gender', ''), 'live': bool(r.get('live')), 'runs': r.get('runs', []),
+                            'status': r.get('status') or ('Finished' if res.get('rows') and not res.get('start_list') else '')}
+        sessions = [{'start_utc': x['start_utc'], 'title': x['title'], 'round': ''} for x in results.values() if x['start_utc']]
+        korea = [{'event_id': ev['id'], 'sport': sport, 'event': ev['name'], 'distance': x['title'], 'round': '', 'heat': '',
+                  'start_utc': x['start_utc'], 'rank': c.get('rank'), 'name': c['name'], 'noc': c['noc'], 'time': main_result(c),
+                  'qual': '', 'status': c.get('status', '')}
+                 for x in results.values() if not x.get('start_list') for c in x.get('rows', []) if c.get('noc') == KOR]
+        save(path, {'event': ev, 'checked_at': now().isoformat(), 'sessions': sessions, 'results': results, 'korea': korea})
+        status[f"{sport}:{ev['id']}"] = {'ok': True, 'at': now().isoformat()}
+    except Exception as exc:
+        status[f"{sport}:{ev['id']}"] = {'ok': False, 'at': now().isoformat(), 'error': f'{type(exc).__name__}: {exc}'[:300]}
+        traceback.print_exc()
+
+def podium_race(race):
+    """Final classification of a FIS / IBU race (no qualification, training or start list)."""
+    if race.get('start_list') or re.search(r'Qualification|Training|Heats|Prologue|\bPR\b', race.get('title', ''), re.I):
+        return None
+    top = [r for r in race.get('rows', []) if r.get('rank') in (1, 2, 3)]
+    return [{'rank': r['rank'], 'name': r['name'], 'noc': r['noc'], 'time': main_result(r)} for r in top] or None
+
 def podium_st(dist):
     """Final A (heat named 'Final' or 'Final A') ranks 1-3, once that heat has results."""
     for r in dist['rounds']:
@@ -324,7 +378,9 @@ def build_season(sport, cal):
         d = load(OUT / 'events' / f"{ev['id']}.json", {})
         podiums = []
         for key, item in (d.get('results') or {}).items():
-            pod = {'short-track': podium_st, 'figure-skating': podium_fs, 'speed-skating': podium_ss}[sport](item)
+            if sport in RACE_SPORTS and (item.get('start_list') or re.search(r'Qualification|Training', item.get('title', ''))):
+                continue  # only final classifications go into the season podium tables
+            pod = {'short-track': podium_st, 'figure-skating': podium_fs, 'speed-skating': podium_ss}.get(sport, podium_race)(item)
             if sport == 'speed-skating' and item.get('division') not in (None, '', 'A'):
                 continue
             podiums.append({'title': item['title'], 'podium': pod})
@@ -369,30 +425,49 @@ def main(argv=None):
         failed += 1
         status['speed-skating'] = {'ok': False, 'at': now().isoformat(), 'error': f'{type(exc).__name__}: {exc}'[:300]}
         traceback.print_exc()
-    if mode == 'full' or 'snowboard' not in cal['sports']:
+    sources = {sp: (lambda sp=sp: fis.calendar(sp, start_year), f'https://www.fis-ski.com/DB/general/calendar-results.html?sectorcode={fis.SECTORS[sp]}')
+               for sp in FIS_SPORTS}
+    sources['biathlon'] = (lambda: ibu.calendar(start_year), ibu.SITE)
+    ibsf = {}
+    def ibsf_part(sp):
+        if 'all' not in ibsf: ibsf['all'] = sliding.ibsf_calendar()
+        return [e for e in ibsf['all'] if e['sport'] == sp]
+    sources['bobsleigh'] = (lambda: ibsf_part('bobsleigh'), sliding.IBSF)
+    sources['skeleton'] = (lambda: ibsf_part('skeleton'), sliding.IBSF)
+    sources['luge'] = (sliding.fil_calendar, sliding.FIL)
+    for sp, (fetch, url) in sources.items():
+        if mode != 'full' and sp in cal['sports'] and cal['sports'][sp].get('season') == season:
+            continue  # calendars of these sources change rarely: refreshed by the twice-daily full run
         try:
-            cal['sports']['snowboard'] = {'source': 'https://www.fis-ski.com/DB/snowboard/calendar-results.html',
-                                          'checked_at': now().isoformat(), 'events': fis.calendar(start_year)}
-            status['snowboard'] = {'ok': True, 'at': now().isoformat()}
+            cal['sports'][sp] = {'source': url, 'checked_at': now().isoformat(), 'season': season, 'events': fetch()}
+            status[sp] = {'ok': True, 'at': now().isoformat()}
         except Exception as exc:
             failed += 1
-            status['snowboard'] = {'ok': False, 'at': now().isoformat(), 'error': f'{type(exc).__name__}: {exc}'[:300]}
+            status[sp] = {'ok': False, 'at': now().isoformat(), 'error': f'{type(exc).__name__}: {exc}'[:300]}
             traceback.print_exc()
+    today = now().date()
+    for sp in RACE_SPORTS:
+        for ev in (cal['sports'].get(sp) or {}).get('events', []):
+            if sp == 'biathlon':
+                collect_races(sp, ev, lambda ev=ev: ibu.races(ev['ibu_id']), ibu.results, mode, status, today)
+            else:
+                collect_races(sp, ev, lambda ev=ev, sp=sp: fis.races(sp, ev['id'].split('-', 1)[1], start_year),
+                              lambda rid, sp=sp: fis.results(sp, rid), mode, status, today)
     cal['season'] = season
     save(OUT / 'calendar.json', cal)
-    for sport in (*ISU_SPORTS, 'speed-skating'):
-        build_season(sport, cal)
+    for sport in (*ISU_SPORTS, 'speed-skating', *RACE_SPORTS):
+        if sport in cal['sports']:
+            build_season(sport, cal)
     korea = []
     for f in sorted((OUT / 'events').glob('*.json')):
         korea += load(f, {}).get('korea', [])
     korea.sort(key=lambda r: r.get('start_utc') or '', reverse=True)
     save(OUT / 'korea.json', {'season': season, 'rows': korea})
-    today = now().date()
-    active = sorted(e['id'] for sp in ('short-track', 'speed-skating', 'figure-skating') for e in cal['sports'].get(sp, {}).get('events', [])
+    active = sorted(e['id'] for sp in ('short-track', 'speed-skating', 'figure-skating', *RACE_SPORTS) for e in cal['sports'].get(sp, {}).get('events', [])
                     if e.get('state') != 'Cancelled' and is_active(e, today))
     save(OUT / 'status.json', {'updated_at': now().isoformat(), 'mode': mode, 'active': active, 'sources': status})
     print(f'{mode}: {sum(len(s["events"]) for s in cal["sports"].values())} events, {len(korea)} Korean results, {failed} source failures')
-    return 1 if failed == len(ISU_SPORTS) + 2 else 0
+    return 1 if failed >= len(ISU_SPORTS) + 1 + len(sources) else 0
 
 if __name__ == '__main__':
     sys.exit(main())
