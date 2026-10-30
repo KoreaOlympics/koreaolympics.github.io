@@ -15,10 +15,10 @@
   "city": "Montreal",
   "country": "CAN",
   "state": "Live",
-  "live": "Men 500 m",
+  "live": "Women 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-30T18:30:21.874125+00:00",
+ "checked_at": "2026-10-30T18:40:41.239237+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -4192,14 +4192,38 @@
       },
       {
        "name": "Heat 4",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Hanne DESMET",
+         "noc": "BEL",
+         "time": "1:32.544",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 6,
+         "lane": 1,
+         "slug": "hanne-desmet"
+        },
+        {
+         "rank": 2,
+         "name": "Sukhee SHIM",
+         "noc": "KOR",
+         "time": "1:32.849",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 79,
+         "lane": 2,
+         "slug": "sukhee-shim"
+        },
+        {
+         "rank": 3,
          "name": "Zoe Florence DELTRAP",
          "noc": "NED",
-         "time": "no time",
+         "time": "1:33.111",
          "qual": "",
          "status": "",
          "record": "",
@@ -4208,66 +4232,42 @@
          "slug": "zoe-florence-deltrap"
         },
         {
-         "rank": null,
-         "name": "Hanne DESMET",
-         "noc": "BEL",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 6,
-         "lane": 1,
-         "slug": "hanne-desmet"
-        },
-        {
-         "rank": null,
-         "name": "Betty MOESKE",
-         "noc": "GER",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 63,
-         "lane": 5,
-         "slug": "betty-moeske"
-        },
-        {
-         "rank": null,
-         "name": "Sukhee SHIM",
-         "noc": "KOR",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 79,
-         "lane": 2,
-         "slug": "sukhee-shim"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Cloe OLLIVIER",
          "noc": "FRA",
-         "time": "no time",
+         "time": "1:33.665",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 24,
          "lane": 4,
          "slug": "cloe-ollivier"
+        },
+        {
+         "rank": 5,
+         "name": "Betty MOESKE",
+         "noc": "GER",
+         "time": "1:34.467",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 63,
+         "lane": 5,
+         "slug": "betty-moeske"
         }
        ]
       },
       {
        "name": "Heat 5",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Elisa CONFORTOLA",
          "noc": "ITA",
-         "time": "no time",
-         "qual": "",
+         "time": "1:32.320",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 8,
@@ -4275,11 +4275,11 @@
          "slug": "elisa-confortola"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Danae BLAIS",
          "noc": "CAN",
-         "time": "no time",
-         "qual": "",
+         "time": "1:32.469",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 25,
@@ -4287,10 +4287,10 @@
          "slug": "danae-blais"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Nikola MAZUR",
          "noc": "POL",
-         "time": "no time",
+         "time": "1:33.138",
          "qual": "",
          "status": "",
          "record": "",
@@ -4299,41 +4299,41 @@
          "slug": "nikola-mazur"
         },
         {
-         "rank": null,
-         "name": "Kateryna SOLOVIOVA",
-         "noc": "GER",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 64,
-         "lane": 4,
-         "slug": "kateryna-soloviova"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Barbora GAKOVA",
          "noc": "CZE",
-         "time": "no time",
+         "time": "1:34.137",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 57,
          "lane": 5,
          "slug": "barbora-gakova"
+        },
+        {
+         "rank": 5,
+         "name": "Kateryna SOLOVIOVA",
+         "noc": "GER",
+         "time": "1:34.605",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 64,
+         "lane": 4,
+         "slug": "kateryna-soloviova"
         }
        ]
       },
       {
        "name": "Heat 6",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Live",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Kristen SANTOS-GRISWOLD",
          "noc": "USA",
-         "time": "no time",
+         "time": "1:34.830",
          "qual": "",
          "status": "",
          "record": "",
@@ -4342,10 +4342,10 @@
          "slug": "kristen-santos-griswold"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Gabriela TOPOLSKA",
          "noc": "POL",
-         "time": "no time",
+         "time": "1:35.060",
          "qual": "",
          "status": "",
          "record": "",
@@ -4354,16 +4354,16 @@
          "slug": "gabriela-topolska"
         },
         {
-         "rank": null,
-         "name": "Ann-Sophie BACHAND",
-         "noc": "CAN",
-         "time": "no time",
+         "rank": 3,
+         "name": "Lia MEAD",
+         "noc": "NZL",
+         "time": "1:36.140",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 51,
-         "lane": 3,
-         "slug": "ann-sophie-bachand"
+         "bib": 81,
+         "lane": 5,
+         "slug": "lia-mead"
         },
         {
          "rank": null,
@@ -4379,15 +4379,15 @@
         },
         {
          "rank": null,
-         "name": "Lia MEAD",
-         "noc": "NZL",
+         "name": "Ann-Sophie BACHAND",
+         "noc": "CAN",
          "time": "no time",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 81,
-         "lane": 5,
-         "slug": "lia-mead"
+         "bib": 51,
+         "lane": 3,
+         "slug": "ann-sophie-bachand"
         }
        ]
       },
@@ -6854,11 +6854,11 @@
    "round": "Heats",
    "heat": "Heat 4",
    "start_utc": "2026-10-30T17:19:08.000Z",
-   "rank": null,
+   "rank": 2,
    "name": "Sukhee SHIM",
    "noc": "KOR",
-   "time": "no time",
-   "qual": "",
+   "time": "1:32.849",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 79,
