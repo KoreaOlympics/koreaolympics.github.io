@@ -2,7 +2,7 @@
 name: Winter source probe
 on:
   push:
-    branches: [claude/winter-probe]
+    branches: [claude/winter-probe2]
 jobs:
   probe:
     runs-on: ubuntu-latest
