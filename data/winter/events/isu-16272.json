@@ -18,7 +18,7 @@
   "live": "Mixed Team Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-30T21:28:31.717697+00:00",
+ "checked_at": "2026-10-30T21:38:52.718222+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -109,7 +109,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-10-30T21:07:00.000Z",
+   "start_utc": "2026-10-30T21:09:00.000Z",
    "title": "Mixed Team Relay",
    "round": "Quarterfinals",
    "event_result_id": 16033,
@@ -8886,7 +8886,7 @@
     {
      "id": 22959,
      "name": "Quarterfinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-10-30T20:09:10.000Z",
      "rule": "The first and second placed teams from each race qualify for Semifinals.",
      "heats": [
@@ -9021,15 +9021,15 @@
       },
       {
        "name": "Heat 4",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Italy",
          "noc": "ITA",
-         "time": "no time",
-         "qual": "",
+         "time": "2:41.082",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -9037,23 +9037,11 @@
          "slug": ""
         },
         {
-         "rank": null,
-         "name": "Germany",
-         "noc": "GER",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 3,
-         "slug": ""
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Czechia",
          "noc": "CZE",
-         "time": "no time",
-         "qual": "",
+         "time": "2:47.748",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -9061,20 +9049,117 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Poland",
          "noc": "POL",
-         "time": "no time",
-         "qual": "",
+         "time": "2:52.680",
+         "qual": "ADV",
          "status": "",
          "record": "",
          "bib": null,
          "lane": 1,
          "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Germany",
+         "noc": "GER",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": null,
+         "lane": 3,
+         "slug": ""
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Semifinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Netherlands",
+        "noc": "NED",
+        "rank": 1,
+        "time": "2:38.023",
+        "qual": "Q"
+       },
+       {
+        "name": "China",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "2:38.599",
+        "qual": "Q"
+       },
+       {
+        "name": "Italy",
+        "noc": "ITA",
+        "rank": 1,
+        "time": "2:41.082",
+        "qual": "Q"
+       },
+       {
+        "name": "Republic of Korea",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "2:41.878",
+        "qual": "Q"
+       },
+       {
+        "name": "Canada",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "2:38.695",
+        "qual": "Q"
+       },
+       {
+        "name": "Japan",
+        "noc": "JPN",
+        "rank": 2,
+        "time": "2:43.038",
+        "qual": "Q"
+       },
+       {
+        "name": "Belgium",
+        "noc": "BEL",
+        "rank": 2,
+        "time": "2:46.615",
+        "qual": "Q"
+       },
+       {
+        "name": "Czechia",
+        "noc": "CZE",
+        "rank": 2,
+        "time": "2:47.748",
+        "qual": "Q"
+       },
+       {
+        "name": "Poland",
+        "noc": "POL",
+        "rank": 3,
+        "time": "2:52.680",
+        "qual": "ADV"
+       }
+      ],
+      "races": [
+       [
+        "Netherlands (NED)",
+        "Republic of Korea (KOR)",
+        "Canada (CAN)",
+        "Czechia (CZE)",
+        "Poland (POL)"
+       ],
+       [
+        "China (CHN)",
+        "Italy (ITA)",
+        "Japan (JPN)",
+        "Belgium (BEL)"
+       ]
+      ]
+     }
     },
     {
      "id": 22960,
