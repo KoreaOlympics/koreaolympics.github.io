@@ -18,7 +18,7 @@
   "live": "Men 5000 m Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-30T22:21:30.343726+00:00",
+ "checked_at": "2026-10-30T22:32:04.258364+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -9185,7 +9185,7 @@
     {
      "id": 22962,
      "name": "Quarterfinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-10-30T20:51:41.000Z",
      "rule": "The first and second placed teams from each race qualify for Semifinals.",
      "heats": [
@@ -9332,15 +9332,15 @@
       },
       {
        "name": "Heat 4",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Canada",
          "noc": "CAN",
-         "time": "no time",
-         "qual": "",
+         "time": "6:52.582",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -9348,22 +9348,22 @@
          "slug": ""
         },
         {
-         "rank": null,
-         "name": "Italy",
-         "noc": "ITA",
-         "time": "no time",
-         "qual": "",
+         "rank": 2,
+         "name": "Kazakhstan",
+         "noc": "KAZ",
+         "time": "6:52.967",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
-         "lane": 2,
+         "lane": 4,
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Turkiye",
          "noc": "TUR",
-         "time": "no time",
+         "time": "6:54.218",
          "qual": "",
          "status": "",
          "record": "",
@@ -9372,20 +9372,97 @@
          "slug": ""
         },
         {
-         "rank": null,
-         "name": "Kazakhstan",
-         "noc": "KAZ",
-         "time": "no time",
+         "rank": 4,
+         "name": "Italy",
+         "noc": "ITA",
+         "time": "7:07.395",
          "qual": "",
          "status": "",
          "record": "",
          "bib": null,
-         "lane": 4,
+         "lane": 2,
          "slug": ""
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Semifinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Canada",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "6:52.582",
+        "qual": "Q"
+       },
+       {
+        "name": "China",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "6:58.175",
+        "qual": "Q"
+       },
+       {
+        "name": "Netherlands",
+        "noc": "NED",
+        "rank": 1,
+        "time": "7:05.291",
+        "qual": "Q"
+       },
+       {
+        "name": "Republic of Korea",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "7:14.808",
+        "qual": "Q"
+       },
+       {
+        "name": "Kazakhstan",
+        "noc": "KAZ",
+        "rank": 2,
+        "time": "6:52.967",
+        "qual": "Q"
+       },
+       {
+        "name": "Japan",
+        "noc": "JPN",
+        "rank": 2,
+        "time": "6:58.256",
+        "qual": "Q"
+       },
+       {
+        "name": "Hungary",
+        "noc": "HUN",
+        "rank": 2,
+        "time": "7:06.215",
+        "qual": "Q"
+       },
+       {
+        "name": "Poland",
+        "noc": "POL",
+        "rank": 2,
+        "time": "7:15.648",
+        "qual": "Q"
+       }
+      ],
+      "races": [
+       [
+        "Canada (CAN)",
+        "Republic of Korea (KOR)",
+        "Kazakhstan (KAZ)",
+        "Poland (POL)"
+       ],
+       [
+        "China (CHN)",
+        "Netherlands (NED)",
+        "Japan (JPN)",
+        "Hungary (HUN)"
+       ]
+      ]
+     }
     },
     {
      "id": 22963,
