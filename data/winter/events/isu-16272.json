@@ -18,7 +18,7 @@
   "live": "Mixed Team Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-30T21:18:11.280930+00:00",
+ "checked_at": "2026-10-30T21:28:31.717697+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -8935,15 +8935,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Republic of Korea",
          "noc": "KOR",
-         "time": "no time",
-         "qual": "",
+         "time": "2:41.878",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -8951,11 +8951,11 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Japan",
          "noc": "JPN",
-         "time": "no time",
-         "qual": "",
+         "time": "2:43.038",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -8963,10 +8963,10 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "France",
          "noc": "FRA",
-         "time": "no time",
+         "time": "2:55.768",
          "qual": "",
          "status": "",
          "record": "",
@@ -8978,27 +8978,15 @@
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Canada",
-         "noc": "CAN",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 1,
-         "slug": ""
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "China",
          "noc": "CHN",
-         "time": "no time",
-         "qual": "",
+         "time": "2:38.599",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -9006,10 +8994,22 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Canada",
+         "noc": "CAN",
+         "time": "2:38.695",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": 3,
          "name": "Hungary",
          "noc": "HUN",
-         "time": "no time",
+         "time": "2:38.782",
          "qual": "",
          "status": "",
          "record": "",
@@ -9021,21 +9021,9 @@
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
-        {
-         "rank": null,
-         "name": "Poland",
-         "noc": "POL",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 1,
-         "slug": ""
-        },
         {
          "rank": null,
          "name": "Italy",
@@ -9070,6 +9058,18 @@
          "record": "",
          "bib": null,
          "lane": 4,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Poland",
+         "noc": "POL",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
          "slug": ""
         }
        ]
@@ -9762,11 +9762,11 @@
    "round": "Quarterfinals",
    "heat": "Heat 2",
    "start_utc": "2026-10-30T20:09:10.000Z",
-   "rank": null,
+   "rank": 1,
    "name": "Republic of Korea",
    "noc": "KOR",
-   "time": "no time",
-   "qual": "",
+   "time": "2:41.878",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": null,
