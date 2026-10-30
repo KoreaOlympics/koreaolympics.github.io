@@ -18,7 +18,7 @@
   "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-30T19:11:39.817957+00:00",
+ "checked_at": "2026-10-30T19:12:12.561578+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -5593,33 +5593,35 @@
       "races": [
        [
         "Zhanshuo LOU (HKG)",
-        "Gleb IVCHENKO (KAZ)",
-        "Andrew HEO (USA)",
-        "Metehan ATAN (TUR)"
+        "Pawel ADAMSKI (POL)",
+        "Mathieu PELLETIER (CAN)"
        ],
        [
         "Kerui SONG (CHN)",
-        "Zixia ZHANG (CHN)",
-        "Pawel ADAMSKI (POL)",
-        "Reinis BERZINS (LAT)"
+        "Andrew HEO (USA)",
+        "Etienne BASTIER (FRA)"
        ],
        [
         "Melle VAN 'T WOUT (NED)",
-        "Lucas Henry KOO (BRA)",
-        "Mathieu PELLETIER (CAN)",
-        "Taesung KIM (KOR)"
+        "Gleb IVCHENKO (KAZ)",
+        "Willem MURRAY (GBR)"
        ],
        [
         "Niels KINGMA (NED)",
-        "Jeongmin LEE (KOR)",
-        "Etienne BASTIER (FRA)",
-        "Marten TAUBERT (GER)"
+        "Zixia ZHANG (CHN)",
+        "Kazuki YOSHINAGA (JPN)"
        ],
        [
         "Peter JASZAPATI (HUN)",
+        "Lucas Henry KOO (BRA)",
+        "Marten TAUBERT (GER)",
+        "Metehan ATAN (TUR)"
+       ],
+       [
         "Bohao ZHANG (CHN)",
-        "Willem MURRAY (GBR)",
-        "Kazuki YOSHINAGA (JPN)"
+        "Jeongmin LEE (KOR)",
+        "Taesung KIM (KOR)",
+        "Reinis BERZINS (LAT)"
        ]
       ]
      }
@@ -5956,13 +5958,74 @@
       },
       {
        "name": "Heat 6",
-       "status": "Live",
-       "official": "Live",
-       "competitors": []
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Dong Min SHIN",
+         "noc": "KOR",
+         "time": "1:29.751",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 16,
+         "lane": 1,
+         "slug": "dong-min-shin"
+        },
+        {
+         "rank": 2,
+         "name": "Long SUN",
+         "noc": "CHN",
+         "time": "1:30.281",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 4,
+         "lane": 2,
+         "slug": "long-sun"
+        },
+        {
+         "rank": 3,
+         "name": "Melle VAN 'T WOUT",
+         "noc": "NED",
+         "time": "1:30.358",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 21,
+         "lane": 3,
+         "slug": "melle-van-t-wout"
+        },
+        {
+         "rank": 4,
+         "name": "Lucas Henry KOO",
+         "noc": "BRA",
+         "time": "1:31.002",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 59,
+         "lane": 4,
+         "slug": "lucas-henry-koo"
+        },
+        {
+         "rank": 5,
+         "name": "Marten TAUBERT",
+         "noc": "GER",
+         "time": "1:31.232",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 79,
+         "lane": 5,
+         "slug": "marten-taubert"
+        }
+       ]
       },
       {
        "name": "Heat 7",
-       "status": "Scheduled",
+       "status": "Getting Ready",
        "official": "Start List",
        "competitors": []
       },
@@ -7458,6 +7521,25 @@
    "bib": 97,
    "lane": 5,
    "slug": "taesung-kim"
+  },
+  {
+   "event_id": "isu-16272",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #2",
+   "distance": "Men 1000 m",
+   "round": "Heats",
+   "heat": "Heat 6",
+   "start_utc": "2026-10-30T17:51:13.000Z",
+   "rank": 1,
+   "name": "Dong Min SHIN",
+   "noc": "KOR",
+   "time": "1:29.751",
+   "qual": "Q",
+   "status": "",
+   "record": "",
+   "bib": 16,
+   "lane": 1,
+   "slug": "dong-min-shin"
   },
   {
    "event_id": "isu-16272",
