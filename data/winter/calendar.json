@@ -2,7 +2,7 @@
  "sports": {
   "short-track": {
    "source": "https://isu-skating.com/en/short-track/events/",
-   "checked_at": "2026-10-30T16:33:56.438219+00:00",
+   "checked_at": "2026-10-30T16:34:30.617383+00:00",
    "events": [
     {
      "id": "isu-16230",
@@ -255,7 +255,7 @@
   },
   "figure-skating": {
    "source": "https://isu-skating.com/en/figure-skating/events/",
-   "checked_at": "2026-10-30T16:34:07.959692+00:00",
+   "checked_at": "2026-10-30T16:34:41.730159+00:00",
    "events": [
     {
      "id": "isu-16076",
@@ -622,7 +622,7 @@
   },
   "speed-skating": {
    "source": "https://live.isuresults.eu/",
-   "checked_at": "2026-10-30T16:34:13.943067+00:00",
+   "checked_at": "2026-10-30T16:34:46.846329+00:00",
    "events": [
     {
      "id": "ssr-2027_CHN_0001",
@@ -747,12 +747,14 @@
    ]
   },
   "snowboard": {
-   "source": "https://www.fis-ski.com/DB/snowboard/calendar-results.html",
-   "checked_at": "2026-10-28T21:54:36.478287+00:00",
+   "source": "https://www.fis-ski.com/DB/general/calendar-results.html?sectorcode=SB",
+   "checked_at": "2026-10-30T16:35:01.994710+00:00",
+   "season": "2026/2027",
    "events": [
     {
      "id": "fis-62864",
      "sport": "snowboard",
+     "source": "FIS",
      "name": "Innsbruck 빅에어",
      "category": "WC",
      "disciplines": [
@@ -769,10 +771,12 @@
     {
      "id": "fis-62746",
      "sport": "snowboard",
+     "source": "FIS",
      "name": "Snow Ruyi 평행대회전",
      "category": "WC",
      "disciplines": [
-      "PGS"
+      "PGS",
+      "PRT"
      ],
      "start": "2026-11-28",
      "end": "2026-11-29",
@@ -785,6 +789,7 @@
     {
      "id": "fis-62865",
      "sport": "snowboard",
+     "source": "FIS",
      "name": "Beijing 빅에어",
      "category": "WC",
      "disciplines": [
@@ -801,6 +806,7 @@
     {
      "id": "fis-62791",
      "sport": "snowboard",
+     "source": "FIS",
      "name": "Mylin 평행대회전",
      "category": "WC",
      "disciplines": [
@@ -817,6 +823,7 @@
     {
      "id": "fis-62866",
      "sport": "snowboard",
+     "source": "FIS",
      "name": "Secret Garden 하프파이프",
      "category": "WC",
      "disciplines": [
@@ -833,6 +840,7 @@
     {
      "id": "fis-62867",
      "sport": "snowboard",
+     "source": "FIS",
      "name": "Breckenridge 슬로프스타일",
      "category": "WC",
      "disciplines": [
@@ -849,6 +857,7 @@
     {
      "id": "fis-62815",
      "sport": "snowboard",
+     "source": "FIS",
      "name": "Cervinia 스노보드크로스",
      "category": "WC",
      "disciplines": [
@@ -865,6 +874,7 @@
     {
      "id": "fis-62758",
      "sport": "snowboard",
+     "source": "FIS",
      "name": "Cortina d'Ampezzo 평행대회전",
      "category": "WC",
      "disciplines": [
@@ -881,6 +891,7 @@
     {
      "id": "fis-62759",
      "sport": "snowboard",
+     "source": "FIS",
      "name": "Carezza 평행대회전",
      "category": "WC",
      "disciplines": [
@@ -897,6 +908,7 @@
     {
      "id": "fis-62868",
      "sport": "snowboard",
+     "source": "FIS",
      "name": "Copper 하프파이프",
      "category": "WC",
      "disciplines": [
@@ -913,6 +925,7 @@
     {
      "id": "fis-62760",
      "sport": "snowboard",
+     "source": "FIS",
      "name": "Davos 평행회전",
      "category": "WC",
      "disciplines": [
@@ -929,6 +942,7 @@
     {
      "id": "fis-62869",
      "sport": "snowboard",
+     "source": "FIS",
      "name": "Kreischberg 빅에어",
      "category": "WC",
      "disciplines": [
@@ -945,6 +959,7 @@
     {
      "id": "fis-62761",
      "sport": "snowboard",
+     "source": "FIS",
      "name": "Scuol 평행대회전",
      "category": "WC",
      "disciplines": [
@@ -961,11 +976,12 @@
     {
      "id": "fis-62870",
      "sport": "snowboard",
-     "name": "Laax 하프파이프 / 슬로프스타일",
+     "source": "FIS",
+     "name": "Laax 슬로프스타일 / 하프파이프",
      "category": "WC",
      "disciplines": [
-      "HP",
-      "SS"
+      "SS",
+      "HP"
      ],
      "start": "2027-01-13",
      "end": "2027-01-16",
@@ -978,6 +994,7 @@
     {
      "id": "fis-62816",
      "sport": "snowboard",
+     "source": "FIS",
      "name": "Secret Garden 스노보드크로스",
      "category": "WC",
      "disciplines": [
@@ -994,6 +1011,7 @@
     {
      "id": "fis-62762",
      "sport": "snowboard",
+     "source": "FIS",
      "name": "Bansko 평행대회전",
      "category": "WC",
      "disciplines": [
@@ -1010,6 +1028,7 @@
     {
      "id": "fis-62871",
      "sport": "snowboard",
+     "source": "FIS",
      "name": "Tignes 빅에어",
      "category": "WC",
      "disciplines": [
@@ -1026,6 +1045,7 @@
     {
      "id": "fis-62763",
      "sport": "snowboard",
+     "source": "FIS",
      "name": "Rogla 평행대회전",
      "category": "WC",
      "disciplines": [
@@ -1042,10 +1062,12 @@
     {
      "id": "fis-62764",
      "sport": "snowboard",
+     "source": "FIS",
      "name": "Bad Gastein 평행회전",
      "category": "WC",
      "disciplines": [
-      "PSL"
+      "PSL",
+      "PRT"
      ],
      "start": "2027-01-26",
      "end": "2027-01-27",
@@ -1058,6 +1080,7 @@
     {
      "id": "fis-62955",
      "sport": "snowboard",
+     "source": "FIS",
      "name": "Ratschings 평행회전",
      "category": "WC",
      "disciplines": [
@@ -1074,6 +1097,7 @@
     {
      "id": "fis-64546",
      "sport": "snowboard",
+     "source": "FIS",
      "name": "Jahorina 스노보드크로스",
      "category": "WC",
      "disciplines": [
@@ -1090,6 +1114,7 @@
     {
      "id": "fis-62872",
      "sport": "snowboard",
+     "source": "FIS",
      "name": "Calgary 하프파이프",
      "category": "WC",
      "disciplines": [
@@ -1106,6 +1131,7 @@
     {
      "id": "fis-62827",
      "sport": "snowboard",
+     "source": "FIS",
      "name": "Erzurum 스노보드크로스",
      "category": "WC",
      "disciplines": [
@@ -1122,11 +1148,12 @@
     {
      "id": "fis-62873",
      "sport": "snowboard",
-     "name": "Aspen 하프파이프 / 슬로프스타일",
+     "source": "FIS",
+     "name": "Aspen 슬로프스타일 / 하프파이프",
      "category": "WC",
      "disciplines": [
-      "HP",
-      "SS"
+      "SS",
+      "HP"
      ],
      "start": "2027-02-25",
      "end": "2027-02-28",
@@ -1139,6 +1166,7 @@
     {
      "id": "fis-62765",
      "sport": "snowboard",
+     "source": "FIS",
      "name": "Krynica 평행대회전",
      "category": "WC",
      "disciplines": [
@@ -1155,16 +1183,18 @@
     {
      "id": "fis-62999",
      "sport": "snowboard",
-     "name": "Montafon 빅에어 / BXT / 하프파이프 / 평행대회전 / 평행회전 / 스노보드크로스 / 슬로프스타일",
+     "source": "FIS",
+     "name": "Montafon 하프파이프 / 평행회전 / 빅에어 / 슬로프스타일 / 스노보드크로스 / 평행대회전 / 스노보드크로스 혼성 단체",
      "category": "WSC",
      "disciplines": [
-      "BA",
-      "BXT",
       "HP",
-      "PGS",
       "PSL",
+      "BA",
+      "SS",
       "SBX",
-      "SS"
+      "PGS",
+      "BXT",
+      "PRT"
      ],
      "start": "2027-03-06",
      "end": "2027-03-21",
@@ -1177,10 +1207,12 @@
     {
      "id": "fis-62766",
      "sport": "snowboard",
+     "source": "FIS",
      "name": "Winterberg 평행회전",
      "category": "WC",
      "disciplines": [
-      "PSL"
+      "PSL",
+      "PRT"
      ],
      "start": "2027-03-20",
      "end": "2027-03-21",
@@ -1193,6 +1225,7 @@
     {
      "id": "fis-62828",
      "sport": "snowboard",
+     "source": "FIS",
      "name": "Mt. St. Anne 스노보드크로스",
      "category": "WC",
      "disciplines": [
@@ -1209,6 +1242,7 @@
     {
      "id": "fis-62874",
      "sport": "snowboard",
+     "source": "FIS",
      "name": "Silvaplana 하프파이프 / 슬로프스타일",
      "category": "WC",
      "disciplines": [
@@ -1222,6 +1256,2815 @@
      "state": "",
      "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=SB&eventid=62874&seasoncode=2027",
      "raw": "4xHP 4xSS"
+    }
+   ]
+  },
+  "alpine": {
+   "source": "https://www.fis-ski.com/DB/general/calendar-results.html?sectorcode=AL",
+   "checked_at": "2026-10-30T16:34:47.579361+00:00",
+   "season": "2026/2027",
+   "events": [
+    {
+     "id": "fis-62771",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Soelden 대회전",
+     "category": "WC",
+     "disciplines": [
+      "GS"
+     ],
+     "start": "2026-10-24",
+     "end": "2026-10-25",
+     "city": "Soelden",
+     "country": "AUT",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62771&seasoncode=2027",
+     "raw": "2xGS"
+    },
+    {
+     "id": "fis-62772",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Levi 회전",
+     "category": "WC",
+     "disciplines": [
+      "SL"
+     ],
+     "start": "2026-11-14",
+     "end": "2026-11-15",
+     "city": "Levi",
+     "country": "FIN",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62772&seasoncode=2027",
+     "raw": "2xSL"
+    },
+    {
+     "id": "fis-62773",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Gurgl 회전",
+     "category": "WC",
+     "disciplines": [
+      "SL"
+     ],
+     "start": "2026-11-21",
+     "end": "2026-11-22",
+     "city": "Gurgl",
+     "country": "AUT",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62773&seasoncode=2027",
+     "raw": "2xSL"
+    },
+    {
+     "id": "fis-62774",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Killington 대회전 / 회전",
+     "category": "WC",
+     "disciplines": [
+      "GS",
+      "SL"
+     ],
+     "start": "2026-11-28",
+     "end": "2026-11-29",
+     "city": "Killington",
+     "country": "USA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62774&seasoncode=2027",
+     "raw": "GS SL"
+    },
+    {
+     "id": "fis-62938",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Copper Mountain, CO 슈퍼대회전 / 대회전",
+     "category": "WC",
+     "disciplines": [
+      "SG",
+      "GS"
+     ],
+     "start": "2026-11-28",
+     "end": "2026-11-29",
+     "city": "Copper Mountain, CO",
+     "country": "USA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62938&seasoncode=2027",
+     "raw": "SG GS"
+    },
+    {
+     "id": "fis-62939",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Beaver Creek 활강 / 슈퍼대회전 / 대회전",
+     "category": "WC",
+     "disciplines": [
+      "DH",
+      "SG",
+      "GS"
+     ],
+     "start": "2026-12-01",
+     "end": "2026-12-06",
+     "city": "Beaver Creek",
+     "country": "USA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62939&seasoncode=2027",
+     "raw": "4xDH SG GS"
+    },
+    {
+     "id": "fis-62810",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Tremblant 대회전",
+     "category": "WC",
+     "disciplines": [
+      "GS"
+     ],
+     "start": "2026-12-05",
+     "end": "2026-12-06",
+     "city": "Tremblant",
+     "country": "CAN",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62810&seasoncode=2027",
+     "raw": "2xGS"
+    },
+    {
+     "id": "fis-62811",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Beaver Creek 활강 / 슈퍼대회전",
+     "category": "WC",
+     "disciplines": [
+      "DH",
+      "SG"
+     ],
+     "start": "2026-12-09",
+     "end": "2026-12-13",
+     "city": "Beaver Creek",
+     "country": "USA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62811&seasoncode=2027",
+     "raw": "4xDH SG"
+    },
+    {
+     "id": "fis-62940",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Val d'Isere 대회전 / 회전",
+     "category": "WC",
+     "disciplines": [
+      "GS",
+      "SL"
+     ],
+     "start": "2026-12-12",
+     "end": "2026-12-13",
+     "city": "Val d'Isere",
+     "country": "FRA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62940&seasoncode=2027",
+     "raw": "GS SL"
+    },
+    {
+     "id": "fis-62941",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Val Gardena-Groeden Südtirol 활강 / 슈퍼대회전",
+     "category": "WC",
+     "disciplines": [
+      "DH",
+      "SG"
+     ],
+     "start": "2026-12-15",
+     "end": "2026-12-19",
+     "city": "Val Gardena-Groeden Südtirol",
+     "country": "ITA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62941&seasoncode=2027",
+     "raw": "4xDH SG"
+    },
+    {
+     "id": "fis-62812",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "St. Moritz 슈퍼대회전 / 대회전",
+     "category": "WC",
+     "disciplines": [
+      "SG",
+      "GS"
+     ],
+     "start": "2026-12-18",
+     "end": "2026-12-20",
+     "city": "St. Moritz",
+     "country": "SUI",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62812&seasoncode=2027",
+     "raw": "2xSG GS"
+    },
+    {
+     "id": "fis-62942",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Alta Badia 대회전 / 회전",
+     "category": "WC",
+     "disciplines": [
+      "GS",
+      "SL"
+     ],
+     "start": "2026-12-20",
+     "end": "2026-12-21",
+     "city": "Alta Badia",
+     "country": "ITA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62942&seasoncode=2027",
+     "raw": "GS SL"
+    },
+    {
+     "id": "fis-62813",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Courchevel 회전",
+     "category": "WC",
+     "disciplines": [
+      "SL"
+     ],
+     "start": "2026-12-22",
+     "end": "2026-12-22",
+     "city": "Courchevel",
+     "country": "FRA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62813&seasoncode=2027",
+     "raw": "SL"
+    },
+    {
+     "id": "fis-62943",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Madonna di Campiglio 회전",
+     "category": "WC",
+     "disciplines": [
+      "SL"
+     ],
+     "start": "2026-12-23",
+     "end": "2026-12-23",
+     "city": "Madonna di Campiglio",
+     "country": "ITA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62943&seasoncode=2027",
+     "raw": "SL"
+    },
+    {
+     "id": "fis-62997",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Bormio 활강 / 슈퍼대회전",
+     "category": "WC",
+     "disciplines": [
+      "DH",
+      "SG"
+     ],
+     "start": "2026-12-26",
+     "end": "2026-12-29",
+     "city": "Bormio",
+     "country": "ITA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62997&seasoncode=2027",
+     "raw": "3xDH SG"
+    },
+    {
+     "id": "fis-62814",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Dachstein West / Gosau 대회전 / 회전",
+     "category": "WC",
+     "disciplines": [
+      "GS",
+      "SL"
+     ],
+     "start": "2026-12-28",
+     "end": "2026-12-29",
+     "city": "Dachstein West / Gosau",
+     "country": "AUT",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62814&seasoncode=2027",
+     "raw": "GS SL"
+    },
+    {
+     "id": "fis-62944",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Kranjska Gora 대회전 / 회전",
+     "category": "WC",
+     "disciplines": [
+      "GS",
+      "SL"
+     ],
+     "start": "2027-01-02",
+     "end": "2027-01-03",
+     "city": "Kranjska Gora",
+     "country": "SLO",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62944&seasoncode=2027",
+     "raw": "GS SL"
+    },
+    {
+     "id": "fis-62877",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Flachau 대회전 / 회전",
+     "category": "WC",
+     "disciplines": [
+      "GS",
+      "SL"
+     ],
+     "start": "2027-01-04",
+     "end": "2027-01-05",
+     "city": "Flachau",
+     "country": "AUT",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62877&seasoncode=2027",
+     "raw": "GS SL"
+    },
+    {
+     "id": "fis-62879",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Val di Fassa 활강 / 슈퍼대회전",
+     "category": "WC",
+     "disciplines": [
+      "DH",
+      "SG"
+     ],
+     "start": "2027-01-07",
+     "end": "2027-01-10",
+     "city": "Val di Fassa",
+     "country": "ITA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62879&seasoncode=2027",
+     "raw": "3xDH SG"
+    },
+    {
+     "id": "fis-62945",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Adelboden 대회전 / 회전",
+     "category": "WC",
+     "disciplines": [
+      "GS",
+      "SL"
+     ],
+     "start": "2027-01-09",
+     "end": "2027-01-10",
+     "city": "Adelboden",
+     "country": "SUI",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62945&seasoncode=2027",
+     "raw": "GS SL"
+    },
+    {
+     "id": "fis-62946",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Wengen 활강 / 슈퍼대회전 / 회전",
+     "category": "WC",
+     "disciplines": [
+      "DH",
+      "SG",
+      "SL"
+     ],
+     "start": "2027-01-12",
+     "end": "2027-01-17",
+     "city": "Wengen",
+     "country": "SUI",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62946&seasoncode=2027",
+     "raw": "4xDH SG SL"
+    },
+    {
+     "id": "fis-62889",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Cortina d'Ampezzo 활강 / 슈퍼대회전",
+     "category": "WC",
+     "disciplines": [
+      "DH",
+      "SG"
+     ],
+     "start": "2027-01-13",
+     "end": "2027-01-17",
+     "city": "Cortina d'Ampezzo",
+     "country": "ITA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62889&seasoncode=2027",
+     "raw": "4xDH SG"
+    },
+    {
+     "id": "fis-62890",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Kronplatz 대회전",
+     "category": "WC",
+     "disciplines": [
+      "GS"
+     ],
+     "start": "2027-01-19",
+     "end": "2027-01-19",
+     "city": "Kronplatz",
+     "country": "ITA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62890&seasoncode=2027",
+     "raw": "GS"
+    },
+    {
+     "id": "fis-62947",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Kitzbuehel 활강 / 슈퍼대회전 / 회전",
+     "category": "WC",
+     "disciplines": [
+      "DH",
+      "SG",
+      "SL"
+     ],
+     "start": "2027-01-19",
+     "end": "2027-01-24",
+     "city": "Kitzbuehel",
+     "country": "AUT",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62947&seasoncode=2027",
+     "raw": "4xDH SG SL"
+    },
+    {
+     "id": "fis-62891",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Jasna 대회전 / 회전",
+     "category": "WC",
+     "disciplines": [
+      "GS",
+      "SL"
+     ],
+     "start": "2027-01-23",
+     "end": "2027-01-24",
+     "city": "Jasna",
+     "country": "SVK",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62891&seasoncode=2027",
+     "raw": "GS SL"
+    },
+    {
+     "id": "fis-62948",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Schladming 대회전 / 회전",
+     "category": "WC",
+     "disciplines": [
+      "GS",
+      "SL"
+     ],
+     "start": "2027-01-26",
+     "end": "2027-01-27",
+     "city": "Schladming",
+     "country": "AUT",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62948&seasoncode=2027",
+     "raw": "GS SL"
+    },
+    {
+     "id": "fis-62892",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Kranjska Gora 대회전 / 회전",
+     "category": "WC",
+     "disciplines": [
+      "GS",
+      "SL"
+     ],
+     "start": "2027-01-29",
+     "end": "2027-01-30",
+     "city": "Kranjska Gora",
+     "country": "SLO",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62892&seasoncode=2027",
+     "raw": "GS SL"
+    },
+    {
+     "id": "fis-62949",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Chamonix 회전",
+     "category": "WC",
+     "disciplines": [
+      "SL"
+     ],
+     "start": "2027-01-30",
+     "end": "2027-01-30",
+     "city": "Chamonix",
+     "country": "FRA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62949&seasoncode=2027",
+     "raw": "SL"
+    },
+    {
+     "id": "fis-62998",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Crans Montana 활강 / 슈퍼대회전 / 팀 복합 / 대회전 / 회전 / 팀 평행",
+     "category": "WSC",
+     "disciplines": [
+      "DH",
+      "SG",
+      "TC",
+      "GS",
+      "SL",
+      "TP"
+     ],
+     "start": "2027-02-01",
+     "end": "2027-02-14",
+     "city": "Crans Montana",
+     "country": "SUI",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62998&seasoncode=2027",
+     "raw": "8xDH 2xSG 2xTC 4xGS 4xSL TP"
+    },
+    {
+     "id": "fis-62950",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Garmisch-Partenkirchen 활강 / 슈퍼대회전",
+     "category": "WC",
+     "disciplines": [
+      "DH",
+      "SG"
+     ],
+     "start": "2027-02-18",
+     "end": "2027-02-21",
+     "city": "Garmisch-Partenkirchen",
+     "country": "GER",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62950&seasoncode=2027",
+     "raw": "3xDH SG"
+    },
+    {
+     "id": "fis-62893",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Lenzerheide 슈퍼대회전",
+     "category": "WC",
+     "disciplines": [
+      "SG"
+     ],
+     "start": "2027-02-20",
+     "end": "2027-02-21",
+     "city": "Lenzerheide",
+     "country": "SUI",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62893&seasoncode=2027",
+     "raw": "2xSG"
+    },
+    {
+     "id": "fis-62934",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Garmisch-Partenkirchen 활강",
+     "category": "WC",
+     "disciplines": [
+      "DH"
+     ],
+     "start": "2027-02-24",
+     "end": "2027-02-28",
+     "city": "Garmisch-Partenkirchen",
+     "country": "GER",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62934&seasoncode=2027",
+     "raw": "5xDH"
+    },
+    {
+     "id": "fis-62951",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Saalbach 활강 / 슈퍼대회전",
+     "category": "WC",
+     "disciplines": [
+      "DH",
+      "SG"
+     ],
+     "start": "2027-02-25",
+     "end": "2027-02-28",
+     "city": "Saalbach",
+     "country": "AUT",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62951&seasoncode=2027",
+     "raw": "3xDH SG"
+    },
+    {
+     "id": "fis-62952",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Kvitfjell 활강 / 슈퍼대회전",
+     "category": "WC",
+     "disciplines": [
+      "DH",
+      "SG"
+     ],
+     "start": "2027-03-03",
+     "end": "2027-03-07",
+     "city": "Kvitfjell",
+     "country": "NOR",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62952&seasoncode=2027",
+     "raw": "4xDH SG"
+    },
+    {
+     "id": "fis-62935",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Soldeu 대회전 / 회전",
+     "category": "WC",
+     "disciplines": [
+      "GS",
+      "SL"
+     ],
+     "start": "2027-03-06",
+     "end": "2027-03-07",
+     "city": "Soldeu",
+     "country": "AND",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62935&seasoncode=2027",
+     "raw": "GS SL"
+    },
+    {
+     "id": "fis-62936",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Kvitfjell 활강 / 슈퍼대회전",
+     "category": "WC",
+     "disciplines": [
+      "DH",
+      "SG"
+     ],
+     "start": "2027-03-09",
+     "end": "2027-03-13",
+     "city": "Kvitfjell",
+     "country": "NOR",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62936&seasoncode=2027",
+     "raw": "3xDH SG"
+    },
+    {
+     "id": "fis-62953",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Are 대회전 / 회전",
+     "category": "WC",
+     "disciplines": [
+      "GS",
+      "SL"
+     ],
+     "start": "2027-03-13",
+     "end": "2027-03-14",
+     "city": "Are",
+     "country": "SWE",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62953&seasoncode=2027",
+     "raw": "GS SL"
+    },
+    {
+     "id": "fis-62937",
+     "sport": "alpine",
+     "source": "FIS",
+     "name": "Sun Valley 활강 / 슈퍼대회전 / 대회전 / 회전",
+     "category": "WC",
+     "disciplines": [
+      "DH",
+      "SG",
+      "GS",
+      "SL"
+     ],
+     "start": "2027-03-18",
+     "end": "2027-03-25",
+     "city": "Sun Valley",
+     "country": "USA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62937&seasoncode=2027",
+     "raw": "6xDH 2xSG 2xGS 2xSL"
+    }
+   ]
+  },
+  "cross-country": {
+   "source": "https://www.fis-ski.com/DB/general/calendar-results.html?sectorcode=CC",
+   "checked_at": "2026-10-30T16:34:50.484240+00:00",
+   "season": "2026/2027",
+   "events": [
+    {
+     "id": "fis-63002",
+     "sport": "cross-country",
+     "source": "FIS",
+     "name": "Ruka 인터벌 / 스프린트 / 매스스타트",
+     "category": "WC",
+     "disciplines": [
+      "INT",
+      "SPQ",
+      "SPF",
+      "MAS"
+     ],
+     "start": "2026-11-27",
+     "end": "2026-11-29",
+     "city": "Ruka",
+     "country": "FIN",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=CC&eventid=63002&seasoncode=2027",
+     "raw": "2xINT 2xSPQ 2xSPF 2xMAS"
+    },
+    {
+     "id": "fis-63003",
+     "sport": "cross-country",
+     "source": "FIS",
+     "name": "Trondheim 인터벌 / 스프린트 / 스키애슬론",
+     "category": "WC",
+     "disciplines": [
+      "INT",
+      "SPQ",
+      "SPF",
+      "SKT"
+     ],
+     "start": "2026-12-04",
+     "end": "2026-12-06",
+     "city": "Trondheim",
+     "country": "NOR",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=CC&eventid=63003&seasoncode=2027",
+     "raw": "2xINT 2xSPQ 2xSPF 2xSKT"
+    },
+    {
+     "id": "fis-63004",
+     "sport": "cross-country",
+     "source": "FIS",
+     "name": "Davos 하프 매스스타트 / 스프린트 / 팀 스프린트",
+     "category": "WC",
+     "disciplines": [
+      "HMS",
+      "SPQ",
+      "SPF",
+      "TSPQ",
+      "TSP"
+     ],
+     "start": "2026-12-11",
+     "end": "2026-12-13",
+     "city": "Davos",
+     "country": "SUI",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=CC&eventid=63004&seasoncode=2027",
+     "raw": "2xHMS 2xSPQ 2xSPF 2xTSPQ 2xTSP"
+    },
+    {
+     "id": "fis-63101",
+     "sport": "cross-country",
+     "source": "FIS",
+     "name": "FIS Tour de Ski 매스스타트",
+     "category": "WC",
+     "disciplines": [
+      "MAS"
+     ],
+     "start": "2027-01-01",
+     "end": "2027-01-10",
+     "city": "FIS Tour de Ski",
+     "country": "FIS",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=CC&eventid=63101&seasoncode=2027",
+     "raw": "2xMAS"
+    },
+    {
+     "id": "fis-63007",
+     "sport": "cross-country",
+     "source": "FIS",
+     "name": "Engadin 스프린트 / 매스스타트 / TE",
+     "category": "WC",
+     "disciplines": [
+      "SPQ",
+      "SPF",
+      "MAS",
+      "TE"
+     ],
+     "start": "2027-01-22",
+     "end": "2027-01-24",
+     "city": "Engadin",
+     "country": "SUI",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=CC&eventid=63007&seasoncode=2027",
+     "raw": "2xSPQ 2xSPF 2xMAS TE"
+    },
+    {
+     "id": "fis-63008",
+     "sport": "cross-country",
+     "source": "FIS",
+     "name": "Toblach/Dobbiaco 인터벌 / 스프린트 / 매스스타트",
+     "category": "WC",
+     "disciplines": [
+      "INT",
+      "SPQ",
+      "SPF",
+      "MAS"
+     ],
+     "start": "2027-01-29",
+     "end": "2027-01-31",
+     "city": "Toblach/Dobbiaco",
+     "country": "ITA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=CC&eventid=63008&seasoncode=2027",
+     "raw": "2xINT 2xSPQ 2xSPF 2xMAS"
+    },
+    {
+     "id": "fis-63009",
+     "sport": "cross-country",
+     "source": "FIS",
+     "name": "Lahti 스프린트 / 스키애슬론 / 인터벌",
+     "category": "WC",
+     "disciplines": [
+      "SPQ",
+      "SPF",
+      "SKT",
+      "INT"
+     ],
+     "start": "2027-02-12",
+     "end": "2027-02-14",
+     "city": "Lahti",
+     "country": "FIN",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=CC&eventid=63009&seasoncode=2027",
+     "raw": "2xSPQ 2xSPF 2xSKT 2xINT"
+    },
+    {
+     "id": "fis-63107",
+     "sport": "cross-country",
+     "source": "FIS",
+     "name": "08 Mar 2027 인터벌 / 스프린트 / 스키애슬론 / 팀 스프린트 / TE / 매스스타트",
+     "category": "WSC",
+     "disciplines": [
+      "INT",
+      "SPQ",
+      "SPF",
+      "SKT",
+      "TSPQ",
+      "TSP",
+      "TE",
+      "MAS"
+     ],
+     "start": "2027-02-24",
+     "end": "2027-02-24",
+     "city": "08 Mar 2027",
+     "country": "SWE",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=CC&eventid=63107&seasoncode=2027",
+     "raw": "4xINT 2xSPQ 2xSPF 2xSKT 2xTSPQ 2xTSP 2xTE 2xMAS"
+    },
+    {
+     "id": "fis-63010",
+     "sport": "cross-country",
+     "source": "FIS",
+     "name": "Oslo 매스스타트",
+     "category": "WC",
+     "disciplines": [
+      "MAS"
+     ],
+     "start": "2027-03-13",
+     "end": "2027-03-14",
+     "city": "Oslo",
+     "country": "NOR",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=CC&eventid=63010&seasoncode=2027",
+     "raw": "2xMAS"
+    },
+    {
+     "id": "fis-63011",
+     "sport": "cross-country",
+     "source": "FIS",
+     "name": "Drammen 스프린트",
+     "category": "WC",
+     "disciplines": [
+      "SPQ",
+      "SPF"
+     ],
+     "start": "2027-03-16",
+     "end": "2027-03-16",
+     "city": "Drammen",
+     "country": "NOR",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=CC&eventid=63011&seasoncode=2027",
+     "raw": "2xSPQ 2xSPF"
+    },
+    {
+     "id": "fis-63012",
+     "sport": "cross-country",
+     "source": "FIS",
+     "name": "Ulricehamn 인터벌 / 스프린트 / 매스스타트",
+     "category": "WC",
+     "disciplines": [
+      "INT",
+      "SPQ",
+      "SPF",
+      "MAS"
+     ],
+     "start": "2027-03-19",
+     "end": "2027-03-21",
+     "city": "Ulricehamn",
+     "country": "SWE",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=CC&eventid=63012&seasoncode=2027",
+     "raw": "2xINT 2xSPQ 2xSPF 2xMAS"
+    }
+   ]
+  },
+  "ski-jumping": {
+   "source": "https://www.fis-ski.com/DB/general/calendar-results.html?sectorcode=JP",
+   "checked_at": "2026-10-30T16:34:53.144053+00:00",
+   "season": "2026/2027",
+   "events": [
+    {
+     "id": "fis-63024",
+     "sport": "ski-jumping",
+     "source": "FIS",
+     "name": "Lillehammer 개인 / 단체",
+     "category": "WC",
+     "disciplines": [
+      "IND",
+      "TE"
+     ],
+     "start": "2026-11-20",
+     "end": "2026-11-22",
+     "city": "Lillehammer",
+     "country": "NOR",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=JP&eventid=63024&seasoncode=2027",
+     "raw": "8xIND TE"
+    },
+    {
+     "id": "fis-63025",
+     "sport": "ski-jumping",
+     "source": "FIS",
+     "name": "Ruka 개인",
+     "category": "WC",
+     "disciplines": [
+      "IND"
+     ],
+     "start": "2026-11-28",
+     "end": "2026-11-29",
+     "city": "Ruka",
+     "country": "FIN",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=JP&eventid=63025&seasoncode=2027",
+     "raw": "3xIND"
+    },
+    {
+     "id": "fis-63029",
+     "sport": "ski-jumping",
+     "source": "FIS",
+     "name": "Hinzenbach 개인",
+     "category": "WC",
+     "disciplines": [
+      "IND"
+     ],
+     "start": "2026-11-28",
+     "end": "2026-11-29",
+     "city": "Hinzenbach",
+     "country": "AUT",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=JP&eventid=63029&seasoncode=2027",
+     "raw": "3xIND"
+    },
+    {
+     "id": "fis-63026",
+     "sport": "ski-jumping",
+     "source": "FIS",
+     "name": "Wisla 개인",
+     "category": "WC",
+     "disciplines": [
+      "IND"
+     ],
+     "start": "2026-12-04",
+     "end": "2026-12-06",
+     "city": "Wisla",
+     "country": "POL",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=JP&eventid=63026&seasoncode=2027",
+     "raw": "8xIND"
+    },
+    {
+     "id": "fis-63027",
+     "sport": "ski-jumping",
+     "source": "FIS",
+     "name": "Titisee-Neustadt 개인 / 단체",
+     "category": "WC",
+     "disciplines": [
+      "IND",
+      "TE"
+     ],
+     "start": "2026-12-11",
+     "end": "2026-12-13",
+     "city": "Titisee-Neustadt",
+     "country": "GER",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=JP&eventid=63027&seasoncode=2027",
+     "raw": "6xIND TE"
+    },
+    {
+     "id": "fis-63028",
+     "sport": "ski-jumping",
+     "source": "FIS",
+     "name": "Engelberg 개인",
+     "category": "WC",
+     "disciplines": [
+      "IND"
+     ],
+     "start": "2026-12-18",
+     "end": "2026-12-20",
+     "city": "Engelberg",
+     "country": "SUI",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=JP&eventid=63028&seasoncode=2027",
+     "raw": "6xIND"
+    },
+    {
+     "id": "fis-63030",
+     "sport": "ski-jumping",
+     "source": "FIS",
+     "name": "Oberstdorf 개인",
+     "category": "WC",
+     "disciplines": [
+      "IND"
+     ],
+     "start": "2026-12-28",
+     "end": "2026-12-29",
+     "city": "Oberstdorf",
+     "country": "GER",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=JP&eventid=63030&seasoncode=2027",
+     "raw": "4xIND"
+    },
+    {
+     "id": "fis-63102",
+     "sport": "ski-jumping",
+     "source": "FIS",
+     "name": "06 Jan 2027 개인",
+     "category": "WC",
+     "disciplines": [
+      "IND"
+     ],
+     "start": "2026-12-29",
+     "end": "2026-12-29",
+     "city": "06 Jan 2027",
+     "country": "FIS",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=JP&eventid=63102&seasoncode=2027",
+     "raw": "2xIND"
+    },
+    {
+     "id": "fis-63031",
+     "sport": "ski-jumping",
+     "source": "FIS",
+     "name": "01 Jan 2027 개인",
+     "category": "WC",
+     "disciplines": [
+      "IND"
+     ],
+     "start": "2026-12-31",
+     "end": "2026-12-31",
+     "city": "01 Jan 2027",
+     "country": "GER",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=JP&eventid=63031&seasoncode=2027",
+     "raw": "4xIND"
+    },
+    {
+     "id": "fis-63032",
+     "sport": "ski-jumping",
+     "source": "FIS",
+     "name": "Innsbruck 개인",
+     "category": "WC",
+     "disciplines": [
+      "IND"
+     ],
+     "start": "2027-01-02",
+     "end": "2027-01-03",
+     "city": "Innsbruck",
+     "country": "AUT",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=JP&eventid=63032&seasoncode=2027",
+     "raw": "4xIND"
+    },
+    {
+     "id": "fis-63033",
+     "sport": "ski-jumping",
+     "source": "FIS",
+     "name": "Bischofshofen 개인",
+     "category": "WC",
+     "disciplines": [
+      "IND"
+     ],
+     "start": "2027-01-05",
+     "end": "2027-01-06",
+     "city": "Bischofshofen",
+     "country": "AUT",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=JP&eventid=63033&seasoncode=2027",
+     "raw": "4xIND"
+    },
+    {
+     "id": "fis-63034",
+     "sport": "ski-jumping",
+     "source": "FIS",
+     "name": "Ljubno 개인",
+     "category": "WC",
+     "disciplines": [
+      "IND"
+     ],
+     "start": "2027-01-09",
+     "end": "2027-01-10",
+     "city": "Ljubno",
+     "country": "SLO",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=JP&eventid=63034&seasoncode=2027",
+     "raw": "4xIND"
+    },
+    {
+     "id": "fis-63035",
+     "sport": "ski-jumping",
+     "source": "FIS",
+     "name": "Zhangjiakou 개인",
+     "category": "WC",
+     "disciplines": [
+      "IND"
+     ],
+     "start": "2027-01-15",
+     "end": "2027-01-16",
+     "city": "Zhangjiakou",
+     "country": "CHN",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=JP&eventid=63035&seasoncode=2027",
+     "raw": "4xIND"
+    },
+    {
+     "id": "fis-63037",
+     "sport": "ski-jumping",
+     "source": "FIS",
+     "name": "Zakopane 단체 / 개인",
+     "category": "WC",
+     "disciplines": [
+      "TE",
+      "IND"
+     ],
+     "start": "2027-01-15",
+     "end": "2027-01-17",
+     "city": "Zakopane",
+     "country": "POL",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=JP&eventid=63037&seasoncode=2027",
+     "raw": "TE 2xIND"
+    },
+    {
+     "id": "fis-63036",
+     "sport": "ski-jumping",
+     "source": "FIS",
+     "name": "Zao 개인",
+     "category": "WC",
+     "disciplines": [
+      "IND"
+     ],
+     "start": "2027-01-19",
+     "end": "2027-01-20",
+     "city": "Zao",
+     "country": "JPN",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=JP&eventid=63036&seasoncode=2027",
+     "raw": "3xIND"
+    },
+    {
+     "id": "fis-63038",
+     "sport": "ski-jumping",
+     "source": "FIS",
+     "name": "Sapporo 개인 / 단체",
+     "category": "WC",
+     "disciplines": [
+      "IND",
+      "TE"
+     ],
+     "start": "2027-01-22",
+     "end": "2027-01-24",
+     "city": "Sapporo",
+     "country": "JPN",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=JP&eventid=63038&seasoncode=2027",
+     "raw": "5xIND TE"
+    },
+    {
+     "id": "fis-63039",
+     "sport": "ski-jumping",
+     "source": "FIS",
+     "name": "Willingen 개인 / 단체",
+     "category": "WC",
+     "disciplines": [
+      "IND",
+      "TE"
+     ],
+     "start": "2027-01-29",
+     "end": "2027-01-31",
+     "city": "Willingen",
+     "country": "GER",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=JP&eventid=63039&seasoncode=2027",
+     "raw": "6xIND TE"
+    },
+    {
+     "id": "fis-63040",
+     "sport": "ski-jumping",
+     "source": "FIS",
+     "name": "Lake Placid 개인 / 단체",
+     "category": "WC",
+     "disciplines": [
+      "IND",
+      "TE"
+     ],
+     "start": "2027-02-05",
+     "end": "2027-02-07",
+     "city": "Lake Placid",
+     "country": "USA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=JP&eventid=63040&seasoncode=2027",
+     "raw": "4xIND TE"
+    },
+    {
+     "id": "fis-63041",
+     "sport": "ski-jumping",
+     "source": "FIS",
+     "name": "Lahti 개인 / 단체",
+     "category": "WC",
+     "disciplines": [
+      "IND",
+      "TE"
+     ],
+     "start": "2027-02-11",
+     "end": "2027-02-14",
+     "city": "Lahti",
+     "country": "FIN",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=JP&eventid=63041&seasoncode=2027",
+     "raw": "5xIND TE"
+    },
+    {
+     "id": "fis-63043",
+     "sport": "ski-jumping",
+     "source": "FIS",
+     "name": "Vikersund 개인",
+     "category": "WC",
+     "disciplines": [
+      "IND"
+     ],
+     "start": "2027-02-18",
+     "end": "2027-02-21",
+     "city": "Vikersund",
+     "country": "NOR",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=JP&eventid=63043&seasoncode=2027",
+     "raw": "4xIND"
+    },
+    {
+     "id": "fis-63042",
+     "sport": "ski-jumping",
+     "source": "FIS",
+     "name": "Villach 개인",
+     "category": "WC",
+     "disciplines": [
+      "IND"
+     ],
+     "start": "2027-02-20",
+     "end": "2027-02-21",
+     "city": "Villach",
+     "country": "AUT",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=JP&eventid=63042&seasoncode=2027",
+     "raw": "3xIND"
+    },
+    {
+     "id": "fis-63108",
+     "sport": "ski-jumping",
+     "source": "FIS",
+     "name": "07 Mar 2027 개인 / 단체",
+     "category": "WSC",
+     "disciplines": [
+      "IND",
+      "TE"
+     ],
+     "start": "2027-02-25",
+     "end": "2027-02-25",
+     "city": "07 Mar 2027",
+     "country": "SWE",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=JP&eventid=63108&seasoncode=2027",
+     "raw": "8xIND 2xTE"
+    },
+    {
+     "id": "fis-63044",
+     "sport": "ski-jumping",
+     "source": "FIS",
+     "name": "Oslo 개인",
+     "category": "WC",
+     "disciplines": [
+      "IND"
+     ],
+     "start": "2027-03-13",
+     "end": "2027-03-14",
+     "city": "Oslo",
+     "country": "NOR",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=JP&eventid=63044&seasoncode=2027",
+     "raw": "6xIND"
+    },
+    {
+     "id": "fis-63045",
+     "sport": "ski-jumping",
+     "source": "FIS",
+     "name": "Planica 개인 / 단체",
+     "category": "WC",
+     "disciplines": [
+      "IND",
+      "TE"
+     ],
+     "start": "2027-03-18",
+     "end": "2027-03-21",
+     "city": "Planica",
+     "country": "SLO",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=JP&eventid=63045&seasoncode=2027",
+     "raw": "4xIND TE"
+    }
+   ]
+  },
+  "nordic-combined": {
+   "source": "https://www.fis-ski.com/DB/general/calendar-results.html?sectorcode=NK",
+   "checked_at": "2026-10-30T16:34:56.460702+00:00",
+   "season": "2026/2027",
+   "events": [
+    {
+     "id": "fis-63013",
+     "sport": "nordic-combined",
+     "source": "FIS",
+     "name": "Ruka 컴팩트 / 군더센 / 매스스타트",
+     "category": "WC",
+     "disciplines": [
+      "PR",
+      "IC",
+      "GU",
+      "MS"
+     ],
+     "start": "2026-11-26",
+     "end": "2026-11-29",
+     "city": "Ruka",
+     "country": "FIN",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=NK&eventid=63013&seasoncode=2027",
+     "raw": "PR IC GU MS"
+    },
+    {
+     "id": "fis-63014",
+     "sport": "nordic-combined",
+     "source": "FIS",
+     "name": "Trondheim 군더센 / 매스스타트",
+     "category": "WC",
+     "disciplines": [
+      "PR",
+      "GU",
+      "MS"
+     ],
+     "start": "2026-12-03",
+     "end": "2026-12-06",
+     "city": "Trondheim",
+     "country": "NOR",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=NK&eventid=63014&seasoncode=2027",
+     "raw": "2xPR 2xGU 2xMS"
+    },
+    {
+     "id": "fis-63015",
+     "sport": "nordic-combined",
+     "source": "FIS",
+     "name": "Val di Fiemme 컴팩트 / 군더센 / 단체",
+     "category": "WC",
+     "disciplines": [
+      "PR",
+      "IC",
+      "GU",
+      "TE"
+     ],
+     "start": "2026-12-10",
+     "end": "2026-12-13",
+     "city": "Val di Fiemme",
+     "country": "ITA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=NK&eventid=63015&seasoncode=2027",
+     "raw": "2xPR 2xIC 2xGU TE"
+    },
+    {
+     "id": "fis-63016",
+     "sport": "nordic-combined",
+     "source": "FIS",
+     "name": "Ramsau 매스스타트 / 군더센",
+     "category": "WC",
+     "disciplines": [
+      "PR",
+      "MS",
+      "GU"
+     ],
+     "start": "2026-12-17",
+     "end": "2026-12-20",
+     "city": "Ramsau",
+     "country": "AUT",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=NK&eventid=63016&seasoncode=2027",
+     "raw": "2xPR 2xMS 2xGU"
+    },
+    {
+     "id": "fis-63017",
+     "sport": "nordic-combined",
+     "source": "FIS",
+     "name": "Klingenthal 군더센",
+     "category": "WC",
+     "disciplines": [
+      "PR",
+      "GU"
+     ],
+     "start": "2027-01-08",
+     "end": "2027-01-10",
+     "city": "Klingenthal",
+     "country": "GER",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=NK&eventid=63017&seasoncode=2027",
+     "raw": "2xPR 4xGU"
+    },
+    {
+     "id": "fis-63018",
+     "sport": "nordic-combined",
+     "source": "FIS",
+     "name": "Otepaa 매스스타트 / 군더센 / 컴팩트",
+     "category": "WC",
+     "disciplines": [
+      "PR",
+      "MS",
+      "GU",
+      "IC"
+     ],
+     "start": "2027-01-14",
+     "end": "2027-01-17",
+     "city": "Otepaa",
+     "country": "EST",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=NK&eventid=63018&seasoncode=2027",
+     "raw": "2xPR 2xMS 2xGU 2xIC"
+    },
+    {
+     "id": "fis-63019",
+     "sport": "nordic-combined",
+     "source": "FIS",
+     "name": "Schonach 군더센 / 컴팩트",
+     "category": "WC",
+     "disciplines": [
+      "PR",
+      "GU",
+      "IC"
+     ],
+     "start": "2027-01-22",
+     "end": "2027-01-24",
+     "city": "Schonach",
+     "country": "GER",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=NK&eventid=63019&seasoncode=2027",
+     "raw": "2xPR 2xGU 2xIC"
+    },
+    {
+     "id": "fis-63020",
+     "sport": "nordic-combined",
+     "source": "FIS",
+     "name": "Seefeld 매스스타트 / 컴팩트 / 군더센",
+     "category": "WC",
+     "disciplines": [
+      "PR",
+      "MS",
+      "IC",
+      "GU"
+     ],
+     "start": "2027-01-28",
+     "end": "2027-01-31",
+     "city": "Seefeld",
+     "country": "AUT",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=NK&eventid=63020&seasoncode=2027",
+     "raw": "2xPR 2xMS 2xIC 2xGU"
+    },
+    {
+     "id": "fis-63021",
+     "sport": "nordic-combined",
+     "source": "FIS",
+     "name": "Lake Placid 군더센 / 매스스타트",
+     "category": "WC",
+     "disciplines": [
+      "PR",
+      "GU",
+      "MS"
+     ],
+     "start": "2027-02-04",
+     "end": "2027-02-06",
+     "city": "Lake Placid",
+     "country": "USA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=NK&eventid=63021&seasoncode=2027",
+     "raw": "2xPR 2xGU 2xMS"
+    },
+    {
+     "id": "fis-63022",
+     "sport": "nordic-combined",
+     "source": "FIS",
+     "name": "Lahti 군더센 / 단체",
+     "category": "WC",
+     "disciplines": [
+      "PR",
+      "GU",
+      "TE"
+     ],
+     "start": "2027-02-11",
+     "end": "2027-02-13",
+     "city": "Lahti",
+     "country": "FIN",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=NK&eventid=63022&seasoncode=2027",
+     "raw": "2xPR 2xGU TE"
+    },
+    {
+     "id": "fis-63109",
+     "sport": "nordic-combined",
+     "source": "FIS",
+     "name": "06 Mar 2027 군더센 / TSP / 컴팩트 / 단체",
+     "category": "WSC",
+     "disciplines": [
+      "GU",
+      "TSP",
+      "IC",
+      "TE"
+     ],
+     "start": "2027-02-25",
+     "end": "2027-02-25",
+     "city": "06 Mar 2027",
+     "country": "WSC",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=NK&eventid=63109&seasoncode=2027",
+     "raw": "2xGU 2xTSP 2xIC TE"
+    },
+    {
+     "id": "fis-63023",
+     "sport": "nordic-combined",
+     "source": "FIS",
+     "name": "Oslo 컴팩트 / 군더센",
+     "category": "WC",
+     "disciplines": [
+      "PR",
+      "IC",
+      "GU"
+     ],
+     "start": "2027-03-11",
+     "end": "2027-03-13",
+     "city": "Oslo",
+     "country": "NOR",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=NK&eventid=63023&seasoncode=2027",
+     "raw": "2xPR 2xIC 2xGU"
+    }
+   ]
+  },
+  "freestyle": {
+   "source": "https://www.fis-ski.com/DB/general/calendar-results.html?sectorcode=FS",
+   "checked_at": "2026-10-30T16:34:59.104019+00:00",
+   "season": "2026/2027",
+   "events": [
+    {
+     "id": "fis-62853",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Innsbruck 빅에어",
+     "category": "WC",
+     "disciplines": [
+      "BA"
+     ],
+     "start": "2026-11-26",
+     "end": "2026-11-27",
+     "city": "Innsbruck",
+     "country": "AUT",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62853&seasoncode=2027",
+     "raw": "4xBA"
+    },
+    {
+     "id": "fis-62854",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Beijing 빅에어",
+     "category": "WC",
+     "disciplines": [
+      "BA"
+     ],
+     "start": "2026-12-03",
+     "end": "2026-12-05",
+     "city": "Beijing",
+     "country": "CHN",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62854&seasoncode=2027",
+     "raw": "4xBA"
+    },
+    {
+     "id": "fis-62830",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Val Thorens 스키크로스",
+     "category": "WC",
+     "disciplines": [
+      "SX"
+     ],
+     "start": "2026-12-08",
+     "end": "2026-12-11",
+     "city": "Val Thorens",
+     "country": "FRA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62830&seasoncode=2027",
+     "raw": "8xSX"
+    },
+    {
+     "id": "fis-62855",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Secret Garden 하프파이프",
+     "category": "WC",
+     "disciplines": [
+      "HP"
+     ],
+     "start": "2026-12-10",
+     "end": "2026-12-12",
+     "city": "Secret Garden",
+     "country": "CHN",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62855&seasoncode=2027",
+     "raw": "4xHP"
+    },
+    {
+     "id": "fis-62856",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Breckenridge 슬로프스타일",
+     "category": "WC",
+     "disciplines": [
+      "SS"
+     ],
+     "start": "2026-12-10",
+     "end": "2026-12-12",
+     "city": "Breckenridge",
+     "country": "USA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62856&seasoncode=2027",
+     "raw": "4xSS"
+    },
+    {
+     "id": "fis-62792",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Ruka 모굴",
+     "category": "WC",
+     "disciplines": [
+      "MO"
+     ],
+     "start": "2026-12-12",
+     "end": "2026-12-12",
+     "city": "Ruka",
+     "country": "FIN",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62792&seasoncode=2027",
+     "raw": "2xMO"
+    },
+    {
+     "id": "fis-62831",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Arosa Lenzerheide 스키크로스",
+     "category": "WC",
+     "disciplines": [
+      "SX"
+     ],
+     "start": "2026-12-14",
+     "end": "2026-12-15",
+     "city": "Arosa Lenzerheide",
+     "country": "SUI",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62831&seasoncode=2027",
+     "raw": "4xSX"
+    },
+    {
+     "id": "fis-62833",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "3 Zinnen Dolomites 스키크로스",
+     "category": "WC",
+     "disciplines": [
+      "SX"
+     ],
+     "start": "2026-12-18",
+     "end": "2026-12-20",
+     "city": "3 Zinnen Dolomites",
+     "country": "ITA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62833&seasoncode=2027",
+     "raw": "8xSX"
+    },
+    {
+     "id": "fis-62857",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Copper 하프파이프",
+     "category": "WC",
+     "disciplines": [
+      "HP"
+     ],
+     "start": "2026-12-18",
+     "end": "2026-12-20",
+     "city": "Copper",
+     "country": "USA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62857&seasoncode=2027",
+     "raw": "4xHP"
+    },
+    {
+     "id": "fis-62858",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Kreischberg 빅에어",
+     "category": "WC",
+     "disciplines": [
+      "BA"
+     ],
+     "start": "2027-01-07",
+     "end": "2027-01-08",
+     "city": "Kreischberg",
+     "country": "AUT",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62858&seasoncode=2027",
+     "raw": "4xBA"
+    },
+    {
+     "id": "fis-62794",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Lac-Beauport 에어리얼 / 에어리얼 단체",
+     "category": "WC",
+     "disciplines": [
+      "AE",
+      "AET"
+     ],
+     "start": "2027-01-09",
+     "end": "2027-01-10",
+     "city": "Lac-Beauport",
+     "country": "CAN",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62794&seasoncode=2027",
+     "raw": "3xAE AET"
+    },
+    {
+     "id": "fis-62859",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Laax 슬로프스타일",
+     "category": "WC",
+     "disciplines": [
+      "SS"
+     ],
+     "start": "2027-01-13",
+     "end": "2027-01-16",
+     "city": "Laax",
+     "country": "SUI",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62859&seasoncode=2027",
+     "raw": "4xSS"
+    },
+    {
+     "id": "fis-62880",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Reiteralm 스키크로스",
+     "category": "WC",
+     "disciplines": [
+      "SX"
+     ],
+     "start": "2027-01-14",
+     "end": "2027-01-17",
+     "city": "Reiteralm",
+     "country": "AUT",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62880&seasoncode=2027",
+     "raw": "8xSX"
+    },
+    {
+     "id": "fis-62803",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Val St. Come 모굴 / 듀얼 모굴",
+     "category": "WC",
+     "disciplines": [
+      "MO",
+      "DM"
+     ],
+     "start": "2027-01-15",
+     "end": "2027-01-16",
+     "city": "Val St. Come",
+     "country": "CAN",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62803&seasoncode=2027",
+     "raw": "2xMO 2xDM"
+    },
+    {
+     "id": "fis-62804",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Lake Placid 에어리얼 / 에어리얼 단체",
+     "category": "WC",
+     "disciplines": [
+      "AE",
+      "AET"
+     ],
+     "start": "2027-01-15",
+     "end": "2027-01-17",
+     "city": "Lake Placid",
+     "country": "USA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62804&seasoncode=2027",
+     "raw": "2xAE AET"
+    },
+    {
+     "id": "fis-62860",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Tignes 빅에어",
+     "category": "WC",
+     "disciplines": [
+      "BA"
+     ],
+     "start": "2027-01-20",
+     "end": "2027-01-22",
+     "city": "Tignes",
+     "country": "FRA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62860&seasoncode=2027",
+     "raw": "4xBA"
+    },
+    {
+     "id": "fis-62881",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Val di Fassa 스키크로스",
+     "category": "WC",
+     "disciplines": [
+      "SX"
+     ],
+     "start": "2027-01-20",
+     "end": "2027-01-23",
+     "city": "Val di Fassa",
+     "country": "ITA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62881&seasoncode=2027",
+     "raw": "8xSX"
+    },
+    {
+     "id": "fis-62805",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Waterville Valley 모굴 / 듀얼 모굴",
+     "category": "WC",
+     "disciplines": [
+      "MO",
+      "DM"
+     ],
+     "start": "2027-01-21",
+     "end": "2027-01-23",
+     "city": "Waterville Valley",
+     "country": "USA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62805&seasoncode=2027",
+     "raw": "4xMO 2xDM"
+    },
+    {
+     "id": "fis-62806",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Deer Valley 모굴 / 에어리얼 / 듀얼 모굴",
+     "category": "WC",
+     "disciplines": [
+      "MO",
+      "AE",
+      "DM"
+     ],
+     "start": "2027-01-28",
+     "end": "2027-01-30",
+     "city": "Deer Valley",
+     "country": "USA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62806&seasoncode=2027",
+     "raw": "2xMO 2xAE 2xDM"
+    },
+    {
+     "id": "fis-62882",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Veysonnaz 스키크로스",
+     "category": "WC",
+     "disciplines": [
+      "SX"
+     ],
+     "start": "2027-01-28",
+     "end": "2027-01-31",
+     "city": "Veysonnaz",
+     "country": "SUI",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62882&seasoncode=2027",
+     "raw": "8xSX"
+    },
+    {
+     "id": "fis-62883",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Bjelasnica 스키크로스",
+     "category": "WC",
+     "disciplines": [
+      "SX"
+     ],
+     "start": "2027-02-04",
+     "end": "2027-02-07",
+     "city": "Bjelasnica",
+     "country": "BIH",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62883&seasoncode=2027",
+     "raw": "8xSX"
+    },
+    {
+     "id": "fis-62861",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Calgary 하프파이프",
+     "category": "WC",
+     "disciplines": [
+      "HP"
+     ],
+     "start": "2027-02-16",
+     "end": "2027-02-18",
+     "city": "Calgary",
+     "country": "CAN",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62861&seasoncode=2027",
+     "raw": "4xHP"
+    },
+    {
+     "id": "fis-62793",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Secret Garden 에어리얼 / 에어리얼 단체",
+     "category": "WC",
+     "disciplines": [
+      "AE",
+      "AET"
+     ],
+     "start": "2027-02-18",
+     "end": "2027-02-19",
+     "city": "Secret Garden",
+     "country": "CHN",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62793&seasoncode=2027",
+     "raw": "4xAE AET"
+    },
+    {
+     "id": "fis-62887",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Kopaonik 스키크로스",
+     "category": "WC",
+     "disciplines": [
+      "SX"
+     ],
+     "start": "2027-02-24",
+     "end": "2027-02-27",
+     "city": "Kopaonik",
+     "country": "SRB",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62887&seasoncode=2027",
+     "raw": "8xSX"
+    },
+    {
+     "id": "fis-62862",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Aspen 하프파이프 / 슬로프스타일",
+     "category": "WC",
+     "disciplines": [
+      "HP",
+      "SS"
+     ],
+     "start": "2027-02-25",
+     "end": "2027-02-28",
+     "city": "Aspen",
+     "country": "USA",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62862&seasoncode=2027",
+     "raw": "4xHP 4xSS"
+    },
+    {
+     "id": "fis-62807",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Almaty 모굴 / 듀얼 모굴 / 에어리얼",
+     "category": "WC",
+     "disciplines": [
+      "MO",
+      "DM",
+      "AE"
+     ],
+     "start": "2027-02-26",
+     "end": "2027-02-28",
+     "city": "Almaty",
+     "country": "KAZ",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62807&seasoncode=2027",
+     "raw": "2xMO 2xDM 2xAE"
+    },
+    {
+     "id": "fis-62885",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Gällivare 스키크로스",
+     "category": "WC",
+     "disciplines": [
+      "SX"
+     ],
+     "start": "2027-03-03",
+     "end": "2027-03-06",
+     "city": "Gällivare",
+     "country": "SWE",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62885&seasoncode=2027",
+     "raw": "8xSX"
+    },
+    {
+     "id": "fis-62878",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Shahdag 모굴 / 듀얼 모굴 / 에어리얼",
+     "category": "WC",
+     "disciplines": [
+      "MO",
+      "DM",
+      "AE"
+     ],
+     "start": "2027-03-05",
+     "end": "2027-03-07",
+     "city": "Shahdag",
+     "country": "AZE",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62878&seasoncode=2027",
+     "raw": "2xMO 2xDM 2xAE"
+    },
+    {
+     "id": "fis-63000",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Montafon 하프파이프 / 빅에어 / 슬로프스타일 / 스키크로스 / 모굴 / 듀얼 모굴 / 에어리얼 / 에어리얼 단체 / DMT / 스키크로스 단체",
+     "category": "WSC",
+     "disciplines": [
+      "HP",
+      "BA",
+      "SS",
+      "SX",
+      "MO",
+      "DM",
+      "AE",
+      "AET",
+      "DMT",
+      "SXT"
+     ],
+     "start": "2027-03-06",
+     "end": "2027-03-21",
+     "city": "Montafon",
+     "country": "AUT",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=63000&seasoncode=2027",
+     "raw": "4xHP 4xBA 4xSS 4xSX 4xMO 2xDM 4xAE AET DMT SXT"
+    },
+    {
+     "id": "fis-62888",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Craigleith 스키크로스",
+     "category": "WC",
+     "disciplines": [
+      "SX"
+     ],
+     "start": "2027-03-19",
+     "end": "2027-03-21",
+     "city": "Craigleith",
+     "country": "CAN",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62888&seasoncode=2027",
+     "raw": "6xSX"
+    },
+    {
+     "id": "fis-62863",
+     "sport": "freestyle",
+     "source": "FIS",
+     "name": "Silvaplana 슬로프스타일 / 하프파이프",
+     "category": "WC",
+     "disciplines": [
+      "SS",
+      "HP"
+     ],
+     "start": "2027-04-01",
+     "end": "2027-04-04",
+     "city": "Silvaplana",
+     "country": "SUI",
+     "state": "",
+     "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62863&seasoncode=2027",
+     "raw": "4xSS 4xHP"
+    }
+   ]
+  },
+  "biathlon": {
+   "source": "https://www.biathlonresults.com/",
+   "checked_at": "2026-10-30T16:35:04.633336+00:00",
+   "season": "2026/2027",
+   "events": [
+    {
+     "id": "ibu-BT2627SWRLCP01",
+     "sport": "biathlon",
+     "source": "IBU",
+     "ibu_id": "BT2627SWRLCP01",
+     "name": "Kontiolahti 월드컵",
+     "category": "WC",
+     "start": "2026-11-26",
+     "end": "2026-11-29",
+     "city": "Kontiolahti",
+     "country": "FIN",
+     "state": "",
+     "url": "https://www.biathlonresults.com/"
+    },
+    {
+     "id": "ibu-BT2627SWRLCP02",
+     "sport": "biathlon",
+     "source": "IBU",
+     "ibu_id": "BT2627SWRLCP02",
+     "name": "Hochfilzen 월드컵",
+     "category": "WC",
+     "start": "2026-12-04",
+     "end": "2026-12-06",
+     "city": "Hochfilzen",
+     "country": "AUT",
+     "state": "",
+     "url": "https://www.biathlonresults.com/"
+    },
+    {
+     "id": "ibu-BT2627SWRLCP03",
+     "sport": "biathlon",
+     "source": "IBU",
+     "ibu_id": "BT2627SWRLCP03",
+     "name": "Le Grand Bornand 월드컵",
+     "category": "WC",
+     "start": "2026-12-10",
+     "end": "2026-12-13",
+     "city": "Le Grand Bornand",
+     "country": "FRA",
+     "state": "",
+     "url": "https://www.biathlonresults.com/"
+    },
+    {
+     "id": "ibu-BT2627SWRLCP04",
+     "sport": "biathlon",
+     "source": "IBU",
+     "ibu_id": "BT2627SWRLCP04",
+     "name": "Pokljuka 월드컵",
+     "category": "WC",
+     "start": "2027-01-02",
+     "end": "2027-01-03",
+     "city": "Pokljuka",
+     "country": "SLO",
+     "state": "",
+     "url": "https://www.biathlonresults.com/"
+    },
+    {
+     "id": "ibu-BT2627SWRLCP05",
+     "sport": "biathlon",
+     "source": "IBU",
+     "ibu_id": "BT2627SWRLCP05",
+     "name": "Ruhpolding 월드컵",
+     "category": "WC",
+     "start": "2027-01-06",
+     "end": "2027-01-10",
+     "city": "Ruhpolding",
+     "country": "GER",
+     "state": "",
+     "url": "https://www.biathlonresults.com/"
+    },
+    {
+     "id": "ibu-BT2627SWRLCP06",
+     "sport": "biathlon",
+     "source": "IBU",
+     "ibu_id": "BT2627SWRLCP06",
+     "name": "Antholz-Anterselva 월드컵",
+     "category": "WC",
+     "start": "2027-01-14",
+     "end": "2027-01-17",
+     "city": "Antholz-Anterselva",
+     "country": "ITA",
+     "state": "",
+     "url": "https://www.biathlonresults.com/"
+    },
+    {
+     "id": "ibu-BT2627SWRLCP07",
+     "sport": "biathlon",
+     "source": "IBU",
+     "ibu_id": "BT2627SWRLCP07",
+     "name": "Nove Mesto na Morave 월드컵",
+     "category": "WC",
+     "start": "2027-01-21",
+     "end": "2027-01-24",
+     "city": "Nove Mesto na Morave",
+     "country": "CZE",
+     "state": "",
+     "url": "https://www.biathlonresults.com/"
+    },
+    {
+     "id": "ibu-BT2627SWRLCH__",
+     "sport": "biathlon",
+     "source": "IBU",
+     "ibu_id": "BT2627SWRLCH__",
+     "name": "Otepaa 세계선수권",
+     "category": "WCH",
+     "start": "2027-02-10",
+     "end": "2027-02-21",
+     "city": "Otepaa",
+     "country": "EST",
+     "state": "",
+     "url": "https://www.biathlonresults.com/"
+    },
+    {
+     "id": "ibu-BT2627SWRLCP08",
+     "sport": "biathlon",
+     "source": "IBU",
+     "ibu_id": "BT2627SWRLCP08",
+     "name": "Oberhof 월드컵",
+     "category": "WC",
+     "start": "2027-03-04",
+     "end": "2027-03-07",
+     "city": "Oberhof",
+     "country": "GER",
+     "state": "",
+     "url": "https://www.biathlonresults.com/"
+    },
+    {
+     "id": "ibu-BT2627SWRLCP09",
+     "sport": "biathlon",
+     "source": "IBU",
+     "ibu_id": "BT2627SWRLCP09",
+     "name": "Oestersund 월드컵",
+     "category": "WC",
+     "start": "2027-03-11",
+     "end": "2027-03-14",
+     "city": "Oestersund",
+     "country": "SWE",
+     "state": "",
+     "url": "https://www.biathlonresults.com/"
+    },
+    {
+     "id": "ibu-BT2627SWRLCP10",
+     "sport": "biathlon",
+     "source": "IBU",
+     "ibu_id": "BT2627SWRLCP10",
+     "name": "Oslo Holmenkollen 월드컵",
+     "category": "WC",
+     "start": "2027-03-18",
+     "end": "2027-03-21",
+     "city": "Oslo Holmenkollen",
+     "country": "NOR",
+     "state": "",
+     "url": "https://www.biathlonresults.com/"
+    }
+   ]
+  },
+  "bobsleigh": {
+   "source": "https://www.ibsf.org/en/races-and-results",
+   "checked_at": "2026-10-30T16:35:05.238329+00:00",
+   "season": "2026/2027",
+   "events": [
+    {
+     "id": "ibsf-200911-bob",
+     "sport": "bobsleigh",
+     "source": "IBSF",
+     "name": "Altenberg 월드컵",
+     "category": "WC",
+     "start": "2026-11-23",
+     "end": "2026-11-29",
+     "city": "Altenberg",
+     "country": "",
+     "state": "",
+     "url": "https://www.ibsf.org/en/races-and-results"
+    },
+    {
+     "id": "ibsf-200912-bob",
+     "sport": "bobsleigh",
+     "source": "IBSF",
+     "name": "Innsbruck 월드컵",
+     "category": "WC",
+     "start": "2026-11-29",
+     "end": "2026-12-06",
+     "city": "Innsbruck",
+     "country": "",
+     "state": "",
+     "url": "https://www.ibsf.org/en/races-and-results"
+    },
+    {
+     "id": "ibsf-200913-bob",
+     "sport": "bobsleigh",
+     "source": "IBSF",
+     "name": "Innsbruck 월드컵",
+     "category": "WC",
+     "start": "2026-12-07",
+     "end": "2026-12-13",
+     "city": "Innsbruck",
+     "country": "",
+     "state": "",
+     "url": "https://www.ibsf.org/en/races-and-results"
+    },
+    {
+     "id": "ibsf-200914-bob",
+     "sport": "bobsleigh",
+     "source": "IBSF",
+     "name": "Cortina d'Ampezzo 월드컵",
+     "category": "WC",
+     "start": "2026-12-14",
+     "end": "2026-12-20",
+     "city": "Cortina d'Ampezzo",
+     "country": "",
+     "state": "",
+     "url": "https://www.ibsf.org/en/races-and-results"
+    },
+    {
+     "id": "ibsf-200915-bob",
+     "sport": "bobsleigh",
+     "source": "IBSF",
+     "name": "Königssee 월드컵",
+     "category": "WC",
+     "start": "2027-01-11",
+     "end": "2027-01-17",
+     "city": "Königssee",
+     "country": "",
+     "state": "",
+     "url": "https://www.ibsf.org/en/races-and-results"
+    },
+    {
+     "id": "ibsf-200916-bob",
+     "sport": "bobsleigh",
+     "source": "IBSF",
+     "name": "St. Moritz - Celerina 월드컵",
+     "category": "WC",
+     "start": "2027-01-18",
+     "end": "2027-01-24",
+     "city": "St. Moritz - Celerina",
+     "country": "",
+     "state": "",
+     "url": "https://www.ibsf.org/en/races-and-results"
+    },
+    {
+     "id": "ibsf-200917-bob",
+     "sport": "bobsleigh",
+     "source": "IBSF",
+     "name": "Winterberg 월드컵",
+     "category": "WC",
+     "start": "2027-01-25",
+     "end": "2027-01-31",
+     "city": "Winterberg",
+     "country": "",
+     "state": "",
+     "url": "https://www.ibsf.org/en/races-and-results"
+    },
+    {
+     "id": "ibsf-200918-bob",
+     "sport": "bobsleigh",
+     "source": "IBSF",
+     "name": "Sigulda 월드컵",
+     "category": "WC",
+     "start": "2027-02-01",
+     "end": "2027-02-07",
+     "city": "Sigulda",
+     "country": "",
+     "state": "",
+     "url": "https://www.ibsf.org/en/races-and-results"
+    },
+    {
+     "id": "ibsf-200944-bob",
+     "sport": "bobsleigh",
+     "source": "IBSF",
+     "name": "Lillehammer 세계선수권",
+     "category": "WCH",
+     "start": "2027-02-14",
+     "end": "2027-02-28",
+     "city": "Lillehammer",
+     "country": "",
+     "state": "",
+     "url": "https://www.ibsf.org/en/races-and-results"
+    }
+   ]
+  },
+  "skeleton": {
+   "source": "https://www.ibsf.org/en/races-and-results",
+   "checked_at": "2026-10-30T16:35:06.329138+00:00",
+   "season": "2026/2027",
+   "events": [
+    {
+     "id": "ibsf-200911-ske",
+     "sport": "skeleton",
+     "source": "IBSF",
+     "name": "Altenberg 월드컵",
+     "category": "WC",
+     "start": "2026-11-23",
+     "end": "2026-11-29",
+     "city": "Altenberg",
+     "country": "",
+     "state": "",
+     "url": "https://www.ibsf.org/en/races-and-results"
+    },
+    {
+     "id": "ibsf-200912-ske",
+     "sport": "skeleton",
+     "source": "IBSF",
+     "name": "Innsbruck 월드컵",
+     "category": "WC",
+     "start": "2026-11-29",
+     "end": "2026-12-06",
+     "city": "Innsbruck",
+     "country": "",
+     "state": "",
+     "url": "https://www.ibsf.org/en/races-and-results"
+    },
+    {
+     "id": "ibsf-200913-ske",
+     "sport": "skeleton",
+     "source": "IBSF",
+     "name": "Innsbruck 월드컵",
+     "category": "WC",
+     "start": "2026-12-07",
+     "end": "2026-12-13",
+     "city": "Innsbruck",
+     "country": "",
+     "state": "",
+     "url": "https://www.ibsf.org/en/races-and-results"
+    },
+    {
+     "id": "ibsf-200914-ske",
+     "sport": "skeleton",
+     "source": "IBSF",
+     "name": "Cortina d'Ampezzo 월드컵",
+     "category": "WC",
+     "start": "2026-12-14",
+     "end": "2026-12-20",
+     "city": "Cortina d'Ampezzo",
+     "country": "",
+     "state": "",
+     "url": "https://www.ibsf.org/en/races-and-results"
+    },
+    {
+     "id": "ibsf-200915-ske",
+     "sport": "skeleton",
+     "source": "IBSF",
+     "name": "Königssee 월드컵",
+     "category": "WC",
+     "start": "2027-01-11",
+     "end": "2027-01-17",
+     "city": "Königssee",
+     "country": "",
+     "state": "",
+     "url": "https://www.ibsf.org/en/races-and-results"
+    },
+    {
+     "id": "ibsf-200916-ske",
+     "sport": "skeleton",
+     "source": "IBSF",
+     "name": "St. Moritz - Celerina 월드컵",
+     "category": "WC",
+     "start": "2027-01-18",
+     "end": "2027-01-24",
+     "city": "St. Moritz - Celerina",
+     "country": "",
+     "state": "",
+     "url": "https://www.ibsf.org/en/races-and-results"
+    },
+    {
+     "id": "ibsf-200917-ske",
+     "sport": "skeleton",
+     "source": "IBSF",
+     "name": "Winterberg 월드컵",
+     "category": "WC",
+     "start": "2027-01-25",
+     "end": "2027-01-31",
+     "city": "Winterberg",
+     "country": "",
+     "state": "",
+     "url": "https://www.ibsf.org/en/races-and-results"
+    },
+    {
+     "id": "ibsf-200918-ske",
+     "sport": "skeleton",
+     "source": "IBSF",
+     "name": "Sigulda 월드컵",
+     "category": "WC",
+     "start": "2027-02-01",
+     "end": "2027-02-07",
+     "city": "Sigulda",
+     "country": "",
+     "state": "",
+     "url": "https://www.ibsf.org/en/races-and-results"
+    },
+    {
+     "id": "ibsf-200944-ske",
+     "sport": "skeleton",
+     "source": "IBSF",
+     "name": "Lillehammer 세계선수권",
+     "category": "WCH",
+     "start": "2027-02-14",
+     "end": "2027-02-28",
+     "city": "Lillehammer",
+     "country": "",
+     "state": "",
+     "url": "https://www.ibsf.org/en/races-and-results"
+    }
+   ]
+  },
+  "luge": {
+   "source": "https://www.fil-luge.org/en/results",
+   "checked_at": "2026-10-30T16:35:06.329144+00:00",
+   "season": "2026/2027",
+   "events": [
+    {
+     "id": "fil-eberspaecher-world-cup-51",
+     "sport": "luge",
+     "source": "FIL",
+     "name": "Winterberg 월드컵",
+     "category": "World Cups",
+     "start": "2026-11-28",
+     "end": "2026-11-29",
+     "city": "Winterberg",
+     "country": "GER",
+     "state": "",
+     "url": "https://www.fil-luge.org/en/media/eberspaecher-world-cup-51"
+    },
+    {
+     "id": "fil-eberspaecher-team-relay-world-cup-presented-by-axa",
+     "sport": "luge",
+     "source": "FIL",
+     "name": "Winterberg 팀 계주 월드컵",
+     "category": "Relay competitions",
+     "start": "2026-11-28",
+     "end": "2026-11-29",
+     "city": "Winterberg",
+     "country": "GER",
+     "state": "",
+     "url": "https://www.fil-luge.org/en/media/eberspaecher-team-relay-world-cup-presented-by-axa"
+    },
+    {
+     "id": "fil-eberspaecher-world-cup-52",
+     "sport": "luge",
+     "source": "FIL",
+     "name": "PyeongChang 월드컵",
+     "category": "World Cups",
+     "start": "2026-12-12",
+     "end": "2026-12-13",
+     "city": "PyeongChang",
+     "country": "KOR",
+     "state": "",
+     "url": "https://www.fil-luge.org/en/media/eberspaecher-world-cup-52"
+    },
+    {
+     "id": "fil-eberspaecher-mixed-world-cup-presented-by-skechers-5",
+     "sport": "luge",
+     "source": "FIL",
+     "name": "PyeongChang 월드컵",
+     "category": "Mixed Event",
+     "start": "2026-12-13",
+     "end": "2026-12-13",
+     "city": "PyeongChang",
+     "country": "KOR",
+     "state": "",
+     "url": "https://www.fil-luge.org/en/media/eberspaecher-mixed-world-cup-presented-by-skechers-5"
+    },
+    {
+     "id": "fil-eberspaecher-world-cup-53",
+     "sport": "luge",
+     "source": "FIL",
+     "name": "Yanqing 월드컵",
+     "category": "World Cups",
+     "start": "2026-12-19",
+     "end": "2026-12-20",
+     "city": "Yanqing",
+     "country": "CHN",
+     "state": "",
+     "url": "https://www.fil-luge.org/en/media/eberspaecher-world-cup-53"
+    },
+    {
+     "id": "fil-eberspaecher-team-relay-world-cup-presented-by-axa-1",
+     "sport": "luge",
+     "source": "FIL",
+     "name": "Yanqing 팀 계주 월드컵",
+     "category": "Relay competitions",
+     "start": "2026-12-20",
+     "end": "2026-12-20",
+     "city": "Yanqing",
+     "country": "CHN",
+     "state": "",
+     "url": "https://www.fil-luge.org/en/media/eberspaecher-team-relay-world-cup-presented-by-axa-1"
+    },
+    {
+     "id": "fil-eberspaecher-world-cup-54",
+     "sport": "luge",
+     "source": "FIL",
+     "name": "Sigulda 월드컵",
+     "category": "World Cups",
+     "start": "2027-01-09",
+     "end": "2027-01-10",
+     "city": "Sigulda",
+     "country": "LAT",
+     "state": "",
+     "url": "https://www.fil-luge.org/en/media/eberspaecher-world-cup-54"
+    },
+    {
+     "id": "fil-eberspaecher-team-relay-world-cup-presented-by-axa-2",
+     "sport": "luge",
+     "source": "FIL",
+     "name": "Sigulda 팀 계주 월드컵",
+     "category": "Relay competitions",
+     "start": "2027-01-10",
+     "end": "2027-01-10",
+     "city": "Sigulda",
+     "country": "LAT",
+     "state": "",
+     "url": "https://www.fil-luge.org/en/media/eberspaecher-team-relay-world-cup-presented-by-axa-2"
+    },
+    {
+     "id": "fil-eberspaecher-world-cup-55",
+     "sport": "luge",
+     "source": "FIL",
+     "name": "Altenberg 월드컵",
+     "category": "World Cups",
+     "start": "2027-01-16",
+     "end": "2027-01-17",
+     "city": "Altenberg",
+     "country": "GER",
+     "state": "",
+     "url": "https://www.fil-luge.org/en/media/eberspaecher-world-cup-55"
+    },
+    {
+     "id": "fil-eberspaecher-team-relay-world-cup-presented-by-axa-3",
+     "sport": "luge",
+     "source": "FIL",
+     "name": "Altenberg 팀 계주 월드컵",
+     "category": "Relay competitions",
+     "start": "2027-01-17",
+     "end": "2027-01-17",
+     "city": "Altenberg",
+     "country": "GER",
+     "state": "",
+     "url": "https://www.fil-luge.org/en/media/eberspaecher-team-relay-world-cup-presented-by-axa-3"
+    },
+    {
+     "id": "fil-eberspaecher-world-cup-super-slide-mode",
+     "sport": "luge",
+     "source": "FIL",
+     "name": "Oberhof 월드컵",
+     "category": "World Cups",
+     "start": "2027-01-23",
+     "end": "2027-01-24",
+     "city": "Oberhof",
+     "country": "GER",
+     "state": "",
+     "url": "https://www.fil-luge.org/en/media/eberspaecher-world-cup-super-slide-mode"
+    },
+    {
+     "id": "fil-eberspaecher-team-relay-world-cup-super-slide-mode-presented-by-axa-1",
+     "sport": "luge",
+     "source": "FIL",
+     "name": "Oberhof 팀 계주 월드컵",
+     "category": "Relay competitions",
+     "start": "2027-01-24",
+     "end": "2027-01-24",
+     "city": "Oberhof",
+     "country": "GER",
+     "state": "",
+     "url": "https://www.fil-luge.org/en/media/eberspaecher-team-relay-world-cup-super-slide-mode-presented-by-axa-1"
+    },
+    {
+     "id": "fil-54th-fil-world-championships",
+     "sport": "luge",
+     "source": "FIL",
+     "name": "Innsbruck - Tirol 세계선수권",
+     "category": "Championships",
+     "start": "2027-02-05",
+     "end": "2027-02-07",
+     "city": "Innsbruck - Tirol",
+     "country": "AUT",
+     "state": "",
+     "url": "https://www.fil-luge.org/en/media/54th-fil-world-championships"
+    },
+    {
+     "id": "fil-58th-fil-european-championships",
+     "sport": "luge",
+     "source": "FIL",
+     "name": "Cortina 유럽선수권",
+     "category": "Championships",
+     "start": "2027-02-13",
+     "end": "2027-02-14",
+     "city": "Cortina",
+     "country": "ITA",
+     "state": "",
+     "url": "https://www.fil-luge.org/en/media/58th-fil-european-championships"
+    },
+    {
+     "id": "fil-eberspaecher-world-cup-56",
+     "sport": "luge",
+     "source": "FIL",
+     "name": "Cortina 월드컵",
+     "category": "World Cups",
+     "start": "2027-02-13",
+     "end": "2027-02-14",
+     "city": "Cortina",
+     "country": "ITA",
+     "state": "",
+     "url": "https://www.fil-luge.org/en/media/eberspaecher-world-cup-56"
+    },
+    {
+     "id": "fil-eberspaecher-mixed-world-cup-presented-by-skechers-6",
+     "sport": "luge",
+     "source": "FIL",
+     "name": "Cortina 월드컵",
+     "category": "Mixed Event",
+     "start": "2027-02-14",
+     "end": "2027-02-14",
+     "city": "Cortina",
+     "country": "ITA",
+     "state": "",
+     "url": "https://www.fil-luge.org/en/media/eberspaecher-mixed-world-cup-presented-by-skechers-6"
+    },
+    {
+     "id": "fil-eberspaecher-world-cup-57",
+     "sport": "luge",
+     "source": "FIL",
+     "name": "La Plagne 월드컵",
+     "category": "World Cups",
+     "start": "2027-02-20",
+     "end": "2027-02-21",
+     "city": "La Plagne",
+     "country": "FRA",
+     "state": "",
+     "url": "https://www.fil-luge.org/en/media/eberspaecher-world-cup-57"
+    },
+    {
+     "id": "fil-eberspaecher-world-cup-58",
+     "sport": "luge",
+     "source": "FIL",
+     "name": "Königssee 월드컵",
+     "category": "World Cups",
+     "start": "2027-03-05",
+     "end": "2027-03-07",
+     "city": "Königssee",
+     "country": "GER",
+     "state": "",
+     "url": "https://www.fil-luge.org/en/media/eberspaecher-world-cup-58"
+    },
+    {
+     "id": "fil-eberspaecher-mixed-world-cup-presented-by-skechers-7",
+     "sport": "luge",
+     "source": "FIL",
+     "name": "Königssee 월드컵",
+     "category": "Mixed Event",
+     "start": "2027-03-05",
+     "end": "2027-03-05",
+     "city": "Königssee",
+     "country": "GER",
+     "state": "",
+     "url": "https://www.fil-luge.org/en/media/eberspaecher-mixed-world-cup-presented-by-skechers-7"
+    },
+    {
+     "id": "fil-eberspaecher-team-relay-world-cup-presented-by-axa-6",
+     "sport": "luge",
+     "source": "FIL",
+     "name": "Königssee 팀 계주 월드컵",
+     "category": "Relay competitions",
+     "start": "2027-03-07",
+     "end": "2027-03-07",
+     "city": "Königssee",
+     "country": "GER",
+     "state": "",
+     "url": "https://www.fil-luge.org/en/media/eberspaecher-team-relay-world-cup-presented-by-axa-6"
     }
    ]
   }
