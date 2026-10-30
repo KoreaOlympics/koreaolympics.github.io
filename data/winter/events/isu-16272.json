@@ -18,7 +18,7 @@
   "live": "Men 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-30T13:47:15.400941+00:00",
+ "checked_at": "2026-10-30T13:57:34.386023+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -1057,7 +1057,7 @@
     {
      "id": 22924,
      "name": "Preliminaries",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-10-30T12:19:56.000Z",
      "rule": "The first placed skater from each race and up to a maximum of nine fastest second place skaters qualify for Heats.",
      "heats": [
@@ -1083,7 +1083,7 @@
          "name": "Dong Min SHIN",
          "noc": "KOR",
          "time": "41.373",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 16,
@@ -1150,7 +1150,7 @@
          "name": "Aibek NASSEN",
          "noc": "KAZ",
          "time": "41.868",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 91,
@@ -1217,7 +1217,7 @@
          "name": "Daniel TIBORCZ",
          "noc": "HUN",
          "time": "41.859",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 82,
@@ -1284,7 +1284,7 @@
          "name": "Aibek TEMIRKHAN",
          "noc": "KAZ",
          "time": "42.329",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 92,
@@ -1351,7 +1351,7 @@
          "name": "Peter JASZAPATI",
          "noc": "HUN",
          "time": "41.974",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 81,
@@ -1418,7 +1418,7 @@
          "name": "Zhanshuo LOU",
          "noc": "HKG",
          "time": "42.203",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 45,
@@ -1485,7 +1485,7 @@
          "name": "Ivan DONCHEV",
          "noc": "BUL",
          "time": "41.757",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 60,
@@ -1552,7 +1552,7 @@
          "name": "Tamirlan ZHOLDAS",
          "noc": "KAZ",
          "time": "42.455",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 95,
@@ -1619,7 +1619,7 @@
          "name": "Justin LIU",
          "noc": "USA",
          "time": "41.725",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 111,
@@ -1654,15 +1654,15 @@
       },
       {
        "name": "Heat 10",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Nicolas ANDERMANN",
          "noc": "AUT",
-         "time": "no time",
-         "qual": "",
+         "time": "42.055",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 51,
@@ -1670,11 +1670,11 @@
          "slug": "nicolas-andermann"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Tibor KOMERICKI",
          "noc": "SLO",
-         "time": "no time",
-         "qual": "",
+         "time": "42.152",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 106,
@@ -1682,42 +1682,42 @@
          "slug": "tibor-komericki"
         },
         {
-         "rank": null,
-         "name": "Aleyandro RIVERO MAERSCHALCK",
-         "noc": "BEL",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 56,
-         "lane": 3,
-         "slug": "aleyandro-rivero-maerschalck"
-        },
-        {
-         "rank": null,
+         "rank": 3,
          "name": "Assen GYUROV",
          "noc": "BUL",
-         "time": "no time",
+         "time": "42.253",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 61,
          "lane": 4,
          "slug": "assen-gyurov"
+        },
+        {
+         "rank": 4,
+         "name": "Aleyandro RIVERO MAERSCHALCK",
+         "noc": "BEL",
+         "time": "42.370",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 56,
+         "lane": 3,
+         "slug": "aleyandro-rivero-maerschalck"
         }
        ]
       },
       {
        "name": "Heat 11",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Bohao ZHANG",
          "noc": "CHN",
-         "time": "no time",
-         "qual": "",
+         "time": "41.722",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 42,
@@ -1725,23 +1725,11 @@
          "slug": "bohao-zhang"
         },
         {
-         "rank": null,
-         "name": "Muhammed BOZDAG",
-         "noc": "TUR",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 109,
-         "lane": 2,
-         "slug": "muhammed-bozdag"
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Maxim MAXIMOV",
          "noc": "BUL",
-         "time": "no time",
-         "qual": "",
+         "time": "42.280",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 63,
@@ -1749,20 +1737,217 @@
          "slug": "maxim-maximov"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Etienne BASTIER",
          "noc": "FRA",
-         "time": "no time",
+         "time": "42.465",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 114,
          "lane": 4,
          "slug": "etienne-bastier"
+        },
+        {
+         "rank": 4,
+         "name": "Muhammed BOZDAG",
+         "noc": "TUR",
+         "time": "47.020",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 109,
+         "lane": 2,
+         "slug": "muhammed-bozdag"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Heats",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Felix ROUSSEL",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "40.303",
+        "qual": "Q"
+       },
+       {
+        "name": "Lorenzo PREVITALI",
+        "noc": "ITA",
+        "rank": 1,
+        "time": "41.259",
+        "qual": "Q"
+       },
+       {
+        "name": "Seochan BAE",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "41.552",
+        "qual": "Q"
+       },
+       {
+        "name": "Reinis BERZINS",
+        "noc": "LAT",
+        "rank": 1,
+        "time": "41.611",
+        "qual": "Q"
+       },
+       {
+        "name": "Bohao ZHANG",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "41.722",
+        "qual": "Q"
+       },
+       {
+        "name": "Niall TREACY",
+        "noc": "GBR",
+        "rank": 1,
+        "time": "41.723",
+        "qual": "Q"
+       },
+       {
+        "name": "Takumi WADA",
+        "noc": "JPN",
+        "rank": 1,
+        "time": "41.762",
+        "qual": "Q"
+       },
+       {
+        "name": "Brendan COREY",
+        "noc": "AUS",
+        "rank": 1,
+        "time": "41.833",
+        "qual": "Q"
+       },
+       {
+        "name": "Kun LI",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "41.930",
+        "qual": "Q"
+       },
+       {
+        "name": "Nicolas ANDERMANN",
+        "noc": "AUT",
+        "rank": 1,
+        "time": "42.055",
+        "qual": "Q"
+       },
+       {
+        "name": "Shuta Matsuzu",
+        "noc": "JPN",
+        "rank": 1,
+        "time": "42.146",
+        "qual": "Q"
+       },
+       {
+        "name": "Dong Min SHIN",
+        "noc": "KOR",
+        "rank": 2,
+        "time": "41.373",
+        "qual": "q"
+       },
+       {
+        "name": "Justin LIU",
+        "noc": "USA",
+        "rank": 2,
+        "time": "41.725",
+        "qual": "q"
+       },
+       {
+        "name": "Ivan DONCHEV",
+        "noc": "BUL",
+        "rank": 2,
+        "time": "41.757",
+        "qual": "q"
+       },
+       {
+        "name": "Daniel TIBORCZ",
+        "noc": "HUN",
+        "rank": 2,
+        "time": "41.859",
+        "qual": "q"
+       },
+       {
+        "name": "Aibek NASSEN",
+        "noc": "KAZ",
+        "rank": 2,
+        "time": "41.868",
+        "qual": "q"
+       },
+       {
+        "name": "Peter JASZAPATI",
+        "noc": "HUN",
+        "rank": 2,
+        "time": "41.974",
+        "qual": "q"
+       },
+       {
+        "name": "Tibor KOMERICKI",
+        "noc": "SLO",
+        "rank": 2,
+        "time": "42.152",
+        "qual": "q"
+       },
+       {
+        "name": "Zhanshuo LOU",
+        "noc": "HKG",
+        "rank": 2,
+        "time": "42.203",
+        "qual": "q"
+       },
+       {
+        "name": "Maxim MAXIMOV",
+        "noc": "BUL",
+        "rank": 2,
+        "time": "42.280",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Felix ROUSSEL (CAN)",
+        "Aibek NASSEN (KAZ)",
+        "Peter JASZAPATI (HUN)"
+       ],
+       [
+        "Lorenzo PREVITALI (ITA)",
+        "Daniel TIBORCZ (HUN)",
+        "Tibor KOMERICKI (SLO)"
+       ],
+       [
+        "Seochan BAE (KOR)",
+        "Ivan DONCHEV (BUL)",
+        "Zhanshuo LOU (HKG)"
+       ],
+       [
+        "Reinis BERZINS (LAT)",
+        "Justin LIU (USA)",
+        "Maxim MAXIMOV (BUL)"
+       ],
+       [
+        "Bohao ZHANG (CHN)",
+        "Dong Min SHIN (KOR)"
+       ],
+       [
+        "Niall TREACY (GBR)",
+        "Shuta Matsuzu (JPN)"
+       ],
+       [
+        "Takumi WADA (JPN)",
+        "Nicolas ANDERMANN (AUT)"
+       ],
+       [
+        "Brendan COREY (AUS)",
+        "Kun LI (CHN)"
+       ]
+      ]
+     }
     },
     {
      "id": 22926,
@@ -2189,7 +2374,7 @@
    "name": "Dong Min SHIN",
    "noc": "KOR",
    "time": "41.373",
-   "qual": "p",
+   "qual": "q",
    "status": "",
    "record": "",
    "bib": 16,
