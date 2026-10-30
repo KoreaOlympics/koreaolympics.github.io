@@ -223,7 +223,7 @@ function stSummary(d) {
   return '<h3>메달리스트</h3>' + medalTables(items) + koreaMatrix(d);
 }
 
-function distChips(d, current) {
+function distChips(d, current, link = rid => evLink({ v: 'results', d: rid })) {
   const entries = Object.entries(d.results || {});
   return GENDERS.map(([g, ko]) => {
     const xs = entries.filter(([, x]) => gender(x.title) === g).sort((a, b) => byDist(a[1], b[1]));
@@ -231,7 +231,7 @@ function distChips(d, current) {
     return `<div class="chiprow"><span class="lbl">${ko}</span>${xs.map(([rid, x]) => {
       const live = (x.rounds || []).some(r => r.status === 'Live');
       const kor = (x.rounds || []).some(r => r.heats.some(h => h.competitors.some(c => c.noc === 'KOR'))) || (x.rows || []).some(c => c.noc === 'KOR');
-      return `<a class="chip ${rid === current ? 'on' : ''}" href="${evLink({ v: 'results', d: rid })}">${esc(title(x.title).replace(/^(남자|여자) /, ''))}${live ? ' 🔴' : ''}${kor ? ' 🇰🇷' : ''}</a>`;
+      return `<a class="chip ${rid === current ? 'on' : ''}" href="${link(rid)}">${esc(title(x.title).replace(/^(남자|여자) /, ''))}${live ? ' 🔴' : ''}${kor ? ' 🇰🇷' : ''}</a>`;
     }).join('')}</div>`;
   }).join('');
 }
@@ -286,9 +286,10 @@ function ssResults(d) {
   const entries = Object.entries(d.results || {});
   if (!entries.length) return '<p class="muted">아직 결과가 없습니다.</p>';
   const rid = state.d && d.results[state.d] ? state.d : entries[0][0];
-  const r = d.results[rid];
-  return distChips(d, rid) +
-    `<h3>${esc(r.title)}</h3><div class="tablewrap"><table><thead><tr><th class="num">순위</th><th>선수</th><th class="num">기록</th><th class="num">차이</th><th>조·레인</th></tr></thead><tbody>${
+  return distChips(d, rid) + `<h3>${esc(d.results[rid].title)}</h3>` + ssTable(d.results[rid]);
+}
+function ssTable(r) {
+  return `<div class="tablewrap"><table><thead><tr><th class="num">순위</th><th>선수</th><th class="num">기록</th><th class="num">차이</th><th>조·레인</th></tr></thead><tbody>${
     r.rows.map(x => `<tr class="${x.noc === 'KOR' ? 'kor' : ''}"><td class="num">${x.rank ?? '-'}</td><td class="name">${name(x.name)} <span class="noc">${esc(x.noc)}</span></td>
       <td class="num">${esc(x.time)}</td><td class="num">${x.behind && x.behind !== '0.000' ? '+' + esc(x.behind) : ''}</td><td class="small muted">${x.pair ?? ''} ${esc(x.lane || '')}</td></tr>`).join('')}</tbody></table></div>`;
 }
@@ -315,16 +316,84 @@ async function viewEvent() {
   return h + (fn[v] ? fn[v](d) : '<p class="muted">결과 자료가 없습니다.</p>');
 }
 
+
+// ---------- 종목별 (기본 탭): 종목 → 대회 → 세부종목 → 그 세부종목의 모든 라운드·조를 아래로 펼친다 ----------
+// URL: #sport=<sport>&e=<event id>&d=<result key>
+const evLabel = e => e.name.replace(/^ISU (CNSG )?/, '').replace(/(^| )(Speed Skating|Short Track|Figure Skating)( |$)/g, '$1').replace(/ 20\d\d$/, '')
+  .replace(/^World Tour #(\d+)$/, '월드투어 $1차').replace(/^World Cup #(\d+)$/, '월드컵 $1차').replace(/^Junior World Cup #(\d+)$/, '주니어 월드컵 $1차')
+  .replace(/^Junior Grand Prix /, '주니어 그랑프리 ').replace(/^Grand Prix /, '그랑프리 ').replace(/^World Championships$/, '세계선수권')
+  .replace(/^Junior World Championships$/, '세계주니어선수권').replace(/^Four Continents Championships$/, '4대륙선수권')
+  .replace(/^European Championships$/, '유럽선수권').replace(/^Grand Prix Final$/, '그랑프리 파이널').replace(/^World Figure Skating Team Trophy$/, '월드 팀 트로피');
+const isJunior = e => /Junior/.test(e.category || '') || /Junior/.test(e.name);
+const browseLink = (extra = {}) => '#' + new URLSearchParams(Object.fromEntries(Object.entries(extra).filter(([, v]) => v)));
+
+function viewBrowse() {
+  const evs = allEvents();
+  const bar = `<nav class="sportbar">${Object.entries(SPORTS).map(([k, ko]) => {
+    const live = evs.filter(e => e.sport === k && phase(e) === 'live').length;
+    return `<a class="sportbtn ${k} ${k === state.sport ? 'on' : ''}" href="${browseLink(k === state.sport ? {} : { sport: k })}">${ko}${live ? ' <span class="badge live">LIVE</span>' : ''}</a>`;
+  }).join('')}</nav>`;
+  if (!state.sport || !SPORTS[state.sport]) return Promise.resolve(bar + '<div class="empty">종목을 누르면 이번 시즌 대회가 펼쳐집니다.</div>');
+  return sportPanel(evs.filter(e => e.sport === state.sport)).then(h => bar + h);
+}
+
+async function sportPanel(evs) {
+  if (!evs.length) return '<div class="empty">이 종목의 이번 시즌 일정이 아직 없습니다.</div>';
+  let h = '';
+  for (const [label, xs] of [['시니어', evs.filter(e => !isJunior(e))], ['주니어', evs.filter(isJunior)]]) {
+    if (!xs.length) continue;
+    h += `<h3>${label} <span class="muted small">${xs.length}개 대회</span></h3><div class="evlist">`;
+    for (const e of xs) {
+      const open = e.id === state.event;
+      h += `<a class="evrow ${open ? 'on' : ''}" href="${browseLink({ sport: state.sport, e: open ? '' : e.id })}">
+        <span class="lbl">${esc(evLabel(e))}</span><span class="m">${fmtRange(e.start, e.end)} · ${esc(e.city)}${e.country ? ' (' + esc(e.country) + ')' : ''}</span>${BADGE[phase(e)]}</a>`;
+      if (open) h += `<div class="evbody">${await eventBody(e)}</div>`;
+    }
+    h += '</div>';
+  }
+  return h;
+}
+
+async function eventBody(e) {
+  const d = await loadEvent(e.id);
+  const official = e.url ? ` · <a href="${esc(e.url)}" target="_blank" rel="noopener">공식 페이지 ↗</a>` : '';
+  if (!d) return `<p class="muted">상세 일정·결과가 아직 수집되지 않았습니다. 대회 하루 전부터 자동 수집합니다.${official}</p>`;
+  const entries = Object.entries(d.results || {});
+  let h = `<p class="small muted">${d.checked_at ? `수집 ${ago(d.checked_at)}` : ''}${official} · <a href="#tab=event&e=${encodeURIComponent(e.id)}">대회 상세 화면 →</a></p>`;
+  if (!entries.length) return h + (sessionsTable(d) || '<p class="muted">아직 결과가 없습니다.</p>');
+  const rid = state.d && d.results[state.d] ? state.d : null;
+  h += distChips(d, rid, k => browseLink({ sport: state.sport, e: e.id, d: k === rid ? '' : k }));
+  if (!rid) {
+    const sum = { 'short-track': stSummary, 'figure-skating': fsSummary, 'speed-skating': ssSummary }[e.sport];
+    return h + '<p class="small muted">세부종목을 누르면 모든 라운드·조 결과가 아래에 펼쳐집니다.</p>' + (sum ? sum(d) : '');
+  }
+  const x = d.results[rid];
+  h += `<h3>${esc(title(x.title))}</h3>`;
+  if (e.sport === 'short-track') return h + stAll(x);
+  if (e.sport === 'figure-skating') return h + fsTable(x);
+  return h + ssTable(x);
+}
+
+// every round of one short-track distance, in race order, heats and projected draws included
+function stAll(dist) {
+  const rounds = dist.rounds.slice().sort((a, b) => (a.start_utc || '9').localeCompare(b.start_utc || '9'));
+  if (!rounds.length) return '<p class="muted">아직 라운드 정보가 없습니다.</p>';
+  return rounds.map(r => {
+    const st = r.status === 'Live' ? '<span class="badge live">LIVE</span>' : r.status === 'Finished' ? '<span class="badge done">종료</span>' : '<span class="badge soon">예정</span>';
+    return `<section class="roundblock"><div class="roundhead"><h4>${esc(round(r.name))}</h4>${st}<span class="small muted">${r.start_utc ? kstDay(r.start_utc) + ' ' + kstTime(r.start_utc) + ' KST' : ''}</span></div>
+      ${r.rule ? `<div class="rule">진출 규칙: ${esc(r.rule)}</div>` : ''}
+      ${r.heats.length ? `<div class="heats">${r.heats.map(hh => heatTable(hh)).join('')}</div>` : '<p class="small muted">아직 결과가 없습니다.</p>'}
+      ${r.projection ? projection(r.projection) : ''}</section>`;
+  }).join('');
+}
+
 // ---------- season summary (Wikipedia / Namu season-article layout) ----------
 async function viewSeason() {
   const sport = ['short-track', 'speed-skating', 'figure-skating'].includes(state.sport) ? state.sport : 'short-track';
   let s;
   try { s = await getJSON(`season-${sport}.json`); } catch { return '<div class="empty">시즌 정리 자료가 아직 없습니다.</div>'; }
   const evs = s.events.filter(e => sport !== 'figure-skating' || !/Junior/.test(e.category || e.name));
-  const label = e => e.name.replace(/^ISU (CNSG )?/, '').replace(/ Speed Skating| Short Track| Figure Skating/g, '').replace(/ 20\d\d$/, '')
-    .replace(/^World Tour #(\d+)$/, '월드투어 $1차').replace(/^World Cup #(\d+)$/, '월드컵 $1차').replace(/^Junior World Cup #(\d+)$/, '주니어 월드컵 $1차')
-    .replace(/^Grand Prix /, '그랑프리 ').replace(/^World Championships$/, '세계선수권').replace(/^Four Continents Championships$/, '4대륙선수권')
-    .replace(/^European Championships$/, '유럽선수권').replace(/^Grand Prix Final$/, '그랑프리 파이널');
+  const label = evLabel;
   let h = `<h2>${s.season} ${SPORTS[sport]} 시즌</h2>`;
   if (!state.sport) h += '<p class="small muted">위의 종목 버튼으로 쇼트트랙·스피드·피겨 시즌을 바꿔 볼 수 있습니다.</p>';
   h += `<h3>대회 일정</h3><div class="tablewrap"><table><thead><tr><th>기간</th><th>대회</th><th>개최지</th><th>상태</th></tr></thead><tbody>${
@@ -368,11 +437,12 @@ function viewStatus() {
 // ---------- routing ----------
 function readHash() {
   const p = new URLSearchParams(location.hash.slice(1));
-  state.tab = p.get('tab') || 'now'; state.event = p.get('e'); state.column = p.get('c'); state.v = p.get('v'); state.d = p.get('d'); state.r = p.get('r'); state.sport = p.get('sport') || '';
+  state.tab = p.get('tab') || 'browse'; state.event = p.get('e'); state.column = p.get('c'); state.v = p.get('v'); state.d = p.get('d'); state.r = p.get('r'); state.sport = p.get('sport') || '';
 }
 function writeHash() {
   const p = new URLSearchParams();
-  if (state.tab !== 'now') p.set('tab', state.tab);
+  if (state.tab !== 'browse') p.set('tab', state.tab);
+  if (state.tab === 'browse' && state.event) { p.set('e', state.event); if (state.d) p.set('d', state.d); }
   if (state.tab === 'event' && state.event) { p.set('e', state.event); for (const k of ['v', 'd', 'r']) if (state[k]) p.set(k, state[k]); }
   if (state.tab === 'columns' && state.column) p.set('c', state.column);
   if (state.sport) p.set('sport', state.sport);
@@ -383,8 +453,9 @@ async function render() {
   const n = ++rendering;
   document.querySelectorAll('.tab').forEach(t => t.classList.toggle('on', t.dataset.tab === state.tab));
   document.querySelectorAll('[data-sport]').forEach(c => c.classList.toggle('on', c.dataset.sport === state.sport));
-  $('#eventTab').hidden = !state.event;
-  const html = await ({ now: viewNow, calendar: viewCalendar, korea: viewKorea, event: viewEvent, season: viewSeason, columns: viewColumns, status: viewStatus }[state.tab] || viewNow)();
+  $('#eventTab').hidden = !(state.tab === 'event' && state.event);
+  $('#controls').hidden = state.tab === 'browse';
+  const html = await ({ browse: viewBrowse, now: viewNow, calendar: viewCalendar, korea: viewKorea, event: viewEvent, season: viewSeason, columns: viewColumns, status: viewStatus }[state.tab] || viewBrowse)();
   if (n !== rendering) return;
   const open = [...document.querySelectorAll('details.dist')].map(d => d.open);
   $('#view').innerHTML = html;
@@ -392,7 +463,7 @@ async function render() {
   state.keepOpen = false;
 }
 document.addEventListener('click', e => {
-  const t = e.target.closest('[data-tab]'); if (t) { state.tab = t.dataset.tab; writeHash(); render(); return; }
+  const t = e.target.closest('[data-tab]'); if (t) { if (t.dataset.tab !== state.tab && t.dataset.tab !== 'event') state.event = state.d = null; state.tab = t.dataset.tab; writeHash(); render(); return; }
   const s = e.target.closest('[data-sport]'); if (s) { state.sport = s.dataset.sport; writeHash(); render(); return; }
   const a = e.target.closest('[data-athlete]'); if (a) { $('#q').value = state.q = a.dataset.athlete; render(); }
 });

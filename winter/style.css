@@ -118,3 +118,19 @@ table.medals td.medal-name { white-space: nowrap; }
 table.matrix td { font-size: 13px; white-space: nowrap; } table.matrix td a { text-decoration: none; display: block; }
 table.narrow { width: auto; min-width: 50%; }
 h4 { margin: 18px 0 6px; font-size: 15px; }
+
+/* 종목별 탭: 종목 → 대회 → 세부종목 → 전체 결과 */
+.sportbar { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 14px; }
+.sportbtn { flex: 1 1 140px; text-align: center; text-decoration: none; font-weight: 700; padding: 12px 10px; border-radius: 12px;
+  background: var(--panel); border: 1px solid var(--line); }
+.sportbtn.on { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+.evlist { display: flex; flex-direction: column; gap: 6px; }
+.evrow { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; text-decoration: none; background: var(--panel);
+  border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; }
+.evrow .lbl { font-weight: 700; min-width: 9em; }
+.evrow .m { color: var(--muted); font-size: 13px; flex: 1 1 auto; }
+.evrow.on { border-color: var(--accent); background: var(--accent-soft); }
+.evbody { border-left: 3px solid var(--accent); margin: 0 0 8px 8px; padding: 4px 0 8px 12px; min-width: 0; }
+.roundblock { border-top: 1px solid var(--line); padding-top: 6px; margin-top: 10px; }
+.roundblock h4 { margin: 0; font-size: 15px; }
+.controls[hidden] { display: none; }
