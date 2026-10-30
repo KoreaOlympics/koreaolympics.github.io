@@ -18,7 +18,7 @@
   "live": "Women 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-30T14:18:45.271758+00:00",
+ "checked_at": "2026-10-30T14:29:02.882873+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -2220,27 +2220,15 @@
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Anna FALKOWSKA",
-         "noc": "POL",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 82,
-         "lane": 1,
-         "slug": "anna-falkowska"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Minji KIM",
          "noc": "KOR",
-         "time": "no time",
-         "qual": "",
+         "time": "1:36.391",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 78,
@@ -2248,11 +2236,23 @@
          "slug": "minji-kim"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Anna FALKOWSKA",
+         "noc": "POL",
+         "time": "1:36.983",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 82,
+         "lane": 1,
+         "slug": "anna-falkowska"
+        },
+        {
+         "rank": 3,
          "name": "Betty MOESKE",
          "noc": "GER",
-         "time": "no time",
-         "qual": "",
+         "time": "1:37.078",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 63,
@@ -2260,42 +2260,42 @@
          "slug": "betty-moeske"
         },
         {
-         "rank": null,
-         "name": "Louisiana STAHL",
-         "noc": "USA",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 87,
-         "lane": 4,
-         "slug": "louisiana-stahl"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Zeinep KUMARKAN",
          "noc": "KAZ",
-         "time": "no time",
+         "time": "1:59.696",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 73,
          "lane": 5,
          "slug": "zeinep-kumarkan"
+        },
+        {
+         "rank": null,
+         "name": "Louisiana STAHL",
+         "noc": "USA",
+         "time": "DNS",
+         "qual": "",
+         "status": "Did Not Start",
+         "record": "",
+         "bib": 87,
+         "lane": 4,
+         "slug": "louisiana-stahl"
         }
        ]
       },
       {
        "name": "Heat 5",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Annabelle GREEN",
          "noc": "GBR",
-         "time": "no time",
-         "qual": "",
+         "time": "1:39.232",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 61,
@@ -2303,11 +2303,11 @@
          "slug": "annabelle-green"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Margherita BETTI",
          "noc": "ITA",
-         "time": "no time",
-         "qual": "",
+         "time": "1:39.359",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 66,
@@ -2315,11 +2315,11 @@
          "slug": "margherita-betti"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Barbora GAKOVA",
          "noc": "CZE",
-         "time": "no time",
-         "qual": "",
+         "time": "1:40.171",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 57,
@@ -2327,7 +2327,7 @@
          "slug": "barbora-gakova"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Anastassiya GALECHINA",
          "noc": "KAZ",
          "time": "no time",
@@ -2342,8 +2342,8 @@
       },
       {
        "name": "Heat 6",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
         {
          "rank": null,
@@ -2356,18 +2356,6 @@
          "bib": 34,
          "lane": 1,
          "slug": "nikola-mazur"
-        },
-        {
-         "rank": null,
-         "name": "Tineke DEN DULK",
-         "noc": "BEL",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 44,
-         "lane": 2,
-         "slug": "tineke-den-dulk-1"
         },
         {
          "rank": null,
@@ -2392,6 +2380,18 @@
          "bib": 67,
          "lane": 4,
          "slug": "wakaba-kenjo"
+        },
+        {
+         "rank": null,
+         "name": "Tineke DEN DULK",
+         "noc": "BEL",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 44,
+         "lane": 2,
+         "slug": "tineke-den-dulk-1"
         }
        ]
       }
@@ -2806,11 +2806,11 @@
    "round": "Preliminaries",
    "heat": "Heat 4",
    "start_utc": "2026-10-30T13:06:24.000Z",
-   "rank": null,
+   "rank": 1,
    "name": "Minji KIM",
    "noc": "KOR",
-   "time": "no time",
-   "qual": "",
+   "time": "1:36.391",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 78,
