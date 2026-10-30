@@ -18,7 +18,7 @@
   "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-30T15:10:49.765806+00:00",
+ "checked_at": "2026-10-30T15:21:05.928970+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -2638,7 +2638,7 @@
     {
      "id": 22939,
      "name": "Preliminaries",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-10-30T13:30:28.000Z",
      "rule": "The first placed skater from each race and up to a maximum of nine fastest second place skaters qualify for Heats.",
      "heats": [
@@ -2664,7 +2664,7 @@
          "name": "Denis ORS",
          "noc": "TUR",
          "time": "1:30.249",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 40,
@@ -2731,7 +2731,7 @@
          "name": "Kazuki YOSHINAGA",
          "noc": "JPN",
          "time": "1:28.922",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 19,
@@ -2798,7 +2798,7 @@
          "name": "Mathieu PELLETIER",
          "noc": "CAN",
          "time": "1:26.013",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 66,
@@ -2865,7 +2865,7 @@
          "name": "Etienne BASTIER",
          "noc": "FRA",
          "time": "1:27.400",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 114,
@@ -2932,7 +2932,7 @@
          "name": "Reinis BERZINS",
          "noc": "LAT",
          "time": "1:29.366",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 34,
@@ -2999,7 +2999,7 @@
          "name": "Taesung KIM",
          "noc": "KOR",
          "time": "1:29.225",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 97,
@@ -3066,7 +3066,7 @@
          "name": "Metehan ATAN",
          "noc": "TUR",
          "time": "1:30.030",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 108,
@@ -3255,7 +3255,7 @@
          "name": "Marten TAUBERT",
          "noc": "GER",
          "time": "1:28.963",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 79,
@@ -3290,15 +3290,15 @@
       },
       {
        "name": "Heat 11",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Melle VAN 'T WOUT",
          "noc": "NED",
-         "time": "no time",
-         "qual": "",
+         "time": "1:28.229",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 21,
@@ -3306,11 +3306,11 @@
          "slug": "melle-van-t-wout"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Willem MURRAY",
          "noc": "GBR",
-         "time": "no time",
-         "qual": "",
+         "time": "1:28.367",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 76,
@@ -3318,10 +3318,10 @@
          "slug": "willem-murray"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Marek PROCHAZKA",
          "noc": "CZE",
-         "time": "no time",
+         "time": "1:28.474",
          "qual": "",
          "status": "",
          "record": "",
@@ -3330,10 +3330,10 @@
          "slug": "marek-prochazka"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Maxim MAXIMOV",
          "noc": "BUL",
-         "time": "no time",
+         "time": "1:28.656",
          "qual": "",
          "status": "",
          "record": "",
@@ -3343,7 +3343,192 @@
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Heats",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Zhanshuo LOU",
+        "noc": "HKG",
+        "rank": 1,
+        "time": "1:25.997",
+        "qual": "Q"
+       },
+       {
+        "name": "Kerui SONG",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "1:27.341",
+        "qual": "Q"
+       },
+       {
+        "name": "Melle VAN 'T WOUT",
+        "noc": "NED",
+        "rank": 1,
+        "time": "1:28.229",
+        "qual": "Q"
+       },
+       {
+        "name": "Niels KINGMA",
+        "noc": "NED",
+        "rank": 1,
+        "time": "1:28.254",
+        "qual": "Q"
+       },
+       {
+        "name": "Peter JASZAPATI",
+        "noc": "HUN",
+        "rank": 1,
+        "time": "1:28.455",
+        "qual": "Q"
+       },
+       {
+        "name": "Bohao ZHANG",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "1:28.583",
+        "qual": "Q"
+       },
+       {
+        "name": "Jeongmin LEE",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "1:29.298",
+        "qual": "Q"
+       },
+       {
+        "name": "Lucas Henry KOO",
+        "noc": "BRA",
+        "rank": 1,
+        "time": "1:29.679",
+        "qual": "Q"
+       },
+       {
+        "name": "Zixia ZHANG",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "1:29.853",
+        "qual": "Q"
+       },
+       {
+        "name": "Gleb IVCHENKO",
+        "noc": "KAZ",
+        "rank": 1,
+        "time": "1:30.420",
+        "qual": "Q"
+       },
+       {
+        "name": "Andrew HEO",
+        "noc": "USA",
+        "rank": 1,
+        "time": "1:31.296",
+        "qual": "Q"
+       },
+       {
+        "name": "Pawel ADAMSKI",
+        "noc": "POL",
+        "rank": 3,
+        "time": "1:31.841",
+        "qual": "ADV"
+       },
+       {
+        "name": "Mathieu PELLETIER",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "1:26.013",
+        "qual": "q"
+       },
+       {
+        "name": "Etienne BASTIER",
+        "noc": "FRA",
+        "rank": 2,
+        "time": "1:27.400",
+        "qual": "q"
+       },
+       {
+        "name": "Willem MURRAY",
+        "noc": "GBR",
+        "rank": 2,
+        "time": "1:28.367",
+        "qual": "q"
+       },
+       {
+        "name": "Kazuki YOSHINAGA",
+        "noc": "JPN",
+        "rank": 2,
+        "time": "1:28.922",
+        "qual": "q"
+       },
+       {
+        "name": "Marten TAUBERT",
+        "noc": "GER",
+        "rank": 2,
+        "time": "1:28.963",
+        "qual": "q"
+       },
+       {
+        "name": "Taesung KIM",
+        "noc": "KOR",
+        "rank": 2,
+        "time": "1:29.225",
+        "qual": "q"
+       },
+       {
+        "name": "Reinis BERZINS",
+        "noc": "LAT",
+        "rank": 2,
+        "time": "1:29.366",
+        "qual": "q"
+       },
+       {
+        "name": "Metehan ATAN",
+        "noc": "TUR",
+        "rank": 2,
+        "time": "1:30.030",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Zhanshuo LOU (HKG)",
+        "Kazuki YOSHINAGA (JPN)",
+        "Marten TAUBERT (GER)"
+       ],
+       [
+        "Kerui SONG (CHN)",
+        "Willem MURRAY (GBR)",
+        "Taesung KIM (KOR)"
+       ],
+       [
+        "Melle VAN 'T WOUT (NED)",
+        "Etienne BASTIER (FRA)",
+        "Reinis BERZINS (LAT)"
+       ],
+       [
+        "Niels KINGMA (NED)",
+        "Mathieu PELLETIER (CAN)",
+        "Metehan ATAN (TUR)"
+       ],
+       [
+        "Peter JASZAPATI (HUN)",
+        "Pawel ADAMSKI (POL)"
+       ],
+       [
+        "Bohao ZHANG (CHN)",
+        "Andrew HEO (USA)"
+       ],
+       [
+        "Jeongmin LEE (KOR)",
+        "Gleb IVCHENKO (KAZ)"
+       ],
+       [
+        "Lucas Henry KOO (BRA)",
+        "Zixia ZHANG (CHN)"
+       ]
+      ]
+     }
     },
     {
      "id": 22941,
@@ -3735,7 +3920,7 @@
    "name": "Taesung KIM",
    "noc": "KOR",
    "time": "1:29.225",
-   "qual": "p",
+   "qual": "q",
    "status": "",
    "record": "",
    "bib": 97,
