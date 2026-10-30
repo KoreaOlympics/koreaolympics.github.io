@@ -1,8 +1,10 @@
-# 임시: 동계 수집 확장(FIS·IBU·IBSF·FIL)을 위해 원본 페이지를 받아 아티팩트로 남긴다. 작업 브랜치에서만 돈다.
+# 임시: 동계 수집 확장(FIS·IBU·IBSF·FIL)을 위해 원본 페이지를 받아 claude/winter-probe2-out 브랜치에 남긴다. 작업 브랜치에서만 돈다.
 name: Winter source probe
 on:
   push:
     branches: [claude/winter-probe2]
+permissions:
+  contents: write
 jobs:
   probe:
     runs-on: ubuntu-latest
@@ -11,5 +13,9 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
       - run: python probe/probe.py
-      - uses: actions/upload-artifact@v4
-        with: {name: probe, path: probe-out}
+      - name: Push output branch
+        run: |
+          cd probe-out
+          git init -q -b out && git add -A
+          git -c user.name=github-actions[bot] -c user.email=41898333+github-actions[bot]@users.noreply.github.com commit -qm "probe output"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" out:claude/winter-probe2-out
