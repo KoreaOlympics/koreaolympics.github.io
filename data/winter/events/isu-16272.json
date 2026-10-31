@@ -18,7 +18,7 @@
   "live": "Women 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-31T18:59:05.690669+00:00",
+ "checked_at": "2026-10-31T19:09:56.408942+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -7659,32 +7659,20 @@
     {
      "id": 22938,
      "name": "Finals",
-     "status": "Live",
-     "start_utc": "2026-10-31T17:56:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-10-31T17:56:58.000Z",
      "rule": "",
      "heats": [
       {
        "name": "Final",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Courtney SARAULT",
-         "noc": "CAN",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 1,
-         "lane": 1,
-         "slug": "courtney-sarault"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Minjeong CHOI",
          "noc": "KOR",
-         "time": "no time",
+         "time": "1:30.273",
          "qual": "",
          "status": "",
          "record": "",
@@ -7693,10 +7681,34 @@
          "slug": "minjeong-choi"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Courtney SARAULT",
+         "noc": "CAN",
+         "time": "1:30.336",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 1,
+         "lane": 1,
+         "slug": "courtney-sarault"
+        },
+        {
+         "rank": 3,
+         "name": "Hanne DESMET",
+         "noc": "BEL",
+         "time": "1:30.393",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 6,
+         "lane": 5,
+         "slug": "hanne-desmet"
+        },
+        {
+         "rank": 4,
          "name": "Florence BRUNELLE",
          "noc": "CAN",
-         "time": "no time",
+         "time": "1:30.574",
          "qual": "",
          "status": "",
          "record": "",
@@ -7705,77 +7717,41 @@
          "slug": "florence-brunelle"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Danae BLAIS",
          "noc": "CAN",
-         "time": "no time",
+         "time": "1:30.949",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 25,
          "lane": 4,
          "slug": "danae-blais"
-        },
-        {
-         "rank": null,
-         "name": "Hanne DESMET",
-         "noc": "BEL",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 6,
-         "lane": 5,
-         "slug": "hanne-desmet"
         }
        ]
       },
       {
        "name": "Final B",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Kristen SANTOS-GRISWOLD",
-         "noc": "USA",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 7,
-         "lane": 4,
-         "slug": "kristen-santos-griswold"
-        },
-        {
-         "rank": null,
-         "name": "Li GONG",
+         "rank": 1,
+         "name": "Jianing ZHANG",
          "noc": "CHN",
-         "time": "no time",
+         "time": "1:34.034",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 19,
-         "lane": 5,
-         "slug": "li-gong"
+         "bib": 55,
+         "lane": 1,
+         "slug": "jianing-zhang"
         },
         {
-         "rank": null,
-         "name": "Jiarui SONG",
-         "noc": "CHN",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 54,
-         "lane": 2,
-         "slug": "jiarui-song"
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Xandra VELZEBOER",
          "noc": "NED",
-         "time": "no time",
+         "time": "1:34.146",
          "qual": "",
          "status": "",
          "record": "",
@@ -7784,16 +7760,40 @@
          "slug": "xandra-velzeboer"
         },
         {
-         "rank": null,
-         "name": "Jianing ZHANG",
+         "rank": 3,
+         "name": "Jiarui SONG",
          "noc": "CHN",
-         "time": "no time",
+         "time": "1:34.151",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 55,
-         "lane": 1,
-         "slug": "jianing-zhang"
+         "bib": 54,
+         "lane": 2,
+         "slug": "jiarui-song"
+        },
+        {
+         "rank": 4,
+         "name": "Li GONG",
+         "noc": "CHN",
+         "time": "1:34.431",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 19,
+         "lane": 5,
+         "slug": "li-gong"
+        },
+        {
+         "rank": 5,
+         "name": "Kristen SANTOS-GRISWOLD",
+         "noc": "USA",
+         "time": "1:42.558",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 7,
+         "lane": 4,
+         "slug": "kristen-santos-griswold"
         }
        ]
       }
@@ -14487,11 +14487,11 @@
    "distance": "Women 1000 m",
    "round": "Finals",
    "heat": "Final",
-   "start_utc": "2026-10-31T17:56:00.000Z",
-   "rank": null,
+   "start_utc": "2026-10-31T17:56:58.000Z",
+   "rank": 1,
    "name": "Minjeong CHOI",
    "noc": "KOR",
-   "time": "no time",
+   "time": "1:30.273",
    "qual": "",
    "status": "",
    "record": "",
