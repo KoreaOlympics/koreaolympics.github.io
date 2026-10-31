@@ -18,7 +18,7 @@
   "live": "Men 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-31T13:41:02.045453+00:00",
+ "checked_at": "2026-10-31T13:51:29.471672+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -8434,7 +8434,7 @@
     {
      "id": 22948,
      "name": "Rep. Heats",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-10-31T12:26:58.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Rep Quarterfinals.",
      "heats": [
@@ -8654,7 +8654,7 @@
          "name": "Luka JASIC",
          "noc": "SRB",
          "time": "2:28.070",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 107,
@@ -8713,38 +8713,38 @@
       },
       {
        "name": "Heat 4",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Furkan AKAR",
+         "rank": 1,
+         "name": "Muhammed BOZDAG",
          "noc": "TUR",
-         "time": "no time",
-         "qual": "",
+         "time": "2:23.580",
+         "qual": "Q",
          "status": "",
          "record": "",
-         "bib": 27,
-         "lane": 1,
-         "slug": "furkan-akar"
+         "bib": 109,
+         "lane": 6,
+         "slug": "muhammed-bozdag"
         },
         {
-         "rank": null,
-         "name": "Ryan SHANE",
-         "noc": "USA",
-         "time": "no time",
-         "qual": "",
+         "rank": 2,
+         "name": "Radek FAJKUS",
+         "noc": "CZE",
+         "time": "2:23.666",
+         "qual": "Q",
          "status": "",
          "record": "",
-         "bib": 112,
-         "lane": 2,
-         "slug": "ryan-shane"
+         "bib": 71,
+         "lane": 7,
+         "slug": "radek-fajkus"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Nicolas ANDERMANN",
          "noc": "AUT",
-         "time": "no time",
+         "time": "2:23.928",
          "qual": "",
          "status": "",
          "record": "",
@@ -8753,22 +8753,10 @@
          "slug": "nicolas-andermann"
         },
         {
-         "rank": null,
-         "name": "Willem MURRAY",
-         "noc": "GBR",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 76,
-         "lane": 4,
-         "slug": "willem-murray"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Robin BENDIG",
          "noc": "GER",
-         "time": "no time",
+         "time": "2:24.972",
          "qual": "",
          "status": "",
          "record": "",
@@ -8777,32 +8765,135 @@
          "slug": "robin-bendig"
         },
         {
-         "rank": null,
-         "name": "Muhammed BOZDAG",
+         "rank": 5,
+         "name": "Furkan AKAR",
          "noc": "TUR",
-         "time": "no time",
+         "time": "2:26.441",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 109,
-         "lane": 6,
-         "slug": "muhammed-bozdag"
+         "bib": 27,
+         "lane": 1,
+         "slug": "furkan-akar"
+        },
+        {
+         "rank": 6,
+         "name": "Willem MURRAY",
+         "noc": "GBR",
+         "time": "2:59.316",
+         "qual": "ADV",
+         "status": "",
+         "record": "",
+         "bib": 76,
+         "lane": 4,
+         "slug": "willem-murray"
         },
         {
          "rank": null,
-         "name": "Radek FAJKUS",
-         "noc": "CZE",
-         "time": "no time",
+         "name": "Ryan SHANE",
+         "noc": "USA",
+         "time": "PEN",
          "qual": "",
-         "status": "",
+         "status": "Penalty",
          "record": "",
-         "bib": 71,
-         "lane": 7,
-         "slug": "radek-fajkus"
+         "bib": 112,
+         "lane": 2,
+         "slug": "ryan-shane"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Rep. Quarterfinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Muhammed BOZDAG",
+        "noc": "TUR",
+        "rank": 1,
+        "time": "2:23.580",
+        "qual": "Q"
+       },
+       {
+        "name": "Marcus HOWARD",
+        "noc": "USA",
+        "rank": 1,
+        "time": "2:27.837",
+        "qual": "Q"
+       },
+       {
+        "name": "Alexandre MIGNER",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "2:35.926",
+        "qual": "Q"
+       },
+       {
+        "name": "David WU JIA WEI",
+        "noc": "HUN",
+        "rank": 1,
+        "time": "2:36.779",
+        "qual": "Q"
+       },
+       {
+        "name": "Radek FAJKUS",
+        "noc": "CZE",
+        "rank": 2,
+        "time": "2:23.666",
+        "qual": "Q"
+       },
+       {
+        "name": "Gleb IVCHENKO",
+        "noc": "KAZ",
+        "rank": 2,
+        "time": "2:28.017",
+        "qual": "Q"
+       },
+       {
+        "name": "Yanghun Ben JUNG",
+        "noc": "GER",
+        "rank": 2,
+        "time": "2:36.068",
+        "qual": "Q"
+       },
+       {
+        "name": "Pawel ADAMSKI",
+        "noc": "POL",
+        "rank": 2,
+        "time": "2:37.441",
+        "qual": "Q"
+       },
+       {
+        "name": "Willem MURRAY",
+        "noc": "GBR",
+        "rank": 6,
+        "time": "2:59.316",
+        "qual": "ADV"
+       }
+      ],
+      "races": [
+       [
+        "Muhammed BOZDAG (TUR)"
+       ],
+       [
+        "Marcus HOWARD (USA)",
+        "Willem MURRAY (GBR)"
+       ],
+       [
+        "Alexandre MIGNER (CAN)",
+        "Pawel ADAMSKI (POL)"
+       ],
+       [
+        "David WU JIA WEI (HUN)",
+        "Yanghun Ben JUNG (GER)"
+       ],
+       [
+        "Radek FAJKUS (CZE)",
+        "Gleb IVCHENKO (KAZ)"
+       ]
+      ]
+     }
     },
     {
      "id": 22950,
