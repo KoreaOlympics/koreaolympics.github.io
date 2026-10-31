@@ -15,10 +15,10 @@
   "city": "Montreal",
   "country": "CAN",
   "state": "Live",
-  "live": "Women 1000 m",
+  "live": "Men 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-31T14:33:28.245637+00:00",
+ "checked_at": "2026-10-31T14:44:06.618874+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -5622,7 +5622,7 @@
     {
      "id": 22934,
      "name": "Rep. Quarterfinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-10-31T13:18:23.000Z",
      "rule": "The first placed skater from each race and up to a maximum of four fastest second place skaters qualify for Rep Semifinals.",
      "heats": [
@@ -5648,7 +5648,7 @@
          "name": "Diana Laura VEGI",
          "noc": "HUN",
          "time": "1:34.402",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 46,
@@ -5715,7 +5715,7 @@
          "name": "Cloe OLLIVIER",
          "noc": "FRA",
          "time": "1:41.305",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 24,
@@ -5770,7 +5770,7 @@
          "name": "Kiek STRAATHOF",
          "noc": "NED",
          "time": "1:33.810",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 80,
@@ -5825,7 +5825,7 @@
          "name": "Zoe Florence DELTRAP",
          "noc": "NED",
          "time": "1:34.004",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 49,
@@ -5860,11 +5860,35 @@
       },
       {
        "name": "Heat 5",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Nikola MAZUR",
+         "noc": "POL",
+         "time": "1:36.974",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 34,
+         "lane": 1,
+         "slug": "nikola-mazur"
+        },
+        {
+         "rank": 2,
+         "name": "Tineke DEN DULK",
+         "noc": "BEL",
+         "time": "1:37.141",
+         "qual": "ADV",
+         "status": "",
+         "record": "",
+         "bib": 44,
+         "lane": 3,
+         "slug": "tineke-den-dulk-1"
+        },
+        {
+         "rank": 3,
          "name": "Anna FALKOWSKA",
          "noc": "POL",
          "time": "no time",
@@ -5877,65 +5901,29 @@
         },
         {
          "rank": null,
-         "name": "Tineke DEN DULK",
-         "noc": "BEL",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 44,
-         "lane": 3,
-         "slug": "tineke-den-dulk-1"
-        },
-        {
-         "rank": null,
          "name": "Petra VANKOVA",
          "noc": "CZE",
-         "time": "no time",
+         "time": "PEN",
          "qual": "",
-         "status": "",
+         "status": "Penalty",
          "record": "",
          "bib": 33,
          "lane": 2,
          "slug": "petra-vankova"
-        },
-        {
-         "rank": null,
-         "name": "Nikola MAZUR",
-         "noc": "POL",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 34,
-         "lane": 1,
-         "slug": "nikola-mazur"
         }
        ]
       },
       {
        "name": "Heat 6",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Lia MEAD",
-         "noc": "NZL",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 81,
-         "lane": 1,
-         "slug": "lia-mead"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Jianing ZHANG",
          "noc": "CHN",
-         "time": "no time",
-         "qual": "",
+         "time": "1:35.489",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 55,
@@ -5943,10 +5931,10 @@
          "slug": "jianing-zhang"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Betty MOESKE",
          "noc": "GER",
-         "time": "no time",
+         "time": "1:35.544",
          "qual": "",
          "status": "",
          "record": "",
@@ -5955,20 +5943,125 @@
          "slug": "betty-moeske"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Kateryna SOLOVIOVA",
          "noc": "GER",
-         "time": "no time",
+         "time": "1:35.627",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 64,
          "lane": 4,
          "slug": "kateryna-soloviova"
+        },
+        {
+         "rank": 4,
+         "name": "Lia MEAD",
+         "noc": "NZL",
+         "time": "1:35.943",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 81,
+         "lane": 1,
+         "slug": "lia-mead"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Rep. Semifinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Ann-Sophie BACHAND",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "1:33.669",
+        "qual": "Q"
+       },
+       {
+        "name": "Alina AZHGALIYEVA",
+        "noc": "KAZ",
+        "rank": 1,
+        "time": "1:33.743",
+        "qual": "Q"
+       },
+       {
+        "name": "Diede VAN OORSCHOT",
+        "noc": "NED",
+        "rank": 1,
+        "time": "1:34.370",
+        "qual": "Q"
+       },
+       {
+        "name": "Jianing ZHANG",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "1:35.489",
+        "qual": "Q"
+       },
+       {
+        "name": "Nikola MAZUR",
+        "noc": "POL",
+        "rank": 1,
+        "time": "1:36.974",
+        "qual": "Q"
+       },
+       {
+        "name": "Margherita BETTI",
+        "noc": "ITA",
+        "rank": 1,
+        "time": "1:40.189",
+        "qual": "Q"
+       },
+       {
+        "name": "Tineke DEN DULK",
+        "noc": "BEL",
+        "rank": 2,
+        "time": "1:37.141",
+        "qual": "ADV"
+       },
+       {
+        "name": "Kiek STRAATHOF",
+        "noc": "NED",
+        "rank": 2,
+        "time": "1:33.810",
+        "qual": "q"
+       },
+       {
+        "name": "Zoe Florence DELTRAP",
+        "noc": "NED",
+        "rank": 2,
+        "time": "1:34.004",
+        "qual": "q"
+       },
+       {
+        "name": "Diana Laura VEGI",
+        "noc": "HUN",
+        "rank": 2,
+        "time": "1:34.402",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Ann-Sophie BACHAND (CAN)",
+        "Jianing ZHANG (CHN)",
+        "Nikola MAZUR (POL)",
+        "Kiek STRAATHOF (NED)",
+        "Zoe Florence DELTRAP (NED)"
+       ],
+       [
+        "Alina AZHGALIYEVA (KAZ)",
+        "Diede VAN OORSCHOT (NED)",
+        "Margherita BETTI (ITA)",
+        "Tineke DEN DULK (BEL)",
+        "Diana Laura VEGI (HUN)"
+       ]
+      ]
+     }
     },
     {
      "id": 22935,
