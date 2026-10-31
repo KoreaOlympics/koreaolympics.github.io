@@ -18,7 +18,7 @@
   "live": "Women 3000 m Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-31T19:53:39.116291+00:00",
+ "checked_at": "2026-10-31T20:04:16.586398+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -253,7 +253,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-10-31T19:47:00.000Z",
+   "start_utc": "2026-10-31T19:46:00.000Z",
    "title": "Women 3000 m Relay",
    "round": "Semifinals",
    "event_result_id": 16038,
@@ -14234,7 +14234,7 @@
     {
      "id": 22965,
      "name": "Semifinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-10-31T18:46:39.000Z",
      "rule": "The first and second placed teams from each race qualify for Final, the third and fourth placed teams from each race qualify for Final B.",
      "heats": [
@@ -14307,15 +14307,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Canada",
          "noc": "CAN",
-         "time": "no time",
-         "qual": "",
+         "time": "4:07.953",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -14323,11 +14323,11 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Republic of Korea",
          "noc": "KOR",
-         "time": "no time",
-         "qual": "",
+         "time": "4:07.990",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -14335,11 +14335,11 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "China",
          "noc": "CHN",
-         "time": "no time",
-         "qual": "",
+         "time": "4:08.406",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": null,
@@ -14347,11 +14347,11 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "France",
          "noc": "FRA",
-         "time": "no time",
-         "qual": "",
+         "time": "4:10.945",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": null,
@@ -14360,7 +14360,50 @@
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Finals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Canada",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "4:07.953",
+        "qual": "Q"
+       },
+       {
+        "name": "Italy",
+        "noc": "ITA",
+        "rank": 1,
+        "time": "4:11.071",
+        "qual": "Q"
+       },
+       {
+        "name": "Republic of Korea",
+        "noc": "KOR",
+        "rank": 2,
+        "time": "4:07.990",
+        "qual": "Q"
+       },
+       {
+        "name": "Netherlands",
+        "noc": "NED",
+        "rank": 2,
+        "time": "4:11.189",
+        "qual": "Q"
+       }
+      ],
+      "races": [
+       [
+        "Canada (CAN)",
+        "Italy (ITA)",
+        "Republic of Korea (KOR)",
+        "Netherlands (NED)"
+       ]
+      ]
+     }
     },
     {
      "id": 22966,
@@ -15389,11 +15432,11 @@
    "round": "Semifinals",
    "heat": "Heat 2",
    "start_utc": "2026-10-31T18:46:39.000Z",
-   "rank": null,
+   "rank": 2,
    "name": "Republic of Korea",
    "noc": "KOR",
-   "time": "no time",
-   "qual": "",
+   "time": "4:07.990",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": null,
