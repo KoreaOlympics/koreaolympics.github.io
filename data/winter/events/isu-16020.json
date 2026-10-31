@@ -18,7 +18,7 @@
   "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-skate-canada-international-2026/"
  },
- "checked_at": "2026-10-31T21:51:40.760340+00:00",
+ "checked_at": "2026-10-31T22:02:26.436903+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-31T01:00:00.000Z",
@@ -45,7 +45,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-10-31T21:28:00.000Z",
+   "start_utc": "2026-10-31T21:20:00.000Z",
    "title": "Ice Dance",
    "round": "Rhythm Dance",
    "event_result_id": 15724,
@@ -921,6 +921,40 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Katarina WOLFKOSTIN / Dimitry TSAREVSKI",
+     "noc": "USA",
+     "points": "71.40",
+     "status": "Active",
+     "segments": {
+      "RD": {
+       "name": "Rhythm Dance",
+       "rank": 1,
+       "total": "71.40",
+       "tes": "41.42",
+       "pcs": "29.98",
+       "status": "Scheduled Break"
+      }
+     }
+    },
+    {
+     "rank": 2,
+     "name": "Iryna PIDGAINA / Artem KOVAL",
+     "noc": "UKR",
+     "points": "64.89",
+     "status": "Active",
+     "segments": {
+      "RD": {
+       "name": "Rhythm Dance",
+       "rank": 2,
+       "total": "64.89",
+       "tes": "36.43",
+       "pcs": "28.46",
+       "status": "Scheduled Break"
+      }
+     }
+    },
+    {
+     "rank": 3,
      "name": "Noemi Maria TALI / Noah LAFORNARA",
      "noc": "ITA",
      "points": "62.79",
@@ -928,16 +962,16 @@
      "segments": {
       "RD": {
        "name": "Rhythm Dance",
-       "rank": 1,
+       "rank": 3,
        "total": "62.79",
        "tes": "35.05",
        "pcs": "27.74",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
     {
-     "rank": 2,
+     "rank": 4,
      "name": "Alyssa ROBINSON / Jacob PORTZ",
      "noc": "CAN",
      "points": "60.22",
@@ -945,16 +979,16 @@
      "segments": {
       "RD": {
        "name": "Rhythm Dance",
-       "rank": 2,
+       "rank": 4,
        "total": "60.22",
        "tes": "33.77",
        "pcs": "26.45",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
     {
-     "rank": 3,
+     "rank": 5,
      "name": "Layla VEILLON / Alexander BRANDYS",
      "noc": "CAN",
      "points": "59.72",
@@ -962,45 +996,11 @@
      "segments": {
       "RD": {
        "name": "Rhythm Dance",
-       "rank": 3,
+       "rank": 5,
        "total": "59.72",
        "tes": "33.02",
        "pcs": "26.70",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Katarina WOLFKOSTIN / Dimitry TSAREVSKI",
-     "noc": "USA",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "RD": {
-       "name": "Rhythm Dance",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Iryna PIDGAINA / Artem KOVAL",
-     "noc": "UKR",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "RD": {
-       "name": "Rhythm Dance",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -1017,7 +1017,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -1034,7 +1034,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -1051,7 +1051,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -1068,7 +1068,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -1085,7 +1085,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     }
