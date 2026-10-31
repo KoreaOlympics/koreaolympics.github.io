@@ -18,7 +18,7 @@
   "live": "Men 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-31T18:27:11.705925+00:00",
+ "checked_at": "2026-10-31T18:37:36.419063+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -213,7 +213,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-10-31T18:05:00.000Z",
+   "start_utc": "2026-10-31T18:04:00.000Z",
    "title": "Men 500 m",
    "round": "Semifinals",
    "event_result_id": 16034,
@@ -7235,7 +7235,7 @@
      ],
      "projection": {
       "next": "Semifinals",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -7330,10 +7330,196 @@
     {
      "id": 22937,
      "name": "Semifinals",
-     "status": "Scheduled",
-     "start_utc": "2026-10-31T17:29:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-10-31T17:29:21.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final, the third and fourth placed skaters from each race and up to a maximum of next two fastest fifth place skaters qualify for Final B.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Minjeong CHOI",
+         "noc": "KOR",
+         "time": "1:31.083",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 4,
+         "lane": 1,
+         "slug": "minjeong-choi"
+        },
+        {
+         "rank": 2,
+         "name": "Danae BLAIS",
+         "noc": "CAN",
+         "time": "1:31.285",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 25,
+         "lane": 5,
+         "slug": "danae-blais"
+        },
+        {
+         "rank": 3,
+         "name": "Jianing ZHANG",
+         "noc": "CHN",
+         "time": "1:31.338",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 55,
+         "lane": 3,
+         "slug": "jianing-zhang"
+        },
+        {
+         "rank": 4,
+         "name": "Xandra VELZEBOER",
+         "noc": "NED",
+         "time": "1:31.452",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 3,
+         "lane": 2,
+         "slug": "xandra-velzeboer"
+        },
+        {
+         "rank": 5,
+         "name": "Li GONG",
+         "noc": "CHN",
+         "time": "1:31.569",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 19,
+         "lane": 4,
+         "slug": "li-gong"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Courtney SARAULT",
+         "noc": "CAN",
+         "time": "1:30.167",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 1,
+         "lane": 1,
+         "slug": "courtney-sarault"
+        },
+        {
+         "rank": 2,
+         "name": "Florence BRUNELLE",
+         "noc": "CAN",
+         "time": "1:30.218",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 10,
+         "lane": 4,
+         "slug": "florence-brunelle"
+        },
+        {
+         "rank": 3,
+         "name": "Hanne DESMET",
+         "noc": "BEL",
+         "time": "1:30.227",
+         "qual": "q",
+         "status": "",
+         "record": "",
+         "bib": 6,
+         "lane": 3,
+         "slug": "hanne-desmet"
+        },
+        {
+         "rank": 4,
+         "name": "Jiarui SONG",
+         "noc": "CHN",
+         "time": "1:30.392",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 54,
+         "lane": 5,
+         "slug": "jiarui-song"
+        },
+        {
+         "rank": 5,
+         "name": "Kristen SANTOS-GRISWOLD",
+         "noc": "USA",
+         "time": "1:31.294",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 7,
+         "lane": 2,
+         "slug": "kristen-santos-griswold"
+        }
+       ]
+      }
+     ],
+     "projection": {
+      "next": "Finals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Courtney SARAULT",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "1:30.167",
+        "qual": "Q"
+       },
+       {
+        "name": "Minjeong CHOI",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "1:31.083",
+        "qual": "Q"
+       },
+       {
+        "name": "Florence BRUNELLE",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "1:30.218",
+        "qual": "Q"
+       },
+       {
+        "name": "Danae BLAIS",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "1:31.285",
+        "qual": "Q"
+       },
+       {
+        "name": "Hanne DESMET",
+        "noc": "BEL",
+        "rank": 3,
+        "time": "1:30.227",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Courtney SARAULT (CAN)",
+        "Minjeong CHOI (KOR)",
+        "Florence BRUNELLE (CAN)",
+        "Danae BLAIS (CAN)",
+        "Hanne DESMET (BEL)"
+       ]
+      ]
+     }
     },
     {
      "id": 22938,
@@ -13998,6 +14184,25 @@
    "name": "Minjeong CHOI",
    "noc": "KOR",
    "time": "1:29.965",
+   "qual": "Q",
+   "status": "",
+   "record": "",
+   "bib": 4,
+   "lane": 1,
+   "slug": "minjeong-choi"
+  },
+  {
+   "event_id": "isu-16272",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #2",
+   "distance": "Women 1000 m",
+   "round": "Semifinals",
+   "heat": "Heat 1",
+   "start_utc": "2026-10-31T17:29:21.000Z",
+   "rank": 1,
+   "name": "Minjeong CHOI",
+   "noc": "KOR",
+   "time": "1:31.083",
    "qual": "Q",
    "status": "",
    "record": "",
