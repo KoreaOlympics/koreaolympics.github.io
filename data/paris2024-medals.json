@@ -1,1418 +1,2916 @@
 {
- "_note": "2024 파리 올림픽 메달리스트 (허브 '직전 올림픽 메달리스트' 표의 빈 칸·'확인 필요' 칸을 채운다). 칸: '선수 (NOC)', 단체는 NOC, 공동 동메달은 ' / '. 'nat:'은 단체 구기의 국가 이름 칸, '@'로 시작하면 세 칸을 합친 설명.",
+ "_note": "2024 파리 올림픽 메달리스트. Wikipedia 각 종목 메달 표(2026.10.31 확인)에서 뽑았다. la28=false는 LA28에 없는 파리 세부종목(링크 없는 행). 단체는 NOC, 3명 이하는 선수 이름, 공동 동메달은 ' / '.",
+ "source": "https://en.wikipedia.org/wiki/<Sport>_at_the_2024_Summer_Olympics",
  "medals": {
-  "olartisticswimming": {
-   "여자 듀엣": [
-    "Wang Liuyi·Wang Qianyi (CHN)",
-    "Kate Shortman·Isabelle Thorpe (GBR)",
-    "Bregje de Brouwer·Noortje de Brouwer (NED)"
-   ],
-   "단체": [
-    "CHN",
-    "ESP",
-    "USA"
-   ]
-  },
-  "olathletics": {
-   "남자 100m": [
-    "Noah Lyles (USA)",
-    "Kishane Thompson (JAM)",
-    "Fred Kerley (USA)"
-   ],
-   "남자 200m": [
-    "Letsile Tebogo (BOT)",
-    "Kenny Bednarek (USA)",
-    "Noah Lyles (USA)"
-   ],
-   "남자 400m": [
-    "Quincy Hall (USA)",
-    "Matthew Hudson-Smith (GBR)",
-    "Muzala Samukonga (ZAM)"
-   ],
-   "남자 800m": [
-    "Emmanuel Wanyonyi (KEN)",
-    "Marco Arop (CAN)",
-    "Djamel Sedjati (ALG)"
-   ],
-   "남자 1500m": [
-    "Cole Hocker (USA)",
-    "Josh Kerr (GBR)",
-    "Yared Nuguse (USA)"
-   ],
-   "남자 5000m": [
-    "Jakob Ingebrigtsen (NOR)",
-    "Ronald Kwemoi (KEN)",
-    "Grant Fisher (USA)"
-   ],
-   "남자 10000m": [
-    "Joshua Cheptegei (UGA)",
-    "Berihu Aregawi (ETH)",
-    "Grant Fisher (USA)"
-   ],
-   "남자 110m 허들": [
-    "Grant Holloway (USA)",
-    "Daniel Roberts (USA)",
-    "Rasheed Broadbell (JAM)"
-   ],
-   "남자 400m 허들": [
-    "Rai Benjamin (USA)",
-    "Karsten Warholm (NOR)",
-    "Alison dos Santos (BRA)"
-   ],
-   "남자 3000m 장애물": [
-    "Soufiane El Bakkali (MAR)",
-    "Kenneth Rooks (USA)",
-    "Abraham Kibiwot (KEN)"
-   ],
-   "남자 4×100m 계주": [
-    "CAN",
-    "RSA",
-    "GBR"
-   ],
-   "남자 4×400m 계주": [
-    "USA",
-    "BOT",
-    "GBR"
-   ],
-   "남자 마라톤": [
-    "Tamirat Tola (ETH)",
-    "Bashir Abdi (BEL)",
-    "Benson Kipruto (KEN)"
-   ],
-   "남자 높이뛰기": [
-    "Hamish Kerr (NZL)",
-    "Shelby McEwen (USA)",
-    "Mutaz Essa Barshim (QAT)"
-   ],
-   "남자 장대높이뛰기": [
-    "Armand Duplantis (SWE)",
-    "Sam Kendricks (USA)",
-    "Emmanouil Karalis (GRE)"
-   ],
-   "남자 멀리뛰기": [
-    "Miltiadis Tentoglou (GRE)",
-    "Wayne Pinnock (JAM)",
-    "Mattia Furlani (ITA)"
-   ],
-   "남자 세단뛰기": [
-    "Jordan Díaz (ESP)",
-    "Pedro Pichardo (POR)",
-    "Andy Díaz (ITA)"
-   ],
-   "남자 포환던지기": [
-    "Ryan Crouser (USA)",
-    "Joe Kovacs (USA)",
-    "Rajindra Campbell (JAM)"
-   ],
-   "남자 원반던지기": [
-    "Rojé Stona (JAM)",
-    "Mykolas Alekna (LTU)",
-    "Matthew Denny (AUS)"
-   ],
-   "남자 해머던지기": [
-    "Ethan Katzberg (CAN)",
-    "Bence Halász (HUN)",
-    "Mykhaylo Kokhan (UKR)"
-   ],
-   "남자 창던지기": [
-    "Arshad Nadeem (PAK)",
-    "Neeraj Chopra (IND)",
-    "Anderson Peters (GRN)"
-   ],
-   "남자 10종경기": [
-    "Markus Rooth (NOR)",
-    "Leo Neugebauer (GER)",
-    "Lindon Victor (GRN)"
-   ],
-   "여자 100m": [
-    "Julien Alfred (LCA)",
-    "Sha'Carri Richardson (USA)",
-    "Melissa Jefferson (USA)"
-   ],
-   "여자 200m": [
-    "Gabrielle Thomas (USA)",
-    "Julien Alfred (LCA)",
-    "Brittany Brown (USA)"
-   ],
-   "여자 400m": [
-    "Marileidy Paulino (DOM)",
-    "Salwa Eid Naser (BRN)",
-    "Natalia Kaczmarek (POL)"
-   ],
-   "여자 800m": [
-    "Keely Hodgkinson (GBR)",
-    "Tsige Duguma (ETH)",
-    "Mary Moraa (KEN)"
-   ],
-   "여자 1500m": [
-    "Faith Kipyegon (KEN)",
-    "Jessica Hull (AUS)",
-    "Georgia Bell (GBR)"
-   ],
-   "여자 5000m": [
-    "Beatrice Chebet (KEN)",
-    "Faith Kipyegon (KEN)",
-    "Sifan Hassan (NED)"
-   ],
-   "여자 10000m": [
-    "Beatrice Chebet (KEN)",
-    "Nadia Battocletti (ITA)",
-    "Sifan Hassan (NED)"
-   ],
-   "여자 100m 허들": [
-    "Masai Russell (USA)",
-    "Cyréna Samba-Mayela (FRA)",
-    "Jasmine Camacho-Quinn (PUR)"
-   ],
-   "여자 400m 허들": [
-    "Sydney McLaughlin-Levrone (USA)",
-    "Anna Cockrell (USA)",
-    "Femke Bol (NED)"
-   ],
-   "여자 3000m 장애물": [
-    "Winfred Yavi (BRN)",
-    "Peruth Chemutai (UGA)",
-    "Faith Cherotich (KEN)"
-   ],
-   "여자 4×100m 계주": [
-    "USA",
-    "GBR",
-    "GER"
-   ],
-   "여자 4×400m 계주": [
-    "USA",
-    "NED",
-    "GBR"
-   ],
-   "여자 마라톤": [
-    "Sifan Hassan (NED)",
-    "Tigst Assefa (ETH)",
-    "Hellen Obiri (KEN)"
-   ],
-   "여자 높이뛰기": [
-    "Yaroslava Mahuchikh (UKR)",
-    "Nicola Olyslagers (AUS)",
-    "Iryna Gerashchenko (UKR) / Eleanor Patterson (AUS)"
-   ],
-   "여자 장대높이뛰기": [
-    "Nina Kennedy (AUS)",
-    "Katie Moon (USA)",
-    "Alysha Newman (CAN)"
-   ],
-   "여자 멀리뛰기": [
-    "Tara Davis-Woodhall (USA)",
-    "Malaika Mihambo (GER)",
-    "Jasmine Moore (USA)"
-   ],
-   "여자 세단뛰기": [
-    "Thea LaFond (DMA)",
-    "Shanieka Ricketts (JAM)",
-    "Jasmine Moore (USA)"
-   ],
-   "여자 포환던지기": [
-    "Yemisi Ogunleye (GER)",
-    "Maddison-Lee Wesche (NZL)",
-    "Song Jiayuan (CHN)"
-   ],
-   "여자 원반던지기": [
-    "Valarie Allman (USA)",
-    "Feng Bin (CHN)",
-    "Sandra Elkasević (CRO)"
-   ],
-   "여자 해머던지기": [
-    "Camryn Rogers (CAN)",
-    "Annette Echikunwoke (USA)",
-    "Zhao Jie (CHN)"
-   ],
-   "여자 창던지기": [
-    "Haruka Kitaguchi (JPN)",
-    "Jo-Ane van Dyk (RSA)",
-    "Nikola Ogrodníková (CZE)"
-   ],
-   "여자 7종경기": [
-    "Nafissatou Thiam (BEL)",
-    "Katarina Johnson-Thompson (GBR)",
-    "Noor Vidts (BEL)"
-   ],
-   "혼성 4×400m 계주": [
-    "NED",
-    "USA",
-    "GBR"
-   ]
-  },
-  "olbadminton": {
-   "남자 단식": [
-    "Viktor Axelsen (DEN)",
-    "Kunlavut Vitidsarn (THA)",
-    "Lee Zii Jia (MAS)"
-   ],
-   "남자 복식": [
-    "Lee Yang·Wang Chi-lin (TPE)",
-    "Liang Weikeng·Wang Chang (CHN)",
-    "Aaron Chia·Soh Wooi Yik (MAS)"
-   ],
-   "여자 단식": [
-    "안세영 (KOR)",
-    "He Bingjiao (CHN)",
-    "Gregoria Mariska Tunjung (INA)"
-   ],
-   "여자 복식": [
-    "Chen Qingchen·Jia Yifan (CHN)",
-    "Liu Shengshu·Tan Ning (CHN)",
-    "Nami Matsuyama·Chiharu Shida (JPN)"
-   ],
-   "혼합 복식": [
-    "Zheng Siwei·Huang Yaqiong (CHN)",
-    "김원호·정나은 (KOR)",
-    "Yuta Watanabe·Arisa Higashino (JPN)"
-   ]
-  },
-  "olboxing": {
-   "남자 80kg": [
-    "Oleksandr Khyzhniak (UKR)",
-    "Nurbek Oralbay (KAZ)",
-    "Arlen López (CUB) / Cristian Pinales (DOM)"
-   ],
-   "여자 54kg": [
-    "Chang Yuan (CHN)",
-    "Hatice Akbaş (TUR)",
-    "방철미 (PRK) / 임애지 (KOR)"
-   ],
-   "여자 57kg": [
-    "Lin Yu-ting (TPE)",
-    "Julia Szeremeta (POL)",
-    "Esra Yıldız Kahraman (TUR) / Nesthy Petecio (PHI)"
-   ],
-   "여자 60kg": [
-    "Kellie Harrington (IRL)",
-    "Yang Wenlu (CHN)",
-    "Wu Shih-yi (TPE) / Beatriz Ferreira (BRA)"
-   ],
-   "여자 75kg": [
-    "Li Qian (CHN)",
-    "확인 필요",
-    "확인 필요"
-   ],
-   "남자 55kg": "@파리 2024와 체급이 달라 해당 없음",
-   "남자 60kg": "@파리 2024와 체급이 달라 해당 없음",
-   "남자 65kg": "@파리 2024와 체급이 달라 해당 없음",
-   "남자 70kg": "@파리 2024와 체급이 달라 해당 없음",
-   "남자 90kg": "@파리 2024와 체급이 달라 해당 없음",
-   "남자 +90kg": "@파리 2024와 체급이 달라 해당 없음",
-   "여자 51kg": "@파리 2024와 체급이 달라 해당 없음",
-   "여자 65kg": "@파리 2024와 체급이 달라 해당 없음",
-   "여자 70kg": "@파리 2024와 체급이 달라 해당 없음"
-  },
-  "olcanoe": {
-   "남자 C1 1000m": [
-    "Martin Fuksa (CZE)",
-    "Isaquias Queiroz (BRA)",
-    "Serghei Tarnovschi (MDA)"
-   ],
-   "남자 C2 500m": [
-    "Liu Hao·Ji Bowen (CHN)",
-    "Gabriele Casadei·Carlo Tacchini (ITA)",
-    "Joan Antoni Moreno·Diego Domínguez (ESP)"
-   ],
-   "남자 K1 1000m": [
-    "Bálint Kopasz (HUN)",
-    "Ádám Varga (HUN)",
-    "Josef Dostál (CZE)"
-   ],
-   "남자 K2 500m": [
-    "GER",
-    "HUN",
-    "AUS"
-   ],
-   "남자 K4 500m": [
-    "GER",
-    "AUS",
-    "ESP"
-   ],
-   "여자 C1 200m": [
-    "Katie Vincent (CAN)",
-    "Nevin Harrison (USA)",
-    "Yarisleidis Cirilo (CUB)"
-   ],
-   "여자 C2 500m": [
-    "Xu Shixiao·Sun Mengya (CHN)",
-    "Sloan MacKenzie·Katie Vincent (CAN)",
-    "Liudmyla Luzan·Anastasiia Rybachok (UKR)"
-   ],
-   "여자 K1 500m": [
-    "Lisa Carrington (NZL)",
-    "Tamara Csipes (HUN)",
-    "Emma Jørgensen (DEN)"
-   ],
-   "여자 K2 500m": [
-    "Lisa Carrington·Alicia Hoskin (NZL)",
-    "Noémi Pupp·Tamara Csipes (HUN)",
-    "확인 필요"
-   ],
-   "여자 K4 500m": [
-    "NZL",
-    "GER",
-    "HUN"
-   ],
-   "남자 슬라롬 C1": [
-    "Nicolas Gestin (FRA)",
-    "Adam Burgess (GBR)",
-    "Matej Beňuš (SVK)"
-   ],
-   "남자 슬라롬 K1": [
-    "Giovanni De Gennaro (ITA)",
-    "Titouan Castryck (FRA)",
-    "Pierre-Antoine Tillard (FRA)"
-   ],
-   "남자 카약 크로스": [
-    "Finn Butcher (NZL)",
-    "Joe Clarke (GBR)",
-    "Noah Hegge (GER)"
-   ],
-   "여자 슬라롬 C1": [
-    "Jessica Fox (AUS)",
-    "Elena Lilik (GER)",
-    "Evy Leibfarth (USA)"
-   ],
-   "여자 슬라롬 K1": [
-    "Jessica Fox (AUS)",
-    "Klaudia Zwolińska (POL)",
-    "Kimberley Woods (GBR)"
-   ],
-   "여자 카약 크로스": [
-    "Noemie Fox (AUS)",
-    "Angèle Hug (FRA)",
-    "Ella Nicholas (COK)"
-   ]
-  },
-  "olclimbing": {
-   "남자 스피드": [
-    "Veddriq Leonardo (INA)",
-    "Wu Peng (CHN)",
-    "Sam Watson (USA)"
-   ],
-   "여자 스피드": [
-    "Aleksandra Mirosław (POL)",
-    "Deng Lijuan (CHN)",
-    "Aleksandra Kałucka (POL)"
-   ]
-  },
-  "olcycling": {
-   "남자 도로 경주": [
-    "Remco Evenepoel (BEL)",
-    "Valentin Madouas (FRA)",
-    "Christophe Laporte (FRA)"
-   ],
-   "남자 도로 독주": [
-    "Remco Evenepoel (BEL)",
-    "Filippo Ganna (ITA)",
-    "Wout van Aert (BEL)"
-   ],
-   "여자 도로 경주": [
-    "Kristen Faulkner (USA)",
-    "Marianne Vos (NED)",
-    "Lotte Kopecky (BEL)"
-   ],
-   "여자 도로 독주": [
-    "Grace Brown (AUS)",
-    "Anna Henderson (GBR)",
-    "Chloé Dygert (USA)"
-   ],
-   "남자 스프린트": [
-    "Harrie Lavreysen (NED)",
-    "Matthew Richardson (AUS)",
-    "Jack Carlin (GBR)"
-   ],
-   "남자 팀 스프린트": [
-    "NED",
-    "GBR",
-    "AUS"
-   ],
-   "남자 케이린": [
-    "Harrie Lavreysen (NED)",
-    "Matthew Richardson (AUS)",
-    "Jeffrey Hoogland (NED)"
-   ],
-   "남자 팀 추발": [
-    "AUS",
-    "GBR",
-    "ITA"
-   ],
-   "남자 옴니엄": [
-    "Benjamin Thomas (FRA)",
-    "Iúri Leitão (POR)",
-    "Fabio Van den Bossche (BEL)"
-   ],
-   "남자 매디슨": [
-    "Iúri Leitão·Rui Oliveira (POR)",
-    "ITA",
-    "DEN"
-   ],
-   "여자 스프린트": [
-    "Ellesse Andrews (NZL)",
-    "Hetty van de Wouw (NED)",
-    "Emma Finucane (GBR)"
-   ],
-   "여자 팀 스프린트": [
-    "GBR",
-    "NZL",
-    "GER"
-   ],
-   "여자 케이린": [
-    "Ellesse Andrews (NZL)",
-    "Hetty van de Wouw (NED)",
-    "Lea Friedrich (GER)"
-   ],
-   "여자 팀 추발": [
-    "USA",
-    "NZL",
-    "GBR"
-   ],
-   "여자 옴니엄": [
-    "Jennifer Valente (USA)",
-    "Daria Pikulik (POL)",
-    "Ally Wollaston (NZL)"
-   ],
-   "여자 매디슨": [
-    "Chiara Consonni·Vittoria Guazzini (ITA)",
-    "GBR",
-    "NED"
-   ],
-   "남자 산악자전거 크로스컨트리": [
-    "Tom Pidcock (GBR)",
-    "Victor Koretzky (FRA)",
-    "Alan Hatherly (RSA)"
-   ],
-   "여자 산악자전거 크로스컨트리": [
-    "Pauline Ferrand-Prévot (FRA)",
-    "Haley Batten (USA)",
-    "Jenny Rissveds (SWE)"
-   ],
-   "남자 BMX 레이싱": [
-    "Joris Daudet (FRA)",
-    "Sylvain André (FRA)",
-    "Romain Mahieu (FRA)"
-   ],
-   "여자 BMX 레이싱": [
-    "Saya Sakakibara (AUS)",
-    "Manon Veenstra (NED)",
-    "Zoé Claessens (SUI)"
-   ],
-   "남자 BMX 프리스타일 파크": [
-    "José Torres (ARG)",
-    "Kieran Reilly (GBR)",
-    "Anthony Jeanjean (FRA)"
-   ],
-   "여자 BMX 프리스타일 파크": [
-    "Deng Yawen (CHN)",
-    "Perris Benegas (USA)",
-    "Natalya Diehm (AUS)"
-   ]
-  },
-  "oldiving": {
-   "남자 3m 스프링보드": [
-    "Xie Siyi (CHN)",
-    "Wang Zongyuan (CHN)",
-    "Osmar Olvera (MEX)"
-   ],
-   "남자 10m 플랫폼": [
-    "Cao Yuan (CHN)",
-    "Rikuto Tamai (JPN)",
-    "Noah Williams (GBR)"
-   ],
-   "남자 3m 싱크로나이즈드": [
-    "Wang Zongyuan·Long Daoyi (CHN)",
-    "MEX",
-    "GBR"
-   ],
-   "남자 10m 싱크로나이즈드": [
-    "Lian Junjie·Yang Hao (CHN)",
-    "GBR",
-    "CAN"
-   ],
-   "여자 3m 스프링보드": [
-    "Chen Yiwen (CHN)",
-    "Maddison Keeney (AUS)",
-    "Chang Yani (CHN)"
-   ],
-   "여자 10m 플랫폼": [
-    "Quan Hongchan (CHN)",
-    "Chen Yuxi (CHN)",
-    "김미래 (PRK)"
-   ],
-   "여자 3m 싱크로나이즈드": [
-    "CHN",
-    "USA",
-    "GBR"
-   ],
-   "여자 10m 싱크로나이즈드": [
-    "CHN",
-    "PRK",
-    "GBR"
-   ]
-  },
-  "olequestrian": {
-   "마장마술 개인": [
-    "Jessica von Bredow-Werndl (GER)",
-    "Isabell Werth (GER)",
-    "Charlotte Fry (GBR)"
-   ],
-   "마장마술 단체": [
-    "GER",
-    "DEN",
-    "GBR"
-   ],
-   "종합마술 개인": [
-    "Michael Jung (GER)",
-    "Chris Burton (AUS)",
-    "Laura Collett (GBR)"
-   ],
-   "종합마술 단체": [
-    "GBR",
-    "FRA",
-    "JPN"
-   ],
-   "장애물 개인": [
-    "Christian Kukuk (GER)",
-    "Steve Guerdat (SUI)",
-    "Maikel van der Vleuten (NED)"
-   ],
-   "장애물 단체": [
-    "GBR",
-    "USA",
-    "FRA"
-   ]
-  },
-  "olfencing": {
-   "남자 에페 개인": [
-    "Koki Kano (JPN)",
-    "Yannick Borel (FRA)",
-    "Mohamed El-Sayed (EGY)"
-   ],
-   "남자 에페 단체": [
-    "HUN",
-    "JPN",
-    "CZE"
-   ],
-   "남자 플뢰레 개인": [
-    "Cheung Ka-long (HKG)",
-    "Filippo Macchi (ITA)",
-    "Nick Itkin (USA)"
-   ],
-   "남자 플뢰레 단체": [
-    "JPN",
-    "ITA",
-    "USA"
-   ],
-   "남자 사브르 개인": [
-    "오상욱 (KOR)",
-    "Fares Ferjani (TUN)",
-    "Luigi Samele (ITA)"
-   ],
-   "남자 사브르 단체": [
-    "KOR",
-    "HUN",
-    "FRA"
-   ],
-   "여자 에페 개인": [
-    "Vivian Kong (HKG)",
-    "Auriane Mallo-Breton (FRA)",
-    "Eszter Muhari (HUN)"
-   ],
-   "여자 에페 단체": [
-    "ITA",
-    "FRA",
-    "POL"
-   ],
-   "여자 플뢰레 개인": [
-    "Lee Kiefer (USA)",
-    "Lauren Scruggs (USA)",
-    "Alice Volpi (ITA)"
-   ],
-   "여자 플뢰레 단체": [
-    "USA",
-    "ITA",
-    "JPN"
-   ],
-   "여자 사브르 개인": [
-    "Manon Apithy-Brunet (FRA)",
-    "Sara Balzer (FRA)",
-    "Olga Kharlan (UKR)"
-   ],
-   "여자 사브르 단체": [
-    "UKR",
-    "KOR",
-    "JPN"
-   ]
-  },
-  "olgolf": {
-   "남자 개인": [
-    "Scottie Scheffler (USA)",
-    "Tommy Fleetwood (GBR)",
-    "Hideki Matsuyama (JPN)"
-   ],
-   "여자 개인": [
-    "Lydia Ko (NZL)",
-    "Esther Henseleit (GER)",
-    "Lin Xiyu (CHN)"
-   ]
-  },
-  "olgymnastics": {
-   "남자 단체": [
-    "JPN",
-    "CHN",
-    "USA"
-   ],
-   "남자 개인종합": [
-    "Shinnosuke Oka (JPN)",
-    "Zhang Boheng (CHN)",
-    "Xiao Ruoteng (CHN)"
-   ],
-   "남자 마루": [
-    "Carlos Yulo (PHI)",
-    "Artem Dolgopyat (ISR)",
-    "Jake Jarman (GBR)"
-   ],
-   "남자 안마": [
-    "Rhys McClenaghan (IRL)",
-    "Nariman Kurbanov (KAZ)",
-    "Stephen Nedoroscik (USA)"
-   ],
-   "남자 링": [
-    "Liu Yang (CHN)",
-    "Zou Jingyuan (CHN)",
-    "Eleftherios Petrounias (GRE)"
-   ],
-   "남자 도마": [
-    "Carlos Yulo (PHI)",
-    "Artur Davtyan (ARM)",
-    "Harry Hepworth (GBR)"
-   ],
-   "남자 평행봉": [
-    "Zou Jingyuan (CHN)",
-    "Illia Kovtun (UKR)",
-    "Shinnosuke Oka (JPN)"
-   ],
-   "남자 철봉": [
-    "Shinnosuke Oka (JPN)",
-    "Ángel Barajas (COL)",
-    "Zhang Boheng (CHN) / Tang Chia-hung (TPE)"
-   ],
-   "여자 단체": [
-    "USA",
-    "ITA",
-    "BRA"
-   ],
-   "여자 개인종합": [
-    "Simone Biles (USA)",
-    "Rebeca Andrade (BRA)",
-    "Sunisa Lee (USA)"
-   ],
-   "여자 도마": [
-    "Simone Biles (USA)",
-    "Rebeca Andrade (BRA)",
-    "Jade Carey (USA)"
-   ],
-   "여자 이단평행봉": [
-    "Kaylia Nemour (ALG)",
-    "Qiu Qiyuan (CHN)",
-    "Sunisa Lee (USA)"
-   ],
-   "여자 평균대": [
-    "Alice D'Amato (ITA)",
-    "Zhou Yaqin (CHN)",
-    "Manila Esposito (ITA)"
-   ],
-   "여자 마루": [
-    "Rebeca Andrade (BRA)",
-    "Simone Biles (USA)",
-    "Ana Bărbosu (ROU)"
-   ],
-   "여자 리듬체조 개인종합": [
-    "Darja Varfolomeev (GER)",
-    "Boryana Kaleyn (BUL)",
-    "Sofia Raffaeli (ITA)"
-   ],
-   "여자 리듬체조 단체종합": [
-    "CHN",
-    "ISR",
-    "ITA"
-   ],
-   "남자 트램펄린": [
-    "Ivan Litvinovich (AIN)",
-    "Wang Zisai (CHN)",
-    "Allan Morante (FRA)"
-   ],
-   "여자 트램펄린": [
-    "Bryony Page (GBR)",
-    "Viyaleta Bardzilouskaya (AIN)",
-    "Sophiane Méthot (CAN)"
-   ]
-  },
-  "oljudo": {
-   "남자 -60kg": [
-    "Yeldos Smetov (KAZ)",
-    "Luka Mkheidze (FRA)",
-    "Francisco Garrigós (ESP) / Ryuju Nagayama (JPN)"
-   ],
-   "남자 -66kg": [
-    "Hifumi Abe (JPN)",
-    "Willian Lima (BRA)",
-    "Denis Vieru (MDA) / Gusman Kyrgyzbayev (KAZ)"
-   ],
-   "남자 -73kg": [
-    "Hidayat Heydarov (AZE)",
-    "Joan-Benjamin Gaba (FRA)",
-    "Adil Osmanov (MDA) / Soichi Hashimoto (JPN)"
-   ],
-   "남자 -81kg": [
-    "Takanori Nagase (JPN)",
-    "Tato Grigalashvili (GEO)",
-    "Somon Makhmadbekov (TJK) / 이준환 (KOR)"
-   ],
-   "남자 -90kg": [
-    "Lasha Bekauri (GEO)",
-    "Sanshiro Murao (JPN)",
-    "Maxime-Gaël Ngayap Hambou (FRA) / Theodoros Tselidis (GRE)"
-   ],
-   "남자 -100kg": [
-    "Zelym Kotsoiev (AZE)",
-    "Muzaffarbek Turoboyev (UZB)",
-    "Ilia Sulamanidze (GEO) / Peter Paltchik (ISR)"
-   ],
-   "남자 +100kg": [
-    "Teddy Riner (FRA)",
-    "김민종 (KOR)",
-    "Alisher Yusupov (UZB) / Temur Rakhimov (TJK)"
-   ],
-   "여자 -48kg": [
-    "Natsumi Tsunoda (JPN)",
-    "Bavuudorj Baasankhuu (MGL)",
-    "Shirine Boukli (FRA) / Tara Babulfath (SWE)"
-   ],
-   "여자 -52kg": [
-    "Diyora Keldiyorova (UZB)",
-    "Distria Krasniqi (KOS)",
-    "Amandine Buchard (FRA) / Larissa Pimenta (BRA)"
-   ],
-   "여자 -57kg": [
-    "Christa Deguchi (CAN)",
-    "허미미 (KOR)",
-    "Sarah-Léonie Cysique (FRA) / Haruka Funakubo (JPN)"
-   ],
-   "여자 -63kg": [
-    "Andreja Leški (SLO)",
-    "Prisca Awiti Alcaraz (MEX)",
-    "Clarisse Agbegnenou (FRA) / Laura Fazliu (KOS)"
-   ],
-   "여자 -70kg": [
-    "Barbara Matić (CRO)",
-    "Miriam Butkereit (GER)",
-    "Michaela Polleres (AUT) / Saki Niizoe (JPN)"
-   ],
-   "여자 -78kg": [
-    "Alice Bellandi (ITA)",
-    "Inbar Lanir (ISR)",
-    "Ma Zhenzhao (CHN) / Patrícia Sampaio (POR)"
-   ],
-   "여자 +78kg": [
-    "Beatriz Souza (BRA)",
-    "Raz Hershko (ISR)",
-    "김하윤 (KOR) / Romane Dicko (FRA)"
-   ],
-   "혼성 단체": [
-    "FRA",
-    "JPN",
-    "KOR / GER"
-   ]
-  },
-  "olmarathonswim": {
-   "남자 10km": [
-    "Kristóf Rasovszky (HUN)",
-    "Oliver Klemet (GER)",
-    "Dávid Betlehem (HUN)"
-   ],
-   "여자 10km": [
-    "Sharon van Rouwendaal (NED)",
-    "Moesha Johnson (AUS)",
-    "Ginevra Taddeucci (ITA)"
-   ]
-  },
-  "olmodernpentathlon": {
-   "남자 개인": [
-    "Ahmed Elgendy (EGY)",
-    "Taishu Sato (JPN)",
-    "Giorgio Malan (ITA)"
-   ],
-   "여자 개인": [
-    "Michelle Gulyás (HUN)",
-    "Élodie Clouvel (FRA)",
-    "성승민 (KOR)"
-   ]
-  },
-  "olrowing": {
-   "남자 싱글 스컬": [
-    "Oliver Zeidler (GER)",
-    "Yauheni Zalaty (AIN)",
-    "Simon van Dorp (NED)"
-   ],
-   "남자 더블 스컬": [
-    "ROU",
-    "IRL",
-    "SUI"
-   ],
-   "남자 쿼드러플 스컬": [
-    "NED",
-    "ITA",
-    "POL"
-   ],
-   "남자 페어": [
-    "Martin Sinković·Valent Sinković (CRO)",
-    "GBR",
-    "SUI"
-   ],
-   "남자 포어": [
-    "GBR",
-    "USA",
-    "NZL"
-   ],
-   "남자 에이트": [
-    "GBR",
-    "NED",
-    "USA"
-   ],
-   "여자 싱글 스컬": [
-    "Karolien Florijn (NED)",
-    "Emma Twigg (NZL)",
-    "Viktorija Senkutė (LTU)"
-   ],
-   "여자 더블 스컬": [
-    "ROU",
-    "NED",
-    "GBR"
-   ],
-   "여자 쿼드러플 스컬": [
-    "GBR",
-    "NED",
-    "USA"
-   ],
-   "여자 페어": [
-    "Ymkje Clevering·Veronique Meester (NED)",
-    "ROU",
-    "AUS"
-   ],
-   "여자 포어": [
-    "NED",
-    "GBR",
-    "AUS"
-   ],
-   "여자 에이트": [
-    "ROU",
-    "CAN",
-    "GBR"
-   ]
-  },
-  "olsailing": {
-   "남자 윈드서핑 (iQFOiL)": [
-    "Tom Reuveny (ISR)",
-    "Grae Morris (AUS)",
-    "Luuc van Opzeeland (NED)"
-   ],
-   "남자 카이트 (Formula Kite)": [
-    "Valentin Bontus (AUT)",
-    "Toni Vodišek (SLO)",
-    "Maximilian Maeder (SGP)"
-   ],
-   "남자 1인승 딩기 (ILCA 7)": [
-    "Matt Wearn (AUS)",
-    "Pavlos Kontides (CYP)",
-    "Stefano Peschiera (PER)"
-   ],
-   "남자 스키프 (49er)": [
-    "ESP",
-    "NZL",
-    "USA"
-   ],
-   "여자 윈드서핑 (iQFOiL)": [
-    "Marta Maggetti (ITA)",
-    "Sharon Kantor (ISR)",
-    "Emma Wilson (GBR)"
-   ],
-   "여자 카이트 (Formula Kite)": [
-    "Eleanor Aldridge (GBR)",
-    "Lauriane Nolot (FRA)",
-    "Annelous Lammerts (NED)"
-   ],
-   "여자 1인승 딩기 (ILCA 6)": [
-    "Marit Bouwmeester (NED)",
-    "Eve McMahon (IRL)",
-    "Anne-Marie Rindom (DEN)"
-   ],
-   "여자 스키프 (49erFX)": [
-    "NED",
-    "SWE",
-    "FRA"
-   ],
-   "혼성 2인승 딩기 (470)": [
-    "Lara Vadlau·Lukas Mähr (AUT)",
-    "Keiju Okada·Miho Yoshioka (JPN)",
-    "확인 필요"
-   ],
-   "혼성 멀티헐 (Nacra 17)": [
-    "Ruggero Tita·Caterina Banti (ITA)",
-    "ARG",
-    "NZL"
-   ]
-  },
-  "olshooting": {
-   "남자 10m 공기권총": [
-    "Xie Yu (CHN)",
-    "Federico Nilo Maldini (ITA)",
-    "Paolo Monna (ITA)"
-   ],
-   "남자 25m 속사권총": [
-    "Li Yuehong (CHN)",
-    "조영재 (KOR)",
-    "Wang Xinjie (CHN)"
-   ],
-   "남자 10m 공기소총": [
-    "Sheng Lihao (CHN)",
-    "Victor Lindgren (SWE)",
-    "Miran Maričić (CRO)"
-   ],
-   "남자 50m 소총 3자세": [
-    "Liu Yukun (CHN)",
-    "Serhiy Kulish (UKR)",
-    "Swapnil Kusale (IND)"
-   ],
-   "남자 트랩": [
-    "Nathan Hales (GBR)",
-    "Qi Ying (CHN)",
-    "Jean Pierre Brol (GUA)"
-   ],
-   "남자 스키트": [
-    "Vincent Hancock (USA)",
-    "Conner Prince (USA)",
-    "Lee Meng-yuan (TPE)"
-   ],
-   "여자 10m 공기권총": [
-    "오예진 (KOR)",
-    "김예지 (KOR)",
-    "Manu Bhaker (IND)"
-   ],
-   "여자 25m 권총": [
-    "양지인 (KOR)",
-    "Camille Jedrzejewski (FRA)",
-    "Veronika Major (HUN)"
-   ],
-   "여자 10m 공기소총": [
-    "반효진 (KOR)",
-    "Huang Yuting (CHN)",
-    "Audrey Gogniat (SUI)"
-   ],
-   "여자 50m 소총 3자세": [
-    "Chiara Leone (SUI)",
-    "Sagen Maddalena (USA)",
-    "Zhang Qiongyue (CHN)"
-   ],
-   "여자 트랩": [
-    "Adriana Ruano (GUA)",
-    "Silvana Stanco (ITA)",
-    "Penny Smith (AUS)"
-   ],
-   "여자 스키트": [
-    "Francisca Crovetto (CHI)",
-    "Amber Rutter (GBR)",
-    "Austen Smith (USA)"
-   ],
-   "혼성 10m 공기권총 단체": [
-    "SRB",
-    "TUR",
-    "IND"
-   ],
-   "혼성 10m 공기소총 단체": [
-    "CHN",
-    "금지현·박하준 (KOR)",
-    "KAZ"
-   ]
-  },
-  "olskateboard": {
-   "남자 스트리트": [
-    "Yuto Horigome (JPN)",
-    "Jagger Eaton (USA)",
-    "Nyjah Huston (USA)"
-   ],
-   "남자 파크": [
-    "Keegan Palmer (AUS)",
-    "Tom Schaar (USA)",
-    "Augusto Akio (BRA)"
-   ],
-   "여자 스트리트": [
-    "Coco Yoshizawa (JPN)",
-    "Liz Akama (JPN)",
-    "Rayssa Leal (BRA)"
-   ],
-   "여자 파크": [
-    "Arisa Trew (AUS)",
-    "Cocona Hiraki (JPN)",
-    "Sky Brown (GBR)"
-   ]
-  },
-  "olsurfing": {
-   "남자 숏보드": [
-    "Kauli Vaast (FRA)",
-    "Jack Robinson (AUS)",
-    "Gabriel Medina (BRA)"
-   ],
-   "여자 숏보드": [
-    "Caroline Marks (USA)",
-    "Tatiana Weston-Webb (BRA)",
-    "Johanne Defay (FRA)"
-   ]
-  },
-  "olswimming": {
-   "남자 자유형 50m": [
-    "Cameron McEvoy (AUS)",
-    "Ben Proud (GBR)",
-    "Florent Manaudou (FRA)"
-   ],
-   "남자 자유형 100m": [
-    "Pan Zhanle (CHN)",
-    "Kyle Chalmers (AUS)",
-    "David Popovici (ROU)"
-   ],
-   "남자 자유형 200m": [
-    "David Popovici (ROU)",
-    "Matthew Richards (GBR)",
-    "Luke Hobson (USA)"
-   ],
-   "남자 자유형 400m": [
-    "Lukas Märtens (GER)",
-    "Elijah Winnington (AUS)",
-    "김우민 (KOR)"
-   ],
-   "남자 자유형 800m": [
-    "Daniel Wiffen (IRL)",
-    "Bobby Finke (USA)",
-    "Gregorio Paltrinieri (ITA)"
-   ],
-   "남자 자유형 1500m": [
-    "Bobby Finke (USA)",
-    "Gregorio Paltrinieri (ITA)",
-    "Daniel Wiffen (IRL)"
-   ],
-   "남자 배영 100m": [
-    "Thomas Ceccon (ITA)",
-    "Xu Jiayu (CHN)",
-    "Ryan Murphy (USA)"
-   ],
-   "남자 배영 200m": [
-    "Hubert Kós (HUN)",
-    "Apostolos Christou (GRE)",
-    "Roman Mityukov (SUI)"
-   ],
-   "남자 평영 100m": [
-    "Nicolò Martinenghi (ITA)",
-    "Adam Peaty (GBR) / Nic Fink (USA)",
-    "—"
-   ],
-   "남자 평영 200m": [
-    "Léon Marchand (FRA)",
-    "Zac Stubblety-Cook (AUS)",
-    "Caspar Corbeau (NED)"
-   ],
-   "남자 접영 100m": [
-    "Kristóf Milák (HUN)",
-    "Josh Liendo (CAN)",
-    "Ilya Kharun (CAN)"
-   ],
-   "남자 접영 200m": [
-    "Léon Marchand (FRA)",
-    "Kristóf Milák (HUN)",
-    "Ilya Kharun (CAN)"
-   ],
-   "남자 개인혼영 200m": [
-    "Léon Marchand (FRA)",
-    "Duncan Scott (GBR)",
-    "Wang Shun (CHN)"
-   ],
-   "남자 개인혼영 400m": [
-    "Léon Marchand (FRA)",
-    "Tomoyuki Matsushita (JPN)",
-    "Carson Foster (USA)"
-   ],
-   "남자 4×100m 자유형 계주": [
-    "USA",
-    "AUS",
-    "ITA"
-   ],
-   "남자 4×200m 자유형 계주": [
-    "GBR",
-    "USA",
-    "AUS"
-   ],
-   "남자 4×100m 혼계영": [
-    "CHN",
-    "USA",
-    "FRA"
-   ],
-   "여자 자유형 50m": [
-    "Sarah Sjöström (SWE)",
-    "Meg Harris (AUS)",
-    "Zhang Yufei (CHN)"
-   ],
-   "여자 자유형 100m": [
-    "Sarah Sjöström (SWE)",
-    "Torri Huske (USA)",
-    "Mollie O'Callaghan (AUS)"
-   ],
-   "여자 자유형 200m": [
-    "Mollie O'Callaghan (AUS)",
-    "Ariarne Titmus (AUS)",
-    "Siobhán Haughey (HKG)"
-   ],
-   "여자 자유형 400m": [
-    "Ariarne Titmus (AUS)",
-    "Summer McIntosh (CAN)",
-    "Katie Ledecky (USA)"
-   ],
-   "여자 자유형 800m": [
-    "Katie Ledecky (USA)",
-    "Ariarne Titmus (AUS)",
-    "Paige Madden (USA)"
-   ],
-   "여자 자유형 1500m": [
-    "Katie Ledecky (USA)",
-    "Anastasiia Kirpichnikova (FRA)",
-    "Isabel Gose (GER)"
-   ],
-   "여자 배영 100m": [
-    "Kaylee McKeown (AUS)",
-    "Regan Smith (USA)",
-    "Katharine Berkoff (USA)"
-   ],
-   "여자 배영 200m": [
-    "Kaylee McKeown (AUS)",
-    "Regan Smith (USA)",
-    "Kylie Masse (CAN)"
-   ],
-   "여자 평영 100m": [
-    "Tatjana Smith (RSA)",
-    "Tang Qianting (CHN)",
-    "Mona McSharry (IRL)"
-   ],
-   "여자 평영 200m": [
-    "Kate Douglass (USA)",
-    "Tatjana Smith (RSA)",
-    "Tes Schouten (NED)"
-   ],
-   "여자 접영 100m": [
-    "Torri Huske (USA)",
-    "Gretchen Walsh (USA)",
-    "Zhang Yufei (CHN)"
-   ],
-   "여자 접영 200m": [
-    "Summer McIntosh (CAN)",
-    "Regan Smith (USA)",
-    "Zhang Yufei (CHN)"
-   ],
-   "여자 개인혼영 200m": [
-    "Summer McIntosh (CAN)",
-    "Kate Douglass (USA)",
-    "Kaylee McKeown (AUS)"
-   ],
-   "여자 개인혼영 400m": [
-    "Summer McIntosh (CAN)",
-    "Katie Grimes (USA)",
-    "Emma Weyant (USA)"
-   ],
-   "여자 4×100m 자유형 계주": [
-    "AUS",
-    "USA",
-    "CHN"
-   ],
-   "여자 4×200m 자유형 계주": [
-    "AUS",
-    "USA",
-    "CHN"
-   ],
-   "여자 4×100m 혼계영": [
-    "USA",
-    "AUS",
-    "CHN"
-   ],
-   "혼성 4×100m 혼계영": [
-    "USA",
-    "CHN",
-    "AUS"
-   ]
-  },
-  "oltabletennis": {
-   "남자 단식": [
-    "Fan Zhendong (CHN)",
-    "Truls Möregårdh (SWE)",
-    "Félix Lebrun (FRA)"
-   ],
-   "여자 단식": [
-    "Chen Meng (CHN)",
-    "Sun Yingsha (CHN)",
-    "Hina Hayata (JPN)"
-   ],
-   "혼합 복식": [
-    "Wang Chuqin·Sun Yingsha (CHN)",
-    "리정식·김금용 (PRK)",
-    "임종훈·신유빈 (KOR)"
-   ]
-  },
-  "oltennis": {
-   "남자 단식": [
-    "Novak Djokovic (SRB)",
-    "Carlos Alcaraz (ESP)",
-    "Lorenzo Musetti (ITA)"
-   ],
-   "남자 복식": [
-    "Matthew Ebden·John Peers (AUS)",
-    "Austin Krajicek·Rajeev Ram (USA)",
-    "Taylor Fritz·Tommy Paul (USA)"
-   ],
-   "여자 단식": [
-    "Zheng Qinwen (CHN)",
-    "Donna Vekić (CRO)",
-    "Iga Świątek (POL)"
-   ],
-   "여자 복식": [
-    "Sara Errani·Jasmine Paolini (ITA)",
-    "Mirra Andreeva·Diana Shnaider (AIN)",
-    "Cristina Bucșa·Sara Sorribes Tormo (ESP)"
-   ],
-   "혼합 복식": [
-    "Kateřina Siniaková·Tomáš Macháč (CZE)",
-    "Wang Xinyu·Zhang Zhizhen (CHN)",
-    "Gabriela Dabrowski·Félix Auger-Aliassime (CAN)"
-   ]
-  },
-  "oltriathlon": {
-   "남자 개인": [
-    "Alex Yee (GBR)",
-    "Hayden Wilde (NZL)",
-    "Léo Bergère (FRA)"
-   ],
-   "여자 개인": [
-    "Cassandre Beaugrand (FRA)",
-    "Julie Derron (SUI)",
-    "Beth Potter (GBR)"
-   ],
-   "혼성 계주": [
-    "GER",
-    "USA",
-    "GBR"
-   ]
-  },
-  "olwrestling": {
-   "남자 자유형 57kg": [
-    "Rei Higuchi (JPN)",
-    "Spencer Lee (USA)",
-    "확인 필요"
-   ],
-   "남자 자유형 65kg": [
-    "Kotaro Kiyooka (JPN)",
-    "확인 필요",
-    "확인 필요"
-   ],
-   "남자 자유형 74kg": [
-    "Razambek Zhamalov (UZB)",
-    "확인 필요",
-    "확인 필요"
-   ],
-   "남자 자유형 86kg": [
-    "확인 필요",
-    "확인 필요",
-    "확인 필요"
-   ],
-   "남자 자유형 97kg": [
-    "Akhmed Tazhudinov (BRN)",
-    "확인 필요",
-    "확인 필요"
-   ],
-   "남자 자유형 125kg": [
-    "Geno Petriashvili (GEO)",
-    "Amir Hossein Zare (IRI)",
-    "Taha Akgül (TUR) / 확인 필요"
-   ],
-   "남자 그레코로만형 60kg": [
-    "Kenichiro Fumita (JPN)",
-    "확인 필요",
-    "확인 필요"
-   ],
-   "남자 그레코로만형 67kg": [
-    "Saeid Esmaeili (IRI)",
-    "확인 필요",
-    "확인 필요"
-   ],
-   "남자 그레코로만형 77kg": [
-    "Nao Kusaka (JPN)",
-    "Demeu Zhadrayev (KAZ)",
-    "Malkhas Amoyan (ARM) / Akzhol Makhmudov (KGZ)"
-   ],
-   "남자 그레코로만형 87kg": [
-    "Semen Novikov (BUL)",
-    "Alireza Mohmadi (IRI)",
-    "Zhan Beleniuk (UKR) / 확인 필요"
-   ],
-   "남자 그레코로만형 97kg": [
-    "Mohammad Hadi Saravi (IRI)",
-    "확인 필요",
-    "확인 필요"
-   ],
-   "남자 그레코로만형 130kg": [
-    "Mijaín López (CUB)",
-    "Yasmani Acosta (CHI)",
-    "Amin Mirzazadeh (IRI) / Meng Lingzhe (CHN)"
-   ],
-   "여자 자유형 50kg": [
-    "Sarah Hildebrandt (USA)",
-    "Yusneylis Guzmán (CUB)",
-    "확인 필요"
-   ],
-   "여자 자유형 53kg": [
-    "Akari Fujinami (JPN)",
-    "Lucía Yépez (ECU)",
-    "확인 필요"
-   ],
-   "여자 자유형 57kg": [
-    "Tsugumi Sakurai (JPN)",
-    "Anastasia Nichita (MDA)",
-    "확인 필요"
-   ],
-   "여자 자유형 62kg": [
-    "Sakura Motoki (JPN)",
-    "Iryna Koliadenko (UKR)",
-    "확인 필요"
-   ],
-   "여자 자유형 68kg": [
-    "Amit Elor (USA)",
-    "Meerim Zhumanazarova (KGZ)",
-    "확인 필요"
-   ],
-   "여자 자유형 76kg": [
-    "Yuka Kagami (JPN)",
-    "Kennedy Blades (USA)",
-    "Tatiana Rentería (COL) / Milaimy Marín (CUB)"
-   ]
-  },
-  "olbasketball": {
-   "5인제 남자": [
-    null,
-    null,
-    "nat:세르비아"
-   ]
-  },
-  "olfootball": {
-   "여자": [
-    "nat:미국",
-    "nat:브라질",
-    "nat:독일"
-   ]
-  }
+  "olartisticswimming": [
+   {
+    "label": "여자 듀엣",
+    "la28": true,
+    "en": "Medalists | Duet",
+    "medals": [
+     "Wang Qianyi·Wang Liuyi (CHN)",
+     "Kate Shortman·Isabelle Thorpe (GBR)",
+     "Bregje de Brouwer·Noortje de Brouwer (NED)"
+    ]
+   },
+   {
+    "label": "단체",
+    "la28": true,
+    "en": "Medalists | Team",
+    "medals": [
+     "CHN",
+     "USA",
+     "ESP"
+    ]
+   }
+  ],
+  "olathletics": [
+   {
+    "label": "남자 100m",
+    "la28": true,
+    "en": "Men's events | 100 metres",
+    "medals": [
+     "Noah Lyles (USA)",
+     "Kishane Thompson (JAM)",
+     "Fred Kerley (USA)"
+    ]
+   },
+   {
+    "label": "남자 200m",
+    "la28": true,
+    "en": "Men's events | 200 metres",
+    "medals": [
+     "Letsile Tebogo (BOT)",
+     "Kenny Bednarek (USA)",
+     "Noah Lyles (USA)"
+    ]
+   },
+   {
+    "label": "남자 400m",
+    "la28": true,
+    "en": "Men's events | 400 metres",
+    "medals": [
+     "Quincy Hall (USA)",
+     "Matthew Hudson-Smith (GBR)",
+     "Muzala Samukonga (ZAM)"
+    ]
+   },
+   {
+    "label": "남자 800m",
+    "la28": true,
+    "en": "Men's events | 800 metres",
+    "medals": [
+     "Emmanuel Wanyonyi (KEN)",
+     "Marco Arop (CAN)",
+     "Djamel Sedjati (ALG)"
+    ]
+   },
+   {
+    "label": "남자 1500m",
+    "la28": true,
+    "en": "Men's events | 1500 metres",
+    "medals": [
+     "Cole Hocker (USA)",
+     "Josh Kerr (GBR)",
+     "Yared Nuguse (USA)"
+    ]
+   },
+   {
+    "label": "남자 5000m",
+    "la28": true,
+    "en": "Men's events | 5000 metres",
+    "medals": [
+     "Jakob Ingebrigtsen (NOR)",
+     "Ronald Kwemoi (KEN)",
+     "Grant Fisher (USA)"
+    ]
+   },
+   {
+    "label": "남자 10000m",
+    "la28": true,
+    "en": "Men's events | 10,000 metres",
+    "medals": [
+     "Joshua Cheptegei (UGA)",
+     "Berihu Aregawi (ETH)",
+     "Grant Fisher (USA)"
+    ]
+   },
+   {
+    "label": "남자 110m 허들",
+    "la28": true,
+    "en": "Men's events | 110 metres hurdles",
+    "medals": [
+     "Grant Holloway (USA)",
+     "Daniel Roberts (USA)",
+     "Rasheed Broadbell (JAM)"
+    ]
+   },
+   {
+    "label": "남자 400m 허들",
+    "la28": true,
+    "en": "Men's events | 400 metres hurdles",
+    "medals": [
+     "Rai Benjamin (USA)",
+     "Karsten Warholm (NOR)",
+     "Alison dos Santos (BRA)"
+    ]
+   },
+   {
+    "label": "남자 3000m 장애물",
+    "la28": true,
+    "en": "Men's events | {{nowrap|3000 metres steeplechase",
+    "medals": [
+     "Soufiane El Bakkali (MAR)",
+     "Kenneth Rooks (USA)",
+     "Abraham Kibiwot (KEN)"
+    ]
+   },
+   {
+    "label": "남자 4×100m 계주",
+    "la28": true,
+    "en": "Men's events | 4 × 100 metres relay",
+    "medals": [
+     "CAN",
+     "RSA",
+     "GBR"
+    ]
+   },
+   {
+    "label": "남자 4×400m 계주",
+    "la28": true,
+    "en": "Men's events | 4 × 400 metres relay",
+    "medals": [
+     "USA",
+     "BOT",
+     "GBR"
+    ]
+   },
+   {
+    "label": "남자 마라톤",
+    "la28": true,
+    "en": "Men's events | Marathon",
+    "medals": [
+     "Tamirat Tola (ETH)",
+     "Bashir Abdi (BEL)",
+     "Benson Kipruto (KEN)"
+    ]
+   },
+   {
+    "label": "남자 20km 경보",
+    "la28": false,
+    "en": "Men's events | 20 kilometres walk",
+    "medals": [
+     "Brian Pintado (ECU)",
+     "Caio Bonfim (BRA)",
+     "Álvaro Martín (ESP)"
+    ]
+   },
+   {
+    "label": "남자 높이뛰기",
+    "la28": true,
+    "en": "Men's events | High jump",
+    "medals": [
+     "Hamish Kerr (NZL)",
+     "Shelby McEwen (USA)",
+     "Mutaz Barsham (QAT)"
+    ]
+   },
+   {
+    "label": "남자 장대높이뛰기",
+    "la28": true,
+    "en": "Men's events | Pole vault",
+    "medals": [
+     "Armand Duplantis (SWE)",
+     "Sam Kendricks (USA)",
+     "Emmanouil Karalis (GRE)"
+    ]
+   },
+   {
+    "label": "남자 멀리뛰기",
+    "la28": true,
+    "en": "Men's events | Long jump",
+    "medals": [
+     "Miltiadis Tentoglou (GRE)",
+     "Wayne Pinnock (JAM)",
+     "Mattia Furlani (ITA)"
+    ]
+   },
+   {
+    "label": "남자 세단뛰기",
+    "la28": true,
+    "en": "Men's events | Triple jump",
+    "medals": [
+     "Jordan Díaz (ESP)",
+     "Pedro Pichardo (POR)",
+     "Andy Díaz (ITA)"
+    ]
+   },
+   {
+    "label": "남자 포환던지기",
+    "la28": true,
+    "en": "Men's events | Shot put",
+    "medals": [
+     "Ryan Crouser (USA)",
+     "Joe Kovacs (USA)",
+     "Rajindra Campbell (JAM)"
+    ]
+   },
+   {
+    "label": "남자 원반던지기",
+    "la28": true,
+    "en": "Men's events | Discus throw",
+    "medals": [
+     "Rojé Stona (JAM)",
+     "Mykolas Alekna (LTU)",
+     "Matthew Denny (AUS)"
+    ]
+   },
+   {
+    "label": "남자 해머던지기",
+    "la28": true,
+    "en": "Men's events | Hammer throw",
+    "medals": [
+     "Ethan Katzberg (CAN)",
+     "Bence Halász (HUN)",
+     "Mykhaylo Kokhan (UKR)"
+    ]
+   },
+   {
+    "label": "남자 창던지기",
+    "la28": true,
+    "en": "Men's events | Javelin throw",
+    "medals": [
+     "Arshad Nadeem (PAK)",
+     "Neeraj Chopra (IND)",
+     "Anderson Peters (GRN)"
+    ]
+   },
+   {
+    "label": "남자 10종경기",
+    "la28": true,
+    "en": "Men's events | Decathlon",
+    "medals": [
+     "Markus Rooth (NOR)",
+     "Leo Neugebauer (GER)",
+     "Lindon Victor (GRN)"
+    ]
+   },
+   {
+    "label": "여자 100m",
+    "la28": true,
+    "en": "Women's events | 100 metres",
+    "medals": [
+     "Julien Alfred (LCA)",
+     "Sha'Carri Richardson (USA)",
+     "Melissa Jefferson (USA)"
+    ]
+   },
+   {
+    "label": "여자 200m",
+    "la28": true,
+    "en": "Women's events | 200 metres",
+    "medals": [
+     "Gabby Thomas (USA)",
+     "Julien Alfred (LCA)",
+     "Brittany Brown (USA)"
+    ]
+   },
+   {
+    "label": "여자 400m",
+    "la28": true,
+    "en": "Women's events | 400 metres",
+    "medals": [
+     "Marileidy Paulino (DOM)",
+     "Salwa Eid Naser (BHR)",
+     "Natalia Kaczmarek (POL)"
+    ]
+   },
+   {
+    "label": "여자 800m",
+    "la28": true,
+    "en": "Women's events | 800 metres",
+    "medals": [
+     "Keely Hodgkinson (GBR)",
+     "Tsige Duguma (ETH)",
+     "Mary Moraa (KEN)"
+    ]
+   },
+   {
+    "label": "여자 1500m",
+    "la28": true,
+    "en": "Women's events | 1500 metres",
+    "medals": [
+     "Faith Kipyegon (KEN)",
+     "Jessica Hull (AUS)",
+     "Georgia Bell (GBR)"
+    ]
+   },
+   {
+    "label": "여자 5000m",
+    "la28": true,
+    "en": "Women's events | 5000 metres",
+    "medals": [
+     "Beatrice Chebet (KEN)",
+     "Faith Kipyegon (KEN)",
+     "Sifan Hassan (NED)"
+    ]
+   },
+   {
+    "label": "여자 10000m",
+    "la28": true,
+    "en": "Women's events | 10,000 metres",
+    "medals": [
+     "Beatrice Chebet (KEN)",
+     "Nadia Battocletti (ITA)",
+     "Sifan Hassan (NED)"
+    ]
+   },
+   {
+    "label": "여자 100m 허들",
+    "la28": true,
+    "en": "Women's events | 100 metres hurdles",
+    "medals": [
+     "Masai Russell (USA)",
+     "Cyréna Samba-Mayela (FRA)",
+     "Jasmine Camacho-Quinn (PUR)"
+    ]
+   },
+   {
+    "label": "여자 400m 허들",
+    "la28": true,
+    "en": "Women's events | 400 metres hurdles",
+    "medals": [
+     "Sydney McLaughlin-Levrone (USA)",
+     "Anna Cockrell (USA)",
+     "Femke Bol (NED)"
+    ]
+   },
+   {
+    "label": "여자 3000m 장애물",
+    "la28": true,
+    "en": "Women's events | {{nowrap|3000 metres steeplechase",
+    "medals": [
+     "Winfred Yavi (BRN)",
+     "Peruth Chemutai (UGA)",
+     "Faith Cherotich (KEN)"
+    ]
+   },
+   {
+    "label": "여자 4×100m 계주",
+    "la28": true,
+    "en": "Women's events | 4 × 100 metres relay",
+    "medals": [
+     "USA",
+     "GBR",
+     "GER"
+    ]
+   },
+   {
+    "label": "여자 4×400m 계주",
+    "la28": true,
+    "en": "Women's events | 4 × 400 metres relay",
+    "medals": [
+     "USA",
+     "NED",
+     "GBR"
+    ]
+   },
+   {
+    "label": "여자 마라톤",
+    "la28": true,
+    "en": "Women's events | Marathon",
+    "medals": [
+     "Sifan Hassan (NED)",
+     "Tigst Assefa (ETH)",
+     "Hellen Obiri (KEN)"
+    ]
+   },
+   {
+    "label": "여자 20km 경보",
+    "la28": false,
+    "en": "Women's events | 20 kilometres walk",
+    "medals": [
+     "Yang Jiayu (CHN)",
+     "María Pérez (ESP)",
+     "Jemima Montag (AUS)"
+    ]
+   },
+   {
+    "label": "여자 높이뛰기",
+    "la28": true,
+    "en": "Women's events | High jump",
+    "medals": [
+     "Yaroslava Mahuchikh (UKR)",
+     "Nicola Olyslagers (AUS)",
+     "Eleanor Patterson (AUS) / Iryna Herashchenko (UKR)"
+    ]
+   },
+   {
+    "label": "여자 장대높이뛰기",
+    "la28": true,
+    "en": "Women's events | Pole vault",
+    "medals": [
+     "Nina Kennedy (AUS)",
+     "Katie Moon (USA)",
+     "Alysha Newman (CAN)"
+    ]
+   },
+   {
+    "label": "여자 멀리뛰기",
+    "la28": true,
+    "en": "Women's events | Long jump",
+    "medals": [
+     "Tara Davis-Woodhall (USA)",
+     "Malaika Mihambo (GER)",
+     "Jasmine Moore (USA)"
+    ]
+   },
+   {
+    "label": "여자 세단뛰기",
+    "la28": true,
+    "en": "Women's events | Triple jump",
+    "medals": [
+     "Thea LaFond (DMA)",
+     "Shanieka Ricketts (JAM)",
+     "Jasmine Moore (USA)"
+    ]
+   },
+   {
+    "label": "여자 포환던지기",
+    "la28": true,
+    "en": "Women's events | Shot put",
+    "medals": [
+     "Yemisi Ogunleye (GER)",
+     "Maddi Wesche (NZL)",
+     "Song Jiayuan (CHN)"
+    ]
+   },
+   {
+    "label": "여자 원반던지기",
+    "la28": true,
+    "en": "Women's events | Discus throw",
+    "medals": [
+     "Valarie Allman (USA)",
+     "Feng Bin (CHN)",
+     "Sandra Elkasević (CRO)"
+    ]
+   },
+   {
+    "label": "여자 해머던지기",
+    "la28": true,
+    "en": "Women's events | Hammer throw",
+    "medals": [
+     "Camryn Rogers (CAN)",
+     "Annette Echikunwoke (USA)",
+     "Zhao Jie (CHN)"
+    ]
+   },
+   {
+    "label": "여자 창던지기",
+    "la28": true,
+    "en": "Women's events | Javelin throw",
+    "medals": [
+     "Haruka Kitaguchi (JPN)",
+     "Jo-Ane van Dyk (RSA)",
+     "Nikola Ogrodníková (CZE)"
+    ]
+   },
+   {
+    "label": "여자 7종경기",
+    "la28": true,
+    "en": "Women's events | Heptathlon",
+    "medals": [
+     "Nafissatou Thiam (BEL)",
+     "Katarina Johnson-Thompson (GBR)",
+     "Noor Vidts (BEL)"
+    ]
+   },
+   {
+    "label": "혼성 4×400m 계주",
+    "la28": true,
+    "en": "Mixed events | 4 × 400 metres relay",
+    "medals": [
+     "NED",
+     "USA",
+     "GBR"
+    ]
+   },
+   {
+    "label": "혼성 마라톤 경보 계주",
+    "la28": false,
+    "en": "Mixed events | Marathon walk relay",
+    "medals": [
+     "Álvaro Martín·María Pérez (ESP)",
+     "Brian Pintado·Glenda Morejón (ECU)",
+     "Rhydian Cowley·Jemima Montag (AUS)"
+    ]
+   }
+  ],
+  "olbadminton": [
+   {
+    "label": "남자 단식",
+    "la28": true,
+    "en": "Medalists | Men's singles",
+    "medals": [
+     "Viktor Axelsen (DEN)",
+     "Kunlavut Vitidsarn (THA)",
+     "Lee Zii Jia (MAS)"
+    ]
+   },
+   {
+    "label": "여자 단식",
+    "la28": true,
+    "en": "Medalists | Women's singles",
+    "medals": [
+     "안세영 (KOR)",
+     "He Bingjiao (CHN)",
+     "Gregoria Mariska Tunjung (INA)"
+    ]
+   },
+   {
+    "label": "남자 복식",
+    "la28": true,
+    "en": "Medalists | Men's doubles",
+    "medals": [
+     "Lee Yang·Wang Chi-lin (TPE)",
+     "Liang Weikeng·Wang Chang (CHN)",
+     "Aaron Chia·Soh Wooi Yik (MAS)"
+    ]
+   },
+   {
+    "label": "여자 복식",
+    "la28": true,
+    "en": "Medalists | Women's doubles",
+    "medals": [
+     "Chen Qingchen·Jia Yifan (CHN)",
+     "Liu Shengshu·Tan Ning (CHN)",
+     "Nami Matsuyama·Chiharu Shida (JPN)"
+    ]
+   },
+   {
+    "label": "혼합 복식",
+    "la28": true,
+    "en": "Medalists | Mixed doubles",
+    "medals": [
+     "Zheng Siwei·Huang Yaqiong (CHN)",
+     "김원호·정나은 (KOR)",
+     "Yuta Watanabe·Arisa Higashino (JPN)"
+    ]
+   }
+  ],
+  "olboxing": [
+   {
+    "label": "남자 51kg",
+    "la28": false,
+    "en": "Men's events | 51 kg",
+    "medals": [
+     "Hasanboy Dusmatov (UZB)",
+     "Billal Bennama (FRA)",
+     "Junior Alcántara (DOM) / Daniel Varela de Pina (CPV)"
+    ]
+   },
+   {
+    "label": "남자 57kg",
+    "la28": false,
+    "en": "Men's events | 57 kg",
+    "medals": [
+     "Abdumalik Khalokov (UZB)",
+     "Munarbek Seiitbek Uulu (KGZ)",
+     "Charlie Senior (AUS) / Javier Ibáñez (BUL)"
+    ]
+   },
+   {
+    "label": "남자 63.5kg",
+    "la28": false,
+    "en": "Men's events | 63.5 kg",
+    "medals": [
+     "Erislandy Álvarez (CUB)",
+     "Sofiane Oumiha (FRA)",
+     "Wyatt Sanford (CAN) / Lasha Guruli (GEO)"
+    ]
+   },
+   {
+    "label": "남자 71kg",
+    "la28": false,
+    "en": "Men's events | 71 kg",
+    "medals": [
+     "Asadkhuja Muydinkhujaev (UZB)",
+     "Marco Verde (MEX)",
+     "Omari Jones (USA) / Lewis Richardson (GBR)"
+    ]
+   },
+   {
+    "label": "남자 80kg",
+    "la28": true,
+    "en": "Men's events | 80 kg",
+    "medals": [
+     "Oleksandr Khyzhniak (UKR)",
+     "Nurbek Oralbay (KAZ)",
+     "Cristian Pinales (DOM) / Arlen López (CUB)"
+    ]
+   },
+   {
+    "label": "남자 92kg",
+    "la28": false,
+    "en": "Men's events | 92 kg",
+    "medals": [
+     "Lazizbek Mullojonov (UZB)",
+     "Loren Alfonso (AZE)",
+     "Enmanuel Reyes (ESP) / Davlat Boltaev (TJK)"
+    ]
+   },
+   {
+    "label": "남자 +92kg",
+    "la28": false,
+    "en": "Men's events | +92 kg",
+    "medals": [
+     "Bakhodir Jalolov (UZB)",
+     "Ayoub Ghadfa (ESP)",
+     "Nelvie Tiafack (GER) / Djamili-Dini Aboudou Moindze (FRA)"
+    ]
+   },
+   {
+    "label": "여자 50kg",
+    "la28": false,
+    "en": "Women's events | 50 kg",
+    "medals": [
+     "Wu Yu (CHN)",
+     "Buse Naz Çakıroğlu (TUR)",
+     "Nazym Kyzaibay (KAZ) / Aira Villegas (PHI)"
+    ]
+   },
+   {
+    "label": "여자 54kg",
+    "la28": true,
+    "en": "Women's events | 54 kg",
+    "medals": [
+     "Chang Yuan (CHN)",
+     "Hatice Akbaş (TUR)",
+     "방철미 (PRK) / 임애지 (KOR)"
+    ]
+   },
+   {
+    "label": "여자 57kg",
+    "la28": true,
+    "en": "Women's events | 57 kg",
+    "medals": [
+     "Lin Yu-ting (TPE)",
+     "Julia Szeremeta (POL)",
+     "Esra Yıldız (TUR) / Nesthy Petecio (PHI)"
+    ]
+   },
+   {
+    "label": "여자 60kg",
+    "la28": true,
+    "en": "Women's events | 60 kg",
+    "medals": [
+     "Kellie Harrington (IRL)",
+     "Yang Wenlu (CHN)",
+     "Wu Shih-yi (TPE) / Beatriz Ferreira (BRA)"
+    ]
+   },
+   {
+    "label": "여자 66kg",
+    "la28": false,
+    "en": "Women's events | 66 kg",
+    "medals": [
+     "Imane Khelif (ALG)",
+     "Yang Liu (CHN)",
+     "Janjaem Suwannapheng (THA) / Chen Nien-chin (TPE)"
+    ]
+   },
+   {
+    "label": "여자 75kg",
+    "la28": true,
+    "en": "Women's events | 75 kg",
+    "medals": [
+     "Li Qian (CHN)",
+     "Atheyna Bylon (PAN)",
+     "Caitlin Parker (AUS) / Cindy Ngamba (EOR)"
+    ]
+   }
+  ],
+  "olcanoe": [
+   {
+    "label": "남자 슬라롬 C1",
+    "la28": true,
+    "en": "Slalom | Men's C-1",
+    "medals": [
+     "Nicolas Gestin (FRA)",
+     "Adam Burgess (GBR)",
+     "Matej Beňuš (SVK)"
+    ]
+   },
+   {
+    "label": "남자 슬라롬 K1",
+    "la28": true,
+    "en": "Slalom | Men's K-1",
+    "medals": [
+     "Giovanni De Gennaro (ITA)",
+     "Titouan Castryck (FRA)",
+     "Pau Echaniz (ESP)"
+    ]
+   },
+   {
+    "label": "남자 카약 크로스",
+    "la28": true,
+    "en": "Slalom | Men's Kayak cross",
+    "medals": [
+     "Finn Butcher (NZL)",
+     "Joe Clarke (GBR)",
+     "Noah Hegge (GER)"
+    ]
+   },
+   {
+    "label": "여자 슬라롬 C1",
+    "la28": true,
+    "en": "Slalom | Women's C-1",
+    "medals": [
+     "Jessica Fox (AUS)",
+     "Elena Lilik (GER)",
+     "Evy Leibfarth (USA)"
+    ]
+   },
+   {
+    "label": "여자 슬라롬 K1",
+    "la28": true,
+    "en": "Slalom | Women's K-1",
+    "medals": [
+     "Jessica Fox (AUS)",
+     "Klaudia Zwolińska (POL)",
+     "Kimberley Woods (GBR)"
+    ]
+   },
+   {
+    "label": "여자 카약 크로스",
+    "la28": true,
+    "en": "Slalom | Women's Kayak cross",
+    "medals": [
+     "Noemie Fox (AUS)",
+     "Angèle Hug (FRA)",
+     "Kimberley Woods (GBR)"
+    ]
+   },
+   {
+    "label": "남자 C1 1000m",
+    "la28": true,
+    "en": "Sprint | C-1 1000 metres",
+    "medals": [
+     "Martin Fuksa (CZE)",
+     "Isaquias Queiroz (BRA)",
+     "Serghei Tarnovschi (MDA)"
+    ]
+   },
+   {
+    "label": "남자 C2 500m",
+    "la28": true,
+    "en": "Sprint | C-2 500 metres",
+    "medals": [
+     "Liu Hao·Ji Bowen (CHN)",
+     "Gabriele Casadei·Carlo Tacchini (ITA)",
+     "Joan Antoni Moreno·Diego Domínguez (ESP)"
+    ]
+   },
+   {
+    "label": "남자 K1 1000m",
+    "la28": true,
+    "en": "Sprint | K-1 1000 metres",
+    "medals": [
+     "Josef Dostál (CZE)",
+     "Ádám Varga (HUN)",
+     "Bálint Kopasz (HUN)"
+    ]
+   },
+   {
+    "label": "남자 K2 500m",
+    "la28": true,
+    "en": "Sprint | K-2 500 metres",
+    "medals": [
+     "Jacob Schopf·Max Lemke (GER)",
+     "Bence Nádas·Sándor Tótka (HUN)",
+     "Jean van der Westhuyzen·Thomas Green (AUS)"
+    ]
+   },
+   {
+    "label": "남자 K4 500m",
+    "la28": true,
+    "en": "Sprint | K-4 500 metres",
+    "medals": [
+     "GER",
+     "AUS",
+     "ESP"
+    ]
+   },
+   {
+    "label": "여자 C1 200m",
+    "la28": true,
+    "en": "Sprint | C-1 200 metres",
+    "medals": [
+     "Katie Vincent (CAN)",
+     "Nevin Harrison (USA)",
+     "Yarisleidis Cirilo (CUB)"
+    ]
+   },
+   {
+    "label": "여자 C2 500m",
+    "la28": true,
+    "en": "Sprint | C-2 500 metres",
+    "medals": [
+     "Xu Shixiao·Sun Mengya (CHN)",
+     "Liudmyla Luzan·Anastasiia Rybachok (UKR)",
+     "Sloan MacKenzie·Katie Vincent (CAN)"
+    ]
+   },
+   {
+    "label": "여자 K1 500m",
+    "la28": true,
+    "en": "Sprint | K-1 500 metres",
+    "medals": [
+     "Lisa Carrington (NZL)",
+     "Tamara Csipes (HUN)",
+     "Emma Jørgensen (DEN)"
+    ]
+   },
+   {
+    "label": "여자 K2 500m",
+    "la28": true,
+    "en": "Sprint | K-2 500 metres",
+    "medals": [
+     "Lisa Carrington·Alicia Hoskin (NZL)",
+     "Tamara Csipes·Alida Dóra Gazsó (HUN)",
+     "Paulina Paszek·Jule Hake (GER) / Noémi Pupp·Sára Fojt (HUN)"
+    ]
+   },
+   {
+    "label": "여자 K4 500m",
+    "la28": true,
+    "en": "Sprint | K-4 500 metres",
+    "medals": [
+     "NZL",
+     "GER",
+     "HUN"
+    ]
+   }
+  ],
+  "olcycling": [
+   {
+    "label": "남자 도로 경주",
+    "la28": true,
+    "en": "Road cycling | Men's road race",
+    "medals": [
+     "Remco Evenepoel (BEL)",
+     "Valentin Madouas (FRA)",
+     "Christophe Laporte (FRA)"
+    ]
+   },
+   {
+    "label": "남자 도로 독주",
+    "la28": true,
+    "en": "Road cycling | Men's time trial",
+    "medals": [
+     "Remco Evenepoel (BEL)",
+     "Filippo Ganna (ITA)",
+     "Wout van Aert (BEL)"
+    ]
+   },
+   {
+    "label": "여자 도로 경주",
+    "la28": true,
+    "en": "Road cycling | Women's road race",
+    "medals": [
+     "Kristen Faulkner (USA)",
+     "Marianne Vos (NED)",
+     "Lotte Kopecky (BEL)"
+    ]
+   },
+   {
+    "label": "여자 도로 독주",
+    "la28": true,
+    "en": "Road cycling | Women's time trial",
+    "medals": [
+     "Grace Brown (AUS)",
+     "Anna Henderson (GBR)",
+     "Chloé Dygert (USA)"
+    ]
+   },
+   {
+    "label": "남자 스프린트",
+    "la28": true,
+    "en": "Men's | Sprint",
+    "medals": [
+     "Harrie Lavreysen (NED)",
+     "Matthew Richardson (AUS)",
+     "Jack Carlin (GBR)"
+    ]
+   },
+   {
+    "label": "남자 팀 스프린트",
+    "la28": true,
+    "en": "Men's | Team sprint",
+    "medals": [
+     "Roy van den Berg·Harrie Lavreysen·Jeffrey Hoogland (NED)",
+     "Ed Lowe·Hamish Turnbull·Jack Carlin (GBR)",
+     "Leigh Hoffman·Matthew Richardson·Matthew Glaetzer (AUS)"
+    ]
+   },
+   {
+    "label": "남자 케이린",
+    "la28": true,
+    "en": "Men's | Keirin",
+    "medals": [
+     "Harrie Lavreysen (NED)",
+     "Matthew Richardson (AUS)",
+     "Matthew Glaetzer (AUS)"
+    ]
+   },
+   {
+    "label": "남자 매디슨",
+    "la28": true,
+    "en": "Men's | Madison",
+    "medals": [
+     "Iúri Leitão·Rui Oliveira (POR)",
+     "Simone Consonni·Elia Viviani (ITA)",
+     "Niklas Larsen·Michael Mørkøv (DEN)"
+    ]
+   },
+   {
+    "label": "남자 옴니엄",
+    "la28": true,
+    "en": "Men's | Omnium",
+    "medals": [
+     "Benjamin Thomas (FRA)",
+     "Iúri Leitão (POR)",
+     "Fabio Van den Bossche (BEL)"
+    ]
+   },
+   {
+    "label": "남자 팀 추발",
+    "la28": true,
+    "en": "Men's | Team pursuit",
+    "medals": [
+     "AUS",
+     "GBR",
+     "ITA"
+    ]
+   },
+   {
+    "label": "여자 스프린트",
+    "la28": true,
+    "en": "Women's | Sprint",
+    "medals": [
+     "Ellesse Andrews (NZL)",
+     "Lea Friedrich (GER)",
+     "Emma Finucane (GBR)"
+    ]
+   },
+   {
+    "label": "여자 팀 스프린트",
+    "la28": true,
+    "en": "Women's | Team sprint",
+    "medals": [
+     "Katy Marchant·Sophie Capewell·Emma Finucane (GBR)",
+     "Rebecca Petch·Shaane Fulton·Ellesse Andrews (NZL)",
+     "Pauline Grabosch·Emma Hinze·Lea Sophie Friedrich (GER)"
+    ]
+   },
+   {
+    "label": "여자 케이린",
+    "la28": true,
+    "en": "Women's | Keirin",
+    "medals": [
+     "Ellesse Andrews (NZL)",
+     "Hetty van de Wouw (NED)",
+     "Emma Finucane (GBR)"
+    ]
+   },
+   {
+    "label": "여자 매디슨",
+    "la28": true,
+    "en": "Women's | Madison",
+    "medals": [
+     "Chiara Consonni·Vittoria Guazzini (ITA)",
+     "Elinor Barker·Neah Evans (GBR)",
+     "Maike van der Duin·Lisa van Belle (NED)"
+    ]
+   },
+   {
+    "label": "여자 옴니엄",
+    "la28": true,
+    "en": "Women's | Omnium",
+    "medals": [
+     "Jennifer Valente (USA)",
+     "Daria Pikulik (POL)",
+     "Ally Wollaston (NZL)"
+    ]
+   },
+   {
+    "label": "여자 팀 추발",
+    "la28": true,
+    "en": "Women's | Team pursuit",
+    "medals": [
+     "USA",
+     "NZL",
+     "GBR"
+    ]
+   },
+   {
+    "label": "남자 산악자전거 크로스컨트리",
+    "la28": true,
+    "en": "Mountain biking | Men's cross-country",
+    "medals": [
+     "Tom Pidcock (GBR)",
+     "Victor Koretzky (FRA)",
+     "Alan Hatherly (RSA)"
+    ]
+   },
+   {
+    "label": "여자 산악자전거 크로스컨트리",
+    "la28": true,
+    "en": "Mountain biking | Women's cross-country",
+    "medals": [
+     "Pauline Ferrand-Prévot (FRA)",
+     "Haley Batten (USA)",
+     "Jenny Rissveds (SWE)"
+    ]
+   },
+   {
+    "label": "남자 BMX 레이싱",
+    "la28": true,
+    "en": "BMX | Men's race",
+    "medals": [
+     "Joris Daudet (FRA)",
+     "Sylvain André (FRA)",
+     "Romain Mahieu (FRA)"
+    ]
+   },
+   {
+    "label": "여자 BMX 레이싱",
+    "la28": true,
+    "en": "BMX | Women's race",
+    "medals": [
+     "Saya Sakakibara (AUS)",
+     "Manon Veenstra (NED)",
+     "Zoé Claessens (SUI)"
+    ]
+   },
+   {
+    "label": "남자 BMX 프리스타일 파크",
+    "la28": true,
+    "en": "BMX | Men's freestyle",
+    "medals": [
+     "José Torres (ARG)",
+     "Kieran Reilly (GBR)",
+     "Anthony Jeanjean (FRA)"
+    ]
+   },
+   {
+    "label": "여자 BMX 프리스타일 파크",
+    "la28": true,
+    "en": "BMX | Women's freestyle",
+    "medals": [
+     "Deng Yawen (CHN)",
+     "Perris Benegas (USA)",
+     "Natalya Diehm (AUS)"
+    ]
+   }
+  ],
+  "oldiving": [
+   {
+    "label": "남자 3m 스프링보드",
+    "la28": true,
+    "en": "Men's events | 3 m springboard",
+    "medals": [
+     "Xie Siyi (CHN)",
+     "Wang Zongyuan (CHN)",
+     "Osmar Olvera (MEX)"
+    ]
+   },
+   {
+    "label": "남자 10m 플랫폼",
+    "la28": true,
+    "en": "Men's events | 10 m platform",
+    "medals": [
+     "Cao Yuan (CHN)",
+     "Rikuto Tamai (JPN)",
+     "Noah Williams (GBR)"
+    ]
+   },
+   {
+    "label": "남자 3m 싱크로나이즈드",
+    "la28": true,
+    "en": "Men's events | Synchronized 3 m springboard",
+    "medals": [
+     "Wang Zongyuan·Long Daoyi (CHN)",
+     "Juan Celaya·Osmar Olvera (MEX)",
+     "Anthony Harding·Jack Laugher (GBR)"
+    ]
+   },
+   {
+    "label": "남자 10m 싱크로나이즈드",
+    "la28": true,
+    "en": "Men's events | Synchronized 10 m platform",
+    "medals": [
+     "Yang Hao·Lian Junjie (CHN)",
+     "Tom Daley·Noah Williams (GBR)",
+     "Rylan Wiens·Nathan Zsombor-Murray (CAN)"
+    ]
+   },
+   {
+    "label": "여자 3m 스프링보드",
+    "la28": true,
+    "en": "Women's events | 3 m springboard",
+    "medals": [
+     "Chen Yiwen (CHN)",
+     "Maddison Keeney (AUS)",
+     "Chang Yani (CHN)"
+    ]
+   },
+   {
+    "label": "여자 10m 플랫폼",
+    "la28": true,
+    "en": "Women's events | 10 m platform",
+    "medals": [
+     "Quan Hongchan (CHN)",
+     "Chen Yuxi (CHN)",
+     "김미래 (PRK)"
+    ]
+   },
+   {
+    "label": "여자 3m 싱크로나이즈드",
+    "la28": true,
+    "en": "Women's events | Synchronized 3 m springboard",
+    "medals": [
+     "Chen Yiwen·Chang Yani (CHN)",
+     "Sarah Bacon·Kassidy Cook (USA)",
+     "Yasmin Harper·Scarlett Mew Jensen (GBR)"
+    ]
+   },
+   {
+    "label": "여자 10m 싱크로나이즈드",
+    "la28": true,
+    "en": "Women's events | Synchronized 10 m platform",
+    "medals": [
+     "Chen Yuxi·Quan Hongchan (CHN)",
+     "김미래·조진미 (PRK)",
+     "Andrea Spendolini-Sirieix·Lois Toulson (GBR)"
+    ]
+   }
+  ],
+  "olequestrian": [
+   {
+    "label": "마장마술 개인",
+    "la28": true,
+    "en": "Medalists | Individual dressage",
+    "medals": [
+     "Jessica von Bredow-Werndl (GER)",
+     "Isabell Werth (GER)",
+     "Charlotte Fry (GBR)"
+    ]
+   },
+   {
+    "label": "마장마술 단체",
+    "la28": true,
+    "en": "Medalists | Team dressage",
+    "medals": [
+     "GER",
+     "DEN",
+     "GBR"
+    ]
+   },
+   {
+    "label": "종합마술 개인",
+    "la28": true,
+    "en": "Medalists | Individual eventing",
+    "medals": [
+     "Michael Jung (GER)",
+     "Christopher Burton (AUS)",
+     "Laura Collett (GBR)"
+    ]
+   },
+   {
+    "label": "종합마술 단체",
+    "la28": true,
+    "en": "Medalists | Team eventing",
+    "medals": [
+     "GBR",
+     "FRA",
+     "JPN"
+    ]
+   },
+   {
+    "label": "장애물 개인",
+    "la28": true,
+    "en": "Medalists | Individual jumping",
+    "medals": [
+     "Christian Kukuk (GER)",
+     "Steve Guerdat (SUI)",
+     "Maikel van der Vleuten (NED)"
+    ]
+   },
+   {
+    "label": "장애물 단체",
+    "la28": true,
+    "en": "Medalists | Team jumping",
+    "medals": [
+     "Ben Maher·Harry Charles·Scott Brash (GBR)",
+     "Laura Kraut·Karl Cook·McLain Ward (USA)",
+     "Simon Delestre·Olivier Perreau·Julien Epaillard (FRA)"
+    ]
+   }
+  ],
+  "olfencing": [
+   {
+    "label": "남자 에페 개인",
+    "la28": true,
+    "en": "Men's events | Individual épée",
+    "medals": [
+     "Koki Kano (JPN)",
+     "Yannick Borel (FRA)",
+     "Mohamed El-Sayed (EGY)"
+    ]
+   },
+   {
+    "label": "남자 에페 단체",
+    "la28": true,
+    "en": "Men's events | Team épée",
+    "medals": [
+     "HUN",
+     "JPN",
+     "CZE"
+    ]
+   },
+   {
+    "label": "남자 플뢰레 개인",
+    "la28": true,
+    "en": "Men's events | Individual foil",
+    "medals": [
+     "Cheung Ka Long (HKG)",
+     "Filippo Macchi (ITA)",
+     "Nick Itkin (USA)"
+    ]
+   },
+   {
+    "label": "남자 플뢰레 단체",
+    "la28": true,
+    "en": "Men's events | Team foil",
+    "medals": [
+     "JPN",
+     "ITA",
+     "FRA"
+    ]
+   },
+   {
+    "label": "남자 사브르 개인",
+    "la28": true,
+    "en": "Men's events | Individual sabre",
+    "medals": [
+     "오상욱 (KOR)",
+     "Fares Ferjani (TUN)",
+     "Luigi Samele (ITA)"
+    ]
+   },
+   {
+    "label": "남자 사브르 단체",
+    "la28": true,
+    "en": "Men's events | Team sabre",
+    "medals": [
+     "KOR",
+     "HUN",
+     "FRA"
+    ]
+   },
+   {
+    "label": "여자 에페 개인",
+    "la28": true,
+    "en": "Women's events | Individual épée",
+    "medals": [
+     "Vivian Kong (HKG)",
+     "Auriane Mallo-Breton (FRA)",
+     "Eszter Muhari (HUN)"
+    ]
+   },
+   {
+    "label": "여자 에페 단체",
+    "la28": true,
+    "en": "Women's events | Team épée",
+    "medals": [
+     "ITA",
+     "FRA",
+     "POL"
+    ]
+   },
+   {
+    "label": "여자 플뢰레 개인",
+    "la28": true,
+    "en": "Women's events | Individual foil",
+    "medals": [
+     "Lee Kiefer (USA)",
+     "Lauren Scruggs (USA)",
+     "Eleanor Harvey (CAN)"
+    ]
+   },
+   {
+    "label": "여자 플뢰레 단체",
+    "la28": true,
+    "en": "Women's events | Team foil",
+    "medals": [
+     "USA",
+     "ITA",
+     "JPN"
+    ]
+   },
+   {
+    "label": "여자 사브르 개인",
+    "la28": true,
+    "en": "Women's events | Individual sabre",
+    "medals": [
+     "Manon Apithy-Brunet (FRA)",
+     "Sara Balzer (FRA)",
+     "Olga Kharlan (UKR)"
+    ]
+   },
+   {
+    "label": "여자 사브르 단체",
+    "la28": true,
+    "en": "Women's events | Team sabre",
+    "medals": [
+     "UKR",
+     "KOR",
+     "JPN"
+    ]
+   }
+  ],
+  "olgolf": [
+   {
+    "label": "남자 개인",
+    "la28": true,
+    "en": "Medalists | Men's individual",
+    "medals": [
+     "Scottie Scheffler (USA)",
+     "Tommy Fleetwood (GBR)",
+     "Hideki Matsuyama (JPN)"
+    ]
+   },
+   {
+    "label": "여자 개인",
+    "la28": true,
+    "en": "Medalists | Women's individual",
+    "medals": [
+     "Lydia Ko (NZL)",
+     "Esther Henseleit (GER)",
+     "Lin Xiyu (CHN)"
+    ]
+   }
+  ],
+  "olgymnastics": [
+   {
+    "label": "남자 단체",
+    "la28": true,
+    "en": "Men | Team all-around",
+    "medals": [
+     "JPN",
+     "CHN",
+     "USA"
+    ]
+   },
+   {
+    "label": "남자 개인종합",
+    "la28": true,
+    "en": "Men | Individual all-around",
+    "medals": [
+     "Shinnosuke Oka (JPN)",
+     "Zhang Boheng (CHN)",
+     "Xiao Ruoteng (CHN)"
+    ]
+   },
+   {
+    "label": "남자 마루",
+    "la28": true,
+    "en": "Men | Floor exercise",
+    "medals": [
+     "Carlos Yulo (PHI)",
+     "Artem Dolgopyat (ISR)",
+     "Jake Jarman (GBR)"
+    ]
+   },
+   {
+    "label": "남자 안마",
+    "la28": true,
+    "en": "Men | Pommel horse",
+    "medals": [
+     "Rhys McClenaghan (IRL)",
+     "Nariman Kurbanov (KAZ)",
+     "Stephen Nedoroscik (USA)"
+    ]
+   },
+   {
+    "label": "남자 링",
+    "la28": true,
+    "en": "Men | Rings",
+    "medals": [
+     "Liu Yang (CHN)",
+     "Zou Jingyuan (CHN)",
+     "Eleftherios Petrounias (GRE)"
+    ]
+   },
+   {
+    "label": "남자 도마",
+    "la28": true,
+    "en": "Men | Vault",
+    "medals": [
+     "Carlos Yulo (PHI)",
+     "Artur Davtyan (ARM)",
+     "Harry Hepworth (GBR)"
+    ]
+   },
+   {
+    "label": "남자 평행봉",
+    "la28": true,
+    "en": "Men | Parallel bars",
+    "medals": [
+     "Zou Jingyuan (CHN)",
+     "Illia Kovtun (UKR)",
+     "Shinnosuke Oka (JPN)"
+    ]
+   },
+   {
+    "label": "남자 철봉",
+    "la28": true,
+    "en": "Men | Horizontal bar",
+    "medals": [
+     "Shinnosuke Oka (JPN)",
+     "Ángel Barajas (COL)",
+     "Zhang Boheng (CHN) / Tang Chia-hung (TPE)"
+    ]
+   },
+   {
+    "label": "여자 단체",
+    "la28": true,
+    "en": "Women | Team all-around",
+    "medals": [
+     "USA",
+     "ITA",
+     "BRA"
+    ]
+   },
+   {
+    "label": "여자 개인종합",
+    "la28": true,
+    "en": "Women | Individual all-around",
+    "medals": [
+     "Simone Biles (USA)",
+     "Rebeca Andrade (BRA)",
+     "Sunisa Lee (USA)"
+    ]
+   },
+   {
+    "label": "여자 도마",
+    "la28": true,
+    "en": "Women | Vault",
+    "medals": [
+     "Simone Biles (USA)",
+     "Rebeca Andrade (BRA)",
+     "Jade Carey (USA)"
+    ]
+   },
+   {
+    "label": "여자 이단평행봉",
+    "la28": true,
+    "en": "Women | Uneven bars",
+    "medals": [
+     "Kaylia Nemour (ALG)",
+     "Qiu Qiyuan (CHN)",
+     "Sunisa Lee (USA)"
+    ]
+   },
+   {
+    "label": "여자 평균대",
+    "la28": true,
+    "en": "Women | Balance beam",
+    "medals": [
+     "Alice D'Amato (ITA)",
+     "Zhou Yaqin (CHN)",
+     "Manila Esposito (ITA)"
+    ]
+   },
+   {
+    "label": "여자 마루",
+    "la28": true,
+    "en": "Women | Floor exercise",
+    "medals": [
+     "Rebeca Andrade (BRA)",
+     "Simone Biles (USA)",
+     "Ana Bărbosu (ROM)"
+    ]
+   },
+   {
+    "label": "여자 리듬체조 단체종합",
+    "la28": true,
+    "en": "Rhythmic gymnastics | Group all-around",
+    "medals": [
+     "CHN",
+     "ISR",
+     "ITA"
+    ]
+   },
+   {
+    "label": "여자 리듬체조 개인종합",
+    "la28": true,
+    "en": "Rhythmic gymnastics | Individual all-around",
+    "medals": [
+     "Darja Varfolomeev (GER)",
+     "Boryana Kaleyn (BUL)",
+     "Sofia Raffaeli (ITA)"
+    ]
+   },
+   {
+    "label": "남자 트램펄린",
+    "la28": true,
+    "en": "Trampoline | Men's individual",
+    "medals": [
+     "Ivan Litvinovich (AIN)",
+     "Wang Zisai (CHN)",
+     "Yan Langyu (CHN)"
+    ]
+   },
+   {
+    "label": "여자 트램펄린",
+    "la28": true,
+    "en": "Trampoline | Women's individual",
+    "medals": [
+     "Bryony Page (GBR)",
+     "Viyaleta Bardzilouskaya (AIN)",
+     "Sophiane Méthot (CAN)"
+    ]
+   }
+  ],
+  "oljudo": [
+   {
+    "label": "남자 -60kg",
+    "la28": true,
+    "en": "Men's events | Extra-lightweight (60 kg)",
+    "medals": [
+     "Yeldos Smetov (KAZ)",
+     "Luka Mkheidze (FRA)",
+     "Ryuju Nagayama (JPN) / Francisco Garrigós (ESP)"
+    ]
+   },
+   {
+    "label": "남자 -66kg",
+    "la28": true,
+    "en": "Men's events | Half-lightweight (66 kg)",
+    "medals": [
+     "Hifumi Abe (JPN)",
+     "Willian Lima (BRA)",
+     "Gusman Kyrgyzbayev (KAZ) / Denis Vieru (MDA)"
+    ]
+   },
+   {
+    "label": "남자 -73kg",
+    "la28": true,
+    "en": "Men's events | Lightweight (73 kg)",
+    "medals": [
+     "Hidayat Heydarov (AZE)",
+     "Joan-Benjamin Gaba (FRA)",
+     "Adil Osmanov (MDA) / Soichi Hashimoto (JPN)"
+    ]
+   },
+   {
+    "label": "남자 -81kg",
+    "la28": true,
+    "en": "Men's events | Half-middleweight (81 kg)",
+    "medals": [
+     "Takanori Nagase (JPN)",
+     "Tato Grigalashvili (GEO)",
+     "이준환 (KOR) / Somon Makhmadbekov (TJK)"
+    ]
+   },
+   {
+    "label": "남자 -90kg",
+    "la28": true,
+    "en": "Men's events | Middleweight (90 kg)",
+    "medals": [
+     "Lasha Bekauri (GEO)",
+     "Sanshiro Murao (JPN)",
+     "Maxime-Gaël Ngayap Hambou (FRA) / Theodoros Tselidis (GRE)"
+    ]
+   },
+   {
+    "label": "남자 -100kg",
+    "la28": true,
+    "en": "Men's events | Half-heavyweight (100 kg)",
+    "medals": [
+     "Zelym Kotsoiev (AZE)",
+     "Ilia Sulamanidze (GEO)",
+     "Peter Paltchik (ISR) / Muzaffarbek Turoboyev (UZB)"
+    ]
+   },
+   {
+    "label": "남자 +100kg",
+    "la28": true,
+    "en": "Men's events | Heavyweight (+100 kg)",
+    "medals": [
+     "Teddy Riner (FRA)",
+     "김민종 (KOR)",
+     "Temur Rakhimov (TJK) / Alisher Yusupov (UZB)"
+    ]
+   },
+   {
+    "label": "여자 -48kg",
+    "la28": true,
+    "en": "Women's events | Extra-lightweight (48 kg)",
+    "medals": [
+     "Natsumi Tsunoda (JPN)",
+     "Bavuudorjiin Baasankhüü (MGL)",
+     "Shirine Boukli (FRA) / Tara Babulfath (SWE)"
+    ]
+   },
+   {
+    "label": "여자 -52kg",
+    "la28": true,
+    "en": "Women's events | Half-lightweight (52 kg)",
+    "medals": [
+     "Diyora Keldiyorova (UZB)",
+     "Distria Krasniqi (KOS)",
+     "Larissa Pimenta (BRA) / Amandine Buchard (FRA)"
+    ]
+   },
+   {
+    "label": "여자 -57kg",
+    "la28": true,
+    "en": "Women's events | Lightweight (57 kg)",
+    "medals": [
+     "Christa Deguchi (CAN)",
+     "허미미 (KOR)",
+     "Haruka Funakubo (JPN) / Sarah-Léonie Cysique (FRA)"
+    ]
+   },
+   {
+    "label": "여자 -63kg",
+    "la28": true,
+    "en": "Women's events | Half-middleweight (63 kg)",
+    "medals": [
+     "Andreja Leški (SLO)",
+     "Prisca Awiti Alcaraz (MEX)",
+     "Clarisse Agbegnenou (FRA) / Laura Fazliu (KOS)"
+    ]
+   },
+   {
+    "label": "여자 -70kg",
+    "la28": true,
+    "en": "Women's events | Middleweight (70 kg)",
+    "medals": [
+     "Barbara Matić (CRO)",
+     "Miriam Butkereit (GER)",
+     "Michaela Polleres (AUT) / Gabriella Willems (BEL)"
+    ]
+   },
+   {
+    "label": "여자 -78kg",
+    "la28": true,
+    "en": "Women's events | Half-heavyweight (78 kg)",
+    "medals": [
+     "Alice Bellandi (ITA)",
+     "Inbar Lanir (ISR)",
+     "Ma Zhenzhao (CHN) / Patrícia Sampaio (POR)"
+    ]
+   },
+   {
+    "label": "여자 +78kg",
+    "la28": true,
+    "en": "Women's events | Heavyweight (+78 kg)",
+    "medals": [
+     "Beatriz Souza (BRA)",
+     "Raz Hershko (ISR)",
+     "김하윤 (KOR) / Romane Dicko (FRA)"
+    ]
+   },
+   {
+    "label": "혼성 단체",
+    "la28": true,
+    "en": "Mixed events | Mixed team",
+    "medals": [
+     "FRA",
+     "JPN",
+     "BRA / KOR"
+    ]
+   }
+  ],
+  "olmodernpentathlon": [
+   {
+    "label": "남자 개인",
+    "la28": true,
+    "en": "Medalists | Men's",
+    "medals": [
+     "Ahmed El-Gendy (EGY)",
+     "Taishu Sato (JPN)",
+     "Giorgio Malan (ITA)"
+    ]
+   },
+   {
+    "label": "여자 개인",
+    "la28": true,
+    "en": "Medalists | Women's",
+    "medals": [
+     "Michelle Gulyás (HUN)",
+     "Élodie Clouvel (FRA)",
+     "성승민 (KOR)"
+    ]
+   }
+  ],
+  "olrowing": [
+   {
+    "label": "남자 싱글 스컬",
+    "la28": true,
+    "en": "Men's events | Single sculls",
+    "medals": [
+     "Oliver Zeidler (GER)",
+     "Yauheni Zalaty (AIN)",
+     "Simon van Dorp (NED)"
+    ]
+   },
+   {
+    "label": "남자 더블 스컬",
+    "la28": true,
+    "en": "Men's events | Double sculls",
+    "medals": [
+     "Andrei Cornea·Marian Enache (ROU)",
+     "Melvin Twellaar·Stef Broenink (NED)",
+     "Daire Lynch·Philip Doyle (IRL)"
+    ]
+   },
+   {
+    "label": "남자 쿼드러플 스컬",
+    "la28": true,
+    "en": "Men's events | Quadruple sculls",
+    "medals": [
+     "NED",
+     "ITA",
+     "POL"
+    ]
+   },
+   {
+    "label": "남자 페어",
+    "la28": true,
+    "en": "Men's events | Coxless pair",
+    "medals": [
+     "Martin Sinković·Valent Sinković (CRO)",
+     "Oliver Wynne-Griffith·Thomas George (GBR)",
+     "Roman Röösli·Andrin Gulich (SUI)"
+    ]
+   },
+   {
+    "label": "남자 포어",
+    "la28": true,
+    "en": "Men's events | Coxless four",
+    "medals": [
+     "USA",
+     "NZL",
+     "GBR"
+    ]
+   },
+   {
+    "label": "남자 에이트",
+    "la28": true,
+    "en": "Men's events | Eight",
+    "medals": [
+     "GBR",
+     "NED",
+     "USA"
+    ]
+   },
+   {
+    "label": "남자 경량급 더블 스컬",
+    "la28": false,
+    "en": "Men's events | Lightweight double sculls",
+    "medals": [
+     "Fintan McCarthy·Paul O'Donovan (IRL)",
+     "Stefano Oppo·Gabriel Soares (ITA)",
+     "Petros Gkaidatzis·Antonios Papakonstantinou (GRE)"
+    ]
+   },
+   {
+    "label": "여자 싱글 스컬",
+    "la28": true,
+    "en": "Women's events | Single sculls",
+    "medals": [
+     "Karolien Florijn (NED)",
+     "Emma Twigg (NZL)",
+     "Viktorija Senkutė (LTU)"
+    ]
+   },
+   {
+    "label": "여자 더블 스컬",
+    "la28": true,
+    "en": "Women's events | Double sculls",
+    "medals": [
+     "Brooke Francis·Lucy Spoors (NZL)",
+     "Ancuța Bodnar·Simona Radiș (ROU)",
+     "Mathilda Hodgkins-Byrne·Becky Wilde (GBR)"
+    ]
+   },
+   {
+    "label": "여자 쿼드러플 스컬",
+    "la28": true,
+    "en": "Women's events | Quadruple sculls",
+    "medals": [
+     "GBR",
+     "NED",
+     "GER"
+    ]
+   },
+   {
+    "label": "여자 페어",
+    "la28": true,
+    "en": "Women's events | Coxless pair",
+    "medals": [
+     "Ymkje Clevering·Veronique Meester (NED)",
+     "Ioana Vrînceanu·Roxana Anghel (ROU)",
+     "Jessica Morrison·Annabelle McIntyre (AUS)"
+    ]
+   },
+   {
+    "label": "여자 포어",
+    "la28": true,
+    "en": "Women's events | Coxless four",
+    "medals": [
+     "NED",
+     "GBR",
+     "NZL"
+    ]
+   },
+   {
+    "label": "여자 에이트",
+    "la28": true,
+    "en": "Women's events | Eight",
+    "medals": [
+     "ROU",
+     "CAN",
+     "GBR"
+    ]
+   },
+   {
+    "label": "여자 경량급 더블 스컬",
+    "la28": false,
+    "en": "Women's events | Lightweight double sculls",
+    "medals": [
+     "Emily Craig·Imogen Grant (GBR)",
+     "Gianina van Groningen·Ionela Cozmiuc (ROU)",
+     "Dimitra Kontou·Zoi Fitsiou (GRE)"
+    ]
+   }
+  ],
+  "olsailing": [
+   {
+    "label": "남자 윈드서핑 (iQFOiL)",
+    "la28": true,
+    "en": "Men's events | iQFoil",
+    "medals": [
+     "Tom Reuveny (ISR)",
+     "Grae Morris (AUS)",
+     "Luuc van Opzeeland (NED)"
+    ]
+   },
+   {
+    "label": "남자 카이트 (Formula Kite)",
+    "la28": true,
+    "en": "Men's events | Formula Kite",
+    "medals": [
+     "Valentin Bontus (AUT)",
+     "Toni Vodišek (SLO)",
+     "Maximilian Maeder (SGP)"
+    ]
+   },
+   {
+    "label": "남자 1인승 딩기 (ILCA 7)",
+    "la28": true,
+    "en": "Men's events | Laser",
+    "medals": [
+     "Matthew Wearn (AUS)",
+     "Pavlos Kontides (CYP)",
+     "Stefano Peschiera (PER)"
+    ]
+   },
+   {
+    "label": "남자 스키프 (49er)",
+    "la28": true,
+    "en": "Men's events | 49er",
+    "medals": [
+     "Diego Botín·Florián Trittel (ESP)",
+     "Isaac McHardie·William McKenzie (NZL)",
+     "Ian Barrows·Hans Henken (USA)"
+    ]
+   },
+   {
+    "label": "여자 윈드서핑 (iQFOiL)",
+    "la28": true,
+    "en": "Women's events | iQFoil",
+    "medals": [
+     "Marta Maggetti (ITA)",
+     "Sharon Kantor (ISR)",
+     "Emma Wilson (GBR)"
+    ]
+   },
+   {
+    "label": "여자 카이트 (Formula Kite)",
+    "la28": true,
+    "en": "Women's events | Formula Kite",
+    "medals": [
+     "Ellie Aldridge (GBR)",
+     "Lauriane Nolot (FRA)",
+     "Annelous Lammerts (NED)"
+    ]
+   },
+   {
+    "label": "여자 1인승 딩기 (ILCA 6)",
+    "la28": true,
+    "en": "Women's events | Laser radial",
+    "medals": [
+     "Marit Bouwmeester (NED)",
+     "Anne-Marie Rindom (DEN)",
+     "Line Flem Høst (NOR)"
+    ]
+   },
+   {
+    "label": "여자 스키프 (49erFX)",
+    "la28": true,
+    "en": "Women's events | 49erFX",
+    "medals": [
+     "Odile van Aanholt<br/ >Annette Duetz (NED)",
+     "Vilma Bobeck<br/ >Rebecca Netzler (SWE)",
+     "Sarah Steyaert<br/ >Charline Picon (FRA)"
+    ]
+   },
+   {
+    "label": "혼성 2인승 딩기 (470)",
+    "la28": true,
+    "en": "Mixed events | 470",
+    "medals": [
+     "Lara Vadlau·Lukas Mähr (AUT)",
+     "Keiju Okada·Miho Yoshioka (JPN)",
+     "Anton Dahlberg·Lovisa Karlsson (SWE)"
+    ]
+   },
+   {
+    "label": "혼성 멀티헐 (Nacra 17)",
+    "la28": true,
+    "en": "Mixed events | Nacra 17",
+    "medals": [
+     "Ruggero Tita·Caterina Banti (ITA)",
+     "Mateo Majdalani·Eugenia Bosco (ARG)",
+     "Micah Wilkinson·Erica Dawson (NZL)"
+    ]
+   }
+  ],
+  "olshooting": [
+   {
+    "label": "남자 10m 공기권총",
+    "la28": true,
+    "en": "Men's events | 10 metre air pistol",
+    "medals": [
+     "Xie Yu (CHN)",
+     "Federico Nilo Maldini (ITA)",
+     "Paolo Monna (ITA)"
+    ]
+   },
+   {
+    "label": "남자 25m 속사권총",
+    "la28": true,
+    "en": "Men's events | 25 metre rapid fire pistol",
+    "medals": [
+     "Li Yuehong (CHN)",
+     "조영재 (KOR)",
+     "Wang Xinjie (CHN)"
+    ]
+   },
+   {
+    "label": "남자 10m 공기소총",
+    "la28": true,
+    "en": "Men's events | 10 metre air rifle",
+    "medals": [
+     "Sheng Lihao (CHN)",
+     "Victor Lindgren (SWE)",
+     "Miran Maričić (CRO)"
+    ]
+   },
+   {
+    "label": "남자 50m 소총 3자세",
+    "la28": true,
+    "en": "Men's events | 50 metre rifle three positions",
+    "medals": [
+     "Liu Yukun (CHN)",
+     "Serhiy Kulish (UKR)",
+     "Swapnil Kusale (IND)"
+    ]
+   },
+   {
+    "label": "남자 스키트",
+    "la28": true,
+    "en": "Men's events | Skeet",
+    "medals": [
+     "Vincent Hancock (USA)",
+     "Conner Prince (USA)",
+     "Lee Meng-yuan (TPE)"
+    ]
+   },
+   {
+    "label": "남자 트랩",
+    "la28": true,
+    "en": "Men's events | Trap",
+    "medals": [
+     "Nathan Hales (GBR)",
+     "Qi Ying (CHN)",
+     "Jean Pierre Brol (GUA)"
+    ]
+   },
+   {
+    "label": "여자 10m 공기권총",
+    "la28": true,
+    "en": "Women's events | 10 metre air pistol",
+    "medals": [
+     "오예진 (KOR)",
+     "김예지 (KOR)",
+     "Manu Bhaker (IND)"
+    ]
+   },
+   {
+    "label": "여자 25m 권총",
+    "la28": true,
+    "en": "Women's events | 25 metre pistol",
+    "medals": [
+     "양지인 (KOR)",
+     "Camille Jedrzejewski (FRA)",
+     "Veronika Major (HUN)"
+    ]
+   },
+   {
+    "label": "여자 10m 공기소총",
+    "la28": true,
+    "en": "Women's events | 10 metre air rifle",
+    "medals": [
+     "반효진 (KOR)",
+     "Huang Yuting (CHN)",
+     "Audrey Gogniat (SUI)"
+    ]
+   },
+   {
+    "label": "여자 50m 소총 3자세",
+    "la28": true,
+    "en": "Women's events | 50 metre rifle three positions",
+    "medals": [
+     "Chiara Leone (SUI)",
+     "Sagen Maddalena (USA)",
+     "Zhang Qiongyue (CHN)"
+    ]
+   },
+   {
+    "label": "여자 스키트",
+    "la28": true,
+    "en": "Women's events | Skeet",
+    "medals": [
+     "Francisca Crovetto (CHI)",
+     "Amber Rutter (GBR)",
+     "Austen Smith (USA)"
+    ]
+   },
+   {
+    "label": "여자 트랩",
+    "la28": true,
+    "en": "Women's events | Trap",
+    "medals": [
+     "Adriana Ruano (GUA)",
+     "Silvana Stanco (ITA)",
+     "Penny Smith (AUS)"
+    ]
+   },
+   {
+    "label": "혼성 10m 공기권총 단체",
+    "la28": true,
+    "en": "Mixed events | 10 metre air pistol team",
+    "medals": [
+     "Zorana Arunović·Damir Mikec (SRB)",
+     "Şevval İlayda Tarhan·Yusuf Dikeç (TUR)",
+     "Manu Bhaker·Sarabjot Singh (IND)"
+    ]
+   },
+   {
+    "label": "혼성 10m 공기소총 단체",
+    "la28": true,
+    "en": "Mixed events | 10 metre air rifle team",
+    "medals": [
+     "Huang Yuting·Sheng Lihao (CHN)",
+     "금지현·박하준 (KOR)",
+     "Alexandra Le·Islam Satpayev (KAZ)"
+    ]
+   },
+   {
+    "label": "혼성 스키트 단체",
+    "la28": false,
+    "en": "Mixed events | Skeet team",
+    "medals": [
+     "Diana Bacosi·Gabriele Rossetti (ITA)",
+     "Austen Smith·Vincent Hancock (USA)",
+     "Jiang Yiting·Lyu Jianlin (CHN)"
+    ]
+   }
+  ],
+  "olskateboard": [
+   {
+    "label": "남자 파크",
+    "la28": true,
+    "en": "Medalists | Men's park",
+    "medals": [
+     "Keegan Palmer (AUS)",
+     "Tom Schaar (USA)",
+     "Augusto Akio (BRA)"
+    ]
+   },
+   {
+    "label": "남자 스트리트",
+    "la28": true,
+    "en": "Medalists | Men's street",
+    "medals": [
+     "Yuto Horigome (JPN)",
+     "Jagger Eaton (USA)",
+     "Nyjah Huston (USA)"
+    ]
+   },
+   {
+    "label": "여자 파크",
+    "la28": true,
+    "en": "Medalists | Women's park",
+    "medals": [
+     "Arisa Trew (AUS)",
+     "Kokona Hiraki (JPN)",
+     "Sky Brown (GBR)"
+    ]
+   },
+   {
+    "label": "여자 스트리트",
+    "la28": true,
+    "en": "Medalists | Women's street",
+    "medals": [
+     "Coco Yoshizawa (JPN)",
+     "Liz Akama (JPN)",
+     "Rayssa Leal (BRA)"
+    ]
+   }
+  ],
+  "olclimbing": [
+   {
+    "label": "남자 콤바인 (볼더·리드)",
+    "la28": false,
+    "en": "Medalists | Men's combined",
+    "medals": [
+     "Toby Roberts (GBR)",
+     "Sorato Anraku (JPN)",
+     "Jakob Schubert (AUT)"
+    ]
+   },
+   {
+    "label": "남자 스피드",
+    "la28": true,
+    "en": "Medalists | Men's speed",
+    "medals": [
+     "Veddriq Leonardo (INA)",
+     "Wu Peng (CHN)",
+     "Sam Watson (USA)"
+    ]
+   },
+   {
+    "label": "여자 콤바인 (볼더·리드)",
+    "la28": false,
+    "en": "Medalists | Women's combined",
+    "medals": [
+     "Janja Garnbret (SLO)",
+     "Brooke Raboutou (USA)",
+     "Jessica Pilz (AUT)"
+    ]
+   },
+   {
+    "label": "여자 스피드",
+    "la28": true,
+    "en": "Medalists | Women's speed",
+    "medals": [
+     "Aleksandra Mirosław (POL)",
+     "Deng Lijuan (CHN)",
+     "Aleksandra Kałucka (POL)"
+    ]
+   }
+  ],
+  "olsurfing": [
+   {
+    "label": "남자 숏보드",
+    "la28": true,
+    "en": "Medalists | Men's shortboard",
+    "medals": [
+     "Kauli Vaast (FRA)",
+     "Jack Robinson (AUS)",
+     "Gabriel Medina (BRA)"
+    ]
+   },
+   {
+    "label": "여자 숏보드",
+    "la28": true,
+    "en": "Medalists | Women's shortboard",
+    "medals": [
+     "Caroline Marks (USA)",
+     "Tatiana Weston-Webb (BRA)",
+     "Johanne Defay (FRA)"
+    ]
+   }
+  ],
+  "olswimming": [
+   {
+    "label": "남자 자유형 50m",
+    "la28": true,
+    "en": "Pool swimming | 50 m freestyle",
+    "medals": [
+     "Cameron McEvoy (AUS)",
+     "Ben Proud (GBR)",
+     "Florent Manaudou (FRA)"
+    ]
+   },
+   {
+    "label": "남자 자유형 100m",
+    "la28": true,
+    "en": "Pool swimming | 100 m freestyle",
+    "medals": [
+     "Pan Zhanle (CHN)",
+     "Kyle Chalmers (AUS)",
+     "David Popovici (ROU)"
+    ]
+   },
+   {
+    "label": "남자 자유형 200m",
+    "la28": true,
+    "en": "Pool swimming | 200 m freestyle",
+    "medals": [
+     "David Popovici (ROU)",
+     "Matthew Richards (GBR)",
+     "Luke Hobson (USA)"
+    ]
+   },
+   {
+    "label": "남자 자유형 400m",
+    "la28": true,
+    "en": "Pool swimming | 400 m freestyle",
+    "medals": [
+     "Lukas Märtens (GER)",
+     "Elijah Winnington (AUS)",
+     "김우민 (KOR)"
+    ]
+   },
+   {
+    "label": "남자 자유형 800m",
+    "la28": true,
+    "en": "Pool swimming | 800 m freestyle",
+    "medals": [
+     "Daniel Wiffen (IRL)",
+     "Bobby Finke (USA)",
+     "Gregorio Paltrinieri (ITA)"
+    ]
+   },
+   {
+    "label": "남자 자유형 1500m",
+    "la28": true,
+    "en": "Pool swimming | 1500 m freestyle",
+    "medals": [
+     "Bobby Finke (USA)",
+     "Gregorio Paltrinieri (ITA)",
+     "Daniel Wiffen (IRL)"
+    ]
+   },
+   {
+    "label": "남자 배영 100m",
+    "la28": true,
+    "en": "Pool swimming | 100 m backstroke",
+    "medals": [
+     "Thomas Ceccon (ITA)",
+     "Xu Jiayu (CHN)",
+     "Ryan Murphy (USA)"
+    ]
+   },
+   {
+    "label": "남자 배영 200m",
+    "la28": true,
+    "en": "Pool swimming | 200 m backstroke",
+    "medals": [
+     "Hubert Kós (HUN)",
+     "Apostolos Christou (GRE)",
+     "Roman Mityukov (SUI)"
+    ]
+   },
+   {
+    "label": "남자 평영 100m",
+    "la28": true,
+    "en": "Pool swimming | 100 m breaststroke",
+    "medals": [
+     "Nicolò Martinenghi (ITA)",
+     "Adam Peaty (GBR)",
+     ""
+    ]
+   },
+   {
+    "label": "남자 평영 200m",
+    "la28": true,
+    "en": "Pool swimming | 200 m breaststroke",
+    "medals": [
+     "Léon Marchand (FRA)",
+     "Zac Stubblety-Cook (AUS)",
+     "Caspar Corbeau (NED)"
+    ]
+   },
+   {
+    "label": "남자 접영 100m",
+    "la28": true,
+    "en": "Pool swimming | 100 m butterfly",
+    "medals": [
+     "Kristóf Milák (HUN)",
+     "Josh Liendo (CAN)",
+     "Ilya Kharun (CAN)"
+    ]
+   },
+   {
+    "label": "남자 접영 200m",
+    "la28": true,
+    "en": "Pool swimming | 200 m butterfly",
+    "medals": [
+     "Léon Marchand (FRA)",
+     "Kristóf Milák (HUN)",
+     "Ilya Kharun (CAN)"
+    ]
+   },
+   {
+    "label": "남자 개인혼영 200m",
+    "la28": true,
+    "en": "Pool swimming | 200 m individual medley",
+    "medals": [
+     "Léon Marchand (FRA)",
+     "Duncan Scott (GBR)",
+     "Wang Shun (CHN)"
+    ]
+   },
+   {
+    "label": "남자 개인혼영 400m",
+    "la28": true,
+    "en": "Pool swimming | 400 m individual medley",
+    "medals": [
+     "Léon Marchand (FRA)",
+     "Tomoyuki Matsushita (JPN)",
+     "Carson Foster (USA)"
+    ]
+   },
+   {
+    "label": "남자 4×100m 자유형 계주",
+    "la28": true,
+    "en": "Pool swimming | 4 × 100 m freestyle relay",
+    "medals": [
+     "USA",
+     "AUS",
+     "ITA"
+    ]
+   },
+   {
+    "label": "남자 4×200m 자유형 계주",
+    "la28": true,
+    "en": "Pool swimming | 4 × 200 m freestyle relay",
+    "medals": [
+     "GBR",
+     "USA",
+     "AUS"
+    ]
+   },
+   {
+    "label": "남자 4×100m 혼계영",
+    "la28": true,
+    "en": "Pool swimming | 4 × 100 m medley relay",
+    "medals": [
+     "CHN",
+     "USA",
+     "FRA"
+    ]
+   },
+   {
+    "label": "여자 자유형 50m",
+    "la28": true,
+    "en": "Pool swimming | 50 m freestyle",
+    "medals": [
+     "Sarah Sjöström (SWE)",
+     "Meg Harris (AUS)",
+     "Zhang Yufei (CHN)"
+    ]
+   },
+   {
+    "label": "여자 자유형 100m",
+    "la28": true,
+    "en": "Pool swimming | 100 m freestyle",
+    "medals": [
+     "Sarah Sjöström (SWE)",
+     "Torri Huske (USA)",
+     "Siobhán Haughey (HKG)"
+    ]
+   },
+   {
+    "label": "여자 자유형 200m",
+    "la28": true,
+    "en": "Pool swimming | 200 m freestyle",
+    "medals": [
+     "Mollie O'Callaghan (AUS)",
+     "Ariarne Titmus (AUS)",
+     "Siobhán Haughey (HKG)"
+    ]
+   },
+   {
+    "label": "여자 자유형 400m",
+    "la28": true,
+    "en": "Pool swimming | 400 m freestyle",
+    "medals": [
+     "Ariarne Titmus (AUS)",
+     "Summer McIntosh (CAN)",
+     "Katie Ledecky (USA)"
+    ]
+   },
+   {
+    "label": "여자 자유형 800m",
+    "la28": true,
+    "en": "Pool swimming | 800 m freestyle",
+    "medals": [
+     "Katie Ledecky (USA)",
+     "Ariarne Titmus (AUS)",
+     "Paige Madden (USA)"
+    ]
+   },
+   {
+    "label": "여자 자유형 1500m",
+    "la28": true,
+    "en": "Pool swimming | 1500 m freestyle",
+    "medals": [
+     "Katie Ledecky (USA)",
+     "Anastasiya Kirpichnikova (FRA)",
+     "Isabel Marie Gose (GER)"
+    ]
+   },
+   {
+    "label": "여자 배영 100m",
+    "la28": true,
+    "en": "Pool swimming | 100 m backstroke",
+    "medals": [
+     "Kaylee McKeown (AUS)",
+     "Regan Smith (USA)",
+     "Katharine Berkoff (USA)"
+    ]
+   },
+   {
+    "label": "여자 배영 200m",
+    "la28": true,
+    "en": "Pool swimming | 200 m backstroke",
+    "medals": [
+     "Kaylee McKeown (AUS)",
+     "Regan Smith (USA)",
+     "Kylie Masse (CAN)"
+    ]
+   },
+   {
+    "label": "여자 평영 100m",
+    "la28": true,
+    "en": "Pool swimming | 100 m breaststroke",
+    "medals": [
+     "Tatjana Smith (SAF)",
+     "Tang Qianting (CHN)",
+     "Mona McSharry (IRL)"
+    ]
+   },
+   {
+    "label": "여자 평영 200m",
+    "la28": true,
+    "en": "Pool swimming | 200 m breaststroke",
+    "medals": [
+     "Kate Douglass (USA)",
+     "Tatjana Smith (SAF)",
+     "Tes Schouten (NED)"
+    ]
+   },
+   {
+    "label": "여자 접영 100m",
+    "la28": true,
+    "en": "Pool swimming | 100 m butterfly",
+    "medals": [
+     "Torri Huske (USA)",
+     "Gretchen Walsh (USA)",
+     "Zhang Yufei (CHN)"
+    ]
+   },
+   {
+    "label": "여자 접영 200m",
+    "la28": true,
+    "en": "Pool swimming | 200 m butterfly",
+    "medals": [
+     "Summer McIntosh (CAN)",
+     "Regan Smith (USA)",
+     "Zhang Yufei (CHN)"
+    ]
+   },
+   {
+    "label": "여자 개인혼영 200m",
+    "la28": true,
+    "en": "Pool swimming | 200 m individual medley",
+    "medals": [
+     "Summer McIntosh (CAN)",
+     "Kate Douglass (USA)",
+     "Kaylee McKeown (AUS)"
+    ]
+   },
+   {
+    "label": "여자 개인혼영 400m",
+    "la28": true,
+    "en": "Pool swimming | 400 m individual medley",
+    "medals": [
+     "Summer McIntosh (CAN)",
+     "Katie Grimes (USA)",
+     "Emma Weyant (USA)"
+    ]
+   },
+   {
+    "label": "여자 4×100m 자유형 계주",
+    "la28": true,
+    "en": "Pool swimming | 4 × 100 m freestyle relay",
+    "medals": [
+     "AUS",
+     "USA",
+     "CHN"
+    ]
+   },
+   {
+    "label": "여자 4×200m 자유형 계주",
+    "la28": true,
+    "en": "Pool swimming | 4 × 200 m freestyle relay",
+    "medals": [
+     "AUS",
+     "USA",
+     "CHN"
+    ]
+   },
+   {
+    "label": "여자 4×100m 혼계영",
+    "la28": true,
+    "en": "Pool swimming | 4 × 100 m medley relay",
+    "medals": [
+     "USA",
+     "AUS",
+     "CHN"
+    ]
+   },
+   {
+    "label": "혼성 4×100m 혼계영",
+    "la28": true,
+    "en": "Pool swimming | 4 × 100 m medley relay",
+    "medals": [
+     "USA",
+     "CHN",
+     "AUS"
+    ]
+   }
+  ],
+  "oltabletennis": [
+   {
+    "label": "남자 단식",
+    "la28": true,
+    "en": "Medalists | Men's singles",
+    "medals": [
+     "Fan Zhendong (CHN)",
+     "Truls Möregårdh (SWE)",
+     "Félix Lebrun (FRA)"
+    ]
+   },
+   {
+    "label": "남자 단체",
+    "la28": false,
+    "en": "Medalists | Men's team",
+    "medals": [
+     "Fan Zhendong·Ma Long·Wang Chuqin (CHN)",
+     "Anton Källberg·Kristian Karlsson·Truls Möregårdh (SWE)",
+     "Simon Gauzy·Alexis Lebrun·Félix Lebrun (FRA)"
+    ]
+   },
+   {
+    "label": "여자 단식",
+    "la28": true,
+    "en": "Medalists | Women's singles",
+    "medals": [
+     "Chen Meng (CHN)",
+     "Sun Yingsha (CHN)",
+     "Hina Hayata (JPN)"
+    ]
+   },
+   {
+    "label": "여자 단체",
+    "la28": false,
+    "en": "Medalists | Women's team",
+    "medals": [
+     "Sun Yingsha·Wang Manyu·Chen Meng (CHN)",
+     "Hina Hayata·Miwa Harimoto·Miu Hirano (JPN)",
+     "신유빈·전지희·이은혜 (KOR)"
+    ]
+   },
+   {
+    "label": "혼합 복식",
+    "la28": true,
+    "en": "Medalists | Mixed doubles",
+    "medals": [
+     "Wang Chuqin·Sun Yingsha (CHN)",
+     "리정식·김금용 (PRK)",
+     "임종훈·신유빈 (KOR)"
+    ]
+   }
+  ],
+  "oltennis": [
+   {
+    "label": "남자 단식",
+    "la28": true,
+    "en": "Events | Men's singles",
+    "medals": [
+     "Novak Djokovic (SRB)",
+     "Carlos Alcaraz (ESP)",
+     "Lorenzo Musetti (ITA)"
+    ]
+   },
+   {
+    "label": "남자 복식",
+    "la28": true,
+    "en": "Events | Men's doubles",
+    "medals": [
+     "Matthew Ebden·John Peers (AUS)",
+     "Austin Krajicek·Rajeev Ram (USA)",
+     "Taylor Fritz·Tommy Paul (USA)"
+    ]
+   },
+   {
+    "label": "여자 단식",
+    "la28": true,
+    "en": "Events | Women's singles",
+    "medals": [
+     "Zheng Qinwen (CHN)",
+     "Donna Vekić (CRO)",
+     "Iga Świątek (POL)"
+    ]
+   },
+   {
+    "label": "여자 복식",
+    "la28": true,
+    "en": "Events | Women's doubles",
+    "medals": [
+     "Sara Errani·Jasmine Paolini (ITA)",
+     "Mirra Andreeva·Diana Shnaider (AIN)",
+     "Cristina Bucșa·Sara Sorribes Tormo (ESP)"
+    ]
+   },
+   {
+    "label": "혼합 복식",
+    "la28": true,
+    "en": "Events | Mixed doubles",
+    "medals": [
+     "Kateřina Siniaková·Tomáš Macháč (CZE)",
+     "Wang Xinyu·Zhang Zhizhen (CHN)",
+     "Gabriela Dabrowski·Félix Auger-Aliassime (CAN)"
+    ]
+   }
+  ],
+  "oltriathlon": [
+   {
+    "label": "남자 개인",
+    "la28": true,
+    "en": "Medalists | Men's individual",
+    "medals": [
+     "Alex Yee (GBR)",
+     "Hayden Wilde (NZL)",
+     "Léo Bergère (FRA)"
+    ]
+   },
+   {
+    "label": "여자 개인",
+    "la28": true,
+    "en": "Medalists | Women's individual",
+    "medals": [
+     "Cassandre Beaugrand (FRA)",
+     "Julie Derron (SUI)",
+     "Beth Potter (GBR)"
+    ]
+   },
+   {
+    "label": "혼성 계주",
+    "la28": true,
+    "en": "Medalists | Mixed relay",
+    "medals": [
+     "GER",
+     "USA",
+     "GBR"
+    ]
+   }
+  ],
+  "olwrestling": [
+   {
+    "label": "남자 자유형 57kg",
+    "la28": true,
+    "en": "Men's freestyle | 57 kg",
+    "medals": [
+     "Rei Higuchi (JPN)",
+     "Spencer Lee (USA)",
+     "Aman Sehrawat (IND) / Gulomjon Abdullaev (UZB)"
+    ]
+   },
+   {
+    "label": "남자 자유형 65kg",
+    "la28": true,
+    "en": "Men's freestyle | 65 kg",
+    "medals": [
+     "Kotaro Kiyooka (JPN)",
+     "Rahman Amouzad (IRI)",
+     "Sebastian Rivera (PUR) / Islam Dudaev (ALB)"
+    ]
+   },
+   {
+    "label": "남자 자유형 74kg",
+    "la28": true,
+    "en": "Men's freestyle | 74 kg",
+    "medals": [
+     "Razambek Zhamalov (UZB)",
+     "Daichi Takatani (JPN)",
+     "Kyle Dake (USA) / Chermen Valiev (ALB)"
+    ]
+   },
+   {
+    "label": "남자 자유형 86kg",
+    "la28": true,
+    "en": "Men's freestyle | 86 kg",
+    "medals": [
+     "Magomed Ramazanov (BUL)",
+     "Hassan Yazdani (IRI)",
+     "Aaron Brooks (USA) / Dauren Kurugliev (GRE)"
+    ]
+   },
+   {
+    "label": "남자 자유형 97kg",
+    "la28": true,
+    "en": "Men's freestyle | 97 kg",
+    "medals": [
+     "Akhmed Tazhudinov (BHR)",
+     "Givi Matcharashvili (GEO)",
+     "Magomedkhan Magomedov (AZE) / Amir Ali Azarpira (IRI)"
+    ]
+   },
+   {
+    "label": "남자 자유형 125kg",
+    "la28": true,
+    "en": "Men's freestyle | 125 kg",
+    "medals": [
+     "Geno Petriashvili (GEO)",
+     "Amir Hossein Zare (IRI)",
+     "Taha Akgül (TUR) / Giorgi Meshvildishvili (AZE)"
+    ]
+   },
+   {
+    "label": "여자 자유형 50kg",
+    "la28": true,
+    "en": "Women's freestyle | 50 kg",
+    "medals": [
+     "Sarah Hildebrandt (USA)",
+     "Yusneylys Guzmán (CUB)",
+     "Yui Susaki (JPN) / Feng Ziqi (CHN)"
+    ]
+   },
+   {
+    "label": "여자 자유형 53kg",
+    "la28": true,
+    "en": "Women's freestyle | 53 kg",
+    "medals": [
+     "Akari Fujinami (JPN)",
+     "Lucía Yépez (ECU)",
+     "최효경 (PRK) / Pang Qianyu (CHN)"
+    ]
+   },
+   {
+    "label": "여자 자유형 57kg",
+    "la28": true,
+    "en": "Women's freestyle | 57 kg",
+    "medals": [
+     "Tsugumi Sakurai (JPN)",
+     "Anastasia Nichita (MDA)",
+     "Helen Maroulis (USA) / Hong Kexin (CHN)"
+    ]
+   },
+   {
+    "label": "여자 자유형 62kg",
+    "la28": true,
+    "en": "Women's freestyle | 62 kg",
+    "medals": [
+     "Sakura Motoki (JPN)",
+     "Iryna Koliadenko (UKR)",
+     "Aisuluu Tynybekova (KGZ) / Grace Bullen (NOR)"
+    ]
+   },
+   {
+    "label": "여자 자유형 68kg",
+    "la28": true,
+    "en": "Women's freestyle | 68 kg",
+    "medals": [
+     "Amit Elor (USA)",
+     "Meerim Zhumanazarova (KGZ)",
+     "Buse Tosun Çavuşoğlu (TUR) / Nonoka Ozaki (JPN)"
+    ]
+   },
+   {
+    "label": "여자 자유형 76kg",
+    "la28": true,
+    "en": "Women's freestyle | 76 kg",
+    "medals": [
+     "Yuka Kagami (JPN)",
+     "Kennedy Blades (USA)",
+     "Milaimys Marín (CUB) / Tatiana Rentería (COL)"
+    ]
+   },
+   {
+    "label": "남자 그레코로만형 60kg",
+    "la28": true,
+    "en": "Men's Greco-Roman | 60 kg",
+    "medals": [
+     "Kenichiro Fumita (JPN)",
+     "Cao Liguo (CHN)",
+     "Zholaman Sharshenbekov (KGZ) / 리세웅 (PRK)"
+    ]
+   },
+   {
+    "label": "남자 그레코로만형 67kg",
+    "la28": true,
+    "en": "Men's Greco-Roman | 67 kg",
+    "medals": [
+     "Saeid Esmaeili (IRI)",
+     "Parviz Nasibov (UKR)",
+     "Hasrat Jafarov (AZE) / Luis Orta (CUB)"
+    ]
+   },
+   {
+    "label": "남자 그레코로만형 77kg",
+    "la28": true,
+    "en": "Men's Greco-Roman | 77 kg",
+    "medals": [
+     "Nao Kusaka (JPN)",
+     "Demeu Zhadrayev (KAZ)",
+     "Malkhas Amoyan (ARM) / Akzhol Makhmudov (KGZ)"
+    ]
+   },
+   {
+    "label": "남자 그레코로만형 87kg",
+    "la28": true,
+    "en": "Men's Greco-Roman | 87 kg",
+    "medals": [
+     "Semen Novikov (BUL)",
+     "Alireza Mohmadi (IRI)",
+     "Zhan Beleniuk (UKR) / Turpal Bisultanov (DEN)"
+    ]
+   },
+   {
+    "label": "남자 그레코로만형 97kg",
+    "la28": true,
+    "en": "Men's Greco-Roman | 97 kg",
+    "medals": [
+     "Mohammad Hadi Saravi (IRI)",
+     "Artur Aleksanyan (ARM)",
+     "Gabriel Rosillo (CUB) / Uzur Dzhuzupbekov (KGZ)"
+    ]
+   },
+   {
+    "label": "남자 그레코로만형 130kg",
+    "la28": true,
+    "en": "Men's Greco-Roman | 130 kg",
+    "medals": [
+     "Mijaín López (CUB)",
+     "Yasmani Acosta (CHI)",
+     "Amin Mirzazadeh (IRI) / Meng Lingzhe (CHN)"
+    ]
+   }
+  ],
+  "olmarathonswim": [
+   {
+    "label": "남자 10km",
+    "la28": true,
+    "en": "Men's 10 km open water",
+    "medals": [
+     "Kristóf Rasovszky (HUN)",
+     "Oliver Klemet (GER)",
+     "Dávid Betlehem (HUN)"
+    ]
+   },
+   {
+    "label": "여자 10km",
+    "la28": true,
+    "en": "Women's 10 km open water",
+    "medals": [
+     "Sharon van Rouwendaal (NED)",
+     "Moesha Johnson (AUS)",
+     "Ginevra Taddeucci (ITA)"
+    ]
+   }
+  ]
  }
 }
