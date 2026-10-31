@@ -18,7 +18,7 @@
   "live": "Mixed Team Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-31T16:19:33.728089+00:00",
+ "checked_at": "2026-10-31T16:30:11.141627+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -12013,7 +12013,7 @@
     {
      "id": 22960,
      "name": "Semifinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-10-31T15:13:37.000Z",
      "rule": "The first and second placed teams from each race qualify for Final, the third and fourth placed teams from each race qualify for Final B.",
      "heats": [
@@ -12086,15 +12086,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "China",
          "noc": "CHN",
-         "time": "no time",
-         "qual": "",
+         "time": "2:40.096",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -12102,11 +12102,11 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Italy",
          "noc": "ITA",
-         "time": "no time",
-         "qual": "",
+         "time": "2:40.238",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -12114,11 +12114,11 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Japan",
          "noc": "JPN",
-         "time": "no time",
-         "qual": "",
+         "time": "2:40.592",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": null,
@@ -12126,11 +12126,11 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Belgium",
          "noc": "BEL",
-         "time": "no time",
-         "qual": "",
+         "time": "2:51.220",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": null,
@@ -12139,7 +12139,50 @@
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Finals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Canada",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "2:36.346",
+        "qual": "Q"
+       },
+       {
+        "name": "China",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "2:40.096",
+        "qual": "Q"
+       },
+       {
+        "name": "Netherlands",
+        "noc": "NED",
+        "rank": 2,
+        "time": "2:37.672",
+        "qual": "Q"
+       },
+       {
+        "name": "Italy",
+        "noc": "ITA",
+        "rank": 2,
+        "time": "2:40.238",
+        "qual": "Q"
+       }
+      ],
+      "races": [
+       [
+        "Canada (CAN)",
+        "China (CHN)",
+        "Netherlands (NED)",
+        "Italy (ITA)"
+       ]
+      ]
+     }
     },
     {
      "id": 22961,
