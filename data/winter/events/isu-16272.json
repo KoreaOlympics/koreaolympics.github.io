@@ -18,7 +18,7 @@
   "live": "Women 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-31T14:22:34.032987+00:00",
+ "checked_at": "2026-10-31T14:32:55.495140+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -141,7 +141,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-10-31T14:00:00.000Z",
+   "start_utc": "2026-10-31T14:01:00.000Z",
    "title": "Men 500 m",
    "round": "Rep. Quarterfinals",
    "event_result_id": 16034,
@@ -5623,7 +5623,7 @@
      "id": 22934,
      "name": "Rep. Quarterfinals",
      "status": "Live",
-     "start_utc": "2026-10-31T13:18:00.000Z",
+     "start_utc": "2026-10-31T13:18:23.000Z",
      "rule": "The first placed skater from each race and up to a maximum of four fastest second place skaters qualify for Rep Semifinals.",
      "heats": [
       {
@@ -5695,15 +5695,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Margherita BETTI",
          "noc": "ITA",
-         "time": "no time",
-         "qual": "",
+         "time": "1:40.189",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 66,
@@ -5711,11 +5711,11 @@
          "slug": "margherita-betti"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Cloe OLLIVIER",
          "noc": "FRA",
-         "time": "no time",
-         "qual": "",
+         "time": "1:41.305",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 24,
@@ -5723,10 +5723,10 @@
          "slug": "cloe-ollivier"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Zeinep KUMARKAN",
          "noc": "KAZ",
-         "time": "no time",
+         "time": "1:41.352",
          "qual": "",
          "status": "",
          "record": "",
@@ -5750,15 +5750,15 @@
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Alina AZHGALIYEVA",
          "noc": "KAZ",
-         "time": "no time",
-         "qual": "",
+         "time": "1:33.743",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 71,
@@ -5766,11 +5766,11 @@
          "slug": "alina-azhgaliyeva"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Kiek STRAATHOF",
          "noc": "NED",
-         "time": "no time",
-         "qual": "",
+         "time": "1:33.810",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 80,
@@ -5778,42 +5778,54 @@
          "slug": "kiek-straathof"
         },
         {
-         "rank": null,
-         "name": "Eva GRENOUILLOUX",
-         "noc": "FRA",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 59,
-         "lane": 3,
-         "slug": "eva-grenouilloux"
-        },
-        {
-         "rank": null,
+         "rank": 3,
          "name": "Wakaba KENJO",
          "noc": "JPN",
-         "time": "no time",
+         "time": "1:33.940",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 67,
          "lane": 4,
          "slug": "wakaba-kenjo"
+        },
+        {
+         "rank": 4,
+         "name": "Eva GRENOUILLOUX",
+         "noc": "FRA",
+         "time": "1:33.983",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 59,
+         "lane": 3,
+         "slug": "eva-grenouilloux"
         }
        ]
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Ann-Sophie BACHAND",
+         "noc": "CAN",
+         "time": "1:33.669",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 51,
+         "lane": 4,
+         "slug": "ann-sophie-bachand"
+        },
+        {
+         "rank": 2,
          "name": "Zoe Florence DELTRAP",
          "noc": "NED",
-         "time": "no time",
-         "qual": "",
+         "time": "1:34.004",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 49,
@@ -5821,22 +5833,10 @@
          "slug": "zoe-florence-deltrap"
         },
         {
-         "rank": null,
-         "name": "Chien Hua HUANG",
-         "noc": "TPE",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 85,
-         "lane": 2,
-         "slug": "chien-hua-huang"
-        },
-        {
-         "rank": null,
+         "rank": 3,
          "name": "Michalina WAWER",
          "noc": "POL",
-         "time": "no time",
+         "time": "1:34.196",
          "qual": "",
          "status": "",
          "record": "",
@@ -5845,22 +5845,22 @@
          "slug": "michalina-wawer"
         },
         {
-         "rank": null,
-         "name": "Ann-Sophie BACHAND",
-         "noc": "CAN",
-         "time": "no time",
+         "rank": 4,
+         "name": "Chien Hua HUANG",
+         "noc": "TPE",
+         "time": "1:35.312",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 51,
-         "lane": 4,
-         "slug": "ann-sophie-bachand"
+         "bib": 85,
+         "lane": 2,
+         "slug": "chien-hua-huang"
         }
        ]
       },
       {
        "name": "Heat 5",
-       "status": "Scheduled",
+       "status": "Getting Ready",
        "official": "Start List",
        "competitors": [
         {
@@ -11616,7 +11616,7 @@
    "distance": "Women 1000 m",
    "round": "Rep. Quarterfinals",
    "heat": "Heat 2",
-   "start_utc": "2026-10-31T13:18:00.000Z",
+   "start_utc": "2026-10-31T13:18:23.000Z",
    "rank": null,
    "name": "Gilli KIM",
    "noc": "KOR",
