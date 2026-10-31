@@ -105,6 +105,47 @@ def flow_block(y, rows, label):
     return out, yy - y
 
 
+def units_block(y, units):
+    """체급·세부종목마다 쿼터가 따로 정해진 종목: 한 줄에 한 체급(세부종목), 같은 경로는 같은 색."""
+    colors = {}
+    for _, _, segs in units['rows']:
+        for seg in segs:
+            colors.setdefault(seg[0], PALETTE[len(colors) % len(PALETTE)])
+    lw = max(text_width(r[0], 13) for r in units['rows']) + 12
+    tw = max(text_width(r[1], 13) for r in units['rows']) + 10
+    x0, x1 = PAD + lw, W - PAD - tw
+    top = max(sum(seg[1] for seg in r[2]) for r in units['rows'])
+    out = ['<defs><pattern id="var" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">'
+           '<rect width="6" height="6" fill="#e3e6ea"/><line x1="0" y1="0" x2="0" y2="6" stroke="#9aa1a9" stroke-width="3"/></pattern></defs>']
+    yy = y
+    for label, total, segs in units['rows']:
+        out.append(t(PAD, yy + 15, label, 13, INK))
+        x = x0
+        for seg in segs:
+            name, n, var = seg[0], seg[1], len(seg) > 2 and seg[2]
+            w = (x1 - x0) * n / top
+            out.append(f'<rect x="{x:.1f}" y="{yy}" width="{max(w - 1.5, 1):.1f}" height="20" fill="{"url(#var)" if var else colors[name]}"/>')
+            if not var and text_width(str(n), 12) + 6 < w:
+                out.append(t(x + w / 2, yy + 15, str(n), 12, '#fff', 'bold', 'middle'))
+            x += w
+        out.append(t(W - PAD, yy + 15, total, 13, BLUE, 'bold', 'end'))
+        yy += 26
+    ly, lx = yy + 12, PAD
+    for name, c in colors.items():
+        var = any(len(seg) > 2 and seg[2] for _, _, segs in units['rows'] for seg in segs if seg[0] == name)
+        iw = 18 + text_width(name, 13) + 16
+        if lx + iw > W - PAD:
+            lx, ly = PAD, ly + 20
+        out.append(f'<rect x="{lx:.0f}" y="{ly - 11}" width="12" height="12" rx="2" fill="{"url(#var)" if var else c}"/>')
+        out.append(t(lx + 18, ly, name, 13))
+        lx += iw
+    yy = ly + 8
+    for line in wrap(units.get('note', ''), 12, W - 2 * PAD) if units.get('note') else []:
+        yy += 17
+        out.append(t(PAD, yy, line, 12, MUTED))
+    return out, yy - y + 10
+
+
 def bar_block(y, bar):
     total = sum(n for _, n in bar['segs'])
     out = [t(PAD, y, bar['label'], 13, MUTED, 'bold')]
@@ -143,6 +184,9 @@ def render(name, d):
     o, h = flow_block(y, d['flow'], d.get('flowlabel')); out += o; y += h + 16
     if d.get('pathnote'):
         out.append(t(PAD, y - 4, d['pathnote'], 12, MUTED)); y += 16
+    if d.get('units'):
+        out += heading(y, d['units']['title']); y += 16
+        o, h = units_block(y, d['units']); out += o; y += h + 18
     if d.get('bars'):
         out += heading(y, '출전권 배분'); y += 26
         for bar in d['bars']:
@@ -162,6 +206,10 @@ def alt_text(name, d):
              '핵심 규칙: ' + ' '.join(d['rules'])]
     for b in d.get('bars', []):
         parts.append(f'출전권 배정 ({b["label"]}): ' + ', '.join(f'{l} {n}' for l, n in b['segs']) + '.')
+    if d.get('units'):
+        parts.append(d['units']['title'] + ': ' + '; '.join(
+            f'{label} {total} (' + ', '.join(f'{seg[0]} {"가변" if len(seg) > 2 and seg[2] else seg[1]}' for seg in segs) + ')'
+            for label, total, segs in d['units']['rows']) + '.')
     parts.append('예선 구조 (차례대로): ' + '; '.join(
         ' '.join(x for x in (name, count, f'({when}{", " + how if how else ""})' if when not in ('—', '') else (f'({how})' if how else '')) if x)
         for when, name, count, how in d['flow']) + '.' + (' ' + d['pathnote'] if d.get('pathnote') else ''))
