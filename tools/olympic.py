@@ -445,6 +445,12 @@ def summary_figure(s):
     return figure(s['file'], s['name'], data[s['file']])
 
 
+def qualified_block(s):
+    """LA28 출전 확정 표 (data/la28-qualified.json, tools/qualified.py)."""
+    from qualified import block
+    return block(s['file'])
+
+
 def render_sections(defs, parts):
     toc, out = [], []
     titles = parts.get('__titles__', {})
@@ -504,7 +510,7 @@ def render_hub(reg, s):
     body = '\n'.join([
         f'<nav class="crumb"><a href="index.html">목차</a> › {E(s["name"])}</nav>',
         f'<h1>{E(s["name"])} <span class="en">({E(s["name_en"])})</span></h1>',
-        '<div class="top">', infobox(s['name'], info), lead, '</div>', summary_figure(s), toc, winter_live_block(s), secs, rel,
+        '<div class="top">', infobox(s['name'], info), lead, '</div>', summary_figure(s), qualified_block(s), toc, winter_live_block(s), secs, rel,
         season_navbox(reg, s['season'], '', hub_path(s))])
     return path, page(f'{s["name"]} | {g["games"]}', '', body, f'{g["games"]} {s["name"]} 세부종목·예선·한국 현황')
 

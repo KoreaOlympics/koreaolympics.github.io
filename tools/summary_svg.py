@@ -291,7 +291,8 @@ def main():
         fig = figure(file, names[file], d)
         if '<nav class="toc">' not in text:
             print('목차 없음, 건너뜀:', file); continue
-        text = text.replace('<nav class="toc">', fig + '\n<nav class="toc">', 1)
+        anchor = '<div class="qualified"' if '<div class="qualified"' in text else '<nav class="toc">'  # 그림 → 출전 확정 표 → 목차
+        text = text.replace(anchor, fig + '\n' + anchor, 1)
         page.write_text(text, encoding='utf-8', newline='\n')
     missing = sorted(set(names) - set(data))
     print(f'{len(data)}개 그림 생성' + (f' · 자료 없음: {", ".join(missing)}' if missing else ''))

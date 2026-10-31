@@ -132,3 +132,13 @@ td.nat, .wikitable td .nat { font-weight: 700; color: #0f6b5c; }
 .summary-figure { margin: 16px 0; overflow-x: auto; }
 .summary-figure img { display: block; width: 100%; max-width: 640px; height: auto; }
 @media (max-width: 600px) { .summary-figure img { width: 560px; max-width: none; } }  /* 글자가 읽히는 크기로 두고 옆으로 넘긴다 */
+/* LA28 출전 확정 표 (tools/qualified.py) · 국기: flag-icons (MIT), assets/flags */
+.qualified { margin: 16px 0 20px; }
+.qualified h2 { font-size: 1.25em; }
+.qualified .asof { font-size: .7em; color: #54595d; font-weight: normal; }
+.qualified .note, .qualified .src { font-size: .9em; color: #54595d; }
+.qualified .noc { font-size: .8em; color: #72777d; }
+img.flag, .flag.none { display: inline-block; width: 20px; height: 15px; margin-right: 6px; vertical-align: -2px; border: 1px solid #c8ccd1; }
+.flag.none { background: #eaecf0; }
+.qualified .nat { white-space: nowrap; }
+@media (max-width: 600px) { .qualified .noc { display: none; } }

@@ -1,0 +1,101 @@
+{
+ "_note": "LA28 출전권 중 이미 결정된 것 (tools/qualified.py가 허브 첫머리 표로 그린다). 행: [NOC, 경로, 비고]. 국가 이름·국기는 NOCS에서 찾는다. 확인하지 못한 자리는 넣지 않고 note에 적는다.",
+ "asof": "2026.10.31",
+ "NOCS": {
+  "USA": ["미국", "us"], "DOM": ["도미니카 공화국", "do"], "VEN": ["베네수엘라", "ve"], "BEL": ["벨기에", "be"], "IND": ["인도", "in"],
+  "NED": ["네덜란드", "nl"], "AUS": ["오스트레일리아", "au"], "GBR": ["영국", "gb"], "RSA": ["남아프리카 공화국", "za"], "JPN": ["일본", "jp"],
+  "CHN": ["중국", "cn"], "GER": ["독일", "de"], "ITA": ["이탈리아", "it"], "SUI": ["스위스", "ch"], "IRL": ["아일랜드", "ie"],
+  "FRA": ["프랑스", "fr"], "DEN": ["덴마크", "dk"], "SWE": ["스웨덴", "se"], "KOR": ["대한민국", "kr"], "THA": ["태국", "th"],
+  "MAS": ["말레이시아", "my"], "CAN": ["캐나다", "ca"], "MEX": ["멕시코", "mx"], "CUB": ["쿠바", "cu"], "BRA": ["브라질", "br"],
+  "TUN": ["튀니지", "tn"], "POL": ["폴란드", "pl"], "TUR": ["튀르키예", "tr"], "HKG": ["홍콩", "hk"], "AIN": ["중립 선수 (러시아 선수단)", ""]
+ },
+ "olarchery": {"groups": [
+  {"title": "리커브 개인 (국가 쿼터)", "rows": [["KOR", "2026 아시안게임 남자 개인 결승", "이우석 금"], ["JPN", "2026 아시안게임 남자 개인 결승", "나카니시 준야 은"],
+                                             ["IND", "2026 아시안게임 여자 개인 결승", "쿰쿰 모호드 금"], ["KOR", "2026 아시안게임 여자 개인 결승", "오예진 은"]]},
+  {"title": "혼성 단체 (남녀 1명씩)", "rows": [["CHN", "2026 아시안게임 리커브 혼성 우승", ""], ["IND", "2026 아시안게임 컴파운드 혼성 우승", "사힐 자다브·치키타 타니파르티"]]}],
+  "note": "아시안게임에서 걸린 8자리가 모두 정해졌다. 쿼터는 선수가 아니라 국가 올림픽위원회에 배정된다.",
+  "sources": [["World Archery · Asian Games에서 첫 LA28 쿼터", "https://www.worldarchery.sport/news/202662/first-angeles-2028-olympic-quotas-awarded-asian-games"]]},
+ "olbaseball": {"groups": [
+  {"title": "야구 (6팀 중 3팀 확정)", "rows": [["USA", "개최국", ""], ["DOM", "2026 WBC 아메리카 상위", ""], ["VEN", "2026 WBC 아메리카 상위", ""]]},
+  {"title": "소프트볼 (6팀 중 1팀 확정)", "rows": [["USA", "개최국", ""]]}],
+  "note": "야구 남은 3자리는 2027 프리미어12(2팀)와 2028년 3월까지 열리는 최종 예선(1팀)에서 정한다.",
+  "sources": [["WBSC · 2026 WBC LA28 출전권", "https://worldbaseball.com/news/2026-world-baseball-classic-two-spots-in-2028-summer-olympics-on-the-line-for-teams-from-the-americas"]]},
+ "olbasketball": {"groups": [
+  {"title": "남자 5대5", "rows": [["USA", "개최국", ""]]},
+  {"title": "여자 5대5", "rows": [["USA", "개최국 · 2026 FIBA 여자 월드컵 우승", "결승 97-79 프랑스"]]},
+  {"title": "3대3 남녀", "rows": [["USA", "개최국", "남녀 각 1팀"]]}],
+  "sources": [["FIBA · 2026 여자 월드컵 결승", "https://www.fiba.basketball/en/news/final-set-at-the-fiba-womens-basketball-world-cup-2026"]]},
+ "olcricket": {"groups": [
+  {"title": "여자 (6팀 중 4팀 확정)", "rows": [["AUS", "2026 여자 T20 월드컵 · 오세아니아 최상위", ""], ["GBR", "2026 여자 T20 월드컵 · 유럽 최상위", "잉글랜드"],
+                                         ["IND", "2026 여자 T20 월드컵 · 아시아 최상위", ""], ["RSA", "2026 여자 T20 월드컵 · 아프리카 최상위", ""]]},
+  {"title": "남자", "rows": []}],
+  "note": "미국은 2026.06.30–12.31 사이 ICC T20 랭킹 15위 안에 들어야 개최국 자리를 얻는다. 남자 대륙별 4자리는 2026.12.31 T20I 랭킹으로 정한다. 마지막 자리는 8팀이 겨루는 ICC 올림픽 예선에서 가린다.",
+  "sources": [["ICC · 여자 LA28 첫 4팀 확정", "https://www.icc-cricket.com/news/first-four-teams-confirmed-for-women-s-cricket-at-la28"],
+              ["ICC · LA28 예선 방식 확정", "https://www.icc-cricket.com/media-releases/qualification-and-format-confirmed-for-cricket-s-historic-return-at-la28-olympic-games"]]},
+ "olequestrian": {"groups": [
+  {"title": "장애물 단체", "rows": [["USA", "개최국", ""], ["GER", "2026 아헨 세계선수권", "금"], ["BEL", "2026 아헨 세계선수권", ""], ["GBR", "2026 아헨 세계선수권", "동"],
+                               ["ITA", "2026 아헨 세계선수권", ""], ["SUI", "2026 아헨 세계선수권", ""], ["IRL", "2026 아헨 세계선수권", ""], ["FRA", "2026 아헨 세계선수권", ""]]},
+  {"title": "마장마술 단체", "rows": [["USA", "개최국", ""], ["GER", "2026 아헨 세계선수권", "금"], ["GBR", "2026 아헨 세계선수권", ""], ["DEN", "2026 아헨 세계선수권", ""],
+                                ["BEL", "2026 아헨 세계선수권", ""], ["NED", "2026 아헨 세계선수권", ""], ["SWE", "2026 아헨 세계선수권", ""], ["AUS", "2026 아헨 세계선수권 · G그룹 최상위", ""]]},
+  {"title": "종합마술 단체", "rows": [["USA", "개최국", "아헨 동"], ["GBR", "2026 아헨 세계선수권", "금"], ["GER", "2026 아헨 세계선수권", "은"], ["IRL", "2026 아헨 세계선수권", "4위"]]}],
+  "note": "종합마술은 아헨 상위 7팀(미국 제외)이 자리를 얻는다. 나머지 4팀은 공식 순위를 확인하는 대로 더한다.",
+  "sources": [["Horse & Hound · 마장마술 올림픽 출전권", "https://www.horseandhound.co.uk/equestrian-sports/dressage/dressage-para-dressage-olympic-qualification-aachen-2026"],
+              ["British Equestrian · 장애물 동메달과 출전권", "https://www.britishequestrian.org.uk/news/britain-s-jumpers-clinch-bronze-and-olympic-qualification"],
+              ["The Irish Field · 아일랜드 종합마술 4위", "https://www.theirishfield.ie/news-ireland-fourth-at-world-championship-jung-wins-gold-on-home-soil-928281"]]},
+ "olflagfootball": {"groups": [
+  {"title": "남자 (6팀 중 3팀 확정)", "rows": [["USA", "개최국", "2026 세계선수권 우승"], ["ITA", "2026 IFAF 세계선수권", "은"], ["CAN", "2026 IFAF 세계선수권", "동 (미국 개최국 자리로 차순위)"]]},
+  {"title": "여자 (6팀 중 3팀 확정)", "rows": [["USA", "개최국", "2026 세계선수권 은"], ["CAN", "2026 IFAF 세계선수권", "금"], ["MEX", "2026 IFAF 세계선수권", "동 (차순위)"]]}],
+  "sources": [["AP · 미국 남자·캐나다 여자 세계 우승, 올림픽 자리", "https://abcnews.com/Sports/wireStory/us-men-canada-women-win-flag-football-world-135691220"]]},
+ "olfootball": {"groups": [{"title": "남녀", "rows": [["USA", "개최국", "남녀 각 1팀"]]}]},
+ "olgymnastics": {"groups": [
+  {"title": "기계체조 남자 단체 (12팀 중 3팀)", "rows": [["JPN", "2026 세계선수권 단체 결승", "금 251.928"], ["AIN", "2026 세계선수권 단체 결승", "은 250.329 · 중립팀 WG2"], ["CHN", "2026 세계선수권 단체 결승", "동 249.193"]]},
+  {"title": "기계체조 여자 단체 (12팀 중 3팀)", "rows": [["CHN", "2026 세계선수권 단체 결승", "금 165.764"], ["USA", "2026 세계선수권 단체 결승", "은"], ["JPN", "2026 세계선수권 단체 결승", "동"]]}],
+  "note": "중립 선수팀 자리가 올림픽에서 어떻게 쓰일지는 IOC 결정에 달려 있다. 나머지 9팀은 2027 세계선수권 단체 예선으로 정한다.",
+  "sources": [["NBC Sports · 2026 세계선수권 남자 단체", "https://www.nbcsports.com/olympics/news/gymnastics-world-championships-2026-mens-team"],
+              ["ECNS · 중국 여자 단체 우승, LA28 출전권", "https://www.ecns.cn/m/news/sports/2026-10-22/detail-ihfmiwhm0739430.shtml"]]},
+ "olhandball": {"groups": [{"title": "남녀", "rows": [["USA", "개최국", "남녀 각 1팀"]]}]},
+ "olhockey": {"groups": [
+  {"title": "남자 (12팀 중 2팀)", "rows": [["BEL", "FIH 프로리그 2025–26 우승", ""], ["IND", "2026 아시안게임 우승", "결승 5-1 말레이시아"]]},
+  {"title": "여자 (12팀 중 2팀)", "rows": [["NED", "FIH 프로리그 2025–26 우승", ""], ["IND", "2026 아시안게임 우승", "결승 1-0 중국"]]}],
+  "note": "미국은 세계랭킹 25위 안이어야 개최국 자리를 쓴다.",
+  "sources": [["FIH · 벨기에 남자 프로리그 우승", "https://www.fih.hockey/news/belgium-crowned-mens-pro-league-champions-secure-la28-olympic-ticket"],
+              ["Business Today · 인도 남자 아시안게임 우승", "https://www.businesstoday.in/sports/story/asian-games-2026-indias-mens-hockey-team-wins-gold-books-place-at-la-olympics-2028-559323-2026-10-03"]]},
+ "ollacrosse": {"groups": [{"title": "남녀", "rows": [["USA", "개최국", "앞선 예선 대회에 모두 참가하는 조건"]]}],
+  "note": "2026 대륙 선수권(팬암·아시아태평양·유럽·아프리카)은 2027 세계선수권 출전을 가리는 대회라 올림픽 자리를 주지 않는다.",
+  "sources": [["World Lacrosse · LA28 예선 방식", "https://worldlacrosse.sport/lacrosse-qualification-set-for-olympic-games-los-angeles-2028/"]]},
+ "olrugby": {"groups": [{"title": "남녀", "rows": [["USA", "개최국", "남녀 각 1팀"]]}],
+  "note": "SVNS 순위 자리는 2027년 5월 시즌 종료 때 정해진다.",
+  "sources": [["World Rugby · LA28 예선 방식", "https://www.world.rugby/news/1046251/world-rugby-confirms-qualification-pathway-for-los-angeles-2028-olympics-games"]]},
+ "olsailing": {"groups": [
+  {"title": "아시아 대륙 예선 (2026 아시안게임)", "rows": [["KOR", "남자 딩기", "하지민 금"], ["THA", "여자 딩기", "소피아 몽고메리 금"]]}],
+  "note": "아시안게임에 걸린 다른 종목(윈드서핑·카이트 등) 자리는 공식 배정을 확인하는 대로 더한다.",
+  "sources": [["Nation Thailand · 여자 딩기 금, 올림픽 출전권", "https://www.nationthailand.com/news/sport/40071798"]]},
+ "olsquash": {"groups": [
+  {"title": "아시아 대륙 예선 (2026 아시안게임 우승)", "rows": [["MAS", "남자 단식", "응 에인 요우"], ["MAS", "여자 단식", "시바상가리 수브라마니암"]]}],
+  "sources": [["Al Jazeera · 말레이시아 두 선수 LA28 출전권", "https://www.aljazeera.com/sports/2026/9/27/malaysias-ng-subramaniam-book-la28-olympics-berth-with-asian-games-gold"]]},
+ "olsurfing": {"groups": [
+  {"title": "아시아 대륙 예선 (2026 아시안게임)", "rows": [["JPN", "남자 숏보드", "이가라시 가노아 금"], ["JPN", "여자 숏보드", "이케다 미라이 금"]]}],
+  "note": "다른 경로로 먼저 자격을 얻으면 아시안게임 자리는 차순위로 넘어갈 수 있다(잠정).",
+  "sources": [["The Inertia · 이가라시 LA28 자리", "https://www.theinertia.com/surf/kanoa-igarashi-guaranteed-spot-la-2028-olympics/"]]},
+ "oltennis": {"groups": [
+  {"title": "ITF 자리 · 대륙종합대회 단식 우승", "rows": [["HKG", "2026 아시안게임 남자 단식", "콜먼 웡"], ["CHN", "2026 아시안게임 여자 단식", "왕시위"]]}],
+  "note": "단식 500위 이내이고 그 국가 쿼터가 직행으로 차지 않아야 최종 확정된다."},
+ "oltriathlon": {"groups": [
+  {"title": "혼성 계주 세계선수권 (국가에 성별 2명씩)", "rows": [["FRA", "2026 혼성 계주 세계선수권 (함부르크)", "남 2 · 여 2"]]}],
+  "note": "미국은 개최국으로 성별 2명을 받는다."},
+ "olvolleyball": {"groups": [
+  {"title": "실내 남자 (12팀 중 6팀)", "rows": [["USA", "개최국", ""], ["JPN", "2026 아시아선수권", ""], ["POL", "2026 유럽선수권", ""], ["BRA", "2026 남미선수권", ""],
+                                      ["TUN", "2026 아프리카선수권", ""], ["CUB", "2026 NORCECA 올림픽 예선", ""]]},
+  {"title": "실내 여자 (12팀 중 4팀)", "rows": [["USA", "개최국", ""], ["THA", "2026 아시아선수권", ""], ["TUR", "2026 유럽선수권", ""], ["CAN", "2026 NORCECA 올림픽 예선", ""]]},
+  {"title": "비치 남자 (24팀 중 4팀)", "rows": [["USA", "개최국", ""], ["SWE", "2026 유럽선수권", ""], ["AUS", "2026 아시아선수권", "니콜라이디스·캐러허"], ["BRA", "2026 남미선수권", "안드레·헤나투"]]},
+  {"title": "비치 여자 (24팀 중 4팀)", "rows": [["USA", "개최국", ""], ["NED", "2026 유럽선수권", "스탐·스훈"], ["AUS", "2026 아시아선수권", "페예스·클랜시"], ["BRA", "2026 남미선수권", "타멜라·빅토리아"]]}],
+  "note": "여자 실내 아프리카·남미, 비치 아프리카 결과는 확인하는 대로 더한다. 비치 NORCECA는 2026.11.04–09.",
+  "sources": [["Olympics.com · 일본 남자 아시아선수권", "https://www.olympics.com/en/news/volleyball-men-asian-championship-2026-la28-japan-quota"],
+              ["FIVB · 폴란드 유럽선수권", "https://www.fivb.com/poland-punch-ticket-to-la28-with-eurovolley-triumph/"],
+              ["Olympics.com · 튀니지 아프리카선수권", "https://www.olympics.com/en/news/2026-african-volleyball-championship-tunisia-secures-quota-olympic-games-la-2028"],
+              ["Olympics.com · 쿠바 NORCECA", "https://www.olympics.com/en/news/volleyball-2026-men-norceca-championship-cuba-back-olympics-win-over-canada"],
+              ["FIVB · 튀르키예 여자 유럽선수권", "https://www.fivb.com/turkiye-extend-european-reign-and-seal-la28-qualification/"],
+              ["FIVB · 네덜란드·스웨덴 비치", "https://www.fivb.com/netherlands-qualify-for-la28/"],
+              ["FIVB · 브라질 비치 두 팀", "https://www.fivb.com/two-brazilian-pairs-earn-spots-at-the-olympic-games-los-angeles-2028/"]]},
+ "olwaterpolo": {"groups": [{"title": "남녀", "rows": [["USA", "개최국", "남녀 각 1팀"]]}]}
+}
