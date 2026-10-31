@@ -15,10 +15,10 @@
   "city": "Montreal",
   "country": "CAN",
   "state": "Live",
-  "live": "Men 1500 m",
+  "live": "Mixed Team Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-31T16:08:36.335773+00:00",
+ "checked_at": "2026-10-31T16:19:00.776483+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -11926,7 +11926,7 @@
      ],
      "projection": {
       "next": "Semifinals",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -12013,10 +12013,133 @@
     {
      "id": 22960,
      "name": "Semifinals",
-     "status": "Scheduled",
-     "start_utc": "2026-10-31T15:13:00.000Z",
+     "status": "Live",
+     "start_utc": "2026-10-31T15:13:37.000Z",
      "rule": "The first and second placed teams from each race qualify for Final, the third and fourth placed teams from each race qualify for Final B.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Canada",
+         "noc": "CAN",
+         "time": "2:36.346",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
+         "slug": ""
+        },
+        {
+         "rank": 2,
+         "name": "Netherlands",
+         "noc": "NED",
+         "time": "2:37.672",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": 3,
+         "name": "Poland",
+         "noc": "POL",
+         "time": "2:37.904",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 5,
+         "slug": ""
+        },
+        {
+         "rank": 4,
+         "name": "Republic of Korea",
+         "noc": "KOR",
+         "time": "2:38.047",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 2,
+         "slug": ""
+        },
+        {
+         "rank": 5,
+         "name": "Czechia",
+         "noc": "CZE",
+         "time": "2:49.370",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 4,
+         "slug": ""
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Getting Ready",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "China",
+         "noc": "CHN",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Italy",
+         "noc": "ITA",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 2,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Japan",
+         "noc": "JPN",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Belgium",
+         "noc": "BEL",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 4,
+         "slug": ""
+        }
+       ]
+      }
+     ]
     },
     {
      "id": 22961,
@@ -13112,6 +13235,25 @@
    "record": "",
    "bib": null,
    "lane": 1,
+   "slug": ""
+  },
+  {
+   "event_id": "isu-16272",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #2",
+   "distance": "Mixed Team Relay",
+   "round": "Semifinals",
+   "heat": "Heat 1",
+   "start_utc": "2026-10-31T15:13:37.000Z",
+   "rank": 4,
+   "name": "Republic of Korea",
+   "noc": "KOR",
+   "time": "2:38.047",
+   "qual": "QB",
+   "status": "",
+   "record": "",
+   "bib": null,
+   "lane": 2,
    "slug": ""
   },
   {
