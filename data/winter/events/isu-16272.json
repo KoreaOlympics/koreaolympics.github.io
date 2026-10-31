@@ -15,10 +15,10 @@
   "city": "Montreal",
   "country": "CAN",
   "state": "Live",
-  "live": "Women 3000 m Relay",
+  "live": "Men 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-31T20:14:44.912721+00:00",
+ "checked_at": "2026-10-31T20:25:14.089826+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -12556,7 +12556,7 @@
      ],
      "projection": {
       "next": "Finals",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -12625,10 +12625,193 @@
     {
      "id": 22953,
      "name": "Finals",
-     "status": "Scheduled",
-     "start_utc": "2026-10-31T19:18:00.000Z",
+     "status": "Live",
+     "start_utc": "2026-10-31T19:19:46.000Z",
      "rule": "",
-     "heats": []
+     "heats": [
+      {
+       "name": "Final",
+       "status": "Getting Ready",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Dong Min SHIN",
+         "noc": "KOR",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 16,
+         "lane": 1,
+         "slug": "dong-min-shin"
+        },
+        {
+         "rank": null,
+         "name": "Felix ROUSSEL",
+         "noc": "CAN",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 11,
+         "lane": 2,
+         "slug": "felix-roussel"
+        },
+        {
+         "rank": null,
+         "name": "Thomas NADALINI",
+         "noc": "ITA",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 6,
+         "lane": 3,
+         "slug": "thomas-nadalini"
+        },
+        {
+         "rank": null,
+         "name": "Jens VAN 'T WOUT",
+         "noc": "NED",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 7,
+         "lane": 4,
+         "slug": "jens-van-t-wout"
+        },
+        {
+         "rank": null,
+         "name": "Bogdan VEKHOV",
+         "noc": "KAZ",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 94,
+         "lane": 5,
+         "slug": "bogdan-vekhov"
+        },
+        {
+         "rank": null,
+         "name": "Shogo MIYATA",
+         "noc": "JPN",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 9,
+         "lane": 6,
+         "slug": "shogo-miyata"
+        },
+        {
+         "rank": null,
+         "name": "Luca SPECHENHAUSER",
+         "noc": "ITA",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 24,
+         "lane": 7,
+         "slug": "luca-spechenhauser"
+        }
+       ]
+      },
+      {
+       "name": "Final B",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Seochan BAE",
+         "noc": "KOR",
+         "time": "2:33.981",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 96,
+         "lane": 4,
+         "slug": "seochan-bae"
+        },
+        {
+         "rank": 2,
+         "name": "Bohao ZHANG",
+         "noc": "CHN",
+         "time": "2:34.061",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 42,
+         "lane": 6,
+         "slug": "bohao-zhang"
+        },
+        {
+         "rank": 3,
+         "name": "Long SUN",
+         "noc": "CHN",
+         "time": "2:34.308",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 4,
+         "lane": 1,
+         "slug": "long-sun"
+        },
+        {
+         "rank": 4,
+         "name": "Jesper SCHMITZ",
+         "noc": "NED",
+         "time": "2:34.583",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 100,
+         "lane": 5,
+         "slug": "jesper-schmitz"
+        },
+        {
+         "rank": 5,
+         "name": "Clayton DE CLEMENTE",
+         "noc": "USA",
+         "time": "2:34.597",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 25,
+         "lane": 3,
+         "slug": "clayton-de-clemente"
+        },
+        {
+         "rank": 6,
+         "name": "Yiding ZHU",
+         "noc": "CHN",
+         "time": "2:34.860",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 70,
+         "lane": 7,
+         "slug": "yiding-zhu"
+        },
+        {
+         "rank": 7,
+         "name": "Reinis BERZINS",
+         "noc": "LAT",
+         "time": "2:35.146",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 34,
+         "lane": 2,
+         "slug": "reinis-berzins"
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -15290,6 +15473,44 @@
    "bib": 98,
    "lane": 2,
    "slug": "gyuho-lee"
+  },
+  {
+   "event_id": "isu-16272",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #2",
+   "distance": "Men 1500 m",
+   "round": "Finals",
+   "heat": "Final",
+   "start_utc": "2026-10-31T19:19:46.000Z",
+   "rank": null,
+   "name": "Dong Min SHIN",
+   "noc": "KOR",
+   "time": "no time",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 16,
+   "lane": 1,
+   "slug": "dong-min-shin"
+  },
+  {
+   "event_id": "isu-16272",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #2",
+   "distance": "Men 1500 m",
+   "round": "Finals",
+   "heat": "Final B",
+   "start_utc": "2026-10-31T19:19:46.000Z",
+   "rank": 1,
+   "name": "Seochan BAE",
+   "noc": "KOR",
+   "time": "2:33.981",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 96,
+   "lane": 4,
+   "slug": "seochan-bae"
   },
   {
    "event_id": "isu-16272",
