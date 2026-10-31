@@ -551,6 +551,8 @@ def sport_box(reg, season):
         rest = sorted(n for n in links if n not in bold)
         top = ' · '.join(f'<b>{link(n)}</b>' for n in bold)
         body = f'{top}<br>' + ' · '.join(link(n) for n in rest)
+        body += (' · <a href="summer-live.html">🔴 하계 실시간</a>'  # 예선 대회 진행 상황 (tools/summer_pages.py)
+                 ' · <a href="la28-qualification.html">📊 랭킹·출전권</a>')  # 출전 확정·예선 랭킹 모음
         caption = f'{E(g["games"])} 종목'
     else:
         names = sorted(links)
