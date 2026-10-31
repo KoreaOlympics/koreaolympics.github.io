@@ -78,31 +78,81 @@ def rules_block(y, rules):
     return out, yy - y
 
 
-def flow_block(y, rows, label):
-    """예선 경로를 우선순위 순서로: 번호 · 경로 이름 · 자리 수 · 시기와 조건."""
+def lane_of(when, name, prev):
+    """시기 문자열 → 타임라인 칸 (상시 / 2026 / 2027 / 2028). 연도가 없으면 앞 경로와 같은 칸."""
+    years = re.findall(r'20(2[6-8])', when)
+    if years:
+        return int('20' + years[0])
+    if when in ('—', '') and re.search(r'개최국|보편성|초청|혼성 단체$', name):
+        return 0
+    return prev
+
+
+def circuit_block(y, rows, total, label):
+    """예선 연결도: 경로 상자를 시기 칸에 놓고, 각 상자에서 버스로 선을 이어 'LA28 본선'에 모은다.
+    점선은 앞 경로에서 자리를 얻지 못한 국가·선수가 다음 경로로 넘어가는 흐름이다."""
+    lanes, prev = [], 2026
+    for when, name, _, _ in rows:
+        lane = lane_of(when, name, prev)
+        lanes.append(lane)
+        prev = lane or prev
+    used = sorted(set(lanes), key=lambda v: (v != 0, v))
+    lane_w = 58
+    lx = {v: PAD + 6 + i * lane_w for i, v in enumerate(used)}
+    x_bus = W - PAD - 118
+    pill = max([text_width(c, 12) for _, _, c, _ in rows if c] + [20]) + 16
+    x_end = x_bus - pill - 18
     out = []
+    # timeline header
+    for v in used:
+        out.append(t(lx[v] + 2, y, '상시' if v == 0 else str(v), 12, MUTED, 'bold'))
     if label:
-        out.append(t(W - PAD, y - 22, label, 12, MUTED, 'normal', 'end'))
-    x0, x1 = PAD + 34, W - PAD
-    yy = y
-    for i, (when, name, count, how) in enumerate(rows, 1):
-        sub = ' · '.join(x for x in (when if when not in ('—', '') else '', how) if x)
-        cw = text_width(count, 13) + 20 if count else 0
-        names = wrap(name, 14, x1 - x0 - 24 - cw)
-        subs = wrap(sub, 12, x1 - x0 - 24) if sub else []
-        h = 14 + 19 * len(names) + 17 * len(subs)
-        if i < len(rows):
-            out.append(f'<line x1="{PAD + 12}" y1="{yy + 12}" x2="{PAD + 12}" y2="{yy + h + 10}" stroke="{BLUE}" stroke-width="2"/>')
-        out.append(f'<circle cx="{PAD + 12}" cy="{yy + 12}" r="11" fill="{BLUE}"/>')
-        out.append(t(PAD + 12, yy + 16.5, str(i), 12, '#fff', 'bold', 'middle'))
-        out.append(f'<rect x="{x0}" y="{yy}" width="{x1 - x0}" height="{h}" rx="6" fill="{BOX}" stroke="#d5deea"/>')
-        out += [t(x0 + 12, yy + 20 + 19 * k, line, 14, INK, 'bold') for k, line in enumerate(names)]
+        out.append(t(x_bus - 6, y, label, 12, MUTED, 'normal', 'end'))
+    y += 12
+    boxes, yy = [], y
+    for (when, name, count, how), lane in zip(rows, lanes):
+        x0 = lx[lane]
+        names = wrap(name, 13, x_end - x0 - 20)
+        sub = ' · '.join(v for v in (when if not re.fullmatch(r'—|', when) else '', how) if v)
+        subs = wrap(sub, 11, x_end - x0 - 20) if sub else []
+        h = 12 + 17 * len(names) + 15 * len(subs)
+        boxes.append((x0, yy, h, count, lane))
+        out.append(f'<rect x="{x0}" y="{yy}" width="{x_end - x0}" height="{h}" rx="5" fill="{BOX}" stroke="{BLUE}" stroke-width="1.2"/>')
+        out += [t(x0 + 10, yy + 18 + 17 * k, line, 13, INK, 'bold') for k, line in enumerate(names)]
+        out += [t(x0 + 10, yy + 17 * len(names) + 16 + 15 * k, line, 11, MUTED) for k, line in enumerate(subs)]
+        yy += h + 14
+    bottom = yy - 14
+    # lane guides behind everything
+    guides = [f'<line x1="{lx[v] - 3}" y1="{y - 4}" x2="{lx[v] - 3}" y2="{bottom}" stroke="#e3e6ea" stroke-dasharray="2 3"/>' for v in used]
+    # carry-over (dashed): from box i to box i+1 when the next route is not a host/universality slot
+    for (x0, y0, h, _, lane), (x1, y1, _, _, lane1) in zip(boxes, boxes[1:]):
+        if lane == 0 or lane1 == 0: continue
+        cx0, cx1 = x0 + 14, x1 + 14
+        mid = y0 + h + 7
+        out.append(f'<path d="M{cx0} {y0 + h} V{mid} H{cx1} V{y1}" fill="none" stroke="#8aa4c8" stroke-width="1.4" stroke-dasharray="4 3"/>')
+    # wires into the bus, count pill on each wire
+    for x0, y0, h, count, _ in boxes:
+        cy = y0 + h / 2
+        out.append(f'<line x1="{x_end}" y1="{cy:.0f}" x2="{x_bus}" y2="{cy:.0f}" stroke="{BLUE}" stroke-width="2"/>')
+        out.append(f'<circle cx="{x_bus}" cy="{cy:.0f}" r="3.5" fill="{BLUE}"/>')
         if count:
-            out.append(f'<rect x="{x1 - cw - 8:.0f}" y="{yy + 6}" width="{cw:.0f}" height="22" rx="11" fill="{BLUE}"/>')
-            out.append(t(x1 - 8 - cw / 2, yy + 21, count, 13, '#fff', 'bold', 'middle'))
-        out += [t(x0 + 12, yy + 19 * len(names) + 18 + 17 * k, line, 12, MUTED) for k, line in enumerate(subs)]
-        yy += h + 10
-    return out, yy - y
+            pw = text_width(count, 12) + 14
+            px = x_end + 9 + (pill - pw) / 2
+            out.append(f'<rect x="{px:.0f}" y="{cy - 10:.0f}" width="{pw:.0f}" height="20" rx="10" fill="#fff" stroke="{BLUE}"/>')
+            out.append(t(px + pw / 2, cy + 4.5, count, 12, BLUE, 'bold', 'middle'))
+    first, last = boxes[0][1] + boxes[0][2] / 2, boxes[-1][1] + boxes[-1][2] / 2
+    out.append(f'<line x1="{x_bus}" y1="{first:.0f}" x2="{x_bus}" y2="{last:.0f}" stroke="{BLUE}" stroke-width="3"/>')
+    # terminal: LA28 본선
+    tl = wrap(total, 13, 88)
+    th = 40 + 17 * len(tl)
+    ty = (first + last) / 2 - th / 2
+    out.append(f'<line x1="{x_bus}" y1="{(first + last) / 2:.0f}" x2="{x_bus + 14}" y2="{(first + last) / 2:.0f}" stroke="{BLUE}" stroke-width="3"/>')
+    out.append(f'<rect x="{x_bus + 14}" y="{ty:.0f}" width="{W - PAD - x_bus - 14}" height="{th}" rx="8" fill="{BLUE}"/>')
+    cxx = (x_bus + 14 + W - PAD) / 2
+    out.append(t(cxx, ty + 22, 'LA28 본선', 14, '#fff', 'bold', 'middle'))
+    out += [t(cxx, ty + 42 + 17 * k, line, 13, '#fff', 'normal', 'middle') for k, line in enumerate(tl)]
+    out.append(t(PAD, bottom + 22, '점선: 앞 경로에서 자리를 얻지 못한 국가·선수가 다음 경로로 넘어간다.', 11, MUTED))
+    return guides + out, bottom + 30 - (y - 12)
 
 
 def units_block(y, units):
@@ -180,8 +230,8 @@ def render(name, d):
     o, h = steps_block(y, d['steps']); out += o; y += h + 34
     out += heading(y, '핵심 규칙'); y += 28
     o, h = rules_block(y, d['rules']); out += o; y += h + 18
-    out += heading(y, 'LA28 예선 구조 (위에서부터 차례로 배정)'); y += 30
-    o, h = flow_block(y, d['flow'], d.get('flowlabel')); out += o; y += h + 16
+    out += heading(y, 'LA28 예선 연결도'); y += 30
+    o, h = circuit_block(y, d['flow'], d['total'], d.get('flowlabel')); out += o; y += h + 16
     if d.get('pathnote'):
         out.append(t(PAD, y - 4, d['pathnote'], 12, MUTED)); y += 16
     if d.get('units'):
