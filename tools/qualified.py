@@ -69,7 +69,7 @@ def main(argv):
         text = BLOCK_RE.sub('', orig)
         b = block(page.stem, data)
         if b:
-            anchor = '<nav class="toc">'
+            anchor = '<div class="pathways"' if '<div class="pathways"' in text else '<nav class="toc">'  # 출전 확정 → 예선 단계 → 목차
             if anchor not in text:
                 print('목차 없음, 건너뜀:', page.name); continue
             text = text.replace(anchor, b + '\n' + anchor, 1)

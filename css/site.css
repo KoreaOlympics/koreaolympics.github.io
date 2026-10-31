@@ -142,3 +142,12 @@ img.flag, .flag.none { display: inline-block; width: 20px; height: 15px; margin-
 .flag.none { background: #eaecf0; }
 .qualified .nat { white-space: nowrap; }
 @media (max-width: 600px) { .qualified .noc { display: none; } }
+/* 구기 LA28 예선 단계 (tools/pathways.py) */
+.pathways { margin: 16px 0 20px; }
+.pathways h2 { font-size: 1.25em; }
+.pathways .asof { font-size: .7em; color: #54595d; font-weight: normal; }
+.pathways .note, .pathways .src { font-size: .9em; color: #54595d; }
+.pathways .small { font-size: .85em; color: #54595d; }
+.pathways tr.st-live td { background: #fdf0f0; }
+.pathways tr.st-soon td { color: #54595d; }
+.pathways .nowrap { white-space: nowrap; }
