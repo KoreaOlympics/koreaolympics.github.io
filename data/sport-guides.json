@@ -1,0 +1,265 @@
+{
+ "_note": "종목 허브 첫머리 '문서 안내'와 세부종목 문서의 '이 종목 문서' 상자 (tools/sport_guide.py). 한국 주요 선수·쿼터 인원은 사격 하위 문서에서 옮겨 왔다.",
+ "olshooting": {
+  "title": "사격 문서 안내",
+  "lead": "사격은 총기에 따라 권총·소총·산탄총 세 갈래로 나뉜다. 세부종목 이름을 누르면 LA28 세부종목 문서, 대회 칸을 누르면 그 대회 문서의 해당 종목 위치로 간다.",
+  "groups": [
+   {
+    "name": "권총",
+    "doc": "olshooting-pistol.html",
+    "events": [
+     {
+      "code": "apm",
+      "file": "men10mairpistol",
+      "label": "남자 10m 공기권총",
+      "quota": 29,
+      "korea": "홍수현, 소승섭"
+     },
+     {
+      "code": "rfm",
+      "file": "men25mrapidfirepistol",
+      "label": "남자 25m 속사권총",
+      "quota": 28,
+      "korea": "이건혁, 송종호, 윤서영"
+     },
+     {
+      "code": "apw",
+      "file": "women10mairpistol",
+      "label": "여자 10m 공기권총",
+      "quota": 29,
+      "korea": "추가은, 오예진, 김보미"
+     },
+     {
+      "code": "p25w",
+      "file": "women25mpistol",
+      "label": "여자 25m 권총",
+      "quota": 28,
+      "korea": "양지인, 오예진, 봉서린"
+     },
+     {
+      "code": "apx",
+      "file": "mixed10mairpistolteam",
+      "label": "혼성 10m 공기권총 단체",
+      "quota": null,
+      "korea": "추가은, 홍수현"
+     }
+    ]
+   },
+   {
+    "name": "소총",
+    "doc": "olshooting-rifle.html",
+    "events": [
+     {
+      "code": "arm",
+      "file": "men10mairrifle",
+      "label": "남자 10m 공기소총",
+      "quota": 29,
+      "korea": "신민기, 박하준, 권협준"
+     },
+     {
+      "code": "r3m",
+      "file": "men50mrifle3positions",
+      "label": "남자 50m 소총 3자세",
+      "quota": 28,
+      "korea": "정승우, 박성현, 권협준"
+     },
+     {
+      "code": "arw",
+      "file": "women10mairrifle",
+      "label": "여자 10m 공기소총",
+      "quota": 29,
+      "korea": "반효진, 권유나, 권은지"
+     },
+     {
+      "code": "r3w",
+      "file": "women50mrifle3positions",
+      "label": "여자 50m 소총 3자세",
+      "quota": 28,
+      "korea": "김지은, 오세희"
+     },
+     {
+      "code": "arx",
+      "file": "mixed10mairrifleteam",
+      "label": "혼성 10m 공기소총 단체",
+      "quota": null,
+      "korea": "반효진, 박하준"
+     }
+    ]
+   },
+   {
+    "name": "산탄총",
+    "doc": "olshooting-shotgun.html",
+    "events": [
+     {
+      "code": "trm",
+      "file": "mentrap",
+      "label": "남자 트랩",
+      "quota": 28,
+      "korea": "안대명"
+     },
+     {
+      "code": "skm",
+      "file": "menskeet",
+      "label": "남자 스키트",
+      "quota": 28,
+      "korea": "이종준"
+     },
+     {
+      "code": "trw",
+      "file": "womentrap",
+      "label": "여자 트랩",
+      "quota": 28,
+      "korea": "이보나"
+     },
+     {
+      "code": "skw",
+      "file": "womenskeet",
+      "label": "여자 스키트",
+      "quota": 28,
+      "korea": "장국희"
+     },
+     {
+      "code": "trx",
+      "file": "mixedtrapteam",
+      "label": "혼성 트랩 단체",
+      "quota": null,
+      "korea": "안대명, 이보나"
+     }
+    ]
+   }
+  ],
+  "stages": [
+   [
+    "olshooting-2026-world.html",
+    "2026 도하 세선",
+    "첫 쿼터 · 종목당 3장"
+   ],
+   [
+    "olshooting-2026-28-continental.html",
+    "2026–28 대륙",
+    "대륙선수권·대륙경기"
+   ],
+   [
+    "olshooting-2027-wc.html",
+    "2027 월드컵",
+    "종목당 4장"
+   ],
+   [
+    "olshooting-2027-world.html",
+    "2027 세선",
+    "대구·카이로 · 종목당 3장"
+   ],
+   [
+    "olshooting-2028-quota.html",
+    "2028 결산",
+    "올림픽 랭킹·최종 배정"
+   ]
+  ],
+  "detail": [
+   "olshooting-ev-{code}.html",
+   "성적·쿼터"
+  ],
+  "docs": [
+   {
+    "title": "총기별 문서",
+    "links": [
+     [
+      "olshooting-pistol.html",
+      "권총",
+      "선발 경로·대회별 쿼터·최소 자격 점수(MQS)·한국 전망"
+     ],
+     [
+      "olshooting-rifle.html",
+      "소총",
+      "같은 구성"
+     ],
+     [
+      "olshooting-shotgun.html",
+      "산탄총",
+      "같은 구성"
+     ]
+    ]
+   },
+   {
+    "title": "예선 대회",
+    "links": [
+     [
+      "olshooting-events.html",
+      "예선 대회 전체",
+      "15종목 × 대회 표, 일정·특례·재배정"
+     ],
+     [
+      "olshooting-2026-world.html",
+      "2026 도하 세계선수권",
+      "첫 LA28 쿼터 대회 (2026.11.01–14)"
+     ],
+     [
+      "olshooting-2026-28-continental.html",
+      "2026–28 대륙 경로",
+      "아시아 54장 등 대륙 몫"
+     ],
+     [
+      "olshooting-2027-wc.html",
+      "2027 월드컵",
+      ""
+     ],
+     [
+      "olshooting-2027-world.html",
+      "2027 세계선수권",
+      "대구 소총·권총 · 카이로 산탄총"
+     ],
+     [
+      "olshooting-2028-quota.html",
+      "2028 출전권 결산",
+      "올림픽 랭킹(2028.05.01)·최종 배정"
+     ]
+    ]
+   },
+   {
+    "title": "2025–26 시즌 성적 (참고, 쿼터 없음)",
+    "links": [
+     [
+      "olshooting-2025-wc.html",
+      "2025 월드컵",
+      ""
+     ],
+     [
+      "olshooting-2025-world.html",
+      "2025 세계선수권",
+      ""
+     ],
+     [
+      "olshooting-2025-final.html",
+      "2025 월드컵 파이널",
+      ""
+     ],
+     [
+      "olshooting-2026-wc.html",
+      "2026 월드컵",
+      ""
+     ]
+    ]
+   },
+   {
+    "title": "한국",
+    "links": [
+     [
+      "olshooting-athletes.html",
+      "한국 선수",
+      "종목별 주요 선수"
+     ],
+     [
+      "olshooting-squad.html",
+      "한국 선수단 구성",
+      "기대 인원·시나리오 (확률 모형)"
+     ],
+     [
+      "olshooting-projection.html",
+      "LA28 전망",
+      "2025 실적·금메달 후보·조건부 시나리오"
+     ]
+    ]
+   }
+  ]
+ }
+}

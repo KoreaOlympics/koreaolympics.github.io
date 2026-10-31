@@ -151,3 +151,18 @@ img.flag, .flag.none { display: inline-block; width: 20px; height: 15px; margin-
 .pathways tr.st-live td { background: #fdf0f0; }
 .pathways tr.st-soon td { color: #54595d; }
 .pathways .nowrap { white-space: nowrap; }
+/* 종목 문서 안내 (tools/sport_guide.py) */
+.guide { margin: 16px 0 20px; }
+.guide h2 { font-size: 1.25em; }
+.guide .small { font-size: .85em; color: #54595d; }
+.guide-matrix td.c, .guide-matrix th:not([scope]) { text-align: center; white-space: nowrap; }
+.guide-matrix tr.grp th { text-align: left; background: #eaecf0; }
+.guide-matrix th[scope="row"] { text-align: left; white-space: nowrap; }
+.guide-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin-top: 12px; }
+.guide-card { border: 1px solid #c8ccd1; background: #f8f9fa; padding: 8px 12px; }
+.guide-card h3 { margin: 0 0 6px; font-size: 1em; }
+.guide-card ul { margin: 0; padding-left: 18px; }
+.guide-box { border-collapse: collapse; margin: 12px 0; width: 100%; max-width: 760px; font-size: .95em; }
+.guide-box caption { text-align: left; font-weight: bold; padding-bottom: 4px; }
+.guide-box th, .guide-box td { border: 1px solid #c8ccd1; padding: 5px 8px; vertical-align: top; }
+.guide-box th { background: #eaecf0; white-space: nowrap; text-align: left; width: 7em; }

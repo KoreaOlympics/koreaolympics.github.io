@@ -400,6 +400,20 @@ def related_block(s, today=None):
 WINTER_LIVE = {'wishorttrack': 'short-track', 'wispeedskating': 'speed-skating', 'wifigure': 'figure-skating', 'wisnowboard': 'snowboard',
                'wialpine': 'alpine', 'wicrosscountry': 'cross-country', 'wiskijumping': 'ski-jumping', 'wifreestyle': 'freestyle',
                'wibiathlon': 'biathlon', 'wibobsleigh': 'bobsleigh', 'wiskeleton': 'skeleton', 'wiluge': 'luge'}
+def _guide_targets():
+    """data/sport-guides.json에 등록된 하위 문서 (허브·세부종목 문서의 '문서 안내'가 링크해도 되는 무시 대상)."""
+    g = _json('data/sport-guides.json') or {}
+    out = set()
+    for k, v in g.items():
+        if k.startswith('_'):
+            continue
+        out |= {grp['doc'] for grp in v['groups']} | {u for u, _, _ in v['stages']}
+        out |= {u for c in v['docs'] for u, _, _ in c['links']}
+        out |= {v['detail'][0].format(code=e['code']) for grp in v['groups'] for e in grp['events']}
+    return out
+
+
+GUIDE_TARGETS = _guide_targets()
 WINTER_CALENDAR_ONLY = {'bobsleigh', 'skeleton', 'luge'}  # 일정만 수집 (결과는 공식 페이지)
 
 
@@ -455,6 +469,17 @@ def pathways_block(s):
     """구기 종목 LA28 예선 단계 (data/team-pathways.json, tools/pathways.py)."""
     from pathways import block
     return block(s['file'])
+
+
+def guide_block(s):
+    """종목 문서 안내 (data/sport-guides.json, tools/sport_guide.py)."""
+    from sport_guide import hub_block
+    return hub_block(s['file'])
+
+
+def event_guide_block(s, e):
+    from sport_guide import event_block
+    return event_block(s['file'], e['file'])
 
 
 def render_sections(defs, parts):
@@ -516,7 +541,7 @@ def render_hub(reg, s):
     body = '\n'.join([
         f'<nav class="crumb"><a href="index.html">목차</a> › {E(s["name"])}</nav>',
         f'<h1>{E(s["name"])} <span class="en">({E(s["name_en"])})</span></h1>',
-        '<div class="top">', infobox(s['name'], info), lead, '</div>', summary_figure(s), qualified_block(s), pathways_block(s), toc, winter_live_block(s), secs, rel,
+        '<div class="top">', infobox(s['name'], info), lead, '</div>', summary_figure(s), qualified_block(s), pathways_block(s), guide_block(s), toc, winter_live_block(s), secs, rel,
         season_navbox(reg, s['season'], '', hub_path(s))])
     return path, page(f'{s["name"]} | {g["games"]}', '', body, f'{g["games"]} {s["name"]} 세부종목·예선·한국 현황')
 
@@ -536,7 +561,7 @@ def render_event(reg, s, e):
         f'<nav class="crumb"><a href="../index.html">목차</a> › <a href="../{E(hub_path(s))}">{E(s["name"])}</a> › {E(e["name"])}</nav>',
         f'<h1>{E(s["name"])} · {E(e["name"])}</h1>',
         '<div class="top">', infobox(e['name'], info), f'<section id="intro" class="lead">\n{intro}\n</section>', '</div>',
-        toc, secs, nb])
+        event_guide_block(s, e), toc, secs, nb])
     return path, page(f'{s["name"]} · {e["name"]} | {g["games"]}', '../', body,
                       f'{g["games"]} {s["name"]} {e["name"]} 예선·쿼터·주요 선수')
 
@@ -768,6 +793,8 @@ def check():
                     errors.append(f'{rel}: 없는 파일 → {target}')
                 continue
             if target == 'winter' and rel.split('/')[0].removesuffix('.html') in WINTER_LIVE:  # 동계 실시간 센터 (원칙 8장 예외와 같은 성격)
+                continue
+            if target in GUIDE_TARGETS and target.startswith(rel.split('/')[0].removesuffix('.html') + '-'):  # 문서 안내에 등록된 그 종목 하위 문서 (8-2장)
                 continue
             if target not in files:
                 if (files[rel][1] is not None and files[rel][1]['file'] == 'oltaekwondo'

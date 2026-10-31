@@ -291,7 +291,7 @@ def main():
         fig = figure(file, names[file], d)
         if '<nav class="toc">' not in text:
             print('목차 없음, 건너뜀:', file); continue
-        anchor = next(a for a in ('<div class="qualified"', '<div class="pathways"', '<nav class="toc">') if a in text)  # 그림 → 출전 확정 → 예선 단계 → 목차
+        anchor = next(a for a in ('<div class="qualified"', '<div class="pathways"', '<div class="guide"', '<nav class="toc">') if a in text)  # 그림 → 출전 확정 → 예선 단계 → 목차
         text = text.replace(anchor, fig + '\n' + anchor, 1)
         page.write_text(text, encoding='utf-8', newline='\n')
     missing = sorted(set(names) - set(data))

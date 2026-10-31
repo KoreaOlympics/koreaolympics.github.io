@@ -150,7 +150,7 @@ def main(argv):
         page = ROOT / f'{file}.html'
         orig = page.read_text(encoding='utf-8')
         text = BLOCK_RE.sub('', orig)
-        anchor = '<nav class="toc">'
+        anchor = '<div class="guide"' if '<div class="guide"' in text else '<nav class="toc">'  # 예선 단계 → 문서 안내 → 목차
         text = text.replace(anchor, block(file, data) + '\n' + anchor, 1)
         if text != orig:
             page.write_text(text, encoding='utf-8', newline='\n')
