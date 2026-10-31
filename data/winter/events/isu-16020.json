@@ -15,10 +15,10 @@
   "city": "Kelowna, BC",
   "country": "CAN",
   "state": "Live",
-  "live": "BROWN Oona / BROWN Gage",
+  "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-skate-canada-international-2026/"
  },
- "checked_at": "2026-10-31T22:13:13.624436+00:00",
+ "checked_at": "2026-10-31T22:23:59.575577+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-31T01:00:00.000Z",
@@ -921,6 +921,23 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Oona BROWN / Gage BROWN",
+     "noc": "USA",
+     "points": "72.69",
+     "status": "Active",
+     "segments": {
+      "RD": {
+       "name": "Rhythm Dance",
+       "rank": 1,
+       "total": "72.69",
+       "tes": "39.44",
+       "pcs": "33.25",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
      "name": "Marie-Jade LAURIAULT / Romain LE GAC",
      "noc": "CAN",
      "points": "72.10",
@@ -928,7 +945,7 @@
      "segments": {
       "RD": {
        "name": "Rhythm Dance",
-       "rank": 1,
+       "rank": 2,
        "total": "72.10",
        "tes": "39.98",
        "pcs": "32.12",
@@ -937,7 +954,7 @@
      }
     },
     {
-     "rank": 2,
+     "rank": 3,
      "name": "Katarina WOLFKOSTIN / Dimitry TSAREVSKI",
      "noc": "USA",
      "points": "71.40",
@@ -945,7 +962,7 @@
      "segments": {
       "RD": {
        "name": "Rhythm Dance",
-       "rank": 2,
+       "rank": 3,
        "total": "71.40",
        "tes": "41.42",
        "pcs": "29.98",
@@ -954,7 +971,7 @@
      }
     },
     {
-     "rank": 3,
+     "rank": 4,
      "name": "Iryna PIDGAINA / Artem KOVAL",
      "noc": "UKR",
      "points": "64.89",
@@ -962,7 +979,7 @@
      "segments": {
       "RD": {
        "name": "Rhythm Dance",
-       "rank": 3,
+       "rank": 4,
        "total": "64.89",
        "tes": "36.43",
        "pcs": "28.46",
@@ -971,7 +988,7 @@
      }
     },
     {
-     "rank": 4,
+     "rank": 5,
      "name": "Noemi Maria TALI / Noah LAFORNARA",
      "noc": "ITA",
      "points": "62.79",
@@ -979,7 +996,7 @@
      "segments": {
       "RD": {
        "name": "Rhythm Dance",
-       "rank": 4,
+       "rank": 5,
        "total": "62.79",
        "tes": "35.05",
        "pcs": "27.74",
@@ -988,7 +1005,7 @@
      }
     },
     {
-     "rank": 5,
+     "rank": 6,
      "name": "Alyssa ROBINSON / Jacob PORTZ",
      "noc": "CAN",
      "points": "60.22",
@@ -996,7 +1013,7 @@
      "segments": {
       "RD": {
        "name": "Rhythm Dance",
-       "rank": 5,
+       "rank": 6,
        "total": "60.22",
        "tes": "33.77",
        "pcs": "26.45",
@@ -1005,7 +1022,7 @@
      }
     },
     {
-     "rank": 6,
+     "rank": 7,
      "name": "Layla VEILLON / Alexander BRANDYS",
      "noc": "CAN",
      "points": "59.72",
@@ -1013,27 +1030,10 @@
      "segments": {
       "RD": {
        "name": "Rhythm Dance",
-       "rank": 6,
+       "rank": 7,
        "total": "59.72",
        "tes": "33.02",
        "pcs": "26.70",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Oona BROWN / Gage BROWN",
-     "noc": "USA",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "RD": {
-       "name": "Rhythm Dance",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
        "status": "Running"
       }
      }
