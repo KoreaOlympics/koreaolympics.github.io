@@ -18,7 +18,7 @@
   "live": "Yujae KIM",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-skate-canada-international-2026/"
  },
- "checked_at": "2026-10-31T20:04:36.793959+00:00",
+ "checked_at": "2026-10-31T20:15:05.246073+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-31T01:00:00.000Z",
@@ -646,6 +646,40 @@
     },
     {
      "rank": 3,
+     "name": "Yujae KIM",
+     "noc": "KOR",
+     "points": "63.50",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 3,
+       "total": "63.50",
+       "tes": "34.15",
+       "pcs": "29.35",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 4,
+     "name": "Madeline SCHIZAS",
+     "noc": "CAN",
+     "points": "57.95",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 4,
+       "total": "57.95",
+       "tes": "29.31",
+       "pcs": "28.64",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 5,
      "name": "Fee Ann LANDRY",
      "noc": "CAN",
      "points": "57.27",
@@ -653,7 +687,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 3,
+       "rank": 5,
        "total": "57.27",
        "tes": "31.54",
        "pcs": "26.73",
@@ -662,7 +696,7 @@
      }
     },
     {
-     "rank": 4,
+     "rank": 6,
      "name": "Viktoriia SAFONOVA",
      "noc": "AIN1",
      "points": "56.89",
@@ -670,44 +704,10 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 4,
+       "rank": 6,
        "total": "56.89",
        "tes": "31.34",
        "pcs": "26.55",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Yujae KIM",
-     "noc": "KOR",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Madeline SCHIZAS",
-     "noc": "CAN",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
        "status": "Running"
       }
      }
@@ -1020,17 +1020,17 @@
    "sport": "figure-skating",
    "event": "ISU Figure Skating Grand Prix Skate Canada International 2026",
    "distance": "Women",
-   "round": "",
+   "round": "Short Program",
    "heat": "",
    "start_utc": "2026-11-01T21:00:00.000Z",
-   "rank": null,
+   "rank": 3,
    "name": "Yujae KIM",
    "noc": "KOR",
-   "time": "",
+   "time": "63.50",
    "qual": "",
    "status": "",
    "segments": {
-    "SP": ""
+    "SP": "63.50"
    }
   },
   {
