@@ -18,7 +18,7 @@
   "live": "Women 3000 m Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-31T20:57:26.820190+00:00",
+ "checked_at": "2026-10-31T21:07:56.796885+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -269,7 +269,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-10-31T20:39:00.000Z",
+   "start_utc": "2026-10-31T20:40:00.000Z",
    "title": "Women 3000 m Relay",
    "round": "Finals",
    "event_result_id": 16038,
@@ -14591,32 +14591,20 @@
     {
      "id": 22966,
      "name": "Finals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-10-31T19:40:38.000Z",
      "rule": "",
      "heats": [
       {
        "name": "Final",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Canada",
-         "noc": "CAN",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 1,
-         "slug": ""
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Italy",
          "noc": "ITA",
-         "time": "no time",
+         "time": "4:12.931",
          "qual": "",
          "status": "",
          "record": "",
@@ -14625,10 +14613,10 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Republic of Korea",
          "noc": "KOR",
-         "time": "no time",
+         "time": "4:12.945",
          "qual": "",
          "status": "",
          "record": "",
@@ -14637,15 +14625,27 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Netherlands",
          "noc": "NED",
-         "time": "no time",
+         "time": "4:23.933",
          "qual": "",
          "status": "",
          "record": "",
          "bib": null,
          "lane": 4,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Canada",
+         "noc": "CAN",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": null,
+         "lane": 1,
          "slug": ""
         }
        ]
@@ -15783,10 +15783,10 @@
    "round": "Finals",
    "heat": "Final",
    "start_utc": "2026-10-31T19:40:38.000Z",
-   "rank": null,
+   "rank": 2,
    "name": "Republic of Korea",
    "noc": "KOR",
-   "time": "no time",
+   "time": "4:12.945",
    "qual": "",
    "status": "",
    "record": "",
