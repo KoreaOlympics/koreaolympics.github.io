@@ -18,7 +18,7 @@
   "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-skate-canada-international-2026/"
  },
- "checked_at": "2026-10-31T01:43:30.908552+00:00",
+ "checked_at": "2026-10-31T01:53:55.391352+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-31T01:09:00.000Z",
@@ -94,6 +94,23 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Kyrylo MARSAK",
+     "noc": "UKR",
+     "points": "83.67",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 1,
+       "total": "83.67",
+       "tes": "47.23",
+       "pcs": "36.44",
+       "status": "Scheduled Break"
+      }
+     }
+    },
+    {
+     "rank": 2,
      "name": "Hyungyeom KIM",
      "noc": "KOR",
      "points": "77.76",
@@ -101,16 +118,16 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 1,
+       "rank": 2,
        "total": "77.76",
        "tes": "45.20",
        "pcs": "32.56",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
     {
-     "rank": 2,
+     "rank": 3,
      "name": "David BONDAR",
      "noc": "CAN",
      "points": "77.48",
@@ -118,16 +135,16 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 2,
+       "rank": 3,
        "total": "77.48",
        "tes": "44.78",
        "pcs": "32.70",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
     {
-     "rank": 3,
+     "rank": 4,
      "name": "Georgii RESHTENKO",
      "noc": "CZE",
      "points": "76.43",
@@ -135,16 +152,16 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 3,
+       "rank": 4,
        "total": "76.43",
        "tes": "41.70",
        "pcs": "34.73",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
     {
-     "rank": 4,
+     "rank": 5,
      "name": "Wesley CHIU",
      "noc": "CAN",
      "points": "73.87",
@@ -152,16 +169,16 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 4,
+       "rank": 5,
        "total": "73.87",
        "tes": "40.47",
        "pcs": "33.40",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
     {
-     "rank": 5,
+     "rank": 6,
      "name": "Liam KAPEIKIS",
      "noc": "USA",
      "points": "70.07",
@@ -169,28 +186,11 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 5,
+       "rank": 6,
        "total": "70.07",
        "tes": "35.58",
        "pcs": "35.49",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Kyrylo MARSAK",
-     "noc": "UKR",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -207,7 +207,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -224,7 +224,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -241,7 +241,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -258,7 +258,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -275,7 +275,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -292,7 +292,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     }
@@ -842,7 +842,7 @@
    "round": "Short Program",
    "heat": "",
    "start_utc": "2026-10-31T23:40:00.000Z",
-   "rank": 1,
+   "rank": 2,
    "name": "Hyungyeom KIM",
    "noc": "KOR",
    "time": "77.76",
