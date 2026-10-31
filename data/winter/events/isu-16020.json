@@ -15,10 +15,10 @@
   "city": "Kelowna, BC",
   "country": "CAN",
   "state": "Live",
-  "live": "Sofia SAMODELKINA",
+  "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-skate-canada-international-2026/"
  },
- "checked_at": "2026-10-31T20:36:03.826207+00:00",
+ "checked_at": "2026-10-31T20:46:34.645107+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-31T01:00:00.000Z",
@@ -646,6 +646,23 @@
     },
     {
      "rank": 3,
+     "name": "Sofia SAMODELKINA",
+     "noc": "KAZ",
+     "points": "71.84",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 3,
+       "total": "71.84",
+       "tes": "40.63",
+       "pcs": "31.21",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 4,
      "name": "Sara-Maude DUPUIS",
      "noc": "CAN",
      "points": "64.58",
@@ -653,7 +670,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 3,
+       "rank": 4,
        "total": "64.58",
        "tes": "36.94",
        "pcs": "27.64",
@@ -662,7 +679,7 @@
      }
     },
     {
-     "rank": 4,
+     "rank": 5,
      "name": "Yujae KIM",
      "noc": "KOR",
      "points": "63.50",
@@ -670,7 +687,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 4,
+       "rank": 5,
        "total": "63.50",
        "tes": "34.15",
        "pcs": "29.35",
@@ -679,7 +696,7 @@
      }
     },
     {
-     "rank": 5,
+     "rank": 6,
      "name": "Madeline SCHIZAS",
      "noc": "CAN",
      "points": "57.95",
@@ -687,7 +704,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 5,
+       "rank": 6,
        "total": "57.95",
        "tes": "29.31",
        "pcs": "28.64",
@@ -696,7 +713,7 @@
      }
     },
     {
-     "rank": 6,
+     "rank": 7,
      "name": "Fee Ann LANDRY",
      "noc": "CAN",
      "points": "57.27",
@@ -704,7 +721,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 6,
+       "rank": 7,
        "total": "57.27",
        "tes": "31.54",
        "pcs": "26.73",
@@ -713,7 +730,7 @@
      }
     },
     {
-     "rank": 7,
+     "rank": 8,
      "name": "Viktoriia SAFONOVA",
      "noc": "AIN1",
      "points": "56.89",
@@ -721,7 +738,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 7,
+       "rank": 8,
        "total": "56.89",
        "tes": "31.34",
        "pcs": "26.55",
@@ -730,7 +747,7 @@
      }
     },
     {
-     "rank": 8,
+     "rank": 9,
      "name": "Anna PEZZETTA",
      "noc": "ITA",
      "points": "54.84",
@@ -738,27 +755,10 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 8,
+       "rank": 9,
        "total": "54.84",
        "tes": "27.61",
        "pcs": "27.23",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Sofia SAMODELKINA",
-     "noc": "KAZ",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
        "status": "Running"
       }
      }
@@ -1023,7 +1023,7 @@
    "round": "Short Program",
    "heat": "",
    "start_utc": "2026-11-01T21:00:00.000Z",
-   "rank": 4,
+   "rank": 5,
    "name": "Yujae KIM",
    "noc": "KOR",
    "time": "63.50",
