@@ -436,6 +436,15 @@ def winter_live_block(s, today=None):
     return '<section id="winter_live">\n<h2>이번 시즌 대회 (실시간)</h2>\n' + wrap_tables('\n'.join(out)) + '\n</section>'
 
 
+def summary_figure(s):
+    """하계 허브 첫머리 '한눈에 보기' 그림 (data/summer-summary.json, tools/summary_svg.py가 SVG를 만든다)."""
+    data = _json('data/summer-summary.json') or {}
+    if s['file'] not in data or not (ROOT / f'assets/summary/{s["file"]}.svg').exists():
+        return ''
+    from summary_svg import figure
+    return figure(s['file'], s['name'], data[s['file']])
+
+
 def render_sections(defs, parts):
     toc, out = [], []
     titles = parts.get('__titles__', {})
@@ -495,7 +504,7 @@ def render_hub(reg, s):
     body = '\n'.join([
         f'<nav class="crumb"><a href="index.html">목차</a> › {E(s["name"])}</nav>',
         f'<h1>{E(s["name"])} <span class="en">({E(s["name_en"])})</span></h1>',
-        '<div class="top">', infobox(s['name'], info), lead, '</div>', toc, winter_live_block(s), secs, rel,
+        '<div class="top">', infobox(s['name'], info), lead, '</div>', summary_figure(s), toc, winter_live_block(s), secs, rel,
         season_navbox(reg, s['season'], '', hub_path(s))])
     return path, page(f'{s["name"]} | {g["games"]}', '', body, f'{g["games"]} {s["name"]} 세부종목·예선·한국 현황')
 
