@@ -1,80 +1,664 @@
 {
  "_note": "구기 종목 '예선의 예선' 단계 (tools/pathways.py가 허브의 'LA28 예선 단계' 연결도와 표로 그린다). 단계 status: done(종료) · live(진행 중) · soon(예정). result: [[NOC, 비고], ...]. 확인하지 못한 일정·결과는 '확인 중'으로 적는다.",
  "asof": "2026.10.31",
- "NOCS_EXTRA": {"LBN": ["레바논", "lb"], "QAT": ["카타르", "qa"], "KSA": ["사우디아라비아", "sa"], "NZL": ["뉴질랜드", "nz"], "PHI": ["필리핀", "ph"], "IRI": ["이란", "ir"]},
- "olfootball": {"tracks": [
-  {"title": "남자 · 아시아 (LA28 2자리)", "stages": [
-   {"name": "AFC U-23 아시안컵 예선", "when": "일정 미발표", "status": "soon", "advance": "조 1위·상위 2위 → 본선", "kor": "출전 예정"},
-   {"name": "AFC U-23 아시안컵 2028 (일본)", "when": "2028 (예정)", "status": "soon", "advance": "상위 2팀 → LA28", "kor": ""}]},
-  {"title": "여자 · 아시아 (LA28 2자리)", "stages": [
-   {"name": "AFC 여자 올림픽 예선 조 편성", "when": "2026.11.12 (예정)", "status": "soon", "advance": "8팀 출전", "kor": "출전 예정"},
-   {"name": "AFC 여자 올림픽 예선", "when": "2027.04.19 – 2028.03.04", "status": "soon", "advance": "상위 2팀 → LA28", "kor": ""}]}],
-  "note": "남자 본선이 12팀으로 줄어 아시아 자리는 2장이고 대륙 간 플레이오프가 없어졌다. 남자는 23세 이하에 나이 제한 없는 선수 3명을 더할 수 있다.",
-  "sources": [["Daily안 · LA 올림픽 남자축구 아시아 예선 일본 개최", "https://www.dailian.co.kr/news/view/1672928/"],
-              ["Wikipedia · 2028 AFC 여자 올림픽 예선", "https://en.wikipedia.org/wiki/2028_AFC_Women%27s_Olympic_Qualifying_Tournament"]]},
- "olbasketball": {"tracks": [
-  {"title": "남자 5대5 (LA28 12팀: 개최국 1 · 월드컵 7 · OQT 4)", "stages": [
-   {"name": "월드컵 아시아 예선 1라운드", "when": "2025.11 – 2026.07", "status": "done", "advance": "조 상위 3팀 → 2라운드", "kor": "B조 2위 (3승 3패), 일본 꺾고 진출",
-    "result": [["KOR", "B조 2위"]]},
-   {"name": "월드컵 아시아 예선 2라운드 F조", "when": "2026.08 – 2027.03", "status": "live", "advance": "조 1–3위 + 4위 중 상위 1팀 → 월드컵 (카타르는 개최국)", "kor": "8월 31일까지 누적 4승 4패",
-    "result": [["LBN", ""], ["JPN", ""], ["QAT", "개최국"], ["KOR", ""], ["CHN", ""], ["KSA", ""]]},
-   {"name": "FIBA 월드컵 2027 (카타르)", "when": "2027", "status": "soon", "advance": "상위 7팀 → LA28 · 나머지 19팀 → OQT", "kor": ""},
-   {"name": "올림픽 사전 예선 (대륙별 5개)", "when": "2027.08", "status": "soon", "advance": "우승 5팀 → OQT", "kor": "월드컵에 못 나가면 이 길"},
-   {"name": "올림픽 최종 예선 (OQT) 4개", "when": "2028.06.26 – 07.02", "status": "soon", "advance": "우승 4팀 → LA28", "kor": ""}]},
-  {"title": "여자 5대5 (LA28 12팀: OQT 16팀 중 12팀)", "stages": [
-   {"name": "올림픽 사전 예선 (멕시코)", "when": "2026.08.17 – 23", "status": "done", "advance": "우승 1팀 → OQT", "kor": "",
-    "result": [["CAN", "우승, 결승 83-53 멕시코"]]},
-   {"name": "FIBA 여자 아시아컵 2027", "when": "2027", "status": "soon", "advance": "상위 4팀 → OQT", "kor": "출전 예정 (2026 월드컵 출전국)"},
-   {"name": "여자 올림픽 최종 예선 (OQT) 4개", "when": "2028.02", "status": "soon", "advance": "조마다 상위 3팀 → LA28 (미국 포함)", "kor": ""}]},
-  {"title": "3대3 (LA28 성별 12팀)", "stages": [
-   {"name": "국가연맹 랭킹", "when": "~2027", "status": "live", "advance": "상위 5팀 → LA28", "kor": ""},
-   {"name": "올림픽 예선 1·2 (OQT)", "when": "2028", "status": "soon", "advance": "보편성 2 · 랭킹 2팀", "kor": ""},
-   {"name": "올림픽 Q-시리즈", "when": "2028", "status": "soon", "advance": "2팀 (성적·통합랭킹)", "kor": ""}]}],
+ "NOCS_EXTRA": {
+  "LBN": [
+   "레바논",
+   "lb"
+  ],
+  "QAT": [
+   "카타르",
+   "qa"
+  ],
+  "KSA": [
+   "사우디아라비아",
+   "sa"
+  ],
+  "NZL": [
+   "뉴질랜드",
+   "nz"
+  ],
+  "PHI": [
+   "필리핀",
+   "ph"
+  ],
+  "IRI": [
+   "이란",
+   "ir"
+  ],
+  "PAK": [
+   "파키스탄",
+   "pk"
+  ],
+  "UZB": [
+   "우즈베키스탄",
+   "uz"
+  ],
+  "PRK": [
+   "북한",
+   "kp"
+  ],
+  "TPE": [
+   "대만",
+   "tw"
+  ]
+ },
+ "olfootball": {
+  "tracks": [
+   {
+    "title": "남자 · 아시아 (LA28 2자리)",
+    "stages": [
+     {
+      "name": "AFC U-23 아시안컵 2028 예선",
+      "when": "2027 (일정 미발표)",
+      "status": "soon",
+      "advance": "조 1위·상위 2위 → 본선",
+      "kor": "출전 예정"
+     },
+     {
+      "name": "AFC U-23 아시안컵 2028 (일본)",
+      "when": "2028.01.04 – 22",
+      "status": "soon",
+      "advance": "상위 2팀 → LA28",
+      "kor": ""
+     }
+    ]
+   },
+   {
+    "title": "여자 · 아시아 (LA28 2자리 + 플레이오프)",
+    "stages": [
+     {
+      "name": "2026 AFC 여자 아시안컵",
+      "when": "2026.03",
+      "status": "done",
+      "advance": "8강 8팀 → 올림픽 예선",
+      "kor": "8강 진출, 올림픽 예선 출전",
+      "result": [
+       [
+        "AUS",
+        ""
+       ],
+       [
+        "CHN",
+        ""
+       ],
+       [
+        "JPN",
+        ""
+       ],
+       [
+        "KOR",
+        ""
+       ],
+       [
+        "PHI",
+        ""
+       ],
+       [
+        "PRK",
+        ""
+       ],
+       [
+        "TPE",
+        ""
+       ],
+       [
+        "UZB",
+        ""
+       ]
+      ]
+     },
+     {
+      "name": "AFC 여자 올림픽 예선 조 추첨",
+      "when": "2026.11.12",
+      "status": "soon",
+      "advance": "4팀씩 2개 조",
+      "kor": ""
+     },
+     {
+      "name": "AFC 여자 올림픽 예선",
+      "when": "2027.04.19 – 2028.03.04",
+      "status": "soon",
+      "advance": "조 1위 2팀 → LA28 · 조 2위끼리 → AFC–CONMEBOL 플레이오프",
+      "kor": ""
+     }
+    ]
+   }
+  ],
+  "note": "남자 본선이 12팀으로 줄어 아시아 자리는 2장이다. 여자는 아시아 2자리에 더해 AFC–CONMEBOL 플레이오프 1자리가 있다.",
+  "sources": [
+   [
+    "Wikipedia · LA28 남자 축구 예선",
+    "https://en.wikipedia.org/wiki/Football_at_the_2028_Summer_Olympics_%E2%80%93_Men%27s_qualification"
+   ],
+   [
+    "Wikipedia · 2028 AFC 여자 올림픽 예선",
+    "https://en.wikipedia.org/wiki/2028_AFC_Women%27s_Olympic_Qualifying_Tournament"
+   ]
+  ]
+ },
+ "olbasketball": {
+  "tracks": [
+   {
+    "title": "남자 5대5 (LA28 12팀: 개최국 1 · 월드컵 7 · OQT 4)",
+    "stages": [
+     {
+      "name": "월드컵 아시아 예선 1라운드",
+      "when": "2025.11 – 2026.07",
+      "status": "done",
+      "advance": "조 상위 3팀 → 2라운드",
+      "kor": "B조 2위 (3승 3패), 일본 꺾고 진출",
+      "result": [
+       [
+        "KOR",
+        "B조 2위"
+       ]
+      ]
+     },
+     {
+      "name": "월드컵 아시아 예선 2라운드 F조",
+      "when": "2026.08 – 2027.03",
+      "status": "live",
+      "advance": "조 1–3위 + 4위 중 상위 1팀 → 월드컵 (카타르는 개최국)",
+      "kor": "조 4위 (4승 4패), 조 4위 중 상위 1팀 다툼 · 다음 경기 2026.11.26 카타르 원정",
+      "result": [
+       [
+        "JPN",
+        "6승 2패"
+       ],
+       [
+        "LBN",
+        "6승 2패"
+       ],
+       [
+        "CHN",
+        "5승 3패"
+       ],
+       [
+        "KOR",
+        "4승 4패"
+       ],
+       [
+        "QAT",
+        "4승 4패 · 개최국"
+       ],
+       [
+        "KSA",
+        "3승 5패"
+       ]
+      ]
+     },
+     {
+      "name": "FIBA 월드컵 2027 (카타르)",
+      "when": "2027",
+      "status": "soon",
+      "advance": "상위 7팀 → LA28 · 나머지 19팀 → OQT",
+      "kor": ""
+     },
+     {
+      "name": "올림픽 사전 예선 (대륙별 5개)",
+      "when": "2027.08",
+      "status": "soon",
+      "advance": "우승 5팀 → OQT",
+      "kor": "월드컵에 못 나가면 이 길"
+     },
+     {
+      "name": "올림픽 최종 예선 (OQT) 4개",
+      "when": "2028.06.26 – 07.02",
+      "status": "soon",
+      "advance": "우승 4팀 → LA28",
+      "kor": ""
+     }
+    ]
+   },
+   {
+    "title": "여자 5대5 (LA28 12팀: OQT 16팀 중 12팀)",
+    "stages": [
+     {
+      "name": "올림픽 사전 예선 (멕시코)",
+      "when": "2026.08.17 – 23",
+      "status": "done",
+      "advance": "우승 1팀 → OQT",
+      "kor": "",
+      "result": [
+       [
+        "CAN",
+        "우승, 결승 83-53 멕시코"
+       ]
+      ]
+     },
+     {
+      "name": "FIBA 여자 아시아컵 2027",
+      "when": "2027",
+      "status": "soon",
+      "advance": "상위 4팀 → OQT",
+      "kor": "출전 예정 (2026 월드컵 출전국)"
+     },
+     {
+      "name": "여자 올림픽 최종 예선 (OQT) 4개",
+      "when": "2028.02",
+      "status": "soon",
+      "advance": "조마다 상위 3팀 → LA28 (미국 포함)",
+      "kor": ""
+     }
+    ]
+   },
+   {
+    "title": "3대3 (LA28 성별 12팀)",
+    "stages": [
+     {
+      "name": "국가연맹 랭킹",
+      "when": "~2027",
+      "status": "live",
+      "advance": "상위 5팀 → LA28",
+      "kor": ""
+     },
+     {
+      "name": "올림픽 예선 1·2 (OQT)",
+      "when": "2028",
+      "status": "soon",
+      "advance": "보편성 2 · 랭킹 2팀",
+      "kor": ""
+     },
+     {
+      "name": "올림픽 Q-시리즈",
+      "when": "2028",
+      "status": "soon",
+      "advance": "2팀 (성적·통합랭킹)",
+      "kor": ""
+     }
+    ]
+   }
+  ],
   "note": "여자 OQT 16팀은 대륙컵 2027(아프리카 2 · 아시아 4 · 아메리카 4 · 유럽 6)과 사전 예선 우승팀으로 꾸린다.",
-  "sources": [["FIBA · 한국, 일본 꺾고 2라운드 진출", "https://www.fiba.basketball/en/news/korea-moves-on-to-second-round-asian-qualifiers"],
-              ["JoongAng Daily · 한국, 사우디 꺾고 4승 4패", "https://www.koreajoongangdaily.com/sports/korea-beats-saudi-arabia-to-keep-2027-world-cup-hopes-alive/12854316"],
-              ["FIBA · 남자 올림픽 농구 대회 방식", "https://about.fiba.basketball/en/our-sport/basketball/national-team-competition-systems/olympic-mens-basketball-tournaments"],
-              ["FIBA · 캐나다 여자 사전 예선 우승", "https://www.fiba.basketball/en/news/canada-are-the-womens-olympic-pre-qualifying-tournament-2026-mexico-champions"]]},
- "olhandball": {"tracks": [
-  {"title": "남자 · 아시아", "stages": [
-   {"name": "2026 아시안게임 (예선 아님)", "when": "2026.09", "status": "done", "advance": "올림픽 자리 없음", "kor": "4위 (준결승 카타르에 30-32)", "result": [["QAT", "결승 진출"], ["KOR", "4위"]]},
-   {"name": "LA28 아시아 예선 (카타르)", "when": "일정 미발표", "status": "soon", "advance": "우승 → LA28 · 2위 → IHF 예선", "kor": "출전 예정"},
-   {"name": "IHF 올림픽 예선 3개 대회", "when": "2028.03", "status": "soon", "advance": "대회마다 상위 2팀 → LA28", "kor": ""}]},
-  {"title": "여자 · 아시아", "stages": [
-   {"name": "2026 아시안게임 (예선 아님)", "when": "2026.09", "status": "done", "advance": "올림픽 자리 없음", "kor": "금메달 (6전 전승, 일본 27-23)", "result": [["KOR", "금"], ["JPN", "은"]]},
-   {"name": "LA28 아시아 예선 (일본)", "when": "일정 미발표", "status": "soon", "advance": "우승 → LA28 · 2위 → IHF 예선", "kor": "출전 예정"},
-   {"name": "IHF 올림픽 예선 3개 대회", "when": "2028.03", "status": "soon", "advance": "대회마다 상위 2팀 → LA28", "kor": ""}]}],
+  "sources": [
+   [
+    "FIBA · 한국, 일본 꺾고 2라운드 진출",
+    "https://www.fiba.basketball/en/news/korea-moves-on-to-second-round-asian-qualifiers"
+   ],
+   [
+    "JoongAng Daily · 한국, 사우디 꺾고 4승 4패",
+    "https://www.koreajoongangdaily.com/sports/korea-beats-saudi-arabia-to-keep-2027-world-cup-hopes-alive/12854316"
+   ],
+   [
+    "FIBA · 남자 올림픽 농구 대회 방식",
+    "https://about.fiba.basketball/en/our-sport/basketball/national-team-competition-systems/olympic-mens-basketball-tournaments"
+   ],
+   [
+    "FIBA · 캐나다 여자 사전 예선 우승",
+    "https://www.fiba.basketball/en/news/canada-are-the-womens-olympic-pre-qualifying-tournament-2026-mexico-champions"
+   ]
+  ]
+ },
+ "olhandball": {
+  "tracks": [
+   {
+    "title": "남자 · 아시아",
+    "stages": [
+     {
+      "name": "2026 아시안게임 (예선 아님)",
+      "when": "2026.09",
+      "status": "done",
+      "advance": "올림픽 자리 없음",
+      "kor": "4위 (준결승 카타르에 30-32)",
+      "result": [
+       [
+        "QAT",
+        "결승 진출"
+       ],
+       [
+        "KOR",
+        "4위"
+       ]
+      ]
+     },
+     {
+      "name": "LA28 아시아 예선 (카타르)",
+      "when": "일정 미발표",
+      "status": "soon",
+      "advance": "우승 → LA28 · 2위 → IHF 예선",
+      "kor": "출전 예정"
+     },
+     {
+      "name": "IHF 올림픽 예선 3개 대회",
+      "when": "2028.03",
+      "status": "soon",
+      "advance": "대회마다 상위 2팀 → LA28",
+      "kor": ""
+     }
+    ]
+   },
+   {
+    "title": "여자 · 아시아",
+    "stages": [
+     {
+      "name": "2026 아시안게임 (예선 아님)",
+      "when": "2026.09",
+      "status": "done",
+      "advance": "올림픽 자리 없음",
+      "kor": "금메달 (6전 전승, 일본 27-23)",
+      "result": [
+       [
+        "KOR",
+        "금"
+       ],
+       [
+        "JPN",
+        "은"
+       ]
+      ]
+     },
+     {
+      "name": "LA28 아시아 예선 (일본)",
+      "when": "일정 미발표",
+      "status": "soon",
+      "advance": "우승 → LA28 · 2위 → IHF 예선",
+      "kor": "출전 예정"
+     },
+     {
+      "name": "IHF 올림픽 예선 3개 대회",
+      "when": "2028.03",
+      "status": "soon",
+      "advance": "대회마다 상위 2팀 → LA28",
+      "kor": ""
+     }
+    ]
+   }
+  ],
   "note": "세계선수권 우승팀 1팀도 바로 LA28에 간다 (남자 2027.01 독일, 여자 2027.12).",
-  "sources": [["JoongAng Daily · 여자 핸드볼 아시안게임 금", "https://www.koreajoongangdaily.com/sports/korean-womens-handball-team-gets-revenge-on-japan-wins-gold-at-asian-games/12893291"]]},
- "olhockey": {"tracks": [
-  {"title": "남자", "stages": [
-   {"name": "FIH 프로리그 2025–26", "when": "~2026.06", "status": "done", "advance": "우승 → LA28", "kor": "", "result": [["BEL", "우승"]]},
-   {"name": "2026 아시안게임", "when": "2026.09 – 10", "status": "done", "advance": "우승 → LA28", "kor": "준결승 탈락 (말레이시아에 1-2)", "result": [["IND", "우승, 결승 5-1"], ["MAS", "준우승"]]},
-   {"name": "FIH 프로리그 2026–27", "when": "2026.12 – 2027.06", "status": "soon", "advance": "우승 (또는 2위) → LA28", "kor": ""},
-   {"name": "올림픽 예선 (OQT) 2개", "when": "2028 초", "status": "soon", "advance": "대회마다 상위 2팀 → LA28", "kor": "세계랭킹으로 초청 16팀 결정"}]},
-  {"title": "여자", "stages": [
-   {"name": "FIH 프로리그 2025–26", "when": "~2026.06", "status": "done", "advance": "우승 → LA28", "kor": "", "result": [["NED", "우승"]]},
-   {"name": "2026 아시안게임", "when": "2026.09 – 10", "status": "done", "advance": "우승 → LA28", "kor": "확인 중", "result": [["IND", "우승, 결승 1-0"], ["CHN", "준우승"]]},
-   {"name": "FIH 프로리그 2026–27", "when": "2026.12 – 2027.06", "status": "soon", "advance": "우승 (또는 2위) → LA28", "kor": ""},
-   {"name": "올림픽 예선 (OQT) 2개", "when": "2028 초", "status": "soon", "advance": "대회마다 상위 2팀 → LA28", "kor": "세계랭킹으로 초청 16팀 결정"}]}],
+  "sources": [
+   [
+    "JoongAng Daily · 여자 핸드볼 아시안게임 금",
+    "https://www.koreajoongangdaily.com/sports/korean-womens-handball-team-gets-revenge-on-japan-wins-gold-at-asian-games/12893291"
+   ]
+  ]
+ },
+ "olhockey": {
+  "tracks": [
+   {
+    "title": "남자",
+    "stages": [
+     {
+      "name": "FIH 프로리그 2025–26",
+      "when": "~2026.06",
+      "status": "done",
+      "advance": "우승 → LA28",
+      "kor": "",
+      "result": [
+       [
+        "BEL",
+        "우승"
+       ]
+      ]
+     },
+     {
+      "name": "2026 아시안게임",
+      "when": "2026.09 – 10",
+      "status": "done",
+      "advance": "우승 → LA28",
+      "kor": "4위 (동메달 결정전 파키스탄에 3-5)",
+      "result": [
+       [
+        "IND",
+        "금, 결승 5-1"
+       ],
+       [
+        "MAS",
+        "은"
+       ],
+       [
+        "PAK",
+        "동"
+       ],
+       [
+        "KOR",
+        "4위"
+       ]
+      ]
+     },
+     {
+      "name": "FIH 프로리그 2026–27",
+      "when": "2026.12 – 2027.06",
+      "status": "soon",
+      "advance": "우승 (또는 2위) → LA28",
+      "kor": ""
+     },
+     {
+      "name": "올림픽 예선 (OQT) 2개",
+      "when": "2028 초",
+      "status": "soon",
+      "advance": "대회마다 상위 2팀 → LA28",
+      "kor": "세계랭킹으로 초청 16팀 결정"
+     }
+    ]
+   },
+   {
+    "title": "여자",
+    "stages": [
+     {
+      "name": "FIH 프로리그 2025–26",
+      "when": "~2026.06",
+      "status": "done",
+      "advance": "우승 → LA28",
+      "kor": "",
+      "result": [
+       [
+        "NED",
+        "우승"
+       ]
+      ]
+     },
+     {
+      "name": "2026 아시안게임",
+      "when": "2026.09 – 10",
+      "status": "done",
+      "advance": "우승 → LA28",
+      "kor": "4위 (동메달 결정전 일본과 0-0, 승부타 2-4)",
+      "result": [
+       [
+        "IND",
+        "금, 결승 1-0"
+       ],
+       [
+        "CHN",
+        "은"
+       ],
+       [
+        "JPN",
+        "동"
+       ],
+       [
+        "KOR",
+        "4위"
+       ]
+      ]
+     },
+     {
+      "name": "FIH 프로리그 2026–27",
+      "when": "2026.12 – 2027.06",
+      "status": "soon",
+      "advance": "우승 (또는 2위) → LA28",
+      "kor": ""
+     },
+     {
+      "name": "올림픽 예선 (OQT) 2개",
+      "when": "2028 초",
+      "status": "soon",
+      "advance": "대회마다 상위 2팀 → LA28",
+      "kor": "세계랭킹으로 초청 16팀 결정"
+     }
+    ]
+   }
+  ],
   "note": "OQT 초청 16팀은 마지막 2027 대륙 선수권이 끝난 날의 FIH 세계랭킹 순으로 정한다.",
-  "sources": [["FIH · LA28 예선 규정 (PDF)", "https://www.fih.hockey/static-assets/pdf/hoc-la28-qualification-system-english.pdf"],
-              ["일간스포츠 · 남자 하키 준결승", "https://isplus.com/article/view/isp202610010256"]]},
- "olvolleyball": {"tracks": [
-  {"title": "실내 남자", "stages": [
-   {"name": "2026 아시아선수권", "when": "2026.09", "status": "done", "advance": "우승 → LA28 · 상위권 → 2027 월드컵", "kor": "3위, 2027 월드컵 출전권", "result": [["JPN", "우승 → LA28"], ["IRI", "준우승"], ["KOR", "3위"]]},
-   {"name": "FIVB 월드컵 2027 (폴란드)", "when": "2027.09.10 – 26", "status": "soon", "advance": "미확보 상위 3팀 → LA28", "kor": "출전 확정"},
-   {"name": "FIVB 세계랭킹", "when": "2028", "status": "soon", "advance": "미확보 상위 3팀 → LA28", "kor": ""}]},
-  {"title": "실내 여자", "stages": [
-   {"name": "2026 아시아선수권", "when": "2026.08 – 09", "status": "done", "advance": "우승 → LA28", "kor": "확인 중", "result": [["THA", "우승 → LA28"], ["CHN", "준우승"]]},
-   {"name": "FIVB 월드컵 2027", "when": "2027.08.20 – 09.05", "status": "soon", "advance": "미확보 상위 3팀 → LA28", "kor": "출전 확정 (세계 27위)"},
-   {"name": "FIVB 세계랭킹", "when": "2028", "status": "soon", "advance": "미확보 상위 3팀 → LA28", "kor": ""}]},
-  {"title": "비치 (남녀 각 24팀)", "stages": [
-   {"name": "대륙선수권 2026", "when": "2026.08 – 11", "status": "live", "advance": "대륙마다 1팀 → LA28", "kor": "", "result": [["AUS", "아시아 남녀"], ["SWE", "유럽 남"], ["NED", "유럽 여"], ["BRA", "남미 남녀"]]},
-   {"name": "2027 세계선수권 (네덜란드)", "when": "2027", "status": "soon", "advance": "1팀 → LA28", "kor": ""},
-   {"name": "올림픽 랭킹 · Q-시리즈", "when": "2028", "status": "soon", "advance": "랭킹 14 · Q-시리즈 3팀", "kor": ""}]}],
+  "sources": [
+   [
+    "FIH · LA28 예선 규정 (PDF)",
+    "https://www.fih.hockey/static-assets/pdf/hoc-la28-qualification-system-english.pdf"
+   ],
+   [
+    "일간스포츠 · 남자 하키 준결승",
+    "https://isplus.com/article/view/isp202610010256"
+   ],
+   [
+    "Wikipedia · 2026 아시안게임 하키",
+    "https://en.wikipedia.org/wiki/Field_hockey_at_the_2026_Asian_Games"
+   ]
+  ]
+ },
+ "olvolleyball": {
+  "tracks": [
+   {
+    "title": "실내 남자",
+    "stages": [
+     {
+      "name": "2026 아시아선수권",
+      "when": "2026.09",
+      "status": "done",
+      "advance": "우승 → LA28 · 상위권 → 2027 월드컵",
+      "kor": "3위, 2027 월드컵 출전권",
+      "result": [
+       [
+        "JPN",
+        "우승 → LA28"
+       ],
+       [
+        "IRI",
+        "준우승"
+       ],
+       [
+        "KOR",
+        "3위"
+       ]
+      ]
+     },
+     {
+      "name": "FIVB 월드컵 2027 (폴란드)",
+      "when": "2027.09.10 – 26",
+      "status": "soon",
+      "advance": "미확보 상위 3팀 → LA28",
+      "kor": "출전 확정"
+     },
+     {
+      "name": "FIVB 세계랭킹",
+      "when": "2028",
+      "status": "soon",
+      "advance": "미확보 상위 3팀 → LA28",
+      "kor": ""
+     }
+    ]
+   },
+   {
+    "title": "실내 여자",
+    "stages": [
+     {
+      "name": "2026 아시아선수권",
+      "when": "2026.08 – 09",
+      "status": "done",
+      "advance": "우승 → LA28",
+      "kor": "8위",
+      "result": [
+       [
+        "THA",
+        "우승 → LA28"
+       ],
+       [
+        "CHN",
+        "준우승"
+       ],
+       [
+        "JPN",
+        "3위"
+       ],
+       [
+        "KOR",
+        "8위"
+       ]
+      ]
+     },
+     {
+      "name": "FIVB 월드컵 2027",
+      "when": "2027.08.20 – 09.05",
+      "status": "soon",
+      "advance": "미확보 상위 3팀 → LA28",
+      "kor": "출전 확정 (세계 27위)"
+     },
+     {
+      "name": "FIVB 세계랭킹",
+      "when": "2028",
+      "status": "soon",
+      "advance": "미확보 상위 3팀 → LA28",
+      "kor": ""
+     }
+    ]
+   },
+   {
+    "title": "비치 (남녀 각 24팀)",
+    "stages": [
+     {
+      "name": "대륙선수권 2026",
+      "when": "2026.08 – 11",
+      "status": "live",
+      "advance": "대륙마다 1팀 → LA28",
+      "kor": "",
+      "result": [
+       [
+        "AUS",
+        "아시아 남녀"
+       ],
+       [
+        "SWE",
+        "유럽 남"
+       ],
+       [
+        "NED",
+        "유럽 여"
+       ],
+       [
+        "BRA",
+        "남미 남녀"
+       ],
+       [
+        "MAR",
+        "아프리카 남"
+       ],
+       [
+        "NGR",
+        "아프리카 여"
+       ]
+      ]
+     },
+     {
+      "name": "2027 세계선수권 (네덜란드)",
+      "when": "2027",
+      "status": "soon",
+      "advance": "1팀 → LA28",
+      "kor": ""
+     },
+     {
+      "name": "올림픽 랭킹 · Q-시리즈",
+      "when": "2028",
+      "status": "soon",
+      "advance": "랭킹 14 · Q-시리즈 3팀",
+      "kor": ""
+     }
+    ]
+   }
+  ],
   "note": "비치 NORCECA 대륙선수권은 2026.11.04–09 푸에르토리코에서 열린다.",
-  "sources": [["Olympics.com · 일본 남자 아시아선수권", "https://www.olympics.com/en/news/volleyball-men-asian-championship-2026-la28-japan-quota"],
-              ["OCA · 태국 여자 아시아선수권", "https://oca.asia/news/7783-thailand-beats-china-to-qualify-for-la28-womens-volleyball.html"],
-              ["Starnews · 한국 여자 2027 월드컵 출전", "https://www.starnewskorea.com/en/sports/2026/10/06/2026100615351673411"]]}
+  "sources": [
+   [
+    "Olympics.com · 일본 남자 아시아선수권",
+    "https://www.olympics.com/en/news/volleyball-men-asian-championship-2026-la28-japan-quota"
+   ],
+   [
+    "OCA · 태국 여자 아시아선수권",
+    "https://oca.asia/news/7783-thailand-beats-china-to-qualify-for-la28-womens-volleyball.html"
+   ],
+   [
+    "Starnews · 한국 여자 2027 월드컵 출전",
+    "https://www.starnewskorea.com/en/sports/2026/10/06/2026100615351673411"
+   ]
+  ]
+ }
 }
