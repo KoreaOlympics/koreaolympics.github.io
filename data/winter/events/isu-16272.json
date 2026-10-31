@@ -15,10 +15,10 @@
   "city": "Montreal",
   "country": "CAN",
   "state": "Live",
-  "live": "Men 500 m",
+  "live": "Women 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-31T18:48:02.021996+00:00",
+ "checked_at": "2026-10-31T18:58:28.605562+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -7606,7 +7606,7 @@
      ],
      "projection": {
       "next": "Finals",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -7659,10 +7659,145 @@
     {
      "id": 22938,
      "name": "Finals",
-     "status": "Scheduled",
+     "status": "Live",
      "start_utc": "2026-10-31T17:56:00.000Z",
      "rule": "",
-     "heats": []
+     "heats": [
+      {
+       "name": "Final",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Courtney SARAULT",
+         "noc": "CAN",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 1,
+         "lane": 1,
+         "slug": "courtney-sarault"
+        },
+        {
+         "rank": null,
+         "name": "Minjeong CHOI",
+         "noc": "KOR",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 4,
+         "lane": 2,
+         "slug": "minjeong-choi"
+        },
+        {
+         "rank": null,
+         "name": "Florence BRUNELLE",
+         "noc": "CAN",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 10,
+         "lane": 3,
+         "slug": "florence-brunelle"
+        },
+        {
+         "rank": null,
+         "name": "Danae BLAIS",
+         "noc": "CAN",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 25,
+         "lane": 4,
+         "slug": "danae-blais"
+        },
+        {
+         "rank": null,
+         "name": "Hanne DESMET",
+         "noc": "BEL",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 6,
+         "lane": 5,
+         "slug": "hanne-desmet"
+        }
+       ]
+      },
+      {
+       "name": "Final B",
+       "status": "Live",
+       "official": "Live",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Jianing ZHANG",
+         "noc": "CHN",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 55,
+         "lane": 1,
+         "slug": "jianing-zhang"
+        },
+        {
+         "rank": null,
+         "name": "Jiarui SONG",
+         "noc": "CHN",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 54,
+         "lane": 2,
+         "slug": "jiarui-song"
+        },
+        {
+         "rank": null,
+         "name": "Xandra VELZEBOER",
+         "noc": "NED",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 3,
+         "lane": 3,
+         "slug": "xandra-velzeboer"
+        },
+        {
+         "rank": null,
+         "name": "Kristen SANTOS-GRISWOLD",
+         "noc": "USA",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 7,
+         "lane": 4,
+         "slug": "kristen-santos-griswold"
+        },
+        {
+         "rank": null,
+         "name": "Li GONG",
+         "noc": "CHN",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 19,
+         "lane": 5,
+         "slug": "li-gong"
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -14343,6 +14478,25 @@
    "record": "",
    "bib": 4,
    "lane": 1,
+   "slug": "minjeong-choi"
+  },
+  {
+   "event_id": "isu-16272",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #2",
+   "distance": "Women 1000 m",
+   "round": "Finals",
+   "heat": "Final",
+   "start_utc": "2026-10-31T17:56:00.000Z",
+   "rank": null,
+   "name": "Minjeong CHOI",
+   "noc": "KOR",
+   "time": "no time",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 4,
+   "lane": 2,
    "slug": "minjeong-choi"
   },
   {
