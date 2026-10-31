@@ -18,7 +18,7 @@
   "live": "Men 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-31T20:25:14.089826+00:00",
+ "checked_at": "2026-10-31T20:35:42.784408+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -261,7 +261,7 @@
    "type": "Couples"
   },
   {
-   "start_utc": "2026-10-31T20:18:00.000Z",
+   "start_utc": "2026-10-31T20:19:00.000Z",
    "title": "Men 1500 m",
    "round": "Finals",
    "event_result_id": 16041,
@@ -12625,56 +12625,20 @@
     {
      "id": 22953,
      "name": "Finals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-10-31T19:19:46.000Z",
      "rule": "",
      "heats": [
       {
        "name": "Final",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Dong Min SHIN",
-         "noc": "KOR",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 16,
-         "lane": 1,
-         "slug": "dong-min-shin"
-        },
-        {
-         "rank": null,
-         "name": "Felix ROUSSEL",
-         "noc": "CAN",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 11,
-         "lane": 2,
-         "slug": "felix-roussel"
-        },
-        {
-         "rank": null,
-         "name": "Thomas NADALINI",
-         "noc": "ITA",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 6,
-         "lane": 3,
-         "slug": "thomas-nadalini"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Jens VAN 'T WOUT",
          "noc": "NED",
-         "time": "no time",
+         "time": "2:20.184",
          "qual": "",
          "status": "",
          "record": "",
@@ -12683,22 +12647,22 @@
          "slug": "jens-van-t-wout"
         },
         {
-         "rank": null,
-         "name": "Bogdan VEKHOV",
-         "noc": "KAZ",
-         "time": "no time",
+         "rank": 2,
+         "name": "Felix ROUSSEL",
+         "noc": "CAN",
+         "time": "2:20.295",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 94,
-         "lane": 5,
-         "slug": "bogdan-vekhov"
+         "bib": 11,
+         "lane": 2,
+         "slug": "felix-roussel"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Shogo MIYATA",
          "noc": "JPN",
-         "time": "no time",
+         "time": "2:20.418",
          "qual": "",
          "status": "",
          "record": "",
@@ -12707,10 +12671,46 @@
          "slug": "shogo-miyata"
         },
         {
-         "rank": null,
+         "rank": 4,
+         "name": "Dong Min SHIN",
+         "noc": "KOR",
+         "time": "2:20.544",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 16,
+         "lane": 1,
+         "slug": "dong-min-shin"
+        },
+        {
+         "rank": 5,
+         "name": "Bogdan VEKHOV",
+         "noc": "KAZ",
+         "time": "2:20.616",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 94,
+         "lane": 5,
+         "slug": "bogdan-vekhov"
+        },
+        {
+         "rank": 6,
+         "name": "Thomas NADALINI",
+         "noc": "ITA",
+         "time": "2:21.035",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 6,
+         "lane": 3,
+         "slug": "thomas-nadalini"
+        },
+        {
+         "rank": 7,
          "name": "Luca SPECHENHAUSER",
          "noc": "ITA",
-         "time": "no time",
+         "time": "2:21.093",
          "qual": "",
          "status": "",
          "record": "",
@@ -15482,10 +15482,10 @@
    "round": "Finals",
    "heat": "Final",
    "start_utc": "2026-10-31T19:19:46.000Z",
-   "rank": null,
+   "rank": 4,
    "name": "Dong Min SHIN",
    "noc": "KOR",
-   "time": "no time",
+   "time": "2:20.544",
    "qual": "",
    "status": "",
    "record": "",
