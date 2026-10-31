@@ -18,7 +18,7 @@
   "live": "Men 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-31T18:06:13.567407+00:00",
+ "checked_at": "2026-10-31T18:16:46.636884+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -4852,21 +4852,21 @@
     {
      "id": 22930,
      "name": "Semifinals",
-     "status": "Live",
-     "start_utc": "2026-10-31T17:05:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-10-31T17:04:07.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final, the third and fourth placed skaters from each race and up to a maximum of next two fastest fifth place skaters qualify for Final B.",
      "heats": [
       {
        "name": "Heat 1",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "Felix ROUSSEL",
          "noc": "CAN",
-         "time": "40.110",
-         "qual": "",
+         "time": "40.088",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 11,
@@ -4877,8 +4877,8 @@
          "rank": 2,
          "name": "Jens VAN 'T WOUT",
          "noc": "NED",
-         "time": "40.240",
-         "qual": "",
+         "time": "40.227",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 7,
@@ -4889,8 +4889,8 @@
          "rank": 3,
          "name": "Mathieu PELLETIER",
          "noc": "CAN",
-         "time": "40.310",
-         "qual": "",
+         "time": "40.302",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 66,
@@ -4901,8 +4901,8 @@
          "rank": 4,
          "name": "Long SUN",
          "noc": "CHN",
-         "time": "40.660",
-         "qual": "",
+         "time": "40.644",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 4,
@@ -4910,11 +4910,11 @@
          "slug": "long-sun"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Kay HUISMAN",
          "noc": "NED",
          "time": "no time",
-         "qual": "",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 41,
@@ -4925,27 +4925,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Maxime LAOUN",
-         "noc": "CAN",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 26,
-         "lane": 1,
-         "slug": "maxime-laoun"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Teun BOER",
          "noc": "NED",
-         "time": "no time",
-         "qual": "",
+         "time": "40.024",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 46,
@@ -4953,23 +4941,11 @@
          "slug": "teun-boer"
         },
         {
-         "rank": null,
-         "name": "Steven DUBOIS",
-         "noc": "CAN",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 3,
-         "lane": 3,
-         "slug": "steven-dubois"
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Thomas NADALINI",
          "noc": "ITA",
-         "time": "no time",
-         "qual": "",
+         "time": "40.109",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 6,
@@ -4977,20 +4953,95 @@
          "slug": "thomas-nadalini"
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Maxime LAOUN",
+         "noc": "CAN",
+         "time": "40.204",
+         "qual": "q",
+         "status": "",
+         "record": "",
+         "bib": 26,
+         "lane": 1,
+         "slug": "maxime-laoun"
+        },
+        {
+         "rank": 4,
          "name": "Furkan AKAR",
          "noc": "TUR",
-         "time": "no time",
-         "qual": "",
+         "time": "40.254",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 27,
          "lane": 5,
          "slug": "furkan-akar"
+        },
+        {
+         "rank": 5,
+         "name": "Steven DUBOIS",
+         "noc": "CAN",
+         "time": "40.337",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 3,
+         "lane": 3,
+         "slug": "steven-dubois"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Finals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Teun BOER",
+        "noc": "NED",
+        "rank": 1,
+        "time": "40.024",
+        "qual": "Q"
+       },
+       {
+        "name": "Felix ROUSSEL",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "40.088",
+        "qual": "Q"
+       },
+       {
+        "name": "Thomas NADALINI",
+        "noc": "ITA",
+        "rank": 2,
+        "time": "40.109",
+        "qual": "Q"
+       },
+       {
+        "name": "Jens VAN 'T WOUT",
+        "noc": "NED",
+        "rank": 2,
+        "time": "40.227",
+        "qual": "Q"
+       },
+       {
+        "name": "Maxime LAOUN",
+        "noc": "CAN",
+        "rank": 3,
+        "time": "40.204",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Teun BOER (NED)",
+        "Felix ROUSSEL (CAN)",
+        "Thomas NADALINI (ITA)",
+        "Jens VAN 'T WOUT (NED)",
+        "Maxime LAOUN (CAN)"
+       ]
+      ]
+     }
     },
     {
      "id": 22931,
