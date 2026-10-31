@@ -18,7 +18,7 @@
   "live": "Men 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-31T13:09:27.465094+00:00",
+ "checked_at": "2026-10-31T13:19:47.030748+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -3372,7 +3372,7 @@
     {
      "id": 22925,
      "name": "Rep. Heats",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-10-31T12:00:36.000Z",
      "rule": "The first placed skater from each race and up to a maximum of three fastest second place skaters qualify for Rep Quarterfinals.",
      "heats": [
@@ -3398,7 +3398,7 @@
          "name": "Etienne BASTIER",
          "noc": "FRA",
          "time": "42.250",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 114,
@@ -3465,7 +3465,7 @@
          "name": "Warre NOIRON",
          "noc": "BEL",
          "time": "41.771",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 54,
@@ -3532,7 +3532,7 @@
          "name": "Simon BASTIER",
          "noc": "FRA",
          "time": "42.851",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 115,
@@ -3579,27 +3579,15 @@
       },
       {
        "name": "Heat 4",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Adriaan DEWAGTERE",
-         "noc": "BEL",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 53,
-         "lane": 1,
-         "slug": "adriaan-dewagtere"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Taesung KIM",
          "noc": "KOR",
-         "time": "no time",
-         "qual": "",
+         "time": "41.496",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 97,
@@ -3607,10 +3595,22 @@
          "slug": "taesung-kim"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Adriaan DEWAGTERE",
+         "noc": "BEL",
+         "time": "41.840",
+         "qual": "q",
+         "status": "",
+         "record": "",
+         "bib": 53,
+         "lane": 1,
+         "slug": "adriaan-dewagtere"
+        },
+        {
+         "rank": 3,
          "name": "Lucas Henry KOO",
          "noc": "BRA",
-         "time": "no time",
+         "time": "42.040",
          "qual": "",
          "status": "",
          "record": "",
@@ -3619,10 +3619,10 @@
          "slug": "lucas-henry-koo"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Aleyandro RIVERO MAERSCHALCK",
          "noc": "BEL",
-         "time": "no time",
+         "time": "42.216",
          "qual": "",
          "status": "",
          "record": "",
@@ -3631,10 +3631,10 @@
          "slug": "aleyandro-rivero-maerschalck"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Willem MURRAY",
          "noc": "GBR",
-         "time": "no time",
+         "time": "43.450",
          "qual": "",
          "status": "",
          "record": "",
@@ -3646,15 +3646,27 @@
       },
       {
        "name": "Heat 5",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Lukasz KUCZYNSKI",
+         "noc": "POL",
+         "time": "41.333",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 39,
+         "lane": 3,
+         "slug": "lukasz-kuczynski"
+        },
+        {
+         "rank": 2,
          "name": "Radek FAJKUS",
          "noc": "CZE",
-         "time": "no time",
-         "qual": "",
+         "time": "41.457",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 71,
@@ -3662,10 +3674,22 @@
          "slug": "radek-fajkus"
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Albie BARLOW",
+         "noc": "GBR",
+         "time": "42.031",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 74,
+         "lane": 5,
+         "slug": "albie-barlow"
+        },
+        {
+         "rank": 4,
          "name": "Marten TAUBERT",
          "noc": "GER",
-         "time": "no time",
+         "time": "1:06.700",
          "qual": "",
          "status": "",
          "record": "",
@@ -3674,44 +3698,105 @@
          "slug": "marten-taubert"
         },
         {
-         "rank": null,
-         "name": "Lukasz KUCZYNSKI",
-         "noc": "POL",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 39,
-         "lane": 3,
-         "slug": "lukasz-kuczynski"
-        },
-        {
-         "rank": null,
+         "rank": 5,
          "name": "Luka JASIC",
          "noc": "SRB",
-         "time": "no time",
+         "time": "1:11.656",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 107,
          "lane": 4,
          "slug": "luka-jasic"
-        },
-        {
-         "rank": null,
-         "name": "Albie BARLOW",
-         "noc": "GBR",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 74,
-         "lane": 5,
-         "slug": "albie-barlow"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Rep. Quarterfinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Lukasz KUCZYNSKI",
+        "noc": "POL",
+        "rank": 1,
+        "time": "41.333",
+        "qual": "Q"
+       },
+       {
+        "name": "Taesung KIM",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "41.496",
+        "qual": "Q"
+       },
+       {
+        "name": "Tamirlan ZHOLDAS",
+        "noc": "KAZ",
+        "rank": 1,
+        "time": "41.666",
+        "qual": "Q"
+       },
+       {
+        "name": "Aibek TEMIRKHAN",
+        "noc": "KAZ",
+        "rank": 1,
+        "time": "42.186",
+        "qual": "Q"
+       },
+       {
+        "name": "Tobias WOLF",
+        "noc": "AUT",
+        "rank": 1,
+        "time": "42.808",
+        "qual": "Q"
+       },
+       {
+        "name": "Radek FAJKUS",
+        "noc": "CZE",
+        "rank": 2,
+        "time": "41.457",
+        "qual": "q"
+       },
+       {
+        "name": "Warre NOIRON",
+        "noc": "BEL",
+        "rank": 2,
+        "time": "41.771",
+        "qual": "q"
+       },
+       {
+        "name": "Adriaan DEWAGTERE",
+        "noc": "BEL",
+        "rank": 2,
+        "time": "41.840",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Lukasz KUCZYNSKI (POL)"
+       ],
+       [
+        "Taesung KIM (KOR)"
+       ],
+       [
+        "Tamirlan ZHOLDAS (KAZ)"
+       ],
+       [
+        "Aibek TEMIRKHAN (KAZ)"
+       ],
+       [
+        "Tobias WOLF (AUT)",
+        "Adriaan DEWAGTERE (BEL)"
+       ],
+       [
+        "Radek FAJKUS (CZE)",
+        "Warre NOIRON (BEL)"
+       ]
+      ]
+     }
     },
     {
      "id": 22927,
@@ -10077,11 +10162,11 @@
    "round": "Rep. Heats",
    "heat": "Heat 4",
    "start_utc": "2026-10-31T12:00:36.000Z",
-   "rank": null,
+   "rank": 1,
    "name": "Taesung KIM",
    "noc": "KOR",
-   "time": "no time",
-   "qual": "",
+   "time": "41.496",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 97,
