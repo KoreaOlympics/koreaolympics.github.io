@@ -18,7 +18,7 @@
   "live": "Men 5000 m Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-31T21:18:26.194340+00:00",
+ "checked_at": "2026-10-31T21:28:55.493547+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -14397,20 +14397,20 @@
      "id": 22963,
      "name": "Semifinals",
      "status": "Live",
-     "start_utc": "2026-10-31T20:06:00.000Z",
+     "start_utc": "2026-10-31T20:13:29.000Z",
      "rule": "The first and second placed teams from each race qualify for Final, the third and fourth placed teams from each race qualify for Final B.",
      "heats": [
       {
        "name": "Heat 1",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Republic of Korea",
          "noc": "KOR",
-         "time": "no time",
-         "qual": "",
+         "time": "7:11.773",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -14418,11 +14418,11 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Canada",
          "noc": "CAN",
-         "time": "no time",
-         "qual": "",
+         "time": "7:11.852",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -14430,11 +14430,11 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Kazakhstan",
          "noc": "KAZ",
-         "time": "no time",
-         "qual": "",
+         "time": "7:11.994",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": null,
@@ -14442,11 +14442,11 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Poland",
          "noc": "POL",
-         "time": "no time",
-         "qual": "",
+         "time": "7:17.101",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": null,
@@ -14457,8 +14457,8 @@
       },
       {
        "name": "Heat 2",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
         {
          "rank": null,
@@ -14486,18 +14486,6 @@
         },
         {
          "rank": null,
-         "name": "Japan",
-         "noc": "JPN",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 3,
-         "slug": ""
-        },
-        {
-         "rank": null,
          "name": "Hungary",
          "noc": "HUN",
          "time": "no time",
@@ -14506,6 +14494,18 @@
          "record": "",
          "bib": null,
          "lane": 4,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Japan",
+         "noc": "JPN",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
          "slug": ""
         }
        ]
@@ -15874,12 +15874,12 @@
    "distance": "Men 5000 m Relay",
    "round": "Semifinals",
    "heat": "Heat 1",
-   "start_utc": "2026-10-31T20:06:00.000Z",
-   "rank": null,
+   "start_utc": "2026-10-31T20:13:29.000Z",
+   "rank": 1,
    "name": "Republic of Korea",
    "noc": "KOR",
-   "time": "no time",
-   "qual": "",
+   "time": "7:11.773",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": null,
