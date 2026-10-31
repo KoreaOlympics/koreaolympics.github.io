@@ -18,7 +18,7 @@
   "live": "Men 5000 m Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-10-31T21:28:55.493547+00:00",
+ "checked_at": "2026-10-31T21:39:26.867535+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -277,7 +277,7 @@
    "type": "Couples"
   },
   {
-   "start_utc": "2026-10-31T21:06:00.000Z",
+   "start_utc": "2026-10-31T21:13:00.000Z",
    "title": "Men 5000 m Relay",
    "round": "Semifinals",
    "event_result_id": 16036,
@@ -14396,7 +14396,7 @@
     {
      "id": 22963,
      "name": "Semifinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-10-31T20:13:29.000Z",
      "rule": "The first and second placed teams from each race qualify for Final, the third and fourth placed teams from each race qualify for Final B.",
      "heats": [
@@ -14457,27 +14457,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "China",
-         "noc": "CHN",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 1,
-         "slug": ""
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Netherlands",
          "noc": "NED",
-         "time": "no time",
-         "qual": "",
+         "time": "7:05.330",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -14485,32 +14473,87 @@
          "slug": ""
         },
         {
-         "rank": null,
-         "name": "Hungary",
-         "noc": "HUN",
-         "time": "no time",
-         "qual": "",
+         "rank": 2,
+         "name": "China",
+         "noc": "CHN",
+         "time": "7:05.397",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
-         "lane": 4,
+         "lane": 1,
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Japan",
          "noc": "JPN",
-         "time": "no time",
-         "qual": "",
+         "time": "7:05.523",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": null,
          "lane": 3,
          "slug": ""
+        },
+        {
+         "rank": 4,
+         "name": "Hungary",
+         "noc": "HUN",
+         "time": "7:20.636",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 4,
+         "slug": ""
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Finals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Netherlands",
+        "noc": "NED",
+        "rank": 1,
+        "time": "7:05.330",
+        "qual": "Q"
+       },
+       {
+        "name": "Republic of Korea",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "7:11.773",
+        "qual": "Q"
+       },
+       {
+        "name": "China",
+        "noc": "CHN",
+        "rank": 2,
+        "time": "7:05.397",
+        "qual": "Q"
+       },
+       {
+        "name": "Canada",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "7:11.852",
+        "qual": "Q"
+       }
+      ],
+      "races": [
+       [
+        "Netherlands (NED)",
+        "Republic of Korea (KOR)",
+        "China (CHN)",
+        "Canada (CAN)"
+       ]
+      ]
+     }
     },
     {
      "id": 22964,
