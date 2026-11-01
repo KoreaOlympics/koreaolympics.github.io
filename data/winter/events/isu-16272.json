@@ -15,10 +15,10 @@
   "city": "Montreal",
   "country": "CAN",
   "state": "Live",
-  "live": "Women 1500 m",
+  "live": "Mixed Team Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-11-01T18:32:36.942400+00:00",
+ "checked_at": "2026-11-01T18:43:26.418155+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -16360,7 +16360,7 @@
      ],
      "projection": {
       "next": "Finals",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -16405,10 +16405,121 @@
     {
      "id": 22961,
      "name": "Finals",
-     "status": "Scheduled",
-     "start_utc": "2026-11-01T17:35:00.000Z",
+     "status": "Live",
+     "start_utc": "2026-11-01T17:35:27.000Z",
      "rule": "",
-     "heats": []
+     "heats": [
+      {
+       "name": "Final",
+       "status": "Getting Ready",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Canada",
+         "noc": "CAN",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "China",
+         "noc": "CHN",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 2,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Netherlands",
+         "noc": "NED",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Italy",
+         "noc": "ITA",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 4,
+         "slug": ""
+        }
+       ]
+      },
+      {
+       "name": "Final B",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Republic of Korea",
+         "noc": "KOR",
+         "time": "2:40.531",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
+         "slug": ""
+        },
+        {
+         "rank": 2,
+         "name": "Poland",
+         "noc": "POL",
+         "time": "2:40.779",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": 3,
+         "name": "Belgium",
+         "noc": "BEL",
+         "time": "2:40.976",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 4,
+         "slug": ""
+        },
+        {
+         "rank": 4,
+         "name": "Japan",
+         "noc": "JPN",
+         "time": "2:44.572",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 2,
+         "slug": ""
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -18250,6 +18361,25 @@
    "record": "",
    "bib": null,
    "lane": 2,
+   "slug": ""
+  },
+  {
+   "event_id": "isu-16272",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #2",
+   "distance": "Mixed Team Relay",
+   "round": "Finals",
+   "heat": "Final B",
+   "start_utc": "2026-11-01T17:35:27.000Z",
+   "rank": 1,
+   "name": "Republic of Korea",
+   "noc": "KOR",
+   "time": "2:40.531",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": null,
+   "lane": 3,
    "slug": ""
   },
   {
