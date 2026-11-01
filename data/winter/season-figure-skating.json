@@ -227,7 +227,26 @@
     },
     {
      "title": "Pairs",
-     "podium": null
+     "podium": [
+      {
+       "rank": 1,
+       "name": "Lia PEREIRA / Trennt MICHAUD",
+       "noc": "CAN",
+       "time": "202.17"
+      },
+      {
+       "rank": 2,
+       "name": "Alisa EFIMOVA / Misha MITROFANOV",
+       "noc": "USA",
+       "time": "191.90"
+      },
+      {
+       "rank": 3,
+       "name": "Oxana VOUILLAMOZ / Tom BOUVART",
+       "noc": "SUI",
+       "time": "183.12"
+      }
+     ]
     },
     {
      "title": "Women",
@@ -383,6 +402,20 @@
    3
   ],
   [
+   "CAN",
+   1,
+   0,
+   0,
+   1
+  ],
+  [
+   "USA",
+   0,
+   1,
+   1,
+   2
+  ],
+  [
    "AIN2",
    0,
    1,
@@ -418,7 +451,7 @@
    1
   ],
   [
-   "USA",
+   "SUI",
    0,
    0,
    1,
@@ -651,6 +684,13 @@
     "event_id": "isu-16027"
    },
    {
+    "name": "Lia PEREIRA / Trennt MICHAUD",
+    "noc": "CAN",
+    "points": 202.17,
+    "event": "ISU Figure Skating Grand Prix Skate Canada International 2026",
+    "event_id": "isu-16020"
+   },
+   {
     "name": "Aleksandra BOIKOVA / Dmitrii KOZLOVSKII",
     "noc": "AIN2",
     "points": 197.66,
@@ -703,13 +743,6 @@
     "name": "Camille KOVALEV / Pavel KOVALEV",
     "noc": "FRA",
     "points": 161.62,
-    "event": "ISU Figure Skating Grand Prix de France 2026",
-    "event_id": "isu-16027"
-   },
-   {
-    "name": "Aurelie FAULA / Theo BELLE",
-    "noc": "FRA",
-    "points": 161.32,
     "event": "ISU Figure Skating Grand Prix de France 2026",
     "event_id": "isu-16027"
    }
