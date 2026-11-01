@@ -18,7 +18,7 @@
   "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-11-01T19:27:39.859840+00:00",
+ "checked_at": "2026-11-01T19:38:36.558972+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -357,7 +357,7 @@
    "type": "Couples"
   },
   {
-   "start_utc": "2026-11-01T19:13:00.000Z",
+   "start_utc": "2026-11-01T19:14:00.000Z",
    "title": "Women 500 m",
    "round": "Quarterfinals",
    "event_result_id": 16035,
@@ -365,7 +365,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-01T19:26:00.000Z",
+   "start_utc": "2026-11-01T19:25:00.000Z",
    "title": "Men 1000 m",
    "round": "Quarterfinals",
    "event_result_id": 16039,
@@ -11424,20 +11424,20 @@
      "id": 22944,
      "name": "Quarterfinals",
      "status": "Live",
-     "start_utc": "2026-11-01T18:26:00.000Z",
+     "start_utc": "2026-11-01T18:25:25.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of two fastest third place skaters qualify for Semifinals.",
      "heats": [
       {
        "name": "Heat 1",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Dong Min SHIN",
          "noc": "KOR",
-         "time": "no time",
-         "qual": "",
+         "time": "1:26.491",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 16,
@@ -11445,11 +11445,11 @@
          "slug": "dong-min-shin"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Michal NIEWINSKI",
          "noc": "POL",
-         "time": "no time",
-         "qual": "",
+         "time": "1:26.569",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 33,
@@ -11457,10 +11457,22 @@
          "slug": "michal-niewinski"
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Long SUN",
+         "noc": "CHN",
+         "time": "1:26.608",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 4,
+         "lane": 4,
+         "slug": "long-sun"
+        },
+        {
+         "rank": 4,
          "name": "Zixia ZHANG",
          "noc": "CHN",
-         "time": "no time",
+         "time": "1:26.901",
          "qual": "",
          "status": "",
          "record": "",
@@ -11469,22 +11481,10 @@
          "slug": "zixia-zhang"
         },
         {
-         "rank": null,
-         "name": "Long SUN",
-         "noc": "CHN",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 4,
-         "lane": 4,
-         "slug": "long-sun"
-        },
-        {
-         "rank": null,
+         "rank": 5,
          "name": "Kazuki YOSHINAGA",
          "noc": "JPN",
-         "time": "no time",
+         "time": "1:26.906",
          "qual": "",
          "status": "",
          "record": "",
@@ -11496,27 +11496,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Niall TREACY",
-         "noc": "GBR",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 20,
-         "lane": 1,
-         "slug": "niall-treacy"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Furkan AKAR",
          "noc": "TUR",
-         "time": "no time",
-         "qual": "",
+         "time": "1:27.319",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 27,
@@ -11524,11 +11512,11 @@
          "slug": "furkan-akar"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Shogo MIYATA",
          "noc": "JPN",
-         "time": "no time",
-         "qual": "",
+         "time": "1:27.510",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 9,
@@ -11536,10 +11524,10 @@
          "slug": "shogo-miyata"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Reinis BERZINS",
          "noc": "LAT",
-         "time": "no time",
+         "time": "1:27.834",
          "qual": "",
          "status": "",
          "record": "",
@@ -11548,30 +11536,42 @@
          "slug": "reinis-berzins"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Kerui SONG",
          "noc": "CHN",
-         "time": "no time",
+         "time": "1:28.056",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 68,
          "lane": 5,
          "slug": "kerui-song"
+        },
+        {
+         "rank": 5,
+         "name": "Niall TREACY",
+         "noc": "GBR",
+         "time": "1:28.154",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 20,
+         "lane": 1,
+         "slug": "niall-treacy"
         }
        ]
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Felix ROUSSEL",
          "noc": "CAN",
-         "time": "no time",
-         "qual": "",
+         "time": "1:23.487",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 11,
@@ -11579,11 +11579,11 @@
          "slug": "felix-roussel"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Mathieu PELLETIER",
          "noc": "CAN",
-         "time": "no time",
-         "qual": "",
+         "time": "1:23.579",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 66,
@@ -11591,11 +11591,11 @@
          "slug": "mathieu-pelletier"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Maxime LAOUN",
          "noc": "CAN",
-         "time": "no time",
-         "qual": "",
+         "time": "1:23.674",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 26,
@@ -11603,35 +11603,35 @@
          "slug": "maxime-laoun"
         },
         {
-         "rank": null,
-         "name": "Brendan COREY",
-         "noc": "AUS",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 18,
-         "lane": 4,
-         "slug": "brendan-corey"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Bohao ZHANG",
          "noc": "CHN",
-         "time": "no time",
+         "time": "1:23.779",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 42,
          "lane": 5,
          "slug": "bohao-zhang"
+        },
+        {
+         "rank": 5,
+         "name": "Brendan COREY",
+         "noc": "AUS",
+         "time": "1:23.839",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 18,
+         "lane": 4,
+         "slug": "brendan-corey"
         }
        ]
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
         {
          "rank": null,
@@ -11659,18 +11659,6 @@
         },
         {
          "rank": null,
-         "name": "Bogdan VEKHOV",
-         "noc": "KAZ",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 94,
-         "lane": 3,
-         "slug": "bogdan-vekhov"
-        },
-        {
-         "rank": null,
          "name": "Luca SPECHENHAUSER",
          "noc": "ITA",
          "time": "no time",
@@ -11680,6 +11668,18 @@
          "bib": 24,
          "lane": 4,
          "slug": "luca-spechenhauser"
+        },
+        {
+         "rank": null,
+         "name": "Bogdan VEKHOV",
+         "noc": "KAZ",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 94,
+         "lane": 3,
+         "slug": "bogdan-vekhov"
         },
         {
          "rank": null,
@@ -18704,12 +18704,12 @@
    "distance": "Men 1000 m",
    "round": "Quarterfinals",
    "heat": "Heat 1",
-   "start_utc": "2026-11-01T18:26:00.000Z",
-   "rank": null,
+   "start_utc": "2026-11-01T18:25:25.000Z",
+   "rank": 1,
    "name": "Dong Min SHIN",
    "noc": "KOR",
-   "time": "no time",
-   "qual": "",
+   "time": "1:26.491",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 16,
