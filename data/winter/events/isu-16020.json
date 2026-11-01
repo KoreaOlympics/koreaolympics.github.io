@@ -18,7 +18,7 @@
   "live": "VALESI Anna / BIDAR Martin",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-skate-canada-international-2026/"
  },
- "checked_at": "2026-11-01T02:21:03.782086+00:00",
+ "checked_at": "2026-11-01T02:31:44.889429+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-31T01:00:00.000Z",
@@ -61,7 +61,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-01T01:53:00.000Z",
+   "start_utc": "2026-11-01T01:45:00.000Z",
    "title": "Pairs",
    "round": "Free Skating",
    "event_result_id": 15723,
@@ -404,6 +404,31 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Anna VALESI / Martin BIDAR",
+     "noc": "CZE",
+     "points": "166.66",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 5,
+       "total": "60.44",
+       "tes": "32.94",
+       "pcs": "27.50",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 1,
+       "total": "106.22",
+       "tes": "51.19",
+       "pcs": "55.03",
+       "status": "Scheduled Break"
+      }
+     }
+    },
+    {
+     "rank": 2,
      "name": "Sofiia HOLICHENKO / Artem DARENSKYI",
      "noc": "UKR",
      "points": "160.73",
@@ -419,16 +444,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 1,
+       "rank": 2,
        "total": "102.39",
        "tes": "50.69",
        "pcs": "51.70",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
     {
-     "rank": 2,
+     "rank": 3,
      "name": "Miyu YUNOKI / Tristan TAYLOR",
      "noc": "CAN",
      "points": "152.41",
@@ -444,16 +469,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 2,
+       "rank": 3,
        "total": "96.63",
        "tes": "46.54",
        "pcs": "50.09",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
     {
-     "rank": 3,
+     "rank": 4,
      "name": "Irma CALDARA / Riccardo MAGLIO",
      "noc": "ITA",
      "points": "146.57",
@@ -469,11 +494,11 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 3,
+       "rank": 4,
        "total": "88.47",
        "tes": "42.38",
        "pcs": "49.09",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -498,7 +523,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -523,7 +548,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -548,7 +573,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -573,32 +598,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Anna VALESI / Martin BIDAR",
-     "noc": "CZE",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 5,
-       "total": "60.44",
-       "tes": "32.94",
-       "pcs": "27.50",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     }
