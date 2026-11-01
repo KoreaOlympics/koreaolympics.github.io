@@ -15,10 +15,10 @@
   "city": "Kelowna, BC",
   "country": "CAN",
   "state": "Live",
-  "live": "Stephen GOGOLEV",
+  "live": "Genrikh GARTUNG",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-skate-canada-international-2026/"
  },
- "checked_at": "2026-10-31T23:51:00.046449+00:00",
+ "checked_at": "2026-11-01T00:01:29.534996+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-31T01:00:00.000Z",
@@ -53,7 +53,7 @@
    "type": "Couples"
   },
   {
-   "start_utc": "2026-10-31T23:40:00.000Z",
+   "start_utc": "2026-10-31T23:48:00.000Z",
    "title": "Men",
    "round": "Free Skating",
    "event_result_id": 15721,
@@ -93,6 +93,31 @@
     "FS"
    ],
    "rows": [
+    {
+     "rank": 1,
+     "name": "Stephen GOGOLEV",
+     "noc": "CAN",
+     "points": "232.72",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 12,
+       "total": "66.73",
+       "tes": "28.67",
+       "pcs": "38.06",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 1,
+       "total": "165.99",
+       "tes": "87.01",
+       "pcs": "78.98",
+       "status": "Running"
+      }
+     }
+    },
     {
      "rank": null,
      "name": "Rio NAKATA",
@@ -356,31 +381,6 @@
        "total": "67.44",
        "tes": "32.84",
        "pcs": "35.60",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Stephen GOGOLEV",
-     "noc": "CAN",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 12,
-       "total": "66.73",
-       "tes": "28.67",
-       "pcs": "38.06",
        "status": "Finished"
       },
       "FS": {
@@ -1181,7 +1181,7 @@
    "distance": "Men",
    "round": "Short Program",
    "heat": "",
-   "start_utc": "2026-10-31T23:40:00.000Z",
+   "start_utc": "2026-10-31T23:48:00.000Z",
    "rank": 6,
    "name": "Hyungyeom KIM",
    "noc": "KOR",
