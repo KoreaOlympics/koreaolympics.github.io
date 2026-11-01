@@ -14,11 +14,11 @@
   "tz": "America/Halifax",
   "city": "Montreal",
   "country": "CAN",
-  "state": "Live",
-  "live": "Men 5000 m Relay",
+  "state": "Finished",
+  "live": "",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-11-01T22:17:24.448487+00:00",
+ "checked_at": "2026-11-01T22:28:22.506455+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -18879,20 +18879,20 @@
     {
      "id": 22964,
      "name": "Finals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-01T20:56:30.000Z",
      "rule": "",
      "heats": [
       {
        "name": "Final",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Canada",
          "noc": "CAN",
-         "time": "no time",
+         "time": "6:59.327",
          "qual": "",
          "status": "",
          "record": "",
@@ -18901,10 +18901,10 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "China",
          "noc": "CHN",
-         "time": "no time",
+         "time": "7:01.305",
          "qual": "",
          "status": "",
          "record": "",
@@ -18913,27 +18913,27 @@
          "slug": ""
         },
         {
-         "rank": null,
-         "name": "Netherlands",
-         "noc": "NED",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 1,
-         "slug": ""
-        },
-        {
-         "rank": null,
+         "rank": 3,
          "name": "Republic of Korea",
          "noc": "KOR",
-         "time": "no time",
+         "time": "7:06.217",
          "qual": "",
          "status": "",
          "record": "",
          "bib": null,
          "lane": 2,
+         "slug": ""
+        },
+        {
+         "rank": 4,
+         "name": "Netherlands",
+         "noc": "NED",
+         "time": "7:06.281",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
          "slug": ""
         }
        ]
@@ -20692,10 +20692,10 @@
    "round": "Finals",
    "heat": "Final",
    "start_utc": "2026-11-01T20:56:30.000Z",
-   "rank": null,
+   "rank": 3,
    "name": "Republic of Korea",
    "noc": "KOR",
-   "time": "no time",
+   "time": "7:06.217",
    "qual": "",
    "status": "",
    "record": "",
