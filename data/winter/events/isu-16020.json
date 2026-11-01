@@ -15,10 +15,10 @@
   "city": "Kelowna, BC",
   "country": "CAN",
   "state": "Live",
-  "live": "LOPAREVA Evgeniia / BRISSAUD Geoffrey",
+  "live": "FEAR Lilah / GIBSON Lewis",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-skate-canada-international-2026/"
  },
- "checked_at": "2026-11-01T23:34:44.698113+00:00",
+ "checked_at": "2026-11-01T23:45:20.326144+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-31T01:00:00.000Z",
@@ -922,6 +922,31 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Evgeniia LOPAREVA / Geoffrey BRISSAUD",
+     "noc": "FRA",
+     "points": "192.95",
+     "status": "Active",
+     "segments": {
+      "RD": {
+       "name": "Rhythm Dance",
+       "rank": 2,
+       "total": "77.90",
+       "tes": "43.41",
+       "pcs": "34.49",
+       "status": "Finished"
+      },
+      "FD": {
+       "name": "Free Dance",
+       "rank": 1,
+       "total": "115.05",
+       "tes": "62.47",
+       "pcs": "52.58",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
      "name": "Caroline GREEN / Michael PARSONS",
      "noc": "USA",
      "points": "186.02",
@@ -937,7 +962,7 @@
       },
       "FD": {
        "name": "Free Dance",
-       "rank": 1,
+       "rank": 2,
        "total": "111.78",
        "tes": "61.36",
        "pcs": "50.42",
@@ -946,7 +971,7 @@
      }
     },
     {
-     "rank": 2,
+     "rank": 3,
      "name": "Oona BROWN / Gage BROWN",
      "noc": "USA",
      "points": "183.72",
@@ -962,7 +987,7 @@
       },
       "FD": {
        "name": "Free Dance",
-       "rank": 2,
+       "rank": 3,
        "total": "111.03",
        "tes": "60.25",
        "pcs": "50.78",
@@ -971,7 +996,7 @@
      }
     },
     {
-     "rank": 3,
+     "rank": 4,
      "name": "Marie-Jade LAURIAULT / Romain LE GAC",
      "noc": "CAN",
      "points": "179.80",
@@ -987,7 +1012,7 @@
       },
       "FD": {
        "name": "Free Dance",
-       "rank": 3,
+       "rank": 4,
        "total": "107.70",
        "tes": "60.06",
        "pcs": "48.64",
@@ -996,7 +1021,7 @@
      }
     },
     {
-     "rank": 4,
+     "rank": 5,
      "name": "Katarina WOLFKOSTIN / Dimitry TSAREVSKI",
      "noc": "USA",
      "points": "175.64",
@@ -1012,7 +1037,7 @@
       },
       "FD": {
        "name": "Free Dance",
-       "rank": 4,
+       "rank": 5,
        "total": "104.24",
        "tes": "57.44",
        "pcs": "46.80",
@@ -1021,7 +1046,7 @@
      }
     },
     {
-     "rank": 5,
+     "rank": 6,
      "name": "Noemi Maria TALI / Noah LAFORNARA",
      "noc": "ITA",
      "points": "158.37",
@@ -1037,7 +1062,7 @@
       },
       "FD": {
        "name": "Free Dance",
-       "rank": 5,
+       "rank": 6,
        "total": "95.58",
        "tes": "52.30",
        "pcs": "43.28",
@@ -1046,7 +1071,7 @@
      }
     },
     {
-     "rank": 6,
+     "rank": 7,
      "name": "Iryna PIDGAINA / Artem KOVAL",
      "noc": "UKR",
      "points": "158.24",
@@ -1062,7 +1087,7 @@
       },
       "FD": {
        "name": "Free Dance",
-       "rank": 6,
+       "rank": 7,
        "total": "93.35",
        "tes": "50.07",
        "pcs": "43.28",
@@ -1071,7 +1096,7 @@
      }
     },
     {
-     "rank": 7,
+     "rank": 8,
      "name": "Layla VEILLON / Alexander BRANDYS",
      "noc": "CAN",
      "points": "150.62",
@@ -1087,7 +1112,7 @@
       },
       "FD": {
        "name": "Free Dance",
-       "rank": 7,
+       "rank": 8,
        "total": "90.90",
        "tes": "51.06",
        "pcs": "39.84",
@@ -1096,7 +1121,7 @@
      }
     },
     {
-     "rank": 8,
+     "rank": 9,
      "name": "Alyssa ROBINSON / Jacob PORTZ",
      "noc": "CAN",
      "points": "150.05",
@@ -1112,7 +1137,7 @@
       },
       "FD": {
        "name": "Free Dance",
-       "rank": 8,
+       "rank": 9,
        "total": "89.83",
        "tes": "49.69",
        "pcs": "40.14",
@@ -1133,31 +1158,6 @@
        "total": "81.37",
        "tes": "45.37",
        "pcs": "36.00",
-       "status": "Finished"
-      },
-      "FD": {
-       "name": "Free Dance",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Evgeniia LOPAREVA / Geoffrey BRISSAUD",
-     "noc": "FRA",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "RD": {
-       "name": "Rhythm Dance",
-       "rank": 2,
-       "total": "77.90",
-       "tes": "43.41",
-       "pcs": "34.49",
        "status": "Finished"
       },
       "FD": {
