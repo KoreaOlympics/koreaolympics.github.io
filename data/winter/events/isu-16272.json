@@ -18,7 +18,7 @@
   "live": "Women 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-11-01T15:40:48.554797+00:00",
+ "checked_at": "2026-11-01T15:51:31.790413+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -1724,7 +1724,7 @@
     {
      "id": 22919,
      "name": "Rep. Quarterfinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-01T14:35:21.000Z",
      "rule": "The first placed skater from each race and up to a maximum of four fastest second place skaters qualify for Rep Semifinals.",
      "heats": [
@@ -1750,7 +1750,7 @@
          "name": "Haruna NAGAMORI",
          "noc": "JPN",
          "time": "44.718",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 69,
@@ -1816,46 +1816,46 @@
       },
       {
        "name": "Heat 3",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Annabelle GREEN",
+         "noc": "GBR",
+         "time": "44.755",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 61,
+         "lane": 2,
+         "slug": "annabelle-green"
+        },
+        {
+         "rank": 3,
          "name": "Minji KIM",
          "noc": "KOR",
-         "time": "no time",
+         "time": "45.709",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 78,
          "lane": 1,
          "slug": "minji-kim"
-        },
-        {
-         "rank": null,
-         "name": "Annabelle GREEN",
-         "noc": "GBR",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 61,
-         "lane": 2,
-         "slug": "annabelle-green"
         }
        ]
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Polina OMELCHUK",
          "noc": "KAZ",
-         "time": "no time",
-         "qual": "",
+         "time": "44.816",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 74,
@@ -1863,11 +1863,11 @@
          "slug": "polina-omelchuk"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Zeinep KUMARKAN",
          "noc": "KAZ",
-         "time": "no time",
-         "qual": "",
+         "time": "44.900",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 73,
@@ -1878,46 +1878,46 @@
       },
       {
        "name": "Heat 5",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Diana Laura VEGI",
+         "noc": "HUN",
+         "time": "45.022",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 46,
+         "lane": 2,
+         "slug": "diana-laura-vegi"
+        },
+        {
+         "rank": 3,
          "name": "Rina YAMANA",
          "noc": "JPN",
-         "time": "no time",
+         "time": "45.603",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 70,
          "lane": 1,
          "slug": "rina-yamana"
-        },
-        {
-         "rank": null,
-         "name": "Diana Laura VEGI",
-         "noc": "HUN",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 46,
-         "lane": 2,
-         "slug": "diana-laura-vegi"
         }
        ]
       },
       {
        "name": "Heat 6",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 2,
          "name": "Kateryna SOLOVIOVA",
          "noc": "GER",
-         "time": "no time",
-         "qual": "",
+         "time": "1:00.364",
+         "qual": "ADV",
          "status": "",
          "record": "",
          "bib": 64,
@@ -1925,10 +1925,10 @@
          "slug": "kateryna-soloviova"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Zoe Florence DELTRAP",
          "noc": "NED",
-         "time": "no time",
+         "time": "1:16.102",
          "qual": "",
          "status": "",
          "record": "",
@@ -1940,9 +1940,9 @@
          "rank": null,
          "name": "Petra VANKOVA",
          "noc": "CZE",
-         "time": "no time",
+         "time": "DNS",
          "qual": "",
-         "status": "",
+         "status": "Did Not Start",
          "record": "",
          "bib": 33,
          "lane": 3,
@@ -1950,7 +1950,84 @@
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Rep. Semifinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Berenice COMBY",
+        "noc": "FRA",
+        "rank": 1,
+        "time": "44.226",
+        "qual": "Q"
+       },
+       {
+        "name": "Margherita BETTI",
+        "noc": "ITA",
+        "rank": 1,
+        "time": "44.636",
+        "qual": "Q"
+       },
+       {
+        "name": "Annabelle GREEN",
+        "noc": "GBR",
+        "rank": 1,
+        "time": "44.755",
+        "qual": "Q"
+       },
+       {
+        "name": "Polina OMELCHUK",
+        "noc": "KAZ",
+        "rank": 1,
+        "time": "44.816",
+        "qual": "Q"
+       },
+       {
+        "name": "Diana Laura VEGI",
+        "noc": "HUN",
+        "rank": 1,
+        "time": "45.022",
+        "qual": "Q"
+       },
+       {
+        "name": "Kateryna SOLOVIOVA",
+        "noc": "GER",
+        "rank": 2,
+        "time": "1:00.364",
+        "qual": "ADV"
+       },
+       {
+        "name": "Haruna NAGAMORI",
+        "noc": "JPN",
+        "rank": 2,
+        "time": "44.718",
+        "qual": "q"
+       },
+       {
+        "name": "Zeinep KUMARKAN",
+        "noc": "KAZ",
+        "rank": 2,
+        "time": "44.900",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Berenice COMBY (FRA)",
+        "Polina OMELCHUK (KAZ)",
+        "Diana Laura VEGI (HUN)",
+        "Zeinep KUMARKAN (KAZ)"
+       ],
+       [
+        "Margherita BETTI (ITA)",
+        "Annabelle GREEN (GBR)",
+        "Kateryna SOLOVIOVA (GER)",
+        "Haruna NAGAMORI (JPN)"
+       ]
+      ]
+     }
     },
     {
      "id": 22920,
@@ -15631,10 +15708,10 @@
    "round": "Rep. Quarterfinals",
    "heat": "Heat 3",
    "start_utc": "2026-11-01T14:35:21.000Z",
-   "rank": null,
+   "rank": 3,
    "name": "Minji KIM",
    "noc": "KOR",
-   "time": "no time",
+   "time": "45.709",
    "qual": "",
    "status": "",
    "record": "",
