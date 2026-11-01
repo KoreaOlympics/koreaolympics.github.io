@@ -18,7 +18,7 @@
   "live": "Women 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-11-01T21:07:09.906306+00:00",
+ "checked_at": "2026-11-01T21:18:04.265952+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -17274,7 +17274,7 @@
     {
      "id": 22957,
      "name": "Semifinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-01T19:51:36.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final, the third and fourth placed skaters from each race and up to a maximum of next two fastest fifth place skaters qualify for Final B.",
      "heats": [
@@ -17336,7 +17336,7 @@
          "name": "Yan ZHANG",
          "noc": "CHN",
          "time": "2:32.240",
-         "qual": "pB",
+         "qual": "qB",
          "status": "",
          "record": "",
          "bib": 56,
@@ -17348,7 +17348,7 @@
          "name": "Maja Dora SOMODI",
          "noc": "HUN",
          "time": "2:33.080",
-         "qual": "",
+         "qual": "qB",
          "status": "",
          "record": "",
          "bib": 32,
@@ -17462,39 +17462,15 @@
       },
       {
        "name": "Heat 3",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Florence BRUNELLE",
-         "noc": "CAN",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 10,
-         "lane": 6,
-         "slug": "florence-brunelle"
-        },
-        {
-         "rank": null,
-         "name": "Ann-Sophie BACHAND",
-         "noc": "CAN",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 51,
-         "lane": 3,
-         "slug": "ann-sophie-bachand"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Xandra VELZEBOER",
          "noc": "NED",
-         "time": "no time",
-         "qual": "",
+         "time": "2:28.318",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 3,
@@ -17502,10 +17478,58 @@
          "slug": "xandra-velzeboer"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Gloria IORIATTI",
+         "noc": "ITA",
+         "time": "2:28.442",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 21,
+         "lane": 4,
+         "slug": "gloria-ioriatti"
+        },
+        {
+         "rank": 3,
+         "name": "Ann-Sophie BACHAND",
+         "noc": "CAN",
+         "time": "2:29.405",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 51,
+         "lane": 3,
+         "slug": "ann-sophie-bachand"
+        },
+        {
+         "rank": 4,
+         "name": "Alina AZHGALIYEVA",
+         "noc": "KAZ",
+         "time": "2:29.797",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 71,
+         "lane": 5,
+         "slug": "alina-azhgaliyeva"
+        },
+        {
+         "rank": 5,
+         "name": "Florence BRUNELLE",
+         "noc": "CAN",
+         "time": "2:38.096",
+         "qual": "ADV",
+         "status": "",
+         "record": "",
+         "bib": 10,
+         "lane": 6,
+         "slug": "florence-brunelle"
+        },
+        {
+         "rank": 6,
          "name": "Rina YAMANA",
          "noc": "JPN",
-         "time": "no time",
+         "time": "2:53.751",
          "qual": "",
          "status": "",
          "record": "",
@@ -17515,43 +17539,102 @@
         },
         {
          "rank": null,
-         "name": "Gloria IORIATTI",
-         "noc": "ITA",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 21,
-         "lane": 4,
-         "slug": "gloria-ioriatti"
-        },
-        {
-         "rank": null,
          "name": "Chutong ZHANG",
          "noc": "CHN",
-         "time": "no time",
+         "time": "PEN",
          "qual": "",
-         "status": "",
+         "status": "Penalty",
          "record": "",
          "bib": 11,
          "lane": 1,
          "slug": "chutong-zhang"
-        },
-        {
-         "rank": null,
-         "name": "Alina AZHGALIYEVA",
-         "noc": "KAZ",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 71,
-         "lane": 5,
-         "slug": "alina-azhgaliyeva"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Finals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Xandra VELZEBOER",
+        "noc": "NED",
+        "rank": 1,
+        "time": "2:28.318",
+        "qual": "Q"
+       },
+       {
+        "name": "Courtney SARAULT",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "2:31.140",
+        "qual": "Q"
+       },
+       {
+        "name": "Minjeong CHOI",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "2:31.910",
+        "qual": "Q"
+       },
+       {
+        "name": "Gloria IORIATTI",
+        "noc": "ITA",
+        "rank": 2,
+        "time": "2:28.442",
+        "qual": "Q"
+       },
+       {
+        "name": "Elisa CONFORTOLA",
+        "noc": "ITA",
+        "rank": 2,
+        "time": "2:31.961",
+        "qual": "Q"
+       },
+       {
+        "name": "Chiara BETTI",
+        "noc": "ITA",
+        "rank": 2,
+        "time": "2:32.731",
+        "qual": "Q"
+       },
+       {
+        "name": "Zoe Florence DELTRAP",
+        "noc": "NED",
+        "rank": 4,
+        "time": "2:53.714",
+        "qual": "ADV"
+       },
+       {
+        "name": "Florence BRUNELLE",
+        "noc": "CAN",
+        "rank": 5,
+        "time": "2:38.096",
+        "qual": "ADV"
+       },
+       {
+        "name": "Diede VAN OORSCHOT",
+        "noc": "NED",
+        "rank": 5,
+        "time": "2:56.548",
+        "qual": "ADV"
+       }
+      ],
+      "races": [
+       [
+        "Xandra VELZEBOER (NED)",
+        "Courtney SARAULT (CAN)",
+        "Minjeong CHOI (KOR)",
+        "Gloria IORIATTI (ITA)",
+        "Elisa CONFORTOLA (ITA)",
+        "Chiara BETTI (ITA)",
+        "Zoe Florence DELTRAP (NED)",
+        "Florence BRUNELLE (CAN)",
+        "Diede VAN OORSCHOT (NED)"
+       ]
+      ]
+     }
     },
     {
      "id": 22958,
