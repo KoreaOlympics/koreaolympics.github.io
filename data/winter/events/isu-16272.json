@@ -18,7 +18,7 @@
   "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-11-01T20:00:28.246400+00:00",
+ "checked_at": "2026-11-01T20:11:24.902221+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -11884,7 +11884,7 @@
      ],
      "projection": {
       "next": "Semifinals",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -11979,10 +11979,145 @@
     {
      "id": 22945,
      "name": "Semifinals",
-     "status": "Scheduled",
-     "start_utc": "2026-11-01T19:06:00.000Z",
+     "status": "Live",
+     "start_utc": "2026-11-01T19:06:26.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final, the third and fourth placed skaters from each race and up to a maximum of next two fastest fifth place skaters qualify for Final B.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Felix ROUSSEL",
+         "noc": "CAN",
+         "time": "1:25.575",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 11,
+         "lane": 1,
+         "slug": "felix-roussel"
+        },
+        {
+         "rank": 2,
+         "name": "Mathieu PELLETIER",
+         "noc": "CAN",
+         "time": "1:25.756",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 66,
+         "lane": 3,
+         "slug": "mathieu-pelletier"
+        },
+        {
+         "rank": 3,
+         "name": "Shogo MIYATA",
+         "noc": "JPN",
+         "time": "1:25.823",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 9,
+         "lane": 4,
+         "slug": "shogo-miyata"
+        },
+        {
+         "rank": 4,
+         "name": "Furkan AKAR",
+         "noc": "TUR",
+         "time": "1:27.003",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 27,
+         "lane": 2,
+         "slug": "furkan-akar"
+        },
+        {
+         "rank": 5,
+         "name": "Maxime LAOUN",
+         "noc": "CAN",
+         "time": "no time",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 26,
+         "lane": 5,
+         "slug": "maxime-laoun"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Live",
+       "official": "Live",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Jens VAN 'T WOUT",
+         "noc": "NED",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 7,
+         "lane": 1,
+         "slug": "jens-van-t-wout"
+        },
+        {
+         "rank": null,
+         "name": "Michal NIEWINSKI",
+         "noc": "POL",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 33,
+         "lane": 4,
+         "slug": "michal-niewinski"
+        },
+        {
+         "rank": null,
+         "name": "Dong Min SHIN",
+         "noc": "KOR",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 16,
+         "lane": 2,
+         "slug": "dong-min-shin"
+        },
+        {
+         "rank": null,
+         "name": "Teun BOER",
+         "noc": "NED",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 46,
+         "lane": 3,
+         "slug": "teun-boer"
+        },
+        {
+         "rank": null,
+         "name": "Luca SPECHENHAUSER",
+         "noc": "ITA",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 24,
+         "lane": 5,
+         "slug": "luca-spechenhauser"
+        }
+       ]
+      }
+     ]
     },
     {
      "id": 22946,
@@ -19008,6 +19143,25 @@
    "noc": "KOR",
    "time": "1:26.491",
    "qual": "Q",
+   "status": "",
+   "record": "",
+   "bib": 16,
+   "lane": 2,
+   "slug": "dong-min-shin"
+  },
+  {
+   "event_id": "isu-16272",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #2",
+   "distance": "Men 1000 m",
+   "round": "Semifinals",
+   "heat": "Heat 2",
+   "start_utc": "2026-11-01T19:06:26.000Z",
+   "rank": null,
+   "name": "Dong Min SHIN",
+   "noc": "KOR",
+   "time": "no time",
+   "qual": "",
    "status": "",
    "record": "",
    "bib": 16,
