@@ -18,7 +18,7 @@
   "live": "Women 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-11-01T19:15:45.607556+00:00",
+ "checked_at": "2026-11-01T19:16:43.735911+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -2343,14 +2343,26 @@
      "heats": [
       {
        "name": "Heat 1",
-       "status": "Live",
+       "status": "Finished",
        "official": "Live",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Victoria JEAN-BAPTISTE",
+         "noc": "CAN",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 53,
+         "lane": 2,
+         "slug": "victoria-jean-baptiste"
+        },
+        {
+         "rank": 1,
          "name": "Xandra VELZEBOER",
          "noc": "NED",
-         "time": "no time",
+         "time": "42.550",
          "qual": "",
          "status": "",
          "record": "",
@@ -2359,22 +2371,10 @@
          "slug": "xandra-velzeboer"
         },
         {
-         "rank": null,
-         "name": "Chiara BETTI",
-         "noc": "ITA",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 16,
-         "lane": 3,
-         "slug": "chiara-betti"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Jianing ZHANG",
          "noc": "CHN",
-         "time": "no time",
+         "time": "44.000",
          "qual": "",
          "status": "",
          "record": "",
@@ -2396,15 +2396,15 @@
         },
         {
          "rank": null,
-         "name": "Victoria JEAN-BAPTISTE",
-         "noc": "CAN",
+         "name": "Chiara BETTI",
+         "noc": "ITA",
          "time": "no time",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 53,
-         "lane": 2,
-         "slug": "victoria-jean-baptiste"
+         "bib": 16,
+         "lane": 3,
+         "slug": "chiara-betti"
         }
        ]
       },
