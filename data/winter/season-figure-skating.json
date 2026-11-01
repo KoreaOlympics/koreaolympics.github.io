@@ -204,7 +204,26 @@
    "podiums": [
     {
      "title": "Men",
-     "podium": null
+     "podium": [
+      {
+       "rank": 1,
+       "name": "Kevin AYMOZ",
+       "noc": "FRA",
+       "time": "258.43"
+      },
+      {
+       "rank": 2,
+       "name": "Rio NAKATA",
+       "noc": "JPN",
+       "time": "249.25"
+      },
+      {
+       "rank": 3,
+       "name": "Mihhail SELEVKO",
+       "noc": "EST",
+       "time": "248.66"
+      }
+     ]
     },
     {
      "title": "Pairs",
@@ -344,10 +363,10 @@
  "medals": [
   [
    "FRA",
-   2,
+   3,
    0,
    0,
-   2
+   3
   ],
   [
    "GEO",
@@ -359,15 +378,22 @@
   [
    "JPN",
    1,
-   1,
+   2,
    0,
-   2
+   3
   ],
   [
    "AIN2",
    0,
    1,
    0,
+   1
+  ],
+  [
+   "EST",
+   0,
+   0,
+   1,
    1
   ],
   [
@@ -560,6 +586,13 @@
     "event_id": "isu-16020"
    },
    {
+    "name": "Rio NAKATA",
+    "noc": "JPN",
+    "points": 249.25,
+    "event": "ISU Figure Skating Grand Prix Skate Canada International 2026",
+    "event_id": "isu-16020"
+   },
+   {
     "name": "Mihhail SELEVKO",
     "noc": "EST",
     "points": 248.66,
@@ -607,13 +640,6 @@
     "points": 224.24,
     "event": "ISU Figure Skating Grand Prix de France 2026",
     "event_id": "isu-16027"
-   },
-   {
-    "name": "Kazuki TOMONO",
-    "noc": "JPN",
-    "points": 222.85,
-    "event": "ISU Figure Skating Grand Prix Skate Canada International 2026",
-    "event_id": "isu-16020"
    }
   ],
   "Pairs": [
