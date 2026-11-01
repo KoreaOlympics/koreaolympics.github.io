@@ -18,7 +18,7 @@
   "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-11-01T15:18:42.538779+00:00",
+ "checked_at": "2026-11-01T15:29:20.212600+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -9411,7 +9411,7 @@
      "id": 22940,
      "name": "Rep. Heats",
      "status": "Live",
-     "start_utc": "2026-11-01T14:15:00.000Z",
+     "start_utc": "2026-11-01T14:15:34.000Z",
      "rule": "The first placed skater from each race and up to a maximum of three fastest second place skaters qualify for Rep Quarterfinals.",
      "heats": [
       {
@@ -9483,27 +9483,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Ward PETRE",
-         "noc": "BEL",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 55,
-         "lane": 1,
-         "slug": "ward-petre"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Tamirlan ZHOLDAS",
          "noc": "KAZ",
-         "time": "no time",
-         "qual": "",
+         "time": "1:28.005",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 95,
@@ -9511,22 +9499,34 @@
          "slug": "tamirlan-zholdas"
         },
         {
-         "rank": null,
-         "name": "Ingemar MIDJO",
-         "noc": "NOR",
-         "time": "no time",
+         "rank": 2,
+         "name": "Ward PETRE",
+         "noc": "BEL",
+         "time": "1:28.104",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 55,
+         "lane": 1,
+         "slug": "ward-petre"
+        },
+        {
+         "rank": 3,
+         "name": "Tibor KOMERICKI",
+         "noc": "SLO",
+         "time": "1:28.138",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 119,
-         "lane": 3,
-         "slug": "ingemar-midjo"
+         "bib": 106,
+         "lane": 5,
+         "slug": "tibor-komericki"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Robin BENDIG",
          "noc": "GER",
-         "time": "no time",
+         "time": "1:28.330",
          "qual": "",
          "status": "",
          "record": "",
@@ -9535,41 +9535,65 @@
          "slug": "robin-bendig"
         },
         {
-         "rank": null,
-         "name": "Tibor KOMERICKI",
-         "noc": "SLO",
-         "time": "no time",
+         "rank": 5,
+         "name": "Ingemar MIDJO",
+         "noc": "NOR",
+         "time": "1:29.112",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 106,
-         "lane": 5,
-         "slug": "tibor-komericki"
+         "bib": 119,
+         "lane": 3,
+         "slug": "ingemar-midjo"
         }
        ]
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Daniel TIBORCZ",
-         "noc": "HUN",
-         "time": "no time",
+         "rank": 1,
+         "name": "Aibek NASSEN",
+         "noc": "KAZ",
+         "time": "1:27.075",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 91,
+         "lane": 3,
+         "slug": "aibek-nassen"
+        },
+        {
+         "rank": 2,
+         "name": "Yanghun Ben JUNG",
+         "noc": "GER",
+         "time": "1:27.201",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 78,
+         "lane": 4,
+         "slug": "yanghun-ben-jung"
+        },
+        {
+         "rank": 3,
+         "name": "Daniele ZAMPEDRI",
+         "noc": "ITA",
+         "time": "1:27.299",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 82,
-         "lane": 1,
-         "slug": "daniel-tiborcz"
+         "bib": 116,
+         "lane": 5,
+         "slug": "daniele-zampedri"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Fre VAN DAMME",
          "noc": "BEL",
-         "time": "no time",
+         "time": "1:27.321",
          "qual": "",
          "status": "",
          "record": "",
@@ -9578,53 +9602,29 @@
          "slug": "fre-van-damme"
         },
         {
-         "rank": null,
-         "name": "Aibek NASSEN",
-         "noc": "KAZ",
-         "time": "no time",
+         "rank": 5,
+         "name": "Daniel TIBORCZ",
+         "noc": "HUN",
+         "time": "1:27.534",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 91,
-         "lane": 3,
-         "slug": "aibek-nassen"
-        },
-        {
-         "rank": null,
-         "name": "Yanghun Ben JUNG",
-         "noc": "GER",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 78,
-         "lane": 4,
-         "slug": "yanghun-ben-jung"
-        },
-        {
-         "rank": null,
-         "name": "Daniele ZAMPEDRI",
-         "noc": "ITA",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 116,
-         "lane": 5,
-         "slug": "daniele-zampedri"
+         "bib": 82,
+         "lane": 1,
+         "slug": "daniel-tiborcz"
         }
        ]
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Live",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Musashi KAKINAMI",
          "noc": "JPN",
-         "time": "no time",
+         "time": "1:27.400",
          "qual": "",
          "status": "",
          "record": "",
@@ -9633,10 +9633,10 @@
          "slug": "musashi-kakinami"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Tobias WOLF",
          "noc": "AUT",
-         "time": "no time",
+         "time": "1:27.670",
          "qual": "",
          "status": "",
          "record": "",
@@ -9645,10 +9645,22 @@
          "slug": "tobias-wolf"
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Radek FAJKUS",
+         "noc": "CZE",
+         "time": "1:27.730",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 71,
+         "lane": 5,
+         "slug": "radek-fajkus"
+        },
+        {
+         "rank": 4,
          "name": "Ivan DONCHEV",
          "noc": "BUL",
-         "time": "no time",
+         "time": "1:40.440",
          "qual": "",
          "status": "",
          "record": "",
@@ -9657,28 +9669,16 @@
          "slug": "ivan-donchev"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Linus August RISNES",
          "noc": "NOR",
-         "time": "no time",
+         "time": "1:44.790",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 121,
          "lane": 4,
          "slug": "linus-august-risnes"
-        },
-        {
-         "rank": null,
-         "name": "Radek FAJKUS",
-         "noc": "CZE",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 71,
-         "lane": 5,
-         "slug": "radek-fajkus"
         }
        ]
       },
