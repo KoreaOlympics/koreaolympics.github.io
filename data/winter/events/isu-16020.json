@@ -15,10 +15,10 @@
   "city": "Kelowna, BC",
   "country": "CAN",
   "state": "Live",
-  "live": "Kevin AYMOZ",
+  "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-skate-canada-international-2026/"
  },
- "checked_at": "2026-11-01T01:16:58.733799+00:00",
+ "checked_at": "2026-11-01T01:27:35.225936+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-31T01:00:00.000Z",
@@ -95,6 +95,31 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Kevin AYMOZ",
+     "noc": "FRA",
+     "points": "258.43",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 2,
+       "total": "90.26",
+       "tes": "45.83",
+       "pcs": "44.43",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 2,
+       "total": "168.17",
+       "tes": "80.73",
+       "pcs": "87.44",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
      "name": "Mihhail SELEVKO",
      "noc": "EST",
      "points": "248.66",
@@ -119,7 +144,7 @@
      }
     },
     {
-     "rank": 2,
+     "rank": 3,
      "name": "Stephen GOGOLEV",
      "noc": "CAN",
      "points": "232.72",
@@ -135,7 +160,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 2,
+       "rank": 3,
        "total": "165.99",
        "tes": "87.01",
        "pcs": "78.98",
@@ -144,7 +169,7 @@
      }
     },
     {
-     "rank": 3,
+     "rank": 4,
      "name": "Kyrylo MARSAK",
      "noc": "UKR",
      "points": "226.40",
@@ -160,7 +185,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 4,
+       "rank": 5,
        "total": "142.73",
        "tes": "69.17",
        "pcs": "74.56",
@@ -169,7 +194,7 @@
      }
     },
     {
-     "rank": 4,
+     "rank": 5,
      "name": "Kazuki TOMONO",
      "noc": "JPN",
      "points": "222.85",
@@ -185,7 +210,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 6,
+       "rank": 7,
        "total": "137.54",
        "tes": "59.89",
        "pcs": "77.65",
@@ -194,7 +219,7 @@
      }
     },
     {
-     "rank": 5,
+     "rank": 6,
      "name": "Georgii RESHTENKO",
      "noc": "CZE",
      "points": "216.94",
@@ -210,7 +235,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 5,
+       "rank": 6,
        "total": "140.51",
        "tes": "75.21",
        "pcs": "65.30",
@@ -219,7 +244,7 @@
      }
     },
     {
-     "rank": 6,
+     "rank": 7,
      "name": "Genrikh GARTUNG",
      "noc": "GER",
      "points": "216.47",
@@ -235,7 +260,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 3,
+       "rank": 4,
        "total": "149.03",
        "tes": "77.96",
        "pcs": "72.07",
@@ -244,7 +269,7 @@
      }
     },
     {
-     "rank": 7,
+     "rank": 8,
      "name": "David BONDAR",
      "noc": "CAN",
      "points": "214.61",
@@ -260,7 +285,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 7,
+       "rank": 8,
        "total": "137.13",
        "tes": "71.60",
        "pcs": "65.53",
@@ -269,7 +294,7 @@
      }
     },
     {
-     "rank": 8,
+     "rank": 9,
      "name": "Wesley CHIU",
      "noc": "CAN",
      "points": "200.94",
@@ -285,7 +310,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 8,
+       "rank": 9,
        "total": "127.07",
        "tes": "61.97",
        "pcs": "66.10",
@@ -294,7 +319,7 @@
      }
     },
     {
-     "rank": 9,
+     "rank": 10,
      "name": "Hyungyeom KIM",
      "noc": "KOR",
      "points": "199.19",
@@ -310,7 +335,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 9,
+       "rank": 10,
        "total": "121.43",
        "tes": "59.52",
        "pcs": "62.91",
@@ -319,7 +344,7 @@
      }
     },
     {
-     "rank": 10,
+     "rank": 11,
      "name": "Liam KAPEIKIS",
      "noc": "USA",
      "points": "189.01",
@@ -335,7 +360,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 10,
+       "rank": 11,
        "total": "118.94",
        "tes": "54.00",
        "pcs": "64.94",
@@ -356,31 +381,6 @@
        "total": "92.64",
        "tes": "53.74",
        "pcs": "39.90",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Kevin AYMOZ",
-     "noc": "FRA",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 2,
-       "total": "90.26",
-       "tes": "45.83",
-       "pcs": "44.43",
        "status": "Finished"
       },
       "FS": {
@@ -1182,7 +1182,7 @@
    "round": "Free Skating",
    "heat": "",
    "start_utc": "2026-10-31T23:48:00.000Z",
-   "rank": 9,
+   "rank": 10,
    "name": "Hyungyeom KIM",
    "noc": "KOR",
    "time": "199.19",
