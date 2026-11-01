@@ -18,7 +18,7 @@
   "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-skate-canada-international-2026/"
  },
- "checked_at": "2026-11-01T20:45:26.195391+00:00",
+ "checked_at": "2026-11-01T20:56:11.311960+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-31T01:00:00.000Z",
@@ -613,6 +613,31 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Yujae KIM",
+     "noc": "KOR",
+     "points": "181.63",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 8,
+       "total": "63.50",
+       "tes": "34.15",
+       "pcs": "29.35",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 2,
+       "total": "118.13",
+       "tes": "60.50",
+       "pcs": "58.63",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
      "name": "Madeline SCHIZAS",
      "noc": "CAN",
      "points": "177.38",
@@ -637,7 +662,7 @@
      }
     },
     {
-     "rank": 2,
+     "rank": 3,
      "name": "Fee Ann LANDRY",
      "noc": "CAN",
      "points": "171.18",
@@ -653,7 +678,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 2,
+       "rank": 3,
        "total": "113.91",
        "tes": "60.77",
        "pcs": "55.14",
@@ -662,7 +687,7 @@
      }
     },
     {
-     "rank": 3,
+     "rank": 4,
      "name": "Viktoriia SAFONOVA",
      "noc": "AIN1",
      "points": "162.47",
@@ -678,7 +703,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 3,
+       "rank": 4,
        "total": "105.58",
        "tes": "56.30",
        "pcs": "50.28",
@@ -687,7 +712,32 @@
      }
     },
     {
-     "rank": 4,
+     "rank": 5,
+     "name": "Sara-Maude DUPUIS",
+     "noc": "CAN",
+     "points": "158.63",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 7,
+       "total": "64.58",
+       "tes": "36.94",
+       "pcs": "27.64",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 6,
+       "total": "94.05",
+       "tes": "43.99",
+       "pcs": "52.06",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 6,
      "name": "Anna PEZZETTA",
      "noc": "ITA",
      "points": "152.80",
@@ -703,7 +753,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 4,
+       "rank": 5,
        "total": "97.96",
        "tes": "46.56",
        "pcs": "51.40",
@@ -849,56 +899,6 @@
        "total": "65.38",
        "tes": "34.94",
        "pcs": "31.44",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Sara-Maude DUPUIS",
-     "noc": "CAN",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 7,
-       "total": "64.58",
-       "tes": "36.94",
-       "pcs": "27.64",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Yujae KIM",
-     "noc": "KOR",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 8,
-       "total": "63.50",
-       "tes": "34.15",
-       "pcs": "29.35",
        "status": "Finished"
       },
       "FS": {
@@ -1198,6 +1198,25 @@
    "sport": "figure-skating",
    "event": "ISU Figure Skating Grand Prix Skate Canada International 2026",
    "distance": "Women",
+   "round": "Free Skating",
+   "heat": "",
+   "start_utc": "2026-11-01T20:09:00.000Z",
+   "rank": 1,
+   "name": "Yujae KIM",
+   "noc": "KOR",
+   "time": "181.63",
+   "qual": "",
+   "status": "",
+   "segments": {
+    "SP": "63.50",
+    "FS": "118.13"
+   }
+  },
+  {
+   "event_id": "isu-16020",
+   "sport": "figure-skating",
+   "event": "ISU Figure Skating Grand Prix Skate Canada International 2026",
+   "distance": "Women",
    "round": "Short Program",
    "heat": "",
    "start_utc": "2026-11-01T20:09:00.000Z",
@@ -1209,25 +1228,6 @@
    "status": "",
    "segments": {
     "SP": "65.38",
-    "FS": ""
-   }
-  },
-  {
-   "event_id": "isu-16020",
-   "sport": "figure-skating",
-   "event": "ISU Figure Skating Grand Prix Skate Canada International 2026",
-   "distance": "Women",
-   "round": "Short Program",
-   "heat": "",
-   "start_utc": "2026-11-01T20:09:00.000Z",
-   "rank": 8,
-   "name": "Yujae KIM",
-   "noc": "KOR",
-   "time": "63.50",
-   "qual": "",
-   "status": "",
-   "segments": {
-    "SP": "63.50",
     "FS": ""
    }
   }
