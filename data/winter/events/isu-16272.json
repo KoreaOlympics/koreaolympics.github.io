@@ -18,7 +18,7 @@
   "live": "Men 5000 m Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-11-01T22:06:21.337222+00:00",
+ "checked_at": "2026-11-01T22:17:24.448487+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -18880,14 +18880,38 @@
      "id": 22964,
      "name": "Finals",
      "status": "Live",
-     "start_utc": "2026-11-01T20:49:00.000Z",
+     "start_utc": "2026-11-01T20:56:30.000Z",
      "rule": "",
      "heats": [
       {
        "name": "Final",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
+        {
+         "rank": null,
+         "name": "Canada",
+         "noc": "CAN",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 4,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "China",
+         "noc": "CHN",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
+         "slug": ""
+        },
         {
          "rank": null,
          "name": "Netherlands",
@@ -18910,30 +18934,6 @@
          "record": "",
          "bib": null,
          "lane": 2,
-         "slug": ""
-        },
-        {
-         "rank": null,
-         "name": "China",
-         "noc": "CHN",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 3,
-         "slug": ""
-        },
-        {
-         "rank": null,
-         "name": "Canada",
-         "noc": "CAN",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 4,
          "slug": ""
         }
        ]
@@ -20691,7 +20691,7 @@
    "distance": "Men 5000 m Relay",
    "round": "Finals",
    "heat": "Final",
-   "start_utc": "2026-11-01T20:49:00.000Z",
+   "start_utc": "2026-11-01T20:56:30.000Z",
    "rank": null,
    "name": "Republic of Korea",
    "noc": "KOR",
