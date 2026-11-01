@@ -18,7 +18,7 @@
   "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-2-montreal/"
  },
- "checked_at": "2026-11-01T20:12:32.640282+00:00",
+ "checked_at": "2026-11-01T20:23:20.505232+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-30T13:00:00.000Z",
@@ -2836,7 +2836,7 @@
      ],
      "projection": {
       "next": "Finals",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -2889,10 +2889,133 @@
     {
      "id": 22923,
      "name": "Finals",
-     "status": "Scheduled",
-     "start_utc": "2026-11-01T19:15:00.000Z",
+     "status": "Live",
+     "start_utc": "2026-11-01T19:15:16.000Z",
      "rule": "",
-     "heats": []
+     "heats": [
+      {
+       "name": "Final",
+       "status": "Live",
+       "official": "Live",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Xandra VELZEBOER",
+         "noc": "NED",
+         "time": "42.080",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 3,
+         "lane": 1,
+         "slug": "xandra-velzeboer"
+        },
+        {
+         "rank": 2,
+         "name": "Danae BLAIS",
+         "noc": "CAN",
+         "time": "42.210",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 25,
+         "lane": 2,
+         "slug": "danae-blais"
+        },
+        {
+         "rank": 3,
+         "name": "Courtney SARAULT",
+         "noc": "CAN",
+         "time": "42.340",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 1,
+         "lane": 4,
+         "slug": "courtney-sarault"
+        },
+        {
+         "rank": 4,
+         "name": "Florence BRUNELLE",
+         "noc": "CAN",
+         "time": "42.530",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 10,
+         "lane": 3,
+         "slug": "florence-brunelle"
+        },
+        {
+         "rank": 5,
+         "name": "Ye WANG",
+         "noc": "CHN",
+         "time": "42.680",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 40,
+         "lane": 5,
+         "slug": "ye-wang"
+        }
+       ]
+      },
+      {
+       "name": "Final B",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Chiara BETTI",
+         "noc": "ITA",
+         "time": "43.626",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 16,
+         "lane": 2,
+         "slug": "chiara-betti"
+        },
+        {
+         "rank": 2,
+         "name": "Minjeong CHOI",
+         "noc": "KOR",
+         "time": "43.688",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 4,
+         "lane": 1,
+         "slug": "minjeong-choi"
+        },
+        {
+         "rank": 3,
+         "name": "Kornelia WOZNIAK",
+         "noc": "POL",
+         "time": "43.850",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 84,
+         "lane": 3,
+         "slug": "kornelia-wozniak"
+        },
+        {
+         "rank": 4,
+         "name": "Nikola MAZUR",
+         "noc": "POL",
+         "time": "43.907",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 34,
+         "lane": 4,
+         "slug": "nikola-mazur"
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -11979,7 +12102,7 @@
     {
      "id": 22945,
      "name": "Semifinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-01T19:06:26.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final, the third and fourth placed skaters from each race and up to a maximum of next two fastest fifth place skaters qualify for Final B.",
      "heats": [
@@ -12017,7 +12140,7 @@
          "name": "Shogo MIYATA",
          "noc": "JPN",
          "time": "1:25.823",
-         "qual": "p",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 9,
@@ -12053,14 +12176,14 @@
       {
        "name": "Heat 2",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "Jens VAN 'T WOUT",
          "noc": "NED",
-         "time": "1:25.030",
-         "qual": "",
+         "time": "1:25.016",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 7,
@@ -12071,8 +12194,8 @@
          "rank": 2,
          "name": "Dong Min SHIN",
          "noc": "KOR",
-         "time": "1:25.090",
-         "qual": "",
+         "time": "1:25.066",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 16,
@@ -12083,8 +12206,8 @@
          "rank": 3,
          "name": "Michal NIEWINSKI",
          "noc": "POL",
-         "time": "1:25.130",
-         "qual": "",
+         "time": "1:25.116",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 33,
@@ -12095,8 +12218,8 @@
          "rank": 4,
          "name": "Teun BOER",
          "noc": "NED",
-         "time": "1:25.310",
-         "qual": "",
+         "time": "1:25.291",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 46,
@@ -12107,8 +12230,8 @@
          "rank": 5,
          "name": "Luca SPECHENHAUSER",
          "noc": "ITA",
-         "time": "1:25.450",
-         "qual": "",
+         "time": "1:25.421",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 24,
@@ -12117,7 +12240,58 @@
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Finals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Jens VAN 'T WOUT",
+        "noc": "NED",
+        "rank": 1,
+        "time": "1:25.016",
+        "qual": "Q"
+       },
+       {
+        "name": "Felix ROUSSEL",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "1:25.575",
+        "qual": "Q"
+       },
+       {
+        "name": "Dong Min SHIN",
+        "noc": "KOR",
+        "rank": 2,
+        "time": "1:25.066",
+        "qual": "Q"
+       },
+       {
+        "name": "Mathieu PELLETIER",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "1:25.756",
+        "qual": "Q"
+       },
+       {
+        "name": "Michal NIEWINSKI",
+        "noc": "POL",
+        "rank": 3,
+        "time": "1:25.116",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Jens VAN 'T WOUT (NED)",
+        "Felix ROUSSEL (CAN)",
+        "Dong Min SHIN (KOR)",
+        "Mathieu PELLETIER (CAN)",
+        "Michal NIEWINSKI (POL)"
+       ]
+      ]
+     }
     },
     {
      "id": 22946,
@@ -18507,6 +18681,25 @@
    "event_id": "isu-16272",
    "sport": "short-track",
    "event": "ISU Short Track World Tour #2",
+   "distance": "Women 500 m",
+   "round": "Finals",
+   "heat": "Final B",
+   "start_utc": "2026-11-01T19:15:16.000Z",
+   "rank": 2,
+   "name": "Minjeong CHOI",
+   "noc": "KOR",
+   "time": "43.688",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 4,
+   "lane": 1,
+   "slug": "minjeong-choi"
+  },
+  {
+   "event_id": "isu-16272",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #2",
    "distance": "Men 500 m",
    "round": "Preliminaries",
    "heat": "Heat 1",
@@ -19160,8 +19353,8 @@
    "rank": 2,
    "name": "Dong Min SHIN",
    "noc": "KOR",
-   "time": "1:25.090",
-   "qual": "",
+   "time": "1:25.066",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 16,
