@@ -15,10 +15,10 @@
   "city": "Kelowna, BC",
   "country": "CAN",
   "state": "Live",
-  "live": "Georgii RESHTENKO",
+  "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-skate-canada-international-2026/"
  },
- "checked_at": "2026-11-01T00:23:11.984452+00:00",
+ "checked_at": "2026-11-01T00:33:56.113897+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-31T01:00:00.000Z",
@@ -120,6 +120,31 @@
     },
     {
      "rank": 2,
+     "name": "Georgii RESHTENKO",
+     "noc": "CZE",
+     "points": "216.94",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 8,
+       "total": "76.43",
+       "tes": "41.70",
+       "pcs": "34.73",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 3,
+       "total": "140.51",
+       "tes": "75.21",
+       "pcs": "65.30",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 3,
      "name": "Genrikh GARTUNG",
      "noc": "GER",
      "points": "216.47",
@@ -144,7 +169,32 @@
      }
     },
     {
-     "rank": 3,
+     "rank": 4,
+     "name": "David BONDAR",
+     "noc": "CAN",
+     "points": "214.61",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 7,
+       "total": "77.48",
+       "tes": "44.78",
+       "pcs": "32.70",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 4,
+       "total": "137.13",
+       "tes": "71.60",
+       "pcs": "65.53",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 5,
      "name": "Wesley CHIU",
      "noc": "CAN",
      "points": "200.94",
@@ -160,7 +210,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 3,
+       "rank": 5,
        "total": "127.07",
        "tes": "61.97",
        "pcs": "66.10",
@@ -169,7 +219,7 @@
      }
     },
     {
-     "rank": 4,
+     "rank": 6,
      "name": "Liam KAPEIKIS",
      "noc": "USA",
      "points": "189.01",
@@ -185,7 +235,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 4,
+       "rank": 6,
        "total": "118.94",
        "tes": "54.00",
        "pcs": "64.94",
@@ -331,56 +381,6 @@
        "total": "77.76",
        "tes": "45.20",
        "pcs": "32.56",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "David BONDAR",
-     "noc": "CAN",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 7,
-       "total": "77.48",
-       "tes": "44.78",
-       "pcs": "32.70",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Georgii RESHTENKO",
-     "noc": "CZE",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 8,
-       "total": "76.43",
-       "tes": "41.70",
-       "pcs": "34.73",
        "status": "Finished"
       },
       "FS": {
