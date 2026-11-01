@@ -15,10 +15,10 @@
   "city": "Kelowna, BC",
   "country": "CAN",
   "state": "Live",
-  "live": "Hyungyeom KIM",
+  "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-skate-canada-international-2026/"
  },
- "checked_at": "2026-11-01T00:44:33.834911+00:00",
+ "checked_at": "2026-11-01T00:55:09.453782+00:00",
  "sessions": [
   {
    "start_utc": "2026-10-31T01:00:00.000Z",
@@ -220,6 +220,31 @@
     },
     {
      "rank": 6,
+     "name": "Hyungyeom KIM",
+     "noc": "KOR",
+     "points": "199.19",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 6,
+       "total": "77.76",
+       "tes": "45.20",
+       "pcs": "32.56",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 6,
+       "total": "121.43",
+       "tes": "59.52",
+       "pcs": "62.91",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 7,
      "name": "Liam KAPEIKIS",
      "noc": "USA",
      "points": "189.01",
@@ -235,7 +260,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 6,
+       "rank": 7,
        "total": "118.94",
        "tes": "54.00",
        "pcs": "64.94",
@@ -356,31 +381,6 @@
        "total": "79.58",
        "tes": "40.22",
        "pcs": "39.36",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Hyungyeom KIM",
-     "noc": "KOR",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 6,
-       "total": "77.76",
-       "tes": "45.20",
-       "pcs": "32.56",
        "status": "Finished"
       },
       "FS": {
@@ -1179,18 +1179,18 @@
    "sport": "figure-skating",
    "event": "ISU Figure Skating Grand Prix Skate Canada International 2026",
    "distance": "Men",
-   "round": "Short Program",
+   "round": "Free Skating",
    "heat": "",
    "start_utc": "2026-10-31T23:48:00.000Z",
    "rank": 6,
    "name": "Hyungyeom KIM",
    "noc": "KOR",
-   "time": "77.76",
+   "time": "199.19",
    "qual": "",
    "status": "",
    "segments": {
     "SP": "77.76",
-    "FS": ""
+    "FS": "121.43"
    }
   },
   {
