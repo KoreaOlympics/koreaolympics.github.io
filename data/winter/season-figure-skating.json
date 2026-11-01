@@ -250,7 +250,26 @@
     },
     {
      "title": "Women",
-     "podium": null
+     "podium": [
+      {
+       "rank": 1,
+       "name": "Mao SHIMADA",
+       "noc": "JPN",
+       "time": "235.44"
+      },
+      {
+       "rank": 2,
+       "name": "Niina PETROKINA",
+       "noc": "EST",
+       "time": "221.07"
+      },
+      {
+       "rank": 3,
+       "name": "Isabeau LEVITO",
+       "noc": "USA",
+       "time": "212.22"
+      }
+     ]
     },
     {
      "title": "Ice Dance",
@@ -388,14 +407,14 @@
    3
   ],
   [
-   "GEO",
-   1,
+   "JPN",
+   2,
    2,
    0,
-   3
+   4
   ],
   [
-   "JPN",
+   "GEO",
    1,
    2,
    0,
@@ -412,6 +431,13 @@
    "USA",
    0,
    1,
+   2,
+   3
+  ],
+  [
+   "EST",
+   0,
+   1,
    1,
    2
   ],
@@ -420,13 +446,6 @@
    0,
    1,
    0,
-   1
-  ],
-  [
-   "EST",
-   0,
-   0,
-   1,
    1
   ],
   [
@@ -533,6 +552,13 @@
   ],
   "Women": [
    {
+    "name": "Mao SHIMADA",
+    "noc": "JPN",
+    "points": 235.44,
+    "event": "ISU Figure Skating Grand Prix Skate Canada International 2026",
+    "event_id": "isu-16020"
+   },
+   {
     "name": "Niina PETROKINA",
     "noc": "EST",
     "points": 221.07,
@@ -545,6 +571,13 @@
     "points": 219.74,
     "event": "ISU Figure Skating Grand Prix de France 2026",
     "event_id": "isu-16027"
+   },
+   {
+    "name": "Isabeau LEVITO",
+    "noc": "USA",
+    "points": 212.22,
+    "event": "ISU Figure Skating Grand Prix Skate Canada International 2026",
+    "event_id": "isu-16020"
    },
    {
     "name": "Saki MIYAKE",
@@ -585,20 +618,6 @@
     "name": "Yuna AOKI",
     "noc": "JPN",
     "points": 200.62,
-    "event": "ISU Figure Skating Grand Prix de France 2026",
-    "event_id": "isu-16027"
-   },
-   {
-    "name": "Yuseong KIM",
-    "noc": "KOR",
-    "points": 192.57,
-    "event": "ISU Figure Skating Grand Prix de France 2026",
-    "event_id": "isu-16027"
-   },
-   {
-    "name": "Rion SUMIYOSHI",
-    "noc": "JPN",
-    "points": 190.7,
     "event": "ISU Figure Skating Grand Prix de France 2026",
     "event_id": "isu-16027"
    }
