@@ -12,7 +12,54 @@
    "country": "AUT",
    "state": "",
    "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62771&seasoncode=2027",
-   "podiums": []
+   "podiums": [
+    {
+     "title": "Women's Giant Slalom",
+     "podium": [
+      {
+       "rank": 1,
+       "name": "MOLTZAN Paula",
+       "noc": "USA",
+       "time": "2:14.82"
+      },
+      {
+       "rank": 2,
+       "name": "COLTURI Lara",
+       "noc": "ALB",
+       "time": "2:14.83"
+      },
+      {
+       "rank": 3,
+       "name": "AICHER Emma",
+       "noc": "GER",
+       "time": "2:15.34"
+      }
+     ]
+    },
+    {
+     "title": "Men's Giant Slalom",
+     "podium": [
+      {
+       "rank": 1,
+       "name": "PINHEIRO BRAATHEN Lucas",
+       "noc": "BRA",
+       "time": "1:44.72"
+      },
+      {
+       "rank": 2,
+       "name": "MEILLARD Loic",
+       "noc": "SUI",
+       "time": "1:45.20"
+      },
+      {
+       "rank": 3,
+       "name": "ODERMATT Marco",
+       "noc": "SUI",
+       "time": "1:45.21"
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "fis-62772",
@@ -459,5 +506,41 @@
    "podiums": []
   }
  ],
- "medals": []
+ "medals": [
+  [
+   "BRA",
+   1,
+   0,
+   0,
+   1
+  ],
+  [
+   "USA",
+   1,
+   0,
+   0,
+   1
+  ],
+  [
+   "SUI",
+   0,
+   1,
+   1,
+   2
+  ],
+  [
+   "ALB",
+   0,
+   1,
+   0,
+   1
+  ],
+  [
+   "GER",
+   0,
+   0,
+   1,
+   1
+  ]
+ ]
 }
