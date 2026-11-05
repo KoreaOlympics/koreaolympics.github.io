@@ -18,7 +18,7 @@
   "live": "",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-05T16:03:35.463779+00:00",
+ "checked_at": "2026-11-05T21:56:10.999341+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -133,22 +133,6 @@
    "type": "Couples"
   },
   {
-   "start_utc": "2026-11-06T23:00:00.000Z",
-   "title": "Men 1000 m (1)",
-   "round": "Ranking Finals",
-   "event_result_id": 16052,
-   "round_id": 23072,
-   "type": "Singles"
-  },
-  {
-   "start_utc": "2026-11-06T23:00:00.000Z",
-   "title": "Women 1500 m",
-   "round": "Rep. Semifinals",
-   "event_result_id": 16046,
-   "round_id": 23038,
-   "type": "Singles"
-  },
-  {
    "start_utc": "2026-11-07T09:00:00.000Z",
    "title": "Women 1000 m (1)",
    "round": "Rep. Quarterfinals",
@@ -197,6 +181,14 @@
    "type": "Singles"
   },
   {
+   "start_utc": "2026-11-07T11:06:00.000Z",
+   "title": "Women 1500 m",
+   "round": "Rep. Semifinals",
+   "event_result_id": 16046,
+   "round_id": 23038,
+   "type": "Singles"
+  },
+  {
    "start_utc": "2026-11-07T11:16:00.000Z",
    "title": "Men 1500 m",
    "round": "Rep. Semifinals",
@@ -210,6 +202,14 @@
    "round": "Ranking Finals",
    "event_result_id": 16050,
    "round_id": 23060,
+   "type": "Singles"
+  },
+  {
+   "start_utc": "2026-11-07T11:34:00.000Z",
+   "title": "Men 1000 m (1)",
+   "round": "Ranking Finals",
+   "event_result_id": 16052,
+   "round_id": 23072,
    "type": "Singles"
   },
   {
@@ -469,7 +469,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-08T13:29:00.000Z",
+   "start_utc": "2026-11-08T13:39:00.000Z",
    "title": "Women 1000 m (2)",
    "round": "Quarterfinals",
    "event_result_id": 16045,
@@ -602,14 +602,6 @@
      "heats": []
     },
     {
-     "id": 23072,
-     "name": "Ranking Finals",
-     "status": "Scheduled",
-     "start_utc": "2026-11-06T23:00:00.000Z",
-     "rule": "",
-     "heats": []
-    },
-    {
      "id": 23071,
      "name": "Rep. Quarterfinals",
      "status": "Scheduled",
@@ -623,6 +615,14 @@
      "status": "Scheduled",
      "start_utc": "2026-11-07T10:03:00.000Z",
      "rule": "The first placed skater from each race qualify for Quarterfinals.",
+     "heats": []
+    },
+    {
+     "id": 23072,
+     "name": "Ranking Finals",
+     "status": "Scheduled",
+     "start_utc": "2026-11-07T11:34:00.000Z",
+     "rule": "",
      "heats": []
     },
     {
@@ -724,19 +724,19 @@
      "heats": []
     },
     {
-     "id": 23038,
-     "name": "Rep. Semifinals",
-     "status": "Scheduled",
-     "start_utc": "2026-11-06T23:00:00.000Z",
-     "rule": "The first placed skater from each race qualify for Semifinals.",
-     "heats": []
-    },
-    {
      "id": 23036,
      "name": "Rep. Quarterfinals",
      "status": "Scheduled",
      "start_utc": "2026-11-07T10:11:00.000Z",
      "rule": "The top five ranked skaters and up to a maximum of one fastest sixth place skater qualify to the Rep. Semifinals.",
+     "heats": []
+    },
+    {
+     "id": 23038,
+     "name": "Rep. Semifinals",
+     "status": "Scheduled",
+     "start_utc": "2026-11-07T11:06:00.000Z",
+     "rule": "The first placed skater from each race qualify for Semifinals.",
      "heats": []
     },
     {
@@ -1064,7 +1064,7 @@
      "id": 23032,
      "name": "Quarterfinals",
      "status": "Scheduled",
-     "start_utc": "2026-11-08T13:29:00.000Z",
+     "start_utc": "2026-11-08T13:39:00.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of two fastest third place skaters qualify for Semifinals.",
      "heats": []
     },
