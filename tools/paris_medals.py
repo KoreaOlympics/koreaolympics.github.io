@@ -21,8 +21,16 @@ def label_of(tr):
     return html.unescape(re.sub(r'<[^>]+>', '', m.group(1))).strip() if m else None
 
 
+def cell(m):
+    if not m:
+        return '<td>—</td>'
+    if m.startswith('nat:'):  # 단체 구기: 국가 이름
+        return f'<td><span class="nat">{E(m[4:])}</span></td>'
+    return f'<td>{E(m)}</td>'
+
+
 def cells(medals):
-    return ''.join(f'<td>{E(m) if m else "—"}</td>' for m in medals)
+    return ''.join(cell(m) for m in medals)
 
 
 def apply(text, rows):
@@ -51,7 +59,7 @@ def apply(text, rows):
         pos = 0 if prev is None else max(k for k, (l, _) in enumerate(out) if l == prev) + 1
         out.insert(pos, tr)
     body = s[:tb.start(1)] + '\n' + ''.join(t for _, t in out) + s[tb.end(1):]
-    body = body.replace(NOTE, '')
+    body = body.replace('\n' + NOTE, '').replace(NOTE, '')
     if any(not r['la28'] for r in rows):
         body = body.replace('</table></div><!-- /tw -->', '</table></div><!-- /tw -->\n' + NOTE, 1)
     return text[:sec.start()] + body + text[sec.end():]

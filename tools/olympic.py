@@ -31,20 +31,7 @@ OPTIONAL = {'rules'}  # 내용이 없으면 화면에서 숨긴다 (원칙 5.5)
 
 # 종목별 맞춤 구조 (영어 Wikipedia 구조 기준). 없는 종목은 기본 구조를 쓴다.
 LAYOUT = {
-    'olwrestling': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
-    'olweightlifting': {'hub': [('timeline', '예선 일정 (Timeline)'), ('qualification', '예선 규정 (Qualification)'), ('men', "남자 종목 (Men's events)"), ('women', "여자 종목 (Women's events)"), ('medals', '2024 메달리스트'), ('korea', '한국 역도 역사와 현황'), ('refs', '각주'), ('links', '외부 링크'), ('results_summary', '대회별 메달 요약')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
-    'olboxing': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
-    'oljudo': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
-    'olbasketball': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
-    'olfootball': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
-    'olwaterpolo': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
-    'olrugby': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
-    'olbaseball': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
-    'ollacrosse': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
-    'olcricket': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
-    'olflagfootball': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
-    'olhockey': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
-    'olhandball': {'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')], 'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')]},
+    'olweightlifting': {'hub': [('timeline', '예선 일정 (Timeline)'), ('qualification', '예선 규정 (Qualification)'), ('men', "남자 종목 (Men's events)"), ('women', "여자 종목 (Women's events)"), ('medals', '2024 메달리스트'), ('korea', '한국 역도 역사와 현황'), ('refs', '각주'), ('links', '외부 링크'), ('results_summary', '대회별 메달 요약')]},  # 세부종목 문서는 기본 구성
     'olvolleyball': {
         'hub': [('qualification', '예선 요약'), ('medals', '2024 메달리스트'), ('korea', '한국 상황 분석'), ('refs', '각주'), ('links', '외부 링크')],
         'event': [('quota', '확보 팀'), ('refs', '각주'), ('links', '외부 링크')],
@@ -57,7 +44,7 @@ def hub_sections(s):
 
 
 def event_sections(s):
-    if s['file'] in LAYOUT:
+    if 'event' in LAYOUT.get(s['file'], {}):
         return LAYOUT[s['file']]['event']
     return TAEKWONDO_EVENT_SECTIONS if s['file'] == 'oltaekwondo' else EVENT_SECTIONS
 
@@ -726,14 +713,35 @@ def build():
     for s in sports(reg):
         pages.append(render_hub(reg, s))
         pages += [render_event(reg, s, e) for e in s['events']]
-    changed = 0
+    changed, refused = 0, []
+    force = '--force' in sys.argv
     for path, text in pages:
         path.parent.mkdir(parents=True, exist_ok=True)
         old = open(path, encoding='utf-8', newline='').read() if path.exists() else None
         if old != text:
+            lost = [] if old is None or force else content_loss(old, text)
+            if lost:  # 내용이 줄거나 자동 블록이 사라지는 문서는 쓰지 않는다
+                refused.append((path.relative_to(ROOT), lost)); continue
             path.write_text(text, encoding='utf-8', newline='\n')
             changed += 1
     print(f'build: {len(pages)}개 문서, {changed}개 갱신')
+    for rel, lost in refused:
+        print(f'  ✗ 쓰지 않음 (내용 손실): {rel} → {", ".join(lost)}')
+    if refused:
+        print(f'  {len(refused)}개 문서를 건너뛰었다. 손실을 확인했으면 --force로 다시 실행한다.')
+
+
+PROTECTED_BLOCKS = ('summary-figure', 'id="la28-qualified"', 'id="la28-pathways"', 'id="sport-guide"', 'id="event-guide"', 'id="winter_live"')
+_TXT = lambda s: re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', s))).strip()
+
+
+def content_loss(old, new):
+    """old → new에서 사라지는 것: 내용이 30% 넘게 줄어드는 섹션, 없어지는 섹션, 없어지는 자동 블록."""
+    sec = lambda t: {m.group(1): _TXT(m.group(2)) for m in re.finditer(r'<section id="([a-z_0-9]+)"[^>]*>(.*?)</section>', t, re.S)}
+    so, sn = sec(old), sec(new)
+    lost = [f'섹션 {k}' for k, v in so.items() if len(v) > 120 and len(sn.get(k, '')) < len(v) * 0.7]
+    lost += [f'블록 {b}' for b in PROTECTED_BLOCKS if b in old and b not in new]
+    return lost
 
 
 # ---------------------------------------------------------------- check / todo
