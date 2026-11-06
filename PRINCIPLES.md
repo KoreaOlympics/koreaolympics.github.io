@@ -242,3 +242,15 @@ index는 Wikipedia 대문 형식으로 툴이 만든다. 배치는 제목 → �
 
 - 동계 16개 분리안 확정 여부 (되돌리려면 명단의 동계 `sports`만 고치면 된다).
 - 2030 프렌치 알프스 세부종목이 확정되면 동계 명단 교체.
+
+### 8-3. 하계 실시간·2026 대회 결과 (`data/summer-live-sources.json`)
+- 대회 목록(위키백과 영문 문서 제목·기간·허브)만 손으로 관리한다. `tools/summer_live.py`가 문서를 읽어 `data/summer-live.json`에 담고,
+  허브의 `<div class="results" id="recent-results">`(문서 안내 다음, 목차 앞)와 `summer-live.html` 첫머리를 그린다.
+- 'Summer live' 워크플로가 매시 진행 중·열흘 안에 끝난 대회를, 하루 한 번 목록 전체를 다시 읽는다.
+- 출전권 표가 있는 대회(`quota_route`)는 `la28-qualified.json`에 `auto` 묶음으로 넣는다. 손으로 쓴 묶음은 건드리지 않는다.
+- 국가 이름·국기: `data/nocs.json`(IOC 206개 + 중립), 한국 선수 한글 이름: `data/korean-names.json`(확인된 이름만).
+
+### 8-4. 내용 보호
+- `tools/olympic.py build`는 섹션이 30% 넘게 줄거나 자동 블록이 사라지는 문서는 쓰지 않는다(`--force`로만).
+- 배포 워크플로는 푸시마다 `tools/guard.py <직전 커밋>`을 돌려 사라지거나 옛 판으로 돌아간 섹션을 되살리고 자동 블록을 자료에서 다시 그린다.
+  일부러 지울 때는 커밋 메시지에 `[guard skip]`.

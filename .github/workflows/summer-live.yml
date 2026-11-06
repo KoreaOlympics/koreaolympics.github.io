@@ -1,0 +1,47 @@
+# 하계 실시간·최근 대회 결과: 위키백과 대회 문서(data/summer-live-sources.json)를 읽어
+# data/summer-live.json, 허브 '2026 주요 대회 결과', summer-live.html, 출전 확정 표(la28-qualified.json의 auto 묶음)를 갱신한다.
+# 매시: 진행 중이거나 열흘 안에 끝난 대회만 · 하루 한 번: 목록 전체.
+name: Summer live
+on:
+  schedule:
+    - cron: '23 * * * *'
+    - cron: '47 19 * * *'
+  workflow_dispatch:
+    inputs:
+      all:
+        description: 'Re-read every event in the list'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: summer-live
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Collect and publish
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          flag=""
+          if [ "${{ github.event.schedule }}" = "47 19 * * *" ] || [ "${{ inputs.all }}" = "true" ]; then flag="--all"; fi
+          python tools/summer_live.py collect $flag
+          python tools/qualified.py
+          python tools/summer_pages.py
+          python tools/olympic.py check
+          git add data/summer-live.json data/la28-qualified.json summer-live.html la28-qualification.html ol*.html
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -q -m "summer: update live results"
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin main && break; sleep 5; done
+          # bot pushes do not trigger push-based deploys; start the Pages deploy explicitly
+          gh workflow run pages.yml --ref main

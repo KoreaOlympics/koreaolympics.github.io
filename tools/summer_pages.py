@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).parent))
 from olympic import E, page, load, sports, hub_path  # noqa: E402
 from qualified import load as load_qualified, nation  # noqa: E402
+from summer_live import live_section  # noqa: E402
 
 KIND = {'direct': '직행', 'worlds': '세계선수권', 'cont': '대륙 예선', 'rank': '랭킹·기간', 'etc': '준비·마감'}
 LIVE_PAGES = [('olarchery-live.html', '양궁 실시간 결과'), ('oltabletennis-live.html', '탁구 실시간 결과'), ('winter/', '동계 실시간 센터')]
@@ -57,6 +58,7 @@ def summer_live():
 <p>LA28 출전권이 걸린 하계 종목 대회를 진행 중·예정 순서로 모았다. 결과가 나오면 각 종목 문서의 'LA28 출전 확정' 표와
 <a href="la28-qualification.html">랭킹·출전권</a> 페이지에 반영한다.</p>
 <p class="menu-links">{" ".join(f'<a href="{E(u)}">🔴 {E(t)}</a>' for u, t in LIVE_PAGES)}</p>
+{live_section()}
 <h2>예선 대회 일정</h2>
 <div class="tw"><table class="wikitable"><thead><tr><th>기간</th><th>종목</th><th>대회</th><th>구분</th><th>상태</th></tr></thead>
 <tbody>{"".join(rows)}</tbody></table></div>

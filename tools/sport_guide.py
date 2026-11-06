@@ -80,8 +80,9 @@ def event_block(file, event_file, data=None, up='../'):
 
 def insert(text, regex, block):
     text = regex.sub('', text)
-    if block and '<nav class="toc">' in text:
-        text = text.replace('<nav class="toc">', block + '\n<nav class="toc">', 1)
+    anchor = next((a for a in ('<div class="results" id="recent-results">', '<nav class="toc">') if a in text), None)
+    if block and anchor:  # 문서 안내 → 대회 결과 → 목차
+        text = text.replace(anchor, block + '\n' + anchor, 1)
     return text
 
 

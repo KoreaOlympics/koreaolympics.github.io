@@ -166,3 +166,15 @@ img.flag, .flag.none { display: inline-block; width: 20px; height: 15px; margin-
 .guide-box caption { text-align: left; font-weight: bold; padding-bottom: 4px; }
 .guide-box th, .guide-box td { border: 1px solid #c8ccd1; padding: 5px 8px; vertical-align: top; }
 .guide-box th { background: #eaecf0; white-space: nowrap; text-align: left; width: 7em; }
+
+/* 2026 주요 대회 결과 (tools/summer_live.py) */
+.results { margin: 1.2em 0; }
+.results h2 .asof { font-size: .6em; color: var(--muted, #72777d); font-weight: 400; }
+details.result-card { border: 1px solid var(--border); border-radius: 6px; background: var(--box); margin: .5em 0; padding: 0 10px; }
+details.result-card > summary { cursor: pointer; padding: 8px 0; line-height: 1.5; }
+details.result-card[open] > summary { border-bottom: 1px solid var(--border); margin-bottom: 6px; }
+details.result-card b.ongoing { color: #d33; }
+table.medal-rows td { min-width: 9em; }
+table.medal-rows tr.grp th { background: var(--head); font-weight: 700; text-align: left; }
+table.medal-rows tr.has-kor > * { background: #fdf0f0; }
+.kor { font-weight: 700; color: #b3122e; }

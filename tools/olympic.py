@@ -401,6 +401,7 @@ def _guide_targets():
 
 
 GUIDE_TARGETS = _guide_targets()
+MENU_PAGES = {'summer-live.html', 'la28-qualification.html'}  # 하계 메뉴 페이지 (tools/summer_pages.py)
 WINTER_CALENDAR_ONLY = {'bobsleigh', 'skeleton', 'luge'}  # 일정만 수집 (결과는 공식 페이지)
 
 
@@ -450,6 +451,12 @@ def qualified_block(s):
     """LA28 출전 확정 표 (data/la28-qualified.json, tools/qualified.py)."""
     from qualified import block
     return block(s['file'])
+
+
+def results_block(s):
+    """2026 주요 대회 결과 (data/summer-live.json, tools/summer_live.py)."""
+    from summer_live import hub_block
+    return hub_block(s['file']) if s.get('season') == 'summer' else ''
 
 
 def pathways_block(s):
@@ -525,30 +532,32 @@ def render_hub(reg, s):
     if rel and '<section id="results_summary"' in secs:  # 마지막 섹션(대회별 메달 요약)을 맨 아래에 둔다
         secs = secs.replace('<section id="results_summary"', rel + '\n<section id="results_summary"', 1)
         rel = ''
-    body = '\n'.join([
+    body = '\n'.join(x for x in [
         f'<nav class="crumb"><a href="index.html">목차</a> › {E(s["name"])}</nav>',
         f'<h1>{E(s["name"])} <span class="en">({E(s["name_en"])})</span></h1>',
-        '<div class="top">', infobox(s['name'], info), lead, '</div>', summary_figure(s), qualified_block(s), pathways_block(s), guide_block(s), toc, winter_live_block(s), secs, rel,
-        season_navbox(reg, s['season'], '', hub_path(s))])
+        '<div class="top">', infobox(s['name'], info), lead, '</div>', summary_figure(s), qualified_block(s), pathways_block(s), guide_block(s), results_block(s), toc, winter_live_block(s), secs, rel,
+        season_navbox(reg, s['season'], '', hub_path(s))] if x)
     return path, page(f'{s["name"]} | {g["games"]}', '', body, f'{g["games"]} {s["name"]} 세부종목·예선·한국 현황')
 
 
 def render_event(reg, s, e):
     path = ROOT / event_path(s, e)
     parts = preserved(path) or {}
+    wanted = {k for k, _ in event_sections(s)} | {'infobox', 'intro'}
     for k, v in event_skeleton(reg, s, e).items():
-        parts.setdefault(k, v)
+        if k in wanted:  # 이 종목 구성에 없는 빈 섹션은 만들지 않는다
+            parts.setdefault(k, v)
     info = parts.get('infobox') or event_infobox(reg, s, e)
     intro = parts.get('intro') or '<p><!-- 추가: 이 세부종목이 무엇인지, 몇 명이 어떻게 겨루는지 2~3문장 --></p>'
     g = reg[s['season']]
     toc, secs = render_sections(event_sections(s), parts)
     groups = [(label, [(e2['file'] + '.html', short(e2, s, label)) for e2 in evs]) for label, evs in event_groups(s)]
     nb = navbox(f'<a href="../{E(hub_path(s))}">{E(s["name"])}</a> 세부종목', groups, e['file'] + '.html')
-    body = '\n'.join([
+    body = '\n'.join(x for x in [
         f'<nav class="crumb"><a href="../index.html">목차</a> › <a href="../{E(hub_path(s))}">{E(s["name"])}</a> › {E(e["name"])}</nav>',
         f'<h1>{E(s["name"])} · {E(e["name"])}</h1>',
         '<div class="top">', infobox(e['name'], info), f'<section id="intro" class="lead">\n{intro}\n</section>', '</div>',
-        event_guide_block(s, e), toc, secs, nb])
+        event_guide_block(s, e), toc, secs, nb] if x)
     return path, page(f'{s["name"]} · {e["name"]} | {g["games"]}', '../', body,
                       f'{g["games"]} {s["name"]} {e["name"]} 예선·쿼터·주요 선수')
 
@@ -731,7 +740,7 @@ def build():
         print(f'  {len(refused)}개 문서를 건너뛰었다. 손실을 확인했으면 --force로 다시 실행한다.')
 
 
-PROTECTED_BLOCKS = ('summary-figure', 'id="la28-qualified"', 'id="la28-pathways"', 'id="sport-guide"', 'id="event-guide"', 'id="winter_live"')
+PROTECTED_BLOCKS = ('summary-figure', 'id="recent-results"', 'id="la28-qualified"', 'id="la28-pathways"', 'id="sport-guide"', 'id="event-guide"', 'id="winter_live"')
 _TXT = lambda s: re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', s))).strip()
 
 
@@ -801,6 +810,8 @@ def check():
                     errors.append(f'{rel}: 없는 파일 → {target}')
                 continue
             if target == 'winter' and rel.split('/')[0].removesuffix('.html') in WINTER_LIVE:  # 동계 실시간 센터 (원칙 8장 예외와 같은 성격)
+                continue
+            if target in MENU_PAGES and rel.startswith('ol') and '/' not in rel:  # 하계 허브의 '대회 결과'가 하계 실시간 페이지로
                 continue
             if target in GUIDE_TARGETS and target.startswith(rel.split('/')[0].removesuffix('.html') + '-'):  # 문서 안내에 등록된 그 종목 하위 문서 (8-2장)
                 continue

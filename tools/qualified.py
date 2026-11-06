@@ -20,8 +20,13 @@ def load():
     return json.loads(DATA.read_text(encoding='utf-8'))
 
 
+_ALL = {}
+
+
 def nation(noc, nocs):
-    name, iso = nocs.get(noc, [noc, ''])
+    if not _ALL and (ROOT / 'data/nocs.json').exists():  # 전체 NOC 표 (data/nocs.json)로 빈 곳을 채운다
+        _ALL.update(json.loads((ROOT / 'data/nocs.json').read_text(encoding='utf-8'))['NOCS'])
+    name, iso = nocs.get(noc) or _ALL.get(noc, [noc, ''])
     flag = (f'<img class="flag" src="assets/flags/{noc}.svg" alt="" width="20" height="15">'
             if iso and (FLAGS / f'{noc}.svg').exists() else '<span class="flag none"></span>')
     return f'<span class="nat">{flag}{E(name)}</span> <span class="noc">{E(noc)}</span>'
@@ -69,7 +74,7 @@ def main(argv):
         text = BLOCK_RE.sub('', orig)
         b = block(page.stem, data)
         if b:
-            anchor = next(a for a in ('<div class="pathways"', '<div class="guide"', '<nav class="toc">') if a in text) if '<nav class="toc">' in text else '<nav class="toc">'  # 출전 확정 → 예선 단계 → 문서 안내 → 목차
+            anchor = next(a for a in ('<div class="pathways"', '<div class="guide"', '<div class="results"', '<nav class="toc">') if a in text) if '<nav class="toc">' in text else '<nav class="toc">'  # 출전 확정 → 예선 단계 → 문서 안내 → 목차
             if anchor not in text:
                 print('목차 없음, 건너뜀:', page.name); continue
             text = text.replace(anchor, b + '\n' + anchor, 1)
