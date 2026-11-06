@@ -18,7 +18,7 @@
   "live": "Mixed Team Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-06T17:15:00.141823+00:00",
+ "checked_at": "2026-11-06T17:25:26.454646+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -9442,7 +9442,7 @@
     {
      "id": 23065,
      "name": "Quarterfinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-06T16:45:27.000Z",
      "rule": "The first and second placed teams from each race and up to a maximum of two fastest third place teams qualify for Semifinals.",
      "heats": [
@@ -9614,14 +9614,14 @@
       {
        "name": "Heat 4",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "Canada",
          "noc": "CAN",
-         "time": "2:48.080",
-         "qual": "",
+         "time": "2:48.131",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -9632,8 +9632,8 @@
          "rank": 2,
          "name": "Ukraine",
          "noc": "UKR",
-         "time": "2:52.910",
-         "qual": "",
+         "time": "2:52.957",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -9644,7 +9644,7 @@
          "rank": 3,
          "name": "Kazakhstan",
          "noc": "KAZ",
-         "time": "2:59.190",
+         "time": "2:59.230",
          "qual": "",
          "status": "",
          "record": "",
@@ -9653,12 +9653,12 @@
          "slug": ""
         },
         {
-         "rank": 4,
+         "rank": null,
          "name": "Germany",
          "noc": "GER",
-         "time": "3:11.350",
+         "time": "PEN",
          "qual": "",
-         "status": "",
+         "status": "Penalty",
          "record": "",
          "bib": null,
          "lane": 2,
@@ -9666,7 +9666,100 @@
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Semifinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "China",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "2:40.442",
+        "qual": "Q"
+       },
+       {
+        "name": "Hungary",
+        "noc": "HUN",
+        "rank": 1,
+        "time": "2:46.883",
+        "qual": "Q"
+       },
+       {
+        "name": "Canada",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "2:48.131",
+        "qual": "Q"
+       },
+       {
+        "name": "Italy",
+        "noc": "ITA",
+        "rank": 1,
+        "time": "2:50.328",
+        "qual": "Q"
+       },
+       {
+        "name": "Individual Neutral Athletes 2",
+        "noc": "AIN2",
+        "rank": 2,
+        "time": "2:42.473",
+        "qual": "Q"
+       },
+       {
+        "name": "Individual Neutral Athletes 1",
+        "noc": "AIN1",
+        "rank": 2,
+        "time": "2:47.561",
+        "qual": "Q"
+       },
+       {
+        "name": "Turkiye",
+        "noc": "TUR",
+        "rank": 2,
+        "time": "2:51.631",
+        "qual": "Q"
+       },
+       {
+        "name": "Ukraine",
+        "noc": "UKR",
+        "rank": 2,
+        "time": "2:52.957",
+        "qual": "Q"
+       },
+       {
+        "name": "Poland",
+        "noc": "POL",
+        "rank": 3,
+        "time": "2:54.720",
+        "qual": "ADV"
+       },
+       {
+        "name": "Japan",
+        "noc": "JPN",
+        "rank": 3,
+        "time": "3:10.011",
+        "qual": "ADV"
+       }
+      ],
+      "races": [
+       [
+        "China (CHN)",
+        "Italy (ITA)",
+        "Individual Neutral Athletes 2 (AIN2)",
+        "Ukraine (UKR)",
+        "Poland (POL)"
+       ],
+       [
+        "Hungary (HUN)",
+        "Canada (CAN)",
+        "Individual Neutral Athletes 1 (AIN1)",
+        "Turkiye (TUR)",
+        "Japan (JPN)"
+       ]
+      ]
+     }
     },
     {
      "id": 23066,
