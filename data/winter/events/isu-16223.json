@@ -18,7 +18,7 @@
   "live": "Men 1000 m (2)",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-06T16:21:47.350135+00:00",
+ "checked_at": "2026-11-06T16:32:19.105143+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -101,7 +101,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-06T16:06:00.000Z",
+   "start_utc": "2026-11-06T16:03:00.000Z",
    "title": "Men 1000 m (2)",
    "round": "Heats",
    "event_result_id": 16044,
@@ -8138,7 +8138,7 @@
     {
      "id": 23021,
      "name": "Heats",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-06T16:03:33.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of six fastest third place skaters qualify for Quarterfinals.",
      "heats": [
@@ -8176,7 +8176,7 @@
          "name": "Kritsanapon PHUATRAKUL",
          "noc": "THA",
          "time": "1:27.005",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 195,
@@ -8243,7 +8243,7 @@
          "name": "Jonathon DERHEIMER",
          "noc": "USA",
          "time": "1:30.421",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 203,
@@ -8310,7 +8310,7 @@
          "name": "Bence KISS-GEBORA",
          "noc": "HUN",
          "time": "1:28.758",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 148,
@@ -8377,7 +8377,7 @@
          "name": "Badis BRUGVIN",
          "noc": "FRA",
          "time": "1:28.194",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 131,
@@ -8432,7 +8432,7 @@
          "name": "Nathan MULLER",
          "noc": "FRA",
          "time": "1:27.759",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 135,
@@ -8455,27 +8455,15 @@
       },
       {
        "name": "Heat 6",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Alexis DUBUC-BILODEAU",
-         "noc": "CAN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 116,
-         "lane": 1,
-         "slug": "alexis-dubuc-bilodeau"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Xinchi YU",
          "noc": "CHN",
-         "time": "",
-         "qual": "",
+         "time": "1:27.145",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 125,
@@ -8483,11 +8471,23 @@
          "slug": "xinchi-yu"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Alexis DUBUC-BILODEAU",
+         "noc": "CAN",
+         "time": "1:27.234",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 116,
+         "lane": 1,
+         "slug": "alexis-dubuc-bilodeau"
+        },
+        {
+         "rank": 3,
          "name": "Maxim SAYENKO",
          "noc": "KAZ",
-         "time": "",
-         "qual": "",
+         "time": "1:27.340",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 168,
@@ -8495,10 +8495,10 @@
          "slug": "maxim-sayenko"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Kazuto TAKAHASHI",
          "noc": "JPN",
-         "time": "",
+         "time": "1:28.788",
          "qual": "",
          "status": "",
          "record": "",
@@ -8508,7 +8508,170 @@
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Quarterfinals",
+      "official_draw_published": false,
+      "pending": [
+       "Rep. Semifinals"
+      ],
+      "qualified": [
+       {
+        "name": "Biho LEE",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "1:25.596",
+        "qual": "Q"
+       },
+       {
+        "name": "Tianyou WANG",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "1:26.737",
+        "qual": "Q"
+       },
+       {
+        "name": "Xinchi YU",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "1:27.145",
+        "qual": "Q"
+       },
+       {
+        "name": "Elliot DUFOUR",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "1:28.089",
+        "qual": "Q"
+       },
+       {
+        "name": "Jeremy BOUCHARD",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "1:28.581",
+        "qual": "Q"
+       },
+       {
+        "name": "Tymeo LIBEAU",
+        "noc": "FRA",
+        "rank": 1,
+        "time": "1:30.122",
+        "qual": "Q"
+       },
+       {
+        "name": "Tagir AMIRKHANOV",
+        "noc": "AIN2",
+        "rank": 2,
+        "time": "1:26.272",
+        "qual": "Q"
+       },
+       {
+        "name": "Alexis DUBUC-BILODEAU",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "1:27.234",
+        "qual": "Q"
+       },
+       {
+        "name": "Borisz Z MOLNAR",
+        "noc": "HUN",
+        "rank": 2,
+        "time": "1:27.737",
+        "qual": "Q"
+       },
+       {
+        "name": "Tsjerk VAN DER MEER",
+        "noc": "NED",
+        "rank": 2,
+        "time": "1:28.139",
+        "qual": "Q"
+       },
+       {
+        "name": "Andrei PETROV",
+        "noc": "AIN2",
+        "rank": 2,
+        "time": "1:28.641",
+        "qual": "Q"
+       },
+       {
+        "name": "Zhandos SEREKPAYEV",
+        "noc": "KAZ",
+        "rank": 2,
+        "time": "1:30.341",
+        "qual": "Q"
+       },
+       {
+        "name": "Kritsanapon PHUATRAKUL",
+        "noc": "THA",
+        "rank": 3,
+        "time": "1:27.005",
+        "qual": "q"
+       },
+       {
+        "name": "Maxim SAYENKO",
+        "noc": "KAZ",
+        "rank": 3,
+        "time": "1:27.340",
+        "qual": "q"
+       },
+       {
+        "name": "Nathan MULLER",
+        "noc": "FRA",
+        "rank": 3,
+        "time": "1:27.759",
+        "qual": "q"
+       },
+       {
+        "name": "Badis BRUGVIN",
+        "noc": "FRA",
+        "rank": 3,
+        "time": "1:28.194",
+        "qual": "q"
+       },
+       {
+        "name": "Bence KISS-GEBORA",
+        "noc": "HUN",
+        "rank": 3,
+        "time": "1:28.758",
+        "qual": "q"
+       },
+       {
+        "name": "Jonathon DERHEIMER",
+        "noc": "USA",
+        "rank": 3,
+        "time": "1:30.421",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Biho LEE (KOR)",
+        "Alexis DUBUC-BILODEAU (CAN)",
+        "Borisz Z MOLNAR (HUN)",
+        "Badis BRUGVIN (FRA)",
+        "Bence KISS-GEBORA (HUN)"
+       ],
+       [
+        "Tianyou WANG (CHN)",
+        "Tagir AMIRKHANOV (AIN2)",
+        "Tsjerk VAN DER MEER (NED)",
+        "Nathan MULLER (FRA)",
+        "Jonathon DERHEIMER (USA)"
+       ],
+       [
+        "Xinchi YU (CHN)",
+        "Tymeo LIBEAU (FRA)",
+        "Andrei PETROV (AIN2)",
+        "Maxim SAYENKO (KAZ)"
+       ],
+       [
+        "Elliot DUFOUR (CAN)",
+        "Jeremy BOUCHARD (CAN)",
+        "Zhandos SEREKPAYEV (KAZ)",
+        "Kritsanapon PHUATRAKUL (THA)"
+       ]
+      ]
+     }
     },
     {
      "id": 23022,
