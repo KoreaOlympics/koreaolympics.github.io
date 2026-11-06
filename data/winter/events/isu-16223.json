@@ -18,7 +18,7 @@
   "live": "Men 3000 m Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-06T18:18:44.963164+00:00",
+ "checked_at": "2026-11-06T18:29:19.185611+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -10129,7 +10129,7 @@
     {
      "id": 23054,
      "name": "Quarterfinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-06T17:59:12.000Z",
      "rule": "The first and second placed teams from each race and up to a maximum of two fastest third place teams qualify for Semifinals.",
      "heats": [
@@ -10167,7 +10167,7 @@
          "name": "France",
          "noc": "FRA",
          "time": "4:00.293",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": null,
@@ -10234,7 +10234,7 @@
          "name": "Japan",
          "noc": "JPN",
          "time": "4:10.077",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": null,
@@ -10258,14 +10258,14 @@
       {
        "name": "Heat 3",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "Hungary",
          "noc": "HUN",
-         "time": "4:12.570",
-         "qual": "",
+         "time": "4:12.615",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -10276,8 +10276,8 @@
          "rank": 2,
          "name": "Individual Neutral Athletes 1",
          "noc": "AIN1",
-         "time": "4:12.810",
-         "qual": "",
+         "time": "4:12.859",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -10288,7 +10288,7 @@
          "rank": 3,
          "name": "United States of America",
          "noc": "USA",
-         "time": "4:16.240",
+         "time": "4:16.232",
          "qual": "",
          "status": "",
          "record": "",
@@ -10300,7 +10300,7 @@
          "rank": 4,
          "name": "Kazakhstan",
          "noc": "KAZ",
-         "time": "4:16.300",
+         "time": "4:16.360",
          "qual": "",
          "status": "",
          "record": "",
@@ -10312,15 +10312,27 @@
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Netherlands",
+         "noc": "NED",
+         "time": "4:09.135",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 4,
+         "slug": ""
+        },
+        {
+         "rank": 2,
          "name": "Italy",
          "noc": "ITA",
-         "time": "",
-         "qual": "",
+         "time": "4:09.137",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -10328,10 +10340,10 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Germany",
          "noc": "GER",
-         "time": "",
+         "time": "4:21.643",
          "qual": "",
          "status": "",
          "record": "",
@@ -10340,32 +10352,113 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Czechia",
          "noc": "CZE",
-         "time": "",
+         "time": "4:21.710",
          "qual": "",
          "status": "",
          "record": "",
          "bib": null,
          "lane": 3,
          "slug": ""
-        },
-        {
-         "rank": null,
-         "name": "Netherlands",
-         "noc": "NED",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 4,
-         "slug": ""
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Semifinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "China",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "3:54.955",
+        "qual": "Q"
+       },
+       {
+        "name": "Canada",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "4:04.348",
+        "qual": "Q"
+       },
+       {
+        "name": "Netherlands",
+        "noc": "NED",
+        "rank": 1,
+        "time": "4:09.135",
+        "qual": "Q"
+       },
+       {
+        "name": "Hungary",
+        "noc": "HUN",
+        "rank": 1,
+        "time": "4:12.615",
+        "qual": "Q"
+       },
+       {
+        "name": "Republic of Korea",
+        "noc": "KOR",
+        "rank": 2,
+        "time": "3:58.618",
+        "qual": "Q"
+       },
+       {
+        "name": "Individual Neutral Athletes 2",
+        "noc": "AIN2",
+        "rank": 2,
+        "time": "4:04.494",
+        "qual": "Q"
+       },
+       {
+        "name": "Italy",
+        "noc": "ITA",
+        "rank": 2,
+        "time": "4:09.137",
+        "qual": "Q"
+       },
+       {
+        "name": "Individual Neutral Athletes 1",
+        "noc": "AIN1",
+        "rank": 2,
+        "time": "4:12.859",
+        "qual": "Q"
+       },
+       {
+        "name": "France",
+        "noc": "FRA",
+        "rank": 3,
+        "time": "4:00.293",
+        "qual": "q"
+       },
+       {
+        "name": "Japan",
+        "noc": "JPN",
+        "rank": 3,
+        "time": "4:10.077",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "China (CHN)",
+        "Hungary (HUN)",
+        "Republic of Korea (KOR)",
+        "Individual Neutral Athletes 1 (AIN1)",
+        "France (FRA)"
+       ],
+       [
+        "Canada (CAN)",
+        "Netherlands (NED)",
+        "Individual Neutral Athletes 2 (AIN2)",
+        "Italy (ITA)",
+        "Japan (JPN)"
+       ]
+      ]
+     }
     },
     {
      "id": 23055,
