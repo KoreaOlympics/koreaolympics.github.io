@@ -18,7 +18,7 @@
   "live": "Women 3000 m Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-06T17:35:52.236344+00:00",
+ "checked_at": "2026-11-06T17:46:18.698957+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -9802,32 +9802,20 @@
      "id": 23041,
      "name": "Quarterfinals",
      "status": "Live",
-     "start_utc": "2026-11-06T17:29:00.000Z",
+     "start_utc": "2026-11-06T17:32:37.000Z",
      "rule": "The first, second and third placed teams from each race and up to a maximum of one fastest fourth place team qualify for Semifinals.",
      "heats": [
       {
        "name": "Heat 1",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Republic of Korea",
-         "noc": "KOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 1,
-         "slug": ""
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Netherlands",
          "noc": "NED",
-         "time": "",
-         "qual": "",
+         "time": "4:22.546",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -9835,11 +9823,23 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Germany",
+         "noc": "GER",
+         "time": "4:23.829",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
+         "slug": ""
+        },
+        {
+         "rank": 3,
          "name": "Individual Neutral Athletes 1",
          "noc": "AIN1",
-         "time": "",
-         "qual": "",
+         "time": "4:26.025",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -9847,11 +9847,11 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Turkiye",
          "noc": "TUR",
-         "time": "",
-         "qual": "",
+         "time": "4:27.471",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": null,
@@ -9860,22 +9860,22 @@
         },
         {
          "rank": null,
-         "name": "Germany",
-         "noc": "GER",
-         "time": "",
+         "name": "Republic of Korea",
+         "noc": "KOR",
+         "time": "PEN",
          "qual": "",
-         "status": "",
+         "status": "Penalty",
          "record": "",
          "bib": null,
-         "lane": 3,
+         "lane": 1,
          "slug": ""
         }
        ]
       },
       {
        "name": "Heat 2",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
         {
          "rank": null,
@@ -9887,6 +9887,18 @@
          "record": "",
          "bib": null,
          "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Individual Neutral Athletes 2",
+         "noc": "AIN2",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 5,
          "slug": ""
         },
         {
@@ -9923,18 +9935,6 @@
          "record": "",
          "bib": null,
          "lane": 4,
-         "slug": ""
-        },
-        {
-         "rank": null,
-         "name": "Individual Neutral Athletes 2",
-         "noc": "AIN2",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 5,
          "slug": ""
         }
        ]
@@ -10608,13 +10608,13 @@
    "distance": "Women 3000 m Relay",
    "round": "Quarterfinals",
    "heat": "Heat 1",
-   "start_utc": "2026-11-06T17:29:00.000Z",
+   "start_utc": "2026-11-06T17:32:37.000Z",
    "rank": null,
    "name": "Republic of Korea",
    "noc": "KOR",
-   "time": "",
+   "time": "PEN",
    "qual": "",
-   "status": "",
+   "status": "Penalty",
    "record": "",
    "bib": null,
    "lane": 1,
