@@ -1,0 +1,14 @@
+{
+ "_": "사설(비공식) 올림픽 예선 랭킹 집계 사이트 등록부 (tools/private_rankings.py). 새 곳을 찾으면 여기에 적는다. robots: 그 사이트 robots.txt를 확인한 날짜와 결과.",
+ "sites": {
+  "totalintel": {
+   "sport": "역도",
+   "url": "https://totalintel.org",
+   "what": "LA28 역도 잠정 OQR(올림픽 예선 랭킹) 체급별 순위 (상위 10위까지 받음), 선수·NOC 분석, 대회 해설 블로그",
+   "read": "체급 페이지 /c/<체급> 12장 (서버에서 그린 HTML 표)",
+   "robots": "2026-11-06 확인: 일반 봇 Allow /, Disallow /admin·/api/ (→ /api/는 쓰지 않는다). Content-Signal: search=yes, ai-train=no, use=reference",
+   "note": "비공식 잠정 순위. 출전권은 예선 기간(2028.05.07) 종료 뒤 IWF가 정한다.",
+   "delay": 2
+  }
+ }
+}

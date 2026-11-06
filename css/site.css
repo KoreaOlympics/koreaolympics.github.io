@@ -179,3 +179,6 @@ table.medal-rows tr.grp th { background: var(--head); font-weight: 700; text-ali
 table.medal-rows tr.has-kor > * { background: #fdf0f0; }
 .kor { font-weight: 700; color: #b3122e; }
 .kor .guess { text-decoration: underline dotted; text-underline-offset: 3px; }
+.korea-news { border: 2px solid #b3122e; border-radius: 8px; padding: 4px 14px 8px; margin: 12px 0 18px; background: #fffafa; }
+.korea-news h2 { margin-top: 8px; } .korea-news h3 { font-size: 1.02em; margin: 10px 0 4px; }
+.korea-news ul { margin: 0 0 6px; padding-left: 1.3em; }

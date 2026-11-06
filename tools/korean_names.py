@@ -49,7 +49,7 @@ SYL = {  # 이름에 흔한 관용 표기 (규칙으로는 틀리기 쉬운 것)
     'yeop': '엽', 'yup': '엽', 'chi': '치', 'ui': '의', 'eui': '의', 'saem': '샘', 'seul': '슬', 'byeol': '별', 'byul': '별',
     'bom': '봄', 'gyeol': '결', 'kyeol': '결', 'roo': '루', 'ru': '루', 'woong': '웅', 'ung': '웅', 'joong': '중',
     'jung-': '정', 'taek': '택', 'deok': '덕', 'duk': '덕', 'je': '제', 'gyun': '균', 'kyun': '균', 'jik': '직', 'hwi': '휘',
-    'hui': '희', 'eul': '을', 'ok': '옥', 'ryun': '륜', 'ryeong': '령', 'ryung': '령', 'yi': '이', 'ee': '이', 'seoung': '승', 'sel': '슬', 'seul': '슬', 'he': '혜', 'whi': '휘', 'hwee': '휘',
+    'hui': '희', 'eul': '을', 'ok': '옥', 'ryun': '륜', 'ryeong': '령', 'ryung': '령', 'yi': '이', 'ee': '이', 'seoung': '승', 'seong': '성', 'hyeon': '현', 'yeo': '여', 'i': '이', 'sel': '슬', 'seul': '슬', 'he': '혜', 'whi': '휘', 'hwee': '휘',
 }
 GIVEN = {'gae-un': '가은', 'ga-eun': '가은'}  # 붙임표 자리가 어긋난 관용 표기
 INI = [('kk', 1), ('tt', 4), ('pp', 8), ('ss', 10), ('jj', 13), ('ch', 14), ('g', 0), ('k', 0), ('n', 2), ('d', 3),
@@ -81,11 +81,24 @@ def _syllables(s):
     return ''.join(out)
 
 
+def _split(p):
+    """붙여 쓴 이름(sungmin, seongwon)을 관용 음절표로 가장 적은 조각으로 나눈다. 안 되면 None."""
+    best = {0: []}
+    for i in range(len(p)):
+        if i not in best:
+            continue
+        for j in range(i + 1, min(len(p), i + 6) + 1):
+            k = p[i:j]
+            if k in SYL and (j not in best or len(best[i]) + 1 < len(best[j])):
+                best[j] = best[i] + [SYL[k]]
+    return ''.join(best[len(p)]) if len(p) in best else None
+
+
 def _part(p):
     p = p.lower()
     if p in SYL:
         return SYL[p]
-    return _syllables(p)
+    return _split(p) or _syllables(p)
 
 
 def guess(name):

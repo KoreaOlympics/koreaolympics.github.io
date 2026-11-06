@@ -47,6 +47,8 @@ TERMS = [  # 긴 것부터 바꾼다
     ('Pistol', '권총'), ('Rifle', '소총'), ('Shotgun', '산탄총'),
 ]
 STAGE = {'Final': '파이널'}
+VENUE = {'Granada': '그라나다', 'Munich': '뮌헨', 'Hangzhou': '항저우', 'Cairo': '카이로', 'Tangier': '탕헤르', 'Almaty': '알마티',
+         'Lonato': '로나토', 'Rome': '로마', 'Lima': '리마', 'Doha': '도하', 'Baku': '바쿠', 'New Delhi': '뉴델리', 'Changwon': '창원'}
 
 
 def ko(s):
@@ -127,6 +129,58 @@ def collect(all_=False):
     return n
 
 
+def _tokens(label):
+    return frozenset(ko(label).replace("'", '').split())
+
+
+def quota_holder(res, quota_event, noc):
+    """출전권 표는 국가만 적으므로, 같은 대회 개인 종목 결과에서 그 나라 선수를 찾는다. ' · 반효진 (금)' 또는 ''."""
+    want = _tokens(quota_event)
+    names = kor_names()
+    for e in res.get('events', []):
+        if _tokens(e['event']) != want:
+            continue
+        for i, m in enumerate(e['medals']):
+            if m['noc'] == noc and len(m['names']) == 1:
+                p = m['names'][0]
+                shown = names.get(p, (p, False))[0] if noc == 'KOR' else p
+                return f' · {shown} ({"금은동"[min(i, 2)]})'
+        return ' · 결선 메달 밖 (선수 확인 필요)'
+    return ''
+
+
+def korea_summary(data=None):
+    """진행 중·최근 대회에서 한국이 얻은 LA28 출전권과 메달 — summer-live.html 맨 위."""
+    data = data or load(OUT, {'results': {}})
+    srcs = sorted(load(SRC)['events'], key=lambda s: s['start'], reverse=True)
+    names = kor_names()
+    items = []
+    for src in srcs:
+        res = data['results'].get(src['id'])
+        if not res or not in_window(src) or status(src) == 'soon':
+            continue
+        quotas = [ko(ev) + quota_holder(res, ev, 'KOR') for ev, _, nocs in res.get('quotas', []) if 'KOR' in nocs]
+        meds = []
+        for grp, ev, stage, ms in rows_of(src, res):
+            for i, m in enumerate(ms[:4]):
+                if m['noc'] == 'KOR':
+                    who_ = '·'.join(names.get(p, (p, False))[0] for p in m['names'][:4]) if len(m['names']) <= 4 else f'{len(m["names"])}명'
+                    label = f'{grp.split(" ", 1)[-1]} {ev}' if stage else ev  # 시즌 문서: '남자 개인 10m 공기소총'
+                    meds.append(f'{"🥇🥈🥉"[min(i, 2)]} {label}{" · " + stage if stage else ""} {who_}')
+        if quotas or meds:
+            items.append((src, quotas, meds))
+    if not items:
+        return ''
+    out = ['<div class="korea-news"><h2>🇰🇷 한국 소식 <span class="asof">' + E(data.get('asof', '')) + '</span></h2>']
+    for src, quotas, meds in items:
+        out.append(f'<h3>{E(src["title"])} <span class="small">{E(src.get("place", ""))} · {"진행 중" if status(src) == "live" else "종료"}</span></h3><ul>')
+        out += [f'<li><b>LA28 출전권 획득</b>: {E(q)}</li>' for q in quotas]
+        out += [f'<li>{E(m)}</li>' for m in meds]
+        out.append('</ul>')
+    out.append('<p class="small">사격 출전권은 선수가 아니라 국가(NOC)가 받는다. 선수 이름은 같은 대회 결선 결과에서 찾은 것이다.</p></div>')
+    return '\n'.join(out)
+
+
 def update_quotas(srcs, data):
     """출전권 표가 있는 대회 → la28-qualified.json의 허브에 'auto' 묶음."""
     q = load(QUAL)
@@ -135,7 +189,7 @@ def update_quotas(srcs, data):
         res = data['results'].get(src['id'])
         if not res or not src.get('quota_route'):
             continue
-        rows = [[noc, src['quota_route'], ko(ev)] for ev, _, nocs in res['quotas'] for noc in nocs]
+        rows = [[noc, src['quota_route'], ko(ev) + quota_holder(res, ev, noc)] for ev, _, nocs in res['quotas'] for noc in nocs]
         hub = q.setdefault(src['sport'], {'groups': []})
         groups = [g for g in hub['groups'] if g.get('auto') != src['id']]
         if rows:
@@ -198,7 +252,7 @@ def who(m, codes, names, up=''):
 def rows_of(src, res):
     """[(묶음, 종목, 차수/장소, 메달)]"""
     if res.get('season'):
-        return [(ko(e['section']), ko(e['event']), STAGE.get(e['stage'], e['stage'] + '차') + ' ' + e['venue'], e['medals']) for e in res['season']]
+        return [(ko(e['section']), ko(e['event']), STAGE.get(e['stage'], e['stage'] + '차') + ' ' + VENUE.get(e['venue'], e['venue']), e['medals']) for e in res['season']]
     return [(ko(e['section']), ko(e['event']), '', e['medals']) for e in res['events']]
 
 
@@ -293,7 +347,7 @@ def live_section():
     hub = {s['file']: s['name'] for s in reg['summer']['sports']}
     srcs = sorted(load(SRC)['events'], key=lambda s: s['start'], reverse=True)
     now = [s for s in srcs if s['id'] in data['results'] and in_window(s) and status(s) != 'soon']
-    out = [f'<h2>진행 중·최근 대회 결과 <span class="asof">{E(data.get("asof", ""))}</span></h2>']
+    out = [korea_summary(data), f'<h2>진행 중·최근 대회 결과 <span class="asof">{E(data.get("asof", ""))}</span></h2>']
     if now:
         out += [f'<h3>{E(hub.get(s["sport"], ""))}</h3>' + event_card(s, data['results'][s['id']], codes, names, open_=s.get('kind') != 'season') for s in now]
     else:
@@ -313,6 +367,9 @@ def live_section():
 
 if __name__ == '__main__':
     cmd = sys.argv[1] if len(sys.argv) > 1 else 'render'
+    if cmd == 'active':  # 지금 진행 중인 대회 수 (워크플로가 반복 여부를 정한다)
+        print(sum(1 for s in load(SRC)['events'] if status(s) == 'live' and s.get('kind') != 'season'))
+        sys.exit()
     if cmd == 'collect':
         collect('--all' in sys.argv)
     render()

@@ -21,7 +21,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 70
     env:
       GH_TOKEN: ${{ github.token }}
     steps:
@@ -29,19 +29,33 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Collect and publish
+      - name: Collect and publish (repeat every 15 minutes while an event is live)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
           flag=""
           if [ "${{ github.event.schedule }}" = "47 19 * * *" ] || [ "${{ inputs.all }}" = "true" ]; then flag="--all"; fi
-          python tools/summer_live.py collect $flag
-          python tools/qualified.py
-          python tools/summer_pages.py
-          python tools/olympic.py check
-          git add data/summer-live.json data/la28-qualified.json summer-live.html la28-qualification.html ol*.html
-          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
-          git commit -q -m "summer: update live results"
-          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin main && break; sleep 5; done
-          # bot pushes do not trigger push-based deploys; start the Pages deploy explicitly
-          gh workflow run pages.yml --ref main
+          end=$((SECONDS + 50*60))
+          while :; do
+            python tools/summer_live.py collect $flag || true
+            python tools/qualified.py
+            python tools/summer_pages.py
+            python tools/olympic.py check
+            git add data/summer-live.json data/la28-qualified.json data/korean-names.json summer-live.html la28-qualification.html ol*.html
+            if ! git diff --cached --quiet; then
+              git commit -q -m "summer: update live results"
+              for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin main && break; sleep 5; done
+              # bot pushes do not trigger push-based deploys; start the Pages deploy explicitly
+              gh workflow run pages.yml --ref main
+            fi
+            flag=""
+            active=$(python tools/summer_live.py active)
+            echo "live events: $active"
+            if [ "$active" = 0 ] || [ $SECONDS -ge $end ]; then break; fi
+            sleep 900
+          done
+          echo "ACTIVE=$active" >> "$GITHUB_ENV"
+      # GitHub 예약 실행은 몇 시간씩 밀리기도 하므로, 대회 중에는 끝날 때 다음 실행을 직접 이어 붙인다
+      - name: Chain the next run while events are live
+        if: env.ACTIVE != '0'
+        run: gh workflow run summer-live.yml --ref main
