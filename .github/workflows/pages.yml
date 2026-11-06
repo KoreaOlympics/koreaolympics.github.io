@@ -29,15 +29,22 @@ jobs:
       # 내용 보호: 업로드·덮어쓰기로 사라진 섹션(파리 메달·예선 규정·확정 국가 등)과 자동 블록을 되살린 뒤 배포한다.
       # 일부러 지운 경우 커밋 메시지에 [guard skip]을 넣는다.
       - name: Guard content
-        if: github.event_name == 'push' && !contains(github.event.head_commit.message, '[guard skip]') && github.event.before != '0000000000000000000000000000000000000000'
+        # 마지막으로 검사한 커밋(guard-base 태그)부터 지금까지를 본다. 앞선 배포가 취소돼도 빠지는 푸시가 없다.
+        # 그 사이 커밋 메시지에 [guard skip]이 있으면 검사하지 않고 기준만 옮긴다.
         run: |
-          python3 tools/guard.py ${{ github.event.before }}
-          if ! git diff --quiet; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
-            git commit -qam "guard: 덮어쓴 내용 되살리기"
-            for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git fetch -q origin "+refs/tags/guard-base:refs/tags/guard-base" || true
+          base=$(git rev-parse -q --verify "refs/tags/guard-base^{commit}" || true)
+          if [ -z "$base" ] && [ "${{ github.event_name }}" = push ] && [ "${{ github.event.before }}" != 0000000000000000000000000000000000000000 ]; then base=${{ github.event.before }}; fi
+          if [ -n "$base" ] && git merge-base --is-ancestor "$base" HEAD && ! git log --format=%B "$base..HEAD" | grep -q '\[guard skip\]'; then
+            python3 tools/guard.py "$base"
+            if ! git diff --quiet; then
+              git commit -qam "guard: 덮어쓴 내용 되살리기"
+              for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done
+            fi
           fi
+          git tag -f guard-base HEAD && git push -qf origin refs/tags/guard-base || true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .
