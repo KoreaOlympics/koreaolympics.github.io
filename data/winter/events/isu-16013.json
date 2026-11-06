@@ -18,7 +18,7 @@
   "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-cup-of-china-2026/"
  },
- "checked_at": "2026-11-06T09:29:09.213051+00:00",
+ "checked_at": "2026-11-06T09:39:33.025695+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T06:53:00.000Z",
@@ -387,6 +387,23 @@
     },
     {
      "rank": 3,
+     "name": "Haein LEE",
+     "noc": "KOR",
+     "points": "67.49",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 3,
+       "total": "67.49",
+       "tes": "34.86",
+       "pcs": "32.63",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 4,
      "name": "Yi ZHU",
      "noc": "CHN",
      "points": "64.58",
@@ -394,7 +411,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 3,
+       "rank": 4,
        "total": "64.58",
        "tes": "36.51",
        "pcs": "28.07",
@@ -403,7 +420,7 @@
      }
     },
     {
-     "rank": 4,
+     "rank": 5,
      "name": "Ruiyang ZHANG",
      "noc": "CHN",
      "points": "61.20",
@@ -411,7 +428,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 4,
+       "rank": 5,
        "total": "61.20",
        "tes": "34.03",
        "pcs": "27.17",
@@ -420,7 +437,7 @@
      }
     },
     {
-     "rank": 5,
+     "rank": 6,
      "name": "Sophie Joline VON FELTEN",
      "noc": "USA",
      "points": "60.19",
@@ -428,7 +445,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 5,
+       "rank": 6,
        "total": "60.19",
        "tes": "33.16",
        "pcs": "27.03",
@@ -437,7 +454,7 @@
      }
     },
     {
-     "rank": 6,
+     "rank": 7,
      "name": "Alina BONILLO",
      "noc": "USA",
      "points": "59.30",
@@ -445,7 +462,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 6,
+       "rank": 7,
        "total": "59.30",
        "tes": "32.32",
        "pcs": "26.98",
@@ -454,7 +471,24 @@
      }
     },
     {
-     "rank": 7,
+     "rank": 8,
+     "name": "Rinka WATANABE",
+     "noc": "JPN",
+     "points": "55.72",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 8,
+       "total": "55.72",
+       "tes": "27.07",
+       "pcs": "29.65",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 9,
      "name": "Olga MIKUTINA",
      "noc": "AUT",
      "points": "55.41",
@@ -462,44 +496,10 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 7,
+       "rank": 9,
        "total": "55.41",
        "tes": "28.00",
        "pcs": "28.41",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Haein LEE",
-     "noc": "KOR",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Rinka WATANABE",
-     "noc": "JPN",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
        "status": "Running"
       }
      }
@@ -920,17 +920,17 @@
    "sport": "figure-skating",
    "event": "ISU Figure Skating Grand Prix Cup of China 2026",
    "distance": "Women",
-   "round": "",
+   "round": "Short Program",
    "heat": "",
    "start_utc": "2026-11-07T08:30:00.000Z",
-   "rank": null,
+   "rank": 3,
    "name": "Haein LEE",
    "noc": "KOR",
-   "time": "",
+   "time": "67.49",
    "qual": "",
    "status": "",
    "segments": {
-    "SP": ""
+    "SP": "67.49"
    }
   },
   {
