@@ -18,7 +18,7 @@
   "live": "Men 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-06T11:47:36.148177+00:00",
+ "checked_at": "2026-11-06T11:57:53.741121+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:31:00.000Z",
@@ -3649,7 +3649,7 @@
     {
      "id": 23014,
      "name": "Quarterfinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-06T11:06:33.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Semifinals.",
      "heats": [
@@ -4323,15 +4323,15 @@
       },
       {
        "name": "Heat 9",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Tagir AMIRKHANOV",
          "noc": "AIN2",
-         "time": "",
-         "qual": "",
+         "time": "2:23.531",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 105,
@@ -4339,22 +4339,22 @@
          "slug": "tagir-amirkhanov"
         },
         {
-         "rank": null,
-         "name": "Tsjerk VAN DER MEER",
-         "noc": "NED",
-         "time": "",
-         "qual": "",
+         "rank": 2,
+         "name": "Nathan MULLER",
+         "noc": "FRA",
+         "time": "2:23.612",
+         "qual": "Q",
          "status": "",
          "record": "",
-         "bib": 183,
-         "lane": 2,
-         "slug": "tsjerk-van-der-meer"
+         "bib": 135,
+         "lane": 4,
+         "slug": "nathan-muller"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Kritsanapon PHUATRAKUL",
          "noc": "THA",
-         "time": "",
+         "time": "2:23.741",
          "qual": "",
          "status": "",
          "record": "",
@@ -4363,34 +4363,22 @@
          "slug": "kritsanapon-phuatrakul"
         },
         {
-         "rank": null,
-         "name": "Nathan MULLER",
-         "noc": "FRA",
-         "time": "",
+         "rank": 4,
+         "name": "Tsjerk VAN DER MEER",
+         "noc": "NED",
+         "time": "2:23.754",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 135,
-         "lane": 4,
-         "slug": "nathan-muller"
+         "bib": 183,
+         "lane": 2,
+         "slug": "tsjerk-van-der-meer"
         },
         {
-         "rank": null,
-         "name": "Maximillian MELAND",
-         "noc": "NOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 185,
-         "lane": 5,
-         "slug": "maximillian-meland"
-        },
-        {
-         "rank": null,
+         "rank": 5,
          "name": "Bence KISS-GEBORA",
          "noc": "HUN",
-         "time": "",
+         "time": "2:24.566",
          "qual": "",
          "status": "",
          "record": "",
@@ -4399,10 +4387,22 @@
          "slug": "bence-kiss-gebora"
         },
         {
-         "rank": null,
+         "rank": 6,
+         "name": "Maximillian MELAND",
+         "noc": "NOR",
+         "time": "2:29.186",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 185,
+         "lane": 5,
+         "slug": "maximillian-meland"
+        },
+        {
+         "rank": 7,
          "name": "Ramadhan Harits KUSWARA",
          "noc": "INA",
-         "time": "",
+         "time": "2:33.928",
          "qual": "",
          "status": "",
          "record": "",
@@ -4412,7 +4412,176 @@
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Semifinals",
+      "official_draw_published": false,
+      "pending": [
+       "Rep. Semifinals"
+      ],
+      "qualified": [
+       {
+        "name": "Xinchi YU",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "2:15.243",
+        "qual": "Q"
+       },
+       {
+        "name": "Tianyou WANG",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "2:16.873",
+        "qual": "Q"
+       },
+       {
+        "name": "Daniel JIN",
+        "noc": "USA",
+        "rank": 1,
+        "time": "2:18.806",
+        "qual": "Q"
+       },
+       {
+        "name": "Wonseok CHOI",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "2:18.951",
+        "qual": "Q"
+       },
+       {
+        "name": "Yoonseok LEE",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "2:19.076",
+        "qual": "Q"
+       },
+       {
+        "name": "Alexis DUBUC-BILODEAU",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "2:23.054",
+        "qual": "Q"
+       },
+       {
+        "name": "Tagir AMIRKHANOV",
+        "noc": "AIN2",
+        "rank": 1,
+        "time": "2:23.531",
+        "qual": "Q"
+       },
+       {
+        "name": "Borisz Z MOLNAR",
+        "noc": "HUN",
+        "rank": 1,
+        "time": "2:24.865",
+        "qual": "Q"
+       },
+       {
+        "name": "Tijmen VAN LAETHEM",
+        "noc": "BEL",
+        "rank": 1,
+        "time": "2:30.004",
+        "qual": "Q"
+       },
+       {
+        "name": "Tymeo LIBEAU",
+        "noc": "FRA",
+        "rank": 2,
+        "time": "2:15.494",
+        "qual": "Q"
+       },
+       {
+        "name": "Ilia SIVOKHO",
+        "noc": "AIN2",
+        "rank": 2,
+        "time": "2:17.706",
+        "qual": "Q"
+       },
+       {
+        "name": "Jeremy BOUCHARD",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "2:19.106",
+        "qual": "Q"
+       },
+       {
+        "name": "William SAMSON",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "2:19.197",
+        "qual": "Q"
+       },
+       {
+        "name": "Fabio BRACCHI",
+        "noc": "ITA",
+        "rank": 2,
+        "time": "2:19.573",
+        "qual": "Q"
+       },
+       {
+        "name": "Maxim SAYENKO",
+        "noc": "KAZ",
+        "rank": 2,
+        "time": "2:23.232",
+        "qual": "Q"
+       },
+       {
+        "name": "Nathan MULLER",
+        "noc": "FRA",
+        "rank": 2,
+        "time": "2:23.612",
+        "qual": "Q"
+       },
+       {
+        "name": "Muhammed Dogukan ERDOGAN",
+        "noc": "TUR",
+        "rank": 2,
+        "time": "2:25.442",
+        "qual": "Q"
+       },
+       {
+        "name": "Kebba NJIE",
+        "noc": "NED",
+        "rank": 2,
+        "time": "2:30.148",
+        "qual": "Q"
+       },
+       {
+        "name": "Filip HYJEK",
+        "noc": "POL",
+        "rank": 4,
+        "time": "2:27.912",
+        "qual": "ADV"
+       }
+      ],
+      "races": [
+       [
+        "Xinchi YU (CHN)",
+        "Alexis DUBUC-BILODEAU (CAN)",
+        "Tagir AMIRKHANOV (AIN2)",
+        "Jeremy BOUCHARD (CAN)",
+        "William SAMSON (CAN)",
+        "Kebba NJIE (NED)",
+        "Filip HYJEK (POL)"
+       ],
+       [
+        "Tianyou WANG (CHN)",
+        "Yoonseok LEE (KOR)",
+        "Borisz Z MOLNAR (HUN)",
+        "Ilia SIVOKHO (AIN2)",
+        "Fabio BRACCHI (ITA)",
+        "Muhammed Dogukan ERDOGAN (TUR)"
+       ],
+       [
+        "Daniel JIN (USA)",
+        "Wonseok CHOI (KOR)",
+        "Tijmen VAN LAETHEM (BEL)",
+        "Tymeo LIBEAU (FRA)",
+        "Maxim SAYENKO (KAZ)",
+        "Nathan MULLER (FRA)"
+       ]
+      ]
+     }
     },
     {
      "id": 23015,
