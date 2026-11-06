@@ -18,7 +18,7 @@
   "live": "Men 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-06T14:35:29.698584+00:00",
+ "checked_at": "2026-11-06T14:45:55.211724+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:31:00.000Z",
@@ -5766,7 +5766,7 @@
     {
      "id": 23046,
      "name": "Heats",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-06T14:18:03.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of four fastest third place skaters qualify for Quarterfinals.",
      "heats": [
@@ -5804,7 +5804,7 @@
          "name": "Aunnipit KOSITVANICH",
          "noc": "THA",
          "time": "41.937",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 194,
@@ -5871,7 +5871,7 @@
          "name": "Kebba NJIE",
          "noc": "NED",
          "time": "41.180",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 181,
@@ -5938,7 +5938,7 @@
          "name": "Mihaly ARENDAS",
          "noc": "HUN",
          "time": "42.165",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 146,
@@ -6005,7 +6005,7 @@
          "name": "Moritz HARTMANN",
          "noc": "GER",
          "time": "41.687",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 138,
@@ -6175,14 +6175,14 @@
       {
        "name": "Heat 7",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "Chanwook PARK",
          "noc": "KOR",
-         "time": "41.160",
-         "qual": "",
+         "time": "41.204",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 175,
@@ -6193,8 +6193,8 @@
          "rank": 2,
          "name": "William SAMSON",
          "noc": "CAN",
-         "time": "41.300",
-         "qual": "",
+         "time": "41.340",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 120,
@@ -6205,8 +6205,8 @@
          "rank": 3,
          "name": "Daniel JIN",
          "noc": "USA",
-         "time": "41.370",
-         "qual": "",
+         "time": "41.356",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 205,
@@ -6217,7 +6217,7 @@
          "rank": 4,
          "name": "Raman SHAM",
          "noc": "AIN1",
-         "time": "41.490",
+         "time": "41.543",
          "qual": "",
          "status": "",
          "record": "",
@@ -6229,7 +6229,7 @@
          "rank": 5,
          "name": "Alessandro PICCO",
          "noc": "ITA",
-         "time": "42.100",
+         "time": "42.142",
          "qual": "",
          "status": "",
          "record": "",
@@ -6239,7 +6239,170 @@
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Quarterfinals",
+      "official_draw_published": false,
+      "pending": [
+       "Rep. Semifinals"
+      ],
+      "qualified": [
+       {
+        "name": "Wonseok CHOI",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "40.607",
+        "qual": "Q"
+       },
+       {
+        "name": "David MAKARIAN",
+        "noc": "AIN2",
+        "rank": 1,
+        "time": "40.902",
+        "qual": "Q"
+       },
+       {
+        "name": "Emile FORTIN",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "41.045",
+        "qual": "Q"
+       },
+       {
+        "name": "Haoyang JIANG",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "41.199",
+        "qual": "Q"
+       },
+       {
+        "name": "Chanwook PARK",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "41.204",
+        "qual": "Q"
+       },
+       {
+        "name": "Yuheng LI",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "41.254",
+        "qual": "Q"
+       },
+       {
+        "name": "Filippo PEZZONI",
+        "noc": "ITA",
+        "rank": 1,
+        "time": "41.482",
+        "qual": "Q"
+       },
+       {
+        "name": "Lucas WU",
+        "noc": "USA",
+        "rank": 2,
+        "time": "40.975",
+        "qual": "Q"
+       },
+       {
+        "name": "Kirill PANIKOROVSKII",
+        "noc": "AIN2",
+        "rank": 2,
+        "time": "41.044",
+        "qual": "Q"
+       },
+       {
+        "name": "William SAMSON",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "41.340",
+        "qual": "Q"
+       },
+       {
+        "name": "Minchan KIM",
+        "noc": "KOR",
+        "rank": 2,
+        "time": "41.413",
+        "qual": "Q"
+       },
+       {
+        "name": "Oskar SOLTAU",
+        "noc": "POL",
+        "rank": 2,
+        "time": "41.610",
+        "qual": "Q"
+       },
+       {
+        "name": "Zhibo SUN",
+        "noc": "CHN",
+        "rank": 2,
+        "time": "41.672",
+        "qual": "Q"
+       },
+       {
+        "name": "Kosuke MAEDA",
+        "noc": "JPN",
+        "rank": 2,
+        "time": "42.005",
+        "qual": "Q"
+       },
+       {
+        "name": "Kebba NJIE",
+        "noc": "NED",
+        "rank": 3,
+        "time": "41.180",
+        "qual": "q"
+       },
+       {
+        "name": "Daniel JIN",
+        "noc": "USA",
+        "rank": 3,
+        "time": "41.356",
+        "qual": "q"
+       },
+       {
+        "name": "Moritz HARTMANN",
+        "noc": "GER",
+        "rank": 3,
+        "time": "41.687",
+        "qual": "q"
+       },
+       {
+        "name": "Aunnipit KOSITVANICH",
+        "noc": "THA",
+        "rank": 3,
+        "time": "41.937",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Wonseok CHOI (KOR)",
+        "Lucas WU (USA)",
+        "Kirill PANIKOROVSKII (AIN2)",
+        "Daniel JIN (USA)",
+        "Moritz HARTMANN (GER)"
+       ],
+       [
+        "David MAKARIAN (AIN2)",
+        "Filippo PEZZONI (ITA)",
+        "William SAMSON (CAN)",
+        "Kebba NJIE (NED)",
+        "Aunnipit KOSITVANICH (THA)"
+       ],
+       [
+        "Emile FORTIN (CAN)",
+        "Yuheng LI (CHN)",
+        "Minchan KIM (KOR)",
+        "Kosuke MAEDA (JPN)"
+       ],
+       [
+        "Haoyang JIANG (CHN)",
+        "Chanwook PARK (KOR)",
+        "Oskar SOLTAU (POL)",
+        "Zhibo SUN (CHN)"
+       ]
+      ]
+     }
     },
     {
      "id": 23047,
@@ -7708,8 +7871,8 @@
    "rank": 1,
    "name": "Chanwook PARK",
    "noc": "KOR",
-   "time": "41.160",
-   "qual": "",
+   "time": "41.204",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 175,
