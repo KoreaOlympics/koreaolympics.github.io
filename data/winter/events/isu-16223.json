@@ -18,7 +18,7 @@
   "live": "Mixed Team Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-06T17:04:33.486298+00:00",
+ "checked_at": "2026-11-06T17:15:00.141823+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -9480,7 +9480,7 @@
          "name": "Republic of Korea",
          "noc": "KOR",
          "time": "2:46.758",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": null,
@@ -9559,26 +9559,14 @@
       {
        "name": "Heat 3",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
-         "name": "United States of America",
-         "noc": "USA",
-         "time": "2:45.460",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 4,
-         "slug": ""
-        },
-        {
-         "rank": 2,
          "name": "Italy",
          "noc": "ITA",
-         "time": "2:50.290",
-         "qual": "",
+         "time": "2:50.328",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -9586,11 +9574,11 @@
          "slug": ""
         },
         {
-         "rank": 3,
+         "rank": 2,
          "name": "Turkiye",
          "noc": "TUR",
-         "time": "2:51.590",
-         "qual": "",
+         "time": "2:51.631",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -9598,29 +9586,41 @@
          "slug": ""
         },
         {
-         "rank": 4,
+         "rank": 3,
          "name": "Japan",
          "noc": "JPN",
-         "time": "3:06.070",
-         "qual": "",
+         "time": "3:10.011",
+         "qual": "ADV",
          "status": "",
          "record": "",
          "bib": null,
          "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "United States of America",
+         "noc": "USA",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": null,
+         "lane": 4,
          "slug": ""
         }
        ]
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Live",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Canada",
          "noc": "CAN",
-         "time": "",
+         "time": "2:48.080",
          "qual": "",
          "status": "",
          "record": "",
@@ -9629,22 +9629,10 @@
          "slug": ""
         },
         {
-         "rank": null,
-         "name": "Germany",
-         "noc": "GER",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 2,
-         "slug": ""
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Ukraine",
          "noc": "UKR",
-         "time": "",
+         "time": "2:52.910",
          "qual": "",
          "status": "",
          "record": "",
@@ -9653,15 +9641,27 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Kazakhstan",
          "noc": "KAZ",
-         "time": "",
+         "time": "2:59.190",
          "qual": "",
          "status": "",
          "record": "",
          "bib": null,
          "lane": 4,
+         "slug": ""
+        },
+        {
+         "rank": 4,
+         "name": "Germany",
+         "noc": "GER",
+         "time": "3:11.350",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 2,
          "slug": ""
         }
        ]
@@ -10311,7 +10311,7 @@
    "name": "Republic of Korea",
    "noc": "KOR",
    "time": "2:46.758",
-   "qual": "p",
+   "qual": "",
    "status": "",
    "record": "",
    "bib": null,
