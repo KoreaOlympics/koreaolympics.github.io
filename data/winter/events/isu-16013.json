@@ -15,10 +15,10 @@
   "city": "Shenzhen",
   "country": "CHN",
   "state": "Live",
-  "live": "REN Junfei / XING Jianing",
+  "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-cup-of-china-2026/"
  },
- "checked_at": "2026-11-06T07:08:26.793166+00:00",
+ "checked_at": "2026-11-06T07:18:43.706230+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T06:53:00.000Z",
@@ -111,6 +111,23 @@
     },
     {
      "rank": 2,
+     "name": "Junfei REN / Jianing XING",
+     "noc": "CHN",
+     "points": "59.16",
+     "status": "Active",
+     "segments": {
+      "RD": {
+       "name": "Rhythm Dance",
+       "rank": 2,
+       "total": "59.16",
+       "tes": "31.99",
+       "pcs": "27.17",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 3,
      "name": "Yufei LIN / Zijian GAO",
      "noc": "CHN",
      "points": "44.86",
@@ -118,27 +135,10 @@
      "segments": {
       "RD": {
        "name": "Rhythm Dance",
-       "rank": 2,
+       "rank": 3,
        "total": "44.86",
        "tes": "24.34",
        "pcs": "22.52",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Junfei REN / Jianing XING",
-     "noc": "CHN",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "RD": {
-       "name": "Rhythm Dance",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
        "status": "Running"
       }
      }
