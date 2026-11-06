@@ -15,10 +15,10 @@
   "city": "Shenzhen",
   "country": "CHN",
   "state": "Live",
-  "live": "Alina BONILLO",
+  "live": "Sophie Joline VON FELTEN",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-cup-of-china-2026/"
  },
- "checked_at": "2026-11-06T08:42:37.317088+00:00",
+ "checked_at": "2026-11-06T09:05:42.325284+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T06:53:00.000Z",
@@ -29,7 +29,7 @@
    "type": "Couples"
   },
   {
-   "start_utc": "2026-11-06T08:25:00.000Z",
+   "start_utc": "2026-11-06T08:34:00.000Z",
    "title": "Women",
    "round": "Short Program",
    "event_result_id": 15725,
@@ -353,6 +353,23 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Alexandra IGNATOVA",
+     "noc": "AIN2",
+     "points": "72.37",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 1,
+       "total": "72.37",
+       "tes": "39.98",
+       "pcs": "32.39",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
      "name": "Mako YAMASHITA",
      "noc": "JPN",
      "points": "69.17",
@@ -360,7 +377,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 1,
+       "rank": 2,
        "total": "69.17",
        "tes": "39.10",
        "pcs": "30.07",
@@ -369,69 +386,52 @@
      }
     },
     {
-     "rank": null,
-     "name": "Alina BONILLO",
-     "noc": "USA",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Alexandra IGNATOVA",
-     "noc": "AIN2",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Ruiyang ZHANG",
-     "noc": "CHN",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
+     "rank": 3,
      "name": "Yi ZHU",
      "noc": "CHN",
-     "points": "",
+     "points": "64.58",
      "status": "Active",
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
+       "rank": 3,
+       "total": "64.58",
+       "tes": "36.51",
+       "pcs": "28.07",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 4,
+     "name": "Ruiyang ZHANG",
+     "noc": "CHN",
+     "points": "61.20",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 4,
+       "total": "61.20",
+       "tes": "34.03",
+       "pcs": "27.17",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 5,
+     "name": "Alina BONILLO",
+     "noc": "USA",
+     "points": "59.30",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 5,
+       "total": "59.30",
+       "tes": "32.32",
+       "pcs": "26.98",
        "status": "Running"
       }
      }
