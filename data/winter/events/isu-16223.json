@@ -18,7 +18,7 @@
   "live": "Men 1000 m (2)",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-06T15:18:03.441045+00:00",
+ "checked_at": "2026-11-06T15:28:29.906763+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:31:00.000Z",
@@ -7284,7 +7284,7 @@
     {
      "id": 23020,
      "name": "Preliminaries",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-06T14:48:58.000Z",
      "rule": "The first, second and third placed skaters from each race and up to a maximum of three fastest fourth place skaters qualify for Heats.",
      "heats": [
@@ -7626,7 +7626,7 @@
          "name": "Andrea BELLOTTI",
          "noc": "ITA",
          "time": "1:29.036",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 157,
@@ -7705,7 +7705,7 @@
          "name": "Zhandos SEREKPAYEV",
          "noc": "KAZ",
          "time": "1:27.842",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 169,
@@ -7784,7 +7784,7 @@
          "name": "Kritsanapon PHUATRAKUL",
          "noc": "THA",
          "time": "1:27.349",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 195,
@@ -7819,15 +7819,15 @@
       },
       {
        "name": "Heat 8",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Xinchi YU",
          "noc": "CHN",
-         "time": "",
-         "qual": "",
+         "time": "1:29.923",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 125,
@@ -7835,11 +7835,11 @@
          "slug": "xinchi-yu"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Badis BRUGVIN",
          "noc": "FRA",
-         "time": "",
-         "qual": "",
+         "time": "1:30.322",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 131,
@@ -7847,11 +7847,11 @@
          "slug": "badis-brugvin"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Fabio BRACCHI",
          "noc": "ITA",
-         "time": "",
-         "qual": "",
+         "time": "1:30.666",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 158,
@@ -7859,22 +7859,10 @@
          "slug": "fabio-bracchi"
         },
         {
-         "rank": null,
-         "name": "Mathieu VAN DER HORST",
-         "noc": "NED",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 182,
-         "lane": 4,
-         "slug": "mathieu-van-der-horst"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "David HRADSKY",
          "noc": "CZE",
-         "time": "",
+         "time": "1:31.212",
          "qual": "",
          "status": "",
          "record": "",
@@ -7883,20 +7871,273 @@
          "slug": "david-hradsky"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Artem MOISEIENKO",
          "noc": "UKR",
-         "time": "",
+         "time": "1:34.290",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 201,
          "lane": 6,
          "slug": "artem-moiseienko"
+        },
+        {
+         "rank": 6,
+         "name": "Mathieu VAN DER HORST",
+         "noc": "NED",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 182,
+         "lane": 4,
+         "slug": "mathieu-van-der-horst"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Heats",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Biho LEE",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "1:25.251",
+        "qual": "Q"
+       },
+       {
+        "name": "Tymeo LIBEAU",
+        "noc": "FRA",
+        "rank": 1,
+        "time": "1:26.782",
+        "qual": "Q"
+       },
+       {
+        "name": "Yoonseok LEE",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "1:27.400",
+        "qual": "Q"
+       },
+       {
+        "name": "Tsjerk VAN DER MEER",
+        "noc": "NED",
+        "rank": 1,
+        "time": "1:27.847",
+        "qual": "Q"
+       },
+       {
+        "name": "Tianyou WANG",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "1:28.149",
+        "qual": "Q"
+       },
+       {
+        "name": "Alexis DUBUC-BILODEAU",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "1:28.694",
+        "qual": "Q"
+       },
+       {
+        "name": "Xinchi YU",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "1:29.923",
+        "qual": "Q"
+       },
+       {
+        "name": "Borisz Z MOLNAR",
+        "noc": "HUN",
+        "rank": 1,
+        "time": "1:30.163",
+        "qual": "Q"
+       },
+       {
+        "name": "Elliot DUFOUR",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "1:26.703",
+        "qual": "Q"
+       },
+       {
+        "name": "Jeremy BOUCHARD",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "1:26.825",
+        "qual": "Q"
+       },
+       {
+        "name": "Jonathon DERHEIMER",
+        "noc": "USA",
+        "rank": 2,
+        "time": "1:27.489",
+        "qual": "Q"
+       },
+       {
+        "name": "Tagir AMIRKHANOV",
+        "noc": "AIN2",
+        "rank": 2,
+        "time": "1:28.041",
+        "qual": "Q"
+       },
+       {
+        "name": "Lowie DEKENS",
+        "noc": "BEL",
+        "rank": 2,
+        "time": "1:28.739",
+        "qual": "Q"
+       },
+       {
+        "name": "Maksim ZHURAUSKI",
+        "noc": "AIN1",
+        "rank": 2,
+        "time": "1:29.665",
+        "qual": "Q"
+       },
+       {
+        "name": "Andrei PETROV",
+        "noc": "AIN2",
+        "rank": 2,
+        "time": "1:30.305",
+        "qual": "Q"
+       },
+       {
+        "name": "Badis BRUGVIN",
+        "noc": "FRA",
+        "rank": 2,
+        "time": "1:30.322",
+        "qual": "Q"
+       },
+       {
+        "name": "Nathan MULLER",
+        "noc": "FRA",
+        "rank": 3,
+        "time": "1:27.060",
+        "qual": "Q"
+       },
+       {
+        "name": "Maxim SAYENKO",
+        "noc": "KAZ",
+        "rank": 3,
+        "time": "1:27.590",
+        "qual": "Q"
+       },
+       {
+        "name": "Kazuto TAKAHASHI",
+        "noc": "JPN",
+        "rank": 3,
+        "time": "1:27.710",
+        "qual": "Q"
+       },
+       {
+        "name": "Filip HYJEK",
+        "noc": "POL",
+        "rank": 3,
+        "time": "1:28.290",
+        "qual": "Q"
+       },
+       {
+        "name": "Ryan HUANG",
+        "noc": "USA",
+        "rank": 3,
+        "time": "1:29.114",
+        "qual": "Q"
+       },
+       {
+        "name": "Bence KISS-GEBORA",
+        "noc": "HUN",
+        "rank": 3,
+        "time": "1:29.838",
+        "qual": "Q"
+       },
+       {
+        "name": "Fabio BRACCHI",
+        "noc": "ITA",
+        "rank": 3,
+        "time": "1:30.666",
+        "qual": "Q"
+       },
+       {
+        "name": "Szymon ETEL",
+        "noc": "POL",
+        "rank": 3,
+        "time": "1:31.084",
+        "qual": "Q"
+       },
+       {
+        "name": "Kritsanapon PHUATRAKUL",
+        "noc": "THA",
+        "rank": 4,
+        "time": "1:27.349",
+        "qual": "q"
+       },
+       {
+        "name": "Zhandos SEREKPAYEV",
+        "noc": "KAZ",
+        "rank": 4,
+        "time": "1:27.842",
+        "qual": "q"
+       },
+       {
+        "name": "Andrea BELLOTTI",
+        "noc": "ITA",
+        "rank": 4,
+        "time": "1:29.036",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Biho LEE (KOR)",
+        "Badis BRUGVIN (FRA)",
+        "Nathan MULLER (FRA)"
+       ],
+       [
+        "Tymeo LIBEAU (FRA)",
+        "Andrei PETROV (AIN2)",
+        "Maxim SAYENKO (KAZ)"
+       ],
+       [
+        "Yoonseok LEE (KOR)",
+        "Maksim ZHURAUSKI (AIN1)",
+        "Kazuto TAKAHASHI (JPN)"
+       ],
+       [
+        "Tsjerk VAN DER MEER (NED)",
+        "Lowie DEKENS (BEL)",
+        "Filip HYJEK (POL)"
+       ],
+       [
+        "Tianyou WANG (CHN)",
+        "Tagir AMIRKHANOV (AIN2)",
+        "Ryan HUANG (USA)"
+       ],
+       [
+        "Alexis DUBUC-BILODEAU (CAN)",
+        "Jonathon DERHEIMER (USA)",
+        "Bence KISS-GEBORA (HUN)",
+        "Andrea BELLOTTI (ITA)"
+       ],
+       [
+        "Xinchi YU (CHN)",
+        "Jeremy BOUCHARD (CAN)",
+        "Fabio BRACCHI (ITA)",
+        "Zhandos SEREKPAYEV (KAZ)"
+       ],
+       [
+        "Borisz Z MOLNAR (HUN)",
+        "Elliot DUFOUR (CAN)",
+        "Szymon ETEL (POL)",
+        "Kritsanapon PHUATRAKUL (THA)"
+       ]
+      ]
+     }
     },
     {
      "id": 23021,
