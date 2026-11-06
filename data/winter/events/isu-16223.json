@@ -18,7 +18,7 @@
   "live": "Men 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-06T13:32:45.504918+00:00",
+ "checked_at": "2026-11-06T13:43:03.290437+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:31:00.000Z",
@@ -4669,7 +4669,7 @@
          "name": "Berat Efe DAL",
          "noc": "TUR",
          "time": "43.211",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 197,
@@ -4736,7 +4736,7 @@
          "name": "Ho Long YUEN",
          "noc": "HKG",
          "time": "42.818",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 145,
@@ -4870,7 +4870,7 @@
          "name": "Elio CALANCA",
          "noc": "FRA",
          "time": "42.994",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 132,
@@ -4937,7 +4937,7 @@
          "name": "Aunnipit KOSITVANICH",
          "noc": "THA",
          "time": "42.381",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 194,
@@ -5004,7 +5004,7 @@
          "name": "Alessandro PICCO",
          "noc": "ITA",
          "time": "43.384",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 161,
@@ -5138,7 +5138,7 @@
          "name": "Jesse-Jan RAYEN",
          "noc": "BEL",
          "time": "43.043",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 113,
@@ -5272,7 +5272,7 @@
          "name": "Christiano DELGADO",
          "noc": "NED",
          "time": "42.542",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 180,
@@ -5382,7 +5382,7 @@
          "name": "Stan DE GRAAF",
          "noc": "NED",
          "time": "43.320",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 179,
@@ -5406,14 +5406,14 @@
       {
        "name": "Heat 13",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "Minchan KIM",
          "noc": "KOR",
-         "time": "41.960",
-         "qual": "",
+         "time": "42.007",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 172,
@@ -5424,8 +5424,8 @@
          "rank": 2,
          "name": "Ryota WATABE",
          "noc": "JPN",
-         "time": "52.930",
-         "qual": "",
+         "time": "52.973",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 165,
@@ -5433,28 +5433,28 @@
          "slug": "ryota-watabe"
         },
         {
-         "rank": null,
-         "name": "Henri Stenskrog MIDJO",
-         "noc": "NOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 186,
-         "lane": 3,
-         "slug": "henri-stenskrog-midjo"
-        },
-        {
-         "rank": null,
+         "rank": 3,
          "name": "Zalan JANCSO",
          "noc": "HUN",
-         "time": "",
+         "time": "56.433",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 147,
          "lane": 1,
          "slug": "zalan-jancso"
+        },
+        {
+         "rank": 4,
+         "name": "Henri Stenskrog MIDJO",
+         "noc": "NOR",
+         "time": "56.442",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 186,
+         "lane": 3,
+         "slug": "henri-stenskrog-midjo"
         }
        ]
       }
@@ -5532,6 +5532,13 @@
         "noc": "USA",
         "rank": 1,
         "time": "41.966",
+        "qual": "Q"
+       },
+       {
+        "name": "Minchan KIM",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "42.007",
         "qual": "Q"
        },
        {
@@ -5633,54 +5640,127 @@
         "qual": "Q"
        },
        {
+        "name": "Ryota WATABE",
+        "noc": "JPN",
+        "rank": 2,
+        "time": "52.973",
+        "qual": "Q"
+       },
+       {
         "name": "Mihaly ARENDAS",
         "noc": "HUN",
         "rank": 4,
         "time": "59.600",
         "qual": "ADV"
+       },
+       {
+        "name": "Aunnipit KOSITVANICH",
+        "noc": "THA",
+        "rank": 3,
+        "time": "42.381",
+        "qual": "q"
+       },
+       {
+        "name": "Christiano DELGADO",
+        "noc": "NED",
+        "rank": 3,
+        "time": "42.542",
+        "qual": "q"
+       },
+       {
+        "name": "Ho Long YUEN",
+        "noc": "HKG",
+        "rank": 3,
+        "time": "42.818",
+        "qual": "q"
+       },
+       {
+        "name": "Elio CALANCA",
+        "noc": "FRA",
+        "rank": 3,
+        "time": "42.994",
+        "qual": "q"
+       },
+       {
+        "name": "Jesse-Jan RAYEN",
+        "noc": "BEL",
+        "rank": 3,
+        "time": "43.043",
+        "qual": "q"
+       },
+       {
+        "name": "Berat Efe DAL",
+        "noc": "TUR",
+        "rank": 3,
+        "time": "43.211",
+        "qual": "q"
+       },
+       {
+        "name": "Stan DE GRAAF",
+        "noc": "NED",
+        "rank": 3,
+        "time": "43.320",
+        "qual": "q"
+       },
+       {
+        "name": "Alessandro PICCO",
+        "noc": "ITA",
+        "rank": 3,
+        "time": "43.384",
+        "qual": "q"
        }
       ],
       "races": [
        [
         "Emile FORTIN (CAN)",
+        "Kirill PANIKOROVSKII (AIN2)",
         "Wesley JONES (USA)",
-        "Moritz HARTMANN (GER)"
+        "Jesse-Jan RAYEN (BEL)",
+        "Berat Efe DAL (TUR)"
        ],
        [
         "Wonseok CHOI (KOR)",
-        "Kirill PANIKOROVSKII (AIN2)",
-        "Zhanarys MAGZHAN (KAZ)"
+        "Samuel Oliver SULC (CZE)",
+        "Moritz HARTMANN (GER)",
+        "Elio CALANCA (FRA)",
+        "Stan DE GRAAF (NED)"
        ],
        [
         "Yuheng LI (CHN)",
-        "Samuel Oliver SULC (CZE)",
-        "Aarav Aniruddha PATWARDHAN (IND)"
+        "Oskar SOLTAU (POL)",
+        "Zhanarys MAGZHAN (KAZ)",
+        "Ho Long YUEN (HKG)",
+        "Alessandro PICCO (ITA)"
        ],
        [
         "Haoyang JIANG (CHN)",
-        "Oskar SOLTAU (POL)",
-        "Raman SHAM (AIN1)"
+        "Kebba NJIE (NED)",
+        "Aarav Aniruddha PATWARDHAN (IND)",
+        "Christiano DELGADO (NED)"
        ],
        [
         "David MAKARIAN (AIN2)",
-        "Kebba NJIE (NED)",
-        "Daniel JIN (USA)"
+        "Kosuke MAEDA (JPN)",
+        "Raman SHAM (AIN1)",
+        "Aunnipit KOSITVANICH (THA)"
        ],
        [
         "Zhibo SUN (CHN)",
-        "Kosuke MAEDA (JPN)",
-        "Frantisek MUCHKA (CZE)"
+        "Minchan KIM (KOR)",
+        "Daniel JIN (USA)",
+        "Mihaly ARENDAS (HUN)"
        ],
        [
         "William SAMSON (CAN)",
         "Lucas WU (USA)",
-        "Kirill KOVALENKO (UKR)"
+        "Frantisek MUCHKA (CZE)",
+        "Ryota WATABE (JPN)"
        ],
        [
         "Chanwook PARK (KOR)",
         "Filippo PEZZONI (ITA)",
-        "Adomas OGULEVICIUS (LTU)",
-        "Mihaly ARENDAS (HUN)"
+        "Kirill KOVALENKO (UKR)",
+        "Adomas OGULEVICIUS (LTU)"
        ]
       ]
      }
@@ -6348,8 +6428,8 @@
    "rank": 1,
    "name": "Minchan KIM",
    "noc": "KOR",
-   "time": "41.960",
-   "qual": "",
+   "time": "42.007",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 172,
