@@ -18,7 +18,7 @@
   "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-cup-of-china-2026/"
  },
- "checked_at": "2026-11-06T13:43:12.493130+00:00",
+ "checked_at": "2026-11-06T13:53:31.447116+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T06:53:00.000Z",
@@ -888,6 +888,23 @@
     },
     {
      "rank": 2,
+     "name": "Shun SATO",
+     "noc": "JPN",
+     "points": "101.97",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 2,
+       "total": "101.97",
+       "tes": "59.57",
+       "pcs": "42.40",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 3,
      "name": "Evgeni SEMENENKO",
      "noc": "AIN2",
      "points": "99.72",
@@ -895,7 +912,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 2,
+       "rank": 3,
        "total": "99.72",
        "tes": "59.52",
        "pcs": "40.20",
@@ -904,7 +921,7 @@
      }
     },
     {
-     "rank": 3,
+     "rank": 4,
      "name": "Vladislav DIKIDZHI",
      "noc": "AIN2",
      "points": "98.86",
@@ -912,7 +929,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 3,
+       "rank": 4,
        "total": "98.86",
        "tes": "58.06",
        "pcs": "40.80",
@@ -921,7 +938,7 @@
      }
     },
     {
-     "rank": 4,
+     "rank": 5,
      "name": "Vladimir SAMOILOV",
      "noc": "POL",
      "points": "88.21",
@@ -929,7 +946,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 4,
+       "rank": 5,
        "total": "88.21",
        "tes": "51.56",
        "pcs": "37.65",
@@ -938,7 +955,7 @@
      }
     },
     {
-     "rank": 5,
+     "rank": 6,
      "name": "Nika EGADZE",
      "noc": "GEO",
      "points": "87.67",
@@ -946,7 +963,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 5,
+       "rank": 6,
        "total": "87.67",
        "tes": "48.37",
        "pcs": "39.30",
@@ -955,7 +972,7 @@
      }
     },
     {
-     "rank": 6,
+     "rank": 7,
      "name": "Zhiming PENG",
      "noc": "CHN",
      "points": "87.65",
@@ -963,7 +980,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 6,
+       "rank": 7,
        "total": "87.65",
        "tes": "53.35",
        "pcs": "34.30",
@@ -972,7 +989,7 @@
      }
     },
     {
-     "rank": 7,
+     "rank": 8,
      "name": "Yudong CHEN",
      "noc": "CHN",
      "points": "80.74",
@@ -980,7 +997,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 7,
+       "rank": 8,
        "total": "80.74",
        "tes": "44.54",
        "pcs": "36.20",
@@ -989,7 +1006,7 @@
      }
     },
     {
-     "rank": 8,
+     "rank": 9,
      "name": "Minkyu SEO",
      "noc": "KOR",
      "points": "79.77",
@@ -997,7 +1014,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 8,
+       "rank": 9,
        "total": "79.77",
        "tes": "40.64",
        "pcs": "39.13",
@@ -1006,7 +1023,7 @@
      }
     },
     {
-     "rank": 9,
+     "rank": 10,
      "name": "Jacob SANCHEZ",
      "noc": "USA",
      "points": "79.45",
@@ -1014,7 +1031,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 9,
+       "rank": 10,
        "total": "79.45",
        "tes": "40.75",
        "pcs": "38.70",
@@ -1023,7 +1040,7 @@
      }
     },
     {
-     "rank": 10,
+     "rank": 11,
      "name": "Lucius KAZANECKI",
      "noc": "USA",
      "points": "63.16",
@@ -1031,27 +1048,10 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 10,
+       "rank": 11,
        "total": "63.16",
        "tes": "29.87",
        "pcs": "33.29",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Shun SATO",
-     "noc": "JPN",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
        "status": "Running"
       }
      }
@@ -1104,7 +1104,7 @@
    "round": "Short Program",
    "heat": "",
    "start_utc": "2026-11-08T05:00:00.000Z",
-   "rank": 8,
+   "rank": 9,
    "name": "Minkyu SEO",
    "noc": "KOR",
    "time": "79.77",
