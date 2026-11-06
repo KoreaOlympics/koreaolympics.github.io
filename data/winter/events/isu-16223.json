@@ -18,7 +18,7 @@
   "live": "Men 1000 m (1)",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-06T08:42:24.876743+00:00",
+ "checked_at": "2026-11-06T08:52:58.440149+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -705,7 +705,7 @@
          "name": "Tadeus Richard MAGER",
          "noc": "GER",
          "time": "1:37.214",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 142,
@@ -795,15 +795,15 @@
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Elliot DUFOUR",
          "noc": "CAN",
-         "time": "",
-         "qual": "",
+         "time": "1:29.901",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 118,
@@ -811,11 +811,11 @@
          "slug": "elliot-dufour"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Alessandro PICCO",
          "noc": "ITA",
-         "time": "",
-         "qual": "",
+         "time": "1:30.175",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 161,
@@ -823,11 +823,11 @@
          "slug": "alessandro-picco"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Kosuke MAEDA",
          "noc": "JPN",
-         "time": "",
-         "qual": "",
+         "time": "1:30.246",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 162,
@@ -835,42 +835,42 @@
          "slug": "kosuke-maeda"
         },
         {
-         "rank": null,
-         "name": "Chi Ping MAN",
-         "noc": "HKG",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 144,
-         "lane": 4,
-         "slug": "chi-ping-man"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Daniel TROWBRIDGE",
          "noc": "GBR",
-         "time": "",
+         "time": "1:44.779",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 137,
          "lane": 5,
          "slug": "daniel-trowbridge"
+        },
+        {
+         "rank": 5,
+         "name": "Chi Ping MAN",
+         "noc": "HKG",
+         "time": "1:46.230",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 144,
+         "lane": 4,
+         "slug": "chi-ping-man"
         }
        ]
       },
       {
        "name": "Heat 5",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Mihaly ARENDAS",
          "noc": "HUN",
-         "time": "",
-         "qual": "",
+         "time": "1:29.266",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 146,
@@ -878,11 +878,23 @@
          "slug": "mihaly-arendas"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Kirill PANIKOROVSKII",
+         "noc": "AIN2",
+         "time": "1:29.392",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 107,
+         "lane": 5,
+         "slug": "kirill-panikorovskii"
+        },
+        {
+         "rank": 3,
          "name": "Berat Efe DAL",
          "noc": "TUR",
-         "time": "",
-         "qual": "",
+         "time": "1:29.735",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 197,
@@ -890,11 +902,11 @@
          "slug": "berat-efe-dal"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Stan DE GRAAF",
          "noc": "NED",
-         "time": "",
-         "qual": "",
+         "time": "1:29.895",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 179,
@@ -902,41 +914,29 @@
          "slug": "stan-de-graaf"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Advay KOTHARI",
          "noc": "IND",
-         "time": "",
+         "time": "1:30.165",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 154,
          "lane": 4,
          "slug": "advay-kothari"
-        },
-        {
-         "rank": null,
-         "name": "Kirill PANIKOROVSKII",
-         "noc": "AIN2",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 107,
-         "lane": 5,
-         "slug": "kirill-panikorovskii"
         }
        ]
       },
       {
        "name": "Heat 6",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Live",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Zhibo SUN",
          "noc": "CHN",
-         "time": "",
+         "time": "1:29.780",
          "qual": "",
          "status": "",
          "record": "",
@@ -945,10 +945,10 @@
          "slug": "zhibo-sun"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Moritz HARTMANN",
          "noc": "GER",
-         "time": "",
+         "time": "1:30.910",
          "qual": "",
          "status": "",
          "record": "",
@@ -957,10 +957,10 @@
          "slug": "moritz-hartmann"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Raman SHAM",
          "noc": "AIN1",
-         "time": "",
+         "time": "1:30.960",
          "qual": "",
          "status": "",
          "record": "",
@@ -969,22 +969,10 @@
          "slug": "raman-sham"
         },
         {
-         "rank": null,
-         "name": "Lucas MOINDRON",
-         "noc": "FRA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 134,
-         "lane": 4,
-         "slug": "lucas-moindron"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Jesse-Jan RAYEN",
          "noc": "BEL",
-         "time": "",
+         "time": "1:31.080",
          "qual": "",
          "status": "",
          "record": "",
@@ -993,10 +981,22 @@
          "slug": "jesse-jan-rayen"
         },
         {
-         "rank": null,
+         "rank": 5,
+         "name": "Lucas MOINDRON",
+         "noc": "FRA",
+         "time": "1:31.890",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 134,
+         "lane": 4,
+         "slug": "lucas-moindron"
+        },
+        {
+         "rank": 6,
          "name": "Sidoine CONESA",
          "noc": "LUX",
-         "time": "",
+         "time": "1:33.760",
          "qual": "",
          "status": "",
          "record": "",
