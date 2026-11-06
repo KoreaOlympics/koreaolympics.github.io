@@ -15,10 +15,10 @@
   "city": "Bormio",
   "country": "ITA",
   "state": "Live",
-  "live": "Men 1500 m",
+  "live": "Men 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-06T13:00:47.514988+00:00",
+ "checked_at": "2026-11-06T13:11:14.752872+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:31:00.000Z",
@@ -4838,15 +4838,15 @@
       },
       {
        "name": "Heat 4",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Wonseok CHOI",
          "noc": "KOR",
-         "time": "",
-         "qual": "",
+         "time": "41.124",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 171,
@@ -4854,35 +4854,11 @@
          "slug": "wonseok-choi"
         },
         {
-         "rank": null,
-         "name": "Daniil BYCHKOU",
-         "noc": "AIN1",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 101,
-         "lane": 2,
-         "slug": "daniil-bychkou"
-        },
-        {
-         "rank": null,
-         "name": "Elio CALANCA",
-         "noc": "FRA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 132,
-         "lane": 3,
-         "slug": "elio-calanca"
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Aarav Aniruddha PATWARDHAN",
          "noc": "IND",
-         "time": "",
-         "qual": "",
+         "time": "42.551",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 155,
@@ -4890,30 +4866,54 @@
          "slug": "aarav-aniruddha-patwardhan"
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Elio CALANCA",
+         "noc": "FRA",
+         "time": "42.994",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 132,
+         "lane": 3,
+         "slug": "elio-calanca"
+        },
+        {
+         "rank": 4,
          "name": "Luke STREET",
          "noc": "NZL",
-         "time": "",
+         "time": "44.289",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 187,
          "lane": 5,
          "slug": "luke-street"
+        },
+        {
+         "rank": 5,
+         "name": "Daniil BYCHKOU",
+         "noc": "AIN1",
+         "time": "52.477",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 101,
+         "lane": 2,
+         "slug": "daniil-bychkou"
         }
        ]
       },
       {
        "name": "Heat 5",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Filippo PEZZONI",
          "noc": "ITA",
-         "time": "",
-         "qual": "",
+         "time": "41.618",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 160,
@@ -4921,11 +4921,11 @@
          "slug": "filippo-pezzoni"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Zhanarys MAGZHAN",
          "noc": "KAZ",
-         "time": "",
-         "qual": "",
+         "time": "42.376",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 167,
@@ -4933,11 +4933,11 @@
          "slug": "zhanarys-magzhan"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Aunnipit KOSITVANICH",
          "noc": "THA",
-         "time": "",
-         "qual": "",
+         "time": "42.381",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 194,
@@ -4945,10 +4945,10 @@
          "slug": "aunnipit-kositvanich"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Daniel TROWBRIDGE",
          "noc": "GBR",
-         "time": "",
+         "time": "43.446",
          "qual": "",
          "status": "",
          "record": "",
@@ -4957,10 +4957,10 @@
          "slug": "daniel-trowbridge"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Viktor KIRSTA",
          "noc": "AUS",
-         "time": "",
+         "time": "44.567",
          "qual": "",
          "status": "",
          "record": "",
@@ -4972,14 +4972,14 @@
       },
       {
        "name": "Heat 6",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Live",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Haoyang JIANG",
          "noc": "CHN",
-         "time": "",
+         "time": "41.230",
          "qual": "",
          "status": "",
          "record": "",
@@ -4988,10 +4988,10 @@
          "slug": "haoyang-jiang"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Oskar SOLTAU",
          "noc": "POL",
-         "time": "",
+         "time": "41.350",
          "qual": "",
          "status": "",
          "record": "",
@@ -5000,10 +5000,10 @@
          "slug": "oskar-soltau"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Alessandro PICCO",
          "noc": "ITA",
-         "time": "",
+         "time": "43.340",
          "qual": "",
          "status": "",
          "record": "",
@@ -5012,10 +5012,10 @@
          "slug": "alessandro-picco"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Hans Matthew BUEMIO",
          "noc": "PHI",
-         "time": "",
+         "time": "44.060",
          "qual": "",
          "status": "",
          "record": "",
@@ -5024,10 +5024,10 @@
          "slug": "hans-matthew-buemio"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Rudolfs STERNMANIS",
          "noc": "LAT",
-         "time": "",
+         "time": "45.410",
          "qual": "",
          "status": "",
          "record": "",
@@ -6082,11 +6082,11 @@
    "round": "Preliminaries",
    "heat": "Heat 4",
    "start_utc": "2026-11-06T12:50:28.000Z",
-   "rank": null,
+   "rank": 1,
    "name": "Wonseok CHOI",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "41.124",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 171,
