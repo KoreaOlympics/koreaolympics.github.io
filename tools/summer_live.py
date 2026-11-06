@@ -13,6 +13,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 import wikiresults as wr  # noqa: E402
+import korean_names  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / 'data/summer-live-sources.json'
@@ -29,7 +30,8 @@ TERMS = [  # 긴 것부터 바꾼다
     ('25 metre rapid fire pistol', '25m 속사권총'), ('25m Rapid Fire Pistol', '25m 속사권총'), ('25 metre centre fire pistol', '25m 센터파이어 권총'),
     ('25 metre standard pistol', '25m 스탠더드 권총'), ('25 metre pistol', '25m 권총'), ('25m Pistol', '25m 권총'), ('50 metre pistol', '50m 권총'),
     ('50 metre rifle three positions', '50m 소총 3자세'), ('50m Rifle 3 Positions', '50m 소총 3자세'), ('50 metre rifle prone', '50m 소총 복사'),
-    ('skeet', '스키트'), ('Skeet', '스키트'), ('trap', '트랩'), ('Trap', '트랩'), ('double trap', '더블 트랩'),
+    ('rapid fire pistol', '속사권총'), ('air pistol', '공기권총'), ('air rifle', '공기소총'), ('rifle 3 positions', '소총 3자세'),
+    ('rifle three positions', '소총 3자세'), ('rifle prone', '소총 복사'), ('skeet', '스키트'), ('Skeet', '스키트'), ('trap', '트랩'), ('Trap', '트랩'), ('double trap', '더블 트랩'),
     ('Clean & Jerk', '용상'), ('Snatch', '인상'), ('Total', '합계'),
     ('Team all-around', '단체'), ('Individual all-around', '개인종합'), ('All-around', '개인종합'), ('Floor', '마루'), ('Pommel horse', '안마'),
     ('Rings', '링'), ('Vault', '도마'), ('Parallel bars', '평행봉'), ('Horizontal bar', '철봉'), ('Uneven bars', '이단평행봉'), ('Balance beam', '평균대'),
@@ -49,7 +51,7 @@ STAGE = {'Final': '파이널'}
 
 def ko(s):
     for a, b in TERMS:
-        s = re.sub(rf'(?<![A-Za-z]){re.escape(a)}(?![A-Za-z])', b, s)
+        s = re.sub(rf'(?<![A-Za-z]){re.escape(a)}(?![A-Za-z])', b, s, flags=re.I)
     return re.sub(r'(\d+) m\b', r'\1m', s).strip()
 
 
@@ -85,6 +87,12 @@ def collect_one(src):
         item['season'] = wr.season(text)
     else:
         item['events'] = wr.medalists(text)
+    kor = {n for e in item['events'] + item['season'] for m in e['medals'] if m['noc'] == 'KOR' for n in m['names']}
+    if kor:  # 새 한국 선수: 위키백과 선수 문서에서 한글 이름 확인, 없으면 로마자에서 옮긴다
+        links = {}
+        for a, b in re.findall(r'\[\[([^\]|#]+)(?:\|([^\]]+))?\]\]', text):
+            links.setdefault((b or a).strip(), a.strip())
+        korean_names.resolve(kor, links, wr.fetch)
     item['table'] = wr.medal_table(text)
     item['quotas'] = wr.quotas(text)
     return item
@@ -157,16 +165,31 @@ def flag(noc, up=''):
     return '<span class="flag none"></span>'
 
 
+def kor_names():
+    """{로마자: (한글, 추정 여부)} — data/korean-names.json의 확인(names)·추정(guessed)."""
+    d = load(ROOT / 'data/korean-names.json', {})
+    return {**{k: (v, True) for k, v in d.get('guessed', {}).items()}, **{k: (v, False) for k, v in d.get('names', {}).items()}}
+
+
+def person(p, names):
+    ko, guessed = names.get(p, (None, False))
+    if not ko:
+        return E(p)
+    if guessed:
+        return f'<span class="guess" title="{E(p)} — 로마자 표기에서 옮긴 이름 (확인 전)">{E(ko)}</span>'
+    return f'<span title="{E(p)}">{E(ko)}</span>'
+
+
 def who(m, codes, names, up=''):
     noc = m['noc']
     nat = codes.get(noc, [noc])[0]
-    people = [names.get(p, p) for p in m['names']]
+    people = m['names']
     if not people or (len(people) == 1 and people[0] in (nat, noc)):
         txt = E(nat)
     elif len(people) > 4:
         txt = f'{E(nat)} <span class="small">({len(people)}명)</span>'
     else:
-        txt = E('·'.join(people)) + f' <span class="small">{E(nat)}</span>'
+        txt = '·'.join(person(p, names) if noc == 'KOR' else E(p) for p in people) + f' <span class="small">{E(nat)}</span>'
     mark = f' <span class="small">{E(m["mark"])}</span>' if m.get('mark') else ''
     cls = ' class="kor"' if noc == 'KOR' else ''
     return f'<span{cls}>{flag(noc, up)}{txt}</span>{mark}'
@@ -237,7 +260,7 @@ def hub_block(file, data=None):
     srcs = [s for s in load(SRC)['events'] if s['sport'] == file and s['id'] in data['results']]
     if not srcs:
         return ''
-    codes, names = nocs(), load(ROOT / 'data/korean-names.json', {'names': {}})['names']
+    codes, names = nocs(), kor_names()
     srcs.sort(key=lambda s: s['start'], reverse=True)
     cards = ''.join(event_card(s, data['results'][s['id']], codes, names, open_=status(s) == 'live' and s.get('kind') != 'season') for s in srcs)
     return (f'<div class="results" id="recent-results"><h2>2026 주요 대회 결과 <span class="asof">{E(data.get("asof", ""))}</span></h2>'
@@ -265,7 +288,7 @@ def render():
 def live_section():
     """summer-live.html 첫머리: 진행 중이거나 열흘 안에 끝난 대회 결과, 그 밖의 2026 대회 목록."""
     data = load(OUT, {'results': {}})
-    codes, names = nocs(), load(ROOT / 'data/korean-names.json', {'names': {}})['names']
+    codes, names = nocs(), kor_names()
     reg = json.loads((ROOT / 'data/olympic-structure.json').read_text(encoding='utf-8'))
     hub = {s['file']: s['name'] for s in reg['summer']['sports']}
     srcs = sorted(load(SRC)['events'], key=lambda s: s['start'], reverse=True)

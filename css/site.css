@@ -178,3 +178,4 @@ table.medal-rows td { min-width: 9em; }
 table.medal-rows tr.grp th { background: var(--head); font-weight: 700; text-align: left; }
 table.medal-rows tr.has-kor > * { background: #fdf0f0; }
 .kor { font-weight: 700; color: #b3122e; }
+.kor .guess { text-decoration: underline dotted; text-underline-offset: 3px; }

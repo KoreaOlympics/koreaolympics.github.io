@@ -75,9 +75,10 @@ def medal(cell):
     else:
         noc = args[0] if re.fullmatch(r'[A-Z]{3}', args[0]) else ''
         names = [plain(x) for x in re.split(r'<br\s*/?\s*>|\n|\*', cell[m.end():], flags=re.I)]
-        names = [n.lstrip('}| ').strip() for n in names]
+        names = [re.sub(r'\s*\([\d.:,]+\)$', '', n.lstrip('}| ')).strip() for n in names]  # 계영 구간 기록 '(57.66)'은 뗀다
         names = [n for n in names if n and not n.startswith(('on ', '(')) and not re.match(r'^[\d.,]+\s*(kg|pts?)?$', n)]
-    return {'names': names, 'noc': noc, 'mark': ''}
+    names = [re.sub(r'\s*\([\d.:,]+\)$', '', n).strip('{}| ').strip() for n in names]  # 계영 구간 기록 '(57.66)'은 뗀다
+    return {'names': [n for n in names if n], 'noc': noc, 'mark': ''}
 
 
 def medalists(text):

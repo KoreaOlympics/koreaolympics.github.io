@@ -1,7 +1,7 @@
 {
  "results": {
   "issf-wch-2026": {
-   "fetched": "2026-11-06 21:13",
+   "fetched": "2026-11-06 22:36",
    "events": [
     {
      "section": "Pistol",
@@ -890,7 +890,7 @@
    ]
   },
   "iwf-wch-2026": {
-   "fetched": "2026-11-06 21:13",
+   "fetched": "2026-11-06 22:36",
    "events": [
     {
      "section": "Men",
@@ -1400,19 +1400,85 @@
      "section": "Men",
      "group": "110 kg",
      "event": "110 kg Snatch",
-     "medals": []
+     "medals": [
+      {
+       "names": [
+        "Akbar Djuraev"
+       ],
+       "noc": "UZB",
+       "mark": "198 kg WR"
+      },
+      {
+       "names": [
+        "Luis Lauret"
+       ],
+       "noc": "ROU",
+       "mark": "194 kg"
+      },
+      {
+       "names": [
+        "Chen Po-jen"
+       ],
+       "noc": "TPE",
+       "mark": "191 kg"
+      }
+     ]
     },
     {
      "section": "Men",
      "group": "110 kg",
      "event": "110 kg Clean & Jerk",
-     "medals": []
+     "medals": [
+      {
+       "names": [
+        "Akbar Djuraev"
+       ],
+       "noc": "UZB",
+       "mark": "234 kg"
+      },
+      {
+       "names": [
+        "Alireza Nassiri"
+       ],
+       "noc": "IRI",
+       "mark": "233 kg"
+      },
+      {
+       "names": [
+        "Şahzadbek Matýakubow"
+       ],
+       "noc": "TKM",
+       "mark": "230 kg"
+      }
+     ]
     },
     {
      "section": "Men",
      "group": "110 kg",
      "event": "110 kg Total",
-     "medals": []
+     "medals": [
+      {
+       "names": [
+        "Akbar Djuraev"
+       ],
+       "noc": "UZB",
+       "mark": "432 kg WR"
+      },
+      {
+       "names": [
+        "Alireza Nassiri"
+       ],
+       "noc": "IRI",
+       "mark": "418 kg"
+      },
+      {
+       "names": [
+        "Şahzadbek Matýakubow"
+       ],
+       "noc": "TKM",
+       "mark": "417 kg"
+      }
+     ]
     },
     {
      "section": "Men",
@@ -2000,7 +2066,19 @@
      0
     ],
     [
+     "UZB",
+     1,
+     0,
+     0
+    ],
+    [
      "COL",
+     0,
+     1,
+     1
+    ],
+    [
+     "IRI",
      0,
      1,
      1
@@ -2036,13 +2114,13 @@
      0
     ],
     [
-     "IRI",
+     "THA",
      0,
      0,
      1
     ],
     [
-     "THA",
+     "TKM",
      0,
      0,
      1
@@ -2057,7 +2135,7 @@
    "quotas": []
   },
   "uww-wch-2026": {
-   "fetched": "2026-11-06 21:13",
+   "fetched": "2026-11-06 22:36",
    "events": [
     {
      "section": "Men's freestyle",
@@ -3098,7 +3176,7 @@
    "quotas": []
   },
   "fig-wch-2026": {
-   "fetched": "2026-11-06 21:09",
+   "fetched": "2026-11-06 22:36",
    "events": [
     {
      "section": "Medalists",
@@ -3489,7 +3567,7 @@
    "quotas": []
   },
   "uci-track-2026": {
-   "fetched": "2026-11-06 21:09",
+   "fetched": "2026-11-06 22:36",
    "events": [
     {
      "section": "Men",
@@ -4199,7 +4277,7 @@
    "quotas": []
   },
   "ijf-wch-2026": {
-   "fetched": "2026-11-06 21:09",
+   "fetched": "2026-11-06 22:36",
    "events": [
     {
      "section": "Men's events",
@@ -5439,7 +5517,7 @@
    "quotas": []
   },
   "icf-sprint-2026": {
-   "fetched": "2026-11-06 21:09",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Canoe",
@@ -6421,7 +6499,7 @@
    "quotas": []
   },
   "uipm-wch-2026": {
-   "fetched": "2026-11-06 21:09",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Men",
@@ -6684,7 +6762,7 @@
    "quotas": []
   },
   "fei-wch-2026": {
-   "fetched": "2026-11-06 21:09",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Medalists",
@@ -7406,7 +7484,7 @@
    "quotas": []
   },
   "panpacs-2026": {
-   "fetched": "2026-11-06 21:09",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Men's events",
@@ -7885,30 +7963,30 @@
      "medals": [
       {
        "names": [
-        "Chris Guiliano (47.51)",
-        "Patrick Sammon (46.98)",
-        "Destin Lasco (47.74)",
-        "Jack Alexy (46.78)"
+        "Chris Guiliano",
+        "Patrick Sammon",
+        "Destin Lasco",
+        "Jack Alexy"
        ],
        "noc": "USA",
        "mark": "3:09.01 CR"
       },
       {
        "names": [
-        "Kai Taylor (47.81)",
-        "Jamie Jack (47.46)",
-        "Edward Sommerville (47.31)",
-        "Harrison Turner (46.99)"
+        "Kai Taylor",
+        "Jamie Jack",
+        "Edward Sommerville",
+        "Harrison Turner"
        ],
        "noc": "AUS",
        "mark": "3:09.57"
       },
       {
        "names": [
-        "Tatsuya Murasa (48.29)",
-        "Shoon Mitsunaga (47.72)",
-        "Katsuhiro Matsumoto (48.08)",
-        "Shuya Matsumoto (49.44)"
+        "Tatsuya Murasa",
+        "Shoon Mitsunaga",
+        "Katsuhiro Matsumoto",
+        "Shuya Matsumoto"
        ],
        "noc": "JPN",
        "mark": "3:13.53"
@@ -7922,30 +8000,30 @@
      "medals": [
       {
        "names": [
-        "Luke Hobson (1:44.13)",
-        "Aaron Shackell (1:44.23)",
-        "Patrick Sammon (1:46.92)",
-        "Gabriel Jett (1:44.09)"
+        "Luke Hobson",
+        "Aaron Shackell",
+        "Patrick Sammon",
+        "Gabriel Jett"
        ],
        "noc": "USA",
        "mark": "6:59.37 CR"
       },
       {
        "names": [
-        "Maximillian Giuliani (1:45.65)",
-        "Kai Taylor (1:45.91)",
-        "Charlie Hawke (1:44.37)",
-        "Samuel Short (1:45.17)"
+        "Maximillian Giuliani",
+        "Kai Taylor",
+        "Charlie Hawke",
+        "Samuel Short"
        ],
        "noc": "AUS",
        "mark": "7:01.10"
       },
       {
        "names": [
-        "Tatsuya Murasa (1:44.75)",
-        "Katsuhiro Matsumoto (1:46.15)",
-        "Kazusa Kuroda (1:46.72)",
-        "Tomoyuki Matsushita (1:45.12)"
+        "Tatsuya Murasa",
+        "Katsuhiro Matsumoto",
+        "Kazusa Kuroda",
+        "Tomoyuki Matsushita"
        ],
        "noc": "JPN",
        "mark": "7:02.74"
@@ -7959,30 +8037,30 @@
      "medals": [
       {
        "names": [
-        "Will Modglin (53.86)",
-        "Van Mathias (57.72)",
-        "Luca Urlando (50.51)",
-        "Jack Alexy (46.97)"
+        "Will Modglin",
+        "Van Mathias",
+        "Luca Urlando",
+        "Jack Alexy"
        ],
        "noc": "USA",
        "mark": "3:29.06 CR"
       },
       {
        "names": [
-        "Stuart Swinburn (54.66)",
-        "Sam Williamson (58.64)",
-        "Matthew Temple (49.70)",
-        "Harrison Turner (47.16)"
+        "Stuart Swinburn",
+        "Sam Williamson",
+        "Matthew Temple",
+        "Harrison Turner"
        ],
        "noc": "AUS",
        "mark": "3:30.15"
       },
       {
        "names": [
-        "Hidekazu Takehera (54.09)",
-        "Shin Ohashi (58.01)",
-        "Shoon Mitsunaga (50.86)",
-        "Tatsuya Murasa (48.03)"
+        "Hidekazu Takehera",
+        "Shin Ohashi",
+        "Shoon Mitsunaga",
+        "Tatsuya Murasa"
        ],
        "noc": "JPN",
        "mark": "3:30.99"
@@ -8501,29 +8579,29 @@
       {
        "names": [
         "Kate Douglass (51.69) CR , AM",
-        "Gretchen Walsh (52.23)",
-        "Torri Huske (52.79)",
-        "Simone Manuel (52.61)"
+        "Gretchen Walsh",
+        "Torri Huske",
+        "Simone Manuel"
        ],
        "noc": "USA",
        "mark": "3:29.32 CR , AM"
       },
       {
        "names": [
-        "Meg Harris (52.51)",
-        "Alexandria Perkins (53.05)",
-        "Milla Jansen (53.03)",
-        "Olivia Wunsch (52.52)"
+        "Meg Harris",
+        "Alexandria Perkins",
+        "Milla Jansen",
+        "Olivia Wunsch"
        ],
        "noc": "AUS",
        "mark": "3:31.11"
       },
       {
        "names": [
-        "Taylor Ruck (53.59)",
-        "Mary-Sophie Harvey (54.20)",
-        "Leah Tigert (54.04)",
-        "Leilani Fack (54.61)"
+        "Taylor Ruck",
+        "Mary-Sophie Harvey",
+        "Leah Tigert",
+        "Leilani Fack"
        ],
        "noc": "CAN",
        "mark": "3:36.44"
@@ -8537,30 +8615,30 @@
      "medals": [
       {
        "names": [
-        "Inez Miller (1:55.83)",
-        "Lani Pallister (1:53.46)",
-        "Hannah Casey (1:57.84)",
-        "Milla Jansen (1:55.27)"
+        "Inez Miller",
+        "Lani Pallister",
+        "Hannah Casey",
+        "Milla Jansen"
        ],
        "noc": "AUS",
        "mark": "7:42.40 CR"
       },
       {
        "names": [
-        "Erin Gemmell (1:57.00)",
-        "Anna Peplowski (1:55.62)",
-        "Rylee Erisman (1:56.11)",
-        "Katie Ledecky (1:54.37)"
+        "Erin Gemmell",
+        "Anna Peplowski",
+        "Rylee Erisman",
+        "Katie Ledecky"
        ],
        "noc": "USA",
        "mark": "7:43.10"
       },
       {
        "names": [
-        "Mary-Sophie Harvey (1:57.95)",
-        "Summer McIntosh (1:55.82)",
-        "Emma O'Croinin (1:59.86)",
-        "Brooklyn Douthwright (1:59.11)"
+        "Mary-Sophie Harvey",
+        "Summer McIntosh",
+        "Emma O'Croinin",
+        "Brooklyn Douthwright"
        ],
        "noc": "CAN",
        "mark": "7:52.74"
@@ -8574,30 +8652,30 @@
      "medals": [
       {
        "names": [
-        "Katharine Berkoff (58.35)",
-        "McKenzie Siroky (1:05.07)",
-        "Gretchen Walsh (54.78)",
-        "Kate Douglass (52.23)"
+        "Katharine Berkoff",
+        "McKenzie Siroky",
+        "Gretchen Walsh",
+        "Kate Douglass"
        ],
        "noc": "USA",
        "mark": "3:50.43 CR"
       },
       {
        "names": [
-        "Iona Anderson (59.23)",
-        "Ella Ramsay (1:06.21)",
-        "Alexandria Perkins (57.04)",
-        "Meg Harris (52.61)"
+        "Iona Anderson",
+        "Ella Ramsay",
+        "Alexandria Perkins",
+        "Meg Harris"
        ],
        "noc": "AUS",
        "mark": "3:55.09"
       },
       {
        "names": [
-        "Wan Letian (1:00.40)",
-        "Tang Qianting (1:05.70)",
-        "Yu Yiting (56.49)",
-        "Cheng Yujie (53.74)"
+        "Wan Letian",
+        "Tang Qianting",
+        "Yu Yiting",
+        "Cheng Yujie"
        ],
        "noc": "CHN",
        "mark": "3:56.33"
@@ -8639,30 +8717,30 @@
      "medals": [
       {
        "names": [
-        "Will Modglin (53.40)",
-        "Van Mathias (57.30)",
-        "Gretchen Walsh (54.99)",
-        "Kate Douglass (51.01)"
+        "Will Modglin",
+        "Van Mathias",
+        "Gretchen Walsh",
+        "Kate Douglass"
        ],
        "noc": "USA",
        "mark": "3:36.70 WR"
       },
       {
        "names": [
-        "Iona Anderson (59.14)",
-        "Sam Williamson (58.50)",
-        "Matthew Temple (49.60)",
-        "Meg Harris (52.06)"
+        "Iona Anderson",
+        "Sam Williamson",
+        "Matthew Temple",
+        "Meg Harris"
        ],
        "noc": "AUS",
        "mark": "3:39.30"
       },
       {
        "names": [
-        "Ingrid Wilm (59.73)",
-        "Oliver Dawson (59.36)",
-        "Finlay Knox (51.60)",
-        "Taylor Ruck (52.53)"
+        "Ingrid Wilm",
+        "Oliver Dawson",
+        "Finlay Knox",
+        "Taylor Ruck"
        ],
        "noc": "CAN",
        "mark": "3:43.22"
@@ -8748,7 +8826,7 @@
    "quotas": []
   },
   "euro-aquatics-2026": {
-   "fetched": "2026-11-06 21:09",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Men",
@@ -9157,10 +9235,10 @@
      "medals": [
       {
        "names": [
-        "Hubert Kós (48.18)",
-        "Szebasztián Szabó (48.29)",
-        "Nándor Németh (47.27)",
-        "Kristóf Milák (46.29)",
+        "Hubert Kós",
+        "Szebasztián Szabó",
+        "Nándor Németh",
+        "Kristóf Milák",
         "Olivér Kós",
         "Ádám Jászó"
        ],
@@ -9169,10 +9247,10 @@
       },
       {
        "names": [
-        "Jere Hribar (47.77)",
-        "Vlaho Nenadić (47.96)",
-        "Vili Sivec (48.24)",
-        "Toni Dragoja (47.11)"
+        "Jere Hribar",
+        "Vlaho Nenadić",
+        "Vili Sivec",
+        "Toni Dragoja"
        ],
        "noc": "CRO",
        "mark": "3:11.08 NR"
@@ -9186,10 +9264,10 @@
      "medals": [
       {
        "names": [
-        "Léon Marchand (1:43.76)",
-        "Pierre Largeron (1:47.44)",
-        "Sauveur Cristofini (1:45.28)",
-        "Roman Fuchs (1:45.75)",
+        "Léon Marchand",
+        "Pierre Largeron",
+        "Sauveur Cristofini",
+        "Roman Fuchs",
         "Néo Dutriaux"
        ],
        "noc": "FRA",
@@ -9197,10 +9275,10 @@
       },
       {
        "names": [
-        "Lukas Märtens (1:45.71)",
-        "Timo Sorgius (1:45.63)",
-        "Jarno Baschnitt (1:45.10)",
-        "Cornelius Jahn (1:45.84)"
+        "Lukas Märtens",
+        "Timo Sorgius",
+        "Jarno Baschnitt",
+        "Cornelius Jahn"
        ],
        "noc": "GER",
        "mark": "7:02.28 NR"
@@ -9214,10 +9292,10 @@
      "medals": [
       {
        "names": [
-        "Thomas Ceccon (52.72)",
-        "Nicolò Martinenghi (58.00)",
-        "Alberto Razzetti (51.13)",
-        "Carlos D'Ambrosio (47.01)",
+        "Thomas Ceccon",
+        "Nicolò Martinenghi",
+        "Alberto Razzetti",
+        "Carlos D'Ambrosio",
         "Michele Lamberti",
         "Michele Busa"
        ],
@@ -9226,10 +9304,10 @@
       },
       {
        "names": [
-        "Yohann Ndoye-Brouard (53.05)",
-        "Carl Aitkaci (59.43)",
-        "Léon Marchand (49.64)",
-        "Maxime Grousset (46.91)",
+        "Yohann Ndoye-Brouard",
+        "Carl Aitkaci",
+        "Léon Marchand",
+        "Maxime Grousset",
         "Mewen Tomac",
         "Amaury Albar",
         "Cédric Gabali"
@@ -9708,10 +9786,10 @@
      "medals": [
       {
        "names": [
-        "Milou van Wijk (53.40)",
-        "Imani de Jong (53.47)",
-        "Yara van Kalmthout (53.68)",
-        "Marrit Steenbergen (51.34)",
+        "Milou van Wijk",
+        "Imani de Jong",
+        "Yara van Kalmthout",
+        "Marrit Steenbergen",
         "Tessa Giele",
         "Femke Spiering"
        ],
@@ -9720,10 +9798,10 @@
       },
       {
        "names": [
-        "Emma Virginia Menicucci (53.85)",
-        "Sara Curtis (52.29)",
-        "Chiara Tarantino (53.68)",
-        "Alessandra Mao (53.37)",
+        "Emma Virginia Menicucci",
+        "Sara Curtis",
+        "Chiara Tarantino",
+        "Alessandra Mao",
         "Sofia Morini"
        ],
        "noc": "ITA",
@@ -9738,10 +9816,10 @@
      "medals": [
       {
        "names": [
-        "Nikolett Pádár (1:57.31)",
-        "Lilla Minna Ábrahám (1:57.22)",
-        "Ajna Késely (1:58.56)",
-        "Panna Ugrai (1:56.00)"
+        "Nikolett Pádár",
+        "Lilla Minna Ábrahám",
+        "Ajna Késely",
+        "Panna Ugrai"
        ],
        "noc": "HUN",
        "mark": "7:49.09"
@@ -9755,10 +9833,10 @@
      "medals": [
       {
        "names": [
-        "Sara Curtis (58.43)",
-        "Benedetta Pilato (1:04.53)",
-        "Anita Gastaldi (57.07)",
-        "Emma Virginia Menicucci (53.57)",
+        "Sara Curtis",
+        "Benedetta Pilato",
+        "Anita Gastaldi",
+        "Emma Virginia Menicucci",
         "Lisa Angiolini"
        ],
        "noc": "ITA",
@@ -9773,10 +9851,10 @@
      "medals": [
       {
        "names": [
-        "Sean Niewold (47.95)",
-        "Merlin Belmon (48.55)",
-        "Milou van Wijk (52.85)",
-        "Marrit Steenbergen (50.74)",
+        "Sean Niewold",
+        "Merlin Belmon",
+        "Milou van Wijk",
+        "Marrit Steenbergen",
         "Brandon van den Berg",
         "Yara van Kalmthout",
         "Imani de Jong"
@@ -9786,10 +9864,10 @@
       },
       {
        "names": [
-        "Carlos D'Ambrosio (47.86)",
-        "Thomas Ceccon (47.56)",
-        "Sara Curtis (51.79)",
-        "Emma Virginia Menicucci (53.59)",
+        "Carlos D'Ambrosio",
+        "Thomas Ceccon",
+        "Sara Curtis",
+        "Emma Virginia Menicucci",
         "Manuel Frigo",
         "Alessandra Mao"
        ],
@@ -9805,10 +9883,10 @@
      "medals": [
       {
        "names": [
-        "Jack McMillan (1:47.09)",
-        "Matt Richards (1:45.85)",
-        "Freya Colbert (1:55.23)",
-        "Freya Anderson (1:55.96)",
+        "Jack McMillan",
+        "Matt Richards",
+        "Freya Colbert",
+        "Freya Anderson",
         "Leah Schlosshan",
         "Tyler Melbourne-Smith"
        ],
@@ -9817,10 +9895,10 @@
       },
       {
        "names": [
-        "Lukas Märtens (1:46.73)",
-        "Jarno Baschnitt (1:45.87)",
-        "Linda Roth (1:57.18)",
-        "Maya Tobehn (1:55.65)",
+        "Lukas Märtens",
+        "Jarno Baschnitt",
+        "Linda Roth",
+        "Maya Tobehn",
         "Timo Sorgius",
         "Nicole Maier"
        ],
@@ -9836,10 +9914,10 @@
      "medals": [
       {
        "names": [
-        "Mary-Ambre Moluh (57.99)",
-        "Carl Aitkaci (59.05)",
-        "Maxime Grousset (49.66)",
-        "Marie Wattel (52.94)",
+        "Mary-Ambre Moluh",
+        "Carl Aitkaci",
+        "Maxime Grousset",
+        "Marie Wattel",
         "Amaury Albar",
         "Albane Cachot"
        ],
@@ -9848,10 +9926,10 @@
       },
       {
        "names": [
-        "Maaike de Waard (59.89)",
-        "Caspar Corbeau (59.03)",
-        "Sean Niewold (51.13)",
-        "Marrit Steenbergen (50.87)",
+        "Maaike de Waard",
+        "Caspar Corbeau",
+        "Sean Niewold",
+        "Marrit Steenbergen",
         "Koen de Groet",
         "Tessa Giele"
        ],
@@ -10879,7 +10957,7 @@
    "quotas": []
   },
   "fie-wch-2026": {
-   "fetched": "2026-11-06 21:09",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Men",
@@ -11434,7 +11512,7 @@
    "quotas": []
   },
   "icf-slalom-2026": {
-   "fetched": "2026-11-06 21:09",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Canoe",
@@ -11878,7 +11956,7 @@
    "quotas": []
   },
   "bwf-wch-2026": {
-   "fetched": "2026-11-06 21:09",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Medalists",
@@ -12134,7 +12212,7 @@
    "quotas": []
   },
   "ittf-team-2026": {
-   "fetched": "2026-11-06 21:09",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Medalists",
@@ -12147,7 +12225,7 @@
         "Lin Shidong",
         "Xiang Peng",
         "Zhou Qihao",
-        "Liang Jingkun}}"
+        "Liang Jingkun"
        ],
        "noc": "CHN",
        "mark": ""
@@ -12158,7 +12236,7 @@
         "Sora Matsushima",
         "Shunsuke Togami",
         "Yukiya Uda",
-        "Hiroto Shinozuka}}"
+        "Hiroto Shinozuka"
        ],
        "noc": "JPN",
        "mark": ""
@@ -12169,7 +12247,7 @@
         "Feng Yi-hsin",
         "Kuo Guan-hong",
         "Hung Jing-kai",
-        "Hsu Hsien-chia}}"
+        "Hsu Hsien-chia"
        ],
        "noc": "TPE",
        "mark": ""
@@ -12180,7 +12258,7 @@
         "Alexis Lebrun",
         "Simon Gauzy",
         "Flavien Coton",
-        "Thibault Poret}}"
+        "Thibault Poret"
        ],
        "noc": "FRA",
        "mark": ""
@@ -12198,7 +12276,7 @@
         "Wang Manyu",
         "Chen Xingtong",
         "Kuai Man",
-        "Wang Yidi}}"
+        "Wang Yidi"
        ],
        "noc": "CHN",
        "mark": ""
@@ -12220,7 +12298,7 @@
         "Elizabeta Samara",
         "Andreea Dragoman",
         "Elena Zaharia",
-        "Adina Diaconu}}"
+        "Adina Diaconu"
        ],
        "noc": "ROU",
        "mark": ""
@@ -12281,7 +12359,7 @@
    "quotas": []
   },
   "issf-wc-2026": {
-   "fetched": "2026-11-06 21:13",
+   "fetched": "2026-11-06 22:37",
    "events": [],
    "season": [
     {
@@ -14393,7 +14471,7 @@
    "quotas": []
   },
   "ag2026-athletics": {
-   "fetched": "2026-11-06 21:09",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Men's events",
@@ -15803,7 +15881,7 @@
         "Salwa Eid Naser",
         "Alaa Sami",
         "Musa Isah",
-        "Aisha Abdullah}}"
+        "Aisha Abdullah"
        ],
        "noc": "BRN",
        "mark": "3:12.87"
@@ -15813,7 +15891,7 @@
         "Poovamma Machettira",
         "Vishal T. K.",
         "Vithya Ramraj",
-        "Manu T. S.}}"
+        "Manu T. S."
        ],
        "noc": "IND",
        "mark": "3:14.46"
@@ -15823,7 +15901,7 @@
         "Nguyễn Thị Ngọc",
         "Quách Thị Lan",
         "Tạ Ngọc Tưởng",
-        "Lê Ngọc Phúc}}"
+        "Lê Ngọc Phúc"
        ],
        "noc": "VIE",
        "mark": "3:14.54"
@@ -15945,7 +16023,7 @@
    "quotas": []
   },
   "ag2026-swimming": {
-   "fetched": "2026-11-06 21:09",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Men's events",
@@ -16430,10 +16508,10 @@
      "medals": [
       {
        "names": [
-        "Zhao Jiayue (48.43)",
-        "Wang Haoyu (47.77)",
-        "Zhang Zhanshuo (47.65)",
-        "Pan Zhanle (46.75)",
+        "Zhao Jiayue",
+        "Wang Haoyu",
+        "Zhang Zhanshuo",
+        "Pan Zhanle",
         "Xu Haibo",
         "Xu Fang"
        ],
@@ -16442,10 +16520,10 @@
       },
       {
        "names": [
-        "Hwang Sun-woo (47.50)",
-        "Kim Ji-hun (48.70)",
-        "Yang Jae-hoon (48.65)",
-        "Kim Young-beom (46.84)",
+        "Hwang Sun-woo",
+        "Kim Ji-hun",
+        "Yang Jae-hoon",
+        "Kim Young-beom",
         "Kim Woo-min",
         "Ji Yu-chan",
         "Lee Ho-joon",
@@ -16456,10 +16534,10 @@
       },
       {
        "names": [
-        "Tatsuya Murasa (48.05)",
-        "Shuya Matsumoto (48.30)",
-        "Katsuhiro Matsumoto (47.81)",
-        "Shoon Mitsunaga (47.80)",
+        "Tatsuya Murasa",
+        "Shuya Matsumoto",
+        "Katsuhiro Matsumoto",
+        "Shoon Mitsunaga",
         "Kazusa Kuroda",
         "Konosuke Yanagimoto",
         "Kazushi Imafuku"
@@ -16476,10 +16554,10 @@
      "medals": [
       {
        "names": [
-        "Xu Haibo (1:46.27)",
-        "Fei Liwei (1:46.74)",
-        "Pan Zhanle (1:44.24)",
-        "Zhang Zhanshuo (1:42.92)",
+        "Xu Haibo",
+        "Fei Liwei",
+        "Pan Zhanle",
+        "Zhang Zhanshuo",
         "Zhao Jiayue",
         "Wang Haoyu",
         "Wang Shun"
@@ -16489,10 +16567,10 @@
       },
       {
        "names": [
-        "Tatsuya Murasa (1:44.70)",
-        "Katsuhiro Matsumoto (1:44.84)",
-        "Kazusa Kuroda (1:45.82)",
-        "Tomoyuki Matsushita (1:45.69)",
+        "Tatsuya Murasa",
+        "Katsuhiro Matsumoto",
+        "Kazusa Kuroda",
+        "Tomoyuki Matsushita",
         "Konosuke Yanagimoto",
         "Kazushi Imafuku"
        ],
@@ -16501,10 +16579,10 @@
       },
       {
        "names": [
-        "Kim Jun-woo (1:47.16)",
-        "Kim Woo-min (1:46.16)",
-        "Lee Ho-joon (1:47.57)",
-        "Hwang Sun-woo (1:45.87)",
+        "Kim Jun-woo",
+        "Kim Woo-min",
+        "Lee Ho-joon",
+        "Hwang Sun-woo",
         "Kim Min-seop",
         "Yang Jae-hoon"
        ],
@@ -16520,10 +16598,10 @@
      "medals": [
       {
        "names": [
-        "Xu Jiayu (52.13)",
-        "Dong Zhihao (57.94)",
-        "Xu Fang (50.52)",
-        "Pan Zhanle (47.30)",
+        "Xu Jiayu",
+        "Dong Zhihao",
+        "Xu Fang",
+        "Pan Zhanle",
         "Jiang Chenglin",
         "Qin Haiyang",
         "Wang Xizhe",
@@ -16534,10 +16612,10 @@
       },
       {
        "names": [
-        "Hidekazu Takehara (53.71)",
-        "Shin Ohashi (57.64)",
-        "Shoon Mitsunaga (49.74)",
-        "Tatsuya Murasa (47.61)",
+        "Hidekazu Takehara",
+        "Shin Ohashi",
+        "Shoon Mitsunaga",
+        "Tatsuya Murasa",
         "Shuya Matsumoto"
        ],
        "noc": "JPN",
@@ -16545,10 +16623,10 @@
       },
       {
        "names": [
-        "Lee Ju-ho (53.92)",
-        "Choi Dong-yeol (58.98)",
-        "Yang Jae-hoon (51.58)",
-        "Kim Young-beom (47.49)",
+        "Lee Ju-ho",
+        "Choi Dong-yeol",
+        "Yang Jae-hoon",
+        "Kim Young-beom",
         "Yoon Ji-hwan",
         "Cho Sung-jae",
         "Kim Ji-hun",
@@ -17042,10 +17120,10 @@
      "medals": [
       {
        "names": [
-        "Yu Yiting (53.39)",
-        "Zhang Yufei (52.99)",
-        "Cheng Yujie (53.79)",
-        "Wu Qingfeng (52.93)",
+        "Yu Yiting",
+        "Zhang Yufei",
+        "Cheng Yujie",
+        "Wu Qingfeng",
         "Fan Yaqi",
         "Li Jiaping",
         "Liu Yaxin",
@@ -17056,10 +17134,10 @@
       },
       {
        "names": [
-        "Gilaine Ma (54.95)",
-        "Siobhán Haughey (52.22)",
-        "Li Sum Yiu (54.51)",
-        "Natalie Kan (54.91)",
+        "Gilaine Ma",
+        "Siobhán Haughey",
+        "Li Sum Yiu",
+        "Natalie Kan",
         "Wang Xintong"
        ],
        "noc": "HKG",
@@ -17067,10 +17145,10 @@
       },
       {
        "names": [
-        "Ayu Mizoguchi (55.03)",
-        "Rio Suzuki (55.04)",
-        "Nagisa Ikemoto (54.47)",
-        "Shiho Matsumoto (54.55)",
+        "Ayu Mizoguchi",
+        "Rio Suzuki",
+        "Nagisa Ikemoto",
+        "Shiho Matsumoto",
         "Yui Fukuoka",
         "Miyu Namba"
        ],
@@ -17086,10 +17164,10 @@
      "medals": [
       {
        "names": [
-        "Li Jiaping (1:57.78)",
-        "Liu Yaxin (1:55.97)",
-        "Yu Yiting (1:55.93)",
-        "Li Bingjie (1:59.69)",
+        "Li Jiaping",
+        "Liu Yaxin",
+        "Yu Yiting",
+        "Li Bingjie",
         "Fan Yaqi",
         "Cheng Yujie",
         "Gao Weizhong",
@@ -17100,10 +17178,10 @@
       },
       {
        "names": [
-        "Rio Suzuki (1:59.02)",
-        "Waka Kobori (1:59.37)",
-        "Ruka Takezawa (2:00.19)",
-        "Yui Fukuoka (2:00.95)",
+        "Rio Suzuki",
+        "Waka Kobori",
+        "Ruka Takezawa",
+        "Yui Fukuoka",
         "Miyu Namba"
        ],
        "noc": "JPN",
@@ -17111,10 +17189,10 @@
       },
       {
        "names": [
-        "Jo Hyun-ju (1:58.99)",
-        "Hur Yeon-kyung (2:00.96)",
-        "Han Da-kyung (2:01.11)",
-        "Lee Song-eun (2:00.81)",
+        "Jo Hyun-ju",
+        "Hur Yeon-kyung",
+        "Han Da-kyung",
+        "Lee Song-eun",
         "Kim Yun-hui",
         "Kim Chae-yun"
        ],
@@ -17130,10 +17208,10 @@
      "medals": [
       {
        "names": [
-        "Peng Xuwei (59.20)",
-        "Tang Qianting (1:05.74)",
-        "Zhang Yufei (56.30)",
-        "Yu Yiting (53.31)",
+        "Peng Xuwei",
+        "Tang Qianting",
+        "Zhang Yufei",
+        "Yu Yiting",
         "Li Wanwei",
         "Yang Chang",
         "Cheng Yujie"
@@ -17143,10 +17221,10 @@
       },
       {
        "names": [
-        "Rio Shirai (59.97)",
-        "Satomi Suzuki (1:05.13)",
-        "Rikako Ikee (58.27)",
-        "Nagisa Ikemoto (54.37)",
+        "Rio Shirai",
+        "Satomi Suzuki",
+        "Rikako Ikee",
+        "Nagisa Ikemoto",
         "Chiho Mizoguchi"
        ],
        "noc": "JPN",
@@ -17154,10 +17232,10 @@
       },
       {
        "names": [
-        "Kim Seung-won (1:00.00)",
-        "Park Si-eun (1:07.39)",
-        "An Se-hyeon (58.04)",
-        "Hur Yeon-kyung (55.24)",
+        "Kim Seung-won",
+        "Park Si-eun",
+        "An Se-hyeon",
+        "Hur Yeon-kyung",
         "Lee Eun-ji",
         "Lee Song-eun",
         "Jo Hyun-ju"
@@ -17174,10 +17252,10 @@
      "medals": [
       {
        "names": [
-        "Xu Jiayu (52.28)",
-        "Dong Zhihao (58.28)",
-        "Zhang Yufei (56.89)",
-        "Yu Yiting (52.93)",
+        "Xu Jiayu",
+        "Dong Zhihao",
+        "Zhang Yufei",
+        "Yu Yiting",
         "Li Wanwei",
         "Qin Haiyang",
         "Xu Fang",
@@ -17188,10 +17266,10 @@
       },
       {
        "names": [
-        "Hidekazu Takehara (53.91)",
-        "Shin Ohashi (57.86)",
-        "Rikako Ikee (58.42)",
-        "Nagisa Ikemoto (53.79)",
+        "Hidekazu Takehara",
+        "Shin Ohashi",
+        "Rikako Ikee",
+        "Nagisa Ikemoto",
         "Chiho Mizuguchi",
         "Shiho Matsumoto"
        ],
@@ -17200,10 +17278,10 @@
       },
       {
        "names": [
-        "Kim Seung-won (1:00.15)",
-        "Choi Dong-yeol (59.04)",
-        "An Se-hyeon (57.66)",
-        "Kim Young-beom (47.27)",
+        "Kim Seung-won",
+        "Choi Dong-yeol",
+        "An Se-hyeon",
+        "Kim Young-beom",
         "Lee Eun-ji",
         "Park Si-eun",
         "Kim Ji-hun",
@@ -17269,7 +17347,7 @@
    "quotas": []
   },
   "ag2026-diving": {
-   "fetched": "2026-11-06 21:09",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Men's events",
@@ -17600,7 +17678,7 @@
    "quotas": []
   },
   "ag2026-archery": {
-   "fetched": "2026-11-06 21:09",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Medalists",
@@ -17917,7 +17995,7 @@
    "quotas": []
   },
   "ag2026-badminton": {
-   "fetched": "2026-11-06 21:09",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Medalists",
@@ -18309,7 +18387,7 @@
    "quotas": []
   },
   "ag2026-boxing": {
-   "fetched": "2026-11-06 21:09",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Men",
@@ -18339,8 +18417,7 @@
       },
       {
        "names": [
-        "Kharkhüügiin Bilgüünsaikhan",
-        "}}"
+        "Kharkhüügiin Bilgüünsaikhan"
        ],
        "noc": "MGL",
        "mark": ""
@@ -18459,8 +18536,7 @@
      "medals": [
       {
        "names": [
-        "Turabek Khabibullaev",
-        "}}"
+        "Turabek Khabibullaev"
        ],
        "noc": "UZB",
        "mark": ""
@@ -18502,8 +18578,7 @@
       },
       {
        "names": [
-        "Jakhongir Zokirov",
-        "}}"
+        "Jakhongir Zokirov"
        ],
        "noc": "UZB",
        "mark": ""
@@ -18566,8 +18641,7 @@
      "medals": [
       {
        "names": [
-        "Natnicha Chongprongklang",
-        "}}"
+        "Natnicha Chongprongklang"
        ],
        "noc": "THA",
        "mark": ""
@@ -18644,8 +18718,7 @@
       },
       {
        "names": [
-        "Chen Nien-chin",
-        "}}"
+        "Chen Nien-chin"
        ],
        "noc": "TPE",
        "mark": ""
@@ -18694,8 +18767,7 @@
       },
       {
        "names": [
-        "Natalya Bogdanova",
-        "}}"
+        "Natalya Bogdanova"
        ],
        "noc": "KAZ",
        "mark": ""
@@ -18799,7 +18871,7 @@
    "quotas": []
   },
   "ag2026-canoeing": {
-   "fetched": "2026-11-06 21:09",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Slalom",
@@ -19408,7 +19480,7 @@
    "quotas": []
   },
   "ag2026-cycling": {
-   "fetched": "2026-11-06 21:09",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "BMX",
@@ -20145,7 +20217,7 @@
    "quotas": []
   },
   "ag2026-equestrian-events": {
-   "fetched": "2026-11-06 21:09",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Medalists",
@@ -20418,7 +20490,7 @@
    "quotas": []
   },
   "ag2026-fencing": {
-   "fetched": "2026-11-06 21:09",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Men's events",
@@ -20966,7 +21038,7 @@
    "quotas": []
   },
   "ag2026-golf": {
-   "fetched": "2026-11-06 21:09",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Medalists",
@@ -21097,7 +21169,7 @@
    "quotas": []
   },
   "ag2026-gymnastics": {
-   "fetched": "2026-11-06 21:09",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Artistic gymnastics",
@@ -21712,7 +21784,7 @@
    "quotas": []
   },
   "ag2026-judo": {
-   "fetched": "2026-11-06 21:09",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Men's events",
@@ -22308,7 +22380,7 @@
    "quotas": []
   },
   "ag2026-modern-pentathlon": {
-   "fetched": "2026-11-06 21:09",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Medalists",
@@ -22465,7 +22537,7 @@
    "quotas": []
   },
   "ag2026-rowing": {
-   "fetched": "2026-11-06 21:09",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Men",
@@ -22986,7 +23058,7 @@
    "quotas": []
   },
   "ag2026-sailing": {
-   "fetched": "2026-11-06 21:09",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Men's",
@@ -23453,7 +23525,7 @@
    "quotas": []
   },
   "ag2026-shooting": {
-   "fetched": "2026-11-06 21:10",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Men",
@@ -24420,7 +24492,7 @@
    "quotas": []
   },
   "ag2026-skateboarding": {
-   "fetched": "2026-11-06 21:10",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Medalists",
@@ -24565,7 +24637,7 @@
    "quotas": []
   },
   "ag2026-sport-climbing": {
-   "fetched": "2026-11-06 21:10",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Men's events",
@@ -24778,7 +24850,7 @@
    "quotas": []
   },
   "ag2026-surfing": {
-   "fetched": "2026-11-06 21:10",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Medalists",
@@ -24867,7 +24939,7 @@
    "quotas": []
   },
   "ag2026-table-tennis": {
-   "fetched": "2026-11-06 21:10",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Medalists",
@@ -24954,7 +25026,7 @@
         "Sora Matsushima",
         "Hiroto Shinozuka",
         "Shunsuke Togami",
-        "Yukiya Uda}}"
+        "Yukiya Uda"
        ],
        "noc": "JPN",
        "mark": ""
@@ -24965,7 +25037,7 @@
         "Lin Shidong",
         "Wang Chuqin",
         "Wen Ruibo",
-        "Xiang Peng}}"
+        "Xiang Peng"
        ],
        "noc": "CHN",
        "mark": ""
@@ -24976,7 +25048,7 @@
         "Jang Woo-jin",
         "Lim Jong-hoon",
         "Oh Jun-sung",
-        "Park Gyu-hyeon}}"
+        "Park Gyu-hyeon"
        ],
        "noc": "KOR",
        "mark": ""
@@ -24987,7 +25059,7 @@
         "Hsu Hsien-chia",
         "Hung Jing-kai",
         "Kuo Guan-hong",
-        "Lin Yun-ju}}"
+        "Lin Yun-ju"
        ],
        "noc": "TPE",
        "mark": ""
@@ -25218,7 +25290,7 @@
    "quotas": []
   },
   "ag2026-taekwondo": {
-   "fetched": "2026-11-06 21:10",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Men",
@@ -25684,7 +25756,7 @@
    "quotas": []
   },
   "ag2026-tennis": {
-   "fetched": "2026-11-06 21:10",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Medalists",
@@ -25928,7 +26000,7 @@
    "quotas": []
   },
   "ag2026-triathlon": {
-   "fetched": "2026-11-06 21:10",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Medalists",
@@ -26054,7 +26126,7 @@
    "quotas": []
   },
   "ag2026-weightlifting": {
-   "fetched": "2026-11-06 21:10",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Men",
@@ -26613,7 +26685,7 @@
    "quotas": []
   },
   "ag2026-wrestling": {
-   "fetched": "2026-11-06 21:10",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Men's freestyle",
@@ -27208,7 +27280,7 @@
    "quotas": []
   },
   "ag2026-football": {
-   "fetched": "2026-11-06 21:10",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Medalists",
@@ -27333,7 +27405,7 @@
         "Chiina Kamiya",
         "Nanasa Ikuta",
         "Ai Tsujisawa",
-        "Hanon Nishio}}"
+        "Hanon Nishio"
        ],
        "noc": "JPN",
        "mark": ""
@@ -27362,7 +27434,7 @@
         "Chae Un-yong",
         "Chae Un-gyong",
         "Kim Hye-yong",
-        "Ri Hye-gyong}}"
+        "Ri Hye-gyong"
        ],
        "noc": "PRK",
        "mark": ""
@@ -27391,7 +27463,7 @@
         "Kang Tae-kyung",
         "Kang Chae-rim",
         "Son Hwa-yeon",
-        "Jeong Da-bin}}"
+        "Jeong Da-bin"
        ],
        "noc": "KOR",
        "mark": ""
@@ -27429,7 +27501,7 @@
    "quotas": []
   },
   "ag2026-basketball": {
-   "fetched": "2026-11-06 21:10",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Medalists",
@@ -27583,7 +27655,7 @@
    "quotas": []
   },
   "ag2026-volleyball": {
-   "fetched": "2026-11-06 21:10",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Medalists",
@@ -27744,7 +27816,7 @@
    "quotas": []
   },
   "ag2026-beach-volleyball": {
-   "fetched": "2026-11-06 21:10",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Medalists",
@@ -27851,7 +27923,7 @@
    "quotas": []
   },
   "ag2026-handball": {
-   "fetched": "2026-11-06 21:10",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Medalists",
@@ -28036,7 +28108,7 @@
    "quotas": []
   },
   "ag2026-field-hockey": {
-   "fetched": "2026-11-06 21:10",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Medalists",
@@ -28149,7 +28221,7 @@
         "Lalthantluangi",
         "Sakshi Rana",
         "Beauty Dungdung",
-        "Deepika Sehrawat}}"
+        "Deepika Sehrawat"
        ],
        "noc": "IND",
        "mark": ""
@@ -28175,7 +28247,7 @@
         "Li Ting",
         "Chen Tong",
         "Yu Anhui",
-        "Luo Yaxi}}"
+        "Luo Yaxi"
        ],
        "noc": "CHN",
        "mark": ""
@@ -28201,7 +28273,7 @@
         "Rui Takashima",
         "Maho Segawa",
         "Haruka Kawaguchi",
-        "Nanami Kaneko}}"
+        "Nanami Kaneko"
        ],
        "noc": "JPN",
        "mark": ""
@@ -28245,7 +28317,7 @@
    "quotas": []
   },
   "ag2026-water-polo": {
-   "fetched": "2026-11-06 21:10",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Medalists",
@@ -28606,7 +28678,7 @@
    "quotas": []
   },
   "ag2026-cricket": {
-   "fetched": "2026-11-06 21:10",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Medalists",
@@ -28771,7 +28843,7 @@
    "quotas": []
   },
   "ag2026-squash": {
-   "fetched": "2026-11-06 21:10",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Medalists",
@@ -29013,7 +29085,7 @@
    "quotas": []
   },
   "ag2026-artistic-swimming": {
-   "fetched": "2026-11-06 21:10",
+   "fetched": "2026-11-06 22:37",
    "events": [
     {
      "section": "Medalists",
@@ -29126,5 +29198,5 @@
    "quotas": []
   }
  },
- "asof": "2026-11-06 21:13 KST"
+ "asof": "2026-11-06 22:37 KST"
 }
