@@ -317,7 +317,26 @@
     },
     {
      "title": "Pairs",
-     "podium": null
+     "podium": [
+      {
+       "rank": 1,
+       "name": "Anastasia MISHINA / Aleksandr GALLIAMOV",
+       "noc": "AIN2",
+       "time": "74.69"
+      },
+      {
+       "rank": 2,
+       "name": "Anastasiia METELKINA / Luka BERULAVA",
+       "noc": "GEO",
+       "time": "67.06"
+      },
+      {
+       "rank": 3,
+       "name": "Karina AKOPOVA / Nikita RAKHMANIN",
+       "noc": "ARM",
+       "time": "66.34"
+      }
+     ]
     },
     {
      "title": "Men",
@@ -452,9 +471,16 @@
   [
    "GEO",
    1,
-   2,
+   3,
    0,
-   3
+   4
+  ],
+  [
+   "AIN2",
+   1,
+   1,
+   0,
+   2
   ],
   [
    "CAN",
@@ -485,10 +511,10 @@
    2
   ],
   [
-   "AIN2",
+   "ARM",
+   0,
    0,
    1,
-   0,
    1
   ],
   [
