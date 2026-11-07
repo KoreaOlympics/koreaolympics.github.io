@@ -15,7 +15,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from olympic import _TXT  # noqa: E402
 
 SEC = re.compile(r'<section id="([a-z_0-9]+)"[^>]*>.*?</section>', re.S)
-GENERATORS = ['tools/summary_svg.py', 'tools/qualified.py', 'tools/pathways.py', 'tools/sport_guide.py', 'tools/paris_medals.py', 'tools/summer_live.py']
+GENERATORS = ['tools/summary_svg.py', 'tools/qualified.py', 'tools/pathways.py', 'tools/sport_guide.py', 'tools/paris_medals.py', 'tools/summer_live.py', 'tools/ain.py']
 GENERATOR_ARGS = {'tools/private_rankings.py': ['render']}
 
 

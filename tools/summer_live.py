@@ -14,6 +14,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 import wikiresults as wr  # noqa: E402
 import korean_names  # noqa: E402
+import ain  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / 'data/summer-live-sources.json'
@@ -241,8 +242,8 @@ def person(p, names):
 
 def who(m, codes, names, up=''):
     noc = m['noc']
-    nat = codes.get(noc, [noc])[0]
     people = m['names']
+    nat = (ain.label(people) if noc == 'AIN' else None) or codes.get(noc, [noc])[0]  # 확인된 중립선수는 러시아·벨라루스
     if not people or (len(people) == 1 and people[0] in (nat, noc)):
         txt = E(nat)
     elif len(people) > 4:
