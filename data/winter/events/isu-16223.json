@@ -18,7 +18,7 @@
   "live": "Men 1000 m (1)",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-07T13:53:27.015043+00:00",
+ "checked_at": "2026-11-07T14:04:09.910610+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -245,7 +245,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-07T13:46:00.000Z",
+   "start_utc": "2026-11-07T13:45:00.000Z",
    "title": "Men 1000 m (1)",
    "round": "Quarterfinals",
    "event_result_id": 16052,
@@ -2876,7 +2876,7 @@
     {
      "id": 23074,
      "name": "Quarterfinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-07T13:45:54.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of two fastest third place skaters qualify for Semifinals.",
      "heats": [
@@ -2914,7 +2914,7 @@
          "name": "Aunnipit KOSITVANICH",
          "noc": "THA",
          "time": "1:27.456",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 194,
@@ -2981,7 +2981,7 @@
          "name": "Daniil BYCHKOU",
          "noc": "AIN1",
          "time": "1:28.900",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 101,
@@ -3016,27 +3016,15 @@
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Emile FORTIN",
-         "noc": "CAN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 119,
-         "lane": 1,
-         "slug": "emile-fortin"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Haoyang JIANG",
          "noc": "CHN",
-         "time": "",
-         "qual": "",
+         "time": "1:26.471",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 121,
@@ -3044,10 +3032,34 @@
          "slug": "haoyang-jiang"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Emile FORTIN",
+         "noc": "CAN",
+         "time": "1:26.612",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 119,
+         "lane": 1,
+         "slug": "emile-fortin"
+        },
+        {
+         "rank": 3,
+         "name": "Kirill PANIKOROVSKII",
+         "noc": "AIN2",
+         "time": "1:27.233",
+         "qual": "q",
+         "status": "",
+         "record": "",
+         "bib": 107,
+         "lane": 5,
+         "slug": "kirill-panikorovskii"
+        },
+        {
+         "rank": 4,
          "name": "Moritz KUEHNRICH",
          "noc": "GER",
-         "time": "",
+         "time": "1:28.988",
          "qual": "",
          "status": "",
          "record": "",
@@ -3056,42 +3068,30 @@
          "slug": "moritz-kuehnrich"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Ryota WATABE",
          "noc": "JPN",
-         "time": "",
+         "time": "1:29.393",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 165,
          "lane": 4,
          "slug": "ryota-watabe"
-        },
-        {
-         "rank": null,
-         "name": "Kirill PANIKOROVSKII",
-         "noc": "AIN2",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 107,
-         "lane": 5,
-         "slug": "kirill-panikorovskii"
         }
        ]
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Yuheng LI",
          "noc": "CHN",
-         "time": "",
-         "qual": "",
+         "time": "1:27.260",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 122,
@@ -3099,11 +3099,11 @@
          "slug": "yuheng-li-1"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Chanwook PARK",
          "noc": "KOR",
-         "time": "",
-         "qual": "",
+         "time": "1:27.345",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 175,
@@ -3111,10 +3111,10 @@
          "slug": "chanwook-park"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Mihaly ARENDAS",
          "noc": "HUN",
-         "time": "",
+         "time": "1:27.599",
          "qual": "",
          "status": "",
          "record": "",
@@ -3123,10 +3123,10 @@
          "slug": "mihaly-arendas"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Zalan JANCSO",
          "noc": "HUN",
-         "time": "",
+         "time": "1:27.924",
          "qual": "",
          "status": "",
          "record": "",
@@ -3135,10 +3135,10 @@
          "slug": "zalan-jancso"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Badis BRUGVIN",
          "noc": "FRA",
-         "time": "",
+         "time": "1:27.996",
          "qual": "",
          "status": "",
          "record": "",
@@ -3147,10 +3147,10 @@
          "slug": "badis-brugvin"
         },
         {
-         "rank": null,
+         "rank": 6,
          "name": "Alessandro PICCO",
          "noc": "ITA",
-         "time": "",
+         "time": "no time",
          "qual": "",
          "status": "",
          "record": "",
@@ -3160,7 +3160,100 @@
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Semifinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Haoyang JIANG",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "1:26.471",
+        "qual": "Q"
+       },
+       {
+        "name": "Minchan KIM",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "1:26.907",
+        "qual": "Q"
+       },
+       {
+        "name": "Zhibo SUN",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "1:27.073",
+        "qual": "Q"
+       },
+       {
+        "name": "Yuheng LI",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "1:27.260",
+        "qual": "Q"
+       },
+       {
+        "name": "Emile FORTIN",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "1:26.612",
+        "qual": "Q"
+       },
+       {
+        "name": "David MAKARIAN",
+        "noc": "AIN2",
+        "rank": 2,
+        "time": "1:27.124",
+        "qual": "Q"
+       },
+       {
+        "name": "Lucas WU",
+        "noc": "USA",
+        "rank": 2,
+        "time": "1:27.248",
+        "qual": "Q"
+       },
+       {
+        "name": "Chanwook PARK",
+        "noc": "KOR",
+        "rank": 2,
+        "time": "1:27.345",
+        "qual": "Q"
+       },
+       {
+        "name": "Kirill PANIKOROVSKII",
+        "noc": "AIN2",
+        "rank": 3,
+        "time": "1:27.233",
+        "qual": "q"
+       },
+       {
+        "name": "Aunnipit KOSITVANICH",
+        "noc": "THA",
+        "rank": 3,
+        "time": "1:27.456",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Haoyang JIANG (CHN)",
+        "Yuheng LI (CHN)",
+        "Emile FORTIN (CAN)",
+        "Chanwook PARK (KOR)",
+        "Kirill PANIKOROVSKII (AIN2)"
+       ],
+       [
+        "Minchan KIM (KOR)",
+        "Zhibo SUN (CHN)",
+        "David MAKARIAN (AIN2)",
+        "Lucas WU (USA)",
+        "Aunnipit KOSITVANICH (THA)"
+       ]
+      ]
+     }
     },
     {
      "id": 23075,
@@ -4909,7 +5002,7 @@
      "name": "Semifinals",
      "status": "Scheduled",
      "start_utc": "2026-11-07T14:47:00.000Z",
-     "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final A. Remainder may qualify for Final B.",
+     "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final, the third and fourth placed skaters from each race and up to a maximum of next two fastest fifth place skaters qualify for Final B.",
      "heats": []
     },
     {
@@ -6301,7 +6394,7 @@
      "name": "Semifinals",
      "status": "Scheduled",
      "start_utc": "2026-11-07T14:17:00.000Z",
-     "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final A. Remainder may qualify for Final B.",
+     "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final, the third and fourth placed skaters from each race and up to a maximum of next two fastest fifth place skaters qualify for Final B.",
      "heats": []
     },
     {
@@ -8401,7 +8494,7 @@
      "name": "Semifinals",
      "status": "Scheduled",
      "start_utc": "2026-11-07T14:32:00.000Z",
-     "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final A. Remainder may qualify for Final B.",
+     "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final, the third and fourth placed skaters from each race and up to a maximum of next two fastest fifth place skaters qualify for Final B.",
      "heats": []
     },
     {
@@ -14558,11 +14651,11 @@
    "round": "Quarterfinals",
    "heat": "Heat 4",
    "start_utc": "2026-11-07T13:45:54.000Z",
-   "rank": null,
+   "rank": 2,
    "name": "Chanwook PARK",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "1:27.345",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 175,
