@@ -15,10 +15,10 @@
   "city": "Bormio",
   "country": "ITA",
   "state": "Live",
-  "live": "Men 1500 m",
+  "live": "Women 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-07T11:00:15.135661+00:00",
+ "checked_at": "2026-11-07T11:10:52.471877+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -5124,10 +5124,114 @@
     {
      "id": 23038,
      "name": "Rep. Semifinals",
-     "status": "Scheduled",
+     "status": "Live",
      "start_utc": "2026-11-07T11:02:00.000Z",
      "rule": "The first placed skater from each race and up to a maximum of one fastest second place skater qualify for Semifinals.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Finished",
+       "official": "Live",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Juul VAN DER ZWAAN",
+         "noc": "NED",
+         "time": "2:28.110",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 256,
+         "lane": 4,
+         "slug": "juul-van-der-zwaan"
+        },
+        {
+         "rank": 2,
+         "name": "Alexanne MARTEL-BARIL",
+         "noc": "CAN",
+         "time": "2:28.200",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 215,
+         "lane": 6,
+         "slug": "alexanne-martel-baril"
+        },
+        {
+         "rank": 3,
+         "name": "Alina LISHENKO",
+         "noc": "KAZ",
+         "time": "2:28.890",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 244,
+         "lane": 2,
+         "slug": "alina-lishenko"
+        },
+        {
+         "rank": 4,
+         "name": "Agata KOBUS",
+         "noc": "POL",
+         "time": "2:29.730",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 263,
+         "lane": 8,
+         "slug": "agata-kobus"
+        },
+        {
+         "rank": 5,
+         "name": "Isabella CHEN",
+         "noc": "USA",
+         "time": "2:29.780",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 275,
+         "lane": 5,
+         "slug": "isabella-chen"
+        },
+        {
+         "rank": null,
+         "name": "Anastasiia BARANOVA",
+         "noc": "AIN2",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 206,
+         "lane": 7,
+         "slug": "anastasiia-baranova"
+        },
+        {
+         "rank": null,
+         "name": "Nonomi INOUE",
+         "noc": "JPN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 238,
+         "lane": 3,
+         "slug": "nonomi-inoue"
+        },
+        {
+         "rank": null,
+         "name": "Pom STRAATHOF",
+         "noc": "NED",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 254,
+         "lane": 1,
+         "slug": "pom-straathof"
+        }
+       ]
+      }
+     ]
     },
     {
      "id": 23037,
