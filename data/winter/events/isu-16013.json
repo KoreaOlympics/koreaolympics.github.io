@@ -15,10 +15,10 @@
   "city": "Shenzhen",
   "country": "CHN",
   "state": "Live",
-  "live": "Olga MIKUTINA",
+  "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-cup-of-china-2026/"
  },
- "checked_at": "2026-11-07T08:41:57.977211+00:00",
+ "checked_at": "2026-11-07T08:52:30.973398+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T06:53:00.000Z",
@@ -353,6 +353,31 @@
    ],
    "rows": [
     {
+     "rank": 1,
+     "name": "Olga MIKUTINA",
+     "noc": "AUT",
+     "points": "157.86",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 12,
+       "total": "55.41",
+       "tes": "28.00",
+       "pcs": "28.41",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 1,
+       "total": "102.45",
+       "tes": "48.09",
+       "pcs": "54.36",
+       "status": "Running"
+      }
+     }
+    },
+    {
      "rank": null,
      "name": "Mone CHIBA",
      "noc": "JPN",
@@ -615,31 +640,6 @@
        "total": "55.72",
        "tes": "27.07",
        "pcs": "29.65",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Olga MIKUTINA",
-     "noc": "AUT",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 12,
-       "total": "55.41",
-       "tes": "28.00",
-       "pcs": "28.41",
        "status": "Finished"
       },
       "FS": {
