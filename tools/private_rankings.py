@@ -124,12 +124,27 @@ TI_DOC = {'F53': ('women', '53 kg', 'women53kg'), 'F61': ('women', '61 kg', 'wom
           'F77': ('women', '77 kg', 'women77kg'), 'F86': ('women', '86 kg', 'women86kg'), 'F86P': ('women', '+86 kg', 'womenover86kg'),
           'M65': ('men', '65 kg', 'men65kg'), 'M75': ('men', '75 kg', 'men75kg'), 'M85': ('men', '85 kg', 'men85kg'),
           'M95': ('men', '95 kg', 'men95kg'), 'M110': ('men', '110 kg', 'men110kg'), 'M110P': ('men', '+110 kg', 'menover110kg')}
-HEAVY = {'M110', 'M110P', 'F86', 'F86P'}  # 중량급: 한국 선수 정리를 사람이 정할 때까지 옛 문장을 둔다
-HEAVY_OLD = {  # 중량급 종전 기재 (정리 전까지 그대로 보여 준다)
-    'M110': '종전 기재 없음 · 옛 후보 진윤성, 장연학', 'M110P': '송영환, 황우만 · 옛 후보 이양재',
-    'F86': '김수현, 전희수 · 옛 후보 장현주', 'F86P': '박혜정, 김효언, 임정희'}
+# 중량급 대표선수 (2026.11.07 사용자 결정). keep=True: OQR과 관계없이 이 선수들을 둔다.
+# keep=False: 결과 기록 전까지만 이 선수들을 두고, 결과가 올라오면 OQR로 자동 갱신한다.
+MANUAL = {'M110': (['진윤성', '장연학'], True), 'M110P': (['송영환', '황우만'], False),
+          'F86': (['김수현', '전희수'], False), 'F86P': (['박혜정', '김효언', '임정희'], False)}
+
+
+def manual(code, c):
+    """수동 대표선수를 쓸 체급이면 (이름들, 상태 문구), 아니면 None."""
+    if code not in MANUAL:
+        return None
+    names, keep = MANUAL[code]
+    if c.get('status'):
+        return names, '닝보 결과 기록 전'
+    if keep:
+        kor = ', '.join(f'{r["ko"]} {r["rank"]}위' for r in c.get('korea', []))
+        return names, f'잠정 OQR 상위 30위 밖 (8위 {c["cut8"]:g}점)' + (f' · OQR 한국: {kor}' if kor else '')
+    return None
+
+
 SQUAD_RE = re.compile(r'<div class="korea-squad" id="korea-squad">.*?</div><!-- /korea-squad -->', re.S)
-OQR_RE = re.compile(r'<p class="note oqr"[^>]*>.*?</p>')
+OQR_RE = re.compile(r'<p class="note oqr"[^>]*>.*?</p>\n?')
 
 
 def oqr_note(code, c, fetched):
@@ -150,9 +165,15 @@ def render_notes(doc):
     text = orig = hub.read_text(encoding='utf-8')
     for code, (sec, h3, ev) in TI_DOC.items():
         c = doc['data'].get(code)
-        if not c or c.get('status') or code in HEAVY:
+        if not c:
             continue
-        note = oqr_note(code, c, doc['fetched'])
+        mn = manual(code, c)
+        if mn:
+            note = f'<p class="note oqr" data-oqr="{code}">한국 대표선수: {E(", ".join(mn[0]))} · {E(mn[1])}</p>'
+        elif c.get('status'):
+            continue
+        else:
+            note = oqr_note(code, c, doc['fetched'])
         m = re.search(rf'(<section id="{sec}">.*?<h3>{re.escape(h3)}</h3>\n)((?:<p class="note[^"]*"[^>]*>.*?</p>)*)', text, re.S)
         if m:
             text = text[:m.start(2)] + note + text[m.end(2):]
@@ -178,8 +199,9 @@ def squad_table(doc):
         label = TI_CATS[code]
         ev = TI_DOC[code][2]
         head = f'<th scope="row"><a href="olweightlifting/{ev}.html">{E(label)}</a></th>'
-        if code in HEAVY:
-            rows.append(f'<tr>{head}<td>{E(HEAVY_OLD[code])}</td><td colspan="2" class="muted">정리 중 (중량급)</td></tr>')
+        mn = manual(code, c)
+        if mn:
+            rows.append(f'<tr>{head}<td class="kor">{E(", ".join(mn[0]))}</td><td colspan="2" class="muted">{E(mn[1])}</td></tr>')
         elif c.get('korea'):
             for k, r in enumerate(c['korea']):
                 state = '<b class="in8">8위 안</b>' if r['in8'] else f'8위와 {r["gap8"]:g}점 차'
@@ -189,8 +211,8 @@ def squad_table(doc):
     day = doc['fetched'][:10].replace('-', '.')
     return ('<div class="korea-squad" id="korea-squad"><h3>체급별 한국 대표선수</h3>'
             '<div class="tw"><table class="wikitable narrow"><thead><tr><th>체급</th><th>대표선수</th><th>잠정 OQR</th><th>출전권선(8위)</th></tr></thead>'
-            f'<tbody>{"".join(rows)}</tbody></table></div><p class="small">{day} 잠정 OQR(비공식, totalintel) 기준으로 자동 갱신. '
-            '중량급(남자 110kg·+110kg, 여자 86kg·+86kg)은 대표선수 정리 전이라 종전 기재를 그대로 둔다.</p></div><!-- /korea-squad -->')
+            f'<tbody>{"".join(rows)}</tbody></table></div><!-- /tw --><p class="small">{day} 잠정 OQR(비공식, totalintel) 기준으로 자동 갱신. '
+            '남자 110kg은 대표선수를 지정해 두고, 결과 기록 전 체급은 지정 선수를 두었다가 결과가 올라오면 OQR로 바꾼다.</p></div><!-- /korea-squad -->')
 
 
 def render():
