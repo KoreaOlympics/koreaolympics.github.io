@@ -15,10 +15,10 @@
   "city": "Shenzhen",
   "country": "CHN",
   "state": "Live",
-  "live": "Haein LEE",
+  "live": "Mako YAMASHITA",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-cup-of-china-2026/"
  },
- "checked_at": "2026-11-07T09:35:07.165358+00:00",
+ "checked_at": "2026-11-07T09:45:36.043957+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T06:53:00.000Z",
@@ -354,6 +354,31 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Haein LEE",
+     "noc": "KOR",
+     "points": "210.79",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 6,
+       "total": "67.49",
+       "tes": "34.86",
+       "pcs": "32.63",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 1,
+       "total": "143.30",
+       "tes": "76.77",
+       "pcs": "66.53",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
      "name": "Sophie Joline VON FELTEN",
      "noc": "USA",
      "points": "189.21",
@@ -369,7 +394,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 1,
+       "rank": 2,
        "total": "129.02",
        "tes": "72.66",
        "pcs": "56.36",
@@ -378,7 +403,7 @@
      }
     },
     {
-     "rank": 2,
+     "rank": 3,
      "name": "Yi ZHU",
      "noc": "CHN",
      "points": "180.47",
@@ -394,7 +419,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 2,
+       "rank": 3,
        "total": "115.89",
        "tes": "58.08",
        "pcs": "57.81",
@@ -403,7 +428,7 @@
      }
     },
     {
-     "rank": 3,
+     "rank": 4,
      "name": "Ruiyang ZHANG",
      "noc": "CHN",
      "points": "166.72",
@@ -419,7 +444,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 3,
+       "rank": 4,
        "total": "105.52",
        "tes": "50.93",
        "pcs": "55.59",
@@ -428,7 +453,7 @@
      }
     },
     {
-     "rank": 4,
+     "rank": 5,
      "name": "Olga MIKUTINA",
      "noc": "AUT",
      "points": "157.86",
@@ -444,7 +469,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 4,
+       "rank": 5,
        "total": "102.45",
        "tes": "48.09",
        "pcs": "54.36",
@@ -453,7 +478,7 @@
      }
     },
     {
-     "rank": 5,
+     "rank": 6,
      "name": "Rinka WATANABE",
      "noc": "JPN",
      "points": "154.86",
@@ -469,7 +494,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 5,
+       "rank": 6,
        "total": "99.14",
        "tes": "41.95",
        "pcs": "57.19",
@@ -478,7 +503,7 @@
      }
     },
     {
-     "rank": 6,
+     "rank": 7,
      "name": "Alina BONILLO",
      "noc": "USA",
      "points": "150.32",
@@ -494,7 +519,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 6,
+       "rank": 7,
        "total": "91.02",
        "tes": "38.14",
        "pcs": "53.88",
@@ -615,31 +640,6 @@
        "total": "69.17",
        "tes": "39.10",
        "pcs": "30.07",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Haein LEE",
-     "noc": "KOR",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 6,
-       "total": "67.49",
-       "tes": "34.86",
-       "pcs": "32.63",
        "status": "Finished"
       },
       "FS": {
@@ -1179,18 +1179,18 @@
    "sport": "figure-skating",
    "event": "ISU Figure Skating Grand Prix Cup of China 2026",
    "distance": "Women",
-   "round": "Short Program",
+   "round": "Free Skating",
    "heat": "",
    "start_utc": "2026-11-07T08:30:00.000Z",
-   "rank": 6,
+   "rank": 1,
    "name": "Haein LEE",
    "noc": "KOR",
-   "time": "67.49",
+   "time": "210.79",
    "qual": "",
    "status": "",
    "segments": {
     "SP": "67.49",
-    "FS": ""
+    "FS": "143.30"
    }
   },
   {

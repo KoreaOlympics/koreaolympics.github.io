@@ -18,7 +18,7 @@
   "live": "Men 1000 m (1)",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-07T09:34:46.488504+00:00",
+ "checked_at": "2026-11-07T09:45:16.611319+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -2083,7 +2083,7 @@
     {
      "id": 23071,
      "name": "Rep. Quarterfinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-07T09:14:30.000Z",
      "rule": "The first placed skater from each race and up to a maximum of five fastest second place skaters qualify for Rep Semifinals.",
      "heats": [
@@ -2109,7 +2109,7 @@
          "name": "Hans Matthew BUEMIO",
          "noc": "PHI",
          "time": "1:35.171",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 188,
@@ -2243,7 +2243,7 @@
          "name": "Kirill KOVALENKO",
          "noc": "UKR",
          "time": "1:32.030",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 200,
@@ -2310,7 +2310,7 @@
          "name": "Stan DE GRAAF",
          "noc": "NED",
          "time": "1:29.384",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 179,
@@ -2357,27 +2357,15 @@
       },
       {
        "name": "Heat 5",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Christiano DELGADO",
-         "noc": "NED",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 180,
-         "lane": 1,
-         "slug": "christiano-delgado"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Kirill PANIKOROVSKII",
          "noc": "AIN2",
-         "time": "",
-         "qual": "",
+         "time": "1:30.347",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 107,
@@ -2385,22 +2373,22 @@
          "slug": "kirill-panikorovskii"
         },
         {
-         "rank": null,
-         "name": "Daniel TROWBRIDGE",
-         "noc": "GBR",
-         "time": "",
-         "qual": "",
+         "rank": 2,
+         "name": "Christiano DELGADO",
+         "noc": "NED",
+         "time": "1:30.402",
+         "qual": "q",
          "status": "",
          "record": "",
-         "bib": 137,
-         "lane": 3,
-         "slug": "daniel-trowbridge"
+         "bib": 180,
+         "lane": 1,
+         "slug": "christiano-delgado"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Advay KOTHARI",
          "noc": "IND",
-         "time": "",
+         "time": "1:30.511",
          "qual": "",
          "status": "",
          "record": "",
@@ -2409,10 +2397,22 @@
          "slug": "advay-kothari"
         },
         {
-         "rank": null,
+         "rank": 4,
+         "name": "Daniel TROWBRIDGE",
+         "noc": "GBR",
+         "time": "1:30.762",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 137,
+         "lane": 3,
+         "slug": "daniel-trowbridge"
+        },
+        {
+         "rank": 5,
          "name": "Harshith BAIGURU THAMMANNAGOWDA",
          "noc": "IND",
-         "time": "",
+         "time": "1:34.625",
          "qual": "",
          "status": "",
          "record": "",
@@ -2421,10 +2421,10 @@
          "slug": "harshith-baiguru-thammannagowda"
         },
         {
-         "rank": null,
+         "rank": 6,
          "name": "Rudolfs STERNMANIS",
          "noc": "LAT",
-         "time": "",
+         "time": "1:35.073",
          "qual": "",
          "status": "",
          "record": "",
@@ -2434,7 +2434,100 @@
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Rep. Semifinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Badis BRUGVIN",
+        "noc": "FRA",
+        "rank": 1,
+        "time": "1:29.304",
+        "qual": "Q"
+       },
+       {
+        "name": "Kirill PANIKOROVSKII",
+        "noc": "AIN2",
+        "rank": 1,
+        "time": "1:30.347",
+        "qual": "Q"
+       },
+       {
+        "name": "Chi Ping MAN",
+        "noc": "HKG",
+        "rank": 1,
+        "time": "1:31.903",
+        "qual": "Q"
+       },
+       {
+        "name": "Tymon HRYNIEWICZ",
+        "noc": "POL",
+        "rank": 1,
+        "time": "1:34.511",
+        "qual": "Q"
+       },
+       {
+        "name": "Luke STREET",
+        "noc": "NZL",
+        "rank": 1,
+        "time": "1:35.337",
+        "qual": "Q"
+       },
+       {
+        "name": "Meiirzhan TOLEGEN",
+        "noc": "KAZ",
+        "rank": 3,
+        "time": "1:52.963",
+        "qual": "ADV"
+       },
+       {
+        "name": "Alessandro PICCO",
+        "noc": "ITA",
+        "rank": 4,
+        "time": "1:59.165",
+        "qual": "ADV"
+       },
+       {
+        "name": "Stan DE GRAAF",
+        "noc": "NED",
+        "rank": 2,
+        "time": "1:29.384",
+        "qual": "q"
+       },
+       {
+        "name": "Christiano DELGADO",
+        "noc": "NED",
+        "rank": 2,
+        "time": "1:30.402",
+        "qual": "q"
+       },
+       {
+        "name": "Kirill KOVALENKO",
+        "noc": "UKR",
+        "rank": 2,
+        "time": "1:32.030",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Badis BRUGVIN (FRA)",
+        "Tymon HRYNIEWICZ (POL)",
+        "Luke STREET (NZL)",
+        "Stan DE GRAAF (NED)",
+        "Christiano DELGADO (NED)"
+       ],
+       [
+        "Kirill PANIKOROVSKII (AIN2)",
+        "Chi Ping MAN (HKG)",
+        "Meiirzhan TOLEGEN (KAZ)",
+        "Alessandro PICCO (ITA)",
+        "Kirill KOVALENKO (UKR)"
+       ]
+      ]
+     }
     },
     {
      "id": 23073,
