@@ -18,7 +18,7 @@
   "live": "Men 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-07T10:49:35.213407+00:00",
+ "checked_at": "2026-11-07T11:00:15.135661+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -173,7 +173,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-07T10:22:00.000Z",
+   "start_utc": "2026-11-07T10:26:00.000Z",
    "title": "Men 1500 m",
    "round": "Rep. Quarterfinals",
    "event_result_id": 16043,
@@ -6098,7 +6098,7 @@
     {
      "id": 23015,
      "name": "Rep. Quarterfinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-07T10:26:59.000Z",
      "rule": "The first, second and third placed skaters from each race and up to a maximum of one fastest fourth place skater qualify for Rep. Semifinals.",
      "heats": [
@@ -6433,7 +6433,7 @@
          "name": "Ho Long YUEN",
          "noc": "HKG",
          "time": "2:21.010",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 145,
@@ -6492,15 +6492,15 @@
       },
       {
        "name": "Heat 5",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "Kaname MIYABE",
          "noc": "JPN",
-         "time": "2:16.370",
-         "qual": "",
+         "time": "2:16.439",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 163,
@@ -6511,8 +6511,8 @@
          "rank": 2,
          "name": "Maksim ZHURAUSKI",
          "noc": "AIN1",
-         "time": "2:16.640",
-         "qual": "",
+         "time": "2:16.624",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 104,
@@ -6520,11 +6520,11 @@
          "slug": "maksim-zhurauski"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Matteo GIANA",
          "noc": "ITA",
-         "time": "",
-         "qual": "",
+         "time": "2:16.721",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 159,
@@ -6532,11 +6532,11 @@
          "slug": "matteo-giana"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Hubert Zbigniew JEZIAK",
          "noc": "GER",
-         "time": "",
-         "qual": "",
+         "time": "2:18.135",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 139,
@@ -6544,10 +6544,10 @@
          "slug": "hubert-zbigniew-jeziak"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "David HRADSKY",
          "noc": "CZE",
-         "time": "",
+         "time": "2:23.235",
          "qual": "",
          "status": "",
          "record": "",
@@ -6556,10 +6556,10 @@
          "slug": "david-hradsky"
         },
         {
-         "rank": null,
+         "rank": 6,
          "name": "Ishaan Rahul DARVEKAR",
          "noc": "IND",
-         "time": "",
+         "time": "2:32.090",
          "qual": "",
          "status": "",
          "record": "",
@@ -6568,32 +6568,175 @@
          "slug": "ishaan-rahul-darvekar"
         },
         {
-         "rank": null,
-         "name": "Andrew GONG",
-         "noc": "HKG",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 143,
-         "lane": 7,
-         "slug": "andrew-gong"
-        },
-        {
-         "rank": null,
+         "rank": 7,
          "name": "Kritsanapon PHUATRAKUL",
          "noc": "THA",
-         "time": "",
+         "time": "3:00.035",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 195,
          "lane": 2,
          "slug": "kritsanapon-phuatrakul"
+        },
+        {
+         "rank": null,
+         "name": "Andrew GONG",
+         "noc": "HKG",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 143,
+         "lane": 7,
+         "slug": "andrew-gong"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Rep",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Kaname MIYABE",
+        "noc": "JPN",
+        "rank": 1,
+        "time": "2:16.439",
+        "qual": "Q"
+       },
+       {
+        "name": "Lowie DEKENS",
+        "noc": "BEL",
+        "rank": 1,
+        "time": "2:18.614",
+        "qual": "Q"
+       },
+       {
+        "name": "Andrei PETROV",
+        "noc": "AIN2",
+        "rank": 1,
+        "time": "2:19.570",
+        "qual": "Q"
+       },
+       {
+        "name": "Elio CALANCA",
+        "noc": "FRA",
+        "rank": 1,
+        "time": "2:22.360",
+        "qual": "Q"
+       },
+       {
+        "name": "Biho LEE",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "2:22.702",
+        "qual": "Q"
+       },
+       {
+        "name": "Maksim ZHURAUSKI",
+        "noc": "AIN1",
+        "rank": 2,
+        "time": "2:16.624",
+        "qual": "Q"
+       },
+       {
+        "name": "Tsjerk VAN DER MEER",
+        "noc": "NED",
+        "rank": 2,
+        "time": "2:18.904",
+        "qual": "Q"
+       },
+       {
+        "name": "Alibi ALIMGEREYEV",
+        "noc": "KAZ",
+        "rank": 2,
+        "time": "2:20.529",
+        "qual": "Q"
+       },
+       {
+        "name": "Jan MUCHKA",
+        "noc": "CZE",
+        "rank": 2,
+        "time": "2:22.639",
+        "qual": "Q"
+       },
+       {
+        "name": "Samuel Oliver SULC",
+        "noc": "CZE",
+        "rank": 2,
+        "time": "2:23.879",
+        "qual": "Q"
+       },
+       {
+        "name": "Matteo GIANA",
+        "noc": "ITA",
+        "rank": 3,
+        "time": "2:16.721",
+        "qual": "Q"
+       },
+       {
+        "name": "Kazuto TAKAHASHI",
+        "noc": "JPN",
+        "rank": 3,
+        "time": "2:18.989",
+        "qual": "Q"
+       },
+       {
+        "name": "Szymon ETEL",
+        "noc": "POL",
+        "rank": 3,
+        "time": "2:21.330",
+        "qual": "Q"
+       },
+       {
+        "name": "Maksym SPORYSH",
+        "noc": "UKR",
+        "rank": 3,
+        "time": "2:23.133",
+        "qual": "Q"
+       },
+       {
+        "name": "Bence KISS-GEBORA",
+        "noc": "HUN",
+        "rank": 3,
+        "time": "2:24.576",
+        "qual": "Q"
+       },
+       {
+        "name": "Hubert Zbigniew JEZIAK",
+        "noc": "GER",
+        "rank": 4,
+        "time": "2:18.135",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Kaname MIYABE (JPN)",
+        "Maksim ZHURAUSKI (AIN1)",
+        "Tsjerk VAN DER MEER (NED)",
+        "Kazuto TAKAHASHI (JPN)",
+        "Szymon ETEL (POL)"
+       ],
+       [
+        "Lowie DEKENS (BEL)",
+        "Biho LEE (KOR)",
+        "Alibi ALIMGEREYEV (KAZ)",
+        "Matteo GIANA (ITA)",
+        "Maksym SPORYSH (UKR)"
+       ],
+       [
+        "Andrei PETROV (AIN2)",
+        "Elio CALANCA (FRA)",
+        "Jan MUCHKA (CZE)",
+        "Samuel Oliver SULC (CZE)",
+        "Bence KISS-GEBORA (HUN)",
+        "Hubert Zbigniew JEZIAK (GER)"
+       ]
+      ]
+     }
     },
     {
      "id": 23017,
