@@ -332,7 +332,26 @@
     },
     {
      "title": "Women",
-     "podium": null
+     "podium": [
+      {
+       "rank": 1,
+       "name": "Mone CHIBA",
+       "noc": "JPN",
+       "time": "224.48"
+      },
+      {
+       "rank": 2,
+       "name": "Alexandra IGNATOVA",
+       "noc": "AIN2",
+       "time": "221.27"
+      },
+      {
+       "rank": 3,
+       "name": "Haein LEE",
+       "noc": "KOR",
+       "time": "210.79"
+      }
+     ]
     },
     {
      "title": "Pairs",
@@ -455,16 +474,16 @@
  ],
  "medals": [
   [
+   "JPN",
+   3,
+   2,
+   0,
+   5
+  ],
+  [
    "FRA",
    3,
    1,
-   0,
-   4
-  ],
-  [
-   "JPN",
-   2,
-   2,
    0,
    4
   ],
@@ -490,6 +509,13 @@
    1
   ],
   [
+   "AIN2",
+   0,
+   2,
+   0,
+   2
+  ],
+  [
    "USA",
    0,
    1,
@@ -504,11 +530,11 @@
    2
   ],
   [
-   "AIN2",
+   "KOR",
    0,
-   1,
    0,
-   1
+   2,
+   2
   ],
   [
    "ESP",
@@ -526,13 +552,6 @@
   ],
   [
    "ITA",
-   0,
-   0,
-   1,
-   1
-  ],
-  [
-   "KOR",
    0,
    0,
    1,
@@ -628,6 +647,13 @@
     "event_id": "isu-16020"
    },
    {
+    "name": "Mone CHIBA",
+    "noc": "JPN",
+    "points": 224.48,
+    "event": "ISU Figure Skating Grand Prix Cup of China 2026",
+    "event_id": "isu-16013"
+   },
+   {
     "name": "Alexandra IGNATOVA",
     "noc": "AIN2",
     "points": 221.27,
@@ -680,13 +706,6 @@
     "name": "Sofia SAMODELKINA",
     "noc": "KAZ",
     "points": 206.89,
-    "event": "ISU Figure Skating Grand Prix Skate Canada International 2026",
-    "event_id": "isu-16020"
-   },
-   {
-    "name": "Jia SHIN",
-    "noc": "KOR",
-    "points": 204.52,
     "event": "ISU Figure Skating Grand Prix Skate Canada International 2026",
     "event_id": "isu-16020"
    }
