@@ -54,6 +54,26 @@ def block(file, data=None):
     return '\n'.join(out)
 
 
+def korea_box(data=None):
+    """대문(index.html) '한국 출전권' 상자: 모든 허브의 출전 확정 표에서 대한민국 줄을 모은다."""
+    data = data or load()
+    reg = json.loads((ROOT / 'data/olympic-structure.json').read_text(encoding='utf-8'))
+    names = {s['file']: s['name'] for s in reg['summer']['sports']}
+    rows = []
+    for file, d in data.items():
+        if not isinstance(d, dict) or 'groups' not in d:
+            continue
+        for g in d['groups']:
+            for noc, route, note in g['rows']:
+                if noc == 'KOR':
+                    rows.append(f'<tr><td><a href="{E(file)}.html#la28-qualified">{E(names.get(file, file))}</a></td>'
+                                f'<td>{E(route)}</td><td>{E(note)}</td></tr>')
+    if not rows:
+        return '<p>아직 확정된 출전권이 없다.</p>'
+    return (f'<table class="wikitable"><thead><tr><th>종목</th><th>경로</th><th>내용</th></tr></thead><tbody>{"".join(rows)}</tbody></table>'
+            f'<p>{len(rows)}자리 · {E(data["asof"].replace("-", "."))} 기준 · <a href="la28-qualification.html">종목별 현황</a> · <a href="la28-quota-status.html">전망</a></p>')
+
+
 def copy_flags(src, data):
     FLAGS.mkdir(parents=True, exist_ok=True)
     used = {noc for k, v in data.items() if isinstance(v, dict) and 'groups' in v for g in v['groups'] for noc, _, _ in g['rows']}

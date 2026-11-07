@@ -453,6 +453,12 @@ def qualified_block(s):
     return block(s['file'])
 
 
+def private_block(s):
+    """사설 랭킹 한국 현황 (data/private-rankings/, tools/private_rankings.py)."""
+    from private_rankings import hub_block
+    return hub_block(s['file'])
+
+
 def results_block(s):
     """2026 주요 대회 결과 (data/summer-live.json, tools/summer_live.py)."""
     from summer_live import hub_block
@@ -535,7 +541,7 @@ def render_hub(reg, s):
     body = '\n'.join(x for x in [
         f'<nav class="crumb"><a href="index.html">목차</a> › {E(s["name"])}</nav>',
         f'<h1>{E(s["name"])} <span class="en">({E(s["name_en"])})</span></h1>',
-        '<div class="top">', infobox(s['name'], info), lead, '</div>', summary_figure(s), qualified_block(s), pathways_block(s), guide_block(s), results_block(s), toc, winter_live_block(s), secs, rel,
+        '<div class="top">', infobox(s['name'], info), lead, '</div>', summary_figure(s), qualified_block(s), pathways_block(s), guide_block(s), results_block(s), private_block(s), toc, winter_live_block(s), secs, rel,
         season_navbox(reg, s['season'], '', hub_path(s))] if x)
     return path, page(f'{s["name"]} | {g["games"]}', '', body, f'{g["games"]} {s["name"]} 세부종목·예선·한국 현황')
 
@@ -695,7 +701,8 @@ def render_index(reg, today=None):
     today = today or dt.date.today().isoformat()
     path = ROOT / 'index.html'
     parts = preserved(path) or {}
-    gen = {'upcoming': render_upcoming(reg, today)}
+    from qualified import korea_box
+    gen = {'upcoming': render_upcoming(reg, today), 'korea': korea_box()}
     intro = parts.get('intro') or '<p><!-- 추가: 사이트 소개 --></p>'
     secs = []
     toc = []
@@ -740,7 +747,7 @@ def build():
         print(f'  {len(refused)}개 문서를 건너뛰었다. 손실을 확인했으면 --force로 다시 실행한다.')
 
 
-PROTECTED_BLOCKS = ('summary-figure', 'id="recent-results"', 'id="la28-qualified"', 'id="la28-pathways"', 'id="sport-guide"', 'id="event-guide"', 'id="winter_live"')
+PROTECTED_BLOCKS = ('summary-figure', 'id="recent-results"', 'id="private-rank"', 'id="la28-qualified"', 'id="la28-pathways"', 'id="sport-guide"', 'id="event-guide"', 'id="winter_live"')
 _TXT = lambda s: re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', s))).strip()
 
 

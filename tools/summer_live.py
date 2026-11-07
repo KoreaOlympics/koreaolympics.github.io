@@ -331,8 +331,9 @@ def render():
         orig = page.read_text(encoding='utf-8')
         text = BLOCK_RE.sub('', orig)
         b = hub_block(page.stem, data)
-        if b and '<nav class="toc">' in text:
-            text = text.replace('<nav class="toc">', b + '\n<nav class="toc">', 1)
+        anchor = next((a for a in ('<div class="private-rank"', '<nav class="toc">') if a in text), None)
+        if b and anchor:  # 대회 결과 → 사설 랭킹 → 목차
+            text = text.replace(anchor, b + '\n' + anchor, 1)
             n += 1
         if text != orig:
             page.write_text(text, encoding='utf-8', newline='\n')

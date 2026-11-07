@@ -16,6 +16,7 @@ from olympic import _TXT  # noqa: E402
 
 SEC = re.compile(r'<section id="([a-z_0-9]+)"[^>]*>.*?</section>', re.S)
 GENERATORS = ['tools/summary_svg.py', 'tools/qualified.py', 'tools/pathways.py', 'tools/sport_guide.py', 'tools/paris_medals.py', 'tools/summer_live.py']
+GENERATOR_ARGS = {'tools/private_rankings.py': ['render']}
 
 
 def show(base, rel):
@@ -79,8 +80,8 @@ def main(argv):
             if not dry:
                 path.write_text(new, encoding='utf-8', newline='\n')
     if not dry:
-        for g in GENERATORS:  # 자동 블록은 자료에서 다시 그린다 (바뀐 것이 없으면 파일도 그대로)
-            subprocess.run([sys.executable, g], cwd=ROOT, check=True, capture_output=True)
+        for g in GENERATORS + list(GENERATOR_ARGS):  # 자동 블록은 자료에서 다시 그린다 (바뀐 것이 없으면 파일도 그대로)
+            subprocess.run([sys.executable, g, *GENERATOR_ARGS.get(g, [])], cwd=ROOT, check=True, capture_output=True)
     print(f'guard: 섹션 {total}개 되살림')
 
 

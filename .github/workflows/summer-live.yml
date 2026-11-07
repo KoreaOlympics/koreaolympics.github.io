@@ -38,10 +38,12 @@ jobs:
           end=$((SECONDS + 50*60))
           while :; do
             python tools/summer_live.py collect $flag || true
+            # 사설 랭킹(totalintel 역도 잠정 OQR)은 하루 한 번 (체급 페이지 12장)
+            if [ "$flag" = "--all" ]; then python tools/private_rankings.py totalintel || true; fi
             python tools/qualified.py
             python tools/summer_pages.py
             python tools/olympic.py check
-            git add data/summer-live.json data/la28-qualified.json data/korean-names.json summer-live.html la28-qualification.html ol*.html
+            git add data/summer-live.json data/private-rankings data/la28-qualified.json data/korean-names.json summer-live.html la28-qualification.html ol*.html
             if ! git diff --cached --quiet; then
               git commit -q -m "summer: update live results"
               for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin main && break; sleep 5; done
