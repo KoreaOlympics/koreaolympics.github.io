@@ -1,5 +1,5 @@
 {
- "_": "하계 실시간·최근 대회 (tools/summer_live.py). wiki는 영문 위키백과 문서 제목, kind=season은 시즌 문서(차수별 표). quota_route가 있으면 출전권 표를 la28-qualified.json에 넣는다.",
+ "_": "LA28 예선 대회만 둔다 (사이트 자료의 예선 일정·출전 확정 표로 예선임이 확인된 대회). 예선이 아닌 대회는 넣지 않는다. qualifies: 이 대회가 LA28 예선인 이유. tools/summer_live.py가 qualifies 없는 대회는 읽지 않는다.",
  "events": [
   {
    "id": "issf-wch-2026",
@@ -10,7 +10,8 @@
    "end": "2026-11-14",
    "wiki": "2026 ISSF World Shooting Championships",
    "quota_route": "2026 세계선수권 (도하)",
-   "quota_title": "ISSF 세계선수권 도하 2026 — 개인 12종목 × 3자리 (국가 쿼터)"
+   "quota_title": "ISSF 세계선수권 도하 2026 — 개인 12종목 × 3자리 (국가 쿼터)",
+   "qualifies": "ISSF 쿼터 대회 (36장)"
   },
   {
    "id": "iwf-wch-2026",
@@ -19,16 +20,8 @@
    "place": "닝보",
    "start": "2026-10-27",
    "end": "2026-11-08",
-   "wiki": "2026 World Weightlifting Championships"
-  },
-  {
-   "id": "uww-wch-2026",
-   "sport": "olwrestling",
-   "title": "세계레슬링선수권",
-   "place": "아스타나",
-   "start": "2026-10-24",
-   "end": "2026-11-01",
-   "wiki": "2026 World Wrestling Championships"
+   "wiki": "2026 World Weightlifting Championships",
+   "qualifies": "OQR 1기간 대회"
   },
   {
    "id": "fig-wch-2026",
@@ -37,7 +30,8 @@
    "place": "로테르담",
    "start": "2026-10-17",
    "end": "2026-10-25",
-   "wiki": "2026 World Artistic Gymnastics Championships"
+   "wiki": "2026 World Artistic Gymnastics Championships",
+   "qualifies": "남녀 단체 상위 3개국 직행"
   },
   {
    "id": "uci-track-2026",
@@ -46,7 +40,8 @@
    "place": "상하이",
    "start": "2026-10-14",
    "end": "2026-10-18",
-   "wiki": "2026 UCI Track Cycling World Championships"
+   "wiki": "2026 UCI Track Cycling World Championships",
+   "qualifies": "트랙 예선 기간 개시 대회"
   },
   {
    "id": "ijf-wch-2026",
@@ -55,134 +50,8 @@
    "place": "바쿠",
    "start": "2026-10-04",
    "end": "2026-10-11",
-   "wiki": "2026 World Judo Championships"
-  },
-  {
-   "id": "wr-wch-2026",
-   "sport": "olrowing",
-   "title": "세계조정선수권",
-   "place": "암스테르담",
-   "start": "2026-08-24",
-   "end": "2026-08-30",
-   "wiki": "2026 World Rowing Championships"
-  },
-  {
-   "id": "icf-sprint-2026",
-   "sport": "olcanoe",
-   "title": "ICF 카누 스프린트 세계선수권",
-   "place": "포즈난",
-   "start": "2026-08-26",
-   "end": "2026-08-30",
-   "wiki": "2026 ICF Canoe Sprint World Championships"
-  },
-  {
-   "id": "uipm-wch-2026",
-   "sport": "olmodernpentathlon",
-   "title": "세계근대5종선수권",
-   "place": "구이양",
-   "start": "2026-08-24",
-   "end": "2026-08-30",
-   "wiki": "2026 World Modern Pentathlon Championships"
-  },
-  {
-   "id": "fei-wch-2026",
-   "sport": "olequestrian",
-   "title": "FEI 세계승마선수권",
-   "place": "아헨",
-   "start": "2026-08-11",
-   "end": "2026-08-23",
-   "wiki": "2026 FEI World Championships"
-  },
-  {
-   "id": "panpacs-2026",
-   "sport": "olswimming",
-   "title": "팬퍼시픽 수영선수권",
-   "place": "어바인",
-   "start": "2026-08-12",
-   "end": "2026-08-15",
-   "wiki": "2026 Pan Pacific Swimming Championships"
-  },
-  {
-   "id": "euro-aquatics-2026",
-   "sport": "olswimming",
-   "title": "유럽 수영선수권",
-   "place": "파리",
-   "start": "2026-07-31",
-   "end": "2026-08-16",
-   "wiki": "2026 European Aquatics Championships"
-  },
-  {
-   "id": "fie-wch-2026",
-   "sport": "olfencing",
-   "title": "세계펜싱선수권",
-   "place": "홍콩",
-   "start": "2026-07-22",
-   "end": "2026-07-30",
-   "wiki": "2026 World Fencing Championships"
-  },
-  {
-   "id": "icf-slalom-2026",
-   "sport": "olcanoe",
-   "title": "ICF 카누 슬랄롬 세계선수권",
-   "place": "오클라호마시티",
-   "start": "2026-07-20",
-   "end": "2026-07-25",
-   "wiki": "2026 ICF Canoe Slalom World Championships"
-  },
-  {
-   "id": "bwf-wch-2026",
-   "sport": "olbadminton",
-   "title": "BWF 세계배드민턴선수권",
-   "place": "뉴델리",
-   "start": "2026-08-17",
-   "end": "2026-08-23",
-   "wiki": "2026 BWF World Championships"
-  },
-  {
-   "id": "ittf-team-2026",
-   "sport": "oltabletennis",
-   "title": "세계탁구선수권(단체전)",
-   "place": "런던",
-   "start": "2026-04-28",
-   "end": "2026-05-10",
-   "wiki": "2026 World Team Table Tennis Championships"
-  },
-  {
-   "id": "issf-wc-2026",
-   "sport": "olshooting",
-   "title": "2026 ISSF 월드컵 (시즌)",
-   "place": "탕헤르·그라나다·알마티·뮌헨·로나토·항저우·카이로·로마",
-   "start": "2026-03-25",
-   "end": "2026-12-08",
-   "wiki": "2026 ISSF World Cup",
-   "kind": "season"
-  },
-  {
-   "id": "ag2026-athletics",
-   "sport": "olathletics",
-   "title": "아이치·나고야 아시안게임",
-   "place": "아이치·나고야",
-   "start": "2026-09-23",
-   "end": "2026-09-29",
-   "wiki": "Athletics at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-swimming",
-   "sport": "olswimming",
-   "title": "아이치·나고야 아시안게임",
-   "place": "아이치·나고야",
-   "start": "2026-09-20",
-   "end": "2026-09-25",
-   "wiki": "Swimming at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-diving",
-   "sport": "oldiving",
-   "title": "아이치·나고야 아시안게임",
-   "place": "아이치·나고야",
-   "start": "2026-09-26",
-   "end": "2026-09-30",
-   "wiki": "Diving at the 2026 Asian Games"
+   "wiki": "2026 World Judo Championships",
+   "qualifies": "IJF 올림픽 랭킹 기간(2026.06.15~) 안"
   },
   {
    "id": "ag2026-archery",
@@ -191,106 +60,8 @@
    "place": "아이치·나고야",
    "start": "2026-09-19",
    "end": "2026-10-04",
-   "wiki": "Archery at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-badminton",
-   "sport": "olbadminton",
-   "title": "아이치·나고야 아시안게임",
-   "place": "아이치·나고야",
-   "start": "2026-09-19",
-   "end": "2026-10-04",
-   "wiki": "Badminton at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-boxing",
-   "sport": "olboxing",
-   "title": "아이치·나고야 아시안게임",
-   "place": "아이치·나고야",
-   "start": "2026-09-19",
-   "end": "2026-10-04",
-   "wiki": "Boxing at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-canoeing",
-   "sport": "olcanoe",
-   "title": "아이치·나고야 아시안게임",
-   "place": "아이치·나고야",
-   "start": "2026-09-19",
-   "end": "2026-10-04",
-   "wiki": "Canoeing at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-cycling",
-   "sport": "olcycling",
-   "title": "아이치·나고야 아시안게임",
-   "place": "아이치·나고야",
-   "start": "2026-09-20",
-   "end": "2026-10-02",
-   "wiki": "Cycling at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-equestrian-events",
-   "sport": "olequestrian",
-   "title": "아이치·나고야 아시안게임",
-   "place": "아이치·나고야",
-   "start": "2026-09-21",
-   "end": "2026-10-04",
-   "wiki": "Equestrian events at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-fencing",
-   "sport": "olfencing",
-   "title": "아이치·나고야 아시안게임",
-   "place": "아이치·나고야",
-   "start": "2026-09-22",
-   "end": "2026-09-27",
-   "wiki": "Fencing at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-golf",
-   "sport": "olgolf",
-   "title": "아이치·나고야 아시안게임",
-   "place": "아이치·나고야",
-   "start": "2026-09-30",
-   "end": "2026-10-03",
-   "wiki": "Golf at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-gymnastics",
-   "sport": "olgymnastics",
-   "title": "아이치·나고야 아시안게임",
-   "place": "아이치·나고야",
-   "start": "2026-09-21",
-   "end": "2026-10-03",
-   "wiki": "Gymnastics at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-judo",
-   "sport": "oljudo",
-   "title": "아이치·나고야 아시안게임",
-   "place": "아이치·나고야",
-   "start": "2026-09-19",
-   "end": "2026-10-04",
-   "wiki": "Judo at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-modern-pentathlon",
-   "sport": "olmodernpentathlon",
-   "title": "아이치·나고야 아시안게임",
-   "place": "아이치·나고야",
-   "start": "2026-09-16",
-   "end": "2026-09-20",
-   "wiki": "Modern pentathlon at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-rowing",
-   "sport": "olrowing",
-   "title": "아이치·나고야 아시안게임",
-   "place": "아이치·나고야",
-   "start": "2026-09-23",
-   "end": "2026-09-24",
-   "wiki": "Rowing at the 2026 Asian Games"
+   "wiki": "Archery at the 2026 Asian Games",
+   "qualifies": "아시아 대륙 예선 (리커브 개인·혼성)"
   },
   {
    "id": "ag2026-sailing",
@@ -299,34 +70,8 @@
    "place": "아이치·나고야",
    "start": "2026-09-26",
    "end": "2026-10-03",
-   "wiki": "Sailing at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-shooting",
-   "sport": "olshooting",
-   "title": "아이치·나고야 아시안게임",
-   "place": "아이치·나고야",
-   "start": "2026-09-19",
-   "end": "2026-10-04",
-   "wiki": "Shooting at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-skateboarding",
-   "sport": "olskateboard",
-   "title": "아이치·나고야 아시안게임",
-   "place": "아이치·나고야",
-   "start": "2026-09-24",
-   "end": "2026-09-27",
-   "wiki": "Skateboarding at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-sport-climbing",
-   "sport": "olclimbing",
-   "title": "아이치·나고야 아시안게임",
-   "place": "아이치·나고야",
-   "start": "2026-09-29",
-   "end": "2026-10-03",
-   "wiki": "Sport climbing at the 2026 Asian Games"
+   "wiki": "Sailing at the 2026 Asian Games",
+   "qualifies": "아시아 대륙 예선"
   },
   {
    "id": "ag2026-surfing",
@@ -335,25 +80,8 @@
    "place": "아이치·나고야",
    "start": "2026-09-26",
    "end": "2026-09-28",
-   "wiki": "Surfing at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-table-tennis",
-   "sport": "oltabletennis",
-   "title": "아이치·나고야 아시안게임",
-   "place": "아이치·나고야",
-   "start": "2026-09-20",
-   "end": "2026-09-28",
-   "wiki": "Table tennis at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-taekwondo",
-   "sport": "oltaekwondo",
-   "title": "아이치·나고야 아시안게임",
-   "place": "아이치·나고야",
-   "start": "2026-10-01",
-   "end": "2026-10-03",
-   "wiki": "Taekwondo at the 2026 Asian Games"
+   "wiki": "Surfing at the 2026 Asian Games",
+   "qualifies": "아시아 대륙 예선"
   },
   {
    "id": "ag2026-tennis",
@@ -362,79 +90,8 @@
    "place": "아이치·나고야",
    "start": "2026-09-27",
    "end": "2026-10-03",
-   "wiki": "Tennis at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-triathlon",
-   "sport": "oltriathlon",
-   "title": "아이치·나고야 아시안게임",
-   "place": "아이치·나고야",
-   "start": "2026-09-20",
-   "end": "2026-09-21",
-   "wiki": "Triathlon at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-weightlifting",
-   "sport": "olweightlifting",
-   "title": "아이치·나고야 아시안게임",
-   "place": "아이치·나고야",
-   "start": "2026-09-23",
-   "end": "2026-09-29",
-   "wiki": "Weightlifting at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-wrestling",
-   "sport": "olwrestling",
-   "title": "아이치·나고야 아시안게임",
-   "place": "아이치·나고야",
-   "start": "2026-09-30",
-   "end": "2026-10-03",
-   "wiki": "Wrestling at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-football",
-   "sport": "olfootball",
-   "title": "아이치·나고야 아시안게임",
-   "place": "아이치·나고야",
-   "start": "2026-09-19",
-   "end": "2026-10-04",
-   "wiki": "Football at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-basketball",
-   "sport": "olbasketball",
-   "title": "아이치·나고야 아시안게임",
-   "place": "아이치·나고야",
-   "start": "2026-09-19",
-   "end": "2026-10-04",
-   "wiki": "Basketball at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-volleyball",
-   "sport": "olvolleyball",
-   "title": "아이치·나고야 아시안게임 배구",
-   "place": "아이치·나고야",
-   "start": "2026-09-19",
-   "end": "2026-10-04",
-   "wiki": "Volleyball at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-beach-volleyball",
-   "sport": "olvolleyball",
-   "title": "아이치·나고야 아시안게임 비치발리볼",
-   "place": "아이치·나고야",
-   "start": "2026-09-20",
-   "end": "2026-10-03",
-   "wiki": "Beach volleyball at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-handball",
-   "sport": "olhandball",
-   "title": "아이치·나고야 아시안게임",
-   "place": "아이치·나고야",
-   "start": "2026-09-19",
-   "end": "2026-09-29",
-   "wiki": "Handball at the 2026 Asian Games"
+   "wiki": "Tennis at the 2026 Asian Games",
+   "qualifies": "대륙종합대회 단식 우승 ITF 자리"
   },
   {
    "id": "ag2026-field-hockey",
@@ -443,43 +100,8 @@
    "place": "아이치·나고야",
    "start": "2026-09-18",
    "end": "2026-10-03",
-   "wiki": "Field hockey at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-water-polo",
-   "sport": "olwaterpolo",
-   "title": "아이치·나고야 아시안게임",
-   "place": "아이치·나고야",
-   "start": "2026-09-20",
-   "end": "2026-10-03",
-   "wiki": "Water polo at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-baseball",
-   "sport": "olbaseball",
-   "title": "아이치·나고야 아시안게임 야구",
-   "place": "아이치·나고야",
-   "start": "2026-09-21",
-   "end": "2026-09-27",
-   "wiki": "Baseball at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-softball",
-   "sport": "olbaseball",
-   "title": "아이치·나고야 아시안게임 소프트볼",
-   "place": "아이치·나고야",
-   "start": "2026-09-26",
-   "end": "2026-10-03",
-   "wiki": "Softball at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-cricket",
-   "sport": "olcricket",
-   "title": "아이치·나고야 아시안게임",
-   "place": "아이치·나고야",
-   "start": "2026-09-19",
-   "end": "2026-10-04",
-   "wiki": "Cricket at the 2026 Asian Games"
+   "wiki": "Field hockey at the 2026 Asian Games",
+   "qualifies": "대륙종합대회 우승 직행"
   },
   {
    "id": "ag2026-squash",
@@ -488,16 +110,8 @@
    "place": "아이치·나고야",
    "start": "2026-09-23",
    "end": "2026-10-02",
-   "wiki": "Squash at the 2026 Asian Games"
-  },
-  {
-   "id": "ag2026-artistic-swimming",
-   "sport": "olartisticswimming",
-   "title": "아이치·나고야 아시안게임",
-   "place": "아이치·나고야",
-   "start": "2026-09-26",
-   "end": "2026-09-28",
-   "wiki": "Artistic swimming at the 2026 Asian Games"
+   "wiki": "Squash at the 2026 Asian Games",
+   "qualifies": "아시아 대륙 예선 (우승)"
   }
  ]
 }

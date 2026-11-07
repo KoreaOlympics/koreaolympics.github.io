@@ -1,4 +1,4 @@
-"""하계 실시간·최근 대회 결과 (위키백과 대회 문서 → data/summer-live.json → 허브 '2026 주요 대회 결과'·summer-live.html).
+"""하계 실시간·최근 대회 결과 (위키백과 대회 문서 → data/summer-live.json → 허브 'LA28 예선 대회 결과'·summer-live.html).
 
     python tools/summer_live.py collect          # 진행 중이거나 막 끝난 대회(시작 1일 전 ~ 끝난 뒤 10일)만 다시 읽는다
     python tools/summer_live.py collect --all    # 목록의 모든 대회를 다시 읽는다
@@ -57,6 +57,11 @@ def ko(s):
     return re.sub(r'(\d+) m\b', r'\1m', s).strip()
 
 
+def sources():
+    """LA28 예선 대회만 (qualifies에 예선인 이유가 적힌 대회). 예선이 아닌 대회는 읽지도 보여 주지도 않는다."""
+    return [e for e in json.loads(SRC.read_text(encoding='utf-8'))['events'] if e.get('qualifies')]
+
+
 def load(p, default=None):
     return json.loads(p.read_text(encoding='utf-8')) if p.exists() else default
 
@@ -101,7 +106,7 @@ def collect_one(src):
 
 
 def collect(all_=False):
-    srcs = load(SRC)['events']
+    srcs = sources()
     data = load(OUT, {'results': {}})
     n = 0
     for src in srcs:
@@ -152,7 +157,7 @@ def quota_holder(res, quota_event, noc):
 def korea_summary(data=None):
     """진행 중·최근 대회에서 한국이 얻은 LA28 출전권과 메달 — summer-live.html 맨 위."""
     data = data or load(OUT, {'results': {}})
-    srcs = sorted(load(SRC)['events'], key=lambda s: s['start'], reverse=True)
+    srcs = sorted(sources(), key=lambda s: s['start'], reverse=True)
     names = kor_names()
     items = []
     for src in srcs:
@@ -273,7 +278,7 @@ def event_card(src, res, codes, names, up='', open_=False, limit=None):
     tag = {'live': '<b class="ongoing">진행 중</b>', 'done': '종료', 'soon': '예정'}[st]
     wiki = 'https://en.wikipedia.org/wiki/' + src['wiki'].replace(' ', '_')
     head = (f'<summary><b>{E(src["title"])}</b> <span class="small">{E(src.get("place", ""))} · {E(src["start"][5:].replace("-", "."))}~{E(src["end"][5:].replace("-", "."))}</span> '
-            f'{tag} <span class="small">결과 {len(done)}/{len(rows)}종목 · 한국 금{g[0]} 은{g[1]} 동{g[2]}</span></summary>')
+            f'{tag} <span class="small">예선: {E(src.get("qualifies", ""))} · 결과 {len(done)}/{len(rows)}종목 · 한국 금{g[0]} 은{g[1]} 동{g[2]}</span></summary>')
     body = []
     show = done if not limit else done[-limit:]
     if show:
@@ -311,14 +316,14 @@ def event_card(src, res, codes, names, up='', open_=False, limit=None):
 
 def hub_block(file, data=None):
     data = data or load(OUT, {'results': {}})
-    srcs = [s for s in load(SRC)['events'] if s['sport'] == file and s['id'] in data['results']]
+    srcs = [s for s in sources() if s['sport'] == file and s['id'] in data['results']]
     if not srcs:
         return ''
     codes, names = nocs(), kor_names()
     srcs.sort(key=lambda s: s['start'], reverse=True)
     cards = ''.join(event_card(s, data['results'][s['id']], codes, names, open_=status(s) == 'live' and s.get('kind') != 'season') for s in srcs)
-    return (f'<div class="results" id="recent-results"><h2>2026 주요 대회 결과 <span class="asof">{E(data.get("asof", ""))}</span></h2>'
-            f'<p class="small">위키백과 대회 문서에서 자동으로 모은다. 대회 중에는 한 시간마다 새로 읽는다. 한국 선수가 있는 줄은 붉게 칠했다. '
+    return (f'<div class="results" id="recent-results"><h2>LA28 예선 대회 결과 <span class="asof">{E(data.get("asof", ""))}</span></h2>'
+            f'<p class="small">LA28 예선 대회만 싣는다. 위키백과 대회 문서에서 자동으로 모은다. 대회 중에는 한 시간마다 새로 읽는다. 한국 선수가 있는 줄은 붉게 칠했다. '
             f'<a href="summer-live.html">하계 실시간 전체 →</a></p>{cards}</div><!-- /results -->')
 
 
@@ -346,7 +351,7 @@ def live_section():
     codes, names = nocs(), kor_names()
     reg = json.loads((ROOT / 'data/olympic-structure.json').read_text(encoding='utf-8'))
     hub = {s['file']: s['name'] for s in reg['summer']['sports']}
-    srcs = sorted(load(SRC)['events'], key=lambda s: s['start'], reverse=True)
+    srcs = sorted(sources(), key=lambda s: s['start'], reverse=True)
     now = [s for s in srcs if s['id'] in data['results'] and in_window(s) and status(s) != 'soon']
     out = [korea_summary(data), f'<h2>진행 중·최근 대회 결과 <span class="asof">{E(data.get("asof", ""))}</span></h2>']
     if now:
@@ -355,7 +360,7 @@ def live_section():
         out.append('<p class="muted">지금 진행 중인 대회가 없다.</p>')
     rest = [s for s in srcs if s['id'] in data['results'] and s not in now]
     if rest:
-        out.append('<h2>2026 대회 결과 모음</h2><div class="tw"><table class="wikitable"><thead><tr><th>기간</th><th>종목</th><th>대회</th><th>결과</th><th>한국</th></tr></thead><tbody>')
+        out.append('<h2>LA28 예선 대회 결과 모음</h2><div class="tw"><table class="wikitable"><thead><tr><th>기간</th><th>종목</th><th>대회</th><th>결과</th><th>한국</th></tr></thead><tbody>')
         for s in rest:
             rows = rows_of(s, data['results'][s['id']])
             g = kor_line(rows)
@@ -369,7 +374,7 @@ def live_section():
 if __name__ == '__main__':
     cmd = sys.argv[1] if len(sys.argv) > 1 else 'render'
     if cmd == 'active':  # 지금 진행 중인 대회 수 (워크플로가 반복 여부를 정한다)
-        print(sum(1 for s in load(SRC)['events'] if status(s) == 'live' and s.get('kind') != 'season'))
+        print(sum(1 for s in sources() if status(s) == 'live' and s.get('kind') != 'season'))
         sys.exit()
     if cmd == 'collect':
         collect('--all' in sys.argv)
