@@ -18,7 +18,7 @@
   "live": "Men 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-07T10:27:39.357029+00:00",
+ "checked_at": "2026-11-07T10:38:05.562031+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -141,7 +141,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-07T09:14:00.000Z",
+   "start_utc": "2026-11-07T09:16:00.000Z",
    "title": "Men 1000 m (1)",
    "round": "Rep. Quarterfinals",
    "event_result_id": 16052,
@@ -165,7 +165,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-07T10:07:00.000Z",
+   "start_utc": "2026-11-07T10:05:00.000Z",
    "title": "Women 1500 m",
    "round": "Rep. Quarterfinals",
    "event_result_id": 16046,
@@ -6099,20 +6099,20 @@
      "id": 23015,
      "name": "Rep. Quarterfinals",
      "status": "Live",
-     "start_utc": "2026-11-07T10:22:00.000Z",
+     "start_utc": "2026-11-07T10:26:00.000Z",
      "rule": "The first, second and third placed skaters from each race and up to a maximum of one fastest fourth place skater qualify for Rep. Semifinals.",
      "heats": [
       {
        "name": "Heat 1",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Biho LEE",
          "noc": "KOR",
-         "time": "",
-         "qual": "",
+         "time": "2:22.702",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 173,
@@ -6120,11 +6120,11 @@
          "slug": "biho-lee"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Samuel Oliver SULC",
          "noc": "CZE",
-         "time": "",
-         "qual": "",
+         "time": "2:23.879",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 130,
@@ -6132,10 +6132,22 @@
          "slug": "samuel-oliver-sulc"
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Bence KISS-GEBORA",
+         "noc": "HUN",
+         "time": "2:24.576",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 148,
+         "lane": 5,
+         "slug": "bence-kiss-gebora"
+        },
+        {
+         "rank": 4,
          "name": "Andrea BELLOTTI",
          "noc": "ITA",
-         "time": "",
+         "time": "2:26.233",
          "qual": "",
          "status": "",
          "record": "",
@@ -6144,10 +6156,10 @@
          "slug": "andrea-bellotti"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Robert Dumitru MURESAN",
          "noc": "ROU",
-         "time": "",
+         "time": "3:00.780",
          "qual": "",
          "status": "",
          "record": "",
@@ -6156,22 +6168,10 @@
          "slug": "robert-dumitru-muresan"
         },
         {
-         "rank": null,
-         "name": "Bence KISS-GEBORA",
-         "noc": "HUN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 148,
-         "lane": 5,
-         "slug": "bence-kiss-gebora"
-        },
-        {
-         "rank": null,
+         "rank": 6,
          "name": "Pranav Madav SURAPANENI",
          "noc": "IND",
-         "time": "",
+         "time": "3:23.277",
          "qual": "",
          "status": "",
          "record": "",
@@ -6183,9 +6183,9 @@
          "rank": null,
          "name": "Maximillian MELAND",
          "noc": "NOR",
-         "time": "",
+         "time": "PEN",
          "qual": "",
-         "status": "",
+         "status": "Penalty",
          "record": "",
          "bib": 185,
          "lane": 7,
@@ -6195,15 +6195,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Andrei PETROV",
          "noc": "AIN2",
-         "time": "",
-         "qual": "",
+         "time": "2:19.570",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 108,
@@ -6211,11 +6211,11 @@
          "slug": "andrei-petrov"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Alibi ALIMGEREYEV",
          "noc": "KAZ",
-         "time": "",
-         "qual": "",
+         "time": "2:20.529",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 166,
@@ -6223,11 +6223,11 @@
          "slug": "alibi-alimgereyev"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Szymon ETEL",
          "noc": "POL",
-         "time": "",
-         "qual": "",
+         "time": "2:21.330",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 189,
@@ -6235,11 +6235,11 @@
          "slug": "szymon-etel"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Zhandos SEREKPAYEV",
          "noc": "KAZ",
-         "time": "",
-         "qual": "",
+         "time": "2:21.675",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 169,
@@ -6247,22 +6247,10 @@
          "slug": "zhandos-serekpayev"
         },
         {
-         "rank": null,
-         "name": "Mertcan TAYGAR",
-         "noc": "TUR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 199,
-         "lane": 5,
-         "slug": "mertcan-taygar"
-        },
-        {
-         "rank": null,
+         "rank": 5,
          "name": "Alimardon MAKHMUDOV",
          "noc": "UZB",
-         "time": "",
+         "time": "2:21.975",
          "qual": "",
          "status": "",
          "record": "",
@@ -6271,16 +6259,28 @@
          "slug": "alimardon-makhmudov"
         },
         {
-         "rank": null,
+         "rank": 6,
          "name": "Toms VINNINS",
          "noc": "LAT",
-         "time": "",
+         "time": "2:27.336",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 177,
          "lane": 7,
          "slug": "toms-vinnins"
+        },
+        {
+         "rank": 7,
+         "name": "Mertcan TAYGAR",
+         "noc": "TUR",
+         "time": "2:27.462",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 199,
+         "lane": 5,
+         "slug": "mertcan-taygar"
         }
        ]
       },
@@ -12727,12 +12727,12 @@
    "distance": "Men 1500 m",
    "round": "Rep. Quarterfinals",
    "heat": "Heat 1",
-   "start_utc": "2026-11-07T10:22:00.000Z",
-   "rank": null,
+   "start_utc": "2026-11-07T10:26:00.000Z",
+   "rank": 1,
    "name": "Biho LEE",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "2:22.702",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 173,
