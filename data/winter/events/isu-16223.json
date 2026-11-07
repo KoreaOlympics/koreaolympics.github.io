@@ -18,7 +18,7 @@
   "live": "Men 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-07T12:26:39.434373+00:00",
+ "checked_at": "2026-11-07T12:27:29.049436+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -12910,7 +12910,7 @@
     {
      "id": 23066,
      "name": "Semifinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-07T12:15:04.000Z",
      "rule": "The first and second placed teams from each race qualify for Final A, the third and fourth placed teams from each race qualify for Final B.",
      "heats": [
@@ -12984,14 +12984,14 @@
       {
        "name": "Heat 2",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "Canada",
          "noc": "CAN",
-         "time": "2:46.210",
-         "qual": "",
+         "time": "2:46.198",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -13002,8 +13002,8 @@
          "rank": 2,
          "name": "Japan",
          "noc": "JPN",
-         "time": "2:46.530",
-         "qual": "",
+         "time": "2:46.519",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -13014,8 +13014,8 @@
          "rank": 3,
          "name": "Turkiye",
          "noc": "TUR",
-         "time": "2:51.030",
-         "qual": "",
+         "time": "2:51.016",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": null,
@@ -13026,8 +13026,8 @@
          "rank": 4,
          "name": "Hungary",
          "noc": "HUN",
-         "time": "2:52.910",
-         "qual": "",
+         "time": "2:52.903",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": null,
@@ -13038,7 +13038,7 @@
          "rank": 5,
          "name": "Individual Neutral Athletes 1",
          "noc": "AIN1",
-         "time": "3:28.210",
+         "time": "3:28.193",
          "qual": "",
          "status": "",
          "record": "",
@@ -13048,7 +13048,50 @@
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Final A",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "China",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "2:39.890",
+        "qual": "Q"
+       },
+       {
+        "name": "Canada",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "2:46.198",
+        "qual": "Q"
+       },
+       {
+        "name": "Italy",
+        "noc": "ITA",
+        "rank": 2,
+        "time": "2:41.262",
+        "qual": "Q"
+       },
+       {
+        "name": "Japan",
+        "noc": "JPN",
+        "rank": 2,
+        "time": "2:46.519",
+        "qual": "Q"
+       }
+      ],
+      "races": [
+       [
+        "China (CHN)",
+        "Canada (CAN)",
+        "Italy (ITA)",
+        "Japan (JPN)"
+       ]
+      ]
+     }
     },
     {
      "id": 23067,
