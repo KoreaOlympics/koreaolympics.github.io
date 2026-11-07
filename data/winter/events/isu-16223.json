@@ -18,7 +18,7 @@
   "live": "Men 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-07T12:05:15.584432+00:00",
+ "checked_at": "2026-11-07T12:15:58.042662+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -12815,7 +12815,7 @@
      ],
      "projection": {
       "next": "Semifinals",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -12910,10 +12910,145 @@
     {
      "id": 23066,
      "name": "Semifinals",
-     "status": "Scheduled",
+     "status": "Live",
      "start_utc": "2026-11-07T12:12:00.000Z",
      "rule": "The first and second placed teams from each race qualify for Final A, the third and fourth placed teams from each race qualify for Final B.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Live",
+       "official": "Live",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "China",
+         "noc": "CHN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Individual Neutral Athletes 2",
+         "noc": "AIN2",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Poland",
+         "noc": "POL",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 5,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Italy",
+         "noc": "ITA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 2,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Ukraine",
+         "noc": "UKR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 4,
+         "slug": ""
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Hungary",
+         "noc": "HUN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Canada",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 2,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Individual Neutral Athletes 1",
+         "noc": "AIN1",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Turkiye",
+         "noc": "TUR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 4,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Japan",
+         "noc": "JPN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 5,
+         "slug": ""
+        }
+       ]
+      }
+     ]
     },
     {
      "id": 23067,
