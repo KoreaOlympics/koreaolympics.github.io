@@ -15,10 +15,10 @@
   "city": "Bormio",
   "country": "ITA",
   "state": "Live",
-  "live": "Men 1000 m (1)",
+  "live": "Women 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-07T11:33:05.263678+00:00",
+ "checked_at": "2026-11-07T11:43:52.949157+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -2697,8 +2697,8 @@
     {
      "id": 23072,
      "name": "Ranking Finals",
-     "status": "Live",
-     "start_utc": "2026-11-07T11:25:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-07T11:26:06.000Z",
      "rule": "",
      "heats": [
       {
@@ -2782,20 +2782,80 @@
       },
       {
        "name": "Heat 2",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Aarav Aniruddha PATWARDHAN",
+         "noc": "IND",
+         "time": "1:30.858",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 155,
+         "lane": 4,
+         "slug": "aarav-aniruddha-patwardhan"
+        },
+        {
+         "rank": 2,
          "name": "Daniel TROWBRIDGE",
          "noc": "GBR",
-         "time": "",
+         "time": "1:31.364",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 137,
          "lane": 1,
          "slug": "daniel-trowbridge"
+        },
+        {
+         "rank": 3,
+         "name": "Tadeus Richard MAGER",
+         "noc": "GER",
+         "time": "1:31.431",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 142,
+         "lane": 3,
+         "slug": "tadeus-richard-mager"
+        },
+        {
+         "rank": 4,
+         "name": "Aditya NGHIEM",
+         "noc": "AUS",
+         "time": "1:33.182",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 111,
+         "lane": 5,
+         "slug": "aditya-nghiem"
+        },
+        {
+         "rank": 5,
+         "name": "Rudolfs STERNMANIS",
+         "noc": "LAT",
+         "time": "1:34.482",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 176,
+         "lane": 7,
+         "slug": "rudolfs-sternmanis"
+        },
+        {
+         "rank": 6,
+         "name": "Harshith BAIGURU THAMMANNAGOWDA",
+         "noc": "IND",
+         "time": "1:36.416",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 152,
+         "lane": 6,
+         "slug": "harshith-baiguru-thammannagowda"
         },
         {
          "rank": null,
@@ -2808,66 +2868,6 @@
          "bib": 117,
          "lane": 2,
          "slug": "adomas-ogulevicius"
-        },
-        {
-         "rank": null,
-         "name": "Tadeus Richard MAGER",
-         "noc": "GER",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 142,
-         "lane": 3,
-         "slug": "tadeus-richard-mager"
-        },
-        {
-         "rank": null,
-         "name": "Aarav Aniruddha PATWARDHAN",
-         "noc": "IND",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 155,
-         "lane": 4,
-         "slug": "aarav-aniruddha-patwardhan"
-        },
-        {
-         "rank": null,
-         "name": "Aditya NGHIEM",
-         "noc": "AUS",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 111,
-         "lane": 5,
-         "slug": "aditya-nghiem"
-        },
-        {
-         "rank": null,
-         "name": "Harshith BAIGURU THAMMANNAGOWDA",
-         "noc": "IND",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 152,
-         "lane": 6,
-         "slug": "harshith-baiguru-thammannagowda"
-        },
-        {
-         "rank": null,
-         "name": "Rudolfs STERNMANIS",
-         "noc": "LAT",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 176,
-         "lane": 7,
-         "slug": "rudolfs-sternmanis"
         }
        ]
       }
@@ -5513,10 +5513,145 @@
     {
      "id": 23037,
      "name": "Ranking Finals",
-     "status": "Scheduled",
-     "start_utc": "2026-11-07T11:37:00.000Z",
+     "status": "Live",
+     "start_utc": "2026-11-07T11:37:26.000Z",
      "rule": "",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Jazmin SZABO",
+         "noc": "HUN",
+         "time": "2:33.621",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 229,
+         "lane": 5,
+         "slug": "jazmin-szabo-1"
+        },
+        {
+         "rank": 2,
+         "name": "Viola COMBA",
+         "noc": "ITA",
+         "time": "2:33.858",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 234,
+         "lane": 4,
+         "slug": "viola-comba"
+        },
+        {
+         "rank": 3,
+         "name": "Varvara KURYLA",
+         "noc": "AIN1",
+         "time": "2:33.994",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 201,
+         "lane": 3,
+         "slug": "varvara-kuryla"
+        },
+        {
+         "rank": 4,
+         "name": "Darya STSIAPANAVA",
+         "noc": "AIN1",
+         "time": "2:34.812",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 204,
+         "lane": 2,
+         "slug": "darya-stsiapanava"
+        },
+        {
+         "rank": 5,
+         "name": "Kateryna MOISIEIEVA",
+         "noc": "UKR",
+         "time": "2:35.338",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 274,
+         "lane": 6,
+         "slug": "kateryna-moisieieva"
+        },
+        {
+         "rank": 6,
+         "name": "Anna PNOVSKA",
+         "noc": "CZE",
+         "time": "2:35.524",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 221,
+         "lane": 7,
+         "slug": "anna-pnovska"
+        },
+        {
+         "rank": 7,
+         "name": "Marina SVIRIDOVA",
+         "noc": "SUI",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 268,
+         "lane": 1,
+         "slug": "marina-sviridova"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Live",
+       "official": "Live",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Savi BUFFEY",
+         "noc": "GBR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 222,
+         "lane": 1,
+         "slug": "savi-buffey"
+        },
+        {
+         "rank": null,
+         "name": "Kyung Eun JANG",
+         "noc": "USA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 276,
+         "lane": 2,
+         "slug": "kyung-eun-jang"
+        },
+        {
+         "rank": null,
+         "name": "Elzem TAS",
+         "noc": "TUR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 272,
+         "lane": 3,
+         "slug": "elzem-tas"
+        }
+       ]
+      }
+     ]
     },
     {
      "id": 23039,
