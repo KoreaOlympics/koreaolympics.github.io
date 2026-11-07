@@ -18,7 +18,7 @@
   "live": "Mixed Team Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-07T16:47:28.018481+00:00",
+ "checked_at": "2026-11-07T16:58:10.449849+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -15473,7 +15473,7 @@
      ],
      "projection": {
       "next": "Final",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -15518,20 +15518,20 @@
     {
      "id": 23067,
      "name": "Final B",
-     "status": "Live",
-     "start_utc": "2026-11-07T16:44:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-07T16:44:15.000Z",
      "rule": "",
      "heats": [
       {
        "name": "Final B",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "Individual Neutral Athletes 2",
          "noc": "AIN2",
-         "time": "2:43.680",
+         "time": "2:43.667",
          "qual": "",
          "status": "",
          "record": "",
@@ -15543,7 +15543,7 @@
          "rank": 2,
          "name": "Hungary",
          "noc": "HUN",
-         "time": "2:44.320",
+         "time": "2:44.312",
          "qual": "",
          "status": "",
          "record": "",
@@ -15552,10 +15552,10 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Ukraine",
          "noc": "UKR",
-         "time": "",
+         "time": "2:48.891",
          "qual": "",
          "status": "",
          "record": "",
@@ -15564,10 +15564,10 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Turkiye",
          "noc": "TUR",
-         "time": "",
+         "time": "2:48.907",
          "qual": "",
          "status": "",
          "record": "",
@@ -15582,10 +15582,66 @@
     {
      "id": 23078,
      "name": "Final",
-     "status": "Scheduled",
+     "status": "Finished",
      "start_utc": "2026-11-07T16:50:00.000Z",
      "rule": "",
-     "heats": []
+     "heats": [
+      {
+       "name": "Final ",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Canada",
+         "noc": "CAN",
+         "time": "2:42.786",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 2,
+         "slug": ""
+        },
+        {
+         "rank": 2,
+         "name": "Italy",
+         "noc": "ITA",
+         "time": "2:44.231",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
+         "slug": ""
+        },
+        {
+         "rank": 3,
+         "name": "China",
+         "noc": "CHN",
+         "time": "2:49.780",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Japan",
+         "noc": "JPN",
+         "time": "YC",
+         "qual": "",
+         "status": "Yellow Card",
+         "record": "",
+         "bib": null,
+         "lane": 4,
+         "slug": ""
+        }
+       ]
+      }
+     ]
     }
    ]
   },
