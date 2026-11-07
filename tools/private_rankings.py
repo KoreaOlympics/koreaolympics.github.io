@@ -120,7 +120,83 @@ def hub_block(file):
             + (f'<p class="small">결과 기록 전: {E(" · ".join(wait))}</p>' if wait else '') + '</div><!-- /private-rank -->')
 
 
+TI_DOC = {'F53': ('women', '53 kg', 'women53kg'), 'F61': ('women', '61 kg', 'women61kg'), 'F69': ('women', '69 kg', 'women69kg'),
+          'F77': ('women', '77 kg', 'women77kg'), 'F86': ('women', '86 kg', 'women86kg'), 'F86P': ('women', '+86 kg', 'womenover86kg'),
+          'M65': ('men', '65 kg', 'men65kg'), 'M75': ('men', '75 kg', 'men75kg'), 'M85': ('men', '85 kg', 'men85kg'),
+          'M95': ('men', '95 kg', 'men95kg'), 'M110': ('men', '110 kg', 'men110kg'), 'M110P': ('men', '+110 kg', 'menover110kg')}
+HEAVY = {'M110', 'M110P', 'F86', 'F86P'}  # 중량급: 한국 선수 정리를 사람이 정할 때까지 옛 문장을 둔다
+HEAVY_OLD = {  # 중량급 종전 기재 (정리 전까지 그대로 보여 준다)
+    'M110': '종전 기재 없음 · 옛 후보 진윤성, 장연학', 'M110P': '송영환, 황우만 · 옛 후보 이양재',
+    'F86': '김수현, 전희수 · 옛 후보 장현주', 'F86P': '박혜정, 김효언, 임정희'}
+SQUAD_RE = re.compile(r'<div class="korea-squad" id="korea-squad">.*?</div><!-- /korea-squad -->', re.S)
+OQR_RE = re.compile(r'<p class="note oqr"[^>]*>.*?</p>')
+
+
+def oqr_note(code, c, fetched):
+    """체급 하나의 한국 현황 한 줄 (허브 체급 제목 아래·세부종목 문서 '한국 주요 선수' 아래)."""
+    day = fetched[5:10].replace('-', '.')
+    if c['korea']:
+        who = ', '.join(f'{r["ko"]} {r["rank"]}위 {r["points"]:g}점 (' + ('8위 안' if r['in8'] else f'8위와 {r["gap8"]:g}점 차') + ')' for r in c['korea'])
+    else:
+        who = '상위 30위 안에 한국 선수 없음'
+    return (f'<p class="note oqr" data-oqr="{code}">한국 · 잠정 OQR {day} (비공식, <a href="{E(c["url"])}">totalintel</a>): {E(who)} '
+            f'· 8위 {c["cut8"]:g}점</p>')
+
+
+def render_notes(doc):
+    """결과가 기록된 체급: 허브의 옛 '한국 주요 선수(2026.10 현황)'·'옛 자료 후보' 문장을 OQR 한 줄로 바꾸고,
+    세부종목 문서 '한국 주요 선수' 아래에도 같은 줄을 둔다. 결과 기록 전 체급은 건드리지 않는다."""
+    hub = ROOT / 'olweightlifting.html'
+    text = orig = hub.read_text(encoding='utf-8')
+    for code, (sec, h3, ev) in TI_DOC.items():
+        c = doc['data'].get(code)
+        if not c or c.get('status') or code in HEAVY:
+            continue
+        note = oqr_note(code, c, doc['fetched'])
+        m = re.search(rf'(<section id="{sec}">.*?<h3>{re.escape(h3)}</h3>\n)((?:<p class="note[^"]*"[^>]*>.*?</p>)*)', text, re.S)
+        if m:
+            text = text[:m.start(2)] + note + text[m.end(2):]
+        p = ROOT / 'olweightlifting' / f'{ev}.html'
+        if p.exists():
+            t = p.read_text(encoding='utf-8')
+            t2 = OQR_RE.sub('', t)
+            t2 = t2.replace('<h3>한국 주요 선수</h3>\n', '<h3>한국 주요 선수</h3>\n' + note + '\n', 1)
+            if t2 != t:
+                p.write_text(t2, encoding='utf-8', newline='\n')
+    if SQUAD_RE.search(text):
+        text = SQUAD_RE.sub(lambda _: squad_table(doc), text, 1)
+    if text != orig:
+        hub.write_text(text, encoding='utf-8', newline='\n')
+
+
+def squad_table(doc):
+    """'한국 역도 역사와 현황' 아래 체급별 한국 대표선수 표."""
+    order = ['M65', 'M75', 'M85', 'M95', 'M110', 'M110P', 'F53', 'F61', 'F69', 'F77', 'F86', 'F86P']
+    rows = []
+    for code in order:
+        c = doc['data'].get(code, {})
+        label = TI_CATS[code]
+        ev = TI_DOC[code][2]
+        head = f'<th scope="row"><a href="olweightlifting/{ev}.html">{E(label)}</a></th>'
+        if code in HEAVY:
+            rows.append(f'<tr>{head}<td>{E(HEAVY_OLD[code])}</td><td colspan="2" class="muted">정리 중 (중량급)</td></tr>')
+        elif c.get('korea'):
+            for k, r in enumerate(c['korea']):
+                state = '<b class="in8">8위 안</b>' if r['in8'] else f'8위와 {r["gap8"]:g}점 차'
+                rows.append(f'<tr>{head if k == 0 else "<th></th>"}<td class="kor">{E(r["ko"])}</td><td class="c">{r["rank"]}위 · {r["points"]:g}점</td><td>{state}</td></tr>')
+        else:
+            rows.append(f'<tr>{head}<td class="muted">—</td><td colspan="2" class="muted">잠정 OQR 상위 30위 안 한국 선수 없음</td></tr>')
+    day = doc['fetched'][:10].replace('-', '.')
+    return ('<div class="korea-squad" id="korea-squad"><h3>체급별 한국 대표선수</h3>'
+            '<div class="tw"><table class="wikitable narrow"><thead><tr><th>체급</th><th>대표선수</th><th>잠정 OQR</th><th>출전권선(8위)</th></tr></thead>'
+            f'<tbody>{"".join(rows)}</tbody></table></div><p class="small">{day} 잠정 OQR(비공식, totalintel) 기준으로 자동 갱신. '
+            '중량급(남자 110kg·+110kg, 여자 86kg·+86kg)은 대표선수 정리 전이라 종전 기재를 그대로 둔다.</p></div><!-- /korea-squad -->')
+
+
 def render():
+    p = OUT / 'totalintel.json'
+    if p.exists():
+        render_notes(json.loads(p.read_text(encoding='utf-8')))
     for key, file in HUBS.items():
         page = ROOT / f'{file}.html'
         orig = page.read_text(encoding='utf-8')
