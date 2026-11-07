@@ -18,7 +18,7 @@
   "live": "Men 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-07T10:38:45.779510+00:00",
+ "checked_at": "2026-11-07T10:49:35.213407+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -5126,7 +5126,7 @@
      "name": "Rep. Semifinals",
      "status": "Scheduled",
      "start_utc": "2026-11-07T11:02:00.000Z",
-     "rule": "The first placed skater from each race qualify for Semifinals.",
+     "rule": "The first placed skater from each race and up to a maximum of one fastest second place skater qualify for Semifinals.",
      "heats": []
     },
     {
@@ -6239,7 +6239,7 @@
          "name": "Zhandos SEREKPAYEV",
          "noc": "KAZ",
          "time": "2:21.675",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 169,
@@ -6286,15 +6286,15 @@
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Elio CALANCA",
          "noc": "FRA",
-         "time": "",
-         "qual": "",
+         "time": "2:22.360",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 132,
@@ -6302,22 +6302,34 @@
          "slug": "elio-calanca"
         },
         {
-         "rank": null,
-         "name": "Raman ZELENIN",
-         "noc": "AIN1",
-         "time": "",
-         "qual": "",
+         "rank": 2,
+         "name": "Jan MUCHKA",
+         "noc": "CZE",
+         "time": "2:22.639",
+         "qual": "Q",
          "status": "",
          "record": "",
-         "bib": 103,
-         "lane": 2,
-         "slug": "raman-zelenin"
+         "bib": 129,
+         "lane": 5,
+         "slug": "jan-muchka"
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Maksym SPORYSH",
+         "noc": "UKR",
+         "time": "2:23.133",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 202,
+         "lane": 7,
+         "slug": "maksym-sporysh"
+        },
+        {
+         "rank": 4,
          "name": "Maximilian MAGER",
          "noc": "GER",
-         "time": "",
+         "time": "2:23.576",
          "qual": "",
          "status": "",
          "record": "",
@@ -6326,10 +6338,10 @@
          "slug": "maximilian-mager"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Mathieu VAN DER HORST",
          "noc": "NED",
-         "time": "",
+         "time": "2:23.688",
          "qual": "",
          "status": "",
          "record": "",
@@ -6338,78 +6350,54 @@
          "slug": "mathieu-van-der-horst"
         },
         {
-         "rank": null,
-         "name": "Jan MUCHKA",
-         "noc": "CZE",
-         "time": "",
+         "rank": 6,
+         "name": "Raman ZELENIN",
+         "noc": "AIN1",
+         "time": "2:24.839",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 129,
-         "lane": 5,
-         "slug": "jan-muchka"
+         "bib": 103,
+         "lane": 2,
+         "slug": "raman-zelenin"
         },
         {
-         "rank": null,
-         "name": "Cohen BUFFEY",
-         "noc": "GBR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 136,
-         "lane": 6,
-         "slug": "cohen-buffey"
-        },
-        {
-         "rank": null,
-         "name": "Maksym SPORYSH",
-         "noc": "UKR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 202,
-         "lane": 7,
-         "slug": "maksym-sporysh"
-        },
-        {
-         "rank": null,
+         "rank": 7,
          "name": "Ramadhan Harits KUSWARA",
          "noc": "INA",
-         "time": "",
+         "time": "2:25.410",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 151,
          "lane": 8,
          "slug": "ramadhan-harits-kuswara"
+        },
+        {
+         "rank": 8,
+         "name": "Cohen BUFFEY",
+         "noc": "GBR",
+         "time": "2:26.797",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 136,
+         "lane": 6,
+         "slug": "cohen-buffey"
         }
        ]
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Kazuto TAKAHASHI",
-         "noc": "JPN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 164,
-         "lane": 1,
-         "slug": "kazuto-takahashi"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Lowie DEKENS",
          "noc": "BEL",
-         "time": "",
-         "qual": "",
+         "time": "2:18.614",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 112,
@@ -6417,11 +6405,11 @@
          "slug": "lowie-dekens"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Tsjerk VAN DER MEER",
          "noc": "NED",
-         "time": "",
-         "qual": "",
+         "time": "2:18.904",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 183,
@@ -6429,11 +6417,23 @@
          "slug": "tsjerk-van-der-meer"
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Kazuto TAKAHASHI",
+         "noc": "JPN",
+         "time": "2:18.989",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 164,
+         "lane": 1,
+         "slug": "kazuto-takahashi"
+        },
+        {
+         "rank": 4,
          "name": "Ho Long YUEN",
          "noc": "HKG",
-         "time": "",
-         "qual": "",
+         "time": "2:21.010",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 145,
@@ -6441,22 +6441,10 @@
          "slug": "ho-long-yuen"
         },
         {
-         "rank": null,
-         "name": "Viktor KIRSTA",
-         "noc": "AUS",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 110,
-         "lane": 5,
-         "slug": "viktor-kirsta"
-        },
-        {
-         "rank": null,
+         "rank": 5,
          "name": "Ryan HUANG",
          "noc": "USA",
-         "time": "",
+         "time": "2:21.664",
          "qual": "",
          "status": "",
          "record": "",
@@ -6465,10 +6453,10 @@
          "slug": "ryan-huang"
         },
         {
-         "rank": null,
+         "rank": 6,
          "name": "Ulrik Evenmo ERVIK",
          "noc": "NOR",
-         "time": "",
+         "time": "2:22.836",
          "qual": "",
          "status": "",
          "record": "",
@@ -6477,10 +6465,22 @@
          "slug": "ulrik-evenmo-ervik"
         },
         {
-         "rank": null,
+         "rank": 7,
+         "name": "Viktor KIRSTA",
+         "noc": "AUS",
+         "time": "2:27.745",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 110,
+         "lane": 5,
+         "slug": "viktor-kirsta"
+        },
+        {
+         "rank": 8,
          "name": "Artem MOISEIENKO",
          "noc": "UKR",
-         "time": "",
+         "time": "2:30.052",
          "qual": "",
          "status": "",
          "record": "",
@@ -6492,50 +6492,14 @@
       },
       {
        "name": "Heat 5",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
         {
-         "rank": null,
-         "name": "Hubert Zbigniew JEZIAK",
-         "noc": "GER",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 139,
-         "lane": 1,
-         "slug": "hubert-zbigniew-jeziak"
-        },
-        {
-         "rank": null,
-         "name": "Kritsanapon PHUATRAKUL",
-         "noc": "THA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 195,
-         "lane": 2,
-         "slug": "kritsanapon-phuatrakul"
-        },
-        {
-         "rank": null,
-         "name": "Maksim ZHURAUSKI",
-         "noc": "AIN1",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 104,
-         "lane": 3,
-         "slug": "maksim-zhurauski"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Kaname MIYABE",
          "noc": "JPN",
-         "time": "",
+         "time": "2:16.370",
          "qual": "",
          "status": "",
          "record": "",
@@ -6544,16 +6508,16 @@
          "slug": "kaname-miyabe"
         },
         {
-         "rank": null,
-         "name": "David HRADSKY",
-         "noc": "CZE",
-         "time": "",
+         "rank": 2,
+         "name": "Maksim ZHURAUSKI",
+         "noc": "AIN1",
+         "time": "2:16.640",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 126,
-         "lane": 5,
-         "slug": "david-hradsky"
+         "bib": 104,
+         "lane": 3,
+         "slug": "maksim-zhurauski"
         },
         {
          "rank": null,
@@ -6569,15 +6533,27 @@
         },
         {
          "rank": null,
-         "name": "Andrew GONG",
-         "noc": "HKG",
+         "name": "Hubert Zbigniew JEZIAK",
+         "noc": "GER",
          "time": "",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 143,
-         "lane": 7,
-         "slug": "andrew-gong"
+         "bib": 139,
+         "lane": 1,
+         "slug": "hubert-zbigniew-jeziak"
+        },
+        {
+         "rank": null,
+         "name": "David HRADSKY",
+         "noc": "CZE",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 126,
+         "lane": 5,
+         "slug": "david-hradsky"
         },
         {
          "rank": null,
@@ -6590,6 +6566,30 @@
          "bib": 153,
          "lane": 8,
          "slug": "ishaan-rahul-darvekar"
+        },
+        {
+         "rank": null,
+         "name": "Andrew GONG",
+         "noc": "HKG",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 143,
+         "lane": 7,
+         "slug": "andrew-gong"
+        },
+        {
+         "rank": null,
+         "name": "Kritsanapon PHUATRAKUL",
+         "noc": "THA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 195,
+         "lane": 2,
+         "slug": "kritsanapon-phuatrakul"
         }
        ]
       }
