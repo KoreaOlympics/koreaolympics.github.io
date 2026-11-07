@@ -309,7 +309,26 @@
    "podiums": [
     {
      "title": "Ice Dance",
-     "podium": null
+     "podium": [
+      {
+       "rank": 1,
+       "name": "Lilah FEAR / Lewis GIBSON",
+       "noc": "GBR",
+       "time": "194.93"
+      },
+      {
+       "rank": 2,
+       "name": "Diana DAVIS / Gleb SMOLKIN",
+       "noc": "GEO",
+       "time": "193.54"
+      },
+      {
+       "rank": 3,
+       "name": "Olivia SMART / Tim DIECK",
+       "noc": "ESP",
+       "time": "178.30"
+      }
+     ]
     },
     {
      "title": "Women",
@@ -450,21 +469,21 @@
    4
   ],
   [
-   "GEO",
-   1,
+   "GBR",
    2,
    0,
-   3
+   0,
+   2
+  ],
+  [
+   "GEO",
+   1,
+   3,
+   0,
+   4
   ],
   [
    "CAN",
-   1,
-   0,
-   0,
-   1
-  ],
-  [
-   "GBR",
    1,
    0,
    0,
@@ -489,6 +508,13 @@
    0,
    1,
    0,
+   1
+  ],
+  [
+   "ESP",
+   0,
+   0,
+   1,
    1
   ],
   [
@@ -537,11 +563,25 @@
     "event_id": "isu-16020"
    },
    {
+    "name": "Lilah FEAR / Lewis GIBSON",
+    "noc": "GBR",
+    "points": 194.93,
+    "event": "ISU Figure Skating Grand Prix Cup of China 2026",
+    "event_id": "isu-16013"
+   },
+   {
     "name": "Diana DAVIS / Gleb SMOLKIN",
     "noc": "GEO",
     "points": 193.93,
     "event": "ISU Figure Skating Grand Prix de France 2026",
     "event_id": "isu-16027"
+   },
+   {
+    "name": "Diana DAVIS / Gleb SMOLKIN",
+    "noc": "GEO",
+    "points": 193.54,
+    "event": "ISU Figure Skating Grand Prix Cup of China 2026",
+    "event_id": "isu-16013"
    },
    {
     "name": "Evgeniia LOPAREVA / Geoffrey BRISSAUD",
@@ -577,20 +617,6 @@
     "points": 179.8,
     "event": "ISU Figure Skating Grand Prix Skate Canada International 2026",
     "event_id": "isu-16020"
-   },
-   {
-    "name": "Olivia SMART / Tim DIECK",
-    "noc": "ESP",
-    "points": 178.3,
-    "event": "ISU Figure Skating Grand Prix Cup of China 2026",
-    "event_id": "isu-16013"
-   },
-   {
-    "name": "Natalie TASCHLEROVA / Filip TASCHLER",
-    "noc": "CZE",
-    "points": 178.21,
-    "event": "ISU Figure Skating Grand Prix Cup of China 2026",
-    "event_id": "isu-16013"
    }
   ],
   "Women": [
