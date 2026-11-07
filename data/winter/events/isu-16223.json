@@ -18,7 +18,7 @@
   "live": "Men 1000 m (1)",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-07T14:59:01.669915+00:00",
+ "checked_at": "2026-11-07T15:09:45.647557+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -261,7 +261,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-07T14:32:00.000Z",
+   "start_utc": "2026-11-07T14:30:00.000Z",
    "title": "Men 1500 m",
    "round": "Semifinals",
    "event_result_id": 16043,
@@ -287,25 +287,25 @@
   {
    "start_utc": "2026-11-07T15:18:00.000Z",
    "title": "Women 1500 m",
-   "round": "Finals",
+   "round": "Final",
    "event_result_id": 16046,
-   "round_id": 23040,
+   "round_id": null,
    "type": "Singles"
   },
   {
    "start_utc": "2026-11-07T15:36:00.000Z",
    "title": "Men 1500 m",
-   "round": "Finals",
+   "round": "Final",
    "event_result_id": 16043,
-   "round_id": 23019,
+   "round_id": 23080,
    "type": "Singles"
   },
   {
    "start_utc": "2026-11-07T15:54:00.000Z",
    "title": "Women 1000 m (1)",
-   "round": "Finals",
+   "round": "Final",
    "event_result_id": 16050,
-   "round_id": 23064,
+   "round_id": 23082,
    "type": "Singles"
   },
   {
@@ -313,7 +313,7 @@
    "title": "Men 1000 m (1)",
    "round": "Finals",
    "event_result_id": 16052,
-   "round_id": 23076,
+   "round_id": null,
    "type": "Singles"
   },
   {
@@ -3258,21 +3258,45 @@
     {
      "id": 23075,
      "name": "Semifinals",
-     "status": "Live",
-     "start_utc": "2026-11-07T14:55:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-07T14:55:34.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final A. Remainder may qualify for Final B.",
      "heats": [
       {
        "name": "Heat 1",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
-         "rank": 4,
+         "rank": 1,
+         "name": "Haoyang JIANG",
+         "noc": "CHN",
+         "time": "1:27.379",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 121,
+         "lane": 1,
+         "slug": "haoyang-jiang"
+        },
+        {
+         "rank": 2,
+         "name": "Chanwook PARK",
+         "noc": "KOR",
+         "time": "1:27.409",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 175,
+         "lane": 4,
+         "slug": "chanwook-park"
+        },
+        {
+         "rank": 3,
          "name": "Kirill PANIKOROVSKII",
          "noc": "AIN2",
-         "time": "1:28.210",
-         "qual": "",
+         "time": "1:28.182",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 107,
@@ -3280,11 +3304,11 @@
          "slug": "kirill-panikorovskii"
         },
         {
-         "rank": 5,
+         "rank": 4,
          "name": "Emile FORTIN",
          "noc": "CAN",
-         "time": "1:28.240",
-         "qual": "",
+         "time": "1:28.207",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 119,
@@ -3293,35 +3317,11 @@
         },
         {
          "rank": null,
-         "name": "Haoyang JIANG",
-         "noc": "CHN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 121,
-         "lane": 1,
-         "slug": "haoyang-jiang"
-        },
-        {
-         "rank": null,
-         "name": "Chanwook PARK",
-         "noc": "KOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 175,
-         "lane": 4,
-         "slug": "chanwook-park"
-        },
-        {
-         "rank": null,
          "name": "Yuheng LI",
          "noc": "CHN",
-         "time": "",
+         "time": "PEN",
          "qual": "",
-         "status": "",
+         "status": "Penalty",
          "record": "",
          "bib": 122,
          "lane": 2,
@@ -3331,27 +3331,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Minchan KIM",
-         "noc": "KOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 172,
-         "lane": 1,
-         "slug": "minchan-kim"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Zhibo SUN",
          "noc": "CHN",
-         "time": "",
-         "qual": "",
+         "time": "1:25.979",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 123,
@@ -3359,23 +3347,23 @@
          "slug": "zhibo-sun"
         },
         {
-         "rank": null,
-         "name": "David MAKARIAN",
-         "noc": "AIN2",
-         "time": "",
-         "qual": "",
+         "rank": 2,
+         "name": "Minchan KIM",
+         "noc": "KOR",
+         "time": "1:26.049",
+         "qual": "Q",
          "status": "",
          "record": "",
-         "bib": 106,
-         "lane": 3,
-         "slug": "david-makarian"
+         "bib": 172,
+         "lane": 1,
+         "slug": "minchan-kim"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Lucas WU",
          "noc": "USA",
-         "time": "",
-         "qual": "",
+         "time": "1:26.164",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 207,
@@ -3383,11 +3371,23 @@
          "slug": "lucas-wu"
         },
         {
-         "rank": null,
+         "rank": 4,
+         "name": "David MAKARIAN",
+         "noc": "AIN2",
+         "time": "1:26.597",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 106,
+         "lane": 3,
+         "slug": "david-makarian"
+        },
+        {
+         "rank": 5,
          "name": "Aunnipit KOSITVANICH",
          "noc": "THA",
-         "time": "",
-         "qual": "",
+         "time": "1:27.678",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 194,
@@ -3396,11 +3396,62 @@
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Final",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Zhibo SUN",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "1:25.979",
+        "qual": "Q"
+       },
+       {
+        "name": "Haoyang JIANG",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "1:27.379",
+        "qual": "Q"
+       },
+       {
+        "name": "Minchan KIM",
+        "noc": "KOR",
+        "rank": 2,
+        "time": "1:26.049",
+        "qual": "Q"
+       },
+       {
+        "name": "Chanwook PARK",
+        "noc": "KOR",
+        "rank": 2,
+        "time": "1:27.409",
+        "qual": "Q"
+       },
+       {
+        "name": "Lucas WU",
+        "noc": "USA",
+        "rank": 3,
+        "time": "1:26.164",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Zhibo SUN (CHN)",
+        "Haoyang JIANG (CHN)",
+        "Minchan KIM (KOR)",
+        "Chanwook PARK (KOR)",
+        "Lucas WU (USA)"
+       ]
+      ]
+     }
     },
     {
-     "id": 23076,
-     "name": "Finals",
+     "id": 23083,
+     "name": "Final",
      "status": "Scheduled",
      "start_utc": "2026-11-07T16:09:00.000Z",
      "rule": "",
@@ -5327,14 +5378,6 @@
      }
     },
     {
-     "id": 23064,
-     "name": "Finals",
-     "status": "Scheduled",
-     "start_utc": "2026-11-07T15:54:00.000Z",
-     "rule": "",
-     "heats": []
-    },
-    {
      "id": 23082,
      "name": "Final",
      "status": "Scheduled",
@@ -7000,7 +7043,7 @@
       }
      ],
      "projection": {
-      "next": "Final",
+      "next": "Finals",
       "official_draw_published": false,
       "pending": [],
       "qualified": [
@@ -7068,16 +7111,8 @@
      }
     },
     {
-     "id": 23040,
+     "id": 23084,
      "name": "Finals",
-     "status": "Scheduled",
-     "start_utc": "2026-11-07T15:18:00.000Z",
-     "rule": "",
-     "heats": []
-    },
-    {
-     "id": 23079,
-     "name": "Final",
      "status": "Scheduled",
      "start_utc": "2026-11-07T15:18:00.000Z",
      "rule": "",
@@ -9525,23 +9560,7 @@
      }
     },
     {
-     "id": 23019,
-     "name": "Finals",
-     "status": "Scheduled",
-     "start_utc": "2026-11-07T15:36:00.000Z",
-     "rule": "",
-     "heats": []
-    },
-    {
      "id": 23080,
-     "name": "Final",
-     "status": "Scheduled",
-     "start_utc": "2026-11-07T15:36:00.000Z",
-     "rule": "",
-     "heats": []
-    },
-    {
-     "id": 23081,
      "name": "Final",
      "status": "Scheduled",
      "start_utc": "2026-11-07T15:36:00.000Z",
@@ -14829,7 +14848,7 @@
       }
      ],
      "projection": {
-      "next": "Final A",
+      "next": "Final",
       "official_draw_published": false,
       "pending": [],
       "qualified": [
@@ -14885,14 +14904,6 @@
      "name": "Final",
      "status": "Scheduled",
      "start_utc": "2026-11-07T16:50:00.000Z",
-     "rule": "",
-     "heats": []
-    },
-    {
-     "id": 23068,
-     "name": "Final A",
-     "status": "Scheduled",
-     "start_utc": "2026-11-07T17:05:00.000Z",
      "rule": "",
      "heats": []
     }
@@ -15205,14 +15216,6 @@
      "name": "Final B",
      "status": "Scheduled",
      "start_utc": "2026-11-08T16:12:00.000Z",
-     "rule": "",
-     "heats": []
-    },
-    {
-     "id": 23044,
-     "name": "Final A",
-     "status": "Scheduled",
-     "start_utc": "2026-11-08T16:20:00.000Z",
      "rule": "",
      "heats": []
     },
@@ -15712,12 +15715,12 @@
    "distance": "Men 1000 m (1)",
    "round": "Semifinals",
    "heat": "Heat 1",
-   "start_utc": "2026-11-07T14:55:00.000Z",
-   "rank": null,
+   "start_utc": "2026-11-07T14:55:34.000Z",
+   "rank": 2,
    "name": "Chanwook PARK",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "1:27.409",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 175,
@@ -15731,12 +15734,12 @@
    "distance": "Men 1000 m (1)",
    "round": "Semifinals",
    "heat": "Heat 2",
-   "start_utc": "2026-11-07T14:55:00.000Z",
-   "rank": null,
+   "start_utc": "2026-11-07T14:55:34.000Z",
+   "rank": 2,
    "name": "Minchan KIM",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "1:26.049",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 172,
