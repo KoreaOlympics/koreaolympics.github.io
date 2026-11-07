@@ -355,7 +355,26 @@
     },
     {
      "title": "Pairs",
-     "podium": null
+     "podium": [
+      {
+       "rank": 1,
+       "name": "Anastasia MISHINA / Aleksandr GALLIAMOV",
+       "noc": "AIN2",
+       "time": "209.84"
+      },
+      {
+       "rank": 2,
+       "name": "Anastasiia METELKINA / Luka BERULAVA",
+       "noc": "GEO",
+       "time": "198.27"
+      },
+      {
+       "rank": 3,
+       "name": "Yuna NAGAOKA / Sumitada MORIGUCHI",
+       "noc": "JPN",
+       "time": "181.50"
+      }
+     ]
     },
     {
      "title": "Men",
@@ -477,8 +496,8 @@
    "JPN",
    3,
    2,
-   0,
-   5
+   1,
+   6
   ],
   [
    "FRA",
@@ -497,9 +516,16 @@
   [
    "GEO",
    1,
-   3,
+   4,
    0,
-   4
+   5
+  ],
+  [
+   "AIN2",
+   1,
+   2,
+   0,
+   3
   ],
   [
    "CAN",
@@ -507,13 +533,6 @@
    0,
    0,
    1
-  ],
-  [
-   "AIN2",
-   0,
-   2,
-   0,
-   2
   ],
   [
    "USA",
@@ -784,6 +803,13 @@
   ],
   "Pairs": [
    {
+    "name": "Anastasia MISHINA / Aleksandr GALLIAMOV",
+    "noc": "AIN2",
+    "points": 209.84,
+    "event": "ISU Figure Skating Grand Prix Cup of China 2026",
+    "event_id": "isu-16013"
+   },
+   {
     "name": "Anastasiia METELKINA / Luka BERULAVA",
     "noc": "GEO",
     "points": 204.65,
@@ -845,13 +871,6 @@
     "points": 179.74,
     "event": "ISU Figure Skating Grand Prix de France 2026",
     "event_id": "isu-16027"
-   },
-   {
-    "name": "Anna VALESI / Martin BIDAR",
-    "noc": "CZE",
-    "points": 166.66,
-    "event": "ISU Figure Skating Grand Prix Skate Canada International 2026",
-    "event_id": "isu-16020"
    }
   ]
  }

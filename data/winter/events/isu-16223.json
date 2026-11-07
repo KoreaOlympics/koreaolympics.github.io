@@ -18,7 +18,7 @@
   "live": "Men 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-07T11:54:33.467039+00:00",
+ "checked_at": "2026-11-07T12:05:15.584432+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -110,7 +110,7 @@
   },
   {
    "start_utc": "2026-11-06T16:45:00.000Z",
-   "title": "Mixed Team Relay",
+   "title": "Mixed Relay 2000 m",
    "round": "Quarterfinals",
    "event_result_id": 16051,
    "round_id": 23065,
@@ -205,7 +205,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-07T11:25:00.000Z",
+   "start_utc": "2026-11-07T11:26:00.000Z",
    "title": "Men 1000 m (1)",
    "round": "Ranking Finals",
    "event_result_id": 16052,
@@ -221,7 +221,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-07T11:42:00.000Z",
+   "start_utc": "2026-11-07T11:47:00.000Z",
    "title": "Men 1500 m",
    "round": "Ranking Finals",
    "event_result_id": 16043,
@@ -230,7 +230,7 @@
   },
   {
    "start_utc": "2026-11-07T12:12:00.000Z",
-   "title": "Mixed Team Relay",
+   "title": "Mixed Relay 2000 m",
    "round": "Semifinals",
    "event_result_id": 16051,
    "round_id": 23066,
@@ -318,7 +318,7 @@
   },
   {
    "start_utc": "2026-11-07T16:44:00.000Z",
-   "title": "Mixed Team Relay",
+   "title": "Mixed Relay 2000 m",
    "round": "Final B",
    "event_result_id": 16051,
    "round_id": 23067,
@@ -326,7 +326,7 @@
   },
   {
    "start_utc": "2026-11-07T16:50:00.000Z",
-   "title": "Mixed Team Relay",
+   "title": "Mixed Relay 2000 m",
    "round": "Final",
    "event_result_id": 16051,
    "round_id": 23078,
@@ -7486,8 +7486,8 @@
     {
      "id": 23016,
      "name": "Ranking Finals",
-     "status": "Live",
-     "start_utc": "2026-11-07T11:46:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-07T11:47:01.000Z",
      "rule": "",
      "heats": [
       {
@@ -7595,86 +7595,26 @@
       },
       {
        "name": "Heat 2",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Mertcan TAYGAR",
-         "noc": "TUR",
-         "time": "",
+         "rank": 1,
+         "name": "Ulrik Evenmo ERVIK",
+         "noc": "NOR",
+         "time": "2:23.275",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 199,
-         "lane": 8,
-         "slug": "mertcan-taygar"
+         "bib": 184,
+         "lane": 3,
+         "slug": "ulrik-evenmo-ervik"
         },
         {
-         "rank": null,
-         "name": "Alimardon MAKHMUDOV",
-         "noc": "UZB",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 208,
-         "lane": 1,
-         "slug": "alimardon-makhmudov"
-        },
-        {
-         "rank": null,
-         "name": "Raman ZELENIN",
-         "noc": "AIN1",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 103,
-         "lane": 2,
-         "slug": "raman-zelenin"
-        },
-        {
-         "rank": null,
-         "name": "Toms VINNINS",
-         "noc": "LAT",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 177,
-         "lane": 4,
-         "slug": "toms-vinnins"
-        },
-        {
-         "rank": null,
-         "name": "Pranav Madav SURAPANENI",
-         "noc": "IND",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 156,
-         "lane": 5,
-         "slug": "pranav-madav-surapaneni"
-        },
-        {
-         "rank": null,
-         "name": "Ishaan Rahul DARVEKAR",
-         "noc": "IND",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 153,
-         "lane": 6,
-         "slug": "ishaan-rahul-darvekar"
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Kritsanapon PHUATRAKUL",
          "noc": "THA",
-         "time": "",
+         "time": "2:24.491",
          "qual": "",
          "status": "",
          "record": "",
@@ -7683,41 +7623,89 @@
          "slug": "kritsanapon-phuatrakul"
         },
         {
-         "rank": null,
-         "name": "Ulrik Evenmo ERVIK",
-         "noc": "NOR",
-         "time": "",
+         "rank": 3,
+         "name": "Alimardon MAKHMUDOV",
+         "noc": "UZB",
+         "time": "2:26.410",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 184,
-         "lane": 3,
-         "slug": "ulrik-evenmo-ervik"
+         "bib": 208,
+         "lane": 1,
+         "slug": "alimardon-makhmudov"
+        },
+        {
+         "rank": 4,
+         "name": "Toms VINNINS",
+         "noc": "LAT",
+         "time": "2:26.546",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 177,
+         "lane": 4,
+         "slug": "toms-vinnins"
+        },
+        {
+         "rank": 5,
+         "name": "Mertcan TAYGAR",
+         "noc": "TUR",
+         "time": "2:26.770",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 199,
+         "lane": 8,
+         "slug": "mertcan-taygar"
+        },
+        {
+         "rank": 6,
+         "name": "Raman ZELENIN",
+         "noc": "AIN1",
+         "time": "2:26.873",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 103,
+         "lane": 2,
+         "slug": "raman-zelenin"
+        },
+        {
+         "rank": 7,
+         "name": "Pranav Madav SURAPANENI",
+         "noc": "IND",
+         "time": "2:27.821",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 156,
+         "lane": 5,
+         "slug": "pranav-madav-surapaneni"
+        },
+        {
+         "rank": 8,
+         "name": "Ishaan Rahul DARVEKAR",
+         "noc": "IND",
+         "time": "2:27.935",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 153,
+         "lane": 6,
+         "slug": "ishaan-rahul-darvekar"
         }
        ]
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Viktor KIRSTA",
-         "noc": "AUS",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 110,
-         "lane": 1,
-         "slug": "viktor-kirsta"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Ramadhan Harits KUSWARA",
          "noc": "INA",
-         "time": "",
+         "time": "2:30.981",
          "qual": "",
          "status": "",
          "record": "",
@@ -7726,10 +7714,22 @@
          "slug": "ramadhan-harits-kuswara"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Artem MOISEIENKO",
+         "noc": "UKR",
+         "time": "2:31.040",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 201,
+         "lane": 4,
+         "slug": "artem-moiseienko"
+        },
+        {
+         "rank": 3,
          "name": "Cohen BUFFEY",
          "noc": "GBR",
-         "time": "",
+         "time": "2:31.153",
          "qual": "",
          "status": "",
          "record": "",
@@ -7738,16 +7738,16 @@
          "slug": "cohen-buffey"
         },
         {
-         "rank": null,
-         "name": "Artem MOISEIENKO",
-         "noc": "UKR",
-         "time": "",
+         "rank": 4,
+         "name": "Viktor KIRSTA",
+         "noc": "AUS",
+         "time": "2:31.243",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 201,
-         "lane": 4,
-         "slug": "artem-moiseienko"
+         "bib": 110,
+         "lane": 1,
+         "slug": "viktor-kirsta"
         }
        ]
       }
@@ -12583,7 +12583,7 @@
    ]
   },
   "16051": {
-   "title": "Mixed Team Relay",
+   "title": "Mixed Relay 2000 m",
    "rounds": [
     {
      "id": 23065,
@@ -14189,7 +14189,7 @@
    "event_id": "isu-16223",
    "sport": "short-track",
    "event": "ISU Short Track Junior World Cup #1",
-   "distance": "Mixed Team Relay",
+   "distance": "Mixed Relay 2000 m",
    "round": "Quarterfinals",
    "heat": "Heat 1",
    "start_utc": "2026-11-06T16:45:00.000Z",
