@@ -18,7 +18,7 @@
   "live": "",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-08T15:26:53.675190+00:00",
+ "checked_at": "2026-11-08T15:37:44.868784+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -509,7 +509,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-08T14:49:00.000Z",
+   "start_utc": "2026-11-08T14:55:00.000Z",
    "title": "Men 1000 m (2)",
    "round": "Semifinals",
    "event_result_id": 16044,
@@ -517,7 +517,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-08T15:09:00.000Z",
+   "start_utc": "2026-11-08T15:15:00.000Z",
    "title": "Women 500 m",
    "round": "Final",
    "event_result_id": 16042,
@@ -525,7 +525,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-08T15:23:00.000Z",
+   "start_utc": "2026-11-08T15:25:00.000Z",
    "title": "Men 500 m",
    "round": "Final",
    "event_result_id": 16048,
@@ -543,9 +543,9 @@
   {
    "start_utc": "2026-11-08T15:52:00.000Z",
    "title": "Men 1000 m (2)",
-   "round": "Finals",
+   "round": "Final",
    "event_result_id": 16044,
-   "round_id": null,
+   "round_id": 23088,
    "type": "Singles"
   },
   {
@@ -14001,7 +14001,7 @@
      ],
      "projection": {
       "next": "Final",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -14054,10 +14054,145 @@
     {
      "id": 23086,
      "name": "Final",
-     "status": "Scheduled",
-     "start_utc": "2026-11-08T15:23:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-08T15:25:00.000Z",
      "rule": "",
-     "heats": []
+     "heats": [
+      {
+       "name": "Final",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Emile FORTIN",
+         "noc": "CAN",
+         "time": "40.585",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 119,
+         "lane": 1,
+         "slug": "emile-fortin"
+        },
+        {
+         "rank": 2,
+         "name": "David MAKARIAN",
+         "noc": "AIN2",
+         "time": "40.652",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 106,
+         "lane": 5,
+         "slug": "david-makarian"
+        },
+        {
+         "rank": 3,
+         "name": "Chanwook PARK",
+         "noc": "KOR",
+         "time": "40.775",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 175,
+         "lane": 3,
+         "slug": "chanwook-park"
+        },
+        {
+         "rank": 4,
+         "name": "Wonseok CHOI",
+         "noc": "KOR",
+         "time": "40.799",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 171,
+         "lane": 2,
+         "slug": "wonseok-choi"
+        },
+        {
+         "rank": 5,
+         "name": "Kirill PANIKOROVSKII",
+         "noc": "AIN2",
+         "time": "41.355",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 107,
+         "lane": 4,
+         "slug": "kirill-panikorovskii"
+        }
+       ]
+      },
+      {
+       "name": "Final B",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "William SAMSON",
+         "noc": "CAN",
+         "time": "41.074",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 120,
+         "lane": 1,
+         "slug": "william-samson"
+        },
+        {
+         "rank": 2,
+         "name": "Daniel JIN",
+         "noc": "USA",
+         "time": "41.125",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 205,
+         "lane": 2,
+         "slug": "daniel-jin"
+        },
+        {
+         "rank": 3,
+         "name": "Zhibo SUN",
+         "noc": "CHN",
+         "time": "41.711",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 123,
+         "lane": 4,
+         "slug": "zhibo-sun"
+        },
+        {
+         "rank": 4,
+         "name": "Yuheng LI",
+         "noc": "CHN",
+         "time": "1:04.702",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 122,
+         "lane": 5,
+         "slug": "yuheng-li-1"
+        },
+        {
+         "rank": null,
+         "name": "Filippo PEZZONI",
+         "noc": "ITA",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 160,
+         "lane": 3,
+         "slug": "filippo-pezzoni"
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -23528,6 +23663,44 @@
    "noc": "KOR",
    "time": "40.979",
    "qual": "Q",
+   "status": "",
+   "record": "",
+   "bib": 171,
+   "lane": 2,
+   "slug": "wonseok-choi"
+  },
+  {
+   "event_id": "isu-16223",
+   "sport": "short-track",
+   "event": "ISU Short Track Junior World Cup #1",
+   "distance": "Men 500 m",
+   "round": "Final",
+   "heat": "Final",
+   "start_utc": "2026-11-08T15:25:00.000Z",
+   "rank": 3,
+   "name": "Chanwook PARK",
+   "noc": "KOR",
+   "time": "40.775",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 175,
+   "lane": 3,
+   "slug": "chanwook-park"
+  },
+  {
+   "event_id": "isu-16223",
+   "sport": "short-track",
+   "event": "ISU Short Track Junior World Cup #1",
+   "distance": "Men 500 m",
+   "round": "Final",
+   "heat": "Final",
+   "start_utc": "2026-11-08T15:25:00.000Z",
+   "rank": 4,
+   "name": "Wonseok CHOI",
+   "noc": "KOR",
+   "time": "40.799",
+   "qual": "",
    "status": "",
    "record": "",
    "bib": 171,
