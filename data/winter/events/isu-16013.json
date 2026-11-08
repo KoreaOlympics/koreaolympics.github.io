@@ -18,7 +18,7 @@
   "live": "Nika EGADZE",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-cup-of-china-2026/"
  },
- "checked_at": "2026-11-08T05:50:51.718743+00:00",
+ "checked_at": "2026-11-08T06:01:34.283604+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T06:53:00.000Z",
@@ -77,7 +77,7 @@
    "type": "Couples"
   },
   {
-   "start_utc": "2026-11-08T05:09:00.000Z",
+   "start_utc": "2026-11-08T05:00:00.000Z",
    "title": "Men",
    "round": "Free Skating",
    "event_result_id": 15701,
@@ -891,12 +891,37 @@
        "total": "169.37",
        "tes": "88.51",
        "pcs": "80.86",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
     {
      "rank": 2,
+     "name": "Nika EGADZE",
+     "noc": "GEO",
+     "points": "246.61",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 7,
+       "total": "87.67",
+       "tes": "48.37",
+       "pcs": "39.30",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 2,
+       "total": "158.94",
+       "tes": "83.45",
+       "pcs": "76.49",
+       "status": "Scheduled Break"
+      }
+     }
+    },
+    {
+     "rank": 3,
      "name": "Yudong CHEN",
      "noc": "CHN",
      "points": "228.92",
@@ -912,16 +937,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 2,
+       "rank": 3,
        "total": "148.18",
        "tes": "74.95",
        "pcs": "73.23",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
     {
-     "rank": 3,
+     "rank": 4,
      "name": "Zhiming PENG",
      "noc": "CHN",
      "points": "220.40",
@@ -937,16 +962,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 3,
+       "rank": 4,
        "total": "132.75",
        "tes": "68.52",
        "pcs": "66.23",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
     {
-     "rank": 4,
+     "rank": 5,
      "name": "Jacob SANCHEZ",
      "noc": "USA",
      "points": "204.39",
@@ -962,16 +987,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 4,
+       "rank": 5,
        "total": "124.94",
        "tes": "51.32",
        "pcs": "73.62",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
     {
-     "rank": 5,
+     "rank": 6,
      "name": "Lucius KAZANECKI",
      "noc": "USA",
      "points": "184.11",
@@ -987,11 +1012,11 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 5,
+       "rank": 6,
        "total": "120.95",
        "tes": "54.85",
        "pcs": "66.10",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -1016,7 +1041,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -1041,7 +1066,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -1066,7 +1091,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -1091,7 +1116,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -1116,7 +1141,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -1141,32 +1166,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Nika EGADZE",
-     "noc": "GEO",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 7,
-       "total": "87.67",
-       "tes": "48.37",
-       "pcs": "39.30",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     }
@@ -1200,7 +1200,7 @@
    "distance": "Men",
    "round": "Free Skating",
    "heat": "",
-   "start_utc": "2026-11-08T05:09:00.000Z",
+   "start_utc": "2026-11-08T05:00:00.000Z",
    "rank": 1,
    "name": "Minkyu SEO",
    "noc": "KOR",
