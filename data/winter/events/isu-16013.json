@@ -15,10 +15,10 @@
   "city": "Shenzhen",
   "country": "CHN",
   "state": "Live",
-  "live": "Minkyu SEO",
+  "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-cup-of-china-2026/"
  },
- "checked_at": "2026-11-08T05:28:33.334065+00:00",
+ "checked_at": "2026-11-08T05:39:07.724780+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T06:53:00.000Z",
@@ -77,7 +77,7 @@
    "type": "Couples"
   },
   {
-   "start_utc": "2026-11-08T05:00:00.000Z",
+   "start_utc": "2026-11-08T05:09:00.000Z",
    "title": "Men",
    "round": "Free Skating",
    "event_result_id": 15701,
@@ -872,6 +872,31 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Minkyu SEO",
+     "noc": "KOR",
+     "points": "249.14",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 10,
+       "total": "79.77",
+       "tes": "40.64",
+       "pcs": "39.13",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 1,
+       "total": "169.37",
+       "tes": "88.51",
+       "pcs": "80.86",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
      "name": "Jacob SANCHEZ",
      "noc": "USA",
      "points": "204.39",
@@ -887,7 +912,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 1,
+       "rank": 2,
        "total": "124.94",
        "tes": "51.32",
        "pcs": "73.62",
@@ -896,7 +921,7 @@
      }
     },
     {
-     "rank": 2,
+     "rank": 3,
      "name": "Lucius KAZANECKI",
      "noc": "USA",
      "points": "184.11",
@@ -912,7 +937,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 2,
+       "rank": 3,
        "total": "120.95",
        "tes": "54.85",
        "pcs": "66.10",
@@ -1144,31 +1169,6 @@
        "status": "Running"
       }
      }
-    },
-    {
-     "rank": null,
-     "name": "Minkyu SEO",
-     "noc": "KOR",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 10,
-       "total": "79.77",
-       "tes": "40.64",
-       "pcs": "39.13",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
     }
    ]
   }
@@ -1198,18 +1198,18 @@
    "sport": "figure-skating",
    "event": "ISU Figure Skating Grand Prix Cup of China 2026",
    "distance": "Men",
-   "round": "Short Program",
+   "round": "Free Skating",
    "heat": "",
-   "start_utc": "2026-11-08T05:00:00.000Z",
-   "rank": 10,
+   "start_utc": "2026-11-08T05:09:00.000Z",
+   "rank": 1,
    "name": "Minkyu SEO",
    "noc": "KOR",
-   "time": "79.77",
+   "time": "249.14",
    "qual": "",
    "status": "",
    "segments": {
     "SP": "79.77",
-    "FS": ""
+    "FS": "169.37"
    }
   }
  ]
