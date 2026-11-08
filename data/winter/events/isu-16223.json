@@ -15,10 +15,10 @@
   "city": "Bormio",
   "country": "ITA",
   "state": "Live",
-  "live": "Men 1000 m (2)",
+  "live": "",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-08T14:21:09.220152+00:00",
+ "checked_at": "2026-11-08T14:31:49.956383+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -477,7 +477,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-08T13:55:00.000Z",
+   "start_utc": "2026-11-08T14:04:00.000Z",
    "title": "Men 1000 m (2)",
    "round": "Quarterfinals",
    "event_result_id": 16044,
@@ -18043,7 +18043,7 @@
     {
      "id": 23025,
      "name": "Quarterfinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-08T14:04:00.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of two fastest third place skaters qualify for Semifinals.",
      "heats": [
@@ -18250,15 +18250,15 @@
       },
       {
        "name": "Heat 4",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Elliot DUFOUR",
          "noc": "CAN",
-         "time": "",
-         "qual": "",
+         "time": "1:27.342",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 118,
@@ -18266,11 +18266,11 @@
          "slug": "elliot-dufour"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Jeremy BOUCHARD",
          "noc": "CAN",
-         "time": "",
-         "qual": "",
+         "time": "1:27.388",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 115,
@@ -18278,22 +18278,22 @@
          "slug": "jeremy-bouchard"
         },
         {
-         "rank": null,
-         "name": "Kritsanapon PHUATRAKUL",
-         "noc": "THA",
-         "time": "",
+         "rank": 3,
+         "name": "Maksim ZHURAUSKI",
+         "noc": "AIN1",
+         "time": "1:27.959",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 195,
-         "lane": 4,
-         "slug": "kritsanapon-phuatrakul"
+         "bib": 104,
+         "lane": 5,
+         "slug": "maksim-zhurauski"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Zhandos SEREKPAYEV",
          "noc": "KAZ",
-         "time": "",
+         "time": "1:28.733",
          "qual": "",
          "status": "",
          "record": "",
@@ -18302,20 +18302,113 @@
          "slug": "zhandos-serekpayev"
         },
         {
-         "rank": null,
-         "name": "Maksim ZHURAUSKI",
-         "noc": "AIN1",
-         "time": "",
+         "rank": 5,
+         "name": "Kritsanapon PHUATRAKUL",
+         "noc": "THA",
+         "time": "1:35.271",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 104,
-         "lane": 5,
-         "slug": "maksim-zhurauski"
+         "bib": 195,
+         "lane": 4,
+         "slug": "kritsanapon-phuatrakul"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Semifinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Biho LEE",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "1:24.466",
+        "qual": "Q"
+       },
+       {
+        "name": "Tianyou WANG",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "1:24.896",
+        "qual": "Q"
+       },
+       {
+        "name": "Elliot DUFOUR",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "1:27.342",
+        "qual": "Q"
+       },
+       {
+        "name": "Xinchi YU",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "1:27.656",
+        "qual": "Q"
+       },
+       {
+        "name": "Alexis DUBUC-BILODEAU",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "1:24.883",
+        "qual": "Q"
+       },
+       {
+        "name": "Tagir AMIRKHANOV",
+        "noc": "AIN2",
+        "rank": 2,
+        "time": "1:25.620",
+        "qual": "Q"
+       },
+       {
+        "name": "Jeremy BOUCHARD",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "1:27.388",
+        "qual": "Q"
+       },
+       {
+        "name": "Tymeo LIBEAU",
+        "noc": "FRA",
+        "rank": 2,
+        "time": "1:27.967",
+        "qual": "Q"
+       },
+       {
+        "name": "Kaname MIYABE",
+        "noc": "JPN",
+        "rank": 3,
+        "time": "1:28.455",
+        "qual": "ADV"
+       },
+       {
+        "name": "Andrei PETROV",
+        "noc": "AIN2",
+        "rank": 4,
+        "time": "no time",
+        "qual": "ADV"
+       }
+      ],
+      "races": [
+       [
+        "Biho LEE (KOR)",
+        "Xinchi YU (CHN)",
+        "Alexis DUBUC-BILODEAU (CAN)",
+        "Tymeo LIBEAU (FRA)",
+        "Kaname MIYABE (JPN)"
+       ],
+       [
+        "Tianyou WANG (CHN)",
+        "Elliot DUFOUR (CAN)",
+        "Tagir AMIRKHANOV (AIN2)",
+        "Jeremy BOUCHARD (CAN)",
+        "Andrei PETROV (AIN2)"
+       ]
+      ]
+     }
     },
     {
      "id": 23026,
