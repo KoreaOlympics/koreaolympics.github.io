@@ -18,7 +18,7 @@
   "live": "Men 3000 m Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-08T16:46:55.345692+00:00",
+ "checked_at": "2026-11-08T16:57:59.396869+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -23046,7 +23046,7 @@
      ],
      "projection": {
       "next": "Final",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -23091,20 +23091,32 @@
     {
      "id": 23056,
      "name": "Final B",
-     "status": "Live",
-     "start_utc": "2026-11-08T16:44:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-08T16:45:08.000Z",
      "rule": "",
      "heats": [
       {
        "name": "Final B",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Hungary",
+         "noc": "HUN",
+         "time": "4:05.936",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
+         "slug": ""
+        },
+        {
+         "rank": 2,
          "name": "France",
          "noc": "FRA",
-         "time": "",
+         "time": "4:06.356",
          "qual": "",
          "status": "",
          "record": "",
@@ -23113,9 +23125,73 @@
          "slug": ""
         },
         {
+         "rank": 3,
+         "name": "Netherlands",
+         "noc": "NED",
+         "time": "4:07.224",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 2,
+         "slug": ""
+        },
+        {
          "rank": null,
-         "name": "Hungary",
-         "noc": "HUN",
+         "name": "Italy",
+         "noc": "ITA",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": null,
+         "lane": 4,
+         "slug": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": 23057,
+     "name": "Final",
+     "status": "Live",
+     "start_utc": "2026-11-08T16:52:00.000Z",
+     "rule": "",
+     "heats": [
+      {
+       "name": "Final",
+       "status": "Live",
+       "official": "Live",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Canada",
+         "noc": "CAN",
+         "time": "3:57.960",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 2,
+         "slug": ""
+        },
+        {
+         "rank": 2,
+         "name": "Individual Neutral Athletes 2",
+         "noc": "AIN2",
+         "time": "3:59.520",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 4,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Republic of Korea",
+         "noc": "KOR",
          "time": "",
          "qual": "",
          "status": "",
@@ -23126,39 +23202,19 @@
         },
         {
          "rank": null,
-         "name": "Italy",
-         "noc": "ITA",
+         "name": "China",
+         "noc": "CHN",
          "time": "",
          "qual": "",
          "status": "",
          "record": "",
          "bib": null,
-         "lane": 4,
-         "slug": ""
-        },
-        {
-         "rank": null,
-         "name": "Netherlands",
-         "noc": "NED",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 2,
+         "lane": 1,
          "slug": ""
         }
        ]
       }
      ]
-    },
-    {
-     "id": 23057,
-     "name": "Final",
-     "status": "Scheduled",
-     "start_utc": "2026-11-08T16:52:00.000Z",
-     "rule": "",
-     "heats": []
     }
    ]
   }
@@ -24621,6 +24677,25 @@
    "noc": "KOR",
    "time": "3:57.492",
    "qual": "Q",
+   "status": "",
+   "record": "",
+   "bib": null,
+   "lane": 3,
+   "slug": ""
+  },
+  {
+   "event_id": "isu-16223",
+   "sport": "short-track",
+   "event": "ISU Short Track Junior World Cup #1",
+   "distance": "Men 3000 m Relay",
+   "round": "Final",
+   "heat": "Final",
+   "start_utc": "2026-11-08T16:52:00.000Z",
+   "rank": null,
+   "name": "Republic of Korea",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
    "status": "",
    "record": "",
    "bib": null,
