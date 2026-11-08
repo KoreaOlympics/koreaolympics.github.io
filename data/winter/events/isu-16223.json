@@ -15,10 +15,10 @@
   "city": "Bormio",
   "country": "ITA",
   "state": "Live",
-  "live": "",
+  "live": "Women 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-08T13:15:19.262853+00:00",
+ "checked_at": "2026-11-08T13:26:11.397499+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -14673,7 +14673,7 @@
      ],
      "projection": {
       "next": "Quarterfinals",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -15058,10 +15058,291 @@
     {
      "id": 23011,
      "name": "Quarterfinals",
-     "status": "Scheduled",
-     "start_utc": "2026-11-08T13:15:00.000Z",
+     "status": "Live",
+     "start_utc": "2026-11-08T13:15:15.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of two fastest third place skaters qualify for Semifinals.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Rongmiao YANG",
+         "noc": "CHN",
+         "time": "43.631",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 219,
+         "lane": 1,
+         "slug": "rongmiao-yang"
+        },
+        {
+         "rank": 2,
+         "name": "Daria DASZUTA",
+         "noc": "POL",
+         "time": "44.708",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 261,
+         "lane": 2,
+         "slug": "daria-daszuta"
+        },
+        {
+         "rank": 3,
+         "name": "Flora KISS-GEBORA",
+         "noc": "HUN",
+         "time": "1:29.468",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 228,
+         "lane": 3,
+         "slug": "flora-kiss-gebora"
+        },
+        {
+         "rank": 4,
+         "name": "Nina TRABUCCHI",
+         "noc": "ITA",
+         "time": "1:30.291",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 237,
+         "lane": 4,
+         "slug": "nina-trabucchi"
+        },
+        {
+         "rank": 5,
+         "name": "Sumin YU",
+         "noc": "KOR",
+         "time": "1:37.270",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 251,
+         "lane": 5,
+         "slug": "sumin-yu"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Junyu KUANG",
+         "noc": "CHN",
+         "time": "43.584",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 217,
+         "lane": 1,
+         "slug": "junyu-kuang"
+        },
+        {
+         "rank": 2,
+         "name": "Mariia KHOKHELKO",
+         "noc": "UKR",
+         "time": "44.196",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 273,
+         "lane": 2,
+         "slug": "mariia-khokhelko"
+        },
+        {
+         "rank": 3,
+         "name": "Riya TANAKA",
+         "noc": "JPN",
+         "time": "44.239",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 241,
+         "lane": 5,
+         "slug": "riya-tanaka"
+        },
+        {
+         "rank": 4,
+         "name": "Nuriya ALPYSBAY",
+         "noc": "KAZ",
+         "time": "44.260",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 243,
+         "lane": 3,
+         "slug": "nuriya-alpysbay"
+        },
+        {
+         "rank": 5,
+         "name": "Olimpia KAZANECKA",
+         "noc": "USA",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 277,
+         "lane": 4,
+         "slug": "olimpia-kazanecka"
+        }
+       ]
+      },
+      {
+       "name": "Heat 3",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Rikka NAKANO",
+         "noc": "JPN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 239,
+         "lane": 1,
+         "slug": "rikka-nakano-1"
+        },
+        {
+         "rank": null,
+         "name": "Kira Judit AMSCHL",
+         "noc": "HUN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 227,
+         "lane": 2,
+         "slug": "kira-judit-amschl"
+        },
+        {
+         "rank": null,
+         "name": "Yuchen JIANG",
+         "noc": "CHN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 216,
+         "lane": 3,
+         "slug": "yuchen-jiang"
+        },
+        {
+         "rank": null,
+         "name": "Eliza RHODEHAMEL",
+         "noc": "USA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 86,
+         "lane": 4,
+         "slug": "eliza-rhodehamel"
+        },
+        {
+         "rank": null,
+         "name": "Mirthe MICHIELSEN",
+         "noc": "BEL",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 210,
+         "lane": 5,
+         "slug": "mirthe-michielsen"
+        }
+       ]
+      },
+      {
+       "name": "Heat 4",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Kseniia PRIBYTOVA",
+         "noc": "AIN2",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 208,
+         "lane": 1,
+         "slug": "kseniia-pribytova"
+        },
+        {
+         "rank": null,
+         "name": "Eliane GOUDREAULT",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 213,
+         "lane": 2,
+         "slug": "eliane-goudreault"
+        },
+        {
+         "rank": null,
+         "name": "Veronika GRISHINA",
+         "noc": "AIN2",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 207,
+         "lane": 3,
+         "slug": "veronika-grishina"
+        },
+        {
+         "rank": null,
+         "name": "Jelka VAN KRANENBURG",
+         "noc": "NED",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 257,
+         "lane": 4,
+         "slug": "jelka-van-kranenburg"
+        },
+        {
+         "rank": null,
+         "name": "Alexanne MARTEL-BARIL",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 215,
+         "lane": 5,
+         "slug": "alexanne-martel-baril"
+        },
+        {
+         "rank": null,
+         "name": "Alina LISHENKO",
+         "noc": "KAZ",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 244,
+         "lane": 6,
+         "slug": "alina-lishenko"
+        }
+       ]
+      }
+     ]
     },
     {
      "id": 23012,
@@ -21163,6 +21444,25 @@
    "bib": 247,
    "lane": 1,
    "slug": "jeongyun-bae"
+  },
+  {
+   "event_id": "isu-16223",
+   "sport": "short-track",
+   "event": "ISU Short Track Junior World Cup #1",
+   "distance": "Women 500 m",
+   "round": "Quarterfinals",
+   "heat": "Heat 1",
+   "start_utc": "2026-11-08T13:15:15.000Z",
+   "rank": 5,
+   "name": "Sumin YU",
+   "noc": "KOR",
+   "time": "1:37.270",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 251,
+   "lane": 5,
+   "slug": "sumin-yu"
   },
   {
    "event_id": "isu-16223",
