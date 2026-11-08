@@ -15,10 +15,10 @@
   "city": "Bormio",
   "country": "ITA",
   "state": "Live",
-  "live": "Men 500 m",
+  "live": "Women 1000 m (2), Men 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-08T11:47:35.730373+00:00",
+ "checked_at": "2026-11-08T11:58:14.555204+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -13341,38 +13341,14 @@
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Viktor KIRSTA",
-         "noc": "AUS",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 110,
-         "lane": 1,
-         "slug": "viktor-kirsta"
-        },
-        {
-         "rank": null,
-         "name": "Maximillian MELAND",
-         "noc": "NOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 185,
-         "lane": 2,
-         "slug": "maximillian-meland"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Ho Long YUEN",
          "noc": "HKG",
-         "time": "",
+         "time": "43.921",
          "qual": "",
          "status": "",
          "record": "",
@@ -13381,10 +13357,34 @@
          "slug": "ho-long-yuen"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Viktor KIRSTA",
+         "noc": "AUS",
+         "time": "44.072",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 110,
+         "lane": 1,
+         "slug": "viktor-kirsta"
+        },
+        {
+         "rank": 3,
+         "name": "Maximillian MELAND",
+         "noc": "NOR",
+         "time": "44.223",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 185,
+         "lane": 2,
+         "slug": "maximillian-meland"
+        },
+        {
+         "rank": 4,
          "name": "Adomas OGULEVICIUS",
          "noc": "LTU",
-         "time": "",
+         "time": "44.364",
          "qual": "",
          "status": "",
          "record": "",
@@ -13393,10 +13393,10 @@
          "slug": "adomas-ogulevicius"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Ramadhan Harits KUSWARA",
          "noc": "INA",
-         "time": "",
+         "time": "45.575",
          "qual": "",
          "status": "",
          "record": "",
@@ -13408,26 +13408,14 @@
       },
       {
        "name": "Heat 5",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Kirill KOVALENKO",
-         "noc": "UKR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 200,
-         "lane": 1,
-         "slug": "kirill-kovalenko"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Elio CALANCA",
          "noc": "FRA",
-         "time": "",
+         "time": "42.890",
          "qual": "",
          "status": "",
          "record": "",
@@ -13436,10 +13424,10 @@
          "slug": "elio-calanca"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Maximilian MAGER",
          "noc": "GER",
-         "time": "",
+         "time": "43.101",
          "qual": "",
          "status": "",
          "record": "",
@@ -13448,10 +13436,22 @@
          "slug": "maximilian-mager"
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Kirill KOVALENKO",
+         "noc": "UKR",
+         "time": "43.145",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 200,
+         "lane": 1,
+         "slug": "kirill-kovalenko"
+        },
+        {
+         "rank": 4,
          "name": "Maksym SPORYSH",
          "noc": "UKR",
-         "time": "",
+         "time": "44.162",
          "qual": "",
          "status": "",
          "record": "",
@@ -13460,10 +13460,10 @@
          "slug": "maksym-sporysh"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Hans Matthew BUEMIO",
          "noc": "PHI",
-         "time": "",
+         "time": "44.657",
          "qual": "",
          "status": "",
          "record": "",
@@ -18238,10 +18238,121 @@
     {
      "id": 23030,
      "name": "Ranking Finals",
-     "status": "Scheduled",
-     "start_utc": "2026-11-08T11:48:00.000Z",
+     "status": "Live",
+     "start_utc": "2026-11-08T11:50:00.000Z",
      "rule": "",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Efsa POLAT",
+         "noc": "TUR",
+         "time": "1:45.577",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 271,
+         "lane": 1,
+         "slug": "efsa-polat"
+        },
+        {
+         "rank": 2,
+         "name": "Ulyana PASHAYEVA",
+         "noc": "AIN1",
+         "time": "1:45.646",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 202,
+         "lane": 2,
+         "slug": "ulyana-pashayeva"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Live",
+       "official": "Live",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Jazmin SZABO",
+         "noc": "HUN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 229,
+         "lane": 1,
+         "slug": "jazmin-szabo-1"
+        },
+        {
+         "rank": null,
+         "name": "Darya STSIAPANAVA",
+         "noc": "AIN1",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 204,
+         "lane": 5,
+         "slug": "darya-stsiapanava"
+        },
+        {
+         "rank": null,
+         "name": "Sunniva Haug JOHANNESSEN",
+         "noc": "NOR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 259,
+         "lane": 6,
+         "slug": "sunniva-haug-johannessen-1"
+        },
+        {
+         "rank": null,
+         "name": "Marina SVIRIDOVA",
+         "noc": "SUI",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 268,
+         "lane": 4,
+         "slug": "marina-sviridova"
+        },
+        {
+         "rank": null,
+         "name": "Anna PNOVSKA",
+         "noc": "CZE",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 221,
+         "lane": 2,
+         "slug": "anna-pnovska"
+        },
+        {
+         "rank": null,
+         "name": "Elzem TAS",
+         "noc": "TUR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 272,
+         "lane": 3,
+         "slug": "elzem-tas"
+        }
+       ]
+      }
+     ]
     },
     {
      "id": 23032,
