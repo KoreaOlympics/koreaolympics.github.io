@@ -18,7 +18,7 @@
   "live": "Women 3000 m Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-08T16:23:22.780149+00:00",
+ "checked_at": "2026-11-08T16:34:29.545411+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -549,7 +549,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-08T16:22:00.000Z",
+   "start_utc": "2026-11-08T16:21:00.000Z",
    "title": "Women 3000 m Relay",
    "round": "Final B",
    "event_result_id": 16047,
@@ -22393,7 +22393,7 @@
      ],
      "projection": {
       "next": "Final",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -22438,19 +22438,83 @@
     {
      "id": 23043,
      "name": "Final B",
-     "status": "Live",
-     "start_utc": "2026-11-08T16:22:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-08T16:21:45.000Z",
      "rule": "",
      "heats": [
       {
        "name": "Final B",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Japan",
+         "noc": "JPN",
+         "time": "4:20.551",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 2,
+         "slug": ""
+        },
+        {
+         "rank": 2,
+         "name": "Canada",
+         "noc": "CAN",
+         "time": "4:20.966",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
+         "slug": ""
+        },
+        {
+         "rank": 3,
+         "name": "Kazakhstan",
+         "noc": "KAZ",
+         "time": "4:33.889",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Netherlands",
+         "noc": "NED",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": null,
+         "lane": 4,
+         "slug": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": 23077,
+     "name": "Final",
+     "status": "Live",
+     "start_utc": "2026-11-08T16:30:00.000Z",
+     "rule": "",
+     "heats": [
+      {
+       "name": "Final",
        "status": "Live",
        "official": "Live",
        "competitors": [
         {
          "rank": null,
-         "name": "Kazakhstan",
-         "noc": "KAZ",
+         "name": "China",
+         "noc": "CHN",
          "time": "",
          "qual": "",
          "status": "",
@@ -22461,8 +22525,8 @@
         },
         {
          "rank": null,
-         "name": "Canada",
-         "noc": "CAN",
+         "name": "Individual Neutral Athletes 2",
+         "noc": "AIN2",
          "time": "",
          "qual": "",
          "status": "",
@@ -22473,20 +22537,8 @@
         },
         {
          "rank": null,
-         "name": "Netherlands",
-         "noc": "NED",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 4,
-         "slug": ""
-        },
-        {
-         "rank": null,
-         "name": "Japan",
-         "noc": "JPN",
+         "name": "Poland",
+         "noc": "POL",
          "time": "",
          "qual": "",
          "status": "",
@@ -22494,18 +22546,22 @@
          "bib": null,
          "lane": 2,
          "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Italy",
+         "noc": "ITA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 4,
+         "slug": ""
         }
        ]
       }
      ]
-    },
-    {
-     "id": 23077,
-     "name": "Final",
-     "status": "Scheduled",
-     "start_utc": "2026-11-08T16:30:00.000Z",
-     "rule": "",
-     "heats": []
     }
    ]
   },
