@@ -15,10 +15,10 @@
   "city": "Bormio",
   "country": "ITA",
   "state": "Live",
-  "live": "Men 1000 m (2)",
+  "live": "",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-08T12:09:54.143208+00:00",
+ "checked_at": "2026-11-08T12:20:33.645656+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -17097,7 +17097,7 @@
     {
      "id": 23023,
      "name": "Ranking Finals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-08T11:58:00.000Z",
      "rule": "",
      "heats": [
@@ -17213,14 +17213,14 @@
       },
       {
        "name": "Heat 3",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Alibi ALIMGEREYEV",
          "noc": "KAZ",
-         "time": "",
+         "time": "1:36.135",
          "qual": "",
          "status": "",
          "record": "",
@@ -17229,10 +17229,22 @@
          "slug": "alibi-alimgereyev"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Ulrik Evenmo ERVIK",
+         "noc": "NOR",
+         "time": "1:36.379",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 184,
+         "lane": 2,
+         "slug": "ulrik-evenmo-ervik"
+        },
+        {
+         "rank": 3,
          "name": "Fabio BRACCHI",
          "noc": "ITA",
-         "time": "",
+         "time": "1:36.529",
          "qual": "",
          "status": "",
          "record": "",
@@ -17241,22 +17253,10 @@
          "slug": "fabio-bracchi"
         },
         {
-         "rank": null,
-         "name": "Raman ZELENIN",
-         "noc": "AIN1",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 103,
-         "lane": 3,
-         "slug": "raman-zelenin"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Aditya NGHIEM",
          "noc": "AUS",
-         "time": "",
+         "time": "1:39.340",
          "qual": "",
          "status": "",
          "record": "",
@@ -17265,10 +17265,10 @@
          "slug": "aditya-nghiem"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Harshith BAIGURU THAMMANNAGOWDA",
          "noc": "IND",
-         "time": "",
+         "time": "1:40.044",
          "qual": "",
          "status": "",
          "record": "",
@@ -17277,16 +17277,16 @@
          "slug": "harshith-baiguru-thammannagowda"
         },
         {
-         "rank": null,
-         "name": "Ulrik Evenmo ERVIK",
-         "noc": "NOR",
-         "time": "",
+         "rank": 6,
+         "name": "Raman ZELENIN",
+         "noc": "AIN1",
+         "time": "no time",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 184,
-         "lane": 2,
-         "slug": "ulrik-evenmo-ervik"
+         "bib": 103,
+         "lane": 3,
+         "slug": "raman-zelenin"
         }
        ]
       }
