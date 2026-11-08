@@ -18,7 +18,7 @@
   "live": "Women 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-08T09:36:49.956874+00:00",
+ "checked_at": "2026-11-08T09:47:45.553089+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -13548,7 +13548,7 @@
     {
      "id": 23008,
      "name": "Rep. Quarterfinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-08T09:27:40.000Z",
      "rule": "The first placed skater from each race and up to a maximum of five fastest second place skaters qualify for Rep Semifinals.",
      "heats": [
@@ -13574,7 +13574,7 @@
          "name": "Varvara KURYLA",
          "noc": "AIN1",
          "time": "46.317",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 201,
@@ -13641,7 +13641,7 @@
          "name": "Klara ZOSCHKE",
          "noc": "GER",
          "time": "45.806",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 226,
@@ -13708,7 +13708,7 @@
          "name": "Charlotte SCHULZ",
          "noc": "GER",
          "time": "46.234",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 224,
@@ -13775,7 +13775,7 @@
          "name": "Meruyert SANSYZBAYEVA",
          "noc": "KAZ",
          "time": "46.241",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 246,
@@ -13822,27 +13822,15 @@
       },
       {
        "name": "Heat 5",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Alexanne MARTEL-BARIL",
-         "noc": "CAN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 215,
-         "lane": 1,
-         "slug": "alexanne-martel-baril"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Juul VAN DER ZWAAN",
          "noc": "NED",
-         "time": "",
-         "qual": "",
+         "time": "45.752",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 256,
@@ -13850,10 +13838,22 @@
          "slug": "juul-van-der-zwaan"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Alexanne MARTEL-BARIL",
+         "noc": "CAN",
+         "time": "45.811",
+         "qual": "q",
+         "status": "",
+         "record": "",
+         "bib": 215,
+         "lane": 1,
+         "slug": "alexanne-martel-baril"
+        },
+        {
+         "rank": 3,
          "name": "Sude Naz KAHRAMAN",
          "noc": "TUR",
-         "time": "",
+         "time": "47.065",
          "qual": "",
          "status": "",
          "record": "",
@@ -13862,10 +13862,10 @@
          "slug": "sude-naz-kahraman"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Elodie HARDING",
          "noc": "SUI",
-         "time": "",
+         "time": "48.495",
          "qual": "",
          "status": "",
          "record": "",
@@ -13875,7 +13875,100 @@
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Rep. Semifinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Mirthe MICHIELSEN",
+        "noc": "BEL",
+        "rank": 1,
+        "time": "45.145",
+        "qual": "Q"
+       },
+       {
+        "name": "Pola DRYL",
+        "noc": "POL",
+        "rank": 1,
+        "time": "45.250",
+        "qual": "Q"
+       },
+       {
+        "name": "Alina LISHENKO",
+        "noc": "KAZ",
+        "rank": 1,
+        "time": "45.673",
+        "qual": "Q"
+       },
+       {
+        "name": "Juul VAN DER ZWAAN",
+        "noc": "NED",
+        "rank": 1,
+        "time": "45.752",
+        "qual": "Q"
+       },
+       {
+        "name": "Anna TELEGANOVA",
+        "noc": "AIN2",
+        "rank": 1,
+        "time": "45.810",
+        "qual": "Q"
+       },
+       {
+        "name": "Klara ZOSCHKE",
+        "noc": "GER",
+        "rank": 2,
+        "time": "45.806",
+        "qual": "q"
+       },
+       {
+        "name": "Alexanne MARTEL-BARIL",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "45.811",
+        "qual": "q"
+       },
+       {
+        "name": "Charlotte SCHULZ",
+        "noc": "GER",
+        "rank": 2,
+        "time": "46.234",
+        "qual": "q"
+       },
+       {
+        "name": "Meruyert SANSYZBAYEVA",
+        "noc": "KAZ",
+        "rank": 2,
+        "time": "46.241",
+        "qual": "q"
+       },
+       {
+        "name": "Varvara KURYLA",
+        "noc": "AIN1",
+        "rank": 2,
+        "time": "46.317",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Mirthe MICHIELSEN (BEL)",
+        "Juul VAN DER ZWAAN (NED)",
+        "Anna TELEGANOVA (AIN2)",
+        "Charlotte SCHULZ (GER)",
+        "Meruyert SANSYZBAYEVA (KAZ)"
+       ],
+       [
+        "Pola DRYL (POL)",
+        "Alina LISHENKO (KAZ)",
+        "Klara ZOSCHKE (GER)",
+        "Alexanne MARTEL-BARIL (CAN)",
+        "Varvara KURYLA (AIN1)"
+       ]
+      ]
+     }
     },
     {
      "id": 23010,
