@@ -304,7 +304,7 @@
    "end": "2026-11-08",
    "city": "Shenzhen",
    "country": "CHN",
-   "state": "Live",
+   "state": "Finished",
    "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-cup-of-china-2026/",
    "podiums": [
     {
@@ -378,7 +378,26 @@
     },
     {
      "title": "Men",
-     "podium": null
+     "podium": [
+      {
+       "rank": 1,
+       "name": "Kao MIURA",
+       "noc": "JPN",
+       "time": "293.25"
+      },
+      {
+       "rank": 2,
+       "name": "Vladislav DIKIDZHI",
+       "noc": "AIN2",
+       "time": "282.44"
+      },
+      {
+       "rank": 3,
+       "name": "Evgeni SEMENENKO",
+       "noc": "AIN2",
+       "time": "281.62"
+      }
+     ]
     }
    ]
   },
@@ -494,10 +513,10 @@
  "medals": [
   [
    "JPN",
-   3,
+   4,
    2,
    1,
-   6
+   7
   ],
   [
    "FRA",
@@ -523,9 +542,9 @@
   [
    "AIN2",
    1,
-   2,
-   0,
-   3
+   3,
+   1,
+   5
   ],
   [
    "CAN",
@@ -731,6 +750,13 @@
   ],
   "Men": [
    {
+    "name": "Kao MIURA",
+    "noc": "JPN",
+    "points": 293.25,
+    "event": "ISU Figure Skating Grand Prix Cup of China 2026",
+    "event_id": "isu-16013"
+   },
+   {
     "name": "Adam SIAO HIM FA",
     "noc": "FRA",
     "points": 284.24,
@@ -792,13 +818,6 @@
     "points": 249.14,
     "event": "ISU Figure Skating Grand Prix Cup of China 2026",
     "event_id": "isu-16013"
-   },
-   {
-    "name": "Mihhail SELEVKO",
-    "noc": "EST",
-    "points": 248.66,
-    "event": "ISU Figure Skating Grand Prix Skate Canada International 2026",
-    "event_id": "isu-16020"
    }
   ],
   "Pairs": [

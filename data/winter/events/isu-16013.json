@@ -14,11 +14,11 @@
   "tz": "Asia/Shanghai",
   "city": "Shenzhen",
   "country": "CHN",
-  "state": "Live",
-  "live": "Kao MIURA",
+  "state": "Finished",
+  "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-cup-of-china-2026/"
  },
- "checked_at": "2026-11-08T06:45:06.817415+00:00",
+ "checked_at": "2026-11-08T06:55:41.254859+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T06:53:00.000Z",
@@ -872,6 +872,31 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Kao MIURA",
+     "noc": "JPN",
+     "points": "293.25",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 1,
+       "total": "102.90",
+       "tes": "59.58",
+       "pcs": "43.32",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 1,
+       "total": "190.35",
+       "tes": "101.64",
+       "pcs": "88.71",
+       "status": "Finished"
+      }
+     }
+    },
+    {
+     "rank": 2,
      "name": "Vladislav DIKIDZHI",
      "noc": "AIN2",
      "points": "282.44",
@@ -887,16 +912,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 1,
+       "rank": 2,
        "total": "183.58",
        "tes": "101.52",
        "pcs": "82.06",
-       "status": "Running"
+       "status": "Finished"
       }
      }
     },
     {
-     "rank": 2,
+     "rank": 3,
      "name": "Evgeni SEMENENKO",
      "noc": "AIN2",
      "points": "281.62",
@@ -912,16 +937,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 2,
+       "rank": 3,
        "total": "181.90",
        "tes": "98.65",
        "pcs": "83.25",
-       "status": "Running"
+       "status": "Finished"
       }
      }
     },
     {
-     "rank": 3,
+     "rank": 4,
      "name": "Shun SATO",
      "noc": "JPN",
      "points": "277.20",
@@ -937,16 +962,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 3,
+       "rank": 4,
        "total": "175.23",
        "tes": "91.38",
        "pcs": "83.85",
-       "status": "Running"
+       "status": "Finished"
       }
      }
     },
     {
-     "rank": 4,
+     "rank": 5,
      "name": "Mikhail SHAIDOROV",
      "noc": "KAZ",
      "points": "263.49",
@@ -962,16 +987,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 5,
+       "rank": 6,
        "total": "168.62",
        "tes": "88.71",
        "pcs": "79.91",
-       "status": "Running"
+       "status": "Finished"
       }
      }
     },
     {
-     "rank": 5,
+     "rank": 6,
      "name": "Vladimir SAMOILOV",
      "noc": "POL",
      "points": "252.39",
@@ -987,16 +1012,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 6,
+       "rank": 7,
        "total": "164.18",
        "tes": "87.70",
        "pcs": "78.48",
-       "status": "Running"
+       "status": "Finished"
       }
      }
     },
     {
-     "rank": 6,
+     "rank": 7,
      "name": "Minkyu SEO",
      "noc": "KOR",
      "points": "249.14",
@@ -1012,16 +1037,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 4,
+       "rank": 5,
        "total": "169.37",
        "tes": "88.51",
        "pcs": "80.86",
-       "status": "Running"
+       "status": "Finished"
       }
      }
     },
     {
-     "rank": 7,
+     "rank": 8,
      "name": "Nika EGADZE",
      "noc": "GEO",
      "points": "246.61",
@@ -1037,16 +1062,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 7,
+       "rank": 8,
        "total": "158.94",
        "tes": "83.45",
        "pcs": "76.49",
-       "status": "Running"
+       "status": "Finished"
       }
      }
     },
     {
-     "rank": 8,
+     "rank": 9,
      "name": "Yudong CHEN",
      "noc": "CHN",
      "points": "228.92",
@@ -1062,16 +1087,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 8,
+       "rank": 9,
        "total": "148.18",
        "tes": "74.95",
        "pcs": "73.23",
-       "status": "Running"
+       "status": "Finished"
       }
      }
     },
     {
-     "rank": 9,
+     "rank": 10,
      "name": "Zhiming PENG",
      "noc": "CHN",
      "points": "220.40",
@@ -1087,16 +1112,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 9,
+       "rank": 10,
        "total": "132.75",
        "tes": "68.52",
        "pcs": "66.23",
-       "status": "Running"
+       "status": "Finished"
       }
      }
     },
     {
-     "rank": 10,
+     "rank": 11,
      "name": "Jacob SANCHEZ",
      "noc": "USA",
      "points": "204.39",
@@ -1112,16 +1137,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 10,
+       "rank": 11,
        "total": "124.94",
        "tes": "51.32",
        "pcs": "73.62",
-       "status": "Running"
+       "status": "Finished"
       }
      }
     },
     {
-     "rank": 11,
+     "rank": 12,
      "name": "Lucius KAZANECKI",
      "noc": "USA",
      "points": "184.11",
@@ -1137,36 +1162,11 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 11,
+       "rank": 12,
        "total": "120.95",
        "tes": "54.85",
        "pcs": "66.10",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Kao MIURA",
-     "noc": "JPN",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 1,
-       "total": "102.90",
-       "tes": "59.58",
-       "pcs": "43.32",
        "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
       }
      }
     }
@@ -1201,7 +1201,7 @@
    "round": "Free Skating",
    "heat": "",
    "start_utc": "2026-11-08T05:09:00.000Z",
-   "rank": 6,
+   "rank": 7,
    "name": "Minkyu SEO",
    "noc": "KOR",
    "time": "249.14",
