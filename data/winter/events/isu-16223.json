@@ -15,10 +15,10 @@
   "city": "Bormio",
   "country": "ITA",
   "state": "Live",
-  "live": "Women 3000 m Relay",
+  "live": "Men 3000 m Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-08T16:35:48.076933+00:00",
+ "checked_at": "2026-11-08T16:46:55.345692+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -22502,20 +22502,20 @@
     {
      "id": 23077,
      "name": "Final",
-     "status": "Live",
-     "start_utc": "2026-11-08T16:30:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-08T16:31:26.000Z",
      "rule": "",
      "heats": [
       {
        "name": "Final",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "China",
          "noc": "CHN",
-         "time": "",
+         "time": "4:12.974",
          "qual": "",
          "status": "",
          "record": "",
@@ -22524,22 +22524,10 @@
          "slug": ""
         },
         {
-         "rank": null,
-         "name": "Individual Neutral Athletes 2",
-         "noc": "AIN2",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 3,
-         "slug": ""
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Poland",
          "noc": "POL",
-         "time": "",
+         "time": "4:15.651",
          "qual": "",
          "status": "",
          "record": "",
@@ -22548,10 +22536,22 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Individual Neutral Athletes 2",
+         "noc": "AIN2",
+         "time": "4:15.832",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
+         "slug": ""
+        },
+        {
+         "rank": 4,
          "name": "Italy",
          "noc": "ITA",
-         "time": "",
+         "time": "4:20.557",
          "qual": "",
          "status": "",
          "record": "",
@@ -23091,10 +23091,66 @@
     {
      "id": 23056,
      "name": "Final B",
-     "status": "Scheduled",
+     "status": "Live",
      "start_utc": "2026-11-08T16:44:00.000Z",
      "rule": "",
-     "heats": []
+     "heats": [
+      {
+       "name": "Final B",
+       "status": "Live",
+       "official": "Live",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "France",
+         "noc": "FRA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Hungary",
+         "noc": "HUN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Italy",
+         "noc": "ITA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 4,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Netherlands",
+         "noc": "NED",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 2,
+         "slug": ""
+        }
+       ]
+      }
+     ]
     },
     {
      "id": 23057,
