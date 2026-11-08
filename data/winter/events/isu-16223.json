@@ -15,10 +15,10 @@
   "city": "Bormio",
   "country": "ITA",
   "state": "Live",
-  "live": "Women 500 m",
+  "live": "Men 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-08T09:47:45.553089+00:00",
+ "checked_at": "2026-11-08T09:58:38.434852+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -12549,7 +12549,7 @@
      ],
      "projection": {
       "next": "Rep. Quarterfinals",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -12696,35 +12696,31 @@
       "races": [
        [
         "Samuel Oliver SULC (CZE)",
-        "Meiirzhan TOLEGEN (KAZ)",
-        "Berat Efe DAL (TUR)"
+        "Alessandro PICCO (ITA)",
+        "Yusuf Can BOZDAG (TUR)",
+        "Aarav Aniruddha PATWARDHAN (IND)",
+        "Jesse-Jan RAYEN (BEL)"
        ],
        [
         "Mihaly ARENDAS (HUN)",
-        "Raman SHAM (AIN1)",
-        "Pranav Madav SURAPANENI (IND)"
+        "Daniil BYCHKOU (AIN1)",
+        "Ilia SIVOKHO (AIN2)",
+        "Ryota WATABE (JPN)",
+        "Frantisek MUCHKA (CZE)"
        ],
        [
         "Tymon HRYNIEWICZ (POL)",
-        "Ilia SIVOKHO (AIN2)",
-        "Ryota WATABE (JPN)"
+        "Zhanarys MAGZHAN (KAZ)",
+        "Raman SHAM (AIN1)",
+        "Pranav Madav SURAPANENI (IND)",
+        "Christiano DELGADO (NED)"
        ],
        [
         "Wesley JONES (USA)",
-        "Yusuf Can BOZDAG (TUR)",
-        "Aarav Aniruddha PATWARDHAN (IND)"
-       ],
-       [
         "Tijmen VAN LAETHEM (BEL)",
-        "Alessandro PICCO (ITA)",
-        "Jesse-Jan RAYEN (BEL)",
+        "Meiirzhan TOLEGEN (KAZ)",
+        "Berat Efe DAL (TUR)",
         "Zalan JANCSO (HUN)"
-       ],
-       [
-        "Zhanarys MAGZHAN (KAZ)",
-        "Daniil BYCHKOU (AIN1)",
-        "Frantisek MUCHKA (CZE)",
-        "Christiano DELGADO (NED)"
        ]
       ]
      }
@@ -12732,10 +12728,279 @@
     {
      "id": 23049,
      "name": "Rep. Quarterfinals",
-     "status": "Scheduled",
+     "status": "Live",
      "start_utc": "2026-11-08T09:57:00.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of two fastest third place skaters qualify for Rep Semifinals.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Live",
+       "official": "Live",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Samuel Oliver SULC",
+         "noc": "CZE",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 130,
+         "lane": 1,
+         "slug": "samuel-oliver-sulc"
+        },
+        {
+         "rank": null,
+         "name": "Alessandro PICCO",
+         "noc": "ITA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 161,
+         "lane": 2,
+         "slug": "alessandro-picco"
+        },
+        {
+         "rank": null,
+         "name": "Yusuf Can BOZDAG",
+         "noc": "TUR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 196,
+         "lane": 3,
+         "slug": "yusuf-can-bozdag"
+        },
+        {
+         "rank": null,
+         "name": "Ryota WATABE",
+         "noc": "JPN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 165,
+         "lane": 4,
+         "slug": "ryota-watabe"
+        },
+        {
+         "rank": null,
+         "name": "Jesse-Jan RAYEN",
+         "noc": "BEL",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 113,
+         "lane": 5,
+         "slug": "jesse-jan-rayen"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Mihaly ARENDAS",
+         "noc": "HUN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 146,
+         "lane": 1,
+         "slug": "mihaly-arendas"
+        },
+        {
+         "rank": null,
+         "name": "Daniil BYCHKOU",
+         "noc": "AIN1",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 101,
+         "lane": 2,
+         "slug": "daniil-bychkou"
+        },
+        {
+         "rank": null,
+         "name": "Ilia SIVOKHO",
+         "noc": "AIN2",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 109,
+         "lane": 3,
+         "slug": "ilia-sivokho"
+        },
+        {
+         "rank": null,
+         "name": "Aarav Aniruddha PATWARDHAN",
+         "noc": "IND",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 155,
+         "lane": 4,
+         "slug": "aarav-aniruddha-patwardhan"
+        },
+        {
+         "rank": null,
+         "name": "Frantisek MUCHKA",
+         "noc": "CZE",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 128,
+         "lane": 5,
+         "slug": "frantisek-muchka"
+        }
+       ]
+      },
+      {
+       "name": "Heat 3",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Tymon HRYNIEWICZ",
+         "noc": "POL",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 190,
+         "lane": 1,
+         "slug": "tymon-hryniewicz"
+        },
+        {
+         "rank": null,
+         "name": "Zhanarys MAGZHAN",
+         "noc": "KAZ",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 167,
+         "lane": 2,
+         "slug": "zhanarys-magzhan"
+        },
+        {
+         "rank": null,
+         "name": "Raman SHAM",
+         "noc": "AIN1",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 102,
+         "lane": 3,
+         "slug": "raman-sham"
+        },
+        {
+         "rank": null,
+         "name": "Pranav Madav SURAPANENI",
+         "noc": "IND",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 156,
+         "lane": 4,
+         "slug": "pranav-madav-surapaneni"
+        },
+        {
+         "rank": null,
+         "name": "Christiano DELGADO",
+         "noc": "NED",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 180,
+         "lane": 5,
+         "slug": "christiano-delgado"
+        }
+       ]
+      },
+      {
+       "name": "Heat 4",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Wesley JONES",
+         "noc": "USA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 206,
+         "lane": 1,
+         "slug": "wesley-jones"
+        },
+        {
+         "rank": null,
+         "name": "Tijmen VAN LAETHEM",
+         "noc": "BEL",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 114,
+         "lane": 2,
+         "slug": "tijmen-van-laethem"
+        },
+        {
+         "rank": null,
+         "name": "Meiirzhan TOLEGEN",
+         "noc": "KAZ",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 170,
+         "lane": 3,
+         "slug": "meiirzhan-tolegen"
+        },
+        {
+         "rank": null,
+         "name": "Berat Efe DAL",
+         "noc": "TUR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 197,
+         "lane": 4,
+         "slug": "berat-efe-dal"
+        },
+        {
+         "rank": null,
+         "name": "Zalan JANCSO",
+         "noc": "HUN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 147,
+         "lane": 5,
+         "slug": "zalan-jancso"
+        }
+       ]
+      }
+     ]
     },
     {
      "id": 23050,
