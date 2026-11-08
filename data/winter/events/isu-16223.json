@@ -18,7 +18,7 @@
   "live": "Men 1000 m (2), Men 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-08T10:32:01.584746+00:00",
+ "checked_at": "2026-11-08T10:42:43.718996+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -15676,7 +15676,7 @@
      "id": 23022,
      "name": "Rep. Quarterfinals",
      "status": "Live",
-     "start_utc": "2026-11-08T10:21:00.000Z",
+     "start_utc": "2026-11-08T10:27:24.000Z",
      "rule": "The first placed skater from each race and up to a maximum of five fastest second place skaters qualify for Rep Semifinals.",
      "heats": [
       {
@@ -15748,15 +15748,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Filip HYJEK",
          "noc": "POL",
-         "time": "",
-         "qual": "",
+         "time": "1:30.977",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 191,
@@ -15764,10 +15764,22 @@
          "slug": "filip-hyjek"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "David HRADSKY",
+         "noc": "CZE",
+         "time": "1:31.236",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 126,
+         "lane": 3,
+         "slug": "david-hradsky"
+        },
+        {
+         "rank": 3,
          "name": "Raman ZELENIN",
          "noc": "AIN1",
-         "time": "",
+         "time": "1:31.355",
          "qual": "",
          "status": "",
          "record": "",
@@ -15776,22 +15788,10 @@
          "slug": "raman-zelenin"
         },
         {
-         "rank": null,
-         "name": "David HRADSKY",
-         "noc": "CZE",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 126,
-         "lane": 3,
-         "slug": "david-hradsky"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Cohen BUFFEY",
          "noc": "GBR",
-         "time": "",
+         "time": "1:31.821",
          "qual": "",
          "status": "",
          "record": "",
@@ -15800,10 +15800,10 @@
          "slug": "cohen-buffey"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Ishaan Rahul DARVEKAR",
          "noc": "IND",
-         "time": "",
+         "time": "1:33.203",
          "qual": "",
          "status": "",
          "record": "",
@@ -15815,15 +15815,15 @@
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Ryan HUANG",
          "noc": "USA",
-         "time": "",
-         "qual": "",
+         "time": "1:31.088",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 204,
@@ -15831,11 +15831,11 @@
          "slug": "ryan-huang"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Fabio BRACCHI",
          "noc": "ITA",
-         "time": "",
-         "qual": "",
+         "time": "1:31.918",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 158,
@@ -15843,22 +15843,10 @@
          "slug": "fabio-bracchi"
         },
         {
-         "rank": null,
-         "name": "Artem MOISEIENKO",
-         "noc": "UKR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 201,
-         "lane": 3,
-         "slug": "artem-moiseienko"
-        },
-        {
-         "rank": null,
+         "rank": 3,
          "name": "Aditya NGHIEM",
          "noc": "AUS",
-         "time": "",
+         "time": "1:34.534",
          "qual": "",
          "status": "",
          "record": "",
@@ -15867,41 +15855,53 @@
          "slug": "aditya-nghiem"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Jan MUCHKA",
          "noc": "CZE",
-         "time": "",
+         "time": "2:01.283",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 129,
          "lane": 5,
          "slug": "jan-muchka"
+        },
+        {
+         "rank": null,
+         "name": "Artem MOISEIENKO",
+         "noc": "UKR",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 201,
+         "lane": 3,
+         "slug": "artem-moiseienko"
         }
        ]
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Live",
        "competitors": [
         {
-         "rank": null,
-         "name": "Szymon ETEL",
-         "noc": "POL",
-         "time": "",
+         "rank": 1,
+         "name": "Mathieu VAN DER HORST",
+         "noc": "NED",
+         "time": "1:29.820",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 189,
-         "lane": 1,
-         "slug": "szymon-etel"
+         "bib": 182,
+         "lane": 6,
+         "slug": "mathieu-van-der-horst"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Moritz KUEHNRICH",
          "noc": "GER",
-         "time": "",
+         "time": "1:30.220",
          "qual": "",
          "status": "",
          "record": "",
@@ -15910,34 +15910,10 @@
          "slug": "moritz-kuehnrich"
         },
         {
-         "rank": null,
-         "name": "Kazuto TAKAHASHI",
-         "noc": "JPN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 164,
-         "lane": 3,
-         "slug": "kazuto-takahashi"
-        },
-        {
-         "rank": null,
-         "name": "Mertcan TAYGAR",
-         "noc": "TUR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 199,
-         "lane": 4,
-         "slug": "mertcan-taygar"
-        },
-        {
-         "rank": null,
+         "rank": 3,
          "name": "Harshith BAIGURU THAMMANNAGOWDA",
          "noc": "IND",
-         "time": "",
+         "time": "1:34.870",
          "qual": "",
          "status": "",
          "record": "",
@@ -15946,16 +15922,40 @@
          "slug": "harshith-baiguru-thammannagowda"
         },
         {
-         "rank": null,
-         "name": "Mathieu VAN DER HORST",
-         "noc": "NED",
-         "time": "",
+         "rank": 4,
+         "name": "Mertcan TAYGAR",
+         "noc": "TUR",
+         "time": "1:44.670",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 182,
-         "lane": 6,
-         "slug": "mathieu-van-der-horst"
+         "bib": 199,
+         "lane": 4,
+         "slug": "mertcan-taygar"
+        },
+        {
+         "rank": 5,
+         "name": "Kazuto TAKAHASHI",
+         "noc": "JPN",
+         "time": "1:48.880",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 164,
+         "lane": 3,
+         "slug": "kazuto-takahashi"
+        },
+        {
+         "rank": 6,
+         "name": "Szymon ETEL",
+         "noc": "POL",
+         "time": "1:59.770",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 189,
+         "lane": 1,
+         "slug": "szymon-etel"
         }
        ]
       },
