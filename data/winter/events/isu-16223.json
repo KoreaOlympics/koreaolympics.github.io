@@ -18,7 +18,7 @@
   "live": "Men 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-08T09:58:38.434852+00:00",
+ "checked_at": "2026-11-08T10:09:33.565978+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -12729,20 +12729,20 @@
      "id": 23049,
      "name": "Rep. Quarterfinals",
      "status": "Live",
-     "start_utc": "2026-11-08T09:57:00.000Z",
+     "start_utc": "2026-11-08T09:57:36.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of two fastest third place skaters qualify for Rep Semifinals.",
      "heats": [
       {
        "name": "Heat 1",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Samuel Oliver SULC",
          "noc": "CZE",
-         "time": "",
-         "qual": "",
+         "time": "41.401",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 130,
@@ -12750,11 +12750,11 @@
          "slug": "samuel-oliver-sulc"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Alessandro PICCO",
          "noc": "ITA",
-         "time": "",
-         "qual": "",
+         "time": "42.633",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 161,
@@ -12762,10 +12762,22 @@
          "slug": "alessandro-picco"
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Ryota WATABE",
+         "noc": "JPN",
+         "time": "43.311",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 165,
+         "lane": 4,
+         "slug": "ryota-watabe"
+        },
+        {
+         "rank": 4,
          "name": "Yusuf Can BOZDAG",
          "noc": "TUR",
-         "time": "",
+         "time": "1:07.442",
          "qual": "",
          "status": "",
          "record": "",
@@ -12775,23 +12787,11 @@
         },
         {
          "rank": null,
-         "name": "Ryota WATABE",
-         "noc": "JPN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 165,
-         "lane": 4,
-         "slug": "ryota-watabe"
-        },
-        {
-         "rank": null,
          "name": "Jesse-Jan RAYEN",
          "noc": "BEL",
-         "time": "",
+         "time": "PEN",
          "qual": "",
-         "status": "",
+         "status": "Penalty",
          "record": "",
          "bib": 113,
          "lane": 5,
@@ -12801,15 +12801,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Mihaly ARENDAS",
          "noc": "HUN",
-         "time": "",
-         "qual": "",
+         "time": "42.392",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 146,
@@ -12817,23 +12817,11 @@
          "slug": "mihaly-arendas"
         },
         {
-         "rank": null,
-         "name": "Daniil BYCHKOU",
-         "noc": "AIN1",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 101,
-         "lane": 2,
-         "slug": "daniil-bychkou"
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Ilia SIVOKHO",
          "noc": "AIN2",
-         "time": "",
-         "qual": "",
+         "time": "42.589",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 109,
@@ -12841,10 +12829,22 @@
          "slug": "ilia-sivokho"
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Daniil BYCHKOU",
+         "noc": "AIN1",
+         "time": "42.639",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 101,
+         "lane": 2,
+         "slug": "daniil-bychkou"
+        },
+        {
+         "rank": 4,
          "name": "Aarav Aniruddha PATWARDHAN",
          "noc": "IND",
-         "time": "",
+         "time": "42.898",
          "qual": "",
          "status": "",
          "record": "",
@@ -12853,10 +12853,10 @@
          "slug": "aarav-aniruddha-patwardhan"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Frantisek MUCHKA",
          "noc": "CZE",
-         "time": "",
+         "time": "43.238",
          "qual": "",
          "status": "",
          "record": "",
@@ -12868,27 +12868,15 @@
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Tymon HRYNIEWICZ",
-         "noc": "POL",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 190,
-         "lane": 1,
-         "slug": "tymon-hryniewicz"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Zhanarys MAGZHAN",
          "noc": "KAZ",
-         "time": "",
-         "qual": "",
+         "time": "42.979",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 167,
@@ -12896,22 +12884,22 @@
          "slug": "zhanarys-magzhan"
         },
         {
-         "rank": null,
-         "name": "Raman SHAM",
-         "noc": "AIN1",
-         "time": "",
-         "qual": "",
+         "rank": 2,
+         "name": "Tymon HRYNIEWICZ",
+         "noc": "POL",
+         "time": "43.121",
+         "qual": "Q",
          "status": "",
          "record": "",
-         "bib": 102,
-         "lane": 3,
-         "slug": "raman-sham"
+         "bib": 190,
+         "lane": 1,
+         "slug": "tymon-hryniewicz"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Pranav Madav SURAPANENI",
          "noc": "IND",
-         "time": "",
+         "time": "43.523",
          "qual": "",
          "status": "",
          "record": "",
@@ -12920,10 +12908,22 @@
          "slug": "pranav-madav-surapaneni"
         },
         {
-         "rank": null,
+         "rank": 4,
+         "name": "Raman SHAM",
+         "noc": "AIN1",
+         "time": "43.800",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 102,
+         "lane": 3,
+         "slug": "raman-sham"
+        },
+        {
+         "rank": 5,
          "name": "Christiano DELGADO",
          "noc": "NED",
-         "time": "",
+         "time": "1:09.583",
          "qual": "",
          "status": "",
          "record": "",
@@ -12935,7 +12935,7 @@
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
+       "status": "Getting Ready",
        "official": "Start List",
        "competitors": [
         {
