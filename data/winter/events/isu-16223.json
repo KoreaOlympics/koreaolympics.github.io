@@ -15,10 +15,10 @@
   "city": "Bormio",
   "country": "ITA",
   "state": "Live",
-  "live": "Women 1000 m (2), Men 500 m",
+  "live": "Men 1000 m (2), Men 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-1/"
  },
- "checked_at": "2026-11-08T10:21:22.279344+00:00",
+ "checked_at": "2026-11-08T10:32:01.584746+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-06T08:30:00.000Z",
@@ -373,7 +373,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-08T10:09:00.000Z",
+   "start_utc": "2026-11-08T10:14:00.000Z",
    "title": "Women 1000 m (2)",
    "round": "Rep. Quarterfinals",
    "event_result_id": 16045,
@@ -15675,10 +15675,370 @@
     {
      "id": 23022,
      "name": "Rep. Quarterfinals",
-     "status": "Scheduled",
+     "status": "Live",
      "start_utc": "2026-11-08T10:21:00.000Z",
      "rule": "The first placed skater from each race and up to a maximum of five fastest second place skaters qualify for Rep Semifinals.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Muhammed Dogukan ERDOGAN",
+         "noc": "TUR",
+         "time": "1:30.800",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 198,
+         "lane": 5,
+         "slug": "muhammed-dogukan-erdogan"
+        },
+        {
+         "rank": 2,
+         "name": "Andrew GONG",
+         "noc": "HKG",
+         "time": "1:30.901",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 143,
+         "lane": 2,
+         "slug": "andrew-gong"
+        },
+        {
+         "rank": 3,
+         "name": "Ulrik Evenmo ERVIK",
+         "noc": "NOR",
+         "time": "1:30.931",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 184,
+         "lane": 3,
+         "slug": "ulrik-evenmo-ervik"
+        },
+        {
+         "rank": 4,
+         "name": "Matteo GIANA",
+         "noc": "ITA",
+         "time": "1:32.762",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 159,
+         "lane": 4,
+         "slug": "matteo-giana"
+        },
+        {
+         "rank": null,
+         "name": "Lowie DEKENS",
+         "noc": "BEL",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 112,
+         "lane": 1,
+         "slug": "lowie-dekens"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Filip HYJEK",
+         "noc": "POL",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 191,
+         "lane": 1,
+         "slug": "filip-hyjek"
+        },
+        {
+         "rank": null,
+         "name": "Raman ZELENIN",
+         "noc": "AIN1",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 103,
+         "lane": 2,
+         "slug": "raman-zelenin"
+        },
+        {
+         "rank": null,
+         "name": "David HRADSKY",
+         "noc": "CZE",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 126,
+         "lane": 3,
+         "slug": "david-hradsky"
+        },
+        {
+         "rank": null,
+         "name": "Cohen BUFFEY",
+         "noc": "GBR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 136,
+         "lane": 4,
+         "slug": "cohen-buffey"
+        },
+        {
+         "rank": null,
+         "name": "Ishaan Rahul DARVEKAR",
+         "noc": "IND",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 153,
+         "lane": 5,
+         "slug": "ishaan-rahul-darvekar"
+        }
+       ]
+      },
+      {
+       "name": "Heat 3",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Ryan HUANG",
+         "noc": "USA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 204,
+         "lane": 1,
+         "slug": "ryan-huang"
+        },
+        {
+         "rank": null,
+         "name": "Fabio BRACCHI",
+         "noc": "ITA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 158,
+         "lane": 2,
+         "slug": "fabio-bracchi"
+        },
+        {
+         "rank": null,
+         "name": "Artem MOISEIENKO",
+         "noc": "UKR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 201,
+         "lane": 3,
+         "slug": "artem-moiseienko"
+        },
+        {
+         "rank": null,
+         "name": "Aditya NGHIEM",
+         "noc": "AUS",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 111,
+         "lane": 4,
+         "slug": "aditya-nghiem"
+        },
+        {
+         "rank": null,
+         "name": "Jan MUCHKA",
+         "noc": "CZE",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 129,
+         "lane": 5,
+         "slug": "jan-muchka"
+        }
+       ]
+      },
+      {
+       "name": "Heat 4",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Szymon ETEL",
+         "noc": "POL",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 189,
+         "lane": 1,
+         "slug": "szymon-etel"
+        },
+        {
+         "rank": null,
+         "name": "Moritz KUEHNRICH",
+         "noc": "GER",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 140,
+         "lane": 2,
+         "slug": "moritz-kuehnrich"
+        },
+        {
+         "rank": null,
+         "name": "Kazuto TAKAHASHI",
+         "noc": "JPN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 164,
+         "lane": 3,
+         "slug": "kazuto-takahashi"
+        },
+        {
+         "rank": null,
+         "name": "Mertcan TAYGAR",
+         "noc": "TUR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 199,
+         "lane": 4,
+         "slug": "mertcan-taygar"
+        },
+        {
+         "rank": null,
+         "name": "Harshith BAIGURU THAMMANNAGOWDA",
+         "noc": "IND",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 152,
+         "lane": 5,
+         "slug": "harshith-baiguru-thammannagowda"
+        },
+        {
+         "rank": null,
+         "name": "Mathieu VAN DER HORST",
+         "noc": "NED",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 182,
+         "lane": 6,
+         "slug": "mathieu-van-der-horst"
+        }
+       ]
+      },
+      {
+       "name": "Heat 5",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Andrea BELLOTTI",
+         "noc": "ITA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 157,
+         "lane": 1,
+         "slug": "andrea-bellotti"
+        },
+        {
+         "rank": null,
+         "name": "Hubert Zbigniew JEZIAK",
+         "noc": "GER",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 139,
+         "lane": 2,
+         "slug": "hubert-zbigniew-jeziak"
+        },
+        {
+         "rank": null,
+         "name": "Maksim ZHURAUSKI",
+         "noc": "AIN1",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 104,
+         "lane": 3,
+         "slug": "maksim-zhurauski"
+        },
+        {
+         "rank": null,
+         "name": "Toms VINNINS",
+         "noc": "LAT",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 177,
+         "lane": 4,
+         "slug": "toms-vinnins"
+        },
+        {
+         "rank": null,
+         "name": "Alibi ALIMGEREYEV",
+         "noc": "KAZ",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 166,
+         "lane": 5,
+         "slug": "alibi-alimgereyev"
+        },
+        {
+         "rank": null,
+         "name": "Kaname MIYABE",
+         "noc": "JPN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 163,
+         "lane": 6,
+         "slug": "kaname-miyabe"
+        }
+       ]
+      }
+     ]
     },
     {
      "id": 23024,
@@ -16388,8 +16748,8 @@
     {
      "id": 23029,
      "name": "Rep. Quarterfinals",
-     "status": "Live",
-     "start_utc": "2026-11-08T10:12:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-08T10:14:28.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of two fastest third place skaters qualify for Rep Semifinals.",
      "heats": [
       {
@@ -16426,7 +16786,7 @@
          "name": "Anna PNOVSKA",
          "noc": "CZE",
          "time": "1:39.163",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 221,
@@ -16461,15 +16821,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Carlotta GROSSMANN",
          "noc": "GER",
-         "time": "",
-         "qual": "",
+         "time": "1:35.506",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 223,
@@ -16477,11 +16837,11 @@
          "slug": "carlotta-grossmann"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Dayana AITYBEK",
          "noc": "KAZ",
-         "time": "",
-         "qual": "",
+         "time": "1:35.552",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 242,
@@ -16489,22 +16849,10 @@
          "slug": "dayana-aitybek"
         },
         {
-         "rank": null,
-         "name": "Elzem TAS",
-         "noc": "TUR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 272,
-         "lane": 3,
-         "slug": "elzem-tas"
-        },
-        {
-         "rank": null,
+         "rank": 3,
          "name": "Jazmin SZABO",
          "noc": "HUN",
-         "time": "",
+         "time": "1:35.697",
          "qual": "",
          "status": "",
          "record": "",
@@ -16513,54 +16861,54 @@
          "slug": "jazmin-szabo-1"
         },
         {
-         "rank": null,
-         "name": "Efsa POLAT",
+         "rank": 4,
+         "name": "Elzem TAS",
          "noc": "TUR",
-         "time": "",
+         "time": "1:36.331",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 271,
-         "lane": 5,
-         "slug": "efsa-polat"
+         "bib": 272,
+         "lane": 3,
+         "slug": "elzem-tas"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Sunniva Haug JOHANNESSEN",
          "noc": "NOR",
-         "time": "",
+         "time": "1:36.700",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 259,
          "lane": 6,
          "slug": "sunniva-haug-johannessen-1"
+        },
+        {
+         "rank": 6,
+         "name": "Efsa POLAT",
+         "noc": "TUR",
+         "time": "1:37.817",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 271,
+         "lane": 5,
+         "slug": "efsa-polat"
         }
        ]
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Lyna HANI",
-         "noc": "CAN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 214,
-         "lane": 1,
-         "slug": "lyna-hani"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Pom STRAATHOF",
          "noc": "NED",
-         "time": "",
-         "qual": "",
+         "time": "1:34.733",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 254,
@@ -16568,11 +16916,23 @@
          "slug": "pom-straathof"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Lyna HANI",
+         "noc": "CAN",
+         "time": "1:34.918",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 214,
+         "lane": 1,
+         "slug": "lyna-hani"
+        },
+        {
+         "rank": 3,
          "name": "Isabella CHEN",
          "noc": "USA",
-         "time": "",
-         "qual": "",
+         "time": "1:35.187",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 275,
@@ -16580,10 +16940,10 @@
          "slug": "isabella-chen"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Marina SVIRIDOVA",
          "noc": "SUI",
-         "time": "",
+         "time": "1:36.311",
          "qual": "",
          "status": "",
          "record": "",
@@ -16592,10 +16952,10 @@
          "slug": "marina-sviridova"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Darya STSIAPANAVA",
          "noc": "AIN1",
-         "time": "",
+         "time": "1:37.052",
          "qual": "",
          "status": "",
          "record": "",
@@ -16604,10 +16964,10 @@
          "slug": "darya-stsiapanava"
         },
         {
-         "rank": null,
+         "rank": 6,
          "name": "Ulyana PASHAYEVA",
          "noc": "AIN1",
-         "time": "",
+         "time": "1:39.083",
          "qual": "",
          "status": "",
          "record": "",
@@ -16617,7 +16977,84 @@
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Rep. Semifinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Pom STRAATHOF",
+        "noc": "NED",
+        "rank": 1,
+        "time": "1:34.733",
+        "qual": "Q"
+       },
+       {
+        "name": "Carlotta GROSSMANN",
+        "noc": "GER",
+        "rank": 1,
+        "time": "1:35.506",
+        "qual": "Q"
+       },
+       {
+        "name": "Kateryna MOISIEIEVA",
+        "noc": "UKR",
+        "rank": 1,
+        "time": "1:38.746",
+        "qual": "Q"
+       },
+       {
+        "name": "Lyna HANI",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "1:34.918",
+        "qual": "Q"
+       },
+       {
+        "name": "Dayana AITYBEK",
+        "noc": "KAZ",
+        "rank": 2,
+        "time": "1:35.552",
+        "qual": "Q"
+       },
+       {
+        "name": "Sofia KOONS",
+        "noc": "USA",
+        "rank": 2,
+        "time": "1:38.754",
+        "qual": "Q"
+       },
+       {
+        "name": "Agata KOBUS",
+        "noc": "POL",
+        "rank": 4,
+        "time": "1:39.451",
+        "qual": "ADV"
+       },
+       {
+        "name": "Isabella CHEN",
+        "noc": "USA",
+        "rank": 3,
+        "time": "1:35.187",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Pom STRAATHOF (NED)",
+        "Lyna HANI (CAN)",
+        "Dayana AITYBEK (KAZ)",
+        "Isabella CHEN (USA)"
+       ],
+       [
+        "Carlotta GROSSMANN (GER)",
+        "Kateryna MOISIEIEVA (UKR)",
+        "Sofia KOONS (USA)",
+        "Agata KOBUS (POL)"
+       ]
+      ]
+     }
     },
     {
      "id": 23031,
