@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / 'data/la28-qualified.json'
 FLAGS = ROOT / 'assets/flags'
 E = lambda s: html.escape(str(s), quote=True)
+EDIT = '<span class="edit">[<a href="https://github.com/koreaolympics/koreaolympics.github.io/edit/main/data/la28-qualified.json">편집</a>]</span>'
 BLOCK_RE = re.compile(r'<div class="qualified" id="la28-qualified">.*?</div><!-- /qualified -->\n?', re.S)
 
 
@@ -38,7 +39,7 @@ def block(file, data=None):
     d = data.get(file)
     if not d:
         return ''
-    out = [f'<div class="qualified" id="la28-qualified"><h2>LA28 출전 확정 <span class="asof">{E(data["asof"])} 기준</span></h2>']
+    out = [f'<div class="qualified" id="la28-qualified"><h2>LA28 출전 확정 <span class="asof">{E(data["asof"])} 기준</span> {EDIT}</h2>']
     for g in d['groups']:
         if g['rows']:
             rows = ''.join(f'<tr><td>{nation(noc, data["NOCS"])}</td><td>{E(route)}</td><td>{E(note)}</td></tr>' for noc, route, note in g['rows'])
@@ -71,7 +72,7 @@ def korea_box(data=None):
     if not rows:
         return '<p>아직 확정된 출전권이 없다.</p>'
     return (f'<table class="wikitable"><thead><tr><th>종목</th><th>경로</th><th>내용</th></tr></thead><tbody>{"".join(rows)}</tbody></table>'
-            f'<p>{len(rows)}자리 · {E(data["asof"].replace("-", "."))} 기준 · <a href="la28-qualification.html">종목별 현황</a> · <a href="la28-quota-status.html">전망</a></p>')
+            f'<p>{len(rows)}자리 · {E(data["asof"].replace("-", "."))} 기준 {EDIT} · <a href="la28-qualification.html">종목별 현황</a> · <a href="la28-quota-status.html">전망</a></p>')
 
 
 def copy_flags(src, data):

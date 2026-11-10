@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="koreaolympics-structure">
+<meta name="description" content="종목·세부종목·선수 문서 탐색">
+<title>탐색 | 코리아 올림픽스</title>
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<header class="site"><a href="index.html">코리아 올림픽스</a><form class="site-search" action="explore.html" role="search"><input type="search" name="q" placeholder="문서 검색" aria-label="문서 검색"><button type="submit">검색</button></form><nav><a href="explore.html">탐색</a><a href="updates.html">갱신 현황</a></nav></header>
+<main class="article">
+<h1>탐색 <span class="en">(문서 1310개)</span></h1>
+<form id="xform" role="search"><input type="search" id="xq" name="q" placeholder="종목·세부종목·선수·대회 검색 (예: 리커브, 유도 -60kg, 쇼트트랙)" aria-label="문서 검색" autofocus></form>
+<div class="filters" role="group" aria-label="구분"><button type="button" data-f="s" data-v="">전체</button><button type="button" data-f="s" data-v="summer">하계</button><button type="button" data-f="s" data-v="winter">동계</button></div>
+<div class="filters" role="group" aria-label="종류"><button type="button" data-f="k" data-v="">모든 종류</button><button type="button" data-f="k" data-v="sport">종목</button><button type="button" data-f="k" data-v="event">세부종목</button><button type="button" data-f="k" data-v="doc">문서</button><button type="button" data-f="g" data-v="">성별 전체</button><button type="button" data-f="g" data-v="men">남자</button><button type="button" data-f="g" data-v="women">여자</button><button type="button" data-f="g" data-v="mixed">혼성</button><button type="button" data-f="kor" data-v="">모든 종목</button><button type="button" data-f="kor" data-v="1">한국 출전 확정</button></div>
+<div id="xout"><p>색인을 읽는 중…</p></div>
+<noscript><p>검색은 스크립트가 필요하다. <a href="index.html">대문</a>의 종목 목록에서 찾을 수 있다.</p></noscript>
+</main>
+<script>
+(function () {
+  var $ = function (i) { return document.getElementById(i); }, P = new URLSearchParams(location.search), all = [];
+  var st = {q: P.get('q') || '', s: P.get('s') || '', k: P.get('k') || '', g: P.get('g') || '', kor: P.get('kor') || ''};
+  var KIND = {sport: '종목', event: '세부종목', doc: '문서'}, SEASON = {summer: '하계', winter: '동계'}, G = {men: '남자', women: '여자', mixed: '혼성', open: '공통'};
+  function esc(t) { return String(t).replace(/[&<>"]/g, function (c) { return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]; }); }
+  function norm(t) { return String(t || '').toLowerCase().replace(/\s/g, ''); }
+  function draw() {
+    var words = st.q.toLowerCase().split(/\s+/).filter(Boolean).map(norm);
+    var hit = all.filter(function (x) {
+      if (st.s && x.s !== st.s) return false;
+      if (st.k && x.k !== st.k) return false;
+      if (st.g && x.g !== st.g) return false;
+      if (st.kor && !x.q) return false;
+      return words.every(function (w) { return x.h.indexOf(w) >= 0; });
+    });
+    var filtered = st.q || st.k || st.g || st.kor, out = '';
+    if (!filtered) {  // 둘러보기: 종목 → 세부종목
+      ['summer', 'winter'].forEach(function (s) {
+        if (st.s && st.s !== s) return;
+        out += '<h2>' + SEASON[s] + '</h2>';
+        all.forEach(function (x) {
+          if (x.k !== 'sport' || x.s !== s) return;
+          var ev = all.filter(function (y) { return y.k === 'event' && y.sp === x.n && y.s === s; }),
+              docs = all.filter(function (y) { return y.k === 'doc' && y.sp === x.n; });
+          out += '<details class="xp"><summary><a href="' + x.u + '">' + esc(x.n) + '</a> <span class="small">' + esc(x.e) + ' · 세부종목 ' + x.c +
+            (docs.length ? ' · 관련 문서 ' + docs.length : '') + (x.q ? ' · <b class="korq">한국 ' + x.q + '자리 확정</b>' : '') + '</span></summary><p>' +
+            ev.map(function (y) { return '<a href="' + y.u + '">' + esc(y.n) + '</a>' + (y.w ? '<sup>신설</sup>' : ''); }).join(' · ') + '</p>' +
+            (docs.length ? '<p class="small">관련 문서: ' + docs.map(function (y) { return '<a href="' + y.u + '">' + esc(y.n.split(' | ')[0]) + '</a>'; }).join(' · ') + '</p>' : '') + '</details>';
+        });
+      });
+    } else {
+      out = '<p class="small">' + hit.length + '건</p><ul class="xr">' + hit.slice(0, 200).map(function (x) {
+        return '<li><a href="' + x.u + '">' + esc(x.n) + '</a><div class="small">' + [KIND[x.k], SEASON[x.s], x.sp !== x.n ? x.sp : '', G[x.g], x.w ? '신설' : '',
+          x.q ? '한국 ' + x.q + '자리 확정' : ''].filter(Boolean).map(esc).join(' › ') + '</div></li>'; }).join('') + '</ul>' +
+        (hit.length > 200 ? '<p class="small">앞의 200건만 보인다. 검색어를 더 넣는다.</p>' : '') + (hit.length ? '' : '<p>맞는 문서가 없다.</p>');
+    }
+    $('xout').innerHTML = out;
+    document.querySelectorAll('.filters button').forEach(function (b) { b.classList.toggle('on', st[b.dataset.f] === b.dataset.v); });
+    var u = new URLSearchParams(); Object.keys(st).forEach(function (k) { if (st[k]) u.set(k, st[k]); });
+    history.replaceState(null, '', u.toString() ? '?' + u : location.pathname);
+  }
+  $('xq').value = st.q;
+  $('xq').addEventListener('input', function () { st.q = this.value.trim(); draw(); });
+  $('xform').addEventListener('submit', function (e) { e.preventDefault(); });
+  document.querySelectorAll('.filters button').forEach(function (b) { b.addEventListener('click', function () { st[b.dataset.f] = b.dataset.v; draw(); }); });
+  fetch('data/site-index.json', {cache: 'no-cache'}).then(function (r) { return r.json(); }).then(function (d) {
+    all = d; all.forEach(function (x) { x.h = norm([x.n, x.e, x.sp, x.u, KIND[x.k], G[x.g]].join(' ')); }); draw();
+  }).catch(function () { $('xout').innerHTML = '<p>색인을 읽지 못했다. 새로 고친다.</p>'; });
+})();
+</script>
+</body>
+</html>
