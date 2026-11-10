@@ -1,13 +1,13 @@
 {
   "sport": "tabletennis",
-  "fetchedAt": "2026-10-11T03:07:49.194Z",
+  "fetchedAt": "2026-11-10T16:46:36.134Z",
   "events": {
     "ms": {
       "label": "남자 단식",
-      "date": "10/05/2026 00:00:00",
+      "date": "11/09/2026 00:00:00",
       "year": "2026",
-      "week": "41",
-      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingIndividuals?TopN=20&CategoryCode=SEN&SubEventCode=MS&RankingYear=2026&RankingMonth=10&RankingWeek=41",
+      "week": "46",
+      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingIndividuals?TopN=20&CategoryCode=SEN&SubEventCode=MS&RankingYear=2026&RankingMonth=11&RankingWeek=46",
       "rows": [
         {
           "rank": 1,
@@ -15,23 +15,23 @@
             "Sora MATSUSHIMA"
           ],
           "noc": "JPN",
-          "points": 6930
+          "points": 7598
         },
         {
           "rank": 2,
           "names": [
-            "Felix LEBRUN"
+            "Tomokazu HARIMOTO"
           ],
-          "noc": "FRA",
-          "points": 6379
+          "noc": "JPN",
+          "points": 6963
         },
         {
           "rank": 3,
           "names": [
-            "Tomokazu HARIMOTO"
+            "Felix LEBRUN"
           ],
-          "noc": "JPN",
-          "points": 6363
+          "noc": "FRA",
+          "points": 6859
         },
         {
           "rank": 4,
@@ -39,23 +39,23 @@
             "WANG Chuqin"
           ],
           "noc": "CHN",
-          "points": 6157
+          "points": 6297
         },
         {
           "rank": 5,
           "names": [
-            "Truls MOREGARD"
+            "LIN Yun-Ju"
           ],
-          "noc": "SWE",
-          "points": 5805
+          "noc": "TPE",
+          "points": 5870
         },
         {
           "rank": 6,
           "names": [
-            "LIN Yun-Ju"
+            "Truls MOREGARDH"
           ],
-          "noc": "TPE",
-          "points": 4405
+          "noc": "SWE",
+          "points": 5630
         },
         {
           "rank": 7,
@@ -63,136 +63,136 @@
             "Hugo CALDERANO"
           ],
           "noc": "BRA",
-          "points": 4240
+          "points": 4830
         },
         {
           "rank": 8,
           "names": [
-            "Alexis LEBRUN"
+            "JANG Woojin"
           ],
-          "noc": "FRA",
-          "points": 3720
+          "noc": "KOR",
+          "points": 4236
         },
         {
           "rank": 9,
           "names": [
-            "LIN Shidong"
+            "Alexis LEBRUN"
           ],
-          "noc": "CHN",
-          "points": 3642
+          "noc": "FRA",
+          "points": 3750
         },
         {
           "rank": 10,
           "names": [
-            "Dang QIU"
+            "LIN Shidong"
           ],
-          "noc": "GER",
-          "points": 3450
+          "noc": "CHN",
+          "points": 3686
         },
         {
           "rank": 11,
           "names": [
-            "JANG Woojin"
+            "Patrick FRANZISKA"
           ],
-          "noc": "KOR",
-          "points": 3181
+          "noc": "GER",
+          "points": 3260
         },
         {
           "rank": 12,
           "names": [
-            "Darko JORGIC"
+            "ZHOU Qihao"
           ],
-          "noc": "SLO",
-          "points": 2930
+          "noc": "CHN",
+          "points": 3030
         },
         {
           "rank": 13,
           "names": [
-            "Shunsuke TOGAMI"
+            "WEN Ruibo"
           ],
-          "noc": "JPN",
-          "points": 2538
+          "noc": "CHN",
+          "points": 2900
         },
         {
           "rank": 14,
           "names": [
-            "Anders LIND"
+            "Darko JORGIC"
           ],
-          "noc": "DEN",
-          "points": 2497
+          "noc": "SLO",
+          "points": 2895
         },
         {
           "rank": 15,
           "names": [
-            "WEN Ruibo"
+            "Shunsuke TOGAMI"
           ],
-          "noc": "CHN",
-          "points": 2435
+          "noc": "JPN",
+          "points": 2848
         },
         {
           "rank": 16,
           "names": [
-            "Vladimir SIDORENKO"
+            "Dang QIU"
           ],
-          "noc": "RUS",
-          "points": 2020
+          "noc": "GER",
+          "points": 2643
         },
         {
           "rank": 17,
           "names": [
-            "ZHOU Qihao"
+            "Vladimir SIDORENKO"
           ],
-          "noc": "CHN",
-          "points": 2020
+          "noc": "RUS",
+          "points": 2290
         },
         {
           "rank": 18,
+          "names": [
+            "Anders LIND"
+          ],
+          "noc": "DEN",
+          "points": 2267
+        },
+        {
+          "rank": 19,
+          "names": [
+            "OH Junsung"
+          ],
+          "noc": "KOR",
+          "points": 2197
+        },
+        {
+          "rank": 20,
           "names": [
             "Hiroto SHINOZUKA"
           ],
           "noc": "JPN",
           "points": 2020
-        },
-        {
-          "rank": 19,
-          "names": [
-            "Dimitrij OVTCHAROV"
-          ],
-          "noc": "GER",
-          "points": 1930
-        },
-        {
-          "rank": 20,
-          "names": [
-            "OH Junsung"
-          ],
-          "noc": "KOR",
-          "points": 1867
         }
       ]
     },
     "ws": {
       "label": "여자 단식",
-      "date": "10/05/2026 00:00:00",
+      "date": "11/09/2026 00:00:00",
       "year": "2026",
-      "week": "41",
-      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingIndividuals?TopN=20&CategoryCode=SEN&SubEventCode=WS&RankingYear=2026&RankingMonth=10&RankingWeek=41",
+      "week": "46",
+      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingIndividuals?TopN=20&CategoryCode=SEN&SubEventCode=WS&RankingYear=2026&RankingMonth=11&RankingWeek=46",
       "rows": [
         {
           "rank": 1,
           "names": [
-            "SUN Yingsha"
+            "WANG Manyu"
           ],
           "noc": "CHN",
-          "points": 7575
+          "points": 9265
         },
         {
           "rank": 2,
           "names": [
-            "WANG Manyu"
+            "SUN Yingsha"
           ],
           "noc": "CHN",
-          "points": 7565
+          "points": 8575
         },
         {
           "rank": 3,
@@ -200,7 +200,7 @@
             "Miwa HARIMOTO"
           ],
           "noc": "JPN",
-          "points": 6709
+          "points": 6889
         },
         {
           "rank": 4,
@@ -208,7 +208,7 @@
             "KUAI Man"
           ],
           "noc": "CHN",
-          "points": 5663
+          "points": 6030
         },
         {
           "rank": 5,
@@ -216,7 +216,7 @@
             "WANG Yidi"
           ],
           "noc": "CHN",
-          "points": 5647
+          "points": 5260
         },
         {
           "rank": 6,
@@ -224,7 +224,7 @@
             "Hina HAYATA"
           ],
           "noc": "JPN",
-          "points": 4810
+          "points": 4770
         },
         {
           "rank": 7,
@@ -232,18 +232,42 @@
             "CHEN Xingtong"
           ],
           "noc": "CHN",
-          "points": 3865
+          "points": 4660
         },
         {
           "rank": 8,
           "names": [
-            "Sabine WINTER"
+            "CHEN Yi"
           ],
-          "noc": "GER",
-          "points": 3550
+          "noc": "CHN",
+          "points": 4335
         },
         {
           "rank": 9,
+          "names": [
+            "Hitomi SATO"
+          ],
+          "noc": "JPN",
+          "points": 4220
+        },
+        {
+          "rank": 10,
+          "names": [
+            "Satsuki ODO"
+          ],
+          "noc": "JPN",
+          "points": 3710
+        },
+        {
+          "rank": 11,
+          "names": [
+            "Sabine WINTER"
+          ],
+          "noc": "GER",
+          "points": 3565
+        },
+        {
+          "rank": 12,
           "names": [
             "ZHU Yuling"
           ],
@@ -251,36 +275,12 @@
           "points": 3500
         },
         {
-          "rank": 10,
-          "names": [
-            "CHEN Yi"
-          ],
-          "noc": "CHN",
-          "points": 3495
-        },
-        {
-          "rank": 11,
-          "names": [
-            "Satsuki ODO"
-          ],
-          "noc": "JPN",
-          "points": 3310
-        },
-        {
-          "rank": 12,
+          "rank": 13,
           "names": [
             "SHIN Yubin"
           ],
           "noc": "KOR",
-          "points": 3120
-        },
-        {
-          "rank": 13,
-          "names": [
-            "Hitomi SATO"
-          ],
-          "noc": "JPN",
-          "points": 2880
+          "points": 3270
         },
         {
           "rank": 14,
@@ -288,31 +288,31 @@
             "Honoka HASHIMOTO"
           ],
           "noc": "JPN",
-          "points": 2554
+          "points": 2924
         },
         {
           "rank": 15,
           "names": [
-            "Ying HAN"
+            "SHI Xunyao"
           ],
-          "noc": "GER",
-          "points": 2385
+          "noc": "CHN",
+          "points": 2495
         },
         {
           "rank": 16,
           "names": [
-            "JOO Cheonhui"
+            "Ying HAN"
           ],
-          "noc": "KOR",
-          "points": 2335
+          "noc": "GER",
+          "points": 2350
         },
         {
           "rank": 17,
           "names": [
-            "SHI Xunyao"
+            "JOO Cheonhui"
           ],
-          "noc": "CHN",
-          "points": 2215
+          "noc": "KOR",
+          "points": 2125
         },
         {
           "rank": 18,
@@ -328,7 +328,7 @@
             "Miyuu KIHARA"
           ],
           "noc": "JPN",
-          "points": 1990
+          "points": 1955
         },
         {
           "rank": 20,
@@ -336,16 +336,16 @@
             "Adriana DIAZ"
           ],
           "noc": "PUR",
-          "points": 1907
+          "points": 1872
         }
       ]
     },
     "md": {
       "label": "남자 복식",
-      "date": "10/05/2026 00:00:00",
+      "date": "11/09/2026 00:00:00",
       "year": "2026",
-      "week": "41",
-      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingPairs?TopN=20&CategoryCode=SEN&SubEventCode=MD&RankingYear=2026&RankingMonth=10&RankingWeek=41",
+      "week": "46",
+      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingPairs?TopN=20&CategoryCode=SEN&SubEventCode=MD&RankingYear=2026&RankingMonth=11&RankingWeek=46",
       "rows": [
         {
           "rank": 1,
@@ -354,10 +354,19 @@
             "Felix LEBRUN"
           ],
           "noc": "FRA",
-          "points": 4308
+          "points": 6208
         },
         {
           "rank": 2,
+          "names": [
+            "LIM Jonghoon",
+            "OH Junsung"
+          ],
+          "noc": "KOR",
+          "points": 5250
+        },
+        {
+          "rank": 3,
           "names": [
             "LIN Shidong",
             "HUANG Youzheng"
@@ -366,49 +375,40 @@
           "points": 4260
         },
         {
-          "rank": 3,
-          "names": [
-            "LIM Jonghoon",
-            "OH Junsung"
-          ],
-          "noc": "KOR",
-          "points": 3340
-        },
-        {
           "rank": 4,
           "names": [
             "Manav THAKKAR",
             "Manush SHAH"
           ],
           "noc": "IND",
-          "points": 2925
+          "points": 3820
         },
         {
           "rank": 5,
-          "names": [
-            "WONG Chun Ting",
-            "CHAN Baldwin"
-          ],
-          "noc": "HKG",
-          "points": 2738
-        },
-        {
-          "rank": 6,
-          "names": [
-            "Dang QIU",
-            "Benedikt DUDA"
-          ],
-          "noc": "GER",
-          "points": 2260
-        },
-        {
-          "rank": 7,
           "names": [
             "YUAN Licen",
             "WEN Ruibo"
           ],
           "noc": "CHN",
-          "points": 2180
+          "points": 3430
+        },
+        {
+          "rank": 6,
+          "names": [
+            "WONG Chun Ting",
+            "CHAN Baldwin"
+          ],
+          "noc": "HKG",
+          "points": 3028
+        },
+        {
+          "rank": 7,
+          "names": [
+            "Dang QIU",
+            "Benedikt DUDA"
+          ],
+          "noc": "GER",
+          "points": 2360
         },
         {
           "rank": 8,
@@ -417,7 +417,7 @@
             "Esteban DORR"
           ],
           "noc": "FRA",
-          "points": 2155
+          "points": 2285
         },
         {
           "rank": 9,
@@ -426,7 +426,7 @@
             "Adrien RASSENFOSSE"
           ],
           "noc": "BEL",
-          "points": 2095
+          "points": 2080
         },
         {
           "rank": 10,
@@ -435,16 +435,16 @@
             "QUEK Izaac"
           ],
           "noc": "SGP",
-          "points": 1510
+          "points": 1965
         },
         {
           "rank": 11,
           "names": [
-            "Shunsuke TOGAMI",
-            "Hiroto SHINOZUKA"
+            "Kristian KARLSSON",
+            "Anton KALLBERG"
           ],
-          "noc": "JPN",
-          "points": 1504
+          "noc": "SWE",
+          "points": 1707
         },
         {
           "rank": 12,
@@ -453,25 +453,25 @@
             "Nicolas BURGOS"
           ],
           "noc": "CHI",
-          "points": 1348
+          "points": 1505
         },
         {
           "rank": 13,
+          "names": [
+            "Shunsuke TOGAMI",
+            "Hiroto SHINOZUKA"
+          ],
+          "noc": "JPN",
+          "points": 1504
+        },
+        {
+          "rank": 14,
           "names": [
             "Mohamed ELBEIALI",
             "Youssef ABDELAZIZ"
           ],
           "noc": "EGY",
-          "points": 1085
-        },
-        {
-          "rank": 14,
-          "names": [
-            "Guilherme TEODORO",
-            "Leonardo IIZUKA"
-          ],
-          "noc": "BRA",
-          "points": 1084
+          "points": 1095
         },
         {
           "rank": 15,
@@ -489,7 +489,7 @@
             "Eduard IONESCU"
           ],
           "noc": "ROU",
-          "points": 911
+          "points": 921
         },
         {
           "rank": 17,
@@ -503,38 +503,38 @@
         {
           "rank": 18,
           "names": [
-            "Jules ROLLAND",
-            "Leo DE NODREST"
+            "Horacio CIFUENTES",
+            "Santiago LORENZO"
           ],
-          "noc": "FRA",
-          "points": 794
+          "noc": "ARG",
+          "points": 755
         },
         {
           "rank": 19,
           "names": [
-            "FENG Yi-Hsin",
-            "KUO Guan-Hong"
+            "Jules ROLLAND",
+            "Leo DE NODREST"
           ],
-          "noc": "TPE",
-          "points": 793
+          "noc": "FRA",
+          "points": 669
         },
         {
           "rank": 20,
           "names": [
-            "Kristian KARLSSON",
-            "Anton KALLBERG"
+            "Guilherme TEODORO",
+            "Leonardo IIZUKA"
           ],
-          "noc": "SWE",
-          "points": 777
+          "noc": "BRA",
+          "points": 639
         }
       ]
     },
     "wd": {
       "label": "여자 복식",
-      "date": "10/05/2026 00:00:00",
+      "date": "11/09/2026 00:00:00",
       "year": "2026",
-      "week": "41",
-      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingPairs?TopN=20&CategoryCode=SEN&SubEventCode=WD&RankingYear=2026&RankingMonth=10&RankingWeek=41",
+      "week": "46",
+      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingPairs?TopN=20&CategoryCode=SEN&SubEventCode=WD&RankingYear=2026&RankingMonth=11&RankingWeek=46",
       "rows": [
         {
           "rank": 1,
@@ -543,7 +543,7 @@
             "Miwa HARIMOTO"
           ],
           "noc": "JPN",
-          "points": 6350
+          "points": 7750
         },
         {
           "rank": 2,
@@ -552,7 +552,7 @@
             "KUAI Man"
           ],
           "noc": "CHN",
-          "points": 3080
+          "points": 5080
         },
         {
           "rank": 3,
@@ -566,6 +566,15 @@
         {
           "rank": 4,
           "names": [
+            "Miyu NAGASAKI",
+            "KIM Nayeong"
+          ],
+          "noc": "JPN/KOR",
+          "points": 2060
+        },
+        {
+          "rank": 5,
+          "names": [
             "Satsuki ODO",
             "Sakura YOKOI"
           ],
@@ -573,16 +582,25 @@
           "points": 2024
         },
         {
-          "rank": 5,
+          "rank": 6,
           "names": [
             "SHIN Yubin",
             "JOO Cheonhui"
           ],
           "noc": "KOR",
-          "points": 1900
+          "points": 1910
         },
         {
-          "rank": 6,
+          "rank": 7,
+          "names": [
+            "LI Yu-Jhun",
+            "CHIEN Tung-Chuan"
+          ],
+          "noc": "TPE",
+          "points": 1865
+        },
+        {
+          "rank": 8,
           "names": [
             "CHEN Yi",
             "KUAI Man"
@@ -591,7 +609,16 @@
           "points": 1620
         },
         {
-          "rank": 7,
+          "rank": 9,
+          "names": [
+            "Elizabeta SAMARA",
+            "Bernadette SZOCS"
+          ],
+          "noc": "ROU",
+          "points": 1573
+        },
+        {
+          "rank": 10,
           "names": [
             "Miu HIRANO",
             "Miyuu KIHARA"
@@ -600,7 +627,7 @@
           "points": 1505
         },
         {
-          "rank": 8,
+          "rank": 11,
           "names": [
             "WANG Yidi",
             "CHEN Yi"
@@ -609,16 +636,7 @@
           "points": 1480
         },
         {
-          "rank": 9,
-          "names": [
-            "Miyu NAGASAKI",
-            "KIM Nayeong"
-          ],
-          "noc": "JPN/KOR",
-          "points": 1480
-        },
-        {
-          "rank": 10,
+          "rank": 12,
           "names": [
             "Diya CHITALE",
             "Yashaswini GHORPADE"
@@ -627,7 +645,7 @@
           "points": 1475
         },
         {
-          "rank": 11,
+          "rank": 13,
           "names": [
             "SHIN Yubin",
             "Miyu NAGASAKI"
@@ -636,31 +654,13 @@
           "points": 1400
         },
         {
-          "rank": 12,
-          "names": [
-            "LI Yu-Jhun",
-            "CHIEN Tung-Chuan"
-          ],
-          "noc": "TPE",
-          "points": 1330
-        },
-        {
-          "rank": 13,
+          "rank": 14,
           "names": [
             "Hitomi SATO",
             "Saki SHIBATA"
           ],
           "noc": "JPN",
           "points": 1294
-        },
-        {
-          "rank": 14,
-          "names": [
-            "QIN Yuxuan",
-            "ZONG Geman"
-          ],
-          "noc": "CHN",
-          "points": 1194
         },
         {
           "rank": 15,
@@ -683,15 +683,6 @@
         {
           "rank": 17,
           "names": [
-            "Maria XIAO",
-            "Adina DIACONU"
-          ],
-          "noc": "ESP/ROU",
-          "points": 1005
-        },
-        {
-          "rank": 18,
-          "names": [
             "Suthasini SAWETTABUT",
             "Orawan PARANANG"
           ],
@@ -699,31 +690,40 @@
           "points": 935
         },
         {
+          "rank": 18,
+          "names": [
+            "Maria XIAO",
+            "Adina DIACONU"
+          ],
+          "noc": "ESP/ROU",
+          "points": 900
+        },
+        {
           "rank": 19,
           "names": [
-            "Sabine WINTER",
-            "Annett KAUFMANN"
+            "WANG Yidi",
+            "JIANG Yiyi"
           ],
-          "noc": "GER",
-          "points": 880
+          "noc": "CHN",
+          "points": 900
         },
         {
           "rank": 20,
           "names": [
-            "Elizabeta SAMARA",
-            "Bernadette SZOCS"
+            "CHEN Yi",
+            "LI Yihui"
           ],
-          "noc": "ROU",
-          "points": 828
+          "noc": "CHN",
+          "points": 900
         }
       ]
     },
     "xd": {
       "label": "혼합복식",
-      "date": "10/05/2026 00:00:00",
+      "date": "11/09/2026 00:00:00",
       "year": "2026",
-      "week": "41",
-      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingPairs?TopN=20&CategoryCode=SEN&SubEventCode=XD&RankingYear=2026&RankingMonth=10&RankingWeek=41",
+      "week": "46",
+      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingPairs?TopN=20&CategoryCode=SEN&SubEventCode=XD&RankingYear=2026&RankingMonth=11&RankingWeek=46",
       "rows": [
         {
           "rank": 1,
@@ -732,7 +732,7 @@
             "SHIN Yubin"
           ],
           "noc": "KOR",
-          "points": 6325
+          "points": 8325
         },
         {
           "rank": 2,
@@ -741,7 +741,7 @@
             "DOO Hoi Kem"
           ],
           "noc": "HKG",
-          "points": 4535
+          "points": 4205
         },
         {
           "rank": 3,
@@ -750,7 +750,7 @@
             "Bruna TAKAHASHI"
           ],
           "noc": "BRA",
-          "points": 4165
+          "points": 3675
         },
         {
           "rank": 4,
@@ -773,50 +773,68 @@
         {
           "rank": 6,
           "names": [
-            "Alvaro ROBLES",
-            "Maria XIAO"
-          ],
-          "noc": "ESP",
-          "points": 2885
-        },
-        {
-          "rank": 7,
-          "names": [
             "Diya CHITALE",
             "Manush SHAH"
           ],
           "noc": "IND",
-          "points": 2385
+          "points": 3215
+        },
+        {
+          "rank": 7,
+          "names": [
+            "Alvaro ROBLES",
+            "Maria XIAO"
+          ],
+          "noc": "ESP",
+          "points": 2850
         },
         {
           "rank": 8,
-          "names": [
-            "Sabine WINTER",
-            "Dang QIU"
-          ],
-          "noc": "GER",
-          "points": 2160
-        },
-        {
-          "rank": 9,
           "names": [
             "CHENG I-Ching",
             "LIN Yun-Ju"
           ],
           "noc": "TPE",
-          "points": 2038
+          "points": 2838
         },
         {
-          "rank": 10,
+          "rank": 9,
           "names": [
             "Sora MATSUSHIMA",
             "Miwa HARIMOTO"
           ],
           "noc": "JPN",
-          "points": 1415
+          "points": 2515
+        },
+        {
+          "rank": 10,
+          "names": [
+            "Sabine WINTER",
+            "Dang QIU"
+          ],
+          "noc": "GER",
+          "points": 2170
         },
         {
           "rank": 11,
+          "names": [
+            "CHEN Yi",
+            "HUANG Youzheng"
+          ],
+          "noc": "CHN",
+          "points": 1850
+        },
+        {
+          "rank": 12,
+          "names": [
+            "Bernadette SZOCS",
+            "Eduard IONESCU"
+          ],
+          "noc": "ROU",
+          "points": 1575
+        },
+        {
+          "rank": 13,
           "names": [
             "Alexis LEBRUN",
             "Satsuki ODO"
@@ -825,7 +843,7 @@
           "points": 1310
         },
         {
-          "rank": 12,
+          "rank": 14,
           "names": [
             "Gustavo GOMEZ",
             "Daniela ORTEGA"
@@ -834,7 +852,25 @@
           "points": 1200
         },
         {
-          "rank": 13,
+          "rank": 15,
+          "names": [
+            "KIM Nayeong",
+            "CHAN Baldwin"
+          ],
+          "noc": "KOR/HKG",
+          "points": 1060
+        },
+        {
+          "rank": 16,
+          "names": [
+            "Jishan LIANG",
+            "Sally MOYLAND"
+          ],
+          "noc": "USA",
+          "points": 985
+        },
+        {
+          "rank": 17,
           "names": [
             "KUAI Man",
             "WEN Ruibo"
@@ -843,7 +879,16 @@
           "points": 970
         },
         {
-          "rank": 14,
+          "rank": 18,
+          "names": [
+            "Mo ZHANG",
+            "Edward LY"
+          ],
+          "noc": "CAN",
+          "points": 955
+        },
+        {
+          "rank": 19,
           "names": [
             "Satsuki ODO",
             "Shunsuke TOGAMI"
@@ -852,58 +897,13 @@
           "points": 950
         },
         {
-          "rank": 15,
-          "names": [
-            "CHEN Yi",
-            "HUANG Youzheng"
-          ],
-          "noc": "CHN",
-          "points": 920
-        },
-        {
-          "rank": 16,
-          "names": [
-            "KIM Nayeong",
-            "CHAN Baldwin"
-          ],
-          "noc": "KOR/HKG",
-          "points": 910
-        },
-        {
-          "rank": 17,
-          "names": [
-            "Miyuu KIHARA",
-            "Hiromu KOBAYASHI"
-          ],
-          "noc": "JPN",
-          "points": 835
-        },
-        {
-          "rank": 18,
-          "names": [
-            "Bernadette SZOCS",
-            "Eduard IONESCU"
-          ],
-          "noc": "ROU",
-          "points": 830
-        },
-        {
-          "rank": 19,
-          "names": [
-            "Maria PANFILOVA",
-            "Evgeny TIKHONOV"
-          ],
-          "noc": "RUS",
-          "points": 790
-        },
-        {
           "rank": 20,
           "names": [
-            "Jishan LIANG",
-            "Sally MOYLAND"
+            "Alexis LEBRUN",
+            "Charlotte LUTZ"
           ],
-          "noc": "USA",
-          "points": 785
+          "noc": "FRA",
+          "points": 940
         }
       ]
     }

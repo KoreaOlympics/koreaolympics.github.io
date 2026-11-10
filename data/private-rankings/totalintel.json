@@ -2,7 +2,7 @@
  "source": "https://totalintel.org",
  "what": "LA28 역도 잠정 OQR(올림픽 예선 랭킹) 체급별 순위 (상위 10위까지 받음), 선수·NOC 분석, 대회 해설 블로그",
  "note": "비공식 잠정 순위. 출전권은 예선 기간(2028.05.07) 종료 뒤 IWF가 정한다.",
- "fetched": "2026-11-07 16:59 KST",
+ "fetched": "2026-11-11 01:46 KST",
  "data": {
   "F53": {
    "label": "여자 53kg",
@@ -420,20 +420,228 @@
   "F86": {
    "label": "여자 86kg",
    "url": "https://totalintel.org/c/F86",
-   "rows": [],
-   "korea": [],
-   "cut8": null,
-   "status": "결과 기록 전",
-   "continental": ""
+   "rows": [
+    {
+     "rank": 1,
+     "tie": false,
+     "name": "Guifang LIAO",
+     "noc": "CHN",
+     "continent": "AS",
+     "points": 291.0,
+     "url": "https://totalintel.org/athlete/liao-guifang-20011005"
+    },
+    {
+     "rank": 2,
+     "tie": false,
+     "name": "Marushchak Alina",
+     "noc": "BRN",
+     "continent": "AS",
+     "points": 272.0,
+     "url": "https://totalintel.org/athlete/alina-marushchak-19970306"
+    },
+    {
+     "rank": 3,
+     "tie": false,
+     "name": "Yudelina MEJIA PEGUERO",
+     "noc": "DOM",
+     "continent": "PA",
+     "points": 266.0,
+     "url": "https://totalintel.org/athlete/mejiapeguero-yudelina-19970604"
+    },
+    {
+     "rank": 4,
+     "tie": false,
+     "name": "Ella NICHOLSON",
+     "noc": "USA",
+     "continent": "PA",
+     "points": 265.0,
+     "url": "https://totalintel.org/athlete/nicholson-ella-20060707"
+    },
+    {
+     "rank": 5,
+     "tie": false,
+     "name": "Anamjan RUSTAMOVA",
+     "noc": "TKM",
+     "continent": "AS",
+     "points": 264.0,
+     "url": "https://totalintel.org/athlete/rustamova-anamjan-20060508"
+    },
+    {
+     "rank": 6,
+     "tie": false,
+     "name": "Suhyeon KIM",
+     "noc": "KOR",
+     "continent": "AS",
+     "points": 258.0,
+     "url": "https://totalintel.org/athlete/kim-suhyeon-19950206"
+    },
+    {
+     "rank": 7,
+     "tie": false,
+     "name": "Madias Dodo Nzesso NGAKE",
+     "noc": "GBR",
+     "continent": "EU",
+     "points": 253.0,
+     "url": "https://totalintel.org/athlete/ngake-madiasdodonzesso-19920420"
+    },
+    {
+     "rank": 8,
+     "tie": false,
+     "name": "Emma POGHOSYAN",
+     "noc": "ARM",
+     "continent": "EU",
+     "points": 249.0,
+     "url": "https://totalintel.org/athlete/poghosyan-emma-20060826"
+    },
+    {
+     "rank": 9,
+     "tie": false,
+     "name": "Rigina ADASHBAEVA",
+     "noc": "UZB",
+     "continent": "AS",
+     "points": 248.0,
+     "url": "https://totalintel.org/athlete/adashbaeva-rigina-20011029"
+    },
+    {
+     "rank": 10,
+     "tie": false,
+     "name": "Mairyn Vanessa HERNANDEZ LIZARRAGA",
+     "noc": "MEX",
+     "continent": "PA",
+     "points": 247.0,
+     "url": "https://totalintel.org/athlete/hernandezlizarraga-mairynvanessa-20050730"
+    }
+   ],
+   "korea": [
+    {
+     "rank": 6,
+     "tie": false,
+     "name": "Suhyeon KIM",
+     "noc": "KOR",
+     "continent": "AS",
+     "points": 258.0,
+     "url": "https://totalintel.org/athlete/kim-suhyeon-19950206",
+     "ko": "김수현",
+     "gap8": -9.0,
+     "in8": true
+    }
+   ],
+   "cut8": 249.0,
+   "status": "",
+   "continental": "One continental place goes to the highest-ranked athlete from a continent not in the top 8: NACAGILEVU Litia Sipola (NZL), Oceania."
   },
   "F86P": {
    "label": "여자 +86kg",
    "url": "https://totalintel.org/c/F86P",
-   "rows": [],
-   "korea": [],
-   "cut8": null,
-   "status": "결과 기록 전",
-   "continental": ""
+   "rows": [
+    {
+     "rank": 1,
+     "tie": false,
+     "name": "Yan LI",
+     "noc": "CHN",
+     "continent": "AS",
+     "points": 317.0,
+     "url": "https://totalintel.org/athlete/li-yan-20040901"
+    },
+    {
+     "rank": 2,
+     "tie": false,
+     "name": "Hyejeong PARK",
+     "noc": "KOR",
+     "continent": "AS",
+     "points": 286.0,
+     "url": "https://totalintel.org/athlete/park-hyejeong-20030312"
+    },
+    {
+     "rank": 3,
+     "tie": true,
+     "name": "Naryury Alexandra PEREZ REVERON",
+     "noc": "VEN",
+     "continent": "PA",
+     "points": 270.0,
+     "url": "https://totalintel.org/athlete/perezreveron-naryuryalexandra-19920929"
+    },
+    {
+     "rank": 3,
+     "tie": true,
+     "name": "Ling Chen WANG",
+     "noc": "TPE",
+     "continent": "AS",
+     "points": 270.0,
+     "url": "https://totalintel.org/athlete/wang-lingchen-20030619"
+    },
+    {
+     "rank": 5,
+     "tie": false,
+     "name": "Lyubov KOVALCHUK",
+     "noc": "KAZ",
+     "continent": "AS",
+     "points": 263.0,
+     "url": "https://totalintel.org/athlete/kovalchuk-lyubov-20010510"
+    },
+    {
+     "rank": 6,
+     "tie": false,
+     "name": "Marifelix SARRIA RUIZ",
+     "noc": "CUB",
+     "continent": "PA",
+     "points": 261.0,
+     "url": "https://totalintel.org/athlete/sarriaruiz-marifelix-20040825"
+    },
+    {
+     "rank": 7,
+     "tie": false,
+     "name": "Taiane JUSTINO DE LIMA",
+     "noc": "BRA",
+     "continent": "PA",
+     "points": 260.0,
+     "url": "https://totalintel.org/athlete/justinodelima-taiane-20040216"
+    },
+    {
+     "rank": 8,
+     "tie": false,
+     "name": "Rahma Ahmed Abdelrazek Hassan ELSAYED",
+     "noc": "EGY",
+     "continent": "AF",
+     "points": 259.0,
+     "url": "https://totalintel.org/athlete/elsayed-rahmaahmedabdelrazekhassan-20060104"
+    },
+    {
+     "rank": 9,
+     "tie": false,
+     "name": "Mary Anne THEISEN LAPPEN",
+     "noc": "USA",
+     "continent": "PA",
+     "points": 258.0,
+     "url": "https://totalintel.org/athlete/theisenlappen-maryanne-19901103"
+    },
+    {
+     "rank": 10,
+     "tie": false,
+     "name": "Crismery Dominga SANTANA PEGUERO",
+     "noc": "DOM",
+     "continent": "PA",
+     "points": 257.0,
+     "url": "https://totalintel.org/athlete/santanapeguero-crismerydominga-19950420"
+    }
+   ],
+   "korea": [
+    {
+     "rank": 2,
+     "tie": false,
+     "name": "Hyejeong PARK",
+     "noc": "KOR",
+     "continent": "AS",
+     "points": 286.0,
+     "url": "https://totalintel.org/athlete/park-hyejeong-20030312",
+     "ko": "박혜정",
+     "gap8": -27.0,
+     "in8": true
+    }
+   ],
+   "cut8": 259.0,
+   "status": "",
+   "continental": "One continental place goes to the highest-ranked athlete from a continent not in the top 8: KISIL Valentyna (UKR), Europe."
   },
   "M65": {
    "label": "남자 65kg",
@@ -1010,6 +1218,32 @@
    "ko": "김이슬",
    "gap8": 1.0,
    "in8": false
+  },
+  {
+   "cat": "여자 86kg",
+   "rank": 6,
+   "tie": false,
+   "name": "Suhyeon KIM",
+   "noc": "KOR",
+   "continent": "AS",
+   "points": 258.0,
+   "url": "https://totalintel.org/athlete/kim-suhyeon-19950206",
+   "ko": "김수현",
+   "gap8": -9.0,
+   "in8": true
+  },
+  {
+   "cat": "여자 +86kg",
+   "rank": 2,
+   "tie": false,
+   "name": "Hyejeong PARK",
+   "noc": "KOR",
+   "continent": "AS",
+   "points": 286.0,
+   "url": "https://totalintel.org/athlete/park-hyejeong-20030312",
+   "ko": "박혜정",
+   "gap8": -27.0,
+   "in8": true
   },
   {
    "cat": "남자 65kg",
