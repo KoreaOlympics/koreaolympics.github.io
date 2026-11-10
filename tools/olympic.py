@@ -346,7 +346,7 @@ def page(title, up, body, desc):
 <link rel="stylesheet" href="{up}{CSS}">
 </head>
 <body>
-<header class="site"><a href="{up}index.html">{SITE}</a></header>
+<header class="site"><a href="{up}index.html">{SITE}</a><form class="site-search" action="{up}explore.html" role="search"><input type="search" name="q" placeholder="문서 검색" aria-label="문서 검색"><button type="submit">검색</button></form><nav><a href="{up}explore.html">탐색</a><a href="{up}updates.html">갱신 현황</a></nav></header>
 <main class="article">
 {body}
 </main>
@@ -401,6 +401,7 @@ def _guide_targets():
 
 
 GUIDE_TARGETS = _guide_targets()
+NAV_PAGES = {'explore.html', 'updates.html'}
 MENU_PAGES = {'summer-live.html', 'la28-qualification.html'}  # 하계 메뉴 페이지 (tools/summer_pages.py)
 WINTER_CALENDAR_ONLY = {'bobsleigh', 'skeleton', 'luge'}  # 일정만 수집 (결과는 공식 페이지)
 
@@ -813,7 +814,7 @@ def check():
     for rel, t in texts.items():
         graph[rel] = []
         for target in links_of(rel, t):
-            if target == CSS:
+            if target == CSS or target in NAV_PAGES:  # 머리말의 탐색·갱신 현황 (8-5장)
                 continue
             if re.search(r'\.(png|jpe?g|webp|gif|svg|pdf)$', target):  # 이미지·첨부 파일은 허용 (존재만 확인)
                 if not (ROOT / target).exists():

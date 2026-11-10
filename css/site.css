@@ -187,3 +187,24 @@ table.medal-rows tr.has-kor > * { background: #fdf0f0; }
 .private-rank h2 .asof { font-size: .6em; color: #72777d; font-weight: 400; }
 .private-rank tr.in > * { background: #eef6ee; }
 .private-rank b.in8 { color: #14866d; }
+
+/* 머리말 검색·탐색 (tools/explore.py, 원칙 8-5장) */
+header.site { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; }
+header.site nav { display: flex; gap: 12px; font-weight: 400; font-size: .9em; }
+header.site nav a { color: var(--link); }
+.site-search { display: flex; margin-left: auto; }
+.site-search input { font: inherit; font-size: .9em; width: 180px; padding: 3px 8px; border: 1px solid var(--border); border-right: 0; border-radius: 2px 0 0 2px; }
+.site-search button { font: inherit; font-size: .85em; padding: 3px 10px; border: 1px solid var(--border); background: var(--box); border-radius: 0 2px 2px 0; cursor: pointer; }
+@media (max-width: 720px) { .site-search { order: 3; width: 100%; margin: 0; } .site-search input { flex: 1; width: auto; } header.site nav { margin-left: auto; } }
+.edit { font: 400 13px sans-serif; white-space: nowrap; }
+#xq { font: inherit; width: 100%; padding: 8px 10px; border: 1px solid var(--border); border-radius: 2px; }
+details.xp { border-bottom: 1px solid var(--line); padding: 5px 0; }
+details.xp summary { cursor: pointer; }
+details.xp p { margin: 6px 0 6px 18px; }
+ul.xr { list-style: none; padding: 0; }
+ul.xr li { margin: 0 0 10px; }
+ul.xr li > a { font-size: 1.1em; }
+.small { font-size: .85em; color: var(--muted); }
+.korq { color: #0f6b5c; }
+td.stale { color: var(--live); font-weight: 700; }
+.nowrap { white-space: nowrap; }

@@ -6,7 +6,7 @@ on:
     branches: [main]
   workflow_dispatch:
   workflow_run:
-    workflows: ['Daily IJF rankings', 'FIE team ranking update', 'Update AG2026 schedule']
+    workflows: ['Update AG2026 schedule']
     types: [completed]
 permissions:
   contents: write  # 내용 보호(guard)가 되살린 내용을 커밋한다
