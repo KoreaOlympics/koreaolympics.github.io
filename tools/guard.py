@@ -43,7 +43,7 @@ def restore(old, new, older=None):
     fixed = []
     for sid, block in olds.items():
         before = _TXT(block)
-        if len(before) <= 120 or sid in ('winter_live',):
+        if len(before) <= 120 or sid in ('winter_live', 'related', 'upcoming'):
             continue
         if sid in news:
             now = _TXT(news[sid])

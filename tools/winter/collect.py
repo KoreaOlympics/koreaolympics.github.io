@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / 'data' / 'winter'
 KOR = 'KOR'
 ISU_SPORTS = ('short-track', 'figure-skating')
-FIS_SPORTS = tuple(fis.SECTORS)          # alpine, cross-country, ski-jumping, nordic-combined, freestyle, snowboard
+FIS_SPORTS = tuple(s for s in fis.SECTORS if s != 'nordic-combined')  # alpine, cross-country, ski-jumping, freestyle, snowboard (노르딕 복합은 실시간 센터에서 뺀다)
 RACE_SPORTS = FIS_SPORTS + ('biathlon',)  # race-list sports: one results table per race
 CALENDAR_ONLY = ('bobsleigh', 'skeleton', 'luge')
 # main result column per race table, first match wins

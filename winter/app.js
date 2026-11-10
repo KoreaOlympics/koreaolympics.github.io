@@ -5,9 +5,9 @@ const SPORTS = { 'short-track': '쇼트트랙', 'speed-skating': '스피드스�
   'alpine': '알파인 스키', 'cross-country': '크로스컨트리', 'ski-jumping': '스키점프', 'nordic-combined': '노르딕 복합', 'freestyle': '프리스타일 스키',
   'snowboard': '스노보드', 'biathlon': '바이애슬론', 'bobsleigh': '봅슬레이', 'skeleton': '스켈레톤', 'luge': '루지' };
 const GROUPS = [['빙상', ['short-track', 'speed-skating', 'figure-skating']],
-  ['설상', ['alpine', 'cross-country', 'ski-jumping', 'nordic-combined', 'freestyle', 'snowboard', 'biathlon']], ['썰매', ['bobsleigh', 'skeleton', 'luge']]];
+  ['설상', ['alpine', 'cross-country', 'ski-jumping', 'freestyle', 'snowboard', 'biathlon']], ['썰매', ['bobsleigh', 'skeleton', 'luge']]];
 // FIS / IBU: an event is a list of races, each with one results table (tools/winter/fis.py, ibu.py)
-const RACE_SPORTS = ['alpine', 'cross-country', 'ski-jumping', 'nordic-combined', 'freestyle', 'snowboard', 'biathlon'];
+const RACE_SPORTS = ['alpine', 'cross-country', 'ski-jumping', 'freestyle', 'snowboard', 'biathlon'];
 const CALENDAR_ONLY = ['bobsleigh', 'skeleton', 'luge'];
 const HUBS = { 'short-track': 'wishorttrack', 'speed-skating': 'wispeedskating', 'figure-skating': 'wifigure', 'alpine': 'wialpine',
   'cross-country': 'wicrosscountry', 'ski-jumping': 'wiskijumping', 'freestyle': 'wifreestyle', 'snowboard': 'wisnowboard',

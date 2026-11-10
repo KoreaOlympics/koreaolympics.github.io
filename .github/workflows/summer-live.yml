@@ -42,8 +42,9 @@ jobs:
             if [ "$flag" = "--all" ]; then python tools/private_rankings.py totalintel || true; fi
             python tools/qualified.py
             python tools/summer_pages.py
+            python tools/olympic.py index   # 대문 '한국 출전권' 상자를 출전 확정 자료에서 다시 만든다
             python tools/olympic.py check
-            git add data/summer-live.json data/private-rankings data/la28-qualified.json data/korean-names.json summer-live.html la28-qualification.html ol*.html
+            git add data/summer-live.json data/private-rankings data/la28-qualified.json data/korean-names.json summer-live.html la28-qualification.html index.html ol*.html
             if ! git diff --cached --quiet; then
               git commit -q -m "summer: update live results"
               for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin main && break; sleep 5; done

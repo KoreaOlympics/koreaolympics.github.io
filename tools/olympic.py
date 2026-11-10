@@ -751,11 +751,14 @@ PROTECTED_BLOCKS = ('summary-figure', 'id="recent-results"', 'id="private-rank"'
 _TXT = lambda s: re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', s))).strip()
 
 
+GENERATED_SECTIONS = {'related', 'winter_live', 'upcoming'}  # 일정에서 만드는 섹션: 대회가 끝나면 줄어드는 것이 정상
+
+
 def content_loss(old, new):
     """old → new에서 사라지는 것: 내용이 30% 넘게 줄어드는 섹션, 없어지는 섹션, 없어지는 자동 블록."""
     sec = lambda t: {m.group(1): _TXT(m.group(2)) for m in re.finditer(r'<section id="([a-z_0-9]+)"[^>]*>(.*?)</section>', t, re.S)}
     so, sn = sec(old), sec(new)
-    lost = [f'섹션 {k}' for k, v in so.items() if len(v) > 120 and len(sn.get(k, '')) < len(v) * 0.7]
+    lost = [f'섹션 {k}' for k, v in so.items() if len(v) > 120 and k not in GENERATED_SECTIONS and len(sn.get(k, '')) < len(v) * 0.7]
     lost += [f'블록 {b}' for b in PROTECTED_BLOCKS if b in old and b not in new]
     return lost
 
@@ -917,5 +920,9 @@ if __name__ == '__main__':
             if sp['file'] in WINTER_LIVE:
                 path, text = render_hub(reg, sp)
                 path.write_text(text, encoding='utf-8', newline='\n')
+    elif cmd == 'index':  # 대문만 다시 쓴다 (하계 실시간 워크플로: '한국 출전권' 상자·임박한 대회)
+        path, text = render_index(load())
+        if path.read_text(encoding='utf-8') != text:
+            path.write_text(text, encoding='utf-8', newline='\n')
     else:
         sys.exit(__doc__)
