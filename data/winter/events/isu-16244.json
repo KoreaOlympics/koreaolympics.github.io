@@ -18,7 +18,7 @@
   "live": "Men 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-12T11:05:43.039338+00:00",
+ "checked_at": "2026-11-12T11:16:04.003204+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -2451,7 +2451,7 @@
     {
      "id": 23209,
      "name": "Quarterfinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-12T10:28:40.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of three fastest third place skaters qualify for Semifinals.",
      "heats": [
@@ -2489,7 +2489,7 @@
          "name": "Aunnipit KOSITVANICH",
          "noc": "THA",
          "time": "2:16.556",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 194,
@@ -2920,7 +2920,7 @@
          "name": "Jesse-Jan RAYEN",
          "noc": "BEL",
          "time": "2:22.209",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 113,
@@ -2999,7 +2999,7 @@
          "name": "Samuel Oliver SULC",
          "noc": "CZE",
          "time": "2:19.205",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 130,
@@ -3046,15 +3046,15 @@
       },
       {
        "name": "Heat 8",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Biho LEE",
          "noc": "KOR",
-         "time": "",
-         "qual": "",
+         "time": "2:15.053",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 173,
@@ -3062,11 +3062,11 @@
          "slug": "biho-lee"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Tymeo LIBEAU",
          "noc": "FRA",
-         "time": "",
-         "qual": "",
+         "time": "2:17.718",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 133,
@@ -3074,10 +3074,10 @@
          "slug": "tymeo-libeau"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Bence KISS-GEBORA",
          "noc": "HUN",
-         "time": "",
+         "time": "2:31.744",
          "qual": "",
          "status": "",
          "record": "",
@@ -3086,10 +3086,10 @@
          "slug": "bence-kiss-gebora"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Leonard TOMIMITSU",
          "noc": "FRA",
-         "time": "",
+         "time": "2:32.093",
          "qual": "",
          "status": "",
          "record": "",
@@ -3098,10 +3098,10 @@
          "slug": "leonard-tomimitsu"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Zhandos SEREKPAYEV",
          "noc": "KAZ",
-         "time": "",
+         "time": "2:48.858",
          "qual": "",
          "status": "",
          "record": "",
@@ -3110,10 +3110,10 @@
          "slug": "zhandos-serekpayev"
         },
         {
-         "rank": null,
+         "rank": 6,
          "name": "Szymon ETEL",
          "noc": "POL",
-         "time": "",
+         "time": "2:59.685",
          "qual": "",
          "status": "",
          "record": "",
@@ -3123,7 +3123,176 @@
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Semifinals",
+      "official_draw_published": false,
+      "pending": [
+       "Rep. Semifinals"
+      ],
+      "qualified": [
+       {
+        "name": "Biho LEE",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "2:15.053",
+        "qual": "Q"
+       },
+       {
+        "name": "Yuheng LI",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "2:15.999",
+        "qual": "Q"
+       },
+       {
+        "name": "Xinchi YU",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "2:18.900",
+        "qual": "Q"
+       },
+       {
+        "name": "Andrei PETROV",
+        "noc": "AIN2",
+        "rank": 1,
+        "time": "2:21.065",
+        "qual": "Q"
+       },
+       {
+        "name": "Jeremy BOUCHARD",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "2:21.758",
+        "qual": "Q"
+       },
+       {
+        "name": "Jesper SCHMITZ",
+        "noc": "NED",
+        "rank": 1,
+        "time": "2:22.112",
+        "qual": "Q"
+       },
+       {
+        "name": "Alexis DUBUC-BILODEAU",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "2:25.034",
+        "qual": "Q"
+       },
+       {
+        "name": "Yoonseok LEE",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "2:25.875",
+        "qual": "Q"
+       },
+       {
+        "name": "Minchan KIM",
+        "noc": "KOR",
+        "rank": 2,
+        "time": "2:16.142",
+        "qual": "Q"
+       },
+       {
+        "name": "Tymeo LIBEAU",
+        "noc": "FRA",
+        "rank": 2,
+        "time": "2:17.718",
+        "qual": "Q"
+       },
+       {
+        "name": "Maxim SAYENKO",
+        "noc": "KAZ",
+        "rank": 2,
+        "time": "2:19.143",
+        "qual": "Q"
+       },
+       {
+        "name": "Borisz Z MOLNAR",
+        "noc": "HUN",
+        "rank": 2,
+        "time": "2:21.308",
+        "qual": "Q"
+       },
+       {
+        "name": "Christiano DELGADO",
+        "noc": "NED",
+        "rank": 2,
+        "time": "2:22.051",
+        "qual": "Q"
+       },
+       {
+        "name": "Ilia SIVOKHO",
+        "noc": "AIN2",
+        "rank": 2,
+        "time": "2:22.645",
+        "qual": "Q"
+       },
+       {
+        "name": "Nathan MULLER",
+        "noc": "FRA",
+        "rank": 2,
+        "time": "2:25.113",
+        "qual": "Q"
+       },
+       {
+        "name": "William SAMSON",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "2:25.912",
+        "qual": "Q"
+       },
+       {
+        "name": "Aunnipit KOSITVANICH",
+        "noc": "THA",
+        "rank": 3,
+        "time": "2:16.556",
+        "qual": "q"
+       },
+       {
+        "name": "Samuel Oliver SULC",
+        "noc": "CZE",
+        "rank": 3,
+        "time": "2:19.205",
+        "qual": "q"
+       },
+       {
+        "name": "Jesse-Jan RAYEN",
+        "noc": "BEL",
+        "rank": 3,
+        "time": "2:22.209",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Biho LEE (KOR)",
+        "Jesper SCHMITZ (NED)",
+        "Alexis DUBUC-BILODEAU (CAN)",
+        "Borisz Z MOLNAR (HUN)",
+        "Christiano DELGADO (NED)",
+        "Samuel Oliver SULC (CZE)",
+        "Jesse-Jan RAYEN (BEL)"
+       ],
+       [
+        "Yuheng LI (CHN)",
+        "Jeremy BOUCHARD (CAN)",
+        "Yoonseok LEE (KOR)",
+        "Maxim SAYENKO (KAZ)",
+        "Ilia SIVOKHO (AIN2)",
+        "Aunnipit KOSITVANICH (THA)"
+       ],
+       [
+        "Xinchi YU (CHN)",
+        "Andrei PETROV (AIN2)",
+        "Minchan KIM (KOR)",
+        "Tymeo LIBEAU (FRA)",
+        "Nathan MULLER (FRA)",
+        "William SAMSON (CAN)"
+       ]
+      ]
+     }
     },
     {
      "id": 23210,
@@ -3742,11 +3911,11 @@
    "round": "Quarterfinals",
    "heat": "Heat 8",
    "start_utc": "2026-11-12T10:28:40.000Z",
-   "rank": null,
+   "rank": 1,
    "name": "Biho LEE",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "2:15.053",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 173,
