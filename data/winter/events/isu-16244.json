@@ -18,7 +18,7 @@
   "live": "Men 500 m (1)",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-12T11:58:22.116399+00:00",
+ "checked_at": "2026-11-12T12:08:47.124659+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -53,7 +53,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-12T11:45:00.000Z",
+   "start_utc": "2026-11-12T11:43:00.000Z",
    "title": "Men 500 m (1)",
    "round": "Heats",
    "event_result_id": 16128,
@@ -1660,7 +1660,7 @@
     {
      "id": 23184,
      "name": "Heats",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-12T11:43:29.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of four fastest third place skaters qualify for Quarterfinals.",
      "heats": [
@@ -1698,7 +1698,7 @@
          "name": "Tijmen VAN LAETHEM",
          "noc": "BEL",
          "time": "42.091",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 114,
@@ -1832,7 +1832,7 @@
          "name": "Tsjerk VAN DER MEER",
          "noc": "NED",
          "time": "41.737",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 183,
@@ -1899,7 +1899,7 @@
          "name": "Jan MUCHKA",
          "noc": "CZE",
          "time": "43.031",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 129,
@@ -1966,7 +1966,7 @@
          "name": "Vaclav KAMENSKY",
          "noc": "CZE",
          "time": "43.230",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 127,
@@ -2001,15 +2001,15 @@
       },
       {
        "name": "Heat 6",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Meiirzhan TOLEGEN",
          "noc": "KAZ",
-         "time": "",
-         "qual": "",
+         "time": "42.348",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 170,
@@ -2017,11 +2017,11 @@
          "slug": "meiirzhan-tolegen"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Tagir AMIRKHANOV",
          "noc": "AIN2",
-         "time": "",
-         "qual": "",
+         "time": "42.445",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 105,
@@ -2029,22 +2029,10 @@
          "slug": "tagir-amirkhanov"
         },
         {
-         "rank": null,
-         "name": "Moritz HARTMANN",
-         "noc": "GER",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 138,
-         "lane": 3,
-         "slug": "moritz-hartmann"
-        },
-        {
-         "rank": null,
+         "rank": 3,
          "name": "Yusuf Can BOZDAG",
          "noc": "TUR",
-         "time": "",
+         "time": "43.428",
          "qual": "",
          "status": "",
          "record": "",
@@ -2053,42 +2041,42 @@
          "slug": "yusuf-can-bozdag"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Lucas MOINDRON",
          "noc": "FRA",
-         "time": "",
+         "time": "43.747",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 134,
          "lane": 4,
          "slug": "lucas-moindron"
+        },
+        {
+         "rank": 5,
+         "name": "Moritz HARTMANN",
+         "noc": "GER",
+         "time": "1:07.118",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 138,
+         "lane": 3,
+         "slug": "moritz-hartmann"
         }
        ]
       },
       {
        "name": "Heat 7",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Chanwook PARK",
-         "noc": "KOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 175,
-         "lane": 1,
-         "slug": "chanwook-park"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Mihaly ARENDAS",
          "noc": "HUN",
-         "time": "",
-         "qual": "",
+         "time": "41.538",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 146,
@@ -2096,11 +2084,23 @@
          "slug": "mihaly-arendas"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Chanwook PARK",
+         "noc": "KOR",
+         "time": "41.643",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 175,
+         "lane": 1,
+         "slug": "chanwook-park"
+        },
+        {
+         "rank": 3,
          "name": "Daniil BYCHKOU",
          "noc": "AIN1",
-         "time": "",
-         "qual": "",
+         "time": "42.126",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 101,
@@ -2108,32 +2108,195 @@
          "slug": "daniil-bychkou"
         },
         {
-         "rank": null,
-         "name": "Moritz KUEHNRICH",
-         "noc": "GER",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 140,
-         "lane": 4,
-         "slug": "moritz-kuehnrich"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Ho Long YUEN",
          "noc": "HKG",
-         "time": "",
+         "time": "42.817",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 145,
          "lane": 5,
          "slug": "ho-long-yuen"
+        },
+        {
+         "rank": 5,
+         "name": "Moritz KUEHNRICH",
+         "noc": "GER",
+         "time": "42.941",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 140,
+         "lane": 4,
+         "slug": "moritz-kuehnrich"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Quarterfinals",
+      "official_draw_published": false,
+      "pending": [
+       "Rep. Semifinals"
+      ],
+      "qualified": [
+       {
+        "name": "Tianyou WANG",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "40.958",
+        "qual": "Q"
+       },
+       {
+        "name": "Wonseok CHOI",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "40.998",
+        "qual": "Q"
+       },
+       {
+        "name": "David MAKARIAN",
+        "noc": "AIN2",
+        "rank": 1,
+        "time": "41.044",
+        "qual": "Q"
+       },
+       {
+        "name": "Haoyang JIANG",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "41.136",
+        "qual": "Q"
+       },
+       {
+        "name": "Emile FORTIN",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "41.326",
+        "qual": "Q"
+       },
+       {
+        "name": "Mihaly ARENDAS",
+        "noc": "HUN",
+        "rank": 1,
+        "time": "41.538",
+        "qual": "Q"
+       },
+       {
+        "name": "Meiirzhan TOLEGEN",
+        "noc": "KAZ",
+        "rank": 1,
+        "time": "42.348",
+        "qual": "Q"
+       },
+       {
+        "name": "Zhibo SUN",
+        "noc": "CHN",
+        "rank": 2,
+        "time": "41.231",
+        "qual": "Q"
+       },
+       {
+        "name": "Elliot DUFOUR",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "41.322",
+        "qual": "Q"
+       },
+       {
+        "name": "Chanwook PARK",
+        "noc": "KOR",
+        "rank": 2,
+        "time": "41.643",
+        "qual": "Q"
+       },
+       {
+        "name": "Wesley JONES",
+        "noc": "USA",
+        "rank": 2,
+        "time": "41.986",
+        "qual": "Q"
+       },
+       {
+        "name": "Kirill PANIKOROVSKII",
+        "noc": "AIN2",
+        "rank": 2,
+        "time": "42.034",
+        "qual": "Q"
+       },
+       {
+        "name": "Raman SHAM",
+        "noc": "AIN1",
+        "rank": 2,
+        "time": "42.042",
+        "qual": "Q"
+       },
+       {
+        "name": "Lowie DEKENS",
+        "noc": "BEL",
+        "rank": 2,
+        "time": "42.042",
+        "qual": "Q"
+       },
+       {
+        "name": "Tagir AMIRKHANOV",
+        "noc": "AIN2",
+        "rank": 2,
+        "time": "42.445",
+        "qual": "Q"
+       },
+       {
+        "name": "Tsjerk VAN DER MEER",
+        "noc": "NED",
+        "rank": 3,
+        "time": "41.737",
+        "qual": "q"
+       },
+       {
+        "name": "Tijmen VAN LAETHEM",
+        "noc": "BEL",
+        "rank": 3,
+        "time": "42.091",
+        "qual": "q"
+       },
+       {
+        "name": "Daniil BYCHKOU",
+        "noc": "AIN1",
+        "rank": 3,
+        "time": "42.126",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Tianyou WANG (CHN)",
+        "Zhibo SUN (CHN)",
+        "Elliot DUFOUR (CAN)",
+        "Tsjerk VAN DER MEER (NED)",
+        "Tijmen VAN LAETHEM (BEL)"
+       ],
+       [
+        "Wonseok CHOI (KOR)",
+        "Meiirzhan TOLEGEN (KAZ)",
+        "Chanwook PARK (KOR)",
+        "Tagir AMIRKHANOV (AIN2)",
+        "Daniil BYCHKOU (AIN1)"
+       ],
+       [
+        "David MAKARIAN (AIN2)",
+        "Mihaly ARENDAS (HUN)",
+        "Wesley JONES (USA)",
+        "Lowie DEKENS (BEL)"
+       ],
+       [
+        "Haoyang JIANG (CHN)",
+        "Emile FORTIN (CAN)",
+        "Kirill PANIKOROVSKII (AIN2)",
+        "Raman SHAM (AIN1)"
+       ]
+      ]
+     }
     },
     {
      "id": 23185,
@@ -4991,11 +5154,11 @@
    "round": "Heats",
    "heat": "Heat 7",
    "start_utc": "2026-11-12T11:43:29.000Z",
-   "rank": null,
+   "rank": 2,
    "name": "Chanwook PARK",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "41.643",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 175,
