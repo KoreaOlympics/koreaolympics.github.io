@@ -18,7 +18,7 @@
   "live": "Men 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-12T10:55:22.716284+00:00",
+ "checked_at": "2026-11-12T11:05:43.039338+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -29,7 +29,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-12T09:53:00.000Z",
+   "start_utc": "2026-11-12T09:51:00.000Z",
    "title": "Women 1500 m",
    "round": "Quarterfinals",
    "event_result_id": 16130,
@@ -37,7 +37,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-12T10:26:00.000Z",
+   "start_utc": "2026-11-12T10:28:00.000Z",
    "title": "Men 1500 m",
    "round": "Quarterfinals",
    "event_result_id": 16132,
@@ -2580,7 +2580,7 @@
          "name": "Maksim ZHURAUSKI",
          "noc": "AIN1",
          "time": "2:22.724",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 104,
@@ -2671,7 +2671,7 @@
          "name": "Evan PALADINO",
          "noc": "USA",
          "time": "2:23.225",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 219,
@@ -2888,15 +2888,15 @@
       },
       {
        "name": "Heat 6",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Jeremy BOUCHARD",
          "noc": "CAN",
-         "time": "",
-         "qual": "",
+         "time": "2:21.758",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 115,
@@ -2904,11 +2904,11 @@
          "slug": "jeremy-bouchard"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Christiano DELGADO",
          "noc": "NED",
-         "time": "",
-         "qual": "",
+         "time": "2:22.051",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 180,
@@ -2916,11 +2916,11 @@
          "slug": "christiano-delgado"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Jesse-Jan RAYEN",
          "noc": "BEL",
-         "time": "",
-         "qual": "",
+         "time": "2:22.209",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 113,
@@ -2928,22 +2928,10 @@
          "slug": "jesse-jan-rayen"
         },
         {
-         "rank": null,
-         "name": "Daniel TROWBRIDGE",
-         "noc": "GBR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 137,
-         "lane": 4,
-         "slug": "daniel-trowbridge"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Tadeus Richard MAGER",
          "noc": "GER",
-         "time": "",
+         "time": "2:22.370",
          "qual": "",
          "status": "",
          "record": "",
@@ -2952,10 +2940,22 @@
          "slug": "tadeus-richard-mager"
         },
         {
-         "rank": null,
+         "rank": 5,
+         "name": "Daniel TROWBRIDGE",
+         "noc": "GBR",
+         "time": "2:22.553",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 137,
+         "lane": 4,
+         "slug": "daniel-trowbridge"
+        },
+        {
+         "rank": 6,
          "name": "Rudolfs STERNMANIS",
          "noc": "LAT",
-         "time": "",
+         "time": "2:30.420",
          "qual": "",
          "status": "",
          "record": "",
@@ -2967,27 +2967,15 @@
       },
       {
        "name": "Heat 7",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Samuel Oliver SULC",
-         "noc": "CZE",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 130,
-         "lane": 1,
-         "slug": "samuel-oliver-sulc"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Xinchi YU",
          "noc": "CHN",
-         "time": "",
-         "qual": "",
+         "time": "2:18.900",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 125,
@@ -2995,10 +2983,34 @@
          "slug": "xinchi-yu"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Maxim SAYENKO",
+         "noc": "KAZ",
+         "time": "2:19.143",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 168,
+         "lane": 4,
+         "slug": "maxim-sayenko"
+        },
+        {
+         "rank": 3,
+         "name": "Samuel Oliver SULC",
+         "noc": "CZE",
+         "time": "2:19.205",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 130,
+         "lane": 1,
+         "slug": "samuel-oliver-sulc"
+        },
+        {
+         "rank": 4,
          "name": "Mauro DEFRANCQ",
          "noc": "BEL",
-         "time": "",
+         "time": "2:24.873",
          "qual": "",
          "status": "",
          "record": "",
@@ -3007,22 +3019,10 @@
          "slug": "mauro-defrancq"
         },
         {
-         "rank": null,
-         "name": "Maxim SAYENKO",
-         "noc": "KAZ",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 168,
-         "lane": 4,
-         "slug": "maxim-sayenko"
-        },
-        {
-         "rank": null,
+         "rank": 5,
          "name": "Maximillian MELAND",
          "noc": "NOR",
-         "time": "",
+         "time": "2:27.337",
          "qual": "",
          "status": "",
          "record": "",
@@ -3031,10 +3031,10 @@
          "slug": "maximillian-meland"
         },
         {
-         "rank": null,
+         "rank": 6,
          "name": "Juraj GOGA",
          "noc": "SVK",
-         "time": "",
+         "time": "2:33.903",
          "qual": "",
          "status": "",
          "record": "",
@@ -3046,9 +3046,21 @@
       },
       {
        "name": "Heat 8",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
+        {
+         "rank": null,
+         "name": "Biho LEE",
+         "noc": "KOR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 173,
+         "lane": 6,
+         "slug": "biho-lee"
+        },
         {
          "rank": null,
          "name": "Tymeo LIBEAU",
@@ -3060,6 +3072,18 @@
          "bib": 133,
          "lane": 1,
          "slug": "tymeo-libeau"
+        },
+        {
+         "rank": null,
+         "name": "Bence KISS-GEBORA",
+         "noc": "HUN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 148,
+         "lane": 5,
+         "slug": "bence-kiss-gebora"
         },
         {
          "rank": null,
@@ -3096,30 +3120,6 @@
          "bib": 189,
          "lane": 4,
          "slug": "szymon-etel"
-        },
-        {
-         "rank": null,
-         "name": "Bence KISS-GEBORA",
-         "noc": "HUN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 148,
-         "lane": 5,
-         "slug": "bence-kiss-gebora"
-        },
-        {
-         "rank": null,
-         "name": "Biho LEE",
-         "noc": "KOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 173,
-         "lane": 6,
-         "slug": "biho-lee"
         }
        ]
       }
