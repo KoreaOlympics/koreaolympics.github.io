@@ -18,7 +18,7 @@
   "live": "Men 3000 m Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-12T18:19:48.642100+00:00",
+ "checked_at": "2026-11-12T18:30:36.537907+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -10104,7 +10104,7 @@
     {
      "id": 23219,
      "name": "Quarterfinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-12T17:52:47.000Z",
      "rule": "The first and second placed teams from each race and up to a maximum of two fastest third place teams qualify for Semifinals.",
      "heats": [
@@ -10142,7 +10142,7 @@
          "name": "Belgium",
          "noc": "BEL",
          "time": "4:11.975",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": null,
@@ -10264,7 +10264,7 @@
          "name": "Kazakhstan",
          "noc": "KAZ",
          "time": "4:09.675",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": null,
@@ -10287,15 +10287,15 @@
       },
       {
        "name": "Heat 4",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Republic of Korea",
          "noc": "KOR",
-         "time": "",
-         "qual": "",
+         "time": "4:07.072",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -10303,11 +10303,11 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Hungary",
          "noc": "HUN",
-         "time": "",
-         "qual": "",
+         "time": "4:08.398",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -10315,10 +10315,10 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Poland",
          "noc": "POL",
-         "time": "",
+         "time": "4:22.168",
          "qual": "",
          "status": "",
          "record": "",
@@ -10327,10 +10327,10 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Turkiye",
          "noc": "TUR",
-         "time": "",
+         "time": "4:33.549",
          "qual": "",
          "status": "",
          "record": "",
@@ -10340,7 +10340,100 @@
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Semifinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "China",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "4:05.884",
+        "qual": "Q"
+       },
+       {
+        "name": "Republic of Korea",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "4:07.072",
+        "qual": "Q"
+       },
+       {
+        "name": "Individual Neutral Athletes 2",
+        "noc": "AIN2",
+        "rank": 1,
+        "time": "4:08.739",
+        "qual": "Q"
+       },
+       {
+        "name": "Canada",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "4:09.504",
+        "qual": "Q"
+       },
+       {
+        "name": "Hungary",
+        "noc": "HUN",
+        "rank": 2,
+        "time": "4:08.398",
+        "qual": "Q"
+       },
+       {
+        "name": "Italy",
+        "noc": "ITA",
+        "rank": 2,
+        "time": "4:09.128",
+        "qual": "Q"
+       },
+       {
+        "name": "France",
+        "noc": "FRA",
+        "rank": 2,
+        "time": "4:09.563",
+        "qual": "Q"
+       },
+       {
+        "name": "Netherlands",
+        "noc": "NED",
+        "rank": 2,
+        "time": "4:11.761",
+        "qual": "Q"
+       },
+       {
+        "name": "Kazakhstan",
+        "noc": "KAZ",
+        "rank": 3,
+        "time": "4:09.675",
+        "qual": "q"
+       },
+       {
+        "name": "Belgium",
+        "noc": "BEL",
+        "rank": 3,
+        "time": "4:11.975",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "China (CHN)",
+        "Canada (CAN)",
+        "Hungary (HUN)",
+        "Netherlands (NED)",
+        "Kazakhstan (KAZ)"
+       ],
+       [
+        "Republic of Korea (KOR)",
+        "Individual Neutral Athletes 2 (AIN2)",
+        "Italy (ITA)",
+        "France (FRA)",
+        "Belgium (BEL)"
+       ]
+      ]
+     }
     },
     {
      "id": 23220,
@@ -10929,11 +11022,11 @@
    "round": "Quarterfinals",
    "heat": "Heat 4",
    "start_utc": "2026-11-12T17:52:47.000Z",
-   "rank": null,
+   "rank": 1,
    "name": "Republic of Korea",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "4:07.072",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": null,
