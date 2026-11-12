@@ -18,7 +18,7 @@
   "live": "Men 500 m (1)",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-12T11:47:57.237929+00:00",
+ "checked_at": "2026-11-12T11:58:22.116399+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -1734,14 +1734,14 @@
       {
        "name": "Heat 2",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "Haoyang JIANG",
          "noc": "CHN",
-         "time": "41.180",
-         "qual": "",
+         "time": "41.136",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 121,
@@ -1749,10 +1749,34 @@
          "slug": "haoyang-jiang"
         },
         {
+         "rank": 2,
+         "name": "Raman SHAM",
+         "noc": "AIN1",
+         "time": "42.042",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 102,
+         "lane": 2,
+         "slug": "raman-sham"
+        },
+        {
+         "rank": 2,
+         "name": "Lowie DEKENS",
+         "noc": "BEL",
+         "time": "42.042",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 112,
+         "lane": 3,
+         "slug": "lowie-dekens"
+        },
+        {
          "rank": 4,
          "name": "Mattia BRACCHI",
          "noc": "ITA",
-         "time": "43.050",
+         "time": "43.038",
          "qual": "",
          "status": "",
          "record": "",
@@ -1764,51 +1788,27 @@
          "rank": 5,
          "name": "Henri Stenskrog MIDJO",
          "noc": "NOR",
-         "time": "43.180",
+         "time": "43.173",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 186,
          "lane": 5,
          "slug": "henri-stenskrog-midjo"
-        },
-        {
-         "rank": null,
-         "name": "Raman SHAM",
-         "noc": "AIN1",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 102,
-         "lane": 2,
-         "slug": "raman-sham"
-        },
-        {
-         "rank": null,
-         "name": "Lowie DEKENS",
-         "noc": "BEL",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 112,
-         "lane": 3,
-         "slug": "lowie-dekens"
         }
        ]
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "David MAKARIAN",
          "noc": "AIN2",
-         "time": "",
-         "qual": "",
+         "time": "41.044",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 106,
@@ -1816,11 +1816,11 @@
          "slug": "david-makarian"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Zhibo SUN",
          "noc": "CHN",
-         "time": "",
-         "qual": "",
+         "time": "41.231",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 123,
@@ -1828,11 +1828,11 @@
          "slug": "zhibo-sun"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Tsjerk VAN DER MEER",
          "noc": "NED",
-         "time": "",
-         "qual": "",
+         "time": "41.737",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 183,
@@ -1840,10 +1840,10 @@
          "slug": "tsjerk-van-der-meer"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Badis BRUGVIN",
          "noc": "FRA",
-         "time": "",
+         "time": "42.582",
          "qual": "",
          "status": "",
          "record": "",
@@ -1852,10 +1852,10 @@
          "slug": "badis-brugvin"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Zhanarys MAGZHAN",
          "noc": "KAZ",
-         "time": "",
+         "time": "1:10.153",
          "qual": "",
          "status": "",
          "record": "",
@@ -1867,15 +1867,15 @@
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Wonseok CHOI",
          "noc": "KOR",
-         "time": "",
-         "qual": "",
+         "time": "40.998",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 171,
@@ -1883,23 +1883,11 @@
          "slug": "wonseok-choi"
         },
         {
-         "rank": null,
-         "name": "Kebba NJIE",
-         "noc": "NED",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 181,
-         "lane": 2,
-         "slug": "kebba-njie"
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Kirill PANIKOROVSKII",
          "noc": "AIN2",
-         "time": "",
-         "qual": "",
+         "time": "42.034",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 107,
@@ -1907,11 +1895,11 @@
          "slug": "kirill-panikorovskii"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Jan MUCHKA",
          "noc": "CZE",
-         "time": "",
-         "qual": "",
+         "time": "43.031",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 129,
@@ -1919,30 +1907,42 @@
          "slug": "jan-muchka"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Adomas OGULEVICIUS",
          "noc": "LTU",
-         "time": "",
+         "time": "43.884",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 117,
          "lane": 5,
          "slug": "adomas-ogulevicius"
+        },
+        {
+         "rank": 5,
+         "name": "Kebba NJIE",
+         "noc": "NED",
+         "time": "1:00.174",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 181,
+         "lane": 2,
+         "slug": "kebba-njie"
         }
        ]
       },
       {
        "name": "Heat 5",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Emile FORTIN",
          "noc": "CAN",
-         "time": "",
-         "qual": "",
+         "time": "41.326",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 119,
@@ -1950,10 +1950,34 @@
          "slug": "emile-fortin"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Wesley JONES",
+         "noc": "USA",
+         "time": "41.986",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 206,
+         "lane": 3,
+         "slug": "wesley-jones"
+        },
+        {
+         "rank": 3,
+         "name": "Vaclav KAMENSKY",
+         "noc": "CZE",
+         "time": "43.230",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 127,
+         "lane": 5,
+         "slug": "vaclav-kamensky"
+        },
+        {
+         "rank": 4,
          "name": "Tymon HRYNIEWICZ",
          "noc": "POL",
-         "time": "",
+         "time": "47.298",
          "qual": "",
          "status": "",
          "record": "",
@@ -1962,60 +1986,24 @@
          "slug": "tymon-hryniewicz"
         },
         {
-         "rank": null,
-         "name": "Wesley JONES",
-         "noc": "USA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 206,
-         "lane": 3,
-         "slug": "wesley-jones"
-        },
-        {
-         "rank": null,
+         "rank": 5,
          "name": "Zalan JANCSO",
          "noc": "HUN",
-         "time": "",
+         "time": "50.400",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 147,
          "lane": 4,
          "slug": "zalan-jancso"
-        },
-        {
-         "rank": null,
-         "name": "Vaclav KAMENSKY",
-         "noc": "CZE",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 127,
-         "lane": 5,
-         "slug": "vaclav-kamensky"
         }
        ]
       },
       {
        "name": "Heat 6",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
-        {
-         "rank": null,
-         "name": "Tagir AMIRKHANOV",
-         "noc": "AIN2",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 105,
-         "lane": 1,
-         "slug": "tagir-amirkhanov"
-        },
         {
          "rank": null,
          "name": "Meiirzhan TOLEGEN",
@@ -2027,6 +2015,18 @@
          "bib": 170,
          "lane": 2,
          "slug": "meiirzhan-tolegen"
+        },
+        {
+         "rank": null,
+         "name": "Tagir AMIRKHANOV",
+         "noc": "AIN2",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 105,
+         "lane": 1,
+         "slug": "tagir-amirkhanov"
         },
         {
          "rank": null,
@@ -2042,18 +2042,6 @@
         },
         {
          "rank": null,
-         "name": "Lucas MOINDRON",
-         "noc": "FRA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 134,
-         "lane": 4,
-         "slug": "lucas-moindron"
-        },
-        {
-         "rank": null,
          "name": "Yusuf Can BOZDAG",
          "noc": "TUR",
          "time": "",
@@ -2063,6 +2051,18 @@
          "bib": 196,
          "lane": 5,
          "slug": "yusuf-can-bozdag"
+        },
+        {
+         "rank": null,
+         "name": "Lucas MOINDRON",
+         "noc": "FRA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 134,
+         "lane": 4,
+         "slug": "lucas-moindron"
         }
        ]
       },
@@ -4972,11 +4972,11 @@
    "round": "Heats",
    "heat": "Heat 4",
    "start_utc": "2026-11-12T11:43:29.000Z",
-   "rank": null,
+   "rank": 1,
    "name": "Wonseok CHOI",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "40.998",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 171,
