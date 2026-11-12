@@ -18,7 +18,7 @@
   "live": "Women 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-12T10:02:47.851071+00:00",
+ "checked_at": "2026-11-12T10:13:12.769346+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -1797,14 +1797,14 @@
       {
        "name": "Heat 2",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "Rongmiao YANG",
          "noc": "CHN",
-         "time": "2:34.020",
-         "qual": "",
+         "time": "2:34.008",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 219,
@@ -1815,8 +1815,8 @@
          "rank": 2,
          "name": "Juul VAN DER ZWAAN",
          "noc": "NED",
-         "time": "2:34.440",
-         "qual": "",
+         "time": "2:34.426",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 256,
@@ -1825,22 +1825,10 @@
         },
         {
          "rank": 3,
-         "name": "Lea POPOVICOVA",
-         "noc": "SVK",
-         "time": "2:35.300",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 185,
-         "lane": 3,
-         "slug": "lea-popovicova"
-        },
-        {
-         "rank": 4,
          "name": "Darya STSIAPANAVA",
          "noc": "AIN1",
-         "time": "2:35.380",
-         "qual": "",
+         "time": "2:35.360",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 204,
@@ -1848,30 +1836,42 @@
          "slug": "darya-stsiapanava"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Efsa POLAT",
          "noc": "TUR",
-         "time": "",
+         "time": "3:12.622",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 271,
          "lane": 4,
          "slug": "efsa-polat"
+        },
+        {
+         "rank": null,
+         "name": "Lea POPOVICOVA",
+         "noc": "SVK",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 185,
+         "lane": 3,
+         "slug": "lea-popovicova"
         }
        ]
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Hanna MAZUR",
          "noc": "POL",
-         "time": "",
-         "qual": "",
+         "time": "2:33.386",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 264,
@@ -1879,23 +1879,11 @@
          "slug": "hanna-mazur-1"
         },
         {
-         "rank": null,
-         "name": "Raiana MANARBEKOVA",
-         "noc": "KAZ",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 245,
-         "lane": 2,
-         "slug": "raiana-manarbekova"
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Lyna HANI",
          "noc": "CAN",
-         "time": "",
-         "qual": "",
+         "time": "2:34.086",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 214,
@@ -1903,10 +1891,22 @@
          "slug": "lyna-hani"
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Raiana MANARBEKOVA",
+         "noc": "KAZ",
+         "time": "2:34.186",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 245,
+         "lane": 2,
+         "slug": "raiana-manarbekova"
+        },
+        {
+         "rank": 4,
          "name": "Beatrice PAGLIA",
          "noc": "ITA",
-         "time": "",
+         "time": "2:35.323",
          "qual": "",
          "status": "",
          "record": "",
@@ -1915,10 +1915,10 @@
          "slug": "beatrice-paglia"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Viola COMBA",
          "noc": "ITA",
-         "time": "",
+         "time": "2:39.688",
          "qual": "",
          "status": "",
          "record": "",
@@ -1930,14 +1930,26 @@
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Live",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Subin KIM",
+         "noc": "KOR",
+         "time": "2:36.160",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 249,
+         "lane": 3,
+         "slug": "subin-kim"
+        },
+        {
+         "rank": 2,
          "name": "Mila BOIVIN",
          "noc": "CAN",
-         "time": "",
+         "time": "2:36.930",
          "qual": "",
          "status": "",
          "record": "",
@@ -1946,28 +1958,16 @@
          "slug": "mila-boivin"
         },
         {
-         "rank": null,
-         "name": "Mirthe MICHIELSEN",
-         "noc": "BEL",
-         "time": "",
+         "rank": 3,
+         "name": "Julie KIESGEN",
+         "noc": "LUX",
+         "time": "2:39.120",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 210,
-         "lane": 2,
-         "slug": "mirthe-michielsen"
-        },
-        {
-         "rank": null,
-         "name": "Subin KIM",
-         "noc": "KOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 249,
-         "lane": 3,
-         "slug": "subin-kim"
+         "bib": 253,
+         "lane": 5,
+         "slug": "julie-kiesgen"
         },
         {
          "rank": null,
@@ -1983,15 +1983,15 @@
         },
         {
          "rank": null,
-         "name": "Julie KIESGEN",
-         "noc": "LUX",
+         "name": "Mirthe MICHIELSEN",
+         "noc": "BEL",
          "time": "",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 253,
-         "lane": 5,
-         "slug": "julie-kiesgen"
+         "bib": 210,
+         "lane": 2,
+         "slug": "mirthe-michielsen"
         }
        ]
       },
@@ -2828,10 +2828,10 @@
    "round": "Quarterfinals",
    "heat": "Heat 4",
    "start_utc": "2026-11-12T09:53:15.000Z",
-   "rank": null,
+   "rank": 1,
    "name": "Subin KIM",
    "noc": "KOR",
-   "time": "",
+   "time": "2:36.160",
    "qual": "",
    "status": "",
    "record": "",
