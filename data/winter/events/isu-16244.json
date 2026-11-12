@@ -18,7 +18,7 @@
   "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-12T14:05:27.912257+00:00",
+ "checked_at": "2026-11-12T14:15:46.925150+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -6111,27 +6111,15 @@
       },
       {
        "name": "Heat 6",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Alexis DUBUC-BILODEAU",
-         "noc": "CAN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 116,
-         "lane": 1,
-         "slug": "alexis-dubuc-bilodeau"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Samuel Oliver SULC",
          "noc": "CZE",
-         "time": "",
-         "qual": "",
+         "time": "1:28.609",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 130,
@@ -6139,22 +6127,34 @@
          "slug": "samuel-oliver-sulc"
         },
         {
-         "rank": null,
-         "name": "Andrew GONG",
-         "noc": "HKG",
-         "time": "",
-         "qual": "",
+         "rank": 2,
+         "name": "Alexis DUBUC-BILODEAU",
+         "noc": "CAN",
+         "time": "1:28.953",
+         "qual": "Q",
          "status": "",
          "record": "",
-         "bib": 143,
-         "lane": 4,
-         "slug": "andrew-gong"
+         "bib": 116,
+         "lane": 1,
+         "slug": "alexis-dubuc-bilodeau"
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Moritz KUEHNRICH",
+         "noc": "GER",
+         "time": "1:30.329",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 140,
+         "lane": 3,
+         "slug": "moritz-kuehnrich"
+        },
+        {
+         "rank": 4,
          "name": "Rene KOPRIVNJAK",
          "noc": "CRO",
-         "time": "",
+         "time": "1:30.332",
          "qual": "",
          "status": "",
          "record": "",
@@ -6163,22 +6163,22 @@
          "slug": "rene-koprivnjak"
         },
         {
-         "rank": null,
-         "name": "Moritz KUEHNRICH",
-         "noc": "GER",
-         "time": "",
+         "rank": 5,
+         "name": "Andrew GONG",
+         "noc": "HKG",
+         "time": "1:30.398",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 140,
-         "lane": 3,
-         "slug": "moritz-kuehnrich"
+         "bib": 143,
+         "lane": 4,
+         "slug": "andrew-gong"
         },
         {
-         "rank": null,
+         "rank": 6,
          "name": "Toms VINNINS",
          "noc": "LAT",
-         "time": "",
+         "time": "1:32.086",
          "qual": "",
          "status": "",
          "record": "",
@@ -6190,15 +6190,15 @@
       },
       {
        "name": "Heat 7",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Tagir AMIRKHANOV",
          "noc": "AIN2",
-         "time": "",
-         "qual": "",
+         "time": "1:28.558",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 105,
@@ -6206,11 +6206,11 @@
          "slug": "tagir-amirkhanov"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Badis BRUGVIN",
          "noc": "FRA",
-         "time": "",
-         "qual": "",
+         "time": "1:28.940",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 131,
@@ -6218,11 +6218,11 @@
          "slug": "badis-brugvin"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Mattia BRACCHI",
          "noc": "ITA",
-         "time": "",
-         "qual": "",
+         "time": "1:29.693",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 212,
@@ -6230,22 +6230,22 @@
          "slug": "mattia-bracchi"
         },
         {
-         "rank": null,
-         "name": "Ulrik Evenmo ERVIK",
-         "noc": "NOR",
-         "time": "",
+         "rank": 4,
+         "name": "Yusuf Can BOZDAG",
+         "noc": "TUR",
+         "time": "1:30.487",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 184,
-         "lane": 4,
-         "slug": "ulrik-evenmo-ervik"
+         "bib": 196,
+         "lane": 6,
+         "slug": "yusuf-can-bozdag"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Viktor KIRSTA",
          "noc": "AUS",
-         "time": "",
+         "time": "1:32.706",
          "qual": "",
          "status": "",
          "record": "",
@@ -6254,36 +6254,24 @@
          "slug": "viktor-kirsta"
         },
         {
-         "rank": null,
-         "name": "Yusuf Can BOZDAG",
-         "noc": "TUR",
-         "time": "",
+         "rank": 6,
+         "name": "Ulrik Evenmo ERVIK",
+         "noc": "NOR",
+         "time": "1:38.090",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 196,
-         "lane": 6,
-         "slug": "yusuf-can-bozdag"
+         "bib": 184,
+         "lane": 4,
+         "slug": "ulrik-evenmo-ervik"
         }
        ]
       },
       {
        "name": "Heat 8",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
-        {
-         "rank": null,
-         "name": "Tymeo LIBEAU",
-         "noc": "FRA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 133,
-         "lane": 1,
-         "slug": "tymeo-libeau"
-        },
         {
          "rank": null,
          "name": "Biho LEE",
@@ -6298,15 +6286,15 @@
         },
         {
          "rank": null,
-         "name": "Daniil BYCHKOU",
-         "noc": "AIN1",
+         "name": "Tymeo LIBEAU",
+         "noc": "FRA",
          "time": "",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 101,
-         "lane": 3,
-         "slug": "daniil-bychkou"
+         "bib": 133,
+         "lane": 1,
+         "slug": "tymeo-libeau"
         },
         {
          "rank": null,
@@ -6319,6 +6307,18 @@
          "bib": 167,
          "lane": 4,
          "slug": "zhanarys-magzhan"
+        },
+        {
+         "rank": null,
+         "name": "Daniil BYCHKOU",
+         "noc": "AIN1",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 101,
+         "lane": 3,
+         "slug": "daniil-bychkou"
         },
         {
          "rank": null,
