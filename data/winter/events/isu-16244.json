@@ -18,7 +18,7 @@
   "live": "Women 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-12T10:23:37.409096+00:00",
+ "checked_at": "2026-11-12T10:24:11.649477+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -1761,7 +1761,7 @@
          "name": "Sasha MENSAH",
          "noc": "USA",
          "time": "2:37.672",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 186,
@@ -1828,7 +1828,7 @@
          "name": "Darya STSIAPANAVA",
          "noc": "AIN1",
          "time": "2:35.360",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 204,
@@ -2077,14 +2077,14 @@
       {
        "name": "Heat 6",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "Yelyzaveta SOLOVIOVA",
          "noc": "GER",
-         "time": "2:31.460",
-         "qual": "",
+         "time": "2:31.450",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 225,
@@ -2095,8 +2095,8 @@
          "rank": 2,
          "name": "Flora KISS-GEBORA",
          "noc": "HUN",
-         "time": "2:32.870",
-         "qual": "",
+         "time": "2:32.848",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 228,
@@ -2107,8 +2107,8 @@
          "rank": 3,
          "name": "Kateryna MOISIEIEVA",
          "noc": "UKR",
-         "time": "2:33.620",
-         "qual": "",
+         "time": "2:33.586",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 274,
@@ -2117,22 +2117,10 @@
         },
         {
          "rank": 4,
-         "name": "Dayana AITYBEK",
-         "noc": "KAZ",
-         "time": "2:49.730",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 242,
-         "lane": 3,
-         "slug": "dayana-aitybek"
-        },
-        {
-         "rank": 5,
          "name": "Anastasiia BARANOVA",
          "noc": "AIN2",
-         "time": "2:53.900",
-         "qual": "",
+         "time": "2:53.885",
+         "qual": "ADV",
          "status": "",
          "record": "",
          "bib": 206,
@@ -2140,16 +2128,28 @@
          "slug": "anastasiia-baranova"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Ulyana PASHAYEVA",
          "noc": "AIN1",
-         "time": "",
+         "time": "3:11.180",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 202,
          "lane": 6,
          "slug": "ulyana-pashayeva"
+        },
+        {
+         "rank": null,
+         "name": "Dayana AITYBEK",
+         "noc": "KAZ",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 242,
+         "lane": 3,
+         "slug": "dayana-aitybek"
         }
        ]
       },
