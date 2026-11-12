@@ -18,7 +18,7 @@
   "live": "Mixed Team Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-12T17:04:20.838025+00:00",
+ "checked_at": "2026-11-12T17:14:49.645374+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -2499,7 +2499,7 @@
        "competitors": [
         {
          "rank": 1,
-         "name": "Hanna Mazur",
+         "name": "Hanna MAZUR",
          "noc": "POL",
          "time": "2:33.386",
          "qual": "Q",
@@ -2900,7 +2900,7 @@
         "qual": "Q"
        },
        {
-        "name": "Hanna Mazur",
+        "name": "Hanna MAZUR",
         "noc": "POL",
         "rank": 1,
         "time": "2:33.386",
@@ -3017,7 +3017,7 @@
        ],
        [
         "Jinzi LI (CHN)",
-        "Hanna Mazur (POL)",
+        "Hanna MAZUR (POL)",
         "Yiaidi ZONG (CHN)",
         "Flora KISS-GEBORA (HUN)",
         "Mila BOIVIN (CAN)",
@@ -8238,7 +8238,7 @@
        "competitors": [
         {
          "rank": 1,
-         "name": "Hanna Mazur",
+         "name": "Hanna MAZUR",
          "noc": "POL",
          "time": "44.454",
          "qual": "Q",
@@ -8505,7 +8505,7 @@
         "qual": "Q"
        },
        {
-        "name": "Hanna Mazur",
+        "name": "Hanna MAZUR",
         "noc": "POL",
         "rank": 1,
         "time": "44.454",
@@ -8632,7 +8632,7 @@
         "Chien Hua HUANG (TPE)"
        ],
        [
-        "Hanna Mazur (POL)",
+        "Hanna MAZUR (POL)",
         "Yuchen JIANG (CHN)",
         "Mirthe MICHIELSEN (BEL)",
         "Eliane GOUDREAULT (CAN)"
@@ -9445,7 +9445,7 @@
     {
      "id": 23191,
      "name": "Quarterfinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-12T16:47:03.000Z",
      "rule": "The first and second placed teams from each race and up to a maximum of two fastest third place teams qualify for Semifinals.",
      "heats": [
@@ -9538,7 +9538,7 @@
          "name": "United States of America",
          "noc": "USA",
          "time": "2:47.787",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": null,
@@ -9593,7 +9593,7 @@
          "name": "Ukraine",
          "noc": "UKR",
          "time": "2:50.218",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": null,
@@ -9616,27 +9616,15 @@
       },
       {
        "name": "Heat 4",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Individual Neutral Athletes 2",
-         "noc": "AIN2",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 1,
-         "slug": ""
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Hungary",
          "noc": "HUN",
-         "time": "",
-         "qual": "",
+         "time": "2:47.825",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -9644,10 +9632,22 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Germany",
+         "noc": "GER",
+         "time": "2:48.306",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 4,
+         "slug": ""
+        },
+        {
+         "rank": 3,
          "name": "Norway",
          "noc": "NOR",
-         "time": "",
+         "time": "3:12.019",
          "qual": "",
          "status": "",
          "record": "",
@@ -9657,19 +9657,112 @@
         },
         {
          "rank": null,
-         "name": "Germany",
-         "noc": "GER",
-         "time": "",
+         "name": "Individual Neutral Athletes 2",
+         "noc": "AIN2",
+         "time": "PEN",
          "qual": "",
-         "status": "",
+         "status": "Penalty",
          "record": "",
          "bib": null,
-         "lane": 4,
+         "lane": 1,
          "slug": ""
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Semifinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "China",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "2:43.845",
+        "qual": "Q"
+       },
+       {
+        "name": "Republic of Korea",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "2:44.258",
+        "qual": "Q"
+       },
+       {
+        "name": "Canada",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "2:46.025",
+        "qual": "Q"
+       },
+       {
+        "name": "Hungary",
+        "noc": "HUN",
+        "rank": 1,
+        "time": "2:47.825",
+        "qual": "Q"
+       },
+       {
+        "name": "Italy",
+        "noc": "ITA",
+        "rank": 2,
+        "time": "2:44.356",
+        "qual": "Q"
+       },
+       {
+        "name": "Poland",
+        "noc": "POL",
+        "rank": 2,
+        "time": "2:46.164",
+        "qual": "Q"
+       },
+       {
+        "name": "Netherlands",
+        "noc": "NED",
+        "rank": 2,
+        "time": "2:46.178",
+        "qual": "Q"
+       },
+       {
+        "name": "Germany",
+        "noc": "GER",
+        "rank": 2,
+        "time": "2:48.306",
+        "qual": "Q"
+       },
+       {
+        "name": "United States of America",
+        "noc": "USA",
+        "rank": 3,
+        "time": "2:47.787",
+        "qual": "q"
+       },
+       {
+        "name": "Ukraine",
+        "noc": "UKR",
+        "rank": 3,
+        "time": "2:50.218",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "China (CHN)",
+        "Hungary (HUN)",
+        "Italy (ITA)",
+        "Germany (GER)",
+        "United States of America (USA)"
+       ],
+       [
+        "Republic of Korea (KOR)",
+        "Canada (CAN)",
+        "Poland (POL)",
+        "Netherlands (NED)",
+        "Ukraine (UKR)"
+       ]
+      ]
+     }
     },
     {
      "id": 23192,
