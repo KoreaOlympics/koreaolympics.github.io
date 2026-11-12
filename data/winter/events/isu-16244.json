@@ -18,7 +18,7 @@
   "live": "Men 3000 m Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-12T17:57:54.002746+00:00",
+ "checked_at": "2026-11-12T18:08:29.182758+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -125,7 +125,7 @@
    "type": "Couples"
   },
   {
-   "start_utc": "2026-11-12T17:54:00.000Z",
+   "start_utc": "2026-11-12T17:52:00.000Z",
    "title": "Men 3000 m Relay",
    "round": "Quarterfinals",
    "event_result_id": 16134,
@@ -10105,20 +10105,20 @@
      "id": 23219,
      "name": "Quarterfinals",
      "status": "Live",
-     "start_utc": "2026-11-12T17:54:00.000Z",
+     "start_utc": "2026-11-12T17:52:47.000Z",
      "rule": "The first and second placed teams from each race and up to a maximum of two fastest third place teams qualify for Semifinals.",
      "heats": [
       {
        "name": "Heat 1",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "China",
          "noc": "CHN",
-         "time": "4:05.890",
-         "qual": "",
+         "time": "4:05.884",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -10126,11 +10126,11 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Italy",
          "noc": "ITA",
-         "time": "",
-         "qual": "",
+         "time": "4:09.128",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -10138,11 +10138,11 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Belgium",
          "noc": "BEL",
-         "time": "",
-         "qual": "",
+         "time": "4:11.975",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": null,
@@ -10150,10 +10150,10 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "India",
          "noc": "IND",
-         "time": "",
+         "time": "4:18.339",
          "qual": "",
          "status": "",
          "record": "",
@@ -10162,10 +10162,10 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Individual Neutral Athletes 1",
          "noc": "AIN1",
-         "time": "",
+         "time": "4:27.041",
          "qual": "",
          "status": "",
          "record": "",
@@ -10177,15 +10177,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Individual Neutral Athletes 2",
          "noc": "AIN2",
-         "time": "",
-         "qual": "",
+         "time": "4:08.739",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -10193,11 +10193,11 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Netherlands",
          "noc": "NED",
-         "time": "",
-         "qual": "",
+         "time": "4:11.761",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -10205,46 +10205,46 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Czechia",
+         "noc": "CZE",
+         "time": "4:27.799",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 4,
+         "slug": ""
+        },
+        {
+         "rank": 4,
          "name": "United States of America",
          "noc": "USA",
-         "time": "",
+         "time": "4:27.819",
          "qual": "",
          "status": "",
          "record": "",
          "bib": null,
          "lane": 3,
          "slug": ""
-        },
-        {
-         "rank": null,
-         "name": "Czechia",
-         "noc": "CZE",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 4,
-         "slug": ""
         }
        ]
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
         {
          "rank": null,
-         "name": "Canada",
-         "noc": "CAN",
+         "name": "Germany",
+         "noc": "GER",
          "time": "",
          "qual": "",
          "status": "",
          "record": "",
          "bib": null,
-         "lane": 1,
+         "lane": 3,
          "slug": ""
         },
         {
@@ -10261,18 +10261,6 @@
         },
         {
          "rank": null,
-         "name": "Germany",
-         "noc": "GER",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 3,
-         "slug": ""
-        },
-        {
-         "rank": null,
          "name": "Kazakhstan",
          "noc": "KAZ",
          "time": "",
@@ -10281,6 +10269,18 @@
          "record": "",
          "bib": null,
          "lane": 4,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Canada",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
          "slug": ""
         }
        ]
@@ -10928,7 +10928,7 @@
    "distance": "Men 3000 m Relay",
    "round": "Quarterfinals",
    "heat": "Heat 4",
-   "start_utc": "2026-11-12T17:54:00.000Z",
+   "start_utc": "2026-11-12T17:52:47.000Z",
    "rank": null,
    "name": "Republic of Korea",
    "noc": "KOR",
