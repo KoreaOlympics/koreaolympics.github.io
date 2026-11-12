@@ -1,7 +1,7 @@
 {
  "results": {
   "issf-wch-2026": {
-   "fetched": "2026-11-12 21:00",
+   "fetched": "2026-11-12 21:01",
    "events": [
     {
      "section": "Pistol",
@@ -1013,7 +1013,15 @@
      "section": "Shotgun",
      "group": "",
      "event": "Women's trap",
-     "medals": []
+     "medals": [
+      {
+       "names": [
+        "Jessica Rossi"
+       ],
+       "noc": "ITA",
+       "mark": ""
+      }
+     ]
     },
     {
      "section": "Shotgun",
@@ -1237,7 +1245,13 @@
      "AIN",
      2,
      0,
-     0
+     1
+    ],
+    [
+     "ITA",
+     2,
+     0,
+     1
     ],
     [
      "LAT",
@@ -1280,12 +1294,6 @@
      1,
      0,
      2
-    ],
-    [
-     "ITA",
-     1,
-     0,
-     1
     ],
     [
      "KUW",
@@ -1331,6 +1339,12 @@
     ],
     [
      "EGY",
+     0,
+     1,
+     0
+    ],
+    [
+     "GUA",
      0,
      1,
      0
@@ -1468,11 +1482,20 @@
       "SVK",
       "KAZ"
      ]
+    ],
+    [
+     "Trap Women",
+     3,
+     [
+      "ITA",
+      "GUA",
+      "RUS"
+     ]
     ]
    ]
   },
   "iwf-wch-2026": {
-   "fetched": "2026-11-12 21:00",
+   "fetched": "2026-11-12 21:01",
    "events": [
     {
      "section": "Men",
@@ -6254,5 +6277,5 @@
    "quotas": []
   }
  },
- "asof": "2026-11-12 21:00 KST"
+ "asof": "2026-11-12 21:01 KST"
 }
