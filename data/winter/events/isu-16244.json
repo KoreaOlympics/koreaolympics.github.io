@@ -15,10 +15,10 @@
   "city": "Bormio",
   "country": "ITA",
   "state": "Live",
-  "live": "Women 1500 m",
+  "live": "Men 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-13T10:35:59.489555+00:00",
+ "checked_at": "2026-11-13T10:46:33.368572+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -3618,13 +3618,222 @@
         }
        ]
       }
+     ]
+    },
+    {
+     "id": 23196,
+     "name": "Rep. Quarterfinals",
+     "status": "Scheduled",
+     "start_utc": "2026-11-13T09:50:00.000Z",
+     "rule": "The first and second placed skaters from each race and up to a maximum of two fastest third place skaters qualify for Rep. Semifinals.",
+     "heats": []
+    },
+    {
+     "id": 23198,
+     "name": "Rep. Semifinals",
+     "status": "Finished",
+     "start_utc": "2026-11-13T10:31:55.000Z",
+     "rule": "The first placed skater from each race qualify for Semifinals.",
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Natasa Z MOLNAR",
+         "noc": "HUN",
+         "time": "2:35.990",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 230,
+         "lane": 5,
+         "slug": "natasa-z-molnar"
+        },
+        {
+         "rank": 2,
+         "name": "Raiana MANARBEKOVA",
+         "noc": "KAZ",
+         "time": "2:36.041",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 245,
+         "lane": 1,
+         "slug": "raiana-manarbekova"
+        },
+        {
+         "rank": 3,
+         "name": "Viola COMBA",
+         "noc": "ITA",
+         "time": "2:38.710",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 234,
+         "lane": 6,
+         "slug": "viola-comba"
+        },
+        {
+         "rank": 4,
+         "name": "Eline Lupke TVETER",
+         "noc": "NOR",
+         "time": "2:39.328",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 260,
+         "lane": 3,
+         "slug": "eline-lupke-tveter"
+        },
+        {
+         "rank": 5,
+         "name": "Efsa POLAT",
+         "noc": "TUR",
+         "time": "2:39.738",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 271,
+         "lane": 4,
+         "slug": "efsa-polat"
+        },
+        {
+         "rank": 6,
+         "name": "Ulyana PASHAYEVA",
+         "noc": "AIN1",
+         "time": "2:42.472",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 202,
+         "lane": 7,
+         "slug": "ulyana-pashayeva"
+        },
+        {
+         "rank": 7,
+         "name": "Julie KIESGEN",
+         "noc": "LUX",
+         "time": "3:11.245",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 253,
+         "lane": 2,
+         "slug": "julie-kiesgen"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Daria DASZUTA",
+         "noc": "POL",
+         "time": "2:26.988",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 261,
+         "lane": 3,
+         "slug": "daria-daszuta"
+        },
+        {
+         "rank": 2,
+         "name": "Sofia KOONS",
+         "noc": "USA",
+         "time": "2:27.029",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 278,
+         "lane": 8,
+         "slug": "sofia-koons"
+        },
+        {
+         "rank": 3,
+         "name": "Beatrice PAGLIA",
+         "noc": "ITA",
+         "time": "2:29.320",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 236,
+         "lane": 4,
+         "slug": "beatrice-paglia"
+        },
+        {
+         "rank": 4,
+         "name": "Elif Doga DERIN",
+         "noc": "TUR",
+         "time": "2:29.660",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 269,
+         "lane": 6,
+         "slug": "elif-doga-derin"
+        },
+        {
+         "rank": 5,
+         "name": "Darya STSIAPANAVA",
+         "noc": "AIN1",
+         "time": "2:29.996",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 204,
+         "lane": 1,
+         "slug": "darya-stsiapanava"
+        },
+        {
+         "rank": 6,
+         "name": "Sasha MENSAH",
+         "noc": "USA",
+         "time": "2:31.233",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 186,
+         "lane": 2,
+         "slug": "sasha-mensah"
+        },
+        {
+         "rank": 7,
+         "name": "Tiffany ZHANG",
+         "noc": "USA",
+         "time": "2:34.781",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 187,
+         "lane": 5,
+         "slug": "tiffany-zhang"
+        },
+        {
+         "rank": 8,
+         "name": "Lara KOLOVRAT",
+         "noc": "CRO",
+         "time": "2:36.489",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 280,
+         "lane": 7,
+         "slug": "lara-kolovrat"
+        }
+       ]
+      }
      ],
      "projection": {
       "next": "Semifinals",
       "official_draw_published": false,
-      "pending": [
-       "Rep. Semifinals"
-      ],
+      "pending": [],
       "qualified": [
        {
         "name": "Yoonha KANG",
@@ -3758,6 +3967,20 @@
         "rank": 3,
         "time": "2:33.586",
         "qual": "q"
+       },
+       {
+        "name": "Daria DASZUTA",
+        "noc": "POL",
+        "rank": 1,
+        "time": "2:26.988",
+        "qual": "Q"
+       },
+       {
+        "name": "Natasa Z MOLNAR",
+        "noc": "HUN",
+        "rank": 1,
+        "time": "2:35.990",
+        "qual": "Q"
        }
       ],
       "races": [
@@ -3776,7 +3999,8 @@
         "Yiaidi ZONG (CHN)",
         "Flora KISS-GEBORA (HUN)",
         "Mila BOIVIN (CAN)",
-        "Pom STRAATHOF (NED)"
+        "Pom STRAATHOF (NED)",
+        "Daria DASZUTA (POL)"
        ],
        [
         "Chien Hua HUANG (TPE)",
@@ -3784,221 +4008,11 @@
         "Bomin PARK (KOR)",
         "Albina ALIEVA (AIN2)",
         "Anastasiia BARANOVA (AIN2)",
-        "Agata KOBUS (POL)"
+        "Agata KOBUS (POL)",
+        "Natasa Z MOLNAR (HUN)"
        ]
       ]
      }
-    },
-    {
-     "id": 23196,
-     "name": "Rep. Quarterfinals",
-     "status": "Scheduled",
-     "start_utc": "2026-11-13T09:50:00.000Z",
-     "rule": "The first and second placed skaters from each race and up to a maximum of two fastest third place skaters qualify for Rep. Semifinals.",
-     "heats": []
-    },
-    {
-     "id": 23198,
-     "name": "Rep. Semifinals",
-     "status": "Live",
-     "start_utc": "2026-11-13T10:26:00.000Z",
-     "rule": "The first placed skater from each race qualify for Semifinals.",
-     "heats": [
-      {
-       "name": "Heat 1",
-       "status": "Finished",
-       "official": "Live",
-       "competitors": [
-        {
-         "rank": 1,
-         "name": "Natasa Z MOLNAR",
-         "noc": "HUN",
-         "time": "2:36.010",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 230,
-         "lane": 5,
-         "slug": "natasa-z-molnar"
-        },
-        {
-         "rank": 2,
-         "name": "Raiana MANARBEKOVA",
-         "noc": "KAZ",
-         "time": "2:36.060",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 245,
-         "lane": 1,
-         "slug": "raiana-manarbekova"
-        },
-        {
-         "rank": 3,
-         "name": "Viola COMBA",
-         "noc": "ITA",
-         "time": "2:38.730",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 234,
-         "lane": 6,
-         "slug": "viola-comba"
-        },
-        {
-         "rank": 4,
-         "name": "Eline Lupke TVETER",
-         "noc": "NOR",
-         "time": "2:39.340",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 260,
-         "lane": 3,
-         "slug": "eline-lupke-tveter"
-        },
-        {
-         "rank": 5,
-         "name": "Efsa POLAT",
-         "noc": "TUR",
-         "time": "2:39.750",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 271,
-         "lane": 4,
-         "slug": "efsa-polat"
-        },
-        {
-         "rank": 6,
-         "name": "Ulyana PASHAYEVA",
-         "noc": "AIN1",
-         "time": "2:42.480",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 202,
-         "lane": 7,
-         "slug": "ulyana-pashayeva"
-        },
-        {
-         "rank": null,
-         "name": "Julie KIESGEN",
-         "noc": "LUX",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 253,
-         "lane": 2,
-         "slug": "julie-kiesgen"
-        }
-       ]
-      },
-      {
-       "name": "Heat 2",
-       "status": "Scheduled",
-       "official": "Start List",
-       "competitors": [
-        {
-         "rank": null,
-         "name": "Darya STSIAPANAVA",
-         "noc": "AIN1",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 204,
-         "lane": 1,
-         "slug": "darya-stsiapanava"
-        },
-        {
-         "rank": null,
-         "name": "Sasha MENSAH",
-         "noc": "USA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 186,
-         "lane": 2,
-         "slug": "sasha-mensah"
-        },
-        {
-         "rank": null,
-         "name": "Daria DASZUTA",
-         "noc": "POL",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 261,
-         "lane": 3,
-         "slug": "daria-daszuta"
-        },
-        {
-         "rank": null,
-         "name": "Beatrice PAGLIA",
-         "noc": "ITA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 236,
-         "lane": 4,
-         "slug": "beatrice-paglia"
-        },
-        {
-         "rank": null,
-         "name": "Tiffany ZHANG",
-         "noc": "USA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 187,
-         "lane": 5,
-         "slug": "tiffany-zhang"
-        },
-        {
-         "rank": null,
-         "name": "Elif Doga DERIN",
-         "noc": "TUR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 269,
-         "lane": 6,
-         "slug": "elif-doga-derin"
-        },
-        {
-         "rank": null,
-         "name": "Lara KOLOVRAT",
-         "noc": "CRO",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 280,
-         "lane": 7,
-         "slug": "lara-kolovrat"
-        },
-        {
-         "rank": null,
-         "name": "Sofia KOONS",
-         "noc": "USA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 278,
-         "lane": 8,
-         "slug": "sofia-koons"
-        }
-       ]
-      }
-     ]
     },
     {
      "id": 23197,
@@ -5430,10 +5444,217 @@
     {
      "id": 23212,
      "name": "Rep. Semifinals",
-     "status": "Scheduled",
+     "status": "Live",
      "start_utc": "2026-11-13T10:36:00.000Z",
      "rule": "The first placed skater from each race qualify for Semifinals.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Bence KISS-GEBORA",
+         "noc": "HUN",
+         "time": "2:20.259",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 148,
+         "lane": 4,
+         "slug": "bence-kiss-gebora"
+        },
+        {
+         "rank": 2,
+         "name": "Alibi ALIMGEREYEV",
+         "noc": "KAZ",
+         "time": "2:20.279",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 166,
+         "lane": 2,
+         "slug": "alibi-alimgereyev"
+        },
+        {
+         "rank": 3,
+         "name": "Berat Efe DAL",
+         "noc": "TUR",
+         "time": "2:20.525",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 197,
+         "lane": 1,
+         "slug": "berat-efe-dal"
+        },
+        {
+         "rank": 4,
+         "name": "Mauro DEFRANCQ",
+         "noc": "BEL",
+         "time": "2:21.710",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 209,
+         "lane": 5,
+         "slug": "mauro-defrancq"
+        },
+        {
+         "rank": 5,
+         "name": "Leonard TOMIMITSU",
+         "noc": "FRA",
+         "time": "2:22.234",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 211,
+         "lane": 6,
+         "slug": "leonard-tomimitsu"
+        },
+        {
+         "rank": 6,
+         "name": "Tadeus Richard MAGER",
+         "noc": "GER",
+         "time": "2:22.342",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 142,
+         "lane": 3,
+         "slug": "tadeus-richard-mager"
+        },
+        {
+         "rank": 7,
+         "name": "Evan PALADINO",
+         "noc": "USA",
+         "time": "2:22.563",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 219,
+         "lane": 7,
+         "slug": "evan-paladino"
+        },
+        {
+         "rank": 8,
+         "name": "Zhandos SEREKPAYEV",
+         "noc": "KAZ",
+         "time": "2:29.920",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 169,
+         "lane": 8,
+         "slug": "zhandos-serekpayev"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Matteo GIANA",
+         "noc": "ITA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 159,
+         "lane": 1,
+         "slug": "matteo-giana"
+        },
+        {
+         "rank": null,
+         "name": "Muhammed Dogukan ERDOGAN",
+         "noc": "TUR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 198,
+         "lane": 2,
+         "slug": "muhammed-dogukan-erdogan"
+        },
+        {
+         "rank": null,
+         "name": "Maksim ZHURAUSKI",
+         "noc": "AIN1",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 104,
+         "lane": 3,
+         "slug": "maksim-zhurauski"
+        },
+        {
+         "rank": null,
+         "name": "Fabio BRACCHI",
+         "noc": "ITA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 158,
+         "lane": 4,
+         "slug": "fabio-bracchi"
+        },
+        {
+         "rank": null,
+         "name": "Advay KOTHARI",
+         "noc": "IND",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 154,
+         "lane": 5,
+         "slug": "advay-kothari"
+        },
+        {
+         "rank": null,
+         "name": "Filip HYJEK",
+         "noc": "POL",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 191,
+         "lane": 6,
+         "slug": "filip-hyjek"
+        },
+        {
+         "rank": null,
+         "name": "Aarav Aniruddha PATWARDHAN",
+         "noc": "IND",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 155,
+         "lane": 7,
+         "slug": "aarav-aniruddha-patwardhan"
+        },
+        {
+         "rank": null,
+         "name": "Vincent CHAN",
+         "noc": "USA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 218,
+         "lane": 8,
+         "slug": "vincent-chan"
+        }
+       ]
+      }
+     ]
     },
     {
      "id": 23211,
