@@ -15,10 +15,10 @@
   "city": "Bormio",
   "country": "ITA",
   "state": "Live",
-  "live": "",
+  "live": "Men 3000 m Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-13T16:51:40.202373+00:00",
+ "checked_at": "2026-11-13T17:02:54.276384+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -287,37 +287,37 @@
   {
    "start_utc": "2026-11-13T14:43:00.000Z",
    "title": "Women 1500 m",
-   "round": "Final",
+   "round": "Finals",
    "event_result_id": 16130,
-   "round_id": null,
+   "round_id": 23272,
    "type": "Singles"
   },
   {
    "start_utc": "2026-11-13T15:00:00.000Z",
    "title": "Men 1500 m",
-   "round": "Final",
+   "round": "Finals",
    "event_result_id": 16132,
-   "round_id": null,
+   "round_id": 23273,
    "type": "Singles"
   },
   {
    "start_utc": "2026-11-13T15:16:00.000Z",
    "title": "Women 500 m (1)",
-   "round": "Final",
+   "round": "Finals",
    "event_result_id": 16127,
-   "round_id": null,
+   "round_id": 23270,
    "type": "Singles"
   },
   {
    "start_utc": "2026-11-13T15:28:00.000Z",
    "title": "Men 500 m (1)",
-   "round": "Final",
+   "round": "Finals",
    "event_result_id": 16128,
-   "round_id": null,
+   "round_id": 23271,
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-13T16:00:00.000Z",
+   "start_utc": "2026-11-13T15:59:00.000Z",
    "title": "Mixed Team Relay",
    "round": "Final B",
    "event_result_id": 16129,
@@ -333,7 +333,7 @@
    "type": "Couples"
   },
   {
-   "start_utc": "2026-11-13T16:38:00.000Z",
+   "start_utc": "2026-11-13T16:37:00.000Z",
    "title": "Women 3000 m Relay",
    "round": "Semifinals",
    "event_result_id": 16133,
@@ -15756,7 +15756,7 @@
     {
      "id": 23216,
      "name": "Semifinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-13T16:37:45.000Z",
      "rule": "The first and second placed teams from each race qualify for Final, the third and fourth placed teams from each race qualify for Final B.",
      "heats": [
@@ -15894,7 +15894,58 @@
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Final",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "China",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "4:11.831",
+        "qual": "Q"
+       },
+       {
+        "name": "Individual Neutral Athletes 2",
+        "noc": "AIN2",
+        "rank": 1,
+        "time": "4:20.404",
+        "qual": "Q"
+       },
+       {
+        "name": "Hungary",
+        "noc": "HUN",
+        "rank": 2,
+        "time": "4:16.028",
+        "qual": "Q"
+       },
+       {
+        "name": "Germany",
+        "noc": "GER",
+        "rank": 2,
+        "time": "4:20.523",
+        "qual": "Q"
+       },
+       {
+        "name": "Kazakhstan",
+        "noc": "KAZ",
+        "rank": 3,
+        "time": "4:17.073",
+        "qual": "ADV"
+       }
+      ],
+      "races": [
+       [
+        "China (CHN)",
+        "Individual Neutral Athletes 2 (AIN2)",
+        "Hungary (HUN)",
+        "Germany (GER)",
+        "Kazakhstan (KAZ)"
+       ]
+      ]
+     }
     },
     {
      "id": 23217,
@@ -16159,7 +16210,7 @@
      ],
      "projection": {
       "next": "Semifinals",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -16254,10 +16305,145 @@
     {
      "id": 23220,
      "name": "Semifinals",
-     "status": "Scheduled",
+     "status": "Live",
      "start_utc": "2026-11-13T16:54:00.000Z",
      "rule": "The first and second placed teams from each race qualify for Final, the third and fourth placed teams from each race qualify for Final B.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Live",
+       "official": "Live",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "China",
+         "noc": "CHN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Canada",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 2,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Hungary",
+         "noc": "HUN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Netherlands",
+         "noc": "NED",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 4,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Kazakhstan",
+         "noc": "KAZ",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 5,
+         "slug": ""
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Republic of Korea",
+         "noc": "KOR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Individual Neutral Athletes 2",
+         "noc": "AIN2",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 2,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Italy",
+         "noc": "ITA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "France",
+         "noc": "FRA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 4,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Belgium",
+         "noc": "BEL",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 5,
+         "slug": ""
+        }
+       ]
+      }
+     ]
     },
     {
      "id": 23221,
@@ -17242,6 +17428,25 @@
    "noc": "KOR",
    "time": "4:07.072",
    "qual": "Q",
+   "status": "",
+   "record": "",
+   "bib": null,
+   "lane": 1,
+   "slug": ""
+  },
+  {
+   "event_id": "isu-16244",
+   "sport": "short-track",
+   "event": "ISU Short Track Junior World Cup #2",
+   "distance": "Men 3000 m Relay",
+   "round": "Semifinals",
+   "heat": "Heat 2",
+   "start_utc": "2026-11-13T16:54:00.000Z",
+   "rank": null,
+   "name": "Republic of Korea",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
    "status": "",
    "record": "",
    "bib": null,
