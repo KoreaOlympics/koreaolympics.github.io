@@ -18,7 +18,7 @@
   "live": "Men 500 m (1)",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-13T13:29:50.605649+00:00",
+ "checked_at": "2026-11-13T13:40:34.914293+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -3428,7 +3428,7 @@
     {
      "id": 23188,
      "name": "Quarterfinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-13T13:14:00.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of two fastest third place skaters qualify for Semifinals.",
      "heats": [
@@ -3466,7 +3466,7 @@
          "name": "Elliot DUFOUR",
          "noc": "CAN",
          "time": "41.442",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 118,
@@ -3533,7 +3533,7 @@
          "name": "Meiirzhan TOLEGEN",
          "noc": "KAZ",
          "time": "41.483",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 170,
@@ -3569,14 +3569,14 @@
       {
        "name": "Heat 3",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "David MAKARIAN",
          "noc": "AIN2",
-         "time": "40.960",
-         "qual": "",
+         "time": "40.952",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 106,
@@ -3587,8 +3587,8 @@
          "rank": 2,
          "name": "Kebba NJIE",
          "noc": "NED",
-         "time": "41.820",
-         "qual": "",
+         "time": "41.814",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 181,
@@ -3599,7 +3599,7 @@
          "rank": 3,
          "name": "Mihaly ARENDAS",
          "noc": "HUN",
-         "time": "41.960",
+         "time": "41.952",
          "qual": "",
          "status": "",
          "record": "",
@@ -3611,7 +3611,7 @@
          "rank": 4,
          "name": "Wesley JONES",
          "noc": "USA",
-         "time": "43.410",
+         "time": "43.400",
          "qual": "",
          "status": "",
          "record": "",
@@ -3620,12 +3620,12 @@
          "slug": "wesley-jones"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Lowie DEKENS",
          "noc": "BEL",
-         "time": "",
+         "time": "DNF",
          "qual": "",
-         "status": "",
+         "status": "Did Not Finish",
          "record": "",
          "bib": 112,
          "lane": 4,
@@ -3635,27 +3635,15 @@
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Haoyang JIANG",
-         "noc": "CHN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 121,
-         "lane": 1,
-         "slug": "haoyang-jiang"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Emile FORTIN",
          "noc": "CAN",
-         "time": "",
-         "qual": "",
+         "time": "40.979",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 119,
@@ -3663,11 +3651,11 @@
          "slug": "emile-fortin"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Kirill PANIKOROVSKII",
          "noc": "AIN2",
-         "time": "",
-         "qual": "",
+         "time": "41.140",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 107,
@@ -3675,10 +3663,22 @@
          "slug": "kirill-panikorovskii"
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Tymon HRYNIEWICZ",
+         "noc": "POL",
+         "time": "42.293",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 190,
+         "lane": 5,
+         "slug": "tymon-hryniewicz"
+        },
+        {
+         "rank": 4,
          "name": "Raman SHAM",
          "noc": "AIN1",
-         "time": "",
+         "time": "42.758",
          "qual": "",
          "status": "",
          "record": "",
@@ -3687,20 +3687,113 @@
          "slug": "raman-sham"
         },
         {
-         "rank": null,
-         "name": "Tymon HRYNIEWICZ",
-         "noc": "POL",
-         "time": "",
+         "rank": 5,
+         "name": "Haoyang JIANG",
+         "noc": "CHN",
+         "time": "DNF",
          "qual": "",
-         "status": "",
+         "status": "Did Not Finish",
          "record": "",
-         "bib": 190,
-         "lane": 5,
-         "slug": "tymon-hryniewicz"
+         "bib": 121,
+         "lane": 1,
+         "slug": "haoyang-jiang"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Semifinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Tianyou WANG",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "40.361",
+        "qual": "Q"
+       },
+       {
+        "name": "David MAKARIAN",
+        "noc": "AIN2",
+        "rank": 1,
+        "time": "40.952",
+        "qual": "Q"
+       },
+       {
+        "name": "Emile FORTIN",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "40.979",
+        "qual": "Q"
+       },
+       {
+        "name": "Wonseok CHOI",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "41.167",
+        "qual": "Q"
+       },
+       {
+        "name": "Zhibo SUN",
+        "noc": "CHN",
+        "rank": 2,
+        "time": "40.868",
+        "qual": "Q"
+       },
+       {
+        "name": "Kirill PANIKOROVSKII",
+        "noc": "AIN2",
+        "rank": 2,
+        "time": "41.140",
+        "qual": "Q"
+       },
+       {
+        "name": "Tagir AMIRKHANOV",
+        "noc": "AIN2",
+        "rank": 2,
+        "time": "41.251",
+        "qual": "Q"
+       },
+       {
+        "name": "Kebba NJIE",
+        "noc": "NED",
+        "rank": 2,
+        "time": "41.814",
+        "qual": "Q"
+       },
+       {
+        "name": "Elliot DUFOUR",
+        "noc": "CAN",
+        "rank": 3,
+        "time": "41.442",
+        "qual": "q"
+       },
+       {
+        "name": "Meiirzhan TOLEGEN",
+        "noc": "KAZ",
+        "rank": 3,
+        "time": "41.483",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Tianyou WANG (CHN)",
+        "Wonseok CHOI (KOR)",
+        "Zhibo SUN (CHN)",
+        "Kebba NJIE (NED)",
+        "Elliot DUFOUR (CAN)"
+       ],
+       [
+        "David MAKARIAN (AIN2)",
+        "Emile FORTIN (CAN)",
+        "Kirill PANIKOROVSKII (AIN2)",
+        "Tagir AMIRKHANOV (AIN2)",
+        "Meiirzhan TOLEGEN (KAZ)"
+       ]
+      ]
+     }
     },
     {
      "id": 23189,
@@ -6707,7 +6800,7 @@
         },
         {
          "rank": 5,
-         "name": "Kyungeun JANG",
+         "name": "Kyung Eun JANG",
          "noc": "USA",
          "time": "46.305",
          "qual": "",
@@ -6715,7 +6808,7 @@
          "record": "",
          "bib": 276,
          "lane": 5,
-         "slug": "kyungeun-jang"
+         "slug": "kyung-eun-jang"
         }
        ]
       },
@@ -6817,7 +6910,7 @@
         },
         {
          "rank": 3,
-         "name": "ALINA LISHENKO",
+         "name": "Alina LISHENKO",
          "noc": "KAZ",
          "time": "45.580",
          "qual": "",
@@ -6963,7 +7056,7 @@
         },
         {
          "rank": 4,
-         "name": "MERUYERT SANSYZBAYEVA",
+         "name": "Meruyert SANSYZBAYEVA",
          "noc": "KAZ",
          "time": "46.301",
          "qual": "",
@@ -7094,7 +7187,7 @@
         },
         {
          "rank": 4,
-         "name": "MERUYERT SANSYZBAYEVA",
+         "name": "Meruyert SANSYZBAYEVA",
          "noc": "KAZ",
          "time": "45.393",
          "qual": "",
@@ -7235,7 +7328,7 @@
        "competitors": [
         {
          "rank": 1,
-         "name": "ALINA LISHENKO",
+         "name": "Alina LISHENKO",
          "noc": "KAZ",
          "time": "45.249",
          "qual": "Q",
@@ -7326,7 +7419,7 @@
         },
         {
          "rank": 4,
-         "name": "Kyungeun JANG",
+         "name": "Kyung Eun JANG",
          "noc": "USA",
          "time": "46.452",
          "qual": "",
@@ -7334,7 +7427,7 @@
          "record": "",
          "bib": 276,
          "lane": 3,
-         "slug": "kyungeun-jang"
+         "slug": "kyung-eun-jang"
         }
        ]
       }
@@ -7352,7 +7445,7 @@
         "qual": "Q"
        },
        {
-        "name": "ALINA LISHENKO",
+        "name": "Alina LISHENKO",
         "noc": "KAZ",
         "rank": 1,
         "time": "45.249",
@@ -7424,7 +7517,7 @@
         "Varvara KURYLA (AIN1)"
        ],
        [
-        "ALINA LISHENKO (KAZ)",
+        "Alina LISHENKO (KAZ)",
         "Marta MITTEMPERGHER (ITA)",
         "Jelka VAN KRANENBURG (NED)",
         "Janna Wietske VAN DER ENDE (NED)",
@@ -7562,7 +7655,7 @@
         },
         {
          "rank": 5,
-         "name": "ALINA LISHENKO",
+         "name": "Alina LISHENKO",
          "noc": "KAZ",
          "time": "1:21.288",
          "qual": "",
@@ -7775,7 +7868,7 @@
        "competitors": [
         {
          "rank": 1,
-         "name": "MERUYERT SANSYZBAYEVA",
+         "name": "Meruyert SANSYZBAYEVA",
          "noc": "KAZ",
          "time": "46.603",
          "qual": "",
@@ -7799,7 +7892,7 @@
         },
         {
          "rank": 3,
-         "name": "Kyungeun JANG",
+         "name": "Kyung Eun JANG",
          "noc": "USA",
          "time": "46.830",
          "qual": "",
@@ -7807,7 +7900,7 @@
          "record": "",
          "bib": 276,
          "lane": 4,
-         "slug": "kyungeun-jang"
+         "slug": "kyung-eun-jang"
         },
         {
          "rank": 4,
@@ -11661,7 +11754,7 @@
         },
         {
          "rank": 3,
-         "name": "Kyungeun JANG",
+         "name": "Kyung Eun JANG",
          "noc": "USA",
          "time": "46.725",
          "qual": "",
@@ -11669,7 +11762,7 @@
          "record": "",
          "bib": 276,
          "lane": 5,
-         "slug": "kyungeun-jang"
+         "slug": "kyung-eun-jang"
         },
         {
          "rank": 4,
@@ -11953,7 +12046,7 @@
         },
         {
          "rank": 5,
-         "name": "ALINA LISHENKO",
+         "name": "Alina LISHENKO",
          "noc": "KAZ",
          "time": "1:21.684",
          "qual": "",
@@ -12398,7 +12491,7 @@
         },
         {
          "rank": 3,
-         "name": "MERUYERT SANSYZBAYEVA",
+         "name": "Meruyert SANSYZBAYEVA",
          "noc": "KAZ",
          "time": "1:36.694",
          "qual": "",
