@@ -18,7 +18,7 @@
   "live": "Men 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-13T10:13:50.926260+00:00",
+ "checked_at": "2026-11-13T10:24:27.245019+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -4683,8 +4683,8 @@
     {
      "id": 23210,
      "name": "Rep. Quarterfinals",
-     "status": "Live",
-     "start_utc": "2026-11-13T09:59:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-13T10:00:23.000Z",
      "rule": "The first, second and third placed skaters from each race and up to a maximum of four fastest fourth place skaters qualify for Rep. Semifinals.",
      "heats": [
       {
@@ -4733,7 +4733,7 @@
          "name": "Vincent CHAN",
          "noc": "USA",
          "time": "2:23.024",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 218,
@@ -4824,7 +4824,7 @@
          "name": "Evan PALADINO",
          "noc": "USA",
          "time": "2:21.136",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 219,
@@ -4883,75 +4883,15 @@
       },
       {
        "name": "Heat 3",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Advay KOTHARI",
-         "noc": "IND",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 154,
-         "lane": 4,
-         "slug": "advay-kothari"
-        },
-        {
-         "rank": null,
-         "name": "Maximilian MAGER",
-         "noc": "GER",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 141,
-         "lane": 3,
-         "slug": "maximilian-mager"
-        },
-        {
-         "rank": null,
-         "name": "Aarav Aniruddha PATWARDHAN",
-         "noc": "IND",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 155,
-         "lane": 8,
-         "slug": "aarav-aniruddha-patwardhan"
-        },
-        {
-         "rank": null,
-         "name": "Frantisek MUCHKA",
-         "noc": "CZE",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 128,
-         "lane": 5,
-         "slug": "frantisek-muchka"
-        },
-        {
-         "rank": null,
-         "name": "Fabio BRACCHI",
-         "noc": "ITA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 158,
-         "lane": 2,
-         "slug": "fabio-bracchi"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Muhammed Dogukan ERDOGAN",
          "noc": "TUR",
-         "time": "",
-         "qual": "",
+         "time": "2:20.946",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 198,
@@ -4959,10 +4899,46 @@
          "slug": "muhammed-dogukan-erdogan"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Fabio BRACCHI",
+         "noc": "ITA",
+         "time": "2:21.770",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 158,
+         "lane": 2,
+         "slug": "fabio-bracchi"
+        },
+        {
+         "rank": 3,
+         "name": "Advay KOTHARI",
+         "noc": "IND",
+         "time": "2:22.291",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 154,
+         "lane": 4,
+         "slug": "advay-kothari"
+        },
+        {
+         "rank": 4,
+         "name": "Aarav Aniruddha PATWARDHAN",
+         "noc": "IND",
+         "time": "2:22.428",
+         "qual": "q",
+         "status": "",
+         "record": "",
+         "bib": 155,
+         "lane": 8,
+         "slug": "aarav-aniruddha-patwardhan"
+        },
+        {
+         "rank": 5,
          "name": "Viktor KIRSTA",
          "noc": "AUS",
-         "time": "",
+         "time": "2:23.127",
          "qual": "",
          "status": "",
          "record": "",
@@ -4971,10 +4947,34 @@
          "slug": "viktor-kirsta"
         },
         {
-         "rank": null,
+         "rank": 6,
+         "name": "Frantisek MUCHKA",
+         "noc": "CZE",
+         "time": "2:23.405",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 128,
+         "lane": 5,
+         "slug": "frantisek-muchka"
+        },
+        {
+         "rank": 7,
+         "name": "Maximilian MAGER",
+         "noc": "GER",
+         "time": "2:24.445",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 141,
+         "lane": 3,
+         "slug": "maximilian-mager"
+        },
+        {
+         "rank": 8,
          "name": "Juraj GOGA",
          "noc": "SVK",
-         "time": "",
+         "time": "2:25.039",
          "qual": "",
          "status": "",
          "record": "",
@@ -4986,75 +4986,15 @@
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "David HRADSKY",
-         "noc": "CZE",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 126,
-         "lane": 1,
-         "slug": "david-hradsky"
-        },
-        {
-         "rank": null,
-         "name": "Bence KISS-GEBORA",
-         "noc": "HUN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 148,
-         "lane": 2,
-         "slug": "bence-kiss-gebora"
-        },
-        {
-         "rank": null,
-         "name": "Andrew GONG",
-         "noc": "HKG",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 143,
-         "lane": 3,
-         "slug": "andrew-gong"
-        },
-        {
-         "rank": null,
-         "name": "Leonard TOMIMITSU",
-         "noc": "FRA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 211,
-         "lane": 4,
-         "slug": "leonard-tomimitsu"
-        },
-        {
-         "rank": null,
-         "name": "Zhandos SEREKPAYEV",
-         "noc": "KAZ",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 169,
-         "lane": 5,
-         "slug": "zhandos-serekpayev"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Alibi ALIMGEREYEV",
          "noc": "KAZ",
-         "time": "",
-         "qual": "",
+         "time": "2:25.127",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 166,
@@ -5062,10 +5002,46 @@
          "slug": "alibi-alimgereyev"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Bence KISS-GEBORA",
+         "noc": "HUN",
+         "time": "2:25.273",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 148,
+         "lane": 2,
+         "slug": "bence-kiss-gebora"
+        },
+        {
+         "rank": 3,
+         "name": "Leonard TOMIMITSU",
+         "noc": "FRA",
+         "time": "2:25.355",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 211,
+         "lane": 4,
+         "slug": "leonard-tomimitsu"
+        },
+        {
+         "rank": 4,
+         "name": "Zhandos SEREKPAYEV",
+         "noc": "KAZ",
+         "time": "2:25.427",
+         "qual": "q",
+         "status": "",
+         "record": "",
+         "bib": 169,
+         "lane": 5,
+         "slug": "zhandos-serekpayev"
+        },
+        {
+         "rank": 5,
          "name": "Szymon ETEL",
          "noc": "POL",
-         "time": "",
+         "time": "2:25.775",
          "qual": "",
          "status": "",
          "record": "",
@@ -5074,10 +5050,34 @@
          "slug": "szymon-etel"
         },
         {
-         "rank": null,
+         "rank": 6,
+         "name": "Andrew GONG",
+         "noc": "HKG",
+         "time": "2:25.899",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 143,
+         "lane": 3,
+         "slug": "andrew-gong"
+        },
+        {
+         "rank": 7,
+         "name": "David HRADSKY",
+         "noc": "CZE",
+         "time": "2:26.208",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 126,
+         "lane": 1,
+         "slug": "david-hradsky"
+        },
+        {
+         "rank": 8,
          "name": "Sidoine CONESA",
          "noc": "LUX",
-         "time": "",
+         "time": "2:33.350",
          "qual": "",
          "status": "",
          "record": "",
@@ -5087,7 +5087,150 @@
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Rep",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Berat Efe DAL",
+        "noc": "TUR",
+        "rank": 1,
+        "time": "2:19.406",
+        "qual": "Q"
+       },
+       {
+        "name": "Matteo GIANA",
+        "noc": "ITA",
+        "rank": 1,
+        "time": "2:20.785",
+        "qual": "Q"
+       },
+       {
+        "name": "Muhammed Dogukan ERDOGAN",
+        "noc": "TUR",
+        "rank": 1,
+        "time": "2:20.946",
+        "qual": "Q"
+       },
+       {
+        "name": "Alibi ALIMGEREYEV",
+        "noc": "KAZ",
+        "rank": 1,
+        "time": "2:25.127",
+        "qual": "Q"
+       },
+       {
+        "name": "Tadeus Richard MAGER",
+        "noc": "GER",
+        "rank": 2,
+        "time": "2:19.822",
+        "qual": "Q"
+       },
+       {
+        "name": "Maksim ZHURAUSKI",
+        "noc": "AIN1",
+        "rank": 2,
+        "time": "2:20.804",
+        "qual": "Q"
+       },
+       {
+        "name": "Fabio BRACCHI",
+        "noc": "ITA",
+        "rank": 2,
+        "time": "2:21.770",
+        "qual": "Q"
+       },
+       {
+        "name": "Bence KISS-GEBORA",
+        "noc": "HUN",
+        "rank": 2,
+        "time": "2:25.273",
+        "qual": "Q"
+       },
+       {
+        "name": "Mauro DEFRANCQ",
+        "noc": "BEL",
+        "rank": 3,
+        "time": "2:20.951",
+        "qual": "Q"
+       },
+       {
+        "name": "Advay KOTHARI",
+        "noc": "IND",
+        "rank": 3,
+        "time": "2:22.291",
+        "qual": "Q"
+       },
+       {
+        "name": "Filip HYJEK",
+        "noc": "POL",
+        "rank": 3,
+        "time": "2:22.865",
+        "qual": "Q"
+       },
+       {
+        "name": "Leonard TOMIMITSU",
+        "noc": "FRA",
+        "rank": 3,
+        "time": "2:25.355",
+        "qual": "Q"
+       },
+       {
+        "name": "Evan PALADINO",
+        "noc": "USA",
+        "rank": 4,
+        "time": "2:21.136",
+        "qual": "q"
+       },
+       {
+        "name": "Aarav Aniruddha PATWARDHAN",
+        "noc": "IND",
+        "rank": 4,
+        "time": "2:22.428",
+        "qual": "q"
+       },
+       {
+        "name": "Vincent CHAN",
+        "noc": "USA",
+        "rank": 4,
+        "time": "2:23.024",
+        "qual": "q"
+       },
+       {
+        "name": "Zhandos SEREKPAYEV",
+        "noc": "KAZ",
+        "rank": 4,
+        "time": "2:25.427",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Berat Efe DAL (TUR)",
+        "Maksim ZHURAUSKI (AIN1)",
+        "Fabio BRACCHI (ITA)",
+        "Leonard TOMIMITSU (FRA)",
+        "Evan PALADINO (USA)"
+       ],
+       [
+        "Matteo GIANA (ITA)",
+        "Tadeus Richard MAGER (GER)",
+        "Bence KISS-GEBORA (HUN)",
+        "Filip HYJEK (POL)",
+        "Aarav Aniruddha PATWARDHAN (IND)"
+       ],
+       [
+        "Muhammed Dogukan ERDOGAN (TUR)",
+        "Alibi ALIMGEREYEV (KAZ)",
+        "Mauro DEFRANCQ (BEL)",
+        "Advay KOTHARI (IND)",
+        "Vincent CHAN (USA)",
+        "Zhandos SEREKPAYEV (KAZ)"
+       ]
+      ]
+     }
     },
     {
      "id": 23212,
