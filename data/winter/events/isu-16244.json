@@ -15,10 +15,10 @@
   "city": "Bormio",
   "country": "ITA",
   "state": "Live",
-  "live": "Women 500 m (1)",
+  "live": "Men 500 m (1)",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-13T15:21:26.347266+00:00",
+ "checked_at": "2026-11-13T15:32:27.633534+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -3939,7 +3939,7 @@
      ],
      "projection": {
       "next": "Final",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -3992,10 +3992,133 @@
     {
      "id": 23269,
      "name": "Final",
-     "status": "Scheduled",
-     "start_utc": "2026-11-13T15:26:00.000Z",
+     "status": "Live",
+     "start_utc": "2026-11-13T15:28:00.000Z",
      "rule": "",
-     "heats": []
+     "heats": [
+      {
+       "name": "Final",
+       "status": "Getting Ready",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Tianyou WANG",
+         "noc": "CHN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 124,
+         "lane": 1,
+         "slug": "tianyou-wang"
+        },
+        {
+         "rank": null,
+         "name": "David MAKARIAN",
+         "noc": "AIN2",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 106,
+         "lane": 2,
+         "slug": "david-makarian"
+        },
+        {
+         "rank": null,
+         "name": "Wonseok CHOI",
+         "noc": "KOR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 171,
+         "lane": 3,
+         "slug": "wonseok-choi"
+        },
+        {
+         "rank": null,
+         "name": "Emile FORTIN",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 119,
+         "lane": 4,
+         "slug": "emile-fortin"
+        },
+        {
+         "rank": null,
+         "name": "Tagir AMIRKHANOV",
+         "noc": "AIN2",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 105,
+         "lane": 5,
+         "slug": "tagir-amirkhanov"
+        }
+       ]
+      },
+      {
+       "name": "Final B",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Meiirzhan TOLEGEN",
+         "noc": "KAZ",
+         "time": "41.957",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 170,
+         "lane": 4,
+         "slug": "meiirzhan-tolegen"
+        },
+        {
+         "rank": 2,
+         "name": "Elliot DUFOUR",
+         "noc": "CAN",
+         "time": "42.063",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 118,
+         "lane": 3,
+         "slug": "elliot-dufour"
+        },
+        {
+         "rank": 3,
+         "name": "Kirill PANIKOROVSKII",
+         "noc": "AIN2",
+         "time": "42.444",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 107,
+         "lane": 2,
+         "slug": "kirill-panikorovskii"
+        },
+        {
+         "rank": null,
+         "name": "Kebba NJIE",
+         "noc": "NED",
+         "time": "YC",
+         "qual": "",
+         "status": "Yellow Card",
+         "record": "",
+         "bib": 181,
+         "lane": 1,
+         "slug": "kebba-njie"
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -9842,20 +9965,20 @@
     {
      "id": 23268,
      "name": "Final",
-     "status": "Live",
-     "start_utc": "2026-11-13T15:14:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-13T15:16:52.000Z",
      "rule": "",
      "heats": [
       {
        "name": "Final",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Yuchen JIANG",
          "noc": "CHN",
-         "time": "",
+         "time": "44.123",
          "qual": "",
          "status": "",
          "record": "",
@@ -9864,10 +9987,10 @@
          "slug": "yuchen-jiang"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Kira Judit AMSCHL",
          "noc": "HUN",
-         "time": "",
+         "time": "44.205",
          "qual": "",
          "status": "",
          "record": "",
@@ -9876,10 +9999,10 @@
          "slug": "kira-judit-amschl"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Junyu KUANG",
          "noc": "CHN",
-         "time": "",
+         "time": "44.254",
          "qual": "",
          "status": "",
          "record": "",
@@ -9888,28 +10011,28 @@
          "slug": "junyu-kuang"
         },
         {
-         "rank": null,
-         "name": "Veronika GRISHINA",
-         "noc": "AIN2",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 207,
-         "lane": 4,
-         "slug": "veronika-grishina"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Anna TELEGANOVA",
          "noc": "AIN2",
-         "time": "",
+         "time": "44.359",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 209,
          "lane": 5,
          "slug": "anna-teleganova"
+        },
+        {
+         "rank": 5,
+         "name": "Veronika GRISHINA",
+         "noc": "AIN2",
+         "time": "44.372",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 207,
+         "lane": 4,
+         "slug": "veronika-grishina"
         }
        ]
       },
@@ -16046,6 +16169,25 @@
    "event_id": "isu-16244",
    "sport": "short-track",
    "event": "ISU Short Track Junior World Cup #2",
+   "distance": "Men 500 m (1)",
+   "round": "Final",
+   "heat": "Final",
+   "start_utc": "2026-11-13T15:28:00.000Z",
+   "rank": null,
+   "name": "Wonseok CHOI",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 171,
+   "lane": 3,
+   "slug": "wonseok-choi"
+  },
+  {
+   "event_id": "isu-16244",
+   "sport": "short-track",
+   "event": "ISU Short Track Junior World Cup #2",
    "distance": "Women 1500 m",
    "round": "Quarterfinals",
    "heat": "Heat 1",
@@ -16467,7 +16609,7 @@
    "distance": "Women 500 m (1)",
    "round": "Final",
    "heat": "Final B",
-   "start_utc": "2026-11-13T15:14:00.000Z",
+   "start_utc": "2026-11-13T15:16:52.000Z",
    "rank": 5,
    "name": "Sumin YU",
    "noc": "KOR",
