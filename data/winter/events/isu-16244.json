@@ -15,10 +15,10 @@
   "city": "Bormio",
   "country": "ITA",
   "state": "Live",
-  "live": "Women 500 m (1)",
+  "live": "Men 500 m (1)",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-13T08:48:07.770189+00:00",
+ "checked_at": "2026-11-13T08:58:45.143330+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -4669,8 +4669,8 @@
     {
      "id": 23177,
      "name": "Rep. Quarterfinals",
-     "status": "Live",
-     "start_utc": "2026-11-13T08:45:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-13T08:45:21.000Z",
      "rule": "The first placed skater from each race and up to a maximum of five fastest second place skaters qualify for Rep Semifinals.",
      "heats": [
       {
@@ -4695,7 +4695,7 @@
          "name": "Jelka VAN KRANENBURG",
          "noc": "NED",
          "time": "44.551",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 257,
@@ -4742,15 +4742,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Palina SHKARSTAN",
          "noc": "AIN1",
-         "time": "",
-         "qual": "",
+         "time": "45.623",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 203,
@@ -4758,11 +4758,11 @@
          "slug": "palina-shkarstan"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Varvara KURYLA",
          "noc": "AIN1",
-         "time": "",
-         "qual": "",
+         "time": "45.666",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 201,
@@ -4770,10 +4770,10 @@
          "slug": "varvara-kuryla"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Elzem TAS",
          "noc": "TUR",
-         "time": "",
+         "time": "45.776",
          "qual": "",
          "status": "",
          "record": "",
@@ -4782,10 +4782,10 @@
          "slug": "elzem-tas"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Kierana Alexandra LAUT",
          "noc": "INA",
-         "time": "",
+         "time": "46.771",
          "qual": "",
          "status": "",
          "record": "",
@@ -4797,15 +4797,15 @@
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Klara ZOSCHKE",
          "noc": "GER",
-         "time": "",
-         "qual": "",
+         "time": "45.617",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 226,
@@ -4813,11 +4813,11 @@
          "slug": "klara-zoschke"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Charlotte SCHULZ",
          "noc": "GER",
-         "time": "",
-         "qual": "",
+         "time": "46.165",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 224,
@@ -4825,42 +4825,42 @@
          "slug": "charlotte-schulz"
         },
         {
-         "rank": null,
-         "name": "Sunniva Haug JOHANNESSEN",
-         "noc": "NOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 259,
-         "lane": 3,
-         "slug": "sunniva-haug-johannessen-1"
-        },
-        {
-         "rank": null,
+         "rank": 3,
          "name": "Savi BUFFEY",
          "noc": "GBR",
-         "time": "",
+         "time": "46.756",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 222,
          "lane": 4,
          "slug": "savi-buffey"
+        },
+        {
+         "rank": 4,
+         "name": "Sunniva Haug JOHANNESSEN",
+         "noc": "NOR",
+         "time": "46.858",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 259,
+         "lane": 3,
+         "slug": "sunniva-haug-johannessen-1"
         }
        ]
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Alina LISHENKO",
          "noc": "KAZ",
-         "time": "",
-         "qual": "",
+         "time": "45.249",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 244,
@@ -4868,11 +4868,11 @@
          "slug": "alina-lishenko"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Janna Wietske VAN DER ENDE",
          "noc": "NED",
-         "time": "",
-         "qual": "",
+         "time": "45.416",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 255,
@@ -4880,10 +4880,10 @@
          "slug": "janna-wietske-van-der-ende"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Sude Naz KAHRAMAN",
          "noc": "TUR",
-         "time": "",
+         "time": "45.483",
          "qual": "",
          "status": "",
          "record": "",
@@ -4892,10 +4892,10 @@
          "slug": "sude-naz-kahraman"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Anna PNOVSKA",
          "noc": "CZE",
-         "time": "",
+         "time": "45.605",
          "qual": "",
          "status": "",
          "record": "",
@@ -4907,27 +4907,15 @@
       },
       {
        "name": "Heat 5",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Sofija RODIC",
-         "noc": "SRB",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 266,
-         "lane": 1,
-         "slug": "sofija-rodic"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Marta MITTEMPERGHER",
          "noc": "ITA",
-         "time": "",
-         "qual": "",
+         "time": "45.487",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 183,
@@ -4935,32 +4923,137 @@
          "slug": "marta-mittempergher"
         },
         {
-         "rank": null,
-         "name": "Kyung Eun JANG",
-         "noc": "USA",
-         "time": "",
-         "qual": "",
+         "rank": 2,
+         "name": "Sofija RODIC",
+         "noc": "SRB",
+         "time": "45.626",
+         "qual": "q",
          "status": "",
          "record": "",
-         "bib": 276,
-         "lane": 3,
-         "slug": "kyung-eun-jang"
+         "bib": 266,
+         "lane": 1,
+         "slug": "sofija-rodic"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Lara DZIEDZINOVA",
          "noc": "SVK",
-         "time": "",
+         "time": "46.064",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 184,
          "lane": 4,
          "slug": "lara-dziedzinova"
+        },
+        {
+         "rank": 4,
+         "name": "Kyung Eun JANG",
+         "noc": "USA",
+         "time": "46.452",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 276,
+         "lane": 3,
+         "slug": "kyung-eun-jang"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Rep. Semifinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Nina TRABUCCHI",
+        "noc": "ITA",
+        "rank": 1,
+        "time": "44.527",
+        "qual": "Q"
+       },
+       {
+        "name": "Alina LISHENKO",
+        "noc": "KAZ",
+        "rank": 1,
+        "time": "45.249",
+        "qual": "Q"
+       },
+       {
+        "name": "Marta MITTEMPERGHER",
+        "noc": "ITA",
+        "rank": 1,
+        "time": "45.487",
+        "qual": "Q"
+       },
+       {
+        "name": "Klara ZOSCHKE",
+        "noc": "GER",
+        "rank": 1,
+        "time": "45.617",
+        "qual": "Q"
+       },
+       {
+        "name": "Palina SHKARSTAN",
+        "noc": "AIN1",
+        "rank": 1,
+        "time": "45.623",
+        "qual": "Q"
+       },
+       {
+        "name": "Jelka VAN KRANENBURG",
+        "noc": "NED",
+        "rank": 2,
+        "time": "44.551",
+        "qual": "q"
+       },
+       {
+        "name": "Janna Wietske VAN DER ENDE",
+        "noc": "NED",
+        "rank": 2,
+        "time": "45.416",
+        "qual": "q"
+       },
+       {
+        "name": "Sofija RODIC",
+        "noc": "SRB",
+        "rank": 2,
+        "time": "45.626",
+        "qual": "q"
+       },
+       {
+        "name": "Varvara KURYLA",
+        "noc": "AIN1",
+        "rank": 2,
+        "time": "45.666",
+        "qual": "q"
+       },
+       {
+        "name": "Charlotte SCHULZ",
+        "noc": "GER",
+        "rank": 2,
+        "time": "46.165",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Nina TRABUCCHI (ITA)",
+        "Klara ZOSCHKE (GER)",
+        "Palina SHKARSTAN (AIN1)",
+        "Sofija RODIC (SRB)",
+        "Varvara KURYLA (AIN1)"
+       ],
+       [
+        "Alina LISHENKO (KAZ)",
+        "Marta MITTEMPERGHER (ITA)",
+        "Jelka VAN KRANENBURG (NED)",
+        "Janna Wietske VAN DER ENDE (NED)",
+        "Charlotte SCHULZ (GER)"
+       ]
+      ]
+     }
     },
     {
      "id": 23179,
