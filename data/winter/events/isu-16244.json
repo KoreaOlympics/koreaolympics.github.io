@@ -15,10 +15,10 @@
   "city": "Bormio",
   "country": "ITA",
   "state": "Live",
-  "live": "Women 3000 m Relay",
+  "live": "",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-13T16:39:32.875104+00:00",
+ "checked_at": "2026-11-13T16:50:28.176678+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -15757,20 +15757,20 @@
      "id": 23216,
      "name": "Semifinals",
      "status": "Live",
-     "start_utc": "2026-11-13T16:38:00.000Z",
+     "start_utc": "2026-11-13T16:37:45.000Z",
      "rule": "The first and second placed teams from each race qualify for Final, the third and fourth placed teams from each race qualify for Final B.",
      "heats": [
       {
        "name": "Heat 1",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "China",
          "noc": "CHN",
-         "time": "",
-         "qual": "",
+         "time": "4:11.831",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -15778,9 +15778,64 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Hungary",
+         "noc": "HUN",
+         "time": "4:16.028",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": 3,
          "name": "Kazakhstan",
          "noc": "KAZ",
+         "time": "4:17.073",
+         "qual": "ADV",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 4,
+         "slug": ""
+        },
+        {
+         "rank": 4,
+         "name": "Canada",
+         "noc": "CAN",
+         "time": "4:23.708",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 2,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Turkiye",
+         "noc": "TUR",
+         "time": "YC",
+         "qual": "",
+         "status": "Yellow Card",
+         "record": "",
+         "bib": null,
+         "lane": 5,
+         "slug": ""
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Live",
+       "official": "Live",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Germany",
+         "noc": "GER",
          "time": "",
          "qual": "",
          "status": "",
@@ -15791,20 +15846,8 @@
         },
         {
          "rank": null,
-         "name": "Hungary",
-         "noc": "HUN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 1,
-         "slug": ""
-        },
-        {
-         "rank": null,
-         "name": "Turkiye",
-         "noc": "TUR",
+         "name": "Netherlands",
+         "noc": "NED",
          "time": "",
          "qual": "",
          "status": "",
@@ -15813,25 +15856,6 @@
          "lane": 5,
          "slug": ""
         },
-        {
-         "rank": null,
-         "name": "Canada",
-         "noc": "CAN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 2,
-         "slug": ""
-        }
-       ]
-      },
-      {
-       "name": "Heat 2",
-       "status": "Scheduled",
-       "official": "Start List",
-       "competitors": [
         {
          "rank": null,
          "name": "Poland",
@@ -15866,30 +15890,6 @@
          "record": "",
          "bib": null,
          "lane": 3,
-         "slug": ""
-        },
-        {
-         "rank": null,
-         "name": "Germany",
-         "noc": "GER",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 4,
-         "slug": ""
-        },
-        {
-         "rank": null,
-         "name": "Netherlands",
-         "noc": "NED",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 5,
          "slug": ""
         }
        ]
