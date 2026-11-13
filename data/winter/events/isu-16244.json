@@ -15,10 +15,10 @@
   "city": "Bormio",
   "country": "ITA",
   "state": "Live",
-  "live": "Men 500 m (1)",
+  "live": "Women 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-13T13:40:34.914293+00:00",
+ "checked_at": "2026-11-13T13:51:19.638799+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -4542,7 +4542,7 @@
      ],
      "projection": {
       "next": "Semifinals",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -4735,10 +4735,284 @@
     {
      "id": 23199,
      "name": "Semifinals",
-     "status": "Scheduled",
-     "start_utc": "2026-11-13T13:39:00.000Z",
+     "status": "Live",
+     "start_utc": "2026-11-13T13:43:00.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final, the third and fourth placed skaters from each race and up to a maximum of next two fastest fifth place skaters qualify for Final B.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Rongmiao YANG",
+         "noc": "CHN",
+         "time": "2:29.868",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 219,
+         "lane": 2,
+         "slug": "rongmiao-yang"
+        },
+        {
+         "rank": 2,
+         "name": "Yoonha KANG",
+         "noc": "KOR",
+         "time": "2:30.200",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 248,
+         "lane": 1,
+         "slug": "yoonha-kang"
+        },
+        {
+         "rank": 3,
+         "name": "Subin KIM",
+         "noc": "KOR",
+         "time": "2:30.224",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 249,
+         "lane": 3,
+         "slug": "subin-kim"
+        },
+        {
+         "rank": 4,
+         "name": "Juul VAN DER ZWAAN",
+         "noc": "NED",
+         "time": "2:32.814",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 256,
+         "lane": 5,
+         "slug": "juul-van-der-zwaan"
+        },
+        {
+         "rank": 5,
+         "name": "Lyna HANI",
+         "noc": "CAN",
+         "time": "2:32.856",
+         "qual": "pB",
+         "status": "",
+         "record": "",
+         "bib": 214,
+         "lane": 4,
+         "slug": "lyna-hani"
+        },
+        {
+         "rank": 6,
+         "name": "Carlotta GROSSMANN",
+         "noc": "GER",
+         "time": "2:33.961",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 223,
+         "lane": 6,
+         "slug": "carlotta-grossmann"
+        },
+        {
+         "rank": 7,
+         "name": "Kateryna MOISIEIEVA",
+         "noc": "UKR",
+         "time": "2:34.779",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 274,
+         "lane": 7,
+         "slug": "kateryna-moisieieva"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Getting Ready",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Jinzi LI",
+         "noc": "CHN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 218,
+         "lane": 1,
+         "slug": "jinzi-li"
+        },
+        {
+         "rank": null,
+         "name": "Hanna MAZUR",
+         "noc": "POL",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 264,
+         "lane": 2,
+         "slug": "hanna-mazur-1"
+        },
+        {
+         "rank": null,
+         "name": "Yiaidi ZONG",
+         "noc": "CHN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 220,
+         "lane": 3,
+         "slug": "yiaidi-zong"
+        },
+        {
+         "rank": null,
+         "name": "Flora KISS-GEBORA",
+         "noc": "HUN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 228,
+         "lane": 4,
+         "slug": "flora-kiss-gebora"
+        },
+        {
+         "rank": null,
+         "name": "Mila BOIVIN",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 211,
+         "lane": 5,
+         "slug": "mila-boivin"
+        },
+        {
+         "rank": null,
+         "name": "Pom STRAATHOF",
+         "noc": "NED",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 254,
+         "lane": 6,
+         "slug": "pom-straathof"
+        },
+        {
+         "rank": null,
+         "name": "Daria DASZUTA",
+         "noc": "POL",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 261,
+         "lane": 7,
+         "slug": "daria-daszuta"
+        }
+       ]
+      },
+      {
+       "name": "Heat 3",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Chien Hua HUANG",
+         "noc": "TPE",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 85,
+         "lane": 1,
+         "slug": "chien-hua-huang"
+        },
+        {
+         "rank": null,
+         "name": "Yelyzaveta SOLOVIOVA",
+         "noc": "GER",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 225,
+         "lane": 2,
+         "slug": "yelyzaveta-soloviova"
+        },
+        {
+         "rank": null,
+         "name": "Bomin PARK",
+         "noc": "KOR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 250,
+         "lane": 3,
+         "slug": "bomin-park"
+        },
+        {
+         "rank": null,
+         "name": "Albina ALIEVA",
+         "noc": "AIN2",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 205,
+         "lane": 4,
+         "slug": "albina-alieva"
+        },
+        {
+         "rank": null,
+         "name": "Anastasiia BARANOVA",
+         "noc": "AIN2",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 206,
+         "lane": 5,
+         "slug": "anastasiia-baranova"
+        },
+        {
+         "rank": null,
+         "name": "Agata KOBUS",
+         "noc": "POL",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 263,
+         "lane": 6,
+         "slug": "agata-kobus"
+        },
+        {
+         "rank": null,
+         "name": "Natasa Z MOLNAR",
+         "noc": "HUN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 230,
+         "lane": 7,
+         "slug": "natasa-z-molnar"
+        }
+       ]
+      }
+     ]
     },
     {
      "id": 23200,
@@ -14504,6 +14778,63 @@
    "bib": 248,
    "lane": 6,
    "slug": "yoonha-kang"
+  },
+  {
+   "event_id": "isu-16244",
+   "sport": "short-track",
+   "event": "ISU Short Track Junior World Cup #2",
+   "distance": "Women 1500 m",
+   "round": "Semifinals",
+   "heat": "Heat 1",
+   "start_utc": "2026-11-13T13:43:00.000Z",
+   "rank": 2,
+   "name": "Yoonha KANG",
+   "noc": "KOR",
+   "time": "2:30.200",
+   "qual": "Q",
+   "status": "",
+   "record": "",
+   "bib": 248,
+   "lane": 1,
+   "slug": "yoonha-kang"
+  },
+  {
+   "event_id": "isu-16244",
+   "sport": "short-track",
+   "event": "ISU Short Track Junior World Cup #2",
+   "distance": "Women 1500 m",
+   "round": "Semifinals",
+   "heat": "Heat 1",
+   "start_utc": "2026-11-13T13:43:00.000Z",
+   "rank": 3,
+   "name": "Subin KIM",
+   "noc": "KOR",
+   "time": "2:30.224",
+   "qual": "p",
+   "status": "",
+   "record": "",
+   "bib": 249,
+   "lane": 3,
+   "slug": "subin-kim"
+  },
+  {
+   "event_id": "isu-16244",
+   "sport": "short-track",
+   "event": "ISU Short Track Junior World Cup #2",
+   "distance": "Women 1500 m",
+   "round": "Semifinals",
+   "heat": "Heat 3",
+   "start_utc": "2026-11-13T13:43:00.000Z",
+   "rank": null,
+   "name": "Bomin PARK",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 250,
+   "lane": 3,
+   "slug": "bomin-park"
   },
   {
    "event_id": "isu-16244",
