@@ -18,7 +18,7 @@
   "live": "Women 500 m (1)",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-13T14:25:02.983435+00:00",
+ "checked_at": "2026-11-13T14:35:58.508053+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -305,7 +305,7 @@
    "title": "Women 500 m (1)",
    "round": "Finals",
    "event_result_id": 16127,
-   "round_id": 23182,
+   "round_id": null,
    "type": "Singles"
   },
   {
@@ -313,7 +313,7 @@
    "title": "Men 500 m (1)",
    "round": "Finals",
    "event_result_id": 16128,
-   "round_id": 23190,
+   "round_id": null,
    "type": "Singles"
   },
   {
@@ -3703,7 +3703,7 @@
      ],
      "projection": {
       "next": "Semifinals",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -3798,14 +3798,200 @@
     {
      "id": 23189,
      "name": "Semifinals",
-     "status": "Scheduled",
-     "start_utc": "2026-11-13T14:15:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-13T14:17:00.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final, the third and fourth placed skaters from each race and up to a maximum of next two fastest fifth place skaters qualify for Final B.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Tianyou WANG",
+         "noc": "CHN",
+         "time": "40.305",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 124,
+         "lane": 1,
+         "slug": "tianyou-wang"
+        },
+        {
+         "rank": 2,
+         "name": "Wonseok CHOI",
+         "noc": "KOR",
+         "time": "40.533",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 171,
+         "lane": 2,
+         "slug": "wonseok-choi"
+        },
+        {
+         "rank": 3,
+         "name": "Kebba NJIE",
+         "noc": "NED",
+         "time": "41.387",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 181,
+         "lane": 4,
+         "slug": "kebba-njie"
+        },
+        {
+         "rank": 4,
+         "name": "Elliot DUFOUR",
+         "noc": "CAN",
+         "time": "41.573",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 118,
+         "lane": 5,
+         "slug": "elliot-dufour"
+        },
+        {
+         "rank": null,
+         "name": "Zhibo SUN",
+         "noc": "CHN",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 123,
+         "lane": 3,
+         "slug": "zhibo-sun"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "David MAKARIAN",
+         "noc": "AIN2",
+         "time": "41.020",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 106,
+         "lane": 1,
+         "slug": "david-makarian"
+        },
+        {
+         "rank": 2,
+         "name": "Emile FORTIN",
+         "noc": "CAN",
+         "time": "41.116",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 119,
+         "lane": 2,
+         "slug": "emile-fortin"
+        },
+        {
+         "rank": 3,
+         "name": "Tagir AMIRKHANOV",
+         "noc": "AIN2",
+         "time": "41.124",
+         "qual": "q",
+         "status": "",
+         "record": "",
+         "bib": 105,
+         "lane": 4,
+         "slug": "tagir-amirkhanov"
+        },
+        {
+         "rank": 4,
+         "name": "Kirill PANIKOROVSKII",
+         "noc": "AIN2",
+         "time": "41.480",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 107,
+         "lane": 3,
+         "slug": "kirill-panikorovskii"
+        },
+        {
+         "rank": 5,
+         "name": "Meiirzhan TOLEGEN",
+         "noc": "KAZ",
+         "time": "41.583",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 170,
+         "lane": 5,
+         "slug": "meiirzhan-tolegen"
+        }
+       ]
+      }
+     ],
+     "projection": {
+      "next": "Final",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Tianyou WANG",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "40.305",
+        "qual": "Q"
+       },
+       {
+        "name": "David MAKARIAN",
+        "noc": "AIN2",
+        "rank": 1,
+        "time": "41.020",
+        "qual": "Q"
+       },
+       {
+        "name": "Wonseok CHOI",
+        "noc": "KOR",
+        "rank": 2,
+        "time": "40.533",
+        "qual": "Q"
+       },
+       {
+        "name": "Emile FORTIN",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "41.116",
+        "qual": "Q"
+       },
+       {
+        "name": "Tagir AMIRKHANOV",
+        "noc": "AIN2",
+        "rank": 3,
+        "time": "41.124",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Tianyou WANG (CHN)",
+        "David MAKARIAN (AIN2)",
+        "Wonseok CHOI (KOR)",
+        "Emile FORTIN (CAN)",
+        "Tagir AMIRKHANOV (AIN2)"
+       ]
+      ]
+     }
     },
     {
-     "id": 23190,
-     "name": "Finals",
+     "id": 23269,
+     "name": "Final",
      "status": "Scheduled",
      "start_utc": "2026-11-13T15:26:00.000Z",
      "rule": "",
@@ -5753,7 +5939,7 @@
         },
         {
          "rank": 5,
-         "name": "ZHANDOS SEREKPAYEV",
+         "name": "Zhandos SEREKPAYEV",
          "noc": "KAZ",
          "time": "2:48.858",
          "qual": "",
@@ -6126,7 +6312,7 @@
         },
         {
          "rank": 4,
-         "name": "ZHANDOS SEREKPAYEV",
+         "name": "Zhandos SEREKPAYEV",
          "noc": "KAZ",
          "time": "2:25.427",
          "qual": "q",
@@ -6298,7 +6484,7 @@
         "qual": "q"
        },
        {
-        "name": "ZHANDOS SEREKPAYEV",
+        "name": "Zhandos SEREKPAYEV",
         "noc": "KAZ",
         "rank": 4,
         "time": "2:25.427",
@@ -6326,7 +6512,7 @@
         "Mauro DEFRANCQ (BEL)",
         "Advay KOTHARI (IND)",
         "Vincent CHAN (USA)",
-        "ZHANDOS SEREKPAYEV (KAZ)"
+        "Zhandos SEREKPAYEV (KAZ)"
        ]
       ]
      }
@@ -6429,7 +6615,7 @@
         },
         {
          "rank": 8,
-         "name": "ZHANDOS SEREKPAYEV",
+         "name": "Zhandos SEREKPAYEV",
          "noc": "KAZ",
          "time": "2:29.920",
          "qual": "",
@@ -9084,8 +9270,8 @@
     {
      "id": 23181,
      "name": "Semifinals",
-     "status": "Live",
-     "start_utc": "2026-11-13T14:11:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-13T14:20:33.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final, the third and fourth placed skaters from each race and up to a maximum of next two fastest fifth place skaters qualify for Final B.",
      "heats": [
       {
@@ -9122,7 +9308,7 @@
          "name": "Mariia KHOKHELKO",
          "noc": "UKR",
          "time": "44.106",
-         "qual": "p",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 273,
@@ -9158,14 +9344,38 @@
       {
        "name": "Heat 2",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
+        {
+         "rank": 1,
+         "name": "Kira Judit AMSCHL",
+         "noc": "HUN",
+         "time": "43.988",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 227,
+         "lane": 1,
+         "slug": "kira-judit-amschl"
+        },
+        {
+         "rank": 2,
+         "name": "Junyu KUANG",
+         "noc": "CHN",
+         "time": "43.998",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 217,
+         "lane": 2,
+         "slug": "junyu-kuang"
+        },
         {
          "rank": 3,
          "name": "Anna TELEGANOVA",
          "noc": "AIN2",
-         "time": "44.110",
-         "qual": "",
+         "time": "44.103",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 209,
@@ -9176,8 +9386,8 @@
          "rank": 4,
          "name": "Nuriya ALPYSBAY",
          "noc": "KAZ",
-         "time": "44.200",
-         "qual": "",
+         "time": "44.190",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 243,
@@ -9189,44 +9399,71 @@
          "name": "Alexanne MARTEL-BARIL",
          "noc": "CAN",
          "time": "44.450",
-         "qual": "",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 215,
          "lane": 5,
          "slug": "alexanne-martel-baril"
-        },
-        {
-         "rank": null,
-         "name": "Kira Judit AMSCHL",
-         "noc": "HUN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 227,
-         "lane": 1,
-         "slug": "kira-judit-amschl"
-        },
-        {
-         "rank": null,
-         "name": "Junyu KUANG",
-         "noc": "CHN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 217,
-         "lane": 2,
-         "slug": "junyu-kuang"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Final",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Yuchen JIANG",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "43.893",
+        "qual": "Q"
+       },
+       {
+        "name": "Kira Judit AMSCHL",
+        "noc": "HUN",
+        "rank": 1,
+        "time": "43.988",
+        "qual": "Q"
+       },
+       {
+        "name": "Junyu KUANG",
+        "noc": "CHN",
+        "rank": 2,
+        "time": "43.998",
+        "qual": "Q"
+       },
+       {
+        "name": "Veronika GRISHINA",
+        "noc": "AIN2",
+        "rank": 2,
+        "time": "44.033",
+        "qual": "Q"
+       },
+       {
+        "name": "Anna TELEGANOVA",
+        "noc": "AIN2",
+        "rank": 3,
+        "time": "44.103",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Yuchen JIANG (CHN)",
+        "Kira Judit AMSCHL (HUN)",
+        "Junyu KUANG (CHN)",
+        "Veronika GRISHINA (AIN2)",
+        "Anna TELEGANOVA (AIN2)"
+       ]
+      ]
+     }
     },
     {
-     "id": 23182,
-     "name": "Finals",
+     "id": 23268,
+     "name": "Final",
      "status": "Scheduled",
      "start_utc": "2026-11-13T15:12:00.000Z",
      "rule": "",
@@ -9799,7 +10036,7 @@
         },
         {
          "rank": 2,
-         "name": "ZHANDOS SEREKPAYEV",
+         "name": "Zhandos SEREKPAYEV",
          "noc": "KAZ",
          "time": "42.331",
          "qual": "Q",
@@ -10064,7 +10301,7 @@
         "qual": "Q"
        },
        {
-        "name": "ZHANDOS SEREKPAYEV",
+        "name": "Zhandos SEREKPAYEV",
         "noc": "KAZ",
         "rank": 2,
         "time": "42.331",
@@ -10194,7 +10431,7 @@
        [
         "Chanwook PARK (KOR)",
         "Jeremy BOUCHARD (CAN)",
-        "ZHANDOS SEREKPAYEV (KAZ)",
+        "Zhandos SEREKPAYEV (KAZ)",
         "Advay KOTHARI (IND)",
         "Tadeus Richard MAGER (GER)"
        ],
@@ -10514,7 +10751,7 @@
         },
         {
          "rank": 3,
-         "name": "ZHANDOS SEREKPAYEV",
+         "name": "Zhandos SEREKPAYEV",
          "noc": "KAZ",
          "time": "42.281",
          "qual": "q",
@@ -10717,7 +10954,7 @@
         "qual": "ADV"
        },
        {
-        "name": "ZHANDOS SEREKPAYEV",
+        "name": "Zhandos SEREKPAYEV",
         "noc": "KAZ",
         "rank": 3,
         "time": "42.281",
@@ -10771,7 +11008,7 @@
         "Andrei PETROV (AIN2)",
         "Kebba NJIE (NED)",
         "Lucas MOINDRON (FRA)",
-        "ZHANDOS SEREKPAYEV (KAZ)"
+        "Zhandos SEREKPAYEV (KAZ)"
        ],
        [
         "Chanwook PARK (KOR)",
@@ -15277,6 +15514,25 @@
    "event_id": "isu-16244",
    "sport": "short-track",
    "event": "ISU Short Track Junior World Cup #2",
+   "distance": "Men 500 m (1)",
+   "round": "Semifinals",
+   "heat": "Heat 1",
+   "start_utc": "2026-11-13T14:17:00.000Z",
+   "rank": 2,
+   "name": "Wonseok CHOI",
+   "noc": "KOR",
+   "time": "40.533",
+   "qual": "Q",
+   "status": "",
+   "record": "",
+   "bib": 171,
+   "lane": 2,
+   "slug": "wonseok-choi"
+  },
+  {
+   "event_id": "isu-16244",
+   "sport": "short-track",
+   "event": "ISU Short Track Junior World Cup #2",
    "distance": "Women 1500 m",
    "round": "Quarterfinals",
    "heat": "Heat 1",
@@ -15584,7 +15840,7 @@
    "distance": "Women 500 m (1)",
    "round": "Semifinals",
    "heat": "Heat 1",
-   "start_utc": "2026-11-13T14:11:00.000Z",
+   "start_utc": "2026-11-13T14:20:33.000Z",
    "rank": 5,
    "name": "Sumin YU",
    "noc": "KOR",
