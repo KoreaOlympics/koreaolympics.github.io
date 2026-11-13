@@ -18,7 +18,7 @@
   "live": "Men 3000 m Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-13T17:02:54.276384+00:00",
+ "checked_at": "2026-11-13T17:13:54.523392+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -16311,15 +16311,15 @@
      "heats": [
       {
        "name": "Heat 1",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "China",
          "noc": "CHN",
-         "time": "",
-         "qual": "",
+         "time": "4:01.071",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -16327,11 +16327,11 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Canada",
          "noc": "CAN",
-         "time": "",
-         "qual": "",
+         "time": "4:06.568",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -16339,11 +16339,23 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Netherlands",
+         "noc": "NED",
+         "time": "4:09.713",
+         "qual": "ADV",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 4,
+         "slug": ""
+        },
+        {
+         "rank": 4,
          "name": "Hungary",
          "noc": "HUN",
-         "time": "",
-         "qual": "",
+         "time": "4:12.329",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": null,
@@ -16352,23 +16364,11 @@
         },
         {
          "rank": null,
-         "name": "Netherlands",
-         "noc": "NED",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 4,
-         "slug": ""
-        },
-        {
-         "rank": null,
          "name": "Kazakhstan",
          "noc": "KAZ",
-         "time": "",
+         "time": "PEN",
          "qual": "",
-         "status": "",
+         "status": "Penalty",
          "record": "",
          "bib": null,
          "lane": 5,
@@ -16378,8 +16378,8 @@
       },
       {
        "name": "Heat 2",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
         {
          "rank": null,
