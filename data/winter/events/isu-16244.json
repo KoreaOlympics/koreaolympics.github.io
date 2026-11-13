@@ -15,10 +15,10 @@
   "city": "Bormio",
   "country": "ITA",
   "state": "Live",
-  "live": "Men 1500 m",
+  "live": "Women 500 m (1)",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-13T14:14:08.398930+00:00",
+ "checked_at": "2026-11-13T14:25:02.983435+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -297,7 +297,7 @@
    "title": "Men 1500 m",
    "round": "Finals",
    "event_result_id": 16132,
-   "round_id": 23214,
+   "round_id": null,
    "type": "Singles"
   },
   {
@@ -6935,8 +6935,8 @@
     {
      "id": 23213,
      "name": "Semifinals",
-     "status": "Live",
-     "start_utc": "2026-11-13T13:58:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-13T14:04:23.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final, the third and fourth placed skaters from each race and up to a maximum of next two fastest fifth place skaters qualify for Final B.",
      "heats": [
       {
@@ -6973,7 +6973,7 @@
          "name": "Alexis DUBUC-BILODEAU",
          "noc": "CAN",
          "time": "2:20.048",
-         "qual": "p",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 116,
@@ -6997,7 +6997,7 @@
          "name": "Samuel Oliver SULC",
          "noc": "CZE",
          "time": "2:20.842",
-         "qual": "pB",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 130,
@@ -7033,14 +7033,14 @@
       {
        "name": "Heat 2",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "Yuheng LI",
          "noc": "CHN",
-         "time": "2:14.880",
-         "qual": "",
+         "time": "2:14.875",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 122,
@@ -7051,8 +7051,8 @@
          "rank": 2,
          "name": "Yoonseok LEE",
          "noc": "KOR",
-         "time": "2:15.090",
-         "qual": "",
+         "time": "2:15.071",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 174,
@@ -7063,8 +7063,8 @@
          "rank": 3,
          "name": "Jeremy BOUCHARD",
          "noc": "CAN",
-         "time": "2:15.500",
-         "qual": "",
+         "time": "2:15.482",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 115,
@@ -7075,8 +7075,8 @@
          "rank": 4,
          "name": "Aunnipit KOSITVANICH",
          "noc": "THA",
-         "time": "2:15.960",
-         "qual": "",
+         "time": "2:15.950",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 194,
@@ -7087,8 +7087,8 @@
          "rank": 5,
          "name": "Ilia SIVOKHO",
          "noc": "AIN2",
-         "time": "2:16.140",
-         "qual": "",
+         "time": "2:16.119",
+         "qual": "qB",
          "status": "",
          "record": "",
          "bib": 109,
@@ -7096,10 +7096,10 @@
          "slug": "ilia-sivokho"
         },
         {
-         "rank": null,
+         "rank": 6,
          "name": "Bence KISS-GEBORA",
          "noc": "HUN",
-         "time": "",
+         "time": "2:49.463",
          "qual": "",
          "status": "",
          "record": "",
@@ -7108,10 +7108,10 @@
          "slug": "bence-kiss-gebora"
         },
         {
-         "rank": null,
+         "rank": 7,
          "name": "Maxim SAYENKO",
          "noc": "KAZ",
-         "time": "",
+         "time": "2:53.055",
          "qual": "",
          "status": "",
          "record": "",
@@ -7123,15 +7123,15 @@
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Xinchi YU",
          "noc": "CHN",
-         "time": "",
-         "qual": "",
+         "time": "2:15.558",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 125,
@@ -7139,35 +7139,11 @@
          "slug": "xinchi-yu"
         },
         {
-         "rank": null,
-         "name": "Andrei PETROV",
-         "noc": "AIN2",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 108,
-         "lane": 2,
-         "slug": "andrei-petrov"
-        },
-        {
-         "rank": null,
-         "name": "Minchan KIM",
-         "noc": "KOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 172,
-         "lane": 3,
-         "slug": "minchan-kim"
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Tymeo LIBEAU",
          "noc": "FRA",
-         "time": "",
-         "qual": "",
+         "time": "2:15.797",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 133,
@@ -7175,23 +7151,11 @@
          "slug": "tymeo-libeau"
         },
         {
-         "rank": null,
-         "name": "Nathan MULLER",
-         "noc": "FRA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 135,
-         "lane": 5,
-         "slug": "nathan-muller"
-        },
-        {
-         "rank": null,
+         "rank": 3,
          "name": "William SAMSON",
          "noc": "CAN",
-         "time": "",
-         "qual": "",
+         "time": "2:16.736",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 120,
@@ -7199,24 +7163,127 @@
          "slug": "william-samson"
         },
         {
-         "rank": null,
+         "rank": 4,
+         "name": "Andrei PETROV",
+         "noc": "AIN2",
+         "time": "2:16.935",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 108,
+         "lane": 2,
+         "slug": "andrei-petrov"
+        },
+        {
+         "rank": 5,
+         "name": "Nathan MULLER",
+         "noc": "FRA",
+         "time": "2:17.787",
+         "qual": "qB",
+         "status": "",
+         "record": "",
+         "bib": 135,
+         "lane": 5,
+         "slug": "nathan-muller"
+        },
+        {
+         "rank": 6,
          "name": "Matteo GIANA",
          "noc": "ITA",
-         "time": "",
+         "time": "2:37.879",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 159,
          "lane": 7,
          "slug": "matteo-giana"
+        },
+        {
+         "rank": null,
+         "name": "Minchan KIM",
+         "noc": "KOR",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 172,
+         "lane": 3,
+         "slug": "minchan-kim"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Final",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Yuheng LI",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "2:14.875",
+        "qual": "Q"
+       },
+       {
+        "name": "Xinchi YU",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "2:15.558",
+        "qual": "Q"
+       },
+       {
+        "name": "Biho LEE",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "2:18.975",
+        "qual": "Q"
+       },
+       {
+        "name": "Yoonseok LEE",
+        "noc": "KOR",
+        "rank": 2,
+        "time": "2:15.071",
+        "qual": "Q"
+       },
+       {
+        "name": "Tymeo LIBEAU",
+        "noc": "FRA",
+        "rank": 2,
+        "time": "2:15.797",
+        "qual": "Q"
+       },
+       {
+        "name": "Jesper SCHMITZ",
+        "noc": "NED",
+        "rank": 2,
+        "time": "2:19.871",
+        "qual": "Q"
+       },
+       {
+        "name": "Jeremy BOUCHARD",
+        "noc": "CAN",
+        "rank": 3,
+        "time": "2:15.482",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Yuheng LI (CHN)",
+        "Xinchi YU (CHN)",
+        "Biho LEE (KOR)",
+        "Yoonseok LEE (KOR)",
+        "Tymeo LIBEAU (FRA)",
+        "Jesper SCHMITZ (NED)",
+        "Jeremy BOUCHARD (CAN)"
+       ]
+      ]
+     }
     },
     {
-     "id": 23214,
-     "name": "Finals",
+     "id": 23267,
+     "name": "Final",
      "status": "Scheduled",
      "start_utc": "2026-11-13T14:54:00.000Z",
      "rule": "",
@@ -8922,7 +8989,7 @@
      ],
      "projection": {
       "next": "Semifinals",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -9017,10 +9084,145 @@
     {
      "id": 23181,
      "name": "Semifinals",
-     "status": "Scheduled",
-     "start_utc": "2026-11-13T14:09:00.000Z",
+     "status": "Live",
+     "start_utc": "2026-11-13T14:11:00.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final, the third and fourth placed skaters from each race and up to a maximum of next two fastest fifth place skaters qualify for Final B.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Yuchen JIANG",
+         "noc": "CHN",
+         "time": "43.893",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 216,
+         "lane": 1,
+         "slug": "yuchen-jiang"
+        },
+        {
+         "rank": 2,
+         "name": "Veronika GRISHINA",
+         "noc": "AIN2",
+         "time": "44.033",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 207,
+         "lane": 2,
+         "slug": "veronika-grishina"
+        },
+        {
+         "rank": 3,
+         "name": "Mariia KHOKHELKO",
+         "noc": "UKR",
+         "time": "44.106",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 273,
+         "lane": 3,
+         "slug": "mariia-khokhelko"
+        },
+        {
+         "rank": 4,
+         "name": "Kseniia PRIBYTOVA",
+         "noc": "AIN2",
+         "time": "44.171",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 208,
+         "lane": 4,
+         "slug": "kseniia-pribytova"
+        },
+        {
+         "rank": 5,
+         "name": "Sumin YU",
+         "noc": "KOR",
+         "time": "44.286",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 251,
+         "lane": 5,
+         "slug": "sumin-yu"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Finished",
+       "official": "Live",
+       "competitors": [
+        {
+         "rank": 3,
+         "name": "Anna TELEGANOVA",
+         "noc": "AIN2",
+         "time": "44.110",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 209,
+         "lane": 3,
+         "slug": "anna-teleganova"
+        },
+        {
+         "rank": 4,
+         "name": "Nuriya ALPYSBAY",
+         "noc": "KAZ",
+         "time": "44.200",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 243,
+         "lane": 4,
+         "slug": "nuriya-alpysbay"
+        },
+        {
+         "rank": 5,
+         "name": "Alexanne MARTEL-BARIL",
+         "noc": "CAN",
+         "time": "44.450",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 215,
+         "lane": 5,
+         "slug": "alexanne-martel-baril"
+        },
+        {
+         "rank": null,
+         "name": "Kira Judit AMSCHL",
+         "noc": "HUN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 227,
+         "lane": 1,
+         "slug": "kira-judit-amschl"
+        },
+        {
+         "rank": null,
+         "name": "Junyu KUANG",
+         "noc": "CHN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 217,
+         "lane": 2,
+         "slug": "junyu-kuang"
+        }
+       ]
+      }
+     ]
     },
     {
      "id": 23182,
@@ -15249,7 +15451,7 @@
    "distance": "Men 1500 m",
    "round": "Semifinals",
    "heat": "Heat 1",
-   "start_utc": "2026-11-13T13:58:00.000Z",
+   "start_utc": "2026-11-13T14:04:23.000Z",
    "rank": 1,
    "name": "Biho LEE",
    "noc": "KOR",
@@ -15268,12 +15470,12 @@
    "distance": "Men 1500 m",
    "round": "Semifinals",
    "heat": "Heat 2",
-   "start_utc": "2026-11-13T13:58:00.000Z",
+   "start_utc": "2026-11-13T14:04:23.000Z",
    "rank": 2,
    "name": "Yoonseok LEE",
    "noc": "KOR",
-   "time": "2:15.090",
-   "qual": "",
+   "time": "2:15.071",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 174,
@@ -15287,13 +15489,13 @@
    "distance": "Men 1500 m",
    "round": "Semifinals",
    "heat": "Heat 3",
-   "start_utc": "2026-11-13T13:58:00.000Z",
+   "start_utc": "2026-11-13T14:04:23.000Z",
    "rank": null,
    "name": "Minchan KIM",
    "noc": "KOR",
-   "time": "",
+   "time": "PEN",
    "qual": "",
-   "status": "",
+   "status": "Penalty",
    "record": "",
    "bib": 172,
    "lane": 3,
@@ -15374,6 +15576,25 @@
    "bib": 247,
    "lane": 3,
    "slug": "jeongyun-bae"
+  },
+  {
+   "event_id": "isu-16244",
+   "sport": "short-track",
+   "event": "ISU Short Track Junior World Cup #2",
+   "distance": "Women 500 m (1)",
+   "round": "Semifinals",
+   "heat": "Heat 1",
+   "start_utc": "2026-11-13T14:11:00.000Z",
+   "rank": 5,
+   "name": "Sumin YU",
+   "noc": "KOR",
+   "time": "44.286",
+   "qual": "QB",
+   "status": "",
+   "record": "",
+   "bib": 251,
+   "lane": 5,
+   "slug": "sumin-yu"
   },
   {
    "event_id": "isu-16244",
