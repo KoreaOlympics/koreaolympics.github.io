@@ -15,10 +15,10 @@
   "city": "Bormio",
   "country": "ITA",
   "state": "Live",
-  "live": "Men 1500 m",
+  "live": "Women 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-13T10:25:12.891626+00:00",
+ "checked_at": "2026-11-13T10:35:59.489555+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -141,7 +141,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-13T08:57:00.000Z",
+   "start_utc": "2026-11-13T09:00:00.000Z",
    "title": "Men 500 m (1)",
    "round": "Rep. Quarterfinals",
    "event_result_id": 16128,
@@ -173,7 +173,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-13T09:51:00.000Z",
+   "start_utc": "2026-11-13T10:00:00.000Z",
    "title": "Men 1500 m",
    "round": "Rep. Quarterfinals",
    "event_result_id": 16132,
@@ -3800,10 +3800,205 @@
     {
      "id": 23198,
      "name": "Rep. Semifinals",
-     "status": "Scheduled",
+     "status": "Live",
      "start_utc": "2026-11-13T10:26:00.000Z",
      "rule": "The first placed skater from each race qualify for Semifinals.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Finished",
+       "official": "Live",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Natasa Z MOLNAR",
+         "noc": "HUN",
+         "time": "2:36.010",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 230,
+         "lane": 5,
+         "slug": "natasa-z-molnar"
+        },
+        {
+         "rank": 2,
+         "name": "Raiana MANARBEKOVA",
+         "noc": "KAZ",
+         "time": "2:36.060",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 245,
+         "lane": 1,
+         "slug": "raiana-manarbekova"
+        },
+        {
+         "rank": 3,
+         "name": "Viola COMBA",
+         "noc": "ITA",
+         "time": "2:38.730",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 234,
+         "lane": 6,
+         "slug": "viola-comba"
+        },
+        {
+         "rank": 4,
+         "name": "Eline Lupke TVETER",
+         "noc": "NOR",
+         "time": "2:39.340",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 260,
+         "lane": 3,
+         "slug": "eline-lupke-tveter"
+        },
+        {
+         "rank": 5,
+         "name": "Efsa POLAT",
+         "noc": "TUR",
+         "time": "2:39.750",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 271,
+         "lane": 4,
+         "slug": "efsa-polat"
+        },
+        {
+         "rank": 6,
+         "name": "Ulyana PASHAYEVA",
+         "noc": "AIN1",
+         "time": "2:42.480",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 202,
+         "lane": 7,
+         "slug": "ulyana-pashayeva"
+        },
+        {
+         "rank": null,
+         "name": "Julie KIESGEN",
+         "noc": "LUX",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 253,
+         "lane": 2,
+         "slug": "julie-kiesgen"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Darya STSIAPANAVA",
+         "noc": "AIN1",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 204,
+         "lane": 1,
+         "slug": "darya-stsiapanava"
+        },
+        {
+         "rank": null,
+         "name": "Sasha MENSAH",
+         "noc": "USA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 186,
+         "lane": 2,
+         "slug": "sasha-mensah"
+        },
+        {
+         "rank": null,
+         "name": "Daria DASZUTA",
+         "noc": "POL",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 261,
+         "lane": 3,
+         "slug": "daria-daszuta"
+        },
+        {
+         "rank": null,
+         "name": "Beatrice PAGLIA",
+         "noc": "ITA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 236,
+         "lane": 4,
+         "slug": "beatrice-paglia"
+        },
+        {
+         "rank": null,
+         "name": "Tiffany ZHANG",
+         "noc": "USA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 187,
+         "lane": 5,
+         "slug": "tiffany-zhang"
+        },
+        {
+         "rank": null,
+         "name": "Elif Doga DERIN",
+         "noc": "TUR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 269,
+         "lane": 6,
+         "slug": "elif-doga-derin"
+        },
+        {
+         "rank": null,
+         "name": "Lara KOLOVRAT",
+         "noc": "CRO",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 280,
+         "lane": 7,
+         "slug": "lara-kolovrat"
+        },
+        {
+         "rank": null,
+         "name": "Sofia KOONS",
+         "noc": "USA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 278,
+         "lane": 8,
+         "slug": "sofia-koons"
+        }
+       ]
+      }
+     ]
     },
     {
      "id": 23197,
