@@ -18,7 +18,7 @@
   "live": "Mixed Team Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-13T11:40:53.791652+00:00",
+ "checked_at": "2026-11-13T11:51:36.223893+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -12724,21 +12724,21 @@
     {
      "id": 23192,
      "name": "Semifinals",
-     "status": "Live",
-     "start_utc": "2026-11-13T11:35:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-13T11:36:40.000Z",
      "rule": "The first and second placed teams from each race qualify for Final, the third and fourth placed teams from each race qualify for Final B.",
      "heats": [
       {
        "name": "Heat 1",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "China",
          "noc": "CHN",
-         "time": "2:39.850",
-         "qual": "",
+         "time": "2:39.835",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -12749,8 +12749,8 @@
          "rank": 2,
          "name": "Hungary",
          "noc": "HUN",
-         "time": "2:40.220",
-         "qual": "",
+         "time": "2:40.213",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -12761,8 +12761,8 @@
          "rank": 3,
          "name": "Italy",
          "noc": "ITA",
-         "time": "2:41.500",
-         "qual": "",
+         "time": "2:41.461",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": null,
@@ -12771,53 +12771,41 @@
         },
         {
          "rank": 4,
+         "name": "United States of America",
+         "noc": "USA",
+         "time": "2:46.263",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 5,
+         "slug": ""
+        },
+        {
+         "rank": 5,
          "name": "Germany",
          "noc": "GER",
-         "time": "2:45.020",
+         "time": "2:46.338",
          "qual": "",
          "status": "",
          "record": "",
          "bib": null,
          "lane": 4,
          "slug": ""
-        },
-        {
-         "rank": 5,
-         "name": "United States of America",
-         "noc": "USA",
-         "time": "2:46.270",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 5,
-         "slug": ""
         }
        ]
       },
       {
        "name": "Heat 2",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Republic of Korea",
-         "noc": "KOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 1,
-         "slug": ""
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Canada",
          "noc": "CAN",
-         "time": "",
-         "qual": "",
+         "time": "2:42.533",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -12825,23 +12813,11 @@
          "slug": ""
         },
         {
-         "rank": null,
-         "name": "Poland",
-         "noc": "POL",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 3,
-         "slug": ""
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Netherlands",
          "noc": "NED",
-         "time": "",
-         "qual": "",
+         "time": "2:42.600",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -12849,10 +12825,34 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Republic of Korea",
+         "noc": "KOR",
+         "time": "2:42.663",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": 4,
+         "name": "Poland",
+         "noc": "POL",
+         "time": "2:43.099",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
+         "slug": ""
+        },
+        {
+         "rank": 5,
          "name": "Ukraine",
          "noc": "UKR",
-         "time": "",
+         "time": "2:50.239",
          "qual": "",
          "status": "",
          "record": "",
@@ -12862,7 +12862,50 @@
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Final",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "China",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "2:39.835",
+        "qual": "Q"
+       },
+       {
+        "name": "Canada",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "2:42.533",
+        "qual": "Q"
+       },
+       {
+        "name": "Hungary",
+        "noc": "HUN",
+        "rank": 2,
+        "time": "2:40.213",
+        "qual": "Q"
+       },
+       {
+        "name": "Netherlands",
+        "noc": "NED",
+        "rank": 2,
+        "time": "2:42.600",
+        "qual": "Q"
+       }
+      ],
+      "races": [
+       [
+        "China (CHN)",
+        "Canada (CAN)",
+        "Hungary (HUN)",
+        "Netherlands (NED)"
+       ]
+      ]
+     }
     },
     {
      "id": 23193,
@@ -14094,12 +14137,12 @@
    "distance": "Mixed Team Relay",
    "round": "Semifinals",
    "heat": "Heat 2",
-   "start_utc": "2026-11-13T11:35:00.000Z",
-   "rank": null,
+   "start_utc": "2026-11-13T11:36:40.000Z",
+   "rank": 3,
    "name": "Republic of Korea",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "2:42.663",
+   "qual": "QB",
    "status": "",
    "record": "",
    "bib": null,
