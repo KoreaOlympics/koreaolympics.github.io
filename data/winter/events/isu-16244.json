@@ -15,10 +15,10 @@
   "city": "Bormio",
   "country": "ITA",
   "state": "Live",
-  "live": "Men 500 m (1)",
+  "live": "Women 500 m (1)",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-13T09:31:24.402404+00:00",
+ "checked_at": "2026-11-13T09:42:07.718352+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -5569,7 +5569,7 @@
      ],
      "projection": {
       "next": "Rep. Semifinals",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -5664,10 +5664,145 @@
     {
      "id": 23179,
      "name": "Rep. Semifinals",
-     "status": "Scheduled",
+     "status": "Live",
      "start_utc": "2026-11-13T09:39:00.000Z",
      "rule": "The first placed skater from each race qualify for Quarterfinals.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Live",
+       "official": "Live",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Nina TRABUCCHI",
+         "noc": "ITA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 237,
+         "lane": 1,
+         "slug": "nina-trabucchi"
+        },
+        {
+         "rank": null,
+         "name": "Klara ZOSCHKE",
+         "noc": "GER",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 226,
+         "lane": 2,
+         "slug": "klara-zoschke"
+        },
+        {
+         "rank": null,
+         "name": "Palina SHKARSTAN",
+         "noc": "AIN1",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 203,
+         "lane": 3,
+         "slug": "palina-shkarstan"
+        },
+        {
+         "rank": null,
+         "name": "Sofija RODIC",
+         "noc": "SRB",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 266,
+         "lane": 4,
+         "slug": "sofija-rodic"
+        },
+        {
+         "rank": null,
+         "name": "Varvara KURYLA",
+         "noc": "AIN1",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 201,
+         "lane": 5,
+         "slug": "varvara-kuryla"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Alina LISHENKO",
+         "noc": "KAZ",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 244,
+         "lane": 1,
+         "slug": "alina-lishenko"
+        },
+        {
+         "rank": null,
+         "name": "Marta MITTEMPERGHER",
+         "noc": "ITA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 183,
+         "lane": 2,
+         "slug": "marta-mittempergher"
+        },
+        {
+         "rank": null,
+         "name": "Jelka VAN KRANENBURG",
+         "noc": "NED",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 257,
+         "lane": 3,
+         "slug": "jelka-van-kranenburg"
+        },
+        {
+         "rank": null,
+         "name": "Janna Wietske VAN DER ENDE",
+         "noc": "NED",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 255,
+         "lane": 4,
+         "slug": "janna-wietske-van-der-ende"
+        },
+        {
+         "rank": null,
+         "name": "Charlotte SCHULZ",
+         "noc": "GER",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 224,
+         "lane": 5,
+         "slug": "charlotte-schulz"
+        }
+       ]
+      }
+     ]
     },
     {
      "id": 23178,
