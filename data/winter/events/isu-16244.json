@@ -18,7 +18,7 @@
   "live": "Men 500 m (1)",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-13T13:19:05.997233+00:00",
+ "checked_at": "2026-11-13T13:29:50.605649+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -3429,20 +3429,20 @@
      "id": 23188,
      "name": "Quarterfinals",
      "status": "Live",
-     "start_utc": "2026-11-13T13:12:00.000Z",
+     "start_utc": "2026-11-13T13:14:00.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of two fastest third place skaters qualify for Semifinals.",
      "heats": [
       {
        "name": "Heat 1",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Tianyou WANG",
          "noc": "CHN",
-         "time": "",
-         "qual": "",
+         "time": "40.361",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 124,
@@ -3450,11 +3450,11 @@
          "slug": "tianyou-wang"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Zhibo SUN",
          "noc": "CHN",
-         "time": "",
-         "qual": "",
+         "time": "40.868",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 123,
@@ -3462,11 +3462,11 @@
          "slug": "zhibo-sun"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Elliot DUFOUR",
          "noc": "CAN",
-         "time": "",
-         "qual": "",
+         "time": "41.442",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 118,
@@ -3474,10 +3474,10 @@
          "slug": "elliot-dufour"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Tijmen VAN LAETHEM",
          "noc": "BEL",
-         "time": "",
+         "time": "41.966",
          "qual": "",
          "status": "",
          "record": "",
@@ -3486,10 +3486,10 @@
          "slug": "tijmen-van-laethem"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Tsjerk VAN DER MEER",
          "noc": "NED",
-         "time": "",
+         "time": "42.082",
          "qual": "",
          "status": "",
          "record": "",
@@ -3501,15 +3501,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Wonseok CHOI",
          "noc": "KOR",
-         "time": "",
-         "qual": "",
+         "time": "41.167",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 171,
@@ -3517,35 +3517,11 @@
          "slug": "wonseok-choi"
         },
         {
-         "rank": null,
-         "name": "Meiirzhan TOLEGEN",
-         "noc": "KAZ",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 170,
-         "lane": 2,
-         "slug": "meiirzhan-tolegen"
-        },
-        {
-         "rank": null,
-         "name": "Chanwook PARK",
-         "noc": "KOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 175,
-         "lane": 3,
-         "slug": "chanwook-park"
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Tagir AMIRKHANOV",
          "noc": "AIN2",
-         "time": "",
-         "qual": "",
+         "time": "41.251",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 105,
@@ -3553,29 +3529,53 @@
          "slug": "tagir-amirkhanov"
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Meiirzhan TOLEGEN",
+         "noc": "KAZ",
+         "time": "41.483",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 170,
+         "lane": 2,
+         "slug": "meiirzhan-tolegen"
+        },
+        {
+         "rank": 4,
          "name": "Daniil BYCHKOU",
          "noc": "AIN1",
-         "time": "",
+         "time": "41.596",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 101,
          "lane": 5,
          "slug": "daniil-bychkou"
+        },
+        {
+         "rank": null,
+         "name": "Chanwook PARK",
+         "noc": "KOR",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 175,
+         "lane": 3,
+         "slug": "chanwook-park"
         }
        ]
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Live",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "David MAKARIAN",
          "noc": "AIN2",
-         "time": "",
+         "time": "40.960",
          "qual": "",
          "status": "",
          "record": "",
@@ -3584,10 +3584,22 @@
          "slug": "david-makarian"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Kebba NJIE",
+         "noc": "NED",
+         "time": "41.820",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 181,
+         "lane": 5,
+         "slug": "kebba-njie"
+        },
+        {
+         "rank": 3,
          "name": "Mihaly ARENDAS",
          "noc": "HUN",
-         "time": "",
+         "time": "41.960",
          "qual": "",
          "status": "",
          "record": "",
@@ -3596,10 +3608,10 @@
          "slug": "mihaly-arendas"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Wesley JONES",
          "noc": "USA",
-         "time": "",
+         "time": "43.410",
          "qual": "",
          "status": "",
          "record": "",
@@ -3618,18 +3630,6 @@
          "bib": 112,
          "lane": 4,
          "slug": "lowie-dekens"
-        },
-        {
-         "rank": null,
-         "name": "Kebba NJIE",
-         "noc": "NED",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 181,
-         "lane": 5,
-         "slug": "kebba-njie"
         }
        ]
       },
@@ -14324,12 +14324,12 @@
    "distance": "Men 500 m (1)",
    "round": "Quarterfinals",
    "heat": "Heat 2",
-   "start_utc": "2026-11-13T13:12:00.000Z",
-   "rank": null,
+   "start_utc": "2026-11-13T13:14:00.000Z",
+   "rank": 1,
    "name": "Wonseok CHOI",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "41.167",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 171,
@@ -14343,13 +14343,13 @@
    "distance": "Men 500 m (1)",
    "round": "Quarterfinals",
    "heat": "Heat 2",
-   "start_utc": "2026-11-13T13:12:00.000Z",
+   "start_utc": "2026-11-13T13:14:00.000Z",
    "rank": null,
    "name": "Chanwook PARK",
    "noc": "KOR",
-   "time": "",
+   "time": "PEN",
    "qual": "",
-   "status": "",
+   "status": "Penalty",
    "record": "",
    "bib": 175,
    "lane": 3,
