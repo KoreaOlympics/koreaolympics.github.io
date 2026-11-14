@@ -15,10 +15,10 @@
   "city": "Bormio",
   "country": "ITA",
   "state": "Live",
-  "live": "Men 1000 m",
+  "live": "",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-14T10:27:55.666591+00:00",
+ "checked_at": "2026-11-14T10:39:09.237860+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -12086,7 +12086,7 @@
      ],
      "projection": {
       "next": "Rep. Semifinals",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -12181,10 +12181,145 @@
     {
      "id": 23227,
      "name": "Rep. Semifinals",
-     "status": "Scheduled",
-     "start_utc": "2026-11-14T10:34:00.000Z",
+     "status": "Live",
+     "start_utc": "2026-11-14T10:33:27.000Z",
      "rule": "The first placed skater from each race qualify for Quarterfinals.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Oskar SOLTAU",
+         "noc": "POL",
+         "time": "41.959",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 192,
+         "lane": 2,
+         "slug": "oskar-soltau"
+        },
+        {
+         "rank": 2,
+         "name": "Filippo PEZZONI",
+         "noc": "ITA",
+         "time": "42.061",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 160,
+         "lane": 1,
+         "slug": "filippo-pezzoni"
+        },
+        {
+         "rank": 3,
+         "name": "Raman ZELENIN",
+         "noc": "AIN1",
+         "time": "42.328",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 103,
+         "lane": 4,
+         "slug": "raman-zelenin"
+        },
+        {
+         "rank": 4,
+         "name": "Tadeus Richard MAGER",
+         "noc": "GER",
+         "time": "42.357",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 142,
+         "lane": 3,
+         "slug": "tadeus-richard-mager"
+        },
+        {
+         "rank": 5,
+         "name": "Artem MOISEIENKO",
+         "noc": "UKR",
+         "time": "42.981",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 201,
+         "lane": 5,
+         "slug": "artem-moiseienko"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Getting Ready",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "William SAMSON",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 120,
+         "lane": 1,
+         "slug": "william-samson"
+        },
+        {
+         "rank": null,
+         "name": "Leonard TOMIMITSU",
+         "noc": "FRA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 211,
+         "lane": 2,
+         "slug": "leonard-tomimitsu"
+        },
+        {
+         "rank": null,
+         "name": "Moritz HARTMANN",
+         "noc": "GER",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 138,
+         "lane": 3,
+         "slug": "moritz-hartmann"
+        },
+        {
+         "rank": null,
+         "name": "Vincent CHAN",
+         "noc": "USA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 218,
+         "lane": 4,
+         "slug": "vincent-chan"
+        },
+        {
+         "rank": null,
+         "name": "Filip HYJEK",
+         "noc": "POL",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 191,
+         "lane": 5,
+         "slug": "filip-hyjek"
+        }
+       ]
+      }
+     ]
     },
     {
      "id": 23226,
@@ -14925,170 +15060,7 @@
         }
        ]
       }
-     ],
-     "projection": {
-      "next": "Quarterfinals",
-      "official_draw_published": false,
-      "pending": [
-       "Rep. Semifinals"
-      ],
-      "qualified": [
-       {
-        "name": "Bomin PARK",
-        "noc": "KOR",
-        "rank": 1,
-        "time": "43.868",
-        "qual": "Q"
-       },
-       {
-        "name": "Rongmiao YANG",
-        "noc": "CHN",
-        "rank": 1,
-        "time": "43.979",
-        "qual": "Q"
-       },
-       {
-        "name": "Kira Judit AMSCHL",
-        "noc": "HUN",
-        "rank": 1,
-        "time": "44.365",
-        "qual": "Q"
-       },
-       {
-        "name": "Hanna MAZUR",
-        "noc": "POL",
-        "rank": 1,
-        "time": "44.454",
-        "qual": "Q"
-       },
-       {
-        "name": "Yuchen JIANG",
-        "noc": "CHN",
-        "rank": 1,
-        "time": "44.765",
-        "qual": "Q"
-       },
-       {
-        "name": "Veronika GRISHINA",
-        "noc": "AIN2",
-        "rank": 1,
-        "time": "44.802",
-        "qual": "Q"
-       },
-       {
-        "name": "Sumin YU",
-        "noc": "KOR",
-        "rank": 1,
-        "time": "44.905",
-        "qual": "Q"
-       },
-       {
-        "name": "Albina ALIEVA",
-        "noc": "AIN2",
-        "rank": 1,
-        "time": "45.103",
-        "qual": "Q"
-       },
-       {
-        "name": "Anna TELEGANOVA",
-        "noc": "AIN2",
-        "rank": 2,
-        "time": "44.048",
-        "qual": "Q"
-       },
-       {
-        "name": "Nuriya ALPYSBAY",
-        "noc": "KAZ",
-        "rank": 2,
-        "time": "44.148",
-        "qual": "Q"
-       },
-       {
-        "name": "Eliza RHODEHAMEL",
-        "noc": "USA",
-        "rank": 2,
-        "time": "44.472",
-        "qual": "Q"
-       },
-       {
-        "name": "Mirthe MICHIELSEN",
-        "noc": "BEL",
-        "rank": 2,
-        "time": "44.564",
-        "qual": "Q"
-       },
-       {
-        "name": "Eliane GOUDREAULT",
-        "noc": "CAN",
-        "rank": 2,
-        "time": "44.812",
-        "qual": "Q"
-       },
-       {
-        "name": "Chien Hua HUANG",
-        "noc": "TPE",
-        "rank": 2,
-        "time": "44.838",
-        "qual": "Q"
-       },
-       {
-        "name": "Lyna HANI",
-        "noc": "CAN",
-        "rank": 2,
-        "time": "45.275",
-        "qual": "Q"
-       },
-       {
-        "name": "Serena COLA",
-        "noc": "ITA",
-        "rank": 2,
-        "time": "46.896",
-        "qual": "Q"
-       },
-       {
-        "name": "Palina SHKARSTAN",
-        "noc": "AIN1",
-        "rank": 3,
-        "time": "44.221",
-        "qual": "q"
-       },
-       {
-        "name": "Agata KOBUS",
-        "noc": "POL",
-        "rank": 3,
-        "time": "44.698",
-        "qual": "q"
-       }
-      ],
-      "races": [
-       [
-        "Bomin PARK (KOR)",
-        "Albina ALIEVA (AIN2)",
-        "Anna TELEGANOVA (AIN2)",
-        "Serena COLA (ITA)",
-        "Palina SHKARSTAN (AIN1)"
-       ],
-       [
-        "Rongmiao YANG (CHN)",
-        "Sumin YU (KOR)",
-        "Nuriya ALPYSBAY (KAZ)",
-        "Lyna HANI (CAN)",
-        "Agata KOBUS (POL)"
-       ],
-       [
-        "Kira Judit AMSCHL (HUN)",
-        "Veronika GRISHINA (AIN2)",
-        "Eliza RHODEHAMEL (USA)",
-        "Chien Hua HUANG (TPE)"
-       ],
-       [
-        "Hanna MAZUR (POL)",
-        "Yuchen JIANG (CHN)",
-        "Mirthe MICHIELSEN (BEL)",
-        "Eliane GOUDREAULT (CAN)"
-       ]
-      ]
-     }
+     ]
     },
     {
      "id": 23170,
@@ -15368,7 +15340,7 @@
      ],
      "projection": {
       "next": "Rep. Semifinals",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -15463,10 +15435,322 @@
     {
      "id": 23172,
      "name": "Rep. Semifinals",
-     "status": "Scheduled",
-     "start_utc": "2026-11-14T10:28:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-14T10:28:05.000Z",
      "rule": "The first placed skater from each race qualify for Quarterfinals.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Natasa Z MOLNAR",
+         "noc": "HUN",
+         "time": "44.791",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 230,
+         "lane": 1,
+         "slug": "natasa-z-molnar"
+        },
+        {
+         "rank": 2,
+         "name": "Daria DASZUTA",
+         "noc": "POL",
+         "time": "45.383",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 261,
+         "lane": 5,
+         "slug": "daria-daszuta"
+        },
+        {
+         "rank": 3,
+         "name": "Janna Wietske VAN DER ENDE",
+         "noc": "NED",
+         "time": "45.450",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 255,
+         "lane": 2,
+         "slug": "janna-wietske-van-der-ende"
+        },
+        {
+         "rank": 4,
+         "name": "Kierana Alexandra LAUT",
+         "noc": "INA",
+         "time": "46.297",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 231,
+         "lane": 4,
+         "slug": "kierana-alexandra-laut"
+        },
+        {
+         "rank": 5,
+         "name": "Isra GHARSALLAOUI",
+         "noc": "FRA",
+         "time": "1:06.842",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 181,
+         "lane": 3,
+         "slug": "isra-gharsallaoui"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Marta MITTEMPERGHER",
+         "noc": "ITA",
+         "time": "45.162",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 183,
+         "lane": 1,
+         "slug": "marta-mittempergher"
+        },
+        {
+         "rank": 2,
+         "name": "Klara ZOSCHKE",
+         "noc": "GER",
+         "time": "45.468",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 226,
+         "lane": 2,
+         "slug": "klara-zoschke"
+        },
+        {
+         "rank": 3,
+         "name": "Lea POPOVICOVA",
+         "noc": "SVK",
+         "time": "45.550",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 185,
+         "lane": 5,
+         "slug": "lea-popovicova"
+        },
+        {
+         "rank": 4,
+         "name": "Alina LISHENKO",
+         "noc": "KAZ",
+         "time": "45.637",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 244,
+         "lane": 3,
+         "slug": "alina-lishenko"
+        },
+        {
+         "rank": 5,
+         "name": "Sofija RODIC",
+         "noc": "SRB",
+         "time": "47.945",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 266,
+         "lane": 4,
+         "slug": "sofija-rodic"
+        }
+       ]
+      }
+     ],
+     "projection": {
+      "next": "Quarterfinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Bomin PARK",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "43.868",
+        "qual": "Q"
+       },
+       {
+        "name": "Rongmiao YANG",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "43.979",
+        "qual": "Q"
+       },
+       {
+        "name": "Kira Judit AMSCHL",
+        "noc": "HUN",
+        "rank": 1,
+        "time": "44.365",
+        "qual": "Q"
+       },
+       {
+        "name": "Hanna MAZUR",
+        "noc": "POL",
+        "rank": 1,
+        "time": "44.454",
+        "qual": "Q"
+       },
+       {
+        "name": "Yuchen JIANG",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "44.765",
+        "qual": "Q"
+       },
+       {
+        "name": "Veronika GRISHINA",
+        "noc": "AIN2",
+        "rank": 1,
+        "time": "44.802",
+        "qual": "Q"
+       },
+       {
+        "name": "Sumin YU",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "44.905",
+        "qual": "Q"
+       },
+       {
+        "name": "Albina ALIEVA",
+        "noc": "AIN2",
+        "rank": 1,
+        "time": "45.103",
+        "qual": "Q"
+       },
+       {
+        "name": "Anna TELEGANOVA",
+        "noc": "AIN2",
+        "rank": 2,
+        "time": "44.048",
+        "qual": "Q"
+       },
+       {
+        "name": "Nuriya ALPYSBAY",
+        "noc": "KAZ",
+        "rank": 2,
+        "time": "44.148",
+        "qual": "Q"
+       },
+       {
+        "name": "Eliza RHODEHAMEL",
+        "noc": "USA",
+        "rank": 2,
+        "time": "44.472",
+        "qual": "Q"
+       },
+       {
+        "name": "Mirthe MICHIELSEN",
+        "noc": "BEL",
+        "rank": 2,
+        "time": "44.564",
+        "qual": "Q"
+       },
+       {
+        "name": "Eliane GOUDREAULT",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "44.812",
+        "qual": "Q"
+       },
+       {
+        "name": "Chien Hua HUANG",
+        "noc": "TPE",
+        "rank": 2,
+        "time": "44.838",
+        "qual": "Q"
+       },
+       {
+        "name": "Lyna HANI",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "45.275",
+        "qual": "Q"
+       },
+       {
+        "name": "Serena COLA",
+        "noc": "ITA",
+        "rank": 2,
+        "time": "46.896",
+        "qual": "Q"
+       },
+       {
+        "name": "Palina SHKARSTAN",
+        "noc": "AIN1",
+        "rank": 3,
+        "time": "44.221",
+        "qual": "q"
+       },
+       {
+        "name": "Agata KOBUS",
+        "noc": "POL",
+        "rank": 3,
+        "time": "44.698",
+        "qual": "q"
+       },
+       {
+        "name": "Natasa Z MOLNAR",
+        "noc": "HUN",
+        "rank": 1,
+        "time": "44.791",
+        "qual": "Q"
+       },
+       {
+        "name": "Marta MITTEMPERGHER",
+        "noc": "ITA",
+        "rank": 1,
+        "time": "45.162",
+        "qual": "Q"
+       }
+      ],
+      "races": [
+       [
+        "Bomin PARK (KOR)",
+        "Albina ALIEVA (AIN2)",
+        "Anna TELEGANOVA (AIN2)",
+        "Serena COLA (ITA)",
+        "Palina SHKARSTAN (AIN1)"
+       ],
+       [
+        "Rongmiao YANG (CHN)",
+        "Sumin YU (KOR)",
+        "Nuriya ALPYSBAY (KAZ)",
+        "Lyna HANI (CAN)",
+        "Agata KOBUS (POL)"
+       ],
+       [
+        "Kira Judit AMSCHL (HUN)",
+        "Veronika GRISHINA (AIN2)",
+        "Eliza RHODEHAMEL (USA)",
+        "Chien Hua HUANG (TPE)",
+        "Natasa Z MOLNAR (HUN)"
+       ],
+       [
+        "Hanna MAZUR (POL)",
+        "Yuchen JIANG (CHN)",
+        "Mirthe MICHIELSEN (BEL)",
+        "Eliane GOUDREAULT (CAN)",
+        "Marta MITTEMPERGHER (ITA)"
+       ]
+      ]
+     }
     },
     {
      "id": 23171,
