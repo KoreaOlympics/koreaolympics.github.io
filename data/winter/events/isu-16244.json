@@ -18,7 +18,7 @@
   "live": "Men 500m (2)",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-14T09:09:19.335600+00:00",
+ "checked_at": "2026-11-14T09:20:14.639880+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -11658,7 +11658,7 @@
     {
      "id": 23225,
      "name": "Rep. Quarterfinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-14T08:57:33.000Z",
      "rule": "The first placed skater from each race and up to a maximum of three fastest second place skaters qualify for Rep Semifinals.",
      "heats": [
@@ -11684,7 +11684,7 @@
          "name": "Aarav Aniruddha PATWARDHAN",
          "noc": "IND",
          "time": "43.044",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 155,
@@ -11885,7 +11885,7 @@
          "name": "Daniel TROWBRIDGE",
          "noc": "GBR",
          "time": "43.520",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 137,
@@ -11920,15 +11920,27 @@
       },
       {
        "name": "Heat 5",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Leonard TOMIMITSU",
+         "noc": "FRA",
+         "time": "42.893",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 211,
+         "lane": 4,
+         "slug": "leonard-tomimitsu"
+        },
+        {
+         "rank": 2,
          "name": "Raman ZELENIN",
          "noc": "AIN1",
-         "time": "",
-         "qual": "",
+         "time": "42.958",
+         "qual": "ADV",
          "status": "",
          "record": "",
          "bib": 103,
@@ -11936,22 +11948,10 @@
          "slug": "raman-zelenin"
         },
         {
-         "rank": null,
-         "name": "Zalan JANCSO",
-         "noc": "HUN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 147,
-         "lane": 2,
-         "slug": "zalan-jancso"
-        },
-        {
-         "rank": null,
+         "rank": 3,
          "name": "Evan PALADINO",
          "noc": "USA",
-         "time": "",
+         "time": "43.376",
          "qual": "",
          "status": "",
          "record": "",
@@ -11961,29 +11961,29 @@
         },
         {
          "rank": null,
-         "name": "Leonard TOMIMITSU",
-         "noc": "FRA",
-         "time": "",
+         "name": "Zalan JANCSO",
+         "noc": "HUN",
+         "time": "PEN",
          "qual": "",
-         "status": "",
+         "status": "Penalty",
          "record": "",
-         "bib": 211,
-         "lane": 4,
-         "slug": "leonard-tomimitsu"
+         "bib": 147,
+         "lane": 2,
+         "slug": "zalan-jancso"
         }
        ]
       },
       {
        "name": "Heat 6",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Tadeus Richard MAGER",
          "noc": "GER",
-         "time": "",
-         "qual": "",
+         "time": "43.082",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 142,
@@ -11991,10 +11991,22 @@
          "slug": "tadeus-richard-mager"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Szymon ETEL",
+         "noc": "POL",
+         "time": "43.105",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 189,
+         "lane": 4,
+         "slug": "szymon-etel"
+        },
+        {
+         "rank": 3,
          "name": "Chi Ping MAN",
          "noc": "HKG",
-         "time": "",
+         "time": "44.292",
          "qual": "",
          "status": "",
          "record": "",
@@ -12003,54 +12015,30 @@
          "slug": "chi-ping-man"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Ramadhan Harits KUSWARA",
          "noc": "INA",
-         "time": "",
+         "time": "45.385",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 151,
          "lane": 3,
          "slug": "ramadhan-harits-kuswara"
-        },
-        {
-         "rank": null,
-         "name": "Szymon ETEL",
-         "noc": "POL",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 189,
-         "lane": 4,
-         "slug": "szymon-etel"
         }
        ]
       },
       {
        "name": "Heat 7",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Filip HYJEK",
-         "noc": "POL",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 191,
-         "lane": 1,
-         "slug": "filip-hyjek"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Filippo PEZZONI",
          "noc": "ITA",
-         "time": "",
-         "qual": "",
+         "time": "42.114",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 160,
@@ -12058,32 +12046,137 @@
          "slug": "filippo-pezzoni"
         },
         {
-         "rank": null,
-         "name": "Juraj GOGA",
-         "noc": "SVK",
-         "time": "",
-         "qual": "",
+         "rank": 2,
+         "name": "Filip HYJEK",
+         "noc": "POL",
+         "time": "42.414",
+         "qual": "q",
          "status": "",
          "record": "",
-         "bib": 215,
-         "lane": 3,
-         "slug": "juraj-goga"
+         "bib": 191,
+         "lane": 1,
+         "slug": "filip-hyjek"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Hans Matthew BUEMIO",
          "noc": "PHI",
-         "time": "",
+         "time": "44.437",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 188,
          "lane": 4,
          "slug": "hans-matthew-buemio"
+        },
+        {
+         "rank": 4,
+         "name": "Juraj GOGA",
+         "noc": "SVK",
+         "time": "44.608",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 215,
+         "lane": 3,
+         "slug": "juraj-goga"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Rep. Semifinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Filippo PEZZONI",
+        "noc": "ITA",
+        "rank": 1,
+        "time": "42.114",
+        "qual": "Q"
+       },
+       {
+        "name": "William SAMSON",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "42.578",
+        "qual": "Q"
+       },
+       {
+        "name": "Leonard TOMIMITSU",
+        "noc": "FRA",
+        "rank": 1,
+        "time": "42.893",
+        "qual": "Q"
+       },
+       {
+        "name": "Oskar SOLTAU",
+        "noc": "POL",
+        "rank": 1,
+        "time": "42.931",
+        "qual": "Q"
+       },
+       {
+        "name": "Tadeus Richard MAGER",
+        "noc": "GER",
+        "rank": 1,
+        "time": "43.082",
+        "qual": "Q"
+       },
+       {
+        "name": "Moritz HARTMANN",
+        "noc": "GER",
+        "rank": 1,
+        "time": "43.146",
+        "qual": "Q"
+       },
+       {
+        "name": "Vincent CHAN",
+        "noc": "USA",
+        "rank": 1,
+        "time": "43.694",
+        "qual": "Q"
+       },
+       {
+        "name": "Raman ZELENIN",
+        "noc": "AIN1",
+        "rank": 2,
+        "time": "42.958",
+        "qual": "ADV"
+       },
+       {
+        "name": "Artem MOISEIENKO",
+        "noc": "UKR",
+        "rank": 4,
+        "time": "1:18.510",
+        "qual": "ADV"
+       },
+       {
+        "name": "Filip HYJEK",
+        "noc": "POL",
+        "rank": 2,
+        "time": "42.414",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Filippo PEZZONI (ITA)",
+        "Oskar SOLTAU (POL)",
+        "Tadeus Richard MAGER (GER)",
+        "Raman ZELENIN (AIN1)",
+        "Artem MOISEIENKO (UKR)"
+       ],
+       [
+        "William SAMSON (CAN)",
+        "Leonard TOMIMITSU (FRA)",
+        "Moritz HARTMANN (GER)",
+        "Vincent CHAN (USA)",
+        "Filip HYJEK (POL)"
+       ]
+      ]
+     }
     },
     {
      "id": 23227,
