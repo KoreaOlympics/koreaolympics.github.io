@@ -18,7 +18,7 @@
   "live": "",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-14T10:39:09.237860+00:00",
+ "checked_at": "2026-11-14T10:50:17.361347+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -16763,7 +16763,7 @@
      ],
      "projection": {
       "next": "Rep. Semifinals",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -16858,10 +16858,145 @@
     {
      "id": 23234,
      "name": "Rep. Semifinals",
-     "status": "Scheduled",
+     "status": "Live",
      "start_utc": "2026-11-14T10:40:00.000Z",
      "rule": "The first placed skater from each race qualify for Quarterfinals.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Live",
+       "official": "Live",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Meruyert SANSYZBAYEVA",
+         "noc": "KAZ",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 246,
+         "lane": 2,
+         "slug": "meruyert-sansyzbayeva"
+        },
+        {
+         "rank": null,
+         "name": "Clara BOUDREAU-ALEXANDRE",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 212,
+         "lane": 1,
+         "slug": "clara-boudreau-alexandre"
+        },
+        {
+         "rank": null,
+         "name": "Darya STSIAPANAVA",
+         "noc": "AIN1",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 204,
+         "lane": 4,
+         "slug": "darya-stsiapanava"
+        },
+        {
+         "rank": null,
+         "name": "Elzem TAS",
+         "noc": "TUR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 272,
+         "lane": 5,
+         "slug": "elzem-tas"
+        },
+        {
+         "rank": null,
+         "name": "Viola COMBA",
+         "noc": "ITA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 234,
+         "lane": 3,
+         "slug": "viola-comba"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Dayana AITYBEK",
+         "noc": "KAZ",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 242,
+         "lane": 1,
+         "slug": "dayana-aitybek"
+        },
+        {
+         "rank": null,
+         "name": "Sofia KOONS",
+         "noc": "USA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 278,
+         "lane": 2,
+         "slug": "sofia-koons"
+        },
+        {
+         "rank": null,
+         "name": "Juul VAN DER ZWAAN",
+         "noc": "NED",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 256,
+         "lane": 3,
+         "slug": "juul-van-der-zwaan"
+        },
+        {
+         "rank": null,
+         "name": "Jazmin SZABO",
+         "noc": "HUN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 229,
+         "lane": 4,
+         "slug": "jazmin-szabo-1"
+        },
+        {
+         "rank": null,
+         "name": "Sofja SELEZNOVA",
+         "noc": "LAT",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 252,
+         "lane": 5,
+         "slug": "sofja-seleznova"
+        }
+       ]
+      }
+     ]
     },
     {
      "id": 23233,
