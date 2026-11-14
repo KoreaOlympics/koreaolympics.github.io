@@ -15,10 +15,10 @@
   "city": "Everett, WA",
   "country": "USA",
   "state": "Live",
-  "live": "Tamir KUPERMAN",
+  "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-skate-america-2026/"
  },
- "checked_at": "2026-11-14T03:37:33.905623+00:00",
+ "checked_at": "2026-11-14T03:48:18.094797+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-14T03:03:00.000Z",
@@ -128,6 +128,23 @@
     },
     {
      "rank": 3,
+     "name": "Tamir KUPERMAN",
+     "noc": "ISR",
+     "points": "83.13",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 3,
+       "total": "83.13",
+       "tes": "45.62",
+       "pcs": "37.51",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 4,
      "name": "Aleksa RAKIC",
      "noc": "CAN",
      "points": "68.92",
@@ -135,7 +152,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 3,
+       "rank": 4,
        "total": "68.92",
        "tes": "36.11",
        "pcs": "33.81",
@@ -144,7 +161,7 @@
      }
     },
     {
-     "rank": 4,
+     "rank": 5,
      "name": "Georgii RESHTENKO",
      "noc": "CZE",
      "points": "65.77",
@@ -152,27 +169,10 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 4,
+       "rank": 5,
        "total": "65.77",
        "tes": "32.77",
        "pcs": "35.00",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Tamir KUPERMAN",
-     "noc": "ISR",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
        "status": "Running"
       }
      }
