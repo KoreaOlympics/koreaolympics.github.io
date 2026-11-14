@@ -18,7 +18,7 @@
   "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-14T10:05:07.391443+00:00",
+ "checked_at": "2026-11-14T10:16:00.145812+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -13812,7 +13812,7 @@
     {
      "id": 23203,
      "name": "Rep. Quarterfinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-14T09:47:31.000Z",
      "rule": "The first placed skater from each race and up to a maximum of four fastest second place skaters qualify for Rep Semifinals.",
      "heats": [
@@ -13838,7 +13838,7 @@
          "name": "Hubert Zbigniew JEZIAK",
          "noc": "GER",
          "time": "1:29.595",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 139,
@@ -13905,7 +13905,7 @@
          "name": "Zhanarys MAGZHAN",
          "noc": "KAZ",
          "time": "1:27.918",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 167,
@@ -13972,7 +13972,7 @@
          "name": "Rene KOPRIVNJAK",
          "noc": "CRO",
          "time": "1:30.731",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 210,
@@ -14051,7 +14051,7 @@
          "name": "Mathieu VAN DER HORST",
          "noc": "NED",
          "time": "1:35.649",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 182,
@@ -14110,15 +14110,15 @@
       },
       {
        "name": "Heat 5",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Kirill PANIKOROVSKII",
          "noc": "AIN2",
-         "time": "",
-         "qual": "",
+         "time": "1:28.351",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 107,
@@ -14126,10 +14126,22 @@
          "slug": "kirill-panikorovskii"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Fabio BRACCHI",
+         "noc": "ITA",
+         "time": "1:28.401",
+         "qual": "q",
+         "status": "",
+         "record": "",
+         "bib": 158,
+         "lane": 2,
+         "slug": "fabio-bracchi"
+        },
+        {
+         "rank": 3,
          "name": "Ho Long YUEN",
          "noc": "HKG",
-         "time": "",
+         "time": "1:29.788",
          "qual": "",
          "status": "",
          "record": "",
@@ -14138,10 +14150,22 @@
          "slug": "ho-long-yuen"
         },
         {
-         "rank": null,
+         "rank": 4,
+         "name": "Patrik MIHALIK",
+         "noc": "SVK",
+         "time": "1:34.730",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 217,
+         "lane": 5,
+         "slug": "patrik-mihalik"
+        },
+        {
+         "rank": 5,
          "name": "Moritz KUEHNRICH",
          "noc": "GER",
-         "time": "",
+         "time": "1:55.230",
          "qual": "",
          "status": "",
          "record": "",
@@ -14150,54 +14174,30 @@
          "slug": "moritz-kuehnrich"
         },
         {
-         "rank": null,
-         "name": "Fabio BRACCHI",
-         "noc": "ITA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 158,
-         "lane": 2,
-         "slug": "fabio-bracchi"
-        },
-        {
-         "rank": null,
+         "rank": 6,
          "name": "Marek HARKABUS",
          "noc": "SVK",
-         "time": "",
+         "time": "2:04.384",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 216,
          "lane": 6,
          "slug": "marek-harkabus"
-        },
-        {
-         "rank": null,
-         "name": "Patrik MIHALIK",
-         "noc": "SVK",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 217,
-         "lane": 5,
-         "slug": "patrik-mihalik"
         }
        ]
       },
       {
        "name": "Heat 6",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Henri Stenskrog MIDJO",
          "noc": "NOR",
-         "time": "",
-         "qual": "",
+         "time": "1:33.581",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 186,
@@ -14205,22 +14205,10 @@
          "slug": "henri-stenskrog-midjo"
         },
         {
-         "rank": null,
-         "name": "Mattia BRACCHI",
-         "noc": "ITA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 212,
-         "lane": 2,
-         "slug": "mattia-bracchi"
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Adomas OGULEVICIUS",
          "noc": "LTU",
-         "time": "",
+         "time": "1:33.852",
          "qual": "",
          "status": "",
          "record": "",
@@ -14229,22 +14217,10 @@
          "slug": "adomas-ogulevicius"
         },
         {
-         "rank": null,
-         "name": "Yusuf Can BOZDAG",
-         "noc": "TUR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 196,
-         "lane": 4,
-         "slug": "yusuf-can-bozdag"
-        },
-        {
-         "rank": null,
+         "rank": 3,
          "name": "Cohen BUFFEY",
          "noc": "GBR",
-         "time": "",
+         "time": "1:34.094",
          "qual": "",
          "status": "",
          "record": "",
@@ -14253,20 +14229,137 @@
          "slug": "cohen-buffey"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Toms VINNINS",
          "noc": "LAT",
-         "time": "",
+         "time": "1:34.903",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 177,
          "lane": 6,
          "slug": "toms-vinnins"
+        },
+        {
+         "rank": 5,
+         "name": "Mattia BRACCHI",
+         "noc": "ITA",
+         "time": "1:55.020",
+         "qual": "ADV",
+         "status": "",
+         "record": "",
+         "bib": 212,
+         "lane": 2,
+         "slug": "mattia-bracchi"
+        },
+        {
+         "rank": null,
+         "name": "Yusuf Can BOZDAG",
+         "noc": "TUR",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 196,
+         "lane": 4,
+         "slug": "yusuf-can-bozdag"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Rep. Semifinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Daniil BYCHKOU",
+        "noc": "AIN1",
+        "rank": 1,
+        "time": "1:27.732",
+        "qual": "Q"
+       },
+       {
+        "name": "Kirill PANIKOROVSKII",
+        "noc": "AIN2",
+        "rank": 1,
+        "time": "1:28.351",
+        "qual": "Q"
+       },
+       {
+        "name": "Berat Efe DAL",
+        "noc": "TUR",
+        "rank": 1,
+        "time": "1:28.549",
+        "qual": "Q"
+       },
+       {
+        "name": "Tsjerk VAN DER MEER",
+        "noc": "NED",
+        "rank": 1,
+        "time": "1:29.756",
+        "qual": "Q"
+       },
+       {
+        "name": "Henri Stenskrog MIDJO",
+        "noc": "NOR",
+        "rank": 1,
+        "time": "1:33.581",
+        "qual": "Q"
+       },
+       {
+        "name": "Tymon HRYNIEWICZ",
+        "noc": "POL",
+        "rank": 1,
+        "time": "1:35.529",
+        "qual": "Q"
+       },
+       {
+        "name": "Mattia BRACCHI",
+        "noc": "ITA",
+        "rank": 5,
+        "time": "1:55.020",
+        "qual": "ADV"
+       },
+       {
+        "name": "Zhanarys MAGZHAN",
+        "noc": "KAZ",
+        "rank": 2,
+        "time": "1:27.918",
+        "qual": "q"
+       },
+       {
+        "name": "Fabio BRACCHI",
+        "noc": "ITA",
+        "rank": 2,
+        "time": "1:28.401",
+        "qual": "q"
+       },
+       {
+        "name": "Hubert Zbigniew JEZIAK",
+        "noc": "GER",
+        "rank": 2,
+        "time": "1:29.595",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Daniil BYCHKOU (AIN1)",
+        "Tsjerk VAN DER MEER (NED)",
+        "Henri Stenskrog MIDJO (NOR)",
+        "Zhanarys MAGZHAN (KAZ)",
+        "Fabio BRACCHI (ITA)"
+       ],
+       [
+        "Kirill PANIKOROVSKII (AIN2)",
+        "Berat Efe DAL (TUR)",
+        "Tymon HRYNIEWICZ (POL)",
+        "Mattia BRACCHI (ITA)",
+        "Hubert Zbigniew JEZIAK (GER)"
+       ]
+      ]
+     }
     },
     {
      "id": 23205,
