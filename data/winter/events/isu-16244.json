@@ -18,7 +18,7 @@
   "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-14T15:41:12.755399+00:00",
+ "checked_at": "2026-11-14T15:52:16.189190+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -16463,20 +16463,20 @@
     {
      "id": 23289,
      "name": "Final",
-     "status": "Live",
-     "start_utc": "2026-11-14T15:37:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-14T15:40:00.000Z",
      "rule": "",
      "heats": [
       {
        "name": "Final",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Tianyou WANG",
          "noc": "CHN",
-         "time": "",
+         "time": "1:25.505",
          "qual": "",
          "status": "",
          "record": "",
@@ -16485,10 +16485,10 @@
          "slug": "tianyou-wang"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Biho LEE",
          "noc": "KOR",
-         "time": "",
+         "time": "1:25.717",
          "qual": "",
          "status": "",
          "record": "",
@@ -16497,10 +16497,22 @@
          "slug": "biho-lee"
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Jesper SCHMITZ",
+         "noc": "NED",
+         "time": "1:26.077",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 100,
+         "lane": 5,
+         "slug": "jesper-schmitz"
+        },
+        {
+         "rank": 4,
          "name": "Yoonseok LEE",
          "noc": "KOR",
-         "time": "",
+         "time": "1:26.097",
          "qual": "",
          "status": "",
          "record": "",
@@ -16509,41 +16521,29 @@
          "slug": "yoonseok-lee"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Yuheng LI",
          "noc": "CHN",
-         "time": "",
+         "time": "1:26.105",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 122,
          "lane": 4,
          "slug": "yuheng-li-1"
-        },
-        {
-         "rank": null,
-         "name": "Jesper SCHMITZ",
-         "noc": "NED",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 100,
-         "lane": 5,
-         "slug": "jesper-schmitz"
         }
        ]
       },
       {
        "name": "Final B",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Tymeo LIBEAU",
          "noc": "FRA",
-         "time": "",
+         "time": "1:33.089",
          "qual": "",
          "status": "",
          "record": "",
@@ -16552,10 +16552,10 @@
          "slug": "tymeo-libeau"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Wonseok CHOI",
          "noc": "KOR",
-         "time": "",
+         "time": "1:33.134",
          "qual": "",
          "status": "",
          "record": "",
@@ -16564,28 +16564,28 @@
          "slug": "wonseok-choi"
         },
         {
-         "rank": null,
-         "name": "Alexis DUBUC-BILODEAU",
-         "noc": "CAN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 116,
-         "lane": 3,
-         "slug": "alexis-dubuc-bilodeau"
-        },
-        {
-         "rank": null,
+         "rank": 3,
          "name": "Xinchi YU",
          "noc": "CHN",
-         "time": "",
+         "time": "1:33.223",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 125,
          "lane": 4,
          "slug": "xinchi-yu"
+        },
+        {
+         "rank": 4,
+         "name": "Alexis DUBUC-BILODEAU",
+         "noc": "CAN",
+         "time": "1:33.401",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 116,
+         "lane": 3,
+         "slug": "alexis-dubuc-bilodeau"
         }
        ]
       }
@@ -23437,11 +23437,11 @@
    "distance": "Men 1000 m",
    "round": "Final",
    "heat": "Final",
-   "start_utc": "2026-11-14T15:37:00.000Z",
-   "rank": null,
+   "start_utc": "2026-11-14T15:40:00.000Z",
+   "rank": 2,
    "name": "Biho LEE",
    "noc": "KOR",
-   "time": "",
+   "time": "1:25.717",
    "qual": "",
    "status": "",
    "record": "",
@@ -23456,11 +23456,11 @@
    "distance": "Men 1000 m",
    "round": "Final",
    "heat": "Final",
-   "start_utc": "2026-11-14T15:37:00.000Z",
-   "rank": null,
+   "start_utc": "2026-11-14T15:40:00.000Z",
+   "rank": 4,
    "name": "Yoonseok LEE",
    "noc": "KOR",
-   "time": "",
+   "time": "1:26.097",
    "qual": "",
    "status": "",
    "record": "",
@@ -23475,11 +23475,11 @@
    "distance": "Men 1000 m",
    "round": "Final",
    "heat": "Final B",
-   "start_utc": "2026-11-14T15:37:00.000Z",
-   "rank": null,
+   "start_utc": "2026-11-14T15:40:00.000Z",
+   "rank": 2,
    "name": "Wonseok CHOI",
    "noc": "KOR",
-   "time": "",
+   "time": "1:33.134",
    "qual": "",
    "status": "",
    "record": "",
