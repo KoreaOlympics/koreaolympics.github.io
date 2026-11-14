@@ -15,10 +15,10 @@
   "city": "Bormio",
   "country": "ITA",
   "state": "Live",
-  "live": "Men 1000 m",
+  "live": "Men 500m (2)",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-14T15:07:57.772196+00:00",
+ "checked_at": "2026-11-14T15:19:09.469861+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -13114,7 +13114,7 @@
      ],
      "projection": {
       "next": "Final",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -13167,10 +13167,133 @@
     {
      "id": 23287,
      "name": "Final",
-     "status": "Scheduled",
-     "start_utc": "2026-11-14T15:08:00.000Z",
+     "status": "Live",
+     "start_utc": "2026-11-14T15:09:33.000Z",
      "rule": "",
-     "heats": []
+     "heats": [
+      {
+       "name": "Final",
+       "status": "Finished",
+       "official": "Live",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Chanwook PARK",
+         "noc": "KOR",
+         "time": "41.020",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 175,
+         "lane": 3,
+         "slug": "chanwook-park"
+        },
+        {
+         "rank": 2,
+         "name": "Minchan KIM",
+         "noc": "KOR",
+         "time": "41.330",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 172,
+         "lane": 2,
+         "slug": "minchan-kim"
+        },
+        {
+         "rank": null,
+         "name": "Andrei PETROV",
+         "noc": "AIN2",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 108,
+         "lane": 4,
+         "slug": "andrei-petrov"
+        },
+        {
+         "rank": null,
+         "name": "Zhibo SUN",
+         "noc": "CHN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 123,
+         "lane": 5,
+         "slug": "zhibo-sun"
+        },
+        {
+         "rank": null,
+         "name": "Emile FORTIN",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 119,
+         "lane": 1,
+         "slug": "emile-fortin"
+        }
+       ]
+      },
+      {
+       "name": "Final B",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "David MAKARIAN",
+         "noc": "AIN2",
+         "time": "40.743",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 106,
+         "lane": 1,
+         "slug": "david-makarian"
+        },
+        {
+         "rank": 2,
+         "name": "Jeremy BOUCHARD",
+         "noc": "CAN",
+         "time": "41.569",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 115,
+         "lane": 4,
+         "slug": "jeremy-bouchard"
+        },
+        {
+         "rank": 3,
+         "name": "Oskar SOLTAU",
+         "noc": "POL",
+         "time": "54.021",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 192,
+         "lane": 2,
+         "slug": "oskar-soltau"
+        },
+        {
+         "rank": null,
+         "name": "Meiirzhan TOLEGEN",
+         "noc": "KAZ",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 170,
+         "lane": 3,
+         "slug": "meiirzhan-tolegen"
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -22781,6 +22904,44 @@
    "record": "",
    "bib": 172,
    "lane": 1,
+   "slug": "minchan-kim"
+  },
+  {
+   "event_id": "isu-16244",
+   "sport": "short-track",
+   "event": "ISU Short Track Junior World Cup #2",
+   "distance": "Men 500m (2)",
+   "round": "Final",
+   "heat": "Final",
+   "start_utc": "2026-11-14T15:09:33.000Z",
+   "rank": 1,
+   "name": "Chanwook PARK",
+   "noc": "KOR",
+   "time": "41.020",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 175,
+   "lane": 3,
+   "slug": "chanwook-park"
+  },
+  {
+   "event_id": "isu-16244",
+   "sport": "short-track",
+   "event": "ISU Short Track Junior World Cup #2",
+   "distance": "Men 500m (2)",
+   "round": "Final",
+   "heat": "Final",
+   "start_utc": "2026-11-14T15:09:33.000Z",
+   "rank": 2,
+   "name": "Minchan KIM",
+   "noc": "KOR",
+   "time": "41.330",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 172,
+   "lane": 2,
    "slug": "minchan-kim"
   },
   {
