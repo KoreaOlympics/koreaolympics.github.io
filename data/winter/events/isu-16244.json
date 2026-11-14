@@ -18,7 +18,7 @@
   "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-14T14:10:38.140538+00:00",
+ "checked_at": "2026-11-14T14:11:47.782223+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -17610,7 +17610,7 @@
      ],
      "projection": {
       "next": "Semifinals",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -17705,10 +17705,145 @@
     {
      "id": 23174,
      "name": "Semifinals",
-     "status": "Scheduled",
+     "status": "Live",
      "start_utc": "2026-11-14T14:11:00.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final, the third and fourth placed skaters from each race and up to a maximum of next two fastest fifth place skaters qualify for Final B.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Getting Ready",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Rongmiao YANG",
+         "noc": "CHN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 219,
+         "lane": 1,
+         "slug": "rongmiao-yang"
+        },
+        {
+         "rank": null,
+         "name": "Bomin PARK",
+         "noc": "KOR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 250,
+         "lane": 2,
+         "slug": "bomin-park"
+        },
+        {
+         "rank": null,
+         "name": "Nuriya ALPYSBAY",
+         "noc": "KAZ",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 243,
+         "lane": 3,
+         "slug": "nuriya-alpysbay"
+        },
+        {
+         "rank": null,
+         "name": "Veronika GRISHINA",
+         "noc": "AIN2",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 207,
+         "lane": 4,
+         "slug": "veronika-grishina"
+        },
+        {
+         "rank": null,
+         "name": "Albina ALIEVA",
+         "noc": "AIN2",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 205,
+         "lane": 5,
+         "slug": "albina-alieva"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Yuchen JIANG",
+         "noc": "CHN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 216,
+         "lane": 1,
+         "slug": "yuchen-jiang"
+        },
+        {
+         "rank": null,
+         "name": "Kira Judit AMSCHL",
+         "noc": "HUN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 227,
+         "lane": 2,
+         "slug": "kira-judit-amschl"
+        },
+        {
+         "rank": null,
+         "name": "Hanna MAZUR",
+         "noc": "POL",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 264,
+         "lane": 3,
+         "slug": "hanna-mazur-1"
+        },
+        {
+         "rank": null,
+         "name": "Eliane GOUDREAULT",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 213,
+         "lane": 4,
+         "slug": "eliane-goudreault"
+        },
+        {
+         "rank": null,
+         "name": "Sumin YU",
+         "noc": "KOR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 251,
+         "lane": 5,
+         "slug": "sumin-yu"
+        }
+       ]
+      }
+     ]
     },
     {
      "id": 23175,
@@ -22111,6 +22246,44 @@
    "record": "",
    "bib": 251,
    "lane": 2,
+   "slug": "sumin-yu"
+  },
+  {
+   "event_id": "isu-16244",
+   "sport": "short-track",
+   "event": "ISU Short Track Junior World Cup #2",
+   "distance": "Women 500 m (2)",
+   "round": "Semifinals",
+   "heat": "Heat 1",
+   "start_utc": "2026-11-14T14:11:00.000Z",
+   "rank": null,
+   "name": "Bomin PARK",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 250,
+   "lane": 2,
+   "slug": "bomin-park"
+  },
+  {
+   "event_id": "isu-16244",
+   "sport": "short-track",
+   "event": "ISU Short Track Junior World Cup #2",
+   "distance": "Women 500 m (2)",
+   "round": "Semifinals",
+   "heat": "Heat 2",
+   "start_utc": "2026-11-14T14:11:00.000Z",
+   "rank": null,
+   "name": "Sumin YU",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 251,
+   "lane": 5,
    "slug": "sumin-yu"
   },
   {
