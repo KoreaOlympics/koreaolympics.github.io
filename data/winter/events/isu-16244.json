@@ -18,7 +18,7 @@
   "live": "Men 500m (2)",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-14T13:15:26.821344+00:00",
+ "checked_at": "2026-11-14T13:26:38.962794+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -12676,15 +12676,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Minchan KIM",
          "noc": "KOR",
-         "time": "",
-         "qual": "",
+         "time": "41.376",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 172,
@@ -12692,11 +12692,11 @@
          "slug": "minchan-kim"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Zhibo SUN",
          "noc": "CHN",
-         "time": "",
-         "qual": "",
+         "time": "41.458",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 123,
@@ -12704,22 +12704,10 @@
          "slug": "zhibo-sun"
         },
         {
-         "rank": null,
-         "name": "Matteo GIANA",
-         "noc": "ITA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 159,
-         "lane": 3,
-         "slug": "matteo-giana"
-        },
-        {
-         "rank": null,
+         "rank": 3,
          "name": "Raman SHAM",
          "noc": "AIN1",
-         "time": "",
+         "time": "41.809",
          "qual": "",
          "status": "",
          "record": "",
@@ -12728,42 +12716,42 @@
          "slug": "raman-sham"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Muhammed Dogukan ERDOGAN",
          "noc": "TUR",
-         "time": "",
+         "time": "42.994",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 198,
          "lane": 5,
          "slug": "muhammed-dogukan-erdogan"
+        },
+        {
+         "rank": 5,
+         "name": "Matteo GIANA",
+         "noc": "ITA",
+         "time": "58.620",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 159,
+         "lane": 3,
+         "slug": "matteo-giana"
         }
        ]
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Andrei PETROV",
-         "noc": "AIN2",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 108,
-         "lane": 1,
-         "slug": "andrei-petrov"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Kebba NJIE",
          "noc": "NED",
-         "time": "",
-         "qual": "",
+         "time": "41.404",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 181,
@@ -12771,22 +12759,34 @@
          "slug": "kebba-njie"
         },
         {
-         "rank": null,
-         "name": "Lucas MOINDRON",
-         "noc": "FRA",
-         "time": "",
-         "qual": "",
+         "rank": 2,
+         "name": "Andrei PETROV",
+         "noc": "AIN2",
+         "time": "41.516",
+         "qual": "Q",
          "status": "",
          "record": "",
-         "bib": 134,
-         "lane": 3,
-         "slug": "lucas-moindron"
+         "bib": 108,
+         "lane": 1,
+         "slug": "andrei-petrov"
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Oskar SOLTAU",
+         "noc": "POL",
+         "time": "41.680",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 192,
+         "lane": 5,
+         "slug": "oskar-soltau"
+        },
+        {
+         "rank": 4,
          "name": "Zhandos SEREKPAYEV",
          "noc": "KAZ",
-         "time": "",
+         "time": "43.493",
          "qual": "",
          "status": "",
          "record": "",
@@ -12795,23 +12795,23 @@
          "slug": "zhandos-serekpayev"
         },
         {
-         "rank": null,
-         "name": "Oskar SOLTAU",
-         "noc": "POL",
-         "time": "",
+         "rank": 5,
+         "name": "Lucas MOINDRON",
+         "noc": "FRA",
+         "time": "DNF",
          "qual": "",
-         "status": "",
+         "status": "Did Not Finish",
          "record": "",
-         "bib": 192,
-         "lane": 5,
-         "slug": "oskar-soltau"
+         "bib": 134,
+         "lane": 3,
+         "slug": "lucas-moindron"
         }
        ]
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
         {
          "rank": null,
@@ -21019,11 +21019,11 @@
    "round": "Quarterfinals",
    "heat": "Heat 2",
    "start_utc": "2026-11-14T13:11:46.000Z",
-   "rank": null,
+   "rank": 1,
    "name": "Minchan KIM",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "41.376",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 172,
