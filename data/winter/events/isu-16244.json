@@ -18,7 +18,7 @@
   "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-14T14:33:54.440457+00:00",
+ "checked_at": "2026-11-14T14:44:50.828885+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -537,7 +537,7 @@
    "title": "Men 1000 m",
    "round": "Finals",
    "event_result_id": 16131,
-   "round_id": 23208,
+   "round_id": null,
    "type": "Singles"
   },
   {
@@ -16146,21 +16146,21 @@
     {
      "id": 23207,
      "name": "Semifinals",
-     "status": "Live",
-     "start_utc": "2026-11-14T14:31:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-14T14:29:49.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final, the third and fourth placed skaters from each race and up to a maximum of next two fastest fifth place skaters qualify for Final B.",
      "heats": [
       {
        "name": "Heat 1",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "Biho LEE",
          "noc": "KOR",
-         "time": "1:25.980",
-         "qual": "",
+         "time": "1:25.972",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 173,
@@ -16171,8 +16171,8 @@
          "rank": 2,
          "name": "Yuheng LI",
          "noc": "CHN",
-         "time": "1:26.110",
-         "qual": "",
+         "time": "1:26.106",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 122,
@@ -16183,8 +16183,8 @@
          "rank": 3,
          "name": "Wonseok CHOI",
          "noc": "KOR",
-         "time": "1:26.320",
-         "qual": "",
+         "time": "1:26.307",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 171,
@@ -16192,11 +16192,11 @@
          "slug": "wonseok-choi"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Alexis DUBUC-BILODEAU",
          "noc": "CAN",
-         "time": "",
-         "qual": "",
+         "time": "1:56.645",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 116,
@@ -16204,11 +16204,11 @@
          "slug": "alexis-dubuc-bilodeau"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Xinchi YU",
          "noc": "CHN",
-         "time": "",
-         "qual": "",
+         "time": "2:02.995",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 125,
@@ -16219,27 +16219,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Yoonseok LEE",
-         "noc": "KOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 174,
-         "lane": 1,
-         "slug": "yoonseok-lee"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Tianyou WANG",
          "noc": "CHN",
-         "time": "",
-         "qual": "",
+         "time": "1:25.485",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 124,
@@ -16247,11 +16235,35 @@
          "slug": "tianyou-wang"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Yoonseok LEE",
+         "noc": "KOR",
+         "time": "1:25.490",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 174,
+         "lane": 1,
+         "slug": "yoonseok-lee"
+        },
+        {
+         "rank": 3,
+         "name": "Tymeo LIBEAU",
+         "noc": "FRA",
+         "time": "1:25.548",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 133,
+         "lane": 5,
+         "slug": "tymeo-libeau"
+        },
+        {
+         "rank": 4,
          "name": "Jesper SCHMITZ",
          "noc": "NED",
-         "time": "",
-         "qual": "",
+         "time": "no time",
+         "qual": "ADV",
          "status": "",
          "record": "",
          "bib": 100,
@@ -16262,33 +16274,72 @@
          "rank": null,
          "name": "Tagir AMIRKHANOV",
          "noc": "AIN2",
-         "time": "",
+         "time": "PEN",
          "qual": "",
-         "status": "",
+         "status": "Penalty",
          "record": "",
          "bib": 105,
          "lane": 4,
          "slug": "tagir-amirkhanov"
-        },
-        {
-         "rank": null,
-         "name": "Tymeo LIBEAU",
-         "noc": "FRA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 133,
-         "lane": 5,
-         "slug": "tymeo-libeau"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Final",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Tianyou WANG",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "1:25.485",
+        "qual": "Q"
+       },
+       {
+        "name": "Biho LEE",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "1:25.972",
+        "qual": "Q"
+       },
+       {
+        "name": "Yoonseok LEE",
+        "noc": "KOR",
+        "rank": 2,
+        "time": "1:25.490",
+        "qual": "Q"
+       },
+       {
+        "name": "Yuheng LI",
+        "noc": "CHN",
+        "rank": 2,
+        "time": "1:26.106",
+        "qual": "Q"
+       },
+       {
+        "name": "Jesper SCHMITZ",
+        "noc": "NED",
+        "rank": 4,
+        "time": "no time",
+        "qual": "ADV"
+       }
+      ],
+      "races": [
+       [
+        "Tianyou WANG (CHN)",
+        "Biho LEE (KOR)",
+        "Yoonseok LEE (KOR)",
+        "Yuheng LI (CHN)",
+        "Jesper SCHMITZ (NED)"
+       ]
+      ]
+     }
     },
     {
-     "id": 23208,
-     "name": "Finals",
+     "id": 23289,
+     "name": "Final",
      "status": "Scheduled",
      "start_utc": "2026-11-14T15:37:00.000Z",
      "rule": "",
@@ -22775,12 +22826,12 @@
    "distance": "Men 1000 m",
    "round": "Semifinals",
    "heat": "Heat 1",
-   "start_utc": "2026-11-14T14:31:00.000Z",
+   "start_utc": "2026-11-14T14:29:49.000Z",
    "rank": 1,
    "name": "Biho LEE",
    "noc": "KOR",
-   "time": "1:25.980",
-   "qual": "",
+   "time": "1:25.972",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 173,
@@ -22794,12 +22845,12 @@
    "distance": "Men 1000 m",
    "round": "Semifinals",
    "heat": "Heat 1",
-   "start_utc": "2026-11-14T14:31:00.000Z",
+   "start_utc": "2026-11-14T14:29:49.000Z",
    "rank": 3,
    "name": "Wonseok CHOI",
    "noc": "KOR",
-   "time": "1:26.320",
-   "qual": "",
+   "time": "1:26.307",
+   "qual": "QB",
    "status": "",
    "record": "",
    "bib": 171,
@@ -22813,12 +22864,12 @@
    "distance": "Men 1000 m",
    "round": "Semifinals",
    "heat": "Heat 2",
-   "start_utc": "2026-11-14T14:31:00.000Z",
-   "rank": null,
+   "start_utc": "2026-11-14T14:29:49.000Z",
+   "rank": 2,
    "name": "Yoonseok LEE",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "1:25.490",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 174,
