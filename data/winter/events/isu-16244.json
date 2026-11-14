@@ -18,7 +18,7 @@
   "live": "Women 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-14T11:46:49.580236+00:00",
+ "checked_at": "2026-11-14T11:57:37.284687+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -12338,7 +12338,7 @@
     {
      "id": 23226,
      "name": "Ranking Finals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-14T11:18:10.000Z",
      "rule": "",
      "heats": [
@@ -12533,26 +12533,14 @@
       },
       {
        "name": "Heat 4",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Daniel TROWBRIDGE",
-         "noc": "GBR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 137,
-         "lane": 1,
-         "slug": "daniel-trowbridge"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Aarav Aniruddha PATWARDHAN",
          "noc": "IND",
-         "time": "",
+         "time": "43.059",
          "qual": "",
          "status": "",
          "record": "",
@@ -12561,10 +12549,34 @@
          "slug": "aarav-aniruddha-patwardhan"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Maximillian MELAND",
+         "noc": "NOR",
+         "time": "44.061",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 185,
+         "lane": 4,
+         "slug": "maximillian-meland"
+        },
+        {
+         "rank": 3,
+         "name": "Alimardon MAKHMUDOV",
+         "noc": "UZB",
+         "time": "44.331",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 208,
+         "lane": 5,
+         "slug": "alimardon-makhmudov"
+        },
+        {
+         "rank": 4,
          "name": "Szymon ETEL",
          "noc": "POL",
-         "time": "",
+         "time": "no time",
          "qual": "",
          "status": "",
          "record": "",
@@ -12574,27 +12586,15 @@
         },
         {
          "rank": null,
-         "name": "Maximillian MELAND",
-         "noc": "NOR",
-         "time": "",
+         "name": "Daniel TROWBRIDGE",
+         "noc": "GBR",
+         "time": "PEN",
          "qual": "",
-         "status": "",
+         "status": "Penalty",
          "record": "",
-         "bib": 185,
-         "lane": 4,
-         "slug": "maximillian-meland"
-        },
-        {
-         "rank": null,
-         "name": "Alimardon MAKHMUDOV",
-         "noc": "UZB",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 208,
-         "lane": 5,
-         "slug": "alimardon-makhmudov"
+         "bib": 137,
+         "lane": 1,
+         "slug": "daniel-trowbridge"
         }
        ]
       }
@@ -14927,10 +14927,303 @@
     {
      "id": 23204,
      "name": "Ranking Finals",
-     "status": "Scheduled",
-     "start_utc": "2026-11-14T11:40:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-14T11:37:15.000Z",
      "rule": "",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Ulrik Evenmo ERVIK",
+         "noc": "NOR",
+         "time": "1:29.023",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 184,
+         "lane": 1,
+         "slug": "ulrik-evenmo-ervik"
+        },
+        {
+         "rank": 2,
+         "name": "Alibi ALIMGEREYEV",
+         "noc": "KAZ",
+         "time": "1:29.311",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 166,
+         "lane": 4,
+         "slug": "alibi-alimgereyev"
+        },
+        {
+         "rank": 3,
+         "name": "Ishaan Rahul DARVEKAR",
+         "noc": "IND",
+         "time": "1:35.842",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 153,
+         "lane": 3,
+         "slug": "ishaan-rahul-darvekar"
+        },
+        {
+         "rank": 4,
+         "name": "Marek HARKABUS",
+         "noc": "SVK",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 216,
+         "lane": 2,
+         "slug": "marek-harkabus"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Robert TOLLIVER",
+         "noc": "USA",
+         "time": "1:32.416",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 220,
+         "lane": 6,
+         "slug": "robert-tolliver"
+        },
+        {
+         "rank": 2,
+         "name": "Moritz KUEHNRICH",
+         "noc": "GER",
+         "time": "1:33.080",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 140,
+         "lane": 4,
+         "slug": "moritz-kuehnrich"
+        },
+        {
+         "rank": 3,
+         "name": "Pranav Madav SURAPANENI",
+         "noc": "IND",
+         "time": "1:33.333",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 156,
+         "lane": 5,
+         "slug": "pranav-madav-surapaneni"
+        },
+        {
+         "rank": 4,
+         "name": "Toms VINNINS",
+         "noc": "LAT",
+         "time": "1:33.337",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 177,
+         "lane": 3,
+         "slug": "toms-vinnins"
+        },
+        {
+         "rank": 5,
+         "name": "Patryk PALENCEUSZ",
+         "noc": "POL",
+         "time": "1:53.523",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 214,
+         "lane": 1,
+         "slug": "patryk-palenceusz"
+        },
+        {
+         "rank": 6,
+         "name": "Patrik MIHALIK",
+         "noc": "SVK",
+         "time": "1:57.798",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 217,
+         "lane": 2,
+         "slug": "patrik-mihalik"
+        }
+       ]
+      },
+      {
+       "name": "Heat 3",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Kritsanapon PHUATRAKUL",
+         "noc": "THA",
+         "time": "1:27.946",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 195,
+         "lane": 4,
+         "slug": "kritsanapon-phuatrakul"
+        },
+        {
+         "rank": 2,
+         "name": "Mauro DEFRANCQ",
+         "noc": "BEL",
+         "time": "1:28.464",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 209,
+         "lane": 5,
+         "slug": "mauro-defrancq"
+        },
+        {
+         "rank": 3,
+         "name": "Andrew GONG",
+         "noc": "HKG",
+         "time": "1:28.924",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 143,
+         "lane": 1,
+         "slug": "andrew-gong"
+        },
+        {
+         "rank": 4,
+         "name": "Cohen BUFFEY",
+         "noc": "GBR",
+         "time": "1:29.567",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 136,
+         "lane": 3,
+         "slug": "cohen-buffey"
+        },
+        {
+         "rank": 5,
+         "name": "Viktor KIRSTA",
+         "noc": "AUS",
+         "time": "1:30.775",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 110,
+         "lane": 2,
+         "slug": "viktor-kirsta"
+        },
+        {
+         "rank": 6,
+         "name": "Kirill KOVALENKO",
+         "noc": "UKR",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 200,
+         "lane": 6,
+         "slug": "kirill-kovalenko"
+        }
+       ]
+      },
+      {
+       "name": "Heat 4",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Rene KOPRIVNJAK",
+         "noc": "CRO",
+         "time": "1:30.745",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 210,
+         "lane": 1,
+         "slug": "rene-koprivnjak"
+        },
+        {
+         "rank": 2,
+         "name": "Mathieu VAN DER HORST",
+         "noc": "NED",
+         "time": "1:30.849",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 182,
+         "lane": 2,
+         "slug": "mathieu-van-der-horst"
+        },
+        {
+         "rank": 3,
+         "name": "Adomas OGULEVICIUS",
+         "noc": "LTU",
+         "time": "1:30.910",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 117,
+         "lane": 3,
+         "slug": "adomas-ogulevicius"
+        },
+        {
+         "rank": 4,
+         "name": "Ho Long YUEN",
+         "noc": "HKG",
+         "time": "1:30.913",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 145,
+         "lane": 5,
+         "slug": "ho-long-yuen"
+        },
+        {
+         "rank": 5,
+         "name": "Simone ZAMPEDRI",
+         "noc": "ITA",
+         "time": "1:59.646",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 213,
+         "lane": 4,
+         "slug": "simone-zampedri"
+        },
+        {
+         "rank": null,
+         "name": "Vaclav KAMENSKY",
+         "noc": "CZE",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 127,
+         "lane": 6,
+         "slug": "vaclav-kamensky"
+        }
+       ]
+      }
+     ]
     },
     {
      "id": 23206,
@@ -17570,7 +17863,7 @@
     {
      "id": 23233,
      "name": "Ranking Finals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-14T11:29:46.000Z",
      "rule": "",
      "heats": [
@@ -17632,25 +17925,13 @@
       {
        "name": "Heat 2",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
-        {
-         "rank": 1,
-         "name": "Sunniva Haug JOHANNESSEN",
-         "noc": "NOR",
-         "time": "no time",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 259,
-         "lane": 3,
-         "slug": "sunniva-haug-johannessen-1"
-        },
         {
          "rank": 1,
          "name": "Nina TRABUCCHI",
          "noc": "ITA",
-         "time": "1:33.940",
+         "time": "1:33.934",
          "qual": "",
          "status": "",
          "record": "",
@@ -17662,7 +17943,7 @@
          "rank": 2,
          "name": "Zuzanna RUTKOWSKA",
          "noc": "POL",
-         "time": "1:34.230",
+         "time": "1:34.217",
          "qual": "",
          "status": "",
          "record": "",
@@ -17674,7 +17955,7 @@
          "rank": 3,
          "name": "Savi BUFFEY",
          "noc": "GBR",
-         "time": "1:36.300",
+         "time": "1:36.291",
          "qual": "",
          "status": "",
          "record": "",
@@ -17686,13 +17967,25 @@
          "rank": 4,
          "name": "Lara DZIEDZINOVA",
          "noc": "SVK",
-         "time": "1:36.380",
+         "time": "1:36.367",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 184,
          "lane": 2,
          "slug": "lara-dziedzinova"
+        },
+        {
+         "rank": 5,
+         "name": "Sunniva Haug JOHANNESSEN",
+         "noc": "NOR",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 259,
+         "lane": 3,
+         "slug": "sunniva-haug-johannessen-1"
         },
         {
          "rank": null,
