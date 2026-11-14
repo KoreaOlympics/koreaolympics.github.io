@@ -18,7 +18,7 @@
   "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-skate-america-2026/"
  },
- "checked_at": "2026-11-14T22:42:38.544098+00:00",
+ "checked_at": "2026-11-14T22:53:53.411783+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-14T03:10:00.000Z",
@@ -612,6 +612,23 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Katarina WOLFKOSTIN / Dimitry TSAREVSKI",
+     "noc": "USA",
+     "points": "69.62",
+     "status": "Active",
+     "segments": {
+      "RD": {
+       "name": "Rhythm Dance",
+       "rank": 1,
+       "total": "69.62",
+       "tes": "39.00",
+       "pcs": "30.62",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
      "name": "Leah NESET / Artem MARKELOV",
      "noc": "USA",
      "points": "69.10",
@@ -628,7 +645,7 @@
      }
     },
     {
-     "rank": 2,
+     "rank": 3,
      "name": "Noemi Maria TALI / Noah LAFORNARA",
      "noc": "ITA",
      "points": "67.84",
@@ -645,7 +662,7 @@
      }
     },
     {
-     "rank": 3,
+     "rank": 4,
      "name": "Sofia VAL / Asaf KAZIMOV",
      "noc": "ESP",
      "points": "65.79",
@@ -662,7 +679,7 @@
      }
     },
     {
-     "rank": 4,
+     "rank": 5,
      "name": "Natacha LAGOUGE / Arnaud CAFFA",
      "noc": "FRA",
      "points": "59.92",
@@ -674,23 +691,6 @@
        "total": "59.92",
        "tes": "33.23",
        "pcs": "26.69",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Katarina WOLFKOSTIN / Dimitry TSAREVSKI",
-     "noc": "USA",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "RD": {
-       "name": "Rhythm Dance",
-       "rank": 1,
-       "total": "69.62",
-       "tes": "39.00",
-       "pcs": "30.62",
        "status": "Running"
       }
      }
