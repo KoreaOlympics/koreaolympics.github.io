@@ -18,7 +18,7 @@
   "live": "VAL Sofia / KAZIMOV Asaf",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-skate-america-2026/"
  },
- "checked_at": "2026-11-14T22:19:34.930856+00:00",
+ "checked_at": "2026-11-14T22:30:31.549755+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-14T03:10:00.000Z",
@@ -37,7 +37,7 @@
    "type": "Couples"
   },
   {
-   "start_utc": "2026-11-14T22:03:00.000Z",
+   "start_utc": "2026-11-14T22:09:00.000Z",
    "title": "Ice Dance",
    "round": "Rhythm Dance",
    "event_result_id": 15730,
@@ -612,6 +612,40 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Leah NESET / Artem MARKELOV",
+     "noc": "USA",
+     "points": "69.10",
+     "status": "Active",
+     "segments": {
+      "RD": {
+       "name": "Rhythm Dance",
+       "rank": 1,
+       "total": "69.10",
+       "tes": "39.61",
+       "pcs": "29.49",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
+     "name": "Sofia VAL / Asaf KAZIMOV",
+     "noc": "ESP",
+     "points": "65.79",
+     "status": "Active",
+     "segments": {
+      "RD": {
+       "name": "Rhythm Dance",
+       "rank": 2,
+       "total": "65.79",
+       "tes": "37.43",
+       "pcs": "28.36",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 3,
      "name": "Natacha LAGOUGE / Arnaud CAFFA",
      "noc": "FRA",
      "points": "59.92",
@@ -619,44 +653,10 @@
      "segments": {
       "RD": {
        "name": "Rhythm Dance",
-       "rank": 1,
+       "rank": 3,
        "total": "59.92",
        "tes": "33.23",
        "pcs": "26.69",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Sofia VAL / Asaf KAZIMOV",
-     "noc": "ESP",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "RD": {
-       "name": "Rhythm Dance",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Leah NESET / Artem MARKELOV",
-     "noc": "USA",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "RD": {
-       "name": "Rhythm Dance",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
        "status": "Running"
       }
      }
