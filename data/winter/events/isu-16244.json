@@ -18,7 +18,7 @@
   "live": "",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-14T16:37:47.755352+00:00",
+ "checked_at": "2026-11-14T16:48:49.517423+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -22465,7 +22465,7 @@
      ],
      "projection": {
       "next": "Final",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -22519,7 +22519,7 @@
      "id": 23221,
      "name": "Final B",
      "status": "Finished",
-     "start_utc": "2026-11-14T16:29:00.000Z",
+     "start_utc": "2026-11-14T16:32:27.000Z",
      "rule": "",
      "heats": [
       {
@@ -22570,10 +22570,78 @@
     {
      "id": 23222,
      "name": "Final",
-     "status": "Scheduled",
+     "status": "Finished",
      "start_utc": "2026-11-14T16:37:00.000Z",
      "rule": "",
-     "heats": []
+     "heats": [
+      {
+       "name": "Final",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "China",
+         "noc": "CHN",
+         "time": "3:55.000",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": 2,
+         "name": "Republic of Korea",
+         "noc": "KOR",
+         "time": "3:55.259",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 2,
+         "slug": ""
+        },
+        {
+         "rank": 3,
+         "name": "Canada",
+         "noc": "CAN",
+         "time": "3:57.849",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 4,
+         "slug": ""
+        },
+        {
+         "rank": 4,
+         "name": "Netherlands",
+         "noc": "NED",
+         "time": "4:02.421",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 5,
+         "slug": ""
+        },
+        {
+         "rank": 5,
+         "name": "Individual Neutral Athletes 2",
+         "noc": "AIN2",
+         "time": "4:12.402",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
+         "slug": ""
+        }
+       ]
+      }
+     ]
     }
    ]
   }
@@ -24097,6 +24165,25 @@
    "record": "",
    "bib": null,
    "lane": 1,
+   "slug": ""
+  },
+  {
+   "event_id": "isu-16244",
+   "sport": "short-track",
+   "event": "ISU Short Track Junior World Cup #2",
+   "distance": "Men 3000 m Relay",
+   "round": "Final",
+   "heat": "Final",
+   "start_utc": "2026-11-14T16:37:00.000Z",
+   "rank": 2,
+   "name": "Republic of Korea",
+   "noc": "KOR",
+   "time": "3:55.259",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": null,
+   "lane": 2,
    "slug": ""
   }
  ]
