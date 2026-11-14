@@ -18,7 +18,7 @@
   "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-14T09:54:13.543261+00:00",
+ "checked_at": "2026-11-14T10:05:07.391443+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -373,7 +373,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-14T09:49:00.000Z",
+   "start_utc": "2026-11-14T09:47:00.000Z",
    "title": "Men 1000 m",
    "round": "Rep. Quarterfinals",
    "event_result_id": 16131,
@@ -13886,14 +13886,14 @@
       {
        "name": "Heat 2",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "Daniil BYCHKOU",
          "noc": "AIN1",
-         "time": "1:27.740",
-         "qual": "",
+         "time": "1:27.732",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 101,
@@ -13904,8 +13904,8 @@
          "rank": 2,
          "name": "Zhanarys MAGZHAN",
          "noc": "KAZ",
-         "time": "1:27.940",
-         "qual": "",
+         "time": "1:27.918",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 167,
@@ -13916,7 +13916,7 @@
          "rank": 3,
          "name": "Viktor KIRSTA",
          "noc": "AUS",
-         "time": "1:31.890",
+         "time": "1:31.869",
          "qual": "",
          "status": "",
          "record": "",
@@ -13925,10 +13925,10 @@
          "slug": "viktor-kirsta"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Mauro DEFRANCQ",
          "noc": "BEL",
-         "time": "",
+         "time": "1:52.644",
          "qual": "",
          "status": "",
          "record": "",
@@ -13937,12 +13937,12 @@
          "slug": "mauro-defrancq"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Alibi ALIMGEREYEV",
          "noc": "KAZ",
-         "time": "",
+         "time": "DNF",
          "qual": "",
-         "status": "",
+         "status": "Did Not Finish",
          "record": "",
          "bib": 166,
          "lane": 2,
@@ -13952,15 +13952,15 @@
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Tsjerk VAN DER MEER",
          "noc": "NED",
-         "time": "",
-         "qual": "",
+         "time": "1:29.756",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 183,
@@ -13968,10 +13968,22 @@
          "slug": "tsjerk-van-der-meer"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Rene KOPRIVNJAK",
+         "noc": "CRO",
+         "time": "1:30.731",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 210,
+         "lane": 3,
+         "slug": "rene-koprivnjak"
+        },
+        {
+         "rank": 3,
          "name": "Simone ZAMPEDRI",
          "noc": "ITA",
-         "time": "",
+         "time": "1:30.904",
          "qual": "",
          "status": "",
          "record": "",
@@ -13980,34 +13992,10 @@
          "slug": "simone-zampedri"
         },
         {
-         "rank": null,
-         "name": "Rene KOPRIVNJAK",
-         "noc": "CRO",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 210,
-         "lane": 3,
-         "slug": "rene-koprivnjak"
-        },
-        {
-         "rank": null,
-         "name": "Robert Dumitru MURESAN",
-         "noc": "ROU",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 193,
-         "lane": 4,
-         "slug": "robert-dumitru-muresan"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Patryk PALENCEUSZ",
          "noc": "POL",
-         "time": "",
+         "time": "1:32.762",
          "qual": "",
          "status": "",
          "record": "",
@@ -14016,30 +14004,42 @@
          "slug": "patryk-palenceusz"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Ulrik Evenmo ERVIK",
          "noc": "NOR",
-         "time": "",
+         "time": "1:59.230",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 184,
          "lane": 6,
          "slug": "ulrik-evenmo-ervik"
+        },
+        {
+         "rank": null,
+         "name": "Robert Dumitru MURESAN",
+         "noc": "ROU",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 193,
+         "lane": 4,
+         "slug": "robert-dumitru-muresan"
         }
        ]
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Tymon HRYNIEWICZ",
          "noc": "POL",
-         "time": "",
-         "qual": "",
+         "time": "1:35.529",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 190,
@@ -14047,23 +14047,11 @@
          "slug": "tymon-hryniewicz"
         },
         {
-         "rank": null,
-         "name": "Kritsanapon PHUATRAKUL",
-         "noc": "THA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 195,
-         "lane": 2,
-         "slug": "kritsanapon-phuatrakul"
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Mathieu VAN DER HORST",
          "noc": "NED",
-         "time": "",
-         "qual": "",
+         "time": "1:35.649",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 182,
@@ -14071,10 +14059,10 @@
          "slug": "mathieu-van-der-horst"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Vaclav KAMENSKY",
          "noc": "CZE",
-         "time": "",
+         "time": "1:35.802",
          "qual": "",
          "status": "",
          "record": "",
@@ -14083,10 +14071,22 @@
          "slug": "vaclav-kamensky"
         },
         {
-         "rank": null,
+         "rank": 4,
+         "name": "Kritsanapon PHUATRAKUL",
+         "noc": "THA",
+         "time": "1:35.895",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 195,
+         "lane": 2,
+         "slug": "kritsanapon-phuatrakul"
+        },
+        {
+         "rank": 5,
          "name": "Robert TOLLIVER",
          "noc": "USA",
-         "time": "",
+         "time": "1:36.179",
          "qual": "",
          "status": "",
          "record": "",
@@ -14095,10 +14095,10 @@
          "slug": "robert-tolliver"
         },
         {
-         "rank": null,
+         "rank": 6,
          "name": "Ishaan Rahul DARVEKAR",
          "noc": "IND",
-         "time": "",
+         "time": "1:38.057",
          "qual": "",
          "status": "",
          "record": "",
@@ -14110,9 +14110,33 @@
       },
       {
        "name": "Heat 5",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
+        {
+         "rank": null,
+         "name": "Kirill PANIKOROVSKII",
+         "noc": "AIN2",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 107,
+         "lane": 4,
+         "slug": "kirill-panikorovskii"
+        },
+        {
+         "rank": null,
+         "name": "Ho Long YUEN",
+         "noc": "HKG",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 145,
+         "lane": 3,
+         "slug": "ho-long-yuen"
+        },
         {
          "rank": null,
          "name": "Moritz KUEHNRICH",
@@ -14139,27 +14163,15 @@
         },
         {
          "rank": null,
-         "name": "Ho Long YUEN",
-         "noc": "HKG",
+         "name": "Marek HARKABUS",
+         "noc": "SVK",
          "time": "",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 145,
-         "lane": 3,
-         "slug": "ho-long-yuen"
-        },
-        {
-         "rank": null,
-         "name": "Kirill PANIKOROVSKII",
-         "noc": "AIN2",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 107,
-         "lane": 4,
-         "slug": "kirill-panikorovskii"
+         "bib": 216,
+         "lane": 6,
+         "slug": "marek-harkabus"
         },
         {
          "rank": null,
@@ -14172,18 +14184,6 @@
          "bib": 217,
          "lane": 5,
          "slug": "patrik-mihalik"
-        },
-        {
-         "rank": null,
-         "name": "Marek HARKABUS",
-         "noc": "SVK",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 216,
-         "lane": 6,
-         "slug": "marek-harkabus"
         }
        ]
       },
