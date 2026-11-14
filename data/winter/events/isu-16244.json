@@ -15,10 +15,10 @@
   "city": "Bormio",
   "country": "ITA",
   "state": "Live",
-  "live": "Women 1000 m",
+  "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-junior-world-cup-2/"
  },
- "checked_at": "2026-11-14T15:30:09.409629+00:00",
+ "checked_at": "2026-11-14T15:41:12.755399+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-12T09:00:00.000Z",
@@ -517,7 +517,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-14T15:08:00.000Z",
+   "start_utc": "2026-11-14T15:09:00.000Z",
    "title": "Men 500m (2)",
    "round": "Final",
    "event_result_id": 16135,
@@ -525,7 +525,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-14T15:22:00.000Z",
+   "start_utc": "2026-11-14T15:25:00.000Z",
    "title": "Women 1000 m",
    "round": "Final",
    "event_result_id": 16136,
@@ -16410,7 +16410,7 @@
      ],
      "projection": {
       "next": "Final",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -16463,10 +16463,133 @@
     {
      "id": 23289,
      "name": "Final",
-     "status": "Scheduled",
+     "status": "Live",
      "start_utc": "2026-11-14T15:37:00.000Z",
      "rule": "",
-     "heats": []
+     "heats": [
+      {
+       "name": "Final",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Tianyou WANG",
+         "noc": "CHN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 124,
+         "lane": 1,
+         "slug": "tianyou-wang"
+        },
+        {
+         "rank": null,
+         "name": "Biho LEE",
+         "noc": "KOR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 173,
+         "lane": 2,
+         "slug": "biho-lee"
+        },
+        {
+         "rank": null,
+         "name": "Yoonseok LEE",
+         "noc": "KOR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 174,
+         "lane": 3,
+         "slug": "yoonseok-lee"
+        },
+        {
+         "rank": null,
+         "name": "Yuheng LI",
+         "noc": "CHN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 122,
+         "lane": 4,
+         "slug": "yuheng-li-1"
+        },
+        {
+         "rank": null,
+         "name": "Jesper SCHMITZ",
+         "noc": "NED",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 100,
+         "lane": 5,
+         "slug": "jesper-schmitz"
+        }
+       ]
+      },
+      {
+       "name": "Final B",
+       "status": "Live",
+       "official": "Live",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Tymeo LIBEAU",
+         "noc": "FRA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 133,
+         "lane": 1,
+         "slug": "tymeo-libeau"
+        },
+        {
+         "rank": null,
+         "name": "Wonseok CHOI",
+         "noc": "KOR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 171,
+         "lane": 2,
+         "slug": "wonseok-choi"
+        },
+        {
+         "rank": null,
+         "name": "Alexis DUBUC-BILODEAU",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 116,
+         "lane": 3,
+         "slug": "alexis-dubuc-bilodeau"
+        },
+        {
+         "rank": null,
+         "name": "Xinchi YU",
+         "noc": "CHN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 125,
+         "lane": 4,
+         "slug": "xinchi-yu"
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -20472,44 +20595,20 @@
     {
      "id": 23288,
      "name": "Final",
-     "status": "Live",
-     "start_utc": "2026-11-14T15:22:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-14T15:27:12.000Z",
      "rule": "",
      "heats": [
       {
        "name": "Final",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Subin KIM",
-         "noc": "KOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 249,
-         "lane": 1,
-         "slug": "subin-kim"
-        },
-        {
-         "rank": null,
-         "name": "Jinzi LI",
-         "noc": "CHN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 218,
-         "lane": 2,
-         "slug": "jinzi-li"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Junyu KUANG",
          "noc": "CHN",
-         "time": "",
+         "time": "1:32.572",
          "qual": "",
          "status": "",
          "record": "",
@@ -20518,10 +20617,34 @@
          "slug": "junyu-kuang"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Jinzi LI",
+         "noc": "CHN",
+         "time": "1:33.095",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 218,
+         "lane": 2,
+         "slug": "jinzi-li"
+        },
+        {
+         "rank": 3,
+         "name": "Subin KIM",
+         "noc": "KOR",
+         "time": "1:33.290",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 249,
+         "lane": 1,
+         "slug": "subin-kim"
+        },
+        {
+         "rank": 4,
          "name": "Yiaidi ZONG",
          "noc": "CHN",
-         "time": "",
+         "time": "1:33.357",
          "qual": "",
          "status": "",
          "record": "",
@@ -20530,10 +20653,10 @@
          "slug": "yiaidi-zong"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Yelyzaveta SOLOVIOVA",
          "noc": "GER",
-         "time": "",
+         "time": "1:33.684",
          "qual": "",
          "status": "",
          "record": "",
@@ -23311,6 +23434,63 @@
    "event_id": "isu-16244",
    "sport": "short-track",
    "event": "ISU Short Track Junior World Cup #2",
+   "distance": "Men 1000 m",
+   "round": "Final",
+   "heat": "Final",
+   "start_utc": "2026-11-14T15:37:00.000Z",
+   "rank": null,
+   "name": "Biho LEE",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 173,
+   "lane": 2,
+   "slug": "biho-lee"
+  },
+  {
+   "event_id": "isu-16244",
+   "sport": "short-track",
+   "event": "ISU Short Track Junior World Cup #2",
+   "distance": "Men 1000 m",
+   "round": "Final",
+   "heat": "Final",
+   "start_utc": "2026-11-14T15:37:00.000Z",
+   "rank": null,
+   "name": "Yoonseok LEE",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 174,
+   "lane": 3,
+   "slug": "yoonseok-lee"
+  },
+  {
+   "event_id": "isu-16244",
+   "sport": "short-track",
+   "event": "ISU Short Track Junior World Cup #2",
+   "distance": "Men 1000 m",
+   "round": "Final",
+   "heat": "Final B",
+   "start_utc": "2026-11-14T15:37:00.000Z",
+   "rank": null,
+   "name": "Wonseok CHOI",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 171,
+   "lane": 2,
+   "slug": "wonseok-choi"
+  },
+  {
+   "event_id": "isu-16244",
+   "sport": "short-track",
+   "event": "ISU Short Track Junior World Cup #2",
    "distance": "Women 500 m (2)",
    "round": "Heats",
    "heat": "Heat 3",
@@ -23618,11 +23798,11 @@
    "distance": "Women 1000 m",
    "round": "Final",
    "heat": "Final",
-   "start_utc": "2026-11-14T15:22:00.000Z",
-   "rank": null,
+   "start_utc": "2026-11-14T15:27:12.000Z",
+   "rank": 3,
    "name": "Subin KIM",
    "noc": "KOR",
-   "time": "",
+   "time": "1:33.290",
    "qual": "",
    "status": "",
    "record": "",
@@ -23637,7 +23817,7 @@
    "distance": "Women 1000 m",
    "round": "Final",
    "heat": "Final B",
-   "start_utc": "2026-11-14T15:22:00.000Z",
+   "start_utc": "2026-11-14T15:27:12.000Z",
    "rank": 1,
    "name": "Yoonha KANG",
    "noc": "KOR",
