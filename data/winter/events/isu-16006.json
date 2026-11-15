@@ -15,10 +15,10 @@
   "city": "Everett, WA",
   "country": "USA",
   "state": "Live",
-  "live": "Georgii RESHTENKO",
+  "live": "Aleksa RAKIC",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-skate-america-2026/"
  },
- "checked_at": "2026-11-15T02:42:25.285728+00:00",
+ "checked_at": "2026-11-15T02:53:21.610321+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-14T03:10:00.000Z",
@@ -95,6 +95,31 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Georgii RESHTENKO",
+     "noc": "CZE",
+     "points": "206.26",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 11,
+       "total": "65.77",
+       "tes": "32.77",
+       "pcs": "35.00",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 2,
+       "total": "140.49",
+       "tes": "76.23",
+       "pcs": "65.26",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
      "name": "Nikolaj MEMOLA",
      "noc": "ITA",
      "points": "205.40",
@@ -356,31 +381,6 @@
        "total": "68.92",
        "tes": "36.11",
        "pcs": "33.81",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Georgii RESHTENKO",
-     "noc": "CZE",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 11,
-       "total": "65.77",
-       "tes": "32.77",
-       "pcs": "35.00",
        "status": "Finished"
       },
       "FS": {
