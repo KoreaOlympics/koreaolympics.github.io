@@ -437,7 +437,26 @@
     },
     {
      "title": "Pairs",
-     "podium": null
+     "podium": [
+      {
+       "rank": 1,
+       "name": "Minerva Fabienne HASE / Nikita VOLODIN",
+       "noc": "GER",
+       "time": "200.79"
+      },
+      {
+       "rank": 2,
+       "name": "Alisa EFIMOVA / Misha MITROFANOV",
+       "noc": "USA",
+       "time": "191.79"
+      },
+      {
+       "rank": 3,
+       "name": "Katie MCBEATH / Balazs NAGY",
+       "noc": "USA",
+       "time": "187.13"
+      }
+     ]
     },
     {
      "title": "Ice Dance",
@@ -585,9 +604,16 @@
   [
    "USA",
    1,
+   2,
+   4,
+   7
+  ],
+  [
+   "GER",
    1,
-   3,
-   5
+   0,
+   1,
+   2
   ],
   [
    "CAN",
@@ -619,13 +645,6 @@
   ],
   [
    "ESP",
-   0,
-   0,
-   1,
-   1
-  ],
-  [
-   "GER",
    0,
    0,
    1,
@@ -886,6 +905,13 @@
     "event_id": "isu-16020"
    },
    {
+    "name": "Minerva Fabienne HASE / Nikita VOLODIN",
+    "noc": "GER",
+    "points": 200.79,
+    "event": "ISU Figure Skating Grand Prix Skate America 2026",
+    "event_id": "isu-16006"
+   },
+   {
     "name": "Anastasiia METELKINA / Luka BERULAVA",
     "noc": "GEO",
     "points": 198.27,
@@ -907,6 +933,13 @@
     "event_id": "isu-16020"
    },
    {
+    "name": "Alisa EFIMOVA / Misha MITROFANOV",
+    "noc": "USA",
+    "points": 191.79,
+    "event": "ISU Figure Skating Grand Prix Skate America 2026",
+    "event_id": "isu-16006"
+   },
+   {
     "name": "Katie MCBEATH / Balazs NAGY",
     "noc": "USA",
     "points": 187.13,
@@ -917,20 +950,6 @@
     "name": "Oxana VOUILLAMOZ / Tom BOUVART",
     "noc": "SUI",
     "points": 183.56,
-    "event": "ISU Figure Skating Grand Prix Skate America 2026",
-    "event_id": "isu-16006"
-   },
-   {
-    "name": "Oxana VOUILLAMOZ / Tom BOUVART",
-    "noc": "SUI",
-    "points": 183.12,
-    "event": "ISU Figure Skating Grand Prix Skate Canada International 2026",
-    "event_id": "isu-16020"
-   },
-   {
-    "name": "Ava KEMP / Yohnatan ELIZAROV",
-    "noc": "CAN",
-    "points": 181.62,
     "event": "ISU Figure Skating Grand Prix Skate America 2026",
     "event_id": "isu-16006"
    }
