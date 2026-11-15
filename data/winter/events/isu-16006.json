@@ -18,7 +18,7 @@
   "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-skate-america-2026/"
  },
- "checked_at": "2026-11-15T00:58:10.323115+00:00",
+ "checked_at": "2026-11-15T01:09:12.352139+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-14T03:10:00.000Z",
@@ -45,7 +45,7 @@
    "type": "Couples"
   },
   {
-   "start_utc": "2026-11-14T23:42:00.000Z",
+   "start_utc": "2026-11-14T23:50:00.000Z",
    "title": "Women",
    "round": "Short Program",
    "event_result_id": 15709,
@@ -956,6 +956,23 @@
     },
     {
      "rank": 6,
+     "name": "Ahsun YUN",
+     "noc": "KOR",
+     "points": "67.13",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 6,
+       "total": "67.13",
+       "tes": "37.97",
+       "pcs": "29.16",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 7,
      "name": "Young YOU",
      "noc": "KOR",
      "points": "65.60",
@@ -963,7 +980,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 6,
+       "rank": 7,
        "total": "65.60",
        "tes": "34.41",
        "pcs": "31.19",
@@ -972,7 +989,7 @@
      }
     },
     {
-     "rank": 7,
+     "rank": 8,
      "name": "Logan HIGASE-CHEN",
      "noc": "USA",
      "points": "63.29",
@@ -980,7 +997,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 7,
+       "rank": 8,
        "total": "63.29",
        "tes": "36.36",
        "pcs": "26.93",
@@ -989,7 +1006,7 @@
      }
     },
     {
-     "rank": 8,
+     "rank": 9,
      "name": "Sophie Joline VON FELTEN",
      "noc": "USA",
      "points": "61.23",
@@ -997,7 +1014,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 8,
+       "rank": 9,
        "total": "61.23",
        "tes": "34.59",
        "pcs": "26.64",
@@ -1006,7 +1023,24 @@
      }
     },
     {
-     "rank": 9,
+     "rank": 10,
+     "name": "Sofia SAMODELKINA",
+     "noc": "KAZ",
+     "points": "61.03",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 10,
+       "total": "61.03",
+       "tes": "29.93",
+       "pcs": "31.10",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 11,
      "name": "Alexa GASPAROTTO",
      "noc": "USA",
      "points": "56.04",
@@ -1014,44 +1048,10 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 9,
+       "rank": 11,
        "total": "56.04",
        "tes": "31.71",
        "pcs": "25.33",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Ahsun YUN",
-     "noc": "KOR",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Sofia SAMODELKINA",
-     "noc": "KAZ",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
        "status": "Running"
       }
      }
@@ -1104,13 +1104,13 @@
    "heat": "",
    "start_utc": "2026-11-15T21:05:00.000Z",
    "rank": 6,
-   "name": "Young YOU",
+   "name": "Ahsun YUN",
    "noc": "KOR",
-   "time": "65.60",
+   "time": "67.13",
    "qual": "",
    "status": "",
    "segments": {
-    "SP": "65.60"
+    "SP": "67.13"
    }
   },
   {
@@ -1118,17 +1118,17 @@
    "sport": "figure-skating",
    "event": "ISU Figure Skating Grand Prix Skate America 2026",
    "distance": "Women",
-   "round": "",
+   "round": "Short Program",
    "heat": "",
    "start_utc": "2026-11-15T21:05:00.000Z",
-   "rank": null,
-   "name": "Ahsun YUN",
+   "rank": 7,
+   "name": "Young YOU",
    "noc": "KOR",
-   "time": "",
+   "time": "65.60",
    "qual": "",
    "status": "",
    "segments": {
-    "SP": ""
+    "SP": "65.60"
    }
   }
  ]
