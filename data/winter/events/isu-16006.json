@@ -18,7 +18,7 @@
   "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-skate-america-2026/"
  },
- "checked_at": "2026-11-15T03:49:30.132686+00:00",
+ "checked_at": "2026-11-15T04:00:29.257567+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-14T03:10:00.000Z",
@@ -95,6 +95,31 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Daniel GRASSL",
+     "noc": "ITA",
+     "points": "274.73",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 4,
+       "total": "86.48",
+       "tes": "45.40",
+       "pcs": "41.08",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 1,
+       "total": "188.25",
+       "tes": "104.53",
+       "pcs": "83.72",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
      "name": "Tamir KUPERMAN",
      "noc": "ISR",
      "points": "248.55",
@@ -110,7 +135,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 1,
+       "rank": 2,
        "total": "165.42",
        "tes": "89.39",
        "pcs": "76.03",
@@ -119,7 +144,7 @@
      }
     },
     {
-     "rank": 2,
+     "rank": 3,
      "name": "Jason BROWN",
      "noc": "USA",
      "points": "245.73",
@@ -135,7 +160,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 2,
+       "rank": 3,
        "total": "161.73",
        "tes": "73.65",
        "pcs": "89.08",
@@ -144,7 +169,32 @@
      }
     },
     {
-     "rank": 3,
+     "rank": 4,
+     "name": "Donovan CARRILLO",
+     "noc": "MEX",
+     "points": "240.38",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 3,
+       "total": "86.49",
+       "tes": "48.98",
+       "pcs": "37.51",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 4,
+       "total": "153.89",
+       "tes": "77.10",
+       "pcs": "77.79",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 5,
      "name": "Lukas BRITSCHGI",
      "noc": "SUI",
      "points": "231.59",
@@ -160,7 +210,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 3,
+       "rank": 5,
        "total": "150.71",
        "tes": "72.03",
        "pcs": "79.68",
@@ -169,7 +219,7 @@
      }
     },
     {
-     "rank": 4,
+     "rank": 6,
      "name": "Aleksandr SELEVKO",
      "noc": "EST",
      "points": "230.68",
@@ -185,7 +235,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 4,
+       "rank": 6,
        "total": "149.66",
        "tes": "68.80",
        "pcs": "81.86",
@@ -194,7 +244,7 @@
      }
     },
     {
-     "rank": 5,
+     "rank": 7,
      "name": "Daniel MARTYNOV",
      "noc": "USA",
      "points": "220.96",
@@ -210,7 +260,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 8,
+       "rank": 10,
        "total": "136.79",
        "tes": "65.26",
        "pcs": "72.53",
@@ -219,7 +269,7 @@
      }
     },
     {
-     "rank": 6,
+     "rank": 8,
      "name": "Aleksa RAKIC",
      "noc": "CAN",
      "points": "207.14",
@@ -235,7 +285,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 7,
+       "rank": 9,
        "total": "138.22",
        "tes": "70.36",
        "pcs": "68.86",
@@ -244,7 +294,7 @@
      }
     },
     {
-     "rank": 7,
+     "rank": 9,
      "name": "Georgii RESHTENKO",
      "noc": "CZE",
      "points": "206.26",
@@ -260,7 +310,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 6,
+       "rank": 8,
        "total": "140.49",
        "tes": "76.23",
        "pcs": "65.26",
@@ -269,7 +319,7 @@
      }
     },
     {
-     "rank": 8,
+     "rank": 10,
      "name": "Nikolaj MEMOLA",
      "noc": "ITA",
      "points": "205.40",
@@ -285,7 +335,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 5,
+       "rank": 7,
        "total": "141.94",
        "tes": "69.61",
        "pcs": "72.33",
@@ -331,56 +381,6 @@
        "total": "91.29",
        "tes": "51.28",
        "pcs": "40.01",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Donovan CARRILLO",
-     "noc": "MEX",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 3,
-       "total": "86.49",
-       "tes": "48.98",
-       "pcs": "37.51",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Daniel GRASSL",
-     "noc": "ITA",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 4,
-       "total": "86.48",
-       "tes": "45.40",
-       "pcs": "41.08",
        "status": "Finished"
       },
       "FS": {
