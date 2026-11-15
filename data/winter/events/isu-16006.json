@@ -18,7 +18,7 @@
   "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-skate-america-2026/"
  },
- "checked_at": "2026-11-15T00:01:28.649254+00:00",
+ "checked_at": "2026-11-15T00:12:23.573513+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-14T03:10:00.000Z",
@@ -871,6 +871,40 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Young YOU",
+     "noc": "KOR",
+     "points": "65.60",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 1,
+       "total": "65.60",
+       "tes": "34.41",
+       "pcs": "31.19",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
+     "name": "Logan HIGASE-CHEN",
+     "noc": "USA",
+     "points": "63.29",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 2,
+       "total": "63.29",
+       "tes": "36.36",
+       "pcs": "26.93",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 3,
      "name": "Alexa GASPAROTTO",
      "noc": "USA",
      "points": "56.04",
@@ -878,44 +912,10 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 1,
+       "rank": 3,
        "total": "56.04",
        "tes": "31.71",
        "pcs": "25.33",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Young YOU",
-     "noc": "KOR",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Logan HIGASE-CHEN",
-     "noc": "USA",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
        "status": "Running"
       }
      }
@@ -1082,17 +1082,17 @@
    "sport": "figure-skating",
    "event": "ISU Figure Skating Grand Prix Skate America 2026",
    "distance": "Women",
-   "round": "",
+   "round": "Short Program",
    "heat": "",
    "start_utc": "2026-11-15T21:05:00.000Z",
-   "rank": null,
+   "rank": 1,
    "name": "Young YOU",
    "noc": "KOR",
-   "time": "",
+   "time": "65.60",
    "qual": "",
    "status": "",
    "segments": {
-    "SP": ""
+    "SP": "65.60"
    }
   },
   {
