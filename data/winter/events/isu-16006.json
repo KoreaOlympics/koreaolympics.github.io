@@ -15,10 +15,10 @@
   "city": "Everett, WA",
   "country": "USA",
   "state": "Live",
-  "live": "Young YOU",
+  "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-skate-america-2026/"
  },
- "checked_at": "2026-11-15T21:46:54.011129+00:00",
+ "checked_at": "2026-11-15T21:58:32.360206+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-14T03:10:00.000Z",
@@ -897,6 +897,31 @@
     },
     {
      "rank": 2,
+     "name": "Young YOU",
+     "noc": "KOR",
+     "points": "193.05",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 8,
+       "total": "65.60",
+       "tes": "34.41",
+       "pcs": "31.19",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 2,
+       "total": "127.45",
+       "tes": "66.89",
+       "pcs": "60.56",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 3,
      "name": "Sophie Joline VON FELTEN",
      "noc": "USA",
      "points": "186.16",
@@ -912,7 +937,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 2,
+       "rank": 3,
        "total": "124.93",
        "tes": "70.96",
        "pcs": "53.97",
@@ -921,7 +946,7 @@
      }
     },
     {
-     "rank": 3,
+     "rank": 4,
      "name": "Alexa GASPAROTTO",
      "noc": "USA",
      "points": "152.77",
@@ -937,7 +962,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 3,
+       "rank": 4,
        "total": "96.73",
        "tes": "49.53",
        "pcs": "47.20",
@@ -946,7 +971,7 @@
      }
     },
     {
-     "rank": 4,
+     "rank": 5,
      "name": "Logan HIGASE-CHEN",
      "noc": "USA",
      "points": "144.72",
@@ -962,7 +987,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 4,
+       "rank": 5,
        "total": "81.43",
        "tes": "39.26",
        "pcs": "46.17",
@@ -1144,36 +1169,30 @@
        "status": "Running"
       }
      }
-    },
-    {
-     "rank": null,
-     "name": "Young YOU",
-     "noc": "KOR",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 8,
-       "total": "65.60",
-       "tes": "34.41",
-       "pcs": "31.19",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
     }
    ]
   }
  },
  "korea": [
+  {
+   "event_id": "isu-16006",
+   "sport": "figure-skating",
+   "event": "ISU Figure Skating Grand Prix Skate America 2026",
+   "distance": "Women",
+   "round": "Free Skating",
+   "heat": "",
+   "start_utc": "2026-11-15T21:12:00.000Z",
+   "rank": 2,
+   "name": "Young YOU",
+   "noc": "KOR",
+   "time": "193.05",
+   "qual": "",
+   "status": "",
+   "segments": {
+    "SP": "65.60",
+    "FS": "127.45"
+   }
+  },
   {
    "event_id": "isu-16006",
    "sport": "figure-skating",
@@ -1209,25 +1228,6 @@
    "status": "",
    "segments": {
     "SP": "67.13",
-    "FS": ""
-   }
-  },
-  {
-   "event_id": "isu-16006",
-   "sport": "figure-skating",
-   "event": "ISU Figure Skating Grand Prix Skate America 2026",
-   "distance": "Women",
-   "round": "Short Program",
-   "heat": "",
-   "start_utc": "2026-11-15T21:12:00.000Z",
-   "rank": 8,
-   "name": "Young YOU",
-   "noc": "KOR",
-   "time": "65.60",
-   "qual": "",
-   "status": "",
-   "segments": {
-    "SP": "65.60",
     "FS": ""
    }
   }
