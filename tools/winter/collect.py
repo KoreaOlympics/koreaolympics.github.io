@@ -413,10 +413,15 @@ def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument('--full', action='store_true')
     args = ap.parse_args(argv)
-    mode = 'full' if args.full else 'quick'
     start_year, season = season_of(now().date())
     cal = load(OUT / 'calendar.json', {'sports': {}})
-    status = load(OUT / 'status.json', {}).get('sources', {})
+    prev = load(OUT / 'status.json', {})
+    status = prev.get('sources', {})
+    # 대회 중에는 10분 간격 실행이 계속 이어져 하루 두 번의 예약 전체 갱신이 밀려난다.
+    # 그래서 마지막 전체 갱신이 12시간을 넘겼으면 어떤 실행이든 전체 갱신으로 돈다.
+    last_full = prev.get('last_full')
+    stale = not last_full or now() - dt.datetime.fromisoformat(last_full) > dt.timedelta(hours=12)
+    mode = 'full' if args.full or stale else 'quick'
     failed = 0
     for sport in ISU_SPORTS:
         try:
@@ -475,7 +480,8 @@ def main(argv=None):
     save(OUT / 'korea.json', {'season': season, 'rows': korea})
     active = sorted(e['id'] for sp in ('short-track', 'speed-skating', 'figure-skating', *RACE_SPORTS) for e in cal['sports'].get(sp, {}).get('events', [])
                     if e.get('state') != 'Cancelled' and is_active(e, today))
-    save(OUT / 'status.json', {'updated_at': now().isoformat(), 'mode': mode, 'active': active, 'sources': status})
+    save(OUT / 'status.json', {'updated_at': now().isoformat(), 'mode': mode, 'last_full': now().isoformat() if mode == 'full' else last_full,
+                               'active': active, 'sources': status})
     print(f'{mode}: {sum(len(s["events"]) for s in cal["sports"].values())} events, {len(korea)} Korean results, {failed} source failures')
     return 1 if failed >= len(ISU_SPORTS) + 1 + len(sources) else 0
 

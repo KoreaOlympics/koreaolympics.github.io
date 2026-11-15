@@ -438,6 +438,54 @@ def winter_live_block(s, today=None):
                        f'(<a href="winter/#tab=season&amp;sport={sport}">시즌 정리</a>)</p>')
     return '<section id="winter_live">\n<h2>이번 시즌 대회 (실시간)</h2>\n' + wrap_tables('\n'.join(out)) + '\n</section>'
 
+_W_TITLE = [(r"Women's", '여자'), (r"Men's", '남자'), (r'Giant Slalom', '대회전'), (r'Super G', '슈퍼대회전'), (r'Slalom', '회전'),
+            (r'Downhill', '활강'), (r'Alpine Combined', '복합'), (r'^1st 500m', '500m 1차'), (r'^2nd 500m', '500m 2차'), (r'Elimination Mass Start', '매스스타트'), (r'Mass Start', '매스스타트'),
+            (r'Team Pursuit', '팀추월'), (r'Team Sprint', '팀 스프린트'), (r'Mixed Relay', '혼성 계주'), (r'Relay', '계주'),
+            (r'Ice Dance', '아이스댄스'), (r'Pairs', '페어'), (r'\b(Women|Men|Ladies)\b', lambda m: {'Women': '여자', 'Ladies': '여자', 'Men': '남자'}[m.group(1)]),
+            (r'\bMixed\b', '혼성')]
+
+
+def _w_title(t):
+    for pat, rep in _W_TITLE:
+        t = re.sub(pat, rep, t)
+    return re.sub(r'(\d) m$', r'\1m', re.sub(r'(\d) m ', r'\1m ', t)).strip()
+
+
+def winter_season_section(s):
+    """동계 허브 '예선 일정' 섹션 본문 (자동): 이번 시즌 대회별 메달리스트. data/winter/season-<종목>.json에서 만든다.
+    예전에는 이 자리에 2026-10-17에 멈춘 수집 결과가 고정돼 있었다. 결과가 하나도 없으면 ''(기존 내용 유지)."""
+    sport = WINTER_LIVE.get(s['file'])
+    season = _json(f'data/winter/season-{sport}.json') if sport else None
+    if not season:
+        return ''
+    names = _json('data/winter/names-ko.json') or {}
+    done = [e for e in season['events'] if any(p.get('podium') for p in e.get('podiums') or [])]
+    if not done:
+        return ''
+    def who(p):
+        n = names.get(p['name']) or p['name']
+        n = f'<b>{E(n)}</b>' if p['noc'] == 'KOR' else E(n)
+        return f'{n} <span class="noc">{E(p["noc"])}</span>' + (f' <span class="small">{E(p["time"])}</span>' if p.get('time') else '')
+    out = ['<!-- generated: winter-season -->',
+           f'<h3>{E(season.get("season", ""))} 시즌 대회별 메달리스트</h3>',
+           f'<p>국제연맹 공식 결과에서 자동으로 만든다(대회 기간 약 10분마다 갱신). 한국 선수는 굵게 표시한다. '
+           f'라운드별 결과와 한국 선수 전체 기록은 <a href="winter/#sport={sport}">동계 실시간 센터</a>에서 본다.</p>']
+    kor = next((m for m in season.get('medals') or [] if m[0] == 'KOR'), None)
+    if kor:
+        out.append(f'<p>대한민국 시즌 합계: 금 {kor[1]} · 은 {kor[2]} · 동 {kor[3]}</p>')
+    for i, e in enumerate(reversed(done)):  # 최근 대회부터, 가장 최근 대회만 펼쳐 둔다
+        rows = ''
+        for p in e['podiums']:
+            pod = {x['rank']: x for x in p.get('podium') or []}
+            if not pod:
+                continue
+            rows += f'<tr><th>{E(_w_title(p["title"]))}</th>' + ''.join(f'<td>{who(pod[r]) if r in pod else "—"}</td>' for r in (1, 2, 3)) + '</tr>'
+        k = [sum(1 for p in e['podiums'] for x in p.get('podium') or [] if x['noc'] == 'KOR' and x['rank'] == r) for r in (1, 2, 3)]
+        ksum = f' · 한국 금 {k[0]} 은 {k[1]} 동 {k[2]}' if sum(k) else ''
+        out.append(f'<details{" open" if i == 0 else ""}><summary>{E(e["start"])}–{E(e["end"][5:])} {E(e["name"])} · {E(e.get("city", ""))} ({E(e.get("country", ""))}){ksum}</summary>'
+                   f'<table class="wikitable medals"><thead><tr><th>세부종목</th><th>금</th><th>은</th><th>동</th></tr></thead><tbody>{rows}</tbody></table></details>')
+    return wrap_tables('\n'.join(out))
+
 
 def summary_figure(s):
     """하계 허브 첫머리 '한눈에 보기' 그림 (data/summer-summary.json, tools/summary_svg.py가 SVG를 만든다)."""
@@ -540,6 +588,9 @@ def render_hub(reg, s):
     basis = f' 세부종목은 {E(g["program_basis"])} 기준이다.' if g.get('program_basis') else ''
     lead = (f'<section id="intro" class="lead"><p>{E(g["games"])} {E(s["name"])}에는 '
             f'<b>{len(s["events"])}개</b> 세부종목이 있다.{basis}</p><ul class="event-list">{lines}</ul></section>')
+    gen_schedule = winter_season_section(s)
+    if gen_schedule:
+        parts = {**parts, 'schedule': gen_schedule}
     toc, secs = render_sections(hub_sections(s), parts)
     rel = related_block(s)
     dom = domestic_block(s)
@@ -766,9 +817,11 @@ GENERATED_SECTIONS = {'related', 'winter_live', 'upcoming'}  # 일정에서 만�
 
 def content_loss(old, new):
     """old → new에서 사라지는 것: 내용이 30% 넘게 줄어드는 섹션, 없어지는 섹션, 없어지는 자동 블록."""
-    sec = lambda t: {m.group(1): _TXT(m.group(2)) for m in re.finditer(r'<section id="([a-z_0-9]+)"[^>]*>(.*?)</section>', t, re.S)}
-    so, sn = sec(old), sec(new)
-    lost = [f'섹션 {k}' for k, v in so.items() if len(v) > 120 and k not in GENERATED_SECTIONS and len(sn.get(k, '')) < len(v) * 0.7]
+    raw = lambda t: {m.group(1): m.group(2) for m in re.finditer(r'<section id="([a-z_0-9]+)"[^>]*>(.*?)</section>', t, re.S)}
+    so, rn = {k: _TXT(v) for k, v in raw(old).items()}, raw(new)
+    sn = {k: _TXT(v) for k, v in rn.items()}
+    auto = GENERATED_SECTIONS | {k for k, v in rn.items() if '<!-- generated:' in v}  # 툴이 자료에서 다시 만드는 섹션
+    lost = [f'섹션 {k}' for k, v in so.items() if len(v) > 120 and k not in auto and len(sn.get(k, '')) < len(v) * 0.7]
     lost += [f'블록 {b}' for b in PROTECTED_BLOCKS if b in old and b not in new]
     return lost
 
