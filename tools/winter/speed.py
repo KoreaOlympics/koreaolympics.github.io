@@ -27,14 +27,22 @@ def competitions(isu_id):
     return r if isinstance(r, list) else r.get('results', [])
 
 def results(isu_id, number):
+    """number: the competition's scheduleNumber (its `number` field is only the 1st/2nd 500m race index)."""
     return get_json(f'{API}/events/{isu_id}/competitions/{number}/results/')
 
 def row(r):
+    """One result line. Individual and mass-start rows carry `competitor`; team pursuit rows carry `team` at the top level."""
     comp = r.get('competitor') or {}
     sk = comp.get('skater') or {}
-    team = comp.get('team') or {}
+    team = r.get('team') or comp.get('team') or {}
     name = f"{sk.get('firstName', '')} {sk.get('lastName', '')}".strip() or team.get('name') or comp.get('identifier', '')
-    return {'rank': r.get('rank'), 'name': name, 'noc': sk.get('country') or team.get('country') or '',
-            'time': r.get('time') or '', 'behind': r.get('timeBehind') or '', 'lane': r.get('startLane'),
-            'pair': r.get('startNumber'), 'medal': r.get('medal'), 'status': r.get('status'),
-            'points': r.get('points'), 'official': r.get('isOfficial')}
+    members = [f"{m['member']['skater'].get('firstName', '')} {m['member']['skater'].get('lastName', '')}".strip()
+               for m in team.get('members', []) if (m.get('member') or {}).get('skater')
+               and (not r.get('activeMembers') or m['member'].get('identifier') in r['activeMembers'])]
+    out = {'rank': r.get('rank'), 'name': name, 'noc': sk.get('country') or team.get('country') or '',
+           'time': r.get('time') or '', 'behind': r.get('timeBehind') or '', 'lane': r.get('startLane'),
+           'pair': r.get('startNumber'), 'medal': r.get('medal'), 'status': r.get('status'),
+           'points': r.get('points') if r.get('points') is not None else r.get('sprintPoints'), 'official': r.get('isOfficial')}
+    if members:
+        out['members'] = members
+    return out

@@ -279,14 +279,24 @@ def collect_speed(start_year, mode, status):
                         for s in speed.schedule(ev['isu_id'])]
             races = {}
             for c in speed.competitions(ev['isu_id']):
-                if not (c.get('isOfficial') or c.get('isLive')): continue
-                rows = [speed.row(r) for r in speed.results(ev['isu_id'], c['number'])]
-                races[str(c['number'])] = {'title': c['title'], 'start_utc': c.get('start'), 'live': c.get('isLive'),
-                                           'official': c.get('isOfficial'), 'distance': (c.get('distance') or {}).get('name'),
-                                           'division': c.get('division'), 'rows': sorted(rows, key=lambda r: (r['rank'] is None, r['rank'] or 0))}
+                key = c.get('scheduleNumber') or c.get('number')
+                done = c.get('isOfficial') or c.get('isLive')
+                try:
+                    rows = [speed.row(r) for r in speed.results(ev['isu_id'], key)]
+                except Exception:
+                    if done: raise
+                    continue  # 추첨 전: 출발 명단이 아직 없다
+                if not rows and not done: continue
+                # 경기 전에는 결과 주소가 출발 명단(순위·기록 없음)을 돌려준다 → 종목별 출전 선수 표에 쓴다
+                start_list = not done and not any(r['rank'] is not None or r['time'] for r in rows)
+                races[str(key)] = {'title': c['title'], 'start_utc': c.get('start'), 'live': c.get('isLive'),
+                                   'official': c.get('isOfficial'), 'distance': (c.get('distance') or {}).get('name'),
+                                   'division': c.get('division'), 'start_list': start_list,
+                                   'rows': sorted(rows, key=lambda r: (r['rank'] is None, r['rank'] or 0, r['pair'] or 0))}
             korea = [{'event_id': ev['id'], 'sport': 'speed-skating', 'event': ev['name'], 'distance': r['title'],
-                      'round': r.get('division') and f"Division {r['division']}" or '', 'heat': '', 'start_utc': r['start_utc'], **x}
-                     for r in races.values() for x in r['rows'] if x['noc'] == KOR]
+                      'round': r.get('division') and f"Division {r['division']}" or '', 'heat': '', 'start_utc': r['start_utc'],
+                      **x, 'status': '', 'qual': ''}
+                     for r in races.values() if not r['start_list'] for x in r['rows'] if x['noc'] == KOR]
             save(path, {'event': ev, 'checked_at': now().isoformat(), 'sessions': sessions, 'results': races, 'korea': korea})
             status[f"speed-skating:{ev['id']}"] = {'ok': True, 'at': now().isoformat()}
         except Exception as exc:

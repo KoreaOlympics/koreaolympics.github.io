@@ -306,13 +306,20 @@ function fsSummary(d) {
 function ssResults(d) {
   const entries = Object.entries(d.results || {});
   if (!entries.length) return '<p class="muted">아직 결과가 없습니다.</p>';
-  const rid = state.d && d.results[state.d] ? state.d : entries[0][0];
+  // 진행 중인 경기 → 가장 최근 결과 → 첫 경기
+  const recent = entries.filter(([, x]) => x.rows?.length && !x.start_list).sort((a, b) => (a[1].start_utc || '').localeCompare(b[1].start_utc || '')).pop();
+  const rid = state.d && d.results[state.d] ? state.d : (entries.find(([, x]) => x.live) || recent || entries[0])[0];
   return distChips(d, rid) + `<h3>${esc(d.results[rid].title)}</h3>` + ssTable(d.results[rid]);
 }
 function ssTable(r) {
-  return `<div class="tablewrap"><table><thead><tr><th class="num">순위</th><th>선수</th><th class="num">기록</th><th class="num">차이</th><th>조·레인</th></tr></thead><tbody>${
-    r.rows.map(x => `<tr class="${x.noc === 'KOR' ? 'kor' : ''}"><td class="num">${x.rank ?? '-'}</td><td class="name">${name(x.name)} <span class="noc">${esc(x.noc)}</span></td>
-      <td class="num">${esc(x.time)}</td><td class="num">${x.behind && x.behind !== '0.000' ? '+' + esc(x.behind) : ''}</td><td class="small muted">${x.pair ?? ''} ${esc(x.lane || '')}</td></tr>`).join('')}</tbody></table></div>`;
+  const when = r.start_utc ? `${kstDay(r.start_utc)} ${kstTime(r.start_utc)} KST` : '';
+  const head = `<p class="small muted">${when}${r.live ? ' · <span class="badge live">LIVE</span> 진행 중 (비공식 기록)' : r.official ? ' · 공식 기록' : r.start_list ? ' · <b>출발 명단</b> (경기 전)' : ''}</p>`;
+  if (!r.rows?.length) return head + '<p class="muted">아직 결과가 없습니다.</p>';
+  const pts = r.rows.some(x => x.points != null && x.points !== '');
+  return head + `<div class="tablewrap"><table><thead><tr><th class="num">순위</th><th>선수</th><th class="num">기록</th><th class="num">차이</th>${pts ? '<th class="num">포인트</th>' : ''}<th>조·레인</th></tr></thead><tbody>${
+    r.rows.map(x => `<tr class="${x.noc === 'KOR' ? 'kor' : ''}"><td class="num">${x.rank ?? '-'}</td><td class="name">${name(x.name)} <span class="noc">${esc(x.noc)}</span>${
+      x.members?.length ? `<br><span class="small muted">${x.members.map(name).join(' · ')}</span>` : ''}</td>
+      <td class="num">${esc(x.time)}</td><td class="num">${x.behind && x.behind !== '0.000' ? '+' + esc(x.behind) : ''}</td>${pts ? `<td class="num">${esc(x.points ?? '')}</td>` : ''}<td class="small muted">${x.pair ?? ''} ${esc(x.lane || '')}</td></tr>`).join('')}</tbody></table></div>`;
 }
 function raceResults(d) {
   const entries = Object.entries(d.results || {});
@@ -320,16 +327,49 @@ function raceResults(d) {
   const rid = state.d && d.results[state.d] ? state.d : (entries.find(([, x]) => x.live) || entries.filter(([, x]) => x.rows?.length).pop() || entries[0])[0];
   return distChips(d, rid) + `<h3>${esc(title(d.results[rid].title))}</h3>` + raceTable(d.results[rid]);
 }
+// 스피드스케이팅: 한국 선수가 어느 종목(거리)에 나가는지 — 선수 × 종목 표. 디비전 A·B는 같은 칸에 넣고 칸 안에 표시한다.
+const SS_COLS = [[/^1st 500m/, '500m 1차'], [/^2nd 500m/, '500m 2차'], [/^500m/, '500m'], [/^1000m/, '1000m'], [/^1500m/, '1500m'], [/^3000m/, '3000m'],
+  [/^5000m/, '5000m'], [/^10000m/, '10000m'], [/Mass Start/, '매스스타트'], [/Team Pursuit/, '팀추월'], [/Team Sprint/, '팀 스프린트']];
+const ssCol = t => { const i = SS_COLS.findIndex(([re]) => re.test(t)); return i < 0 ? [99, t.replace(/\s*(Women|Men|Ladies)\b.*$/, '')] : [i, SS_COLS[i][1]]; };
+function ssMatrix(d) {
+  const tables = GENDERS.map(([g, ko]) => {
+    const who = new Map(), cols = new Map();
+    for (const [rid, x] of Object.entries(d.results || {})) {
+      if (gender(x.title) !== g) continue;
+      const [order, label] = ssCol(x.title);
+      for (const r of x.rows || []) {
+        if (r.noc !== 'KOR') continue;
+        cols.set(label, order);
+        for (const n of r.members?.length ? r.members : [r.name]) {
+          const row = who.get(n) || {};
+          row[label] = { rid, div: x.division, rank: r.rank, time: r.time, live: x.live, start_list: x.start_list, official: x.official, team: !!r.members?.length };
+          who.set(n, row);
+        }
+      }
+    }
+    if (!who.size) return '';
+    const used = [...cols.entries()].sort((a, b) => a[1] - b[1]).map(([label]) => label);
+    return `<div class="tablewrap"><table class="matrix"><thead><tr><th>${ko}</th>${used.map(c => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${
+      [...who.entries()].map(([n, row]) => `<tr><td class="name">${name(n)}</td>${used.map(c => {
+        const x = row[c];
+        if (!x) return '<td class="muted">–</td>';
+        const medal = x.official && x.div !== 'B' && [1, 2, 3].includes(x.rank) ? ['', '🥇', '🥈', '🥉'][x.rank] : '';
+        const res = x.start_list || (x.rank == null && !x.time) ? (x.live ? '경기 중' : x.start_list ? '출전 예정' : '기록 없음') : `${x.rank ?? '-'}위 ${esc(x.time)}`;
+        return `<td><a href="${evLink({ v: 'results', d: x.rid })}">${medal}${x.div ? `디비전 ${esc(x.div)}` : ''}${x.live ? ' 🔴' : ''}<br><span class="small">${res}</span></a></td>`;
+      }).join('')}</tr>`).join('')}</tbody></table></div>`;
+  }).filter(Boolean);
+  return tables.length ? `<h3>🇰🇷 한국 선수 종목별 출전</h3><p class="small muted">선수가 나가는 종목과 디비전 · 순위 · 기록. 추첨이 나오면 경기 전에도 "출전 예정"으로 표시된다. 칸을 누르면 그 경기 결과로 이동</p>` + tables.join('') : '';
+}
 function ssSummary(d) {
   const items = Object.values(d.results || {}).filter(x => ['A', null, undefined, ''].includes(x.division)).map(x => ({ title: x.title.replace(/\s*Division A/, ''), podium: ssPodium(x) }));
-  return '<h3>메달리스트 (디비전 A)</h3>' + (items.length ? medalTables(items) : '<p class="muted">아직 결과가 없습니다.</p>');
+  return ssMatrix(d) + '<h3>메달리스트 (디비전 A)</h3>' + (items.length ? medalTables(items) : '<p class="muted">아직 결과가 없습니다.</p>');
 }
 
 async function viewEvent() {
   const d = await loadEvent(state.event, true);
   const e = allEvents().find(x => x.id === state.event) || d?.event;  // the calendar can briefly miss an event the source dropped
   if (!e) return '<div class="empty">대회를 찾을 수 없습니다.</div>';
-  const v = state.v || (phase(e) === 'live' && e.sport === 'short-track' ? 'results' : 'summary');
+  const v = state.v || (phase(e) === 'live' && ['short-track', 'speed-skating'].includes(e.sport) ? 'results' : 'summary');
   let h = `<div class="sport ${e.sport}">${SPORTS[e.sport]} ${BADGE[phase(e)]}</div><h2 style="margin-top:4px">${esc(e.name)}</h2>
     <p class="muted">${fmtRange(e.start, e.end)} · ${esc(e.city)} (${esc(e.country)}) · <a href="${esc(e.url)}" target="_blank" rel="noopener">공식 페이지 ↗</a>${d?.checked_at ? ` · 수집 ${ago(d.checked_at)}` : ''}</p>`;
   if (!d) return h + '<div class="card muted">이 대회의 상세 일정·결과는 아직 수집되지 않았습니다. 대회 하루 전부터 자동 수집합니다.</div>';
