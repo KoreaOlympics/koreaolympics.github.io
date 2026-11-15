@@ -460,7 +460,26 @@
     },
     {
      "title": "Ice Dance",
-     "podium": null
+     "podium": [
+      {
+       "rank": 1,
+       "name": "Emilea ZINGAS / Vadym KOLESNIK",
+       "noc": "USA",
+       "time": "201.88"
+      },
+      {
+       "rank": 2,
+       "name": "Evgeniia LOPAREVA / Geoffrey BRISSAUD",
+       "noc": "FRA",
+       "time": "195.28"
+      },
+      {
+       "rank": 3,
+       "name": "Katerina MRAZKOVA / Daniel MRAZEK",
+       "noc": "CZE",
+       "time": "190.88"
+      }
+     ]
     },
     {
      "title": "Women",
@@ -576,9 +595,16 @@
   [
    "FRA",
    3,
-   1,
+   2,
    0,
-   4
+   5
+  ],
+  [
+   "USA",
+   2,
+   2,
+   4,
+   8
   ],
   [
    "GBR",
@@ -600,13 +626,6 @@
    3,
    1,
    5
-  ],
-  [
-   "USA",
-   1,
-   2,
-   4,
-   7
   ],
   [
    "GER",
@@ -644,6 +663,13 @@
    2
   ],
   [
+   "CZE",
+   0,
+   0,
+   1,
+   1
+  ],
+  [
    "ESP",
    0,
    0,
@@ -673,6 +699,13 @@
     "points": 207.57,
     "event": "ISU Figure Skating Grand Prix de France 2026",
     "event_id": "isu-16027"
+   },
+   {
+    "name": "Emilea ZINGAS / Vadym KOLESNIK",
+    "noc": "USA",
+    "points": 201.88,
+    "event": "ISU Figure Skating Grand Prix Skate America 2026",
+    "event_id": "isu-16006"
    },
    {
     "name": "Lilah FEAR / Lewis GIBSON",
@@ -729,13 +762,6 @@
     "points": 189.36,
     "event": "ISU Figure Skating Grand Prix de France 2026",
     "event_id": "isu-16027"
-   },
-   {
-    "name": "Caroline GREEN / Michael PARSONS",
-    "noc": "USA",
-    "points": 186.02,
-    "event": "ISU Figure Skating Grand Prix Skate Canada International 2026",
-    "event_id": "isu-16020"
    }
   ],
   "Women": [
