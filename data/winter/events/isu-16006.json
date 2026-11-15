@@ -18,7 +18,7 @@
   "live": "Sara-Maude DUPUIS",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-skate-america-2026/"
  },
- "checked_at": "2026-11-15T00:23:20.826661+00:00",
+ "checked_at": "2026-11-15T00:34:17.912862+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-14T03:10:00.000Z",
@@ -45,7 +45,7 @@
    "type": "Couples"
   },
   {
-   "start_utc": "2026-11-14T23:50:00.000Z",
+   "start_utc": "2026-11-14T23:42:00.000Z",
    "title": "Women",
    "round": "Short Program",
    "event_result_id": 15709,
@@ -882,7 +882,7 @@
        "total": "74.24",
        "tes": "41.74",
        "pcs": "32.50",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -899,12 +899,29 @@
        "total": "71.47",
        "tes": "39.99",
        "pcs": "31.48",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
     {
      "rank": 3,
+     "name": "Sara-Maude DUPUIS",
+     "noc": "CAN",
+     "points": "68.95",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 3,
+       "total": "68.95",
+       "tes": "39.60",
+       "pcs": "29.35",
+       "status": "Scheduled Break"
+      }
+     }
+    },
+    {
+     "rank": 4,
      "name": "Young YOU",
      "noc": "KOR",
      "points": "65.60",
@@ -912,16 +929,16 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 3,
+       "rank": 4,
        "total": "65.60",
        "tes": "34.41",
        "pcs": "31.19",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
     {
-     "rank": 4,
+     "rank": 5,
      "name": "Logan HIGASE-CHEN",
      "noc": "USA",
      "points": "63.29",
@@ -929,16 +946,16 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 4,
+       "rank": 5,
        "total": "63.29",
        "tes": "36.36",
        "pcs": "26.93",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
     {
-     "rank": 5,
+     "rank": 6,
      "name": "Alexa GASPAROTTO",
      "noc": "USA",
      "points": "56.04",
@@ -946,28 +963,11 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 5,
+       "rank": 6,
        "total": "56.04",
        "tes": "31.71",
        "pcs": "25.33",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Sara-Maude DUPUIS",
-     "noc": "CAN",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -984,7 +984,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -1001,7 +1001,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -1018,7 +1018,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -1035,7 +1035,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -1052,7 +1052,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -1069,7 +1069,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     }
@@ -1085,7 +1085,7 @@
    "round": "Short Program",
    "heat": "",
    "start_utc": "2026-11-15T21:05:00.000Z",
-   "rank": 3,
+   "rank": 4,
    "name": "Young YOU",
    "noc": "KOR",
    "time": "65.60",
