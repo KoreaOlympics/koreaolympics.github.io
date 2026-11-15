@@ -414,7 +414,26 @@
    "podiums": [
     {
      "title": "Men",
-     "podium": null
+     "podium": [
+      {
+       "rank": 1,
+       "name": "Ilia MALININ",
+       "noc": "USA",
+       "time": "284.31"
+      },
+      {
+       "rank": 2,
+       "name": "Daniel GRASSL",
+       "noc": "ITA",
+       "time": "274.73"
+      },
+      {
+       "rank": 3,
+       "name": "Tamir KUPERMAN",
+       "noc": "ISR",
+       "time": "248.55"
+      }
+     ]
     },
     {
      "title": "Pairs",
@@ -564,6 +583,13 @@
    5
   ],
   [
+   "USA",
+   1,
+   1,
+   3,
+   5
+  ],
+  [
    "CAN",
    1,
    0,
@@ -571,14 +597,14 @@
    1
   ],
   [
-   "USA",
+   "EST",
    0,
    1,
-   3,
-   4
+   1,
+   2
   ],
   [
-   "EST",
+   "ITA",
    0,
    1,
    1,
@@ -606,7 +632,7 @@
    1
   ],
   [
-   "ITA",
+   "ISR",
    0,
    0,
    1,
@@ -774,6 +800,13 @@
     "event_id": "isu-16013"
    },
    {
+    "name": "Ilia MALININ",
+    "noc": "USA",
+    "points": 284.31,
+    "event": "ISU Figure Skating Grand Prix Skate America 2026",
+    "event_id": "isu-16006"
+   },
+   {
     "name": "Adam SIAO HIM FA",
     "noc": "FRA",
     "points": 284.24,
@@ -828,13 +861,6 @@
     "points": 252.39,
     "event": "ISU Figure Skating Grand Prix Cup of China 2026",
     "event_id": "isu-16013"
-   },
-   {
-    "name": "Rio NAKATA",
-    "noc": "JPN",
-    "points": 249.25,
-    "event": "ISU Figure Skating Grand Prix Skate Canada International 2026",
-    "event_id": "isu-16020"
    }
   ],
   "Pairs": [
