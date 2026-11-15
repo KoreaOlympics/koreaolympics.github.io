@@ -466,6 +466,12 @@ def results_block(s):
     return hub_block(s['file']) if s.get('season') == 'summer' else ''
 
 
+def domestic_block(s):
+    """부록: 국내 대회 우승자 (data/domestic-winners.json, tools/domestic.py)."""
+    from domestic import hub_block
+    return wrap_tables(hub_block(s['file']))
+
+
 def pathways_block(s):
     """구기 종목 LA28 예선 단계 (data/team-pathways.json, tools/pathways.py)."""
     from pathways import block
@@ -486,7 +492,7 @@ def event_guide_block(s, e):
 def render_sections(defs, parts):
     toc, out = [], []
     titles = parts.get('__titles__', {})
-    extra = [k for k in parts if k not in {d[0] for d in defs} | {'__titles__', 'infobox', 'intro', 'related', 'winter_live'}]
+    extra = [k for k in parts if k not in {d[0] for d in defs} | {'__titles__', 'infobox', 'intro', 'related', 'winter_live', 'domestic'}]
     defs = list(defs) + [(k, titles.get(k, k)) for k in extra if k not in {d[0] for d in defs}]
     for sid, title in defs:
         body = wrap_tables(fill_live(parts.get(sid, '')))
@@ -536,13 +542,16 @@ def render_hub(reg, s):
             f'<b>{len(s["events"])}개</b> 세부종목이 있다.{basis}</p><ul class="event-list">{lines}</ul></section>')
     toc, secs = render_sections(hub_sections(s), parts)
     rel = related_block(s)
+    dom = domestic_block(s)
+    if dom:  # 부록은 목차 끝에 넣는다
+        toc = toc.replace('</ol></nav>', '<li><a href="#domestic">부록: 국내 대회 우승자</a></li></ol></nav>')
     if rel and '<section id="results_summary"' in secs:  # 마지막 섹션(대회별 메달 요약)을 맨 아래에 둔다
         secs = secs.replace('<section id="results_summary"', rel + '\n<section id="results_summary"', 1)
         rel = ''
     body = '\n'.join(x for x in [
         f'<nav class="crumb"><a href="index.html">목차</a> › {E(s["name"])}</nav>',
         f'<h1>{E(s["name"])} <span class="en">({E(s["name_en"])})</span></h1>',
-        '<div class="top">', infobox(s['name'], info), lead, '</div>', summary_figure(s), qualified_block(s), pathways_block(s), guide_block(s), results_block(s), private_block(s), toc, winter_live_block(s), secs, rel,
+        '<div class="top">', infobox(s['name'], info), lead, '</div>', summary_figure(s), qualified_block(s), pathways_block(s), guide_block(s), results_block(s), private_block(s), toc, winter_live_block(s), secs, rel, dom,
         season_navbox(reg, s['season'], '', hub_path(s))] if x)
     return path, page(f'{s["name"]} | {g["games"]}', '', body, f'{g["games"]} {s["name"]} 세부종목·예선·한국 현황')
 
@@ -748,7 +757,7 @@ def build():
         print(f'  {len(refused)}개 문서를 건너뛰었다. 손실을 확인했으면 --force로 다시 실행한다.')
 
 
-PROTECTED_BLOCKS = ('summary-figure', 'id="recent-results"', 'id="private-rank"', 'id="la28-qualified"', 'id="la28-pathways"', 'id="sport-guide"', 'id="event-guide"', 'id="winter_live"')
+PROTECTED_BLOCKS = ('summary-figure', 'id="recent-results"', 'id="private-rank"', 'id="la28-qualified"', 'id="la28-pathways"', 'id="sport-guide"', 'id="event-guide"', 'id="winter_live"', 'id="domestic"')
 _TXT = lambda s: re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', s))).strip()
 
 
