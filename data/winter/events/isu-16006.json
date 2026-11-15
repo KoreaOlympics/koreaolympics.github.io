@@ -15,10 +15,10 @@
   "city": "Everett, WA",
   "country": "USA",
   "state": "Live",
-  "live": "Sofia SAMODELKINA",
+  "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-skate-america-2026/"
  },
- "checked_at": "2026-11-15T21:22:20.448946+00:00",
+ "checked_at": "2026-11-15T21:33:27.716338+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-14T03:10:00.000Z",
@@ -77,7 +77,7 @@
    "type": "Couples"
   },
   {
-   "start_utc": "2026-11-15T21:05:00.000Z",
+   "start_utc": "2026-11-15T21:12:00.000Z",
    "title": "Women",
    "round": "Free Skating",
    "event_result_id": 15709,
@@ -872,6 +872,31 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Sofia SAMODELKINA",
+     "noc": "KAZ",
+     "points": "198.59",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 11,
+       "total": "61.03",
+       "tes": "29.93",
+       "pcs": "31.10",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 1,
+       "total": "137.56",
+       "tes": "76.26",
+       "pcs": "61.30",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
      "name": "Alexa GASPAROTTO",
      "noc": "USA",
      "points": "152.77",
@@ -887,7 +912,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 1,
+       "rank": 2,
        "total": "96.73",
        "tes": "49.53",
        "pcs": "47.20",
@@ -1144,31 +1169,6 @@
        "status": "Running"
       }
      }
-    },
-    {
-     "rank": null,
-     "name": "Sofia SAMODELKINA",
-     "noc": "KAZ",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 11,
-       "total": "61.03",
-       "tes": "29.93",
-       "pcs": "31.10",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
     }
    ]
   }
@@ -1181,7 +1181,7 @@
    "distance": "Women",
    "round": "Short Program",
    "heat": "",
-   "start_utc": "2026-11-15T21:05:00.000Z",
+   "start_utc": "2026-11-15T21:12:00.000Z",
    "rank": 3,
    "name": "Yujae KIM",
    "noc": "KOR",
@@ -1200,7 +1200,7 @@
    "distance": "Women",
    "round": "Short Program",
    "heat": "",
-   "start_utc": "2026-11-15T21:05:00.000Z",
+   "start_utc": "2026-11-15T21:12:00.000Z",
    "rank": 7,
    "name": "Ahsun YUN",
    "noc": "KOR",
@@ -1219,7 +1219,7 @@
    "distance": "Women",
    "round": "Short Program",
    "heat": "",
-   "start_utc": "2026-11-15T21:05:00.000Z",
+   "start_utc": "2026-11-15T21:12:00.000Z",
    "rank": 8,
    "name": "Young YOU",
    "noc": "KOR",
