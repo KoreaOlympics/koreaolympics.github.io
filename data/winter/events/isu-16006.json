@@ -15,10 +15,10 @@
   "city": "Everett, WA",
   "country": "USA",
   "state": "Live",
-  "live": "",
+  "live": "Sara-Maude DUPUIS",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-skate-america-2026/"
  },
- "checked_at": "2026-11-15T00:12:23.573513+00:00",
+ "checked_at": "2026-11-15T00:23:20.826661+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-14T03:10:00.000Z",
@@ -871,6 +871,40 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Alexandra IGNATOVA",
+     "noc": "AIN2",
+     "points": "74.24",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 1,
+       "total": "74.24",
+       "tes": "41.74",
+       "pcs": "32.50",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
+     "name": "Adeliia PETROSIAN",
+     "noc": "AIN2",
+     "points": "71.47",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 2,
+       "total": "71.47",
+       "tes": "39.99",
+       "pcs": "31.48",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 3,
      "name": "Young YOU",
      "noc": "KOR",
      "points": "65.60",
@@ -878,7 +912,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 1,
+       "rank": 3,
        "total": "65.60",
        "tes": "34.41",
        "pcs": "31.19",
@@ -887,7 +921,7 @@
      }
     },
     {
-     "rank": 2,
+     "rank": 4,
      "name": "Logan HIGASE-CHEN",
      "noc": "USA",
      "points": "63.29",
@@ -895,7 +929,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 2,
+       "rank": 4,
        "total": "63.29",
        "tes": "36.36",
        "pcs": "26.93",
@@ -904,7 +938,7 @@
      }
     },
     {
-     "rank": 3,
+     "rank": 5,
      "name": "Alexa GASPAROTTO",
      "noc": "USA",
      "points": "56.04",
@@ -912,44 +946,10 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 3,
+       "rank": 5,
        "total": "56.04",
        "tes": "31.71",
        "pcs": "25.33",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Adeliia PETROSIAN",
-     "noc": "AIN2",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Alexandra IGNATOVA",
-     "noc": "AIN2",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
        "status": "Running"
       }
      }
@@ -1085,7 +1085,7 @@
    "round": "Short Program",
    "heat": "",
    "start_utc": "2026-11-15T21:05:00.000Z",
-   "rank": 1,
+   "rank": 3,
    "name": "Young YOU",
    "noc": "KOR",
    "time": "65.60",
