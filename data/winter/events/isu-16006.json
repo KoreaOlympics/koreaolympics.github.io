@@ -15,10 +15,10 @@
   "city": "Everett, WA",
   "country": "USA",
   "state": "Live",
-  "live": "Yujae KIM",
+  "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-skate-america-2026/"
  },
- "checked_at": "2026-11-15T22:34:43.371706+00:00",
+ "checked_at": "2026-11-15T22:46:02.946887+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-14T03:10:00.000Z",
@@ -897,6 +897,31 @@
     },
     {
      "rank": 2,
+     "name": "Yujae KIM",
+     "noc": "KOR",
+     "points": "204.28",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 3,
+       "total": "73.92",
+       "tes": "42.71",
+       "pcs": "31.21",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 3,
+       "total": "130.36",
+       "tes": "67.23",
+       "pcs": "63.13",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 3,
      "name": "Sofia SAMODELKINA",
      "noc": "KAZ",
      "points": "198.59",
@@ -921,7 +946,7 @@
      }
     },
     {
-     "rank": 3,
+     "rank": 4,
      "name": "Adeliia PETROSIAN",
      "noc": "AIN2",
      "points": "198.03",
@@ -937,7 +962,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 4,
+       "rank": 5,
        "total": "126.56",
        "tes": "65.44",
        "pcs": "61.12",
@@ -946,7 +971,7 @@
      }
     },
     {
-     "rank": 4,
+     "rank": 5,
      "name": "Young YOU",
      "noc": "KOR",
      "points": "193.05",
@@ -962,7 +987,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 3,
+       "rank": 4,
        "total": "127.45",
        "tes": "66.89",
        "pcs": "60.56",
@@ -971,7 +996,7 @@
      }
     },
     {
-     "rank": 5,
+     "rank": 6,
      "name": "Ahsun YUN",
      "noc": "KOR",
      "points": "189.22",
@@ -987,7 +1012,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 6,
+       "rank": 7,
        "total": "122.09",
        "tes": "63.91",
        "pcs": "58.18",
@@ -996,7 +1021,7 @@
      }
     },
     {
-     "rank": 6,
+     "rank": 7,
      "name": "Sara-Maude DUPUIS",
      "noc": "CAN",
      "points": "188.28",
@@ -1012,7 +1037,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 7,
+       "rank": 8,
        "total": "119.33",
        "tes": "60.01",
        "pcs": "59.32",
@@ -1021,7 +1046,7 @@
      }
     },
     {
-     "rank": 7,
+     "rank": 8,
      "name": "Sophie Joline VON FELTEN",
      "noc": "USA",
      "points": "186.16",
@@ -1037,7 +1062,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 5,
+       "rank": 6,
        "total": "124.93",
        "tes": "70.96",
        "pcs": "53.97",
@@ -1046,7 +1071,7 @@
      }
     },
     {
-     "rank": 8,
+     "rank": 9,
      "name": "Alexa GASPAROTTO",
      "noc": "USA",
      "points": "152.77",
@@ -1062,7 +1087,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 8,
+       "rank": 9,
        "total": "96.73",
        "tes": "49.53",
        "pcs": "47.20",
@@ -1071,7 +1096,7 @@
      }
     },
     {
-     "rank": 9,
+     "rank": 10,
      "name": "Logan HIGASE-CHEN",
      "noc": "USA",
      "points": "144.72",
@@ -1087,7 +1112,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 9,
+       "rank": 10,
        "total": "81.43",
        "tes": "39.26",
        "pcs": "46.17",
@@ -1144,31 +1169,6 @@
        "status": "Running"
       }
      }
-    },
-    {
-     "rank": null,
-     "name": "Yujae KIM",
-     "noc": "KOR",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 3,
-       "total": "73.92",
-       "tes": "42.71",
-       "pcs": "31.21",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
     }
    ]
   }
@@ -1182,7 +1182,26 @@
    "round": "Free Skating",
    "heat": "",
    "start_utc": "2026-11-15T21:12:00.000Z",
-   "rank": 4,
+   "rank": 2,
+   "name": "Yujae KIM",
+   "noc": "KOR",
+   "time": "204.28",
+   "qual": "",
+   "status": "",
+   "segments": {
+    "SP": "73.92",
+    "FS": "130.36"
+   }
+  },
+  {
+   "event_id": "isu-16006",
+   "sport": "figure-skating",
+   "event": "ISU Figure Skating Grand Prix Skate America 2026",
+   "distance": "Women",
+   "round": "Free Skating",
+   "heat": "",
+   "start_utc": "2026-11-15T21:12:00.000Z",
+   "rank": 5,
    "name": "Young YOU",
    "noc": "KOR",
    "time": "193.05",
@@ -1201,7 +1220,7 @@
    "round": "Free Skating",
    "heat": "",
    "start_utc": "2026-11-15T21:12:00.000Z",
-   "rank": 5,
+   "rank": 6,
    "name": "Ahsun YUN",
    "noc": "KOR",
    "time": "189.22",
@@ -1210,25 +1229,6 @@
    "segments": {
     "SP": "67.13",
     "FS": "122.09"
-   }
-  },
-  {
-   "event_id": "isu-16006",
-   "sport": "figure-skating",
-   "event": "ISU Figure Skating Grand Prix Skate America 2026",
-   "distance": "Women",
-   "round": "Short Program",
-   "heat": "",
-   "start_utc": "2026-11-15T21:12:00.000Z",
-   "rank": 3,
-   "name": "Yujae KIM",
-   "noc": "KOR",
-   "time": "73.92",
-   "qual": "",
-   "status": "",
-   "segments": {
-    "SP": "73.92",
-    "FS": ""
    }
   }
  ]
