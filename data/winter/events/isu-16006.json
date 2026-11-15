@@ -15,10 +15,10 @@
   "city": "Everett, WA",
   "country": "USA",
   "state": "Live",
-  "live": "Aleksa RAKIC",
+  "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-skate-america-2026/"
  },
- "checked_at": "2026-11-15T02:53:21.610321+00:00",
+ "checked_at": "2026-11-15T03:04:15.402865+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-14T03:10:00.000Z",
@@ -53,7 +53,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-15T02:25:00.000Z",
+   "start_utc": "2026-11-15T02:32:00.000Z",
    "title": "Men",
    "round": "Free Skating",
    "event_result_id": 15728,
@@ -95,6 +95,56 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Lukas BRITSCHGI",
+     "noc": "SUI",
+     "points": "231.59",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 9,
+       "total": "80.88",
+       "tes": "41.26",
+       "pcs": "40.62",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 1,
+       "total": "150.71",
+       "tes": "72.03",
+       "pcs": "79.68",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
+     "name": "Aleksa RAKIC",
+     "noc": "CAN",
+     "points": "207.14",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 10,
+       "total": "68.92",
+       "tes": "36.11",
+       "pcs": "33.81",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 4,
+       "total": "138.22",
+       "tes": "70.36",
+       "pcs": "68.86",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 3,
      "name": "Georgii RESHTENKO",
      "noc": "CZE",
      "points": "206.26",
@@ -110,7 +160,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 2,
+       "rank": 3,
        "total": "140.49",
        "tes": "76.23",
        "pcs": "65.26",
@@ -119,7 +169,7 @@
      }
     },
     {
-     "rank": 2,
+     "rank": 4,
      "name": "Nikolaj MEMOLA",
      "noc": "ITA",
      "points": "205.40",
@@ -135,7 +185,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 1,
+       "rank": 2,
        "total": "141.94",
        "tes": "69.61",
        "pcs": "72.33",
@@ -331,56 +381,6 @@
        "total": "81.02",
        "tes": "40.73",
        "pcs": "41.29",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Lukas BRITSCHGI",
-     "noc": "SUI",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 9,
-       "total": "80.88",
-       "tes": "41.26",
-       "pcs": "40.62",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Aleksa RAKIC",
-     "noc": "CAN",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 10,
-       "total": "68.92",
-       "tes": "36.11",
-       "pcs": "33.81",
        "status": "Finished"
       },
       "FS": {
