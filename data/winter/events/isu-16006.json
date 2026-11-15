@@ -18,7 +18,7 @@
   "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-skate-america-2026/"
  },
- "checked_at": "2026-11-15T00:46:56.093013+00:00",
+ "checked_at": "2026-11-15T00:58:10.323115+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-14T03:10:00.000Z",
@@ -888,6 +888,23 @@
     },
     {
      "rank": 2,
+     "name": "Yujae KIM",
+     "noc": "KOR",
+     "points": "73.92",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 2,
+       "total": "73.92",
+       "tes": "42.71",
+       "pcs": "31.21",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 3,
      "name": "Adeliia PETROSIAN",
      "noc": "AIN2",
      "points": "71.47",
@@ -895,7 +912,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 2,
+       "rank": 3,
        "total": "71.47",
        "tes": "39.99",
        "pcs": "31.48",
@@ -904,7 +921,24 @@
      }
     },
     {
-     "rank": 3,
+     "rank": 4,
+     "name": "Rino MATSUIKE",
+     "noc": "JPN",
+     "points": "70.30",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 4,
+       "total": "70.30",
+       "tes": "37.06",
+       "pcs": "33.24",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 5,
      "name": "Sara-Maude DUPUIS",
      "noc": "CAN",
      "points": "68.95",
@@ -912,7 +946,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 3,
+       "rank": 5,
        "total": "68.95",
        "tes": "39.60",
        "pcs": "29.35",
@@ -921,7 +955,7 @@
      }
     },
     {
-     "rank": 4,
+     "rank": 6,
      "name": "Young YOU",
      "noc": "KOR",
      "points": "65.60",
@@ -929,7 +963,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 4,
+       "rank": 6,
        "total": "65.60",
        "tes": "34.41",
        "pcs": "31.19",
@@ -938,7 +972,7 @@
      }
     },
     {
-     "rank": 5,
+     "rank": 7,
      "name": "Logan HIGASE-CHEN",
      "noc": "USA",
      "points": "63.29",
@@ -946,7 +980,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 5,
+       "rank": 7,
        "total": "63.29",
        "tes": "36.36",
        "pcs": "26.93",
@@ -955,7 +989,7 @@
      }
     },
     {
-     "rank": 6,
+     "rank": 8,
      "name": "Sophie Joline VON FELTEN",
      "noc": "USA",
      "points": "61.23",
@@ -963,7 +997,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 6,
+       "rank": 8,
        "total": "61.23",
        "tes": "34.59",
        "pcs": "26.64",
@@ -972,7 +1006,7 @@
      }
     },
     {
-     "rank": 7,
+     "rank": 9,
      "name": "Alexa GASPAROTTO",
      "noc": "USA",
      "points": "56.04",
@@ -980,44 +1014,10 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 7,
+       "rank": 9,
        "total": "56.04",
        "tes": "31.71",
        "pcs": "25.33",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Rino MATSUIKE",
-     "noc": "JPN",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Yujae KIM",
-     "noc": "KOR",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
        "status": "Running"
       }
      }
@@ -1085,14 +1085,14 @@
    "round": "Short Program",
    "heat": "",
    "start_utc": "2026-11-15T21:05:00.000Z",
-   "rank": 4,
-   "name": "Young YOU",
+   "rank": 2,
+   "name": "Yujae KIM",
    "noc": "KOR",
-   "time": "65.60",
+   "time": "73.92",
    "qual": "",
    "status": "",
    "segments": {
-    "SP": "65.60"
+    "SP": "73.92"
    }
   },
   {
@@ -1100,17 +1100,17 @@
    "sport": "figure-skating",
    "event": "ISU Figure Skating Grand Prix Skate America 2026",
    "distance": "Women",
-   "round": "",
+   "round": "Short Program",
    "heat": "",
    "start_utc": "2026-11-15T21:05:00.000Z",
-   "rank": null,
-   "name": "Yujae KIM",
+   "rank": 6,
+   "name": "Young YOU",
    "noc": "KOR",
-   "time": "",
+   "time": "65.60",
    "qual": "",
    "status": "",
    "segments": {
-    "SP": ""
+    "SP": "65.60"
    }
   },
   {
