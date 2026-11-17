@@ -280,3 +280,8 @@ index는 Wikipedia 대문 형식으로 툴이 만든다. 배치는 제목 → �
 - 첫머리(intro)는 `<h3>경기 방식</h3>`으로 시작하는 종목 설명이다. 선수 근황은 '주목 선수' 섹션에 "최근 동향"으로 적는다.
 - 유도·양궁·펜싱·역도·레슬링은 `python tools/event_intro.py`가 이 형식을 맞춘다.
 
+
+### 8-9. 동계 허브 '직전 올림픽 메달리스트' (`data/milano2026-medals.json`)
+
+- 동계 허브의 메달리스트 표는 2026 밀라노·코르티나 결과다. `python tools/milano_medals.py fetch`가 Wikipedia 각 종목 메달 표에서 자료 파일을 만들고, `python tools/milano_medals.py`가 허브 표를 채운다.
+- 표기는 파리 2024 표와 같다(3명 이하는 이름, 그보다 큰 팀은 NOC, 공동 메달은 " / "). 2026 대회에 없던 세부종목은 그렇게 적는다.
