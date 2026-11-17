@@ -4,6 +4,7 @@
     python tools/guard.py <기준 커밋> --dry # 무엇을 되살릴지만 보여 준다
 
 - 종목·세부종목 문서에서 기준 커밋에 있던 섹션이 없어지거나 내용이 30% 넘게 줄었으면 기준 커밋의 섹션으로 되돌린다.
+- 본문에 `<!-- generated: ... -->` 표시가 있는 섹션은 툴이 다시 만드는 것이므로 되돌리지 않는다.
 - 자동 블록(한눈에 보기·출전 확정·예선 단계·문서 안내·파리 메달)은 data/ 자료에서 다시 만든다.
 - 일부러 지운 경우에는 커밋 메시지에 [guard skip]을 넣으면 워크플로가 이 도구를 돌리지 않는다.
 """
@@ -46,6 +47,8 @@ def restore(old, new, older=None):
         if len(before) <= 120 or sid in ('winter_live', 'related', 'upcoming'):
             continue
         if sid in news:
+            if '<!-- generated:' in news[sid]:
+                continue  # 툴이 자료에서 다시 만드는 섹션 (원칙 8-7): 줄어들거나 예전 내용과 같아져도 정상이다
             now = _TXT(news[sid])
             stale = now != before and now in older.get(sid, set())  # 옛 판을 다시 올렸다
             if len(now) >= len(before) * 0.7 and not stale:
