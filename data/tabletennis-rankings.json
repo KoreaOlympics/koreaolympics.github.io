@@ -1,13 +1,13 @@
 {
   "sport": "tabletennis",
-  "fetchedAt": "2026-11-15T23:58:30.459Z",
+  "fetchedAt": "2026-11-17T02:55:28.025Z",
   "events": {
     "ms": {
       "label": "남자 단식",
-      "date": "11/09/2026 00:00:00",
+      "date": "11/16/2026 00:00:00",
       "year": "2026",
-      "week": "46",
-      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingIndividuals?TopN=20&CategoryCode=SEN&SubEventCode=MS&RankingYear=2026&RankingMonth=11&RankingWeek=46",
+      "week": "47",
+      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingIndividuals?TopN=20&CategoryCode=SEN&SubEventCode=MS&RankingYear=2026&RankingMonth=11&RankingWeek=47",
       "rows": [
         {
           "rank": 1,
@@ -173,10 +173,10 @@
     },
     "ws": {
       "label": "여자 단식",
-      "date": "11/09/2026 00:00:00",
+      "date": "11/16/2026 00:00:00",
       "year": "2026",
-      "week": "46",
-      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingIndividuals?TopN=20&CategoryCode=SEN&SubEventCode=WS&RankingYear=2026&RankingMonth=11&RankingWeek=46",
+      "week": "47",
+      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingIndividuals?TopN=20&CategoryCode=SEN&SubEventCode=WS&RankingYear=2026&RankingMonth=11&RankingWeek=47",
       "rows": [
         {
           "rank": 1,
@@ -288,7 +288,7 @@
             "Honoka HASHIMOTO"
           ],
           "noc": "JPN",
-          "points": 2924
+          "points": 3054
         },
         {
           "rank": 15,
@@ -312,7 +312,7 @@
             "JOO Cheonhui"
           ],
           "noc": "KOR",
-          "points": 2125
+          "points": 2285
         },
         {
           "rank": 18,
@@ -342,10 +342,10 @@
     },
     "md": {
       "label": "남자 복식",
-      "date": "11/09/2026 00:00:00",
+      "date": "11/16/2026 00:00:00",
       "year": "2026",
-      "week": "46",
-      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingPairs?TopN=20&CategoryCode=SEN&SubEventCode=MD&RankingYear=2026&RankingMonth=11&RankingWeek=46",
+      "week": "47",
+      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingPairs?TopN=20&CategoryCode=SEN&SubEventCode=MD&RankingYear=2026&RankingMonth=11&RankingWeek=47",
       "rows": [
         {
           "rank": 1,
@@ -512,29 +512,29 @@
         {
           "rank": 19,
           "names": [
+            "Guilherme TEODORO",
+            "Leonardo IIZUKA"
+          ],
+          "noc": "BRA",
+          "points": 682
+        },
+        {
+          "rank": 20,
+          "names": [
             "Jules ROLLAND",
             "Leo DE NODREST"
           ],
           "noc": "FRA",
           "points": 669
-        },
-        {
-          "rank": 20,
-          "names": [
-            "Guilherme TEODORO",
-            "Leonardo IIZUKA"
-          ],
-          "noc": "BRA",
-          "points": 639
         }
       ]
     },
     "wd": {
       "label": "여자 복식",
-      "date": "11/09/2026 00:00:00",
+      "date": "11/16/2026 00:00:00",
       "year": "2026",
-      "week": "46",
-      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingPairs?TopN=20&CategoryCode=SEN&SubEventCode=WD&RankingYear=2026&RankingMonth=11&RankingWeek=46",
+      "week": "47",
+      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingPairs?TopN=20&CategoryCode=SEN&SubEventCode=WD&RankingYear=2026&RankingMonth=11&RankingWeek=47",
       "rows": [
         {
           "rank": 1,
@@ -593,6 +593,15 @@
         {
           "rank": 7,
           "names": [
+            "Miu HIRANO",
+            "Miyuu KIHARA"
+          ],
+          "noc": "JPN",
+          "points": 1905
+        },
+        {
+          "rank": 8,
+          "names": [
             "LI Yu-Jhun",
             "CHIEN Tung-Chuan"
           ],
@@ -600,7 +609,7 @@
           "points": 1865
         },
         {
-          "rank": 8,
+          "rank": 9,
           "names": [
             "CHEN Yi",
             "KUAI Man"
@@ -609,22 +618,13 @@
           "points": 1620
         },
         {
-          "rank": 9,
+          "rank": 10,
           "names": [
             "Elizabeta SAMARA",
             "Bernadette SZOCS"
           ],
           "noc": "ROU",
-          "points": 1573
-        },
-        {
-          "rank": 10,
-          "names": [
-            "Miu HIRANO",
-            "Miyuu KIHARA"
-          ],
-          "noc": "JPN",
-          "points": 1505
+          "points": 1618
         },
         {
           "rank": 11,
@@ -720,10 +720,10 @@
     },
     "xd": {
       "label": "혼합복식",
-      "date": "11/09/2026 00:00:00",
+      "date": "11/16/2026 00:00:00",
       "year": "2026",
-      "week": "46",
-      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingPairs?TopN=20&CategoryCode=SEN&SubEventCode=XD&RankingYear=2026&RankingMonth=11&RankingWeek=46",
+      "week": "47",
+      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingPairs?TopN=20&CategoryCode=SEN&SubEventCode=XD&RankingYear=2026&RankingMonth=11&RankingWeek=47",
       "rows": [
         {
           "rank": 1,
@@ -854,6 +854,15 @@
         {
           "rank": 15,
           "names": [
+            "Maria PANFILOVA",
+            "Evgeny TIKHONOV"
+          ],
+          "noc": "RUS",
+          "points": 1070
+        },
+        {
+          "rank": 16,
+          "names": [
             "KIM Nayeong",
             "CHAN Baldwin"
           ],
@@ -861,16 +870,16 @@
           "points": 1060
         },
         {
-          "rank": 16,
+          "rank": 17,
           "names": [
             "Jishan LIANG",
             "Sally MOYLAND"
           ],
           "noc": "USA",
-          "points": 985
+          "points": 989
         },
         {
-          "rank": 17,
+          "rank": 18,
           "names": [
             "KUAI Man",
             "WEN Ruibo"
@@ -879,7 +888,7 @@
           "points": 970
         },
         {
-          "rank": 18,
+          "rank": 19,
           "names": [
             "Mo ZHANG",
             "Edward LY"
@@ -888,22 +897,13 @@
           "points": 955
         },
         {
-          "rank": 19,
+          "rank": 20,
           "names": [
             "Satsuki ODO",
             "Shunsuke TOGAMI"
           ],
           "noc": "JPN",
           "points": 950
-        },
-        {
-          "rank": 20,
-          "names": [
-            "Alexis LEBRUN",
-            "Charlotte LUTZ"
-          ],
-          "noc": "FRA",
-          "points": 940
         }
       ]
     }
