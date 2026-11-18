@@ -37,6 +37,8 @@ jobs:
           # 배드민턴(브라우저 필요)·탁구 랭킹: 저장소 밖에 Playwright를 깔아 쓴다
           (cd "$RUNNER_TEMP" && npm i --silent playwright && npx playwright install --with-deps chromium >/dev/null && cd "$GITHUB_WORKSPACE" && NODE_PATH="$RUNNER_TEMP/node_modules" node tools/update/update-racket-rankings.cjs) &
           python tools/summer_live.py collect --all || true
+          python tools/domestic.py || true   # 부록: 전국체전 우승자 (meet.sports.or.kr)
+          python tools/trials.py || true     # 부록: 국가대표 선발전 (result.sports.or.kr)
           wait || true
       - name: Stamp edited data (push)
         if: github.event_name == 'push'

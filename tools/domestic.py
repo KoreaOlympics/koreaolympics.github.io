@@ -64,6 +64,7 @@ def fetch(meet, code):
 
 def update():
     out = {'_source': '대한체육회 전국체육대회 정보 시스템 (meet.sports.or.kr) 종목별 메달명세', 'updated_at': dt.date.today().isoformat(), 'sports': {}}
+    prev = json.loads(DATA.read_text(encoding='utf-8')) if DATA.exists() else {}
     titles = {}
     for file, (meet, code) in SPORTS.items():
         if meet not in titles:
@@ -71,7 +72,10 @@ def update():
             titles[meet] = m.group(1) if m else ''
         events, total = fetch(meet, code)
         if not events:
-            print(f'{file}: 금메달 명세 없음 (건너뜀)', file=sys.stderr)
+            old = (prev.get('sports') or {}).get(file)
+            print(f'{file}: 금메달 명세 없음 ({"이전 자료 유지" if old else "건너뜀"})', file=sys.stderr)
+            if old:  # 시스템 장애·새 대회 준비 중일 때 있던 자료를 지우지 않는다
+                out['sports'][file] = old
             continue
         year = max(e['date'] for e in events)[:4]
         out['sports'][file] = {'festival': {'name': titles[meet], 'year': int(year), 'url': BASE.format(meet=meet) + 'main.do', 'events': events}}
@@ -106,12 +110,14 @@ def _table(events):
 
 
 def hub_block(file, data=None):
-    """허브 하나의 부록. 자료가 없으면 ''."""
+    """허브 하나의 부록: 전국체전 우승자 + 국가대표 선발전 결과(tools/trials.py). 둘 다 없으면 ''."""
+    from trials import hub_part
+    trials = hub_part(file)
     if data is None:
         data = json.loads(DATA.read_text(encoding='utf-8')) if DATA.exists() else {}
     d = (data.get('sports') or {}).get(file)
     if not d or not d.get('festival'):
-        return ''
+        return f'<section id="domestic">\n<h2>부록: 국내 대회 우승자</h2>\n{trials}\n</section>' if trials else ''
     f = d['festival']
     events = sorted(f['events'], key=lambda e: _rank(e['division']))  # 안정 정렬: 같은 종별 안에서는 공식 순서 유지
     senior = [e for e in events if _rank(e['division'])[0] == 0]
@@ -124,6 +130,8 @@ def hub_block(file, data=None):
         part = [e for e in events if _rank(e['division'])[0] == level]
         if part:
             out.append(f'<details><summary>{label} 우승자 ({len(part)}개 세부종목)</summary>{_table(part)}</details>')
+    if trials:
+        out.append(trials)
     return '<section id="domestic">\n<h2>부록: 국내 대회 우승자</h2>\n' + '\n'.join(out) + '\n</section>'
 
 
