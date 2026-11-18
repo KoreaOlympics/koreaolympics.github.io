@@ -20,20 +20,27 @@ from summer_live import live_section  # noqa: E402
 KIND = {'direct': '직행', 'worlds': '세계선수권', 'cont': '대륙 예선', 'rank': '랭킹·기간', 'etc': '준비·마감'}
 LIVE_PAGES = [('olarchery-live.html', '양궁 실시간 결과'), ('oltabletennis-live.html', '탁구 실시간 결과'), ('winter/', '동계 실시간 센터')]
 STATUS_JS = '''<script>
-// 오늘(KST) 기준으로 진행 중·예정·종료를 표시하고, 끝난 지 30일이 지난 대회는 접는다.
+// 오늘(KST) 기준으로 진행 중·예정·종료를 표시한다. 진행 중은 맨 위, 끝난 대회는 맨 아래로 옮기고 14일이 지나면 숨긴다.
 (function () {
   var today = new Date().toLocaleDateString('en-CA', {timeZone: 'Asia/Seoul'});
-  var old = new Date(Date.now() - 30 * 864e5).toLocaleDateString('en-CA', {timeZone: 'Asia/Seoul'});
-  document.querySelectorAll('tr[data-start]').forEach(function (tr) {
+  var old = new Date(Date.now() - 14 * 864e5).toLocaleDateString('en-CA', {timeZone: 'Asia/Seoul'});
+  var rows = Array.prototype.slice.call(document.querySelectorAll('tr[data-start]')), done = [], now = [];
+  rows.forEach(function (tr) {
     var s = tr.dataset.start, e = tr.dataset.end || s, cell = tr.querySelector('.st');
-    if (e < today) { cell.textContent = '종료'; tr.className = 'done'; if (e < old) tr.hidden = true; }
-    else if (s <= today) { cell.innerHTML = '<b class="ongoing">진행 중</b>'; tr.className = 'now'; }
+    if (e < today) { cell.textContent = '종료'; tr.className = 'done'; if (e < old) tr.hidden = true; done.push(tr); }
+    else if (s <= today) { cell.innerHTML = '<b class="ongoing">진행 중</b>'; tr.className = 'now'; now.push(tr); }
     else { cell.textContent = '예정'; }
   });
+  if (rows.length) {
+    var tb = rows[0].parentNode;
+    now.reverse().forEach(function (tr) { tb.insertBefore(tr, tb.firstChild); });
+    done.forEach(function (tr) { tb.appendChild(tr); });
+  }
 })();
 </script>'''
 STYLE = '''<style>
 tr.now td { background: #fdf0f0; } tr.done td { color: #72777d; } b.ongoing { color: #d33; }
+details.result-card.done > summary, details.result-card.done > summary b { color: #54595d; font-weight: normal; } ul.next-events { margin: .3em 0 .5em; }
 .menu-links a { margin-right: 12px; } .nowrap { white-space: nowrap; } td.num { text-align: right; }
 </style>'''
 
@@ -62,7 +69,7 @@ def summer_live():
 <h2>예선 대회 일정</h2>
 <div class="tw"><table class="wikitable"><thead><tr><th>기간</th><th>종목</th><th>대회</th><th>구분</th><th>상태</th></tr></thead>
 <tbody>{"".join(rows)}</tbody></table></div>
-<p class="note">일정 출처: data/index-schedule.json (메인 '예선 일정'과 같은 자료). 끝난 지 30일이 지난 대회는 숨긴다.</p>'''
+<p class="note">일정 출처: data/index-schedule.json (메인 '예선 일정'과 같은 자료). 끝난 대회는 아래로 내리고 14일이 지나면 숨긴다.</p>'''
     return page('하계 실시간 | LA28 예선', '', STYLE + body + STATUS_JS, 'LA28 하계 종목 예선 대회 진행 상황과 실시간 결과 페이지')
 
 

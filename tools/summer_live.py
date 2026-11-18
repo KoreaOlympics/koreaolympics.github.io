@@ -155,15 +155,13 @@ def quota_holder(res, quota_event, noc):
     return ''
 
 
-def korea_summary(data=None):
-    """진행 중·최근 대회에서 한국이 얻은 LA28 출전권과 메달 — summer-live.html 맨 위."""
-    data = data or load(OUT, {'results': {}})
-    srcs = sorted(sources(), key=lambda s: s['start'], reverse=True)
+def korea_items(srcs, data):
+    """대회별 한국 LA28 출전권·메달 [(대회, 출전권, 메달)]."""
     names = kor_names()
     items = []
     for src in srcs:
         res = data['results'].get(src['id'])
-        if not res or not in_window(src) or status(src) == 'soon':
+        if not res:
             continue
         quotas = [ko(ev) + quota_holder(res, ev, 'KOR') for ev, _, nocs in res.get('quotas', []) if 'KOR' in nocs]
         meds = []
@@ -175,11 +173,19 @@ def korea_summary(data=None):
                     meds.append(f'{"🥇🥈🥉"[min(i, 2)]} {label}{" · " + stage if stage else ""} {who_}')
         if quotas or meds:
             items.append((src, quotas, meds))
+    return items
+
+
+def korea_summary(data=None):
+    """진행 중인 대회에서 한국이 얻은 LA28 출전권과 메달 — summer-live.html 맨 위 상자. 끝난 대회는 넣지 않는다."""
+    data = data or load(OUT, {'results': {}})
+    live = [s for s in sorted(sources(), key=lambda s: s['start'], reverse=True) if status(s) == 'live']
+    items = korea_items(live, data)
     if not items:
         return ''
     out = ['<div class="korea-news"><h2>🇰🇷 한국 소식 <span class="asof">' + E(data.get('asof', '')) + '</span></h2>']
     for src, quotas, meds in items:
-        out.append(f'<h3>{E(src["title"])} <span class="small">{E(src.get("place", ""))} · {"진행 중" if status(src) == "live" else "종료"}</span></h3><ul>')
+        out.append(f'<h3>{E(src["title"])} <span class="small">{E(src.get("place", ""))} · 진행 중</span></h3><ul>')
         out += [f'<li><b>LA28 출전권 획득</b>: {E(q)}</li>' for q in quotas]
         out += [f'<li>{E(m)}</li>' for m in meds]
         out.append('</ul>')
@@ -276,7 +282,7 @@ def event_card(src, res, codes, names, up='', open_=False, limit=None):
     rows = rows_of(src, res)
     done = [r for r in rows if r[3]]
     g = kor_line(rows)
-    tag = {'live': '<b class="ongoing">진행 중</b>', 'done': '종료', 'soon': '예정'}[st]
+    tag = {'live': '<b class="ongoing">진행 중</b>', 'done': '<span class="small">종료</span>', 'soon': '<span class="small">예정</span>'}[st]
     wiki = 'https://en.wikipedia.org/wiki/' + src['wiki'].replace(' ', '_')
     head = (f'<summary><b>{E(src["title"])}</b> <span class="small">{E(src.get("place", ""))} · {E(src["start"][5:].replace("-", "."))}~{E(src["end"][5:].replace("-", "."))}</span> '
             f'{tag} <span class="small">예선: {E(src.get("qualifies", ""))} · 결과 {len(done)}/{len(rows)}종목 · 한국 금{g[0]} 은{g[1]} 동{g[2]}</span></summary>')
@@ -312,7 +318,7 @@ def event_card(src, res, codes, names, up='', open_=False, limit=None):
         body.append('<p class="small"><b>LA28 출전권</b>: ' + ' · '.join(
             f'{E(ko(ev))} ' + ', '.join(f'{flag(c, up)}{E(codes.get(c, [c])[0])}' for c in l) for ev, _, l in res['quotas']) + '</p>')
     body.append(f'<p class="src">출처: <a href="{E(wiki)}">위키백과 {E(src["wiki"])}</a> · {E(res["fetched"])} 읽음</p>')
-    return f'<details class="result-card"{" open" if open_ else ""}>{head}{"".join(body)}</details>'
+    return f'<details class="result-card{" done" if st == "done" else ""}"{" open" if open_ else ""}>{head}{"".join(body)}</details>'
 
 
 def hub_block(file, data=None):
@@ -346,20 +352,45 @@ def render():
     print(f'{n}개 허브에 대회 결과')
 
 
+def upcoming(limit=6, day=None):
+    """data/index-schedule.json에서 오늘 진행 중이거나 다가오는 예선 일정 (결과를 모으지 않는 대회 포함)."""
+    day = day or today()
+    sched = load(ROOT / 'data/index-schedule.json', {'events': []})['events']
+    return sorted((e for e in sched if (e.get('end') or e['start']) >= day), key=lambda e: e['start'])[:limit]
+
+
 def live_section():
-    """summer-live.html 첫머리: 진행 중이거나 열흘 안에 끝난 대회 결과, 그 밖의 2026 대회 목록."""
+    """summer-live.html 첫머리: 진행 중 대회를 맨 위에 펼치고, 다가오는 일정을 보여 준 뒤, 끝난 대회는 접어서 아래에 둔다."""
     data = load(OUT, {'results': {}})
     codes, names = nocs(), kor_names()
     reg = json.loads((ROOT / 'data/olympic-structure.json').read_text(encoding='utf-8'))
     hub = {s['file']: s['name'] for s in reg['summer']['sports']}
-    srcs = sorted(sources(), key=lambda s: s['start'], reverse=True)
-    now = [s for s in srcs if s['id'] in data['results'] and in_window(s) and status(s) != 'soon']
-    out = [korea_summary(data), f'<h2>진행 중·최근 대회 결과 <span class="asof">{E(data.get("asof", ""))}</span></h2>']
-    if now:
-        out += [f'<h3>{E(hub.get(s["sport"], ""))}</h3>' + event_card(s, data['results'][s['id']], codes, names, open_=s.get('kind') != 'season') for s in now]
+    have = [s for s in sorted(sources(), key=lambda s: s['start'], reverse=True) if s['id'] in data['results']]
+    live = [s for s in have if status(s) == 'live']
+    recent = sorted((s for s in have if status(s) == 'done' and in_window(s)), key=lambda s: s['end'], reverse=True)
+    out = [korea_summary(data), f'<h2>진행 중 대회 <span class="asof">{E(data.get("asof", ""))}</span></h2>']
+    if live:
+        out += [f'<h3>{E(hub.get(s["sport"], ""))}</h3>' + event_card(s, data['results'][s['id']], codes, names, open_=s.get('kind') != 'season') for s in live]
     else:
-        out.append('<p class="muted">지금 진행 중인 대회가 없다.</p>')
-    rest = [s for s in srcs if s['id'] in data['results'] and s not in now]
+        out.append('<p class="muted">지금 결과를 모으는 대회가 없다.</p>')
+    nxt = upcoming()
+    if nxt:
+        def when(e):
+            a = e['start'][5:].replace('-', '.')
+            return a + ('~' + e['end'][5:].replace('-', '.') if e.get('end') and e['end'] != e['start'] else '')
+        out.append('<h3>다가오는 예선 일정</h3><ul class="next-events">' + ''.join(
+            f'<li><span class="nowrap">{E(when(e))}</span> <a href="{E(e["sport"])}.html">{E(e.get("label") or hub.get(e["sport"], e["sport"]))}</a> · '
+            + (f'<b>{E(e["title"])}</b>' if e.get('major') else E(e['title']))
+            + (' <b class="ongoing">진행 중</b>' if e['start'] <= today() else '') + '</li>' for e in nxt)
+            + '</ul><p class="small">전체 일정은 아래 \'예선 대회 일정\' 표에 있다.</p>')
+    if recent:
+        out.append('<h2>최근 끝난 대회 <span class="small">(10일 이내)</span></h2>')
+        for src, quotas, meds in korea_items(recent, data):
+            n = [sum(1 for m in meds if m.startswith(c)) for c in '🥇🥈🥉']
+            bits = [f'LA28 출전권 {E(q)}' for q in quotas] + ([f'메달 금{n[0]} 은{n[1]} 동{n[2]}'] if meds else [])
+            out.append(f'<p class="small">한국 · {E(src["title"])}: ' + ' · '.join(bits) + '</p>')
+        out += [event_card(s, data['results'][s['id']], codes, names) for s in recent]
+    rest = [s for s in have if s not in live and s not in recent]
     if rest:
         out.append('<h2>LA28 예선 대회 결과 모음</h2><div class="tw"><table class="wikitable"><thead><tr><th>기간</th><th>종목</th><th>대회</th><th>결과</th><th>한국</th></tr></thead><tbody>')
         for s in rest:
@@ -370,7 +401,6 @@ def live_section():
                        f'<td class="nowrap">금{g[0]} 은{g[1]} 동{g[2]}</td></tr>')
         out.append('</tbody></table></div>')
     return '\n'.join(out)
-
 
 if __name__ == '__main__':
     cmd = sys.argv[1] if len(sys.argv) > 1 else 'render'
