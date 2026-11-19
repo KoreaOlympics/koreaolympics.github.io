@@ -14,7 +14,7 @@
   "state": "",
   "url": "https://live.isuresults.eu/events/2027_JPN_0001/schedule"
  },
- "checked_at": "2026-11-19T23:14:49.059862+00:00",
+ "checked_at": "2026-11-19T23:25:30.238984+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:05:00Z",
@@ -151,11 +151,11 @@
   "1": {
    "title": "1000m Women Division B",
    "start_utc": "2026-11-20T01:05:00Z",
-   "live": false,
+   "live": true,
    "official": false,
    "distance": "1,000 Meter",
    "division": "B",
-   "start_list": true,
+   "start_list": false,
    "rows": [
     {
      "rank": null,
@@ -2356,5 +2356,48 @@
    ]
   }
  },
- "korea": []
+ "korea": [
+  {
+   "event_id": "ssr-2027_JPN_0001",
+   "sport": "speed-skating",
+   "event": "ISU Speed Skating World Cup #2",
+   "distance": "1000m Women Division B",
+   "round": "Division B",
+   "heat": "",
+   "start_utc": "2026-11-20T01:05:00Z",
+   "rank": null,
+   "name": "Huidan Jung",
+   "noc": "KOR",
+   "time": "",
+   "behind": "",
+   "lane": "I",
+   "pair": 2,
+   "medal": null,
+   "status": "",
+   "points": null,
+   "official": true,
+   "qual": ""
+  },
+  {
+   "event_id": "ssr-2027_JPN_0001",
+   "sport": "speed-skating",
+   "event": "ISU Speed Skating World Cup #2",
+   "distance": "1000m Women Division B",
+   "round": "Division B",
+   "heat": "",
+   "start_utc": "2026-11-20T01:05:00Z",
+   "rank": null,
+   "name": "Minsun Kim",
+   "noc": "KOR",
+   "time": "",
+   "behind": "",
+   "lane": "I",
+   "pair": 10,
+   "medal": null,
+   "status": "",
+   "points": null,
+   "official": true,
+   "qual": ""
+  }
+ ]
 }
