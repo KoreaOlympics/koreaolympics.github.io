@@ -3,12 +3,13 @@
   "id": "isu-15999",
   "sport": "figure-skating",
   "source": "ISU",
+  "season": "2026/2027",
   "slug": "isu-gp-finlandia-trophy-2026",
   "name": "ISU Figure Skating Grand Prix Finlandia Trophy 2026",
   "category": "ISU Grand Prix",
   "start": "2026-11-20",
   "end": "2026-11-21",
-  "start_utc": "2026-11-19T22:00:00.000Z",
+  "start_utc": "2026-11-20T11:00:00.000Z",
   "end_utc": "2026-11-21T21:59:59.000Z",
   "tz": "Europe/Kyiv",
   "city": "Helsinki",
@@ -17,7 +18,7 @@
   "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-finlandia-trophy-2026/"
  },
- "checked_at": "2026-10-24T18:53:35.691372+00:00",
+ "checked_at": "2026-11-19T03:15:57.982667+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T12:00:00.000Z",
@@ -32,7 +33,7 @@
    "title": "Women",
    "round": "Short Program",
    "event_result_id": 15732,
-   "round_id": null,
+   "round_id": 23005,
    "type": "Singles"
   },
   {
@@ -64,7 +65,7 @@
    "title": "Women",
    "round": "Free Skating",
    "event_result_id": 15732,
-   "round_id": null,
+   "round_id": 23006,
    "type": "Singles"
   },
   {
@@ -84,6 +85,27 @@
    "type": "Couples"
   }
  ],
- "results": {},
+ "results": {
+  "15733": {
+   "title": "Pairs",
+   "segments": [],
+   "rows": []
+  },
+  "15732": {
+   "title": "Women",
+   "segments": [],
+   "rows": []
+  },
+  "15731": {
+   "title": "Men",
+   "segments": [],
+   "rows": []
+  },
+  "15734": {
+   "title": "Ice Dance",
+   "segments": [],
+   "rows": []
+  }
+ },
  "korea": []
 }
