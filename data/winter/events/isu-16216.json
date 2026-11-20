@@ -18,7 +18,7 @@
   "live": "Men 5000 m Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-20T07:44:42.032443+00:00",
+ "checked_at": "2026-11-20T07:55:20.084458+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -6473,27 +6473,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "People's Republic of China",
-         "noc": "CHN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 1,
-         "slug": ""
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Ain2",
          "noc": "AIN2",
-         "time": "",
-         "qual": "",
+         "time": "6:57.590",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -6501,11 +6489,23 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "People's Republic of China",
+         "noc": "CHN",
+         "time": "6:57.808",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": 3,
          "name": "Italy",
          "noc": "ITA",
-         "time": "",
-         "qual": "",
+         "time": "6:57.942",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": null,
@@ -6513,10 +6513,10 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Kazakhstan",
          "noc": "KAZ",
-         "time": "",
+         "time": "6:58.644",
          "qual": "",
          "status": "",
          "record": "",
@@ -6528,8 +6528,8 @@
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
         {
          "rank": null,
@@ -6557,18 +6557,6 @@
         },
         {
          "rank": null,
-         "name": "Turkiye",
-         "noc": "TUR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 3,
-         "slug": ""
-        },
-        {
-         "rank": null,
          "name": "United States of America",
          "noc": "USA",
          "time": "",
@@ -6577,6 +6565,18 @@
          "record": "",
          "bib": null,
          "lane": 4,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Turkiye",
+         "noc": "TUR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
          "slug": ""
         }
        ]
