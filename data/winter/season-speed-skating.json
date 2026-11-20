@@ -350,7 +350,26 @@
    "podiums": [
     {
      "title": "1000m Women",
-     "podium": null
+     "podium": [
+      {
+       "rank": 1,
+       "name": "Angel Daleman",
+       "noc": "NED",
+       "time": "1:13.709"
+      },
+      {
+       "rank": 2,
+       "name": "Isabel Grevelt",
+       "noc": "NED",
+       "time": "1:14.663"
+      },
+      {
+       "rank": 3,
+       "name": "Wiktoria Dąbrowska",
+       "noc": "POL",
+       "time": "1:14.803"
+      }
+     ]
     },
     {
      "title": "1000m Men",
@@ -442,10 +461,10 @@
  "medals": [
   [
    "NED",
-   6,
    7,
+   8,
    3,
-   16
+   18
   ],
   [
    "CHN",
@@ -504,18 +523,18 @@
    2
   ],
   [
-   "USA",
+   "POL",
    0,
    0,
    2,
    2
   ],
   [
-   "POL",
+   "USA",
    0,
    0,
-   1,
-   1
+   2,
+   2
   ]
  ]
 }
