@@ -18,7 +18,7 @@
   "live": "Women 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-20T06:18:40.394274+00:00",
+ "checked_at": "2026-11-20T06:29:30.031258+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -5112,7 +5112,7 @@
          "name": "Minji KIM",
          "noc": "KOR",
          "time": "1:32.112",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 78,
@@ -5348,15 +5348,15 @@
       },
       {
        "name": "Heat 6",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Gilli KIM",
          "noc": "KOR",
-         "time": "",
-         "qual": "",
+         "time": "1:32.202",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 5,
@@ -5364,11 +5364,11 @@
          "slug": "gilli-kim"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Li GONG",
          "noc": "CHN",
-         "time": "",
-         "qual": "",
+         "time": "1:32.223",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 19,
@@ -5376,10 +5376,10 @@
          "slug": "li-gong"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Margherita BETTI",
          "noc": "ITA",
-         "time": "",
+         "time": "1:32.371",
          "qual": "",
          "status": "",
          "record": "",
@@ -5388,10 +5388,10 @@
          "slug": "margherita-betti"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Kateryna SOLOVIOVA",
          "noc": "GER",
-         "time": "",
+         "time": "1:32.489",
          "qual": "",
          "status": "",
          "record": "",
@@ -5403,27 +5403,15 @@
       },
       {
        "name": "Heat 7",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Chiara BETTI",
-         "noc": "ITA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 16,
-         "lane": 1,
-         "slug": "chiara-betti"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Jiarui SONG",
          "noc": "CHN",
-         "time": "",
-         "qual": "",
+         "time": "1:34.695",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 54,
@@ -5431,11 +5419,11 @@
          "slug": "jiarui-song"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Tineke DEN DULK",
          "noc": "BEL",
-         "time": "",
-         "qual": "",
+         "time": "1:34.790",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 44,
@@ -5443,22 +5431,34 @@
          "slug": "tineke-den-dulk-1"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Ann-Sophie BACHAND",
          "noc": "CAN",
-         "time": "",
-         "qual": "",
+         "time": "no time",
+         "qual": "ADV",
          "status": "",
          "record": "",
          "bib": 51,
          "lane": 4,
          "slug": "ann-sophie-bachand"
+        },
+        {
+         "rank": null,
+         "name": "Chiara BETTI",
+         "noc": "ITA",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 16,
+         "lane": 1,
+         "slug": "chiara-betti"
         }
        ]
       },
       {
        "name": "Heat 8",
-       "status": "Scheduled",
+       "status": "Getting Ready",
        "official": "Start List",
        "competitors": [
         {
@@ -6020,7 +6020,7 @@
    "name": "Minji KIM",
    "noc": "KOR",
    "time": "1:32.112",
-   "qual": "p",
+   "qual": "",
    "status": "",
    "record": "",
    "bib": 78,
@@ -6073,11 +6073,11 @@
    "round": "Heats",
    "heat": "Heat 6",
    "start_utc": "2026-11-20T06:00:20.000Z",
-   "rank": null,
+   "rank": 1,
    "name": "Gilli KIM",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "1:32.202",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 5,
