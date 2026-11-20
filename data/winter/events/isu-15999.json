@@ -15,10 +15,10 @@
   "city": "Helsinki",
   "country": "FIN",
   "state": "Live",
-  "live": "BRATTI Emily / SOMERVILLE Ian",
+  "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-finlandia-trophy-2026/"
  },
- "checked_at": "2026-11-20T17:43:08.498997+00:00",
+ "checked_at": "2026-11-20T17:53:49.552354+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T12:09:00.000Z",
@@ -921,6 +921,40 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Juulia TURKKILA / Matthias VERSLUIS",
+     "noc": "FIN",
+     "points": "77.58",
+     "status": "Active",
+     "segments": {
+      "RD": {
+       "name": "Rhythm Dance",
+       "rank": 1,
+       "total": "77.58",
+       "tes": "43.00",
+       "pcs": "34.58",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
+     "name": "Emily BRATTI / Ian SOMERVILLE",
+     "noc": "USA",
+     "points": "70.55",
+     "status": "Active",
+     "segments": {
+      "RD": {
+       "name": "Rhythm Dance",
+       "rank": 2,
+       "total": "70.55",
+       "tes": "39.82",
+       "pcs": "30.73",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 3,
      "name": "Marjorie LAJOIE / Jean-Luc BAKER",
      "noc": "CAN",
      "points": "68.00",
@@ -928,7 +962,7 @@
      "segments": {
       "RD": {
        "name": "Rhythm Dance",
-       "rank": 1,
+       "rank": 3,
        "total": "68.00",
        "tes": "36.27",
        "pcs": "31.73",
@@ -937,7 +971,7 @@
      }
     },
     {
-     "rank": 2,
+     "rank": 4,
      "name": "Milla Ruud REITAN / Nikolaj MAJOROV",
      "noc": "SWE",
      "points": "60.96",
@@ -945,44 +979,10 @@
      "segments": {
       "RD": {
        "name": "Rhythm Dance",
-       "rank": 2,
+       "rank": 4,
        "total": "60.96",
        "tes": "32.80",
        "pcs": "28.16",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Emily BRATTI / Ian SOMERVILLE",
-     "noc": "USA",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "RD": {
-       "name": "Rhythm Dance",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Juulia TURKKILA / Matthias VERSLUIS",
-     "noc": "FIN",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "RD": {
-       "name": "Rhythm Dance",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
        "status": "Running"
       }
      }
