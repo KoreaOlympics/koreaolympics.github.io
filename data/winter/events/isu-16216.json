@@ -18,7 +18,7 @@
   "live": "Men 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-20T01:25:37.803441+00:00",
+ "checked_at": "2026-11-20T01:36:24.847387+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -426,7 +426,7 @@
          "name": "Benjamin SULLIVAN",
          "noc": "USA",
          "time": "41.155",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 113,
@@ -560,7 +560,7 @@
          "name": "Adriaan DEWAGTERE",
          "noc": "BEL",
          "time": "41.870",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 53,
@@ -694,7 +694,7 @@
          "name": "Tobias WOLF",
          "noc": "AUT",
          "time": "42.154",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 52,
@@ -851,15 +851,15 @@
       },
       {
        "name": "Heat 8",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Peter Joseph GROSECLOSE",
          "noc": "PHI",
-         "time": "",
-         "qual": "",
+         "time": "42.798",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 102,
@@ -867,11 +867,11 @@
          "slug": "peter-joseph-groseclose"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Nicolas ANDERMANN",
          "noc": "AUT",
-         "time": "",
-         "qual": "",
+         "time": "42.899",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 51,
@@ -879,10 +879,10 @@
          "slug": "nicolas-andermann"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Linus August RISNES",
          "noc": "NOR",
-         "time": "",
+         "time": "43.125",
          "qual": "",
          "status": "",
          "record": "",
@@ -891,10 +891,10 @@
          "slug": "linus-august-risnes"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Tsz Fung KWOK",
          "noc": "HKG",
-         "time": "",
+         "time": "43.264",
          "qual": "",
          "status": "",
          "record": "",
@@ -960,6 +960,13 @@
         "qual": "Q"
        },
        {
+        "name": "Peter Joseph GROSECLOSE",
+        "noc": "PHI",
+        "rank": 1,
+        "time": "42.798",
+        "qual": "Q"
+       },
+       {
         "name": "Kazuki YOSHINAGA",
         "noc": "JPN",
         "rank": 2,
@@ -1009,44 +1016,77 @@
         "qual": "Q"
        },
        {
+        "name": "Nicolas ANDERMANN",
+        "noc": "AUT",
+        "rank": 2,
+        "time": "42.899",
+        "qual": "Q"
+       },
+       {
         "name": "Vladimir BALBEKOV",
         "noc": "AIN2",
         "rank": 4,
         "time": "1:02.869",
         "qual": "ADV"
+       },
+       {
+        "name": "Benjamin SULLIVAN",
+        "noc": "USA",
+        "rank": 3,
+        "time": "41.155",
+        "qual": "q"
+       },
+       {
+        "name": "Adriaan DEWAGTERE",
+        "noc": "BEL",
+        "rank": 3,
+        "time": "41.870",
+        "qual": "q"
+       },
+       {
+        "name": "Tobias WOLF",
+        "noc": "AUT",
+        "rank": 3,
+        "time": "42.154",
+        "qual": "q"
        }
       ],
       "races": [
        [
-        "Konstantin IVLIEV (AIN2)"
-       ],
-       [
-        "Seochan BAE (KOR)",
+        "Konstantin IVLIEV (AIN2)",
+        "Nicolas ANDERMANN (AUT)",
         "Vladimir BALBEKOV (AIN2)"
        ],
        [
+        "Seochan BAE (KOR)",
+        "Yanghun Ben JUNG (GER)",
+        "Benjamin SULLIVAN (USA)"
+       ],
+       [
         "Tibor KOMERICKI (SLO)",
-        "Yanghun Ben JUNG (GER)"
+        "Daniele ZAMPEDRI (ITA)",
+        "Adriaan DEWAGTERE (BEL)"
        ],
        [
         "Justin LIU (USA)",
-        "Daniele ZAMPEDRI (ITA)"
+        "Damir KURMANOV (KAZ)",
+        "Tobias WOLF (AUT)"
        ],
        [
         "Taesung KIM (KOR)",
-        "Damir KURMANOV (KAZ)"
-       ],
-       [
-        "Brendan COREY (AUS)",
         "Muhammed BOZDAG (TUR)"
        ],
        [
-        "Shuta MATSUZU (JPN)",
+        "Brendan COREY (AUS)",
         "Lorenzo PREVITALI (ITA)"
        ],
        [
-        "Kazuki YOSHINAGA (JPN)",
+        "Shuta MATSUZU (JPN)",
         "Takumi WADA (JPN)"
+       ],
+       [
+        "Peter Joseph GROSECLOSE (PHI)",
+        "Kazuki YOSHINAGA (JPN)"
        ]
       ]
      }
