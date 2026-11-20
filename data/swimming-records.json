@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-19T01:52:08+00:00",
+  "checked_at": "2026-11-20T01:46:53+00:00",
   "pool": "50m",
   "records": {
     "mfree50": {
@@ -35,10 +35,10 @@
       "status": "연맹 게시"
     },
     "mfree800": {
-      "time": "7:46.03",
-      "holder": "김우민",
-      "date": "2023-09-28",
-      "meet": "제19회 아시아경기대회",
+      "time": "7:43.86",
+      "holder": "김준우",
+      "date": "2026-09-24",
+      "meet": "제20회 아시아경기대회",
       "source": "https://www.korswim.co.kr/page/14?cate=006001&cor=021002",
       "status": "연맹 게시"
     },
@@ -75,10 +75,10 @@
       "status": "연맹 게시"
     },
     "wfree400": {
-      "time": "4:09.65",
-      "holder": "박희경",
-      "date": "2026-08-09",
-      "meet": "제45회 대통령배 전국수영대회",
+      "time": "4:09.23",
+      "holder": "한다경",
+      "date": "2026-10-20",
+      "meet": "제107회 전국체육대회",
       "source": "https://www.korswim.co.kr/page/14?cate=006001&cor=021002",
       "status": "연맹 게시"
     },
@@ -331,5 +331,46 @@
       "status": "연맹 게시"
     }
   },
-  "history": []
+  "history": [
+    {
+      "event": "mfree800",
+      "previous": {
+        "time": "7:46.03",
+        "holder": "김우민",
+        "date": "2023-09-28",
+        "meet": "제19회 아시아경기대회",
+        "source": "https://www.korswim.co.kr/page/14?cate=006001&cor=021002",
+        "status": "연맹 게시"
+      },
+      "next": {
+        "time": "7:43.86",
+        "holder": "김준우",
+        "date": "2026-09-24",
+        "meet": "제20회 아시아경기대회",
+        "source": "https://www.korswim.co.kr/page/14?cate=006001&cor=021002",
+        "status": "연맹 게시"
+      },
+      "detected": "2026-11-20"
+    },
+    {
+      "event": "wfree400",
+      "previous": {
+        "time": "4:09.65",
+        "holder": "박희경",
+        "date": "2026-08-09",
+        "meet": "제45회 대통령배 전국수영대회",
+        "source": "https://www.korswim.co.kr/page/14?cate=006001&cor=021002",
+        "status": "연맹 게시"
+      },
+      "next": {
+        "time": "4:09.23",
+        "holder": "한다경",
+        "date": "2026-10-20",
+        "meet": "제107회 전국체육대회",
+        "source": "https://www.korswim.co.kr/page/14?cate=006001&cor=021002",
+        "status": "연맹 게시"
+      },
+      "detected": "2026-11-20"
+    }
+  ]
 }
