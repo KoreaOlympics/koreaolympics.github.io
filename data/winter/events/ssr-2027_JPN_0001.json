@@ -14,7 +14,7 @@
   "state": "",
   "url": "https://live.isuresults.eu/events/2027_JPN_0001/schedule"
  },
- "checked_at": "2026-11-20T03:46:23.029283+00:00",
+ "checked_at": "2026-11-20T03:56:55.332931+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:05:00Z",
@@ -1037,6 +1037,19 @@
     },
     {
      "rank": 2,
+     "name": "Ethan Cepuran",
+     "noc": "USA",
+     "time": "6:24.178",
+     "behind": "3.667",
+     "lane": "O",
+     "pair": 4,
+     "medal": null,
+     "status": 0,
+     "points": null,
+     "official": true
+    },
+    {
+     "rank": 3,
      "name": "Filip Moeller Nordal",
      "noc": "NOR",
      "time": "6:25.574",
@@ -1049,7 +1062,20 @@
      "official": true
     },
     {
-     "rank": 3,
+     "rank": 4,
+     "name": "Daniel Hall",
+     "noc": "CAN",
+     "time": "6:26.852",
+     "behind": "6.341",
+     "lane": "O",
+     "pair": 4,
+     "medal": null,
+     "status": 0,
+     "points": null,
+     "official": true
+    },
+    {
+     "rank": 5,
      "name": "Seungkyum Kim",
      "noc": "KOR",
      "time": "6:27.355",
@@ -1062,7 +1088,20 @@
      "official": true
     },
     {
-     "rank": 4,
+     "rank": 6,
+     "name": "Vadim Yakubovskiy",
+     "noc": "KAZ",
+     "time": "6:27.577",
+     "behind": "7.066",
+     "lane": "I",
+     "pair": 4,
+     "medal": null,
+     "status": 0,
+     "points": null,
+     "official": true
+    },
+    {
+     "rank": 7,
      "name": "Shomu Sasaki",
      "noc": "JPN",
      "time": "6:29.186",
@@ -1075,7 +1114,7 @@
      "official": true
     },
     {
-     "rank": 5,
+     "rank": 8,
      "name": "Lukas Stekly",
      "noc": "SVK",
      "time": "6:29.249",
@@ -1088,7 +1127,7 @@
      "official": true
     },
     {
-     "rank": 6,
+     "rank": 9,
      "name": "Sil van der Veen",
      "noc": "NED",
      "time": "6:31.000",
@@ -1101,7 +1140,20 @@
      "official": true
     },
     {
-     "rank": 7,
+     "rank": 10,
+     "name": "Xuanyu Zhou",
+     "noc": "CHN",
+     "time": "6:32.278",
+     "behind": "11.767",
+     "lane": "I",
+     "pair": 4,
+     "medal": null,
+     "status": 0,
+     "points": null,
+     "official": true
+    },
+    {
+     "rank": 11,
      "name": "Yuta Fuchigami",
      "noc": "JPN",
      "time": "6:32.752",
@@ -1114,7 +1166,7 @@
      "official": true
     },
     {
-     "rank": 8,
+     "rank": 12,
      "name": "Jaro Flaig",
      "noc": "GER",
      "time": "6:35.161",
@@ -1127,7 +1179,7 @@
      "official": true
     },
     {
-     "rank": 9,
+     "rank": 13,
      "name": "Sergio Alvarez Fernandez",
      "noc": "ESP",
      "time": "6:36.895",
@@ -1140,7 +1192,7 @@
      "official": true
     },
     {
-     "rank": 10,
+     "rank": 14,
      "name": "Kelin Dunfee",
      "noc": "USA",
      "time": "6:48.956",
@@ -1162,58 +1214,6 @@
      "pair": 1,
      "medal": null,
      "status": 3,
-     "points": null,
-     "official": true
-    },
-    {
-     "rank": null,
-     "name": "Vadim Yakubovskiy",
-     "noc": "KAZ",
-     "time": "",
-     "behind": "",
-     "lane": "I",
-     "pair": 4,
-     "medal": null,
-     "status": null,
-     "points": null,
-     "official": true
-    },
-    {
-     "rank": null,
-     "name": "Ethan Cepuran",
-     "noc": "USA",
-     "time": "",
-     "behind": "",
-     "lane": "O",
-     "pair": 4,
-     "medal": null,
-     "status": null,
-     "points": null,
-     "official": true
-    },
-    {
-     "rank": null,
-     "name": "Xuanyu Zhou",
-     "noc": "CHN",
-     "time": "",
-     "behind": "",
-     "lane": "I",
-     "pair": 4,
-     "medal": null,
-     "status": null,
-     "points": null,
-     "official": true
-    },
-    {
-     "rank": null,
-     "name": "Daniel Hall",
-     "noc": "CAN",
-     "time": "",
-     "behind": "",
-     "lane": "O",
-     "pair": 4,
-     "medal": null,
-     "status": null,
      "points": null,
      "official": true
     },
@@ -2470,7 +2470,7 @@
    "round": "Division B",
    "heat": "",
    "start_utc": "2026-11-20T03:08:00Z",
-   "rank": 3,
+   "rank": 5,
    "name": "Seungkyum Kim",
    "noc": "KOR",
    "time": "6:27.355",
