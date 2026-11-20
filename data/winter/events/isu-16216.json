@@ -18,7 +18,7 @@
   "live": "Men 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-20T01:04:07.356282+00:00",
+ "checked_at": "2026-11-20T01:14:52.195532+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -461,15 +461,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Brendan COREY",
          "noc": "AUS",
-         "time": "",
-         "qual": "",
+         "time": "42.038",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 18,
@@ -477,11 +477,11 @@
          "slug": "brendan-corey"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Yanghun Ben JUNG",
          "noc": "GER",
-         "time": "",
-         "qual": "",
+         "time": "42.606",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 78,
@@ -489,11 +489,11 @@
          "slug": "yanghun-ben-jung"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Maxim MAXIMOV",
          "noc": "BUL",
-         "time": "",
-         "qual": "",
+         "time": "42.822",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 63,
@@ -501,54 +501,42 @@
          "slug": "maxim-maximov"
         },
         {
-         "rank": null,
-         "name": "Pavel TSOY",
-         "noc": "KAZ",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 136,
-         "lane": 4,
-         "slug": "pavel-tsoy"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Vladimir BALBEKOV",
          "noc": "AIN2",
-         "time": "",
-         "qual": "",
+         "time": "1:02.869",
+         "qual": "ADV",
          "status": "",
          "record": "",
          "bib": 122,
          "lane": 5,
          "slug": "vladimir-balbekov"
+        },
+        {
+         "rank": null,
+         "name": "Pavel TSOY",
+         "noc": "KAZ",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 136,
+         "lane": 4,
+         "slug": "pavel-tsoy"
         }
        ]
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Takumi WADA",
-         "noc": "JPN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 90,
-         "lane": 1,
-         "slug": "takumi-wada"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Tibor KOMERICKI",
          "noc": "SLO",
-         "time": "",
-         "qual": "",
+         "time": "41.355",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 106,
@@ -556,11 +544,23 @@
          "slug": "tibor-komericki"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Takumi WADA",
+         "noc": "JPN",
+         "time": "41.530",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 90,
+         "lane": 1,
+         "slug": "takumi-wada"
+        },
+        {
+         "rank": 3,
          "name": "Adriaan DEWAGTERE",
          "noc": "BEL",
-         "time": "",
-         "qual": "",
+         "time": "41.870",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 53,
@@ -568,41 +568,41 @@
          "slug": "adriaan-dewagtere"
         },
         {
-         "rank": null,
-         "name": "Valentin KOBYZEV",
-         "noc": "AIN2",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 125,
-         "lane": 4,
-         "slug": "valentin-kobyzev"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Ivan MARTINIC",
          "noc": "CRO",
-         "time": "",
+         "time": "42.862",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 130,
          "lane": 5,
          "slug": "ivan-martinic"
+        },
+        {
+         "rank": 5,
+         "name": "Valentin KOBYZEV",
+         "noc": "AIN2",
+         "time": "1:11.337",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 125,
+         "lane": 4,
+         "slug": "valentin-kobyzev"
         }
        ]
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Live",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Shuta MATSUZU",
          "noc": "JPN",
-         "time": "",
+         "time": "42.210",
          "qual": "",
          "status": "",
          "record": "",
@@ -611,34 +611,10 @@
          "slug": "shuta-matsuzu"
         },
         {
-         "rank": null,
-         "name": "Enzo PROOST",
-         "noc": "BEL",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 128,
-         "lane": 2,
-         "slug": "enzo-proost"
-        },
-        {
-         "rank": null,
-         "name": "Chun-Chieh LIN",
-         "noc": "TPE",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 140,
-         "lane": 3,
-         "slug": "chun-chieh-lin"
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Daniele ZAMPEDRI",
          "noc": "ITA",
-         "time": "",
+         "time": "42.320",
          "qual": "",
          "status": "",
          "record": "",
@@ -647,16 +623,40 @@
          "slug": "daniele-zampedri"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "David NASHAEV",
          "noc": "KAZ",
-         "time": "",
+         "time": "42.390",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 135,
          "lane": 5,
          "slug": "david-nashaev"
+        },
+        {
+         "rank": 4,
+         "name": "Enzo PROOST",
+         "noc": "BEL",
+         "time": "42.490",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 128,
+         "lane": 2,
+         "slug": "enzo-proost"
+        },
+        {
+         "rank": 5,
+         "name": "Chun-Chieh LIN",
+         "noc": "TPE",
+         "time": "43.240",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 140,
+         "lane": 3,
+         "slug": "chun-chieh-lin"
         }
        ]
       },
@@ -758,7 +758,7 @@
         },
         {
          "rank": null,
-         "name": "Assen GYUROV",
+         "name": "Asen GYUROV",
          "noc": "BUL",
          "time": "",
          "qual": "",
@@ -766,7 +766,7 @@
          "record": "",
          "bib": 61,
          "lane": 3,
-         "slug": "assen-gyurov"
+         "slug": "asen-gyurov"
         },
         {
          "rank": null,
