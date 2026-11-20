@@ -15,10 +15,10 @@
   "city": "Helsinki",
   "country": "FIN",
   "state": "Live",
-  "live": "",
+  "live": "Mao SHIMADA",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-finlandia-trophy-2026/"
  },
- "checked_at": "2026-11-20T14:34:21.260252+00:00",
+ "checked_at": "2026-11-20T14:45:29.475052+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T12:09:00.000Z",
@@ -337,6 +337,23 @@
     },
     {
      "rank": 3,
+     "name": "Haein LEE",
+     "noc": "KOR",
+     "points": "67.76",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 3,
+       "total": "67.76",
+       "tes": "36.31",
+       "pcs": "31.45",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 4,
      "name": "Iida KARHUNEN",
      "noc": "FIN",
      "points": "66.24",
@@ -344,7 +361,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 3,
+       "rank": 4,
        "total": "66.24",
        "tes": "36.98",
        "pcs": "29.26",
@@ -353,7 +370,7 @@
      }
     },
     {
-     "rank": 4,
+     "rank": 5,
      "name": "Rion SUMIYOSHI",
      "noc": "JPN",
      "points": "64.06",
@@ -361,7 +378,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 4,
+       "rank": 5,
        "total": "64.06",
        "tes": "33.53",
        "pcs": "30.53",
@@ -370,7 +387,7 @@
      }
     },
     {
-     "rank": 5,
+     "rank": 6,
      "name": "Janna JYRKINEN",
      "noc": "FIN",
      "points": "59.74",
@@ -378,7 +395,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 5,
+       "rank": 6,
        "total": "59.74",
        "tes": "33.57",
        "pcs": "26.17",
@@ -387,7 +404,24 @@
      }
     },
     {
-     "rank": 6,
+     "rank": 7,
+     "name": "Anna PEZZETTA",
+     "noc": "ITA",
+     "points": "57.71",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 7,
+       "total": "57.71",
+       "tes": "30.35",
+       "pcs": "27.36",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 8,
      "name": "Rinka WATANABE",
      "noc": "JPN",
      "points": "50.68",
@@ -395,7 +429,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 6,
+       "rank": 8,
        "total": "50.68",
        "tes": "24.03",
        "pcs": "27.65",
@@ -404,7 +438,7 @@
      }
     },
     {
-     "rank": 7,
+     "rank": 9,
      "name": "Minja PELTONEN",
      "noc": "FIN",
      "points": "49.35",
@@ -412,44 +446,10 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 7,
+       "rank": 9,
        "total": "49.35",
        "tes": "24.36",
        "pcs": "24.99",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Anna PEZZETTA",
-     "noc": "ITA",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Haein LEE",
-     "noc": "KOR",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
        "status": "Running"
       }
      }
@@ -940,17 +940,17 @@
    "sport": "figure-skating",
    "event": "ISU Figure Skating Grand Prix Finlandia Trophy 2026",
    "distance": "Women",
-   "round": "",
+   "round": "Short Program",
    "heat": "",
    "start_utc": "2026-11-21T12:00:00.000Z",
-   "rank": null,
+   "rank": 3,
    "name": "Haein LEE",
    "noc": "KOR",
-   "time": "",
+   "time": "67.76",
    "qual": "",
    "status": "",
    "segments": {
-    "SP": ""
+    "SP": "67.76"
    }
   }
  ]
