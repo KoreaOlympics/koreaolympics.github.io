@@ -18,7 +18,7 @@
   "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-finlandia-trophy-2026/"
  },
- "checked_at": "2026-11-20T13:50:13.558280+00:00",
+ "checked_at": "2026-11-20T14:00:57.733806+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T12:09:00.000Z",
@@ -29,7 +29,7 @@
    "type": "Couples"
   },
   {
-   "start_utc": "2026-11-20T13:30:00.000Z",
+   "start_utc": "2026-11-20T13:39:00.000Z",
    "title": "Women",
    "round": "Short Program",
    "event_result_id": 15732,
@@ -303,6 +303,23 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Seoyoung KIM",
+     "noc": "KOR",
+     "points": "69.03",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 1,
+       "total": "69.03",
+       "tes": "40.24",
+       "pcs": "28.79",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
      "name": "Janna JYRKINEN",
      "noc": "FIN",
      "points": "59.74",
@@ -310,7 +327,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 1,
+       "rank": 2,
        "total": "59.74",
        "tes": "33.57",
        "pcs": "26.17",
@@ -319,35 +336,18 @@
      }
     },
     {
-     "rank": null,
+     "rank": 3,
      "name": "Minja PELTONEN",
      "noc": "FIN",
-     "points": "",
+     "points": "49.35",
      "status": "Active",
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Seoyoung KIM",
-     "noc": "KOR",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
+       "rank": 3,
+       "total": "49.35",
+       "tes": "24.36",
+       "pcs": "24.99",
        "status": "Running"
       }
      }
@@ -904,17 +904,17 @@
    "sport": "figure-skating",
    "event": "ISU Figure Skating Grand Prix Finlandia Trophy 2026",
    "distance": "Women",
-   "round": "",
+   "round": "Short Program",
    "heat": "",
    "start_utc": "2026-11-21T12:00:00.000Z",
-   "rank": null,
+   "rank": 1,
    "name": "Seoyoung KIM",
    "noc": "KOR",
-   "time": "",
+   "time": "69.03",
    "qual": "",
    "status": "",
    "segments": {
-    "SP": ""
+    "SP": "69.03"
    }
   },
   {
