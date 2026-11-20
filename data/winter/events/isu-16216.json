@@ -18,7 +18,7 @@
   "live": "Men 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-20T01:14:52.195532+00:00",
+ "checked_at": "2026-11-20T01:25:37.803441+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -388,7 +388,7 @@
     {
      "id": 23442,
      "name": "Preliminaries",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-20T01:00:41.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of four fastest third place skaters qualify for Heats.",
      "heats": [
@@ -493,7 +493,7 @@
          "name": "Maxim MAXIMOV",
          "noc": "BUL",
          "time": "42.822",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 63,
@@ -596,14 +596,14 @@
       {
        "name": "Heat 4",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "Shuta MATSUZU",
          "noc": "JPN",
-         "time": "42.210",
-         "qual": "",
+         "time": "42.207",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 89,
@@ -614,8 +614,8 @@
          "rank": 2,
          "name": "Daniele ZAMPEDRI",
          "noc": "ITA",
-         "time": "42.320",
-         "qual": "",
+         "time": "42.305",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 116,
@@ -626,7 +626,7 @@
          "rank": 3,
          "name": "David NASHAEV",
          "noc": "KAZ",
-         "time": "42.390",
+         "time": "42.373",
          "qual": "",
          "status": "",
          "record": "",
@@ -638,7 +638,7 @@
          "rank": 4,
          "name": "Enzo PROOST",
          "noc": "BEL",
-         "time": "42.490",
+         "time": "42.478",
          "qual": "",
          "status": "",
          "record": "",
@@ -650,7 +650,7 @@
          "rank": 5,
          "name": "Chun-Chieh LIN",
          "noc": "TPE",
-         "time": "43.240",
+         "time": "43.229",
          "qual": "",
          "status": "",
          "record": "",
@@ -662,15 +662,15 @@
       },
       {
        "name": "Heat 5",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Taesung KIM",
          "noc": "KOR",
-         "time": "",
-         "qual": "",
+         "time": "41.461",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 97,
@@ -678,11 +678,23 @@
          "slug": "taesung-kim"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Damir KURMANOV",
+         "noc": "KAZ",
+         "time": "42.069",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 134,
+         "lane": 5,
+         "slug": "damir-kurmanov"
+        },
+        {
+         "rank": 3,
          "name": "Tobias WOLF",
          "noc": "AUT",
-         "time": "",
-         "qual": "",
+         "time": "42.154",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 52,
@@ -690,10 +702,10 @@
          "slug": "tobias-wolf"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Marten TAUBERT",
          "noc": "GER",
-         "time": "",
+         "time": "42.343",
          "qual": "",
          "status": "",
          "record": "",
@@ -702,54 +714,30 @@
          "slug": "marten-taubert"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Munkh-Erdene ERDENEBILEG",
          "noc": "MGL",
-         "time": "",
+         "time": "1:14.922",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 138,
          "lane": 4,
          "slug": "munkh-erdene-erdenebileg"
-        },
-        {
-         "rank": null,
-         "name": "Damir KURMANOV",
-         "noc": "KAZ",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 134,
-         "lane": 5,
-         "slug": "damir-kurmanov"
         }
        ]
       },
       {
        "name": "Heat 6",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Lorenzo PREVITALI",
-         "noc": "ITA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 48,
-         "lane": 1,
-         "slug": "lorenzo-previtali"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Justin LIU",
          "noc": "USA",
-         "time": "",
-         "qual": "",
+         "time": "41.451",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 111,
@@ -757,22 +745,34 @@
          "slug": "justin-liu"
         },
         {
-         "rank": null,
-         "name": "Asen GYUROV",
-         "noc": "BUL",
-         "time": "",
+         "rank": 2,
+         "name": "Lorenzo PREVITALI",
+         "noc": "ITA",
+         "time": "41.649",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 48,
+         "lane": 1,
+         "slug": "lorenzo-previtali"
+        },
+        {
+         "rank": 3,
+         "name": "Kayshan Azri Putra FIRDAUS",
+         "noc": "INA",
+         "time": "43.613",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 61,
-         "lane": 3,
-         "slug": "asen-gyurov"
+         "bib": 132,
+         "lane": 5,
+         "slug": "kayshan-azri-putra-firdaus"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Martin PRANTL",
          "noc": "CRO",
-         "time": "",
+         "time": "43.665",
          "qual": "",
          "status": "",
          "record": "",
@@ -781,30 +781,30 @@
          "slug": "martin-prantl"
         },
         {
-         "rank": null,
-         "name": "Kayshan Azri Putra FIRDAUS",
-         "noc": "INA",
-         "time": "",
+         "rank": 5,
+         "name": "Asen GYUROV",
+         "noc": "BUL",
+         "time": "58.754",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 132,
-         "lane": 5,
-         "slug": "kayshan-azri-putra-firdaus"
+         "bib": 61,
+         "lane": 3,
+         "slug": "asen-gyurov"
         }
        ]
       },
       {
        "name": "Heat 7",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Seochan BAE",
          "noc": "KOR",
-         "time": "",
-         "qual": "",
+         "time": "40.944",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 96,
@@ -812,11 +812,11 @@
          "slug": "seochan-bae"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Muhammed BOZDAG",
          "noc": "TUR",
-         "time": "",
-         "qual": "",
+         "time": "41.901",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 109,
@@ -824,10 +824,10 @@
          "slug": "muhammed-bozdag"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Luca SPECHENHAUSER",
          "noc": "ITA",
-         "time": "",
+         "time": "42.181",
          "qual": "",
          "status": "",
          "record": "",
@@ -836,10 +836,10 @@
          "slug": "luca-spechenhauser"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Fredrik PEDERSEN",
          "noc": "NOR",
-         "time": "",
+         "time": "43.188",
          "qual": "",
          "status": "",
          "record": "",
@@ -851,8 +851,8 @@
       },
       {
        "name": "Heat 8",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
         {
          "rank": null,
@@ -904,7 +904,152 @@
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Heats",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Konstantin IVLIEV",
+        "noc": "AIN2",
+        "rank": 1,
+        "time": "40.923",
+        "qual": "Q"
+       },
+       {
+        "name": "Seochan BAE",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "40.944",
+        "qual": "Q"
+       },
+       {
+        "name": "Tibor KOMERICKI",
+        "noc": "SLO",
+        "rank": 1,
+        "time": "41.355",
+        "qual": "Q"
+       },
+       {
+        "name": "Justin LIU",
+        "noc": "USA",
+        "rank": 1,
+        "time": "41.451",
+        "qual": "Q"
+       },
+       {
+        "name": "Taesung KIM",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "41.461",
+        "qual": "Q"
+       },
+       {
+        "name": "Brendan COREY",
+        "noc": "AUS",
+        "rank": 1,
+        "time": "42.038",
+        "qual": "Q"
+       },
+       {
+        "name": "Shuta MATSUZU",
+        "noc": "JPN",
+        "rank": 1,
+        "time": "42.207",
+        "qual": "Q"
+       },
+       {
+        "name": "Kazuki YOSHINAGA",
+        "noc": "JPN",
+        "rank": 2,
+        "time": "41.039",
+        "qual": "Q"
+       },
+       {
+        "name": "Takumi WADA",
+        "noc": "JPN",
+        "rank": 2,
+        "time": "41.530",
+        "qual": "Q"
+       },
+       {
+        "name": "Lorenzo PREVITALI",
+        "noc": "ITA",
+        "rank": 2,
+        "time": "41.649",
+        "qual": "Q"
+       },
+       {
+        "name": "Muhammed BOZDAG",
+        "noc": "TUR",
+        "rank": 2,
+        "time": "41.901",
+        "qual": "Q"
+       },
+       {
+        "name": "Damir KURMANOV",
+        "noc": "KAZ",
+        "rank": 2,
+        "time": "42.069",
+        "qual": "Q"
+       },
+       {
+        "name": "Daniele ZAMPEDRI",
+        "noc": "ITA",
+        "rank": 2,
+        "time": "42.305",
+        "qual": "Q"
+       },
+       {
+        "name": "Yanghun Ben JUNG",
+        "noc": "GER",
+        "rank": 2,
+        "time": "42.606",
+        "qual": "Q"
+       },
+       {
+        "name": "Vladimir BALBEKOV",
+        "noc": "AIN2",
+        "rank": 4,
+        "time": "1:02.869",
+        "qual": "ADV"
+       }
+      ],
+      "races": [
+       [
+        "Konstantin IVLIEV (AIN2)"
+       ],
+       [
+        "Seochan BAE (KOR)",
+        "Vladimir BALBEKOV (AIN2)"
+       ],
+       [
+        "Tibor KOMERICKI (SLO)",
+        "Yanghun Ben JUNG (GER)"
+       ],
+       [
+        "Justin LIU (USA)",
+        "Daniele ZAMPEDRI (ITA)"
+       ],
+       [
+        "Taesung KIM (KOR)",
+        "Damir KURMANOV (KAZ)"
+       ],
+       [
+        "Brendan COREY (AUS)",
+        "Muhammed BOZDAG (TUR)"
+       ],
+       [
+        "Shuta MATSUZU (JPN)",
+        "Lorenzo PREVITALI (ITA)"
+       ],
+       [
+        "Kazuki YOSHINAGA (JPN)",
+        "Takumi WADA (JPN)"
+       ]
+      ]
+     }
     },
     {
      "id": 23444,
@@ -1310,11 +1455,11 @@
    "round": "Preliminaries",
    "heat": "Heat 5",
    "start_utc": "2026-11-20T01:00:41.000Z",
-   "rank": null,
+   "rank": 1,
    "name": "Taesung KIM",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "41.461",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 97,
@@ -1329,11 +1474,11 @@
    "round": "Preliminaries",
    "heat": "Heat 7",
    "start_utc": "2026-11-20T01:00:41.000Z",
-   "rank": null,
+   "rank": 1,
    "name": "Seochan BAE",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "40.944",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 96,
