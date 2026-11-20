@@ -18,7 +18,7 @@
   "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-20T02:09:18.354229+00:00",
+ "checked_at": "2026-11-20T02:19:49.706047+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -1155,7 +1155,7 @@
     {
      "id": 23453,
      "name": "Preliminaries",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-20T01:39:29.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of four fastest third place skaters qualify for Heats.",
      "heats": [
@@ -1193,7 +1193,7 @@
          "name": "Kun LI",
          "noc": "CHN",
          "time": "1:25.236",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 67,
@@ -1260,7 +1260,7 @@
          "name": "Noah TROPPE",
          "noc": "USA",
          "time": "1:27.602",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 141,
@@ -1327,7 +1327,7 @@
          "name": "Musashi KAKINAMI",
          "noc": "JPN",
          "time": "1:26.824",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 88,
@@ -1394,7 +1394,7 @@
          "name": "Justin LIU",
          "noc": "USA",
          "time": "1:27.287",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 111,
@@ -1630,27 +1630,15 @@
       },
       {
        "name": "Heat 8",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Asen GYUROV",
-         "noc": "BUL",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 61,
-         "lane": 4,
-         "slug": "asen-gyurov"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Taesung KIM",
          "noc": "KOR",
-         "time": "",
-         "qual": "",
+         "time": "1:27.169",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 97,
@@ -1658,11 +1646,11 @@
          "slug": "taesung-kim"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Lorenzo PREVITALI",
          "noc": "ITA",
-         "time": "",
-         "qual": "",
+         "time": "1:27.317",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 48,
@@ -1670,10 +1658,10 @@
          "slug": "lorenzo-previtali"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Ivan MARTINIC",
          "noc": "CRO",
-         "time": "",
+         "time": "1:28.639",
          "qual": "",
          "status": "",
          "record": "",
@@ -1682,20 +1670,217 @@
          "slug": "ivan-martinic"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Kayshan Azri Putra FIRDAUS",
          "noc": "INA",
-         "time": "",
+         "time": "1:29.519",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 132,
          "lane": 5,
          "slug": "kayshan-azri-putra-firdaus"
+        },
+        {
+         "rank": 5,
+         "name": "Asen GYUROV",
+         "noc": "BUL",
+         "time": "1:31.151",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 61,
+         "lane": 4,
+         "slug": "asen-gyurov"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Heats",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "William DANDJINOU",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "1:24.246",
+        "qual": "Q"
+       },
+       {
+        "name": "Semen ELISTRATOV",
+        "noc": "AIN2",
+        "rank": 1,
+        "time": "1:26.597",
+        "qual": "Q"
+       },
+       {
+        "name": "Vladimir BALBEKOV",
+        "noc": "AIN2",
+        "rank": 1,
+        "time": "1:27.070",
+        "qual": "Q"
+       },
+       {
+        "name": "Taesung KIM",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "1:27.169",
+        "qual": "Q"
+       },
+       {
+        "name": "Philippe DAUDELIN",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "1:27.393",
+        "qual": "Q"
+       },
+       {
+        "name": "Jeongmin LEE",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "1:28.884",
+        "qual": "Q"
+       },
+       {
+        "name": "Denis ORS",
+        "noc": "TUR",
+        "rank": 1,
+        "time": "1:29.821",
+        "qual": "Q"
+       },
+       {
+        "name": "Fre VAN DAMME",
+        "noc": "BEL",
+        "rank": 1,
+        "time": "1:31.226",
+        "qual": "Q"
+       },
+       {
+        "name": "Kay HUISMAN",
+        "noc": "NED",
+        "rank": 2,
+        "time": "1:25.137",
+        "qual": "Q"
+       },
+       {
+        "name": "Damir KURMANOV",
+        "noc": "KAZ",
+        "rank": 2,
+        "time": "1:26.790",
+        "qual": "Q"
+       },
+       {
+        "name": "Tobias WOLF",
+        "noc": "AUT",
+        "rank": 2,
+        "time": "1:27.194",
+        "qual": "Q"
+       },
+       {
+        "name": "Lorenzo PREVITALI",
+        "noc": "ITA",
+        "rank": 2,
+        "time": "1:27.317",
+        "qual": "Q"
+       },
+       {
+        "name": "Zhanshuo LOU",
+        "noc": "HKG",
+        "rank": 2,
+        "time": "1:27.436",
+        "qual": "Q"
+       },
+       {
+        "name": "Adriaan DEWAGTERE",
+        "noc": "BEL",
+        "rank": 2,
+        "time": "1:29.040",
+        "qual": "Q"
+       },
+       {
+        "name": "Yanghun Ben JUNG",
+        "noc": "GER",
+        "rank": 2,
+        "time": "1:29.988",
+        "qual": "Q"
+       },
+       {
+        "name": "Linus August RISNES",
+        "noc": "NOR",
+        "rank": 2,
+        "time": "1:32.295",
+        "qual": "Q"
+       },
+       {
+        "name": "Kun LI",
+        "noc": "CHN",
+        "rank": 3,
+        "time": "1:25.236",
+        "qual": "q"
+       },
+       {
+        "name": "Musashi KAKINAMI",
+        "noc": "JPN",
+        "rank": 3,
+        "time": "1:26.824",
+        "qual": "q"
+       },
+       {
+        "name": "Justin LIU",
+        "noc": "USA",
+        "rank": 3,
+        "time": "1:27.287",
+        "qual": "q"
+       },
+       {
+        "name": "Noah TROPPE",
+        "noc": "USA",
+        "rank": 3,
+        "time": "1:27.602",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "William DANDJINOU (CAN)",
+        "Linus August RISNES (NOR)",
+        "Kun LI (CHN)"
+       ],
+       [
+        "Semen ELISTRATOV (AIN2)",
+        "Yanghun Ben JUNG (GER)",
+        "Musashi KAKINAMI (JPN)"
+       ],
+       [
+        "Vladimir BALBEKOV (AIN2)",
+        "Adriaan DEWAGTERE (BEL)",
+        "Justin LIU (USA)"
+       ],
+       [
+        "Taesung KIM (KOR)",
+        "Zhanshuo LOU (HKG)",
+        "Noah TROPPE (USA)"
+       ],
+       [
+        "Philippe DAUDELIN (CAN)",
+        "Lorenzo PREVITALI (ITA)"
+       ],
+       [
+        "Jeongmin LEE (KOR)",
+        "Tobias WOLF (AUT)"
+       ],
+       [
+        "Denis ORS (TUR)",
+        "Damir KURMANOV (KAZ)"
+       ],
+       [
+        "Fre VAN DAMME (BEL)",
+        "Kay HUISMAN (NED)"
+       ]
+      ]
+     }
     },
     {
      "id": 23455,
@@ -2089,11 +2274,11 @@
    "round": "Preliminaries",
    "heat": "Heat 8",
    "start_utc": "2026-11-20T01:39:29.000Z",
-   "rank": null,
+   "rank": 1,
    "name": "Taesung KIM",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "1:27.169",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 97,
