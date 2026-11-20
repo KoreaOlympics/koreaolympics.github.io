@@ -18,7 +18,7 @@
   "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-20T07:01:18.534455+00:00",
+ "checked_at": "2026-11-20T07:11:57.795918+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -2585,7 +2585,7 @@
     {
      "id": 23455,
      "name": "Heats",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-20T06:32:07.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of two fastest third place skaters qualify for Quarterfinals.",
      "heats": [
@@ -2891,7 +2891,7 @@
          "name": "Brendan COREY",
          "noc": "AUS",
          "time": "1:25.505",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 18,
@@ -2993,14 +2993,38 @@
       },
       {
        "name": "Heat 7",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Seochan BAE",
+         "noc": "KOR",
+         "time": "1:28.058",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 96,
+         "lane": 1,
+         "slug": "seochan-bae"
+        },
+        {
+         "rank": 2,
+         "name": "Vladimir BALBEKOV",
+         "noc": "AIN2",
+         "time": "1:28.505",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 122,
+         "lane": 3,
+         "slug": "vladimir-balbekov"
+        },
+        {
+         "rank": 3,
          "name": "Denis ORS",
          "noc": "TUR",
-         "time": "",
+         "time": "1:29.375",
          "qual": "",
          "status": "",
          "record": "",
@@ -3009,65 +3033,65 @@
          "slug": "denis-ors"
         },
         {
-         "rank": null,
-         "name": "Seochan BAE",
-         "noc": "KOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 96,
-         "lane": 1,
-         "slug": "seochan-bae"
-        },
-        {
-         "rank": null,
-         "name": "Vladimir BALBEKOV",
-         "noc": "AIN2",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 122,
-         "lane": 3,
-         "slug": "vladimir-balbekov"
-        },
-        {
-         "rank": null,
-         "name": "Wonjun MOON",
-         "noc": "HUN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 28,
-         "lane": 2,
-         "slug": "wonjun-moon"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Justin LIU",
          "noc": "USA",
-         "time": "",
+         "time": "no time",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 111,
          "lane": 5,
          "slug": "justin-liu"
+        },
+        {
+         "rank": null,
+         "name": "Wonjun MOON",
+         "noc": "HUN",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 28,
+         "lane": 2,
+         "slug": "wonjun-moon"
         }
        ]
       },
       {
        "name": "Heat 8",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Taesung KIM",
+         "noc": "KOR",
+         "time": "1:28.175",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 97,
+         "lane": 3,
+         "slug": "taesung-kim"
+        },
+        {
+         "rank": 2,
+         "name": "Long SUN",
+         "noc": "CHN",
+         "time": "1:28.277",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 4,
+         "lane": 2,
+         "slug": "long-sun"
+        },
+        {
+         "rank": 3,
          "name": "Luca SPECHENHAUSER",
          "noc": "ITA",
-         "time": "",
+         "time": "1:28.432",
          "qual": "",
          "status": "",
          "record": "",
@@ -3076,34 +3100,10 @@
          "slug": "luca-spechenhauser"
         },
         {
-         "rank": null,
-         "name": "Long SUN",
-         "noc": "CHN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 4,
-         "lane": 2,
-         "slug": "long-sun"
-        },
-        {
-         "rank": null,
-         "name": "Taesung KIM",
-         "noc": "KOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 97,
-         "lane": 3,
-         "slug": "taesung-kim"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Philippe DAUDELIN",
          "noc": "CAN",
-         "time": "",
+         "time": "1:28.461",
          "qual": "",
          "status": "",
          "record": "",
@@ -3112,10 +3112,10 @@
          "slug": "philippe-daudelin"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Noah TROPPE",
          "noc": "USA",
-         "time": "",
+         "time": "1:28.593",
          "qual": "",
          "status": "",
          "record": "",
@@ -3125,7 +3125,170 @@
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Quarterfinals",
+      "official_draw_published": false,
+      "pending": [
+       "Rep. Semifinals"
+      ],
+      "qualified": [
+       {
+        "name": "Felix ROUSSEL",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "1:25.033",
+        "qual": "Q"
+       },
+       {
+        "name": "Jens VAN 'T WOUT",
+        "noc": "NED",
+        "rank": 1,
+        "time": "1:25.777",
+        "qual": "Q"
+       },
+       {
+        "name": "William DANDJINOU",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "1:27.105",
+        "qual": "Q"
+       },
+       {
+        "name": "Jongun RIM",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "1:27.645",
+        "qual": "Q"
+       },
+       {
+        "name": "Seochan BAE",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "1:28.058",
+        "qual": "Q"
+       },
+       {
+        "name": "Taesung KIM",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "1:28.175",
+        "qual": "Q"
+       },
+       {
+        "name": "Furkan AKAR",
+        "noc": "TUR",
+        "rank": 1,
+        "time": "1:28.634",
+        "qual": "Q"
+       },
+       {
+        "name": "Thomas NADALINI",
+        "noc": "ITA",
+        "rank": 1,
+        "time": "1:29.359",
+        "qual": "Q"
+       },
+       {
+        "name": "Semen ELISTRATOV",
+        "noc": "AIN2",
+        "rank": 2,
+        "time": "1:25.142",
+        "qual": "Q"
+       },
+       {
+        "name": "Lorenzo PREVITALI",
+        "noc": "ITA",
+        "rank": 2,
+        "time": "1:26.568",
+        "qual": "Q"
+       },
+       {
+        "name": "Shogo MIYATA",
+        "noc": "JPN",
+        "rank": 2,
+        "time": "1:27.269",
+        "qual": "Q"
+       },
+       {
+        "name": "Zixia ZHANG",
+        "noc": "CHN",
+        "rank": 2,
+        "time": "1:27.710",
+        "qual": "Q"
+       },
+       {
+        "name": "Long SUN",
+        "noc": "CHN",
+        "rank": 2,
+        "time": "1:28.277",
+        "qual": "Q"
+       },
+       {
+        "name": "Vladimir BALBEKOV",
+        "noc": "AIN2",
+        "rank": 2,
+        "time": "1:28.505",
+        "qual": "Q"
+       },
+       {
+        "name": "Melle VAN 'T WOUT",
+        "noc": "NED",
+        "rank": 2,
+        "time": "1:28.723",
+        "qual": "Q"
+       },
+       {
+        "name": "Clayton DE CLEMENTE",
+        "noc": "USA",
+        "rank": 2,
+        "time": "1:30.019",
+        "qual": "Q"
+       },
+       {
+        "name": "Kun LI",
+        "noc": "CHN",
+        "rank": 4,
+        "time": "1:34.693",
+        "qual": "ADV"
+       },
+       {
+        "name": "Brendan COREY",
+        "noc": "AUS",
+        "rank": 3,
+        "time": "1:25.505",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Felix ROUSSEL (CAN)",
+        "Thomas NADALINI (ITA)",
+        "Semen ELISTRATOV (AIN2)",
+        "Clayton DE CLEMENTE (USA)",
+        "Kun LI (CHN)"
+       ],
+       [
+        "Jens VAN 'T WOUT (NED)",
+        "Furkan AKAR (TUR)",
+        "Lorenzo PREVITALI (ITA)",
+        "Melle VAN 'T WOUT (NED)",
+        "Brendan COREY (AUS)"
+       ],
+       [
+        "William DANDJINOU (CAN)",
+        "Taesung KIM (KOR)",
+        "Shogo MIYATA (JPN)",
+        "Vladimir BALBEKOV (AIN2)"
+       ],
+       [
+        "Jongun RIM (KOR)",
+        "Seochan BAE (KOR)",
+        "Zixia ZHANG (CHN)",
+        "Long SUN (CHN)"
+       ]
+      ]
+     }
     },
     {
      "id": 23454,
@@ -6526,11 +6689,11 @@
    "round": "Heats",
    "heat": "Heat 7",
    "start_utc": "2026-11-20T06:32:07.000Z",
-   "rank": null,
+   "rank": 1,
    "name": "Seochan BAE",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "1:28.058",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 96,
@@ -6545,11 +6708,11 @@
    "round": "Heats",
    "heat": "Heat 8",
    "start_utc": "2026-11-20T06:32:07.000Z",
-   "rank": null,
+   "rank": 1,
    "name": "Taesung KIM",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "1:28.175",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 97,
