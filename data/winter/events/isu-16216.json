@@ -18,7 +18,7 @@
   "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-20T06:50:42.215362+00:00",
+ "checked_at": "2026-11-20T07:01:18.534455+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -2623,7 +2623,7 @@
          "name": "Kerui SONG",
          "noc": "CHN",
          "time": "1:27.511",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 68,
@@ -2690,7 +2690,7 @@
          "name": "Kay HUISMAN",
          "noc": "NED",
          "time": "1:27.775",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 41,
@@ -2859,15 +2859,15 @@
       },
       {
        "name": "Heat 5",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Felix ROUSSEL",
          "noc": "CAN",
-         "time": "",
-         "qual": "",
+         "time": "1:25.033",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 11,
@@ -2875,23 +2875,11 @@
          "slug": "felix-roussel"
         },
         {
-         "rank": null,
-         "name": "Brendan COREY",
-         "noc": "AUS",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 18,
-         "lane": 2,
-         "slug": "brendan-corey"
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Semen ELISTRATOV",
          "noc": "AIN2",
-         "time": "",
-         "qual": "",
+         "time": "1:25.142",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 123,
@@ -2899,10 +2887,22 @@
          "slug": "semen-elistratov"
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Brendan COREY",
+         "noc": "AUS",
+         "time": "1:25.505",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 18,
+         "lane": 2,
+         "slug": "brendan-corey"
+        },
+        {
+         "rank": 4,
          "name": "Fre VAN DAMME",
          "noc": "BEL",
-         "time": "",
+         "time": "1:27.318",
          "qual": "",
          "status": "",
          "record": "",
@@ -2911,10 +2911,10 @@
          "slug": "fre-van-damme"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Musashi KAKINAMI",
          "noc": "JPN",
-         "time": "",
+         "time": "1:27.510",
          "qual": "",
          "status": "",
          "record": "",
@@ -2926,15 +2926,27 @@
       },
       {
        "name": "Heat 6",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "William DANDJINOU",
+         "noc": "CAN",
+         "time": "1:27.105",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 1,
+         "lane": 3,
+         "slug": "william-dandjinou"
+        },
+        {
+         "rank": 2,
          "name": "Shogo MIYATA",
          "noc": "JPN",
-         "time": "",
-         "qual": "",
+         "time": "1:27.269",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 9,
@@ -2942,10 +2954,10 @@
          "slug": "shogo-miyata"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Brandon KIM",
          "noc": "USA",
-         "time": "",
+         "time": "1:27.406",
          "qual": "",
          "status": "",
          "record": "",
@@ -2954,48 +2966,48 @@
          "slug": "brandon-kim"
         },
         {
-         "rank": null,
-         "name": "William DANDJINOU",
-         "noc": "CAN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 1,
-         "lane": 3,
-         "slug": "william-dandjinou"
-        },
-        {
-         "rank": null,
-         "name": "Jeongmin LEE",
-         "noc": "KOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 32,
-         "lane": 4,
-         "slug": "jeongmin-lee"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Kun LI",
          "noc": "CHN",
-         "time": "",
-         "qual": "",
+         "time": "1:34.693",
+         "qual": "ADV",
          "status": "",
          "record": "",
          "bib": 67,
          "lane": 5,
          "slug": "kun-li"
+        },
+        {
+         "rank": null,
+         "name": "Jeongmin LEE",
+         "noc": "KOR",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 32,
+         "lane": 4,
+         "slug": "jeongmin-lee"
         }
        ]
       },
       {
        "name": "Heat 7",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
+        {
+         "rank": null,
+         "name": "Denis ORS",
+         "noc": "TUR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 40,
+         "lane": 4,
+         "slug": "denis-ors"
+        },
         {
          "rank": null,
          "name": "Seochan BAE",
@@ -3007,18 +3019,6 @@
          "bib": 96,
          "lane": 1,
          "slug": "seochan-bae"
-        },
-        {
-         "rank": null,
-         "name": "Wonjun MOON",
-         "noc": "HUN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 28,
-         "lane": 2,
-         "slug": "wonjun-moon"
         },
         {
          "rank": null,
@@ -3034,15 +3034,15 @@
         },
         {
          "rank": null,
-         "name": "Denis ORS",
-         "noc": "TUR",
+         "name": "Wonjun MOON",
+         "noc": "HUN",
          "time": "",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 40,
-         "lane": 4,
-         "slug": "denis-ors"
+         "bib": 28,
+         "lane": 2,
+         "slug": "wonjun-moon"
         },
         {
          "rank": null,
@@ -6510,9 +6510,9 @@
    "rank": null,
    "name": "Jeongmin LEE",
    "noc": "KOR",
-   "time": "",
+   "time": "PEN",
    "qual": "",
-   "status": "",
+   "status": "Penalty",
    "record": "",
    "bib": 32,
    "lane": 4,
