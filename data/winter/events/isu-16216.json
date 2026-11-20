@@ -18,7 +18,7 @@
   "live": "Men 5000 m Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-20T07:34:06.767283+00:00",
+ "checked_at": "2026-11-20T07:44:42.032443+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -6425,20 +6425,20 @@
      "id": 23410,
      "name": "Quarterfinals",
      "status": "Live",
-     "start_utc": "2026-11-20T07:24:00.000Z",
+     "start_utc": "2026-11-20T07:28:08.000Z",
      "rule": "The first and second placed teams from each race and up to a maximum of two fastest third place teams qualify for Semifinals.",
      "heats": [
       {
        "name": "Heat 1",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Republic of Korea",
          "noc": "KOR",
-         "time": "",
-         "qual": "",
+         "time": "6:49.623",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -6446,11 +6446,11 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Belgium",
          "noc": "BEL",
-         "time": "",
-         "qual": "",
+         "time": "6:52.534",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -6461,9 +6461,9 @@
          "rank": null,
          "name": "Japan",
          "noc": "JPN",
-         "time": "",
+         "time": "PEN",
          "qual": "",
-         "status": "",
+         "status": "Penalty",
          "record": "",
          "bib": null,
          "lane": 2,
@@ -6473,8 +6473,8 @@
       },
       {
        "name": "Heat 2",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
         {
          "rank": null,
@@ -6486,6 +6486,18 @@
          "record": "",
          "bib": null,
          "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Ain2",
+         "noc": "AIN2",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 4,
          "slug": ""
         },
         {
@@ -6510,18 +6522,6 @@
          "record": "",
          "bib": null,
          "lane": 3,
-         "slug": ""
-        },
-        {
-         "rank": null,
-         "name": "Ain2",
-         "noc": "AIN2",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 4,
          "slug": ""
         }
        ]
@@ -7184,12 +7184,12 @@
    "distance": "Men 5000 m Relay",
    "round": "Quarterfinals",
    "heat": "Heat 1",
-   "start_utc": "2026-11-20T07:24:00.000Z",
-   "rank": null,
+   "start_utc": "2026-11-20T07:28:08.000Z",
+   "rank": 1,
    "name": "Republic of Korea",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "6:49.623",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": null,

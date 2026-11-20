@@ -14,7 +14,7 @@
   "state": "",
   "url": "https://live.isuresults.eu/events/2027_JPN_0001/schedule"
  },
- "checked_at": "2026-11-20T07:34:33.287083+00:00",
+ "checked_at": "2026-11-20T07:45:10.915976+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:05:00Z",
@@ -1920,8 +1920,8 @@
   "7": {
    "title": "3000m Women",
    "start_utc": "2026-11-20T06:51:00Z",
-   "live": true,
-   "official": false,
+   "live": false,
+   "official": true,
    "distance": "3,000 Meter",
    "division": "A",
    "start_list": false,
@@ -2139,11 +2139,11 @@
   "8": {
    "title": "5000m Men",
    "start_utc": "2026-11-20T07:47:00Z",
-   "live": false,
+   "live": true,
    "official": false,
    "distance": "5,000 Meter",
    "division": "A",
-   "start_list": true,
+   "start_list": false,
    "rows": [
     {
      "rank": null,
