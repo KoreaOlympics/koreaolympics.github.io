@@ -18,7 +18,7 @@
   "live": "Men 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-21T05:42:02.731062+00:00",
+ "checked_at": "2026-11-21T05:52:46.461824+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -193,7 +193,7 @@
    "title": "Men 500 m",
    "round": "Finals",
    "event_result_id": 16345,
-   "round_id": 23449,
+   "round_id": null,
    "type": "Singles"
   },
   {
@@ -3147,21 +3147,21 @@
     {
      "id": 23448,
      "name": "Semifinals",
-     "status": "Live",
-     "start_utc": "2026-11-21T05:35:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-21T05:37:00.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final, the third and fourth placed skaters from each race and up to a maximum of next two fastest fifth place skaters qualify for Final B.",
      "heats": [
       {
        "name": "Heat 1",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Teun BOER",
          "noc": "NED",
-         "time": "",
-         "qual": "",
+         "time": "40.247",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 46,
@@ -3169,23 +3169,11 @@
          "slug": "teun-boer"
         },
         {
-         "rank": null,
-         "name": "Konstantin IVLIEV",
-         "noc": "AIN2",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 124,
-         "lane": 3,
-         "slug": "konstantin-ivliev"
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Jens VAN 'T WOUT",
          "noc": "NED",
-         "time": "",
-         "qual": "",
+         "time": "40.404",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 7,
@@ -3193,11 +3181,11 @@
          "slug": "jens-van-t-wout"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Justin LIU",
          "noc": "USA",
-         "time": "",
-         "qual": "",
+         "time": "40.713",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 111,
@@ -3205,42 +3193,42 @@
          "slug": "justin-liu"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Jeongmin LEE",
          "noc": "KOR",
-         "time": "",
-         "qual": "",
+         "time": "40.918",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 32,
          "lane": 5,
          "slug": "jeongmin-lee"
+        },
+        {
+         "rank": null,
+         "name": "Konstantin IVLIEV",
+         "noc": "AIN2",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 124,
+         "lane": 3,
+         "slug": "konstantin-ivliev"
         }
        ]
       },
       {
        "name": "Heat 2",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Felix ROUSSEL",
-         "noc": "CAN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 11,
-         "lane": 1,
-         "slug": "felix-roussel"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Mathieu PELLETIER",
          "noc": "CAN",
-         "time": "",
-         "qual": "",
+         "time": "40.422",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 66,
@@ -3248,23 +3236,11 @@
          "slug": "mathieu-pelletier"
         },
         {
-         "rank": null,
-         "name": "Steven DUBOIS",
-         "noc": "CAN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 3,
-         "lane": 3,
-         "slug": "steven-dubois"
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Andrew HEO",
          "noc": "USA",
-         "time": "",
-         "qual": "",
+         "time": "40.447",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 15,
@@ -3272,24 +3248,99 @@
          "slug": "andrew-heo"
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Felix ROUSSEL",
+         "noc": "CAN",
+         "time": "40.614",
+         "qual": "q",
+         "status": "",
+         "record": "",
+         "bib": 11,
+         "lane": 1,
+         "slug": "felix-roussel"
+        },
+        {
+         "rank": 4,
          "name": "Shogo MIYATA",
          "noc": "JPN",
-         "time": "",
-         "qual": "",
+         "time": "40.705",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 9,
          "lane": 5,
          "slug": "shogo-miyata"
+        },
+        {
+         "rank": null,
+         "name": "Steven DUBOIS",
+         "noc": "CAN",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 3,
+         "lane": 3,
+         "slug": "steven-dubois"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Final",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Teun BOER",
+        "noc": "NED",
+        "rank": 1,
+        "time": "40.247",
+        "qual": "Q"
+       },
+       {
+        "name": "Mathieu PELLETIER",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "40.422",
+        "qual": "Q"
+       },
+       {
+        "name": "Jens VAN 'T WOUT",
+        "noc": "NED",
+        "rank": 2,
+        "time": "40.404",
+        "qual": "Q"
+       },
+       {
+        "name": "Andrew HEO",
+        "noc": "USA",
+        "rank": 2,
+        "time": "40.447",
+        "qual": "Q"
+       },
+       {
+        "name": "Felix ROUSSEL",
+        "noc": "CAN",
+        "rank": 3,
+        "time": "40.614",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Teun BOER (NED)",
+        "Mathieu PELLETIER (CAN)",
+        "Jens VAN 'T WOUT (NED)",
+        "Andrew HEO (USA)",
+        "Felix ROUSSEL (CAN)"
+       ]
+      ]
+     }
     },
     {
-     "id": 23449,
-     "name": "Finals",
+     "id": 23508,
+     "name": "Final",
      "status": "Scheduled",
      "start_utc": "2026-11-21T06:08:00.000Z",
      "rule": "",
@@ -10236,12 +10287,12 @@
    "distance": "Men 500 m",
    "round": "Semifinals",
    "heat": "Heat 1",
-   "start_utc": "2026-11-21T05:35:00.000Z",
-   "rank": null,
+   "start_utc": "2026-11-21T05:37:00.000Z",
+   "rank": 4,
    "name": "Jeongmin LEE",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "40.918",
+   "qual": "QB",
    "status": "",
    "record": "",
    "bib": 32,
