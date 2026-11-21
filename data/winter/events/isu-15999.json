@@ -15,10 +15,10 @@
   "city": "Helsinki",
   "country": "FIN",
   "state": "Live",
-  "live": "Anna PEZZETTA",
+  "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-finlandia-trophy-2026/"
  },
- "checked_at": "2026-11-21T12:27:23.392688+00:00",
+ "checked_at": "2026-11-21T12:38:22.768808+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T12:09:00.000Z",
@@ -61,7 +61,7 @@
    "type": "Couples"
   },
   {
-   "start_utc": "2026-11-21T12:00:00.000Z",
+   "start_utc": "2026-11-21T12:08:00.000Z",
    "title": "Women",
    "round": "Free Skating",
    "event_result_id": 15732,
@@ -304,6 +304,31 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Anna PEZZETTA",
+     "noc": "ITA",
+     "points": "176.65",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 10,
+       "total": "57.71",
+       "tes": "30.35",
+       "pcs": "27.36",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 1,
+       "total": "118.94",
+       "tes": "62.28",
+       "pcs": "56.66",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
      "name": "Rinka WATANABE",
      "noc": "JPN",
      "points": "162.80",
@@ -319,7 +344,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 1,
+       "rank": 2,
        "total": "112.12",
        "tes": "55.49",
        "pcs": "56.63",
@@ -328,7 +353,7 @@
      }
     },
     {
-     "rank": 2,
+     "rank": 3,
      "name": "Minja PELTONEN",
      "noc": "FIN",
      "points": "145.71",
@@ -344,7 +369,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 2,
+       "rank": 3,
        "total": "96.36",
        "tes": "47.64",
        "pcs": "48.72",
@@ -565,31 +590,6 @@
        "total": "59.74",
        "tes": "33.57",
        "pcs": "26.17",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Anna PEZZETTA",
-     "noc": "ITA",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 10,
-       "total": "57.71",
-       "tes": "30.35",
-       "pcs": "27.36",
        "status": "Finished"
       },
       "FS": {
@@ -1181,7 +1181,7 @@
    "distance": "Women",
    "round": "Short Program",
    "heat": "",
-   "start_utc": "2026-11-21T12:00:00.000Z",
+   "start_utc": "2026-11-21T12:08:00.000Z",
    "rank": 3,
    "name": "Seoyoung KIM",
    "noc": "KOR",
@@ -1200,7 +1200,7 @@
    "distance": "Women",
    "round": "Short Program",
    "heat": "",
-   "start_utc": "2026-11-21T12:00:00.000Z",
+   "start_utc": "2026-11-21T12:08:00.000Z",
    "rank": 4,
    "name": "Yuseong KIM",
    "noc": "KOR",
@@ -1219,7 +1219,7 @@
    "distance": "Women",
    "round": "Short Program",
    "heat": "",
-   "start_utc": "2026-11-21T12:00:00.000Z",
+   "start_utc": "2026-11-21T12:08:00.000Z",
    "rank": 5,
    "name": "Haein LEE",
    "noc": "KOR",
