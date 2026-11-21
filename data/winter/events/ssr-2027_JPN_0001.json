@@ -14,7 +14,7 @@
   "state": "",
   "url": "https://live.isuresults.eu/events/2027_JPN_0001/schedule"
  },
- "checked_at": "2026-11-21T02:44:58.624113+00:00",
+ "checked_at": "2026-11-21T02:55:56.082099+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:05:00Z",
@@ -2603,8 +2603,8 @@
   "10": {
    "title": "1st 500m Men Division B",
    "start_utc": "2026-11-21T02:23:00Z",
-   "live": true,
-   "official": false,
+   "live": false,
+   "official": true,
    "distance": "500 Meter",
    "division": "B",
    "start_list": false,
@@ -2874,11 +2874,11 @@
   "11": {
    "title": "1500m Women Division B",
    "start_utc": "2026-11-21T03:01:00Z",
-   "live": false,
+   "live": true,
    "official": false,
    "distance": "1,500 Meter",
    "division": "B",
-   "start_list": true,
+   "start_list": false,
    "rows": [
     {
      "rank": null,
@@ -4771,6 +4771,27 @@
    "behind": "0.580",
    "lane": "O",
    "pair": 5,
+   "medal": null,
+   "status": "",
+   "points": null,
+   "official": true,
+   "qual": ""
+  },
+  {
+   "event_id": "ssr-2027_JPN_0001",
+   "sport": "speed-skating",
+   "event": "ISU Speed Skating World Cup #2",
+   "distance": "1500m Women Division B",
+   "round": "Division B",
+   "heat": "",
+   "start_utc": "2026-11-21T03:01:00Z",
+   "rank": null,
+   "name": "Jiwoo Park",
+   "noc": "KOR",
+   "time": "",
+   "behind": "",
+   "lane": "I",
+   "pair": 7,
    "medal": null,
    "status": "",
    "points": null,
