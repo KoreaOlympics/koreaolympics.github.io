@@ -18,7 +18,7 @@
   "live": "Men 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-21T07:55:08.646862+00:00",
+ "checked_at": "2026-11-21T08:05:55.592516+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -221,7 +221,7 @@
    "type": "Couples"
   },
   {
-   "start_utc": "2026-11-21T07:48:00.000Z",
+   "start_utc": "2026-11-21T07:50:00.000Z",
    "title": "Men 1500 m",
    "round": "Final",
    "event_result_id": 16343,
@@ -231,9 +231,9 @@
   {
    "start_utc": "2026-11-21T08:09:00.000Z",
    "title": "Women 3000 m Relay",
-   "round": "Finals",
+   "round": "Final",
    "event_result_id": 16342,
-   "round_id": null,
+   "round_id": 23511,
    "type": "Couples"
   },
   {
@@ -7870,14 +7870,26 @@
      "heats": [
       {
        "name": "Final",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Live",
        "competitors": [
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Felix ROUSSEL",
+         "noc": "CAN",
+         "time": "2:28.640",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 11,
+         "lane": 4,
+         "slug": "felix-roussel"
+        },
+        {
+         "rank": 4,
          "name": "Jongun RIM",
          "noc": "KOR",
-         "time": "",
+         "time": "2:28.710",
          "qual": "",
          "status": "",
          "record": "",
@@ -7886,16 +7898,40 @@
          "slug": "jongun-rim"
         },
         {
-         "rank": null,
-         "name": "Valentin KOBYZEV",
-         "noc": "AIN2",
-         "time": "",
+         "rank": 5,
+         "name": "Bohao ZHANG",
+         "noc": "CHN",
+         "time": "2:30.110",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 125,
-         "lane": 2,
-         "slug": "valentin-kobyzev"
+         "bib": 42,
+         "lane": 7,
+         "slug": "bohao-zhang"
+        },
+        {
+         "rank": 6,
+         "name": "Steven DUBOIS",
+         "noc": "CAN",
+         "time": "2:51.170",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 3,
+         "lane": 5,
+         "slug": "steven-dubois"
+        },
+        {
+         "rank": 7,
+         "name": "Mathieu PELLETIER",
+         "noc": "CAN",
+         "time": "2:57.990",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 66,
+         "lane": 8,
+         "slug": "mathieu-pelletier"
         },
         {
          "rank": null,
@@ -7911,30 +7947,6 @@
         },
         {
          "rank": null,
-         "name": "Felix ROUSSEL",
-         "noc": "CAN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 11,
-         "lane": 4,
-         "slug": "felix-roussel"
-        },
-        {
-         "rank": null,
-         "name": "Steven DUBOIS",
-         "noc": "CAN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 3,
-         "lane": 5,
-         "slug": "steven-dubois"
-        },
-        {
-         "rank": null,
          "name": "Jens VAN 'T WOUT",
          "noc": "NED",
          "time": "",
@@ -7947,40 +7959,28 @@
         },
         {
          "rank": null,
-         "name": "Bohao ZHANG",
-         "noc": "CHN",
+         "name": "Valentin KOBYZEV",
+         "noc": "AIN2",
          "time": "",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 42,
-         "lane": 7,
-         "slug": "bohao-zhang"
-        },
-        {
-         "rank": null,
-         "name": "Mathieu PELLETIER",
-         "noc": "CAN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 66,
-         "lane": 8,
-         "slug": "mathieu-pelletier"
+         "bib": 125,
+         "lane": 2,
+         "slug": "valentin-kobyzev"
         }
        ]
       },
       {
        "name": "Final B",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "Seochan BAE",
          "noc": "KOR",
-         "time": "2:15.860",
+         "time": "2:15.841",
          "qual": "",
          "status": "",
          "record": "",
@@ -7992,7 +7992,7 @@
          "rank": 2,
          "name": "Luca SPECHENHAUSER",
          "noc": "ITA",
-         "time": "2:15.980",
+         "time": "2:15.927",
          "qual": "",
          "status": "",
          "record": "",
@@ -8004,7 +8004,7 @@
          "rank": 3,
          "name": "Daniil NIKOLAEV",
          "noc": "AIN2",
-         "time": "2:16.260",
+         "time": "2:16.247",
          "qual": "",
          "status": "",
          "record": "",
@@ -8016,7 +8016,7 @@
          "rank": 4,
          "name": "Long SUN",
          "noc": "CHN",
-         "time": "2:16.290",
+         "time": "2:16.275",
          "qual": "",
          "status": "",
          "record": "",
@@ -8028,7 +8028,7 @@
          "rank": 5,
          "name": "Brendan COREY",
          "noc": "AUS",
-         "time": "2:18.340",
+         "time": "2:18.312",
          "qual": "",
          "status": "",
          "record": "",
@@ -8040,7 +8040,7 @@
          "rank": 6,
          "name": "Thomas NADALINI",
          "noc": "ITA",
-         "time": "2:59.410",
+         "time": "2:59.392",
          "qual": "",
          "status": "",
          "record": "",
@@ -8052,7 +8052,7 @@
          "rank": 7,
          "name": "Semen ELISTRATOV",
          "noc": "AIN2",
-         "time": "3:03.510",
+         "time": "3:03.477",
          "qual": "",
          "status": "",
          "record": "",
@@ -11789,10 +11789,10 @@
    "round": "Final",
    "heat": "Final",
    "start_utc": "2026-11-21T07:50:44.000Z",
-   "rank": null,
+   "rank": 4,
    "name": "Jongun RIM",
    "noc": "KOR",
-   "time": "",
+   "time": "2:28.710",
    "qual": "",
    "status": "",
    "record": "",
@@ -11830,7 +11830,7 @@
    "rank": 1,
    "name": "Seochan BAE",
    "noc": "KOR",
-   "time": "2:15.860",
+   "time": "2:15.841",
    "qual": "",
    "status": "",
    "record": "",
