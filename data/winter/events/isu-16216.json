@@ -15,10 +15,10 @@
   "city": "Seoul",
   "country": "KOR",
   "state": "Live",
-  "live": "Men 5000 m Relay",
+  "live": "Men 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-21T00:54:28.676524+00:00",
+ "checked_at": "2026-11-21T01:05:18.885844+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -1802,10 +1802,231 @@
     {
      "id": 23443,
      "name": "Rep. Heats",
-     "status": "Scheduled",
-     "start_utc": "2026-11-21T01:00:00.000Z",
+     "status": "Live",
+     "start_utc": "2026-11-21T01:00:34.000Z",
      "rule": "The first placed skater from each race and up to a maximum of four fastest second place skaters qualify for Rep Quarterfinals.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Ivan DONCHEV",
+         "noc": "BUL",
+         "time": "41.784",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 60,
+         "lane": 1,
+         "slug": "ivan-donchev"
+        },
+        {
+         "rank": 2,
+         "name": "Fredrik PEDERSEN",
+         "noc": "NOR",
+         "time": "41.963",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 120,
+         "lane": 3,
+         "slug": "fredrik-pedersen"
+        },
+        {
+         "rank": 3,
+         "name": "Linus August RISNES",
+         "noc": "NOR",
+         "time": "43.518",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 121,
+         "lane": 2,
+         "slug": "linus-august-risnes"
+        },
+        {
+         "rank": 4,
+         "name": "Munkh-Erdene ERDENEBILEG",
+         "noc": "MGL",
+         "time": "44.479",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 138,
+         "lane": 4,
+         "slug": "munkh-erdene-erdenebileg"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Valentin KOBYZEV",
+         "noc": "AIN2",
+         "time": "41.854",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 125,
+         "lane": 4,
+         "slug": "valentin-kobyzev"
+        },
+        {
+         "rank": 2,
+         "name": "Aleyandro RIVERO MAERSCHALCK",
+         "noc": "BEL",
+         "time": "42.614",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 56,
+         "lane": 1,
+         "slug": "aleyandro-rivero-maerschalck"
+        },
+        {
+         "rank": 3,
+         "name": "Chun-Chieh LIN",
+         "noc": "TPE",
+         "time": "43.011",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 140,
+         "lane": 3,
+         "slug": "chun-chieh-lin"
+        },
+        {
+         "rank": 4,
+         "name": "Ivan MARTINIC",
+         "noc": "CRO",
+         "time": "43.799",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 130,
+         "lane": 2,
+         "slug": "ivan-martinic"
+        }
+       ]
+      },
+      {
+       "name": "Heat 3",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Marten TAUBERT",
+         "noc": "GER",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 79,
+         "lane": 1,
+         "slug": "marten-taubert"
+        },
+        {
+         "rank": null,
+         "name": "Maxim MAXIMOV",
+         "noc": "BUL",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 63,
+         "lane": 2,
+         "slug": "maxim-maximov"
+        },
+        {
+         "rank": null,
+         "name": "Tsz Fung KWOK",
+         "noc": "HKG",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 80,
+         "lane": 3,
+         "slug": "tsz-fung-kwok"
+        },
+        {
+         "rank": null,
+         "name": "Asen GYUROV",
+         "noc": "BUL",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 61,
+         "lane": 4,
+         "slug": "asen-gyurov"
+        }
+       ]
+      },
+      {
+       "name": "Heat 4",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "David NASHAEV",
+         "noc": "KAZ",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 135,
+         "lane": 1,
+         "slug": "david-nashaev"
+        },
+        {
+         "rank": null,
+         "name": "Enzo PROOST",
+         "noc": "BEL",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 128,
+         "lane": 2,
+         "slug": "enzo-proost"
+        },
+        {
+         "rank": null,
+         "name": "Kayshan Azri Putra FIRDAUS",
+         "noc": "INA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 132,
+         "lane": 3,
+         "slug": "kayshan-azri-putra-firdaus"
+        },
+        {
+         "rank": null,
+         "name": "Martin PRANTL",
+         "noc": "CRO",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 131,
+         "lane": 4,
+         "slug": "martin-prantl"
+        }
+       ]
+      }
+     ]
     },
     {
      "id": 23445,
