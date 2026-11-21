@@ -18,7 +18,7 @@
   "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-finlandia-trophy-2026/"
  },
- "checked_at": "2026-11-21T16:02:19.407814+00:00",
+ "checked_at": "2026-11-21T16:13:09.306429+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T12:09:00.000Z",
@@ -632,7 +632,7 @@
        "total": "158.91",
        "tes": "73.40",
        "pcs": "85.51",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -657,12 +657,62 @@
        "total": "147.95",
        "tes": "75.92",
        "pcs": "73.03",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
     {
      "rank": 3,
+     "name": "Stephen GOGOLEV",
+     "noc": "CAN",
+     "points": "216.61",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 7,
+       "total": "76.88",
+       "tes": "39.05",
+       "pcs": "38.83",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 3,
+       "total": "139.73",
+       "tes": "65.90",
+       "pcs": "74.83",
+       "status": "Scheduled Break"
+      }
+     }
+    },
+    {
+     "rank": 4,
+     "name": "Matias LINDFORS",
+     "noc": "FIN",
+     "points": "215.67",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 8,
+       "total": "76.74",
+       "tes": "38.51",
+       "pcs": "38.23",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 5,
+       "total": "138.93",
+       "tes": "59.61",
+       "pcs": "79.32",
+       "status": "Scheduled Break"
+      }
+     }
+    },
+    {
+     "rank": 5,
      "name": "Tamir KUPERMAN",
      "noc": "ISR",
      "points": "212.39",
@@ -678,16 +728,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 4,
+       "rank": 6,
        "total": "136.57",
        "tes": "68.11",
        "pcs": "69.46",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
     {
-     "rank": 4,
+     "rank": 6,
      "name": "Genrikh GARTUNG",
      "noc": "GER",
      "points": "211.64",
@@ -703,11 +753,11 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 3,
+       "rank": 4,
        "total": "139.45",
        "tes": "69.21",
        "pcs": "71.24",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -732,7 +782,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -757,7 +807,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -782,7 +832,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -807,7 +857,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -832,7 +882,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     },
@@ -857,57 +907,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Stephen GOGOLEV",
-     "noc": "CAN",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 7,
-       "total": "76.88",
-       "tes": "39.05",
-       "pcs": "38.83",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Matias LINDFORS",
-     "noc": "FIN",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 8,
-       "total": "76.74",
-       "tes": "38.51",
-       "pcs": "38.23",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
+       "status": "Scheduled Break"
       }
      }
     }
