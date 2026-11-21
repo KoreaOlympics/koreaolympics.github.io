@@ -545,21 +545,21 @@
      "podium": [
       {
        "rank": 1,
+       "name": "Mao SHIMADA",
+       "noc": "JPN",
+       "time": "229.49"
+      },
+      {
+       "rank": 2,
        "name": "Niina PETROKINA",
        "noc": "EST",
        "time": "214.06"
       },
       {
-       "rank": 2,
+       "rank": 3,
        "name": "Isabeau LEVITO",
        "noc": "USA",
        "time": "207.19"
-      },
-      {
-       "rank": 3,
-       "name": "Yuseong KIM",
-       "noc": "KOR",
-       "time": "204.86"
       }
      ]
     },
@@ -661,10 +661,10 @@
  "medals": [
   [
    "JPN",
-   5,
+   6,
    2,
    2,
-   9
+   10
   ],
   [
    "FRA",
@@ -676,8 +676,8 @@
   [
    "USA",
    2,
-   3,
-   5,
+   2,
+   6,
    10
   ],
   [
@@ -709,18 +709,18 @@
    5
   ],
   [
-   "EST",
-   1,
-   1,
-   1,
-   3
-  ],
-  [
    "CAN",
    1,
    1,
    0,
    2
+  ],
+  [
+   "EST",
+   0,
+   2,
+   1,
+   3
   ],
   [
    "ITA",
@@ -733,8 +733,8 @@
    "KOR",
    0,
    0,
-   3,
-   3
+   2,
+   2
   ],
   [
    "CZE",
@@ -854,6 +854,13 @@
     "event_id": "isu-16020"
    },
    {
+    "name": "Mao SHIMADA",
+    "noc": "JPN",
+    "points": 229.49,
+    "event": "ISU Figure Skating Grand Prix Finlandia Trophy 2026",
+    "event_id": "isu-15999"
+   },
+   {
     "name": "Mone CHIBA",
     "noc": "JPN",
     "points": 224.48,
@@ -901,13 +908,6 @@
     "points": 212.22,
     "event": "ISU Figure Skating Grand Prix Skate Canada International 2026",
     "event_id": "isu-16020"
-   },
-   {
-    "name": "Rino MATSUIKE",
-    "noc": "JPN",
-    "points": 211.63,
-    "event": "ISU Figure Skating Grand Prix Skate America 2026",
-    "event_id": "isu-16006"
    }
   ],
   "Men": [
