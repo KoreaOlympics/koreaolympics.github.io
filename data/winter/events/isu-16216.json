@@ -18,7 +18,7 @@
   "live": "Men 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-21T01:05:18.885844+00:00",
+ "checked_at": "2026-11-21T01:16:07.605915+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -1802,7 +1802,7 @@
     {
      "id": 23443,
      "name": "Rep. Heats",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-21T01:00:34.000Z",
      "rule": "The first placed skater from each race and up to a maximum of four fastest second place skaters qualify for Rep Quarterfinals.",
      "heats": [
@@ -1828,7 +1828,7 @@
          "name": "Fredrik PEDERSEN",
          "noc": "NOR",
          "time": "41.963",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 120,
@@ -1883,7 +1883,7 @@
          "name": "Aleyandro RIVERO MAERSCHALCK",
          "noc": "BEL",
          "time": "42.614",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 56,
@@ -1918,15 +1918,15 @@
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Marten TAUBERT",
          "noc": "GER",
-         "time": "",
-         "qual": "",
+         "time": "41.644",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 79,
@@ -1934,10 +1934,22 @@
          "slug": "marten-taubert"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Asen GYUROV",
+         "noc": "BUL",
+         "time": "41.742",
+         "qual": "q",
+         "status": "",
+         "record": "",
+         "bib": 61,
+         "lane": 4,
+         "slug": "asen-gyurov"
+        },
+        {
+         "rank": 3,
          "name": "Maxim MAXIMOV",
          "noc": "BUL",
-         "time": "",
+         "time": "41.870",
          "qual": "",
          "status": "",
          "record": "",
@@ -1946,42 +1958,30 @@
          "slug": "maxim-maximov"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Tsz Fung KWOK",
          "noc": "HKG",
-         "time": "",
+         "time": "1:02.108",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 80,
          "lane": 3,
          "slug": "tsz-fung-kwok"
-        },
-        {
-         "rank": null,
-         "name": "Asen GYUROV",
-         "noc": "BUL",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 61,
-         "lane": 4,
-         "slug": "asen-gyurov"
         }
        ]
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "David NASHAEV",
          "noc": "KAZ",
-         "time": "",
-         "qual": "",
+         "time": "42.533",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 135,
@@ -1989,11 +1989,11 @@
          "slug": "david-nashaev"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Enzo PROOST",
          "noc": "BEL",
-         "time": "",
-         "qual": "",
+         "time": "42.603",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 128,
@@ -2001,32 +2001,117 @@
          "slug": "enzo-proost"
         },
         {
-         "rank": null,
-         "name": "Kayshan Azri Putra FIRDAUS",
-         "noc": "INA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 132,
-         "lane": 3,
-         "slug": "kayshan-azri-putra-firdaus"
-        },
-        {
-         "rank": null,
+         "rank": 3,
          "name": "Martin PRANTL",
          "noc": "CRO",
-         "time": "",
+         "time": "42.880",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 131,
          "lane": 4,
          "slug": "martin-prantl"
+        },
+        {
+         "rank": 4,
+         "name": "Kayshan Azri Putra FIRDAUS",
+         "noc": "INA",
+         "time": "43.012",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 132,
+         "lane": 3,
+         "slug": "kayshan-azri-putra-firdaus"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Rep. Quarterfinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Marten TAUBERT",
+        "noc": "GER",
+        "rank": 1,
+        "time": "41.644",
+        "qual": "Q"
+       },
+       {
+        "name": "Ivan DONCHEV",
+        "noc": "BUL",
+        "rank": 1,
+        "time": "41.784",
+        "qual": "Q"
+       },
+       {
+        "name": "Valentin KOBYZEV",
+        "noc": "AIN2",
+        "rank": 1,
+        "time": "41.854",
+        "qual": "Q"
+       },
+       {
+        "name": "David NASHAEV",
+        "noc": "KAZ",
+        "rank": 1,
+        "time": "42.533",
+        "qual": "Q"
+       },
+       {
+        "name": "Asen GYUROV",
+        "noc": "BUL",
+        "rank": 2,
+        "time": "41.742",
+        "qual": "q"
+       },
+       {
+        "name": "Fredrik PEDERSEN",
+        "noc": "NOR",
+        "rank": 2,
+        "time": "41.963",
+        "qual": "q"
+       },
+       {
+        "name": "Enzo PROOST",
+        "noc": "BEL",
+        "rank": 2,
+        "time": "42.603",
+        "qual": "q"
+       },
+       {
+        "name": "Aleyandro RIVERO MAERSCHALCK",
+        "noc": "BEL",
+        "rank": 2,
+        "time": "42.614",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Marten TAUBERT (GER)"
+       ],
+       [
+        "Ivan DONCHEV (BUL)"
+       ],
+       [
+        "Valentin KOBYZEV (AIN2)"
+       ],
+       [
+        "David NASHAEV (KAZ)"
+       ],
+       [
+        "Asen GYUROV (BUL)",
+        "Aleyandro RIVERO MAERSCHALCK (BEL)"
+       ],
+       [
+        "Fredrik PEDERSEN (NOR)",
+        "Enzo PROOST (BEL)"
+       ]
+      ]
+     }
     },
     {
      "id": 23445,
