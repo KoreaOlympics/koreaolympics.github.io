@@ -14,7 +14,7 @@
   "state": "",
   "url": "https://live.isuresults.eu/events/2027_JPN_0001/schedule"
  },
- "checked_at": "2026-11-21T05:53:18.036311+00:00",
+ "checked_at": "2026-11-21T06:04:01.559163+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:05:00Z",
@@ -3442,8 +3442,8 @@
   "13": {
    "title": "1st 500m Women",
    "start_utc": "2026-11-21T05:35:00Z",
-   "live": true,
-   "official": false,
+   "live": false,
+   "official": true,
    "distance": "500 Meter",
    "division": "A",
    "start_list": false,
@@ -3463,6 +3463,19 @@
     },
     {
      "rank": 2,
+     "name": "Femke Kok",
+     "noc": "NED",
+     "time": "37.506",
+     "behind": "0.052",
+     "lane": "O",
+     "pair": 10,
+     "medal": null,
+     "status": 0,
+     "points": null,
+     "official": true
+    },
+    {
+     "rank": 3,
      "name": "Suzanne Schulting",
      "noc": "NED",
      "time": "37.737",
@@ -3475,7 +3488,20 @@
      "official": true
     },
     {
-     "rank": 3,
+     "rank": 4,
+     "name": "Wiktoria Dąbrowska",
+     "noc": "POL",
+     "time": "37.866",
+     "behind": "0.412",
+     "lane": "I",
+     "pair": 10,
+     "medal": null,
+     "status": 0,
+     "points": null,
+     "official": true
+    },
+    {
+     "rank": 5,
      "name": "Daria Kachanova",
      "noc": "AIN2",
      "time": "37.989",
@@ -3488,7 +3514,7 @@
      "official": true
     },
     {
-     "rank": 4,
+     "rank": 6,
      "name": "Kurumi Inagawa",
      "noc": "JPN",
      "time": "38.028",
@@ -3501,7 +3527,7 @@
      "official": true
     },
     {
-     "rank": 5,
+     "rank": 7,
      "name": "Ruining Tian",
      "noc": "CHN",
      "time": "38.058",
@@ -3514,7 +3540,7 @@
      "official": true
     },
     {
-     "rank": 6,
+     "rank": 8,
      "name": "Amber Duizendstraal",
      "noc": "NED",
      "time": "38.088",
@@ -3527,7 +3553,7 @@
      "official": true
     },
     {
-     "rank": 7,
+     "rank": 9,
      "name": "Julie Nistad Samsonsen",
      "noc": "NOR",
      "time": "38.101",
@@ -3540,7 +3566,7 @@
      "official": true
     },
     {
-     "rank": 8,
+     "rank": 10,
      "name": "Martyna Baran",
      "noc": "POL",
      "time": "38.143",
@@ -3553,7 +3579,7 @@
      "official": true
     },
     {
-     "rank": 9,
+     "rank": 11,
      "name": "Yukino Yoshida",
      "noc": "JPN",
      "time": "38.153",
@@ -3566,7 +3592,7 @@
      "official": true
     },
     {
-     "rank": 10,
+     "rank": 12,
      "name": "Serena Pergher",
      "noc": "ITA",
      "time": "38.189",
@@ -3579,7 +3605,7 @@
      "official": true
     },
     {
-     "rank": 11,
+     "rank": 13,
      "name": "Kristina Silaeva",
      "noc": "KAZ",
      "time": "38.193",
@@ -3592,7 +3618,7 @@
      "official": true
     },
     {
-     "rank": 12,
+     "rank": 14,
      "name": "Vanessa Herzog",
      "noc": "AUT",
      "time": "38.302",
@@ -3605,7 +3631,7 @@
      "official": true
     },
     {
-     "rank": 13,
+     "rank": 15,
      "name": "Fran Vanhoutte",
      "noc": "BEL",
      "time": "38.377",
@@ -3618,7 +3644,7 @@
      "official": true
     },
     {
-     "rank": 13,
+     "rank": 15,
      "name": "Ying-Chu Chen",
      "noc": "TPE",
      "time": "38.377",
@@ -3631,7 +3657,7 @@
      "official": true
     },
     {
-     "rank": 15,
+     "rank": 17,
      "name": "Minsun Kim",
      "noc": "KOR",
      "time": "38.451",
@@ -3644,7 +3670,7 @@
      "official": true
     },
     {
-     "rank": 16,
+     "rank": 18,
      "name": "Chong Pei",
      "noc": "CHN",
      "time": "38.558",
@@ -3657,7 +3683,7 @@
      "official": true
     },
     {
-     "rank": 17,
+     "rank": 19,
      "name": "Rio Yamada",
      "noc": "JPN",
      "time": "38.618",
@@ -3670,7 +3696,7 @@
      "official": true
     },
     {
-     "rank": 18,
+     "rank": 20,
      "name": "Jenna Larter",
      "noc": "CAN",
      "time": "38.803",
@@ -3681,67 +3707,41 @@
      "status": 0,
      "points": null,
      "official": true
-    },
-    {
-     "rank": null,
-     "name": "Wiktoria Dąbrowska",
-     "noc": "POL",
-     "time": "",
-     "behind": "",
-     "lane": "I",
-     "pair": 10,
-     "medal": null,
-     "status": null,
-     "points": null,
-     "official": true
-    },
-    {
-     "rank": null,
-     "name": "Femke Kok",
-     "noc": "NED",
-     "time": "",
-     "behind": "",
-     "lane": "O",
-     "pair": 10,
-     "medal": null,
-     "status": null,
-     "points": null,
-     "official": true
     }
    ]
   },
   "14": {
    "title": "1st 500m Men",
    "start_utc": "2026-11-21T06:03:00Z",
-   "live": false,
+   "live": true,
    "official": false,
    "distance": "500 Meter",
    "division": "A",
-   "start_list": true,
+   "start_list": false,
    "rows": [
     {
-     "rank": null,
-     "name": "Merijn Scheperkamp",
-     "noc": "NED",
-     "time": "",
-     "behind": "",
-     "lane": "I",
+     "rank": 1,
+     "name": "Jordan Stolz",
+     "noc": "USA",
+     "time": "34.260",
+     "behind": "0.000",
+     "lane": "O",
      "pair": 1,
      "medal": null,
-     "status": null,
+     "status": 0,
      "points": null,
      "official": true
     },
     {
-     "rank": null,
-     "name": "Jordan Stolz",
-     "noc": "USA",
-     "time": "",
-     "behind": "",
-     "lane": "O",
+     "rank": 2,
+     "name": "Merijn Scheperkamp",
+     "noc": "NED",
+     "time": "35.330",
+     "behind": "1.070",
+     "lane": "I",
      "pair": 1,
      "medal": null,
-     "status": null,
+     "status": 0,
      "points": null,
      "official": true
     },
@@ -4827,12 +4827,33 @@
    "round": "Division A",
    "heat": "",
    "start_utc": "2026-11-21T05:35:00Z",
-   "rank": 15,
+   "rank": 17,
    "name": "Minsun Kim",
    "noc": "KOR",
    "time": "38.451",
    "behind": "0.997",
    "lane": "I",
+   "pair": 4,
+   "medal": null,
+   "status": "",
+   "points": null,
+   "official": true,
+   "qual": ""
+  },
+  {
+   "event_id": "ssr-2027_JPN_0001",
+   "sport": "speed-skating",
+   "event": "ISU Speed Skating World Cup #2",
+   "distance": "1st 500m Men",
+   "round": "Division A",
+   "heat": "",
+   "start_utc": "2026-11-21T06:03:00Z",
+   "rank": null,
+   "name": "Kyungmin Koo",
+   "noc": "KOR",
+   "time": "",
+   "behind": "",
+   "lane": "O",
    "pair": 4,
    "medal": null,
    "status": "",

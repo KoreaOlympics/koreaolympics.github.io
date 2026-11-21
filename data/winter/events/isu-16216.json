@@ -15,10 +15,10 @@
   "city": "Seoul",
   "country": "KOR",
   "state": "Live",
-  "live": "Men 500 m",
+  "live": "Women 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-21T05:52:46.461824+00:00",
+ "checked_at": "2026-11-21T06:03:29.325558+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -173,7 +173,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-21T05:35:00.000Z",
+   "start_utc": "2026-11-21T05:37:00.000Z",
    "title": "Men 500 m",
    "round": "Semifinals",
    "event_result_id": 16345,
@@ -191,9 +191,9 @@
   {
    "start_utc": "2026-11-21T06:08:00.000Z",
    "title": "Men 500 m",
-   "round": "Finals",
+   "round": "Final",
    "event_result_id": 16345,
-   "round_id": null,
+   "round_id": 23508,
    "type": "Singles"
   },
   {
@@ -3148,7 +3148,7 @@
      "id": 23448,
      "name": "Semifinals",
      "status": "Finished",
-     "start_utc": "2026-11-21T05:37:00.000Z",
+     "start_utc": "2026-11-21T05:40:21.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final, the third and fourth placed skaters from each race and up to a maximum of next two fastest fifth place skaters qualify for Final B.",
      "heats": [
       {
@@ -9433,7 +9433,7 @@
      ],
      "projection": {
       "next": "Semifinals",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -9528,10 +9528,145 @@
     {
      "id": 23440,
      "name": "Semifinals",
-     "status": "Scheduled",
+     "status": "Live",
      "start_utc": "2026-11-21T05:59:00.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final, the third and fourth placed skaters from each race and up to a maximum of next two fastest fifth place skaters qualify for Final B.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Live",
+       "official": "Live",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Gilli KIM",
+         "noc": "KOR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 5,
+         "lane": 4,
+         "slug": "gilli-kim"
+        },
+        {
+         "rank": null,
+         "name": "Courtney SARAULT",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 1,
+         "lane": 1,
+         "slug": "courtney-sarault"
+        },
+        {
+         "rank": null,
+         "name": "Tineke DEN DULK",
+         "noc": "BEL",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 44,
+         "lane": 3,
+         "slug": "tineke-den-dulk-1"
+        },
+        {
+         "rank": null,
+         "name": "Sukhee SHIM",
+         "noc": "KOR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 79,
+         "lane": 2,
+         "slug": "sukhee-shim"
+        },
+        {
+         "rank": null,
+         "name": "Alena KRYLOVA",
+         "noc": "AIN2",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 92,
+         "lane": 5,
+         "slug": "alena-krylova"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Minjeong CHOI",
+         "noc": "KOR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 4,
+         "lane": 1,
+         "slug": "minjeong-choi"
+        },
+        {
+         "rank": null,
+         "name": "Florence BRUNELLE",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 10,
+         "lane": 2,
+         "slug": "florence-brunelle"
+        },
+        {
+         "rank": null,
+         "name": "Ann-Sophie BACHAND",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 51,
+         "lane": 3,
+         "slug": "ann-sophie-bachand"
+        },
+        {
+         "rank": null,
+         "name": "Danae BLAIS",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 25,
+         "lane": 4,
+         "slug": "danae-blais"
+        },
+        {
+         "rank": null,
+         "name": "Failia AIMALETDINOVA",
+         "noc": "AIN2",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 90,
+         "lane": 5,
+         "slug": "failia-aimaletdinova"
+        }
+       ]
+      }
+     ]
     },
     {
      "id": 23441,
@@ -10287,7 +10422,7 @@
    "distance": "Men 500 m",
    "round": "Semifinals",
    "heat": "Heat 1",
-   "start_utc": "2026-11-21T05:37:00.000Z",
+   "start_utc": "2026-11-21T05:40:21.000Z",
    "rank": 4,
    "name": "Jeongmin LEE",
    "noc": "KOR",
@@ -10868,6 +11003,63 @@
    "bib": 5,
    "lane": 1,
    "slug": "gilli-kim"
+  },
+  {
+   "event_id": "isu-16216",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #3",
+   "distance": "Women 1000 m",
+   "round": "Semifinals",
+   "heat": "Heat 1",
+   "start_utc": "2026-11-21T05:59:00.000Z",
+   "rank": null,
+   "name": "Gilli KIM",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 5,
+   "lane": 4,
+   "slug": "gilli-kim"
+  },
+  {
+   "event_id": "isu-16216",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #3",
+   "distance": "Women 1000 m",
+   "round": "Semifinals",
+   "heat": "Heat 1",
+   "start_utc": "2026-11-21T05:59:00.000Z",
+   "rank": null,
+   "name": "Sukhee SHIM",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 79,
+   "lane": 2,
+   "slug": "sukhee-shim"
+  },
+  {
+   "event_id": "isu-16216",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #3",
+   "distance": "Women 1000 m",
+   "round": "Semifinals",
+   "heat": "Heat 2",
+   "start_utc": "2026-11-21T05:59:00.000Z",
+   "rank": null,
+   "name": "Minjeong CHOI",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 4,
+   "lane": 1,
+   "slug": "minjeong-choi"
   },
   {
    "event_id": "isu-16216",
