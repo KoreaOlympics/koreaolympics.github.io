@@ -18,7 +18,7 @@
   "live": "Women 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-21T02:33:12.351112+00:00",
+ "checked_at": "2026-11-21T02:44:18.806898+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -7857,21 +7857,33 @@
     {
      "id": 23437,
      "name": "Rep. Quarterfinals",
-     "status": "Live",
-     "start_utc": "2026-11-21T02:25:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-21T02:31:21.000Z",
      "rule": "The first placed skater from each race and up to a maximum of three fastest second place skaters qualify for Rep Semifinals.",
      "heats": [
       {
        "name": "Heat 1",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Minji KIM",
+         "noc": "KOR",
+         "time": "1:34.911",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 78,
+         "lane": 1,
+         "slug": "minji-kim"
+        },
+        {
+         "rank": 2,
          "name": "Diede VAN OORSCHOT",
          "noc": "NED",
-         "time": "",
-         "qual": "",
+         "time": "1:35.488",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 36,
@@ -7879,10 +7891,22 @@
          "slug": "diede-van-oorschot"
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Katarina BURIC",
+         "noc": "CRO",
+         "time": "1:35.947",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 96,
+         "lane": 2,
+         "slug": "katarina-buric"
+        },
+        {
+         "rank": 4,
          "name": "Zoe Florence DELTRAP",
          "noc": "NED",
-         "time": "",
+         "time": "2:00.042",
          "qual": "",
          "status": "",
          "record": "",
@@ -7891,54 +7915,30 @@
          "slug": "zoe-florence-deltrap"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Betty MOESKE",
          "noc": "GER",
-         "time": "",
+         "time": "2:04.640",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 63,
          "lane": 4,
          "slug": "betty-moeske"
-        },
-        {
-         "rank": null,
-         "name": "Minji KIM",
-         "noc": "KOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 78,
-         "lane": 1,
-         "slug": "minji-kim"
-        },
-        {
-         "rank": null,
-         "name": "Katarina BURIC",
-         "noc": "CRO",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 96,
-         "lane": 2,
-         "slug": "katarina-buric"
         }
        ]
       },
       {
        "name": "Heat 2",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Valentina ASCIC",
          "noc": "CRO",
-         "time": "",
-         "qual": "",
+         "time": "1:33.330",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 29,
@@ -7946,11 +7946,11 @@
          "slug": "valentina-ascic"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Anastasiia ZHEGANOVA",
          "noc": "AIN2",
-         "time": "",
-         "qual": "",
+         "time": "1:33.446",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 95,
@@ -7958,10 +7958,10 @@
          "slug": "anastasiia-zheganova"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Ayano SEKIGUCHI",
          "noc": "JPN",
-         "time": "",
+         "time": "1:33.605",
          "qual": "",
          "status": "",
          "record": "",
@@ -7970,10 +7970,22 @@
          "slug": "ayano-sekiguchi"
         },
         {
-         "rank": null,
+         "rank": 4,
+         "name": "Pauliina KLEVSTUEN",
+         "noc": "NOR",
+         "time": "1:37.519",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 89,
+         "lane": 6,
+         "slug": "pauliina-klevstuen"
+        },
+        {
+         "rank": 5,
          "name": "Kiek STRAATHOF",
          "noc": "NED",
-         "time": "",
+         "time": "1:39.849",
          "qual": "",
          "status": "",
          "record": "",
@@ -7982,41 +7994,53 @@
          "slug": "kiek-straathof"
         },
         {
-         "rank": null,
+         "rank": 6,
          "name": "Mirei NAKASHIMA",
          "noc": "JPN",
-         "time": "",
+         "time": "1:45.593",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 12,
          "lane": 5,
          "slug": "mirei-nakashima"
-        },
-        {
-         "rank": null,
-         "name": "Pauliina KLEVSTUEN",
-         "noc": "NOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 89,
-         "lane": 6,
-         "slug": "pauliina-klevstuen"
         }
        ]
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Alena KRYLOVA",
+         "noc": "AIN2",
+         "time": "1:36.061",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 92,
+         "lane": 2,
+         "slug": "alena-krylova"
+        },
+        {
+         "rank": 2,
+         "name": "Selma POUTSMA",
+         "noc": "NED",
+         "time": "1:36.640",
+         "qual": "q",
+         "status": "",
+         "record": "",
+         "bib": 15,
+         "lane": 4,
+         "slug": "selma-poutsma"
+        },
+        {
+         "rank": 3,
          "name": "Margherita BETTI",
          "noc": "ITA",
-         "time": "",
+         "time": "1:36.677",
          "qual": "",
          "status": "",
          "record": "",
@@ -8025,46 +8049,10 @@
          "slug": "margherita-betti"
         },
         {
-         "rank": null,
-         "name": "Alena KRYLOVA",
-         "noc": "AIN2",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 92,
-         "lane": 2,
-         "slug": "alena-krylova"
-        },
-        {
-         "rank": null,
-         "name": "Kateryna SOLOVIOVA",
-         "noc": "GER",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 64,
-         "lane": 3,
-         "slug": "kateryna-soloviova"
-        },
-        {
-         "rank": null,
-         "name": "Selma POUTSMA",
-         "noc": "NED",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 15,
-         "lane": 4,
-         "slug": "selma-poutsma"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Haruna NAGAMORI",
          "noc": "JPN",
-         "time": "",
+         "time": "1:36.899",
          "qual": "",
          "status": "",
          "record": "",
@@ -8073,20 +8061,93 @@
          "slug": "haruna-nagamori"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Ching Yan LAM",
          "noc": "HKG",
-         "time": "",
+         "time": "1:37.030",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 97,
          "lane": 6,
          "slug": "ching-yan-lam"
+        },
+        {
+         "rank": 6,
+         "name": "Kateryna SOLOVIOVA",
+         "noc": "GER",
+         "time": "1:37.156",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 64,
+         "lane": 3,
+         "slug": "kateryna-soloviova"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Rep. Semifinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Valentina ASCIC",
+        "noc": "CRO",
+        "rank": 1,
+        "time": "1:33.330",
+        "qual": "Q"
+       },
+       {
+        "name": "Minji KIM",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "1:34.911",
+        "qual": "Q"
+       },
+       {
+        "name": "Alena KRYLOVA",
+        "noc": "AIN2",
+        "rank": 1,
+        "time": "1:36.061",
+        "qual": "Q"
+       },
+       {
+        "name": "Anastasiia ZHEGANOVA",
+        "noc": "AIN2",
+        "rank": 2,
+        "time": "1:33.446",
+        "qual": "q"
+       },
+       {
+        "name": "Diede VAN OORSCHOT",
+        "noc": "NED",
+        "rank": 2,
+        "time": "1:35.488",
+        "qual": "q"
+       },
+       {
+        "name": "Selma POUTSMA",
+        "noc": "NED",
+        "rank": 2,
+        "time": "1:36.640",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Valentina ASCIC (CRO)",
+        "Anastasiia ZHEGANOVA (AIN2)",
+        "Diede VAN OORSCHOT (NED)"
+       ],
+       [
+        "Minji KIM (KOR)",
+        "Alena KRYLOVA (AIN2)",
+        "Selma POUTSMA (NED)"
+       ]
+      ]
+     }
     },
     {
      "id": 23438,
@@ -9022,12 +9083,12 @@
    "distance": "Women 1000 m",
    "round": "Rep. Quarterfinals",
    "heat": "Heat 1",
-   "start_utc": "2026-11-21T02:25:00.000Z",
-   "rank": null,
+   "start_utc": "2026-11-21T02:31:21.000Z",
+   "rank": 1,
    "name": "Minji KIM",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "1:34.911",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 78,
