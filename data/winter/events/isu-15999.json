@@ -15,10 +15,10 @@
   "city": "Helsinki",
   "country": "FIN",
   "state": "Live",
-  "live": "WESSENBERG Megan / STREKALIN Denys",
+  "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-finlandia-trophy-2026/"
  },
- "checked_at": "2026-11-21T10:43:53.534266+00:00",
+ "checked_at": "2026-11-21T10:54:40.246568+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T12:09:00.000Z",
@@ -95,6 +95,56 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Megan WESSENBERG / Denys STREKALIN",
+     "noc": "FRA",
+     "points": "162.03",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 6,
+       "total": "60.71",
+       "tes": "34.48",
+       "pcs": "26.23",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 1,
+       "total": "101.32",
+       "tes": "49.02",
+       "pcs": "53.30",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
+     "name": "Valentina PLAZAS / Maximiliano FERNANDEZ",
+     "noc": "USA",
+     "points": "153.98",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 5,
+       "total": "60.87",
+       "tes": "34.18",
+       "pcs": "27.69",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 2,
+       "total": "93.11",
+       "tes": "44.90",
+       "pcs": "51.21",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 3,
      "name": "Irma CALDARA / Riccardo MAGLIO",
      "noc": "ITA",
      "points": "145.04",
@@ -110,7 +160,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 1,
+       "rank": 3,
        "total": "90.77",
        "tes": "44.31",
        "pcs": "48.46",
@@ -119,7 +169,7 @@
      }
     },
     {
-     "rank": 2,
+     "rank": 4,
      "name": "Hannah HERRERA / Ivan KHOBTA",
      "noc": "UKR",
      "points": "142.56",
@@ -135,7 +185,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 2,
+       "rank": 4,
        "total": "86.93",
        "tes": "40.18",
        "pcs": "46.75",
@@ -231,56 +281,6 @@
        "total": "67.26",
        "tes": "37.00",
        "pcs": "30.26",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Valentina PLAZAS / Maximiliano FERNANDEZ",
-     "noc": "USA",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 5,
-       "total": "60.87",
-       "tes": "34.18",
-       "pcs": "27.69",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Megan WESSENBERG / Denys STREKALIN",
-     "noc": "FRA",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 6,
-       "total": "60.71",
-       "tes": "34.48",
-       "pcs": "26.23",
        "status": "Finished"
       },
       "FS": {
