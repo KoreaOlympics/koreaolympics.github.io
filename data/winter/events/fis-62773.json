@@ -16,7 +16,7 @@
   "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62773&seasoncode=2027",
   "raw": "2xSL"
  },
- "checked_at": "2026-11-21T13:13:27.787252+00:00",
+ "checked_at": "2026-11-21T13:24:35.477681+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-21T09:30:00Z",
@@ -32,348 +32,971 @@
  "results": {
   "131581": {
    "title": "Women's Slalom",
-   "columns": [],
+   "columns": [
+    "Run 1",
+    "Run 2",
+    "Tot. Time",
+    "Diff. Time"
+   ],
    "rows": [
     {
-     "order": "1",
-     "bib": "31",
-     "code": "155728",
-     "name": "DUBOVSKA Martina",
-     "year": "1992",
-     "noc": "CZE",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "2",
-     "bib": "19",
-     "code": "198176",
-     "name": "LAMURE Marie",
-     "year": "2001",
-     "noc": "FRA",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "3",
-     "bib": "52",
-     "code": "516560",
-     "name": "LINGG Charlotte",
-     "year": "1999",
-     "noc": "LIE",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "4",
-     "bib": "43",
-     "code": "6537254",
-     "name": "MORITZ Liv",
-     "year": "2004",
-     "noc": "USA",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "5",
-     "bib": "36",
-     "code": "6536171",
-     "name": "HENSIEN Katie",
-     "year": "1999",
-     "noc": "USA",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "6",
-     "bib": "30",
-     "code": "6535773",
-     "name": "O'BRIEN Nina",
-     "year": "1997",
-     "noc": "USA",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "7",
-     "bib": "25",
-     "code": "56664",
-     "name": "FALCH Natalie",
-     "year": "2004",
-     "noc": "AUT",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "8",
-     "bib": "35",
-     "code": "6296299",
-     "name": "VALLERIANI Giulia",
-     "year": "2004",
-     "noc": "ITA",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "9",
-     "bib": "18",
-     "code": "565491",
-     "name": "DVORNIK Neja",
-     "year": "2001",
-     "noc": "SLO",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "10",
-     "bib": "44",
-     "code": "565488",
-     "name": "TOMSIC Nika",
-     "year": "2000",
-     "noc": "SLO",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "11",
-     "bib": "46",
-     "code": "516631",
-     "name": "EGLOFF Selina",
-     "year": "2001",
-     "noc": "SUI",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "12",
-     "bib": "7",
-     "code": "56315",
-     "name": "TRUPPE Katharina",
-     "year": "1996",
-     "noc": "AUT",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "13",
-     "bib": "4",
-     "code": "516562",
-     "name": "RAST Camille",
-     "year": "1999",
-     "noc": "SUI",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "14",
-     "bib": "27",
-     "code": "516619",
-     "name": "HOEPLI Aline",
-     "year": "2001",
-     "noc": "SUI",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "15",
-     "bib": "42",
-     "code": "6296281",
-     "name": "MONDINELLI Emilia",
-     "year": "2004",
-     "noc": "ITA",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "16",
-     "bib": "10",
-     "code": "507325",
-     "name": "OEHLUND Cornelia",
-     "year": "2005",
-     "noc": "SWE",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "17",
-     "bib": "15",
-     "code": "206355",
-     "name": "DUERR Lena",
-     "year": "1991",
-     "noc": "GER",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "18",
-     "bib": "5",
-     "code": "507168",
-     "name": "AICHER Emma",
-     "year": "2003",
-     "noc": "GER",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "19",
-     "bib": "22",
-     "code": "516553",
-     "name": "CHRISTEN Eliane",
-     "year": "1999",
-     "noc": "SUI",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "20",
-     "bib": "3",
-     "code": "539909",
-     "name": "MOLTZAN Paula",
-     "year": "1994",
-     "noc": "USA",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "21",
-     "bib": "12",
-     "code": "198164",
-     "name": "CHEVRIER Marion",
-     "year": "2001",
-     "noc": "FRA",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "22",
-     "bib": "17",
-     "code": "385116",
-     "name": "LJUTIC Zrinka",
-     "year": "2004",
-     "noc": "CRO",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "23",
-     "bib": "16",
-     "code": "198253",
-     "name": "MCFARLANE Caitlin",
-     "year": "2002",
-     "noc": "FRA",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "24",
-     "bib": "14",
-     "code": "506399",
-     "name": "HECTOR Sara",
-     "year": "1992",
-     "noc": "SWE",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "25",
-     "bib": "26",
-     "code": "6536392",
-     "name": "HURT A J",
-     "year": "2000",
-     "noc": "USA",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "26",
-     "bib": "21",
-     "code": "507109",
-     "name": "ARONSSON ELFMAN Hanna",
-     "year": "2002",
-     "noc": "SWE",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "27",
-     "bib": "11",
-     "code": "555072",
-     "name": "GERMANE Dzenifera",
-     "year": "2003",
-     "noc": "LAT",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "28",
-     "bib": "13",
-     "code": "6295075",
-     "name": "DELLA MEA Lara",
-     "year": "1999",
-     "noc": "ITA",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "29",
+     "rank": 1,
      "bib": "6",
      "code": "805009",
      "name": "COLTURI Lara",
      "year": "2006",
      "noc": "ALB",
-     "cells": {},
-     "rank": null,
+     "cells": {
+      "Run 1": "51.94",
+      "Run 2": "53.53",
+      "Tot. Time": "1:45.47",
+      "Diff. Time": ""
+     },
      "status": ""
     },
     {
-     "order": "30",
+     "rank": 2,
+     "bib": "14",
+     "code": "506399",
+     "name": "HECTOR Sara",
+     "year": "1992",
+     "noc": "SWE",
+     "cells": {
+      "Run 1": "52.31",
+      "Run 2": "53.43",
+      "Tot. Time": "1:45.74",
+      "Diff. Time": "+0.27"
+     },
+     "status": ""
+    },
+    {
+     "rank": 3,
      "bib": "2",
      "code": "506146",
      "name": "SWENN LARSSON Anna",
      "year": "1991",
      "noc": "SWE",
-     "cells": {},
-     "rank": null,
+     "cells": {
+      "Run 1": "51.70",
+      "Run 2": "54.07",
+      "Tot. Time": "1:45.77",
+      "Diff. Time": "+0.30"
+     },
      "status": ""
+    },
+    {
+     "rank": 4,
+     "bib": "26",
+     "code": "6536392",
+     "name": "HURT A J",
+     "year": "2000",
+     "noc": "USA",
+     "cells": {
+      "Run 1": "52.25",
+      "Run 2": "53.61",
+      "Tot. Time": "1:45.86",
+      "Diff. Time": "+0.39"
+     },
+     "status": ""
+    },
+    {
+     "rank": 5,
+     "bib": "21",
+     "code": "507109",
+     "name": "ARONSSON ELFMAN Hanna",
+     "year": "2002",
+     "noc": "SWE",
+     "cells": {
+      "Run 1": "52.15",
+      "Run 2": "54.25",
+      "Tot. Time": "1:46.40",
+      "Diff. Time": "+0.93"
+     },
+     "status": ""
+    },
+    {
+     "rank": 5,
+     "bib": "4",
+     "code": "516562",
+     "name": "RAST Camille",
+     "year": "1999",
+     "noc": "SUI",
+     "cells": {
+      "Run 1": "53.16",
+      "Run 2": "53.24",
+      "Tot. Time": "1:46.40",
+      "Diff. Time": "+0.93"
+     },
+     "status": ""
+    },
+    {
+     "rank": 7,
+     "bib": "17",
+     "code": "385116",
+     "name": "LJUTIC Zrinka",
+     "year": "2004",
+     "noc": "CRO",
+     "cells": {
+      "Run 1": "52.44",
+      "Run 2": "54.06",
+      "Tot. Time": "1:46.50",
+      "Diff. Time": "+1.03"
+     },
+     "status": ""
+    },
+    {
+     "rank": 8,
+     "bib": "5",
+     "code": "507168",
+     "name": "AICHER Emma",
+     "year": "2003",
+     "noc": "GER",
+     "cells": {
+      "Run 1": "52.98",
+      "Run 2": "53.54",
+      "Tot. Time": "1:46.52",
+      "Diff. Time": "+1.05"
+     },
+     "status": ""
+    },
+    {
+     "rank": 9,
+     "bib": "13",
+     "code": "6295075",
+     "name": "DELLA MEA Lara",
+     "year": "1999",
+     "noc": "ITA",
+     "cells": {
+      "Run 1": "51.96",
+      "Run 2": "54.57",
+      "Tot. Time": "1:46.53",
+      "Diff. Time": "+1.06"
+     },
+     "status": ""
+    },
+    {
+     "rank": 10,
+     "bib": "11",
+     "code": "555072",
+     "name": "GERMANE Dzenifera",
+     "year": "2003",
+     "noc": "LAT",
+     "cells": {
+      "Run 1": "52.09",
+      "Run 2": "54.49",
+      "Tot. Time": "1:46.58",
+      "Diff. Time": "+1.11"
+     },
+     "status": ""
+    },
+    {
+     "rank": 11,
+     "bib": "12",
+     "code": "198164",
+     "name": "CHEVRIER Marion",
+     "year": "2001",
+     "noc": "FRA",
+     "cells": {
+      "Run 1": "52.58",
+      "Run 2": "54.09",
+      "Tot. Time": "1:46.67",
+      "Diff. Time": "+1.20"
+     },
+     "status": ""
+    },
+    {
+     "rank": 12,
+     "bib": "15",
+     "code": "206355",
+     "name": "DUERR Lena",
+     "year": "1991",
+     "noc": "GER",
+     "cells": {
+      "Run 1": "52.99",
+      "Run 2": "53.93",
+      "Tot. Time": "1:46.92",
+      "Diff. Time": "+1.45"
+     },
+     "status": ""
+    },
+    {
+     "rank": 13,
+     "bib": "3",
+     "code": "539909",
+     "name": "MOLTZAN Paula",
+     "year": "1994",
+     "noc": "USA",
+     "cells": {
+      "Run 1": "52.86",
+      "Run 2": "54.33",
+      "Tot. Time": "1:47.19",
+      "Diff. Time": "+1.72"
+     },
+     "status": ""
+    },
+    {
+     "rank": 14,
+     "bib": "16",
+     "code": "198253",
+     "name": "MCFARLANE Caitlin",
+     "year": "2002",
+     "noc": "FRA",
+     "cells": {
+      "Run 1": "52.41",
+      "Run 2": "54.99",
+      "Tot. Time": "1:47.40",
+      "Diff. Time": "+1.93"
+     },
+     "status": ""
+    },
+    {
+     "rank": 15,
+     "bib": "46",
+     "code": "516631",
+     "name": "EGLOFF Selina",
+     "year": "2001",
+     "noc": "SUI",
+     "cells": {
+      "Run 1": "53.39",
+      "Run 2": "54.06",
+      "Tot. Time": "1:47.45",
+      "Diff. Time": "+1.98"
+     },
+     "status": ""
+    },
+    {
+     "rank": 16,
+     "bib": "36",
+     "code": "6536171",
+     "name": "HENSIEN Katie",
+     "year": "1999",
+     "noc": "USA",
+     "cells": {
+      "Run 1": "53.83",
+      "Run 2": "53.66",
+      "Tot. Time": "1:47.49",
+      "Diff. Time": "+2.02"
+     },
+     "status": ""
+    },
+    {
+     "rank": 17,
+     "bib": "22",
+     "code": "516553",
+     "name": "CHRISTEN Eliane",
+     "year": "1999",
+     "noc": "SUI",
+     "cells": {
+      "Run 1": "52.96",
+      "Run 2": "54.55",
+      "Tot. Time": "1:47.51",
+      "Diff. Time": "+2.04"
+     },
+     "status": ""
+    },
+    {
+     "rank": 18,
+     "bib": "18",
+     "code": "565491",
+     "name": "DVORNIK Neja",
+     "year": "2001",
+     "noc": "SLO",
+     "cells": {
+      "Run 1": "53.51",
+      "Run 2": "54.11",
+      "Tot. Time": "1:47.62",
+      "Diff. Time": "+2.15"
+     },
+     "status": ""
+    },
+    {
+     "rank": 19,
+     "bib": "27",
+     "code": "516619",
+     "name": "HOEPLI Aline",
+     "year": "2001",
+     "noc": "SUI",
+     "cells": {
+      "Run 1": "53.15",
+      "Run 2": "54.57",
+      "Tot. Time": "1:47.72",
+      "Diff. Time": "+2.25"
+     },
+     "status": ""
+    },
+    {
+     "rank": 20,
+     "bib": "31",
+     "code": "155728",
+     "name": "DUBOVSKA Martina",
+     "year": "1992",
+     "noc": "CZE",
+     "cells": {
+      "Run 1": "53.90",
+      "Run 2": "54.27",
+      "Tot. Time": "1:48.17",
+      "Diff. Time": "+2.70"
+     },
+     "status": ""
+    },
+    {
+     "rank": 21,
+     "bib": "10",
+     "code": "507325",
+     "name": "OEHLUND Cornelia",
+     "year": "2005",
+     "noc": "SWE",
+     "cells": {
+      "Run 1": "53.10",
+      "Run 2": "55.11",
+      "Tot. Time": "1:48.21",
+      "Diff. Time": "+2.74"
+     },
+     "status": ""
+    },
+    {
+     "rank": 22,
+     "bib": "52",
+     "code": "516560",
+     "name": "LINGG Charlotte",
+     "year": "1999",
+     "noc": "LIE",
+     "cells": {
+      "Run 1": "53.87",
+      "Run 2": "54.40",
+      "Tot. Time": "1:48.27",
+      "Diff. Time": "+2.80"
+     },
+     "status": ""
+    },
+    {
+     "rank": 23,
+     "bib": "43",
+     "code": "6537254",
+     "name": "MORITZ Liv",
+     "year": "2004",
+     "noc": "USA",
+     "cells": {
+      "Run 1": "53.86",
+      "Run 2": "54.66",
+      "Tot. Time": "1:48.52",
+      "Diff. Time": "+3.05"
+     },
+     "status": ""
+    },
+    {
+     "rank": 24,
+     "bib": "19",
+     "code": "198176",
+     "name": "LAMURE Marie",
+     "year": "2001",
+     "noc": "FRA",
+     "cells": {
+      "Run 1": "53.87",
+      "Run 2": "55.15",
+      "Tot. Time": "1:49.02",
+      "Diff. Time": "+3.55"
+     },
+     "status": ""
+    },
+    {
+     "rank": null,
+     "bib": "44",
+     "code": "565488",
+     "name": "TOMSIC Nika",
+     "year": "2000",
+     "noc": "SLO",
+     "cells": {
+      "Run 1": "53.40",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not finish 2nd run"
+    },
+    {
+     "rank": null,
+     "bib": "42",
+     "code": "6296281",
+     "name": "MONDINELLI Emilia",
+     "year": "2004",
+     "noc": "ITA",
+     "cells": {
+      "Run 1": "53.11",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not finish 2nd run"
+    },
+    {
+     "rank": null,
+     "bib": "35",
+     "code": "6296299",
+     "name": "VALLERIANI Giulia",
+     "year": "2004",
+     "noc": "ITA",
+     "cells": {
+      "Run 1": "53.67",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not finish 2nd run"
+    },
+    {
+     "rank": null,
+     "bib": "30",
+     "code": "6535773",
+     "name": "O'BRIEN Nina",
+     "year": "1997",
+     "noc": "USA",
+     "cells": {
+      "Run 1": "53.81",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not finish 2nd run"
+    },
+    {
+     "rank": null,
+     "bib": "25",
+     "code": "56664",
+     "name": "FALCH Natalie",
+     "year": "2004",
+     "noc": "AUT",
+     "cells": {
+      "Run 1": "53.79",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not finish 2nd run"
+    },
+    {
+     "rank": null,
+     "bib": "7",
+     "code": "56315",
+     "name": "TRUPPE Katharina",
+     "year": "1996",
+     "noc": "AUT",
+     "cells": {
+      "Run 1": "53.22",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not finish 2nd run"
+    },
+    {
+     "rank": null,
+     "bib": "63",
+     "code": "516530",
+     "name": "GOOD Nicole",
+     "year": "1998",
+     "noc": "SUI",
+     "cells": {
+      "Run 1": "54.74",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "62",
+     "code": "56698",
+     "name": "RINGS-WANNER Valentina",
+     "year": "2005",
+     "noc": "AUT",
+     "cells": {
+      "Run 1": "54.36",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "61",
+     "code": "198016",
+     "name": "ESCANE Doriane",
+     "year": "1999",
+     "noc": "FRA",
+     "cells": {
+      "Run 1": "55.02",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "60",
+     "code": "6537917",
+     "name": "ZAYTSEVA Viktoria",
+     "year": "2007",
+     "noc": "USA",
+     "cells": {
+      "Run 1": "55.47",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "57",
+     "code": "355061",
+     "name": "HILZINGER Jessica",
+     "year": "1997",
+     "noc": "GER",
+     "cells": {
+      "Run 1": "54.65",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "56",
+     "code": "516504",
+     "name": "DANIOTH Aline",
+     "year": "1998",
+     "noc": "SUI",
+     "cells": {
+      "Run 1": "55.41",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "55",
+     "code": "25218",
+     "name": "MIJARES RUF Carla",
+     "year": "2002",
+     "noc": "AND",
+     "cells": {
+      "Run 1": "54.15",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "53",
+     "code": "385096",
+     "name": "POPOVIC Leona",
+     "year": "1997",
+     "noc": "CRO",
+     "cells": {
+      "Run 1": "54.71",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "51",
+     "code": "665009",
+     "name": "SHKANOVA Maria",
+     "year": "1989",
+     "noc": "AIN",
+     "cells": {
+      "Run 1": "56.04",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "50",
+     "code": "45423",
+     "name": "HOFFMAN Madison",
+     "year": "2000",
+     "noc": "AUS",
+     "cells": {
+      "Run 1": "55.21",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "49",
+     "code": "108095",
+     "name": "ALEXANDER Kiki",
+     "year": "2001",
+     "noc": "CAN",
+     "cells": {
+      "Run 1": "54.43",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "48",
+     "code": "198215",
+     "name": "POGNEAUX Chiara",
+     "year": "2002",
+     "noc": "FRA",
+     "cells": {
+      "Run 1": "54.16",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "47",
+     "code": "6296778",
+     "name": "COLLOMB Giorgia",
+     "year": "2006",
+     "noc": "ITA",
+     "cells": {
+      "Run 1": "54.11",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "45",
+     "code": "307813",
+     "name": "MAEDA Chisaki",
+     "year": "1998",
+     "noc": "JPN",
+     "cells": {
+      "Run 1": "54.14",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "41",
+     "code": "108075",
+     "name": "BENNETT Sarah",
+     "year": "2001",
+     "noc": "CAN",
+     "cells": {
+      "Run 1": "56.02",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "40",
+     "code": "56392",
+     "name": "GRITSCH Franziska",
+     "year": "1997",
+     "noc": "AUT",
+     "cells": {
+      "Run 1": "54.48",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "39",
+     "code": "35222",
+     "name": "BARUZZI FARRIOL Francesca",
+     "year": "1998",
+     "noc": "ARG",
+     "cells": {
+      "Run 1": "53.94",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "37",
+     "code": "6295835",
+     "name": "PAZZAGLIA Alice",
+     "year": "2002",
+     "noc": "ITA",
+     "cells": {
+      "Run 1": "54.70",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "33",
+     "code": "6537255",
+     "name": "MORITZ Kjersti",
+     "year": "2004",
+     "noc": "USA",
+     "cells": {
+      "Run 1": "54.25",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "32",
+     "code": "6538147",
+     "name": "GROSDIDIER Logan",
+     "year": "2008",
+     "noc": "USA",
+     "cells": {
+      "Run 1": "54.25",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "29",
+     "code": "198177",
+     "name": "BRECHE Clarisse",
+     "year": "2001",
+     "noc": "FRA",
+     "cells": {
+      "Run 1": "54.67",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "28",
+     "code": "6295165",
+     "name": "ROSSETTI Marta",
+     "year": "1999",
+     "noc": "ITA",
+     "cells": {
+      "Run 1": "53.95",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "24",
+     "code": "56550",
+     "name": "HOERHAGER Lisa",
+     "year": "2001",
+     "noc": "AUT",
+     "cells": {
+      "Run 1": "54.38",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "23",
+     "code": "299699",
+     "name": "PETERLINI Martina",
+     "year": "1997",
+     "noc": "ITA",
+     "cells": {
+      "Run 1": "54.63",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "20",
+     "code": "107427",
+     "name": "ST-GERMAIN Laurence",
+     "year": "1994",
+     "noc": "CAN",
+     "cells": {
+      "Run 1": "54.41",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "9",
+     "code": "565463",
+     "name": "SLOKAR Andreja",
+     "year": "1997",
+     "noc": "SLO",
+     "cells": {
+      "Run 1": "54.51",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "8",
+     "code": "56253",
+     "name": "HUBER Katharina",
+     "year": "1995",
+     "noc": "AUT",
+     "cells": {
+      "Run 1": "54.20",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "66",
+     "code": "465171",
+     "name": "MOLDOVAN Sofia Maria",
+     "year": "2008",
+     "noc": "ROU",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "65",
+     "code": "45439",
+     "name": "MAHON Sophie",
+     "year": "2001",
+     "noc": "AUS",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "64",
+     "code": "325119",
+     "name": "GIM Sohui",
+     "year": "1996",
+     "noc": "KOR",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "59",
+     "code": "6537779",
+     "name": "HUNT Annika",
+     "year": "2006",
+     "noc": "USA",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "58",
+     "code": "426100",
+     "name": "HOLTMANN Mina Fuerst",
+     "year": "1995",
+     "noc": "NOR",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "54",
+     "code": "108336",
+     "name": "LAMONTAGNE Justine",
+     "year": "2002",
+     "noc": "CAN",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "34",
+     "code": "6297347",
+     "name": "TROCKER Anna",
+     "year": "2008",
+     "noc": "ITA",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "1",
+     "code": "516280",
+     "name": "HOLDENER Wendy",
+     "year": "1993",
+     "noc": "SUI",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "38",
+     "code": "516783",
+     "name": "MAECHLER Janine",
+     "year": "2004",
+     "noc": "SUI",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": ""
+     },
+     "status": "Did not start 1st run"
     }
    ],
-   "start_list": true,
+   "start_list": false,
    "start_utc": "2026-11-21T09:30:00Z",
    "gender": "W",
    "live": false,
    "runs": [
     "Completed",
-    "In progress"
+    "Unofficial result"
    ],
-   "status": ""
+   "status": "Finished"
   },
   "131582": {
    "columns": [],
@@ -388,5 +1011,21 @@
    "status": ""
   }
  },
- "korea": []
+ "korea": [
+  {
+   "event_id": "fis-62773",
+   "sport": "alpine",
+   "event": "live 회전",
+   "distance": "Women's Slalom",
+   "round": "",
+   "heat": "",
+   "start_utc": "2026-11-21T09:30:00Z",
+   "rank": null,
+   "name": "GIM Sohui",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
+   "status": "Did not finish 1st run"
+  }
+ ]
 }
