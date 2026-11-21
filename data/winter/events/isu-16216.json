@@ -18,7 +18,7 @@
   "live": "Men 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-21T05:19:32.211873+00:00",
+ "checked_at": "2026-11-21T05:20:30.628506+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -2777,7 +2777,7 @@
     {
      "id": 23447,
      "name": "Quarterfinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-21T05:05:59.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of two fastest third place skaters qualify for Semifinals.",
      "heats": [
@@ -2984,21 +2984,9 @@
       },
       {
        "name": "Heat 4",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
-        {
-         "rank": null,
-         "name": "Teun BOER",
-         "noc": "NED",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 46,
-         "lane": 1,
-         "slug": "teun-boer"
-        },
         {
          "rank": null,
          "name": "Long SUN",
@@ -3010,6 +2998,18 @@
          "bib": 4,
          "lane": 2,
          "slug": "long-sun"
+        },
+        {
+         "rank": null,
+         "name": "Teun BOER",
+         "noc": "NED",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 46,
+         "lane": 1,
+         "slug": "teun-boer"
         },
         {
          "rank": null,
@@ -3049,7 +3049,76 @@
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Semifinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Jens VAN 'T WOUT",
+        "noc": "NED",
+        "rank": 1,
+        "time": "39.879",
+        "qual": "Q"
+       },
+       {
+        "name": "Felix ROUSSEL",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "39.969",
+        "qual": "Q"
+       },
+       {
+        "name": "Mathieu PELLETIER",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "40.037",
+        "qual": "Q"
+       },
+       {
+        "name": "Konstantin IVLIEV",
+        "noc": "AIN2",
+        "rank": 2,
+        "time": "40.059",
+        "qual": "Q"
+       },
+       {
+        "name": "Steven DUBOIS",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "40.135",
+        "qual": "Q"
+       },
+       {
+        "name": "Justin LIU",
+        "noc": "USA",
+        "rank": 2,
+        "time": "1:07.358",
+        "qual": "Q"
+       },
+       {
+        "name": "Jeongmin LEE",
+        "noc": "KOR",
+        "rank": 3,
+        "time": "1:12.444",
+        "qual": "ADV"
+       }
+      ],
+      "races": [
+       [
+        "Jens VAN 'T WOUT (NED)",
+        "Konstantin IVLIEV (AIN2)",
+        "Steven DUBOIS (CAN)"
+       ],
+       [
+        "Felix ROUSSEL (CAN)",
+        "Mathieu PELLETIER (CAN)",
+        "Justin LIU (USA)",
+        "Jeongmin LEE (KOR)"
+       ]
+      ]
+     }
     },
     {
      "id": 23448,
