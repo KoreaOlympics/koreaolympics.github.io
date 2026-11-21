@@ -15,10 +15,10 @@
   "city": "Helsinki",
   "country": "FIN",
   "state": "Live",
-  "live": "Adam SIAO HIM FA",
+  "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-finlandia-trophy-2026/"
  },
- "checked_at": "2026-11-21T15:28:25.895321+00:00",
+ "checked_at": "2026-11-21T15:39:28.490535+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T12:09:00.000Z",
@@ -69,7 +69,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-21T15:15:00.000Z",
+   "start_utc": "2026-11-21T15:23:00.000Z",
    "title": "Men",
    "round": "Free Skating",
    "event_result_id": 15731,
@@ -612,6 +612,56 @@
    ],
    "rows": [
     {
+     "rank": 1,
+     "name": "Adam SIAO HIM FA",
+     "noc": "FRA",
+     "points": "230.54",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 12,
+       "total": "71.63",
+       "tes": "31.65",
+       "pcs": "40.98",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 1,
+       "total": "158.91",
+       "tes": "73.40",
+       "pcs": "85.51",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
+     "name": "Kyrylo MARSAK",
+     "noc": "UKR",
+     "points": "220.05",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 11,
+       "total": "72.10",
+       "tes": "38.56",
+       "pcs": "34.54",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 2,
+       "total": "147.95",
+       "tes": "75.92",
+       "pcs": "73.03",
+       "status": "Running"
+      }
+     }
+    },
+    {
      "rank": null,
      "name": "Mihhail SELEVKO",
      "noc": "EST",
@@ -849,56 +899,6 @@
        "total": "72.19",
        "tes": "37.89",
        "pcs": "35.30",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Kyrylo MARSAK",
-     "noc": "UKR",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 11,
-       "total": "72.10",
-       "tes": "38.56",
-       "pcs": "34.54",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Adam SIAO HIM FA",
-     "noc": "FRA",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 12,
-       "total": "71.63",
-       "tes": "31.65",
-       "pcs": "40.98",
        "status": "Finished"
       },
       "FS": {
