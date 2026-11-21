@@ -15,10 +15,10 @@
   "city": "Helsinki",
   "country": "FIN",
   "state": "Live",
-  "live": "Iida KARHUNEN",
+  "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-finlandia-trophy-2026/"
  },
- "checked_at": "2026-11-21T13:01:53.808641+00:00",
+ "checked_at": "2026-11-21T13:13:01.200713+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T12:09:00.000Z",
@@ -304,6 +304,31 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Isabeau LEVITO",
+     "noc": "USA",
+     "points": "207.19",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 6,
+       "total": "67.02",
+       "tes": "32.67",
+       "pcs": "34.35",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 1,
+       "total": "140.17",
+       "tes": "69.60",
+       "pcs": "70.57",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
      "name": "Iida KARHUNEN",
      "noc": "FIN",
      "points": "186.47",
@@ -319,16 +344,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 1,
+       "rank": 2,
        "total": "120.23",
        "tes": "60.04",
        "pcs": "60.19",
-       "status": "Scheduled Break"
+       "status": "Running"
       }
      }
     },
     {
-     "rank": 2,
+     "rank": 3,
      "name": "Rion SUMIYOSHI",
      "noc": "JPN",
      "points": "179.87",
@@ -344,16 +369,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 3,
+       "rank": 4,
        "total": "115.81",
        "tes": "57.11",
        "pcs": "59.70",
-       "status": "Scheduled Break"
+       "status": "Running"
       }
      }
     },
     {
-     "rank": 3,
+     "rank": 4,
      "name": "Anna PEZZETTA",
      "noc": "ITA",
      "points": "176.65",
@@ -369,16 +394,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 2,
+       "rank": 3,
        "total": "118.94",
        "tes": "62.28",
        "pcs": "56.66",
-       "status": "Scheduled Break"
+       "status": "Running"
       }
      }
     },
     {
-     "rank": 4,
+     "rank": 5,
      "name": "Rinka WATANABE",
      "noc": "JPN",
      "points": "162.80",
@@ -394,16 +419,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 4,
+       "rank": 5,
        "total": "112.12",
        "tes": "55.49",
        "pcs": "56.63",
-       "status": "Scheduled Break"
+       "status": "Running"
       }
      }
     },
     {
-     "rank": 5,
+     "rank": 6,
      "name": "Janna JYRKINEN",
      "noc": "FIN",
      "points": "156.40",
@@ -419,16 +444,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 5,
+       "rank": 6,
        "total": "96.66",
        "tes": "45.33",
        "pcs": "52.33",
-       "status": "Scheduled Break"
+       "status": "Running"
       }
      }
     },
     {
-     "rank": 6,
+     "rank": 7,
      "name": "Minja PELTONEN",
      "noc": "FIN",
      "points": "145.71",
@@ -444,11 +469,11 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 6,
+       "rank": 7,
        "total": "96.36",
        "tes": "47.64",
        "pcs": "48.72",
-       "status": "Scheduled Break"
+       "status": "Running"
       }
      }
     },
@@ -473,7 +498,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Scheduled Break"
+       "status": "Running"
       }
      }
     },
@@ -498,7 +523,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Scheduled Break"
+       "status": "Running"
       }
      }
     },
@@ -523,7 +548,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Scheduled Break"
+       "status": "Running"
       }
      }
     },
@@ -548,7 +573,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Scheduled Break"
+       "status": "Running"
       }
      }
     },
@@ -573,32 +598,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Scheduled Break"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Isabeau LEVITO",
-     "noc": "USA",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 6,
-       "total": "67.02",
-       "tes": "32.67",
-       "pcs": "34.35",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Scheduled Break"
+       "status": "Running"
       }
      }
     }
