@@ -18,7 +18,7 @@
   "live": "Men 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-21T06:15:09.868518+00:00",
+ "checked_at": "2026-11-21T06:26:27.177958+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -3341,20 +3341,20 @@
     {
      "id": 23508,
      "name": "Final",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-21T06:09:24.000Z",
      "rule": "",
      "heats": [
       {
        "name": "Final",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Teun BOER",
          "noc": "NED",
-         "time": "",
+         "time": "40.310",
          "qual": "",
          "status": "",
          "record": "",
@@ -3363,22 +3363,10 @@
          "slug": "teun-boer"
         },
         {
-         "rank": null,
-         "name": "Mathieu PELLETIER",
-         "noc": "CAN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 66,
-         "lane": 2,
-         "slug": "mathieu-pelletier"
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Jens VAN 'T WOUT",
          "noc": "NED",
-         "time": "",
+         "time": "40.427",
          "qual": "",
          "status": "",
          "record": "",
@@ -3387,28 +3375,40 @@
          "slug": "jens-van-t-wout"
         },
         {
-         "rank": null,
-         "name": "Andrew HEO",
-         "noc": "USA",
-         "time": "",
+         "rank": 3,
+         "name": "Mathieu PELLETIER",
+         "noc": "CAN",
+         "time": "40.495",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 15,
-         "lane": 4,
-         "slug": "andrew-heo"
+         "bib": 66,
+         "lane": 2,
+         "slug": "mathieu-pelletier"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Felix ROUSSEL",
          "noc": "CAN",
-         "time": "",
+         "time": "40.582",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 11,
          "lane": 5,
          "slug": "felix-roussel"
+        },
+        {
+         "rank": 5,
+         "name": "Andrew HEO",
+         "noc": "USA",
+         "time": "40.628",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 15,
+         "lane": 4,
+         "slug": "andrew-heo"
         }
        ]
       },
