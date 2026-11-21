@@ -14,7 +14,7 @@
   "state": "",
   "url": "https://live.isuresults.eu/events/2027_JPN_0001/schedule"
  },
- "checked_at": "2026-11-21T03:30:05.210731+00:00",
+ "checked_at": "2026-11-21T03:41:15.079829+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:05:00Z",
@@ -2874,8 +2874,8 @@
   "11": {
    "title": "1500m Women Division B",
    "start_utc": "2026-11-21T03:01:00Z",
-   "live": true,
-   "official": false,
+   "live": false,
+   "official": true,
    "distance": "1,500 Meter",
    "division": "B",
    "start_list": false,
@@ -3119,11 +3119,11 @@
   "12": {
    "title": "1500m Men Division B",
    "start_utc": "2026-11-21T03:45:00Z",
-   "live": false,
+   "live": true,
    "official": false,
    "distance": "1,500 Meter",
    "division": "B",
-   "start_list": true,
+   "start_list": false,
    "rows": [
     {
      "rank": null,
@@ -4791,6 +4791,27 @@
    "time": "1:59.586",
    "behind": "0.370",
    "lane": "I",
+   "pair": 7,
+   "medal": null,
+   "status": "",
+   "points": null,
+   "official": true,
+   "qual": ""
+  },
+  {
+   "event_id": "ssr-2027_JPN_0001",
+   "sport": "speed-skating",
+   "event": "ISU Speed Skating World Cup #2",
+   "distance": "1500m Men Division B",
+   "round": "Division B",
+   "heat": "",
+   "start_utc": "2026-11-21T03:45:00Z",
+   "rank": null,
+   "name": "Hojun Yang",
+   "noc": "KOR",
+   "time": "",
+   "behind": "",
+   "lane": "O",
    "pair": 7,
    "medal": null,
    "status": "",

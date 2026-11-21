@@ -15,10 +15,10 @@
   "city": "Seoul",
   "country": "KOR",
   "state": "Live",
-  "live": "Women 1000 m",
+  "live": "Mixed Team Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-21T03:29:22.310978+00:00",
+ "checked_at": "2026-11-21T03:40:33.223639+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -133,7 +133,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-21T02:58:00.000Z",
+   "start_utc": "2026-11-21T03:02:00.000Z",
    "title": "Women 1000 m",
    "round": "Rep. Semifinals",
    "event_result_id": 16344,
@@ -141,7 +141,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-21T03:02:00.000Z",
+   "start_utc": "2026-11-21T03:06:00.000Z",
    "title": "Men 1500 m",
    "round": "Rep. Semifinals",
    "event_result_id": 16343,
@@ -152,9 +152,9 @@
    "start_utc": "2026-11-21T03:32:00.000Z",
    "title": "Mixed Team Relay",
    "round": "Semifinals",
-   "event_result_id": null,
-   "round_id": null,
-   "type": null
+   "event_result_id": 16381,
+   "round_id": 23505,
+   "type": "Couples"
   },
   {
    "start_utc": "2026-11-21T05:05:00.000Z",
@@ -304,9 +304,9 @@
    "start_utc": "2026-11-22T05:05:00.000Z",
    "title": "Mixed Team Relay",
    "round": "Finals",
-   "event_result_id": null,
-   "round_id": null,
-   "type": null
+   "event_result_id": 16381,
+   "round_id": 23506,
+   "type": "Couples"
   },
   {
    "start_utc": "2026-11-22T05:25:00.000Z",
@@ -6463,7 +6463,7 @@
      "id": 23432,
      "name": "Rep. Semifinals",
      "status": "Finished",
-     "start_utc": "2026-11-21T03:06:00.000Z",
+     "start_utc": "2026-11-21T03:06:33.000Z",
      "rule": "The first placed skater from each race qualify for Semifinals.",
      "heats": [
       {
@@ -8905,6 +8905,162 @@
     }
    ]
   },
+  "16381": {
+   "title": "Mixed Team Relay",
+   "rounds": [
+    {
+     "id": 23505,
+     "name": "Semifinals",
+     "status": "Live",
+     "start_utc": "2026-11-21T03:34:31.000Z",
+     "rule": "The first and second placed teams from each race and up to a maximum of one fastest third place team qualify for Final, the third and fourth placed teams from each race qualify for Final B.",
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Netherlands",
+         "noc": "NED",
+         "time": "2:40.187",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": 2,
+         "name": "People's Republic of China",
+         "noc": "CHN",
+         "time": "2:40.794",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
+         "slug": ""
+        },
+        {
+         "rank": 3,
+         "name": "Germany",
+         "noc": "GER",
+         "time": "2:44.768",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 4,
+         "slug": ""
+        },
+        {
+         "rank": 4,
+         "name": "Croatia",
+         "noc": "CRO",
+         "time": "2:50.659",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 5,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Italy",
+         "noc": "ITA",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": null,
+         "lane": 2,
+         "slug": ""
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Getting Ready",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Republic of Korea",
+         "noc": "KOR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Canada",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 2,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Japan",
+         "noc": "JPN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Belgium",
+         "noc": "BEL",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 4,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Ain2",
+         "noc": "AIN2",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 5,
+         "slug": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": 23506,
+     "name": "Finals",
+     "status": "Scheduled",
+     "start_utc": "2026-11-22T05:05:00.000Z",
+     "rule": "",
+     "heats": []
+    }
+   ]
+  },
   "16342": {
    "title": "Women 3000 m Relay",
    "rounds": [
@@ -9410,7 +9566,7 @@
    "distance": "Men 1500 m",
    "round": "Rep. Semifinals",
    "heat": "Heat 1",
-   "start_utc": "2026-11-21T03:06:00.000Z",
+   "start_utc": "2026-11-21T03:06:33.000Z",
    "rank": 3,
    "name": "Jeongmin LEE",
    "noc": "KOR",
@@ -9625,6 +9781,25 @@
    "noc": "KOR",
    "time": "6:49.623",
    "qual": "Q",
+   "status": "",
+   "record": "",
+   "bib": null,
+   "lane": 1,
+   "slug": ""
+  },
+  {
+   "event_id": "isu-16216",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #3",
+   "distance": "Mixed Team Relay",
+   "round": "Semifinals",
+   "heat": "Heat 2",
+   "start_utc": "2026-11-21T03:34:31.000Z",
+   "rank": null,
+   "name": "Republic of Korea",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
    "status": "",
    "record": "",
    "bib": null,
