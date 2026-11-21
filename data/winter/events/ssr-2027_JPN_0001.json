@@ -14,7 +14,7 @@
   "state": "",
   "url": "https://live.isuresults.eu/events/2027_JPN_0001/schedule"
  },
- "checked_at": "2026-11-21T06:27:11.001083+00:00",
+ "checked_at": "2026-11-21T06:38:14.005965+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:05:00Z",
@@ -3713,8 +3713,8 @@
   "14": {
    "title": "1st 500m Men",
    "start_utc": "2026-11-21T06:03:00Z",
-   "live": true,
-   "official": false,
+   "live": false,
+   "official": true,
    "distance": "500 Meter",
    "division": "A",
    "start_list": false,
@@ -3984,11 +3984,11 @@
   "15": {
    "title": "1500m Women",
    "start_utc": "2026-11-21T06:42:00Z",
-   "live": false,
+   "live": true,
    "official": false,
    "distance": "1,500 Meter",
    "division": "A",
-   "start_list": true,
+   "start_list": false,
    "rows": [
     {
      "rank": null,

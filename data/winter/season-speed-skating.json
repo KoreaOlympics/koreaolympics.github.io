@@ -465,7 +465,26 @@
     },
     {
      "title": "1st 500m Men",
-     "podium": null
+     "podium": [
+      {
+       "rank": 1,
+       "name": "Jordan Stolz",
+       "noc": "USA",
+       "time": "34.261"
+      },
+      {
+       "rank": 2,
+       "name": "Ziwen Lian",
+       "noc": "CHN",
+       "time": "34.710"
+      },
+      {
+       "rank": 3,
+       "name": "Laurent Dubreuil",
+       "noc": "CAN",
+       "time": "34.717"
+      }
+     ]
     },
     {
      "title": "1500m Women",
@@ -561,9 +580,9 @@
   [
    "CHN",
    5,
+   4,
    3,
-   3,
-   11
+   12
   ],
   [
    "NOR",
@@ -578,6 +597,13 @@
    0,
    1,
    3
+  ],
+  [
+   "USA",
+   1,
+   0,
+   3,
+   4
   ],
   [
    "ITA",
@@ -608,25 +634,18 @@
    1
   ],
   [
+   "CAN",
+   0,
+   0,
+   3,
+   3
+  ],
+  [
    "POL",
    0,
    0,
    3,
    3
-  ],
-  [
-   "USA",
-   0,
-   0,
-   3,
-   3
-  ],
-  [
-   "CAN",
-   0,
-   0,
-   2,
-   2
   ]
  ]
 }
