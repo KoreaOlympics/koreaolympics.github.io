@@ -18,7 +18,7 @@
   "live": "Women 3000 m Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-21T07:22:47.379934+00:00",
+ "checked_at": "2026-11-21T07:33:33.240291+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -205,7 +205,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-21T06:58:00.000Z",
+   "start_utc": "2026-11-21T07:03:00.000Z",
    "title": "Men 1500 m",
    "round": "Semifinals",
    "event_result_id": 16343,
@@ -213,7 +213,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-21T07:17:00.000Z",
+   "start_utc": "2026-11-21T07:21:00.000Z",
    "title": "Women 3000 m Relay",
    "round": "Semifinals",
    "event_result_id": 16342,
@@ -223,9 +223,9 @@
   {
    "start_utc": "2026-11-21T07:48:00.000Z",
    "title": "Men 1500 m",
-   "round": "Finals",
+   "round": "Final",
    "event_result_id": 16343,
-   "round_id": null,
+   "round_id": 23510,
    "type": "Singles"
   },
   {
@@ -10785,33 +10785,21 @@
     {
      "id": 23426,
      "name": "Semifinals",
-     "status": "Live",
-     "start_utc": "2026-11-21T07:17:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-21T07:21:07.000Z",
      "rule": "The first and second placed teams from each race and up to a maximum of one fastest third place team qualify for Final, the third and fourth placed teams from each race qualify for Final B.",
      "heats": [
       {
        "name": "Heat 1",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Netherlands",
-         "noc": "NED",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 1,
-         "slug": ""
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "People's Republic of China",
          "noc": "CHN",
-         "time": "",
-         "qual": "",
+         "time": "4:17.672",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -10819,36 +10807,36 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Japan",
          "noc": "JPN",
-         "time": "",
-         "qual": "",
+         "time": "4:18.192",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
          "lane": 3,
+         "slug": ""
+        },
+        {
+         "rank": 3,
+         "name": "Netherlands",
+         "noc": "NED",
+         "time": "4:32.756",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
          "slug": ""
         }
        ]
       },
       {
        "name": "Heat 2",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
-        {
-         "rank": null,
-         "name": "Republic of Korea",
-         "noc": "KOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 1,
-         "slug": ""
-        },
         {
          "rank": null,
          "name": "Canada",
@@ -10859,6 +10847,18 @@
          "record": "",
          "bib": null,
          "lane": 2,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Republic of Korea",
+         "noc": "KOR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
          "slug": ""
         },
         {
@@ -10875,7 +10875,34 @@
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Finals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "People's Republic of China",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "4:17.672",
+        "qual": "Q"
+       },
+       {
+        "name": "Japan",
+        "noc": "JPN",
+        "rank": 2,
+        "time": "4:18.192",
+        "qual": "Q"
+       }
+      ],
+      "races": [
+       [
+        "People's Republic of China (CHN)",
+        "Japan (JPN)"
+       ]
+      ]
+     }
     },
     {
      "id": 23427,
@@ -11960,7 +11987,7 @@
    "distance": "Women 3000 m Relay",
    "round": "Semifinals",
    "heat": "Heat 2",
-   "start_utc": "2026-11-21T07:17:00.000Z",
+   "start_utc": "2026-11-21T07:21:07.000Z",
    "rank": null,
    "name": "Republic of Korea",
    "noc": "KOR",
