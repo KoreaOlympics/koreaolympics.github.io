@@ -14,7 +14,7 @@
   "state": "",
   "url": "https://live.isuresults.eu/events/2027_JPN_0001/schedule"
  },
- "checked_at": "2026-11-21T07:12:21.797822+00:00",
+ "checked_at": "2026-11-21T07:23:21.403665+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:05:00Z",
@@ -3984,8 +3984,8 @@
   "15": {
    "title": "1500m Women",
    "start_utc": "2026-11-21T06:42:00Z",
-   "live": true,
-   "official": false,
+   "live": false,
+   "official": true,
    "distance": "1,500 Meter",
    "division": "A",
    "start_list": false,
@@ -4018,6 +4018,19 @@
     },
     {
      "rank": 3,
+     "name": "Valerie Maltais",
+     "noc": "CAN",
+     "time": "1:55.480",
+     "behind": "1.682",
+     "lane": "I",
+     "pair": 10,
+     "medal": null,
+     "status": 0,
+     "points": null,
+     "official": true
+    },
+    {
+     "rank": 4,
      "name": "Binyu Yang",
      "noc": "CHN",
      "time": "1:55.689",
@@ -4030,7 +4043,7 @@
      "official": true
     },
     {
-     "rank": 4,
+     "rank": 5,
      "name": "Mei Han",
      "noc": "CHN",
      "time": "1:56.061",
@@ -4043,7 +4056,7 @@
      "official": true
     },
     {
-     "rank": 5,
+     "rank": 6,
      "name": "Kristina Shumekova",
      "noc": "KAZ",
      "time": "1:56.265",
@@ -4056,7 +4069,7 @@
      "official": true
     },
     {
-     "rank": 6,
+     "rank": 7,
      "name": "Anastasiia Semenova",
      "noc": "AIN2",
      "time": "1:56.887",
@@ -4069,7 +4082,7 @@
      "official": true
     },
     {
-     "rank": 7,
+     "rank": 8,
      "name": "Antoinette Rijpma-De Jong",
      "noc": "NED",
      "time": "1:56.977",
@@ -4082,7 +4095,20 @@
      "official": true
     },
     {
-     "rank": 8,
+     "rank": 9,
+     "name": "Gioya Lancee",
+     "noc": "NED",
+     "time": "1:57.265",
+     "behind": "3.467",
+     "lane": "O",
+     "pair": 10,
+     "medal": null,
+     "status": 0,
+     "points": null,
+     "official": true
+    },
+    {
+     "rank": 10,
      "name": "Sofia Thorup",
      "noc": "DEN",
      "time": "1:57.500",
@@ -4095,7 +4121,7 @@
      "official": true
     },
     {
-     "rank": 9,
+     "rank": 11,
      "name": "Merel Conijn",
      "noc": "NED",
      "time": "1:57.585",
@@ -4108,7 +4134,7 @@
      "official": true
     },
     {
-     "rank": 10,
+     "rank": 12,
      "name": "Momoka Horikawa",
      "noc": "JPN",
      "time": "1:58.228",
@@ -4121,7 +4147,7 @@
      "official": true
     },
     {
-     "rank": 11,
+     "rank": 13,
      "name": "Anna Kubo",
      "noc": "JPN",
      "time": "1:58.341",
@@ -4134,7 +4160,7 @@
      "official": true
     },
     {
-     "rank": 12,
+     "rank": 14,
      "name": "Anna Ostlender",
      "noc": "GER",
      "time": "1:58.350",
@@ -4147,7 +4173,7 @@
      "official": true
     },
     {
-     "rank": 13,
+     "rank": 15,
      "name": "Laura Hall",
      "noc": "CAN",
      "time": "1:58.739",
@@ -4160,7 +4186,7 @@
      "official": true
     },
     {
-     "rank": 14,
+     "rank": 16,
      "name": "Vanessa Herzog",
      "noc": "AUT",
      "time": "1:59.043",
@@ -4173,7 +4199,7 @@
      "official": true
     },
     {
-     "rank": 15,
+     "rank": 17,
      "name": "Katsiaryna Hahiyeva",
      "noc": "AIN1",
      "time": "1:59.171",
@@ -4186,7 +4212,7 @@
      "official": true
     },
     {
-     "rank": 16,
+     "rank": 18,
      "name": "Hana Noake",
      "noc": "JPN",
      "time": "1:59.827",
@@ -4199,7 +4225,7 @@
      "official": true
     },
     {
-     "rank": 17,
+     "rank": 19,
      "name": "Jiaxuan Li",
      "noc": "CHN",
      "time": "2:01.601",
@@ -4212,7 +4238,7 @@
      "official": true
     },
     {
-     "rank": 18,
+     "rank": 20,
      "name": "Karolina Bosiek",
      "noc": "POL",
      "time": "2:01.993",
@@ -4223,43 +4249,17 @@
      "status": 0,
      "points": null,
      "official": true
-    },
-    {
-     "rank": null,
-     "name": "Valerie Maltais",
-     "noc": "CAN",
-     "time": "",
-     "behind": "",
-     "lane": "I",
-     "pair": 10,
-     "medal": null,
-     "status": null,
-     "points": null,
-     "official": true
-    },
-    {
-     "rank": null,
-     "name": "Gioya Lancee",
-     "noc": "NED",
-     "time": "",
-     "behind": "",
-     "lane": "O",
-     "pair": 10,
-     "medal": null,
-     "status": null,
-     "points": null,
-     "official": true
     }
    ]
   },
   "16": {
    "title": "1500m Men",
    "start_utc": "2026-11-21T07:22:00Z",
-   "live": false,
+   "live": true,
    "official": false,
    "distance": "1,500 Meter",
    "division": "A",
-   "start_list": true,
+   "start_list": false,
    "rows": [
     {
      "rank": null,

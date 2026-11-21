@@ -15,10 +15,10 @@
   "city": "Seoul",
   "country": "KOR",
   "state": "Live",
-  "live": "Men 1500 m",
+  "live": "Women 3000 m Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-21T07:11:48.462718+00:00",
+ "checked_at": "2026-11-21T07:22:47.379934+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -225,7 +225,7 @@
    "title": "Men 1500 m",
    "round": "Finals",
    "event_result_id": 16343,
-   "round_id": 23434,
+   "round_id": null,
    "type": "Singles"
   },
   {
@@ -7519,8 +7519,8 @@
     {
      "id": 23433,
      "name": "Semifinals",
-     "status": "Live",
-     "start_utc": "2026-11-21T07:02:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-21T07:03:08.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final, the third and fourth placed skaters from each race and up to a maximum of next two fastest fifth place skaters qualify for Final B.",
      "heats": [
       {
@@ -7616,39 +7616,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Jens VAN 'T WOUT",
-         "noc": "NED",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 7,
-         "lane": 1,
-         "slug": "jens-van-t-wout"
-        },
-        {
-         "rank": null,
-         "name": "Shogo MIYATA",
-         "noc": "JPN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 9,
-         "lane": 2,
-         "slug": "shogo-miyata"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Dong Min SHIN",
          "noc": "KOR",
-         "time": "",
-         "qual": "",
+         "time": "2:19.983",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 16,
@@ -7656,11 +7632,23 @@
          "slug": "dong-min-shin"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Jens VAN 'T WOUT",
+         "noc": "NED",
+         "time": "2:20.091",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 7,
+         "lane": 1,
+         "slug": "jens-van-t-wout"
+        },
+        {
+         "rank": 3,
          "name": "Semen ELISTRATOV",
          "noc": "AIN2",
-         "time": "",
-         "qual": "",
+         "time": "2:20.353",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 123,
@@ -7668,11 +7656,11 @@
          "slug": "semen-elistratov"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Daniil NIKOLAEV",
          "noc": "AIN2",
-         "time": "",
-         "qual": "",
+         "time": "2:20.412",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 126,
@@ -7680,10 +7668,10 @@
          "slug": "daniil-nikolaev"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Musashi KAKINAMI",
          "noc": "JPN",
-         "time": "",
+         "time": "2:20.821",
          "qual": "",
          "status": "",
          "record": "",
@@ -7692,10 +7680,22 @@
          "slug": "musashi-kakinami"
         },
         {
-         "rank": null,
+         "rank": 6,
+         "name": "Shogo MIYATA",
+         "noc": "JPN",
+         "time": "2:20.947",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 9,
+         "lane": 2,
+         "slug": "shogo-miyata"
+        },
+        {
+         "rank": 7,
          "name": "Andrew HEO",
          "noc": "USA",
-         "time": "",
+         "time": "2:24.411",
          "qual": "",
          "status": "",
          "record": "",
@@ -7707,39 +7707,15 @@
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Felix ROUSSEL",
-         "noc": "CAN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 11,
-         "lane": 1,
-         "slug": "felix-roussel"
-        },
-        {
-         "rank": null,
-         "name": "Thomas NADALINI",
-         "noc": "ITA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 6,
-         "lane": 2,
-         "slug": "thomas-nadalini"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Jongun RIM",
          "noc": "KOR",
-         "time": "",
-         "qual": "",
+         "time": "2:17.348",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 8,
@@ -7747,11 +7723,23 @@
          "slug": "jongun-rim"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Felix ROUSSEL",
+         "noc": "CAN",
+         "time": "2:17.413",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 11,
+         "lane": 1,
+         "slug": "felix-roussel"
+        },
+        {
+         "rank": 3,
          "name": "Luca SPECHENHAUSER",
          "noc": "ITA",
-         "time": "",
-         "qual": "",
+         "time": "2:17.587",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 24,
@@ -7759,11 +7747,11 @@
          "slug": "luca-spechenhauser"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Long SUN",
          "noc": "CHN",
-         "time": "",
-         "qual": "",
+         "time": "2:17.754",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": 4,
@@ -7771,10 +7759,22 @@
          "slug": "long-sun"
         },
         {
-         "rank": null,
+         "rank": 5,
+         "name": "Thomas NADALINI",
+         "noc": "ITA",
+         "time": "2:18.726",
+         "qual": "qB",
+         "status": "",
+         "record": "",
+         "bib": 6,
+         "lane": 2,
+         "slug": "thomas-nadalini"
+        },
+        {
+         "rank": 6,
          "name": "Clayton DE CLEMENTE",
          "noc": "USA",
-         "time": "",
+         "time": "2:19.478",
          "qual": "",
          "status": "",
          "record": "",
@@ -7784,11 +7784,86 @@
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Final",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Jongun RIM",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "2:17.348",
+        "qual": "Q"
+       },
+       {
+        "name": "Valentin KOBYZEV",
+        "noc": "AIN2",
+        "rank": 1,
+        "time": "2:19.370",
+        "qual": "Q"
+       },
+       {
+        "name": "Dong Min SHIN",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "2:19.983",
+        "qual": "Q"
+       },
+       {
+        "name": "Felix ROUSSEL",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "2:17.413",
+        "qual": "Q"
+       },
+       {
+        "name": "Steven DUBOIS",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "2:19.406",
+        "qual": "Q"
+       },
+       {
+        "name": "Jens VAN 'T WOUT",
+        "noc": "NED",
+        "rank": 2,
+        "time": "2:20.091",
+        "qual": "Q"
+       },
+       {
+        "name": "Bohao ZHANG",
+        "noc": "CHN",
+        "rank": 5,
+        "time": "2:24.464",
+        "qual": "ADV"
+       },
+       {
+        "name": "Mathieu PELLETIER",
+        "noc": "CAN",
+        "rank": 6,
+        "time": "2:59.276",
+        "qual": "ADV"
+       }
+      ],
+      "races": [
+       [
+        "Jongun RIM (KOR)",
+        "Valentin KOBYZEV (AIN2)",
+        "Dong Min SHIN (KOR)",
+        "Felix ROUSSEL (CAN)",
+        "Steven DUBOIS (CAN)",
+        "Jens VAN 'T WOUT (NED)",
+        "Bohao ZHANG (CHN)",
+        "Mathieu PELLETIER (CAN)"
+       ]
+      ]
+     }
     },
     {
-     "id": 23434,
-     "name": "Finals",
+     "id": 23510,
+     "name": "Final",
      "status": "Scheduled",
      "start_utc": "2026-11-21T07:48:00.000Z",
      "rule": "",
@@ -10710,10 +10785,97 @@
     {
      "id": 23426,
      "name": "Semifinals",
-     "status": "Scheduled",
+     "status": "Live",
      "start_utc": "2026-11-21T07:17:00.000Z",
      "rule": "The first and second placed teams from each race and up to a maximum of one fastest third place team qualify for Final, the third and fourth placed teams from each race qualify for Final B.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Live",
+       "official": "Live",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Netherlands",
+         "noc": "NED",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "People's Republic of China",
+         "noc": "CHN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 2,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Japan",
+         "noc": "JPN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
+         "slug": ""
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Republic of Korea",
+         "noc": "KOR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Canada",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 2,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Ain2",
+         "noc": "AIN2",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
+         "slug": ""
+        }
+       ]
+      }
+     ]
     },
     {
      "id": 23427,
@@ -11323,7 +11485,7 @@
    "distance": "Men 1500 m",
    "round": "Semifinals",
    "heat": "Heat 1",
-   "start_utc": "2026-11-21T07:02:00.000Z",
+   "start_utc": "2026-11-21T07:03:08.000Z",
    "rank": 4,
    "name": "Seochan BAE",
    "noc": "KOR",
@@ -11342,12 +11504,12 @@
    "distance": "Men 1500 m",
    "round": "Semifinals",
    "heat": "Heat 2",
-   "start_utc": "2026-11-21T07:02:00.000Z",
-   "rank": null,
+   "start_utc": "2026-11-21T07:03:08.000Z",
+   "rank": 1,
    "name": "Dong Min SHIN",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "2:19.983",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 16,
@@ -11361,12 +11523,12 @@
    "distance": "Men 1500 m",
    "round": "Semifinals",
    "heat": "Heat 3",
-   "start_utc": "2026-11-21T07:02:00.000Z",
-   "rank": null,
+   "start_utc": "2026-11-21T07:03:08.000Z",
+   "rank": 1,
    "name": "Jongun RIM",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "2:17.348",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 8,
@@ -11785,6 +11947,25 @@
    "noc": "KOR",
    "time": "2:38.136",
    "qual": "q",
+   "status": "",
+   "record": "",
+   "bib": null,
+   "lane": 1,
+   "slug": ""
+  },
+  {
+   "event_id": "isu-16216",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #3",
+   "distance": "Women 3000 m Relay",
+   "round": "Semifinals",
+   "heat": "Heat 2",
+   "start_utc": "2026-11-21T07:17:00.000Z",
+   "rank": null,
+   "name": "Republic of Korea",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
    "status": "",
    "record": "",
    "bib": null,
