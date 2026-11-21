@@ -514,7 +514,7 @@
    "end": "2026-11-21",
    "city": "Helsinki",
    "country": "FIN",
-   "state": "Live",
+   "state": "Finished",
    "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-finlandia-trophy-2026/",
    "podiums": [
     {
@@ -588,7 +588,26 @@
     },
     {
      "title": "Ice Dance",
-     "podium": null
+     "podium": [
+      {
+       "rank": 1,
+       "name": "Laurence FOURNIER BEAUDRY / Guillaume CIZERON",
+       "noc": "FRA",
+       "time": "212.91"
+      },
+      {
+       "rank": 2,
+       "name": "Juulia TURKKILA / Matthias VERSLUIS",
+       "noc": "FIN",
+       "time": "190.88"
+      },
+      {
+       "rank": 3,
+       "name": "Oona BROWN / Gage BROWN",
+       "noc": "USA",
+       "time": "187.97"
+      }
+     ]
     }
    ]
   },
@@ -687,17 +706,17 @@
   ],
   [
    "FRA",
-   3,
+   4,
    2,
    0,
-   5
+   6
   ],
   [
    "USA",
    2,
    2,
-   6,
-   10
+   7,
+   11
   ],
   [
    "GER",
@@ -749,6 +768,13 @@
    2
   ],
   [
+   "FIN",
+   0,
+   1,
+   0,
+   1
+  ],
+  [
    "SWE",
    0,
    1,
@@ -793,6 +819,13 @@
  ],
  "season_best": {
   "Ice Dance": [
+   {
+    "name": "Laurence FOURNIER BEAUDRY / Guillaume CIZERON",
+    "noc": "FRA",
+    "points": 212.91,
+    "event": "ISU Figure Skating Grand Prix Finlandia Trophy 2026",
+    "event_id": "isu-15999"
+   },
    {
     "name": "Laurence FOURNIER BEAUDRY / Guillaume CIZERON",
     "noc": "FRA",
@@ -855,13 +888,6 @@
     "points": 190.88,
     "event": "ISU Figure Skating Grand Prix Skate America 2026",
     "event_id": "isu-16006"
-   },
-   {
-    "name": "Juulia TURKKILA / Matthias VERSLUIS",
-    "noc": "FIN",
-    "points": 190.88,
-    "event": "ISU Figure Skating Grand Prix Finlandia Trophy 2026",
-    "event_id": "isu-15999"
    }
   ],
   "Women": [

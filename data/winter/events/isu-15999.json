@@ -14,11 +14,11 @@
   "tz": "Europe/Kyiv",
   "city": "Helsinki",
   "country": "FIN",
-  "state": "Live",
+  "state": "Finished",
   "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-finlandia-trophy-2026/"
  },
- "checked_at": "2026-11-21T19:01:42.406323+00:00",
+ "checked_at": "2026-11-21T19:13:03.575845+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T12:09:00.000Z",
@@ -922,6 +922,31 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Laurence FOURNIER BEAUDRY / Guillaume CIZERON",
+     "noc": "FRA",
+     "points": "212.91",
+     "status": "Active",
+     "segments": {
+      "RD": {
+       "name": "Rhythm Dance",
+       "rank": 1,
+       "total": "85.78",
+       "tes": "48.17",
+       "pcs": "37.61",
+       "status": "Finished"
+      },
+      "FD": {
+       "name": "Free Dance",
+       "rank": 1,
+       "total": "127.13",
+       "tes": "69.71",
+       "pcs": "57.42",
+       "status": "Finished"
+      }
+     }
+    },
+    {
+     "rank": 2,
      "name": "Juulia TURKKILA / Matthias VERSLUIS",
      "noc": "FIN",
      "points": "190.88",
@@ -937,16 +962,16 @@
       },
       "FD": {
        "name": "Free Dance",
-       "rank": 1,
+       "rank": 2,
        "total": "113.30",
        "tes": "60.44",
        "pcs": "52.86",
-       "status": "Running"
+       "status": "Finished"
       }
      }
     },
     {
-     "rank": 2,
+     "rank": 3,
      "name": "Oona BROWN / Gage BROWN",
      "noc": "USA",
      "points": "187.97",
@@ -962,16 +987,16 @@
       },
       "FD": {
        "name": "Free Dance",
-       "rank": 2,
+       "rank": 3,
        "total": "111.75",
        "tes": "60.75",
        "pcs": "51.00",
-       "status": "Running"
+       "status": "Finished"
       }
      }
     },
     {
-     "rank": 3,
+     "rank": 4,
      "name": "Caroline GREEN / Michael PARSONS",
      "noc": "USA",
      "points": "184.61",
@@ -987,16 +1012,16 @@
       },
       "FD": {
        "name": "Free Dance",
-       "rank": 3,
+       "rank": 4,
        "total": "109.40",
        "tes": "59.20",
        "pcs": "50.20",
-       "status": "Running"
+       "status": "Finished"
       }
      }
     },
     {
-     "rank": 4,
+     "rank": 5,
      "name": "Marie-Jade LAURIAULT / Romain LE GAC",
      "noc": "CAN",
      "points": "181.08",
@@ -1012,16 +1037,16 @@
       },
       "FD": {
        "name": "Free Dance",
-       "rank": 4,
+       "rank": 5,
        "total": "107.92",
        "tes": "59.20",
        "pcs": "48.72",
-       "status": "Running"
+       "status": "Finished"
       }
      }
     },
     {
-     "rank": 5,
+     "rank": 6,
      "name": "Natalie TASCHLEROVA / Filip TASCHLER",
      "noc": "CZE",
      "points": "178.58",
@@ -1037,16 +1062,16 @@
       },
       "FD": {
        "name": "Free Dance",
-       "rank": 6,
+       "rank": 7,
        "total": "101.93",
        "tes": "52.51",
        "pcs": "49.42",
-       "status": "Running"
+       "status": "Finished"
       }
      }
     },
     {
-     "rank": 6,
+     "rank": 7,
      "name": "Yuka ORIHARA / Juho PIRINEN",
      "noc": "FIN",
      "points": "177.08",
@@ -1062,16 +1087,16 @@
       },
       "FD": {
        "name": "Free Dance",
-       "rank": 5,
+       "rank": 6,
        "total": "106.34",
        "tes": "58.14",
        "pcs": "48.20",
-       "status": "Running"
+       "status": "Finished"
       }
      }
     },
     {
-     "rank": 7,
+     "rank": 8,
      "name": "Marjorie LAJOIE / Jean-Luc BAKER",
      "noc": "CAN",
      "points": "167.71",
@@ -1087,16 +1112,16 @@
       },
       "FD": {
        "name": "Free Dance",
-       "rank": 7,
+       "rank": 8,
        "total": "99.71",
        "tes": "53.41",
        "pcs": "47.30",
-       "status": "Running"
+       "status": "Finished"
       }
      }
     },
     {
-     "rank": 8,
+     "rank": 9,
      "name": "Emily BRATTI / Ian SOMERVILLE",
      "noc": "USA",
      "points": "167.42",
@@ -1112,16 +1137,16 @@
       },
       "FD": {
        "name": "Free Dance",
-       "rank": 8,
+       "rank": 9,
        "total": "96.87",
        "tes": "51.45",
        "pcs": "45.42",
-       "status": "Running"
+       "status": "Finished"
       }
      }
     },
     {
-     "rank": 9,
+     "rank": 10,
      "name": "Milla Ruud REITAN / Nikolaj MAJOROV",
      "noc": "SWE",
      "points": "154.13",
@@ -1137,36 +1162,11 @@
       },
       "FD": {
        "name": "Free Dance",
-       "rank": 9,
+       "rank": 10,
        "total": "93.17",
        "tes": "50.75",
        "pcs": "42.42",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Laurence FOURNIER BEAUDRY / Guillaume CIZERON",
-     "noc": "FRA",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "RD": {
-       "name": "Rhythm Dance",
-       "rank": 1,
-       "total": "85.78",
-       "tes": "48.17",
-       "pcs": "37.61",
        "status": "Finished"
-      },
-      "FD": {
-       "name": "Free Dance",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
       }
      }
     }
