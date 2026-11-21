@@ -14,7 +14,7 @@
   "state": "",
   "url": "https://live.isuresults.eu/events/2027_JPN_0001/schedule"
  },
- "checked_at": "2026-11-21T09:15:27.904628+00:00",
+ "checked_at": "2026-11-21T09:26:33.262469+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:05:00Z",
@@ -4526,11 +4526,11 @@
   "17": {
    "title": "Team Pursuit Women Division B",
    "start_utc": "2026-11-22T02:50:00Z",
-   "live": false,
+   "live": true,
    "official": false,
    "distance": "Team Pursuit (6 Laps)",
    "division": "B",
-   "start_list": true,
+   "start_list": false,
    "rows": [
     {
      "rank": null,
@@ -4565,8 +4565,7 @@
      "members": [
       "Linda Rossi",
       "Giulia Presti",
-      "Emily Tormen",
-      "Alice Marletti"
+      "Emily Tormen"
      ]
     }
    ]
@@ -6680,6 +6679,32 @@
    "status": "",
    "points": null,
    "official": true,
+   "qual": ""
+  },
+  {
+   "event_id": "ssr-2027_JPN_0001",
+   "sport": "speed-skating",
+   "event": "ISU Speed Skating World Cup #2",
+   "distance": "Team Pursuit Women Division B",
+   "round": "Division B",
+   "heat": "",
+   "start_utc": "2026-11-22T02:50:00Z",
+   "rank": null,
+   "name": "Republic of Korea",
+   "noc": "KOR",
+   "time": "",
+   "behind": "",
+   "lane": null,
+   "pair": 1,
+   "medal": null,
+   "status": "",
+   "points": null,
+   "official": true,
+   "members": [
+    "Jiwoo Park",
+    "Leewon Lim",
+    "Chaeeun Lee"
+   ],
    "qual": ""
   }
  ]
