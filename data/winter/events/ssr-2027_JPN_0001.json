@@ -14,7 +14,7 @@
   "state": "",
   "url": "https://live.isuresults.eu/events/2027_JPN_0001/schedule"
  },
- "checked_at": "2026-11-22T06:23:43.892958+00:00",
+ "checked_at": "2026-11-22T06:35:09.564137+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:05:00Z",
@@ -5458,10 +5458,100 @@
    "rows": [
     {
      "rank": 1,
+     "name": "AIN2",
+     "noc": "AIN2",
+     "time": "2:58.308",
+     "behind": "0.000",
+     "lane": null,
+     "pair": 2,
+     "medal": null,
+     "status": 0,
+     "points": null,
+     "official": true,
+     "members": [
+      "Irina Salnikova",
+      "Kseniia Korzhova",
+      "Anastasiia Semenova"
+     ]
+    },
+    {
+     "rank": 2,
+     "name": "Netherlands",
+     "noc": "NED",
+     "time": "2:59.806",
+     "behind": "1.498",
+     "lane": null,
+     "pair": 4,
+     "medal": null,
+     "status": 0,
+     "points": null,
+     "official": true,
+     "members": [
+      "Joy Beune",
+      "Antoinette Rijpma-De Jong",
+      "Merel Conijn"
+     ]
+    },
+    {
+     "rank": 3,
+     "name": "China",
+     "noc": "CHN",
+     "time": "3:00.153",
+     "behind": "1.845",
+     "lane": null,
+     "pair": 3,
+     "medal": null,
+     "status": 0,
+     "points": null,
+     "official": true,
+     "members": [
+      "Mei Han",
+      "Jiaxuan Li",
+      "Binyu Yang"
+     ]
+    },
+    {
+     "rank": 4,
+     "name": "Japan",
+     "noc": "JPN",
+     "time": "3:02.145",
+     "behind": "3.837",
+     "lane": null,
+     "pair": 2,
+     "medal": null,
+     "status": 0,
+     "points": null,
+     "official": true,
+     "members": [
+      "Momoka Horikawa",
+      "Hana Noake",
+      "Akane Iida"
+     ]
+    },
+    {
+     "rank": 5,
+     "name": "Germany",
+     "noc": "GER",
+     "time": "3:02.194",
+     "behind": "3.886",
+     "lane": null,
+     "pair": 4,
+     "medal": null,
+     "status": 0,
+     "points": null,
+     "official": true,
+     "members": [
+      "Maira Jasch",
+      "Melissa Schaefer",
+      "Ashley Voelker"
+     ]
+    },
+    {
+     "rank": 6,
      "name": "Poland",
      "noc": "POL",
      "time": "3:03.281",
-     "behind": "0.000",
+     "behind": "4.973",
      "lane": null,
      "pair": 1,
      "medal": null,
@@ -5475,11 +5565,29 @@
      ]
     },
     {
-     "rank": 2,
+     "rank": 7,
+     "name": "Canada",
+     "noc": "CAN",
+     "time": "3:04.796",
+     "behind": "6.488",
+     "lane": null,
+     "pair": 3,
+     "medal": null,
+     "status": 0,
+     "points": null,
+     "official": true,
+     "members": [
+      "Laura Hall",
+      "Valerie Maltais",
+      "Rose-Anne Grenier"
+     ]
+    },
+    {
+     "rank": 8,
      "name": "Kazakhstan",
      "noc": "KAZ",
      "time": "3:07.690",
-     "behind": "4.409",
+     "behind": "9.382",
      "lane": null,
      "pair": 1,
      "medal": null,
@@ -5490,114 +5598,6 @@
       "Mariya Degen",
       "Kristina Shumekova",
       "Alina Shumekova"
-     ]
-    },
-    {
-     "rank": null,
-     "name": "AIN2",
-     "noc": "AIN2",
-     "time": "",
-     "behind": "",
-     "lane": null,
-     "pair": 2,
-     "medal": null,
-     "status": null,
-     "points": null,
-     "official": true,
-     "members": [
-      "Irina Salnikova",
-      "Kseniia Korzhova",
-      "Anastasiia Semenova"
-     ]
-    },
-    {
-     "rank": null,
-     "name": "Japan",
-     "noc": "JPN",
-     "time": "",
-     "behind": "",
-     "lane": null,
-     "pair": 2,
-     "medal": null,
-     "status": null,
-     "points": null,
-     "official": true,
-     "members": [
-      "Momoka Horikawa",
-      "Hana Noake",
-      "Akane Iida"
-     ]
-    },
-    {
-     "rank": null,
-     "name": "China",
-     "noc": "CHN",
-     "time": "",
-     "behind": "",
-     "lane": null,
-     "pair": 3,
-     "medal": null,
-     "status": null,
-     "points": null,
-     "official": true,
-     "members": [
-      "Mei Han",
-      "Jiaxuan Li",
-      "Binyu Yang"
-     ]
-    },
-    {
-     "rank": null,
-     "name": "Canada",
-     "noc": "CAN",
-     "time": "",
-     "behind": "",
-     "lane": null,
-     "pair": 3,
-     "medal": null,
-     "status": null,
-     "points": null,
-     "official": true,
-     "members": [
-      "Laura Hall",
-      "Valerie Maltais",
-      "Rose-Anne Grenier"
-     ]
-    },
-    {
-     "rank": null,
-     "name": "Germany",
-     "noc": "GER",
-     "time": "",
-     "behind": "",
-     "lane": null,
-     "pair": 4,
-     "medal": null,
-     "status": null,
-     "points": null,
-     "official": true,
-     "members": [
-      "Maira Jasch",
-      "Melissa Schaefer",
-      "Ashley Voelker"
-     ]
-    },
-    {
-     "rank": null,
-     "name": "Netherlands",
-     "noc": "NED",
-     "time": "",
-     "behind": "",
-     "lane": null,
-     "pair": 4,
-     "medal": null,
-     "status": null,
-     "points": null,
-     "official": true,
-     "members": [
-      "Joy Beune",
-      "Antoinette Rijpma-De Jong",
-      "Merel Conijn"
      ]
     }
    ]
@@ -6359,7 +6359,7 @@
      "time": "",
      "behind": "",
      "lane": null,
-     "pair": 2,
+     "pair": 1,
      "medal": null,
      "status": null,
      "points": null,
@@ -6378,7 +6378,7 @@
      "time": "",
      "behind": "",
      "lane": null,
-     "pair": 2,
+     "pair": 1,
      "medal": null,
      "status": null,
      "points": null,
