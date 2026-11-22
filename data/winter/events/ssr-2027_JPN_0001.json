@@ -14,7 +14,7 @@
   "state": "",
   "url": "https://live.isuresults.eu/events/2027_JPN_0001/schedule"
  },
- "checked_at": "2026-11-22T08:09:44.704450+00:00",
+ "checked_at": "2026-11-22T08:20:55.412333+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:05:00Z",
@@ -6031,8 +6031,8 @@
   "24": {
    "title": "2nd 500m Men",
    "start_utc": "2026-11-22T07:49:00Z",
-   "live": true,
-   "official": false,
+   "live": false,
+   "official": true,
    "distance": "500 Meter",
    "division": "A",
    "start_list": false,
@@ -6132,8 +6132,8 @@
      "rank": 8,
      "name": "Stefan Westenbroek",
      "noc": "NED",
-     "time": "34.869",
-     "behind": "0.496",
+     "time": "34.866",
+     "behind": "0.493",
      "lane": "I",
      "pair": 10,
      "medal": null,
@@ -6158,8 +6158,8 @@
      "rank": 10,
      "name": "Laurent Dubreuil",
      "noc": "CAN",
-     "time": "34.910",
-     "behind": "0.537",
+     "time": "34.911",
+     "behind": "0.538",
      "lane": "O",
      "pair": 10,
      "medal": null,
@@ -6302,11 +6302,11 @@
   "26": {
    "title": "Mixed Relay Final",
    "start_utc": "2026-11-22T08:28:00Z",
-   "live": false,
+   "live": true,
    "official": false,
    "distance": "Relay (7 Laps)",
    "division": "A",
-   "start_list": true,
+   "start_list": false,
    "rows": [
     {
      "rank": null,
@@ -6340,8 +6340,7 @@
      "members": [
       "Iga Wojtasik",
       "Jerzy Stadnicki",
-      "Wiktoria Dąbrowska",
-      "Mateusz Mikolajuk"
+      "Wiktoria Dąbrowska"
      ]
     },
     {
@@ -6359,8 +6358,7 @@
      "members": [
       "Dantong Wang",
       "Xuanyu Zhou",
-      "Yuxuan Wang",
-      "Baoshuo Pan"
+      "Yuxuan Wang"
      ]
     },
     {
@@ -6378,8 +6376,7 @@
      "members": [
       "Chaeeun Park",
       "Hojun Yang",
-      "Minsun Kim",
-      "Uiryun Cha"
+      "Minsun Kim"
      ]
     }
    ]
@@ -6945,6 +6942,32 @@
    "status": "",
    "points": null,
    "official": true,
+   "qual": ""
+  },
+  {
+   "event_id": "ssr-2027_JPN_0001",
+   "sport": "speed-skating",
+   "event": "ISU Speed Skating World Cup #2",
+   "distance": "Mixed Relay Final",
+   "round": "Division A",
+   "heat": "",
+   "start_utc": "2026-11-22T08:28:00Z",
+   "rank": null,
+   "name": "Republic of Korea",
+   "noc": "KOR",
+   "time": "",
+   "behind": "",
+   "lane": null,
+   "pair": 1,
+   "medal": null,
+   "status": "",
+   "points": null,
+   "official": true,
+   "members": [
+    "Chaeeun Park",
+    "Hojun Yang",
+    "Minsun Kim"
+   ],
    "qual": ""
   }
  ]
