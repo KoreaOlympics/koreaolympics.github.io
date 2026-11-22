@@ -14,7 +14,7 @@
   "state": "",
   "url": "https://live.isuresults.eu/events/2027_JPN_0001/schedule"
  },
- "checked_at": "2026-11-22T06:00:41.911194+00:00",
+ "checked_at": "2026-11-22T06:12:20.309072+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:05:00Z",
@@ -5226,8 +5226,8 @@
   "25": {
    "title": "Mixed Relay Semi-Final",
    "start_utc": "2026-11-22T05:35:00Z",
-   "live": true,
-   "official": false,
+   "live": false,
+   "official": true,
    "distance": "Relay (7 Laps)",
    "division": "A",
    "start_list": false,
@@ -5251,41 +5251,6 @@
     },
     {
      "rank": 2,
-     "name": "AIN2",
-     "noc": "AIN2",
-     "time": "2:58.208",
-     "behind": "0.315",
-     "lane": null,
-     "pair": 2,
-     "medal": null,
-     "status": 0,
-     "points": null,
-     "official": true,
-     "members": [
-      "Alexandra Sayutina",
-      "Nikita Baziuk",
-      "Daria Kachanova"
-     ]
-    },
-    {
-     "rank": 3,
-     "name": "Austria",
-     "noc": "AUT",
-     "time": "2:58.342",
-     "behind": "0.449",
-     "lane": null,
-     "pair": 2,
-     "medal": null,
-     "status": 0,
-     "points": null,
-     "official": true,
-     "members": [
-      "Jeannine Rosner",
-      "Gabriel Odor"
-     ]
-    },
-    {
-     "rank": 4,
      "name": "Poland",
      "noc": "POL",
      "time": "3:01.218",
@@ -5303,42 +5268,7 @@
      ]
     },
     {
-     "rank": 5,
-     "name": "Netherlands",
-     "noc": "NED",
-     "time": "3:01.600",
-     "behind": "3.707",
-     "lane": null,
-     "pair": 3,
-     "medal": null,
-     "status": 0,
-     "points": null,
-     "official": true,
-     "members": [
-      "Chloé Hoogendoorn",
-      "Sijmen Egberts"
-     ]
-    },
-    {
-     "rank": 6,
-     "name": "AIN1",
-     "noc": "AIN1",
-     "time": "3:01.999",
-     "behind": "4.106",
-     "lane": null,
-     "pair": 3,
-     "medal": null,
-     "status": 0,
-     "points": null,
-     "official": true,
-     "members": [
-      "Katsiaryna Hahiyeva",
-      "Viktor Rudenko",
-      "Hanna Damaratskaya"
-     ]
-    },
-    {
-     "rank": 7,
+     "rank": 3,
      "name": "China",
      "noc": "CHN",
      "time": "3:03.734",
@@ -5353,6 +5283,76 @@
       "Dantong Wang",
       "Xuanyu Zhou",
       "Yuxuan Wang"
+     ]
+    },
+    {
+     "rank": 4,
+     "name": "Republic of Korea",
+     "noc": "KOR",
+     "time": "3:16.386",
+     "behind": "18.493",
+     "lane": null,
+     "pair": 4,
+     "medal": null,
+     "status": 0,
+     "points": null,
+     "official": true,
+     "members": [
+      "Chaeeun Park",
+      "Hojun Yang",
+      "Minsun Kim"
+     ]
+    },
+    {
+     "rank": 5,
+     "name": "AIN2",
+     "noc": "AIN2",
+     "time": "2:58.208",
+     "behind": "0.315",
+     "lane": null,
+     "pair": 2,
+     "medal": null,
+     "status": 0,
+     "points": null,
+     "official": true,
+     "members": [
+      "Alexandra Sayutina",
+      "Nikita Baziuk",
+      "Daria Kachanova"
+     ]
+    },
+    {
+     "rank": 6,
+     "name": "Austria",
+     "noc": "AUT",
+     "time": "2:58.342",
+     "behind": "0.449",
+     "lane": null,
+     "pair": 2,
+     "medal": null,
+     "status": 0,
+     "points": null,
+     "official": true,
+     "members": [
+      "Jeannine Rosner",
+      "Gabriel Odor"
+     ]
+    },
+    {
+     "rank": 7,
+     "name": "Netherlands",
+     "noc": "NED",
+     "time": "3:01.600",
+     "behind": "3.707",
+     "lane": null,
+     "pair": 3,
+     "medal": null,
+     "status": 0,
+     "points": null,
+     "official": true,
+     "members": [
+      "Chloé Hoogendoorn",
+      "Sijmen Egberts"
      ]
     },
     {
@@ -5374,6 +5374,24 @@
      ]
     },
     {
+     "rank": 8,
+     "name": "AIN1",
+     "noc": "AIN1",
+     "time": "3:01.999",
+     "behind": "4.106",
+     "lane": null,
+     "pair": 3,
+     "medal": null,
+     "status": 0,
+     "points": null,
+     "official": true,
+     "members": [
+      "Katsiaryna Hahiyeva",
+      "Viktor Rudenko",
+      "Hanna Damaratskaya"
+     ]
+    },
+    {
      "rank": 9,
      "name": "Kazakhstan",
      "noc": "KAZ",
@@ -5389,24 +5407,6 @@
       "Darya Vazhenina",
       "Nuraly Akzhol",
       "Arina Ilyachshenko"
-     ]
-    },
-    {
-     "rank": 10,
-     "name": "Republic of Korea",
-     "noc": "KOR",
-     "time": "3:16.381",
-     "behind": "18.488",
-     "lane": null,
-     "pair": 4,
-     "medal": null,
-     "status": 0,
-     "points": null,
-     "official": true,
-     "members": [
-      "Chaeeun Park",
-      "Hojun Yang",
-      "Minsun Kim"
      ]
     },
     {
@@ -5450,11 +5450,11 @@
   "21": {
    "title": "Team Pursuit Women",
    "start_utc": "2026-11-22T06:15:00Z",
-   "live": false,
+   "live": true,
    "official": false,
    "distance": "Team Pursuit (6 Laps)",
    "division": "A",
-   "start_list": true,
+   "start_list": false,
    "rows": [
     {
      "rank": null,
@@ -5471,8 +5471,7 @@
      "members": [
       "Zofia Braun",
       "Karolina Bosiek",
-      "Emilia Zawisza",
-      "Wiktoria Dąbrowska"
+      "Emilia Zawisza"
      ]
     },
     {
@@ -5490,8 +5489,7 @@
      "members": [
       "Mariya Degen",
       "Kristina Shumekova",
-      "Alina Shumekova",
-      "Arina Ilyachshenko"
+      "Alina Shumekova"
      ]
     },
     {
@@ -5509,8 +5507,7 @@
      "members": [
       "Irina Salnikova",
       "Kseniia Korzhova",
-      "Anastasiia Semenova",
-      "Alexandra Sayutina"
+      "Anastasiia Semenova"
      ]
     },
     {
@@ -5528,8 +5525,7 @@
      "members": [
       "Momoka Horikawa",
       "Hana Noake",
-      "Akane Iida",
-      "Anna Kubo"
+      "Akane Iida"
      ]
     },
     {
@@ -5547,8 +5543,7 @@
      "members": [
       "Mei Han",
       "Jiaxuan Li",
-      "Binyu Yang",
-      "Zhien Tai"
+      "Binyu Yang"
      ]
     },
     {
@@ -5584,8 +5579,7 @@
      "members": [
       "Maira Jasch",
       "Melissa Schaefer",
-      "Ashley Voelker",
-      "Marlen Ehseluns"
+      "Ashley Voelker"
      ]
     },
     {
@@ -5603,8 +5597,7 @@
      "members": [
       "Joy Beune",
       "Antoinette Rijpma-De Jong",
-      "Merel Conijn",
-      "Gioya Lancee"
+      "Merel Conijn"
      ]
     }
    ]
@@ -6817,11 +6810,11 @@
    "round": "Division A",
    "heat": "",
    "start_utc": "2026-11-22T05:35:00Z",
-   "rank": 10,
+   "rank": 4,
    "name": "Republic of Korea",
    "noc": "KOR",
-   "time": "3:16.381",
-   "behind": "18.488",
+   "time": "3:16.386",
+   "behind": "18.493",
    "lane": null,
    "pair": 4,
    "medal": null,
