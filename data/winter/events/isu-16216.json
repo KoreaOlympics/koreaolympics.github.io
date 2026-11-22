@@ -15,10 +15,10 @@
   "city": "Seoul",
   "country": "KOR",
   "state": "Live",
-  "live": "Men 1000 m",
+  "live": "Mixed Team Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-22T05:02:37.831110+00:00",
+ "checked_at": "2026-11-22T05:13:49.909811+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -600,7 +600,7 @@
        "competitors": [
         {
          "rank": 1,
-         "name": "Shuta Matsuzu",
+         "name": "Shuta MATSUZU",
          "noc": "JPN",
          "time": "42.207",
          "qual": "Q",
@@ -953,7 +953,7 @@
         "qual": "Q"
        },
        {
-        "name": "Shuta Matsuzu",
+        "name": "Shuta MATSUZU",
         "noc": "JPN",
         "rank": 1,
         "time": "42.207",
@@ -1081,7 +1081,7 @@
         "Lorenzo PREVITALI (ITA)"
        ],
        [
-        "Shuta Matsuzu (JPN)",
+        "Shuta MATSUZU (JPN)",
         "Takumi WADA (JPN)"
        ],
        [
@@ -1476,7 +1476,7 @@
         },
         {
          "rank": 4,
-         "name": "Shuta Matsuzu",
+         "name": "Shuta MATSUZU",
          "noc": "JPN",
          "time": "41.106",
          "qual": "",
@@ -2244,7 +2244,7 @@
         },
         {
          "rank": 2,
-         "name": "Shuta Matsuzu",
+         "name": "Shuta MATSUZU",
          "noc": "JPN",
          "time": "41.607",
          "qual": "",
@@ -6798,7 +6798,7 @@
      "id": 23415,
      "name": "Rep. Semifinals",
      "status": "Finished",
-     "start_utc": "2026-11-22T03:43:00.000Z",
+     "start_utc": "2026-11-22T03:44:46.000Z",
      "rule": "The first placed skater from each race and up to a maximum of one fastest second place skater qualify for Semifinals.",
      "heats": [
       {
@@ -7773,7 +7773,7 @@
         },
         {
          "rank": 3,
-         "name": "Shuta Matsuzu",
+         "name": "Shuta MATSUZU",
          "noc": "JPN",
          "time": "2:29.295",
          "qual": "",
@@ -8316,7 +8316,7 @@
         },
         {
          "rank": 4,
-         "name": "Shuta Matsuzu",
+         "name": "Shuta MATSUZU",
          "noc": "JPN",
          "time": "2:35.373",
          "qual": "",
@@ -13039,7 +13039,7 @@
      ],
      "projection": {
       "next": "Final",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -13092,10 +13092,121 @@
     {
      "id": 23519,
      "name": "Final",
-     "status": "Scheduled",
-     "start_utc": "2026-11-22T05:05:00.000Z",
+     "status": "Live",
+     "start_utc": "2026-11-22T05:05:48.000Z",
      "rule": "",
-     "heats": []
+     "heats": [
+      {
+       "name": "Final",
+       "status": "Getting Ready",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Canada",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Netherlands",
+         "noc": "NED",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 2,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Ain2",
+         "noc": "AIN2",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "People's Republic of China",
+         "noc": "CHN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 4,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Republic of Korea",
+         "noc": "KOR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 5,
+         "slug": ""
+        }
+       ]
+      },
+      {
+       "name": "Final B",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Japan",
+         "noc": "JPN",
+         "time": "2:45.696",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
+         "slug": ""
+        },
+        {
+         "rank": 2,
+         "name": "Croatia",
+         "noc": "CRO",
+         "time": "2:46.252",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 2,
+         "slug": ""
+        },
+        {
+         "rank": 3,
+         "name": "Germany",
+         "noc": "GER",
+         "time": "2:55.342",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
+         "slug": ""
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -14542,6 +14653,25 @@
    "record": "",
    "bib": null,
    "lane": 1,
+   "slug": ""
+  },
+  {
+   "event_id": "isu-16216",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #3",
+   "distance": "Mixed Team Relay",
+   "round": "Final",
+   "heat": "Final",
+   "start_utc": "2026-11-22T05:05:48.000Z",
+   "rank": null,
+   "name": "Republic of Korea",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": null,
+   "lane": 5,
    "slug": ""
   },
   {
