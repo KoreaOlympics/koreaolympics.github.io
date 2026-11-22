@@ -15,10 +15,10 @@
   "city": "Seoul",
   "country": "KOR",
   "state": "Live",
-  "live": "Women 1500 m",
+  "live": "Men 5000 m Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-22T08:20:02.813045+00:00",
+ "checked_at": "2026-11-22T08:31:12.819619+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -365,7 +365,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-22T07:59:00.000Z",
+   "start_utc": "2026-11-22T08:01:00.000Z",
    "title": "Women 1500 m",
    "round": "Final",
    "event_result_id": 16340,
@@ -14662,7 +14662,7 @@
      ],
      "projection": {
       "next": "Final",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -14715,10 +14715,109 @@
     {
      "id": 23520,
      "name": "Final",
-     "status": "Scheduled",
+     "status": "Live",
      "start_utc": "2026-11-22T08:19:00.000Z",
      "rule": "",
-     "heats": []
+     "heats": [
+      {
+       "name": "Final",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Republic of Korea",
+         "noc": "KOR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Netherlands",
+         "noc": "NED",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 2,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Canada",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "United States of America",
+         "noc": "USA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 4,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Italy",
+         "noc": "ITA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 5,
+         "slug": ""
+        }
+       ]
+      },
+      {
+       "name": "Final B",
+       "status": "Live",
+       "official": "Live",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Ain2",
+         "noc": "AIN2",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "People's Republic of China",
+         "noc": "CHN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 2,
+         "slug": ""
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -16802,6 +16901,25 @@
    "noc": "KOR",
    "time": "7:05.796",
    "qual": "Q",
+   "status": "",
+   "record": "",
+   "bib": null,
+   "lane": 1,
+   "slug": ""
+  },
+  {
+   "event_id": "isu-16216",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #3",
+   "distance": "Men 5000 m Relay",
+   "round": "Final",
+   "heat": "Final",
+   "start_utc": "2026-11-22T08:19:00.000Z",
+   "rank": null,
+   "name": "Republic of Korea",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
    "status": "",
    "record": "",
    "bib": null,
