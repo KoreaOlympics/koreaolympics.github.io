@@ -14,7 +14,7 @@
   "state": "",
   "url": "https://live.isuresults.eu/events/2027_JPN_0001/schedule"
  },
- "checked_at": "2026-11-22T04:18:31.007300+00:00",
+ "checked_at": "2026-11-22T04:29:25.289758+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:05:00Z",
@@ -4955,8 +4955,8 @@
   "20": {
    "title": "2nd 500m Men Division B",
    "start_utc": "2026-11-22T03:59:00Z",
-   "live": true,
-   "official": false,
+   "live": false,
+   "official": true,
    "distance": "500 Meter",
    "division": "B",
    "start_list": false,
@@ -5054,19 +5054,6 @@
     },
     {
      "rank": 8,
-     "name": "Byeonghun Lee",
-     "noc": "KOR",
-     "time": "35.411",
-     "behind": "0.368",
-     "lane": "O",
-     "pair": 5,
-     "medal": null,
-     "status": 0,
-     "points": null,
-     "official": true
-    },
-    {
-     "rank": 9,
      "name": "Jaewoong Chung",
      "noc": "KOR",
      "time": "35.416",
@@ -5079,7 +5066,7 @@
      "official": true
     },
     {
-     "rank": 10,
+     "rank": 9,
      "name": "Ryota Kojima",
      "noc": "JPN",
      "time": "35.428",
@@ -5092,7 +5079,7 @@
      "official": true
     },
     {
-     "rank": 11,
+     "rank": 10,
      "name": "Merijn Scheperkamp",
      "noc": "NED",
      "time": "35.487",
@@ -5105,7 +5092,7 @@
      "official": true
     },
     {
-     "rank": 12,
+     "rank": 11,
      "name": "Kayo Vos",
      "noc": "NED",
      "time": "35.512",
@@ -5118,7 +5105,7 @@
      "official": true
     },
     {
-     "rank": 13,
+     "rank": 12,
      "name": "Cedrick Brunet",
      "noc": "CAN",
      "time": "35.521",
@@ -5131,7 +5118,7 @@
      "official": true
     },
     {
-     "rank": 14,
+     "rank": 13,
      "name": "Mateusz Mikolajuk",
      "noc": "POL",
      "time": "35.607",
@@ -5144,7 +5131,7 @@
      "official": true
     },
     {
-     "rank": 15,
+     "rank": 14,
      "name": "Hendrik Dombek",
      "noc": "GER",
      "time": "35.637",
@@ -5157,7 +5144,7 @@
      "official": true
     },
     {
-     "rank": 16,
+     "rank": 15,
      "name": "Arthur Lebeaupin",
      "noc": "FRA",
      "time": "35.681",
@@ -5170,7 +5157,7 @@
      "official": true
     },
     {
-     "rank": 17,
+     "rank": 16,
      "name": "Szymon Hostynski",
      "noc": "POL",
      "time": "35.704",
@@ -5183,7 +5170,7 @@
      "official": true
     },
     {
-     "rank": 18,
+     "rank": 17,
      "name": "Daniel Milagros",
      "noc": "ESP",
      "time": "35.907",
@@ -5196,7 +5183,7 @@
      "official": true
     },
     {
-     "rank": 19,
+     "rank": 18,
      "name": "Ignaz Gschwentner",
      "noc": "AUT",
      "time": "35.990",
@@ -5209,7 +5196,7 @@
      "official": true
     },
     {
-     "rank": 20,
+     "rank": 19,
      "name": "Tanner Worley",
      "noc": "USA",
      "time": "36.317",
@@ -5220,17 +5207,30 @@
      "status": 0,
      "points": null,
      "official": true
+    },
+    {
+     "rank": null,
+     "name": "Byeonghun Lee",
+     "noc": "KOR",
+     "time": "35.411",
+     "behind": "",
+     "lane": "O",
+     "pair": 5,
+     "medal": null,
+     "status": 3,
+     "points": null,
+     "official": true
     }
    ]
   },
   "25": {
    "title": "Mixed Relay Semi-Final",
    "start_utc": "2026-11-22T05:35:00Z",
-   "live": false,
+   "live": true,
    "official": false,
    "distance": "Relay (7 Laps)",
    "division": "A",
-   "start_list": true,
+   "start_list": false,
    "rows": [
     {
      "rank": null,
@@ -5392,9 +5392,9 @@
      "official": true,
      "members": [
       "Katsiaryna Hahiyeva",
-      "Ignat Golovatsiuk",
+      "Viktor Rudenko",
       "Hanna Damaratskaya",
-      "Viktor Rudenko"
+      "Ignat Golovatsiuk"
      ]
     },
     {
@@ -6784,12 +6784,12 @@
    "heat": "",
    "start_utc": "2026-11-22T03:59:00Z",
    "rank": 8,
-   "name": "Byeonghun Lee",
+   "name": "Jaewoong Chung",
    "noc": "KOR",
-   "time": "35.411",
-   "behind": "0.368",
+   "time": "35.416",
+   "behind": "0.373",
    "lane": "O",
-   "pair": 5,
+   "pair": 7,
    "medal": null,
    "status": "",
    "points": null,
@@ -6804,17 +6804,44 @@
    "round": "Division B",
    "heat": "",
    "start_utc": "2026-11-22T03:59:00Z",
-   "rank": 9,
-   "name": "Jaewoong Chung",
+   "rank": null,
+   "name": "Byeonghun Lee",
    "noc": "KOR",
-   "time": "35.416",
-   "behind": "0.373",
+   "time": "35.411",
+   "behind": "",
    "lane": "O",
-   "pair": 7,
+   "pair": 5,
    "medal": null,
    "status": "",
    "points": null,
    "official": true,
+   "qual": ""
+  },
+  {
+   "event_id": "ssr-2027_JPN_0001",
+   "sport": "speed-skating",
+   "event": "ISU Speed Skating World Cup #2",
+   "distance": "Mixed Relay Semi-Final",
+   "round": "Division A",
+   "heat": "",
+   "start_utc": "2026-11-22T05:35:00Z",
+   "rank": null,
+   "name": "Republic of Korea",
+   "noc": "KOR",
+   "time": "",
+   "behind": "",
+   "lane": null,
+   "pair": 4,
+   "medal": null,
+   "status": "",
+   "points": null,
+   "official": true,
+   "members": [
+    "Chaeeun Park",
+    "Hojun Yang",
+    "Minsun Kim",
+    "Uiryun Cha"
+   ],
    "qual": ""
   }
  ]
