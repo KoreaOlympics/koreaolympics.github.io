@@ -18,7 +18,7 @@
   "live": "Women 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-22T06:45:32.776859+00:00",
+ "checked_at": "2026-11-22T06:56:54.546601+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -11780,20 +11780,20 @@
     {
      "id": 23536,
      "name": "Final",
-     "status": "Live",
-     "start_utc": "2026-11-22T06:45:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-22T06:44:45.000Z",
      "rule": "",
      "heats": [
       {
        "name": "Final",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Courtney SARAULT",
          "noc": "CAN",
-         "time": "",
+         "time": "43.055",
          "qual": "",
          "status": "",
          "record": "",
@@ -11802,22 +11802,10 @@
          "slug": "courtney-sarault"
         },
         {
-         "rank": null,
-         "name": "Florence BRUNELLE",
-         "noc": "CAN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 10,
-         "lane": 2,
-         "slug": "florence-brunelle"
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Danae BLAIS",
          "noc": "CAN",
-         "time": "",
+         "time": "43.171",
          "qual": "",
          "status": "",
          "record": "",
@@ -11826,65 +11814,53 @@
          "slug": "danae-blais"
         },
         {
-         "rank": null,
-         "name": "Jiarui SONG",
-         "noc": "CHN",
-         "time": "",
+         "rank": 3,
+         "name": "Florence BRUNELLE",
+         "noc": "CAN",
+         "time": "43.184",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 54,
-         "lane": 4,
-         "slug": "jiarui-song"
+         "bib": 10,
+         "lane": 2,
+         "slug": "florence-brunelle"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Minjeong CHOI",
          "noc": "KOR",
-         "time": "",
+         "time": "43.300",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 4,
          "lane": 5,
          "slug": "minjeong-choi"
+        },
+        {
+         "rank": 5,
+         "name": "Jiarui SONG",
+         "noc": "CHN",
+         "time": "DNF",
+         "qual": "",
+         "status": "Did Not Finish",
+         "record": "",
+         "bib": 54,
+         "lane": 4,
+         "slug": "jiarui-song"
         }
        ]
       },
       {
        "name": "Final B",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Victoria JEAN-BAPTISTE",
-         "noc": "CAN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 53,
-         "lane": 1,
-         "slug": "victoria-jean-baptiste"
-        },
-        {
-         "rank": null,
-         "name": "Selma POUTSMA",
-         "noc": "NED",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 15,
-         "lane": 2,
-         "slug": "selma-poutsma"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Xinran WANG",
          "noc": "CHN",
-         "time": "",
+         "time": "43.575",
          "qual": "",
          "status": "",
          "record": "",
@@ -11893,16 +11869,40 @@
          "slug": "xinran-wang"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Victoria JEAN-BAPTISTE",
+         "noc": "CAN",
+         "time": "43.903",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 53,
+         "lane": 1,
+         "slug": "victoria-jean-baptiste"
+        },
+        {
+         "rank": 3,
          "name": "Li GONG",
          "noc": "CHN",
-         "time": "",
+         "time": "43.952",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 19,
          "lane": 4,
          "slug": "li-gong"
+        },
+        {
+         "rank": 4,
+         "name": "Selma POUTSMA",
+         "noc": "NED",
+         "time": "43.963",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 15,
+         "lane": 2,
+         "slug": "selma-poutsma"
         }
        ]
       }
@@ -15648,11 +15648,11 @@
    "distance": "Women 500 m",
    "round": "Final",
    "heat": "Final",
-   "start_utc": "2026-11-22T06:45:00.000Z",
-   "rank": null,
+   "start_utc": "2026-11-22T06:44:45.000Z",
+   "rank": 4,
    "name": "Minjeong CHOI",
    "noc": "KOR",
-   "time": "",
+   "time": "43.300",
    "qual": "",
    "status": "",
    "record": "",
