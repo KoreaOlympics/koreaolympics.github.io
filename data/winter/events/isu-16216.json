@@ -15,10 +15,10 @@
   "city": "Seoul",
   "country": "KOR",
   "state": "Live",
-  "live": "Men 1000 m",
+  "live": "Women 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-22T06:34:03.881623+00:00",
+ "checked_at": "2026-11-22T06:45:32.776859+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -353,7 +353,7 @@
    "title": "Men 1000 m",
    "round": "Finals",
    "event_result_id": 16347,
-   "round_id": 23460,
+   "round_id": null,
    "type": "Singles"
   },
   {
@@ -6273,7 +6273,7 @@
      ],
      "projection": {
       "next": "Semifinals",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -6368,14 +6368,200 @@
     {
      "id": 23459,
      "name": "Semifinals",
-     "status": "Scheduled",
-     "start_utc": "2026-11-22T06:36:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-22T06:36:14.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final, the third and fourth placed skaters from each race and up to a maximum of next two fastest fifth place skaters qualify for Final B.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Felix ROUSSEL",
+         "noc": "CAN",
+         "time": "1:25.068",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 11,
+         "lane": 1,
+         "slug": "felix-roussel"
+        },
+        {
+         "rank": 2,
+         "name": "Jens VAN 'T WOUT",
+         "noc": "NED",
+         "time": "1:25.193",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 7,
+         "lane": 2,
+         "slug": "jens-van-t-wout"
+        },
+        {
+         "rank": 3,
+         "name": "Thomas NADALINI",
+         "noc": "ITA",
+         "time": "1:25.292",
+         "qual": "q",
+         "status": "",
+         "record": "",
+         "bib": 6,
+         "lane": 5,
+         "slug": "thomas-nadalini"
+        },
+        {
+         "rank": 4,
+         "name": "Semen ELISTRATOV",
+         "noc": "AIN2",
+         "time": "1:25.313",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 123,
+         "lane": 3,
+         "slug": "semen-elistratov"
+        },
+        {
+         "rank": 5,
+         "name": "Furkan AKAR",
+         "noc": "TUR",
+         "time": "1:27.045",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 27,
+         "lane": 4,
+         "slug": "furkan-akar"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "William DANDJINOU",
+         "noc": "CAN",
+         "time": "1:25.696",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 1,
+         "lane": 1,
+         "slug": "william-dandjinou"
+        },
+        {
+         "rank": 2,
+         "name": "Kay HUISMAN",
+         "noc": "NED",
+         "time": "1:25.933",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 41,
+         "lane": 4,
+         "slug": "kay-huisman"
+        },
+        {
+         "rank": 3,
+         "name": "Vladimir BALBEKOV",
+         "noc": "AIN2",
+         "time": "1:26.032",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 122,
+         "lane": 5,
+         "slug": "vladimir-balbekov"
+        },
+        {
+         "rank": 4,
+         "name": "Jongun RIM",
+         "noc": "KOR",
+         "time": "1:26.336",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 8,
+         "lane": 2,
+         "slug": "jongun-rim"
+        },
+        {
+         "rank": 5,
+         "name": "Taesung KIM",
+         "noc": "KOR",
+         "time": "1:26.616",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 97,
+         "lane": 3,
+         "slug": "taesung-kim"
+        }
+       ]
+      }
+     ],
+     "projection": {
+      "next": "Final",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Felix ROUSSEL",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "1:25.068",
+        "qual": "Q"
+       },
+       {
+        "name": "William DANDJINOU",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "1:25.696",
+        "qual": "Q"
+       },
+       {
+        "name": "Jens VAN 'T WOUT",
+        "noc": "NED",
+        "rank": 2,
+        "time": "1:25.193",
+        "qual": "Q"
+       },
+       {
+        "name": "Kay HUISMAN",
+        "noc": "NED",
+        "rank": 2,
+        "time": "1:25.933",
+        "qual": "Q"
+       },
+       {
+        "name": "Thomas NADALINI",
+        "noc": "ITA",
+        "rank": 3,
+        "time": "1:25.292",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Felix ROUSSEL (CAN)",
+        "William DANDJINOU (CAN)",
+        "Jens VAN 'T WOUT (NED)",
+        "Kay HUISMAN (NED)",
+        "Thomas NADALINI (ITA)"
+       ]
+      ]
+     }
     },
     {
-     "id": 23460,
-     "name": "Finals",
+     "id": 23537,
+     "name": "Final",
      "status": "Scheduled",
      "start_utc": "2026-11-22T07:04:00.000Z",
      "rule": "",
@@ -11541,7 +11727,7 @@
      ],
      "projection": {
       "next": "Final",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -11594,10 +11780,133 @@
     {
      "id": 23536,
      "name": "Final",
-     "status": "Scheduled",
+     "status": "Live",
      "start_utc": "2026-11-22T06:45:00.000Z",
      "rule": "",
-     "heats": []
+     "heats": [
+      {
+       "name": "Final",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Courtney SARAULT",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 1,
+         "lane": 1,
+         "slug": "courtney-sarault"
+        },
+        {
+         "rank": null,
+         "name": "Florence BRUNELLE",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 10,
+         "lane": 2,
+         "slug": "florence-brunelle"
+        },
+        {
+         "rank": null,
+         "name": "Danae BLAIS",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 25,
+         "lane": 3,
+         "slug": "danae-blais"
+        },
+        {
+         "rank": null,
+         "name": "Jiarui SONG",
+         "noc": "CHN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 54,
+         "lane": 4,
+         "slug": "jiarui-song"
+        },
+        {
+         "rank": null,
+         "name": "Minjeong CHOI",
+         "noc": "KOR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 4,
+         "lane": 5,
+         "slug": "minjeong-choi"
+        }
+       ]
+      },
+      {
+       "name": "Final B",
+       "status": "Getting Ready",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Victoria JEAN-BAPTISTE",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 53,
+         "lane": 1,
+         "slug": "victoria-jean-baptiste"
+        },
+        {
+         "rank": null,
+         "name": "Selma POUTSMA",
+         "noc": "NED",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 15,
+         "lane": 2,
+         "slug": "selma-poutsma"
+        },
+        {
+         "rank": null,
+         "name": "Xinran WANG",
+         "noc": "CHN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 28,
+         "lane": 3,
+         "slug": "xinran-wang"
+        },
+        {
+         "rank": null,
+         "name": "Li GONG",
+         "noc": "CHN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 19,
+         "lane": 4,
+         "slug": "li-gong"
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -14804,6 +15113,44 @@
    "event_id": "isu-16216",
    "sport": "short-track",
    "event": "ISU Short Track World Tour #3",
+   "distance": "Men 1000 m",
+   "round": "Semifinals",
+   "heat": "Heat 2",
+   "start_utc": "2026-11-22T06:36:14.000Z",
+   "rank": 4,
+   "name": "Jongun RIM",
+   "noc": "KOR",
+   "time": "1:26.336",
+   "qual": "QB",
+   "status": "",
+   "record": "",
+   "bib": 8,
+   "lane": 2,
+   "slug": "jongun-rim"
+  },
+  {
+   "event_id": "isu-16216",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #3",
+   "distance": "Men 1000 m",
+   "round": "Semifinals",
+   "heat": "Heat 2",
+   "start_utc": "2026-11-22T06:36:14.000Z",
+   "rank": 5,
+   "name": "Taesung KIM",
+   "noc": "KOR",
+   "time": "1:26.616",
+   "qual": "QB",
+   "status": "",
+   "record": "",
+   "bib": 97,
+   "lane": 3,
+   "slug": "taesung-kim"
+  },
+  {
+   "event_id": "isu-16216",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #3",
    "distance": "Women 1500 m",
    "round": "Quarterfinals",
    "heat": "Heat 1",
@@ -15292,6 +15639,25 @@
    "record": "",
    "bib": 4,
    "lane": 2,
+   "slug": "minjeong-choi"
+  },
+  {
+   "event_id": "isu-16216",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #3",
+   "distance": "Women 500 m",
+   "round": "Final",
+   "heat": "Final",
+   "start_utc": "2026-11-22T06:45:00.000Z",
+   "rank": null,
+   "name": "Minjeong CHOI",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 4,
+   "lane": 5,
    "slug": "minjeong-choi"
   },
   {
