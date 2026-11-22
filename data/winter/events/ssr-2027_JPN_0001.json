@@ -14,7 +14,7 @@
   "state": "",
   "url": "https://live.isuresults.eu/events/2027_JPN_0001/schedule"
  },
- "checked_at": "2026-11-22T03:22:54.195609+00:00",
+ "checked_at": "2026-11-22T03:33:43.395516+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:05:00Z",
@@ -4573,8 +4573,8 @@
   "18": {
    "title": "Team Pursuit Men Division B",
    "start_utc": "2026-11-22T03:00:00Z",
-   "live": true,
-   "official": false,
+   "live": false,
+   "official": true,
    "distance": "Team Pursuit (8 Laps)",
    "division": "B",
    "start_list": false,
@@ -4709,12 +4709,12 @@
   },
   "19": {
    "title": "2nd 500m Women Division B",
-   "start_utc": "2026-11-22T03:34:00Z",
-   "live": false,
+   "start_utc": "2026-11-22T03:36:00Z",
+   "live": true,
    "official": false,
    "distance": "500 Meter",
    "division": "B",
-   "start_list": true,
+   "start_list": false,
    "rows": [
     {
      "rank": null,
@@ -5303,9 +5303,7 @@
      "official": true,
      "members": [
       "Jeannine Rosner",
-      "Gabriel Odor",
-      "Vanessa Herzog",
-      "Ignaz Gschwentner"
+      "Gabriel Odor"
      ]
     },
     {
@@ -5719,9 +5717,9 @@
      "official": true,
      "members": [
       "Taiga Sasaki",
-      "Shomu Sasaki",
       "Yuta Fuchigami",
-      "Motonaga Arito"
+      "Motonaga Arito",
+      "Shomu Sasaki"
      ]
     },
     {
@@ -6713,6 +6711,48 @@
     "Youngjin Jin",
     "Uiryun Cha"
    ],
+   "qual": ""
+  },
+  {
+   "event_id": "ssr-2027_JPN_0001",
+   "sport": "speed-skating",
+   "event": "ISU Speed Skating World Cup #2",
+   "distance": "2nd 500m Women Division B",
+   "round": "Division B",
+   "heat": "",
+   "start_utc": "2026-11-22T03:36:00Z",
+   "rank": null,
+   "name": "Chaeeun Park",
+   "noc": "KOR",
+   "time": "",
+   "behind": "",
+   "lane": "I",
+   "pair": 3,
+   "medal": null,
+   "status": "",
+   "points": null,
+   "official": true,
+   "qual": ""
+  },
+  {
+   "event_id": "ssr-2027_JPN_0001",
+   "sport": "speed-skating",
+   "event": "ISU Speed Skating World Cup #2",
+   "distance": "2nd 500m Women Division B",
+   "round": "Division B",
+   "heat": "",
+   "start_utc": "2026-11-22T03:36:00Z",
+   "rank": null,
+   "name": "Huidan Jung",
+   "noc": "KOR",
+   "time": "",
+   "behind": "",
+   "lane": "I",
+   "pair": 7,
+   "medal": null,
+   "status": "",
+   "points": null,
+   "official": true,
    "qual": ""
   }
  ]

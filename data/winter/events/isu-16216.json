@@ -15,10 +15,10 @@
   "city": "Seoul",
   "country": "KOR",
   "state": "Live",
-  "live": "Women 1500 m",
+  "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-22T03:22:15.839203+00:00",
+ "checked_at": "2026-11-22T03:33:07.869492+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -269,7 +269,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-22T02:54:00.000Z",
+   "start_utc": "2026-11-22T02:55:00.000Z",
    "title": "Women 500 m",
    "round": "Rep. Semifinals",
    "event_result_id": 16341,
@@ -277,7 +277,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-22T03:13:00.000Z",
+   "start_utc": "2026-11-22T03:16:00.000Z",
    "title": "Women 1500 m",
    "round": "Rep. Quarterfinals",
    "event_result_id": 16340,
@@ -5746,7 +5746,7 @@
      ],
      "projection": {
       "next": "Rep. Semifinals",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -5841,10 +5841,145 @@
     {
      "id": 23457,
      "name": "Rep. Semifinals",
-     "status": "Scheduled",
+     "status": "Live",
      "start_utc": "2026-11-22T03:28:00.000Z",
      "rule": "The first placed skater from each race qualify for Quarterfinals.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Live",
+       "official": "Live",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Philippe DAUDELIN",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 129,
+         "lane": 3,
+         "slug": "philippe-daudelin"
+        },
+        {
+         "rank": null,
+         "name": "Kay HUISMAN",
+         "noc": "NED",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 41,
+         "lane": 2,
+         "slug": "kay-huisman"
+        },
+        {
+         "rank": null,
+         "name": "Fre VAN DAMME",
+         "noc": "BEL",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 57,
+         "lane": 4,
+         "slug": "fre-van-damme"
+        },
+        {
+         "rank": null,
+         "name": "Daniil NIKOLAEV",
+         "noc": "AIN2",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 126,
+         "lane": 1,
+         "slug": "daniil-nikolaev"
+        },
+        {
+         "rank": null,
+         "name": "Kazuki YOSHINAGA",
+         "noc": "JPN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 19,
+         "lane": 5,
+         "slug": "kazuki-yoshinaga"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Luca SPECHENHAUSER",
+         "noc": "ITA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 24,
+         "lane": 1,
+         "slug": "luca-spechenhauser"
+        },
+        {
+         "rank": null,
+         "name": "Maxime LAOUN",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 26,
+         "lane": 2,
+         "slug": "maxime-laoun"
+        },
+        {
+         "rank": null,
+         "name": "Justin LIU",
+         "noc": "USA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 111,
+         "lane": 3,
+         "slug": "justin-liu"
+        },
+        {
+         "rank": null,
+         "name": "Adriaan DEWAGTERE",
+         "noc": "BEL",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 53,
+         "lane": 4,
+         "slug": "adriaan-dewagtere"
+        },
+        {
+         "rank": null,
+         "name": "Niels KINGMA",
+         "noc": "NED",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 99,
+         "lane": 5,
+         "slug": "niels-kingma"
+        }
+       ]
+      }
+     ]
     },
     {
      "id": 23458,
@@ -6530,7 +6665,7 @@
     {
      "id": 23414,
      "name": "Rep. Quarterfinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-22T03:16:07.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of two fastest third place skaters qualify for Rep. Semifinals.",
      "heats": [
@@ -6568,7 +6703,7 @@
          "name": "Haruna NAGAMORI",
          "noc": "JPN",
          "time": "2:43.235",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 69,
@@ -6603,15 +6738,39 @@
       },
       {
        "name": "Heat 2",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Kiek STRAATHOF",
+         "noc": "NED",
+         "time": "2:33.814",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 80,
+         "lane": 3,
+         "slug": "kiek-straathof"
+        },
+        {
+         "rank": 2,
+         "name": "Betty MOESKE",
+         "noc": "GER",
+         "time": "2:33.862",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 63,
+         "lane": 4,
+         "slug": "betty-moeske"
+        },
+        {
+         "rank": 3,
          "name": "Chien Hua HUANG",
          "noc": "TPE",
-         "time": "",
-         "qual": "",
+         "time": "2:33.897",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 85,
@@ -6619,10 +6778,10 @@
          "slug": "chien-hua-huang"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Birgit Marja Maria RADT",
          "noc": "NED",
-         "time": "",
+         "time": "2:34.079",
          "qual": "",
          "status": "",
          "record": "",
@@ -6631,54 +6790,30 @@
          "slug": "birgit-marja-maria-radt"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Pauliina KLEVSTUEN",
          "noc": "NOR",
-         "time": "",
+         "time": "2:36.147",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 89,
          "lane": 5,
          "slug": "pauliina-klevstuen"
-        },
-        {
-         "rank": null,
-         "name": "Betty MOESKE",
-         "noc": "GER",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 63,
-         "lane": 4,
-         "slug": "betty-moeske"
-        },
-        {
-         "rank": null,
-         "name": "Kiek STRAATHOF",
-         "noc": "NED",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 80,
-         "lane": 3,
-         "slug": "kiek-straathof"
         }
        ]
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Valentina ASCIC",
          "noc": "CRO",
-         "time": "",
-         "qual": "",
+         "time": "2:38.103",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 29,
@@ -6686,10 +6821,34 @@
          "slug": "valentina-ascic"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Margherita BETTI",
+         "noc": "ITA",
+         "time": "2:38.198",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 66,
+         "lane": 3,
+         "slug": "margherita-betti"
+        },
+        {
+         "rank": 3,
+         "name": "Anastasiia ZHEGANOVA",
+         "noc": "AIN2",
+         "time": "2:38.250",
+         "qual": "q",
+         "status": "",
+         "record": "",
+         "bib": 95,
+         "lane": 5,
+         "slug": "anastasiia-zheganova"
+        },
+        {
+         "rank": 4,
          "name": "Rina YAMANA",
          "noc": "JPN",
-         "time": "",
+         "time": "2:38.428",
          "qual": "",
          "status": "",
          "record": "",
@@ -6698,44 +6857,97 @@
          "slug": "rina-yamana"
         },
         {
-         "rank": null,
-         "name": "Margherita BETTI",
-         "noc": "ITA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 66,
-         "lane": 3,
-         "slug": "margherita-betti"
-        },
-        {
-         "rank": null,
+         "rank": 5,
          "name": "Ayano SEKIGUCHI",
          "noc": "JPN",
-         "time": "",
+         "time": "2:38.483",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 98,
          "lane": 4,
          "slug": "ayano-sekiguchi"
-        },
-        {
-         "rank": null,
-         "name": "Anastasiia ZHEGANOVA",
-         "noc": "AIN2",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 95,
-         "lane": 5,
-         "slug": "anastasiia-zheganova"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Rep",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Kiek STRAATHOF",
+        "noc": "NED",
+        "rank": 1,
+        "time": "2:33.814",
+        "qual": "Q"
+       },
+       {
+        "name": "Valentina ASCIC",
+        "noc": "CRO",
+        "rank": 1,
+        "time": "2:38.103",
+        "qual": "Q"
+       },
+       {
+        "name": "Ann-Sophie BACHAND",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "2:42.750",
+        "qual": "Q"
+       },
+       {
+        "name": "Betty MOESKE",
+        "noc": "GER",
+        "rank": 2,
+        "time": "2:33.862",
+        "qual": "Q"
+       },
+       {
+        "name": "Margherita BETTI",
+        "noc": "ITA",
+        "rank": 2,
+        "time": "2:38.198",
+        "qual": "Q"
+       },
+       {
+        "name": "Kateryna SOLOVIOVA",
+        "noc": "GER",
+        "rank": 2,
+        "time": "2:43.110",
+        "qual": "Q"
+       },
+       {
+        "name": "Chien Hua HUANG",
+        "noc": "TPE",
+        "rank": 3,
+        "time": "2:33.897",
+        "qual": "q"
+       },
+       {
+        "name": "Anastasiia ZHEGANOVA",
+        "noc": "AIN2",
+        "rank": 3,
+        "time": "2:38.250",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Kiek STRAATHOF (NED)",
+        "Betty MOESKE (GER)",
+        "Margherita BETTI (ITA)",
+        "Anastasiia ZHEGANOVA (AIN2)"
+       ],
+       [
+        "Valentina ASCIC (CRO)",
+        "Ann-Sophie BACHAND (CAN)",
+        "Kateryna SOLOVIOVA (GER)",
+        "Chien Hua HUANG (TPE)"
+       ]
+      ]
+     }
     },
     {
      "id": 23415,
