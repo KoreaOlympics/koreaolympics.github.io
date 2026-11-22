@@ -18,7 +18,7 @@
   "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-22T02:36:41.595802+00:00",
+ "checked_at": "2026-11-22T02:47:46.444637+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -5314,7 +5314,7 @@
      "id": 23456,
      "name": "Rep. Quarterfinals",
      "status": "Live",
-     "start_utc": "2026-11-22T02:31:00.000Z",
+     "start_utc": "2026-11-22T02:31:15.000Z",
      "rule": "The first placed skater from each race and up to a maximum of four fastest second place skaters qualify for Rep Semifinals.",
      "heats": [
       {
@@ -5386,15 +5386,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Kay HUISMAN",
          "noc": "NED",
-         "time": "",
-         "qual": "",
+         "time": "1:29.503",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 41,
@@ -5402,10 +5402,34 @@
          "slug": "kay-huisman"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Musashi KAKINAMI",
+         "noc": "JPN",
+         "time": "1:29.766",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 88,
+         "lane": 3,
+         "slug": "musashi-kakinami"
+        },
+        {
+         "rank": 3,
+         "name": "Ivan DONCHEV",
+         "noc": "BUL",
+         "time": "1:29.966",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 60,
+         "lane": 5,
+         "slug": "ivan-donchev"
+        },
+        {
+         "rank": 4,
          "name": "Yanghun Ben JUNG",
          "noc": "GER",
-         "time": "",
+         "time": "1:30.116",
          "qual": "",
          "status": "",
          "record": "",
@@ -5414,54 +5438,30 @@
          "slug": "yanghun-ben-jung"
         },
         {
-         "rank": null,
-         "name": "Musashi KAKINAMI",
-         "noc": "JPN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 88,
-         "lane": 3,
-         "slug": "musashi-kakinami"
-        },
-        {
-         "rank": null,
+         "rank": 5,
          "name": "Tibor KOMERICKI",
          "noc": "SLO",
-         "time": "",
+         "time": "1:32.376",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 106,
          "lane": 4,
          "slug": "tibor-komericki"
-        },
-        {
-         "rank": null,
-         "name": "Ivan DONCHEV",
-         "noc": "BUL",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 60,
-         "lane": 5,
-         "slug": "ivan-donchev"
         }
        ]
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Luca SPECHENHAUSER",
          "noc": "ITA",
-         "time": "",
-         "qual": "",
+         "time": "1:28.671",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 24,
@@ -5469,11 +5469,11 @@
          "slug": "luca-spechenhauser"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Kazuki YOSHINAGA",
          "noc": "JPN",
-         "time": "",
-         "qual": "",
+         "time": "1:28.769",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 19,
@@ -5481,10 +5481,10 @@
          "slug": "kazuki-yoshinaga"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Noah TROPPE",
          "noc": "USA",
-         "time": "",
+         "time": "1:28.896",
          "qual": "",
          "status": "",
          "record": "",
@@ -5493,54 +5493,42 @@
          "slug": "noah-troppe"
         },
         {
-         "rank": null,
-         "name": "Maksat UALIULLA",
-         "noc": "KAZ",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 93,
-         "lane": 4,
-         "slug": "maksat-ualiulla"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Alisher ABULKATIMOV",
          "noc": "KAZ",
-         "time": "",
+         "time": "1:29.825",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 133,
          "lane": 5,
          "slug": "alisher-abulkatimov"
+        },
+        {
+         "rank": 5,
+         "name": "Maksat UALIULLA",
+         "noc": "KAZ",
+         "time": "2:08.243",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 93,
+         "lane": 4,
+         "slug": "maksat-ualiulla"
         }
        ]
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Denis ORS",
-         "noc": "TUR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 40,
-         "lane": 1,
-         "slug": "denis-ors"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Philippe DAUDELIN",
          "noc": "CAN",
-         "time": "",
-         "qual": "",
+         "time": "1:30.013",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 129,
@@ -5548,11 +5536,11 @@
          "slug": "philippe-daudelin"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Tobias Wolf",
          "noc": "AUT",
-         "time": "",
-         "qual": "",
+         "time": "1:30.187",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 52,
@@ -5560,10 +5548,10 @@
          "slug": "tobias-wolf"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Daniele Zampedri",
          "noc": "ITA",
-         "time": "",
+         "time": "1:30.212",
          "qual": "",
          "status": "",
          "record": "",
@@ -5572,23 +5560,35 @@
          "slug": "daniele-zampedri"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Peter Joseph GROSECLOSE",
          "noc": "PHI",
-         "time": "",
+         "time": "1:30.393",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 102,
          "lane": 5,
          "slug": "peter-joseph-groseclose"
+        },
+        {
+         "rank": 5,
+         "name": "Denis ORS",
+         "noc": "TUR",
+         "time": "1:30.860",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 40,
+         "lane": 1,
+         "slug": "denis-ors"
         }
        ]
       },
       {
        "name": "Heat 5",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
         {
          "rank": null,
@@ -9580,7 +9580,7 @@
          "name": "Birgit Marja Maria RADT",
          "noc": "NED",
          "time": "45.212",
-         "qual": "",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 100,
@@ -9853,6 +9853,13 @@
         "rank": 3,
         "time": "44.399",
         "qual": "q"
+       },
+       {
+        "name": "Birgit Marja Maria RADT",
+        "noc": "NED",
+        "rank": 3,
+        "time": "45.212",
+        "qual": "q"
        }
       ],
       "races": [
@@ -9868,7 +9875,8 @@
         "Ayano SEKIGUCHI (JPN)",
         "Rina YAMANA (JPN)",
         "Betty MOESKE (GER)",
-        "Alena KRYLOVA (AIN2)"
+        "Alena KRYLOVA (AIN2)",
+        "Birgit Marja Maria RADT (NED)"
        ]
       ]
      }
