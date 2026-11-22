@@ -15,10 +15,10 @@
   "city": "Seoul",
   "country": "KOR",
   "state": "Live",
-  "live": "Women 500 m",
+  "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-22T05:58:18.846366+00:00",
+ "checked_at": "2026-11-22T05:59:38.773554+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -5819,7 +5819,7 @@
      ],
      "projection": {
       "next": "Quarterfinals",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -5998,10 +5998,279 @@
     {
      "id": 23458,
      "name": "Quarterfinals",
-     "status": "Scheduled",
+     "status": "Live",
      "start_utc": "2026-11-22T05:56:00.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of two fastest third place skaters qualify for Semifinals.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Live",
+       "official": "Live",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Felix ROUSSEL",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 11,
+         "lane": 1,
+         "slug": "felix-roussel"
+        },
+        {
+         "rank": null,
+         "name": "Clayton DE CLEMENTE",
+         "noc": "USA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 25,
+         "lane": 4,
+         "slug": "clayton-de-clemente"
+        },
+        {
+         "rank": null,
+         "name": "Kun LI",
+         "noc": "CHN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 67,
+         "lane": 5,
+         "slug": "kun-li"
+        },
+        {
+         "rank": null,
+         "name": "Semen ELISTRATOV",
+         "noc": "AIN2",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 123,
+         "lane": 3,
+         "slug": "semen-elistratov"
+        },
+        {
+         "rank": null,
+         "name": "Thomas NADALINI",
+         "noc": "ITA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 6,
+         "lane": 2,
+         "slug": "thomas-nadalini"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Jens VAN 'T WOUT",
+         "noc": "NED",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 7,
+         "lane": 1,
+         "slug": "jens-van-t-wout"
+        },
+        {
+         "rank": null,
+         "name": "Furkan AKAR",
+         "noc": "TUR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 27,
+         "lane": 2,
+         "slug": "furkan-akar"
+        },
+        {
+         "rank": null,
+         "name": "Lorenzo PREVITALI",
+         "noc": "ITA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 48,
+         "lane": 3,
+         "slug": "lorenzo-previtali"
+        },
+        {
+         "rank": null,
+         "name": "Melle VAN 'T WOUT",
+         "noc": "NED",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 21,
+         "lane": 4,
+         "slug": "melle-van-t-wout"
+        },
+        {
+         "rank": null,
+         "name": "Brendan COREY",
+         "noc": "AUS",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 18,
+         "lane": 5,
+         "slug": "brendan-corey"
+        }
+       ]
+      },
+      {
+       "name": "Heat 3",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "William DANDJINOU",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 1,
+         "lane": 1,
+         "slug": "william-dandjinou"
+        },
+        {
+         "rank": null,
+         "name": "Taesung KIM",
+         "noc": "KOR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 97,
+         "lane": 2,
+         "slug": "taesung-kim"
+        },
+        {
+         "rank": null,
+         "name": "Shogo MIYATA",
+         "noc": "JPN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 9,
+         "lane": 3,
+         "slug": "shogo-miyata"
+        },
+        {
+         "rank": null,
+         "name": "Vladimir BALBEKOV",
+         "noc": "AIN2",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 122,
+         "lane": 4,
+         "slug": "vladimir-balbekov"
+        },
+        {
+         "rank": null,
+         "name": "Justin LIU",
+         "noc": "USA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 111,
+         "lane": 5,
+         "slug": "justin-liu"
+        }
+       ]
+      },
+      {
+       "name": "Heat 4",
+       "status": "Scheduled",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Jongun RIM",
+         "noc": "KOR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 8,
+         "lane": 1,
+         "slug": "jongun-rim"
+        },
+        {
+         "rank": null,
+         "name": "Seochan BAE",
+         "noc": "KOR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 96,
+         "lane": 2,
+         "slug": "seochan-bae"
+        },
+        {
+         "rank": null,
+         "name": "Zixia ZHANG",
+         "noc": "CHN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 69,
+         "lane": 3,
+         "slug": "zixia-zhang"
+        },
+        {
+         "rank": null,
+         "name": "Long SUN",
+         "noc": "CHN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 4,
+         "lane": 4,
+         "slug": "long-sun"
+        },
+        {
+         "rank": null,
+         "name": "Kay HUISMAN",
+         "noc": "NED",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 41,
+         "lane": 5,
+         "slug": "kay-huisman"
+        }
+       ]
+      }
+     ]
     },
     {
      "id": 23459,
@@ -14194,6 +14463,63 @@
    "bib": 97,
    "lane": 3,
    "slug": "taesung-kim"
+  },
+  {
+   "event_id": "isu-16216",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #3",
+   "distance": "Men 1000 m",
+   "round": "Quarterfinals",
+   "heat": "Heat 3",
+   "start_utc": "2026-11-22T05:56:00.000Z",
+   "rank": null,
+   "name": "Taesung KIM",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 97,
+   "lane": 2,
+   "slug": "taesung-kim"
+  },
+  {
+   "event_id": "isu-16216",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #3",
+   "distance": "Men 1000 m",
+   "round": "Quarterfinals",
+   "heat": "Heat 4",
+   "start_utc": "2026-11-22T05:56:00.000Z",
+   "rank": null,
+   "name": "Jongun RIM",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 8,
+   "lane": 1,
+   "slug": "jongun-rim"
+  },
+  {
+   "event_id": "isu-16216",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #3",
+   "distance": "Men 1000 m",
+   "round": "Quarterfinals",
+   "heat": "Heat 4",
+   "start_utc": "2026-11-22T05:56:00.000Z",
+   "rank": null,
+   "name": "Seochan BAE",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 96,
+   "lane": 2,
+   "slug": "seochan-bae"
   },
   {
    "event_id": "isu-16216",
