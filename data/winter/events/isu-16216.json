@@ -18,7 +18,7 @@
   "live": "Women 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-22T07:32:58.001797+00:00",
+ "checked_at": "2026-11-22T07:44:27.968376+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -369,7 +369,7 @@
    "title": "Women 1500 m",
    "round": "Finals",
    "event_result_id": 16340,
-   "round_id": 23417,
+   "round_id": null,
    "type": "Singles"
   },
   {
@@ -7775,7 +7775,7 @@
     {
      "id": 23416,
      "name": "Semifinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-22T07:23:31.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final, the third and fourth placed skaters from each race and up to a maximum of next two fastest fifth place skaters qualify for Final B.",
      "heats": [
@@ -7813,7 +7813,7 @@
          "name": "Valentina ASCIC",
          "noc": "CRO",
          "time": "2:26.209",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 29,
@@ -7872,14 +7872,62 @@
       },
       {
        "name": "Heat 2",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Minjeong CHOI",
+         "noc": "KOR",
+         "time": "2:38.447",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 4,
+         "lane": 2,
+         "slug": "minjeong-choi"
+        },
+        {
+         "rank": 2,
+         "name": "Jianing ZHANG",
+         "noc": "CHN",
+         "time": "2:38.537",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 55,
+         "lane": 5,
+         "slug": "jianing-zhang"
+        },
+        {
+         "rank": 3,
+         "name": "Chutong ZHANG",
+         "noc": "CHN",
+         "time": "2:38.991",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 11,
+         "lane": 3,
+         "slug": "chutong-zhang"
+        },
+        {
+         "rank": 4,
+         "name": "Yan ZHANG",
+         "noc": "CHN",
+         "time": "2:39.207",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 56,
+         "lane": 6,
+         "slug": "yan-zhang-1"
+        },
+        {
+         "rank": 5,
          "name": "Minji KIM",
          "noc": "KOR",
-         "time": "",
+         "time": "2:39.255",
          "qual": "",
          "status": "",
          "record": "",
@@ -7888,90 +7936,30 @@
          "slug": "minji-kim"
         },
         {
-         "rank": null,
-         "name": "Chutong ZHANG",
-         "noc": "CHN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 11,
-         "lane": 3,
-         "slug": "chutong-zhang"
-        },
-        {
-         "rank": null,
-         "name": "Minjeong CHOI",
-         "noc": "KOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 4,
-         "lane": 2,
-         "slug": "minjeong-choi"
-        },
-        {
-         "rank": null,
+         "rank": 6,
          "name": "Florence BRUNELLE",
          "noc": "CAN",
-         "time": "",
+         "time": "2:39.796",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 10,
          "lane": 1,
          "slug": "florence-brunelle"
-        },
-        {
-         "rank": null,
-         "name": "Jianing ZHANG",
-         "noc": "CHN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 55,
-         "lane": 5,
-         "slug": "jianing-zhang"
-        },
-        {
-         "rank": null,
-         "name": "Yan ZHANG",
-         "noc": "CHN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 56,
-         "lane": 6,
-         "slug": "yan-zhang-1"
         }
        ]
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Gloria IORIATTI",
-         "noc": "ITA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 21,
-         "lane": 1,
-         "slug": "gloria-ioriatti"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Gilli KIM",
          "noc": "KOR",
-         "time": "",
-         "qual": "",
+         "time": "2:29.957",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 5,
@@ -7979,10 +7967,46 @@
          "slug": "gilli-kim"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Failia AIMALETDINOVA",
+         "noc": "AIN2",
+         "time": "2:30.035",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 90,
+         "lane": 4,
+         "slug": "failia-aimaletdinova"
+        },
+        {
+         "rank": 3,
+         "name": "Sukhee SHIM",
+         "noc": "KOR",
+         "time": "2:30.404",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 79,
+         "lane": 5,
+         "slug": "sukhee-shim"
+        },
+        {
+         "rank": 4,
+         "name": "Diede VAN OORSCHOT",
+         "noc": "NED",
+         "time": "2:30.883",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 36,
+         "lane": 6,
+         "slug": "diede-van-oorschot"
+        },
+        {
+         "rank": 5,
          "name": "Mariia METELKINA",
          "noc": "AIN2",
-         "time": "",
+         "time": "2:30.903",
          "qual": "",
          "status": "",
          "record": "",
@@ -7991,48 +8015,91 @@
          "slug": "mariia-metelkina"
         },
         {
-         "rank": null,
-         "name": "Failia AIMALETDINOVA",
-         "noc": "AIN2",
-         "time": "",
+         "rank": 6,
+         "name": "Gloria IORIATTI",
+         "noc": "ITA",
+         "time": "2:45.613",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 90,
-         "lane": 4,
-         "slug": "failia-aimaletdinova"
-        },
-        {
-         "rank": null,
-         "name": "Sukhee SHIM",
-         "noc": "KOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 79,
-         "lane": 5,
-         "slug": "sukhee-shim"
-        },
-        {
-         "rank": null,
-         "name": "Diede VAN OORSCHOT",
-         "noc": "NED",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 36,
-         "lane": 6,
-         "slug": "diede-van-oorschot"
+         "bib": 21,
+         "lane": 1,
+         "slug": "gloria-ioriatti"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Final",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Jiarui SONG",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "2:25.995",
+        "qual": "Q"
+       },
+       {
+        "name": "Gilli KIM",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "2:29.957",
+        "qual": "Q"
+       },
+       {
+        "name": "Minjeong CHOI",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "2:38.447",
+        "qual": "Q"
+       },
+       {
+        "name": "Elisa CONFORTOLA",
+        "noc": "ITA",
+        "rank": 2,
+        "time": "2:26.016",
+        "qual": "Q"
+       },
+       {
+        "name": "Failia AIMALETDINOVA",
+        "noc": "AIN2",
+        "rank": 2,
+        "time": "2:30.035",
+        "qual": "Q"
+       },
+       {
+        "name": "Jianing ZHANG",
+        "noc": "CHN",
+        "rank": 2,
+        "time": "2:38.537",
+        "qual": "Q"
+       },
+       {
+        "name": "Valentina ASCIC",
+        "noc": "CRO",
+        "rank": 3,
+        "time": "2:26.209",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Jiarui SONG (CHN)",
+        "Gilli KIM (KOR)",
+        "Minjeong CHOI (KOR)",
+        "Elisa CONFORTOLA (ITA)",
+        "Failia AIMALETDINOVA (AIN2)",
+        "Jianing ZHANG (CHN)",
+        "Valentina ASCIC (CRO)"
+       ]
+      ]
+     }
     },
     {
-     "id": 23417,
-     "name": "Finals",
+     "id": 23539,
+     "name": "Final",
      "status": "Scheduled",
      "start_utc": "2026-11-22T07:59:00.000Z",
      "rule": "",
@@ -15654,10 +15721,29 @@
    "round": "Semifinals",
    "heat": "Heat 2",
    "start_utc": "2026-11-22T07:23:31.000Z",
-   "rank": null,
+   "rank": 1,
+   "name": "Minjeong CHOI",
+   "noc": "KOR",
+   "time": "2:38.447",
+   "qual": "Q",
+   "status": "",
+   "record": "",
+   "bib": 4,
+   "lane": 2,
+   "slug": "minjeong-choi"
+  },
+  {
+   "event_id": "isu-16216",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #3",
+   "distance": "Women 1500 m",
+   "round": "Semifinals",
+   "heat": "Heat 2",
+   "start_utc": "2026-11-22T07:23:31.000Z",
+   "rank": 5,
    "name": "Minji KIM",
    "noc": "KOR",
-   "time": "",
+   "time": "2:39.255",
    "qual": "",
    "status": "",
    "record": "",
@@ -15671,32 +15757,13 @@
    "event": "ISU Short Track World Tour #3",
    "distance": "Women 1500 m",
    "round": "Semifinals",
-   "heat": "Heat 2",
-   "start_utc": "2026-11-22T07:23:31.000Z",
-   "rank": null,
-   "name": "Minjeong CHOI",
-   "noc": "KOR",
-   "time": "",
-   "qual": "",
-   "status": "",
-   "record": "",
-   "bib": 4,
-   "lane": 2,
-   "slug": "minjeong-choi"
-  },
-  {
-   "event_id": "isu-16216",
-   "sport": "short-track",
-   "event": "ISU Short Track World Tour #3",
-   "distance": "Women 1500 m",
-   "round": "Semifinals",
    "heat": "Heat 3",
    "start_utc": "2026-11-22T07:23:31.000Z",
-   "rank": null,
+   "rank": 1,
    "name": "Gilli KIM",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "2:29.957",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 5,
@@ -15711,11 +15778,11 @@
    "round": "Semifinals",
    "heat": "Heat 3",
    "start_utc": "2026-11-22T07:23:31.000Z",
-   "rank": null,
+   "rank": 3,
    "name": "Sukhee SHIM",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "2:30.404",
+   "qual": "QB",
    "status": "",
    "record": "",
    "bib": 79,
