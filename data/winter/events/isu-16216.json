@@ -18,7 +18,7 @@
   "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-22T06:11:19.063388+00:00",
+ "checked_at": "2026-11-22T06:22:40.082474+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -345,7 +345,7 @@
    "title": "Women 500 m",
    "round": "Finals",
    "event_result_id": 16341,
-   "round_id": 23425,
+   "round_id": null,
    "type": "Singles"
   },
   {
@@ -5998,7 +5998,7 @@
     {
      "id": 23458,
      "name": "Quarterfinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-22T05:58:00.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of two fastest third place skaters qualify for Semifinals.",
      "heats": [
@@ -6036,7 +6036,7 @@
          "name": "Thomas NADALINI",
          "noc": "ITA",
          "time": "1:26.408",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 6,
@@ -6170,7 +6170,7 @@
          "name": "Vladimir BALBEKOV",
          "noc": "AIN2",
          "time": "1:26.448",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 122,
@@ -6206,14 +6206,14 @@
       {
        "name": "Heat 4",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "Jongun RIM",
          "noc": "KOR",
-         "time": "1:26.700",
-         "qual": "",
+         "time": "1:26.691",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 8,
@@ -6224,8 +6224,8 @@
          "rank": 2,
          "name": "Kay HUISMAN",
          "noc": "NED",
-         "time": "1:26.800",
-         "qual": "",
+         "time": "1:26.789",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 41,
@@ -6236,7 +6236,7 @@
          "rank": 3,
          "name": "Zixia ZHANG",
          "noc": "CHN",
-         "time": "1:26.950",
+         "time": "1:26.938",
          "qual": "",
          "status": "",
          "record": "",
@@ -6246,31 +6246,124 @@
         },
         {
          "rank": 4,
-         "name": "Seochan BAE",
-         "noc": "KOR",
-         "time": "1:27.090",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 96,
-         "lane": 2,
-         "slug": "seochan-bae"
-        },
-        {
-         "rank": null,
          "name": "Long SUN",
          "noc": "CHN",
-         "time": "",
+         "time": "2:01.245",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 4,
          "lane": 4,
          "slug": "long-sun"
+        },
+        {
+         "rank": null,
+         "name": "Seochan BAE",
+         "noc": "KOR",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 96,
+         "lane": 2,
+         "slug": "seochan-bae"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Semifinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Felix ROUSSEL",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "1:26.028",
+        "qual": "Q"
+       },
+       {
+        "name": "William DANDJINOU",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "1:26.269",
+        "qual": "Q"
+       },
+       {
+        "name": "Jongun RIM",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "1:26.691",
+        "qual": "Q"
+       },
+       {
+        "name": "Jens VAN 'T WOUT",
+        "noc": "NED",
+        "rank": 1,
+        "time": "1:27.301",
+        "qual": "Q"
+       },
+       {
+        "name": "Semen ELISTRATOV",
+        "noc": "AIN2",
+        "rank": 2,
+        "time": "1:26.211",
+        "qual": "Q"
+       },
+       {
+        "name": "Taesung KIM",
+        "noc": "KOR",
+        "rank": 2,
+        "time": "1:26.347",
+        "qual": "Q"
+       },
+       {
+        "name": "Kay HUISMAN",
+        "noc": "NED",
+        "rank": 2,
+        "time": "1:26.789",
+        "qual": "Q"
+       },
+       {
+        "name": "Furkan AKAR",
+        "noc": "TUR",
+        "rank": 2,
+        "time": "1:27.330",
+        "qual": "Q"
+       },
+       {
+        "name": "Thomas NADALINI",
+        "noc": "ITA",
+        "rank": 3,
+        "time": "1:26.408",
+        "qual": "q"
+       },
+       {
+        "name": "Vladimir BALBEKOV",
+        "noc": "AIN2",
+        "rank": 3,
+        "time": "1:26.448",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Felix ROUSSEL (CAN)",
+        "Jens VAN 'T WOUT (NED)",
+        "Semen ELISTRATOV (AIN2)",
+        "Furkan AKAR (TUR)",
+        "Thomas NADALINI (ITA)"
+       ],
+       [
+        "William DANDJINOU (CAN)",
+        "Jongun RIM (KOR)",
+        "Taesung KIM (KOR)",
+        "Kay HUISMAN (NED)",
+        "Vladimir BALBEKOV (AIN2)"
+       ]
+      ]
+     }
     },
     {
      "id": 23459,
@@ -11212,7 +11305,7 @@
      ],
      "projection": {
       "next": "Semifinals",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -11307,14 +11400,200 @@
     {
      "id": 23424,
      "name": "Semifinals",
-     "status": "Scheduled",
-     "start_utc": "2026-11-22T06:13:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-22T06:12:58.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of one fastest third place skater qualify for Final, the third and fourth placed skaters from each race and up to a maximum of next two fastest fifth place skaters qualify for Final B.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Florence BRUNELLE",
+         "noc": "CAN",
+         "time": "43.435",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 10,
+         "lane": 1,
+         "slug": "florence-brunelle"
+        },
+        {
+         "rank": 2,
+         "name": "Danae BLAIS",
+         "noc": "CAN",
+         "time": "43.522",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 25,
+         "lane": 2,
+         "slug": "danae-blais"
+        },
+        {
+         "rank": 3,
+         "name": "Victoria JEAN-BAPTISTE",
+         "noc": "CAN",
+         "time": "43.724",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 53,
+         "lane": 3,
+         "slug": "victoria-jean-baptiste"
+        },
+        {
+         "rank": 4,
+         "name": "Selma POUTSMA",
+         "noc": "NED",
+         "time": "44.313",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 15,
+         "lane": 4,
+         "slug": "selma-poutsma"
+        },
+        {
+         "rank": 5,
+         "name": "Li GONG",
+         "noc": "CHN",
+         "time": "44.499",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 19,
+         "lane": 5,
+         "slug": "li-gong"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Courtney SARAULT",
+         "noc": "CAN",
+         "time": "43.259",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 1,
+         "lane": 1,
+         "slug": "courtney-sarault"
+        },
+        {
+         "rank": 2,
+         "name": "Jiarui SONG",
+         "noc": "CHN",
+         "time": "43.660",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 54,
+         "lane": 5,
+         "slug": "jiarui-song"
+        },
+        {
+         "rank": 3,
+         "name": "Minjeong CHOI",
+         "noc": "KOR",
+         "time": "44.233",
+         "qual": "ADV",
+         "status": "",
+         "record": "",
+         "bib": 4,
+         "lane": 2,
+         "slug": "minjeong-choi"
+        },
+        {
+         "rank": 4,
+         "name": "Xinran WANG",
+         "noc": "CHN",
+         "time": "44.438",
+         "qual": "QB",
+         "status": "",
+         "record": "",
+         "bib": 28,
+         "lane": 3,
+         "slug": "xinran-wang"
+        },
+        {
+         "rank": null,
+         "name": "Chutong ZHANG",
+         "noc": "CHN",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 11,
+         "lane": 4,
+         "slug": "chutong-zhang"
+        }
+       ]
+      }
+     ],
+     "projection": {
+      "next": "Final",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Courtney SARAULT",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "43.259",
+        "qual": "Q"
+       },
+       {
+        "name": "Florence BRUNELLE",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "43.435",
+        "qual": "Q"
+       },
+       {
+        "name": "Danae BLAIS",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "43.522",
+        "qual": "Q"
+       },
+       {
+        "name": "Jiarui SONG",
+        "noc": "CHN",
+        "rank": 2,
+        "time": "43.660",
+        "qual": "Q"
+       },
+       {
+        "name": "Minjeong CHOI",
+        "noc": "KOR",
+        "rank": 3,
+        "time": "44.233",
+        "qual": "ADV"
+       }
+      ],
+      "races": [
+       [
+        "Courtney SARAULT (CAN)",
+        "Florence BRUNELLE (CAN)",
+        "Danae BLAIS (CAN)",
+        "Jiarui SONG (CHN)",
+        "Minjeong CHOI (KOR)"
+       ]
+      ]
+     }
     },
     {
-     "id": 23425,
-     "name": "Finals",
+     "id": 23536,
+     "name": "Final",
      "status": "Scheduled",
      "start_utc": "2026-11-22T06:45:00.000Z",
      "rule": "",
@@ -14494,8 +14773,8 @@
    "rank": 1,
    "name": "Jongun RIM",
    "noc": "KOR",
-   "time": "1:26.700",
-   "qual": "",
+   "time": "1:26.691",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 8,
@@ -14510,12 +14789,12 @@
    "round": "Quarterfinals",
    "heat": "Heat 4",
    "start_utc": "2026-11-22T05:58:00.000Z",
-   "rank": 4,
+   "rank": null,
    "name": "Seochan BAE",
    "noc": "KOR",
-   "time": "1:27.090",
+   "time": "PEN",
    "qual": "",
-   "status": "",
+   "status": "Penalty",
    "record": "",
    "bib": 96,
    "lane": 2,
@@ -14995,6 +15274,25 @@
    "bib": 76,
    "lane": 3,
    "slug": "ji-hyun-choi"
+  },
+  {
+   "event_id": "isu-16216",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #3",
+   "distance": "Women 500 m",
+   "round": "Semifinals",
+   "heat": "Heat 2",
+   "start_utc": "2026-11-22T06:12:58.000Z",
+   "rank": 3,
+   "name": "Minjeong CHOI",
+   "noc": "KOR",
+   "time": "44.233",
+   "qual": "ADV",
+   "status": "",
+   "record": "",
+   "bib": 4,
+   "lane": 2,
+   "slug": "minjeong-choi"
   },
   {
    "event_id": "isu-16216",

@@ -14,7 +14,7 @@
   "state": "",
   "url": "https://live.isuresults.eu/events/2027_JPN_0001/schedule"
  },
- "checked_at": "2026-11-22T06:12:20.309072+00:00",
+ "checked_at": "2026-11-22T06:23:43.892958+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:05:00Z",
@@ -5357,24 +5357,6 @@
     },
     {
      "rank": 8,
-     "name": "Italy",
-     "noc": "ITA",
-     "time": "3:04.693",
-     "behind": "6.800",
-     "lane": null,
-     "pair": 1,
-     "medal": null,
-     "status": 0,
-     "points": null,
-     "official": true,
-     "members": [
-      "Maybritt Vigl",
-      "Francesco Betti",
-      "Emily Tormen"
-     ]
-    },
-    {
-     "rank": 8,
      "name": "AIN1",
      "noc": "AIN1",
      "time": "3:01.999",
@@ -5393,6 +5375,24 @@
     },
     {
      "rank": 9,
+     "name": "Italy",
+     "noc": "ITA",
+     "time": "3:04.693",
+     "behind": "6.800",
+     "lane": null,
+     "pair": 1,
+     "medal": null,
+     "status": 0,
+     "points": null,
+     "official": true,
+     "members": [
+      "Maybritt Vigl",
+      "Francesco Betti",
+      "Emily Tormen"
+     ]
+    },
+    {
+     "rank": 10,
      "name": "Kazakhstan",
      "noc": "KAZ",
      "time": "3:04.875",
@@ -5457,15 +5457,15 @@
    "start_list": false,
    "rows": [
     {
-     "rank": null,
+     "rank": 1,
      "name": "Poland",
      "noc": "POL",
-     "time": "",
-     "behind": "",
+     "time": "3:03.281",
+     "behind": "0.000",
      "lane": null,
      "pair": 1,
      "medal": null,
-     "status": null,
+     "status": 0,
      "points": null,
      "official": true,
      "members": [
@@ -5475,15 +5475,15 @@
      ]
     },
     {
-     "rank": null,
+     "rank": 2,
      "name": "Kazakhstan",
      "noc": "KAZ",
-     "time": "",
-     "behind": "",
+     "time": "3:07.690",
+     "behind": "4.409",
      "lane": null,
      "pair": 1,
      "medal": null,
-     "status": null,
+     "status": 0,
      "points": null,
      "official": true,
      "members": [
@@ -6304,6 +6304,91 @@
      "status": null,
      "points": null,
      "official": true
+    }
+   ]
+  },
+  "26": {
+   "title": "Mixed Relay Final",
+   "start_utc": "2026-11-22T08:28:00Z",
+   "live": false,
+   "official": false,
+   "distance": "Relay (7 Laps)",
+   "division": "A",
+   "start_list": true,
+   "rows": [
+    {
+     "rank": null,
+     "name": "Czechia",
+     "noc": "CZE",
+     "time": "",
+     "behind": "",
+     "lane": null,
+     "pair": 1,
+     "medal": null,
+     "status": null,
+     "points": null,
+     "official": true,
+     "members": [
+      "Katerina Kainova",
+      "Metodej Jilek"
+     ]
+    },
+    {
+     "rank": null,
+     "name": "Poland",
+     "noc": "POL",
+     "time": "",
+     "behind": "",
+     "lane": null,
+     "pair": 1,
+     "medal": null,
+     "status": null,
+     "points": null,
+     "official": true,
+     "members": [
+      "Iga Wojtasik",
+      "Jerzy Stadnicki",
+      "Wiktoria Dąbrowska",
+      "Mateusz Mikolajuk"
+     ]
+    },
+    {
+     "rank": null,
+     "name": "China",
+     "noc": "CHN",
+     "time": "",
+     "behind": "",
+     "lane": null,
+     "pair": 2,
+     "medal": null,
+     "status": null,
+     "points": null,
+     "official": true,
+     "members": [
+      "Dantong Wang",
+      "Xuanyu Zhou",
+      "Yuxuan Wang",
+      "Baoshuo Pan"
+     ]
+    },
+    {
+     "rank": null,
+     "name": "Republic of Korea",
+     "noc": "KOR",
+     "time": "",
+     "behind": "",
+     "lane": null,
+     "pair": 2,
+     "medal": null,
+     "status": null,
+     "points": null,
+     "official": true,
+     "members": [
+      "Chaeeun Park",
+      "Hojun Yang",
+      "Minsun Kim",
+      "Uiryun Cha"
+     ]
     }
    ]
   }
