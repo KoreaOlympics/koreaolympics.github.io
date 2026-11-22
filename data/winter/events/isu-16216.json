@@ -14,11 +14,11 @@
   "tz": "Asia/Seoul",
   "city": "Seoul",
   "country": "KOR",
-  "state": "Live",
-  "live": "Men 5000 m Relay",
+  "state": "Finished",
+  "live": "",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-22T08:42:22.608929+00:00",
+ "checked_at": "2026-11-22T08:53:33.855357+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -14715,32 +14715,20 @@
     {
      "id": 23520,
      "name": "Final",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-22T08:22:22.000Z",
      "rule": "",
      "heats": [
       {
        "name": "Final",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Netherlands",
-         "noc": "NED",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 2,
-         "slug": ""
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Republic of Korea",
          "noc": "KOR",
-         "time": "",
+         "time": "7:05.176",
          "qual": "",
          "status": "",
          "record": "",
@@ -14749,10 +14737,34 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Netherlands",
+         "noc": "NED",
+         "time": "7:05.440",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 2,
+         "slug": ""
+        },
+        {
+         "rank": 3,
+         "name": "Canada",
+         "noc": "CAN",
+         "time": "7:05.896",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
+         "slug": ""
+        },
+        {
+         "rank": 4,
          "name": "Italy",
          "noc": "ITA",
-         "time": "",
+         "time": "7:06.574",
          "qual": "",
          "status": "",
          "record": "",
@@ -14761,27 +14773,15 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "United States of America",
          "noc": "USA",
-         "time": "",
+         "time": "7:07.849",
          "qual": "",
          "status": "",
          "record": "",
          "bib": null,
          "lane": 4,
-         "slug": ""
-        },
-        {
-         "rank": null,
-         "name": "Canada",
-         "noc": "CAN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 3,
          "slug": ""
         }
        ]
@@ -16915,10 +16915,10 @@
    "round": "Final",
    "heat": "Final",
    "start_utc": "2026-11-22T08:22:22.000Z",
-   "rank": null,
+   "rank": 1,
    "name": "Republic of Korea",
    "noc": "KOR",
-   "time": "",
+   "time": "7:05.176",
    "qual": "",
    "status": "",
    "record": "",

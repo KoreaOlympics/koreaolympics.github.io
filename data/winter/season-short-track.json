@@ -944,7 +944,7 @@
    "end": "2026-11-22",
    "city": "Seoul",
    "country": "KOR",
-   "state": "Live",
+   "state": "Finished",
    "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/",
    "podiums": [
     {
@@ -1087,7 +1087,26 @@
     },
     {
      "title": "Men 5000 m Relay",
-     "podium": null
+     "podium": [
+      {
+       "rank": 1,
+       "name": "Republic of Korea",
+       "noc": "KOR",
+       "time": "7:05.176"
+      },
+      {
+       "rank": 2,
+       "name": "Netherlands",
+       "noc": "NED",
+       "time": "7:05.440"
+      },
+      {
+       "rank": 3,
+       "name": "Canada",
+       "noc": "CAN",
+       "time": "7:05.896"
+      }
+     ]
     },
     {
      "title": "Mixed Team Relay",
@@ -1245,23 +1264,23 @@
   [
    "NED",
    12,
+   5,
    4,
-   4,
-   20
+   21
   ],
   [
    "KOR",
-   8,
+   9,
    12,
    10,
-   30
+   31
   ],
   [
    "CAN",
    6,
    12,
-   7,
-   25
+   8,
+   26
   ],
   [
    "ITA",
