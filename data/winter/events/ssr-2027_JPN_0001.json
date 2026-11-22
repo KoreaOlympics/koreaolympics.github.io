@@ -14,7 +14,7 @@
   "state": "",
   "url": "https://live.isuresults.eu/events/2027_JPN_0001/schedule"
  },
- "checked_at": "2026-11-22T02:59:36.521320+00:00",
+ "checked_at": "2026-11-22T03:10:42.816073+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:05:00Z",
@@ -4526,8 +4526,8 @@
   "17": {
    "title": "Team Pursuit Women Division B",
    "start_utc": "2026-11-22T02:50:00Z",
-   "live": true,
-   "official": false,
+   "live": false,
+   "official": true,
    "distance": "Team Pursuit (6 Laps)",
    "division": "B",
    "start_list": false,
@@ -4573,40 +4573,22 @@
   "18": {
    "title": "Team Pursuit Men Division B",
    "start_utc": "2026-11-22T03:00:00Z",
-   "live": false,
+   "live": true,
    "official": false,
    "distance": "Team Pursuit (8 Laps)",
    "division": "B",
-   "start_list": true,
+   "start_list": false,
    "rows": [
     {
-     "rank": null,
-     "name": "AIN1",
-     "noc": "AIN1",
-     "time": "",
-     "behind": "",
-     "lane": null,
-     "pair": 1,
-     "medal": null,
-     "status": null,
-     "points": null,
-     "official": true,
-     "members": [
-      "Ignat Golovatsiuk",
-      "Yahor Damaratski",
-      "Viktor Rudenko"
-     ]
-    },
-    {
-     "rank": null,
+     "rank": 1,
      "name": "Canada",
      "noc": "CAN",
-     "time": "",
-     "behind": "",
+     "time": "3:44.800",
+     "behind": "0.000",
      "lane": null,
      "pair": 2,
      "medal": null,
-     "status": null,
+     "status": 0,
      "points": null,
      "official": true,
      "members": [
@@ -4616,21 +4598,39 @@
      ]
     },
     {
-     "rank": null,
+     "rank": 2,
      "name": "Kazakhstan",
      "noc": "KAZ",
-     "time": "",
-     "behind": "",
+     "time": "3:50.621",
+     "behind": "5.821",
      "lane": null,
      "pair": 2,
      "medal": null,
-     "status": null,
+     "status": 0,
      "points": null,
      "official": true,
      "members": [
       "Andrey Zuyev",
       "Vadim Yakubovskiy",
       "Vitaliy Chshigolev"
+     ]
+    },
+    {
+     "rank": 3,
+     "name": "AIN1",
+     "noc": "AIN1",
+     "time": "3:53.761",
+     "behind": "8.961",
+     "lane": null,
+     "pair": 1,
+     "medal": null,
+     "status": 0,
+     "points": null,
+     "official": true,
+     "members": [
+      "Ignat Golovatsiuk",
+      "Yahor Damaratski",
+      "Viktor Rudenko"
      ]
     },
     {
@@ -6686,6 +6686,32 @@
     "Jiwoo Park",
     "Leewon Lim",
     "Chaeeun Lee"
+   ],
+   "qual": ""
+  },
+  {
+   "event_id": "ssr-2027_JPN_0001",
+   "sport": "speed-skating",
+   "event": "ISU Speed Skating World Cup #2",
+   "distance": "Team Pursuit Men Division B",
+   "round": "Division B",
+   "heat": "",
+   "start_utc": "2026-11-22T03:00:00Z",
+   "rank": null,
+   "name": "Republic of Korea",
+   "noc": "KOR",
+   "time": "",
+   "behind": "",
+   "lane": null,
+   "pair": 3,
+   "medal": null,
+   "status": "",
+   "points": null,
+   "official": true,
+   "members": [
+    "Seungkyum Kim",
+    "Youngjin Jin",
+    "Uiryun Cha"
    ],
    "qual": ""
   }
