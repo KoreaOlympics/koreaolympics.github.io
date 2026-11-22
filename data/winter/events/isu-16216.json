@@ -18,7 +18,7 @@
   "live": "Men 5000 m Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-22T08:31:12.819619+00:00",
+ "checked_at": "2026-11-22T08:42:22.608929+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -14716,26 +14716,14 @@
      "id": 23520,
      "name": "Final",
      "status": "Live",
-     "start_utc": "2026-11-22T08:19:00.000Z",
+     "start_utc": "2026-11-22T08:22:22.000Z",
      "rule": "",
      "heats": [
       {
        "name": "Final",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
-        {
-         "rank": null,
-         "name": "Republic of Korea",
-         "noc": "KOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 1,
-         "slug": ""
-        },
         {
          "rank": null,
          "name": "Netherlands",
@@ -14750,14 +14738,26 @@
         },
         {
          "rank": null,
-         "name": "Canada",
-         "noc": "CAN",
+         "name": "Republic of Korea",
+         "noc": "KOR",
          "time": "",
          "qual": "",
          "status": "",
          "record": "",
          "bib": null,
-         "lane": 3,
+         "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Italy",
+         "noc": "ITA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 5,
          "slug": ""
         },
         {
@@ -14774,45 +14774,45 @@
         },
         {
          "rank": null,
-         "name": "Italy",
-         "noc": "ITA",
+         "name": "Canada",
+         "noc": "CAN",
          "time": "",
          "qual": "",
          "status": "",
          "record": "",
          "bib": null,
-         "lane": 5,
+         "lane": 3,
          "slug": ""
         }
        ]
       },
       {
        "name": "Final B",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Ain2",
-         "noc": "AIN2",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 1,
-         "slug": ""
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "People's Republic of China",
          "noc": "CHN",
-         "time": "",
+         "time": "7:57.993",
          "qual": "",
          "status": "",
          "record": "",
          "bib": null,
          "lane": 2,
+         "slug": ""
+        },
+        {
+         "rank": 2,
+         "name": "Ain2",
+         "noc": "AIN2",
+         "time": "7:58.128",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
          "slug": ""
         }
        ]
@@ -16914,7 +16914,7 @@
    "distance": "Men 5000 m Relay",
    "round": "Final",
    "heat": "Final",
-   "start_utc": "2026-11-22T08:19:00.000Z",
+   "start_utc": "2026-11-22T08:22:22.000Z",
    "rank": null,
    "name": "Republic of Korea",
    "noc": "KOR",
