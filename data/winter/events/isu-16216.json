@@ -15,10 +15,10 @@
   "city": "Seoul",
   "country": "KOR",
   "state": "Live",
-  "live": "Men 1000 m",
+  "live": "Women 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-22T02:47:46.444637+00:00",
+ "checked_at": "2026-11-22T02:58:49.257771+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -5313,7 +5313,7 @@
     {
      "id": 23456,
      "name": "Rep. Quarterfinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-22T02:31:15.000Z",
      "rule": "The first placed skater from each race and up to a maximum of four fastest second place skaters qualify for Rep Semifinals.",
      "heats": [
@@ -5339,7 +5339,7 @@
          "name": "Muhammed BOZDAG",
          "noc": "TUR",
          "time": "1:30.136",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 109,
@@ -5406,7 +5406,7 @@
          "name": "Musashi KAKINAMI",
          "noc": "JPN",
          "time": "1:29.766",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 88,
@@ -5473,7 +5473,7 @@
          "name": "Kazuki YOSHINAGA",
          "noc": "JPN",
          "time": "1:28.769",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 19,
@@ -5540,7 +5540,7 @@
          "name": "Tobias Wolf",
          "noc": "AUT",
          "time": "1:30.187",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 52,
@@ -5587,15 +5587,27 @@
       },
       {
        "name": "Heat 5",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Maxime LAOUN",
+         "noc": "CAN",
+         "time": "1:29.387",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 26,
+         "lane": 3,
+         "slug": "maxime-laoun"
+        },
+        {
+         "rank": 2,
          "name": "Niels KINGMA",
          "noc": "NED",
-         "time": "",
-         "qual": "",
+         "time": "1:29.439",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 99,
@@ -5603,10 +5615,10 @@
          "slug": "niels-kingma"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Nicolas ANDERMANN",
          "noc": "AUT",
-         "time": "",
+         "time": "1:29.552",
          "qual": "",
          "status": "",
          "record": "",
@@ -5615,34 +5627,10 @@
          "slug": "nicolas-andermann"
         },
         {
-         "rank": null,
-         "name": "Maxime LAOUN",
-         "noc": "CAN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 26,
-         "lane": 3,
-         "slug": "maxime-laoun"
-        },
-        {
-         "rank": null,
-         "name": "Warre NOIRON",
-         "noc": "BEL",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 54,
-         "lane": 4,
-         "slug": "warre-noiron"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Marten TAUBERT",
          "noc": "GER",
-         "time": "",
+         "time": "1:29.688",
          "qual": "",
          "status": "",
          "record": "",
@@ -5651,66 +5639,42 @@
          "slug": "marten-taubert"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Tsz Fung KWOK",
          "noc": "HKG",
-         "time": "",
+         "time": "1:29.841",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 80,
          "lane": 6,
          "slug": "tsz-fung-kwok"
+        },
+        {
+         "rank": 6,
+         "name": "Warre NOIRON",
+         "noc": "BEL",
+         "time": "1:29.854",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 54,
+         "lane": 4,
+         "slug": "warre-noiron"
         }
        ]
       },
       {
        "name": "Heat 6",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Damir KURMANOV",
-         "noc": "KAZ",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 134,
-         "lane": 1,
-         "slug": "damir-kurmanov"
-        },
-        {
-         "rank": null,
-         "name": "Fre VAN DAMME",
-         "noc": "BEL",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 57,
-         "lane": 2,
-         "slug": "fre-van-damme"
-        },
-        {
-         "rank": null,
-         "name": "Adriaan DEWAGTERE",
-         "noc": "BEL",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 53,
-         "lane": 3,
-         "slug": "adriaan-dewagtere"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Daniil NIKOLAEV",
          "noc": "AIN2",
-         "time": "",
-         "qual": "",
+         "time": "1:27.167",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 126,
@@ -5718,10 +5682,34 @@
          "slug": "daniil-nikolaev"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Fre VAN DAMME",
+         "noc": "BEL",
+         "time": "1:27.411",
+         "qual": "q",
+         "status": "",
+         "record": "",
+         "bib": 57,
+         "lane": 2,
+         "slug": "fre-van-damme"
+        },
+        {
+         "rank": 3,
+         "name": "Adriaan DEWAGTERE",
+         "noc": "BEL",
+         "time": "1:28.768",
+         "qual": "ADV",
+         "status": "",
+         "record": "",
+         "bib": 53,
+         "lane": 3,
+         "slug": "adriaan-dewagtere"
+        },
+        {
+         "rank": 4,
          "name": "Kayshan Azri Putra FIRDAUS",
          "noc": "INA",
-         "time": "",
+         "time": "1:28.904",
          "qual": "",
          "status": "",
          "record": "",
@@ -5730,20 +5718,125 @@
          "slug": "kayshan-azri-putra-firdaus"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Ivan MARTINIC",
          "noc": "CRO",
-         "time": "",
+         "time": "1:29.143",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 130,
          "lane": 6,
          "slug": "ivan-martinic"
+        },
+        {
+         "rank": null,
+         "name": "Damir KURMANOV",
+         "noc": "KAZ",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 134,
+         "lane": 1,
+         "slug": "damir-kurmanov"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Rep. Semifinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Daniil NIKOLAEV",
+        "noc": "AIN2",
+        "rank": 1,
+        "time": "1:27.167",
+        "qual": "Q"
+       },
+       {
+        "name": "Luca SPECHENHAUSER",
+        "noc": "ITA",
+        "rank": 1,
+        "time": "1:28.671",
+        "qual": "Q"
+       },
+       {
+        "name": "Maxime LAOUN",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "1:29.387",
+        "qual": "Q"
+       },
+       {
+        "name": "Kay HUISMAN",
+        "noc": "NED",
+        "rank": 1,
+        "time": "1:29.503",
+        "qual": "Q"
+       },
+       {
+        "name": "Philippe DAUDELIN",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "1:30.013",
+        "qual": "Q"
+       },
+       {
+        "name": "Justin LIU",
+        "noc": "USA",
+        "rank": 1,
+        "time": "1:30.065",
+        "qual": "Q"
+       },
+       {
+        "name": "Adriaan DEWAGTERE",
+        "noc": "BEL",
+        "rank": 3,
+        "time": "1:28.768",
+        "qual": "ADV"
+       },
+       {
+        "name": "Fre VAN DAMME",
+        "noc": "BEL",
+        "rank": 2,
+        "time": "1:27.411",
+        "qual": "q"
+       },
+       {
+        "name": "Kazuki YOSHINAGA",
+        "noc": "JPN",
+        "rank": 2,
+        "time": "1:28.769",
+        "qual": "q"
+       },
+       {
+        "name": "Niels KINGMA",
+        "noc": "NED",
+        "rank": 2,
+        "time": "1:29.439",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Daniil NIKOLAEV (AIN2)",
+        "Kay HUISMAN (NED)",
+        "Philippe DAUDELIN (CAN)",
+        "Fre VAN DAMME (BEL)",
+        "Kazuki YOSHINAGA (JPN)"
+       ],
+       [
+        "Luca SPECHENHAUSER (ITA)",
+        "Maxime LAOUN (CAN)",
+        "Justin LIU (USA)",
+        "Adriaan DEWAGTERE (BEL)",
+        "Niels KINGMA (NED)"
+       ]
+      ]
+     }
     },
     {
      "id": 23457,
@@ -9781,7 +9874,7 @@
      ],
      "projection": {
       "next": "Rep. Semifinals",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -9884,10 +9977,157 @@
     {
      "id": 23422,
      "name": "Rep. Semifinals",
-     "status": "Scheduled",
-     "start_utc": "2026-11-22T02:52:00.000Z",
+     "status": "Live",
+     "start_utc": "2026-11-22T02:54:00.000Z",
      "rule": "The first placed skater from each race qualify for Quarterfinals.",
-     "heats": []
+     "heats": [
+      {
+       "name": "Heat 1",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Elena SEREGINA",
+         "noc": "AIN2",
+         "time": "44.417",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 94,
+         "lane": 1,
+         "slug": "elena-seregina-1"
+        },
+        {
+         "rank": 2,
+         "name": "Anastasiia KONSTANTINOVA",
+         "noc": "AIN2",
+         "time": "44.656",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 91,
+         "lane": 3,
+         "slug": "anastasiia-konstantinova"
+        },
+        {
+         "rank": 3,
+         "name": "Margherita Betti",
+         "noc": "ITA",
+         "time": "44.709",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 66,
+         "lane": 2,
+         "slug": "margherita-betti"
+        },
+        {
+         "rank": 4,
+         "name": "Ching Yan LAM",
+         "noc": "HKG",
+         "time": "46.501",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 97,
+         "lane": 4,
+         "slug": "ching-yan-lam"
+        },
+        {
+         "rank": 5,
+         "name": "Haruna NAGAMORI",
+         "noc": "JPN",
+         "time": "46.707",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 69,
+         "lane": 5,
+         "slug": "haruna-nagamori"
+        }
+       ]
+      },
+      {
+       "name": "Heat 2",
+       "status": "Getting Ready",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Minji KIM",
+         "noc": "KOR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 78,
+         "lane": 1,
+         "slug": "minji-kim"
+        },
+        {
+         "rank": null,
+         "name": "Ayano SEKIGUCHI",
+         "noc": "JPN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 98,
+         "lane": 2,
+         "slug": "ayano-sekiguchi"
+        },
+        {
+         "rank": null,
+         "name": "Rina YAMANA",
+         "noc": "JPN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 70,
+         "lane": 3,
+         "slug": "rina-yamana"
+        },
+        {
+         "rank": null,
+         "name": "Betty MOESKE",
+         "noc": "GER",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 63,
+         "lane": 4,
+         "slug": "betty-moeske"
+        },
+        {
+         "rank": null,
+         "name": "Alena KRYLOVA",
+         "noc": "AIN2",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 92,
+         "lane": 5,
+         "slug": "alena-krylova"
+        },
+        {
+         "rank": null,
+         "name": "Birgit Marja Maria RADT",
+         "noc": "NED",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 100,
+         "lane": 6,
+         "slug": "birgit-marja-maria-radt"
+        }
+       ]
+      }
+     ]
     },
     {
      "id": 23423,
@@ -13363,6 +13603,25 @@
    "bib": 77,
    "lane": 1,
    "slug": "geonhee-kim-1"
+  },
+  {
+   "event_id": "isu-16216",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #3",
+   "distance": "Women 500 m",
+   "round": "Rep. Semifinals",
+   "heat": "Heat 2",
+   "start_utc": "2026-11-22T02:54:00.000Z",
+   "rank": null,
+   "name": "Minji KIM",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 78,
+   "lane": 1,
+   "slug": "minji-kim"
   },
   {
    "event_id": "isu-16216",

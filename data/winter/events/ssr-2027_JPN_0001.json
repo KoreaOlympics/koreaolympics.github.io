@@ -14,7 +14,7 @@
   "state": "",
   "url": "https://live.isuresults.eu/events/2027_JPN_0001/schedule"
  },
- "checked_at": "2026-11-22T02:48:32.262056+00:00",
+ "checked_at": "2026-11-22T02:59:36.521320+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:05:00Z",
@@ -4526,46 +4526,46 @@
   "17": {
    "title": "Team Pursuit Women Division B",
    "start_utc": "2026-11-22T02:50:00Z",
-   "live": false,
+   "live": true,
    "official": false,
    "distance": "Team Pursuit (6 Laps)",
    "division": "B",
-   "start_list": true,
+   "start_list": false,
    "rows": [
     {
-     "rank": null,
-     "name": "Republic of Korea",
-     "noc": "KOR",
-     "time": "",
-     "behind": "",
-     "lane": null,
-     "pair": 1,
-     "medal": null,
-     "status": null,
-     "points": null,
-     "official": true,
-     "members": [
-      "Jiwoo Park",
-      "Leewon Lim",
-      "Chaeeun Lee"
-     ]
-    },
-    {
-     "rank": null,
+     "rank": 1,
      "name": "Italy",
      "noc": "ITA",
-     "time": "",
-     "behind": "",
+     "time": "3:06.827",
+     "behind": "0.000",
      "lane": null,
      "pair": 1,
      "medal": null,
-     "status": null,
+     "status": 0,
      "points": null,
      "official": true,
      "members": [
       "Linda Rossi",
       "Giulia Presti",
       "Emily Tormen"
+     ]
+    },
+    {
+     "rank": 2,
+     "name": "Republic of Korea",
+     "noc": "KOR",
+     "time": "3:07.437",
+     "behind": "0.610",
+     "lane": null,
+     "pair": 1,
+     "medal": null,
+     "status": 0,
+     "points": null,
+     "official": true,
+     "members": [
+      "Jiwoo Park",
+      "Leewon Lim",
+      "Chaeeun Lee"
      ]
     }
    ]
@@ -4612,8 +4612,7 @@
      "members": [
       "Daniel Hall",
       "Jake Weidemann",
-      "Ryan Kulbacki",
-      "Max Halyk"
+      "Ryan Kulbacki"
      ]
     },
     {
@@ -4631,8 +4630,7 @@
      "members": [
       "Andrey Zuyev",
       "Vadim Yakubovskiy",
-      "Vitaliy Chshigolev",
-      "Nuraly Akzhol"
+      "Vitaliy Chshigolev"
      ]
     },
     {
@@ -4668,8 +4666,7 @@
      "members": [
       "Seungkyum Kim",
       "Youngjin Jin",
-      "Uiryun Cha",
-      "Hojun Yang"
+      "Uiryun Cha"
      ]
     },
     {
@@ -4687,8 +4684,7 @@
      "members": [
       "Hanbin Liu",
       "Xuanyu Zhou",
-      "Hanahati Muhamaiti",
-      "Hanyang Shen"
+      "Hanahati Muhamaiti"
      ]
     },
     {
@@ -4706,8 +4702,7 @@
      "members": [
       "Jasper Krommenhoek",
       "Remo Slotegraaf",
-      "Marcel Bosker",
-      "Sil van der Veen"
+      "Marcel Bosker"
      ]
     }
    ]
@@ -6666,6 +6661,32 @@
    "status": "",
    "points": null,
    "official": true,
+   "qual": ""
+  },
+  {
+   "event_id": "ssr-2027_JPN_0001",
+   "sport": "speed-skating",
+   "event": "ISU Speed Skating World Cup #2",
+   "distance": "Team Pursuit Women Division B",
+   "round": "Division B",
+   "heat": "",
+   "start_utc": "2026-11-22T02:50:00Z",
+   "rank": 2,
+   "name": "Republic of Korea",
+   "noc": "KOR",
+   "time": "3:07.437",
+   "behind": "0.610",
+   "lane": null,
+   "pair": 1,
+   "medal": null,
+   "status": "",
+   "points": null,
+   "official": true,
+   "members": [
+    "Jiwoo Park",
+    "Leewon Lim",
+    "Chaeeun Lee"
+   ],
    "qual": ""
   }
  ]
