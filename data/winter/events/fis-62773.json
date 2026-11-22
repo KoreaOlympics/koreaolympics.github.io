@@ -16,7 +16,7 @@
   "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62773&seasoncode=2027",
   "raw": "2xSL"
  },
- "checked_at": "2026-11-22T13:11:41.742199+00:00",
+ "checked_at": "2026-11-22T13:22:42.829315+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-21T09:30:00Z",
@@ -1134,348 +1134,1138 @@
   },
   "131582": {
    "title": "Men's Slalom",
-   "columns": [],
+   "columns": [
+    "Run 1",
+    "Run 2",
+    "Tot. Time",
+    "Diff. Time",
+    "FIS Points",
+    "Cup Points"
+   ],
    "rows": [
     {
-     "order": "1",
-     "bib": "51",
-     "code": "6293252",
-     "name": "KASTLUNGER Tobias",
-     "year": "1999",
-     "noc": "ITA",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "2",
-     "bib": "32",
-     "code": "6191340",
-     "name": "AZZOLIN Antoine",
-     "year": "2003",
-     "noc": "FRA",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "3",
-     "bib": "55",
-     "code": "54348",
-     "name": "PERTL Adrian",
-     "year": "1996",
-     "noc": "AUT",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "4",
-     "bib": "38",
-     "code": "60261",
-     "name": "MAES Sam",
-     "year": "1998",
-     "noc": "BEL",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "5",
-     "bib": "35",
-     "code": "6532592",
-     "name": "RITCHIE Benjamin",
-     "year": "2000",
-     "noc": "USA",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "6",
-     "bib": "30",
-     "code": "221223",
-     "name": "MAJOR Billy",
-     "year": "1996",
-     "noc": "GBR",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "7",
-     "bib": "21",
-     "code": "380377",
-     "name": "KOLEGA Samuel",
-     "year": "1999",
-     "noc": "CRO",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "8",
-     "bib": "28",
-     "code": "422873",
-     "name": "GRAHL-MADSEN Hans",
-     "year": "2003",
-     "noc": "NOR",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "9",
-     "bib": "15",
-     "code": "54444",
-     "name": "GSTREIN Fabio",
-     "year": "1997",
-     "noc": "AUT",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "10",
-     "bib": "23",
-     "code": "221236",
-     "name": "TAYLOR Laurie",
-     "year": "1996",
-     "noc": "GBR",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "11",
-     "bib": "6",
-     "code": "512182",
-     "name": "MEILLARD Loic",
-     "year": "1996",
-     "noc": "SUI",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "12",
-     "bib": "20",
-     "code": "92720",
-     "name": "POPOV Albert",
-     "year": "1997",
-     "noc": "BUL",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "13",
-     "bib": "24",
-     "code": "54252",
-     "name": "RASCHNER Dominik",
-     "year": "1994",
-     "noc": "AUT",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "14",
-     "bib": "19",
-     "code": "502617",
-     "name": "AX SWARTZ Fabian",
-     "year": "2004",
-     "noc": "SWE",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "15",
-     "bib": "18",
-     "code": "511996",
-     "name": "YULE Daniel",
-     "year": "1993",
-     "noc": "SUI",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "16",
-     "bib": "7",
-     "code": "6190543",
-     "name": "RASSAT Paco",
-     "year": "1998",
-     "noc": "FRA",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "17",
-     "bib": "37",
-     "code": "180889",
-     "name": "POHJOLAINEN Jesper",
-     "year": "2001",
-     "noc": "FIN",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "18",
-     "bib": "17",
-     "code": "6190558",
-     "name": "AMIEZ Steven",
-     "year": "1998",
-     "noc": "FRA",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "19",
-     "bib": "8",
-     "code": "202451",
-     "name": "STRASSER Linus",
-     "year": "1992",
-     "noc": "GER",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "20",
-     "bib": "9",
-     "code": "422803",
-     "name": "SOLBERG Eirik Hystad",
-     "year": "2002",
-     "noc": "NOR",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "21",
-     "bib": "36",
-     "code": "6532163",
-     "name": "SEYMOUR Jett",
-     "year": "1998",
-     "noc": "USA",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "22",
-     "bib": "33",
-     "code": "6191203",
-     "name": "AULNETTE Auguste",
-     "year": "2002",
-     "noc": "FRA",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "23",
-     "bib": "13",
-     "code": "54170",
-     "name": "MATT Michael",
-     "year": "1993",
-     "noc": "AUT",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "24",
-     "bib": "12",
-     "code": "512203",
-     "name": "NEF Tanguy",
-     "year": "1996",
-     "noc": "SUI",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "25",
-     "bib": "4",
-     "code": "422304",
-     "name": "KRISTOFFERSEN Henrik",
-     "year": "1994",
-     "noc": "NOR",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "26",
-     "bib": "27",
-     "code": "54630",
-     "name": "STURM Joshua",
-     "year": "2001",
-     "noc": "AUT",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "27",
-     "bib": "2",
-     "code": "6190403",
-     "name": "NOEL Clement",
-     "year": "1997",
-     "noc": "FRA",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "28",
-     "bib": "10",
-     "code": "60253",
-     "name": "MARCHANT Armand",
-     "year": "1997",
-     "noc": "BEL",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "29",
-     "bib": "1",
-     "code": "422732",
-     "name": "MCGRATH Atle Lie",
-     "year": "2000",
-     "noc": "NOR",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "30",
+     "rank": 1,
      "bib": "5",
      "code": "422507",
      "name": "HAUGAN Timon",
      "year": "1996",
      "noc": "NOR",
-     "cells": {},
-     "rank": null,
+     "cells": {
+      "Run 1": "53.65",
+      "Run 2": "48.90",
+      "Tot. Time": "1:42.55",
+      "Diff. Time": "",
+      "FIS Points": "0.00",
+      "Cup Points": "100"
+     },
      "status": ""
+    },
+    {
+     "rank": 2,
+     "bib": "9",
+     "code": "422803",
+     "name": "SOLBERG Eirik Hystad",
+     "year": "2002",
+     "noc": "NOR",
+     "cells": {
+      "Run 1": "55.02",
+      "Run 2": "48.13",
+      "Tot. Time": "1:43.15",
+      "Diff. Time": "+0.60",
+      "FIS Points": "4.27",
+      "Cup Points": "80"
+     },
+     "status": ""
+    },
+    {
+     "rank": 3,
+     "bib": "12",
+     "code": "512203",
+     "name": "NEF Tanguy",
+     "year": "1996",
+     "noc": "SUI",
+     "cells": {
+      "Run 1": "54.43",
+      "Run 2": "49.00",
+      "Tot. Time": "1:43.43",
+      "Diff. Time": "+0.88",
+      "FIS Points": "6.26",
+      "Cup Points": "60"
+     },
+     "status": ""
+    },
+    {
+     "rank": 4,
+     "bib": "10",
+     "code": "60253",
+     "name": "MARCHANT Armand",
+     "year": "1997",
+     "noc": "BEL",
+     "cells": {
+      "Run 1": "54.09",
+      "Run 2": "49.46",
+      "Tot. Time": "1:43.55",
+      "Diff. Time": "+1.00",
+      "FIS Points": "7.12",
+      "Cup Points": "50"
+     },
+     "status": ""
+    },
+    {
+     "rank": 5,
+     "bib": "13",
+     "code": "54170",
+     "name": "MATT Michael",
+     "year": "1993",
+     "noc": "AUT",
+     "cells": {
+      "Run 1": "54.54",
+      "Run 2": "49.12",
+      "Tot. Time": "1:43.66",
+      "Diff. Time": "+1.11",
+      "FIS Points": "7.90",
+      "Cup Points": "45"
+     },
+     "status": ""
+    },
+    {
+     "rank": 6,
+     "bib": "21",
+     "code": "380377",
+     "name": "KOLEGA Samuel",
+     "year": "1999",
+     "noc": "CRO",
+     "cells": {
+      "Run 1": "55.56",
+      "Run 2": "48.25",
+      "Tot. Time": "1:43.81",
+      "Diff. Time": "+1.26",
+      "FIS Points": "8.97",
+      "Cup Points": "40"
+     },
+     "status": ""
+    },
+    {
+     "rank": 6,
+     "bib": "19",
+     "code": "502617",
+     "name": "AX SWARTZ Fabian",
+     "year": "2004",
+     "noc": "SWE",
+     "cells": {
+      "Run 1": "55.20",
+      "Run 2": "48.61",
+      "Tot. Time": "1:43.81",
+      "Diff. Time": "+1.26",
+      "FIS Points": "8.97",
+      "Cup Points": "40"
+     },
+     "status": ""
+    },
+    {
+     "rank": 8,
+     "bib": "23",
+     "code": "221236",
+     "name": "TAYLOR Laurie",
+     "year": "1996",
+     "noc": "GBR",
+     "cells": {
+      "Run 1": "55.42",
+      "Run 2": "48.60",
+      "Tot. Time": "1:44.02",
+      "Diff. Time": "+1.47",
+      "FIS Points": "10.46",
+      "Cup Points": "32"
+     },
+     "status": ""
+    },
+    {
+     "rank": 9,
+     "bib": "36",
+     "code": "6532163",
+     "name": "SEYMOUR Jett",
+     "year": "1998",
+     "noc": "USA",
+     "cells": {
+      "Run 1": "54.90",
+      "Run 2": "49.15",
+      "Tot. Time": "1:44.05",
+      "Diff. Time": "+1.50",
+      "FIS Points": "10.68",
+      "Cup Points": "29"
+     },
+     "status": ""
+    },
+    {
+     "rank": 10,
+     "bib": "17",
+     "code": "6190558",
+     "name": "AMIEZ Steven",
+     "year": "1998",
+     "noc": "FRA",
+     "cells": {
+      "Run 1": "55.08",
+      "Run 2": "49.01",
+      "Tot. Time": "1:44.09",
+      "Diff. Time": "+1.54",
+      "FIS Points": "10.96",
+      "Cup Points": "26"
+     },
+     "status": ""
+    },
+    {
+     "rank": 11,
+     "bib": "2",
+     "code": "6190403",
+     "name": "NOEL Clement",
+     "year": "1997",
+     "noc": "FRA",
+     "cells": {
+      "Run 1": "54.20",
+      "Run 2": "49.93",
+      "Tot. Time": "1:44.13",
+      "Diff. Time": "+1.58",
+      "FIS Points": "11.25",
+      "Cup Points": "24"
+     },
+     "status": ""
+    },
+    {
+     "rank": 12,
+     "bib": "27",
+     "code": "54630",
+     "name": "STURM Joshua",
+     "year": "2001",
+     "noc": "AUT",
+     "cells": {
+      "Run 1": "54.40",
+      "Run 2": "49.89",
+      "Tot. Time": "1:44.29",
+      "Diff. Time": "+1.74",
+      "FIS Points": "12.39",
+      "Cup Points": "22"
+     },
+     "status": ""
+    },
+    {
+     "rank": 12,
+     "bib": "7",
+     "code": "6190543",
+     "name": "RASSAT Paco",
+     "year": "1998",
+     "noc": "FRA",
+     "cells": {
+      "Run 1": "55.18",
+      "Run 2": "49.11",
+      "Tot. Time": "1:44.29",
+      "Diff. Time": "+1.74",
+      "FIS Points": "12.39",
+      "Cup Points": "22"
+     },
+     "status": ""
+    },
+    {
+     "rank": 14,
+     "bib": "28",
+     "code": "422873",
+     "name": "GRAHL-MADSEN Hans",
+     "year": "2003",
+     "noc": "NOR",
+     "cells": {
+      "Run 1": "55.56",
+      "Run 2": "48.85",
+      "Tot. Time": "1:44.41",
+      "Diff. Time": "+1.86",
+      "FIS Points": "13.24",
+      "Cup Points": "18"
+     },
+     "status": ""
+    },
+    {
+     "rank": 15,
+     "bib": "33",
+     "code": "6191203",
+     "name": "AULNETTE Auguste",
+     "year": "2002",
+     "noc": "FRA",
+     "cells": {
+      "Run 1": "54.83",
+      "Run 2": "49.60",
+      "Tot. Time": "1:44.43",
+      "Diff. Time": "+1.88",
+      "FIS Points": "13.38",
+      "Cup Points": "16"
+     },
+     "status": ""
+    },
+    {
+     "rank": 16,
+     "bib": "18",
+     "code": "511996",
+     "name": "YULE Daniel",
+     "year": "1993",
+     "noc": "SUI",
+     "cells": {
+      "Run 1": "55.19",
+      "Run 2": "49.25",
+      "Tot. Time": "1:44.44",
+      "Diff. Time": "+1.89",
+      "FIS Points": "13.45",
+      "Cup Points": "15"
+     },
+     "status": ""
+    },
+    {
+     "rank": 17,
+     "bib": "32",
+     "code": "6191340",
+     "name": "AZZOLIN Antoine",
+     "year": "2003",
+     "noc": "FRA",
+     "cells": {
+      "Run 1": "56.05",
+      "Run 2": "48.42",
+      "Tot. Time": "1:44.47",
+      "Diff. Time": "+1.92",
+      "FIS Points": "13.67",
+      "Cup Points": "14"
+     },
+     "status": ""
+    },
+    {
+     "rank": 18,
+     "bib": "8",
+     "code": "202451",
+     "name": "STRASSER Linus",
+     "year": "1992",
+     "noc": "GER",
+     "cells": {
+      "Run 1": "55.05",
+      "Run 2": "49.55",
+      "Tot. Time": "1:44.60",
+      "Diff. Time": "+2.05",
+      "FIS Points": "14.59",
+      "Cup Points": "13"
+     },
+     "status": ""
+    },
+    {
+     "rank": 19,
+     "bib": "15",
+     "code": "54444",
+     "name": "GSTREIN Fabio",
+     "year": "1997",
+     "noc": "AUT",
+     "cells": {
+      "Run 1": "55.49",
+      "Run 2": "49.25",
+      "Tot. Time": "1:44.74",
+      "Diff. Time": "+2.19",
+      "FIS Points": "15.59",
+      "Cup Points": "12"
+     },
+     "status": ""
+    },
+    {
+     "rank": 20,
+     "bib": "6",
+     "code": "512182",
+     "name": "MEILLARD Loic",
+     "year": "1996",
+     "noc": "SUI",
+     "cells": {
+      "Run 1": "55.35",
+      "Run 2": "49.49",
+      "Tot. Time": "1:44.84",
+      "Diff. Time": "+2.29",
+      "FIS Points": "16.30",
+      "Cup Points": "11"
+     },
+     "status": ""
+    },
+    {
+     "rank": 21,
+     "bib": "38",
+     "code": "60261",
+     "name": "MAES Sam",
+     "year": "1998",
+     "noc": "BEL",
+     "cells": {
+      "Run 1": "55.91",
+      "Run 2": "49.18",
+      "Tot. Time": "1:45.09",
+      "Diff. Time": "+2.54",
+      "FIS Points": "18.08",
+      "Cup Points": "10"
+     },
+     "status": ""
+    },
+    {
+     "rank": 22,
+     "bib": "35",
+     "code": "6532592",
+     "name": "RITCHIE Benjamin",
+     "year": "2000",
+     "noc": "USA",
+     "cells": {
+      "Run 1": "55.88",
+      "Run 2": "49.26",
+      "Tot. Time": "1:45.14",
+      "Diff. Time": "+2.59",
+      "FIS Points": "18.44",
+      "Cup Points": "9"
+     },
+     "status": ""
+    },
+    {
+     "rank": 23,
+     "bib": "24",
+     "code": "54252",
+     "name": "RASCHNER Dominik",
+     "year": "1994",
+     "noc": "AUT",
+     "cells": {
+      "Run 1": "55.22",
+      "Run 2": "49.94",
+      "Tot. Time": "1:45.16",
+      "Diff. Time": "+2.61",
+      "FIS Points": "18.58",
+      "Cup Points": "8"
+     },
+     "status": ""
+    },
+    {
+     "rank": 24,
+     "bib": "51",
+     "code": "6293252",
+     "name": "KASTLUNGER Tobias",
+     "year": "1999",
+     "noc": "ITA",
+     "cells": {
+      "Run 1": "56.14",
+      "Run 2": "49.18",
+      "Tot. Time": "1:45.32",
+      "Diff. Time": "+2.77",
+      "FIS Points": "19.72",
+      "Cup Points": "7"
+     },
+     "status": ""
+    },
+    {
+     "rank": 25,
+     "bib": "55",
+     "code": "54348",
+     "name": "PERTL Adrian",
+     "year": "1996",
+     "noc": "AUT",
+     "cells": {
+      "Run 1": "55.93",
+      "Run 2": "49.50",
+      "Tot. Time": "1:45.43",
+      "Diff. Time": "+2.88",
+      "FIS Points": "20.50",
+      "Cup Points": "6"
+     },
+     "status": ""
+    },
+    {
+     "rank": null,
+     "bib": "37",
+     "code": "180889",
+     "name": "POHJOLAINEN Jesper",
+     "year": "2001",
+     "noc": "FIN",
+     "cells": {
+      "Run 1": "55.16",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 2nd run"
+    },
+    {
+     "rank": null,
+     "bib": "30",
+     "code": "221223",
+     "name": "MAJOR Billy",
+     "year": "1996",
+     "noc": "GBR",
+     "cells": {
+      "Run 1": "55.79",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 2nd run"
+    },
+    {
+     "rank": null,
+     "bib": "20",
+     "code": "92720",
+     "name": "POPOV Albert",
+     "year": "1997",
+     "noc": "BUL",
+     "cells": {
+      "Run 1": "55.32",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 2nd run"
+    },
+    {
+     "rank": null,
+     "bib": "4",
+     "code": "422304",
+     "name": "KRISTOFFERSEN Henrik",
+     "year": "1994",
+     "noc": "NOR",
+     "cells": {
+      "Run 1": "54.41",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 2nd run"
+    },
+    {
+     "rank": null,
+     "bib": "1",
+     "code": "422732",
+     "name": "MCGRATH Atle Lie",
+     "year": "2000",
+     "noc": "NOR",
+     "cells": {
+      "Run 1": "53.66",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 2nd run"
+    },
+    {
+     "rank": null,
+     "bib": "62",
+     "code": "92776",
+     "name": "ZLATKOV Kalin",
+     "year": "2001",
+     "noc": "BUL",
+     "cells": {
+      "Run 1": "57.61",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "61",
+     "code": "512396",
+     "name": "LUETOLF Joel",
+     "year": "2000",
+     "noc": "SUI",
+     "cells": {
+      "Run 1": "56.49",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "60",
+     "code": "6533474",
+     "name": "PALAMARAS Nickco",
+     "year": "2004",
+     "noc": "GER",
+     "cells": {
+      "Run 1": "56.29",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "59",
+     "code": "6294327",
+     "name": "BARBERA Corrado",
+     "year": "2002",
+     "noc": "ITA",
+     "cells": {
+      "Run 1": "56.76",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "52",
+     "code": "492197",
+     "name": "GARAY FERNANDEZ Aingeru",
+     "year": "1998",
+     "noc": "ESP",
+     "cells": {
+      "Run 1": "56.46",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "50",
+     "code": "511983",
+     "name": "AERNI Luca",
+     "year": "1993",
+     "noc": "SUI",
+     "cells": {
+      "Run 1": "56.52",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "44",
+     "code": "320266",
+     "name": "JUNG Donghyun",
+     "year": "1988",
+     "noc": "KOR",
+     "cells": {
+      "Run 1": "57.47",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "43",
+     "code": "6190909",
+     "name": "DESGRIPPES Hugo",
+     "year": "2000",
+     "noc": "FRA",
+     "cells": {
+      "Run 1": "56.54",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "40",
+     "code": "491879",
+     "name": "SALARICH BAUCELLS Joaquim",
+     "year": "1994",
+     "noc": "ESP",
+     "cells": {
+      "Run 1": "57.74",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "34",
+     "code": "511902",
+     "name": "ZENHAEUSERN Ramon",
+     "year": "1992",
+     "noc": "SUI",
+     "cells": {
+      "Run 1": "56.41",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "31",
+     "code": "54447",
+     "name": "RUELAND Simon",
+     "year": "1997",
+     "noc": "AUT",
+     "cells": {
+      "Run 1": "56.31",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "16",
+     "code": "193967",
+     "name": "MUFFAT-JEANDET Victor",
+     "year": "1989",
+     "noc": "FRA",
+     "cells": {
+      "Run 1": "56.33",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not qualify"
+    },
+    {
+     "rank": null,
+     "bib": "68",
+     "code": "6293773",
+     "name": "BENDOTTI Matteo",
+     "year": "2001",
+     "noc": "ITA",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "67",
+     "code": "20463",
+     "name": "CORNELLA GUITART Xavier",
+     "year": "2001",
+     "noc": "AND",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "66",
+     "code": "430633",
+     "name": "JASICZEK Michal",
+     "year": "1994",
+     "noc": "POL",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "64",
+     "code": "221674",
+     "name": "CARRICK-SMITH Zak",
+     "year": "2007",
+     "noc": "GBR",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "63",
+     "code": "54233",
+     "name": "LEITGEB Richard",
+     "year": "1994",
+     "noc": "HUN",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "58",
+     "code": "54766",
+     "name": "HEINE Oscar",
+     "year": "2003",
+     "noc": "AUT",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "57",
+     "code": "491853",
+     "name": "DEL CAMPO HERNANDEZ Juan",
+     "year": "1994",
+     "noc": "ESP",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "56",
+     "code": "380361",
+     "name": "RODES Istok",
+     "year": "1996",
+     "noc": "CRO",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "54",
+     "code": "40656",
+     "name": "MCADAM Hugh",
+     "year": "2000",
+     "noc": "AUS",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "53",
+     "code": "202908",
+     "name": "HIMMELSBACH Fabian",
+     "year": "1999",
+     "noc": "GER",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "49",
+     "code": "6292914",
+     "name": "CANINS Matteo",
+     "year": "1998",
+     "noc": "ITA",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "48",
+     "code": "502433",
+     "name": "HANSSON William",
+     "year": "2001",
+     "noc": "SWE",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "47",
+     "code": "6300464",
+     "name": "KOYAMA Yohei",
+     "year": "1998",
+     "noc": "JPN",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "46",
+     "code": "6301077",
+     "name": "AIHARA Shiro",
+     "year": "2001",
+     "noc": "JPN",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "45",
+     "code": "6533230",
+     "name": "PUCKETT Cooper",
+     "year": "2003",
+     "noc": "USA",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "42",
+     "code": "6294499",
+     "name": "SARACCO Edoardo",
+     "year": "2003",
+     "noc": "ITA",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "41",
+     "code": "502015",
+     "name": "JAKOBSEN Kristoffer",
+     "year": "1994",
+     "noc": "SWE",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "39",
+     "code": "6293764",
+     "name": "SACCARDI Tommaso",
+     "year": "2001",
+     "noc": "ITA",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "26",
+     "code": "380335",
+     "name": "ZUBCIC Filip",
+     "year": "1993",
+     "noc": "CRO",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "25",
+     "code": "512353",
+     "name": "ITEN Matthias",
+     "year": "1999",
+     "noc": "SUI",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "22",
+     "code": "422899",
+     "name": "SANDVIK Oscar Andreas",
+     "year": "2004",
+     "noc": "NOR",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "14",
+     "code": "6293171",
+     "name": "VINATZER Alex",
+     "year": "1999",
+     "noc": "ITA",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "11",
+     "code": "180919",
+     "name": "HALLBERG Eduard",
+     "year": "2003",
+     "noc": "FIN",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "3",
+     "code": "422729",
+     "name": "PINHEIRO BRAATHEN Lucas",
+     "year": "2000",
+     "noc": "BRA",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not finish 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "29",
+     "code": "54093",
+     "name": "STROLZ Johannes",
+     "year": "1992",
+     "noc": "AUT",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Disqualified 1st run"
+    },
+    {
+     "rank": null,
+     "bib": "65",
+     "code": "320367",
+     "name": "PARK Jeyun",
+     "year": "1994",
+     "noc": "KOR",
+     "cells": {
+      "Run 1": "",
+      "Run 2": "",
+      "Tot. Time": "",
+      "Diff. Time": "",
+      "FIS Points": ""
+     },
+     "status": "Did not start 1st run"
     }
    ],
-   "start_list": true,
+   "start_list": false,
    "start_utc": "2026-11-22T09:30:00Z",
    "gender": "M",
    "live": false,
    "runs": [
-    "Completed",
-    "In progress"
+    "Official results",
+    "Official results"
    ],
-   "status": ""
+   "status": "Finished"
   }
  },
  "korea": [
@@ -1493,6 +2283,36 @@
    "time": "",
    "qual": "",
    "status": "Did not finish 1st run"
+  },
+  {
+   "event_id": "fis-62773",
+   "sport": "alpine",
+   "event": "live 회전",
+   "distance": "Men's Slalom",
+   "round": "",
+   "heat": "",
+   "start_utc": "2026-11-22T09:30:00Z",
+   "rank": null,
+   "name": "JUNG Donghyun",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
+   "status": "Did not qualify"
+  },
+  {
+   "event_id": "fis-62773",
+   "sport": "alpine",
+   "event": "live 회전",
+   "distance": "Men's Slalom",
+   "round": "",
+   "heat": "",
+   "start_utc": "2026-11-22T09:30:00Z",
+   "rank": null,
+   "name": "PARK Jeyun",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
+   "status": "Did not start 1st run"
   }
  ]
 }
