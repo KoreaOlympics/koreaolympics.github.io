@@ -18,7 +18,7 @@
   "live": "Women 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-22T07:57:33.062935+00:00",
+ "checked_at": "2026-11-22T08:08:48.417674+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -367,9 +367,9 @@
   {
    "start_utc": "2026-11-22T07:59:00.000Z",
    "title": "Women 1500 m",
-   "round": "Finals",
+   "round": "Final",
    "event_result_id": 16340,
-   "round_id": null,
+   "round_id": 23539,
    "type": "Singles"
   },
   {
@@ -8031,7 +8031,7 @@
      ],
      "projection": {
       "next": "Final",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -8100,10 +8100,193 @@
     {
      "id": 23539,
      "name": "Final",
-     "status": "Scheduled",
-     "start_utc": "2026-11-22T07:59:00.000Z",
+     "status": "Live",
+     "start_utc": "2026-11-22T08:01:27.000Z",
      "rule": "",
-     "heats": []
+     "heats": [
+      {
+       "name": "Final",
+       "status": "Getting Ready",
+       "official": "Start List",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Jiarui SONG",
+         "noc": "CHN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 54,
+         "lane": 1,
+         "slug": "jiarui-song"
+        },
+        {
+         "rank": null,
+         "name": "Gilli KIM",
+         "noc": "KOR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 5,
+         "lane": 2,
+         "slug": "gilli-kim"
+        },
+        {
+         "rank": null,
+         "name": "Minjeong CHOI",
+         "noc": "KOR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 4,
+         "lane": 3,
+         "slug": "minjeong-choi"
+        },
+        {
+         "rank": null,
+         "name": "Elisa CONFORTOLA",
+         "noc": "ITA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 8,
+         "lane": 4,
+         "slug": "elisa-confortola"
+        },
+        {
+         "rank": null,
+         "name": "Failia AIMALETDINOVA",
+         "noc": "AIN2",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 90,
+         "lane": 5,
+         "slug": "failia-aimaletdinova"
+        },
+        {
+         "rank": null,
+         "name": "Jianing ZHANG",
+         "noc": "CHN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 55,
+         "lane": 6,
+         "slug": "jianing-zhang"
+        },
+        {
+         "rank": null,
+         "name": "Valentina ASCIC",
+         "noc": "CRO",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 29,
+         "lane": 7,
+         "slug": "valentina-ascic"
+        }
+       ]
+      },
+      {
+       "name": "Final B",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Courtney SARAULT",
+         "noc": "CAN",
+         "time": "2:30.858",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 1,
+         "lane": 7,
+         "slug": "courtney-sarault"
+        },
+        {
+         "rank": 2,
+         "name": "Ann-Sophie BACHAND",
+         "noc": "CAN",
+         "time": "2:30.898",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 51,
+         "lane": 5,
+         "slug": "ann-sophie-bachand"
+        },
+        {
+         "rank": 3,
+         "name": "Zoe Florence DELTRAP",
+         "noc": "NED",
+         "time": "2:31.001",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 49,
+         "lane": 6,
+         "slug": "zoe-florence-deltrap"
+        },
+        {
+         "rank": 4,
+         "name": "Yan ZHANG",
+         "noc": "CHN",
+         "time": "2:31.058",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 56,
+         "lane": 4,
+         "slug": "yan-zhang-1"
+        },
+        {
+         "rank": 5,
+         "name": "Diede VAN OORSCHOT",
+         "noc": "NED",
+         "time": "2:32.319",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 36,
+         "lane": 3,
+         "slug": "diede-van-oorschot"
+        },
+        {
+         "rank": 6,
+         "name": "Sukhee SHIM",
+         "noc": "KOR",
+         "time": "3:00.785",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 79,
+         "lane": 1,
+         "slug": "sukhee-shim"
+        },
+        {
+         "rank": 7,
+         "name": "Chutong ZHANG",
+         "noc": "CHN",
+         "time": "no time",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 11,
+         "lane": 2,
+         "slug": "chutong-zhang"
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -15787,6 +15970,63 @@
    "record": "",
    "bib": 79,
    "lane": 5,
+   "slug": "sukhee-shim"
+  },
+  {
+   "event_id": "isu-16216",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #3",
+   "distance": "Women 1500 m",
+   "round": "Final",
+   "heat": "Final",
+   "start_utc": "2026-11-22T08:01:27.000Z",
+   "rank": null,
+   "name": "Gilli KIM",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 5,
+   "lane": 2,
+   "slug": "gilli-kim"
+  },
+  {
+   "event_id": "isu-16216",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #3",
+   "distance": "Women 1500 m",
+   "round": "Final",
+   "heat": "Final",
+   "start_utc": "2026-11-22T08:01:27.000Z",
+   "rank": null,
+   "name": "Minjeong CHOI",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 4,
+   "lane": 3,
+   "slug": "minjeong-choi"
+  },
+  {
+   "event_id": "isu-16216",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #3",
+   "distance": "Women 1500 m",
+   "round": "Final",
+   "heat": "Final B",
+   "start_utc": "2026-11-22T08:01:27.000Z",
+   "rank": 6,
+   "name": "Sukhee SHIM",
+   "noc": "KOR",
+   "time": "3:00.785",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 79,
+   "lane": 1,
    "slug": "sukhee-shim"
   },
   {
