@@ -18,7 +18,7 @@
   "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-3-seoul/"
  },
- "checked_at": "2026-11-22T07:10:06.301938+00:00",
+ "checked_at": "2026-11-22T07:21:32.899463+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:00:00.000Z",
@@ -6562,20 +6562,32 @@
     {
      "id": 23537,
      "name": "Final",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-22T07:04:52.000Z",
      "rule": "",
      "heats": [
       {
        "name": "Final",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Jens VAN 'T WOUT",
+         "noc": "NED",
+         "time": "1:28.988",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 7,
+         "lane": 3,
+         "slug": "jens-van-t-wout"
+        },
+        {
+         "rank": 2,
          "name": "Felix ROUSSEL",
          "noc": "CAN",
-         "time": "",
+         "time": "1:29.073",
          "qual": "",
          "status": "",
          "record": "",
@@ -6584,10 +6596,22 @@
          "slug": "felix-roussel"
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Thomas NADALINI",
+         "noc": "ITA",
+         "time": "1:30.099",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 6,
+         "lane": 5,
+         "slug": "thomas-nadalini"
+        },
+        {
+         "rank": 4,
          "name": "William DANDJINOU",
          "noc": "CAN",
-         "time": "",
+         "time": "2:06.082",
          "qual": "",
          "status": "",
          "record": "",
@@ -6597,39 +6621,15 @@
         },
         {
          "rank": null,
-         "name": "Jens VAN 'T WOUT",
-         "noc": "NED",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 7,
-         "lane": 3,
-         "slug": "jens-van-t-wout"
-        },
-        {
-         "rank": null,
          "name": "Kay HUISMAN",
          "noc": "NED",
-         "time": "",
+         "time": "PEN",
          "qual": "",
-         "status": "",
+         "status": "Penalty",
          "record": "",
          "bib": 41,
          "lane": 4,
          "slug": "kay-huisman"
-        },
-        {
-         "rank": null,
-         "name": "Thomas NADALINI",
-         "noc": "ITA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 6,
-         "lane": 5,
-         "slug": "thomas-nadalini"
         }
        ]
       },

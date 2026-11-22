@@ -14,7 +14,7 @@
   "state": "",
   "url": "https://live.isuresults.eu/events/2027_JPN_0001/schedule"
  },
- "checked_at": "2026-11-22T07:11:10.825405+00:00",
+ "checked_at": "2026-11-22T07:22:37.102005+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-20T01:05:00Z",
@@ -5605,8 +5605,8 @@
   "22": {
    "title": "Team Pursuit Men",
    "start_utc": "2026-11-22T06:43:00Z",
-   "live": true,
-   "official": false,
+   "live": false,
+   "official": true,
    "distance": "Team Pursuit (8 Laps)",
    "division": "A",
    "start_list": false,
@@ -5760,11 +5760,11 @@
   "23": {
    "title": "2nd 500m Women",
    "start_utc": "2026-11-22T07:21:00Z",
-   "live": false,
+   "live": true,
    "official": false,
    "distance": "500 Meter",
    "division": "A",
-   "start_list": true,
+   "start_list": false,
    "rows": [
     {
      "rank": null,
@@ -6903,6 +6903,27 @@
     "Hojun Yang",
     "Minsun Kim"
    ],
+   "qual": ""
+  },
+  {
+   "event_id": "ssr-2027_JPN_0001",
+   "sport": "speed-skating",
+   "event": "ISU Speed Skating World Cup #2",
+   "distance": "2nd 500m Women",
+   "round": "Division A",
+   "heat": "",
+   "start_utc": "2026-11-22T07:21:00Z",
+   "rank": null,
+   "name": "Minsun Kim",
+   "noc": "KOR",
+   "time": "",
+   "behind": "",
+   "lane": "O",
+   "pair": 4,
+   "medal": null,
+   "status": "",
+   "points": null,
+   "official": true,
    "qual": ""
   }
  ]
