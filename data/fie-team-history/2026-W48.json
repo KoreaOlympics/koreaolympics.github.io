@@ -1,0 +1,2326 @@
+{
+  "schemaVersion": 1,
+  "fetchedAt": "2026-11-23T00:49:56.491485+00:00",
+  "season": 2027,
+  "rankingType": "official-senior-team",
+  "zoneSource": "https://fie.org/fie/structure/federations",
+  "events": [
+    {
+      "id": "fm",
+      "label": "남자 플뢰레",
+      "source": "https://fie.org/api/fie/fencers/ranking?season=2027&weapon=F&gender=M&category=S&type=E&page=1&pageSize=100",
+      "teams": [
+        {
+          "code": "ITA",
+          "country": "Italy",
+          "rank": 1,
+          "points": 424.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "HKG",
+          "country": "Hong Kong, China",
+          "rank": 2,
+          "points": 348.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "USA",
+          "country": "United States of America",
+          "rank": 3,
+          "points": 304.0,
+          "zone": "America"
+        },
+        {
+          "code": "JPN",
+          "country": "Japan",
+          "rank": 4,
+          "points": 296.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "RUS",
+          "country": "Russian Federation",
+          "rank": 5,
+          "points": 280.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "FRA",
+          "country": "France",
+          "rank": 6,
+          "points": 248.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "EGY",
+          "country": "Egypt",
+          "rank": 7,
+          "points": 213.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "HUN",
+          "country": "Hungary",
+          "rank": 8,
+          "points": 206.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "CHN",
+          "country": "People's Republic of China",
+          "rank": 9,
+          "points": 196.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "KOR",
+          "country": "Republic of Korea",
+          "rank": 10,
+          "points": 194.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "GER",
+          "country": "Germany",
+          "rank": 11,
+          "points": 185.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "POL",
+          "country": "Poland",
+          "rank": 12,
+          "points": 174.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "ESP",
+          "country": "Spain",
+          "rank": 13,
+          "points": 164.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "CAN",
+          "country": "Canada",
+          "rank": 14,
+          "points": 148.0,
+          "zone": "America"
+        },
+        {
+          "code": "BRA",
+          "country": "Brazil",
+          "rank": 15,
+          "points": 135.0,
+          "zone": "America"
+        },
+        {
+          "code": "BEL",
+          "country": "Belgium",
+          "rank": 16,
+          "points": 134.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "GBR",
+          "country": "Great Britain",
+          "rank": 17,
+          "points": 122.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "TPE",
+          "country": "Chinese Taipei",
+          "rank": 18,
+          "points": 102.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "SGP",
+          "country": "Singapore",
+          "rank": 19,
+          "points": 92.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "MEX",
+          "country": "Mexico",
+          "rank": 20,
+          "points": 88.0,
+          "zone": "America"
+        },
+        {
+          "code": "CHI",
+          "country": "Chile",
+          "rank": 21,
+          "points": 83.0,
+          "zone": "America"
+        },
+        {
+          "code": "UKR",
+          "country": "Ukraine",
+          "rank": 22,
+          "points": 81.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "UZB",
+          "country": "Uzbekistan",
+          "rank": 23,
+          "points": 80.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "ALG",
+          "country": "Algeria",
+          "rank": 24,
+          "points": 76.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "QAT",
+          "country": "Qatar",
+          "rank": 25,
+          "points": 72.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "VEN",
+          "country": "Venezuela",
+          "rank": 26,
+          "points": 58.0,
+          "zone": "America"
+        },
+        {
+          "code": "IND",
+          "country": "India",
+          "rank": 27,
+          "points": 58.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "KAZ",
+          "country": "Kazakhstan",
+          "rank": 28,
+          "points": 57.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "ISR",
+          "country": "Israel",
+          "rank": 29,
+          "points": 54.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "AUS",
+          "country": "Australia",
+          "rank": 30,
+          "points": 53.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "ANG",
+          "country": "Angola",
+          "rank": 31,
+          "points": 40.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "CRO",
+          "country": "Croatia",
+          "rank": 32,
+          "points": 40.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "MAS",
+          "country": "Malaysia",
+          "rank": 33,
+          "points": 38.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "SEN",
+          "country": "Senegal",
+          "rank": 34,
+          "points": 36.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "COL",
+          "country": "Colombia",
+          "rank": 35,
+          "points": 33.0,
+          "zone": "America"
+        },
+        {
+          "code": "CIV",
+          "country": "Côte d'Ivoire",
+          "rank": 36,
+          "points": 32.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "ARG",
+          "country": "Argentina",
+          "rank": 37,
+          "points": 30.0,
+          "zone": "America"
+        },
+        {
+          "code": "PER",
+          "country": "Peru",
+          "rank": 38,
+          "points": 28.0,
+          "zone": "America"
+        },
+        {
+          "code": "BRN",
+          "country": "Bahrain",
+          "rank": 39,
+          "points": 28.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "AUT",
+          "country": "Austria",
+          "rank": 40,
+          "points": 27.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "PUR",
+          "country": "Puerto Rico",
+          "rank": 41,
+          "points": 24.0,
+          "zone": "America"
+        },
+        {
+          "code": "PHI",
+          "country": "Philippines",
+          "rank": 42,
+          "points": 23.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "ECU",
+          "country": "Ecuador",
+          "rank": 43,
+          "points": 23.0,
+          "zone": "America"
+        },
+        {
+          "code": "GUA",
+          "country": "Guatemala",
+          "rank": 44,
+          "points": 22.0,
+          "zone": "America"
+        },
+        {
+          "code": "ESA",
+          "country": "El Salvador",
+          "rank": 45,
+          "points": 21.0,
+          "zone": "America"
+        },
+        {
+          "code": "THA",
+          "country": "Thailand",
+          "rank": 46,
+          "points": 19.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "NEP",
+          "country": "Nepal",
+          "rank": 47,
+          "points": 18.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "MAC",
+          "country": "Macao, China",
+          "rank": 48,
+          "points": 16.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "SRI",
+          "country": "Sri Lanka",
+          "rank": 49,
+          "points": 8.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "TUR",
+          "country": "Türkiye",
+          "rank": 50,
+          "points": 8.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "TUN",
+          "country": "Tunisia",
+          "rank": 51,
+          "points": 8.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "BUL",
+          "country": "Bulgaria",
+          "rank": 52,
+          "points": 8.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "GRE",
+          "country": "Greece",
+          "rank": 53,
+          "points": 8.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "CZE",
+          "country": "Czechia",
+          "rank": 54,
+          "points": 0.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "IRL",
+          "country": "Ireland",
+          "rank": 55,
+          "points": 0.0,
+          "zone": "Europe"
+        }
+      ]
+    },
+    {
+      "id": "em",
+      "label": "남자 에페",
+      "source": "https://fie.org/api/fie/fencers/ranking?season=2027&weapon=E&gender=M&category=S&type=E&page=1&pageSize=100",
+      "teams": [
+        {
+          "code": "KAZ",
+          "country": "Kazakhstan",
+          "rank": 1,
+          "points": 354.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "FRA",
+          "country": "France",
+          "rank": 2,
+          "points": 310.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "SUI",
+          "country": "Switzerland",
+          "rank": 3,
+          "points": 284.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "ITA",
+          "country": "Italy",
+          "rank": 4,
+          "points": 274.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "UKR",
+          "country": "Ukraine",
+          "rank": 5,
+          "points": 272.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "EGY",
+          "country": "Egypt",
+          "rank": 6,
+          "points": 248.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "HUN",
+          "country": "Hungary",
+          "rank": 7,
+          "points": 221.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "KOR",
+          "country": "Republic of Korea",
+          "rank": 8,
+          "points": 205.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "RUS",
+          "country": "Russian Federation",
+          "rank": 9,
+          "points": 199.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "USA",
+          "country": "United States of America",
+          "rank": 10,
+          "points": 181.0,
+          "zone": "America"
+        },
+        {
+          "code": "JPN",
+          "country": "Japan",
+          "rank": 11,
+          "points": 176.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "ISR",
+          "country": "Israel",
+          "rank": 12,
+          "points": 171.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "HKG",
+          "country": "Hong Kong, China",
+          "rank": 13,
+          "points": 165.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "CHN",
+          "country": "People's Republic of China",
+          "rank": 14,
+          "points": 161.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "NED",
+          "country": "Netherlands",
+          "rank": 15,
+          "points": 155.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "DEN",
+          "country": "Denmark",
+          "rank": 16,
+          "points": 140.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "UZB",
+          "country": "Uzbekistan",
+          "rank": 17,
+          "points": 126.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "POL",
+          "country": "Poland",
+          "rank": 18,
+          "points": 123.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "VEN",
+          "country": "Venezuela",
+          "rank": 19,
+          "points": 120.0,
+          "zone": "America"
+        },
+        {
+          "code": "GER",
+          "country": "Germany",
+          "rank": 20,
+          "points": 107.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "BRA",
+          "country": "Brazil",
+          "rank": 21,
+          "points": 102.0,
+          "zone": "America"
+        },
+        {
+          "code": "ESP",
+          "country": "Spain",
+          "rank": 22,
+          "points": 100.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "SWE",
+          "country": "Sweden",
+          "rank": 23,
+          "points": 95.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "CZE",
+          "country": "Czechia",
+          "rank": 24,
+          "points": 94.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "TPE",
+          "country": "Chinese Taipei",
+          "rank": 25,
+          "points": 86.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "GBR",
+          "country": "Great Britain",
+          "rank": 26,
+          "points": 72.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "FIN",
+          "country": "Finland",
+          "rank": 27,
+          "points": 70.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "COL",
+          "country": "Colombia",
+          "rank": 28,
+          "points": 68.0,
+          "zone": "America"
+        },
+        {
+          "code": "CAN",
+          "country": "Canada",
+          "rank": 29,
+          "points": 64.0,
+          "zone": "America"
+        },
+        {
+          "code": "AUT",
+          "country": "Austria",
+          "rank": 30,
+          "points": 58.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "ALG",
+          "country": "Algeria",
+          "rank": 31,
+          "points": 56.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "POR",
+          "country": "Portugal",
+          "rank": 32,
+          "points": 56.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "EST",
+          "country": "Estonia",
+          "rank": 33,
+          "points": 54.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "CIV",
+          "country": "Côte d'Ivoire",
+          "rank": 34,
+          "points": 52.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "PAN",
+          "country": "Panama",
+          "rank": 35,
+          "points": 46.0,
+          "zone": "America"
+        },
+        {
+          "code": "KGZ",
+          "country": "Kyrgyzstan",
+          "rank": 36,
+          "points": 41.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "MAR",
+          "country": "Morocco",
+          "rank": 37,
+          "points": 40.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "PHI",
+          "country": "Philippines",
+          "rank": 38,
+          "points": 39.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "CHI",
+          "country": "Chile",
+          "rank": 39,
+          "points": 38.0,
+          "zone": "America"
+        },
+        {
+          "code": "SGP",
+          "country": "Singapore",
+          "rank": 40,
+          "points": 38.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "LBA",
+          "country": "Libya",
+          "rank": 41,
+          "points": 36.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "ARG",
+          "country": "Argentina",
+          "rank": 42,
+          "points": 36.0,
+          "zone": "America"
+        },
+        {
+          "code": "KSA",
+          "country": "Saudi Arabia",
+          "rank": 43,
+          "points": 34.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "RSA",
+          "country": "South Africa",
+          "rank": 44,
+          "points": 30.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "IND",
+          "country": "India",
+          "rank": 45,
+          "points": 29.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "NGR",
+          "country": "Nigeria",
+          "rank": 46,
+          "points": 28.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "AUS",
+          "country": "Australia",
+          "rank": 47,
+          "points": 28.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "BEN",
+          "country": "Benin",
+          "rank": 48,
+          "points": 26.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "MEX",
+          "country": "Mexico",
+          "rank": 49,
+          "points": 25.0,
+          "zone": "America"
+        },
+        {
+          "code": "SEN",
+          "country": "Senegal",
+          "rank": 50,
+          "points": 25.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "CUB",
+          "country": "Cuba",
+          "rank": 51,
+          "points": 24.0,
+          "zone": "America"
+        },
+        {
+          "code": "VIE",
+          "country": "Viet Nam",
+          "rank": 51,
+          "points": 24.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "ESA",
+          "country": "El Salvador",
+          "rank": 53,
+          "points": 23.0,
+          "zone": "America"
+        },
+        {
+          "code": "CRC",
+          "country": "Costa Rica",
+          "rank": 54,
+          "points": 22.0,
+          "zone": "America"
+        },
+        {
+          "code": "GUA",
+          "country": "Guatemala",
+          "rank": 55,
+          "points": 21.0,
+          "zone": "America"
+        },
+        {
+          "code": "PER",
+          "country": "Peru",
+          "rank": 56,
+          "points": 20.0,
+          "zone": "America"
+        },
+        {
+          "code": "IRI",
+          "country": "Islamic Republic of Iran",
+          "rank": 57,
+          "points": 19.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "TKM",
+          "country": "Turkmenistan",
+          "rank": 58,
+          "points": 18.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "QAT",
+          "country": "Qatar",
+          "rank": 59,
+          "points": 16.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "CRO",
+          "country": "Croatia",
+          "rank": 60,
+          "points": 16.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "TUR",
+          "country": "Türkiye",
+          "rank": 61,
+          "points": 16.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "NZL",
+          "country": "New Zealand",
+          "rank": 62,
+          "points": 8.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "NEP",
+          "country": "Nepal",
+          "rank": 63,
+          "points": 8.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "LUX",
+          "country": "Luxembourg",
+          "rank": 64,
+          "points": 8.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "NOR",
+          "country": "Norway",
+          "rank": 65,
+          "points": 8.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "GRE",
+          "country": "Greece",
+          "rank": 66,
+          "points": 8.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "BEL",
+          "country": "Belgium",
+          "rank": 67,
+          "points": 0.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "SVK",
+          "country": "Slovakia",
+          "rank": 68,
+          "points": 0.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "BUL",
+          "country": "Bulgaria",
+          "rank": 69,
+          "points": 0.0,
+          "zone": "Europe"
+        }
+      ]
+    },
+    {
+      "id": "sm",
+      "label": "남자 사브르",
+      "source": "https://fie.org/api/fie/fencers/ranking?season=2027&weapon=S&gender=M&category=S&type=E&page=1&pageSize=100",
+      "teams": [
+        {
+          "code": "FRA",
+          "country": "France",
+          "rank": 1,
+          "points": 400.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "KOR",
+          "country": "Republic of Korea",
+          "rank": 2,
+          "points": 376.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "ROU",
+          "country": "Romania",
+          "rank": 3,
+          "points": 304.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "HUN",
+          "country": "Hungary",
+          "rank": 4,
+          "points": 296.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "USA",
+          "country": "United States of America",
+          "rank": 5,
+          "points": 258.0,
+          "zone": "America"
+        },
+        {
+          "code": "RUS",
+          "country": "Russian Federation",
+          "rank": 6,
+          "points": 252.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "JPN",
+          "country": "Japan",
+          "rank": 7,
+          "points": 234.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "EGY",
+          "country": "Egypt",
+          "rank": 8,
+          "points": 228.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "ITA",
+          "country": "Italy",
+          "rank": 9,
+          "points": 192.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "CHN",
+          "country": "People's Republic of China",
+          "rank": 10,
+          "points": 180.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "ESP",
+          "country": "Spain",
+          "rank": 11,
+          "points": 170.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "GER",
+          "country": "Germany",
+          "rank": 12,
+          "points": 162.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "POL",
+          "country": "Poland",
+          "rank": 13,
+          "points": 148.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "TUR",
+          "country": "Türkiye",
+          "rank": 14,
+          "points": 143.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "KAZ",
+          "country": "Kazakhstan",
+          "rank": 15,
+          "points": 131.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "UZB",
+          "country": "Uzbekistan",
+          "rank": 16,
+          "points": 131.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "CAN",
+          "country": "Canada",
+          "rank": 17,
+          "points": 121.0,
+          "zone": "America"
+        },
+        {
+          "code": "VEN",
+          "country": "Venezuela",
+          "rank": 18,
+          "points": 108.0,
+          "zone": "America"
+        },
+        {
+          "code": "HKG",
+          "country": "Hong Kong, China",
+          "rank": 19,
+          "points": 103.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "GEO",
+          "country": "Georgia",
+          "rank": 20,
+          "points": 84.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "IND",
+          "country": "India",
+          "rank": 21,
+          "points": 82.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "ALG",
+          "country": "Algeria",
+          "rank": 22,
+          "points": 76.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "CHI",
+          "country": "Chile",
+          "rank": 23,
+          "points": 70.0,
+          "zone": "America"
+        },
+        {
+          "code": "KSA",
+          "country": "Saudi Arabia",
+          "rank": 24,
+          "points": 68.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "UKR",
+          "country": "Ukraine",
+          "rank": 25,
+          "points": 56.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "GBR",
+          "country": "Great Britain",
+          "rank": 26,
+          "points": 53.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "MEX",
+          "country": "Mexico",
+          "rank": 27,
+          "points": 52.0,
+          "zone": "America"
+        },
+        {
+          "code": "BUL",
+          "country": "Bulgaria",
+          "rank": 28,
+          "points": 52.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "IRI",
+          "country": "Islamic Republic of Iran",
+          "rank": 29,
+          "points": 49.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "BRA",
+          "country": "Brazil",
+          "rank": 30,
+          "points": 48.0,
+          "zone": "America"
+        },
+        {
+          "code": "SGP",
+          "country": "Singapore",
+          "rank": 31,
+          "points": 47.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "AUS",
+          "country": "Australia",
+          "rank": 32,
+          "points": 42.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "SEN",
+          "country": "Senegal",
+          "rank": 33,
+          "points": 40.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "AZE",
+          "country": "Azerbaijan",
+          "rank": 34,
+          "points": 39.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "PHI",
+          "country": "Philippines",
+          "rank": 35,
+          "points": 37.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "NIG",
+          "country": "Niger",
+          "rank": 36,
+          "points": 36.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "CIV",
+          "country": "Côte d'Ivoire",
+          "rank": 37,
+          "points": 32.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "ARG",
+          "country": "Argentina",
+          "rank": 38,
+          "points": 28.0,
+          "zone": "America"
+        },
+        {
+          "code": "DOM",
+          "country": "Dominican Republic",
+          "rank": 39,
+          "points": 26.0,
+          "zone": "America"
+        },
+        {
+          "code": "COL",
+          "country": "Colombia",
+          "rank": 40,
+          "points": 25.0,
+          "zone": "America"
+        },
+        {
+          "code": "BOL",
+          "country": "Bolivia",
+          "rank": 41,
+          "points": 24.0,
+          "zone": "America"
+        },
+        {
+          "code": "PUR",
+          "country": "Puerto Rico",
+          "rank": 42,
+          "points": 23.0,
+          "zone": "America"
+        },
+        {
+          "code": "ESA",
+          "country": "El Salvador",
+          "rank": 43,
+          "points": 22.0,
+          "zone": "America"
+        },
+        {
+          "code": "UAE",
+          "country": "United Arab Emirates",
+          "rank": 43,
+          "points": 22.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "PER",
+          "country": "Peru",
+          "rank": 45,
+          "points": 21.0,
+          "zone": "America"
+        },
+        {
+          "code": "NZL",
+          "country": "New Zealand",
+          "rank": 46,
+          "points": 20.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "GUA",
+          "country": "Guatemala",
+          "rank": 47,
+          "points": 20.0,
+          "zone": "America"
+        },
+        {
+          "code": "SWE",
+          "country": "Sweden",
+          "rank": 48,
+          "points": 19.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "TUN",
+          "country": "Tunisia",
+          "rank": 49,
+          "points": 18.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "JOR",
+          "country": "Jordan",
+          "rank": 50,
+          "points": 16.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "IRQ",
+          "country": "Iraq",
+          "rank": 51,
+          "points": 8.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "THA",
+          "country": "Thailand",
+          "rank": 52,
+          "points": 0.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "KUW",
+          "country": "Kuwait",
+          "rank": 53,
+          "points": 0.0,
+          "zone": "Asia-Oceania"
+        }
+      ]
+    },
+    {
+      "id": "ff",
+      "label": "여자 플뢰레",
+      "source": "https://fie.org/api/fie/fencers/ranking?season=2027&weapon=F&gender=F&category=S&type=E&page=1&pageSize=100",
+      "teams": [
+        {
+          "code": "ITA",
+          "country": "Italy",
+          "rank": 1,
+          "points": 448.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "FRA",
+          "country": "France",
+          "rank": 2,
+          "points": 320.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "USA",
+          "country": "United States of America",
+          "rank": 3,
+          "points": 312.0,
+          "zone": "America"
+        },
+        {
+          "code": "JPN",
+          "country": "Japan",
+          "rank": 4,
+          "points": 286.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "CAN",
+          "country": "Canada",
+          "rank": 5,
+          "points": 248.0,
+          "zone": "America"
+        },
+        {
+          "code": "ESP",
+          "country": "Spain",
+          "rank": 6,
+          "points": 228.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "HUN",
+          "country": "Hungary",
+          "rank": 7,
+          "points": 224.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "CHN",
+          "country": "People's Republic of China",
+          "rank": 8,
+          "points": 212.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "UKR",
+          "country": "Ukraine",
+          "rank": 9,
+          "points": 198.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "KOR",
+          "country": "Republic of Korea",
+          "rank": 10,
+          "points": 193.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "RUS",
+          "country": "Russian Federation",
+          "rank": 11,
+          "points": 185.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "GER",
+          "country": "Germany",
+          "rank": 12,
+          "points": 172.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "POL",
+          "country": "Poland",
+          "rank": 13,
+          "points": 170.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "HKG",
+          "country": "Hong Kong, China",
+          "rank": 14,
+          "points": 159.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "SGP",
+          "country": "Singapore",
+          "rank": 15,
+          "points": 151.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "EGY",
+          "country": "Egypt",
+          "rank": 16,
+          "points": 88.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "CHI",
+          "country": "Chile",
+          "rank": 17,
+          "points": 78.0,
+          "zone": "America"
+        },
+        {
+          "code": "ISR",
+          "country": "Israel",
+          "rank": 18,
+          "points": 68.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "TPE",
+          "country": "Chinese Taipei",
+          "rank": 19,
+          "points": 67.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "BRA",
+          "country": "Brazil",
+          "rank": 20,
+          "points": 66.0,
+          "zone": "America"
+        },
+        {
+          "code": "ROU",
+          "country": "Romania",
+          "rank": 21,
+          "points": 65.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "VEN",
+          "country": "Venezuela",
+          "rank": 22,
+          "points": 62.0,
+          "zone": "America"
+        },
+        {
+          "code": "AUS",
+          "country": "Australia",
+          "rank": 23,
+          "points": 57.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "GBR",
+          "country": "Great Britain",
+          "rank": 24,
+          "points": 54.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "ALG",
+          "country": "Algeria",
+          "rank": 25,
+          "points": 52.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "PHI",
+          "country": "Philippines",
+          "rank": 26,
+          "points": 50.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "KAZ",
+          "country": "Kazakhstan",
+          "rank": 27,
+          "points": 44.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "SEN",
+          "country": "Senegal",
+          "rank": 28,
+          "points": 40.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "IND",
+          "country": "India",
+          "rank": 29,
+          "points": 40.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "CIV",
+          "country": "Côte d'Ivoire",
+          "rank": 30,
+          "points": 36.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "MEX",
+          "country": "Mexico",
+          "rank": 31,
+          "points": 32.0,
+          "zone": "America"
+        },
+        {
+          "code": "COL",
+          "country": "Colombia",
+          "rank": 32,
+          "points": 28.0,
+          "zone": "America"
+        },
+        {
+          "code": "ARG",
+          "country": "Argentina",
+          "rank": 33,
+          "points": 26.0,
+          "zone": "America"
+        },
+        {
+          "code": "PER",
+          "country": "Peru",
+          "rank": 34,
+          "points": 25.0,
+          "zone": "America"
+        },
+        {
+          "code": "GUA",
+          "country": "Guatemala",
+          "rank": 35,
+          "points": 24.0,
+          "zone": "America"
+        },
+        {
+          "code": "ESA",
+          "country": "El Salvador",
+          "rank": 36,
+          "points": 23.0,
+          "zone": "America"
+        },
+        {
+          "code": "MDA",
+          "country": "Republic of Moldova",
+          "rank": 36,
+          "points": 23.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "CAM",
+          "country": "Cambodia",
+          "rank": 36,
+          "points": 23.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "NEP",
+          "country": "Nepal",
+          "rank": 39,
+          "points": 22.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "AUT",
+          "country": "Austria",
+          "rank": 40,
+          "points": 16.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "MAC",
+          "country": "Macao, China",
+          "rank": 41,
+          "points": 16.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "TUN",
+          "country": "Tunisia",
+          "rank": 42,
+          "points": 16.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "TUR",
+          "country": "Türkiye",
+          "rank": 43,
+          "points": 8.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "BUL",
+          "country": "Bulgaria",
+          "rank": 44,
+          "points": 8.0,
+          "zone": "Europe"
+        }
+      ]
+    },
+    {
+      "id": "ef",
+      "label": "여자 에페",
+      "source": "https://fie.org/api/fie/fencers/ranking?season=2027&weapon=E&gender=F&category=S&type=E&page=1&pageSize=100",
+      "teams": [
+        {
+          "code": "KOR",
+          "country": "Republic of Korea",
+          "rank": 1,
+          "points": 350.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "ITA",
+          "country": "Italy",
+          "rank": 2,
+          "points": 328.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "HUN",
+          "country": "Hungary",
+          "rank": 3,
+          "points": 292.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "FRA",
+          "country": "France",
+          "rank": 4,
+          "points": 282.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "USA",
+          "country": "United States of America",
+          "rank": 5,
+          "points": 264.0,
+          "zone": "America"
+        },
+        {
+          "code": "RUS",
+          "country": "Russian Federation",
+          "rank": 6,
+          "points": 260.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "CHN",
+          "country": "People's Republic of China",
+          "rank": 7,
+          "points": 254.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "EST",
+          "country": "Estonia",
+          "rank": 8,
+          "points": 227.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "UKR",
+          "country": "Ukraine",
+          "rank": 9,
+          "points": 222.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "POL",
+          "country": "Poland",
+          "rank": 10,
+          "points": 173.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "HKG",
+          "country": "Hong Kong, China",
+          "rank": 11,
+          "points": 172.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "CAN",
+          "country": "Canada",
+          "rank": 12,
+          "points": 171.0,
+          "zone": "America"
+        },
+        {
+          "code": "SUI",
+          "country": "Switzerland",
+          "rank": 13,
+          "points": 158.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "GER",
+          "country": "Germany",
+          "rank": 14,
+          "points": 147.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "KAZ",
+          "country": "Kazakhstan",
+          "rank": 15,
+          "points": 122.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "SWE",
+          "country": "Sweden",
+          "rank": 16,
+          "points": 120.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "JPN",
+          "country": "Japan",
+          "rank": 17,
+          "points": 116.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "ISR",
+          "country": "Israel",
+          "rank": 18,
+          "points": 114.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "ROU",
+          "country": "Romania",
+          "rank": 19,
+          "points": 100.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "ESP",
+          "country": "Spain",
+          "rank": 20,
+          "points": 96.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "SGP",
+          "country": "Singapore",
+          "rank": 21,
+          "points": 94.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "EGY",
+          "country": "Egypt",
+          "rank": 22,
+          "points": 88.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "VEN",
+          "country": "Venezuela",
+          "rank": 23,
+          "points": 80.0,
+          "zone": "America"
+        },
+        {
+          "code": "AUS",
+          "country": "Australia",
+          "rank": 24,
+          "points": 72.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "UZB",
+          "country": "Uzbekistan",
+          "rank": 25,
+          "points": 68.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "COL",
+          "country": "Colombia",
+          "rank": 26,
+          "points": 66.0,
+          "zone": "America"
+        },
+        {
+          "code": "IND",
+          "country": "India",
+          "rank": 27,
+          "points": 57.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "RSA",
+          "country": "South Africa",
+          "rank": 28,
+          "points": 52.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "CHI",
+          "country": "Chile",
+          "rank": 29,
+          "points": 52.0,
+          "zone": "America"
+        },
+        {
+          "code": "ALG",
+          "country": "Algeria",
+          "rank": 30,
+          "points": 52.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "FIN",
+          "country": "Finland",
+          "rank": 31,
+          "points": 52.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "GBR",
+          "country": "Great Britain",
+          "rank": 32,
+          "points": 50.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "MAR",
+          "country": "Morocco",
+          "rank": 33,
+          "points": 48.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "BRA",
+          "country": "Brazil",
+          "rank": 34,
+          "points": 48.0,
+          "zone": "America"
+        },
+        {
+          "code": "TPE",
+          "country": "Chinese Taipei",
+          "rank": 35,
+          "points": 46.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "MEX",
+          "country": "Mexico",
+          "rank": 36,
+          "points": 44.0,
+          "zone": "America"
+        },
+        {
+          "code": "SEN",
+          "country": "Senegal",
+          "rank": 37,
+          "points": 32.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "ARG",
+          "country": "Argentina",
+          "rank": 38,
+          "points": 30.0,
+          "zone": "America"
+        },
+        {
+          "code": "CIV",
+          "country": "Côte d'Ivoire",
+          "rank": 38,
+          "points": 30.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "MRI",
+          "country": "Mauritius",
+          "rank": 40,
+          "points": 28.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "TUR",
+          "country": "Türkiye",
+          "rank": 41,
+          "points": 27.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "CRC",
+          "country": "Costa Rica",
+          "rank": 42,
+          "points": 25.0,
+          "zone": "America"
+        },
+        {
+          "code": "PAR",
+          "country": "Paraguay",
+          "rank": 43,
+          "points": 24.0,
+          "zone": "America"
+        },
+        {
+          "code": "AUT",
+          "country": "Austria",
+          "rank": 44,
+          "points": 24.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "PHI",
+          "country": "Philippines",
+          "rank": 45,
+          "points": 23.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "PER",
+          "country": "Peru",
+          "rank": 46,
+          "points": 23.0,
+          "zone": "America"
+        },
+        {
+          "code": "THA",
+          "country": "Thailand",
+          "rank": 47,
+          "points": 22.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "ESA",
+          "country": "El Salvador",
+          "rank": 48,
+          "points": 22.0,
+          "zone": "America"
+        },
+        {
+          "code": "UAE",
+          "country": "United Arab Emirates",
+          "rank": 49,
+          "points": 21.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "PAN",
+          "country": "Panama",
+          "rank": 50,
+          "points": 21.0,
+          "zone": "America"
+        },
+        {
+          "code": "VIE",
+          "country": "Viet Nam",
+          "rank": 51,
+          "points": 20.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "JAM",
+          "country": "Jamaica",
+          "rank": 51,
+          "points": 20.0,
+          "zone": "America"
+        },
+        {
+          "code": "DOM",
+          "country": "Dominican Republic",
+          "rank": 53,
+          "points": 19.0,
+          "zone": "America"
+        },
+        {
+          "code": "NEP",
+          "country": "Nepal",
+          "rank": 53,
+          "points": 19.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "URU",
+          "country": "Uruguay",
+          "rank": 55,
+          "points": 18.0,
+          "zone": "America"
+        },
+        {
+          "code": "NED",
+          "country": "Netherlands",
+          "rank": 56,
+          "points": 16.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "NOR",
+          "country": "Norway",
+          "rank": 57,
+          "points": 8.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "GUA",
+          "country": "Guatemala",
+          "rank": 58,
+          "points": 8.0,
+          "zone": "America"
+        },
+        {
+          "code": "GRE",
+          "country": "Greece",
+          "rank": 59,
+          "points": 8.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "NZL",
+          "country": "New Zealand",
+          "rank": 60,
+          "points": 0.0,
+          "zone": "Asia-Oceania"
+        }
+      ]
+    },
+    {
+      "id": "sf",
+      "label": "여자 사브르",
+      "source": "https://fie.org/api/fie/fencers/ranking?season=2027&weapon=S&gender=F&category=S&type=E&page=1&pageSize=100",
+      "teams": [
+        {
+          "code": "FRA",
+          "country": "France",
+          "rank": 1,
+          "points": 340.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "HUN",
+          "country": "Hungary",
+          "rank": 2,
+          "points": 329.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "RUS",
+          "country": "Russian Federation",
+          "rank": 3,
+          "points": 304.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "KOR",
+          "country": "Republic of Korea",
+          "rank": 4,
+          "points": 292.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "USA",
+          "country": "United States of America",
+          "rank": 5,
+          "points": 273.0,
+          "zone": "America"
+        },
+        {
+          "code": "CHN",
+          "country": "People's Republic of China",
+          "rank": 6,
+          "points": 270.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "JPN",
+          "country": "Japan",
+          "rank": 7,
+          "points": 256.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "ITA",
+          "country": "Italy",
+          "rank": 8,
+          "points": 211.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "POL",
+          "country": "Poland",
+          "rank": 9,
+          "points": 197.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "ESP",
+          "country": "Spain",
+          "rank": 10,
+          "points": 189.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "AZE",
+          "country": "Azerbaijan",
+          "rank": 11,
+          "points": 181.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "UKR",
+          "country": "Ukraine",
+          "rank": 12,
+          "points": 181.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "UZB",
+          "country": "Uzbekistan",
+          "rank": 13,
+          "points": 170.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "HKG",
+          "country": "Hong Kong, China",
+          "rank": 14,
+          "points": 169.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "BUL",
+          "country": "Bulgaria",
+          "rank": 15,
+          "points": 164.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "GER",
+          "country": "Germany",
+          "rank": 16,
+          "points": 159.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "KAZ",
+          "country": "Kazakhstan",
+          "rank": 17,
+          "points": 99.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "EGY",
+          "country": "Egypt",
+          "rank": 18,
+          "points": 96.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "ALG",
+          "country": "Algeria",
+          "rank": 19,
+          "points": 84.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "CAN",
+          "country": "Canada",
+          "rank": 20,
+          "points": 76.0,
+          "zone": "America"
+        },
+        {
+          "code": "ARG",
+          "country": "Argentina",
+          "rank": 21,
+          "points": 71.0,
+          "zone": "America"
+        },
+        {
+          "code": "VEN",
+          "country": "Venezuela",
+          "rank": 22,
+          "points": 68.0,
+          "zone": "America"
+        },
+        {
+          "code": "ROU",
+          "country": "Romania",
+          "rank": 23,
+          "points": 62.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "IND",
+          "country": "India",
+          "rank": 24,
+          "points": 49.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "THA",
+          "country": "Thailand",
+          "rank": 25,
+          "points": 46.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "GBR",
+          "country": "Great Britain",
+          "rank": 26,
+          "points": 45.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "CHI",
+          "country": "Chile",
+          "rank": 27,
+          "points": 42.0,
+          "zone": "America"
+        },
+        {
+          "code": "SGP",
+          "country": "Singapore",
+          "rank": 28,
+          "points": 42.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "DOM",
+          "country": "Dominican Republic",
+          "rank": 29,
+          "points": 41.0,
+          "zone": "America"
+        },
+        {
+          "code": "MEX",
+          "country": "Mexico",
+          "rank": 30,
+          "points": 40.0,
+          "zone": "America"
+        },
+        {
+          "code": "SEN",
+          "country": "Senegal",
+          "rank": 30,
+          "points": 40.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "PHI",
+          "country": "Philippines",
+          "rank": 32,
+          "points": 40.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "COL",
+          "country": "Colombia",
+          "rank": 33,
+          "points": 38.0,
+          "zone": "America"
+        },
+        {
+          "code": "CIV",
+          "country": "Côte d'Ivoire",
+          "rank": 34,
+          "points": 36.0,
+          "zone": "Africa"
+        },
+        {
+          "code": "BRA",
+          "country": "Brazil",
+          "rank": 35,
+          "points": 32.0,
+          "zone": "America"
+        },
+        {
+          "code": "PUR",
+          "country": "Puerto Rico",
+          "rank": 36,
+          "points": 32.0,
+          "zone": "America"
+        },
+        {
+          "code": "GRE",
+          "country": "Greece",
+          "rank": 37,
+          "points": 31.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "ESA",
+          "country": "El Salvador",
+          "rank": 38,
+          "points": 31.0,
+          "zone": "America"
+        },
+        {
+          "code": "PER",
+          "country": "Peru",
+          "rank": 39,
+          "points": 28.0,
+          "zone": "America"
+        },
+        {
+          "code": "GUA",
+          "country": "Guatemala",
+          "rank": 40,
+          "points": 22.0,
+          "zone": "America"
+        },
+        {
+          "code": "BOL",
+          "country": "Bolivia",
+          "rank": 41,
+          "points": 21.0,
+          "zone": "America"
+        },
+        {
+          "code": "TUR",
+          "country": "Türkiye",
+          "rank": 42,
+          "points": 16.0,
+          "zone": "Europe"
+        },
+        {
+          "code": "AUS",
+          "country": "Australia",
+          "rank": 43,
+          "points": 16.0,
+          "zone": "Asia-Oceania"
+        },
+        {
+          "code": "TUN",
+          "country": "Tunisia",
+          "rank": 44,
+          "points": 8.0,
+          "zone": "Africa"
+        }
+      ]
+    }
+  ]
+}
