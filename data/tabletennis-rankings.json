@@ -1,13 +1,13 @@
 {
   "sport": "tabletennis",
-  "fetchedAt": "2026-11-23T00:50:24.644Z",
+  "fetchedAt": "2026-11-24T04:46:32.584Z",
   "events": {
     "ms": {
       "label": "남자 단식",
-      "date": "11/16/2026 00:00:00",
+      "date": "11/23/2026 00:00:00",
       "year": "2026",
-      "week": "47",
-      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingIndividuals?TopN=20&CategoryCode=SEN&SubEventCode=MS&RankingYear=2026&RankingMonth=11&RankingWeek=47",
+      "week": "48",
+      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingIndividuals?TopN=20&CategoryCode=SEN&SubEventCode=MS&RankingYear=2026&RankingMonth=11&RankingWeek=48",
       "rows": [
         {
           "rank": 1,
@@ -31,7 +31,7 @@
             "Felix LEBRUN"
           ],
           "noc": "FRA",
-          "points": 6859
+          "points": 6559
         },
         {
           "rank": 4,
@@ -76,21 +76,29 @@
         {
           "rank": 9,
           "names": [
-            "Alexis LEBRUN"
-          ],
-          "noc": "FRA",
-          "points": 3750
-        },
-        {
-          "rank": 10,
-          "names": [
             "LIN Shidong"
           ],
           "noc": "CHN",
           "points": 3686
         },
         {
+          "rank": 10,
+          "names": [
+            "Alexis LEBRUN"
+          ],
+          "noc": "FRA",
+          "points": 3630
+        },
+        {
           "rank": 11,
+          "names": [
+            "Shunsuke TOGAMI"
+          ],
+          "noc": "JPN",
+          "points": 3273
+        },
+        {
+          "rank": 12,
           "names": [
             "Patrick FRANZISKA"
           ],
@@ -98,7 +106,7 @@
           "points": 3260
         },
         {
-          "rank": 12,
+          "rank": 13,
           "names": [
             "ZHOU Qihao"
           ],
@@ -106,7 +114,7 @@
           "points": 3030
         },
         {
-          "rank": 13,
+          "rank": 14,
           "names": [
             "WEN Ruibo"
           ],
@@ -114,20 +122,12 @@
           "points": 2900
         },
         {
-          "rank": 14,
+          "rank": 15,
           "names": [
             "Darko JORGIC"
           ],
           "noc": "SLO",
           "points": 2895
-        },
-        {
-          "rank": 15,
-          "names": [
-            "Shunsuke TOGAMI"
-          ],
-          "noc": "JPN",
-          "points": 2848
         },
         {
           "rank": 16,
@@ -140,10 +140,10 @@
         {
           "rank": 17,
           "names": [
-            "Vladimir SIDORENKO"
+            "OH Junsung"
           ],
-          "noc": "RUS",
-          "points": 2290
+          "noc": "KOR",
+          "points": 2362
         },
         {
           "rank": 18,
@@ -156,10 +156,10 @@
         {
           "rank": 19,
           "names": [
-            "OH Junsung"
+            "Vladimir SIDORENKO"
           ],
-          "noc": "KOR",
-          "points": 2197
+          "noc": "RUS",
+          "points": 2235
         },
         {
           "rank": 20,
@@ -173,10 +173,10 @@
     },
     "ws": {
       "label": "여자 단식",
-      "date": "11/16/2026 00:00:00",
+      "date": "11/23/2026 00:00:00",
       "year": "2026",
-      "week": "47",
-      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingIndividuals?TopN=20&CategoryCode=SEN&SubEventCode=WS&RankingYear=2026&RankingMonth=11&RankingWeek=47",
+      "week": "48",
+      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingIndividuals?TopN=20&CategoryCode=SEN&SubEventCode=WS&RankingYear=2026&RankingMonth=11&RankingWeek=48",
       "rows": [
         {
           "rank": 1,
@@ -277,18 +277,18 @@
         {
           "rank": 13,
           "names": [
-            "SHIN Yubin"
+            "Honoka HASHIMOTO"
           ],
-          "noc": "KOR",
-          "points": 3270
+          "noc": "JPN",
+          "points": 3374
         },
         {
           "rank": 14,
           "names": [
-            "Honoka HASHIMOTO"
+            "SHIN Yubin"
           ],
-          "noc": "JPN",
-          "points": 3054
+          "noc": "KOR",
+          "points": 3270
         },
         {
           "rank": 15,
@@ -309,26 +309,26 @@
         {
           "rank": 17,
           "names": [
-            "JOO Cheonhui"
+            "Miyu NAGASAKI"
           ],
-          "noc": "KOR",
-          "points": 2285
+          "noc": "JPN",
+          "points": 2130
         },
         {
           "rank": 18,
           "names": [
-            "Miyu NAGASAKI"
+            "JOO Cheonhui"
           ],
-          "noc": "JPN",
-          "points": 2070
+          "noc": "KOR",
+          "points": 2040
         },
         {
           "rank": 19,
           "names": [
-            "Miyuu KIHARA"
+            "Bernadette SZOCS"
           ],
-          "noc": "JPN",
-          "points": 1955
+          "noc": "ROU",
+          "points": 1900
         },
         {
           "rank": 20,
@@ -342,10 +342,10 @@
     },
     "md": {
       "label": "남자 복식",
-      "date": "11/16/2026 00:00:00",
+      "date": "11/23/2026 00:00:00",
       "year": "2026",
-      "week": "47",
-      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingPairs?TopN=20&CategoryCode=SEN&SubEventCode=MD&RankingYear=2026&RankingMonth=11&RankingWeek=47",
+      "week": "48",
+      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingPairs?TopN=20&CategoryCode=SEN&SubEventCode=MD&RankingYear=2026&RankingMonth=11&RankingWeek=48",
       "rows": [
         {
           "rank": 1,
@@ -354,7 +354,7 @@
             "Felix LEBRUN"
           ],
           "noc": "FRA",
-          "points": 6208
+          "points": 5998
         },
         {
           "rank": 2,
@@ -381,7 +381,7 @@
             "Manush SHAH"
           ],
           "noc": "IND",
-          "points": 3820
+          "points": 4030
         },
         {
           "rank": 5,
@@ -431,20 +431,20 @@
         {
           "rank": 10,
           "names": [
-            "PANG Koen",
-            "QUEK Izaac"
-          ],
-          "noc": "SGP",
-          "points": 1965
-        },
-        {
-          "rank": 11,
-          "names": [
             "Kristian KARLSSON",
             "Anton KALLBERG"
           ],
           "noc": "SWE",
           "points": 1707
+        },
+        {
+          "rank": 11,
+          "names": [
+            "PANG Koen",
+            "QUEK Izaac"
+          ],
+          "noc": "SGP",
+          "points": 1549
         },
         {
           "rank": 12,
@@ -471,7 +471,7 @@
             "Youssef ABDELAZIZ"
           ],
           "noc": "EGY",
-          "points": 1095
+          "points": 1090
         },
         {
           "rank": 15,
@@ -521,20 +521,20 @@
         {
           "rank": 20,
           "names": [
-            "Jules ROLLAND",
-            "Leo DE NODREST"
+            "Lev KATSMAN",
+            "Maksim GREBNEV"
           ],
-          "noc": "FRA",
-          "points": 669
+          "noc": "RUS",
+          "points": 658
         }
       ]
     },
     "wd": {
       "label": "여자 복식",
-      "date": "11/16/2026 00:00:00",
+      "date": "11/23/2026 00:00:00",
       "year": "2026",
-      "week": "47",
-      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingPairs?TopN=20&CategoryCode=SEN&SubEventCode=WD&RankingYear=2026&RankingMonth=11&RankingWeek=47",
+      "week": "48",
+      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingPairs?TopN=20&CategoryCode=SEN&SubEventCode=WD&RankingYear=2026&RankingMonth=11&RankingWeek=48",
       "rows": [
         {
           "rank": 1,
@@ -602,6 +602,15 @@
         {
           "rank": 8,
           "names": [
+            "Elizabeta SAMARA",
+            "Bernadette SZOCS"
+          ],
+          "noc": "ROU",
+          "points": 1880
+        },
+        {
+          "rank": 9,
+          "names": [
             "LI Yu-Jhun",
             "CHIEN Tung-Chuan"
           ],
@@ -609,22 +618,13 @@
           "points": 1865
         },
         {
-          "rank": 9,
+          "rank": 10,
           "names": [
             "CHEN Yi",
             "KUAI Man"
           ],
           "noc": "CHN",
           "points": 1620
-        },
-        {
-          "rank": 10,
-          "names": [
-            "Elizabeta SAMARA",
-            "Bernadette SZOCS"
-          ],
-          "noc": "ROU",
-          "points": 1618
         },
         {
           "rank": 11,
@@ -720,10 +720,10 @@
     },
     "xd": {
       "label": "혼합복식",
-      "date": "11/16/2026 00:00:00",
+      "date": "11/23/2026 00:00:00",
       "year": "2026",
-      "week": "47",
-      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingPairs?TopN=20&CategoryCode=SEN&SubEventCode=XD&RankingYear=2026&RankingMonth=11&RankingWeek=47",
+      "week": "48",
+      "source": "https://wtt-mobile-app-services-api.azurewebsites.net/api/cms/GetRankingPairs?TopN=20&CategoryCode=SEN&SubEventCode=XD&RankingYear=2026&RankingMonth=11&RankingWeek=48",
       "rows": [
         {
           "rank": 1,
@@ -777,7 +777,7 @@
             "Manush SHAH"
           ],
           "noc": "IND",
-          "points": 3215
+          "points": 3075
         },
         {
           "rank": 7,
@@ -786,25 +786,25 @@
             "Maria XIAO"
           ],
           "noc": "ESP",
-          "points": 2850
+          "points": 2815
         },
         {
           "rank": 8,
-          "names": [
-            "CHENG I-Ching",
-            "LIN Yun-Ju"
-          ],
-          "noc": "TPE",
-          "points": 2838
-        },
-        {
-          "rank": 9,
           "names": [
             "Sora MATSUSHIMA",
             "Miwa HARIMOTO"
           ],
           "noc": "JPN",
           "points": 2515
+        },
+        {
+          "rank": 9,
+          "names": [
+            "CHENG I-Ching",
+            "LIN Yun-Ju"
+          ],
+          "noc": "TPE",
+          "points": 2418
         },
         {
           "rank": 10,
@@ -831,10 +831,19 @@
             "Eduard IONESCU"
           ],
           "noc": "ROU",
-          "points": 1575
+          "points": 1840
         },
         {
           "rank": 13,
+          "names": [
+            "Satsuki ODO",
+            "Shunsuke TOGAMI"
+          ],
+          "noc": "JPN",
+          "points": 1550
+        },
+        {
+          "rank": 14,
           "names": [
             "Alexis LEBRUN",
             "Satsuki ODO"
@@ -843,7 +852,7 @@
           "points": 1310
         },
         {
-          "rank": 14,
+          "rank": 15,
           "names": [
             "Gustavo GOMEZ",
             "Daniela ORTEGA"
@@ -852,7 +861,7 @@
           "points": 1200
         },
         {
-          "rank": 15,
+          "rank": 16,
           "names": [
             "Maria PANFILOVA",
             "Evgeny TIKHONOV"
@@ -861,7 +870,7 @@
           "points": 1070
         },
         {
-          "rank": 16,
+          "rank": 17,
           "names": [
             "KIM Nayeong",
             "CHAN Baldwin"
@@ -870,7 +879,7 @@
           "points": 1060
         },
         {
-          "rank": 17,
+          "rank": 18,
           "names": [
             "Jishan LIANG",
             "Sally MOYLAND"
@@ -879,7 +888,7 @@
           "points": 989
         },
         {
-          "rank": 18,
+          "rank": 19,
           "names": [
             "KUAI Man",
             "WEN Ruibo"
@@ -888,22 +897,13 @@
           "points": 970
         },
         {
-          "rank": 19,
+          "rank": 20,
           "names": [
             "Mo ZHANG",
             "Edward LY"
           ],
           "noc": "CAN",
           "points": 955
-        },
-        {
-          "rank": 20,
-          "names": [
-            "Satsuki ODO",
-            "Shunsuke TOGAMI"
-          ],
-          "noc": "JPN",
-          "points": 950
         }
       ]
     }
