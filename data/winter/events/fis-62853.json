@@ -16,7 +16,7 @@
   "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62853&seasoncode=2027",
   "raw": "4xBA"
  },
- "checked_at": "2026-11-26T14:46:48.187545+00:00",
+ "checked_at": "2026-11-26T14:57:24.575916+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-26T13:50:00Z",
@@ -30,7 +30,7 @@
   },
   {
    "start_utc": "2026-11-27T17:45:00Z",
-   "title": "Freeski Big Air",
+   "title": "Women's Freeski Big Air",
    "round": ""
   },
   {
@@ -42,37 +42,291 @@
  "results": {
   "19546": {
    "title": "Women's Freeski Big Air Qualification",
-   "columns": [],
+   "columns": [
+    "Result"
+   ],
    "rows": [
     {
-     "order": "1",
+     "rank": 1,
+     "bib": "1",
+     "code": "2532209",
+     "name": "GREMAUD Mathilde",
+     "year": "2000",
+     "noc": "SUI",
+     "cells": {
+      "Result": "175.25"
+     },
+     "status": ""
+    },
+    {
+     "rank": 2,
+     "bib": "4",
+     "code": "2534255",
+     "name": "LIU Mengting",
+     "year": "2004",
+     "noc": "CHN",
+     "cells": {
+      "Result": "164.50"
+     },
+     "status": ""
+    },
+    {
+     "rank": 3,
      "bib": "8",
      "code": "2532452",
      "name": "WOLF Lara",
      "year": "2000",
      "noc": "AUT",
+     "cells": {
+      "Result": "163.75"
+     },
+     "status": ""
+    },
+    {
+     "rank": 4,
+     "bib": "21",
+     "code": "2542578",
+     "name": "ZHANG Jiaying",
+     "year": "2007",
+     "noc": "CHN",
+     "cells": {
+      "Result": "160.75"
+     },
+     "status": ""
+    },
+    {
+     "rank": 5,
+     "bib": "18",
+     "code": "2537064",
+     "name": "ANDRASKA Anouk",
+     "year": "2004",
+     "noc": "SUI",
+     "cells": {
+      "Result": "152.50"
+     },
+     "status": ""
+    },
+    {
+     "rank": 6,
+     "bib": "11",
+     "code": "2535825",
+     "name": "HAN Linshan",
+     "year": "2006",
+     "noc": "CHN",
+     "cells": {
+      "Result": "150.75"
+     },
+     "status": ""
+    },
+    {
+     "rank": 7,
+     "bib": "6",
+     "code": "2531561",
+     "name": "TANNO Giulia",
+     "year": "1998",
+     "noc": "SUI",
+     "cells": {
+      "Result": "150.25"
+     },
+     "status": ""
+    },
+    {
+     "rank": 8,
+     "bib": "10",
+     "code": "2532939",
+     "name": "GASKELL Elena",
+     "year": "2001",
+     "noc": "CAN",
+     "cells": {
+      "Result": "147.25"
+     },
+     "status": ""
+    },
+    {
+     "rank": 9,
+     "bib": "3",
+     "code": "2533924",
+     "name": "OLDHAM Megan",
+     "year": "2001",
+     "noc": "CAN",
+     "cells": {
+      "Result": "142.00"
+     },
+     "status": ""
+    },
+    {
+     "rank": 10,
+     "bib": "15",
+     "code": "2539335",
+     "name": "GASSLITTER Maria",
+     "year": "2006",
+     "noc": "ITA",
+     "cells": {
+      "Result": "135.50"
+     },
+     "status": ""
+    },
+    {
+     "rank": 11,
+     "bib": "2",
+     "code": "2534885",
+     "name": "MUIR Kirsty",
+     "year": "2004",
+     "noc": "GBR",
+     "cells": {
+      "Result": "134.25"
+     },
+     "status": ""
+    },
+    {
+     "rank": 12,
+     "bib": "20",
+     "code": "2535393",
+     "name": "ORLOVA Ksenia",
+     "year": "2005",
+     "noc": "AIN",
+     "cells": {
+      "Result": "126.75"
+     },
+     "status": ""
+    },
+    {
+     "rank": 13,
+     "bib": "14",
+     "code": "2533087",
+     "name": "HENDERSON Grace",
+     "year": "2001",
+     "noc": "USA",
+     "cells": {
+      "Result": "121.25"
+     },
+     "status": ""
+    },
+    {
+     "rank": 14,
+     "bib": "16",
+     "code": "2539061",
+     "name": "TROTTER Sylvia",
+     "year": "2007",
+     "noc": "NZL",
+     "cells": {
+      "Result": "119.50"
+     },
+     "status": ""
+    },
+    {
+     "rank": 15,
+     "bib": "17",
+     "code": "2539041",
+     "name": "DISBROWE Madeleine",
+     "year": "2008",
+     "noc": "NZL",
+     "cells": {
+      "Result": "116.75"
+     },
+     "status": ""
+    },
+    {
+     "rank": 16,
+     "bib": "13",
+     "code": "2535091",
+     "name": "YANG Ruyi",
+     "year": "2005",
+     "noc": "CHN",
+     "cells": {
+      "Result": "96.75"
+     },
+     "status": ""
+    },
+    {
+     "rank": 17,
+     "bib": "7",
+     "code": "2534921",
+     "name": "ANDREWS Ruby Star",
+     "year": "2004",
+     "noc": "NZL",
+     "cells": {
+      "Result": "54.50"
+     },
+     "status": ""
+    },
+    {
+     "rank": 18,
+     "bib": "19",
+     "code": "2538456",
+     "name": "CLAYTON Ash",
+     "year": "2004",
+     "noc": "GBR",
+     "cells": {
+      "Result": "52.75"
+     },
+     "status": ""
+    },
+    {
+     "rank": null,
+     "bib": "12",
+     "code": "2533050",
+     "name": "HAMILL Marin",
+     "year": "2001",
+     "noc": "USA",
+     "cells": {
+      "Result": ""
+     },
+     "status": "Did not start"
+    }
+   ],
+   "start_list": false,
+   "start_utc": "2026-11-26T13:50:00Z",
+   "gender": "W",
+   "live": false,
+   "runs": [
+    "Official results"
+   ],
+   "status": "Finished"
+  },
+  "19701": {
+   "columns": [],
+   "rows": [],
+   "title": "Freeski Big Air",
+   "start_utc": "2026-11-27T17:45:00Z",
+   "gender": "M",
+   "live": false,
+   "runs": [],
+   "status": ""
+  },
+  "19548": {
+   "title": "Women's Freeski Big Air",
+   "columns": [],
+   "rows": [
+    {
+     "order": "1",
+     "bib": "15",
+     "code": "2539335",
+     "name": "GASSLITTER Maria",
+     "year": "2006",
+     "noc": "ITA",
      "cells": {},
      "rank": null,
      "status": ""
     },
     {
      "order": "2",
-     "bib": "2",
-     "code": "2534885",
-     "name": "MUIR Kirsty",
-     "year": "2004",
-     "noc": "GBR",
+     "bib": "3",
+     "code": "2533924",
+     "name": "OLDHAM Megan",
+     "year": "2001",
+     "noc": "CAN",
      "cells": {},
      "rank": null,
      "status": ""
     },
     {
      "order": "3",
-     "bib": "12",
-     "code": "2533050",
-     "name": "HAMILL Marin",
+     "bib": "10",
+     "code": "2532939",
+     "name": "GASKELL Elena",
      "year": "2001",
-     "noc": "USA",
+     "noc": "CAN",
      "cells": {},
      "rank": null,
      "status": ""
@@ -90,17 +344,6 @@
     },
     {
      "order": "5",
-     "bib": "1",
-     "code": "2532209",
-     "name": "GREMAUD Mathilde",
-     "year": "2000",
-     "noc": "SUI",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "6",
      "bib": "11",
      "code": "2535825",
      "name": "HAN Linshan",
@@ -111,95 +354,7 @@
      "status": ""
     },
     {
-     "order": "7",
-     "bib": "4",
-     "code": "2534255",
-     "name": "LIU Mengting",
-     "year": "2004",
-     "noc": "CHN",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "8",
-     "bib": "10",
-     "code": "2532939",
-     "name": "GASKELL Elena",
-     "year": "2001",
-     "noc": "CAN",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "9",
-     "bib": "7",
-     "code": "2534921",
-     "name": "ANDREWS Ruby Star",
-     "year": "2004",
-     "noc": "NZL",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "10",
-     "bib": "3",
-     "code": "2533924",
-     "name": "OLDHAM Megan",
-     "year": "2001",
-     "noc": "CAN",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "11",
-     "bib": "14",
-     "code": "2533087",
-     "name": "HENDERSON Grace",
-     "year": "2001",
-     "noc": "USA",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "12",
-     "bib": "21",
-     "code": "2542578",
-     "name": "ZHANG Jiaying",
-     "year": "2007",
-     "noc": "CHN",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "13",
-     "bib": "15",
-     "code": "2539335",
-     "name": "GASSLITTER Maria",
-     "year": "2006",
-     "noc": "ITA",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "14",
-     "bib": "16",
-     "code": "2539061",
-     "name": "TROTTER Sylvia",
-     "year": "2007",
-     "noc": "NZL",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "15",
+     "order": "6",
      "bib": "18",
      "code": "2537064",
      "name": "ANDRASKA Anouk",
@@ -210,73 +365,51 @@
      "status": ""
     },
     {
-     "order": "16",
-     "bib": "13",
-     "code": "2535091",
-     "name": "YANG Ruyi",
-     "year": "2005",
+     "order": "7",
+     "bib": "21",
+     "code": "2542578",
+     "name": "ZHANG Jiaying",
+     "year": "2007",
      "noc": "CHN",
      "cells": {},
      "rank": null,
      "status": ""
     },
     {
-     "order": "17",
-     "bib": "20",
-     "code": "2535393",
-     "name": "ORLOVA Ksenia",
-     "year": "2005",
-     "noc": "AIN",
+     "order": "8",
+     "bib": "8",
+     "code": "2532452",
+     "name": "WOLF Lara",
+     "year": "2000",
+     "noc": "AUT",
      "cells": {},
      "rank": null,
      "status": ""
     },
     {
-     "order": "18",
-     "bib": "17",
-     "code": "2539041",
-     "name": "DISBROWE Madeleine",
-     "year": "2008",
-     "noc": "NZL",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "19",
-     "bib": "19",
-     "code": "2538456",
-     "name": "CLAYTON Ash",
+     "order": "9",
+     "bib": "4",
+     "code": "2534255",
+     "name": "LIU Mengting",
      "year": "2004",
-     "noc": "GBR",
+     "noc": "CHN",
+     "cells": {},
+     "rank": null,
+     "status": ""
+    },
+    {
+     "order": "10",
+     "bib": "1",
+     "code": "2532209",
+     "name": "GREMAUD Mathilde",
+     "year": "2000",
+     "noc": "SUI",
      "cells": {},
      "rank": null,
      "status": ""
     }
    ],
    "start_list": true,
-   "start_utc": "2026-11-26T13:50:00Z",
-   "gender": "W",
-   "live": false,
-   "runs": [
-    "Completed"
-   ],
-   "status": ""
-  },
-  "19701": {
-   "columns": [],
-   "rows": [],
-   "title": "Freeski Big Air",
-   "start_utc": "2026-11-27T17:45:00Z",
-   "gender": "M",
-   "live": false,
-   "runs": [],
-   "status": ""
-  },
-  "19548": {
-   "columns": [],
-   "rows": [],
-   "title": "Freeski Big Air",
    "start_utc": "2026-11-27T17:45:00Z",
    "gender": "W",
    "live": false,
