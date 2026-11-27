@@ -18,7 +18,7 @@
   "live": "Women 3000 m Relay",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-4-shanghai/"
  },
- "checked_at": "2026-11-27T10:13:21.165180+00:00",
+ "checked_at": "2026-11-27T10:24:08.821619+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T01:00:00.000Z",
@@ -9540,20 +9540,20 @@
      "id": 23669,
      "name": "Quarterfinals",
      "status": "Live",
-     "start_utc": "2026-11-27T10:00:00.000Z",
+     "start_utc": "2026-11-27T10:08:50.000Z",
      "rule": "The first and second placed teams from each race and up to a maximum of two fastest third place teams qualify for Semifinals.",
      "heats": [
       {
        "name": "Heat 1",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Republic of Korea",
          "noc": "KOR",
-         "time": "",
-         "qual": "",
+         "time": "4:11.932",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -9561,54 +9561,42 @@
          "slug": ""
         },
         {
-         "rank": null,
-         "name": "France",
-         "noc": "FRA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 3,
-         "slug": ""
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Japan",
          "noc": "JPN",
-         "time": "",
-         "qual": "",
+         "time": "4:12.315",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
          "lane": 2,
+         "slug": ""
+        },
+        {
+         "rank": 3,
+         "name": "France",
+         "noc": "FRA",
+         "time": "4:12.700",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
          "slug": ""
         }
        ]
       },
       {
        "name": "Heat 2",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Italy",
-         "noc": "ITA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 1,
-         "slug": ""
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "People's Republic of China",
          "noc": "CHN",
-         "time": "",
-         "qual": "",
+         "time": "4:12.622",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -9616,11 +9604,23 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Italy",
+         "noc": "ITA",
+         "time": "4:12.730",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": 3,
          "name": "Poland",
          "noc": "POL",
-         "time": "",
-         "qual": "",
+         "time": "4:12.807",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": null,
@@ -9628,10 +9628,10 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Ukraine",
          "noc": "UKR",
-         "time": "",
+         "time": "4:20.672",
          "qual": "",
          "status": "",
          "record": "",
@@ -9643,21 +9643,9 @@
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
-        {
-         "rank": null,
-         "name": "Netherlands",
-         "noc": "NED",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 1,
-         "slug": ""
-        },
         {
          "rank": null,
          "name": "Canada",
@@ -9672,14 +9660,14 @@
         },
         {
          "rank": null,
-         "name": "Kazakhstan",
-         "noc": "KAZ",
+         "name": "Netherlands",
+         "noc": "NED",
          "time": "",
          "qual": "",
          "status": "",
          "record": "",
          "bib": null,
-         "lane": 3,
+         "lane": 1,
          "slug": ""
         },
         {
@@ -9692,6 +9680,18 @@
          "record": "",
          "bib": null,
          "lane": 4,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Kazakhstan",
+         "noc": "KAZ",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 3,
          "slug": ""
         }
        ]
@@ -10286,12 +10286,12 @@
    "distance": "Women 3000 m Relay",
    "round": "Quarterfinals",
    "heat": "Heat 1",
-   "start_utc": "2026-11-27T10:00:00.000Z",
-   "rank": null,
+   "start_utc": "2026-11-27T10:08:50.000Z",
+   "rank": 1,
    "name": "Republic of Korea",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "4:11.932",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": null,
