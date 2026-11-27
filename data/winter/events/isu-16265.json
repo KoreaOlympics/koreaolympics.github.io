@@ -18,7 +18,7 @@
   "live": "Men 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-4-shanghai/"
  },
- "checked_at": "2026-11-27T01:57:26.183804+00:00",
+ "checked_at": "2026-11-27T02:07:58.890524+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T01:00:00.000Z",
@@ -1132,8 +1132,8 @@
     {
      "id": 23661,
      "name": "Preliminaries",
-     "status": "Live",
-     "start_utc": "2026-11-27T01:21:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-27T01:21:59.000Z",
      "rule": "The first placed skater from each race and up to a maximum of nine fastest second place skaters qualify for Heats.",
      "heats": [
       {
@@ -1158,7 +1158,7 @@
          "name": "Yuheng LI",
          "noc": "CHN",
          "time": "40.918",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 152,
@@ -1225,7 +1225,7 @@
          "name": "Ivan DONCHEV",
          "noc": "BUL",
          "time": "42.016",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 60,
@@ -1292,7 +1292,7 @@
          "name": "Tibor KOMERICKI",
          "noc": "SLO",
          "time": "41.214",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 106,
@@ -1359,7 +1359,7 @@
          "name": "Benjamin SULLIVAN",
          "noc": "USA",
          "time": "41.515",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 113,
@@ -1426,7 +1426,7 @@
          "name": "Yanghun Ben JUNG",
          "noc": "GER",
          "time": "41.469",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 78,
@@ -1493,7 +1493,7 @@
          "name": "Tamirlan ZHOLDAS",
          "noc": "KAZ",
          "time": "41.388",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 95,
@@ -1560,7 +1560,7 @@
          "name": "Daniel TIBORCZ",
          "noc": "HUN",
          "time": "42.360",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 82,
@@ -1694,7 +1694,7 @@
          "name": "Vladimir BALBEKOV",
          "noc": "AIN2",
          "time": "41.104",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 122,
@@ -1761,7 +1761,7 @@
          "name": "Muhammed BOZDAG",
          "noc": "TUR",
          "time": "42.243",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 109,
@@ -1808,15 +1808,15 @@
       },
       {
        "name": "Heat 11",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Niall TREACY",
          "noc": "GBR",
-         "time": "",
-         "qual": "",
+         "time": "41.862",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 20,
@@ -1824,10 +1824,22 @@
          "slug": "niall-treacy"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Luca SPECHENHAUSER",
+         "noc": "ITA",
+         "time": "42.284",
+         "qual": "q",
+         "status": "",
+         "record": "",
+         "bib": 24,
+         "lane": 3,
+         "slug": "luca-spechenhauser"
+        },
+        {
+         "rank": 3,
          "name": "Peter JASZAPATI",
          "noc": "HUN",
-         "time": "",
+         "time": "42.601",
          "qual": "",
          "status": "",
          "record": "",
@@ -1836,44 +1848,217 @@
          "slug": "peter-jaszapati"
         },
         {
-         "rank": null,
-         "name": "Luca SPECHENHAUSER",
-         "noc": "ITA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 24,
-         "lane": 3,
-         "slug": "luca-spechenhauser"
-        },
-        {
-         "rank": null,
-         "name": "Warre NOIRON",
-         "noc": "BEL",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 54,
-         "lane": 4,
-         "slug": "warre-noiron"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Marva Kayana Putra FIRDAUS",
          "noc": "INA",
-         "time": "",
+         "time": "43.851",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 145,
          "lane": 5,
          "slug": "marva-kayana-putra-firdaus"
+        },
+        {
+         "rank": 5,
+         "name": "Warre NOIRON",
+         "noc": "BEL",
+         "time": "1:01.459",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 54,
+         "lane": 4,
+         "slug": "warre-noiron"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Heats",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "William DANDJINOU",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "40.477",
+        "qual": "Q"
+       },
+       {
+        "name": "Niels KINGMA",
+        "noc": "NED",
+        "rank": 1,
+        "time": "41.075",
+        "qual": "Q"
+       },
+       {
+        "name": "Seochan BAE",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "41.117",
+        "qual": "Q"
+       },
+       {
+        "name": "Takumi WADA",
+        "noc": "JPN",
+        "rank": 1,
+        "time": "41.297",
+        "qual": "Q"
+       },
+       {
+        "name": "Kun LI",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "41.306",
+        "qual": "Q"
+       },
+       {
+        "name": "Kazuki YOSHINAGA",
+        "noc": "JPN",
+        "rank": 1,
+        "time": "41.465",
+        "qual": "Q"
+       },
+       {
+        "name": "Gleb IVCHENKO",
+        "noc": "KAZ",
+        "rank": 1,
+        "time": "41.647",
+        "qual": "Q"
+       },
+       {
+        "name": "Niall TREACY",
+        "noc": "GBR",
+        "rank": 1,
+        "time": "41.862",
+        "qual": "Q"
+       },
+       {
+        "name": "Brendan COREY",
+        "noc": "AUS",
+        "rank": 1,
+        "time": "42.140",
+        "qual": "Q"
+       },
+       {
+        "name": "Aibek NASSEN",
+        "noc": "KAZ",
+        "rank": 1,
+        "time": "42.140",
+        "qual": "Q"
+       },
+       {
+        "name": "Nicolas ANDERMANN",
+        "noc": "AUT",
+        "rank": 1,
+        "time": "42.624",
+        "qual": "Q"
+       },
+       {
+        "name": "Yuheng LI",
+        "noc": "CHN",
+        "rank": 2,
+        "time": "40.918",
+        "qual": "q"
+       },
+       {
+        "name": "Vladimir BALBEKOV",
+        "noc": "AIN2",
+        "rank": 2,
+        "time": "41.104",
+        "qual": "q"
+       },
+       {
+        "name": "Tibor KOMERICKI",
+        "noc": "SLO",
+        "rank": 2,
+        "time": "41.214",
+        "qual": "q"
+       },
+       {
+        "name": "Tamirlan ZHOLDAS",
+        "noc": "KAZ",
+        "rank": 2,
+        "time": "41.388",
+        "qual": "q"
+       },
+       {
+        "name": "Yanghun Ben JUNG",
+        "noc": "GER",
+        "rank": 2,
+        "time": "41.469",
+        "qual": "q"
+       },
+       {
+        "name": "Benjamin SULLIVAN",
+        "noc": "USA",
+        "rank": 2,
+        "time": "41.515",
+        "qual": "q"
+       },
+       {
+        "name": "Ivan DONCHEV",
+        "noc": "BUL",
+        "rank": 2,
+        "time": "42.016",
+        "qual": "q"
+       },
+       {
+        "name": "Muhammed BOZDAG",
+        "noc": "TUR",
+        "rank": 2,
+        "time": "42.243",
+        "qual": "q"
+       },
+       {
+        "name": "Luca SPECHENHAUSER",
+        "noc": "ITA",
+        "rank": 2,
+        "time": "42.284",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "William DANDJINOU (CAN)",
+        "Yanghun Ben JUNG (GER)",
+        "Benjamin SULLIVAN (USA)"
+       ],
+       [
+        "Niels KINGMA (NED)",
+        "Tamirlan ZHOLDAS (KAZ)",
+        "Ivan DONCHEV (BUL)"
+       ],
+       [
+        "Seochan BAE (KOR)",
+        "Tibor KOMERICKI (SLO)",
+        "Muhammed BOZDAG (TUR)"
+       ],
+       [
+        "Takumi WADA (JPN)",
+        "Vladimir BALBEKOV (AIN2)",
+        "Luca SPECHENHAUSER (ITA)"
+       ],
+       [
+        "Kun LI (CHN)",
+        "Yuheng LI (CHN)"
+       ],
+       [
+        "Kazuki YOSHINAGA (JPN)",
+        "Nicolas ANDERMANN (AUT)"
+       ],
+       [
+        "Gleb IVCHENKO (KAZ)",
+        "Aibek NASSEN (KAZ)"
+       ],
+       [
+        "Niall TREACY (GBR)",
+        "Brendan COREY (AUS)"
+       ]
+      ]
+     }
     },
     {
      "id": 23663,
@@ -2303,7 +2488,7 @@
    "distance": "Men 500 m",
    "round": "Preliminaries",
    "heat": "Heat 3",
-   "start_utc": "2026-11-27T01:21:00.000Z",
+   "start_utc": "2026-11-27T01:21:59.000Z",
    "rank": 1,
    "name": "Seochan BAE",
    "noc": "KOR",
