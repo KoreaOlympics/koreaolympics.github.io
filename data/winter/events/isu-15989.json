@@ -15,10 +15,10 @@
   "city": "Tokyo",
   "country": "JPN",
   "state": "Live",
-  "live": "",
+  "live": "NAGAOKA Yuna / MORIGUCHI Sumitada",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-nhk-trophy-2026/"
  },
- "checked_at": "2026-11-27T06:22:43.996613+00:00",
+ "checked_at": "2026-11-27T06:33:35.719331+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T03:42:00.000Z",
@@ -337,6 +337,23 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Karina AKOPOVA / Nikita RAKHMANIN",
+     "noc": "ARM",
+     "points": "66.95",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 1,
+       "total": "66.95",
+       "tes": "37.02",
+       "pcs": "29.93",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
      "name": "Anna VALESI / Martin BIDAR",
      "noc": "CZE",
      "points": "59.77",
@@ -344,7 +361,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 1,
+       "rank": 2,
        "total": "59.77",
        "tes": "32.64",
        "pcs": "27.13",
@@ -353,7 +370,7 @@
      }
     },
     {
-     "rank": 2,
+     "rank": 3,
      "name": "Chelsea LIU / Ryan BEDARD",
      "noc": "USA",
      "points": "59.71",
@@ -361,7 +378,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 2,
+       "rank": 3,
        "total": "59.71",
        "tes": "33.02",
        "pcs": "26.69",
@@ -370,7 +387,7 @@
      }
     },
     {
-     "rank": 3,
+     "rank": 4,
      "name": "Jazmine DESROCHERS / Kieran THRASHER",
      "noc": "CAN",
      "points": "55.27",
@@ -378,7 +395,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 3,
+       "rank": 4,
        "total": "55.27",
        "tes": "27.72",
        "pcs": "27.55",
@@ -387,7 +404,24 @@
      }
     },
     {
-     "rank": 4,
+     "rank": 5,
+     "name": "Camille KOVALEV / Pavel KOVALEV",
+     "noc": "FRA",
+     "points": "52.07",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 5,
+       "total": "52.07",
+       "tes": "26.80",
+       "pcs": "26.27",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 6,
      "name": "Naomi WILLIAMS / Lachlan LEWER",
      "noc": "USA",
      "points": "49.50",
@@ -395,44 +429,10 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 4,
+       "rank": 6,
        "total": "49.50",
        "tes": "26.70",
        "pcs": "24.80",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Camille KOVALEV / Pavel KOVALEV",
-     "noc": "FRA",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Karina AKOPOVA / Nikita RAKHMANIN",
-     "noc": "ARM",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
        "status": "Running"
       }
      }
