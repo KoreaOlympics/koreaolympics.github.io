@@ -18,7 +18,7 @@
   "live": "Men 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-4-shanghai/"
  },
- "checked_at": "2026-11-27T03:47:02.737269+00:00",
+ "checked_at": "2026-11-27T03:57:44.043538+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T01:00:00.000Z",
@@ -3905,15 +3905,39 @@
       },
       {
        "name": "Heat 2",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Andrew HEO",
+         "noc": "USA",
+         "time": "2:24.392",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 15,
+         "lane": 1,
+         "slug": "andrew-heo"
+        },
+        {
+         "rank": 2,
+         "name": "Philippe DAUDELIN",
+         "noc": "CAN",
+         "time": "2:24.443",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 129,
+         "lane": 6,
+         "slug": "philippe-daudelin"
+        },
+        {
+         "rank": 3,
          "name": "Pietro MARINELLI",
          "noc": "ITA",
-         "time": "",
-         "qual": "",
+         "time": "2:24.467",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 86,
@@ -3921,10 +3945,10 @@
          "slug": "pietro-marinelli"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Muhammed BOZDAG",
          "noc": "TUR",
-         "time": "",
+         "time": "2:24.570",
          "qual": "",
          "status": "",
          "record": "",
@@ -3933,22 +3957,10 @@
          "slug": "muhammed-bozdag"
         },
         {
-         "rank": null,
-         "name": "Andrew HEO",
-         "noc": "USA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 15,
-         "lane": 1,
-         "slug": "andrew-heo"
-        },
-        {
-         "rank": null,
+         "rank": 5,
          "name": "Bas VAN DER VALK",
          "noc": "NED",
-         "time": "",
+         "time": "2:24.799",
          "qual": "",
          "status": "",
          "record": "",
@@ -3957,10 +3969,10 @@
          "slug": "bas-van-der-valk"
         },
         {
-         "rank": null,
+         "rank": 6,
          "name": "Samuel Oliver SULC",
          "noc": "CZE",
-         "time": "",
+         "time": "2:24.897",
          "qual": "",
          "status": "",
          "record": "",
@@ -3969,36 +3981,72 @@
          "slug": "samuel-oliver-sulc"
         },
         {
-         "rank": null,
+         "rank": 7,
          "name": "Linus August RISNES",
          "noc": "NOR",
-         "time": "",
+         "time": "2:36.989",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 121,
          "lane": 4,
          "slug": "linus-august-risnes"
-        },
-        {
-         "rank": null,
-         "name": "Philippe DAUDELIN",
-         "noc": "CAN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 129,
-         "lane": 6,
-         "slug": "philippe-daudelin"
         }
        ]
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Live",
        "competitors": [
+        {
+         "rank": 1,
+         "name": "Furkan AKAR",
+         "noc": "TUR",
+         "time": "2:39.170",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 27,
+         "lane": 2,
+         "slug": "furkan-akar"
+        },
+        {
+         "rank": 2,
+         "name": "Aibek NASSEN",
+         "noc": "KAZ",
+         "time": "2:39.970",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 91,
+         "lane": 6,
+         "slug": "aibek-nassen"
+        },
+        {
+         "rank": 3,
+         "name": "Takumi WADA",
+         "noc": "JPN",
+         "time": "2:41.670",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 90,
+         "lane": 7,
+         "slug": "takumi-wada"
+        },
+        {
+         "rank": 4,
+         "name": "Yaroslav MOROZOV",
+         "noc": "UKR",
+         "time": "2:44.210",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 150,
+         "lane": 3,
+         "slug": "yaroslav-morozov"
+        },
         {
          "rank": null,
          "name": "Zhanshuo LOU",
@@ -4010,30 +4058,6 @@
          "bib": 45,
          "lane": 1,
          "slug": "zhanshuo-lou"
-        },
-        {
-         "rank": null,
-         "name": "Furkan AKAR",
-         "noc": "TUR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 27,
-         "lane": 2,
-         "slug": "furkan-akar"
-        },
-        {
-         "rank": null,
-         "name": "Yaroslav MOROZOV",
-         "noc": "UKR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 150,
-         "lane": 3,
-         "slug": "yaroslav-morozov"
         },
         {
          "rank": null,
@@ -4051,37 +4075,13 @@
          "rank": null,
          "name": "Martin PRANTL",
          "noc": "CRO",
-         "time": "",
+         "time": "DNS",
          "qual": "",
-         "status": "",
+         "status": "Did Not Start",
          "record": "",
          "bib": 131,
          "lane": 5,
          "slug": "martin-prantl"
-        },
-        {
-         "rank": null,
-         "name": "Aibek NASSEN",
-         "noc": "KAZ",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 91,
-         "lane": 6,
-         "slug": "aibek-nassen"
-        },
-        {
-         "rank": null,
-         "name": "Takumi WADA",
-         "noc": "JPN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 90,
-         "lane": 7,
-         "slug": "takumi-wada"
         }
        ]
       },
