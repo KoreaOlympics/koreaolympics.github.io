@@ -18,7 +18,7 @@
   "live": "Women 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-4-shanghai/"
  },
- "checked_at": "2026-11-27T08:01:18.044751+00:00",
+ "checked_at": "2026-11-27T08:11:56.711130+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T01:00:00.000Z",
@@ -7598,31 +7598,55 @@
      "id": 23646,
      "name": "Quarterfinals",
      "status": "Live",
-     "start_utc": "2026-11-27T07:52:00.000Z",
+     "start_utc": "2026-11-27T08:00:00.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of three fastest third place skaters qualify for Semifinals.",
      "heats": [
       {
        "name": "Heat 1",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Cloe OLLIVIER",
-         "noc": "FRA",
-         "time": "",
-         "qual": "",
+         "rank": 1,
+         "name": "Ann-Sophie BACHAND",
+         "noc": "CAN",
+         "time": "2:30.004",
+         "qual": "Q",
          "status": "",
          "record": "",
-         "bib": 24,
-         "lane": 5,
-         "slug": "cloe-ollivier"
+         "bib": 51,
+         "lane": 2,
+         "slug": "ann-sophie-bachand"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Elisa CONFORTOLA",
+         "noc": "ITA",
+         "time": "2:30.083",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 8,
+         "lane": 1,
+         "slug": "elisa-confortola"
+        },
+        {
+         "rank": 3,
+         "name": "Alena KRYLOVA",
+         "noc": "AIN2",
+         "time": "2:30.098",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 92,
+         "lane": 7,
+         "slug": "alena-krylova"
+        },
+        {
+         "rank": 4,
          "name": "Rina YAMANA",
          "noc": "JPN",
-         "time": "",
+         "time": "2:30.927",
          "qual": "",
          "status": "",
          "record": "",
@@ -7631,46 +7655,22 @@
          "slug": "rina-yamana"
         },
         {
-         "rank": null,
-         "name": "Alena KRYLOVA",
-         "noc": "AIN2",
-         "time": "",
+         "rank": 5,
+         "name": "Cloe OLLIVIER",
+         "noc": "FRA",
+         "time": "2:31.672",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 92,
-         "lane": 7,
-         "slug": "alena-krylova"
+         "bib": 24,
+         "lane": 5,
+         "slug": "cloe-ollivier"
         },
         {
-         "rank": null,
-         "name": "Elisa CONFORTOLA",
-         "noc": "ITA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 8,
-         "lane": 1,
-         "slug": "elisa-confortola"
-        },
-        {
-         "rank": null,
-         "name": "Diana Laura VEGI",
-         "noc": "HUN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 46,
-         "lane": 4,
-         "slug": "diana-laura-vegi"
-        },
-        {
-         "rank": null,
+         "rank": 6,
          "name": "Jiayan NAN",
          "noc": "CHN",
-         "time": "",
+         "time": "2:45.463",
          "qual": "",
          "status": "",
          "record": "",
@@ -7679,30 +7679,30 @@
          "slug": "jiayan-nan"
         },
         {
-         "rank": null,
-         "name": "Ann-Sophie BACHAND",
-         "noc": "CAN",
-         "time": "",
+         "rank": 7,
+         "name": "Diana Laura VEGI",
+         "noc": "HUN",
+         "time": "2:48.386",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 51,
-         "lane": 2,
-         "slug": "ann-sophie-bachand"
+         "bib": 46,
+         "lane": 4,
+         "slug": "diana-laura-vegi"
         }
        ]
       },
       {
        "name": "Heat 2",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Courtney SARAULT",
          "noc": "CAN",
-         "time": "",
-         "qual": "",
+         "time": "2:27.232",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 1,
@@ -7710,23 +7710,11 @@
          "slug": "courtney-sarault"
         },
         {
-         "rank": null,
-         "name": "Valentina ASCIC",
-         "noc": "CRO",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 29,
-         "lane": 2,
-         "slug": "valentina-ascic"
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Jiarui SONG",
          "noc": "CHN",
-         "time": "",
-         "qual": "",
+         "time": "2:27.513",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 54,
@@ -7734,10 +7722,34 @@
          "slug": "jiarui-song"
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Valentina ASCIC",
+         "noc": "CRO",
+         "time": "2:27.674",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 29,
+         "lane": 2,
+         "slug": "valentina-ascic"
+        },
+        {
+         "rank": 4,
+         "name": "Katia FILIPPI",
+         "noc": "ITA",
+         "time": "2:28.293",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 101,
+         "lane": 7,
+         "slug": "katia-filippi-1"
+        },
+        {
+         "rank": 5,
          "name": "Katarina BURIC",
          "noc": "CRO",
-         "time": "",
+         "time": "2:28.397",
          "qual": "",
          "status": "",
          "record": "",
@@ -7746,10 +7758,10 @@
          "slug": "katarina-buric"
         },
         {
-         "rank": null,
+         "rank": 6,
          "name": "Ching Yan LAM",
          "noc": "HKG",
-         "time": "",
+         "time": "2:29.322",
          "qual": "",
          "status": "",
          "record": "",
@@ -7758,48 +7770,24 @@
          "slug": "ching-yan-lam"
         },
         {
-         "rank": null,
+         "rank": 7,
          "name": "Thanutchaya CHATTHAISONG",
          "noc": "THA",
-         "time": "",
+         "time": "2:29.426",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 102,
          "lane": 6,
          "slug": "thanutchaya-chatthaisong"
-        },
-        {
-         "rank": null,
-         "name": "Katia FILIPPI",
-         "noc": "ITA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 101,
-         "lane": 7,
-         "slug": "katia-filippi-1"
         }
        ]
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
-        {
-         "rank": null,
-         "name": "Minjeong CHOI",
-         "noc": "KOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 4,
-         "lane": 1,
-         "slug": "minjeong-choi"
-        },
         {
          "rank": null,
          "name": "Minji KIM",
@@ -7811,18 +7799,6 @@
          "bib": 78,
          "lane": 2,
          "slug": "minji-kim"
-        },
-        {
-         "rank": null,
-         "name": "Alina AZHGALIYEVA",
-         "noc": "KAZ",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 71,
-         "lane": 3,
-         "slug": "alina-azhgaliyeva"
         },
         {
          "rank": null,
@@ -7850,15 +7826,27 @@
         },
         {
          "rank": null,
-         "name": "Svitlana REPETSKA",
-         "noc": "UKR",
+         "name": "Minjeong CHOI",
+         "noc": "KOR",
          "time": "",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 105,
-         "lane": 6,
-         "slug": "svitlana-repetska"
+         "bib": 4,
+         "lane": 1,
+         "slug": "minjeong-choi"
+        },
+        {
+         "rank": null,
+         "name": "Alina AZHGALIYEVA",
+         "noc": "KAZ",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 71,
+         "lane": 3,
+         "slug": "alina-azhgaliyeva"
         },
         {
          "rank": null,
@@ -7871,6 +7859,18 @@
          "bib": 103,
          "lane": 7,
          "slug": "mariia-khokhelko"
+        },
+        {
+         "rank": null,
+         "name": "Svitlana REPETSKA",
+         "noc": "UKR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 105,
+         "lane": 6,
+         "slug": "svitlana-repetska"
         }
        ]
       },
@@ -8786,26 +8786,7 @@
    "distance": "Women 1500 m",
    "round": "Quarterfinals",
    "heat": "Heat 3",
-   "start_utc": "2026-11-27T07:52:00.000Z",
-   "rank": null,
-   "name": "Minjeong CHOI",
-   "noc": "KOR",
-   "time": "",
-   "qual": "",
-   "status": "",
-   "record": "",
-   "bib": 4,
-   "lane": 1,
-   "slug": "minjeong-choi"
-  },
-  {
-   "event_id": "isu-16265",
-   "sport": "short-track",
-   "event": "ISU Short Track World Tour #4",
-   "distance": "Women 1500 m",
-   "round": "Quarterfinals",
-   "heat": "Heat 3",
-   "start_utc": "2026-11-27T07:52:00.000Z",
+   "start_utc": "2026-11-27T08:00:00.000Z",
    "rank": null,
    "name": "Minji KIM",
    "noc": "KOR",
@@ -8823,8 +8804,27 @@
    "event": "ISU Short Track World Tour #4",
    "distance": "Women 1500 m",
    "round": "Quarterfinals",
+   "heat": "Heat 3",
+   "start_utc": "2026-11-27T08:00:00.000Z",
+   "rank": null,
+   "name": "Minjeong CHOI",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 4,
+   "lane": 1,
+   "slug": "minjeong-choi"
+  },
+  {
+   "event_id": "isu-16265",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #4",
+   "distance": "Women 1500 m",
+   "round": "Quarterfinals",
    "heat": "Heat 4",
-   "start_utc": "2026-11-27T07:52:00.000Z",
+   "start_utc": "2026-11-27T08:00:00.000Z",
    "rank": null,
    "name": "Gilli KIM",
    "noc": "KOR",
@@ -8843,7 +8843,7 @@
    "distance": "Women 1500 m",
    "round": "Quarterfinals",
    "heat": "Heat 6",
-   "start_utc": "2026-11-27T07:52:00.000Z",
+   "start_utc": "2026-11-27T08:00:00.000Z",
    "rank": null,
    "name": "Sukhee SHIM",
    "noc": "KOR",
