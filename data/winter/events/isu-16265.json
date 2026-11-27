@@ -18,7 +18,7 @@
   "live": "Men 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-4-shanghai/"
  },
- "checked_at": "2026-11-27T01:25:49.531806+00:00",
+ "checked_at": "2026-11-27T01:36:21.865203+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T01:00:00.000Z",
@@ -445,7 +445,7 @@
      "id": 23628,
      "name": "Preliminaries",
      "status": "Finished",
-     "start_utc": "2026-11-27T01:00:55.000Z",
+     "start_utc": "2026-11-27T01:00:00.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of six fastest third place skaters qualify for Heats.",
      "heats": [
       {
@@ -1139,14 +1139,14 @@
       {
        "name": "Heat 1",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "William DANDJINOU",
          "noc": "CAN",
-         "time": "40.490",
-         "qual": "",
+         "time": "40.477",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 1,
@@ -1157,8 +1157,8 @@
          "rank": 2,
          "name": "Yuheng LI",
          "noc": "CHN",
-         "time": "40.930",
-         "qual": "",
+         "time": "40.918",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 152,
@@ -1169,7 +1169,7 @@
          "rank": 3,
          "name": "Nikita NIKOLAEV",
          "noc": "AIN2",
-         "time": "41.660",
+         "time": "41.674",
          "qual": "",
          "status": "",
          "record": "",
@@ -1181,7 +1181,7 @@
          "rank": 4,
          "name": "Adriaan DEWAGTERE",
          "noc": "BEL",
-         "time": "41.800",
+         "time": "41.788",
          "qual": "",
          "status": "",
          "record": "",
@@ -1205,14 +1205,38 @@
       },
       {
        "name": "Heat 2",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Gleb IVCHENKO",
+         "noc": "KAZ",
+         "time": "41.647",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 47,
+         "lane": 5,
+         "slug": "gleb-ivchenko"
+        },
+        {
+         "rank": 2,
+         "name": "Ivan DONCHEV",
+         "noc": "BUL",
+         "time": "42.016",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 60,
+         "lane": 3,
+         "slug": "ivan-donchev"
+        },
+        {
+         "rank": 3,
          "name": "Felix PIGEON",
          "noc": "POL",
-         "time": "",
+         "time": "42.119",
          "qual": "",
          "status": "",
          "record": "",
@@ -1221,34 +1245,10 @@
          "slug": "felix-pigeon"
         },
         {
-         "rank": null,
-         "name": "Daniele ZAMPEDRI",
-         "noc": "ITA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 116,
-         "lane": 2,
-         "slug": "daniele-zampedri"
-        },
-        {
-         "rank": null,
-         "name": "Ivan DONCHEV",
-         "noc": "BUL",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 60,
-         "lane": 3,
-         "slug": "ivan-donchev"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Taiga SASAKI",
          "noc": "JPN",
-         "time": "",
+         "time": "42.343",
          "qual": "",
          "status": "",
          "record": "",
@@ -1257,30 +1257,30 @@
          "slug": "taiga-sasaki-1"
         },
         {
-         "rank": null,
-         "name": "Gleb IVCHENKO",
-         "noc": "KAZ",
-         "time": "",
+         "rank": 5,
+         "name": "Daniele ZAMPEDRI",
+         "noc": "ITA",
+         "time": "46.358",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 47,
-         "lane": 5,
-         "slug": "gleb-ivchenko"
+         "bib": 116,
+         "lane": 2,
+         "slug": "daniele-zampedri"
         }
        ]
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Seochan BAE",
          "noc": "KOR",
-         "time": "",
-         "qual": "",
+         "time": "41.117",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 96,
@@ -1288,11 +1288,11 @@
          "slug": "seochan-bae"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Tibor KOMERICKI",
          "noc": "SLO",
-         "time": "",
-         "qual": "",
+         "time": "41.214",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 106,
@@ -1300,22 +1300,22 @@
          "slug": "tibor-komericki"
         },
         {
-         "rank": null,
-         "name": "Willem MURRAY",
-         "noc": "GBR",
-         "time": "",
+         "rank": 3,
+         "name": "Pietro MARINELLI",
+         "noc": "ITA",
+         "time": "41.815",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 76,
-         "lane": 3,
-         "slug": "willem-murray"
+         "bib": 86,
+         "lane": 5,
+         "slug": "pietro-marinelli"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Franciszek IZBICKI",
          "noc": "POL",
-         "time": "",
+         "time": "58.372",
          "qual": "",
          "status": "",
          "record": "",
@@ -1324,30 +1324,30 @@
          "slug": "franciszek-izbicki"
         },
         {
-         "rank": null,
-         "name": "Pietro MARINELLI",
-         "noc": "ITA",
-         "time": "",
+         "rank": 5,
+         "name": "Willem MURRAY",
+         "noc": "GBR",
+         "time": "1:05.014",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 86,
-         "lane": 5,
-         "slug": "pietro-marinelli"
+         "bib": 76,
+         "lane": 3,
+         "slug": "willem-murray"
         }
        ]
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Kazuki YOSHINAGA",
          "noc": "JPN",
-         "time": "",
-         "qual": "",
+         "time": "41.465",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 19,
@@ -1355,10 +1355,22 @@
          "slug": "kazuki-yoshinaga"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Benjamin SULLIVAN",
+         "noc": "USA",
+         "time": "41.515",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 113,
+         "lane": 3,
+         "slug": "benjamin-sullivan"
+        },
+        {
+         "rank": 3,
          "name": "Tobias WOLF",
          "noc": "AUT",
-         "time": "",
+         "time": "42.026",
          "qual": "",
          "status": "",
          "record": "",
@@ -1367,22 +1379,10 @@
          "slug": "tobias-wolf"
         },
         {
-         "rank": null,
-         "name": "Benjamin SULLIVAN",
-         "noc": "USA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 113,
-         "lane": 3,
-         "slug": "benjamin-sullivan"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Rostyslav LEONTENKO",
          "noc": "UKR",
-         "time": "",
+         "time": "42.159",
          "qual": "",
          "status": "",
          "record": "",
@@ -1391,10 +1391,10 @@
          "slug": "rostyslav-leontenko"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Samuel Oliver SULC",
          "noc": "CZE",
-         "time": "",
+         "time": "42.329",
          "qual": "",
          "status": "",
          "record": "",
@@ -2002,7 +2002,7 @@
      "name": "Preliminaries",
      "status": "Scheduled",
      "start_utc": "2026-11-27T02:37:00.000Z",
-     "rule": "The first placed skater from each race and up to a maximum of eight fastest second place skaters qualify for Heats.",
+     "rule": "The first placed skater from each race and up to a maximum of nine fastest second place skaters qualify for Heats.",
      "heats": []
     },
     {
@@ -2265,7 +2265,7 @@
    "distance": "Women 500 m",
    "round": "Preliminaries",
    "heat": "Heat 1",
-   "start_utc": "2026-11-27T01:00:55.000Z",
+   "start_utc": "2026-11-27T01:00:00.000Z",
    "rank": 3,
    "name": "Sukhee SHIM",
    "noc": "KOR",
@@ -2284,7 +2284,7 @@
    "distance": "Women 500 m",
    "round": "Preliminaries",
    "heat": "Heat 2",
-   "start_utc": "2026-11-27T01:00:55.000Z",
+   "start_utc": "2026-11-27T01:00:00.000Z",
    "rank": null,
    "name": "Minji KIM",
    "noc": "KOR",
@@ -2304,11 +2304,11 @@
    "round": "Preliminaries",
    "heat": "Heat 3",
    "start_utc": "2026-11-27T01:21:00.000Z",
-   "rank": null,
+   "rank": 1,
    "name": "Seochan BAE",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "41.117",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 96,
