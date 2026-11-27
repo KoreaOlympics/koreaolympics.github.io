@@ -18,7 +18,7 @@
   "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-4-shanghai/"
  },
- "checked_at": "2026-11-27T03:14:59.627832+00:00",
+ "checked_at": "2026-11-27T03:25:41.093277+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T01:00:00.000Z",
@@ -2816,7 +2816,7 @@
     {
      "id": 23620,
      "name": "Preliminaries",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-27T02:39:57.000Z",
      "rule": "The first placed skater from each race and up to a maximum of nine fastest second place skaters qualify for Heats.",
      "heats": [
@@ -2842,7 +2842,7 @@
          "name": "Niall TREACY",
          "noc": "GBR",
          "time": "1:26.893",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 20,
@@ -2909,7 +2909,7 @@
          "name": "Yanghun Ben JUNG",
          "noc": "GER",
          "time": "1:27.466",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 78,
@@ -2976,7 +2976,7 @@
          "name": "Adriaan DEWAGTERE",
          "noc": "BEL",
          "time": "1:28.461",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 53,
@@ -3110,7 +3110,7 @@
          "name": "Tianyou WANG",
          "noc": "CHN",
          "time": "1:26.891",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 153,
@@ -3177,7 +3177,7 @@
          "name": "Ivan DONCHEV",
          "noc": "BUL",
          "time": "1:27.292",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 60,
@@ -3244,7 +3244,7 @@
          "name": "Justin LIU",
          "noc": "USA",
          "time": "1:29.504",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 111,
@@ -3311,7 +3311,7 @@
          "name": "Bohao ZHANG",
          "noc": "CHN",
          "time": "1:27.215",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 42,
@@ -3378,7 +3378,7 @@
          "name": "David WU JIA WEI",
          "noc": "HUN",
          "time": "1:29.112",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 83,
@@ -3425,15 +3425,15 @@
       },
       {
        "name": "Heat 10",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Zhanshuo LOU",
          "noc": "HKG",
-         "time": "",
-         "qual": "",
+         "time": "1:27.968",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 45,
@@ -3441,11 +3441,11 @@
          "slug": "zhanshuo-lou"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Nicolas ANDERMANN",
          "noc": "AUT",
-         "time": "",
-         "qual": "",
+         "time": "1:27.983",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 51,
@@ -3453,10 +3453,10 @@
          "slug": "nicolas-andermann"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Tibor KOMERICKI",
          "noc": "SLO",
-         "time": "",
+         "time": "1:28.727",
          "qual": "",
          "status": "",
          "record": "",
@@ -3465,10 +3465,10 @@
          "slug": "tibor-komericki"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Fredrik PEDERSEN",
          "noc": "NOR",
-         "time": "",
+         "time": "1:30.179",
          "qual": "",
          "status": "",
          "record": "",
@@ -3477,10 +3477,10 @@
          "slug": "fredrik-pedersen"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Kritsanapon PHUATRAKUL",
          "noc": "THA",
-         "time": "",
+         "time": "1:31.604",
          "qual": "",
          "status": "",
          "record": "",
@@ -3492,14 +3492,26 @@
       },
       {
        "name": "Heat 11",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Peter JASZAPATI",
+         "noc": "HUN",
+         "time": "1:31.241",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 81,
+         "lane": 2,
+         "slug": "peter-jaszapati"
+        },
+        {
+         "rank": 2,
          "name": "Gleb IVCHENKO",
          "noc": "KAZ",
-         "time": "",
+         "time": "1:31.348",
          "qual": "",
          "status": "",
          "record": "",
@@ -3508,34 +3520,10 @@
          "slug": "gleb-ivchenko"
         },
         {
-         "rank": null,
-         "name": "Peter JASZAPATI",
-         "noc": "HUN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 81,
-         "lane": 2,
-         "slug": "peter-jaszapati"
-        },
-        {
-         "rank": null,
-         "name": "Linus August RISNES",
-         "noc": "NOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 121,
-         "lane": 3,
-         "slug": "linus-august-risnes"
-        },
-        {
-         "rank": null,
+         "rank": 3,
          "name": "Tsz Fung KWOK",
          "noc": "HKG",
-         "time": "",
+         "time": "1:32.079",
          "qual": "",
          "status": "",
          "record": "",
@@ -3544,20 +3532,217 @@
          "slug": "tsz-fung-kwok"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Marva Kayana Putra FIRDAUS",
          "noc": "INA",
-         "time": "",
+         "time": "1:34.676",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 145,
          "lane": 5,
          "slug": "marva-kayana-putra-firdaus"
+        },
+        {
+         "rank": 5,
+         "name": "Linus August RISNES",
+         "noc": "NOR",
+         "time": "1:45.764",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 121,
+         "lane": 3,
+         "slug": "linus-august-risnes"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Heats",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Kazuki YOSHINAGA",
+        "noc": "JPN",
+        "rank": 1,
+        "time": "1:26.766",
+        "qual": "Q"
+       },
+       {
+        "name": "Jeongmin LEE",
+        "noc": "KOR",
+        "rank": 1,
+        "time": "1:26.855",
+        "qual": "Q"
+       },
+       {
+        "name": "Steven DUBOIS",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "1:27.162",
+        "qual": "Q"
+       },
+       {
+        "name": "Felix PIGEON",
+        "noc": "POL",
+        "rank": 1,
+        "time": "1:27.204",
+        "qual": "Q"
+       },
+       {
+        "name": "Adil GALIAKHMETOV",
+        "noc": "KAZ",
+        "rank": 1,
+        "time": "1:27.238",
+        "qual": "Q"
+       },
+       {
+        "name": "Muhammed BOZDAG",
+        "noc": "TUR",
+        "rank": 1,
+        "time": "1:27.918",
+        "qual": "Q"
+       },
+       {
+        "name": "Zhanshuo LOU",
+        "noc": "HKG",
+        "rank": 1,
+        "time": "1:27.968",
+        "qual": "Q"
+       },
+       {
+        "name": "Lorenzo PREVITALI",
+        "noc": "ITA",
+        "rank": 1,
+        "time": "1:28.503",
+        "qual": "Q"
+       },
+       {
+        "name": "Clayton DE CLEMENTE",
+        "noc": "USA",
+        "rank": 1,
+        "time": "1:29.301",
+        "qual": "Q"
+       },
+       {
+        "name": "Daniil NIKOLAEV",
+        "noc": "AIN2",
+        "rank": 1,
+        "time": "1:29.370",
+        "qual": "Q"
+       },
+       {
+        "name": "Peter JASZAPATI",
+        "noc": "HUN",
+        "rank": 1,
+        "time": "1:31.241",
+        "qual": "Q"
+       },
+       {
+        "name": "Niels KINGMA",
+        "noc": "NED",
+        "rank": 4,
+        "time": "1:59.520",
+        "qual": "ADV"
+       },
+       {
+        "name": "Tianyou WANG",
+        "noc": "CHN",
+        "rank": 2,
+        "time": "1:26.891",
+        "qual": "q"
+       },
+       {
+        "name": "Niall TREACY",
+        "noc": "GBR",
+        "rank": 2,
+        "time": "1:26.893",
+        "qual": "q"
+       },
+       {
+        "name": "Bohao ZHANG",
+        "noc": "CHN",
+        "rank": 2,
+        "time": "1:27.215",
+        "qual": "q"
+       },
+       {
+        "name": "Ivan DONCHEV",
+        "noc": "BUL",
+        "rank": 2,
+        "time": "1:27.292",
+        "qual": "q"
+       },
+       {
+        "name": "Yanghun Ben JUNG",
+        "noc": "GER",
+        "rank": 2,
+        "time": "1:27.466",
+        "qual": "q"
+       },
+       {
+        "name": "Nicolas ANDERMANN",
+        "noc": "AUT",
+        "rank": 2,
+        "time": "1:27.983",
+        "qual": "q"
+       },
+       {
+        "name": "Adriaan DEWAGTERE",
+        "noc": "BEL",
+        "rank": 2,
+        "time": "1:28.461",
+        "qual": "q"
+       },
+       {
+        "name": "David WU JIA WEI",
+        "noc": "HUN",
+        "rank": 2,
+        "time": "1:29.112",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Kazuki YOSHINAGA (JPN)",
+        "Ivan DONCHEV (BUL)",
+        "Yanghun Ben JUNG (GER)"
+       ],
+       [
+        "Jeongmin LEE (KOR)",
+        "Bohao ZHANG (CHN)",
+        "Nicolas ANDERMANN (AUT)"
+       ],
+       [
+        "Steven DUBOIS (CAN)",
+        "Niall TREACY (GBR)",
+        "Adriaan DEWAGTERE (BEL)"
+       ],
+       [
+        "Felix PIGEON (POL)",
+        "Tianyou WANG (CHN)",
+        "David WU JIA WEI (HUN)"
+       ],
+       [
+        "Adil GALIAKHMETOV (KAZ)",
+        "Niels KINGMA (NED)"
+       ],
+       [
+        "Muhammed BOZDAG (TUR)",
+        "Peter JASZAPATI (HUN)"
+       ],
+       [
+        "Zhanshuo LOU (HKG)",
+        "Daniil NIKOLAEV (AIN2)"
+       ],
+       [
+        "Lorenzo PREVITALI (ITA)",
+        "Clayton DE CLEMENTE (USA)"
+       ]
+      ]
+     }
     },
     {
      "id": 23622,
