@@ -18,7 +18,7 @@
   "live": "Men 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-4-shanghai/"
  },
- "checked_at": "2026-11-27T02:41:31.777218+00:00",
+ "checked_at": "2026-11-27T02:52:20.922784+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T01:00:00.000Z",
@@ -2817,20 +2817,32 @@
      "id": 23620,
      "name": "Preliminaries",
      "status": "Live",
-     "start_utc": "2026-11-27T02:37:00.000Z",
+     "start_utc": "2026-11-27T02:39:57.000Z",
      "rule": "The first placed skater from each race and up to a maximum of nine fastest second place skaters qualify for Heats.",
      "heats": [
       {
        "name": "Heat 1",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Jeongmin LEE",
+         "noc": "KOR",
+         "time": "1:26.855",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 32,
+         "lane": 3,
+         "slug": "jeongmin-lee"
+        },
+        {
+         "rank": 2,
          "name": "Niall TREACY",
          "noc": "GBR",
-         "time": "",
-         "qual": "",
+         "time": "1:26.893",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 20,
@@ -2838,10 +2850,10 @@
          "slug": "niall-treacy"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Pawel ADAMSKI",
          "noc": "POL",
-         "time": "",
+         "time": "1:28.073",
          "qual": "",
          "status": "",
          "record": "",
@@ -2850,22 +2862,10 @@
          "slug": "pawel-adamski"
         },
         {
-         "rank": null,
-         "name": "Jeongmin LEE",
-         "noc": "KOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 32,
-         "lane": 3,
-         "slug": "jeongmin-lee"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Asen GYUROV",
          "noc": "BUL",
-         "time": "",
+         "time": "1:28.708",
          "qual": "",
          "status": "",
          "record": "",
@@ -2874,10 +2874,10 @@
          "slug": "asen-gyurov"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Munkh-Erdene ERDENEBILEG",
          "noc": "MGL",
-         "time": "",
+         "time": "1:28.769",
          "qual": "",
          "status": "",
          "record": "",
@@ -2889,15 +2889,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Steven DUBOIS",
          "noc": "CAN",
-         "time": "",
-         "qual": "",
+         "time": "1:27.162",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 3,
@@ -2905,10 +2905,22 @@
          "slug": "steven-dubois"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Yanghun Ben JUNG",
+         "noc": "GER",
+         "time": "1:27.466",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 78,
+         "lane": 3,
+         "slug": "yanghun-ben-jung"
+        },
+        {
+         "rank": 3,
          "name": "Denis ORS",
          "noc": "TUR",
-         "time": "",
+         "time": "1:27.669",
          "qual": "",
          "status": "",
          "record": "",
@@ -2917,22 +2929,10 @@
          "slug": "denis-ors"
         },
         {
-         "rank": null,
-         "name": "Yanghun Ben JUNG",
-         "noc": "GER",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 78,
-         "lane": 3,
-         "slug": "yanghun-ben-jung"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Adam HILL JNR",
          "noc": "GBR",
-         "time": "",
+         "time": "1:29.134",
          "qual": "",
          "status": "",
          "record": "",
@@ -2941,10 +2941,10 @@
          "slug": "adam-hill-jnr"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Martin PRANTL",
          "noc": "CRO",
-         "time": "",
+         "time": "1:34.405",
          "qual": "",
          "status": "",
          "record": "",
@@ -2956,39 +2956,15 @@
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Brendan COREY",
-         "noc": "AUS",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 18,
-         "lane": 1,
-         "slug": "brendan-corey"
-        },
-        {
-         "rank": null,
-         "name": "Adriaan DEWAGTERE",
-         "noc": "BEL",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 53,
-         "lane": 2,
-         "slug": "adriaan-dewagtere"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Muhammed BOZDAG",
          "noc": "TUR",
-         "time": "",
-         "qual": "",
+         "time": "1:27.918",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 109,
@@ -2996,10 +2972,34 @@
          "slug": "muhammed-bozdag"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Adriaan DEWAGTERE",
+         "noc": "BEL",
+         "time": "1:28.461",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 53,
+         "lane": 2,
+         "slug": "adriaan-dewagtere"
+        },
+        {
+         "rank": 3,
+         "name": "Rostyslav LEONTENKO",
+         "noc": "UKR",
+         "time": "1:28.540",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 149,
+         "lane": 5,
+         "slug": "rostyslav-leontenko"
+        },
+        {
+         "rank": 4,
          "name": "Chun-Chieh LIN",
          "noc": "TPE",
-         "time": "",
+         "time": "1:31.123",
          "qual": "",
          "status": "",
          "record": "",
@@ -3008,24 +3008,36 @@
          "slug": "chun-chieh-lin"
         },
         {
-         "rank": null,
-         "name": "Rostyslav LEONTENKO",
-         "noc": "UKR",
-         "time": "",
+         "rank": 5,
+         "name": "Brendan COREY",
+         "noc": "AUS",
+         "time": "2:08.211",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 149,
-         "lane": 5,
-         "slug": "rostyslav-leontenko"
+         "bib": 18,
+         "lane": 1,
+         "slug": "brendan-corey"
         }
        ]
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
+        {
+         "rank": null,
+         "name": "Willem MURRAY",
+         "noc": "GBR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 76,
+         "lane": 2,
+         "slug": "willem-murray"
+        },
         {
          "rank": null,
          "name": "Clayton DE CLEMENTE",
@@ -3040,15 +3052,15 @@
         },
         {
          "rank": null,
-         "name": "Willem MURRAY",
-         "noc": "GBR",
+         "name": "Yaroslav MOROZOV",
+         "noc": "UKR",
          "time": "",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 76,
-         "lane": 2,
-         "slug": "willem-murray"
+         "bib": 150,
+         "lane": 5,
+         "slug": "yaroslav-morozov"
         },
         {
          "rank": null,
@@ -3073,18 +3085,6 @@
          "bib": 56,
          "lane": 4,
          "slug": "aleyandro-rivero-maerschalck"
-        },
-        {
-         "rank": null,
-         "name": "Yaroslav MOROZOV",
-         "noc": "UKR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 150,
-         "lane": 5,
-         "slug": "yaroslav-morozov"
         }
        ]
       },
@@ -3876,12 +3876,12 @@
    "distance": "Men 1000 m",
    "round": "Preliminaries",
    "heat": "Heat 1",
-   "start_utc": "2026-11-27T02:37:00.000Z",
-   "rank": null,
+   "start_utc": "2026-11-27T02:39:57.000Z",
+   "rank": 1,
    "name": "Jeongmin LEE",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "1:26.855",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 32,
