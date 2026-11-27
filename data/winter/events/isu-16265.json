@@ -18,7 +18,7 @@
   "live": "Women 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-4-shanghai/"
  },
- "checked_at": "2026-11-27T05:49:38.604077+00:00",
+ "checked_at": "2026-11-27T06:00:45.052912+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T01:00:00.000Z",
@@ -1109,7 +1109,7 @@
          "name": "Valentina ASCIC",
          "noc": "CRO",
          "time": "42.966",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 29,
@@ -1412,27 +1412,15 @@
       },
       {
        "name": "Heat 6",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Kornelia WOZNIAK",
-         "noc": "POL",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 84,
-         "lane": 1,
-         "slug": "kornelia-wozniak"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Xinran WANG",
          "noc": "CHN",
-         "time": "",
-         "qual": "",
+         "time": "43.187",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 28,
@@ -1440,23 +1428,11 @@
          "slug": "xinran-wang"
         },
         {
-         "rank": null,
-         "name": "Elena SEREGINA",
-         "noc": "AIN2",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 94,
-         "lane": 3,
-         "slug": "elena-seregina-1"
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Polina OMELCHUK",
          "noc": "KAZ",
-         "time": "",
-         "qual": "",
+         "time": "44.628",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 74,
@@ -1464,30 +1440,54 @@
          "slug": "polina-omelchuk"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Sukhee SHIM",
          "noc": "KOR",
-         "time": "",
+         "time": "44.637",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 79,
          "lane": 5,
          "slug": "sukhee-shim"
+        },
+        {
+         "rank": 4,
+         "name": "Kornelia WOZNIAK",
+         "noc": "POL",
+         "time": "1:04.409",
+         "qual": "ADV",
+         "status": "",
+         "record": "",
+         "bib": 84,
+         "lane": 1,
+         "slug": "kornelia-wozniak"
+        },
+        {
+         "rank": 5,
+         "name": "Elena SEREGINA",
+         "noc": "AIN2",
+         "time": "1:13.723",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 94,
+         "lane": 3,
+         "slug": "elena-seregina-1"
         }
        ]
       },
       {
        "name": "Heat 7",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Jiarui SONG",
          "noc": "CHN",
-         "time": "",
-         "qual": "",
+         "time": "43.542",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 54,
@@ -1495,11 +1495,11 @@
          "slug": "jiarui-song"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Hanne DESMET",
          "noc": "BEL",
-         "time": "",
-         "qual": "",
+         "time": "43.604",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 6,
@@ -1507,10 +1507,10 @@
          "slug": "hanne-desmet"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Margherita BETTI",
          "noc": "ITA",
-         "time": "",
+         "time": "43.675",
          "qual": "",
          "status": "",
          "record": "",
@@ -1519,10 +1519,10 @@
          "slug": "margherita-betti"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Eva GRENOUILLOUX",
          "noc": "FRA",
-         "time": "",
+         "time": "43.814",
          "qual": "",
          "status": "",
          "record": "",
@@ -1531,10 +1531,10 @@
          "slug": "eva-grenouilloux"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Guldana ZHALMUKHAN",
          "noc": "KAZ",
-         "time": "",
+         "time": "44.351",
          "qual": "",
          "status": "",
          "record": "",
@@ -1546,14 +1546,14 @@
       },
       {
        "name": "Heat 8",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Live",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Victoria JEAN-BAPTISTE",
          "noc": "CAN",
-         "time": "",
+         "time": "43.200",
          "qual": "",
          "status": "",
          "record": "",
@@ -1562,16 +1562,40 @@
          "slug": "victoria-jean-baptiste"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Gabriela TOPOLSKA",
          "noc": "POL",
-         "time": "",
+         "time": "43.620",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 13,
          "lane": 2,
          "slug": "gabriela-topolska"
+        },
+        {
+         "rank": 3,
+         "name": "Diana Laura VEGI",
+         "noc": "HUN",
+         "time": "43.670",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 46,
+         "lane": 4,
+         "slug": "diana-laura-vegi"
+        },
+        {
+         "rank": 4,
+         "name": "Katarina BURIC",
+         "noc": "CRO",
+         "time": "45.800",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 96,
+         "lane": 5,
+         "slug": "katarina-buric"
         },
         {
          "rank": null,
@@ -1584,30 +1608,6 @@
          "bib": 31,
          "lane": 3,
          "slug": "aurelie-leveque"
-        },
-        {
-         "rank": null,
-         "name": "Diana Laura VEGI",
-         "noc": "HUN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 46,
-         "lane": 4,
-         "slug": "diana-laura-vegi"
-        },
-        {
-         "rank": null,
-         "name": "Katarina BURIC",
-         "noc": "CRO",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 96,
-         "lane": 5,
-         "slug": "katarina-buric"
         }
        ]
       }
@@ -5550,10 +5550,10 @@
    "round": "Heats",
    "heat": "Heat 6",
    "start_utc": "2026-11-27T05:30:55.000Z",
-   "rank": null,
+   "rank": 3,
    "name": "Sukhee SHIM",
    "noc": "KOR",
-   "time": "",
+   "time": "44.637",
    "qual": "",
    "status": "",
    "record": "",
