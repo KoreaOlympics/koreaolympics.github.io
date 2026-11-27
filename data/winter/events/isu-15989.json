@@ -15,10 +15,10 @@
   "city": "Tokyo",
   "country": "JPN",
   "state": "Live",
-  "live": "",
+  "live": "Adeliia PETROSIAN",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-nhk-trophy-2026/"
  },
- "checked_at": "2026-11-27T07:40:01.831613+00:00",
+ "checked_at": "2026-11-27T07:50:51.192472+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T03:42:00.000Z",
@@ -563,6 +563,40 @@
     },
     {
      "rank": 2,
+     "name": "Young YOU",
+     "noc": "KOR",
+     "points": "71.42",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 2,
+       "total": "71.42",
+       "tes": "39.89",
+       "pcs": "31.53",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 3,
+     "name": "Mako YAMASHITA",
+     "noc": "JPN",
+     "points": "69.34",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 3,
+       "total": "69.34",
+       "tes": "38.60",
+       "pcs": "30.74",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 4,
      "name": "Viktoriia SAFONOVA",
      "noc": "AIN1",
      "points": "63.11",
@@ -570,44 +604,10 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 2,
+       "rank": 4,
        "total": "63.11",
        "tes": "36.69",
        "pcs": "26.42",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Young YOU",
-     "noc": "KOR",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Mako YAMASHITA",
-     "noc": "JPN",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
        "status": "Running"
       }
      }
@@ -969,17 +969,17 @@
    "sport": "figure-skating",
    "event": "ISU Figure Skating Grand Prix NHK Trophy 2026",
    "distance": "Women",
-   "round": "",
+   "round": "Short Program",
    "heat": "",
    "start_utc": "2026-11-28T07:30:00.000Z",
-   "rank": null,
+   "rank": 2,
    "name": "Young YOU",
    "noc": "KOR",
-   "time": "",
+   "time": "71.42",
    "qual": "",
    "status": "",
    "segments": {
-    "SP": ""
+    "SP": "71.42"
    }
   },
   {
