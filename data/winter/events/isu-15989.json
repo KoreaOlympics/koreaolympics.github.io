@@ -15,10 +15,10 @@
   "city": "Tokyo",
   "country": "JPN",
   "state": "Live",
-  "live": "Adeliia PETROSIAN",
+  "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-nhk-trophy-2026/"
  },
- "checked_at": "2026-11-27T07:50:51.192472+00:00",
+ "checked_at": "2026-11-27T08:01:29.109448+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T03:42:00.000Z",
@@ -597,6 +597,23 @@
     },
     {
      "rank": 4,
+     "name": "Adeliia PETROSIAN",
+     "noc": "AIN2",
+     "points": "65.28",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 4,
+       "total": "65.28",
+       "tes": "35.59",
+       "pcs": "29.69",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 5,
      "name": "Viktoriia SAFONOVA",
      "noc": "AIN1",
      "points": "63.11",
@@ -604,7 +621,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 4,
+       "rank": 5,
        "total": "63.11",
        "tes": "36.69",
        "pcs": "26.42",
@@ -613,35 +630,18 @@
      }
     },
     {
-     "rank": null,
-     "name": "Adeliia PETROSIAN",
-     "noc": "AIN2",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
+     "rank": 6,
      "name": "Julia SAUTER",
      "noc": "ROU",
-     "points": "",
+     "points": "61.88",
      "status": "Active",
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
+       "rank": 6,
+       "total": "61.88",
+       "tes": "34.47",
+       "pcs": "28.41",
        "status": "Running"
       }
      }
