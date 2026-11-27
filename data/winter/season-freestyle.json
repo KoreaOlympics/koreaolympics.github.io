@@ -12,7 +12,31 @@
    "country": "AUT",
    "state": "",
    "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62853&seasoncode=2027",
-   "podiums": []
+   "podiums": [
+    {
+     "title": "Women's Freeski Big Air",
+     "podium": [
+      {
+       "rank": 1,
+       "name": "GREMAUD Mathilde",
+       "noc": "SUI",
+       "time": "177.75"
+      },
+      {
+       "rank": 2,
+       "name": "OLDHAM Megan",
+       "noc": "CAN",
+       "time": "175.25"
+      },
+      {
+       "rank": 3,
+       "name": "WOLF Lara",
+       "noc": "AUT",
+       "time": "169.75"
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "fis-62854",
@@ -375,5 +399,27 @@
    "podiums": []
   }
  ],
- "medals": []
+ "medals": [
+  [
+   "SUI",
+   1,
+   0,
+   0,
+   1
+  ],
+  [
+   "CAN",
+   0,
+   1,
+   0,
+   1
+  ],
+  [
+   "AUT",
+   0,
+   0,
+   1,
+   1
+  ]
+ ]
 }
