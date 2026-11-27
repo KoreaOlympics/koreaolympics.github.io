@@ -15,10 +15,10 @@
   "city": "Tokyo",
   "country": "JPN",
   "state": "Live",
-  "live": "",
+  "live": "Kevin AYMOZ",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-nhk-trophy-2026/"
  },
- "checked_at": "2026-11-27T10:58:44.536635+00:00",
+ "checked_at": "2026-11-27T11:09:44.578753+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T03:42:00.000Z",
@@ -855,6 +855,23 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Lukas BRITSCHGI",
+     "noc": "SUI",
+     "points": "90.81",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 1,
+       "total": "90.81",
+       "tes": "48.57",
+       "pcs": "42.24",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
      "name": "Petr GUMENNIK",
      "noc": "AIN2",
      "points": "90.60",
@@ -862,7 +879,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 1,
+       "rank": 2,
        "total": "90.60",
        "tes": "52.60",
        "pcs": "38.00",
@@ -871,7 +888,7 @@
      }
     },
     {
-     "rank": 2,
+     "rank": 3,
      "name": "Vladimir SAMOILOV",
      "noc": "POL",
      "points": "86.72",
@@ -879,7 +896,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 2,
+       "rank": 3,
        "total": "86.72",
        "tes": "50.03",
        "pcs": "37.69",
@@ -888,7 +905,7 @@
      }
     },
     {
-     "rank": 3,
+     "rank": 4,
      "name": "Jason BROWN",
      "noc": "USA",
      "points": "85.89",
@@ -896,7 +913,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 3,
+       "rank": 4,
        "total": "85.89",
        "tes": "43.34",
        "pcs": "43.55",
@@ -905,7 +922,7 @@
      }
     },
     {
-     "rank": 4,
+     "rank": 5,
      "name": "Vladislav DIKIDZHI",
      "noc": "AIN2",
      "points": "85.46",
@@ -913,7 +930,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 4,
+       "rank": 5,
        "total": "85.46",
        "tes": "48.70",
        "pcs": "37.76",
@@ -922,7 +939,24 @@
      }
     },
     {
-     "rank": 5,
+     "rank": 6,
+     "name": "Rio NAKATA",
+     "noc": "JPN",
+     "points": "82.62",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 6,
+       "total": "82.62",
+       "tes": "43.68",
+       "pcs": "39.94",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 7,
      "name": "Nozomu YOSHIOKA",
      "noc": "JPN",
      "points": "79.40",
@@ -930,7 +964,7 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 5,
+       "rank": 7,
        "total": "79.40",
        "tes": "45.71",
        "pcs": "33.69",
@@ -939,7 +973,7 @@
      }
     },
     {
-     "rank": 6,
+     "rank": 8,
      "name": "Francois PITOT",
      "noc": "FRA",
      "points": "78.06",
@@ -947,44 +981,10 @@
      "segments": {
       "SP": {
        "name": "Short Program",
-       "rank": 6,
+       "rank": 8,
        "total": "78.06",
        "tes": "42.56",
        "pcs": "36.50",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Rio NAKATA",
-     "noc": "JPN",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Lukas BRITSCHGI",
-     "noc": "SUI",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
        "status": "Running"
       }
      }
