@@ -15,13 +15,13 @@
   "city": "Tokyo",
   "country": "JPN",
   "state": "Live",
-  "live": "LAJOIE Marjorie / BAKER Jean-Luc",
+  "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-nhk-trophy-2026/"
  },
- "checked_at": "2026-11-27T03:58:45.453379+00:00",
+ "checked_at": "2026-11-27T04:09:40.977861+00:00",
  "sessions": [
   {
-   "start_utc": "2026-11-27T03:35:00.000Z",
+   "start_utc": "2026-11-27T03:42:00.000Z",
    "title": "Ice Dance",
    "round": "Rhythm Dance",
    "event_result_id": 15738,
@@ -94,6 +94,23 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Marjorie LAJOIE / Jean-Luc BAKER",
+     "noc": "CAN",
+     "points": "70.57",
+     "status": "Active",
+     "segments": {
+      "RD": {
+       "name": "Rhythm Dance",
+       "rank": 1,
+       "total": "70.57",
+       "tes": "38.98",
+       "pcs": "31.59",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
      "name": "Ikura KUSHIDA / Koshiro SHIMADA",
      "noc": "JPN",
      "points": "63.77",
@@ -101,7 +118,7 @@
      "segments": {
       "RD": {
        "name": "Rhythm Dance",
-       "rank": 1,
+       "rank": 2,
        "total": "63.77",
        "tes": "36.12",
        "pcs": "27.65",
@@ -110,7 +127,7 @@
      }
     },
     {
-     "rank": 2,
+     "rank": 3,
      "name": "Rika KIHIRA / Shingo NISHIYAMA",
      "noc": "JPN",
      "points": "62.71",
@@ -118,27 +135,10 @@
      "segments": {
       "RD": {
        "name": "Rhythm Dance",
-       "rank": 2,
+       "rank": 3,
        "total": "62.71",
        "tes": "36.01",
        "pcs": "26.70",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Marjorie LAJOIE / Jean-Luc BAKER",
-     "noc": "CAN",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "RD": {
-       "name": "Rhythm Dance",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
        "status": "Running"
       }
      }
