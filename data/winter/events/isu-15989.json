@@ -15,10 +15,10 @@
   "city": "Tokyo",
   "country": "JPN",
   "state": "Live",
-  "live": "ZINGAS Emilea / KOLESNIK Vadym",
+  "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-nhk-trophy-2026/"
  },
- "checked_at": "2026-11-27T04:32:50.787931+00:00",
+ "checked_at": "2026-11-27T04:43:33.134844+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T03:42:00.000Z",
@@ -94,6 +94,23 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Emilea ZINGAS / Vadym KOLESNIK",
+     "noc": "USA",
+     "points": "83.16",
+     "status": "Active",
+     "segments": {
+      "RD": {
+       "name": "Rhythm Dance",
+       "rank": 1,
+       "total": "83.16",
+       "tes": "46.63",
+       "pcs": "36.53",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
      "name": "Christina CARREIRA / Anthony PONOMARENKO",
      "noc": "USA",
      "points": "80.82",
@@ -101,7 +118,7 @@
      "segments": {
       "RD": {
        "name": "Rhythm Dance",
-       "rank": 1,
+       "rank": 2,
        "total": "80.82",
        "tes": "45.85",
        "pcs": "34.97",
@@ -110,7 +127,7 @@
      }
     },
     {
-     "rank": 2,
+     "rank": 3,
      "name": "Juulia TURKKILA / Matthias VERSLUIS",
      "noc": "FIN",
      "points": "77.01",
@@ -118,7 +135,7 @@
      "segments": {
       "RD": {
        "name": "Rhythm Dance",
-       "rank": 2,
+       "rank": 3,
        "total": "77.01",
        "tes": "42.58",
        "pcs": "34.43",
@@ -127,7 +144,7 @@
      }
     },
     {
-     "rank": 3,
+     "rank": 4,
      "name": "Yuka ORIHARA / Juho PIRINEN",
      "noc": "FIN",
      "points": "71.93",
@@ -135,7 +152,7 @@
      "segments": {
       "RD": {
        "name": "Rhythm Dance",
-       "rank": 3,
+       "rank": 4,
        "total": "71.93",
        "tes": "40.30",
        "pcs": "31.63",
@@ -144,7 +161,7 @@
      }
     },
     {
-     "rank": 4,
+     "rank": 5,
      "name": "Marjorie LAJOIE / Jean-Luc BAKER",
      "noc": "CAN",
      "points": "70.57",
@@ -152,7 +169,7 @@
      "segments": {
       "RD": {
        "name": "Rhythm Dance",
-       "rank": 4,
+       "rank": 5,
        "total": "70.57",
        "tes": "38.98",
        "pcs": "31.59",
@@ -161,7 +178,7 @@
      }
     },
     {
-     "rank": 5,
+     "rank": 6,
      "name": "Ikura KUSHIDA / Koshiro SHIMADA",
      "noc": "JPN",
      "points": "63.77",
@@ -169,7 +186,7 @@
      "segments": {
       "RD": {
        "name": "Rhythm Dance",
-       "rank": 5,
+       "rank": 6,
        "total": "63.77",
        "tes": "36.12",
        "pcs": "27.65",
@@ -178,7 +195,7 @@
      }
     },
     {
-     "rank": 6,
+     "rank": 7,
      "name": "Rika KIHIRA / Shingo NISHIYAMA",
      "noc": "JPN",
      "points": "62.71",
@@ -186,27 +203,10 @@
      "segments": {
       "RD": {
        "name": "Rhythm Dance",
-       "rank": 6,
+       "rank": 7,
        "total": "62.71",
        "tes": "36.01",
        "pcs": "26.70",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Emilea ZINGAS / Vadym KOLESNIK",
-     "noc": "USA",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "RD": {
-       "name": "Rhythm Dance",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
        "status": "Running"
       }
      }
