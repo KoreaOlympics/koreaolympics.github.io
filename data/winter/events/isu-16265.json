@@ -18,7 +18,7 @@
   "live": "Women 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-4-shanghai/"
  },
- "checked_at": "2026-11-27T06:45:16.143813+00:00",
+ "checked_at": "2026-11-27T06:56:06.797949+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T01:00:00.000Z",
@@ -4164,7 +4164,7 @@
      "id": 23640,
      "name": "Heats",
      "status": "Live",
-     "start_utc": "2026-11-27T06:33:00.000Z",
+     "start_utc": "2026-11-27T06:39:43.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of two fastest third place skaters qualify for Quarterfinals.",
      "heats": [
       {
@@ -4201,7 +4201,7 @@
          "name": "Kiek STRAATHOF",
          "noc": "NED",
          "time": "1:35.332",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 80,
@@ -4236,15 +4236,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Courtney SARAULT",
          "noc": "CAN",
-         "time": "",
-         "qual": "",
+         "time": "1:31.223",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 1,
@@ -4252,10 +4252,34 @@
          "slug": "courtney-sarault"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Minji KIM",
+         "noc": "KOR",
+         "time": "1:31.653",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 78,
+         "lane": 3,
+         "slug": "minji-kim"
+        },
+        {
+         "rank": 3,
+         "name": "Maja Dora SOMODI",
+         "noc": "HUN",
+         "time": "1:31.744",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 32,
+         "lane": 5,
+         "slug": "maja-dora-somodi"
+        },
+        {
+         "rank": 4,
          "name": "Rina YAMANA",
          "noc": "JPN",
-         "time": "",
+         "time": "1:31.891",
          "qual": "",
          "status": "",
          "record": "",
@@ -4264,54 +4288,30 @@
          "slug": "rina-yamana"
         },
         {
-         "rank": null,
-         "name": "Minji KIM",
-         "noc": "KOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 78,
-         "lane": 3,
-         "slug": "minji-kim"
-        },
-        {
-         "rank": null,
+         "rank": 5,
          "name": "Natalia MALISZEWSKA",
          "noc": "POL",
-         "time": "",
+         "time": "1:32.727",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 17,
          "lane": 4,
          "slug": "natalia-maliszewska"
-        },
-        {
-         "rank": null,
-         "name": "Maja Dora SOMODI",
-         "noc": "HUN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 32,
-         "lane": 5,
-         "slug": "maja-dora-somodi"
         }
        ]
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Xandra VELZEBOER",
          "noc": "NED",
-         "time": "",
-         "qual": "",
+         "time": "1:31.121",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 3,
@@ -4319,11 +4319,11 @@
          "slug": "xandra-velzeboer"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Yan ZHANG",
          "noc": "CHN",
-         "time": "",
-         "qual": "",
+         "time": "1:31.527",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 56,
@@ -4331,22 +4331,10 @@
          "slug": "yan-zhang-1"
         },
         {
-         "rank": null,
-         "name": "Michalina WAWER",
-         "noc": "POL",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 83,
-         "lane": 3,
-         "slug": "michalina-wawer"
-        },
-        {
-         "rank": null,
+         "rank": 3,
          "name": "Anastassiya GALECHINA",
          "noc": "KAZ",
-         "time": "",
+         "time": "1:32.163",
          "qual": "",
          "status": "",
          "record": "",
@@ -4355,10 +4343,22 @@
          "slug": "anastassiya-galechina-1"
         },
         {
-         "rank": null,
+         "rank": 4,
+         "name": "Michalina WAWER",
+         "noc": "POL",
+         "time": "1:32.172",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 83,
+         "lane": 3,
+         "slug": "michalina-wawer"
+        },
+        {
+         "rank": 5,
          "name": "Katia FILIPPI",
          "noc": "ITA",
-         "time": "",
+         "time": "1:32.189",
          "qual": "",
          "status": "",
          "record": "",
@@ -4370,15 +4370,15 @@
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Hanne DESMET",
          "noc": "BEL",
-         "time": "",
-         "qual": "",
+         "time": "1:31.310",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 6,
@@ -4386,11 +4386,11 @@
          "slug": "hanne-desmet"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Failia AIMALETDINOVA",
          "noc": "AIN2",
-         "time": "",
-         "qual": "",
+         "time": "1:31.385",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 90,
@@ -4398,10 +4398,10 @@
          "slug": "failia-aimaletdinova"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Diana Laura VEGI",
          "noc": "HUN",
-         "time": "",
+         "time": "1:32.324",
          "qual": "",
          "status": "",
          "record": "",
@@ -4410,34 +4410,34 @@
          "slug": "diana-laura-vegi"
         },
         {
-         "rank": null,
-         "name": "Polina OMELCHUK",
-         "noc": "KAZ",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 74,
-         "lane": 4,
-         "slug": "polina-omelchuk"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Haruna NAGAMORI",
          "noc": "JPN",
-         "time": "",
+         "time": "1:32.482",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 69,
          "lane": 5,
          "slug": "haruna-nagamori"
+        },
+        {
+         "rank": 5,
+         "name": "Polina OMELCHUK",
+         "noc": "KAZ",
+         "time": "1:36.415",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 74,
+         "lane": 4,
+         "slug": "polina-omelchuk"
         }
        ]
       },
       {
        "name": "Heat 5",
-       "status": "Scheduled",
+       "status": "Getting Ready",
        "official": "Start List",
        "competitors": [
         {
@@ -7063,7 +7063,7 @@
    "distance": "Women 1000 m",
    "round": "Heats",
    "heat": "Heat 1",
-   "start_utc": "2026-11-27T06:33:00.000Z",
+   "start_utc": "2026-11-27T06:39:43.000Z",
    "rank": 1,
    "name": "Minjeong CHOI",
    "noc": "KOR",
@@ -7082,12 +7082,12 @@
    "distance": "Women 1000 m",
    "round": "Heats",
    "heat": "Heat 2",
-   "start_utc": "2026-11-27T06:33:00.000Z",
-   "rank": null,
+   "start_utc": "2026-11-27T06:39:43.000Z",
+   "rank": 2,
    "name": "Minji KIM",
    "noc": "KOR",
-   "time": "",
-   "qual": "",
+   "time": "1:31.653",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 78,
@@ -7101,7 +7101,7 @@
    "distance": "Women 1000 m",
    "round": "Heats",
    "heat": "Heat 6",
-   "start_utc": "2026-11-27T06:33:00.000Z",
+   "start_utc": "2026-11-27T06:39:43.000Z",
    "rank": null,
    "name": "Gilli KIM",
    "noc": "KOR",
@@ -7120,7 +7120,7 @@
    "distance": "Women 1000 m",
    "round": "Heats",
    "heat": "Heat 8",
-   "start_utc": "2026-11-27T06:33:00.000Z",
+   "start_utc": "2026-11-27T06:39:43.000Z",
    "rank": null,
    "name": "Sukhee SHIM",
    "noc": "KOR",
