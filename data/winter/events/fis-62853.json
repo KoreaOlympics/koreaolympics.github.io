@@ -16,11 +16,16 @@
   "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62853&seasoncode=2027",
   "raw": "4xBA"
  },
- "checked_at": "2026-11-27T07:28:39.128414+00:00",
+ "checked_at": "2026-11-27T07:39:22.996927+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-26T13:50:00Z",
    "title": "Women's Freeski Big Air Qualification",
+   "round": ""
+  },
+  {
+   "start_utc": "2026-11-27T09:10:00Z",
+   "title": "Men's Freeski Big Air Qualification",
    "round": ""
   },
   {
@@ -31,11 +36,6 @@
   {
    "start_utc": "2026-11-27T17:45:00Z",
    "title": "Women's Freeski Big Air",
-   "round": ""
-  },
-  {
-   "start_utc": "2026-11-27",
-   "title": "Men's Freeski Big Air Qualification",
    "round": ""
   }
  ],
@@ -283,138 +283,6 @@
     "Official results"
    ],
    "status": "Finished"
-  },
-  "19701": {
-   "columns": [],
-   "rows": [],
-   "title": "Freeski Big Air",
-   "start_utc": "2026-11-27T17:45:00Z",
-   "gender": "M",
-   "live": false,
-   "runs": [],
-   "status": ""
-  },
-  "19548": {
-   "title": "Women's Freeski Big Air",
-   "columns": [],
-   "rows": [
-    {
-     "order": "1",
-     "bib": "15",
-     "code": "2539335",
-     "name": "GASSLITTER Maria",
-     "year": "2006",
-     "noc": "ITA",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "2",
-     "bib": "3",
-     "code": "2533924",
-     "name": "OLDHAM Megan",
-     "year": "2001",
-     "noc": "CAN",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "3",
-     "bib": "10",
-     "code": "2532939",
-     "name": "GASKELL Elena",
-     "year": "2001",
-     "noc": "CAN",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "4",
-     "bib": "6",
-     "code": "2531561",
-     "name": "TANNO Giulia",
-     "year": "1998",
-     "noc": "SUI",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "5",
-     "bib": "11",
-     "code": "2535825",
-     "name": "HAN Linshan",
-     "year": "2006",
-     "noc": "CHN",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "6",
-     "bib": "18",
-     "code": "2537064",
-     "name": "ANDRASKA Anouk",
-     "year": "2004",
-     "noc": "SUI",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "7",
-     "bib": "21",
-     "code": "2542578",
-     "name": "ZHANG Jiaying",
-     "year": "2007",
-     "noc": "CHN",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "8",
-     "bib": "8",
-     "code": "2532452",
-     "name": "WOLF Lara",
-     "year": "2000",
-     "noc": "AUT",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "9",
-     "bib": "4",
-     "code": "2534255",
-     "name": "LIU Mengting",
-     "year": "2004",
-     "noc": "CHN",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "10",
-     "bib": "1",
-     "code": "2532209",
-     "name": "GREMAUD Mathilde",
-     "year": "2000",
-     "noc": "SUI",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    }
-   ],
-   "start_list": true,
-   "start_utc": "2026-11-27T17:45:00Z",
-   "gender": "W",
-   "live": false,
-   "runs": [],
-   "status": ""
   },
   "19550": {
    "title": "Men's Freeski Big Air Qualification",
@@ -983,8 +851,140 @@
     }
    ],
    "start_list": true,
-   "start_utc": "2026-11-27",
+   "start_utc": "2026-11-27T09:10:00Z",
    "gender": "M",
+   "live": false,
+   "runs": [],
+   "status": ""
+  },
+  "19701": {
+   "columns": [],
+   "rows": [],
+   "title": "Freeski Big Air",
+   "start_utc": "2026-11-27T17:45:00Z",
+   "gender": "M",
+   "live": false,
+   "runs": [],
+   "status": ""
+  },
+  "19548": {
+   "title": "Women's Freeski Big Air",
+   "columns": [],
+   "rows": [
+    {
+     "order": "1",
+     "bib": "15",
+     "code": "2539335",
+     "name": "GASSLITTER Maria",
+     "year": "2006",
+     "noc": "ITA",
+     "cells": {},
+     "rank": null,
+     "status": ""
+    },
+    {
+     "order": "2",
+     "bib": "3",
+     "code": "2533924",
+     "name": "OLDHAM Megan",
+     "year": "2001",
+     "noc": "CAN",
+     "cells": {},
+     "rank": null,
+     "status": ""
+    },
+    {
+     "order": "3",
+     "bib": "10",
+     "code": "2532939",
+     "name": "GASKELL Elena",
+     "year": "2001",
+     "noc": "CAN",
+     "cells": {},
+     "rank": null,
+     "status": ""
+    },
+    {
+     "order": "4",
+     "bib": "6",
+     "code": "2531561",
+     "name": "TANNO Giulia",
+     "year": "1998",
+     "noc": "SUI",
+     "cells": {},
+     "rank": null,
+     "status": ""
+    },
+    {
+     "order": "5",
+     "bib": "11",
+     "code": "2535825",
+     "name": "HAN Linshan",
+     "year": "2006",
+     "noc": "CHN",
+     "cells": {},
+     "rank": null,
+     "status": ""
+    },
+    {
+     "order": "6",
+     "bib": "18",
+     "code": "2537064",
+     "name": "ANDRASKA Anouk",
+     "year": "2004",
+     "noc": "SUI",
+     "cells": {},
+     "rank": null,
+     "status": ""
+    },
+    {
+     "order": "7",
+     "bib": "21",
+     "code": "2542578",
+     "name": "ZHANG Jiaying",
+     "year": "2007",
+     "noc": "CHN",
+     "cells": {},
+     "rank": null,
+     "status": ""
+    },
+    {
+     "order": "8",
+     "bib": "8",
+     "code": "2532452",
+     "name": "WOLF Lara",
+     "year": "2000",
+     "noc": "AUT",
+     "cells": {},
+     "rank": null,
+     "status": ""
+    },
+    {
+     "order": "9",
+     "bib": "4",
+     "code": "2534255",
+     "name": "LIU Mengting",
+     "year": "2004",
+     "noc": "CHN",
+     "cells": {},
+     "rank": null,
+     "status": ""
+    },
+    {
+     "order": "10",
+     "bib": "1",
+     "code": "2532209",
+     "name": "GREMAUD Mathilde",
+     "year": "2000",
+     "noc": "SUI",
+     "cells": {},
+     "rank": null,
+     "status": ""
+    }
+   ],
+   "start_list": true,
+   "start_utc": "2026-11-27T17:45:00Z",
+   "gender": "W",
    "live": false,
    "runs": [],
    "status": ""
