@@ -18,7 +18,7 @@
   "live": "Men 1500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-4-shanghai/"
  },
- "checked_at": "2026-11-27T04:20:14.829793+00:00",
+ "checked_at": "2026-11-27T04:32:39.481792+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T01:00:00.000Z",
@@ -3808,7 +3808,7 @@
     {
      "id": 23651,
      "name": "Heats",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-27T03:40:44.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of six fastest third place skaters qualify for Quarterfinals.",
      "heats": [
@@ -3846,7 +3846,7 @@
          "name": "Lucas WAREHAM",
          "noc": "AUS",
          "time": "2:25.517",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 50,
@@ -3937,7 +3937,7 @@
          "name": "Pietro MARINELLI",
          "noc": "ITA",
          "time": "2:24.467",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 86,
@@ -4119,7 +4119,7 @@
          "name": "Warre VAN DAMME",
          "noc": "BEL",
          "time": "2:23.347",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 58,
@@ -4210,7 +4210,7 @@
          "name": "Tsz Fung KWOK",
          "noc": "HKG",
          "time": "2:30.831",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 80,
@@ -4301,7 +4301,7 @@
          "name": "Fre VAN DAMME",
          "noc": "BEL",
          "time": "2:23.602",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 57,
@@ -4392,7 +4392,7 @@
          "name": "Tobias WOLF",
          "noc": "AUT",
          "time": "2:20.425",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 52,
@@ -4451,15 +4451,15 @@
       },
       {
        "name": "Heat 8",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Yuheng LI",
          "noc": "CHN",
-         "time": "",
-         "qual": "",
+         "time": "2:28.722",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 152,
@@ -4467,10 +4467,58 @@
          "slug": "yuheng-li-1"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Vladimir BALBEKOV",
+         "noc": "AIN2",
+         "time": "2:28.775",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 122,
+         "lane": 6,
+         "slug": "vladimir-balbekov"
+        },
+        {
+         "rank": 3,
+         "name": "Peter JASZAPATI",
+         "noc": "HUN",
+         "time": "2:28.827",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 81,
+         "lane": 1,
+         "slug": "peter-jaszapati"
+        },
+        {
+         "rank": 4,
+         "name": "Nicolas ANDERMANN",
+         "noc": "AUT",
+         "time": "2:29.557",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 51,
+         "lane": 2,
+         "slug": "nicolas-andermann"
+        },
+        {
+         "rank": 5,
+         "name": "Enzo PROOST",
+         "noc": "BEL",
+         "time": "2:32.308",
+         "qual": "ADV",
+         "status": "",
+         "record": "",
+         "bib": 128,
+         "lane": 7,
+         "slug": "enzo-proost"
+        },
+        {
+         "rank": 6,
          "name": "Radek FAJKUS",
          "noc": "CZE",
-         "time": "",
+         "time": "3:03.390",
          "qual": "",
          "status": "",
          "record": "",
@@ -4480,67 +4528,222 @@
         },
         {
          "rank": null,
-         "name": "Nicolas ANDERMANN",
-         "noc": "AUT",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 51,
-         "lane": 2,
-         "slug": "nicolas-andermann"
-        },
-        {
-         "rank": null,
-         "name": "Enzo PROOST",
-         "noc": "BEL",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 128,
-         "lane": 7,
-         "slug": "enzo-proost"
-        },
-        {
-         "rank": null,
          "name": "Metehan ATAN",
          "noc": "TUR",
-         "time": "",
+         "time": "PEN",
          "qual": "",
-         "status": "",
+         "status": "Penalty",
          "record": "",
          "bib": 108,
          "lane": 3,
          "slug": "metehan-atan"
-        },
-        {
-         "rank": null,
-         "name": "Peter JASZAPATI",
-         "noc": "HUN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 81,
-         "lane": 1,
-         "slug": "peter-jaszapati"
-        },
-        {
-         "rank": null,
-         "name": "Vladimir BALBEKOV",
-         "noc": "AIN2",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 122,
-         "lane": 6,
-         "slug": "vladimir-balbekov"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Quarterfinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Adil GALIAKHMETOV",
+        "noc": "KAZ",
+        "rank": 1,
+        "time": "2:20.121",
+        "qual": "Q"
+       },
+       {
+        "name": "Taiga SASAKI",
+        "noc": "JPN",
+        "rank": 1,
+        "time": "2:21.284",
+        "qual": "Q"
+       },
+       {
+        "name": "Noah TROPPE",
+        "noc": "USA",
+        "rank": 1,
+        "time": "2:23.017",
+        "qual": "Q"
+       },
+       {
+        "name": "Andrew HEO",
+        "noc": "USA",
+        "rank": 1,
+        "time": "2:24.392",
+        "qual": "Q"
+       },
+       {
+        "name": "Kay HUISMAN",
+        "noc": "NED",
+        "rank": 1,
+        "time": "2:24.404",
+        "qual": "Q"
+       },
+       {
+        "name": "Yuheng LI",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "2:28.722",
+        "qual": "Q"
+       },
+       {
+        "name": "Maxime LAOUN",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "2:29.010",
+        "qual": "Q"
+       },
+       {
+        "name": "Furkan AKAR",
+        "noc": "TUR",
+        "rank": 1,
+        "time": "2:38.352",
+        "qual": "Q"
+       },
+       {
+        "name": "Niels KINGMA",
+        "noc": "NED",
+        "rank": 2,
+        "time": "2:20.240",
+        "qual": "Q"
+       },
+       {
+        "name": "Willem MURRAY",
+        "noc": "GBR",
+        "rank": 2,
+        "time": "2:22.495",
+        "qual": "Q"
+       },
+       {
+        "name": "Tianyou WANG",
+        "noc": "CHN",
+        "rank": 2,
+        "time": "2:23.219",
+        "qual": "Q"
+       },
+       {
+        "name": "Philippe DAUDELIN",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "2:24.443",
+        "qual": "Q"
+       },
+       {
+        "name": "Lorenzo PREVITALI",
+        "noc": "ITA",
+        "rank": 2,
+        "time": "2:24.566",
+        "qual": "Q"
+       },
+       {
+        "name": "Vladimir BALBEKOV",
+        "noc": "AIN2",
+        "rank": 2,
+        "time": "2:28.775",
+        "qual": "Q"
+       },
+       {
+        "name": "Peter Joseph GROSECLOSE",
+        "noc": "PHI",
+        "rank": 2,
+        "time": "2:29.055",
+        "qual": "Q"
+       },
+       {
+        "name": "Aibek NASSEN",
+        "noc": "KAZ",
+        "rank": 2,
+        "time": "2:39.093",
+        "qual": "Q"
+       },
+       {
+        "name": "Enzo PROOST",
+        "noc": "BEL",
+        "rank": 5,
+        "time": "2:32.308",
+        "qual": "ADV"
+       },
+       {
+        "name": "Tobias WOLF",
+        "noc": "AUT",
+        "rank": 3,
+        "time": "2:20.425",
+        "qual": "q"
+       },
+       {
+        "name": "Warre VAN DAMME",
+        "noc": "BEL",
+        "rank": 3,
+        "time": "2:23.347",
+        "qual": "q"
+       },
+       {
+        "name": "Fre VAN DAMME",
+        "noc": "BEL",
+        "rank": 3,
+        "time": "2:23.602",
+        "qual": "q"
+       },
+       {
+        "name": "Pietro MARINELLI",
+        "noc": "ITA",
+        "rank": 3,
+        "time": "2:24.467",
+        "qual": "q"
+       },
+       {
+        "name": "Lucas WAREHAM",
+        "noc": "AUS",
+        "rank": 3,
+        "time": "2:25.517",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Adil GALIAKHMETOV (KAZ)",
+        "Tobias WOLF (AUT)",
+        "Warre VAN DAMME (BEL)"
+       ],
+       [
+        "Taiga SASAKI (JPN)",
+        "Enzo PROOST (BEL)",
+        "Fre VAN DAMME (BEL)"
+       ],
+       [
+        "Noah TROPPE (USA)",
+        "Aibek NASSEN (KAZ)",
+        "Pietro MARINELLI (ITA)"
+       ],
+       [
+        "Andrew HEO (USA)",
+        "Peter Joseph GROSECLOSE (PHI)",
+        "Lucas WAREHAM (AUS)"
+       ],
+       [
+        "Kay HUISMAN (NED)",
+        "Vladimir BALBEKOV (AIN2)"
+       ],
+       [
+        "Yuheng LI (CHN)",
+        "Lorenzo PREVITALI (ITA)"
+       ],
+       [
+        "Maxime LAOUN (CAN)",
+        "Philippe DAUDELIN (CAN)"
+       ],
+       [
+        "Furkan AKAR (TUR)",
+        "Tianyou WANG (CHN)"
+       ],
+       [
+        "Niels KINGMA (NED)",
+        "Willem MURRAY (GBR)"
+       ]
+      ]
+     }
     },
     {
      "id": 23653,
