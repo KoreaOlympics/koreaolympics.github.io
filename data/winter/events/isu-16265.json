@@ -18,7 +18,7 @@
   "live": "Women 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-4-shanghai/"
  },
- "checked_at": "2026-11-27T06:44:12.414359+00:00",
+ "checked_at": "2026-11-27T06:45:16.143813+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T01:00:00.000Z",
@@ -4170,14 +4170,14 @@
       {
        "name": "Heat 1",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "Minjeong CHOI",
          "noc": "KOR",
-         "time": "1:34.730",
-         "qual": "",
+         "time": "1:34.724",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 4,
@@ -4188,8 +4188,8 @@
          "rank": 2,
          "name": "Chien Hua HUANG",
          "noc": "TPE",
-         "time": "1:34.950",
-         "qual": "",
+         "time": "1:34.935",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 85,
@@ -4197,23 +4197,11 @@
          "slug": "chien-hua-huang"
         },
         {
-         "rank": 5,
-         "name": "Gabriela TOPOLSKA",
-         "noc": "POL",
-         "time": "1:36.030",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 13,
-         "lane": 2,
-         "slug": "gabriela-topolska"
-        },
-        {
-         "rank": null,
+         "rank": 3,
          "name": "Kiek STRAATHOF",
          "noc": "NED",
-         "time": "",
-         "qual": "",
+         "time": "1:35.332",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 80,
@@ -4221,22 +4209,34 @@
          "slug": "kiek-straathof"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Tineke DEN DULK",
          "noc": "BEL",
-         "time": "",
-         "qual": "",
+         "time": "1:35.344",
+         "qual": "ADV",
          "status": "",
          "record": "",
          "bib": 44,
          "lane": 3,
          "slug": "tineke-den-dulk-1"
+        },
+        {
+         "rank": null,
+         "name": "Gabriela TOPOLSKA",
+         "noc": "POL",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 13,
+         "lane": 2,
+         "slug": "gabriela-topolska"
         }
        ]
       },
       {
        "name": "Heat 2",
-       "status": "Scheduled",
+       "status": "Getting Ready",
        "official": "Start List",
        "competitors": [
         {
@@ -7067,8 +7067,8 @@
    "rank": 1,
    "name": "Minjeong CHOI",
    "noc": "KOR",
-   "time": "1:34.730",
-   "qual": "",
+   "time": "1:34.724",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": 4,
