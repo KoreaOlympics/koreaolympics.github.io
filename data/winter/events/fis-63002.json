@@ -19,7 +19,7 @@
   "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=CC&eventid=63002&seasoncode=2027",
   "raw": "2xINT 2xSPQ 2xSPF 2xMAS"
  },
- "checked_at": "2026-11-28T07:58:04.010620+00:00",
+ "checked_at": "2026-11-28T08:09:17.129428+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T09:30:00Z",
@@ -2436,798 +2436,941 @@
   },
   "52086": {
    "title": "Women's 1.2km Sprint Qualification Classic",
-   "columns": [],
+   "columns": [
+    "Time",
+    "Diff. Time"
+   ],
    "rows": [
     {
-     "order": "1",
-     "bib": "1",
-     "code": "3426200",
-     "name": "WENG Lotta Udnes",
-     "year": "1996",
-     "noc": "NOR",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "2",
+     "rank": 1,
      "bib": "2",
      "code": "3506166",
      "name": "SVAHN Linn",
      "year": "1999",
      "noc": "SWE",
-     "cells": {},
-     "rank": null,
+     "cells": {
+      "Time": "2:56.39",
+      "Diff. Time": ""
+     },
      "status": ""
     },
     {
-     "order": "3",
-     "bib": "3",
-     "code": "3515321",
-     "name": "KAELIN Nadja",
-     "year": "2001",
-     "noc": "SUI",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "4",
-     "bib": "4",
-     "code": "3506105",
-     "name": "",
-     "year": "1998",
-     "noc": "SWE",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "5",
-     "bib": "5",
-     "code": "3155324",
-     "name": "JANATOVA Katerina",
-     "year": "1997",
-     "noc": "CZE",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "6",
-     "bib": "6",
-     "code": "3505800",
-     "name": "DAHLQVIST Maja",
-     "year": "1994",
-     "noc": "SWE",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "7",
-     "bib": "7",
-     "code": "3055160",
-     "name": "SCHERZ Magdalena",
-     "year": "2001",
-     "noc": "AUT",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "8",
-     "bib": "8",
-     "code": "3185828",
-     "name": "KAHARA Jasmin",
-     "year": "2000",
-     "noc": "FIN",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "9",
-     "bib": "9",
-     "code": "3185911",
-     "name": "NIEMELA Hilla",
-     "year": "2001",
-     "noc": "FIN",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "10",
-     "bib": "10",
-     "code": "3185579",
-     "name": "MATINTALO Johanna",
-     "year": "1996",
-     "noc": "FIN",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "11",
-     "bib": "11",
-     "code": "3555052",
-     "name": "EIDUKA Patricija",
-     "year": "2000",
-     "noc": "LAT",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "12",
-     "bib": "12",
-     "code": "3205570",
-     "name": "RYDZEK Coletta",
-     "year": "1997",
-     "noc": "GER",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "13",
-     "bib": "13",
-     "code": "3025003",
-     "name": "DEL RIO Gina",
-     "year": "2004",
-     "noc": "AND",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "14",
-     "bib": "14",
-     "code": "3427972",
-     "name": "",
-     "year": "2005",
-     "noc": "NOR",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "15",
-     "bib": "15",
-     "code": "3205434",
-     "name": "KREHL Sofie",
-     "year": "1995",
-     "noc": "GER",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "16",
-     "bib": "16",
-     "code": "3505998",
-     "name": "ILAR Moa",
-     "year": "1997",
-     "noc": "SWE",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "17",
-     "bib": "17",
-     "code": "3535562",
-     "name": "KERN Julia",
-     "year": "1997",
-     "noc": "USA",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "18",
-     "bib": "18",
-     "code": "3295512",
-     "name": "DE MARTIN PINTER Iris",
-     "year": "2004",
-     "noc": "ITA",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "19",
-     "bib": "19",
-     "code": "3295241",
-     "name": "",
-     "year": "1995",
-     "noc": "ITA",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "20",
-     "bib": "20",
-     "code": "3295408",
-     "name": "CASSOL Federica",
-     "year": "2000",
-     "noc": "ITA",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "21",
-     "bib": "21",
-     "code": "3195273",
-     "name": "GAL Melissa",
-     "year": "1999",
-     "noc": "FRA",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "22",
-     "bib": "22",
-     "code": "3426626",
-     "name": "SKISTAD Kristine Stavaas",
-     "year": "1999",
-     "noc": "NOR",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "23",
-     "bib": "23",
-     "code": "3185976",
-     "name": "SAARI Amanda",
-     "year": "2000",
-     "noc": "FIN",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "24",
-     "bib": "24",
-     "code": "3506428",
-     "name": "ERIKSSON Lisa",
-     "year": "2003",
-     "noc": "SWE",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "25",
-     "bib": "25",
-     "code": "3427376",
-     "name": "AABREKK Ingrid Bergene",
-     "year": "2002",
-     "noc": "NOR",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "26",
+     "rank": 2,
      "bib": "26",
      "code": "3185551",
      "name": "JOENSUU Jasmi",
      "year": "1996",
      "noc": "FIN",
-     "cells": {},
-     "rank": null,
+     "cells": {
+      "Time": "2:58.45",
+      "Diff. Time": "+2.06"
+     },
      "status": ""
     },
     {
-     "order": "27",
+     "rank": 3,
+     "bib": "14",
+     "code": "3427972",
+     "name": "ANDREASSEN Milla Grosberghaugen",
+     "year": "2005",
+     "noc": "NOR",
+     "cells": {
+      "Time": "2:59.28",
+      "Diff. Time": "+2.89"
+     },
+     "status": ""
+    },
+    {
+     "rank": 4,
+     "bib": "10",
+     "code": "3185579",
+     "name": "MATINTALO Johanna",
+     "year": "1996",
+     "noc": "FIN",
+     "cells": {
+      "Time": "2:59.40",
+      "Diff. Time": "+3.01"
+     },
+     "status": ""
+    },
+    {
+     "rank": 5,
+     "bib": "13",
+     "code": "3025003",
+     "name": "DEL RIO Gina",
+     "year": "2004",
+     "noc": "AND",
+     "cells": {
+      "Time": "3:01.01",
+      "Diff. Time": "+4.62"
+     },
+     "status": ""
+    },
+    {
+     "rank": 6,
      "bib": "27",
      "code": "3295410",
      "name": "MONSORNO Nicole",
      "year": "2000",
      "noc": "ITA",
-     "cells": {},
-     "rank": null,
+     "cells": {
+      "Time": "3:01.45",
+      "Diff. Time": "+5.06"
+     },
      "status": ""
     },
     {
-     "order": "28",
-     "bib": "28",
-     "code": "3515319",
-     "name": "WEBER Anja",
-     "year": "2001",
-     "noc": "SUI",
-     "cells": {},
-     "rank": null,
+     "rank": 7,
+     "bib": "38",
+     "code": "3185705",
+     "name": "OLKKONEN Tiia",
+     "year": "1999",
+     "noc": "FIN",
+     "cells": {
+      "Time": "3:01.55",
+      "Diff. Time": "+5.16"
+     },
      "status": ""
     },
     {
-     "order": "29",
-     "bib": "29",
-     "code": "3486010",
-     "name": "TERENTEVA Natalia",
-     "year": "1995",
-     "noc": "AIN",
-     "cells": {},
-     "rank": null,
+     "rank": 8,
+     "bib": "4",
+     "code": "3506105",
+     "name": "HAGSTROEM Johanna",
+     "year": "1998",
+     "noc": "SWE",
+     "cells": {
+      "Time": "3:01.72",
+      "Diff. Time": "+5.33"
+     },
      "status": ""
     },
     {
-     "order": "30",
-     "bib": "30",
-     "code": "3205305",
-     "name": "GIMMLER Laura",
-     "year": "1993",
-     "noc": "GER",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "31",
-     "bib": "31",
-     "code": "3435201",
-     "name": "SKINDER Monika",
-     "year": "2001",
-     "noc": "POL",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "32",
+     "rank": 9,
      "bib": "32",
      "code": "3427704",
      "name": "HAUGEN Helene Ekrheim",
      "year": "2004",
      "noc": "NOR",
-     "cells": {},
-     "rank": null,
+     "cells": {
+      "Time": "3:01.95",
+      "Diff. Time": "+5.56"
+     },
      "status": ""
     },
     {
-     "order": "33",
-     "bib": "33",
-     "code": "3426201",
-     "name": "WENG Tiril Udnes",
-     "year": "1996",
-     "noc": "NOR",
-     "cells": {},
-     "rank": null,
+     "rank": 10,
+     "bib": "28",
+     "code": "3515319",
+     "name": "WEBER Anja",
+     "year": "2001",
+     "noc": "SUI",
+     "cells": {
+      "Time": "3:01.97",
+      "Diff. Time": "+5.58"
+     },
      "status": ""
     },
     {
-     "order": "34",
-     "bib": "34",
-     "code": "3487048",
-     "name": "NEPRYAEVA Dariya",
-     "year": "2002",
-     "noc": "AIN",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "35",
-     "bib": "35",
-     "code": "3506154",
-     "name": "KARLSSON Frida",
-     "year": "1999",
-     "noc": "SWE",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "36",
-     "bib": "36",
-     "code": "3295511",
-     "name": "LAURENT Nadine",
-     "year": "2003",
+     "rank": 11,
+     "bib": "20",
+     "code": "3295408",
+     "name": "CASSOL Federica",
+     "year": "2000",
      "noc": "ITA",
-     "cells": {},
-     "rank": null,
+     "cells": {
+      "Time": "3:02.11",
+      "Diff. Time": "+5.72"
+     },
      "status": ""
     },
     {
-     "order": "37",
-     "bib": "37",
-     "code": "3395115",
-     "name": "PULLES Mariel Merlii",
-     "year": "1998",
-     "noc": "EST",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "38",
-     "bib": "38",
-     "code": "3185705",
-     "name": "",
-     "year": "1999",
-     "noc": "FIN",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "39",
-     "bib": "39",
-     "code": "3535634",
-     "name": "JORTBERG Lauren",
-     "year": "1997",
-     "noc": "USA",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "40",
-     "bib": "40",
-     "code": "3205460",
-     "name": "HENNIG DOTZLER Katharina",
-     "year": "1996",
-     "noc": "GER",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "41",
-     "bib": "41",
-     "code": "3055186",
-     "name": "BUCHER Heidi",
-     "year": "2006",
-     "noc": "AUT",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "42",
-     "bib": "42",
-     "code": "3105479",
-     "name": "MACKIE Alison",
-     "year": "2005",
-     "noc": "CAN",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "43",
-     "bib": "43",
-     "code": "3427344",
-     "name": "FUERSTENBERG Theresa",
-     "year": "2002",
-     "noc": "GER",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "44",
-     "bib": "44",
-     "code": "3205754",
-     "name": "VEIT Verena",
-     "year": "2002",
-     "noc": "GER",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "45",
-     "bib": "45",
-     "code": "3205728",
-     "name": "HOFFMANN Helen",
-     "year": "2002",
-     "noc": "GER",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "46",
+     "rank": 12,
      "bib": "46",
      "code": "3426456",
      "name": "AMUNDSEN Hedda Oestberg",
      "year": "1998",
      "noc": "NOR",
-     "cells": {},
-     "rank": null,
+     "cells": {
+      "Time": "3:02.22",
+      "Diff. Time": "+5.83"
+     },
      "status": ""
     },
     {
-     "order": "47",
-     "bib": "47",
-     "code": "3295529",
-     "name": "CENA Virginia",
+     "rank": 13,
+     "bib": "30",
+     "code": "3205305",
+     "name": "GIMMLER Laura",
+     "year": "1993",
+     "noc": "GER",
+     "cells": {
+      "Time": "3:02.24",
+      "Diff. Time": "+5.85"
+     },
+     "status": ""
+    },
+    {
+     "rank": 14,
+     "bib": "16",
+     "code": "3505998",
+     "name": "ILAR Moa",
+     "year": "1997",
+     "noc": "SWE",
+     "cells": {
+      "Time": "3:02.66",
+      "Diff. Time": "+6.27"
+     },
+     "status": ""
+    },
+    {
+     "rank": 15,
+     "bib": "6",
+     "code": "3505800",
+     "name": "DAHLQVIST Maja",
+     "year": "1994",
+     "noc": "SWE",
+     "cells": {
+      "Time": "3:02.77",
+      "Diff. Time": "+6.38"
+     },
+     "status": ""
+    },
+    {
+     "rank": 16,
+     "bib": "18",
+     "code": "3295512",
+     "name": "DE MARTIN PINTER Iris",
      "year": "2004",
      "noc": "ITA",
-     "cells": {},
-     "rank": null,
+     "cells": {
+      "Time": "3:02.86",
+      "Diff. Time": "+6.47"
+     },
      "status": ""
     },
     {
-     "order": "48",
-     "bib": "48",
-     "code": "3435276",
-     "name": "KOLODZIEJ Aleksandra",
-     "year": "2004",
-     "noc": "POL",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "49",
-     "bib": "49",
-     "code": "3515375",
-     "name": "KAELIN Marina",
-     "year": "2003",
-     "noc": "SUI",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "50",
-     "bib": "50",
-     "code": "3105370",
-     "name": "SCHMIDT Sonjaa",
+     "rank": 17,
+     "bib": "25",
+     "code": "3427376",
+     "name": "AABREKK Ingrid Bergene",
      "year": "2002",
-     "noc": "CAN",
-     "cells": {},
-     "rank": null,
+     "noc": "NOR",
+     "cells": {
+      "Time": "3:03.13",
+      "Diff. Time": "+6.74"
+     },
      "status": ""
     },
     {
-     "order": "51",
-     "bib": "51",
-     "code": "3055067",
-     "name": "STADLOBER Teresa",
-     "year": "1993",
+     "rank": 18,
+     "bib": "29",
+     "code": "3486010",
+     "name": "TERENTEVA Natalia",
+     "year": "1995",
+     "noc": "AIN",
+     "cells": {
+      "Time": "3:03.88",
+      "Diff. Time": "+7.49"
+     },
+     "status": ""
+    },
+    {
+     "rank": 19,
+     "bib": "8",
+     "code": "3185828",
+     "name": "KAHARA Jasmin",
+     "year": "2000",
+     "noc": "FIN",
+     "cells": {
+      "Time": "3:04.21",
+      "Diff. Time": "+7.82"
+     },
+     "status": ""
+    },
+    {
+     "rank": 20,
+     "bib": "19",
+     "code": "3295241",
+     "name": "GANZ Caterina",
+     "year": "1995",
+     "noc": "ITA",
+     "cells": {
+      "Time": "3:04.31",
+      "Diff. Time": "+7.92"
+     },
+     "status": ""
+    },
+    {
+     "rank": 21,
+     "bib": "35",
+     "code": "3506154",
+     "name": "KARLSSON Frida",
+     "year": "1999",
+     "noc": "SWE",
+     "cells": {
+      "Time": "3:04.37",
+      "Diff. Time": "+7.98"
+     },
+     "status": ""
+    },
+    {
+     "rank": 22,
+     "bib": "39",
+     "code": "3535634",
+     "name": "JORTBERG Lauren",
+     "year": "1997",
+     "noc": "USA",
+     "cells": {
+      "Time": "3:04.73",
+      "Diff. Time": "+8.34"
+     },
+     "status": ""
+    },
+    {
+     "rank": 23,
+     "bib": "23",
+     "code": "3185976",
+     "name": "SAARI Amanda",
+     "year": "2000",
+     "noc": "FIN",
+     "cells": {
+      "Time": "3:04.85",
+      "Diff. Time": "+8.46"
+     },
+     "status": ""
+    },
+    {
+     "rank": 24,
+     "bib": "7",
+     "code": "3055160",
+     "name": "SCHERZ Magdalena",
+     "year": "2001",
      "noc": "AUT",
-     "cells": {},
-     "rank": null,
+     "cells": {
+      "Time": "3:04.91",
+      "Diff. Time": "+8.52"
+     },
      "status": ""
     },
     {
-     "order": "52",
-     "bib": "52",
-     "code": "3395132",
-     "name": "KAASIKU Keidy",
+     "rank": 25,
+     "bib": "43",
+     "code": "3427344",
+     "name": "FUERSTENBERG Theresa",
+     "year": "2002",
+     "noc": "GER",
+     "cells": {
+      "Time": "3:05.03",
+      "Diff. Time": "+8.64"
+     },
+     "status": ""
+    },
+    {
+     "rank": 26,
+     "bib": "22",
+     "code": "3426626",
+     "name": "SKISTAD Kristine Stavaas",
+     "year": "1999",
+     "noc": "NOR",
+     "cells": {
+      "Time": "3:05.17",
+      "Diff. Time": "+8.78"
+     },
+     "status": ""
+    },
+    {
+     "rank": 27,
+     "bib": "1",
+     "code": "3426200",
+     "name": "WENG Lotta Udnes",
+     "year": "1996",
+     "noc": "NOR",
+     "cells": {
+      "Time": "3:05.66",
+      "Diff. Time": "+9.27"
+     },
+     "status": ""
+    },
+    {
+     "rank": 28,
+     "bib": "9",
+     "code": "3185911",
+     "name": "NIEMELA Hilla",
      "year": "2001",
-     "noc": "EST",
-     "cells": {},
-     "rank": null,
+     "noc": "FIN",
+     "cells": {
+      "Time": "3:05.70",
+      "Diff. Time": "+9.31"
+     },
      "status": ""
     },
     {
-     "order": "53",
-     "bib": "53",
-     "code": "3395131",
-     "name": "KAASIKU Kaidy",
-     "year": "2001",
-     "noc": "EST",
-     "cells": {},
-     "rank": null,
+     "rank": 29,
+     "bib": "12",
+     "code": "3205570",
+     "name": "RYDZEK Coletta",
+     "year": "1997",
+     "noc": "GER",
+     "cells": {
+      "Time": "3:05.84",
+      "Diff. Time": "+9.45"
+     },
      "status": ""
     },
     {
-     "order": "54",
+     "rank": 30,
      "bib": "54",
      "code": "3185137",
      "name": "KYLLONEN Anne",
      "year": "1987",
      "noc": "FIN",
-     "cells": {},
-     "rank": null,
+     "cells": {
+      "Time": "3:06.34",
+      "Diff. Time": "+9.95"
+     },
      "status": ""
     },
     {
-     "order": "55",
-     "bib": "55",
-     "code": "3535843",
-     "name": "ALBRECHT Emma",
-     "year": "2001",
+     "rank": 31,
+     "bib": "17",
+     "code": "3535562",
+     "name": "KERN Julia",
+     "year": "1997",
      "noc": "USA",
-     "cells": {},
-     "rank": null,
+     "cells": {
+      "Time": "3:06.45",
+      "Diff. Time": "+10.06"
+     },
      "status": ""
     },
     {
-     "order": "56",
-     "bib": "56",
-     "code": "3186098",
-     "name": "HAAPALEHTO Ella Noora",
-     "year": "2005",
-     "noc": "FIN",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "57",
-     "bib": "57",
-     "code": "3395116",
-     "name": "OJASTE Teiloora",
-     "year": "2000",
-     "noc": "EST",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "58",
-     "bib": "58",
-     "code": "3185957",
-     "name": "TOSSAVAINEN Eevi-Inkeri",
-     "year": "2003",
-     "noc": "FIN",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "59",
-     "bib": "59",
-     "code": "3675046",
-     "name": "KOVALYOVA Darya",
-     "year": "1995",
-     "noc": "KAZ",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "60",
-     "bib": "60",
-     "code": "3675089",
-     "name": "STEPASHKINA Nadezhda",
-     "year": "1998",
-     "noc": "KAZ",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "61",
-     "bib": "61",
-     "code": "3435192",
-     "name": "KOBIELUSZ Magdalena",
-     "year": "2000",
-     "noc": "POL",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "62",
-     "bib": "62",
-     "code": "3305347",
-     "name": "HONDA Chika",
-     "year": "2002",
-     "noc": "JPN",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "63",
-     "bib": "63",
-     "code": "3105214",
-     "name": "STEWART-JONES Katherine",
-     "year": "1995",
-     "noc": "CAN",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "64",
-     "bib": "64",
-     "code": "3675079",
-     "name": "MELNIK Anna",
-     "year": "1998",
-     "noc": "KAZ",
-     "cells": {},
-     "rank": null,
-     "status": ""
-    },
-    {
-     "order": "65",
+     "rank": 32,
      "bib": "65",
      "code": "3105371",
      "name": "WELLS Amelia",
      "year": "2002",
      "noc": "GBR",
-     "cells": {},
-     "rank": null,
+     "cells": {
+      "Time": "3:06.46",
+      "Diff. Time": "+10.07"
+     },
      "status": ""
     },
     {
-     "order": "66",
-     "bib": "66",
-     "code": "3695104",
-     "name": "NIKON Anastasiia",
-     "year": "2004",
-     "noc": "UKR",
-     "cells": {},
-     "rank": null,
+     "rank": 33,
+     "bib": "58",
+     "code": "3185957",
+     "name": "TOSSAVAINEN Eevi-Inkeri",
+     "year": "2003",
+     "noc": "FIN",
+     "cells": {
+      "Time": "3:06.73",
+      "Diff. Time": "+10.34"
+     },
      "status": ""
     },
     {
-     "order": "67",
-     "bib": "67",
-     "code": "3305263",
-     "name": "KOBAYASHI Chika",
+     "rank": 34,
+     "bib": "36",
+     "code": "3295511",
+     "name": "LAURENT Nadine",
+     "year": "2003",
+     "noc": "ITA",
+     "cells": {
+      "Time": "3:07.18",
+      "Diff. Time": "+10.79"
+     },
+     "status": ""
+    },
+    {
+     "rank": 35,
+     "bib": "40",
+     "code": "3205460",
+     "name": "HENNIG DOTZLER Katharina",
+     "year": "1996",
+     "noc": "GER",
+     "cells": {
+      "Time": "3:07.31",
+      "Diff. Time": "+10.92"
+     },
+     "status": ""
+    },
+    {
+     "rank": 36,
+     "bib": "44",
+     "code": "3205754",
+     "name": "VEIT Verena",
+     "year": "2002",
+     "noc": "GER",
+     "cells": {
+      "Time": "3:08.03",
+      "Diff. Time": "+11.64"
+     },
+     "status": ""
+    },
+    {
+     "rank": 37,
+     "bib": "3",
+     "code": "3515321",
+     "name": "KAELIN Nadja",
+     "year": "2001",
+     "noc": "SUI",
+     "cells": {
+      "Time": "3:08.11",
+      "Diff. Time": "+11.72"
+     },
+     "status": ""
+    },
+    {
+     "rank": 38,
+     "bib": "5",
+     "code": "3155324",
+     "name": "JANATOVA Katerina",
+     "year": "1997",
+     "noc": "CZE",
+     "cells": {
+      "Time": "3:08.63",
+      "Diff. Time": "+12.24"
+     },
+     "status": ""
+    },
+    {
+     "rank": 39,
+     "bib": "34",
+     "code": "3487048",
+     "name": "NEPRYAEVA Dariya",
+     "year": "2002",
+     "noc": "AIN",
+     "cells": {
+      "Time": "3:08.67",
+      "Diff. Time": "+12.28"
+     },
+     "status": ""
+    },
+    {
+     "rank": 40,
+     "bib": "21",
+     "code": "3195273",
+     "name": "GAL Melissa",
+     "year": "1999",
+     "noc": "FRA",
+     "cells": {
+      "Time": "3:09.01",
+      "Diff. Time": "+12.62"
+     },
+     "status": ""
+    },
+    {
+     "rank": 41,
+     "bib": "31",
+     "code": "3435201",
+     "name": "SKINDER Monika",
+     "year": "2001",
+     "noc": "POL",
+     "cells": {
+      "Time": "3:09.20",
+      "Diff. Time": "+12.81"
+     },
+     "status": ""
+    },
+    {
+     "rank": 42,
+     "bib": "24",
+     "code": "3506428",
+     "name": "ERIKSSON Lisa",
+     "year": "2003",
+     "noc": "SWE",
+     "cells": {
+      "Time": "3:09.37",
+      "Diff. Time": "+12.98"
+     },
+     "status": ""
+    },
+    {
+     "rank": 43,
+     "bib": "15",
+     "code": "3205434",
+     "name": "KREHL Sofie",
+     "year": "1995",
+     "noc": "GER",
+     "cells": {
+      "Time": "3:09.71",
+      "Diff. Time": "+13.32"
+     },
+     "status": ""
+    },
+    {
+     "rank": 43,
+     "bib": "42",
+     "code": "3105479",
+     "name": "MACKIE Alison",
+     "year": "2005",
+     "noc": "CAN",
+     "cells": {
+      "Time": "3:09.71",
+      "Diff. Time": "+13.32"
+     },
+     "status": ""
+    },
+    {
+     "rank": 45,
+     "bib": "11",
+     "code": "3555052",
+     "name": "EIDUKA Patricija",
+     "year": "2000",
+     "noc": "LAT",
+     "cells": {
+      "Time": "3:09.75",
+      "Diff. Time": "+13.36"
+     },
+     "status": ""
+    },
+    {
+     "rank": 46,
+     "bib": "50",
+     "code": "3105370",
+     "name": "SCHMIDT Sonjaa",
+     "year": "2002",
+     "noc": "CAN",
+     "cells": {
+      "Time": "3:10.06",
+      "Diff. Time": "+13.67"
+     },
+     "status": ""
+    },
+    {
+     "rank": 47,
+     "bib": "45",
+     "code": "3205728",
+     "name": "HOFFMANN Helen",
+     "year": "2002",
+     "noc": "GER",
+     "cells": {
+      "Time": "3:10.21",
+      "Diff. Time": "+13.82"
+     },
+     "status": ""
+    },
+    {
+     "rank": 48,
+     "bib": "49",
+     "code": "3515375",
+     "name": "KAELIN Marina",
+     "year": "2003",
+     "noc": "SUI",
+     "cells": {
+      "Time": "3:10.25",
+      "Diff. Time": "+13.86"
+     },
+     "status": ""
+    },
+    {
+     "rank": 49,
+     "bib": "41",
+     "code": "3055186",
+     "name": "BUCHER Heidi",
+     "year": "2006",
+     "noc": "AUT",
+     "cells": {
+      "Time": "3:10.68",
+      "Diff. Time": "+14.29"
+     },
+     "status": ""
+    },
+    {
+     "rank": 50,
+     "bib": "51",
+     "code": "3055067",
+     "name": "STADLOBER Teresa",
+     "year": "1993",
+     "noc": "AUT",
+     "cells": {
+      "Time": "3:11.61",
+      "Diff. Time": "+15.22"
+     },
+     "status": ""
+    },
+    {
+     "rank": 51,
+     "bib": "37",
+     "code": "3395115",
+     "name": "PULLES Mariel Merlii",
      "year": "1998",
-     "noc": "JPN",
-     "cells": {},
-     "rank": null,
+     "noc": "EST",
+     "cells": {
+      "Time": "3:12.08",
+      "Diff. Time": "+15.69"
+     },
      "status": ""
     },
     {
-     "order": "68",
+     "rank": 52,
      "bib": "68",
      "code": "3185688",
      "name": "LAMSA Emmi",
      "year": "1998",
      "noc": "FIN",
-     "cells": {},
-     "rank": null,
+     "cells": {
+      "Time": "3:12.17",
+      "Diff. Time": "+15.78"
+     },
      "status": ""
     },
     {
-     "order": "69",
-     "bib": "69",
-     "code": "3695121",
-     "name": "MYHAL Daryna",
-     "year": "2005",
+     "rank": 53,
+     "bib": "61",
+     "code": "3435192",
+     "name": "KOBIELUSZ Magdalena",
+     "year": "2000",
+     "noc": "POL",
+     "cells": {
+      "Time": "3:13.06",
+      "Diff. Time": "+16.67"
+     },
+     "status": ""
+    },
+    {
+     "rank": 54,
+     "bib": "55",
+     "code": "3535843",
+     "name": "ALBRECHT Emma",
+     "year": "2001",
+     "noc": "USA",
+     "cells": {
+      "Time": "3:13.07",
+      "Diff. Time": "+16.68"
+     },
+     "status": ""
+    },
+    {
+     "rank": 55,
+     "bib": "47",
+     "code": "3295529",
+     "name": "CENA Virginia",
+     "year": "2004",
+     "noc": "ITA",
+     "cells": {
+      "Time": "3:13.44",
+      "Diff. Time": "+17.05"
+     },
+     "status": ""
+    },
+    {
+     "rank": 56,
+     "bib": "60",
+     "code": "3675089",
+     "name": "STEPASHKINA Nadezhda",
+     "year": "1998",
+     "noc": "KAZ",
+     "cells": {
+      "Time": "3:14.12",
+      "Diff. Time": "+17.73"
+     },
+     "status": ""
+    },
+    {
+     "rank": 57,
+     "bib": "48",
+     "code": "3435276",
+     "name": "KOLODZIEJ Aleksandra",
+     "year": "2004",
+     "noc": "POL",
+     "cells": {
+      "Time": "3:14.93",
+      "Diff. Time": "+18.54"
+     },
+     "status": ""
+    },
+    {
+     "rank": 58,
+     "bib": "57",
+     "code": "3395116",
+     "name": "OJASTE Teiloora",
+     "year": "2000",
+     "noc": "EST",
+     "cells": {
+      "Time": "3:17.07",
+      "Diff. Time": "+20.68"
+     },
+     "status": ""
+    },
+    {
+     "rank": 59,
+     "bib": "63",
+     "code": "3105214",
+     "name": "STEWART-JONES Katherine",
+     "year": "1995",
+     "noc": "CAN",
+     "cells": {
+      "Time": "3:17.91",
+      "Diff. Time": "+21.52"
+     },
+     "status": ""
+    },
+    {
+     "rank": 60,
+     "bib": "62",
+     "code": "3305347",
+     "name": "HONDA Chika",
+     "year": "2002",
+     "noc": "JPN",
+     "cells": {
+      "Time": "3:19.50",
+      "Diff. Time": "+23.11"
+     },
+     "status": ""
+    },
+    {
+     "rank": 61,
+     "bib": "66",
+     "code": "3695104",
+     "name": "NIKON Anastasiia",
+     "year": "2004",
      "noc": "UKR",
-     "cells": {},
-     "rank": null,
+     "cells": {
+      "Time": "3:19.81",
+      "Diff. Time": "+23.42"
+     },
      "status": ""
     },
     {
-     "order": "70",
+     "rank": 62,
+     "bib": "52",
+     "code": "3395132",
+     "name": "KAASIKU Keidy",
+     "year": "2001",
+     "noc": "EST",
+     "cells": {
+      "Time": "3:19.97",
+      "Diff. Time": "+23.58"
+     },
+     "status": ""
+    },
+    {
+     "rank": 63,
+     "bib": "53",
+     "code": "3395131",
+     "name": "KAASIKU Kaidy",
+     "year": "2001",
+     "noc": "EST",
+     "cells": {
+      "Time": "3:20.41",
+      "Diff. Time": "+24.02"
+     },
+     "status": ""
+    },
+    {
+     "rank": 64,
+     "bib": "64",
+     "code": "3675079",
+     "name": "MELNIK Anna",
+     "year": "1998",
+     "noc": "KAZ",
+     "cells": {
+      "Time": "3:21.21",
+      "Diff. Time": "+24.82"
+     },
+     "status": ""
+    },
+    {
+     "rank": 65,
+     "bib": "59",
+     "code": "3675046",
+     "name": "KOVALYOVA Darya",
+     "year": "1995",
+     "noc": "KAZ",
+     "cells": {
+      "Time": "3:21.72",
+      "Diff. Time": "+25.33"
+     },
+     "status": ""
+    },
+    {
+     "rank": 66,
      "bib": "70",
      "code": "3305258",
      "name": "MIYAZAKI Hikari",
      "year": "1998",
      "noc": "JPN",
-     "cells": {},
-     "rank": null,
+     "cells": {
+      "Time": "3:21.82",
+      "Diff. Time": "+25.43"
+     },
      "status": ""
     },
     {
-     "order": "71",
+     "rank": 67,
+     "bib": "67",
+     "code": "3305263",
+     "name": "KOBAYASHI Chika",
+     "year": "1998",
+     "noc": "JPN",
+     "cells": {
+      "Time": "3:28.20",
+      "Diff. Time": "+31.81"
+     },
+     "status": ""
+    },
+    {
+     "rank": 68,
      "bib": "71",
      "code": "3695095",
      "name": "KOVALOVA Daryna",
      "year": "2001",
      "noc": "UKR",
-     "cells": {},
-     "rank": null,
+     "cells": {
+      "Time": "3:31.38",
+      "Diff. Time": "+34.99"
+     },
      "status": ""
+    },
+    {
+     "rank": 69,
+     "bib": "69",
+     "code": "3695121",
+     "name": "MYHAL Daryna",
+     "year": "2005",
+     "noc": "UKR",
+     "cells": {
+      "Time": "3:39.26",
+      "Diff. Time": "+42.87"
+     },
+     "status": ""
+    },
+    {
+     "rank": null,
+     "bib": "33",
+     "code": "3426201",
+     "name": "WENG Tiril Udnes",
+     "year": "1996",
+     "noc": "NOR",
+     "cells": {
+      "Time": ""
+     },
+     "status": "Did not start"
+    },
+    {
+     "rank": null,
+     "bib": "56",
+     "code": "3186098",
+     "name": "HAAPALEHTO Ella Noora",
+     "year": "2005",
+     "noc": "FIN",
+     "cells": {
+      "Time": ""
+     },
+     "status": "Did not start"
     }
    ],
-   "start_list": true,
+   "start_list": false,
    "start_utc": "2026-11-28T07:45:00Z",
    "gender": "W",
    "live": false,
    "runs": [
-    "In progress"
+    "Unofficial result"
    ],
-   "status": ""
+   "status": "Finished"
   },
   "52087": {
    "title": "Men's 1.2km Sprint Qualification Classic",
@@ -4075,7 +4218,7 @@
    "gender": "M",
    "live": false,
    "runs": [
-    "Scheduled"
+    "Ready to start"
    ],
    "status": ""
   },
