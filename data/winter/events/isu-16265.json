@@ -14,11 +14,11 @@
   "tz": "Asia/Shanghai",
   "city": "Shanghai",
   "country": "CHN",
-  "state": "Live",
-  "live": "Men 500 m",
+  "state": "In Progress",
+  "live": "",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-4-shanghai/"
  },
- "checked_at": "2026-11-28T01:42:50.149609+00:00",
+ "checked_at": "2026-11-28T01:53:47.686002+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T01:00:00.000Z",
@@ -3471,7 +3471,7 @@
     {
      "id": 23662,
      "name": "Rep. Heats",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-28T01:31:03.000Z",
      "rule": "The first placed skater from each race and up to a maximum of three fastest second place skaters qualify for Rep Quarterfinals.",
      "heats": [
@@ -3497,7 +3497,7 @@
          "name": "Peter JASZAPATI",
          "noc": "HUN",
          "time": "41.723",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 81,
@@ -3564,7 +3564,7 @@
          "name": "Aleyandro RIVERO MAERSCHALCK",
          "noc": "BEL",
          "time": "42.165",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 56,
@@ -3698,7 +3698,7 @@
          "name": "Franciszek IZBICKI",
          "noc": "POL",
          "time": "41.865",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 104,
@@ -3745,27 +3745,15 @@
       },
       {
        "name": "Heat 5",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Nikita NIKOLAEV",
-         "noc": "AIN2",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 127,
-         "lane": 1,
-         "slug": "nikita-nikolaev"
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Pietro MARINELLI",
          "noc": "ITA",
-         "time": "",
-         "qual": "",
+         "time": "41.694",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 86,
@@ -3773,10 +3761,22 @@
          "slug": "pietro-marinelli"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Samuel Oliver SULC",
+         "noc": "CZE",
+         "time": "43.025",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 144,
+         "lane": 5,
+         "slug": "samuel-oliver-sulc"
+        },
+        {
+         "rank": 3,
          "name": "Rostyslav LEONTENKO",
          "noc": "UKR",
-         "time": "",
+         "time": "44.407",
          "qual": "",
          "status": "",
          "record": "",
@@ -3785,32 +3785,117 @@
          "slug": "rostyslav-leontenko"
         },
         {
+         "rank": 4,
+         "name": "Nikita NIKOLAEV",
+         "noc": "AIN2",
+         "time": "1:17.029",
+         "qual": "ADV",
+         "status": "",
+         "record": "",
+         "bib": 127,
+         "lane": 1,
+         "slug": "nikita-nikolaev"
+        },
+        {
          "rank": null,
          "name": "Taiga SASAKI",
          "noc": "JPN",
-         "time": "",
+         "time": "PEN",
          "qual": "",
-         "status": "",
+         "status": "Penalty",
          "record": "",
          "bib": 146,
          "lane": 4,
          "slug": "taiga-sasaki-1"
-        },
-        {
-         "rank": null,
-         "name": "Samuel Oliver SULC",
-         "noc": "CZE",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 144,
-         "lane": 5,
-         "slug": "samuel-oliver-sulc"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Rep. Quarterfinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Daniel TIBORCZ",
+        "noc": "HUN",
+        "rank": 1,
+        "time": "41.694",
+        "qual": "Q"
+       },
+       {
+        "name": "Pietro MARINELLI",
+        "noc": "ITA",
+        "rank": 1,
+        "time": "41.694",
+        "qual": "Q"
+       },
+       {
+        "name": "Adriaan DEWAGTERE",
+        "noc": "BEL",
+        "rank": 1,
+        "time": "41.816",
+        "qual": "Q"
+       },
+       {
+        "name": "Felix PIGEON",
+        "noc": "POL",
+        "rank": 1,
+        "time": "41.866",
+        "qual": "Q"
+       },
+       {
+        "name": "Lucas WAREHAM",
+        "noc": "AUS",
+        "rank": 1,
+        "time": "42.034",
+        "qual": "Q"
+       },
+       {
+        "name": "Nikita NIKOLAEV",
+        "noc": "AIN2",
+        "rank": 4,
+        "time": "1:17.029",
+        "qual": "ADV"
+       },
+       {
+        "name": "Peter JASZAPATI",
+        "noc": "HUN",
+        "rank": 2,
+        "time": "41.723",
+        "qual": "q"
+       },
+       {
+        "name": "Franciszek IZBICKI",
+        "noc": "POL",
+        "rank": 2,
+        "time": "41.865",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Daniel TIBORCZ (HUN)"
+       ],
+       [
+        "Pietro MARINELLI (ITA)"
+       ],
+       [
+        "Adriaan DEWAGTERE (BEL)"
+       ],
+       [
+        "Felix PIGEON (POL)"
+       ],
+       [
+        "Lucas WAREHAM (AUS)",
+        "Franciszek IZBICKI (POL)"
+       ],
+       [
+        "Nikita NIKOLAEV (AIN2)",
+        "Peter JASZAPATI (HUN)"
+       ]
+      ]
+     }
     },
     {
      "id": 23664,
