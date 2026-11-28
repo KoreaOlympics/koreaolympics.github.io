@@ -14,11 +14,11 @@
   "tz": "Asia/Shanghai",
   "city": "Shanghai",
   "country": "CHN",
-  "state": "Live",
-  "live": "Men 1500 m",
+  "state": "In Progress",
+  "live": "",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-4-shanghai/"
  },
- "checked_at": "2026-11-28T02:16:58.241243+00:00",
+ "checked_at": "2026-11-28T02:27:53.748798+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T01:00:00.000Z",
@@ -8700,7 +8700,7 @@
     {
      "id": 23652,
      "name": "Rep. Heats",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-28T01:59:19.000Z",
      "rule": "The first and second placed skaters from each race and up to a maximum of four fastest third place skaters qualify for Rep Quarterfinals.",
      "heats": [
@@ -8738,7 +8738,7 @@
          "name": "Yanghun Ben JUNG",
          "noc": "GER",
          "time": "2:24.859",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 78,
@@ -8829,7 +8829,7 @@
          "name": "Fredrik PEDERSEN",
          "noc": "NOR",
          "time": "2:38.281",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 120,
@@ -8920,7 +8920,7 @@
          "name": "Steven CHEN",
          "noc": "AUS",
          "time": "2:31.946",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": 142,
@@ -8991,15 +8991,27 @@
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Bas VAN DER VALK",
+         "noc": "NED",
+         "time": "2:15.352",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 139,
+         "lane": 4,
+         "slug": "bas-van-der-valk"
+        },
+        {
+         "rank": 2,
          "name": "Krzysztof MADRY",
          "noc": "POL",
-         "time": "",
-         "qual": "",
+         "time": "2:15.543",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 105,
@@ -9007,10 +9019,22 @@
          "slug": "krzysztof-madry"
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Ivan DONCHEV",
+         "noc": "BUL",
+         "time": "2:15.817",
+         "qual": "q",
+         "status": "",
+         "record": "",
+         "bib": 60,
+         "lane": 8,
+         "slug": "ivan-donchev"
+        },
+        {
+         "rank": 4,
          "name": "Marek PROCHAZKA",
          "noc": "CZE",
-         "time": "",
+         "time": "2:17.411",
          "qual": "",
          "status": "",
          "record": "",
@@ -9019,46 +9043,10 @@
          "slug": "marek-prochazka"
         },
         {
-         "rank": null,
-         "name": "Borisz Z MOLNAR",
-         "noc": "HUN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 151,
-         "lane": 3,
-         "slug": "borisz-z-molnar"
-        },
-        {
-         "rank": null,
-         "name": "Bas VAN DER VALK",
-         "noc": "NED",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 139,
-         "lane": 4,
-         "slug": "bas-van-der-valk"
-        },
-        {
-         "rank": null,
-         "name": "Ivan MARTINIC",
-         "noc": "CRO",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 130,
-         "lane": 5,
-         "slug": "ivan-martinic"
-        },
-        {
-         "rank": null,
+         "rank": 5,
          "name": "Munkh-Erdene ERDENEBILEG",
          "noc": "MGL",
-         "time": "",
+         "time": "2:17.537",
          "qual": "",
          "status": "",
          "record": "",
@@ -9067,10 +9055,10 @@
          "slug": "munkh-erdene-erdenebileg"
         },
         {
-         "rank": null,
+         "rank": 6,
          "name": "Linus August RISNES",
          "noc": "NOR",
-         "time": "",
+         "time": "2:21.547",
          "qual": "",
          "status": "",
          "record": "",
@@ -9079,20 +9067,147 @@
          "slug": "linus-august-risnes"
         },
         {
-         "rank": null,
-         "name": "Ivan DONCHEV",
-         "noc": "BUL",
-         "time": "",
-         "qual": "",
+         "rank": 7,
+         "name": "Ivan MARTINIC",
+         "noc": "CRO",
+         "time": "2:23.048",
+         "qual": "ADV",
          "status": "",
          "record": "",
-         "bib": 60,
-         "lane": 8,
-         "slug": "ivan-donchev"
+         "bib": 130,
+         "lane": 5,
+         "slug": "ivan-martinic"
+        },
+        {
+         "rank": null,
+         "name": "Borisz Z MOLNAR",
+         "noc": "HUN",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 151,
+         "lane": 3,
+         "slug": "borisz-z-molnar"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Rep. Quarterfinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Bas VAN DER VALK",
+        "noc": "NED",
+        "rank": 1,
+        "time": "2:15.352",
+        "qual": "Q"
+       },
+       {
+        "name": "Peter JASZAPATI",
+        "noc": "HUN",
+        "rank": 1,
+        "time": "2:24.219",
+        "qual": "Q"
+       },
+       {
+        "name": "Zixia ZHANG",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "2:31.003",
+        "qual": "Q"
+       },
+       {
+        "name": "Muhammed BOZDAG",
+        "noc": "TUR",
+        "rank": 1,
+        "time": "2:37.553",
+        "qual": "Q"
+       },
+       {
+        "name": "Krzysztof MADRY",
+        "noc": "POL",
+        "rank": 2,
+        "time": "2:15.543",
+        "qual": "Q"
+       },
+       {
+        "name": "Nikita NIKOLAEV",
+        "noc": "AIN2",
+        "rank": 2,
+        "time": "2:24.328",
+        "qual": "Q"
+       },
+       {
+        "name": "Tibor KOMERICKI",
+        "noc": "SLO",
+        "rank": 2,
+        "time": "2:31.673",
+        "qual": "Q"
+       },
+       {
+        "name": "Tsz Fung KWOK",
+        "noc": "HKG",
+        "rank": 2,
+        "time": "2:38.016",
+        "qual": "Q"
+       },
+       {
+        "name": "Ivan MARTINIC",
+        "noc": "CRO",
+        "rank": 7,
+        "time": "2:23.048",
+        "qual": "ADV"
+       },
+       {
+        "name": "Ivan DONCHEV",
+        "noc": "BUL",
+        "rank": 3,
+        "time": "2:15.817",
+        "qual": "q"
+       },
+       {
+        "name": "Yanghun Ben JUNG",
+        "noc": "GER",
+        "rank": 3,
+        "time": "2:24.859",
+        "qual": "q"
+       },
+       {
+        "name": "Steven CHEN",
+        "noc": "AUS",
+        "rank": 3,
+        "time": "2:31.946",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Bas VAN DER VALK (NED)",
+        "Ivan DONCHEV (BUL)",
+        "Yanghun Ben JUNG (GER)"
+       ],
+       [
+        "Peter JASZAPATI (HUN)",
+        "Ivan MARTINIC (CRO)",
+        "Steven CHEN (AUS)"
+       ],
+       [
+        "Zixia ZHANG (CHN)",
+        "Tsz Fung KWOK (HKG)"
+       ],
+       [
+        "Muhammed BOZDAG (TUR)",
+        "Tibor KOMERICKI (SLO)"
+       ],
+       [
+        "Krzysztof MADRY (POL)",
+        "Nikita NIKOLAEV (AIN2)"
+       ]
+      ]
+     }
     },
     {
      "id": 23654,
