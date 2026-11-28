@@ -619,7 +619,7 @@
    "end": "2026-11-29",
    "city": "Tokyo",
    "country": "JPN",
-   "state": "Live",
+   "state": "In Progress",
    "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-nhk-trophy-2026/",
    "podiums": [
     {
@@ -670,7 +670,26 @@
     },
     {
      "title": "Women",
-     "podium": null
+     "podium": [
+      {
+       "rank": 1,
+       "name": "Jia SHIN",
+       "noc": "KOR",
+       "time": "219.02"
+      },
+      {
+       "rank": 2,
+       "name": "Mone CHIBA",
+       "noc": "JPN",
+       "time": "214.57"
+      },
+      {
+       "rank": 3,
+       "name": "Young YOU",
+       "noc": "KOR",
+       "time": "199.99"
+      }
+     ]
     },
     {
      "title": "Men",
@@ -755,9 +774,9 @@
   [
    "JPN",
    6,
+   4,
    3,
-   3,
-   12
+   13
   ],
   [
    "FRA",
@@ -816,6 +835,13 @@
    2
   ],
   [
+   "KOR",
+   1,
+   0,
+   3,
+   4
+  ],
+  [
    "ITA",
    0,
    1,
@@ -838,13 +864,6 @@
   ],
   [
    "ESP",
-   0,
-   0,
-   2,
-   2
-  ],
-  [
-   "KOR",
    0,
    0,
    2,
@@ -1010,18 +1029,18 @@
     "event_id": "isu-15989"
    },
    {
+    "name": "Mone CHIBA",
+    "noc": "JPN",
+    "points": 214.57,
+    "event": "ISU Figure Skating Grand Prix NHK Trophy 2026",
+    "event_id": "isu-15989"
+   },
+   {
     "name": "Niina PETROKINA",
     "noc": "EST",
     "points": 214.06,
     "event": "ISU Figure Skating Grand Prix Finlandia Trophy 2026",
     "event_id": "isu-15999"
-   },
-   {
-    "name": "Alexandra IGNATOVA",
-    "noc": "AIN2",
-    "points": 213.9,
-    "event": "ISU Figure Skating Grand Prix Skate America 2026",
-    "event_id": "isu-16006"
    }
   ],
   "Men": [

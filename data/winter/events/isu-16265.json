@@ -14,11 +14,11 @@
   "tz": "Asia/Shanghai",
   "city": "Shanghai",
   "country": "CHN",
-  "state": "Live",
-  "live": "Men 1500 m",
+  "state": "In Progress",
+  "live": "",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-4-shanghai/"
  },
- "checked_at": "2026-11-28T09:17:33.250265+00:00",
+ "checked_at": "2026-11-28T09:28:59.548842+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T01:00:00.000Z",
@@ -12999,20 +12999,20 @@
     {
      "id": 23705,
      "name": "Final",
-     "status": "Live",
-     "start_utc": "2026-11-28T08:53:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-28T09:05:04.000Z",
      "rule": "",
      "heats": [
       {
        "name": "Final",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "Seochan BAE",
          "noc": "KOR",
-         "time": "2:30.190",
+         "time": "2:30.189",
          "qual": "",
          "status": "",
          "record": "",
@@ -13022,21 +13022,9 @@
         },
         {
          "rank": 2,
-         "name": "Luca SPECHENHAUSER",
-         "noc": "ITA",
-         "time": "2:30.760",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 24,
-         "lane": 8,
-         "slug": "luca-spechenhauser"
-        },
-        {
-         "rank": 3,
          "name": "Michal NIEWINSKI",
          "noc": "POL",
-         "time": "2:30.850",
+         "time": "2:30.841",
          "qual": "",
          "status": "",
          "record": "",
@@ -13045,22 +13033,10 @@
          "slug": "michal-niewinski"
         },
         {
-         "rank": 4,
-         "name": "Yuheng LI",
-         "noc": "CHN",
-         "time": "2:30.920",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 152,
-         "lane": 5,
-         "slug": "yuheng-li-1"
-        },
-        {
-         "rank": 5,
+         "rank": 3,
          "name": "Shogo MIYATA",
          "noc": "JPN",
-         "time": "2:31.010",
+         "time": "2:31.008",
          "qual": "",
          "status": "",
          "record": "",
@@ -13069,10 +13045,10 @@
          "slug": "shogo-miyata"
         },
         {
-         "rank": 6,
+         "rank": 4,
          "name": "Semen ELISTRATOV",
          "noc": "AIN2",
-         "time": "2:31.050",
+         "time": "2:31.051",
          "qual": "",
          "status": "",
          "record": "",
@@ -13081,10 +13057,10 @@
          "slug": "semen-elistratov"
         },
         {
-         "rank": 7,
+         "rank": 5,
          "name": "Maxime LAOUN",
          "noc": "CAN",
-         "time": "2:31.090",
+         "time": "2:31.077",
          "qual": "",
          "status": "",
          "record": "",
@@ -13093,16 +13069,40 @@
          "slug": "maxime-laoun"
         },
         {
-         "rank": 8,
+         "rank": 6,
          "name": "Steven DUBOIS",
          "noc": "CAN",
-         "time": "2:31.120",
+         "time": "2:31.103",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 3,
          "lane": 4,
          "slug": "steven-dubois"
+        },
+        {
+         "rank": null,
+         "name": "Luca SPECHENHAUSER",
+         "noc": "ITA",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 24,
+         "lane": 8,
+         "slug": "luca-spechenhauser"
+        },
+        {
+         "rank": null,
+         "name": "Yuheng LI",
+         "noc": "CHN",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 152,
+         "lane": 5,
+         "slug": "yuheng-li-1"
         }
        ]
       },
@@ -16205,11 +16205,11 @@
    "distance": "Men 1500 m",
    "round": "Final",
    "heat": "Final",
-   "start_utc": "2026-11-28T08:53:00.000Z",
+   "start_utc": "2026-11-28T09:05:04.000Z",
    "rank": 1,
    "name": "Seochan BAE",
    "noc": "KOR",
-   "time": "2:30.190",
+   "time": "2:30.189",
    "qual": "",
    "status": "",
    "record": "",
@@ -16224,7 +16224,7 @@
    "distance": "Men 1500 m",
    "round": "Final",
    "heat": "Final B",
-   "start_utc": "2026-11-28T08:53:00.000Z",
+   "start_utc": "2026-11-28T09:05:04.000Z",
    "rank": 1,
    "name": "Gyuho LEE",
    "noc": "KOR",
