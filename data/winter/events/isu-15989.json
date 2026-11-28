@@ -15,10 +15,10 @@
   "city": "Tokyo",
   "country": "JPN",
   "state": "Live",
-  "live": "VALESI Anna / BIDAR Martin",
+  "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-nhk-trophy-2026/"
  },
- "checked_at": "2026-11-28T05:52:46.177545+00:00",
+ "checked_at": "2026-11-28T06:03:49.000705+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T03:42:00.000Z",
@@ -338,6 +338,31 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Anna VALESI / Martin BIDAR",
+     "noc": "CZE",
+     "points": "161.04",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 4,
+       "total": "59.77",
+       "tes": "32.64",
+       "pcs": "27.13",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 1,
+       "total": "101.27",
+       "tes": "45.91",
+       "pcs": "56.36",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
      "name": "Chelsea LIU / Ryan BEDARD",
      "noc": "USA",
      "points": "160.08",
@@ -353,7 +378,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 1,
+       "rank": 2,
        "total": "100.37",
        "tes": "48.09",
        "pcs": "54.28",
@@ -362,7 +387,7 @@
      }
     },
     {
-     "rank": 2,
+     "rank": 3,
      "name": "Jazmine DESROCHERS / Kieran THRASHER",
      "noc": "CAN",
      "points": "152.75",
@@ -378,7 +403,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 2,
+       "rank": 3,
        "total": "97.48",
        "tes": "46.18",
        "pcs": "53.30",
@@ -387,7 +412,7 @@
      }
     },
     {
-     "rank": 3,
+     "rank": 4,
      "name": "Camille KOVALEV / Pavel KOVALEV",
      "noc": "FRA",
      "points": "147.39",
@@ -403,7 +428,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 3,
+       "rank": 4,
        "total": "95.32",
        "tes": "43.30",
        "pcs": "53.02",
@@ -412,7 +437,7 @@
      }
     },
     {
-     "rank": 4,
+     "rank": 5,
      "name": "Naomi WILLIAMS / Lachlan LEWER",
      "noc": "USA",
      "points": "141.83",
@@ -428,7 +453,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 4,
+       "rank": 5,
        "total": "92.33",
        "tes": "44.31",
        "pcs": "49.02",
@@ -499,31 +524,6 @@
        "total": "66.95",
        "tes": "37.02",
        "pcs": "29.93",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Anna VALESI / Martin BIDAR",
-     "noc": "CZE",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 4,
-       "total": "59.77",
-       "tes": "32.64",
-       "pcs": "27.13",
        "status": "Finished"
       },
       "FS": {
