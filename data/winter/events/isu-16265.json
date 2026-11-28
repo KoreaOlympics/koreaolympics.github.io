@@ -18,7 +18,7 @@
   "live": "Men 500 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-4-shanghai/"
  },
- "checked_at": "2026-11-28T02:38:39.955622+00:00",
+ "checked_at": "2026-11-28T02:49:26.731811+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T01:00:00.000Z",
@@ -3973,15 +3973,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Kun LI",
          "noc": "CHN",
-         "time": "",
-         "qual": "",
+         "time": "41.094",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 67,
@@ -3989,11 +3989,11 @@
          "slug": "kun-li"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Brendan COREY",
          "noc": "AUS",
-         "time": "",
-         "qual": "",
+         "time": "41.215",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 18,
@@ -4001,10 +4001,10 @@
          "slug": "brendan-corey"
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "Tibor KOMERICKI",
          "noc": "SLO",
-         "time": "",
+         "time": "42.435",
          "qual": "",
          "status": "",
          "record": "",
@@ -4014,41 +4014,53 @@
         },
         {
          "rank": null,
-         "name": "Pietro MARINELLI",
-         "noc": "ITA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 86,
-         "lane": 4,
-         "slug": "pietro-marinelli"
-        },
-        {
-         "rank": null,
          "name": "Lucas WAREHAM",
          "noc": "AUS",
-         "time": "",
+         "time": "PEN",
          "qual": "",
-         "status": "",
+         "status": "Penalty",
          "record": "",
          "bib": 50,
          "lane": 5,
          "slug": "lucas-wareham"
+        },
+        {
+         "rank": null,
+         "name": "Pietro MARINELLI",
+         "noc": "ITA",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": 86,
+         "lane": 4,
+         "slug": "pietro-marinelli"
         }
        ]
       },
       {
        "name": "Heat 3",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
+         "name": "Nikita NIKOLAEV",
+         "noc": "AIN2",
+         "time": "41.929",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 127,
+         "lane": 5,
+         "slug": "nikita-nikolaev"
+        },
+        {
+         "rank": 2,
          "name": "Andrew HEO",
          "noc": "USA",
-         "time": "",
-         "qual": "",
+         "time": "42.152",
+         "qual": "ADV",
          "status": "",
          "record": "",
          "bib": 15,
@@ -4056,34 +4068,10 @@
          "slug": "andrew-heo"
         },
         {
-         "rank": null,
-         "name": "Denis ORS",
-         "noc": "TUR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 40,
-         "lane": 2,
-         "slug": "denis-ors"
-        },
-        {
-         "rank": null,
-         "name": "Gleb IVCHENKO",
-         "noc": "KAZ",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 47,
-         "lane": 3,
-         "slug": "gleb-ivchenko"
-        },
-        {
-         "rank": null,
+         "rank": 3,
          "name": "Daniel TIBORCZ",
          "noc": "HUN",
-         "time": "",
+         "time": "42.934",
          "qual": "",
          "status": "",
          "record": "",
@@ -4093,29 +4081,41 @@
         },
         {
          "rank": null,
-         "name": "Nikita NIKOLAEV",
-         "noc": "AIN2",
-         "time": "",
+         "name": "Gleb IVCHENKO",
+         "noc": "KAZ",
+         "time": "PEN",
          "qual": "",
-         "status": "",
+         "status": "Penalty",
          "record": "",
-         "bib": 127,
-         "lane": 5,
-         "slug": "nikita-nikolaev"
+         "bib": 47,
+         "lane": 3,
+         "slug": "gleb-ivchenko"
+        },
+        {
+         "rank": null,
+         "name": "Denis ORS",
+         "noc": "TUR",
+         "time": "DNS",
+         "qual": "",
+         "status": "Did Not Start",
+         "record": "",
+         "bib": 40,
+         "lane": 2,
+         "slug": "denis-ors"
         }
        ]
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Kay HUISMAN",
          "noc": "NED",
-         "time": "",
-         "qual": "",
+         "time": "40.805",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 41,
@@ -4123,10 +4123,22 @@
          "slug": "kay-huisman"
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "Justin LIU",
+         "noc": "USA",
+         "time": "41.078",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 111,
+         "lane": 4,
+         "slug": "justin-liu"
+        },
+        {
+         "rank": 3,
          "name": "Takumi WADA",
          "noc": "JPN",
-         "time": "",
+         "time": "41.245",
          "qual": "",
          "status": "",
          "record": "",
@@ -4135,47 +4147,35 @@
          "slug": "takumi-wada"
         },
         {
-         "rank": null,
-         "name": "Muhammed BOZDAG",
-         "noc": "TUR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 109,
-         "lane": 3,
-         "slug": "muhammed-bozdag"
-        },
-        {
-         "rank": null,
-         "name": "Justin LIU",
-         "noc": "USA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 111,
-         "lane": 4,
-         "slug": "justin-liu"
-        },
-        {
-         "rank": null,
+         "rank": 4,
          "name": "Peter JASZAPATI",
          "noc": "HUN",
-         "time": "",
+         "time": "41.284",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 81,
          "lane": 5,
          "slug": "peter-jaszapati"
+        },
+        {
+         "rank": 5,
+         "name": "Muhammed BOZDAG",
+         "noc": "TUR",
+         "time": "42.429",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 109,
+         "lane": 3,
+         "slug": "muhammed-bozdag"
         }
        ]
       },
       {
        "name": "Heat 5",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
         {
          "rank": null,
@@ -4217,9 +4217,9 @@
          "rank": null,
          "name": "Jongun RIM",
          "noc": "KOR",
-         "time": "",
+         "time": "DNS",
          "qual": "",
-         "status": "",
+         "status": "Did Not Start",
          "record": "",
          "bib": 8,
          "lane": 4,
@@ -11636,9 +11636,9 @@
    "rank": null,
    "name": "Jongun RIM",
    "noc": "KOR",
-   "time": "",
+   "time": "DNS",
    "qual": "",
-   "status": "",
+   "status": "Did Not Start",
    "record": "",
    "bib": 8,
    "lane": 4,
