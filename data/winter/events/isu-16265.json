@@ -18,7 +18,7 @@
   "live": "Women 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-4-shanghai/"
  },
- "checked_at": "2026-11-28T03:11:57.184645+00:00",
+ "checked_at": "2026-11-28T03:23:23.067702+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T01:00:00.000Z",
@@ -5777,7 +5777,7 @@
      "id": 23641,
      "name": "Rep. Quarterfinals",
      "status": "Live",
-     "start_utc": "2026-11-28T02:51:00.000Z",
+     "start_utc": "2026-11-28T02:57:26.000Z",
      "rule": "The first placed skater from each race and up to a maximum of four fastest second place skaters qualify for Rep Semifinals.",
      "heats": [
       {
@@ -5869,7 +5869,7 @@
          "name": "Anastasiia ZHEGANOVA",
          "noc": "AIN2",
          "time": "1:37.651",
-         "qual": "p",
+         "qual": "",
          "status": "",
          "record": "",
          "bib": 95,
@@ -5917,14 +5917,14 @@
       {
        "name": "Heat 3",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "Maja Dora SOMODI",
          "noc": "HUN",
-         "time": "1:35.980",
-         "qual": "",
+         "time": "1:35.966",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 32,
@@ -5935,8 +5935,8 @@
          "rank": 2,
          "name": "Rina YAMANA",
          "noc": "JPN",
-         "time": "1:36.380",
-         "qual": "",
+         "time": "1:36.366",
+         "qual": "p",
          "status": "",
          "record": "",
          "bib": 70,
@@ -5947,7 +5947,7 @@
          "rank": 3,
          "name": "Diana MYKHALCHUK",
          "noc": "UKR",
-         "time": "1:36.680",
+         "time": "1:36.662",
          "qual": "",
          "status": "",
          "record": "",
@@ -5956,10 +5956,10 @@
          "slug": "diana-mykhalchuk"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Cloe OLLIVIER",
          "noc": "FRA",
-         "time": "",
+         "time": "1:54.887",
          "qual": "",
          "status": "",
          "record": "",
@@ -5968,10 +5968,10 @@
          "slug": "cloe-ollivier"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Katia Filippi",
          "noc": "ITA",
-         "time": "",
+         "time": "2:25.346",
          "qual": "",
          "status": "",
          "record": "",
@@ -5983,26 +5983,50 @@
       },
       {
        "name": "Heat 4",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Anastassiya GALECHINA",
-         "noc": "KAZ",
-         "time": "",
+         "rank": 1,
+         "name": "Natalia MALISZEWSKA",
+         "noc": "POL",
+         "time": "1:32.694",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": 17,
+         "lane": 3,
+         "slug": "natalia-maliszewska"
+        },
+        {
+         "rank": 2,
+         "name": "Jiayan NAN",
+         "noc": "CHN",
+         "time": "1:32.884",
+         "qual": "p",
+         "status": "",
+         "record": "",
+         "bib": 107,
+         "lane": 4,
+         "slug": "jiayan-nan"
+        },
+        {
+         "rank": 3,
+         "name": "Betty MOESKE",
+         "noc": "GER",
+         "time": "1:32.976",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 72,
-         "lane": 1,
-         "slug": "anastassiya-galechina-1"
+         "bib": 63,
+         "lane": 5,
+         "slug": "betty-moeske"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Yelyzaveta SYDORKO",
          "noc": "UKR",
-         "time": "",
+         "time": "1:36.694",
          "qual": "",
          "status": "",
          "record": "",
@@ -6011,77 +6035,41 @@
          "slug": "yelyzaveta-sydorko"
         },
         {
-         "rank": null,
-         "name": "Natalia MALISZEWSKA",
-         "noc": "POL",
-         "time": "",
+         "rank": 5,
+         "name": "Anastassiya GALECHINA",
+         "noc": "KAZ",
+         "time": "2:06.449",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 17,
-         "lane": 3,
-         "slug": "natalia-maliszewska"
-        },
-        {
-         "rank": null,
-         "name": "Jiayan NAN",
-         "noc": "CHN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 107,
-         "lane": 4,
-         "slug": "jiayan-nan"
-        },
-        {
-         "rank": null,
-         "name": "Betty MOESKE",
-         "noc": "GER",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 63,
-         "lane": 5,
-         "slug": "betty-moeske"
+         "bib": 72,
+         "lane": 1,
+         "slug": "anastassiya-galechina-1"
         }
        ]
       },
       {
        "name": "Heat 5",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Diana Laura VEGI",
-         "noc": "HUN",
-         "time": "",
-         "qual": "",
+         "rank": 1,
+         "name": "Ching Yan LAM",
+         "noc": "HKG",
+         "time": "1:39.040",
+         "qual": "Q",
          "status": "",
          "record": "",
-         "bib": 46,
-         "lane": 1,
-         "slug": "diana-laura-vegi"
+         "bib": 97,
+         "lane": 4,
+         "slug": "ching-yan-lam"
         },
         {
-         "rank": null,
-         "name": "Sukhee SHIM",
-         "noc": "KOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 79,
-         "lane": 2,
-         "slug": "sukhee-shim"
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Lia MEAD",
          "noc": "NZL",
-         "time": "",
+         "time": "1:39.386",
          "qual": "",
          "status": "",
          "record": "",
@@ -6090,16 +6078,28 @@
          "slug": "lia-mead"
         },
         {
-         "rank": null,
-         "name": "Ching Yan LAM",
-         "noc": "HKG",
-         "time": "",
+         "rank": 3,
+         "name": "Katarina BURIC",
+         "noc": "CRO",
+         "time": "1:39.415",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 97,
-         "lane": 4,
-         "slug": "ching-yan-lam"
+         "bib": 96,
+         "lane": 6,
+         "slug": "katarina-buric"
+        },
+        {
+         "rank": 4,
+         "name": "Diana Laura VEGI",
+         "noc": "HUN",
+         "time": "1:56.732",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 46,
+         "lane": 1,
+         "slug": "diana-laura-vegi"
         },
         {
          "rank": null,
@@ -6115,22 +6115,22 @@
         },
         {
          "rank": null,
-         "name": "Katarina BURIC",
-         "noc": "CRO",
-         "time": "",
+         "name": "Sukhee SHIM",
+         "noc": "KOR",
+         "time": "DNS",
          "qual": "",
-         "status": "",
+         "status": "Did Not Start",
          "record": "",
-         "bib": 96,
-         "lane": 6,
-         "slug": "katarina-buric"
+         "bib": 79,
+         "lane": 2,
+         "slug": "sukhee-shim"
         }
        ]
       },
       {
        "name": "Heat 6",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Live",
+       "official": "Live",
        "competitors": [
         {
          "rank": null,
@@ -6143,6 +6143,42 @@
          "bib": 25,
          "lane": 1,
          "slug": "danae-blais"
+        },
+        {
+         "rank": null,
+         "name": "Mariia KHOKHELKO",
+         "noc": "UKR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 103,
+         "lane": 6,
+         "slug": "mariia-khokhelko"
+        },
+        {
+         "rank": null,
+         "name": "Pauliina KLEVSTUEN",
+         "noc": "NOR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 89,
+         "lane": 5,
+         "slug": "pauliina-klevstuen"
+        },
+        {
+         "rank": null,
+         "name": "Polina OMELCHUK",
+         "noc": "KAZ",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 74,
+         "lane": 4,
+         "slug": "polina-omelchuk"
         },
         {
          "rank": null,
@@ -6167,42 +6203,6 @@
          "bib": 82,
          "lane": 3,
          "slug": "anna-falkowska"
-        },
-        {
-         "rank": null,
-         "name": "Polina OMELCHUK",
-         "noc": "KAZ",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 74,
-         "lane": 4,
-         "slug": "polina-omelchuk"
-        },
-        {
-         "rank": null,
-         "name": "Pauliina KLEVSTUEN",
-         "noc": "NOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 89,
-         "lane": 5,
-         "slug": "pauliina-klevstuen"
-        },
-        {
-         "rank": null,
-         "name": "Mariia KHOKHELKO",
-         "noc": "UKR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 103,
-         "lane": 6,
-         "slug": "mariia-khokhelko"
         }
        ]
       }
@@ -12247,13 +12247,13 @@
    "distance": "Women 1000 m",
    "round": "Rep. Quarterfinals",
    "heat": "Heat 5",
-   "start_utc": "2026-11-28T02:51:00.000Z",
+   "start_utc": "2026-11-28T02:57:26.000Z",
    "rank": null,
    "name": "Sukhee SHIM",
    "noc": "KOR",
-   "time": "",
+   "time": "DNS",
    "qual": "",
-   "status": "",
+   "status": "Did Not Start",
    "record": "",
    "bib": 79,
    "lane": 2,
