@@ -14,11 +14,11 @@
   "tz": "Asia/Shanghai",
   "city": "Shanghai",
   "country": "CHN",
-  "state": "Live",
-  "live": "Men 500 m",
+  "state": "In Progress",
+  "live": "",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-4-shanghai/"
  },
- "checked_at": "2026-11-28T03:34:36.105234+00:00",
+ "checked_at": "2026-11-28T03:45:49.152578+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T01:00:00.000Z",
@@ -3303,170 +3303,7 @@
         }
        ]
       }
-     ],
-     "projection": {
-      "next": "Quarterfinals",
-      "official_draw_published": false,
-      "pending": [
-       "Rep. Semifinals"
-      ],
-      "qualified": [
-       {
-        "name": "Jens VAN 'T WOUT",
-        "noc": "NED",
-        "rank": 1,
-        "time": "40.347",
-        "qual": "Q"
-       },
-       {
-        "name": "Thomas NADALINI",
-        "noc": "ITA",
-        "rank": 1,
-        "time": "40.535",
-        "qual": "Q"
-       },
-       {
-        "name": "Brandon KIM",
-        "noc": "USA",
-        "rank": 1,
-        "time": "40.600",
-        "qual": "Q"
-       },
-       {
-        "name": "Long SUN",
-        "noc": "CHN",
-        "rank": 1,
-        "time": "40.705",
-        "qual": "Q"
-       },
-       {
-        "name": "Maxime LAOUN",
-        "noc": "CAN",
-        "rank": 1,
-        "time": "40.762",
-        "qual": "Q"
-       },
-       {
-        "name": "Felix ROUSSEL",
-        "noc": "CAN",
-        "rank": 1,
-        "time": "40.807",
-        "qual": "Q"
-       },
-       {
-        "name": "Teun BOER",
-        "noc": "NED",
-        "rank": 1,
-        "time": "40.827",
-        "qual": "Q"
-       },
-       {
-        "name": "Mathieu PELLETIER",
-        "noc": "CAN",
-        "rank": 1,
-        "time": "40.947",
-        "qual": "Q"
-       },
-       {
-        "name": "Vladimir BALBEKOV",
-        "noc": "AIN2",
-        "rank": 2,
-        "time": "40.429",
-        "qual": "Q"
-       },
-       {
-        "name": "William DANDJINOU",
-        "noc": "CAN",
-        "rank": 2,
-        "time": "40.798",
-        "qual": "Q"
-       },
-       {
-        "name": "Shogo MIYATA",
-        "noc": "JPN",
-        "rank": 2,
-        "time": "40.906",
-        "qual": "Q"
-       },
-       {
-        "name": "Seochan BAE",
-        "noc": "KOR",
-        "rank": 2,
-        "time": "40.971",
-        "qual": "Q"
-       },
-       {
-        "name": "Furkan AKAR",
-        "noc": "TUR",
-        "rank": 2,
-        "time": "40.987",
-        "qual": "Q"
-       },
-       {
-        "name": "Jeongmin LEE",
-        "noc": "KOR",
-        "rank": 2,
-        "time": "41.137",
-        "qual": "Q"
-       },
-       {
-        "name": "Aibek NASSEN",
-        "noc": "KAZ",
-        "rank": 2,
-        "time": "41.302",
-        "qual": "Q"
-       },
-       {
-        "name": "Konstantin IVLIEV",
-        "noc": "AIN2",
-        "rank": 2,
-        "time": "41.324",
-        "qual": "Q"
-       },
-       {
-        "name": "Zixia ZHANG",
-        "noc": "CHN",
-        "rank": 3,
-        "time": "40.510",
-        "qual": "q"
-       },
-       {
-        "name": "Taesung KIM",
-        "noc": "KOR",
-        "rank": 3,
-        "time": "40.948",
-        "qual": "q"
-       }
-      ],
-      "races": [
-       [
-        "Jens VAN 'T WOUT (NED)",
-        "Mathieu PELLETIER (CAN)",
-        "Vladimir BALBEKOV (AIN2)",
-        "Konstantin IVLIEV (AIN2)",
-        "Zixia ZHANG (CHN)"
-       ],
-       [
-        "Thomas NADALINI (ITA)",
-        "Teun BOER (NED)",
-        "William DANDJINOU (CAN)",
-        "Aibek NASSEN (KAZ)",
-        "Taesung KIM (KOR)"
-       ],
-       [
-        "Brandon KIM (USA)",
-        "Felix ROUSSEL (CAN)",
-        "Shogo MIYATA (JPN)",
-        "Jeongmin LEE (KOR)"
-       ],
-       [
-        "Long SUN (CHN)",
-        "Maxime LAOUN (CAN)",
-        "Seochan BAE (KOR)",
-        "Furkan AKAR (TUR)"
-       ]
-      ]
-     }
+     ]
     },
     {
      "id": 23662,
@@ -4392,7 +4229,7 @@
     {
      "id": 23665,
      "name": "Rep. Semifinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-28T03:09:00.000Z",
      "rule": "The first placed skater from each race qualify for Quarterfinals.",
      "heats": [
@@ -4466,14 +4303,14 @@
       {
        "name": "Heat 2",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "Brendan COREY",
          "noc": "AUS",
-         "time": "41.540",
-         "qual": "",
+         "time": "41.522",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": 18,
@@ -4484,7 +4321,7 @@
          "rank": 2,
          "name": "Andrew HEO",
          "noc": "USA",
-         "time": "42.630",
+         "time": "42.622",
          "qual": "",
          "status": "",
          "record": "",
@@ -4496,8 +4333,8 @@
          "rank": 3,
          "name": "Michal NIEWINSKI",
          "noc": "POL",
-         "time": "1:00.170",
-         "qual": "",
+         "time": "1:00.306",
+         "qual": "ADV",
          "status": "",
          "record": "",
          "bib": 33,
@@ -4506,31 +4343,216 @@
         },
         {
          "rank": 4,
-         "name": "Kun LI",
-         "noc": "CHN",
-         "time": "1:08.800",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 67,
-         "lane": 2,
-         "slug": "kun-li"
-        },
-        {
-         "rank": null,
          "name": "Nikita NIKOLAEV",
          "noc": "AIN2",
-         "time": "",
+         "time": "1:28.932",
          "qual": "",
          "status": "",
          "record": "",
          "bib": 127,
          "lane": 3,
          "slug": "nikita-nikolaev"
+        },
+        {
+         "rank": null,
+         "name": "Kun LI",
+         "noc": "CHN",
+         "time": "YC",
+         "qual": "",
+         "status": "Yellow Card",
+         "record": "",
+         "bib": 67,
+         "lane": 2,
+         "slug": "kun-li"
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Quarterfinals",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Jens VAN 'T WOUT",
+        "noc": "NED",
+        "rank": 1,
+        "time": "40.347",
+        "qual": "Q"
+       },
+       {
+        "name": "Thomas NADALINI",
+        "noc": "ITA",
+        "rank": 1,
+        "time": "40.535",
+        "qual": "Q"
+       },
+       {
+        "name": "Brandon KIM",
+        "noc": "USA",
+        "rank": 1,
+        "time": "40.600",
+        "qual": "Q"
+       },
+       {
+        "name": "Long SUN",
+        "noc": "CHN",
+        "rank": 1,
+        "time": "40.705",
+        "qual": "Q"
+       },
+       {
+        "name": "Maxime LAOUN",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "40.762",
+        "qual": "Q"
+       },
+       {
+        "name": "Felix ROUSSEL",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "40.807",
+        "qual": "Q"
+       },
+       {
+        "name": "Teun BOER",
+        "noc": "NED",
+        "rank": 1,
+        "time": "40.827",
+        "qual": "Q"
+       },
+       {
+        "name": "Mathieu PELLETIER",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "40.947",
+        "qual": "Q"
+       },
+       {
+        "name": "Vladimir BALBEKOV",
+        "noc": "AIN2",
+        "rank": 2,
+        "time": "40.429",
+        "qual": "Q"
+       },
+       {
+        "name": "William DANDJINOU",
+        "noc": "CAN",
+        "rank": 2,
+        "time": "40.798",
+        "qual": "Q"
+       },
+       {
+        "name": "Shogo MIYATA",
+        "noc": "JPN",
+        "rank": 2,
+        "time": "40.906",
+        "qual": "Q"
+       },
+       {
+        "name": "Seochan BAE",
+        "noc": "KOR",
+        "rank": 2,
+        "time": "40.971",
+        "qual": "Q"
+       },
+       {
+        "name": "Furkan AKAR",
+        "noc": "TUR",
+        "rank": 2,
+        "time": "40.987",
+        "qual": "Q"
+       },
+       {
+        "name": "Jeongmin LEE",
+        "noc": "KOR",
+        "rank": 2,
+        "time": "41.137",
+        "qual": "Q"
+       },
+       {
+        "name": "Aibek NASSEN",
+        "noc": "KAZ",
+        "rank": 2,
+        "time": "41.302",
+        "qual": "Q"
+       },
+       {
+        "name": "Konstantin IVLIEV",
+        "noc": "AIN2",
+        "rank": 2,
+        "time": "41.324",
+        "qual": "Q"
+       },
+       {
+        "name": "Zixia ZHANG",
+        "noc": "CHN",
+        "rank": 3,
+        "time": "40.510",
+        "qual": "q"
+       },
+       {
+        "name": "Taesung KIM",
+        "noc": "KOR",
+        "rank": 3,
+        "time": "40.948",
+        "qual": "q"
+       },
+       {
+        "name": "Kay HUISMAN",
+        "noc": "NED",
+        "rank": 1,
+        "time": "40.838",
+        "qual": "Q"
+       },
+       {
+        "name": "Brendan COREY",
+        "noc": "AUS",
+        "rank": 1,
+        "time": "41.522",
+        "qual": "Q"
+       },
+       {
+        "name": "Michal NIEWINSKI",
+        "noc": "POL",
+        "rank": 3,
+        "time": "1:00.306",
+        "qual": "ADV"
+       }
+      ],
+      "races": [
+       [
+        "Jens VAN 'T WOUT (NED)",
+        "Mathieu PELLETIER (CAN)",
+        "Vladimir BALBEKOV (AIN2)",
+        "Konstantin IVLIEV (AIN2)",
+        "Zixia ZHANG (CHN)"
+       ],
+       [
+        "Thomas NADALINI (ITA)",
+        "Teun BOER (NED)",
+        "William DANDJINOU (CAN)",
+        "Aibek NASSEN (KAZ)",
+        "Taesung KIM (KOR)"
+       ],
+       [
+        "Brandon KIM (USA)",
+        "Felix ROUSSEL (CAN)",
+        "Shogo MIYATA (JPN)",
+        "Jeongmin LEE (KOR)",
+        "Kay HUISMAN (NED)"
+       ],
+       [
+        "Long SUN (CHN)",
+        "Maxime LAOUN (CAN)",
+        "Seochan BAE (KOR)",
+        "Furkan AKAR (TUR)",
+        "Brendan COREY (AUS)",
+        "Michal NIEWINSKI (POL)"
+       ]
+      ]
+     }
     },
     {
      "id": 23666,
