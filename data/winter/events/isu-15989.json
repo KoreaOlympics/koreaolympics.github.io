@@ -14,11 +14,11 @@
   "tz": "Asia/Tokyo",
   "city": "Tokyo",
   "country": "JPN",
-  "state": "In Progress",
-  "live": "",
+  "state": "Live",
+  "live": "Mako YAMASHITA",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-nhk-trophy-2026/"
  },
- "checked_at": "2026-11-28T08:31:20.557320+00:00",
+ "checked_at": "2026-11-28T08:42:28.518535+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T03:42:00.000Z",
@@ -547,6 +547,31 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Yuna AOKI",
+     "noc": "JPN",
+     "points": "198.98",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 6,
+       "total": "69.17",
+       "tes": "35.06",
+       "pcs": "34.11",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 1,
+       "total": "129.81",
+       "tes": "63.28",
+       "pcs": "67.53",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
      "name": "Adeliia PETROSIAN",
      "noc": "AIN2",
      "points": "186.90",
@@ -562,16 +587,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 2,
+       "rank": 3,
        "total": "121.62",
        "tes": "66.62",
        "pcs": "57.00",
-       "status": "Scheduled Break"
+       "status": "Running"
       }
      }
     },
     {
-     "rank": 2,
+     "rank": 3,
      "name": "Sarah EVERHARDT",
      "noc": "USA",
      "points": "185.16",
@@ -587,16 +612,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 1,
+       "rank": 2,
        "total": "126.11",
        "tes": "64.69",
        "pcs": "61.42",
-       "status": "Scheduled Break"
+       "status": "Running"
       }
      }
     },
     {
-     "rank": 3,
+     "rank": 4,
      "name": "Madeline SCHIZAS",
      "noc": "CAN",
      "points": "183.28",
@@ -612,16 +637,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 4,
+       "rank": 5,
        "total": "114.92",
        "tes": "58.91",
        "pcs": "57.01",
-       "status": "Scheduled Break"
+       "status": "Running"
       }
      }
     },
     {
-     "rank": 4,
+     "rank": 5,
      "name": "Viktoriia SAFONOVA",
      "noc": "AIN1",
      "points": "179.70",
@@ -637,16 +662,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 3,
+       "rank": 4,
        "total": "116.59",
        "tes": "65.21",
        "pcs": "51.38",
-       "status": "Scheduled Break"
+       "status": "Running"
       }
      }
     },
     {
-     "rank": 5,
+     "rank": 6,
      "name": "Julia SAUTER",
      "noc": "ROU",
      "points": "176.26",
@@ -662,16 +687,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 5,
+       "rank": 6,
        "total": "114.38",
        "tes": "56.50",
        "pcs": "57.88",
-       "status": "Scheduled Break"
+       "status": "Running"
       }
      }
     },
     {
-     "rank": 6,
+     "rank": 7,
      "name": "Kimmy REPOND",
      "noc": "SUI",
      "points": "173.17",
@@ -687,11 +712,11 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 6,
+       "rank": 7,
        "total": "112.15",
        "tes": "57.64",
        "pcs": "55.51",
-       "status": "Scheduled Break"
+       "status": "Running"
       }
      }
     },
@@ -716,7 +741,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Scheduled Break"
+       "status": "Running"
       }
      }
     },
@@ -741,7 +766,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Scheduled Break"
+       "status": "Running"
       }
      }
     },
@@ -766,7 +791,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Scheduled Break"
+       "status": "Running"
       }
      }
     },
@@ -791,7 +816,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Scheduled Break"
+       "status": "Running"
       }
      }
     },
@@ -816,32 +841,7 @@
        "total": "",
        "tes": "",
        "pcs": "",
-       "status": "Scheduled Break"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Yuna AOKI",
-     "noc": "JPN",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 6,
-       "total": "69.17",
-       "tes": "35.06",
-       "pcs": "34.11",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Scheduled Break"
+       "status": "Running"
       }
      }
     }
