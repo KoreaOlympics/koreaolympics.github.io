@@ -15,10 +15,10 @@
   "city": "Tokyo",
   "country": "JPN",
   "state": "Live",
-  "live": "",
+  "live": "Kevin AYMOZ",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-nhk-trophy-2026/"
  },
- "checked_at": "2026-11-28T11:49:58.628582+00:00",
+ "checked_at": "2026-11-28T12:01:20.399689+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T03:42:00.000Z",
@@ -77,7 +77,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-28T10:30:00.000Z",
+   "start_utc": "2026-11-28T10:38:00.000Z",
    "title": "Men",
    "round": "Free Skating",
    "event_result_id": 15735,
@@ -856,6 +856,56 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Lukas BRITSCHGI",
+     "noc": "SUI",
+     "points": "266.02",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 5,
+       "total": "90.81",
+       "tes": "48.57",
+       "pcs": "42.24",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 2,
+       "total": "175.21",
+       "tes": "90.06",
+       "pcs": "85.15",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
+     "name": "Daniel GRASSL",
+     "noc": "ITA",
+     "points": "262.86",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 4,
+       "total": "91.66",
+       "tes": "50.70",
+       "pcs": "40.96",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 3,
+       "total": "171.20",
+       "tes": "89.99",
+       "pcs": "81.21",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 3,
      "name": "Rio NAKATA",
      "noc": "JPN",
      "points": "258.05",
@@ -880,7 +930,7 @@
      }
     },
     {
-     "rank": 2,
+     "rank": 4,
      "name": "Petr GUMENNIK",
      "noc": "AIN2",
      "points": "253.11",
@@ -896,7 +946,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 3,
+       "rank": 5,
        "total": "162.51",
        "tes": "87.58",
        "pcs": "74.93",
@@ -905,7 +955,7 @@
      }
     },
     {
-     "rank": 3,
+     "rank": 5,
      "name": "Vladislav DIKIDZHI",
      "noc": "AIN2",
      "points": "250.22",
@@ -921,7 +971,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 2,
+       "rank": 4,
        "total": "164.76",
        "tes": "88.87",
        "pcs": "75.89",
@@ -930,7 +980,7 @@
      }
     },
     {
-     "rank": 4,
+     "rank": 6,
      "name": "Jason BROWN",
      "noc": "USA",
      "points": "244.80",
@@ -946,7 +996,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 4,
+       "rank": 6,
        "total": "158.91",
        "tes": "70.57",
        "pcs": "88.34",
@@ -955,7 +1005,7 @@
      }
     },
     {
-     "rank": 5,
+     "rank": 7,
      "name": "Vladimir SAMOILOV",
      "noc": "POL",
      "points": "232.33",
@@ -971,7 +1021,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 5,
+       "rank": 7,
        "total": "145.61",
        "tes": "70.92",
        "pcs": "74.69",
@@ -980,7 +1030,7 @@
      }
     },
     {
-     "rank": 6,
+     "rank": 8,
      "name": "Francois PITOT",
      "noc": "FRA",
      "points": "222.72",
@@ -996,7 +1046,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 6,
+       "rank": 8,
        "total": "144.66",
        "tes": "73.36",
        "pcs": "72.30",
@@ -1005,7 +1055,7 @@
      }
     },
     {
-     "rank": 7,
+     "rank": 9,
      "name": "Nozomu YOSHIOKA",
      "noc": "JPN",
      "points": "221.19",
@@ -1021,7 +1071,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 7,
+       "rank": 9,
        "total": "141.79",
        "tes": "74.62",
        "pcs": "67.17",
@@ -1092,56 +1142,6 @@
        "total": "94.15",
        "tes": "49.70",
        "pcs": "44.45",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Daniel GRASSL",
-     "noc": "ITA",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 4,
-       "total": "91.66",
-       "tes": "50.70",
-       "pcs": "40.96",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Lukas BRITSCHGI",
-     "noc": "SUI",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 5,
-       "total": "90.81",
-       "tes": "48.57",
-       "pcs": "42.24",
        "status": "Finished"
       },
       "FS": {

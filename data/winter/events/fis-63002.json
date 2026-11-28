@@ -19,7 +19,7 @@
   "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=CC&eventid=63002&seasoncode=2027",
   "raw": "2xINT 2xSPQ 2xSPF 2xMAS"
  },
- "checked_at": "2026-11-28T11:50:11.851922+00:00",
+ "checked_at": "2026-11-28T12:01:32.891847+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T09:30:00Z",
@@ -5467,347 +5467,1008 @@
   },
   "52089": {
    "title": "Men's 1.2km Sprint Final Classic",
-   "columns": [],
+   "columns": [
+    "Time",
+    "Diff. Time"
+   ],
    "rows": [
     {
-     "order": "1",
-     "bib": "4",
-     "code": "3422819",
-     "name": "KLAEBO Johannes Hoesflot",
-     "year": "1996",
-     "noc": "NOR",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 1"
-    },
-    {
-     "order": "2",
-     "bib": "9",
-     "code": "3422619",
-     "name": "VALNES Erik",
-     "year": "1996",
-     "noc": "NOR",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 1"
-    },
-    {
-     "order": "3",
-     "bib": "24",
-     "code": "3510588",
-     "name": "RIEBLI Janik",
-     "year": "1998",
-     "noc": "SUI",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 1"
-    },
-    {
-     "order": "4",
-     "bib": "25",
-     "code": "3290825",
-     "name": "BARP Elia",
-     "year": "2002",
-     "noc": "ITA",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 1"
-    },
-    {
-     "order": "5",
-     "bib": "29",
-     "code": "3424067",
-     "name": "MICHELSEN Even Solem",
-     "year": "2000",
-     "noc": "NOR",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 1"
-    },
-    {
-     "order": "6",
-     "bib": "30",
-     "code": "3180838",
-     "name": "AHONEN Ville",
-     "year": "1994",
-     "noc": "FIN",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 1"
-    },
-    {
-     "order": "1",
-     "bib": "1",
-     "code": "8420837",
-     "name": "HEGGEN Lars",
-     "year": "2005",
-     "noc": "NOR",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 2"
-    },
-    {
-     "order": "2",
+     "rank": 1,
      "bib": "6",
      "code": "8420636",
      "name": "VIKE Oskar Opstad",
      "year": "2004",
      "noc": "NOR",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 2"
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
     },
     {
-     "order": "3",
+     "rank": 2,
+     "bib": "4",
+     "code": "3422819",
+     "name": "KLAEBO Johannes Hoesflot",
+     "year": "1996",
+     "noc": "NOR",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 3,
      "bib": "8",
      "code": "3290616",
      "name": "MOCELLINI Simone",
      "year": "1998",
      "noc": "ITA",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 2"
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
     },
     {
-     "order": "4",
-     "bib": "26",
-     "code": "3490315",
-     "name": "PUEYO Jaume",
-     "year": "2001",
-     "noc": "ESP",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 2"
-    },
-    {
-     "order": "5",
-     "bib": "27",
-     "code": "3180861",
-     "name": "MAKI Joni",
-     "year": "1995",
-     "noc": "FIN",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 2"
-    },
-    {
-     "order": "6",
-     "bib": "28",
-     "code": "3501955",
-     "name": "ALGOTSSON Oskar",
-     "year": "2002",
-     "noc": "SWE",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 2"
-    },
-    {
-     "order": "1",
-     "bib": "2",
-     "code": "3510656",
-     "name": "GROND Valerio",
-     "year": "2000",
-     "noc": "SUI",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 3"
-    },
-    {
-     "order": "2",
-     "bib": "5",
-     "code": "3501871",
-     "name": "DANIELSSON Emil",
-     "year": "2001",
-     "noc": "SWE",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 3"
-    },
-    {
-     "order": "3",
-     "bib": "13",
-     "code": "8420588",
-     "name": "KOLLERUD Kristian",
-     "year": "2004",
-     "noc": "NOR",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 3"
-    },
-    {
-     "order": "4",
-     "bib": "18",
-     "code": "3181407",
-     "name": "LIEKARI Emil",
-     "year": "2001",
-     "noc": "FIN",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 3"
-    },
-    {
-     "order": "5",
-     "bib": "22",
-     "code": "3190528",
-     "name": "SCHELY Theo",
-     "year": "1999",
-     "noc": "FRA",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 3"
-    },
-    {
-     "order": "6",
-     "bib": "23",
-     "code": "3190323",
-     "name": "CHANAVAT Lucas",
-     "year": "1994",
-     "noc": "FRA",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 3"
-    },
-    {
-     "order": "1",
-     "bib": "10",
-     "code": "3181408",
-     "name": "MOILANEN Niilo",
-     "year": "2001",
-     "noc": "FIN",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 4"
-    },
-    {
-     "order": "2",
+     "rank": 4,
      "bib": "11",
      "code": "3190548",
      "name": "CHAPPAZ Jules",
      "year": "1999",
      "noc": "FRA",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 4"
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
     },
     {
-     "order": "3",
-     "bib": "12",
-     "code": "3430233",
-     "name": "BURY Kamil",
-     "year": "1995",
-     "noc": "POL",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 4"
-    },
-    {
-     "order": "4",
-     "bib": "17",
-     "code": "3423264",
-     "name": "AMUNDSEN Harald Oestberg",
-     "year": "1998",
+     "rank": 5,
+     "bib": "9",
+     "code": "3422619",
+     "name": "VALNES Erik",
+     "year": "1996",
      "noc": "NOR",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 4"
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
     },
     {
-     "order": "5",
-     "bib": "20",
-     "code": "3180508",
-     "name": "HAKOLA Ristomatti",
-     "year": "1991",
-     "noc": "FIN",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 4"
+     "rank": 6,
+     "bib": "1",
+     "code": "8420837",
+     "name": "HEGGEN Lars",
+     "year": "2005",
+     "noc": "NOR",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
     },
     {
-     "order": "6",
-     "bib": "21",
-     "code": "3502108",
-     "name": "GRAHN Anton",
-     "year": "2004",
-     "noc": "SWE",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 4"
+     "rank": 7,
+     "bib": "2",
+     "code": "3510656",
+     "name": "GROND Valerio",
+     "year": "2000",
+     "noc": "SUI",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
     },
     {
-     "order": "1",
+     "rank": 8,
      "bib": "3",
      "code": "3501842",
      "name": "ERSSON George",
      "year": "2001",
      "noc": "SWE",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 5"
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
     },
     {
-     "order": "2",
-     "bib": "7",
-     "code": "3180990",
-     "name": "HAARALA Juuso",
-     "year": "1996",
-     "noc": "FIN",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 5"
+     "rank": 9,
+     "bib": "5",
+     "code": "3501871",
+     "name": "DANIELSSON Emil",
+     "year": "2001",
+     "noc": "SWE",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
     },
     {
-     "order": "3",
-     "bib": "14",
-     "code": "3181566",
-     "name": "MELNITS Ike",
-     "year": "2003",
-     "noc": "FIN",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 5"
+     "rank": 10,
+     "bib": "12",
+     "code": "3430233",
+     "name": "BURY Kamil",
+     "year": "1995",
+     "noc": "POL",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
     },
     {
-     "order": "4",
+     "rank": 11,
+     "bib": "13",
+     "code": "8420588",
+     "name": "KOLLERUD Kristian",
+     "year": "2004",
+     "noc": "NOR",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 12,
+     "bib": "16",
+     "code": "3424534",
+     "name": "HJELMESET Lars Agnar",
+     "year": "2001",
+     "noc": "NOR",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 13,
      "bib": "15",
      "code": "3290712",
      "name": "GRAZ Davide",
      "year": "2000",
      "noc": "ITA",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 5"
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
     },
     {
-     "order": "5",
-     "bib": "16",
-     "code": "3424534",
-     "name": "",
-     "year": "2001",
+     "rank": 14,
+     "bib": "21",
+     "code": "3502108",
+     "name": "GRAHN Anton",
+     "year": "2004",
+     "noc": "SWE",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 15,
+     "bib": "29",
+     "code": "3424067",
+     "name": "MICHELSEN Even Solem",
+     "year": "2000",
      "noc": "NOR",
-     "cells": {},
-     "rank": null,
-     "status": "1/4 Final - Heat 5"
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
     },
     {
-     "order": "6",
+     "rank": 16,
+     "bib": "17",
+     "code": "3423264",
+     "name": "AMUNDSEN Harald Oestberg",
+     "year": "1998",
+     "noc": "NOR",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 17,
      "bib": "19",
      "code": "3510779",
      "name": "ALDER Roman",
      "year": "2004",
      "noc": "SUI",
-     "cells": {},
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 18,
+     "bib": "23",
+     "code": "3190323",
+     "name": "CHANAVAT Lucas",
+     "year": "1994",
+     "noc": "FRA",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 19,
+     "bib": "25",
+     "code": "3290825",
+     "name": "BARP Elia",
+     "year": "2002",
+     "noc": "ITA",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 20,
+     "bib": "27",
+     "code": "3180861",
+     "name": "MAKI Joni",
+     "year": "1995",
+     "noc": "FIN",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 21,
+     "bib": "14",
+     "code": "3181566",
+     "name": "MELNITS Ike",
+     "year": "2003",
+     "noc": "FIN",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 22,
+     "bib": "20",
+     "code": "3180508",
+     "name": "HAKOLA Ristomatti",
+     "year": "1991",
+     "noc": "FIN",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 23,
+     "bib": "22",
+     "code": "3190528",
+     "name": "SCHELY Theo",
+     "year": "1999",
+     "noc": "FRA",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 24,
+     "bib": "24",
+     "code": "3510588",
+     "name": "RIEBLI Janik",
+     "year": "1998",
+     "noc": "SUI",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 25,
+     "bib": "28",
+     "code": "3501955",
+     "name": "ALGOTSSON Oskar",
+     "year": "2002",
+     "noc": "SWE",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 26,
+     "bib": "7",
+     "code": "3180990",
+     "name": "HAARALA Juuso",
+     "year": "1996",
+     "noc": "FIN",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 27,
+     "bib": "10",
+     "code": "3181408",
+     "name": "MOILANEN Niilo",
+     "year": "2001",
+     "noc": "FIN",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 28,
+     "bib": "18",
+     "code": "3181407",
+     "name": "LIEKARI Emil",
+     "year": "2001",
+     "noc": "FIN",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 29,
+     "bib": "26",
+     "code": "3490315",
+     "name": "PUEYO Jaume",
+     "year": "2001",
+     "noc": "ESP",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 30,
+     "bib": "30",
+     "code": "3180838",
+     "name": "AHONEN Ville",
+     "year": "1994",
+     "noc": "FIN",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 31,
+     "bib": "16",
+     "code": "3180865",
+     "name": "VUORINEN Lauri",
+     "year": "1995",
+     "noc": "FIN",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 32,
+     "bib": "32",
+     "code": "3510784",
+     "name": "NAEFF Isai",
+     "year": "2005",
+     "noc": "SUI",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 32,
+     "bib": "36",
+     "code": "3181239",
+     "name": "AHONEN Olli",
+     "year": "1999",
+     "noc": "FIN",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 34,
+     "bib": "13",
+     "code": "3530910",
+     "name": "SCHOONMAKER JC",
+     "year": "2000",
+     "noc": "USA",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 35,
+     "bib": "52",
+     "code": "3501819",
+     "name": "GISSELMAN Truls",
+     "year": "2001",
+     "noc": "SWE",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 36,
+     "bib": "7",
+     "code": "3530835",
+     "name": "KETTERSON Zak",
+     "year": "1997",
+     "noc": "USA",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 37,
+     "bib": "51",
+     "code": "3501735",
+     "name": "EKBERG Johan",
+     "year": "2000",
+     "noc": "SWE",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 38,
+     "bib": "21",
+     "code": "3200933",
+     "name": "STOELBEN Jan",
+     "year": "2001",
+     "noc": "GER",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 39,
+     "bib": "17",
+     "code": "3510731",
+     "name": "NAEFF Noe",
+     "year": "2003",
+     "noc": "SUI",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 40,
+     "bib": "18",
+     "code": "3530882",
+     "name": "SCHUMACHER Gus",
+     "year": "2000",
+     "noc": "USA",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 41,
+     "bib": "56",
+     "code": "3290600",
+     "name": "DAPRA Simone",
+     "year": "1997",
+     "noc": "ITA",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 42,
+     "bib": "67",
+     "code": "3670199",
+     "name": "MATASSOV Svyatoslav",
+     "year": "2000",
+     "noc": "KAZ",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 43,
+     "bib": "49",
+     "code": "3490344",
+     "name": "SELLES GASCH Bernat",
+     "year": "2003",
+     "noc": "ESP",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 44,
+     "bib": "59",
+     "code": "3190635",
+     "name": "CORREIA Matteo",
+     "year": "2002",
+     "noc": "FRA",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 45,
+     "bib": "1",
+     "code": "3050281",
+     "name": "MRKONJIC Lukas",
+     "year": "1999",
+     "noc": "AUT",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 46,
+     "bib": "44",
+     "code": "3100406",
+     "name": "CYR Antoine",
+     "year": "1998",
+     "noc": "CAN",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 47,
+     "bib": "71",
+     "code": "3300906",
+     "name": "MORI Rio",
+     "year": "2006",
+     "noc": "JPN",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 48,
+     "bib": "35",
+     "code": "3484079",
+     "name": "KOROSTELEV Savelii",
+     "year": "2003",
+     "noc": "AIN",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 49,
+     "bib": "47",
+     "code": "3390258",
+     "name": "DREMLJUGA Karl Sebastian",
+     "year": "2001",
+     "noc": "EST",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 50,
+     "bib": "34",
+     "code": "3150570",
+     "name": "NOVAK Michal",
+     "year": "1996",
+     "noc": "CZE",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 51,
+     "bib": "28",
+     "code": "3531108",
+     "name": "YOUNG Jack",
+     "year": "2002",
+     "noc": "USA",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 52,
+     "bib": "50",
+     "code": "3390240",
+     "name": "HIMMA Martin",
+     "year": "1999",
+     "noc": "EST",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 53,
+     "bib": "72",
+     "code": "3300608",
+     "name": "YAMASHITA Haruki",
+     "year": "1999",
+     "noc": "JPN",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 54,
+     "bib": "31",
+     "code": "3190614",
+     "name": "BOURDIN Remi",
+     "year": "2001",
+     "noc": "FRA",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 55,
+     "bib": "62",
+     "code": "3100449",
+     "name": "GRALL-JOHNSON Pierre",
+     "year": "1999",
+     "noc": "CAN",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 56,
+     "bib": "45",
+     "code": "3530998",
+     "name": "MCMULLEN Zanden",
+     "year": "2001",
+     "noc": "USA",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 57,
+     "bib": "65",
+     "code": "3670249",
+     "name": "NURSBEKOV Yernar",
+     "year": "2002",
+     "noc": "KAZ",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 58,
+     "bib": "39",
+     "code": "3100462",
+     "name": "MCKEEVER Xavier",
+     "year": "2003",
+     "noc": "CAN",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 59,
+     "bib": "68",
+     "code": "3390276",
+     "name": "UNN Albert",
+     "year": "2001",
+     "noc": "EST",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 60,
+     "bib": "43",
+     "code": "3100477",
+     "name": "MASSON Sasha",
+     "year": "2002",
+     "noc": "CAN",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 61,
+     "bib": "46",
+     "code": "3100412",
+     "name": "RITCHIE Graham",
+     "year": "1998",
+     "noc": "CAN",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 62,
+     "bib": "64",
+     "code": "3430365",
+     "name": "JARECKI Piotr",
+     "year": "2003",
+     "noc": "POL",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 63,
+     "bib": "60",
+     "code": "3390207",
+     "name": "ROOS Henri",
+     "year": "1998",
+     "noc": "EST",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 64,
+     "bib": "37",
+     "code": "3560101",
+     "name": "SIMENC Miha",
+     "year": "1995",
+     "noc": "SLO",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 65,
+     "bib": "38",
+     "code": "3201012",
+     "name": "KECK Elias",
+     "year": "2003",
+     "noc": "GER",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 66,
+     "bib": "58",
+     "code": "3531259",
+     "name": "JAYNE Zachary",
+     "year": "2004",
+     "noc": "USA",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 67,
+     "bib": "61",
+     "code": "3080035",
+     "name": "SILVA Manex",
+     "year": "2002",
+     "noc": "BRA",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 68,
+     "bib": "55",
+     "code": "3550147",
+     "name": "VIGANTS Raimo",
+     "year": "1999",
+     "noc": "LAT",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 69,
+     "bib": "70",
+     "code": "3300693",
+     "name": "HIROSE Ryo",
+     "year": "2000",
+     "noc": "JPN",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 70,
+     "bib": "75",
+     "code": "3670343",
+     "name": "TURLYBEKULY Nartay",
+     "year": "2002",
+     "noc": "KAZ",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 71,
+     "bib": "74",
+     "code": "3670078",
+     "name": "KLIMIN Olzhas",
+     "year": "1996",
+     "noc": "KAZ",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 72,
+     "bib": "69",
+     "code": "3550280",
+     "name": "KALNINS Davis",
+     "year": "2007",
+     "noc": "LAT",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 73,
+     "bib": "66",
+     "code": "3690142",
+     "name": "LISOHOR Oleksandr",
+     "year": "2004",
+     "noc": "UKR",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 74,
+     "bib": "76",
+     "code": "3690180",
+     "name": "MIHAL Yehor",
+     "year": "2008",
+     "noc": "UKR",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
+     "rank": 75,
+     "bib": "73",
+     "code": "3690149",
+     "name": "ROMANCHENKO Dmytro",
+     "year": "2003",
+     "noc": "UKR",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": ""
+    },
+    {
      "rank": null,
-     "status": "1/4 Final - Heat 5"
+     "bib": "63",
+     "code": "3220002",
+     "name": "MUSGRAVE Andrew",
+     "year": "1990",
+     "noc": "GBR",
+     "cells": {
+      "Time": "",
+      "Diff. Time": ""
+     },
+     "status": "Did not start"
     }
    ],
-   "start_list": true,
+   "start_list": false,
    "start_utc": "2026-11-28T10:45:00Z",
    "gender": "M",
    "live": false,
    "runs": [
-    "In progress"
+    "Unofficial result"
    ],
-   "status": ""
+   "status": "Finished"
   },
   "52091": {
    "columns": [],
