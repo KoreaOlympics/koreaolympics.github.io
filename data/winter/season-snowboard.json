@@ -31,6 +31,29 @@
    "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=SB&eventid=62746&seasoncode=2027",
    "podiums": [
     {
+     "title": "Women's Parallel Giant Slalom",
+     "podium": [
+      {
+       "rank": 1,
+       "name": "DALMASSO Lucia",
+       "noc": "ITA",
+       "time": "1:32.49"
+      },
+      {
+       "rank": 2,
+       "name": "DEKKER Michelle",
+       "noc": "NED",
+       "time": "1:34.26"
+      },
+      {
+       "rank": 3,
+       "name": "NADYRSHINA Sofiya",
+       "noc": "AIN",
+       "time": "1:35.07"
+      }
+     ]
+    },
+    {
      "title": "Parallel Team",
      "podium": null
     }
@@ -361,5 +384,27 @@
    "podiums": []
   }
  ],
- "medals": []
+ "medals": [
+  [
+   "ITA",
+   1,
+   0,
+   0,
+   1
+  ],
+  [
+   "NED",
+   0,
+   1,
+   0,
+   1
+  ],
+  [
+   "AIN",
+   0,
+   0,
+   1,
+   1
+  ]
+ ]
 }
