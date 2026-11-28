@@ -15,10 +15,10 @@
   "city": "Tokyo",
   "country": "JPN",
   "state": "Live",
-  "live": "Jia SHIN",
+  "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-nhk-trophy-2026/"
  },
- "checked_at": "2026-11-28T09:06:40.946121+00:00",
+ "checked_at": "2026-11-28T09:18:03.793493+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T03:42:00.000Z",
@@ -547,6 +547,31 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Jia SHIN",
+     "noc": "KOR",
+     "points": "219.02",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 2,
+       "total": "75.31",
+       "tes": "42.72",
+       "pcs": "32.59",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 1,
+       "total": "143.71",
+       "tes": "75.73",
+       "pcs": "67.98",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
      "name": "Young YOU",
      "noc": "KOR",
      "points": "199.99",
@@ -562,7 +587,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 2,
+       "rank": 3,
        "total": "128.57",
        "tes": "65.64",
        "pcs": "62.93",
@@ -571,7 +596,7 @@
      }
     },
     {
-     "rank": 2,
+     "rank": 3,
      "name": "Yuna AOKI",
      "noc": "JPN",
      "points": "198.98",
@@ -587,7 +612,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 1,
+       "rank": 2,
        "total": "129.81",
        "tes": "63.28",
        "pcs": "67.53",
@@ -596,7 +621,7 @@
      }
     },
     {
-     "rank": 3,
+     "rank": 4,
      "name": "Alina GORBACHEVA",
      "noc": "AIN2",
      "points": "193.87",
@@ -612,7 +637,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 4,
+       "rank": 5,
        "total": "122.39",
        "tes": "62.68",
        "pcs": "61.71",
@@ -621,7 +646,7 @@
      }
     },
     {
-     "rank": 4,
+     "rank": 5,
      "name": "Mako YAMASHITA",
      "noc": "JPN",
      "points": "190.85",
@@ -637,7 +662,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 6,
+       "rank": 7,
        "total": "121.51",
        "tes": "61.10",
        "pcs": "61.41",
@@ -646,7 +671,7 @@
      }
     },
     {
-     "rank": 5,
+     "rank": 6,
      "name": "Adeliia PETROSIAN",
      "noc": "AIN2",
      "points": "186.90",
@@ -662,7 +687,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 5,
+       "rank": 6,
        "total": "121.62",
        "tes": "66.62",
        "pcs": "57.00",
@@ -671,7 +696,7 @@
      }
     },
     {
-     "rank": 6,
+     "rank": 7,
      "name": "Sarah EVERHARDT",
      "noc": "USA",
      "points": "185.16",
@@ -687,7 +712,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 3,
+       "rank": 4,
        "total": "126.11",
        "tes": "64.69",
        "pcs": "61.42",
@@ -696,7 +721,7 @@
      }
     },
     {
-     "rank": 7,
+     "rank": 8,
      "name": "Madeline SCHIZAS",
      "noc": "CAN",
      "points": "183.28",
@@ -712,7 +737,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 8,
+       "rank": 9,
        "total": "114.92",
        "tes": "58.91",
        "pcs": "57.01",
@@ -721,7 +746,7 @@
      }
     },
     {
-     "rank": 8,
+     "rank": 9,
      "name": "Viktoriia SAFONOVA",
      "noc": "AIN1",
      "points": "179.70",
@@ -737,7 +762,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 7,
+       "rank": 8,
        "total": "116.59",
        "tes": "65.21",
        "pcs": "51.38",
@@ -746,7 +771,7 @@
      }
     },
     {
-     "rank": 9,
+     "rank": 10,
      "name": "Julia SAUTER",
      "noc": "ROU",
      "points": "176.26",
@@ -762,7 +787,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 9,
+       "rank": 10,
        "total": "114.38",
        "tes": "56.50",
        "pcs": "57.88",
@@ -771,7 +796,7 @@
      }
     },
     {
-     "rank": 10,
+     "rank": 11,
      "name": "Kimmy REPOND",
      "noc": "SUI",
      "points": "173.17",
@@ -787,7 +812,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 10,
+       "rank": 11,
        "total": "112.15",
        "tes": "57.64",
        "pcs": "55.51",
@@ -808,31 +833,6 @@
        "total": "77.12",
        "tes": "42.58",
        "pcs": "34.54",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Jia SHIN",
-     "noc": "KOR",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 2,
-       "total": "75.31",
-       "tes": "42.72",
-       "pcs": "32.59",
        "status": "Finished"
       },
       "FS": {
@@ -1167,6 +1167,25 @@
    "heat": "",
    "start_utc": "2026-11-28T07:38:00.000Z",
    "rank": 1,
+   "name": "Jia SHIN",
+   "noc": "KOR",
+   "time": "219.02",
+   "qual": "",
+   "status": "",
+   "segments": {
+    "SP": "75.31",
+    "FS": "143.71"
+   }
+  },
+  {
+   "event_id": "isu-15989",
+   "sport": "figure-skating",
+   "event": "ISU Figure Skating Grand Prix NHK Trophy 2026",
+   "distance": "Women",
+   "round": "Free Skating",
+   "heat": "",
+   "start_utc": "2026-11-28T07:38:00.000Z",
+   "rank": 2,
    "name": "Young YOU",
    "noc": "KOR",
    "time": "199.99",
@@ -1175,25 +1194,6 @@
    "segments": {
     "SP": "71.42",
     "FS": "128.57"
-   }
-  },
-  {
-   "event_id": "isu-15989",
-   "sport": "figure-skating",
-   "event": "ISU Figure Skating Grand Prix NHK Trophy 2026",
-   "distance": "Women",
-   "round": "Short Program",
-   "heat": "",
-   "start_utc": "2026-11-28T07:38:00.000Z",
-   "rank": 2,
-   "name": "Jia SHIN",
-   "noc": "KOR",
-   "time": "75.31",
-   "qual": "",
-   "status": "",
-   "segments": {
-    "SP": "75.31",
-    "FS": ""
    }
   }
  ]
