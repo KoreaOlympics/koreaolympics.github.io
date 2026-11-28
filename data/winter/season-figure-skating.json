@@ -619,7 +619,7 @@
    "end": "2026-11-29",
    "city": "Tokyo",
    "country": "JPN",
-   "state": "Live",
+   "state": "In Progress",
    "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-nhk-trophy-2026/",
    "podiums": [
     {
@@ -647,7 +647,26 @@
     },
     {
      "title": "Pairs",
-     "podium": null
+     "podium": [
+      {
+       "rank": 1,
+       "name": "Minerva Fabienne HASE / Nikita VOLODIN",
+       "noc": "GER",
+       "time": "213.08"
+      },
+      {
+       "rank": 2,
+       "name": "Yuna NAGAOKA / Sumitada MORIGUCHI",
+       "noc": "JPN",
+       "time": "195.69"
+      },
+      {
+       "rank": 3,
+       "name": "Karina AKOPOVA / Nikita RAKHMANIN",
+       "noc": "ARM",
+       "time": "178.39"
+      }
+     ]
     },
     {
      "title": "Women",
@@ -736,9 +755,9 @@
   [
    "JPN",
    6,
-   2,
    3,
-   11
+   3,
+   12
   ],
   [
    "FRA",
@@ -756,10 +775,10 @@
   ],
   [
    "GER",
-   2,
+   3,
    0,
    1,
-   3
+   4
   ],
   [
    "GBR",
@@ -830,6 +849,13 @@
    0,
    2,
    2
+  ],
+  [
+   "ARM",
+   0,
+   0,
+   1,
+   1
   ],
   [
    "CZE",
@@ -1072,6 +1098,13 @@
   ],
   "Pairs": [
    {
+    "name": "Minerva Fabienne HASE / Nikita VOLODIN",
+    "noc": "GER",
+    "points": 213.08,
+    "event": "ISU Figure Skating Grand Prix NHK Trophy 2026",
+    "event_id": "isu-15989"
+   },
+   {
     "name": "Anastasia MISHINA / Aleksandr GALLIAMOV",
     "noc": "AIN2",
     "points": 209.84,
@@ -1131,13 +1164,6 @@
     "name": "Lia PEREIRA / Trennt MICHAUD",
     "noc": "CAN",
     "points": 195.28,
-    "event": "ISU Figure Skating Grand Prix Finlandia Trophy 2026",
-    "event_id": "isu-15999"
-   },
-   {
-    "name": "Audrey SHIN / Spencer Akira HOWE",
-    "noc": "USA",
-    "points": 193.18,
     "event": "ISU Figure Skating Grand Prix Finlandia Trophy 2026",
     "event_id": "isu-15999"
    }

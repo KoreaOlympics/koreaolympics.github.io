@@ -14,11 +14,11 @@
   "tz": "Asia/Tokyo",
   "city": "Tokyo",
   "country": "JPN",
-  "state": "Live",
-  "live": "HASE Minerva Fabienne / VOLODIN Nikita",
+  "state": "In Progress",
+  "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-nhk-trophy-2026/"
  },
- "checked_at": "2026-11-28T06:16:01.437059+00:00",
+ "checked_at": "2026-11-28T06:26:57.231435+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T03:42:00.000Z",
@@ -338,6 +338,31 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Minerva Fabienne HASE / Nikita VOLODIN",
+     "noc": "GER",
+     "points": "213.08",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 1,
+       "total": "75.21",
+       "tes": "40.17",
+       "pcs": "35.04",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 1,
+       "total": "137.87",
+       "tes": "66.52",
+       "pcs": "71.35",
+       "status": "Finished"
+      }
+     }
+    },
+    {
+     "rank": 2,
      "name": "Yuna NAGAOKA / Sumitada MORIGUCHI",
      "noc": "JPN",
      "points": "195.69",
@@ -353,16 +378,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 1,
+       "rank": 2,
        "total": "125.91",
        "tes": "60.88",
        "pcs": "65.03",
-       "status": "Running"
+       "status": "Finished"
       }
      }
     },
     {
-     "rank": 2,
+     "rank": 3,
      "name": "Karina AKOPOVA / Nikita RAKHMANIN",
      "noc": "ARM",
      "points": "178.39",
@@ -378,16 +403,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 2,
+       "rank": 3,
        "total": "111.44",
        "tes": "54.89",
        "pcs": "58.55",
-       "status": "Running"
+       "status": "Finished"
       }
      }
     },
     {
-     "rank": 3,
+     "rank": 4,
      "name": "Anna VALESI / Martin BIDAR",
      "noc": "CZE",
      "points": "161.04",
@@ -403,16 +428,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 3,
+       "rank": 4,
        "total": "101.27",
        "tes": "45.91",
        "pcs": "56.36",
-       "status": "Running"
+       "status": "Finished"
       }
      }
     },
     {
-     "rank": 4,
+     "rank": 5,
      "name": "Chelsea LIU / Ryan BEDARD",
      "noc": "USA",
      "points": "160.08",
@@ -428,16 +453,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 4,
+       "rank": 5,
        "total": "100.37",
        "tes": "48.09",
        "pcs": "54.28",
-       "status": "Running"
+       "status": "Finished"
       }
      }
     },
     {
-     "rank": 5,
+     "rank": 6,
      "name": "Jazmine DESROCHERS / Kieran THRASHER",
      "noc": "CAN",
      "points": "152.75",
@@ -453,16 +478,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 5,
+       "rank": 6,
        "total": "97.48",
        "tes": "46.18",
        "pcs": "53.30",
-       "status": "Running"
+       "status": "Finished"
       }
      }
     },
     {
-     "rank": 6,
+     "rank": 7,
      "name": "Camille KOVALEV / Pavel KOVALEV",
      "noc": "FRA",
      "points": "147.39",
@@ -478,16 +503,16 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 6,
+       "rank": 7,
        "total": "95.32",
        "tes": "43.30",
        "pcs": "53.02",
-       "status": "Running"
+       "status": "Finished"
       }
      }
     },
     {
-     "rank": 7,
+     "rank": 8,
      "name": "Naomi WILLIAMS / Lachlan LEWER",
      "noc": "USA",
      "points": "141.83",
@@ -503,36 +528,11 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 7,
+       "rank": 8,
        "total": "92.33",
        "tes": "44.31",
        "pcs": "49.02",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Minerva Fabienne HASE / Nikita VOLODIN",
-     "noc": "GER",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 1,
-       "total": "75.21",
-       "tes": "40.17",
-       "pcs": "35.04",
        "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
       }
      }
     }
