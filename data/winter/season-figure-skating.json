@@ -619,12 +619,31 @@
    "end": "2026-11-29",
    "city": "Tokyo",
    "country": "JPN",
-   "state": "Live",
+   "state": "In Progress",
    "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-nhk-trophy-2026/",
    "podiums": [
     {
      "title": "Ice Dance",
-     "podium": null
+     "podium": [
+      {
+       "rank": 1,
+       "name": "Emilea ZINGAS / Vadym KOLESNIK",
+       "noc": "USA",
+       "time": "203.29"
+      },
+      {
+       "rank": 2,
+       "name": "Christina CARREIRA / Anthony PONOMARENKO",
+       "noc": "USA",
+       "time": "196.88"
+      },
+      {
+       "rank": 3,
+       "name": "Olivia SMART / Tim DIECK",
+       "noc": "ESP",
+       "time": "186.47"
+      }
+     ]
     },
     {
      "title": "Pairs",
@@ -730,10 +749,10 @@
   ],
   [
    "USA",
-   2,
-   2,
+   3,
+   3,
    7,
-   11
+   13
   ],
   [
    "GER",
@@ -799,6 +818,13 @@
    1
   ],
   [
+   "ESP",
+   0,
+   0,
+   2,
+   2
+  ],
+  [
    "KOR",
    0,
    0,
@@ -807,13 +833,6 @@
   ],
   [
    "CZE",
-   0,
-   0,
-   1,
-   1
-  ],
-  [
-   "ESP",
    0,
    0,
    1,
@@ -849,6 +868,13 @@
     "points": 207.57,
     "event": "ISU Figure Skating Grand Prix de France 2026",
     "event_id": "isu-16027"
+   },
+   {
+    "name": "Emilea ZINGAS / Vadym KOLESNIK",
+    "noc": "USA",
+    "points": 203.29,
+    "event": "ISU Figure Skating Grand Prix NHK Trophy 2026",
+    "event_id": "isu-15989"
    },
    {
     "name": "Emilea ZINGAS / Vadym KOLESNIK",
@@ -898,13 +924,6 @@
     "points": 193.54,
     "event": "ISU Figure Skating Grand Prix Cup of China 2026",
     "event_id": "isu-16013"
-   },
-   {
-    "name": "Evgeniia LOPAREVA / Geoffrey BRISSAUD",
-    "noc": "FRA",
-    "points": 192.95,
-    "event": "ISU Figure Skating Grand Prix Skate Canada International 2026",
-    "event_id": "isu-16020"
    }
   ],
   "Women": [
