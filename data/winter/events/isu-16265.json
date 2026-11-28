@@ -14,11 +14,11 @@
   "tz": "Asia/Shanghai",
   "city": "Shanghai",
   "country": "CHN",
-  "state": "Live",
-  "live": "Women 1000 m",
+  "state": "In Progress",
+  "live": "",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-4-shanghai/"
  },
- "checked_at": "2026-11-28T07:45:08.859279+00:00",
+ "checked_at": "2026-11-28T07:56:11.105695+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T01:00:00.000Z",
@@ -7885,20 +7885,20 @@
     {
      "id": 23704,
      "name": "Final",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-28T07:30:00.000Z",
      "rule": "",
      "heats": [
       {
        "name": "Final",
-       "status": "Live",
-       "official": "Live",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Minjeong CHOI",
          "noc": "KOR",
-         "time": "",
+         "time": "1:30.981",
          "qual": "",
          "status": "",
          "record": "",
@@ -7907,34 +7907,10 @@
          "slug": "minjeong-choi"
         },
         {
-         "rank": null,
-         "name": "Gloria IORIATTI",
-         "noc": "ITA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 21,
-         "lane": 3,
-         "slug": "gloria-ioriatti"
-        },
-        {
-         "rank": null,
-         "name": "Elisa CONFORTOLA",
-         "noc": "ITA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 8,
-         "lane": 1,
-         "slug": "elisa-confortola"
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Xandra VELZEBOER",
          "noc": "NED",
-         "time": "",
+         "time": "1:31.115",
          "qual": "",
          "status": "",
          "record": "",
@@ -7943,10 +7919,34 @@
          "slug": "xandra-velzeboer"
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Gilli KIM",
+         "noc": "KOR",
+         "time": "1:31.246",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 5,
+         "lane": 4,
+         "slug": "gilli-kim"
+        },
+        {
+         "rank": 4,
+         "name": "Gloria IORIATTI",
+         "noc": "ITA",
+         "time": "1:31.290",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 21,
+         "lane": 3,
+         "slug": "gloria-ioriatti"
+        },
+        {
+         "rank": 5,
          "name": "Danae BLAIS",
          "noc": "CAN",
-         "time": "",
+         "time": "1:31.318",
          "qual": "",
          "status": "",
          "record": "",
@@ -7955,16 +7955,16 @@
          "slug": "danae-blais"
         },
         {
-         "rank": null,
-         "name": "Gilli KIM",
-         "noc": "KOR",
-         "time": "",
+         "rank": 6,
+         "name": "Elisa CONFORTOLA",
+         "noc": "ITA",
+         "time": "1:31.482",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 5,
-         "lane": 4,
-         "slug": "gilli-kim"
+         "bib": 8,
+         "lane": 1,
+         "slug": "elisa-confortola"
         }
        ]
       },
@@ -15203,10 +15203,10 @@
    "round": "Final",
    "heat": "Final",
    "start_utc": "2026-11-28T07:30:00.000Z",
-   "rank": null,
+   "rank": 1,
    "name": "Minjeong CHOI",
    "noc": "KOR",
-   "time": "",
+   "time": "1:30.981",
    "qual": "",
    "status": "",
    "record": "",
@@ -15222,10 +15222,10 @@
    "round": "Final",
    "heat": "Final",
    "start_utc": "2026-11-28T07:30:00.000Z",
-   "rank": null,
+   "rank": 3,
    "name": "Gilli KIM",
    "noc": "KOR",
-   "time": "",
+   "time": "1:31.246",
    "qual": "",
    "status": "",
    "record": "",
