@@ -15,10 +15,10 @@
   "city": "Tokyo",
   "country": "JPN",
   "state": "Live",
-  "live": "",
+  "live": "Petr GUMENNIK",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-nhk-trophy-2026/"
  },
- "checked_at": "2026-11-28T11:25:53.545205+00:00",
+ "checked_at": "2026-11-28T11:37:14.645336+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T03:42:00.000Z",
@@ -77,7 +77,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-28T10:38:00.000Z",
+   "start_utc": "2026-11-28T10:30:00.000Z",
    "title": "Men",
    "round": "Free Skating",
    "event_result_id": 15735,
@@ -931,6 +931,31 @@
     },
     {
      "rank": 4,
+     "name": "Vladimir SAMOILOV",
+     "noc": "POL",
+     "points": "232.33",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 7,
+       "total": "86.72",
+       "tes": "50.03",
+       "pcs": "37.69",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 4,
+       "total": "145.61",
+       "tes": "70.92",
+       "pcs": "74.69",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 5,
      "name": "Francois PITOT",
      "noc": "FRA",
      "points": "222.72",
@@ -946,7 +971,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 4,
+       "rank": 5,
        "total": "144.66",
        "tes": "73.36",
        "pcs": "72.30",
@@ -955,7 +980,7 @@
      }
     },
     {
-     "rank": 5,
+     "rank": 6,
      "name": "Nozomu YOSHIOKA",
      "noc": "JPN",
      "points": "221.19",
@@ -971,7 +996,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 5,
+       "rank": 6,
        "total": "141.79",
        "tes": "74.62",
        "pcs": "67.17",
@@ -1117,31 +1142,6 @@
        "total": "90.60",
        "tes": "52.60",
        "pcs": "38.00",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Vladimir SAMOILOV",
-     "noc": "POL",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 7,
-       "total": "86.72",
-       "tes": "50.03",
-       "pcs": "37.69",
        "status": "Finished"
       },
       "FS": {
