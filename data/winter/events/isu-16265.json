@@ -14,11 +14,11 @@
   "tz": "Asia/Shanghai",
   "city": "Shanghai",
   "country": "CHN",
-  "state": "Live",
-  "live": "Men 500 m",
+  "state": "In Progress",
+  "live": "",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-4-shanghai/"
  },
- "checked_at": "2026-11-28T07:22:53.220479+00:00",
+ "checked_at": "2026-11-28T07:34:01.097848+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T01:00:00.000Z",
@@ -229,7 +229,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-28T06:59:00.000Z",
+   "start_utc": "2026-11-28T07:10:00.000Z",
    "title": "Women 1000 m",
    "round": "Semifinals",
    "event_result_id": 16433,
@@ -237,7 +237,7 @@
    "type": "Singles"
   },
   {
-   "start_utc": "2026-11-28T07:08:00.000Z",
+   "start_utc": "2026-11-28T07:10:00.000Z",
    "title": "Men 500 m",
    "round": "Final",
    "event_result_id": 16435,
@@ -247,9 +247,9 @@
   {
    "start_utc": "2026-11-28T07:27:00.000Z",
    "title": "Women 1000 m",
-   "round": "Finals",
+   "round": "Final",
    "event_result_id": 16433,
-   "round_id": null,
+   "round_id": 23704,
    "type": "Singles"
   },
   {
@@ -5133,20 +5133,20 @@
     {
      "id": 23703,
      "name": "Final",
-     "status": "Live",
-     "start_utc": "2026-11-28T07:08:00.000Z",
+     "status": "Finished",
+     "start_utc": "2026-11-28T07:10:00.000Z",
      "rule": "",
      "heats": [
       {
        "name": "Final",
-       "status": "Scheduled",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Jens VAN 'T WOUT",
          "noc": "NED",
-         "time": "",
+         "time": "40.399",
          "qual": "",
          "status": "",
          "record": "",
@@ -5155,10 +5155,10 @@
          "slug": "jens-van-t-wout"
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Teun BOER",
          "noc": "NED",
-         "time": "",
+         "time": "40.471",
          "qual": "",
          "status": "",
          "record": "",
@@ -5167,22 +5167,22 @@
          "slug": "teun-boer"
         },
         {
-         "rank": null,
-         "name": "Felix ROUSSEL",
-         "noc": "CAN",
-         "time": "",
+         "rank": 3,
+         "name": "Zixia ZHANG",
+         "noc": "CHN",
+         "time": "40.955",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 11,
-         "lane": 3,
-         "slug": "felix-roussel"
+         "bib": 69,
+         "lane": 5,
+         "slug": "zixia-zhang"
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Taesung KIM",
          "noc": "KOR",
-         "time": "",
+         "time": "43.522",
          "qual": "",
          "status": "",
          "record": "",
@@ -5191,29 +5191,29 @@
          "slug": "taesung-kim"
         },
         {
-         "rank": null,
-         "name": "Zixia ZHANG",
-         "noc": "CHN",
-         "time": "",
+         "rank": 5,
+         "name": "Felix ROUSSEL",
+         "noc": "CAN",
+         "time": "1:09.157",
          "qual": "",
          "status": "",
          "record": "",
-         "bib": 69,
-         "lane": 5,
-         "slug": "zixia-zhang"
+         "bib": 11,
+         "lane": 3,
+         "slug": "felix-roussel"
         }
        ]
       },
       {
        "name": "Final B",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
+         "rank": 1,
          "name": "Michal NIEWINSKI",
          "noc": "POL",
-         "time": "",
+         "time": "40.771",
          "qual": "",
          "status": "",
          "record": "",
@@ -5222,22 +5222,10 @@
          "slug": "michal-niewinski"
         },
         {
-         "rank": null,
-         "name": "Seochan BAE",
-         "noc": "KOR",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": 96,
-         "lane": 2,
-         "slug": "seochan-bae"
-        },
-        {
-         "rank": null,
+         "rank": 2,
          "name": "Vladimir BALBEKOV",
          "noc": "AIN2",
-         "time": "",
+         "time": "40.841",
          "qual": "",
          "status": "",
          "record": "",
@@ -5246,10 +5234,22 @@
          "slug": "vladimir-balbekov"
         },
         {
-         "rank": null,
+         "rank": 3,
+         "name": "Seochan BAE",
+         "noc": "KOR",
+         "time": "40.979",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 96,
+         "lane": 2,
+         "slug": "seochan-bae"
+        },
+        {
+         "rank": 4,
          "name": "Brandon KIM",
          "noc": "USA",
-         "time": "",
+         "time": "41.002",
          "qual": "",
          "status": "",
          "record": "",
@@ -5258,10 +5258,10 @@
          "slug": "brandon-kim"
         },
         {
-         "rank": null,
+         "rank": 5,
          "name": "Shogo MIYATA",
          "noc": "JPN",
-         "time": "",
+         "time": "41.114",
          "qual": "",
          "status": "",
          "record": "",
@@ -14844,11 +14844,11 @@
    "distance": "Men 500 m",
    "round": "Final",
    "heat": "Final",
-   "start_utc": "2026-11-28T07:08:00.000Z",
-   "rank": null,
+   "start_utc": "2026-11-28T07:10:00.000Z",
+   "rank": 4,
    "name": "Taesung KIM",
    "noc": "KOR",
-   "time": "",
+   "time": "43.522",
    "qual": "",
    "status": "",
    "record": "",
@@ -14863,11 +14863,11 @@
    "distance": "Men 500 m",
    "round": "Final",
    "heat": "Final B",
-   "start_utc": "2026-11-28T07:08:00.000Z",
-   "rank": null,
+   "start_utc": "2026-11-28T07:10:00.000Z",
+   "rank": 3,
    "name": "Seochan BAE",
    "noc": "KOR",
-   "time": "",
+   "time": "40.979",
    "qual": "",
    "status": "",
    "record": "",
