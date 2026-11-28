@@ -14,11 +14,11 @@
   "tz": "Asia/Shanghai",
   "city": "Shanghai",
   "country": "CHN",
-  "state": "Live",
-  "live": "Women 3000 m Relay",
+  "state": "In Progress",
+  "live": "",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-4-shanghai/"
  },
- "checked_at": "2026-11-28T09:40:25.699932+00:00",
+ "checked_at": "2026-11-28T09:51:55.962028+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T01:00:00.000Z",
@@ -15029,32 +15029,20 @@
     {
      "id": 23706,
      "name": "Final",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-28T09:16:00.000Z",
      "rule": "",
      "heats": [
       {
        "name": "Final",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "Italy",
-         "noc": "ITA",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 1,
-         "slug": ""
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Canada",
          "noc": "CAN",
-         "time": "",
+         "time": "4:07.847",
          "qual": "",
          "status": "",
          "record": "",
@@ -15063,10 +15051,10 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 2,
          "name": "Republic of Korea",
          "noc": "KOR",
-         "time": "",
+         "time": "4:08.005",
          "qual": "",
          "status": "",
          "record": "",
@@ -15075,10 +15063,10 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 3,
          "name": "People's Republic of China",
          "noc": "CHN",
-         "time": "",
+         "time": "4:09.015",
          "qual": "",
          "status": "",
          "record": "",
@@ -15087,15 +15075,27 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 4,
          "name": "Poland",
          "noc": "POL",
-         "time": "",
+         "time": "4:12.593",
          "qual": "",
          "status": "",
          "record": "",
          "bib": null,
          "lane": 5,
+         "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "Italy",
+         "noc": "ITA",
+         "time": "PEN",
+         "qual": "",
+         "status": "Penalty",
+         "record": "",
+         "bib": null,
+         "lane": 1,
          "slug": ""
         }
        ]
@@ -16495,10 +16495,10 @@
    "round": "Final",
    "heat": "Final",
    "start_utc": "2026-11-28T09:16:00.000Z",
-   "rank": null,
+   "rank": 2,
    "name": "Republic of Korea",
    "noc": "KOR",
-   "time": "",
+   "time": "4:08.005",
    "qual": "",
    "status": "",
    "record": "",
