@@ -14,11 +14,11 @@
   "tz": "Asia/Shanghai",
   "city": "Shanghai",
   "country": "CHN",
-  "state": "In Progress",
-  "live": "",
+  "state": "Live",
+  "live": "Women 1000 m",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-4-shanghai/"
  },
- "checked_at": "2026-11-28T07:34:01.097848+00:00",
+ "checked_at": "2026-11-28T07:45:08.859279+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T01:00:00.000Z",
@@ -5134,7 +5134,7 @@
      "id": 23703,
      "name": "Final",
      "status": "Finished",
-     "start_utc": "2026-11-28T07:10:00.000Z",
+     "start_utc": "2026-11-28T07:21:16.000Z",
      "rule": "",
      "heats": [
       {
@@ -7824,7 +7824,7 @@
      ],
      "projection": {
       "next": "Final",
-      "official_draw_published": false,
+      "official_draw_published": true,
       "pending": [],
       "qualified": [
        {
@@ -7885,10 +7885,121 @@
     {
      "id": 23704,
      "name": "Final",
-     "status": "Scheduled",
-     "start_utc": "2026-11-28T07:27:00.000Z",
+     "status": "Live",
+     "start_utc": "2026-11-28T07:30:00.000Z",
      "rule": "",
-     "heats": []
+     "heats": [
+      {
+       "name": "Final",
+       "status": "Live",
+       "official": "Live",
+       "competitors": [
+        {
+         "rank": null,
+         "name": "Minjeong CHOI",
+         "noc": "KOR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 4,
+         "lane": 2,
+         "slug": "minjeong-choi"
+        },
+        {
+         "rank": null,
+         "name": "Gloria IORIATTI",
+         "noc": "ITA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 21,
+         "lane": 3,
+         "slug": "gloria-ioriatti"
+        },
+        {
+         "rank": null,
+         "name": "Elisa CONFORTOLA",
+         "noc": "ITA",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 8,
+         "lane": 1,
+         "slug": "elisa-confortola"
+        },
+        {
+         "rank": null,
+         "name": "Xandra VELZEBOER",
+         "noc": "NED",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 3,
+         "lane": 6,
+         "slug": "xandra-velzeboer"
+        },
+        {
+         "rank": null,
+         "name": "Danae BLAIS",
+         "noc": "CAN",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 25,
+         "lane": 5,
+         "slug": "danae-blais"
+        },
+        {
+         "rank": null,
+         "name": "Gilli KIM",
+         "noc": "KOR",
+         "time": "",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 5,
+         "lane": 4,
+         "slug": "gilli-kim"
+        }
+       ]
+      },
+      {
+       "name": "Final B",
+       "status": "Finished",
+       "official": "Official",
+       "competitors": [
+        {
+         "rank": 1,
+         "name": "Minji KIM",
+         "noc": "KOR",
+         "time": "1:38.633",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 78,
+         "lane": 1,
+         "slug": "minji-kim"
+        },
+        {
+         "rank": 2,
+         "name": "Zoe Florence DELTRAP",
+         "noc": "NED",
+         "time": "1:38.709",
+         "qual": "",
+         "status": "",
+         "record": "",
+         "bib": 49,
+         "lane": 2,
+         "slug": "zoe-florence-deltrap"
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -14844,7 +14955,7 @@
    "distance": "Men 500 m",
    "round": "Final",
    "heat": "Final",
-   "start_utc": "2026-11-28T07:10:00.000Z",
+   "start_utc": "2026-11-28T07:21:16.000Z",
    "rank": 4,
    "name": "Taesung KIM",
    "noc": "KOR",
@@ -14863,7 +14974,7 @@
    "distance": "Men 500 m",
    "round": "Final",
    "heat": "Final B",
-   "start_utc": "2026-11-28T07:10:00.000Z",
+   "start_utc": "2026-11-28T07:21:16.000Z",
    "rank": 3,
    "name": "Seochan BAE",
    "noc": "KOR",
@@ -15082,6 +15193,63 @@
    "record": "",
    "bib": 78,
    "lane": 3,
+   "slug": "minji-kim"
+  },
+  {
+   "event_id": "isu-16265",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #4",
+   "distance": "Women 1000 m",
+   "round": "Final",
+   "heat": "Final",
+   "start_utc": "2026-11-28T07:30:00.000Z",
+   "rank": null,
+   "name": "Minjeong CHOI",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 4,
+   "lane": 2,
+   "slug": "minjeong-choi"
+  },
+  {
+   "event_id": "isu-16265",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #4",
+   "distance": "Women 1000 m",
+   "round": "Final",
+   "heat": "Final",
+   "start_utc": "2026-11-28T07:30:00.000Z",
+   "rank": null,
+   "name": "Gilli KIM",
+   "noc": "KOR",
+   "time": "",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 5,
+   "lane": 4,
+   "slug": "gilli-kim"
+  },
+  {
+   "event_id": "isu-16265",
+   "sport": "short-track",
+   "event": "ISU Short Track World Tour #4",
+   "distance": "Women 1000 m",
+   "round": "Final",
+   "heat": "Final B",
+   "start_utc": "2026-11-28T07:30:00.000Z",
+   "rank": 1,
+   "name": "Minji KIM",
+   "noc": "KOR",
+   "time": "1:38.633",
+   "qual": "",
+   "status": "",
+   "record": "",
+   "bib": 78,
+   "lane": 1,
    "slug": "minji-kim"
   },
   {
