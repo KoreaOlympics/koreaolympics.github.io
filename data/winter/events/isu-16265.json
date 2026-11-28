@@ -14,11 +14,11 @@
   "tz": "Asia/Shanghai",
   "city": "Shanghai",
   "country": "CHN",
-  "state": "Live",
-  "live": "Mixed Team Relay",
+  "state": "In Progress",
+  "live": "",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-4-shanghai/"
  },
- "checked_at": "2026-11-28T05:08:03.174873+00:00",
+ "checked_at": "2026-11-28T05:19:13.607779+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T01:00:00.000Z",
@@ -361,7 +361,7 @@
    "title": "Mixed Team Relay",
    "round": "Finals",
    "event_result_id": 16437,
-   "round_id": 23660,
+   "round_id": null,
    "type": "Couples"
   },
   {
@@ -12483,7 +12483,7 @@
     {
      "id": 23659,
      "name": "Semifinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-28T04:45:00.000Z",
      "rule": "The first and second placed teams from each race and up to a maximum of one fastest third place team qualify for Final, the third and fourth placed teams from each race and up to a maximum of next two fastest fifth place teams qualify for Final B.",
      "heats": [
@@ -12521,7 +12521,7 @@
          "name": "Ain2",
          "noc": "AIN2",
          "time": "2:39.028",
-         "qual": "p",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": null,
@@ -12557,14 +12557,14 @@
       {
        "name": "Heat 2",
        "status": "Finished",
-       "official": "Live",
+       "official": "Official",
        "competitors": [
         {
          "rank": 1,
          "name": "Netherlands",
          "noc": "NED",
-         "time": "2:37.150",
-         "qual": "",
+         "time": "2:37.135",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -12573,22 +12573,10 @@
         },
         {
          "rank": 2,
-         "name": "People's Republic of China",
-         "noc": "CHN",
-         "time": "2:37.520",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 5,
-         "slug": ""
-        },
-        {
-         "rank": 3,
          "name": "Republic of Korea",
          "noc": "KOR",
-         "time": "2:38.950",
-         "qual": "",
+         "time": "2:38.941",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -12596,11 +12584,11 @@
          "slug": ""
         },
         {
-         "rank": 4,
+         "rank": 3,
          "name": "Germany",
          "noc": "GER",
-         "time": "2:41.690",
-         "qual": "",
+         "time": "2:41.683",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": null,
@@ -12608,11 +12596,11 @@
          "slug": ""
         },
         {
-         "rank": 5,
+         "rank": 4,
          "name": "Kazakhstan",
          "noc": "KAZ",
-         "time": "2:54.400",
-         "qual": "",
+         "time": "2:54.348",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": null,
@@ -12620,24 +12608,87 @@
          "slug": ""
         },
         {
-         "rank": 6,
+         "rank": 5,
          "name": "Poland",
          "noc": "POL",
-         "time": "2:57.150",
-         "qual": "",
+         "time": "2:57.135",
+         "qual": "ADV",
          "status": "",
          "record": "",
          "bib": null,
          "lane": 3,
          "slug": ""
+        },
+        {
+         "rank": null,
+         "name": "People's Republic of China",
+         "noc": "CHN",
+         "time": "YC",
+         "qual": "",
+         "status": "Yellow Card",
+         "record": "",
+         "bib": null,
+         "lane": 5,
+         "slug": ""
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Final",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Netherlands",
+        "noc": "NED",
+        "rank": 1,
+        "time": "2:37.135",
+        "qual": "Q"
+       },
+       {
+        "name": "Canada",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "2:38.008",
+        "qual": "Q"
+       },
+       {
+        "name": "Italy",
+        "noc": "ITA",
+        "rank": 2,
+        "time": "2:38.698",
+        "qual": "Q"
+       },
+       {
+        "name": "Republic of Korea",
+        "noc": "KOR",
+        "rank": 2,
+        "time": "2:38.941",
+        "qual": "Q"
+       },
+       {
+        "name": "Poland",
+        "noc": "POL",
+        "rank": 5,
+        "time": "2:57.135",
+        "qual": "ADV"
+       }
+      ],
+      "races": [
+       [
+        "Netherlands (NED)",
+        "Canada (CAN)",
+        "Italy (ITA)",
+        "Republic of Korea (KOR)",
+        "Poland (POL)"
+       ]
+      ]
+     }
     },
     {
-     "id": 23660,
-     "name": "Finals",
+     "id": 23702,
+     "name": "Final",
      "status": "Scheduled",
      "start_utc": "2026-11-29T06:05:00.000Z",
      "rule": "",
@@ -13809,11 +13860,11 @@
    "round": "Semifinals",
    "heat": "Heat 2",
    "start_utc": "2026-11-28T04:45:00.000Z",
-   "rank": 3,
+   "rank": 2,
    "name": "Republic of Korea",
    "noc": "KOR",
-   "time": "2:38.950",
-   "qual": "",
+   "time": "2:38.941",
+   "qual": "Q",
    "status": "",
    "record": "",
    "bib": null,
