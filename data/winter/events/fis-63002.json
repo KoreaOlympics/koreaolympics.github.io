@@ -19,7 +19,7 @@
   "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=CC&eventid=63002&seasoncode=2027",
   "raw": "2xINT 2xSPQ 2xSPF 2xMAS"
  },
- "checked_at": "2026-11-28T08:09:17.129428+00:00",
+ "checked_at": "2026-11-28T08:20:24.263189+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T09:30:00Z",
@@ -4222,22 +4222,24 @@
    ],
    "status": ""
   },
-  "52089": {
-   "columns": [],
-   "rows": [],
-   "title": "1.2km Sprint Final Classic",
-   "start_utc": "2026-11-28T10:15:00Z",
-   "gender": "M",
-   "live": false,
-   "runs": [],
-   "status": ""
-  },
   "52088": {
    "columns": [],
    "rows": [],
    "title": "1.2km Sprint Final Classic",
    "start_utc": "2026-11-28T10:15:00Z",
    "gender": "W",
+   "live": false,
+   "runs": [
+    "Scheduled"
+   ],
+   "status": ""
+  },
+  "52089": {
+   "columns": [],
+   "rows": [],
+   "title": "1.2km Sprint Final Classic",
+   "start_utc": "2026-11-28T10:15:00Z",
+   "gender": "M",
    "live": false,
    "runs": [],
    "status": ""
