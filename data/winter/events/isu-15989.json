@@ -14,11 +14,11 @@
   "tz": "Asia/Tokyo",
   "city": "Tokyo",
   "country": "JPN",
-  "state": "Live",
-  "live": "KOVALEV Camille / KOVALEV Pavel",
+  "state": "In Progress",
+  "live": "",
   "url": "https://isu-skating.com/en/figure-skating/events/eventdetail/isu-gp-nhk-trophy-2026/"
  },
- "checked_at": "2026-11-28T05:19:32.826734+00:00",
+ "checked_at": "2026-11-28T05:30:37.670706+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T03:42:00.000Z",
@@ -61,7 +61,7 @@
    "type": "Couples"
   },
   {
-   "start_utc": "2026-11-28T05:00:00.000Z",
+   "start_utc": "2026-11-28T05:08:00.000Z",
    "title": "Pairs",
    "round": "Free Skating",
    "event_result_id": 15737,
@@ -338,6 +338,31 @@
    "rows": [
     {
      "rank": 1,
+     "name": "Camille KOVALEV / Pavel KOVALEV",
+     "noc": "FRA",
+     "points": "147.39",
+     "status": "Active",
+     "segments": {
+      "SP": {
+       "name": "Short Program",
+       "rank": 7,
+       "total": "52.07",
+       "tes": "26.80",
+       "pcs": "26.27",
+       "status": "Finished"
+      },
+      "FS": {
+       "name": "Free Skating",
+       "rank": 1,
+       "total": "95.32",
+       "tes": "43.30",
+       "pcs": "53.02",
+       "status": "Running"
+      }
+     }
+    },
+    {
+     "rank": 2,
      "name": "Naomi WILLIAMS / Lachlan LEWER",
      "noc": "USA",
      "points": "141.83",
@@ -353,7 +378,7 @@
       },
       "FS": {
        "name": "Free Skating",
-       "rank": 1,
+       "rank": 2,
        "total": "92.33",
        "tes": "44.31",
        "pcs": "49.02",
@@ -499,31 +524,6 @@
        "total": "55.27",
        "tes": "27.72",
        "pcs": "27.55",
-       "status": "Finished"
-      },
-      "FS": {
-       "name": "Free Skating",
-       "rank": null,
-       "total": "",
-       "tes": "",
-       "pcs": "",
-       "status": "Running"
-      }
-     }
-    },
-    {
-     "rank": null,
-     "name": "Camille KOVALEV / Pavel KOVALEV",
-     "noc": "FRA",
-     "points": "",
-     "status": "Active",
-     "segments": {
-      "SP": {
-       "name": "Short Program",
-       "rank": 7,
-       "total": "52.07",
-       "tes": "26.80",
-       "pcs": "26.27",
        "status": "Finished"
       },
       "FS": {
