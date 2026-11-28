@@ -14,11 +14,11 @@
   "tz": "Asia/Shanghai",
   "city": "Shanghai",
   "country": "CHN",
-  "state": "Live",
-  "live": "Women 3000 m Relay",
+  "state": "In Progress",
+  "live": "",
   "url": "https://isu-skating.com/en/short-track/events/eventdetail/isu-short-track-world-tour-4-shanghai/"
  },
- "checked_at": "2026-11-28T08:42:02.433273+00:00",
+ "checked_at": "2026-11-28T08:53:12.497529+00:00",
  "sessions": [
   {
    "start_utc": "2026-11-27T01:00:00.000Z",
@@ -281,7 +281,7 @@
    "title": "Women 3000 m Relay",
    "round": "Finals",
    "event_result_id": 16438,
-   "round_id": 23671,
+   "round_id": null,
    "type": "Couples"
   },
   {
@@ -14664,7 +14664,7 @@
     {
      "id": 23670,
      "name": "Semifinals",
-     "status": "Live",
+     "status": "Finished",
      "start_utc": "2026-11-28T08:24:00.000Z",
      "rule": "The first and second placed teams from each race and up to a maximum of one fastest third place team qualify for Final, the third and fourth placed teams from each race and up to a maximum of next two fastest fifth place teams qualify for Final B.",
      "heats": [
@@ -14702,7 +14702,7 @@
          "name": "Poland",
          "noc": "POL",
          "time": "4:13.070",
-         "qual": "p",
+         "qual": "q",
          "status": "",
          "record": "",
          "bib": null,
@@ -14725,27 +14725,15 @@
       },
       {
        "name": "Heat 2",
-       "status": "Getting Ready",
-       "official": "Start List",
+       "status": "Finished",
+       "official": "Official",
        "competitors": [
         {
-         "rank": null,
-         "name": "People's Republic of China",
-         "noc": "CHN",
-         "time": "",
-         "qual": "",
-         "status": "",
-         "record": "",
-         "bib": null,
-         "lane": 1,
-         "slug": ""
-        },
-        {
-         "rank": null,
+         "rank": 1,
          "name": "Canada",
          "noc": "CAN",
-         "time": "",
-         "qual": "",
+         "time": "4:12.283",
+         "qual": "Q",
          "status": "",
          "record": "",
          "bib": null,
@@ -14753,11 +14741,23 @@
          "slug": ""
         },
         {
-         "rank": null,
+         "rank": 2,
+         "name": "People's Republic of China",
+         "noc": "CHN",
+         "time": "4:12.667",
+         "qual": "Q",
+         "status": "",
+         "record": "",
+         "bib": null,
+         "lane": 1,
+         "slug": ""
+        },
+        {
+         "rank": 3,
          "name": "Netherlands",
          "noc": "NED",
-         "time": "",
-         "qual": "",
+         "time": "4:24.820",
+         "qual": "QB",
          "status": "",
          "record": "",
          "bib": null,
@@ -14768,9 +14768,9 @@
          "rank": null,
          "name": "France",
          "noc": "FRA",
-         "time": "",
+         "time": "PEN",
          "qual": "",
-         "status": "",
+         "status": "Penalty",
          "record": "",
          "bib": null,
          "lane": 4,
@@ -14778,11 +14778,62 @@
         }
        ]
       }
-     ]
+     ],
+     "projection": {
+      "next": "Final",
+      "official_draw_published": false,
+      "pending": [],
+      "qualified": [
+       {
+        "name": "Italy",
+        "noc": "ITA",
+        "rank": 1,
+        "time": "4:11.965",
+        "qual": "Q"
+       },
+       {
+        "name": "Canada",
+        "noc": "CAN",
+        "rank": 1,
+        "time": "4:12.283",
+        "qual": "Q"
+       },
+       {
+        "name": "Republic of Korea",
+        "noc": "KOR",
+        "rank": 2,
+        "time": "4:12.364",
+        "qual": "Q"
+       },
+       {
+        "name": "People's Republic of China",
+        "noc": "CHN",
+        "rank": 2,
+        "time": "4:12.667",
+        "qual": "Q"
+       },
+       {
+        "name": "Poland",
+        "noc": "POL",
+        "rank": 3,
+        "time": "4:13.070",
+        "qual": "q"
+       }
+      ],
+      "races": [
+       [
+        "Italy (ITA)",
+        "Canada (CAN)",
+        "Republic of Korea (KOR)",
+        "People's Republic of China (CHN)",
+        "Poland (POL)"
+       ]
+      ]
+     }
     },
     {
-     "id": 23671,
-     "name": "Finals",
+     "id": 23706,
+     "name": "Final",
      "status": "Scheduled",
      "start_utc": "2026-11-28T09:10:00.000Z",
      "rule": "",
